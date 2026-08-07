@@ -1,0 +1,11 @@
+{
+  "allow": [
+    "create_folder(public)",
+    "propose_edit(public/index.html)",
+    "propose_edit(public/style.css)",
+    "propose_edit(public/app.js)",
+    "edit_file",
+    "run_command(mkdir functions\\src && move src\\* functions\\src\\)",
+    "run_command(move src functions\\src)"
+  ]
+}

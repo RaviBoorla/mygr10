@@ -1,0 +1,11 @@
+# Copy this file to `.dev.vars` and fill in real values for local dev.
+# `.dev.vars` is git-ignored. Do not commit real secrets.
+
+AUTH_TOKEN=local-dev-token-change-me
+
+# Use "*" only for local testing; set a real origin in deployed envs.
+CORS_ORIGIN=http://localhost:8787
+
+# Set to "debug" to see verbose request logs in `wrangler dev`.
+LOG_LEVEL=info
+ENVIRONMENT=development

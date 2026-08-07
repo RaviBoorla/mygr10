@@ -1,0 +1,61 @@
+# Cloudflare Workers configuration.
+#
+# Docs: https://developers.cloudflare.com/workers/wrangler/configuration/
+#
+# The `name` and `main` fields are the only required ones. Everything
+# else has sensible defaults baked into wrangler itself, but we
+# declare them explicitly here for reproducibility across teammates.
+
+name = "cloudflare-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+
+# Production and staging are configured side-by-side; flip with
+# `wrangler deploy --env staging`.
+[env.staging]
+name = "cloudflare-worker-staging"
+routes = [ "staging.example.com/*" ]
+
+[env.production]
+name = "cloudflare-worker-production"
+routes = [ "api.example.com/*" ]
+
+# --- KV namespaces -----------------------------------------------------
+#
+# Rate limiting uses KV for a sliding-window counter. Create the
+# namespace once with `wrangler kv namespace create RATE_LIMIT_KV`
+# and paste the resulting id below.
+#
+# kv_namespaces = [
+#   { binding = "RATE_LIMIT_KV", id = "<your-kv-namespace-id>" }
+# ]
+
+# --- Secrets -----------------------------------------------------------
+#
+# Secrets are set with `wrangler secret put NAME` and are NOT stored
+# in this file. Common ones:
+#
+#   AUTH_TOKEN       Bearer token for write endpoints
+#   CORS_ORIGIN      Allowed origin(s) for CORS
+
+# --- Vars (non-secret) -------------------------------------------------
+#
+# [vars]
+# LOG_LEVEL = "info"
+# SERVICE_NAME = "cloudflare-worker"
+# ENVIRONMENT = "production"
+
+# --- Cron triggers -----------------------------------------------------
+#
+# Uncomment to enable. The handler in src/index.js is already wired up.
+#
+# [triggers]
+# crons = [ "*/5 * * * *" ]
+
+# --- Build / observability --------------------------------------------
+#
+# [build]
+# command = "npm run build"
+#
+# [observability]
+# enabled = true
