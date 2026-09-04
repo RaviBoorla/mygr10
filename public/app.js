@@ -2190,27 +2190,42 @@ const app = {
 
   // ── Test session ─────────────────────────────────────────────────────────────
   startTest(qCount, timeLimit) {
-    this.questions = Array.from({ length: qCount }, (_, i) => ({
-      id: i,
-      text: `Sample question ${i + 1} for ${state.subject}. (Mock data — replace with API call.)`,
-      options: ['Option A', 'Option B', 'Option C', 'Option D'],
-      correct: Math.floor(Math.random() * 4),
-      tag: 'Topic ' + (Math.floor(i / 5) + 1),
-      explanation: `This is the explanation for question ${i + 1}. The correct option is highlighted above. Review your textbook notes on this topic for a deeper understanding.`
-    }));
-    this.userAnswers         = {};
-    this.reviewSet           = new Set();
-    this.currentQuestionIndex = 0;
+    const slug = state.subject.toLowerCase().replace(/ /g, '-');
+    const file = `/questions/${slug}.json`;
 
+    this.userAnswers          = {};
+    this.reviewSet            = new Set();
+    this.currentQuestionIndex = 0;
     this.navigate('test-session');
 
-    const el = document.getElementById('test-title');
-    if (el) el.textContent =
+    const titleEl = document.getElementById('test-title');
+    if (titleEl) titleEl.textContent =
       `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'}`;
 
-    this.renderQuestion();
-    this.renderPalette();
-    this.startTimer(timeLimit);
+    fetch(file)
+      .then(r => r.ok ? r.json() : Promise.reject('not found'))
+      .then(all => {
+        // Shuffle and pick qCount questions
+        const shuffled = all.sort(() => Math.random() - 0.5).slice(0, qCount);
+        this.questions = shuffled.map((q, i) => ({ id: i, ...q }));
+        this.renderQuestion();
+        this.renderPalette();
+        this.startTimer(timeLimit);
+      })
+      .catch(() => {
+        // Fallback to placeholder questions when JSON not yet available
+        this.questions = Array.from({ length: qCount }, (_, i) => ({
+          id: i,
+          text: `Question ${i + 1} for ${state.subject}. (Content coming soon.)`,
+          options: ['Option A', 'Option B', 'Option C', 'Option D'],
+          correct: Math.floor(Math.random() * 4),
+          chapter: state.subject,
+          explanation: 'Explanation will be available once questions are loaded.'
+        }));
+        this.renderQuestion();
+        this.renderPalette();
+        this.startTimer(timeLimit);
+      });
   },
 
   renderQuestion() {
