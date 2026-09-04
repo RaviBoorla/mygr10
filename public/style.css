@@ -244,7 +244,7 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 /* Test body */
 .test-layout {
   display: grid;
-  grid-template-columns: 1fr 220px;
+  grid-template-columns: 0.9fr 242px;
   gap: 16px;
   padding: 8px 16px;
   height: calc(100vh - var(--header-h) - 16px);
@@ -261,12 +261,17 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .q-text        { margin: 0; font-size: 16px; line-height: 1.45; }
 
 /* Options */
+#options-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
 .option-btn {
   display: flex;
   align-items: center;
   gap: 12px;
   width: 100%;
-  margin-bottom: 7px;
+  margin-bottom: 0;
   padding: 10px 14px;
   border-radius: 8px;
   border: 2px solid var(--border);
