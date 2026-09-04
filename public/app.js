@@ -1700,7 +1700,16 @@ const app = {
       : `<div></div>`;
 
     const logoTarget = isDuringTest ? '' : `onclick="app.navigate('dashboard')"`;
-    const logo = `<span class="hdr-logo" ${logoTarget}>Mygr10</span>`;
+    const logo = `<span class="hdr-logo" ${logoTarget}>
+      <svg class="logo-icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#2563eb"/>
+        <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+        <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+        <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+        <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+      </svg>
+      Rise
+    </span>`;
 
     const right = state.board
       ? `<span class="hdr-board">${esc(state.board)}</span>
@@ -1731,7 +1740,16 @@ const app = {
   _screenBoardSelect() {
     return `
       <div class="screen welcome-screen">
-        <div class="welcome-logo">Mygr10</div>
+        <div class="welcome-logo">
+          <svg class="welcome-logo-icon" width="52" height="52" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="7" fill="#2563eb"/>
+            <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+            <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+            <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+            <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+          </svg>
+          Rise
+        </div>
         <p class="welcome-sub">Grade 10 board exam practice</p>
         <div class="board-list">
           <button class="btn board-btn" onclick="app.setBoard('CBSE')">

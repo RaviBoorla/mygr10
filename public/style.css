@@ -48,12 +48,17 @@ body {
 .hdr-right { display: flex; align-items: center; gap: 10px; }
 
 .hdr-logo {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--primary);
   cursor: pointer;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
+  user-select: none;
 }
+.logo-icon { flex-shrink: 0; border-radius: 5px; }
 
 .hdr-back {
   background: none;
@@ -147,11 +152,16 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 }
 
 .welcome-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   font-size: 42px;
   font-weight: 800;
   color: var(--primary);
   letter-spacing: -1px;
 }
+.welcome-logo-icon { border-radius: 14px; }
 .welcome-sub  { color: var(--text-light); font-size: 16px; margin: 0 0 8px; }
 .board-list   { display: grid; gap: 12px; width: 100%; max-width: 460px; }
 
