@@ -4,6 +4,7 @@ const state = {
   mode:            null,   // 'mock' | 'drill'
   subject:         null,
   revisionSubject: null,
+  revisionChapter: 0,
   revisionFilter:  'all',  // 'all'|'formulae'|'logic'|'tips'|'bestPractices'
   currentScreen:   'board-selection',
   history:         []      // stack of previous screen ids
@@ -1482,7 +1483,7 @@ const app = {
     if (this.timerInterval) clearInterval(this.timerInterval);
     Object.assign(state, {
       board: null, mode: null, subject: null,
-      revisionSubject: null, revisionFilter: 'all',
+      revisionSubject: null, revisionChapter: 0, revisionFilter: 'all',
       currentScreen: 'board-selection', history: []
     });
     this.render();
@@ -1672,6 +1673,9 @@ const app = {
         </div>`;
     }
 
+    const idx = Math.min(state.revisionChapter, chapters.length - 1);
+    const ch  = chapters[idx];
+
     const FILTERS = [
       { id: 'all',           label: 'All' },
       { id: 'formulae',      label: 'Formulae' },
@@ -1679,11 +1683,6 @@ const app = {
       { id: 'tips',          label: 'Tips' },
       { id: 'bestPractices', label: 'Best Practices' }
     ];
-    const filterBar = FILTERS.map(f =>
-      `<button class="filter-tab ${state.revisionFilter === f.id ? 'active' : ''}"
-               onclick="app.setFilter('${f.id}')">${f.label}</button>`
-    ).join('');
-
     const CATS = [
       { key: 'formulae',      label: 'Formula',       cls: 'badge-f' },
       { key: 'logic',         label: 'Logic',         cls: 'badge-l' },
@@ -1691,30 +1690,40 @@ const app = {
       { key: 'bestPractices', label: 'Best Practice', cls: 'badge-b' }
     ];
 
-    const chHtml = chapters.map(ch => {
-      const items = [];
-      CATS.forEach(({ key, label, cls }) => {
-        if (state.revisionFilter !== 'all' && state.revisionFilter !== key) return;
-        (ch[key] || []).forEach(text =>
-          items.push(`<li class="rev-item"><span class="badge ${cls}">${label}</span>${esc(text)}</li>`)
-        );
-      });
-      if (!items.length) return '';
-      return `
-        <div class="ch-block open">
-          <div class="ch-header" onclick="this.parentElement.classList.toggle('open')">
-            <span>${esc(ch.chapter)}</span><span class="ch-chevron">&#9660;</span>
-          </div>
-          <ul class="ch-content">${items.join('')}</ul>
-        </div>`;
-    }).filter(Boolean).join('');
+    const chapterTabs = chapters.map((c, i) =>
+      `<button class="ch-tab ${i === idx ? 'active' : ''}"
+               onclick="app.selectRevisionChapter(${i})">${esc(c.chapter)}</button>`
+    ).join('');
+
+    const filterBar = FILTERS.map(f =>
+      `<button class="filter-tab ${state.revisionFilter === f.id ? 'active' : ''}"
+               onclick="app.setFilter('${f.id}')">${f.label}</button>`
+    ).join('');
+
+    const items = [];
+    CATS.forEach(({ key, label, cls }) => {
+      if (state.revisionFilter !== 'all' && state.revisionFilter !== key) return;
+      (ch[key] || []).forEach(text =>
+        items.push(`<li class="rev-item"><span class="badge ${cls}">${label}</span>${esc(text)}</li>`)
+      );
+    });
+
+    const contentHtml = items.length
+      ? `<ul class="rev-list">${items.join('')}</ul>`
+      : '<div class="empty-state">No items match this filter.</div>';
 
     return `
-      <div class="screen">
-        <h2>${esc(subject)}</h2>
-        <div class="filter-bar">${filterBar}</div>
-        <div class="chapters">
-          ${chHtml || '<div class="card empty-state">No items match this filter.</div>'}
+      <div class="screen rev-screen">
+        <div class="rev-topbar">
+          <h2>${esc(subject)}</h2>
+          <div class="filter-bar">${filterBar}</div>
+        </div>
+        <div class="rev-layout">
+          <nav class="rev-nav">${chapterTabs}</nav>
+          <div class="rev-content card">
+            <h3 class="rev-ch-title">${esc(ch.chapter)}</h3>
+            ${contentHtml}
+          </div>
         </div>
       </div>`;
   },
@@ -1742,13 +1751,18 @@ const app = {
 
   openRevisionSubject(subject) {
     state.revisionSubject = subject;
+    state.revisionChapter = 0;
     state.revisionFilter  = 'all';
     this.navigate('revision-content');
   },
 
+  selectRevisionChapter(idx) {
+    state.revisionChapter = idx;
+    document.getElementById('app').innerHTML = this._header() + this._screenRevisionContent();
+  },
+
   setFilter(filter) {
     state.revisionFilter = filter;
-    // Re-render in place without touching history
     document.getElementById('app').innerHTML = this._header() + this._screenRevisionContent();
   },
 
