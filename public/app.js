@@ -2305,7 +2305,8 @@ const state = {
   params:  [],
   notesQuery: '',
   notesFilter: 'all',
-  openPicker: null   // subject whose chapter list is expanded on the home screen
+  openPicker: null,  // subject whose chapter list is expanded on the home screen
+  difficulty: {}     // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
 };
 
 // ─── Routing (real URLs → real Back button, refresh-safe, shareable) ──────────
@@ -2511,6 +2512,7 @@ const app = {
             <h3>${esc(subject)}</h3>
             <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
           </header>
+          ${hasBank ? this._difficultyBar(subject) : ''}
           <div class="subj-actions">${actions}</div>
           <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
             <p class="picker-hint">Pick a chapter to drill</p>
@@ -2564,6 +2566,24 @@ const app = {
       const bank = bankCache[state.openPicker];
       if (bank) this._renderChips(state.openPicker, bank);
     }
+  },
+
+  _DIFFICULTIES: [['all', 'All'], ['easy', 'Easy'], ['medium', 'Medium'], ['hard', 'Hard']],
+
+  _difficultyBar(subject) {
+    const cur = state.difficulty[subject] || 'all';
+    return `<div class="filter-bar diff-bar" data-diff="${esc(subject)}">
+      ${this._DIFFICULTIES.map(([id, label]) =>
+        `<button class="filter-tab ${cur === id ? 'active' : ''}" data-level="${id}"
+                 onclick="app.setDifficulty('${esc(subject)}','${id}')">${label}</button>`).join('')}
+    </div>`;
+  },
+
+  setDifficulty(subject, level) {
+    state.difficulty[subject] = level;
+    const bar = document.querySelector(`[data-diff="${CSS.escape(subject)}"]`);
+    if (bar) bar.querySelectorAll('.filter-tab').forEach(btn =>
+      btn.classList.toggle('active', btn.dataset.level === level));
   },
 
   togglePicker(subject) {
@@ -2633,10 +2653,18 @@ const app = {
     LS.del(KEY.draft);
     this.go(['test']);
 
+    const difficulty = state.difficulty[subject] || 'all';
+    this.session.difficulty = difficulty;
+
     loadBank(subject)
       .then(all => {
-        const pool = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
-        if (!pool.length) throw new Error('No questions in this chapter yet.');
+        const byChapter = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
+        const pool = difficulty === 'all' ? byChapter : byChapter.filter(q => q.difficulty === difficulty);
+        if (!pool.length) {
+          throw new Error(difficulty === 'all'
+            ? 'No questions in this chapter yet.'
+            : `No ${difficulty} questions available${chapter ? ' in this chapter' : ''}. Try a different difficulty.`);
+        }
         // Mock tests surface real board-paper questions first, filling remaining slots at random.
         const picked = mode === 'mock'
           ? shuffle(pool.filter(q => q.priority)).concat(shuffle(pool.filter(q => !q.priority))).slice(0, cfg.count)
@@ -2658,7 +2686,8 @@ const app = {
 
   _screenTest() {
     const s = this.session;
-    const title = `${state.board} · ${esc(s.subject)}${s.chapter ? ' · ' + esc(s.chapter) : ''} · ${MODES[s.mode].label}`;
+    const diffTag = s.difficulty && s.difficulty !== 'all' ? ` · ${esc(s.difficulty)}` : '';
+    const title = `${state.board} · ${esc(s.subject)}${s.chapter ? ' · ' + esc(s.chapter) : ''} · ${MODES[s.mode].label}${diffTag}`;
     return `
       <div class="screen test-screen" id="test-session">
         ${this._modalMarkup()}
