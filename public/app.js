@@ -1971,11 +1971,11 @@ const REVISION = {
 };
 
 // merge IB and ICSE Mathematics chapters into the main Mathematics array
+// (kept alongside the per-board keys below — the consolidated notes page reads those directly)
+REVISION['CBSE Mathematics'] = REVISION.Mathematics;
 REVISION.Mathematics = REVISION.Mathematics
   .concat(REVISION['ICSE Mathematics'] || [])
   .concat(REVISION['IB Mathematics'] || []);
-delete REVISION['ICSE Mathematics'];
-delete REVISION['IB Mathematics'];
 
 // ─── Theorems by chapter ─────────────────────────────────────────────────────
 const THEOREMS = {
@@ -2226,14 +2226,37 @@ const MODES = {
   drill: { label: 'Chapter Drill',  count: 25, seconds: null }
 };
 
-// Revision notes are keyed either per board ("ICSE Mathematics") or shared ("Physics").
-function notesKeyFor(board, subject) {
-  if (REVISION[`${board} ${subject}`]) return `${board} ${subject}`;
-  if (REVISION[subject]) return subject;
-  return null;
-}
-function notesSubjects(board) {
-  return (SUBJECTS[board] || []).filter(s => notesKeyFor(board, s));
+// ─── Consolidated revision notes — one page per subject, merged across boards ─
+const NOTES_CATALOG = [
+  { id: 'Mathematics', label: 'Maths' },
+  { id: 'Physics',     label: 'Physics' },
+  { id: 'Chemistry',   label: 'Chemistry' },
+  { id: 'Biology',     label: 'Biology' },
+  { id: 'English',     label: 'English' },
+  { id: 'Hindi',       label: 'Hindi' }
+];
+// canonical subject → [board, REVISION key] sources to merge, in board display order
+const NOTES_SOURCES = {
+  Mathematics: [['CBSE', 'CBSE Mathematics'], ['ICSE', 'ICSE Mathematics'], ['IB', 'IB Mathematics']],
+  Physics:     [['ICSE', 'Physics']],
+  Chemistry:   [['ICSE', 'Chemistry']],
+  Biology:     [['ICSE', 'Biology'], ['IB', 'Biology']],
+  English:     [],
+  Hindi:       []
+};
+const _consolidatedCache = {};
+function consolidatedChapters(subjectId) {
+  if (_consolidatedCache[subjectId]) return _consolidatedCache[subjectId];
+  const merged = [];
+  (NOTES_SOURCES[subjectId] || []).forEach(([board, key]) => {
+    (REVISION[key] || []).forEach(ch => {
+      const name = ch.chapter.trim().toLowerCase();
+      const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
+      if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
+      else merged.push({ ...ch, _boards: [board] });
+    });
+  });
+  return (_consolidatedCache[subjectId] = merged);
 }
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────
@@ -2347,10 +2370,15 @@ const app = {
               aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
               title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
 
+    const notesActive = state.screen === 'notes';
+    const notesBtn = `<button class="btn small ${notesActive ? 'primary' : 'ghost'}"
+              ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>`;
+
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}</div>
         <div class="hdr-right">
+          ${notesBtn}
           <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
         </div>
       </header>`;
@@ -2360,8 +2388,7 @@ const app = {
     switch (name) {
       case 'board':   return this._screenBoard();
       case 'home':    return this._screenHome();
-      case 'notes':   return params.length ? this._screenNotes(params[0], Number(params[1]) || 0)
-                                           : this._screenNotesIndex();
+      case 'notes':   return this._screenNotes(params[0] || NOTES_CATALOG[0].id, Number(params[1]) || 0);
       case 'test':    return this._screenTest();
       case 'results': return this._screenResults();
       default:        return '';
@@ -2414,10 +2441,10 @@ const app = {
     state.board = board;
     state.openPicker = null;
     LS.set(KEY.board, board);
-    // On the notes screen the current subject may not exist in the new board.
-    // Always navigate home so the user starts fresh for the switched board.
+    // Revision notes are board-independent; only the results screen depends on the
+    // active board's history, so leaving it avoids showing a stale/mismatched screen.
     const cur = parseHash();
-    if (cur.name === 'notes' || cur.name === 'results') {
+    if (cur.name === 'results') {
       this.go(['home']);
     } else {
       this.render();
@@ -2444,7 +2471,6 @@ const app = {
 
     const cards = subjects.map(subject => {
       const hasBank  = !!BANKS[subject];
-      const notesKey = notesKeyFor(state.board, subject);
       const open     = state.openPicker === subject;
 
       const actions = hasBank
@@ -2456,17 +2482,13 @@ const app = {
            </button>`
         : `<span class="soon-tag">Question bank coming soon</span>`;
 
-      const notesBtn = notesKey
-        ? `<button class="btn act-btn ghost" onclick="app.go(['notes','${esc(subject)}','0'])">Revision notes</button>`
-        : '';
-
       return `
         <article class="subj-card card">
           <header class="subj-head">
             <h3>${esc(subject)}</h3>
             <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
           </header>
-          <div class="subj-actions">${actions}${notesBtn}</div>
+          <div class="subj-actions">${actions}</div>
           <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
             <p class="picker-hint">Pick a chapter to drill</p>
             <div class="chapter-chips" data-chips="${esc(subject)}">Loading chapters…</div>
@@ -3008,44 +3030,21 @@ const app = {
     if (h) this.startTest({ subject: h.subject, mode: h.mode, chapter: h.chapter || null });
   },
 
-  // ── Screen: revision notes ──────────────────────────────────────────────────
-  _screenNotesIndex() {
-    const subjects = notesSubjects(state.board);
-    if (!subjects.length) {
-      return `<div class="screen"><h2>Revision notes</h2>
-        <div class="card empty-state">Notes for ${esc(state.board)} are coming soon.</div></div>`;
-    }
-    return `
-      <div class="screen">
-        <h2>Revision notes</h2>
-        <p class="subtitle">Formulae, theorems, logic and exam tips</p>
-        <div class="subj-grid">
-          ${subjects.map(s => {
-            const chapters = REVISION[notesKeyFor(state.board, s)] || [];
-            return `<button class="btn board-btn" onclick="app.go(['notes','${esc(s)}','0'])">
-                      <strong>${esc(s)}</strong><span>${plural(chapters.length, 'chapter')}</span>
-                    </button>`;
-          }).join('')}
-        </div>
-      </div>`;
-  },
-
-  _screenNotes(subject, chapterIdx) {
-    const key = notesKeyFor(state.board, subject);
-    if (!key) {
-      return `<div class="screen"><h2>${esc(subject)}</h2>
-        <div class="card empty-state">Notes for this subject are coming soon.
-          <button class="btn" onclick="app.go(['notes'])">See available notes</button></div></div>`;
-    }
-    const chapters = REVISION[key];
-    const idx = Math.max(0, Math.min(chapterIdx, chapters.length - 1));
+  // ── Screen: revision notes (consolidated across CBSE, ICSE and IB) ──────────
+  _screenNotes(subjectId, chapterIdx) {
+    const id = NOTES_CATALOG.some(s => s.id === subjectId) ? subjectId : NOTES_CATALOG[0].id;
+    const chapters = consolidatedChapters(id);
+    const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
+        <h2>Revision notes</h2>
+        <p class="subtitle">Formulae, theorems, logic and exam tips — CBSE, ICSE &amp; IB combined</p>
+        <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
+        ${chapters.length ? `
         <div class="rev-topbar">
-          <h2>${esc(subject)}</h2>
           <input class="notes-search" id="notes-search" type="search" placeholder="Search all chapters…  ( / )"
                  value="${esc(state.notesQuery)}" oninput="app.setNotesQuery(this.value)">
-          <div class="filter-bar" id="notes-filters">${this._filterBar(this._chapterItems(key, chapters, idx))}</div>
+          <div class="filter-bar" id="notes-filters">${this._filterBar(this._chapterItems(id, chapters, idx))}</div>
         </div>
         <label class="ch-select-wrap">
           <span class="sr-only">Chapter</span>
@@ -3054,11 +3053,18 @@ const app = {
           </select>
         </label>
         <div class="rev-layout">
-          <nav class="rev-nav" id="notes-nav" aria-label="Chapters">${this._chapterTabs(subject, chapters, idx)}</nav>
-          <div class="rev-content card" id="notes-body">${this._notesBody(key, chapters, idx)}</div>
-        </div>
+          <nav class="rev-nav" id="notes-nav" aria-label="Chapters">${this._chapterTabs(id, chapters, idx)}</nav>
+          <div class="rev-content card" id="notes-body">${this._notesBody(id, chapters, idx)}</div>
+        </div>` : `<div class="card empty-state">Notes for this subject are coming soon.</div>`}
       </div>`;
   },
+
+  _subjectTabs(activeId) {
+    return NOTES_CATALOG.map(s => `<button class="filter-tab ${s.id === activeId ? 'active' : ''}"
+             onclick="app.go(['notes','${s.id}','0'])">${esc(s.label)}</button>`).join('');
+  },
+
+  _chLabel(ch) { return `${ch.chapter} (${ch._boards.join(', ')})`; },
 
   _FILTERS: [
     { id: 'all',           label: 'All' },
@@ -3091,17 +3097,17 @@ const app = {
   // Small screens get a native picker: one tap through 30 chapters beats a wall of chips.
   _chapterOptions(chapters, idx) {
     return chapters.map((c, i) =>
-      `<option value="${i}" ${i === idx ? 'selected' : ''}>${esc(c.chapter)}</option>`).join('');
+      `<option value="${i}" ${i === idx ? 'selected' : ''}>${esc(this._chLabel(c))}</option>`).join('');
   },
 
-  _chapterTabs(subject, chapters, idx) {
+  _chapterTabs(id, chapters, idx) {
     const q = state.notesQuery.trim().toLowerCase();
     return chapters.map((c, i) => {
-      const hits = q ? this._chapterItems(subject, chapters, i).filter(it => it.text.toLowerCase().includes(q)).length : 0;
+      const hits = q ? this._chapterItems(id, chapters, i).filter(it => it.text.toLowerCase().includes(q)).length : 0;
       if (q && !hits) return '';
       return `<button class="ch-tab ${i === idx && !q ? 'active' : ''}" ${i === idx && !q ? 'aria-current="true"' : ''}
                       onclick="app.selectChapter(${i})">
-                ${esc(c.chapter)}${q ? `<span class="chip-count">${hits}</span>` : ''}
+                ${esc(this._chLabel(c))}${q ? `<span class="chip-count">${hits}</span>` : ''}
               </button>`;
     }).join('') || '<p class="empty-inline">No chapter matches.</p>';
   },
@@ -3130,9 +3136,9 @@ const app = {
 
     const items = this._chapterItems(key, chapters, idx).filter(inFilter);
     const chHtml = typeof chapters[idx].html === 'function' ? chapters[idx].html() : '';
-    return `<h3 class=”rev-ch-title”>${esc(chapters[idx].chapter)}</h3>${chHtml}
-      ${items.length ? `<ul class=”rev-list”>${items.map(it => this._noteItem(it, false)).join('')}</ul>`
-                     : (chHtml ? '' : '<div class=”empty-state”>Nothing under this filter — try “All”.</div>')}`;
+    return `<h3 class="rev-ch-title">${esc(this._chLabel(chapters[idx]))}</h3>${chHtml}
+      ${items.length ? `<ul class="rev-list">${items.map(it => this._noteItem(it, false)).join('')}</ul>`
+                     : (chHtml ? '' : '<div class="empty-state">Nothing under this filter — try "All".</div>')}`;
   },
 
   _noteItem(it, showChapter) {
@@ -3142,17 +3148,16 @@ const app = {
 
   // Notes interactions repaint only the two panels — scroll and focus stay put.
   _repaintNotes() {
-    const subject = state.params[0];
-    const key = notesKeyFor(state.board, subject);
-    if (!key) return;
-    const chapters = REVISION[key];
+    const id = NOTES_CATALOG.some(s => s.id === state.params[0]) ? state.params[0] : NOTES_CATALOG[0].id;
+    const chapters = consolidatedChapters(id);
+    if (!chapters.length) return;
     const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));
     const nav  = document.getElementById('notes-nav');
     const body = document.getElementById('notes-body');
     const bar  = document.getElementById('notes-filters');
-    if (nav)  nav.innerHTML  = this._chapterTabs(subject, chapters, idx);
-    if (body) body.innerHTML = this._notesBody(key, chapters, idx);
-    if (bar)  bar.innerHTML  = this._filterBar(this._chapterItems(key, chapters, idx));
+    if (nav)  nav.innerHTML  = this._chapterTabs(id, chapters, idx);
+    if (body) body.innerHTML = this._notesBody(id, chapters, idx);
+    if (bar)  bar.innerHTML  = this._filterBar(this._chapterItems(id, chapters, idx));
     const sel = document.getElementById('notes-select');
     if (sel && Number(sel.value) !== idx) sel.value = String(idx);
   },
