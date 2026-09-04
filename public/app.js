@@ -1449,6 +1449,191 @@ const REVISION = {
   }
 };
 
+// ─── Theorems by chapter ─────────────────────────────────────────────────────
+const THEOREMS = {
+  CBSE: {
+    Mathematics: {
+      'Real Numbers': [
+        "Fundamental Theorem of Arithmetic: Every composite number can be expressed as a product of primes, and this factorisation is unique (up to order of factors). [Gr 10]",
+        "Euclid's Division Lemma: For any two positive integers a and b, there exist unique integers q and r such that a = bq + r, where 0 ≤ r < b. [Gr 10]",
+        "Theorem: If p is a prime and p divides a², then p divides a. [Gr 10]",
+        "Theorem: √p is irrational for any prime number p (proved by contradiction). [Gr 10]",
+        "Theorem: The sum or product of a non-zero rational and an irrational number is irrational. [Gr 10]"
+      ],
+      'Polynomials': [
+        "Remainder Theorem: If polynomial p(x) is divided by (x − a), the remainder equals p(a). [Gr 9]",
+        "Factor Theorem: (x − a) is a factor of p(x) if and only if p(a) = 0. [Gr 9]",
+        "Theorem: A polynomial of degree n has at most n real zeroes. [Gr 9]"
+      ],
+      'Triangles': [
+        "Isosceles Triangle Theorem (Gr 9): Angles opposite to equal sides of a triangle are equal. Converse: Sides opposite equal angles are equal.",
+        "Angle Sum Property (Gr 8): The sum of all interior angles of a triangle is 180°.",
+        "Exterior Angle Theorem (Gr 8): An exterior angle of a triangle equals the sum of the two non-adjacent interior angles.",
+        "Mid-Point Theorem (Gr 9): The line segment joining the midpoints of two sides of a triangle is parallel to the third side and equals half of it.",
+        "Converse of Mid-Point Theorem (Gr 9): A line through the midpoint of one side of a triangle, parallel to another side, bisects the third side.",
+        "SSS Congruence Rule: If three sides of one triangle are equal to three sides of another, the triangles are congruent. [Gr 9]",
+        "SAS Congruence Rule: If two sides and the included angle of one triangle are equal to two sides and the included angle of another, the triangles are congruent. [Gr 9]",
+        "ASA Congruence Rule: If two angles and the included side of one triangle are equal to two angles and the included side of another, the triangles are congruent. [Gr 9]",
+        "AAS Congruence Rule: If two angles and a non-included side of one triangle are equal to the corresponding two angles and side of another, the triangles are congruent. [Gr 9]",
+        "RHS Congruence Rule: If the hypotenuse and one side of a right-angled triangle are equal to the hypotenuse and one side of another right-angled triangle, the triangles are congruent. [Gr 9]",
+        "Basic Proportionality Theorem / Thales (Gr 10): If a line is drawn parallel to one side of a triangle, it divides the other two sides in the same ratio. (DE ∥ BC ⟹ AD/DB = AE/EC)",
+        "Converse of BPT (Gr 10): If a line divides two sides of a triangle in the same ratio, it is parallel to the third side.",
+        "AA Similarity Criterion (Gr 10): If two angles of one triangle are equal to two angles of another, the two triangles are similar.",
+        "SSS Similarity Criterion (Gr 10): If corresponding sides of two triangles are proportional, the triangles are similar.",
+        "SAS Similarity Criterion (Gr 10): If one angle of a triangle equals one angle of another, and the sides including these angles are proportional, the triangles are similar.",
+        "Area Theorem (Gr 10): The ratio of areas of two similar triangles equals the square of the ratio of their corresponding sides.",
+        "Pythagoras Theorem (Gr 8/10): In a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides. (a² + b² = c²)",
+        "Converse of Pythagoras (Gr 10): If the square of one side of a triangle equals the sum of squares of the other two sides, the angle opposite that side is 90°."
+      ],
+      'Circles': [
+        "Theorem (Gr 9): Equal chords of a circle subtend equal angles at the centre. Converse: Chords subtending equal angles at the centre are equal.",
+        "Theorem (Gr 9): The perpendicular from the centre of a circle to a chord bisects the chord. Converse: The line joining the centre to the midpoint of a chord is perpendicular to it.",
+        "Theorem (Gr 9): Equal chords of a circle are equidistant from the centre. Converse: Chords equidistant from the centre are equal.",
+        "Theorem (Gr 9): The angle subtended by an arc at the centre is double the angle subtended at any point on the remaining arc.",
+        "Theorem (Gr 9): Angles in the same segment of a circle are equal.",
+        "Theorem (Gr 9): The sum of opposite angles of a cyclic quadrilateral is 180°.",
+        "Theorem (Gr 10): The tangent at any point of a circle is perpendicular to the radius at the point of contact.",
+        "Theorem (Gr 10): The lengths of two tangents drawn from an external point to a circle are equal."
+      ],
+      'Introduction to Trigonometry': [
+        "Pythagorean Identity (Gr 10): sin²θ + cos²θ = 1 (follows from Pythagoras in a right triangle). Divide by cos²θ → 1 + tan²θ = sec²θ. Divide by sin²θ → 1 + cot²θ = cosec²θ."
+      ],
+      'Probability': [
+        "Theorem: For any event E, 0 ≤ P(E) ≤ 1.",
+        "Complementary Event Theorem: P(E) + P(Ē) = 1."
+      ]
+    },
+    Science: {
+      'Chemical Reactions & Equations': [
+        "Law of Conservation of Mass (Lavoisier, Gr 10): In any chemical reaction, the total mass of reactants equals the total mass of products.",
+        "Law of Definite Proportions (Proust, Gr 9): A chemical compound always contains the same elements in the same fixed proportion by mass, regardless of source or method of preparation."
+      ],
+      'Electricity': [
+        "Ohm's Law (Gr 10): At constant temperature, the current through a conductor is directly proportional to the potential difference across it. (V = IR, where R is constant for a given conductor)",
+        "Joule's Law of Heating (Gr 10): Heat produced in a conductor H = I²Rt — proportional to the square of current, the resistance, and the time of flow."
+      ],
+      'Light — Reflection & Refraction': [
+        "Laws of Reflection (Gr 8/10): (1) Angle of incidence = angle of reflection. (2) Incident ray, normal, and reflected ray are coplanar.",
+        "Laws of Refraction — Snell's Law (Gr 10): (1) Incident ray, normal, and refracted ray are coplanar. (2) n₁ sin θ₁ = n₂ sin θ₂ (ratio of sines is constant for two given media).",
+        "Theorem (Gr 10): The refractive index n = c/v = sin i / sin r (Snell's Law consequence)."
+      ],
+      'Magnetic Effects of Electric Current': [
+        "Faraday's First Law of Electromagnetic Induction (Gr 10): Whenever the magnetic flux through a circuit changes, an EMF is induced in it.",
+        "Faraday's Second Law (Gr 10): The magnitude of induced EMF is directly proportional to the rate of change of magnetic flux linkage.",
+        "Lenz's Law (Gr 10): The direction of induced current is always such that it opposes the cause producing it (a consequence of conservation of energy).",
+        "Fleming's Left-Hand Rule (motor effect): If the index finger points in the direction of the magnetic field and the middle finger in the direction of current, the thumb points in the direction of the force on the conductor.",
+        "Fleming's Right-Hand Rule (generator effect): If the thumb points in the direction of motion and the index finger in the field direction, the middle finger gives the direction of induced current."
+      ],
+      'Heredity & Evolution': [
+        "Mendel's Law of Segregation (Gr 10): The two alleles for each trait separate during gamete formation; each gamete carries only one allele.",
+        "Mendel's Law of Independent Assortment (Gr 10): Alleles of different genes on different chromosomes assort into gametes independently of each other."
+      ],
+      'Life Processes': [
+        "Cell Theory (Gr 9): (1) All organisms are made of one or more cells. (2) The cell is the basic structural and functional unit of life. (3) All cells arise from pre-existing cells (Virchow)."
+      ]
+    }
+  },
+  ICSE: {
+    Physics: {
+      'Force & Pressure': [
+        "Newton's First Law of Motion (Gr 9): A body at rest remains at rest, and a body in uniform motion continues in uniform motion in a straight line, unless acted upon by a net external force.",
+        "Newton's Second Law of Motion (Gr 9): The net force on a body equals the rate of change of its momentum. For constant mass: F = ma.",
+        "Newton's Third Law of Motion (Gr 9): For every action force, there is an equal and opposite reaction force; the two forces act on different bodies.",
+        "Archimedes' Principle (Gr 9): When a body is wholly or partially immersed in a fluid, it experiences an upthrust equal to the weight of the fluid displaced.",
+        "Pascal's Law (Gr 9): Pressure applied to an enclosed fluid is transmitted undiminished in all directions throughout the fluid.",
+        "Law of Conservation of Momentum: The total linear momentum of a closed system remains constant when no external net force acts on it. (Follows from Newton's 3rd Law)"
+      ],
+      'Machines & Levers': [
+        "Principle of Moments (Gr 9): When a body is in equilibrium under coplanar forces, the algebraic sum of the moments of all forces about any point is zero. (Clockwise moments = anticlockwise moments)",
+        "Theorem: For an ideal machine, Mechanical Advantage = Velocity Ratio. In a real machine, MA < VR because efficiency < 100% due to friction."
+      ],
+      'Work, Energy & Power': [
+        "Work–Energy Theorem (Gr 9): The net work done on a body equals its change in kinetic energy. (W_net = ΔKE = ½mv² − ½mu²)",
+        "Law of Conservation of Energy (Gr 9): Energy cannot be created or destroyed; it can only be transformed from one form to another. The total energy of an isolated system remains constant.",
+        "Law of Conservation of Mechanical Energy: In the absence of non-conservative forces, the sum of kinetic and potential energy remains constant. (KE + PE = constant)"
+      ],
+      'Heat': [
+        "Principle of Calorimetry (Gr 9): In an isolated system, heat lost by a hotter body equals heat gained by a cooler body. (m₁c₁ΔT₁ = m₂c₂ΔT₂)",
+        "Kirchhoff's Law of Radiation (Gr 10): A good absorber of thermal radiation is also a good emitter at the same temperature (and vice versa).",
+        "Boyle's Law (Gr 9): At constant temperature, the volume of a fixed mass of gas is inversely proportional to its pressure. (PV = constant)",
+        "Charles' Law (Gr 9): At constant pressure, the volume of a fixed mass of gas is directly proportional to its absolute temperature. (V/T = constant)",
+        "Gay-Lussac's Law (Gr 9): At constant volume, the pressure of a fixed mass of gas is directly proportional to its absolute temperature. (P/T = constant)"
+      ],
+      'Sound': [
+        "Law of Reflection of Sound (Gr 9): The angle of incidence of a sound wave equals its angle of reflection; the incident wave, reflected wave, and normal lie in the same plane.",
+        "Doppler Effect (Gr 10): When the source and observer are in relative motion, the observed frequency is higher when they approach and lower when they recede."
+      ]
+    },
+    Chemistry: {
+      'Periodic Table': [
+        "Periodic Law — Modern (Moseley, Gr 10): The physical and chemical properties of elements are a periodic function of their atomic numbers."
+      ],
+      'Mole Concept': [
+        "Law of Conservation of Mass (Gr 9): In any chemical change, the total mass of products equals the total mass of reactants.",
+        "Law of Definite Proportions (Gr 9): A pure chemical compound always contains the same elements in the same proportion by mass.",
+        "Avogadro's Law (Gr 10): Equal volumes of all gases, at the same temperature and pressure, contain the same number of molecules.",
+        "Gay-Lussac's Law of Combining Volumes (Gr 10): Gases react in volumes that bear a simple whole-number ratio to each other and to the volume of any gaseous product, at the same temperature and pressure."
+      ]
+    },
+    Mathematics: {
+      'Similarity': [
+        "Basic Proportionality Theorem (Thales, Gr 9/10): If a line is drawn parallel to one side of a triangle, it divides the other two sides in the same ratio.",
+        "Converse of BPT: If a line divides two sides of a triangle in the same ratio, it is parallel to the third side.",
+        "AA Similarity Theorem: Two triangles are similar if two pairs of corresponding angles are equal.",
+        "SSS Similarity Theorem: Two triangles are similar if all three pairs of corresponding sides are proportional.",
+        "SAS Similarity Theorem: Two triangles are similar if two pairs of corresponding sides are proportional and the included angles are equal.",
+        "Area Theorem: The ratio of areas of two similar triangles = square of the ratio of their corresponding sides.",
+        "Mid-Point Theorem (Gr 9): The segment joining midpoints of two sides of a triangle is parallel to the third side and equal to half its length.",
+        "Pythagoras Theorem (Gr 8): In a right-angled triangle, hypotenuse² = sum of squares of the other two sides.",
+        "Converse of Pythagoras: If hypotenuse² = sum of squares of the other two sides, the triangle is right-angled."
+      ],
+      'Coordinate Geometry (ICSE)': [
+        "Theorem: The perpendicular bisector of a line segment is the locus of all points equidistant from the two endpoints.",
+        "Thales' Theorem in Coordinate Geometry: The angle subtended by a diameter of a circle at any point on the circle is 90°."
+      ]
+    }
+  },
+  IB: {
+    Mathematics: {
+      'Geometry & Trigonometry': [
+        "Sine Rule: a/sin A = b/sin B = c/sin C — valid for all triangles.",
+        "Cosine Rule: c² = a² + b² − 2ab cos C — generalisation of Pythagoras.",
+        "Pythagoras Theorem: In a right triangle, a² + b² = c² (c = hypotenuse).",
+        "Area Theorem: Area of triangle = ½ab sin C (C = included angle)."
+      ],
+      'Statistics & Probability': [
+        "Theorem: For any event A, 0 ≤ P(A) ≤ 1.",
+        "Addition Rule: P(A ∪ B) = P(A) + P(B) − P(A ∩ B).",
+        "Multiplication Rule: P(A ∩ B) = P(A) × P(B|A).",
+        "Independence Theorem: Events A and B are independent iff P(A ∩ B) = P(A) × P(B).",
+        "Bayes' Theorem: P(A|B) = P(B|A)·P(A) / P(B).",
+        "Complementary Probability: P(A') = 1 − P(A)."
+      ],
+      'Algebra & Indices': [
+        "Theorem: log_b x is defined only for x > 0 and b > 0, b ≠ 1.",
+        "Change of Base Theorem: log_b x = log_a x / log_a b (for any valid base a)."
+      ]
+    },
+    Sciences: {
+      'Cell Biology': [
+        "Cell Theory (3 postulates): (1) All living organisms are made of one or more cells. (2) The cell is the smallest unit of life. (3) All cells arise from pre-existing cells.",
+        "Osmosis Theorem: Water moves by osmosis from a region of higher water potential to lower water potential across a partially permeable membrane."
+      ],
+      'Genetics & Evolution': [
+        "Mendel's Law of Segregation: Each organism carries two alleles for each trait; these separate during gamete formation so each gamete carries exactly one.",
+        "Mendel's Law of Independent Assortment: Alleles of genes located on different chromosomes are distributed into gametes independently.",
+        "Hardy–Weinberg Theorem: In the absence of evolution (no mutation, selection, migration, drift, non-random mating), allele and genotype frequencies in a population remain constant. (p + q = 1; p² + 2pq + q² = 1)",
+        "Darwinian Natural Selection: Heritable variation + differential reproductive success leads to change in allele frequencies — the mechanism of evolution."
+      ],
+      'Molecular Biology': [
+        "Central Dogma of Molecular Biology (Crick): Genetic information flows DNA → RNA → Protein. DNA can replicate itself. Information cannot flow backward from protein to nucleic acid.",
+        "Semi-Conservative Replication Theorem (Meselson–Stahl): Each new DNA molecule retains one parental strand and one newly synthesised strand.",
+        "Watson–Crick Base Pairing: In DNA, A pairs with T and G pairs with C via hydrogen bonds. In RNA, A pairs with U and G with C."
+      ]
+    }
+  }
+};
+
 // ─── HTML escape helper ───────────────────────────────────────────────────────
 function esc(str) {
   return String(str)
@@ -1685,6 +1870,7 @@ const app = {
     const ch  = chapters[idx];
 
     const FILTERS = [
+      { id: 'theorems',      label: 'Theorems' },
       { id: 'all',           label: 'All' },
       { id: 'formulae',      label: 'Formulae' },
       { id: 'logic',         label: 'Logic' },
@@ -1692,11 +1878,16 @@ const app = {
       { id: 'bestPractices', label: 'Best Practices' }
     ];
     const CATS = [
+      { key: 'theorems',      label: 'Theorem',       cls: 'badge-th' },
       { key: 'formulae',      label: 'Formula',       cls: 'badge-f' },
       { key: 'logic',         label: 'Logic',         cls: 'badge-l' },
       { key: 'tips',          label: 'Tip',           cls: 'badge-t' },
       { key: 'bestPractices', label: 'Best Practice', cls: 'badge-b' }
     ];
+
+    // Merge theorems from the separate THEOREMS lookup into this chapter
+    const chapterTheorems = ((THEOREMS[state.board] || {})[subject] || {})[ch.chapter] || [];
+    const enrichedCh = { ...ch, theorems: [...(ch.theorems || []), ...chapterTheorems] };
 
     const chapterTabs = chapters.map((c, i) =>
       `<button class="ch-tab ${i === idx ? 'active' : ''}"
@@ -1711,7 +1902,7 @@ const app = {
     const items = [];
     CATS.forEach(({ key, label, cls }) => {
       if (state.revisionFilter !== 'all' && state.revisionFilter !== key) return;
-      (ch[key] || []).forEach(text =>
+      (enrichedCh[key] || []).forEach(text =>
         items.push(`<li class="rev-item"><span class="badge ${cls}">${label}</span>${esc(text)}</li>`)
       );
     });
