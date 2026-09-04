@@ -1,62 +1,64 @@
-# cloudflare-worker
+# Mygr10
 
-A small, production-shaped [Cloudflare Workers](https://workers.cloudflare.com/) template.
-No frameworks, no npm runtime dependencies — the whole runtime fits in a
-single cold-start budget and has no transitive supply-chain risk.
+A practice and self-assessment app for Indian Grade 10 students preparing for
+board examinations. Students drill the MCQ (OMR bubble-sheet) format used by
+their board so they walk into the exam hall familiar with the timing, layout,
+and question style.
 
-## Features
+## Supported boards
 
-- Zero-dependency router with `:param` segments and trailing `*` wildcards
-- Middleware pipeline (CORS, Bearer auth, KV-backed rate limiting)
-- Structured JSON logging (`console.log` → Workers Logs / Logpush)
-- Standard JSON error responses with an `error` code + `message`
-- Security headers (HSTS, nosniff, no-referrer, X-Frame-Options: DENY)
-- Optional cron trigger stubbed in `src/index.js`
+- **CBSE** — Central Board of Secondary Education
+- **ICSE** — Indian Certificate of Secondary Education
+- **IB Diploma** — International Baccalaureate (MYP-5 / pre-DP level)
+
+## Practice modes
+
+| Mode | Questions | Time | Coverage |
+|---|---|---|---|
+| Subject-wise full mock | 40 MCQs | 90 min (auto-submit) | Full syllabus |
+| Chapter-wise drill | 25 MCQs | Untimed | Single chapter |
 
 ## Project layout
 
 ```
 .
+├── public/
+│   ├── index.html          # Single-page app shell
+│   ├── app.js              # Client-side state machine + screen renderer
+│   └── style.css           # OMR-themed UI
 ├── src/
-│   ├── index.js                # fetch + scheduled handler, middleware wiring
-│   ├── router.js               # tiny pattern router
+│   ├── index.js            # Cloudflare Workers entry point + middleware wiring
+│   ├── router.js           # Zero-dep pattern router (:params, * wildcards)
 │   ├── middleware/
-│   │   ├── cors.js             # CORS (origin allow-list, preflight short-circuit)
-│   │   ├── auth.js             # Bearer token (constant-time compare)
-│   │   └── rateLimit.js        # KV sliding window
+│   │   ├── cors.js         # CORS (origin allow-list, preflight short-circuit)
+│   │   ├── auth.js         # Bearer token (constant-time compare)
+│   │   └── rateLimit.js    # KV sliding window
 │   ├── handlers/
-│   │   ├── root.js             # /, /favicon.ico
-│   │   ├── health.js           # /health
-│   │   ├── api.js              # /api/v1/*
-│   │   └── errors.js           # 404, 405, error boundary
+│   │   ├── root.js         # /, /favicon.ico
+│   │   ├── health.js       # /health
+│   │   ├── api.js          # /api/v1/* — boards, subjects, chapters, questions
+│   │   └── errors.js       # 404, 405, error boundary
 │   └── utils/
-│       ├── response.js         # json/text/redirect helpers
-│       ├── logger.js           # structured JSON logger
-│       └── validators.js       # input validation + readJson
-├── test/
-│   └── index.test.js           # vitest-style tests for handlers
-├── wrangler.toml               # Cloudflare config (entry, compat date, KV bindings)
+│       ├── response.js     # json/text/redirect helpers
+│       ├── logger.js       # Structured JSON logger
+│       └── validators.js   # Input validation + readJson
+├── wrangler.toml           # Cloudflare config (entry, compat date, KV bindings)
 ├── package.json
 ├── README.md
 ├── LICENSE
 └── CHANGELOG.md
 ```
 
-## Endpoints
+## API endpoints
 
-| Method | Path                    | Auth | Description                          |
-| ------ | ----------------------- | ---- | ------------------------------------ |
-| GET    | `/`                     | no   | Friendly landing page                |
-| GET    | `/favicon.ico`          | no   | 204                                  |
-| GET    | `/health`               | no   | Liveness/readiness probe             |
-| GET    | `/api/v1`               | no   | Version banner                       |
-| GET    | `/api/v1/echo?msg=hi`   | no   | Echo a query param                   |
-| GET    | `/api/v1/items`         | no   | List items (in-memory)               |
-| GET    | `/api/v1/items/:id`     | no   | Fetch one item                       |
-| POST   | `/api/v1/items`         | yes  | Create item (`{"name": "..."}`)      |
-
-Auth uses `Authorization: Bearer <token>`; the expected token is read
-from the `AUTH_TOKEN` environment variable / secret.
+| Method | Path | Description |
+|---|---|---|
+| GET | `/health` | Liveness/readiness probe |
+| GET | `/api/v1/boards` | List supported boards |
+| GET | `/api/v1/boards/:board/subjects` | Subjects for a board |
+| GET | `/api/v1/boards/:board/subjects/:subject/chapters` | Chapters for a subject |
+| GET | `/api/v1/boards/:board/subjects/:subject/chapters/:chapter/questions` | Questions (correct answer omitted) |
+| POST | `/api/v1/boards/:board/subjects/:subject/chapters/:chapter/submit` | Reveal correct answers + explanations |
 
 ## Getting started
 
@@ -66,35 +68,25 @@ Prerequisites: Node 18+ and a Cloudflare account.
 npm install
 npm run dev          # local dev with wrangler
 npm run deploy       # deploy to Cloudflare
-npm test             # run tests
 ```
 
 ## Configuration
 
-All runtime config is via `wrangler.toml` + environment variables / secrets:
+| Variable | Purpose |
+|---|---|
+| `CORS_ORIGIN` | Allowed Origin, `*`, or comma-separated list |
+| `RATE_LIMIT_KV` | KV namespace binding (configured in wrangler) |
+| `LOG_LEVEL` | `debug` \| `info` \| `warn` \| `error` |
+| `ENVIRONMENT` | `development` enables verbose error responses |
 
-| Variable            | Purpose                                          |
-| ------------------- | ------------------------------------------------ |
-| `AUTH_TOKEN`        | Bearer token required for write endpoints        |
-| `CORS_ORIGIN`       | Allowed Origin, `*`, or comma-separated list     |
-| `RATE_LIMIT_KV`     | KV namespace binding (configured in wrangler)    |
-| `LOG_LEVEL`         | `debug` \| `info` \| `warn` \| `error`           |
-| `ENVIRONMENT`       | `development` enables verbose error responses    |
-
-For local development, copy `.dev.vars.example` to `.dev.vars` and fill
-in the values. The file is gitignored.
+For local development, copy `.dev.vars.example` to `.dev.vars` and fill in the values.
 
 ## Architecture notes
 
-- **Middleware ordering**: CORS first so rejections still carry CORS
-  headers; rate limit before auth so an attacker cannot burn CPU on
-  token compares.
-- **Auth** is a constant-time compare against `AUTH_TOKEN`. Swap for
-  JWT or a Durable Object if you need multi-tenant or revocable auth.
-- **Rate limiting** uses KV with a fixed window. Acceptable for
-  coarse DoS protection; for stricter limits, use a Durable Object.
-- **Storage** is in-memory (per-isolate) for the demo. Production
-  code should mount KV, D1, or R2.
+- **Content is data-driven** — adding a new board or chapter is a data change in `src/handlers/api.js`; no code changes required elsewhere.
+- **Correct answers are server-side only** — `GET /questions` strips `correct` and `explanation` fields; they are returned only by `POST /submit`.
+- **Storage** — question bank is in-memory (per-isolate) for v1. Production should migrate to Cloudflare D1 or KV.
+- **Middleware ordering** — CORS first so rejections still carry the right headers; rate limit before auth so attackers cannot burn CPU on token compares.
 
 ## License
 

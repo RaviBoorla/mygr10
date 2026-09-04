@@ -114,7 +114,9 @@ const app = {
     render() {
         const appDiv = document.getElementById('app');
         appDiv.innerHTML = screens[state.currentScreen] || '';
-        
+        const screenEl = appDiv.querySelector('.screen');
+        if (screenEl) screenEl.classList.add('active');
+
         if (state.currentScreen === 'dashboard') {
             document.getElementById('display-board').innerText = state.board;
         }
@@ -171,6 +173,7 @@ const app = {
             tag: 'Topic ' + (Math.floor(i / 5) + 1)
         }));
         this.userAnswers = {};
+        this.reviewSet = new Set();
         this.currentQuestionIndex = 0;
         
         this.navigate('test-session');
@@ -207,10 +210,14 @@ const app = {
         const palette = document.getElementById('palette');
         if (!palette) return;
 
-        palette.innerHTML = this.questions.map((q, i) => `
-            <div class="omr-bubble ${this.userAnswers[q.id] !== undefined ? 'selected' : ''}" 
-                 onclick="app.jumpToQuestion(${i})">${i + 1}</div>
-        `).join('');
+        palette.innerHTML = this.questions.map((q, i) => {
+            const cls = this.reviewSet.has(i)
+                ? 'omr-bubble review'
+                : this.userAnswers[q.id] !== undefined
+                    ? 'omr-bubble answered'
+                    : 'omr-bubble';
+            return `<div class="${cls}" onclick="app.jumpToQuestion(${i})">${i + 1}</div>`;
+        }).join('');
     },
 
     selectOption(index) {
@@ -243,33 +250,38 @@ const app = {
     },
 
     markForReview() {
-        alert("Marked for review!");
+        const idx = this.currentQuestionIndex;
+        if (this.reviewSet.has(idx)) {
+            this.reviewSet.delete(idx);
+        } else {
+            this.reviewSet.add(idx);
+        }
+        this.renderPalette();
     },
 
     startTimer(timeLimit) {
-        let seconds = timeLimit || 0;
         const timerEl = document.getElementById('timer');
         if (!timerEl) return;
-        
+
         if (this.timerInterval) clearInterval(this.timerInterval);
 
+        if (timeLimit === null) {
+            timerEl.innerText = "Untimed";
+            return;
+        }
+
+        let seconds = timeLimit;
         const updateTimer = () => {
-            if (seconds <= 0 && timeLimit !== null) {
+            if (seconds <= 0) {
                 this.submitTest();
                 return;
             }
-            
-            if (timeLimit === null) {
-                timerEl.innerText = "Untimed";
-                return;
-            }
-
             const m = Math.floor(seconds / 60);
             const s = seconds % 60;
             timerEl.innerText = `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
             seconds--;
         };
-        
+
         this.timerInterval = setInterval(updateTimer, 1000);
         updateTimer();
     },

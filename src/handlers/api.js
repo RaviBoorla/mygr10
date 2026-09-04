@@ -78,14 +78,14 @@ export function getSubjects(request, ctx) {
 
 export function getChapters(request, ctx) {
     const { board, subject } = ctx.params;
-    const board = DATA.boards[board];
-    if (!board) return jsonNotFound(`Board ${board} not found`);
-    
-    const subject = board.subjects[subject];
-    if (!subject) return jsonNotFound(`Subject ${subject} not found in ${board}`);
-    
+    const boardData = DATA.boards[board];
+    if (!boardData) return jsonNotFound(`Board ${board} not found`);
+
+    const subjectData = boardData.subjects[subject];
+    if (!subjectData) return jsonNotFound(`Subject ${subject} not found in ${board}`);
+
     return jsonOk({
-        chapters: Object.keys(subject.chapters).map(id => ({ id }))
+        chapters: Object.keys(subjectData.chapters).map(id => ({ id }))
     });
 }
 

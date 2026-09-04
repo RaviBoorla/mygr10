@@ -89,80 +89,18 @@ p.subtitle { text-align: center; color: var(--text-light); margin-bottom: 24px; 
 }
 
 /* OMR Specifics */
-.test-container {
-    display: grid;
-    grid-template-columns: 1fr 250px;
-    gap: 20px;
-}
-
-.question-card {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.options-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.option-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.option-item:hover {
-    background: #f1f5f9;
-}
-
-.option-item.selected {
-    border-color: var(--primary);
-    background: #eff6ff;
-}
-
-.bubble {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.option-item.selected .bubble {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
-
-.palette-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.palette-grid {
+.omr-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
 }
 
-.palette-btn {
+.omr-bubble {
     width: 35px;
     height: 35px;
     border: 1px solid var(--border);
     border-radius: 4px;
-    background: white;
+    background: var(--white);
     cursor: pointer;
     font-size: 12px;
     display: flex;
@@ -170,33 +108,5 @@ p.subtitle { text-align: center; color: var(--text-light); margin-bottom: 24px; 
     justify-content: center;
 }
 
-.palette-btn.answered { background: var(--success); color: white; border-color: var(--success); }
-.palette-btn.marked { background: var(--warning); color: white; border-color: var(--warning); }
-.palette-btn.current { border: 2px solid var(--primary); font-weight: bold; }
-
-.timer-display {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    background: #fee2e2;
-    color: #b91c1c;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.results-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.review-item {
-    border-left: 4px solid var(--error);
-    padding-left: 15px;
-    margin-bottom: 20px;
-}
-
-.review-item.correct {
-    border-left-color: var(--success);
-}
+.omr-bubble.answered { background: var(--success); color: white; border-color: var(--success); }
+.omr-bubble.review   { background: var(--warning); color: white; border-color: var(--warning); }
