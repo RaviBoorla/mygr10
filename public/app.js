@@ -2235,26 +2235,49 @@ const NOTES_CATALOG = [
   { id: 'English',     label: 'English' },
   { id: 'Hindi',       label: 'Hindi' }
 ];
-// canonical subject → [board, REVISION key] sources to merge, in board display order
+// CBSE's combined "Science" subject holds chemistry/physics/biology chapters together —
+// name the ones that belong to each split-out subject so they can be pulled out below.
+const CBSE_SCIENCE_SPLIT = {
+  Chemistry: ['Chemical Reactions & Equations', 'Acids, Bases & Salts', 'Metals & Non-Metals', 'Carbon & its Compounds'],
+  Physics:   ['Light — Reflection & Refraction', 'Human Eye & Colourful World', 'Electricity', 'Magnetic Effects of Electric Current', 'Sources of Energy'],
+  Biology:   ['Life Processes', 'Control & Coordination', 'Reproduction', 'Heredity & Evolution']
+};
+// canonical subject → [board, REVISION key, THEOREMS key, chapter allow-list] sources to merge, in board display order
 const NOTES_SOURCES = {
-  Mathematics: [['CBSE', 'CBSE Mathematics'], ['ICSE', 'ICSE Mathematics'], ['IB', 'IB Mathematics']],
-  Physics:     [['ICSE', 'Physics']],
-  Chemistry:   [['ICSE', 'Chemistry']],
-  Biology:     [['ICSE', 'Biology'], ['IB', 'Biology']],
-  English:     [],
-  Hindi:       []
+  Mathematics: [
+    ['CBSE', 'CBSE Mathematics', 'Mathematics'],
+    ['ICSE', 'ICSE Mathematics', 'Mathematics'],
+    ['IB',   'IB Mathematics',   'Mathematics']
+  ],
+  Physics: [
+    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Physics],
+    ['ICSE', 'Physics', 'Physics']
+  ],
+  Chemistry: [
+    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Chemistry],
+    ['ICSE', 'Chemistry', 'Chemistry']
+  ],
+  Biology: [
+    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Biology],
+    ['ICSE', 'Biology', 'Biology'],
+    ['IB',   'Biology', 'Biology']
+  ],
+  English: [],
+  Hindi:   []
 };
 const _consolidatedCache = {};
 function consolidatedChapters(subjectId) {
   if (_consolidatedCache[subjectId]) return _consolidatedCache[subjectId];
   const merged = [];
-  (NOTES_SOURCES[subjectId] || []).forEach(([board, key]) => {
-    (REVISION[key] || []).forEach(ch => {
-      const name = ch.chapter.trim().toLowerCase();
-      const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
-      if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
-      else merged.push({ ...ch, _boards: [board] });
-    });
+  (NOTES_SOURCES[subjectId] || []).forEach(([board, key, theoremKey, only]) => {
+    (REVISION[key] || [])
+      .filter(ch => !only || only.includes(ch.chapter))
+      .forEach(ch => {
+        const name = ch.chapter.trim().toLowerCase();
+        const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
+        if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
+        else merged.push({ ...ch, _boards: [board], _theoremKey: theoremKey });
+      });
   });
   return (_consolidatedCache[subjectId] = merged);
 }
@@ -3115,7 +3138,8 @@ const app = {
   // Flatten one chapter into badge-tagged items, merging the separate THEOREMS lookup.
   _chapterItems(key, chapters, i) {
     const ch = chapters[i];
-    const merged = { ...ch, theorems: [...(ch.theorems || []), ...(((THEOREMS[key] || {})[ch.chapter]) || [])] };
+    const tKey = ch._theoremKey || key;
+    const merged = { ...ch, theorems: [...(ch.theorems || []), ...(((THEOREMS[tKey] || {})[ch.chapter]) || [])] };
     const out = [];
     this._CATS.forEach(cat => (merged[cat.key] || []).forEach(text =>
       out.push({ text, label: cat.label, cls: cat.cls, cat: cat.key, chapter: ch.chapter })));
