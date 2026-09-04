@@ -1851,6 +1851,11 @@ const app = {
           <div id="final-score" class="final-score"></div>
           <p id="score-comment" class="score-comment"></p>
         </div>
+        <div class="review-filter-bar">
+          <button class="rfb active" id="rfb-all"       onclick="app.setResultsFilter('all')">All Questions</button>
+          <button class="rfb"        id="rfb-incorrect" onclick="app.setResultsFilter('incorrect')">Incorrect</button>
+          <button class="rfb"        id="rfb-correct"   onclick="app.setResultsFilter('correct')">Correct</button>
+        </div>
         <div id="review-list"></div>
         <div class="results-actions">
           <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
@@ -1858,6 +1863,53 @@ const app = {
           <button class="btn" onclick="app.goHome()">Change Board</button>
         </div>
       </div>`;
+  },
+
+  setResultsFilter(f) {
+    this.resultsFilter = f;
+    ['all','incorrect','correct'].forEach(k => {
+      const el = document.getElementById('rfb-' + k);
+      if (el) el.classList.toggle('active', k === f);
+    });
+    this._renderReviewList();
+  },
+
+  _renderReviewList() {
+    const list = document.getElementById('review-list');
+    if (!list) return;
+    const data = (this.reviewData || []).filter(r => {
+      if (this.resultsFilter === 'correct')   return r.isCorrect;
+      if (this.resultsFilter === 'incorrect') return !r.isCorrect;
+      return true;
+    });
+    if (!data.length) {
+      list.innerHTML = '<div class="card empty-state">No questions in this category.</div>';
+      return;
+    }
+    list.innerHTML = data.map((r, idx) => {
+      const optHtml = r.options.map((opt, oi) => {
+        let cls = 'opt-neutral';
+        if (oi === r.correct) cls = 'opt-correct';
+        else if (oi === r.userAnswer && oi !== r.correct) cls = 'opt-wrong';
+        const label = String.fromCharCode(65 + oi);
+        const marker = oi === r.correct ? '✓' : (oi === r.userAnswer && !r.isCorrect ? '✗' : '');
+        return `<div class="rev-opt ${cls}"><span class="rev-opt-label">${label}</span><span>${esc(opt)}</span>${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}</div>`;
+      }).join('');
+      const statusBadge = r.isCorrect
+        ? '<span class="rev-badge correct">Correct</span>'
+        : r.userAnswer === undefined
+          ? '<span class="rev-badge skipped">Skipped</span>'
+          : '<span class="rev-badge wrong">Incorrect</span>';
+      return `
+        <div class="card rev-card">
+          <div class="rev-card-header">
+            <span class="rev-q-num">Q${r.num}</span>${statusBadge}
+          </div>
+          <p class="rev-q-text">${esc(r.text)}</p>
+          <div class="rev-options">${optHtml}</div>
+          <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
+        </div>`;
+    }).join('');
   },
 
   _screenRevisionList() {
@@ -1990,7 +2042,8 @@ const app = {
       text: `Sample question ${i + 1} for ${state.subject}. (Mock data — replace with API call.)`,
       options: ['Option A', 'Option B', 'Option C', 'Option D'],
       correct: Math.floor(Math.random() * 4),
-      tag: 'Topic ' + (Math.floor(i / 5) + 1)
+      tag: 'Topic ' + (Math.floor(i / 5) + 1),
+      explanation: `This is the explanation for question ${i + 1}. The correct option is highlighted above. Review your textbook notes on this topic for a deeper understanding.`
     }));
     this.userAnswers         = {};
     this.reviewSet           = new Set();
@@ -2115,19 +2168,13 @@ const app = {
     clearInterval(this.timerInterval);
 
     let score = 0;
-    const wrong = [];
-    this.questions.forEach(q => {
+    this.reviewData = this.questions.map((q, i) => {
       const ua = this.userAnswers[q.id];
-      if (ua === q.correct) {
-        score++;
-      } else {
-        wrong.push({
-          q:       q.text,
-          correct: `${String.fromCharCode(65 + q.correct)}) ${q.options[q.correct]}`,
-          user:    ua !== undefined ? `${String.fromCharCode(65 + ua)}) ${q.options[ua]}` : 'Not answered'
-        });
-      }
+      const isCorrect = ua === q.correct;
+      if (isCorrect) score++;
+      return { num: i + 1, text: q.text, options: q.options, correct: q.correct, userAnswer: ua, isCorrect, explanation: q.explanation || '' };
     });
+    this.resultsFilter = 'all';
 
     state.history = ['dashboard'];
     this.navigate('results');
@@ -2142,18 +2189,7 @@ const app = {
       pct >= 60   ? 'Good effort — review the ones you missed.' :
                     'Keep practising — you\'ll get there!';
 
-    const list = document.getElementById('review-list');
-    if (!list) return;
-    if (!wrong.length) {
-      list.innerHTML = '<div class="card empty-state" style="color:var(--success)">All answers correct!</div>';
-      return;
-    }
-    list.innerHTML = wrong.map(w => `
-      <div class="card wrong-card">
-        <p class="wrong-q">${esc(w.q)}</p>
-        <p class="wrong-user">&#10007; Your answer: ${esc(w.user)}</p>
-        <p class="wrong-correct">&#10003; Correct: ${esc(w.correct)}</p>
-      </div>`).join('');
+    this._renderReviewList();
   }
 };
 
