@@ -2414,7 +2414,14 @@ const app = {
     state.board = board;
     state.openPicker = null;
     LS.set(KEY.board, board);
-    this.render();
+    // On the notes screen the current subject may not exist in the new board.
+    // Always navigate home so the user starts fresh for the switched board.
+    const cur = parseHash();
+    if (cur.name === 'notes' || cur.name === 'results') {
+      this.go(['home']);
+    } else {
+      this.render();
+    }
   },
 
   // ── Screen: home — practice, resume and history on one page ─────────────────
