@@ -1998,32 +1998,30 @@ const app = {
 
   _screenResults() {
     return `
-      <div class="results-layout" id="results">
-        <div class="results-left">
+      <div class="screen" id="results">
+        <div class="test-topbar">
+          <p id="rev-title" class="test-title"></p>
           <div class="score-summary">
-            <div class="score-tile correct-tile"><div class="tile-val" id="stat-correct">0</div><div class="tile-lbl">Correct</div></div>
-            <div class="score-tile wrong-tile"><div class="tile-val" id="stat-wrong">0</div><div class="tile-lbl">Incorrect</div></div>
-            <div class="score-tile skip-tile"><div class="tile-val" id="stat-skip">0</div><div class="tile-lbl">Not Attempted</div></div>
-          </div>
-          <div class="card" id="rev-card-area"></div>
-          <div class="rev-nav">
-            <button class="btn" onclick="app.showReviewQuestion(app.reviewIndex - 1)">&#8592; Prev</button>
-            <button class="btn" onclick="app.showReviewQuestion(app.reviewIndex + 1)">Next &#8594;</button>
-          </div>
-          <div class="results-actions">
-            <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
-            <button class="btn primary" onclick="app.navigate('dashboard')">Dashboard</button>
-            <button class="btn" onclick="app.goHome()">Change Board</button>
+            <div class="score-tile correct-tile"><span class="tile-val" id="stat-correct">0</span><span class="tile-lbl">Correct</span></div>
+            <div class="score-tile wrong-tile"><span class="tile-val" id="stat-wrong">0</span><span class="tile-lbl">Incorrect</span></div>
+            <div class="score-tile skip-tile"><span class="tile-val" id="stat-skip">0</span><span class="tile-lbl">Not Attempted</span></div>
           </div>
         </div>
-        <div class="results-right">
-          <div class="rpal-title">Questions</div>
-          <div class="rpal-legend">
-            <div class="rpal-legend-row"><div class="rpal-dot g"></div> Correct</div>
-            <div class="rpal-legend-row"><div class="rpal-dot r"></div> Incorrect</div>
-            <div class="rpal-legend-row"><div class="rpal-dot w"></div> Not Attempted</div>
+        <div class="test-layout">
+          <div class="card question-area" id="rev-card-area"></div>
+          <div class="card palette-area">
+            <h4 class="palette-title">Question Palette</h4>
+            <div class="palette-legend">
+              <span><span class="dot rev-correct"></span>Correct</span>
+              <span><span class="dot rev-wrong"></span>Incorrect</span>
+              <span><span class="dot"></span>Not Attempted</span>
+            </div>
+            <div id="rpal-grid" class="omr-grid"></div>
+            <div class="results-actions">
+              <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
+              <button class="btn primary" onclick="app.navigate('dashboard')">Dashboard</button>
+            </div>
           </div>
-          <div class="rpal-grid" id="rpal-grid"></div>
         </div>
       </div>`;
   },
@@ -2057,11 +2055,16 @@ const app = {
       </div>
       <p class="rev-q-text">${esc(r.text)}</p>
       <div class="rev-options">${optHtml}</div>
-      <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>`;
+      <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
+      <div class="test-nav" style="margin-top:12px;">
+        <button class="btn nav-btn" onclick="app.showReviewQuestion(${this.reviewIndex - 1})">&#8592; Prev</button>
+        <span></span>
+        <button class="btn primary nav-btn" onclick="app.showReviewQuestion(${this.reviewIndex + 1})">Next &#8594;</button>
+      </div>`;
 
     // Highlight active button in palette
-    document.querySelectorAll('.rpal-btn').forEach((btn, idx) => {
-      btn.classList.toggle('active-rev', idx === this.reviewIndex);
+    document.querySelectorAll('#rpal-grid .omr-bubble').forEach((btn, idx) => {
+      btn.classList.toggle('current', idx === this.reviewIndex);
     });
   },
 
@@ -2069,8 +2072,8 @@ const app = {
     const grid = document.getElementById('rpal-grid');
     if (!grid || !this.reviewData) return;
     grid.innerHTML = this.reviewData.map((r, i) => {
-      const cls = r.isCorrect ? 'g' : r.userAnswer === undefined ? 'w' : 'r';
-      return `<button class="rpal-btn ${cls}" onclick="app.showReviewQuestion(${i})">${r.num}</button>`;
+      const cls = r.isCorrect ? 'rev-correct' : r.userAnswer === undefined ? 'rev-skip' : 'rev-wrong';
+      return `<button class="omr-bubble ${cls}" onclick="app.showReviewQuestion(${i})">${r.num}</button>`;
     }).join('');
   },
 
@@ -2359,6 +2362,7 @@ const app = {
     this.navigate('results');
 
     const setEl = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    setEl('rev-title',    `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'} — Results`);
     setEl('stat-correct', score);
     setEl('stat-wrong',   wrong);
     setEl('stat-skip',    skipped);
