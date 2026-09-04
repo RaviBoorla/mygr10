@@ -13,6 +13,12 @@
   --warning:      #f59e0b;
   --header-h:     48px;
   --radius:       10px;
+
+  /* Exam-surface geometry — change here, applies to mock, drill and review alike */
+  --exam-gutter:  12px;             /* space around and between the panels     */
+  --exam-bottom:  max(5vh, 44px);   /* breathing room under the action rows:
+                                       at least 5% of the viewport, and never
+                                       less than one button row                */
 }
 
 /* ─── Reset / base ─────────────────────────────────────────────────────────── */
@@ -27,7 +33,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-#app { max-width: 1400px; margin: 0 auto; padding-bottom: 40px; }
+#app { max-width: 1400px; margin: 0 auto; }
 
 /* Visible, consistent keyboard focus everywhere */
 :focus-visible {
@@ -90,10 +96,13 @@ body {
 /* ─── Screen wrapper ───────────────────────────────────────────────────────── */
 .screen {
   display: flex; flex-direction: column; gap: 16px;
-  padding: 24px 16px;
+  padding: 24px 16px 40px;
   animation: fadeIn .2s ease;
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+/* Full-height shells fade without the 6px slide — a transform on a viewport-tall
+   element pushes past the fold and flashes a scrollbar on every screen change. */
+@keyframes fadeInPlace { from { opacity: 0; } to { opacity: 1; } }
 
 h2 { margin: 0 0 4px; font-size: 22px; }
 .subtitle { margin: 0; color: var(--text-light); font-size: 14px; }
@@ -207,20 +216,30 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .recent-desc small { color: var(--text-light); font-size: 12px; }
 
 /* ─── Test session ─────────────────────────────────────────────────────────── */
-.test-screen { padding: 0; gap: 0; }
+/* Mock test, chapter drill and the question-and-answer review all share this
+   shell: header, then a natural-height topbar, then panels taking the rest.
+   Previously only .test-screen dropped .screen's padding, so #results overflowed
+   the viewport and clipped its action rows. */
+.test-screen, #results {
+  padding: 0; gap: 0;
+  animation: fadeInPlace .2s ease;
+  display: flex; flex-direction: column;
+  height: calc(100dvh - var(--header-h));
+  overflow: hidden;
+}
 
 .test-topbar {
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; padding: 8px 16px;
   background: var(--surface); border-bottom: 1px solid var(--border);
-  position: sticky; top: var(--header-h); z-index: 9;
+  position: relative; z-index: 9;
   flex-wrap: wrap;
 }
 .test-title { margin: 0; font-size: 13px; color: var(--text-light); font-weight: 500; }
 .test-topbar-right { display: flex; align-items: center; gap: 10px; }
 .answered-count { font-size: 12px; font-weight: 600; color: var(--text-light); }
 
-.progress-rail { height: 3px; background: var(--border); position: sticky; top: calc(var(--header-h) + 44px); z-index: 8; }
+.progress-rail { height: 3px; background: var(--border); position: relative; z-index: 8; }
 .progress-fill { height: 100%; width: 0; background: var(--success); transition: width .2s ease; }
 
 .timer {
@@ -239,9 +258,9 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .test-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
-  gap: 12px;
-  padding: 12px;
-  height: calc(100dvh - var(--header-h) - 47px);
+  gap: var(--exam-gutter);
+  padding: var(--exam-gutter) var(--exam-gutter) var(--exam-bottom);
+  flex: 1; min-height: 0;
   overflow: hidden;
 }
 .question-area {
@@ -417,7 +436,13 @@ kbd {
 .modal-actions .btn { min-width: 100px; text-align: center; }
 
 /* ─── Revision notes ───────────────────────────────────────────────────────── */
-.rev-screen { gap: 12px; padding: 16px 16px 0; }
+.rev-screen {
+  gap: 12px; padding: 16px 16px 0;
+  animation: fadeInPlace .2s ease;
+  display: flex; flex-direction: column;
+  height: calc(100dvh - var(--header-h));
+  overflow: hidden;
+}
 
 .rev-topbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .rev-topbar h2 { margin: 0; white-space: nowrap; }
@@ -441,7 +466,8 @@ kbd {
 
 .rev-layout {
   display: grid; grid-template-columns: 240px 1fr; gap: 16px;
-  height: calc(100dvh - var(--header-h) - 110px);
+  flex: 1; min-height: 0;
+  padding-bottom: var(--exam-bottom);
 }
 .rev-nav { display: flex; flex-direction: column; gap: 4px; overflow-y: auto; padding: 6px; margin: -6px; }
 .ch-select-wrap { display: none; }
@@ -496,6 +522,7 @@ kbd {
 
 /* ─── Small screens: stack, never trap content in a fixed-height pane ──────── */
 @media (max-width: 820px) {
+  .test-screen, #results, .rev-screen { height: auto; overflow: visible; }
   .test-layout, .rev-layout { grid-template-columns: 1fr; height: auto; overflow: visible; }
   .question-area, .rev-content, .rev-nav { height: auto; overflow: visible; }
   .palette-area { height: auto; }
