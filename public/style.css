@@ -244,9 +244,9 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 /* Test body */
 .test-layout {
   display: grid;
-  grid-template-columns: 0.9fr 266px;
-  gap: 16px;
-  padding: 8px 16px;
+  grid-template-columns: 1fr 292px;
+  gap: 12px;
+  padding: 8px 12px;
   height: calc(100vh - var(--header-h) - 16px);
   overflow: hidden;
 }
@@ -259,6 +259,7 @@ h2 { margin: 0 0 4px; font-size: 22px; }
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 12px !important;
 }
 @media (max-width: 640px) { .test-layout { grid-template-columns: 1fr; } }
 
@@ -341,7 +342,7 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .omr-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+  gap: 4px;
 }
 
 .omr-bubble {
@@ -415,6 +416,24 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 /* Actions inside palette panel */
 .results-actions { display: flex; gap: 6px; flex-direction: column; margin-top: 4px; }
 .results-actions .btn { text-align: center; width: 100%; }
+
+/* ─── Custom modal (replaces browser confirm) ──────────────────────────────── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,.45);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-overlay[hidden] { display: none !important; }
+.modal-box {
+  background: var(--surface); border-radius: 14px;
+  padding: 28px 32px; max-width: 400px; width: 90%;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  text-align: center;
+}
+.modal-title { font-size: 17px; font-weight: 700; margin: 0 0 8px; }
+.modal-body  { font-size: 14px; color: var(--text-light); margin: 0 0 22px; line-height: 1.5; }
+.modal-actions { display: flex; gap: 10px; justify-content: center; }
+.modal-actions .btn { min-width: 100px; }
 
 /* ─── Revision ─────────────────────────────────────────────────────────────── */
 .rev-screen { gap: 12px; }

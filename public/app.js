@@ -1964,6 +1964,16 @@ const app = {
   _screenTest() {
     return `
       <div class="screen" id="test-session">
+        <div class="modal-overlay" id="test-modal" hidden>
+          <div class="modal-box">
+            <p class="modal-title" id="modal-title"></p>
+            <p class="modal-body"  id="modal-body"></p>
+            <div class="modal-actions">
+              <button class="btn" id="modal-cancel" onclick="app._modalCancel()">Cancel</button>
+              <button class="btn primary" id="modal-ok" onclick="app._modalOk()">OK</button>
+            </div>
+          </div>
+        </div>
         <div class="test-topbar">
           <p id="test-title" class="test-title"></p>
           <div class="test-topbar-right">
@@ -2325,7 +2335,7 @@ const app = {
 
     let s = timeLimit;
     const tick = () => {
-      if (s <= 0) { this.submitTest(); return; }
+      if (s <= 0) { this.submitTest(true); return; }
       const m = Math.floor(s / 60), sec = s % 60;
       el.textContent = `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
       el.classList.toggle('timer-low', s <= 300);
@@ -2335,40 +2345,72 @@ const app = {
     tick();
   },
 
-  quitTest() {
-    if (!confirm('Quit this test? Your progress will be lost.')) return;
-    clearInterval(this.timerInterval);
-    state.history = [];
-    this.navigate('dashboard');
+  _showModal(title, body, onOk, okLabel = 'OK', showCancel = true) {
+    const overlay = document.getElementById('test-modal');
+    if (!overlay) { if (onOk) onOk(); return; }
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-body').textContent  = body;
+    document.getElementById('modal-ok').textContent    = okLabel;
+    document.getElementById('modal-cancel').hidden     = !showCancel;
+    this._modalOnOk = onOk;
+    overlay.hidden = false;
+  },
+  _modalOk() {
+    document.getElementById('test-modal').hidden = true;
+    if (this._modalOnOk) this._modalOnOk();
+    this._modalOnOk = null;
+  },
+  _modalCancel() {
+    document.getElementById('test-modal').hidden = true;
+    this._modalOnOk = null;
   },
 
-  submitTest() {
+  quitTest() {
+    this._showModal('Quit Test', 'Quit this test? Your progress will be lost.', () => {
+      clearInterval(this.timerInterval);
+      state.history = [];
+      this.navigate('dashboard');
+    }, 'Quit');
+  },
+
+  submitTest(force = false) {
     const unanswered = this.questions.filter(q => this.userAnswers[q.id] === undefined).length;
-    if (unanswered > 0 && !confirm(`${unanswered} question${unanswered > 1 ? 's' : ''} unanswered. Submit anyway?`)) return;
-    clearInterval(this.timerInterval);
+    const doSubmit = () => {
+      clearInterval(this.timerInterval);
 
-    let score = 0;
-    this.reviewData = this.questions.map((q, i) => {
-      const ua = this.userAnswers[q.id];
-      const isCorrect = ua === q.correct;
-      if (isCorrect) score++;
-      return { num: i + 1, text: q.text, options: q.options, correct: q.correct, userAnswer: ua, isCorrect, explanation: q.explanation || '' };
-    });
-    const wrong    = this.reviewData.filter(r => !r.isCorrect && r.userAnswer !== undefined).length;
-    const skipped  = this.reviewData.filter(r => r.userAnswer === undefined).length;
-    this.reviewIndex = 0;
+      let score = 0;
+      this.reviewData = this.questions.map((q, i) => {
+        const ua = this.userAnswers[q.id];
+        const isCorrect = ua === q.correct;
+        if (isCorrect) score++;
+        return { num: i + 1, text: q.text, options: q.options, correct: q.correct, userAnswer: ua, isCorrect, explanation: q.explanation || '', chapter: q.chapter || '' };
+      });
+      const wrong   = this.reviewData.filter(r => !r.isCorrect && r.userAnswer !== undefined).length;
+      const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
+      this.reviewIndex = 0;
 
-    state.history = ['dashboard'];
-    this.navigate('results');
+      state.history = ['dashboard'];
+      this.navigate('results');
 
-    const setEl = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-    setEl('rev-title',    `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'} — Results`);
-    setEl('stat-correct', score);
-    setEl('stat-wrong',   wrong);
-    setEl('stat-skip',    skipped);
+      const setEl = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+      setEl('rev-title',    `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'} — Results`);
+      setEl('stat-correct', score);
+      setEl('stat-wrong',   wrong);
+      setEl('stat-skip',    skipped);
 
-    this._buildReviewPalette();
-    this.showReviewQuestion(0);
+      this._buildReviewPalette();
+      this.showReviewQuestion(0);
+    };
+
+    if (!force && unanswered > 0) {
+      this._showModal(
+        'Submit Test?',
+        `${unanswered} question${unanswered > 1 ? 's' : ''} unanswered. Submit anyway?`,
+        doSubmit, 'Submit'
+      );
+    } else {
+      doSubmit();
+    }
   }
 };
 
