@@ -1521,7 +1521,7 @@ const REVISION = {
         ]
       }
     ],
-    Sciences: [
+    Biology: [
       {
         chapter: 'Cell Biology',
         formulae: [],
@@ -1762,7 +1762,7 @@ const THEOREMS = {
         "Change of Base Theorem: log_b x = log_a x / log_a b (for any valid base a)."
       ]
   },
-  Sciences: {
+  Biology: {
       'Cell Biology': [
         "Cell Theory (3 postulates): (1) All living organisms are made of one or more cells. (2) The cell is the smallest unit of life. (3) All cells arise from pre-existing cells.",
         "Osmosis Theorem: Water moves by osmosis from a region of higher water potential to lower water potential across a partially permeable membrane."
@@ -1801,7 +1801,7 @@ function esc(str) {
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
   ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
-  IB:   ['Mathematics', 'Sciences', 'Individuals & Societies', 'Language & Literature']
+  IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
 };
 
 // ─── App ──────────────────────────────────────────────────────────────────────
@@ -2177,7 +2177,7 @@ const app = {
 
   selectSubject(subject) {
     state.subject = subject;
-    state.mode === 'mock' ? this.startTest(40, 90 * 60) : this.startTest(25, null);
+    state.mode === 'mock' ? this.startTest(50, 40 * 60) : this.startTest(25, null);
   },
 
   openRevisionSubject(subject) {

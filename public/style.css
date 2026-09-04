@@ -250,9 +250,15 @@ h2 { margin: 0 0 4px; font-size: 22px; }
   height: calc(100vh - var(--header-h) - 16px);
   overflow: hidden;
 }
-.question-area, .palette-area {
+.question-area {
   overflow-y: auto;
   height: 100%;
+}
+.palette-area {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 @media (max-width: 640px) { .test-layout { grid-template-columns: 1fr; } }
 
@@ -328,7 +334,8 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .dot.review      { background: var(--warning); }
 .dot.current-dot { border: 2px solid var(--primary); background: #eff6ff; }
 
-.submit-btn { width: 100%; margin-top: auto; text-align: center; }
+.omr-grid   { flex: 1; overflow-y: auto; }
+.submit-btn { width: 100%; flex-shrink: 0; text-align: center; margin-top: 8px; }
 
 /* ─── OMR palette bubbles ──────────────────────────────────────────────────── */
 .omr-grid {
