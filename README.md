@@ -15,8 +15,12 @@ and question style.
 
 | Mode | Questions | Time | Coverage |
 |---|---|---|---|
-| Subject-wise full mock | 40 MCQs | 90 min (auto-submit) | Full syllabus |
-| Chapter-wise drill | 25 MCQs | Untimed | Single chapter |
+| Full mock test | 50 MCQs | 40 min (auto-submit) | Whole subject |
+| Chapter drill | up to 25 MCQs | Untimed | One chapter |
+
+Both modes are started from the home screen — a mock is one click, a chapter
+drill is two (subject → chapter). Revision notes for a subject are one click
+from the same card.
 
 ## Project layout
 
@@ -24,8 +28,9 @@ and question style.
 .
 ├── public/
 │   ├── index.html          # Single-page app shell
-│   ├── app.js              # Client-side state machine + screen renderer
-│   └── style.css           # OMR-themed UI
+│   ├── app.js              # Revision content + hash router + screen renderer
+│   ├── style.css           # OMR-themed UI
+│   └── questions/*.json    # Client-side question banks (one per subject)
 ├── src/
 │   ├── index.js            # Cloudflare Workers entry point + middleware wiring
 │   ├── router.js           # Zero-dep pattern router (:params, * wildcards)
@@ -80,6 +85,20 @@ npm run deploy       # deploy to Cloudflare
 | `ENVIRONMENT` | `development` enables verbose error responses |
 
 For local development, copy `.dev.vars.example` to `.dev.vars` and fill in the values.
+
+## Client behaviour
+
+- **Hash routing** — every screen has a URL (`#/home`, `#/notes/Mathematics/5`),
+  so the browser Back button, refresh and shared links all work.
+- **Board is remembered** — chosen once, kept in `localStorage`, changed from the
+  header select without losing where you are.
+- **In-progress tests survive** — answers, marks and the remaining time are
+  written to `localStorage` on every change, so leaving or reloading offers a
+  Resume rather than losing the attempt.
+- **Keyboard-first test taking** — `A`–`D` / `1`–`4` answer, `←` `→` move,
+  `M` marks for review, `Enter` advances; answering auto-advances by default.
+- **No fabricated questions** — a subject without a bank is labelled
+  "coming soon" and a failed load shows an error, never placeholder answers.
 
 ## Architecture notes
 

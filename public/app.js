@@ -1,15 +1,3 @@
-// ─── State ────────────────────────────────────────────────────────────────────
-const state = {
-  board:           null,
-  mode:            null,   // 'mock' | 'drill'
-  subject:         null,
-  revisionSubject: null,
-  revisionChapter: 0,
-  revisionFilter:  'all',  // 'all'|'formulae'|'logic'|'tips'|'bestPractices'
-  currentScreen:   'board-selection',
-  history:         []      // stack of previous screen ids
-};
-
 // ─── Revision content (board-agnostic — all boards share one set) ─────────────
 const REVISION = {
   Mathematics: [
@@ -1787,7 +1775,7 @@ Object.assign(THEOREMS.Mathematics, THEOREMS['IB Mathematics'] || {});
 delete THEOREMS['ICSE Mathematics'];
 delete THEOREMS['IB Mathematics'];
 
-// ─── HTML escape helper ───────────────────────────────────────────────────────
+// ─── Small helpers ────────────────────────────────────────────────────────────
 function esc(str) {
   return String(str)
     .replace(/&/g, '&amp;')
@@ -1797,63 +1785,171 @@ function esc(str) {
     .replace(/>/g, '&gt;');
 }
 
-// ─── Subject lists ────────────────────────────────────────────────────────────
+// localStorage that never throws (private mode, quota, disabled cookies)
+const LS = {
+  get(key, fallback) {
+    try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); }
+    catch { return fallback; }
+  },
+  set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch { /* ignore */ } },
+  del(key)        { try { localStorage.removeItem(key); } catch { /* ignore */ } }
+};
+
+const KEY = {
+  board:    'rise.board',
+  draft:    'rise.draft',
+  results:  'rise.results',
+  autoNext: 'rise.autoNext'
+};
+
+// Unbiased Fisher–Yates on a copy (Array#sort with a random comparator is biased)
+function shuffle(list) {
+  const a = list.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function plural(n, word) { return `${n} ${word}${n === 1 ? '' : 's'}`; }
+
+// ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
   ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
   IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
 };
 
+// Subject → question-bank file. Subjects absent here have no bank yet.
+const BANKS = {
+  'Mathematics':    'mathematics',
+  'Science':        'science',
+  'Social Science': 'social-science'
+};
+
+const BOARDS = [
+  { id: 'CBSE', name: 'CBSE',       desc: 'Central Board of Secondary Education' },
+  { id: 'ICSE', name: 'ICSE',       desc: 'Indian Certificate of Secondary Education' },
+  { id: 'IB',   name: 'IB Diploma', desc: 'International Baccalaureate (MYP-5)' }
+];
+
+const MODES = {
+  mock:  { label: 'Full Mock Test', count: 50, seconds: 40 * 60 },
+  drill: { label: 'Chapter Drill',  count: 25, seconds: null }
+};
+
+// Revision notes are keyed either per board ("ICSE Mathematics") or shared ("Physics").
+function notesKeyFor(board, subject) {
+  if (REVISION[`${board} ${subject}`]) return `${board} ${subject}`;
+  if (REVISION[subject]) return subject;
+  return null;
+}
+function notesSubjects(board) {
+  return (SUBJECTS[board] || []).filter(s => notesKeyFor(board, s));
+}
+
+// ─── Question bank loading (cached — one fetch per subject per session) ───────
+const bankCache = {};
+function loadBank(subject) {
+  if (bankCache[subject]) return Promise.resolve(bankCache[subject]);
+  const slug = BANKS[subject];
+  if (!slug) return Promise.reject(new Error('No question bank for ' + subject));
+  return fetch(`questions/${slug}.json`)
+    .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
+    .then(list => { bankCache[subject] = list; return list; });
+}
+function chaptersOf(list) {
+  const seen = new Map();
+  list.forEach(q => seen.set(q.chapter || 'General', (seen.get(q.chapter || 'General') || 0) + 1));
+  return [...seen.entries()].map(([name, count]) => ({ name, count }));
+}
+
+// ─── State ────────────────────────────────────────────────────────────────────
+const state = {
+  board:   LS.get(KEY.board, null),
+  screen:  'board',
+  params:  [],
+  notesQuery: '',
+  notesFilter: 'all',
+  openPicker: null   // subject whose chapter list is expanded on the home screen
+};
+
+// ─── Routing (real URLs → real Back button, refresh-safe, shareable) ──────────
+function parseHash() {
+  const raw = (location.hash || '').replace(/^#\/?/, '');
+  const parts = raw.split('/').filter(Boolean).map(p => { try { return decodeURIComponent(p); } catch { return p; } });
+  return { name: parts[0] || '', parts: parts.slice(1) };
+}
+function buildHash(parts) {
+  return '#/' + parts.map(encodeURIComponent).join('/');
+}
+
 // ─── App ──────────────────────────────────────────────────────────────────────
 const app = {
 
+  depth: 0,          // how many in-app navigations deep we are (drives the Back affordance)
+  session: null,     // live test session
+  reviewData: null,  // last completed attempt
+
   // ── Bootstrap ──────────────────────────────────────────────────────────────
-  init() { this.render(); },
+  init() {
+    this.autoNext = LS.get(KEY.autoNext, true);
+    window.addEventListener('hashchange', () => this.render());
+    document.addEventListener('keydown', e => this.onKey(e));
+    if (!location.hash && state.board) this.go(['home'], true);
+    this.render();
+  },
 
   // ── Navigation ─────────────────────────────────────────────────────────────
-  navigate(screenId) {
-    if (state.currentScreen !== screenId) state.history.push(state.currentScreen);
-    state.currentScreen = screenId;
-    this.render();
-    window.scrollTo(0, 0);
+  go(parts, replace = false) {
+    const target = buildHash(parts);
+    if (location.hash === target) { this.render(); return; }
+    if (replace) {
+      location.replace(location.pathname + location.search + target);
+      this.render();
+    } else {
+      this.depth++;
+      location.hash = target;   // hashchange fires → render()
+    }
   },
 
   goBack() {
-    if (!state.history.length) return;
-    state.currentScreen = state.history.pop();
-    this.render();
-    window.scrollTo(0, 0);
-  },
-
-  goHome() {
-    if (this.timerInterval) clearInterval(this.timerInterval);
-    Object.assign(state, {
-      board: null, mode: null, subject: null,
-      revisionSubject: null, revisionChapter: 0, revisionFilter: 'all',
-      currentScreen: 'board-selection', history: []
-    });
-    this.render();
+    if (this.depth > 0) { this.depth--; history.back(); }
+    else this.go(['home'], true);
   },
 
   // ── Render ──────────────────────────────────────────────────────────────────
   render() {
-    document.getElementById('app').innerHTML =
-      this._header() + this._screen();
+    const r = parseHash();
+    let name = r.name || 'home';
+
+    // Guards: never strand the user on a screen that has no data behind it.
+    if (!state.board)                        name = 'board';
+    else if (name === 'test' && !this.session)    name = 'home';
+    else if (name === 'results' && !this.reviewData) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board'].includes(name)) name = 'home';
+
+    state.screen = name;
+    state.params = r.parts;
+
+    document.getElementById('app').innerHTML = this._header() + this._screen(name, r.parts);
+    window.scrollTo(0, 0);
+    this._afterRender(name, r.parts);
   },
 
   _header() {
-    const s = state.currentScreen;
-    if (s === 'board-selection') return '';
+    if (state.screen === 'board') return '';
 
-    const isDuringTest = s === 'test-session';
-    const canGoBack    = state.history.length > 0 && s !== 'dashboard' && !isDuringTest;
+    const inTest   = state.screen === 'test';
+    const showBack = !inTest && state.screen !== 'home';
 
-    const back = canGoBack
-      ? `<button class="hdr-back" onclick="app.goBack()">&#8592; Back</button>`
-      : `<div></div>`;
+    const back = showBack
+      ? `<button class="hdr-back" onclick="app.goBack()" aria-label="Go back">&#8592; Back</button>`
+      : '';
 
-    const logoTarget = isDuringTest ? '' : `onclick="app.navigate('dashboard')"`;
-    const logo = `<span class="hdr-logo" ${logoTarget}>
+    const logoAttrs = inTest ? 'aria-disabled="true"' : `onclick="app.go(['home'])" title="Home"`;
+    const logo = `<button class="hdr-logo" ${logoAttrs}>
       <svg class="logo-icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
         <rect width="32" height="32" rx="7" fill="#2563eb"/>
         <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
@@ -1861,13 +1957,18 @@ const app = {
         <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
         <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
       </svg>
-      Rise
-    </span>`;
+      <span>Rise</span>
+    </button>`;
 
-    const right = state.board
-      ? `<span class="hdr-board">${esc(state.board)}</span>
-         <button class="hdr-change" onclick="app.goHome()">Change board</button>`
-      : '';
+    // Switching board is a one-step control, not a trip back to the welcome screen.
+    const right = inTest
+      ? `<span class="hdr-board">${esc(state.board)}</span>`
+      : `<label class="hdr-board-picker">
+           <span class="sr-only">Board</span>
+           <select class="hdr-board-select" onchange="app.switchBoard(this.value)">
+             ${BOARDS.map(b => `<option value="${b.id}" ${b.id === state.board ? 'selected' : ''}>${esc(b.name)}</option>`).join('')}
+           </select>
+         </label>`;
 
     return `
       <header class="app-header">
@@ -1876,21 +1977,29 @@ const app = {
       </header>`;
   },
 
-  _screen() {
-    switch (state.currentScreen) {
-      case 'board-selection':   return this._screenBoardSelect();
-      case 'dashboard':         return this._screenDashboard();
-      case 'subject-selection': return this._screenSubjectSelect();
-      case 'test-session':      return this._screenTest();
-      case 'results':           return this._screenResults();
-      case 'revision':          return this._screenRevisionList();
-      case 'revision-content':  return this._screenRevisionContent();
-      default: return '<p class="screen">Unknown screen.</p>';
+  _screen(name, params) {
+    switch (name) {
+      case 'board':   return this._screenBoard();
+      case 'home':    return this._screenHome();
+      case 'notes':   return params.length ? this._screenNotes(params[0], Number(params[1]) || 0)
+                                           : this._screenNotesIndex();
+      case 'test':    return this._screenTest();
+      case 'results': return this._screenResults();
+      default:        return '';
     }
   },
 
-  // ── Screens ─────────────────────────────────────────────────────────────────
-  _screenBoardSelect() {
+  _afterRender(name, params) {
+    if (name === 'home')    this._hydrateHome();
+    if (name === 'test') {
+      this.renderQuestion(); this.renderPalette(); this.renderTestMeta();
+      if (this.session.questions.length) this.startTimer();
+    }
+    if (name === 'results') { this._buildReviewPalette(); this.showReviewQuestion(this.reviewIndex || 0); }
+  },
+
+  // ── Screen: board selection (first run only) ────────────────────────────────
+  _screenBoard() {
     return `
       <div class="screen welcome-screen">
         <div class="welcome-logo">
@@ -1905,135 +2014,552 @@ const app = {
         </div>
         <p class="welcome-sub">Grade 10 board exam practice</p>
         <div class="board-list">
-          <button class="btn board-btn" onclick="app.setBoard('CBSE')">
-            <strong>CBSE</strong>
-            <span>Central Board of Secondary Education</span>
-          </button>
-          <button class="btn board-btn" onclick="app.setBoard('ICSE')">
-            <strong>ICSE</strong>
-            <span>Indian Certificate of Secondary Education</span>
-          </button>
-          <button class="btn board-btn" onclick="app.setBoard('IB')">
-            <strong>IB Diploma</strong>
-            <span>International Baccalaureate (MYP-5)</span>
-          </button>
+          ${BOARDS.map(b => `
+            <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
+              <strong>${esc(b.name)}</strong>
+              <span>${esc(b.desc)}</span>
+            </button>`).join('')}
         </div>
+        <p class="welcome-foot">We remember your choice — you can switch boards any time from the header.</p>
       </div>`;
   },
 
-  _screenDashboard() {
-    return `
-      <div class="screen">
-        <h2 class="dash-title">What would you like to do today?</h2>
-        <div class="mode-grid">
-          <div class="mode-card card" onclick="app.setMode('mock')">
-            <div class="mode-icon">&#128221;</div>
-            <h3>Full Mock Test</h3>
-            <p>50 MCQs &bull; 40 min &bull; Full syllabus</p>
-            <button class="btn primary">Start Mock</button>
-          </div>
-          <div class="mode-card card" onclick="app.setMode('drill')">
-            <div class="mode-icon">&#127919;</div>
-            <h3>Chapter Drill</h3>
-            <p>25 MCQs &bull; Untimed &bull; One chapter</p>
-            <button class="btn primary">Start Drill</button>
-          </div>
-          <div class="mode-card card" onclick="app.startRevision()">
-            <div class="mode-icon">&#128218;</div>
-            <h3>Revision Notes</h3>
-            <p>Formulae, tips &amp; key concepts</p>
-            <button class="btn primary">Open</button>
-          </div>
+  setBoard(board) {
+    state.board = board;
+    LS.set(KEY.board, board);
+    this.go(['home'], true);
+  },
+
+  switchBoard(board) {
+    if (board === state.board) return;
+    state.board = board;
+    state.openPicker = null;
+    LS.set(KEY.board, board);
+    this.render();
+  },
+
+  // ── Screen: home — practice, resume and history on one page ─────────────────
+  _screenHome() {
+    const subjects = SUBJECTS[state.board] || [];
+    const draft    = this._draft();
+
+    const resume = draft ? `
+      <section class="resume-banner card">
+        <div>
+          <p class="resume-title">Resume your ${esc(MODES[draft.mode].label.toLowerCase())}</p>
+          <p class="resume-sub">${esc(draft.subject)}${draft.chapter ? ' · ' + esc(draft.chapter) : ''} —
+             ${Object.keys(draft.answers).length} of ${draft.questions.length} answered${draft.remaining !== null ? ` · ${this._mmss(draft.remaining)} left` : ''}</p>
         </div>
+        <div class="resume-actions">
+          <button class="btn" onclick="app.discardDraft()">Discard</button>
+          <button class="btn primary" onclick="app.resumeDraft()">Resume</button>
+        </div>
+      </section>` : '';
+
+    const cards = subjects.map(subject => {
+      const hasBank  = !!BANKS[subject];
+      const notesKey = notesKeyFor(state.board, subject);
+      const open     = state.openPicker === subject;
+
+      const actions = hasBank
+        ? `<button class="btn primary act-btn" onclick="app.startTest({subject:'${esc(subject)}',mode:'mock'})">
+             Mock test <small>${MODES.mock.count} Q · ${MODES.mock.seconds / 60} min</small>
+           </button>
+           <button class="btn act-btn" aria-expanded="${open}" onclick="app.togglePicker('${esc(subject)}')">
+             Chapter drill <small>${MODES.drill.count} Q · untimed</small>
+           </button>`
+        : `<span class="soon-tag">Question bank coming soon</span>`;
+
+      const notesBtn = notesKey
+        ? `<button class="btn act-btn ghost" onclick="app.go(['notes','${esc(subject)}','0'])">Revision notes</button>`
+        : '';
+
+      return `
+        <article class="subj-card card">
+          <header class="subj-head">
+            <h3>${esc(subject)}</h3>
+            <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
+          </header>
+          <div class="subj-actions">${actions}${notesBtn}</div>
+          <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
+            <p class="picker-hint">Pick a chapter to drill</p>
+            <div class="chapter-chips" data-chips="${esc(subject)}">Loading chapters…</div>
+          </div>
+        </article>`;
+    }).join('');
+
+    const history = LS.get(KEY.results, []).slice(0, 5);
+    const recent = history.length ? `
+      <section class="home-section">
+        <h2 class="section-title">Recent attempts</h2>
+        <ul class="recent-list">
+          ${history.map((h, i) => `
+            <li class="recent-row card">
+              <span class="recent-score ${h.correct / h.total >= 0.6 ? 'good' : 'weak'}">${Math.round(h.correct / h.total * 100)}%</span>
+              <span class="recent-desc">
+                <strong>${esc(h.subject)}</strong>
+                <small>${esc(MODES[h.mode].label)}${h.chapter ? ' · ' + esc(h.chapter) : ''} · ${h.correct}/${h.total} · ${esc(h.when)}</small>
+              </span>
+              <button class="btn small" onclick="app.retryFromHistory(${i})">Retry</button>
+            </li>`).join('')}
+        </ul>
+      </section>` : '';
+
+    return `
+      <div class="screen home-screen">
+        ${resume}
+        <section class="home-section">
+          <h2 class="section-title">Practice</h2>
+          <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
+          <div class="subj-grid">${cards}</div>
+        </section>
+        ${recent}
       </div>`;
   },
 
-  _screenSubjectSelect() {
-    const label = state.mode === 'mock' ? 'Full Mock Test' : 'Chapter Drill';
-    const btns  = (SUBJECTS[state.board] || []).map(s =>
-      `<button class="btn subject-btn" onclick="app.selectSubject('${esc(s)}')">${esc(s)}</button>`
-    ).join('');
-    return `
-      <div class="screen">
-        <h2>${esc(label)}</h2>
-        <p class="subtitle">Choose a subject</p>
-        <div class="btn-group">${btns}</div>
-      </div>`;
+  // Fill in question/chapter counts once banks load; keeps the first paint instant.
+  _hydrateHome() {
+    (SUBJECTS[state.board] || []).filter(s => BANKS[s]).forEach(subject => {
+      loadBank(subject).then(list => {
+        const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
+        if (meta) meta.textContent = `${list.length} questions · ${chaptersOf(list).length} chapters`;
+        if (state.openPicker === subject) this._renderChips(subject, list);
+      }).catch(() => {
+        const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
+        if (meta) meta.textContent = 'Questions unavailable';
+      });
+    });
+    if (state.openPicker) {
+      const bank = bankCache[state.openPicker];
+      if (bank) this._renderChips(state.openPicker, bank);
+    }
+  },
+
+  togglePicker(subject) {
+    state.openPicker = state.openPicker === subject ? null : subject;
+    // Only touch the affected card — no full-screen repaint, no lost scroll position.
+    document.querySelectorAll('[data-picker]').forEach(el => {
+      el.hidden = el.getAttribute('data-picker') !== state.openPicker;
+    });
+    document.querySelectorAll('[aria-expanded]').forEach(el => el.setAttribute('aria-expanded', 'false'));
+    if (!state.openPicker) return;
+    const card = document.querySelector(`[data-picker="${CSS.escape(subject)}"]`);
+    const btn  = card && card.parentElement.querySelector('[aria-expanded]');
+    if (btn) btn.setAttribute('aria-expanded', 'true');
+    loadBank(subject)
+      .then(list => this._renderChips(subject, list))
+      .catch(err => {
+        const box = document.querySelector(`[data-chips="${CSS.escape(subject)}"]`);
+        if (box) box.textContent = err.message;
+      });
+  },
+
+  _renderChips(subject, list) {
+    const box = document.querySelector(`[data-chips="${CSS.escape(subject)}"]`);
+    if (!box) return;
+    const chapters = chaptersOf(list);
+    // Index-based handlers: chapter titles never have to survive an HTML attribute round-trip.
+    this._chapterIndex = this._chapterIndex || {};
+    this._chapterIndex[subject] = chapters.map(c => c.name);
+    box.innerHTML = chapters
+      .map((c, i) => `<button class="chip" onclick="app.drillChapter('${esc(subject)}',${i})">
+                   ${esc(c.name)}<span class="chip-count">${c.count}</span>
+                 </button>`).join('');
+  },
+
+  drillChapter(subject, i) {
+    const name = ((this._chapterIndex || {})[subject] || [])[i];
+    if (name) this.startTest({ subject, mode: 'drill', chapter: name });
+  },
+
+  // ── Draft (an in-progress test survives navigation, refresh and crashes) ────
+  _draft() {
+    const d = LS.get(KEY.draft, null);
+    if (!d || !d.questions || !d.questions.length) return null;
+    if (d.board !== state.board) return null;
+    return d;
+  },
+  _saveDraft() {
+    if (!this.session) return;
+    LS.set(KEY.draft, { ...this.session, board: state.board });
+  },
+  discardDraft() { LS.del(KEY.draft); this.render(); },
+  resumeDraft() {
+    const d = this._draft();
+    if (!d) { this.render(); return; }
+    this.session = d;
+    this.go(['test']);
+  },
+
+  // ── Test session ────────────────────────────────────────────────────────────
+  startTest({ subject, mode, chapter = null }) {
+    const cfg = MODES[mode];
+    this.session = {
+      subject, mode, chapter,
+      questions: [], answers: {}, marked: [], index: 0,
+      remaining: cfg.seconds, loading: true, error: null
+    };
+    LS.del(KEY.draft);
+    this.go(['test']);
+
+    loadBank(subject)
+      .then(all => {
+        const pool = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
+        if (!pool.length) throw new Error('No questions in this chapter yet.');
+        const picked = shuffle(pool).slice(0, cfg.count);
+        this.session.questions = picked.map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
+        this.session.loading = false;
+        if (state.screen !== 'test') return;
+        this.renderQuestion(); this.renderPalette(); this.renderTestMeta();
+        this.startTimer();
+        this._saveDraft();
+      })
+      .catch(err => {
+        // No fabricated questions: an honest error beats fake answers in a study app.
+        this.session.loading = false;
+        this.session.error = err.message || 'Could not load questions.';
+        if (state.screen === 'test') this.renderTestMeta();
+      });
   },
 
   _screenTest() {
+    const s = this.session;
+    const title = `${state.board} · ${esc(s.subject)}${s.chapter ? ' · ' + esc(s.chapter) : ''} · ${MODES[s.mode].label}`;
     return `
-      <div class="screen" id="test-session">
-        <div class="modal-overlay" id="test-modal" hidden>
-          <div class="modal-box">
-            <p class="modal-title" id="modal-title"></p>
-            <p class="modal-body"  id="modal-body"></p>
-            <div class="modal-actions">
-              <button class="btn" id="modal-cancel" onclick="app._modalCancel()">Cancel</button>
-              <button class="btn primary" id="modal-ok" onclick="app._modalOk()">OK</button>
-            </div>
-          </div>
-        </div>
+      <div class="screen test-screen" id="test-session">
+        ${this._modalMarkup()}
         <div class="test-topbar">
-          <p id="test-title" class="test-title"></p>
+          <p class="test-title">${title}</p>
           <div class="test-topbar-right">
-            <div id="timer" class="timer">--:--</div>
+            <span class="answered-count" id="answered-count"></span>
+            <div id="timer" class="timer" role="timer" aria-live="off">--:--</div>
             <button class="btn quit-btn" onclick="app.quitTest()">Quit</button>
           </div>
         </div>
+        <div class="progress-rail"><div class="progress-fill" id="progress-fill"></div></div>
         <div class="test-layout">
           <div class="card question-area">
+            <div id="q-state"></div>
             <p id="q-number" class="q-number"></p>
+            <p id="q-chapter" class="q-chapter"></p>
             <p id="q-text"   class="q-text"></p>
-            <div id="options-list"></div>
+            <div id="options-list" role="group" aria-label="Answer options"></div>
             <div class="test-nav">
               <button class="btn nav-btn" onclick="app.prevQuestion()">&#8592; Prev</button>
               <button class="btn review-btn" id="mark-btn" onclick="app.markForReview()">&#9873; Mark</button>
               <button class="btn primary nav-btn" onclick="app.nextQuestion()">Next &#8594;</button>
             </div>
+            <p class="kbd-hint">Keyboard: <kbd>A</kbd>–<kbd>D</kbd> or <kbd>1</kbd>–<kbd>4</kbd> answer ·
+               <kbd>←</kbd> <kbd>→</kbd> move · <kbd>M</kbd> mark · <kbd>Enter</kbd> next</p>
           </div>
-          <div class="card palette-area">
-            <h4 class="palette-title">Question Palette</h4>
-            <div class="palette-legend">
-              <span><span class="dot answered"></span>Answered</span>
-              <span><span class="dot review"></span>Review</span>
-              <span><span class="dot current-dot"></span>Current</span>
+          <details class="card palette-area" id="palette-panel" open>
+            <summary class="palette-summary">Question palette</summary>
+            <div class="palette-inner">
+              <div class="palette-legend">
+                <span><span class="dot answered"></span>Answered</span>
+                <span><span class="dot review"></span>Marked</span>
+                <span><span class="dot current-dot"></span>Current</span>
+              </div>
+              <div id="palette" class="omr-grid"></div>
+              <label class="autonext">
+                <input type="checkbox" id="autonext-toggle" ${this.autoNext ? 'checked' : ''}
+                       onchange="app.setAutoNext(this.checked)">
+                Jump to next question after answering
+              </label>
+              <button class="btn primary submit-btn" onclick="app.submitTest()">Submit test</button>
             </div>
-            <div id="palette" class="omr-grid"></div>
-            <button class="btn primary submit-btn" onclick="app.submitTest()">Submit Test</button>
-          </div>
+          </details>
         </div>
       </div>`;
   },
 
+  renderTestMeta() {
+    const s = this.session;
+    const box = document.getElementById('q-state');
+    if (!box) return;
+    if (s.loading) {
+      box.innerHTML = '<div class="inline-state">Loading questions…</div>';
+    } else if (s.error) {
+      box.innerHTML = `<div class="inline-state error">${esc(s.error)}
+        <button class="btn small" onclick="app.go(['home'])">Back to practice</button></div>`;
+    } else {
+      box.innerHTML = '';
+    }
+    const answered = Object.keys(s.answers).length;
+    const total    = s.questions.length || 1;
+    const counter  = document.getElementById('answered-count');
+    if (counter) counter.textContent = s.questions.length ? `${answered}/${s.questions.length} answered` : '';
+    const fill = document.getElementById('progress-fill');
+    if (fill) fill.style.width = `${Math.round(answered / total * 100)}%`;
+  },
+
+  renderQuestion() {
+    const s = this.session;
+    if (!s || !s.questions.length) return;
+    const q = s.questions[s.index];
+    const numEl  = document.getElementById('q-number');
+    const chEl   = document.getElementById('q-chapter');
+    const textEl = document.getElementById('q-text');
+    const optEl  = document.getElementById('options-list');
+    if (!numEl || !textEl || !optEl) return;
+
+    numEl.textContent  = `Question ${s.index + 1} of ${s.questions.length}`;
+    if (chEl) chEl.textContent = q.chapter || '';
+    textEl.textContent = q.text;
+
+    optEl.innerHTML = q.options.map((opt, i) => {
+      const selected = s.answers[q.id] === i;
+      return `<button class="option-btn ${selected ? 'selected' : ''}"
+                      aria-pressed="${selected}" onclick="app.selectOption(${i})">
+                <span class="option-letter">${String.fromCharCode(65 + i)}</span>
+                <span>${esc(opt)}</span>
+              </button>`;
+    }).join('');
+
+    const markBtn = document.getElementById('mark-btn');
+    if (markBtn) {
+      const marked = s.marked.includes(s.index);
+      markBtn.classList.toggle('marked', marked);
+      markBtn.innerHTML = marked ? '&#9873; Marked' : '&#9873; Mark';
+    }
+    const prev = document.querySelector('.test-nav .nav-btn');
+    if (prev) prev.disabled = s.index === 0;
+  },
+
+  renderPalette() {
+    const s = this.session;
+    const palette = document.getElementById('palette');
+    if (!palette || !s) return;
+    palette.innerHTML = s.questions.map((q, i) => {
+      const cls = ['omr-bubble',
+        s.marked.includes(i) ? 'review' : s.answers[q.id] !== undefined ? 'answered' : '',
+        i === s.index ? 'current' : ''
+      ].filter(Boolean).join(' ');
+      return `<button class="${cls}" ${i === s.index ? 'aria-current="true"' : ''}
+                      onclick="app.jumpToQuestion(${i})"
+                      aria-label="Question ${i + 1}">${i + 1}</button>`;
+    }).join('');
+  },
+
+  setAutoNext(on) { this.autoNext = on; LS.set(KEY.autoNext, on); },
+
+  selectOption(index) {
+    const s = this.session;
+    const q = s.questions[s.index];
+    s.answers[q.id] = index;
+    this.renderQuestion(); this.renderPalette(); this.renderTestMeta();
+    this._saveDraft();
+    if (this.autoNext && s.index < s.questions.length - 1) {
+      setTimeout(() => { if (this.session === s) this.nextQuestion(); }, 180);
+    }
+  },
+
+  nextQuestion() { this.jumpToQuestion(this.session.index + 1); },
+  prevQuestion() { this.jumpToQuestion(this.session.index - 1); },
+
+  jumpToQuestion(index) {
+    const s = this.session;
+    if (!s || !s.questions.length) return;
+    s.index = Math.max(0, Math.min(index, s.questions.length - 1));
+    this.renderQuestion(); this.renderPalette();
+    this._saveDraft();
+    const area = document.querySelector('.question-area');
+    if (area) area.scrollTop = 0;
+  },
+
+  markForReview() {
+    const s = this.session;
+    const at = s.marked.indexOf(s.index);
+    at === -1 ? s.marked.push(s.index) : s.marked.splice(at, 1);
+    this.renderQuestion(); this.renderPalette();
+    this._saveDraft();
+  },
+
+  _mmss(sec) {
+    const m = Math.floor(sec / 60), r = sec % 60;
+    return `${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
+  },
+
+  startTimer() {
+    clearInterval(this.timerInterval);
+    const s = this.session;
+    const el = document.getElementById('timer');
+    if (!s || !el) return;
+    if (s.remaining === null) { el.textContent = 'Untimed'; el.classList.add('untimed'); return; }
+
+    let ticks = 0;
+    const tick = () => {
+      if (s.remaining <= 0) { clearInterval(this.timerInterval); this.submitTest(true); return; }
+      el.textContent = this._mmss(s.remaining);
+      el.classList.toggle('timer-low', s.remaining <= 300);
+      if (s.remaining === 300) el.setAttribute('aria-live', 'polite');
+      s.remaining--;
+      if (++ticks % 5 === 0) this._saveDraft();
+    };
+    this.timerInterval = setInterval(tick, 1000);
+    tick();
+  },
+
+  // ── Modal (Escape closes, Enter confirms, focus lands on the action) ─────────
+  _modalMarkup() {
+    return `
+      <div class="modal-overlay" id="test-modal" hidden>
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <p class="modal-title" id="modal-title"></p>
+          <p class="modal-body"  id="modal-body"></p>
+          <div class="modal-actions">
+            <button class="btn" id="modal-cancel" onclick="app._modalCancel()">Cancel</button>
+            <button class="btn primary" id="modal-ok" onclick="app._modalOk()">OK</button>
+          </div>
+        </div>
+      </div>`;
+  },
+  _modalOpen() {
+    const o = document.getElementById('test-modal');
+    return !!o && !o.hidden;
+  },
+  _showModal(title, body, onOk, okLabel = 'OK') {
+    const overlay = document.getElementById('test-modal');
+    if (!overlay) { if (onOk) onOk(); return; }
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-body').textContent  = body;
+    document.getElementById('modal-ok').textContent    = okLabel;
+    this._modalOnOk = onOk;
+    overlay.hidden = false;
+    document.getElementById('modal-ok').focus();
+  },
+  _modalOk() {
+    const o = document.getElementById('test-modal');
+    if (o) o.hidden = true;
+    const fn = this._modalOnOk; this._modalOnOk = null;
+    if (fn) fn();
+  },
+  _modalCancel() {
+    const o = document.getElementById('test-modal');
+    if (o) o.hidden = true;
+    this._modalOnOk = null;
+  },
+
+  quitTest() {
+    this._showModal('Quit this test?', 'Your answers so far will be discarded.', () => {
+      clearInterval(this.timerInterval);
+      this.session = null;
+      LS.del(KEY.draft);
+      this.go(['home'], true);
+    }, 'Quit');
+  },
+
+  submitTest(force = false) {
+    const s = this.session;
+    if (!s || !s.questions.length) return;
+    const unanswered = s.questions.filter(q => s.answers[q.id] === undefined).length;
+
+    const doSubmit = () => {
+      clearInterval(this.timerInterval);
+      let correct = 0;
+      this.reviewData = s.questions.map((q, i) => {
+        const ua = s.answers[q.id];
+        const isCorrect = ua === q.correct;
+        if (isCorrect) correct++;
+        return {
+          num: i + 1, text: q.text, options: q.options, correct: q.correct,
+          userAnswer: ua, isCorrect, explanation: q.explanation || '', chapter: q.chapter || ''
+        };
+      });
+      const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
+      const wrong   = this.reviewData.length - correct - skipped;
+
+      this.lastConfig  = { subject: s.subject, mode: s.mode, chapter: s.chapter };
+      this.reviewIndex = 0;
+      this.reviewFilter = 'all';
+      this.summary = { correct, wrong, skipped, total: this.reviewData.length };
+
+      const past = LS.get(KEY.results, []);
+      past.unshift({
+        ...this.lastConfig, board: state.board, correct, total: this.reviewData.length,
+        when: new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'short' })
+      });
+      LS.set(KEY.results, past.slice(0, 10));
+
+      this.session = null;
+      LS.del(KEY.draft);
+      this.go(['results'], true);
+    };
+
+    if (!force && unanswered > 0) {
+      this._showModal('Submit test?', `${plural(unanswered, 'question')} still unanswered.`, doSubmit, 'Submit');
+    } else {
+      doSubmit();
+    }
+  },
+
+  // ── Screen: results ─────────────────────────────────────────────────────────
   _screenResults() {
+    const { correct, wrong, skipped, total } = this.summary;
+    const pct = Math.round(correct / total * 100);
+    const cfg = this.lastConfig;
+    const FILTERS = [
+      { id: 'all',     label: `All ${total}` },
+      { id: 'wrong',   label: `Incorrect ${wrong}` },
+      { id: 'skipped', label: `Skipped ${skipped}` }
+    ];
     return `
       <div class="screen" id="results">
         <div class="test-topbar">
-          <p id="rev-title" class="test-title"></p>
+          <p class="test-title">${esc(cfg.subject)}${cfg.chapter ? ' · ' + esc(cfg.chapter) : ''} · ${MODES[cfg.mode].label} — results</p>
           <div class="score-summary">
-            <div class="score-tile correct-tile"><span class="tile-val" id="stat-correct">0</span><span class="tile-lbl">Correct</span></div>
-            <div class="score-tile wrong-tile"><span class="tile-val" id="stat-wrong">0</span><span class="tile-lbl">Incorrect</span></div>
-            <div class="score-tile skip-tile"><span class="tile-val" id="stat-skip">0</span><span class="tile-lbl">Not Attempted</span></div>
+            <div class="score-tile pct-tile ${pct >= 60 ? 'good' : 'weak'}"><span class="tile-val">${pct}%</span><span class="tile-lbl">Score</span></div>
+            <div class="score-tile correct-tile"><span class="tile-val">${correct}</span><span class="tile-lbl">Correct</span></div>
+            <div class="score-tile wrong-tile"><span class="tile-val">${wrong}</span><span class="tile-lbl">Incorrect</span></div>
+            <div class="score-tile skip-tile"><span class="tile-val">${skipped}</span><span class="tile-lbl">Skipped</span></div>
           </div>
         </div>
         <div class="test-layout">
           <div class="card question-area" id="rev-card-area"></div>
           <div class="card palette-area">
-            <h4 class="palette-title">Question Palette</h4>
-            <div class="palette-legend">
-              <span><span class="dot rev-correct"></span>Correct</span>
-              <span><span class="dot rev-wrong"></span>Incorrect</span>
-              <span><span class="dot"></span>Not Attempted</span>
-            </div>
-            <div id="rpal-grid" class="omr-grid"></div>
-            <div class="results-actions">
-              <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
-              <button class="btn primary" onclick="app.navigate('dashboard')">Dashboard</button>
+            <div class="palette-inner">
+              <div class="filter-bar small-filters">
+                ${FILTERS.map(f => `<button class="filter-tab ${this.reviewFilter === f.id ? 'active' : ''}"
+                    onclick="app.setReviewFilter('${f.id}')">${f.label}</button>`).join('')}
+              </div>
+              <div id="rpal-grid" class="omr-grid"></div>
+              <div class="results-actions">
+                <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : 'drill'}</button>
+                <button class="btn" onclick="app.go(['home'],true)">Back to practice</button>
+              </div>
             </div>
           </div>
         </div>
       </div>`;
+  },
+
+  setReviewFilter(id) {
+    this.reviewFilter = id;
+    document.querySelectorAll('#results .filter-tab').forEach(btn =>
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes(`'${id}'`)));
+    this._buildReviewPalette();
+    const first = this._reviewList()[0];
+    if (first) this.showReviewQuestion(this.reviewData.indexOf(first));
+  },
+
+  _reviewList() {
+    const d = this.reviewData || [];
+    if (this.reviewFilter === 'wrong')   return d.filter(r => !r.isCorrect && r.userAnswer !== undefined);
+    if (this.reviewFilter === 'skipped') return d.filter(r => r.userAnswer === undefined);
+    return d;
+  },
+
+  _buildReviewPalette() {
+    const grid = document.getElementById('rpal-grid');
+    if (!grid || !this.reviewData) return;
+    const visible = this._reviewList();
+    if (!visible.length) { grid.innerHTML = '<p class="empty-inline">Nothing here — nice work.</p>'; return; }
+    grid.innerHTML = visible.map(r => {
+      const i = this.reviewData.indexOf(r);
+      const cls = r.isCorrect ? 'rev-correct' : r.userAnswer === undefined ? 'rev-skip' : 'rev-wrong';
+      return `<button class="omr-bubble ${cls}" onclick="app.showReviewQuestion(${i})"
+                      aria-label="Question ${r.num}">${r.num}</button>`;
+    }).join('');
   },
 
   showReviewQuestion(i) {
@@ -2041,375 +2567,253 @@ const app = {
     if (!data.length) return;
     this.reviewIndex = Math.max(0, Math.min(i, data.length - 1));
     const r = data[this.reviewIndex];
+    const visible = this._reviewList();
+    const pos = visible.indexOf(r);
 
     const optHtml = r.options.map((opt, oi) => {
       let cls = 'opt-neutral';
       if (oi === r.correct) cls = 'opt-correct';
-      else if (oi === r.userAnswer && oi !== r.correct) cls = 'opt-wrong';
-      const label = String.fromCharCode(65 + oi);
+      else if (oi === r.userAnswer) cls = 'opt-wrong';
       const marker = oi === r.correct ? '✓' : (oi === r.userAnswer && !r.isCorrect ? '✗' : '');
-      return `<div class="rev-opt ${cls}"><span class="rev-opt-label">${label}</span><span>${esc(opt)}</span>${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}</div>`;
+      return `<div class="rev-opt ${cls}">
+                <span class="rev-opt-label">${String.fromCharCode(65 + oi)}</span>
+                <span>${esc(opt)}</span>
+                ${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}
+              </div>`;
     }).join('');
 
-    const badge = r.isCorrect
-      ? '<span class="rev-badge correct">Correct</span>'
-      : r.userAnswer === undefined
-        ? '<span class="rev-badge skipped">Not Attempted</span>'
-        : '<span class="rev-badge wrong">Incorrect</span>';
+    const badge = r.isCorrect ? '<span class="rev-badge correct">Correct</span>'
+      : r.userAnswer === undefined ? '<span class="rev-badge skipped">Not attempted</span>'
+      : '<span class="rev-badge wrong">Incorrect</span>';
+
+    const prevR = pos > 0 ? visible[pos - 1] : null;
+    const nextR = pos > -1 && pos < visible.length - 1 ? visible[pos + 1] : null;
 
     const area = document.getElementById('rev-card-area');
     if (area) area.innerHTML = `
       <div class="rev-card-header">
         <span class="rev-q-num">Q${r.num} of ${data.length}</span>${badge}
-        <span style="margin-left:auto;font-size:12px;color:var(--text-light)">${esc(r.chapter || '')}</span>
+        <span class="rev-chapter">${esc(r.chapter || '')}</span>
       </div>
       <p class="rev-q-text">${esc(r.text)}</p>
       <div class="rev-options">${optHtml}</div>
-      <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
-      <div class="test-nav" style="margin-top:12px;">
-        <button class="btn nav-btn" onclick="app.showReviewQuestion(${this.reviewIndex - 1})">&#8592; Prev</button>
-        <span></span>
-        <button class="btn primary nav-btn" onclick="app.showReviewQuestion(${this.reviewIndex + 1})">Next &#8594;</button>
+      <div class="rev-explanation"><strong>Why:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
+      <div class="test-nav">
+        <button class="btn nav-btn" ${prevR ? `onclick="app.showReviewQuestion(${data.indexOf(prevR)})"` : 'disabled'}>&#8592; Prev</button>
+        <button class="btn primary nav-btn" ${nextR ? `onclick="app.showReviewQuestion(${data.indexOf(nextR)})"` : 'disabled'}>Next &#8594;</button>
       </div>`;
 
-    // Highlight active button in palette
-    document.querySelectorAll('#rpal-grid .omr-bubble').forEach((btn, idx) => {
-      btn.classList.toggle('current', idx === this.reviewIndex);
+    document.querySelectorAll('#rpal-grid .omr-bubble').forEach(btn => {
+      btn.classList.toggle('current', btn.textContent.trim() === String(r.num));
     });
   },
 
-  _buildReviewPalette() {
-    const grid = document.getElementById('rpal-grid');
-    if (!grid || !this.reviewData) return;
-    grid.innerHTML = this.reviewData.map((r, i) => {
-      const cls = r.isCorrect ? 'rev-correct' : r.userAnswer === undefined ? 'rev-skip' : 'rev-wrong';
-      return `<button class="omr-bubble ${cls}" onclick="app.showReviewQuestion(${i})">${r.num}</button>`;
-    }).join('');
+  retryLast() { this.startTest({ ...this.lastConfig }); },
+
+  retryFromHistory(i) {
+    const h = LS.get(KEY.results, [])[i];
+    if (h) this.startTest({ subject: h.subject, mode: h.mode, chapter: h.chapter || null });
   },
 
-  _screenRevisionList() {
-    const btns = Object.keys(REVISION).map(s =>
-      `<button class="btn subject-btn" onclick="app.openRevisionSubject('${esc(s)}')">${esc(s)}</button>`
-    ).join('');
+  // ── Screen: revision notes ──────────────────────────────────────────────────
+  _screenNotesIndex() {
+    const subjects = notesSubjects(state.board);
+    if (!subjects.length) {
+      return `<div class="screen"><h2>Revision notes</h2>
+        <div class="card empty-state">Notes for ${esc(state.board)} are coming soon.</div></div>`;
+    }
     return `
       <div class="screen">
-        <h2>Revision Notes</h2>
-        <p class="subtitle">Pick a subject to review formulae, tips &amp; key concepts</p>
-        <div class="btn-group">${btns}</div>
+        <h2>Revision notes</h2>
+        <p class="subtitle">Formulae, theorems, logic and exam tips</p>
+        <div class="subj-grid">
+          ${subjects.map(s => {
+            const chapters = REVISION[notesKeyFor(state.board, s)] || [];
+            return `<button class="btn board-btn" onclick="app.go(['notes','${esc(s)}','0'])">
+                      <strong>${esc(s)}</strong><span>${plural(chapters.length, 'chapter')}</span>
+                    </button>`;
+          }).join('')}
+        </div>
       </div>`;
   },
 
-  _screenRevisionContent() {
-    const subject  = state.revisionSubject;
-    const chapters = REVISION[subject];
-
-    if (!chapters || chapters.length === 0) {
-      return `
-        <div class="screen">
-          <h2>${esc(subject)}</h2>
-          <div class="card empty-state">Revision notes for this subject are coming soon.</div>
-        </div>`;
+  _screenNotes(subject, chapterIdx) {
+    const key = notesKeyFor(state.board, subject);
+    if (!key) {
+      return `<div class="screen"><h2>${esc(subject)}</h2>
+        <div class="card empty-state">Notes for this subject are coming soon.
+          <button class="btn" onclick="app.go(['notes'])">See available notes</button></div></div>`;
     }
-
-    const idx = Math.min(state.revisionChapter, chapters.length - 1);
-    const ch  = chapters[idx];
-
-    const FILTERS = [
-      { id: 'theorems',      label: 'Theorems' },
-      { id: 'all',           label: 'All' },
-      { id: 'formulae',      label: 'Formulae' },
-      { id: 'logic',         label: 'Logic' },
-      { id: 'tips',          label: 'Tips' },
-      { id: 'bestPractices', label: 'Best Practices' }
-    ];
-    const CATS = [
-      { key: 'theorems',      label: 'Theorem',       cls: 'badge-th' },
-      { key: 'formulae',      label: 'Formula',       cls: 'badge-f' },
-      { key: 'logic',         label: 'Logic',         cls: 'badge-l' },
-      { key: 'tips',          label: 'Tip',           cls: 'badge-t' },
-      { key: 'bestPractices', label: 'Best Practice', cls: 'badge-b' }
-    ];
-
-    // Merge theorems from the separate THEOREMS lookup into this chapter
-    const chapterTheorems = (THEOREMS[subject] || {})[ch.chapter] || [];
-    const enrichedCh = { ...ch, theorems: [...(ch.theorems || []), ...chapterTheorems] };
-
-    const chapterTabs = chapters.map((c, i) =>
-      `<button class="ch-tab ${i === idx ? 'active' : ''}"
-               onclick="app.selectRevisionChapter(${i})">${esc(c.chapter)}</button>`
-    ).join('');
-
-    const filterBar = FILTERS.map(f =>
-      `<button class="filter-tab ${state.revisionFilter === f.id ? 'active' : ''}"
-               onclick="app.setFilter('${f.id}')">${f.label}</button>`
-    ).join('');
-
-    const items = [];
-    CATS.forEach(({ key, label, cls }) => {
-      if (state.revisionFilter !== 'all' && state.revisionFilter !== key) return;
-      (enrichedCh[key] || []).forEach(text =>
-        items.push(`<li class="rev-item"><span class="badge ${cls}">${label}</span>${esc(text)}</li>`)
-      );
-    });
-
-    const contentHtml = items.length
-      ? `<ul class="rev-list">${items.join('')}</ul>`
-      : '<div class="empty-state">No items match this filter.</div>';
-
+    const chapters = REVISION[key];
+    const idx = Math.max(0, Math.min(chapterIdx, chapters.length - 1));
     return `
       <div class="screen rev-screen">
         <div class="rev-topbar">
           <h2>${esc(subject)}</h2>
-          <div class="filter-bar">${filterBar}</div>
+          <input class="notes-search" id="notes-search" type="search" placeholder="Search all chapters…  ( / )"
+                 value="${esc(state.notesQuery)}" oninput="app.setNotesQuery(this.value)">
+          <div class="filter-bar" id="notes-filters">${this._filterBar(this._chapterItems(key, chapters, idx))}</div>
         </div>
+        <label class="ch-select-wrap">
+          <span class="sr-only">Chapter</span>
+          <select class="ch-select" id="notes-select" onchange="app.selectChapter(Number(this.value))">
+            ${this._chapterOptions(chapters, idx)}
+          </select>
+        </label>
         <div class="rev-layout">
-          <nav class="rev-nav">${chapterTabs}</nav>
-          <div class="rev-content card">
-            <h3 class="rev-ch-title">${esc(ch.chapter)}</h3>
-            ${contentHtml}
-          </div>
+          <nav class="rev-nav" id="notes-nav" aria-label="Chapters">${this._chapterTabs(subject, chapters, idx)}</nav>
+          <div class="rev-content card" id="notes-body">${this._notesBody(key, chapters, idx)}</div>
         </div>
       </div>`;
   },
 
-  // ── Actions ──────────────────────────────────────────────────────────────────
-  setBoard(board) {
-    state.board = board;
-    state.history = [];
-    this.navigate('dashboard');
-  },
+  _FILTERS: [
+    { id: 'all',           label: 'All' },
+    { id: 'theorems',      label: 'Theorems' },
+    { id: 'formulae',      label: 'Formulae' },
+    { id: 'logic',         label: 'Logic' },
+    { id: 'tips',          label: 'Tips' },
+    { id: 'bestPractices', label: 'Best practices' }
+  ],
+  _CATS: [
+    { key: 'theorems',      label: 'Theorem',       cls: 'badge-th' },
+    { key: 'formulae',      label: 'Formula',       cls: 'badge-f'  },
+    { key: 'logic',         label: 'Logic',         cls: 'badge-l'  },
+    { key: 'tips',          label: 'Tip',           cls: 'badge-t'  },
+    { key: 'bestPractices', label: 'Best practice', cls: 'badge-b'  }
+  ],
 
-  setMode(mode) {
-    state.mode = mode;
-    this.navigate('subject-selection');
-  },
-
-  startRevision() {
-    this.navigate('revision');
-  },
-
-  selectSubject(subject) {
-    state.subject = subject;
-    state.mode === 'mock' ? this.startTest(50, 40 * 60) : this.startTest(25, null);
-  },
-
-  openRevisionSubject(subject) {
-    state.revisionSubject = subject;
-    state.revisionChapter = 0;
-    state.revisionFilter  = 'all';
-    this.navigate('revision-content');
-  },
-
-  selectRevisionChapter(idx) {
-    state.revisionChapter = idx;
-    document.getElementById('app').innerHTML = this._header() + this._screenRevisionContent();
-  },
-
-  setFilter(filter) {
-    state.revisionFilter = filter;
-    document.getElementById('app').innerHTML = this._header() + this._screenRevisionContent();
-  },
-
-  // ── Test session ─────────────────────────────────────────────────────────────
-  startTest(qCount, timeLimit) {
-    const slug = state.subject.toLowerCase().replace(/ /g, '-');
-    const file = `/questions/${slug}.json`;
-
-    this.userAnswers          = {};
-    this.reviewSet            = new Set();
-    this.currentQuestionIndex = 0;
-    this.navigate('test-session');
-
-    const titleEl = document.getElementById('test-title');
-    if (titleEl) titleEl.textContent =
-      `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'}`;
-
-    fetch(file)
-      .then(r => r.ok ? r.json() : Promise.reject('not found'))
-      .then(all => {
-        // Shuffle and pick qCount questions
-        const shuffled = all.sort(() => Math.random() - 0.5).slice(0, qCount);
-        this.questions = shuffled.map((q, i) => ({ id: i, ...q }));
-        this.renderQuestion();
-        this.renderPalette();
-        this.startTimer(timeLimit);
-      })
-      .catch(() => {
-        // Fallback to placeholder questions when JSON not yet available
-        this.questions = Array.from({ length: qCount }, (_, i) => ({
-          id: i,
-          text: `Question ${i + 1} for ${state.subject}. (Content coming soon.)`,
-          options: ['Option A', 'Option B', 'Option C', 'Option D'],
-          correct: Math.floor(Math.random() * 4),
-          chapter: state.subject,
-          explanation: 'Explanation will be available once questions are loaded.'
-        }));
-        this.renderQuestion();
-        this.renderPalette();
-        this.startTimer(timeLimit);
-      });
-  },
-
-  renderQuestion() {
-    const q       = this.questions[this.currentQuestionIndex];
-    const numEl   = document.getElementById('q-number');
-    const textEl  = document.getElementById('q-text');
-    const optEl   = document.getElementById('options-list');
-    const markBtn = document.getElementById('mark-btn');
-    if (!numEl || !textEl || !optEl) return;
-
-    numEl.textContent  = `Question ${this.currentQuestionIndex + 1} of ${this.questions.length}`;
-    textEl.textContent = q.text;
-
-    optEl.innerHTML = ['A','B','C','D'].map((letter, i) =>
-      `<button class="option-btn ${this.userAnswers[q.id] === i ? 'selected' : ''}"
-               onclick="app.selectOption(${i})">
-         <span class="option-letter">${letter}</span>
-         <span>${esc(q.options[i])}</span>
-       </button>`
-    ).join('');
-
-    if (markBtn) {
-      const marked = this.reviewSet.has(this.currentQuestionIndex);
-      markBtn.classList.toggle('marked', marked);
-      markBtn.textContent = marked ? '⚑ Marked' : '⚑ Mark';
-    }
-  },
-
-  renderPalette() {
-    const palette = document.getElementById('palette');
-    if (!palette) return;
-    palette.innerHTML = this.questions.map((q, i) => {
-      const answered = this.userAnswers[q.id] !== undefined;
-      const reviewed = this.reviewSet.has(i);
-      const current  = i === this.currentQuestionIndex;
-      const cls = ['omr-bubble',
-        reviewed ? 'review' : answered ? 'answered' : '',
-        current  ? 'current' : ''
-      ].filter(Boolean).join(' ');
-      return `<div class="${cls}" onclick="app.jumpToQuestion(${i})">${i + 1}</div>`;
+  _filterBar(items) {
+    const counts = {};
+    (items || []).forEach(it => { counts[it.cat] = (counts[it.cat] || 0) + 1; });
+    return this._FILTERS.map(f => {
+      const n = f.id === 'all' ? (items || []).length : (counts[f.id] || 0);
+      const dead = items && n === 0;
+      return `<button class="filter-tab ${state.notesFilter === f.id ? 'active' : ''}"
+               ${dead ? 'disabled' : ''} onclick="app.setNotesFilter('${f.id}')">
+               ${f.label}${items ? `<span class="chip-count">${n}</span>` : ''}</button>`;
     }).join('');
   },
 
-  selectOption(index) {
-    this.userAnswers[this.questions[this.currentQuestionIndex].id] = index;
-    this.renderQuestion();
-    this.renderPalette();
+  // Small screens get a native picker: one tap through 30 chapters beats a wall of chips.
+  _chapterOptions(chapters, idx) {
+    return chapters.map((c, i) =>
+      `<option value="${i}" ${i === idx ? 'selected' : ''}>${esc(c.chapter)}</option>`).join('');
   },
 
-  nextQuestion() {
-    if (this.currentQuestionIndex < this.questions.length - 1) {
-      this.currentQuestionIndex++;
-      this.renderQuestion();
-      this.renderPalette();
+  _chapterTabs(subject, chapters, idx) {
+    const q = state.notesQuery.trim().toLowerCase();
+    return chapters.map((c, i) => {
+      const hits = q ? this._chapterItems(subject, chapters, i).filter(it => it.text.toLowerCase().includes(q)).length : 0;
+      if (q && !hits) return '';
+      return `<button class="ch-tab ${i === idx && !q ? 'active' : ''}" ${i === idx && !q ? 'aria-current="true"' : ''}
+                      onclick="app.selectChapter(${i})">
+                ${esc(c.chapter)}${q ? `<span class="chip-count">${hits}</span>` : ''}
+              </button>`;
+    }).join('') || '<p class="empty-inline">No chapter matches.</p>';
+  },
+
+  // Flatten one chapter into badge-tagged items, merging the separate THEOREMS lookup.
+  _chapterItems(key, chapters, i) {
+    const ch = chapters[i];
+    const merged = { ...ch, theorems: [...(ch.theorems || []), ...(((THEOREMS[key] || {})[ch.chapter]) || [])] };
+    const out = [];
+    this._CATS.forEach(cat => (merged[cat.key] || []).forEach(text =>
+      out.push({ text, label: cat.label, cls: cat.cls, cat: cat.key, chapter: ch.chapter })));
+    return out;
+  },
+
+  _notesBody(key, chapters, idx) {
+    const q = state.notesQuery.trim().toLowerCase();
+    const inFilter = it => state.notesFilter === 'all' || state.notesFilter === it.cat;
+
+    if (q) {
+      const hits = chapters.flatMap((_, i) => this._chapterItems(key, chapters, i))
+        .filter(inFilter).filter(it => it.text.toLowerCase().includes(q));
+      if (!hits.length) return `<div class="empty-state">No notes match “${esc(state.notesQuery)}”.</div>`;
+      return `<h3 class="rev-ch-title">${plural(hits.length, 'match')} for “${esc(state.notesQuery)}”</h3>
+              <ul class="rev-list">${hits.map(it => this._noteItem(it, true)).join('')}</ul>`;
     }
+
+    const items = this._chapterItems(key, chapters, idx).filter(inFilter);
+    return `<h3 class="rev-ch-title">${esc(chapters[idx].chapter)}</h3>
+      ${items.length ? `<ul class="rev-list">${items.map(it => this._noteItem(it, false)).join('')}</ul>`
+                     : '<div class="empty-state">Nothing under this filter — try “All”.</div>'}`;
   },
 
-  prevQuestion() {
-    if (this.currentQuestionIndex > 0) {
-      this.currentQuestionIndex--;
-      this.renderQuestion();
-      this.renderPalette();
+  _noteItem(it, showChapter) {
+    return `<li class="rev-item"><span class="badge ${it.cls}">${it.label}</span>
+      <span>${esc(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span></li>`;
+  },
+
+  // Notes interactions repaint only the two panels — scroll and focus stay put.
+  _repaintNotes() {
+    const subject = state.params[0];
+    const key = notesKeyFor(state.board, subject);
+    if (!key) return;
+    const chapters = REVISION[key];
+    const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));
+    const nav  = document.getElementById('notes-nav');
+    const body = document.getElementById('notes-body');
+    const bar  = document.getElementById('notes-filters');
+    if (nav)  nav.innerHTML  = this._chapterTabs(subject, chapters, idx);
+    if (body) body.innerHTML = this._notesBody(key, chapters, idx);
+    if (bar)  bar.innerHTML  = this._filterBar(this._chapterItems(key, chapters, idx));
+    const sel = document.getElementById('notes-select');
+    if (sel && Number(sel.value) !== idx) sel.value = String(idx);
+  },
+
+  selectChapter(i) {
+    state.params[1] = String(i);
+    state.notesQuery = '';
+    state.notesFilter = 'all';
+    const search = document.getElementById('notes-search');
+    if (search) search.value = '';
+    // Keep the URL shareable without stacking a history entry per chapter click.
+    location.replace(location.pathname + location.search + buildHash(['notes', state.params[0], String(i)]));
+    this._repaintNotes();
+    const body = document.getElementById('notes-body');
+    if (body) body.scrollTop = 0;
+  },
+
+  setNotesFilter(id) { state.notesFilter = id; this._repaintNotes(); },
+  setNotesQuery(v)   { state.notesQuery  = v;  this._repaintNotes(); },
+
+  // ── Keyboard ────────────────────────────────────────────────────────────────
+  onKey(e) {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const tag = (e.target.tagName || '').toLowerCase();
+    const typing = tag === 'input' || tag === 'textarea' || tag === 'select';
+
+    if (this._modalOpen()) {
+      if (e.key === 'Escape') { e.preventDefault(); this._modalCancel(); }
+      return;
     }
-  },
-
-  jumpToQuestion(index) {
-    this.currentQuestionIndex = index;
-    this.renderQuestion();
-    this.renderPalette();
-  },
-
-  markForReview() {
-    const idx = this.currentQuestionIndex;
-    this.reviewSet.has(idx) ? this.reviewSet.delete(idx) : this.reviewSet.add(idx);
-    this.renderQuestion();
-    this.renderPalette();
-  },
-
-  startTimer(timeLimit) {
-    if (this.timerInterval) clearInterval(this.timerInterval);
-    const el = document.getElementById('timer');
-    if (!el) return;
-
-    if (timeLimit === null) { el.textContent = 'Untimed'; return; }
-
-    let s = timeLimit;
-    const tick = () => {
-      if (s <= 0) { this.submitTest(true); return; }
-      const m = Math.floor(s / 60), sec = s % 60;
-      el.textContent = `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
-      el.classList.toggle('timer-low', s <= 300);
-      s--;
-    };
-    this.timerInterval = setInterval(tick, 1000);
-    tick();
-  },
-
-  _showModal(title, body, onOk, okLabel = 'OK', showCancel = true) {
-    const overlay = document.getElementById('test-modal');
-    if (!overlay) { if (onOk) onOk(); return; }
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-body').textContent  = body;
-    document.getElementById('modal-ok').textContent    = okLabel;
-    document.getElementById('modal-cancel').hidden     = !showCancel;
-    this._modalOnOk = onOk;
-    overlay.hidden = false;
-  },
-  _modalOk() {
-    document.getElementById('test-modal').hidden = true;
-    if (this._modalOnOk) this._modalOnOk();
-    this._modalOnOk = null;
-  },
-  _modalCancel() {
-    document.getElementById('test-modal').hidden = true;
-    this._modalOnOk = null;
-  },
-
-  quitTest() {
-    this._showModal('Quit Test', 'Quit this test? Your progress will be lost.', () => {
-      clearInterval(this.timerInterval);
-      state.history = [];
-      this.navigate('dashboard');
-    }, 'Quit');
-  },
-
-  submitTest(force = false) {
-    const unanswered = this.questions.filter(q => this.userAnswers[q.id] === undefined).length;
-    const doSubmit = () => {
-      clearInterval(this.timerInterval);
-
-      let score = 0;
-      this.reviewData = this.questions.map((q, i) => {
-        const ua = this.userAnswers[q.id];
-        const isCorrect = ua === q.correct;
-        if (isCorrect) score++;
-        return { num: i + 1, text: q.text, options: q.options, correct: q.correct, userAnswer: ua, isCorrect, explanation: q.explanation || '', chapter: q.chapter || '' };
-      });
-      const wrong   = this.reviewData.filter(r => !r.isCorrect && r.userAnswer !== undefined).length;
-      const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
-      this.reviewIndex = 0;
-
-      state.history = ['dashboard'];
-      this.navigate('results');
-
-      const setEl = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
-      setEl('rev-title',    `${state.board} · ${state.subject} · ${state.mode === 'mock' ? 'Full Mock' : 'Chapter Drill'} — Results`);
-      setEl('stat-correct', score);
-      setEl('stat-wrong',   wrong);
-      setEl('stat-skip',    skipped);
-
-      this._buildReviewPalette();
-      this.showReviewQuestion(0);
-    };
-
-    if (!force && unanswered > 0) {
-      this._showModal(
-        'Submit Test?',
-        `${unanswered} question${unanswered > 1 ? 's' : ''} unanswered. Submit anyway?`,
-        doSubmit, 'Submit'
-      );
-    } else {
-      doSubmit();
+    if (state.screen === 'test' && !typing && this.session && this.session.questions.length) {
+      const k = e.key.toLowerCase();
+      const letter = 'abcd'.indexOf(k);
+      const digit  = '1234'.indexOf(k);
+      const optionCount = this.session.questions[this.session.index].options.length;
+      if (letter > -1 && letter < optionCount) { e.preventDefault(); this.selectOption(letter); return; }
+      if (digit  > -1 && digit  < optionCount) { e.preventDefault(); this.selectOption(digit);  return; }
+      if (e.key === 'ArrowRight' || e.key === 'Enter') { e.preventDefault(); this.nextQuestion(); return; }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); this.prevQuestion(); return; }
+      if (k === 'm')              { e.preventDefault(); this.markForReview(); return; }
+      return;
+    }
+    if (state.screen === 'results' && !typing) {
+      const visible = this._reviewList();
+      const pos = visible.indexOf(this.reviewData[this.reviewIndex]);
+      if (e.key === 'ArrowRight' && pos > -1 && pos < visible.length - 1) {
+        e.preventDefault(); this.showReviewQuestion(this.reviewData.indexOf(visible[pos + 1]));
+      } else if (e.key === 'ArrowLeft' && pos > 0) {
+        e.preventDefault(); this.showReviewQuestion(this.reviewData.indexOf(visible[pos - 1]));
+      }
+      return;
+    }
+    if (state.screen === 'notes' && e.key === '/' && !typing) {
+      const search = document.getElementById('notes-search');
+      if (search) { e.preventDefault(); search.focus(); search.select(); }
     }
   }
 };
