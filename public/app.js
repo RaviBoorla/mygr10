@@ -2183,10 +2183,12 @@ const LS = {
 };
 
 const KEY = {
-  board:    'rise.board',
-  draft:    'rise.draft',
-  results:  'rise.results',
-  autoNext: 'rise.autoNext'
+  board:     'rise.board',
+  draft:     'rise.draft',
+  results:   'rise.results',
+  autoNext:  'rise.autoNext',
+  progress:  'rise.progress',   // subject → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
+  bookmarks: 'rise.bookmarks'   // subject → qid → { at }
 };
 
 // Unbiased Fisher–Yates on a copy (Array#sort with a random comparator is biased)
@@ -2222,9 +2224,14 @@ const BOARDS = [
 ];
 
 const MODES = {
-  mock:  { label: 'Full Mock Test', count: 50, seconds: 40 * 60 },
-  drill: { label: 'Chapter Drill',  count: 25, seconds: null }
+  mock:     { label: 'Full Mock Test',    count: 50, seconds: 40 * 60 },
+  drill:    { label: 'Chapter Drill',     count: 25, seconds: null },
+  bookmark: { label: 'Bookmarked Review', count: 50, seconds: null },
+  srs:      { label: 'Spaced Review',     count: 30, seconds: null }
 };
+
+// Leitner-style spaced repetition: box index → days until next due.
+const SRS_INTERVALS = [0, 1, 3, 7, 14, 30];
 
 // ─── Consolidated revision notes — one page per subject, merged across boards ─
 const NOTES_CATALOG = [
@@ -2398,10 +2405,15 @@ const app = {
     const notesBtn = `<button class="btn small ${notesActive ? 'primary' : 'ghost'}"
               ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>`;
 
+    const progressActive = state.screen === 'progress';
+    const progressBtn = `<button class="btn small ${progressActive ? 'primary' : 'ghost'}"
+              ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>`;
+
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}</div>
         <div class="hdr-right">
+          ${progressBtn}
           ${notesBtn}
           <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
         </div>
@@ -2410,12 +2422,13 @@ const app = {
 
   _screen(name, params) {
     switch (name) {
-      case 'board':   return this._screenBoard();
-      case 'home':    return this._screenHome();
-      case 'notes':   return this._screenNotes(params[0] || NOTES_CATALOG[0].id, Number(params[1]) || 0);
-      case 'test':    return this._screenTest();
-      case 'results': return this._screenResults();
-      default:        return '';
+      case 'board':    return this._screenBoard();
+      case 'home':     return this._screenHome();
+      case 'notes':    return this._screenNotes(params[0] || NOTES_CATALOG[0].id, Number(params[1]) || 0);
+      case 'progress': return this._screenProgress();
+      case 'test':     return this._screenTest();
+      case 'results':  return this._screenResults();
+      default:         return '';
     }
   },
 
@@ -2475,6 +2488,58 @@ const app = {
     }
   },
 
+  // ── Screen: progress — per-chapter accuracy, weakest chapters first ─────────
+  _screenProgress() {
+    const subjects = (SUBJECTS[state.board] || []).filter(s => BANKS[s]);
+    const store = LS.get(KEY.progress, {});
+    const now = Date.now();
+
+    const sections = subjects.map(subject => {
+      const bySubj = store[subject] || {};
+      const chapters = {};
+      Object.values(bySubj).forEach(r => {
+        const name = r.chapter || 'General';
+        const c = chapters[name] || (chapters[name] = { correct: 0, wrong: 0, due: 0 });
+        c.correct += r.correctCount || 0;
+        c.wrong += r.wrongCount || 0;
+        if (r.due <= now) c.due++;
+      });
+      const rows = Object.entries(chapters).sort((a, b) => {
+        const accA = a[1].correct / (a[1].correct + a[1].wrong || 1);
+        const accB = b[1].correct / (b[1].correct + b[1].wrong || 1);
+        return accA - accB; // weakest chapter first
+      });
+      if (!rows.length) return '';
+      const dueTotal = this._dueCount(subject);
+      return `
+        <section class="home-section">
+          <h2 class="section-title">${esc(subject)}</h2>
+          ${dueTotal ? `<button class="btn act-btn ghost small" onclick="app.startSpacedReview('${esc(subject)}')">
+                          &#8635; Review ${plural(dueTotal, 'due question')}</button>` : ''}
+          <ul class="recent-list">
+            ${rows.map(([chapter, c]) => {
+              const total = c.correct + c.wrong;
+              const pct = total ? Math.round(c.correct / total * 100) : 0;
+              return `<li class="recent-row card">
+                <span class="recent-score ${pct >= 60 ? 'good' : 'weak'}">${pct}%</span>
+                <span class="recent-desc">
+                  <strong>${esc(chapter)}</strong>
+                  <small>${plural(total, 'attempt')}${c.due ? ` · ${c.due} due for review` : ''}</small>
+                </span>
+              </li>`;
+            }).join('')}
+          </ul>
+        </section>`;
+    }).join('');
+
+    return `
+      <div class="screen">
+        <h2>Progress</h2>
+        <p class="subtitle">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+        ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
+      </div>`;
+  },
+
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
     const subjects = SUBJECTS[state.board] || [];
@@ -2506,6 +2571,14 @@ const app = {
            </button>`
         : `<span class="soon-tag">Question bank coming soon</span>`;
 
+      const bmCount  = hasBank ? this._bookmarkCount(subject) : 0;
+      const dueCount = hasBank ? this._dueCount(subject) : 0;
+      const reviewLinks = (bmCount || dueCount) ? `
+          <div class="subj-actions">
+            ${bmCount  ? `<button class="btn act-btn ghost small" onclick="app.startBookmarkReview('${esc(subject)}')">&#9733; Bookmarked <small>${bmCount}</small></button>` : ''}
+            ${dueCount ? `<button class="btn act-btn ghost small" onclick="app.startSpacedReview('${esc(subject)}')">&#8635; Due for review <small>${dueCount}</small></button>` : ''}
+          </div>` : '';
+
       return `
         <article class="subj-card card">
           <header class="subj-head">
@@ -2514,6 +2587,7 @@ const app = {
           </header>
           ${hasBank ? this._difficultyBar(subject) : ''}
           <div class="subj-actions">${actions}</div>
+          ${reviewLinks}
           <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
             <p class="picker-hint">Pick a chapter to drill</p>
             <div class="chapter-chips" data-chips="${esc(subject)}">Loading chapters…</div>
@@ -2684,6 +2758,37 @@ const app = {
       });
   },
 
+  // Bookmarked review and spaced review both hand over an already-resolved question
+  // list (no chapter/difficulty filtering, no timer) instead of going through startTest.
+  startCustomTest(subject, mode, questions) {
+    if (!questions.length) return;
+    this.session = {
+      subject, mode, chapter: null, difficulty: 'all',
+      questions: shuffle(questions).slice(0, MODES[mode].count).map((q, i) => ({ ...q, id: q.id || `q-${i}` })),
+      answers: {}, marked: [], index: 0,
+      remaining: null, loading: false, error: null
+    };
+    LS.del(KEY.draft);
+    this.go(['test']);
+    this._saveDraft();
+  },
+
+  startBookmarkReview(subject) {
+    const store = LS.get(KEY.bookmarks, {});
+    const ids = Object.keys(store[subject] || {});
+    if (!ids.length) return;
+    loadBank(subject).then(all => this.startCustomTest(subject, 'bookmark', all.filter(q => ids.includes(q.id))));
+  },
+
+  startSpacedReview(subject) {
+    const store = LS.get(KEY.progress, {});
+    const bySubj = store[subject] || {};
+    const now = Date.now();
+    const dueIds = Object.keys(bySubj).filter(id => bySubj[id].due <= now);
+    if (!dueIds.length) return;
+    loadBank(subject).then(all => this.startCustomTest(subject, 'srs', all.filter(q => dueIds.includes(q.id))));
+  },
+
   _screenTest() {
     const s = this.session;
     const diffTag = s.difficulty && s.difficulty !== 'all' ? ` · ${esc(s.difficulty)}` : '';
@@ -2710,6 +2815,7 @@ const app = {
             <div class="test-nav">
               <button class="btn nav-btn" onclick="app.prevQuestion()">&#8592; Prev</button>
               <button class="btn review-btn" id="mark-btn" onclick="app.markForReview()">&#9873; Mark</button>
+              <button class="btn review-btn" id="bookmark-btn" onclick="app.toggleBookmark()">&#9734; Bookmark</button>
               <button class="btn primary nav-btn" onclick="app.nextQuestion()">Next &#8594;</button>
             </div>
             <p class="kbd-hint">Keyboard: <kbd>A</kbd>–<kbd>D</kbd> or <kbd>1</kbd>–<kbd>4</kbd> answer ·
@@ -2785,8 +2891,48 @@ const app = {
       markBtn.classList.toggle('marked', marked);
       markBtn.innerHTML = marked ? '&#9873; Marked' : '&#9873; Mark';
     }
+    this._renderBookmarkBtn('bookmark-btn', s.subject, q.id);
     const prev = document.querySelector('.test-nav .nav-btn');
     if (prev) prev.disabled = s.index === 0;
+  },
+
+  _isBookmarked(subject, id) {
+    const store = LS.get(KEY.bookmarks, {});
+    return !!(store[subject] && store[subject][id]);
+  },
+
+  _bookmarkCount(subject) {
+    const store = LS.get(KEY.bookmarks, {});
+    return Object.keys(store[subject] || {}).length;
+  },
+
+  _dueCount(subject) {
+    const store = LS.get(KEY.progress, {});
+    const now = Date.now();
+    return Object.values(store[subject] || {}).filter(r => r.due <= now).length;
+  },
+
+  _renderBookmarkBtn(btnId, subject, id) {
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+    const on = this._isBookmarked(subject, id);
+    btn.classList.toggle('marked', on);
+    btn.innerHTML = on ? '&#9733; Bookmarked' : '&#9734; Bookmark';
+  },
+
+  toggleBookmark(subject, id) {
+    if (subject === undefined) {
+      const s = this.session;
+      if (!s) return;
+      subject = s.subject;
+      id = s.questions[s.index].id;
+    }
+    const store = LS.get(KEY.bookmarks, {});
+    const bySubj = store[subject] || (store[subject] = {});
+    if (bySubj[id]) delete bySubj[id]; else bySubj[id] = { at: Date.now() };
+    LS.set(KEY.bookmarks, store);
+    this._renderBookmarkBtn('bookmark-btn', subject, id);
+    this._renderBookmarkBtn('review-bookmark-btn', subject, id);
   },
 
   renderPalette() {
@@ -2925,7 +3071,7 @@ const app = {
         const isCorrect = ua === q.correct;
         if (isCorrect) correct++;
         return {
-          num: i + 1, text: q.text, options: q.options, correct: q.correct,
+          id: q.id, num: i + 1, text: q.text, options: q.options, correct: q.correct,
           userAnswer: ua, isCorrect, explanation: q.explanation || '', chapter: q.chapter || ''
         };
       });
@@ -2937,12 +3083,17 @@ const app = {
       this.reviewFilter = 'all';
       this.summary = { correct, wrong, skipped, total: this.reviewData.length };
 
+      this._updateProgress(s.subject, this.reviewData);
+
+      const now = Date.now();
       const past = LS.get(KEY.results, []);
       past.unshift({
         ...this.lastConfig, board: state.board, correct, total: this.reviewData.length,
-        when: new Date().toLocaleDateString(undefined, { day: 'numeric', month: 'short' })
+        ts: now,
+        when: new Date(now).toLocaleString(undefined,
+          { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' })
       });
-      LS.set(KEY.results, past.slice(0, 10));
+      LS.set(KEY.results, past.slice(0, 30));
 
       this.session = null;
       LS.del(KEY.draft);
@@ -2954,6 +3105,31 @@ const app = {
     } else {
       doSubmit();
     }
+  },
+
+  // Leitner-style spaced repetition: every answered question moves its box up (correct)
+  // or resets to 0 (wrong), which sets when it's next due for review.
+  _updateProgress(subject, reviewData) {
+    const store = LS.get(KEY.progress, {});
+    const bySubj = store[subject] || (store[subject] = {});
+    const now = Date.now();
+    reviewData.forEach(r => {
+      if (r.userAnswer === undefined) return;
+      const rec = bySubj[r.id] || { box: 0, correctCount: 0, wrongCount: 0 };
+      rec.chapter = r.chapter;
+      rec.lastAt = now;
+      rec.lastResult = r.isCorrect ? 'correct' : 'wrong';
+      if (r.isCorrect) {
+        rec.box = Math.min((rec.box || 0) + 1, SRS_INTERVALS.length - 1);
+        rec.correctCount = (rec.correctCount || 0) + 1;
+      } else {
+        rec.box = 0;
+        rec.wrongCount = (rec.wrongCount || 0) + 1;
+      }
+      rec.due = now + SRS_INTERVALS[rec.box] * 86400000;
+      bySubj[r.id] = rec;
+    });
+    LS.set(KEY.progress, store);
   },
 
   // ── Screen: results ─────────────────────────────────────────────────────────
@@ -2988,7 +3164,7 @@ const app = {
               </div>
               <div id="rpal-grid" class="omr-grid"></div>
               <div class="results-actions">
-                <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : 'drill'}</button>
+                <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : cfg.mode === 'bookmark' ? 'bookmarked set' : cfg.mode === 'srs' ? 'review' : 'drill'}</button>
                 <button class="btn" onclick="app.exitReview()">Back to practice</button>
               </div>
             </div>
@@ -3058,6 +3234,8 @@ const app = {
       <div class="rev-card-header">
         <span class="rev-q-num">Q${r.num} of ${data.length}</span>${badge}
         <span class="rev-chapter">${esc(r.chapter || '')}</span>
+        <button class="btn small review-btn" id="review-bookmark-btn"
+                onclick="app.toggleBookmark('${esc(this.lastConfig.subject)}','${esc(r.id)}')">&#9734; Bookmark</button>
       </div>
       <p class="rev-q-text">${esc(r.text)}</p>
       <div class="rev-options">${optHtml}</div>
@@ -3066,13 +3244,21 @@ const app = {
         <button class="btn nav-btn" ${prevR ? `onclick="app.showReviewQuestion(${data.indexOf(prevR)})"` : 'disabled'}>&#8592; Prev</button>
         <button class="btn primary nav-btn" ${nextR ? `onclick="app.showReviewQuestion(${data.indexOf(nextR)})"` : 'disabled'}>Next &#8594;</button>
       </div>`;
+    this._renderBookmarkBtn('review-bookmark-btn', this.lastConfig.subject, r.id);
 
     document.querySelectorAll('#rpal-grid .omr-bubble').forEach(btn => {
       btn.classList.toggle('current', btn.textContent.trim() === String(r.num));
     });
   },
 
-  retryLast() { this.startTest({ ...this.lastConfig }); },
+  retryLast() {
+    const cfg = this.lastConfig;
+    // Bookmarked/due sets are recomputed fresh rather than replayed — the whole point
+    // of spaced review is that "due" changes after every attempt.
+    if (cfg.mode === 'bookmark') { this.startBookmarkReview(cfg.subject); return; }
+    if (cfg.mode === 'srs')      { this.startSpacedReview(cfg.subject);  return; }
+    this.startTest({ ...cfg });
+  },
 
   // Leaving the review drops the attempt so a stray #/results cannot resurrect it.
   exitReview() {
@@ -3082,7 +3268,10 @@ const app = {
 
   retryFromHistory(i) {
     const h = LS.get(KEY.results, [])[i];
-    if (h) this.startTest({ subject: h.subject, mode: h.mode, chapter: h.chapter || null });
+    if (!h) return;
+    if (h.mode === 'bookmark') { this.startBookmarkReview(h.subject); return; }
+    if (h.mode === 'srs')      { this.startSpacedReview(h.subject);  return; }
+    this.startTest({ subject: h.subject, mode: h.mode, chapter: h.chapter || null });
   },
 
   // ── Screen: revision notes (consolidated across CBSE, ICSE and IB) ──────────
