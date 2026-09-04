@@ -1,107 +1,2802 @@
 [
-  {"id":"sci-001","chapter":"Chemical Reactions and Equations","text":"Which of the following is an example of a combination reaction?","options":["CaO + H₂O → Ca(OH)₂","2H₂O → 2H₂ + O₂","CaCO₃ → CaO + CO₂","Fe₂O₃ + 2Al → Al₂O₃ + 2Fe"],"correct":0,"explanation":"Combination (synthesis) reaction: two or more substances combine to form a single product. CaO + H₂O → Ca(OH)₂ is a classic example."},
-  {"id":"sci-002","chapter":"Chemical Reactions and Equations","text":"The chemical equation 2H₂ + O₂ → 2H₂O is an example of:","options":["Decomposition reaction","Combination reaction","Displacement reaction","Double displacement reaction"],"correct":1,"explanation":"Two hydrogen molecules combine with one oxygen molecule to form water — this is a combination (synthesis) reaction."},
-  {"id":"sci-003","chapter":"Chemical Reactions and Equations","text":"In the reaction ZnO + C → Zn + CO₂, zinc oxide is:","options":["Oxidised","Reduced","Both oxidised and reduced","Neither oxidised nor reduced"],"correct":1,"explanation":"ZnO loses oxygen → zinc oxide is reduced. Carbon gains oxygen → carbon is oxidised. This is a redox reaction."},
-  {"id":"sci-004","chapter":"Chemical Reactions and Equations","text":"Rancidity of food can be prevented by:","options":["Adding water","Keeping in airtight containers with nitrogen","Exposing to sunlight","Heating repeatedly"],"correct":1,"explanation":"Rancidity is caused by oxidation of fats. Replacing air (oxygen) with inert nitrogen in airtight packaging prevents oxidation."},
-  {"id":"sci-005","chapter":"Chemical Reactions and Equations","text":"The reaction between barium chloride and sodium sulphate is:","options":["Combination","Decomposition","Single displacement","Double displacement"],"correct":3,"explanation":"BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl. Both compounds exchange ions → double displacement (precipitation) reaction."},
-  {"id":"sci-006","chapter":"Acids, Bases and Salts","text":"The pH of a neutral solution is:","options":["0","7","14","Between 7 and 14"],"correct":1,"explanation":"pH 7 is neutral. pH < 7 is acidic; pH > 7 is basic/alkaline. Pure water at 25°C has pH = 7."},
-  {"id":"sci-007","chapter":"Acids, Bases and Salts","text":"Which gas is produced when zinc reacts with dilute sulphuric acid?","options":["SO₂","H₂S","H₂","CO₂"],"correct":2,"explanation":"Zn + H₂SO₄ → ZnSO₄ + H₂↑. Metals above hydrogen in reactivity series displace hydrogen from dilute acids."},
-  {"id":"sci-008","chapter":"Acids, Bases and Salts","text":"Baking soda is chemically:","options":["Na₂CO₃","NaHCO₃","NaOH","Na₂SO₄"],"correct":1,"explanation":"Baking soda = sodium hydrogen carbonate (NaHCO₃). Washing soda is Na₂CO₃·10H₂O; caustic soda is NaOH."},
-  {"id":"sci-009","chapter":"Acids, Bases and Salts","text":"Plaster of Paris is obtained by heating:","options":["CaCO₃","CaSO₄·2H₂O","CaSO₄","Ca(OH)₂"],"correct":1,"explanation":"Gypsum (CaSO₄·2H₂O) heated to ~120°C loses 1.5 water molecules → Plaster of Paris (CaSO₄·½H₂O)."},
-  {"id":"sci-010","chapter":"Acids, Bases and Salts","text":"The common name for sodium hydroxide is:","options":["Washing soda","Baking soda","Caustic soda","Bleaching powder"],"correct":2,"explanation":"NaOH = caustic soda (strongly alkaline, corrosive). Na₂CO₃·10H₂O = washing soda; NaHCO₃ = baking soda."},
-  {"id":"sci-011","chapter":"Metals and Non-metals","text":"Which of the following is the most reactive metal?","options":["Gold","Copper","Potassium","Iron"],"correct":2,"explanation":"The reactivity series (K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Ag > Au). Potassium is the most reactive among the options."},
-  {"id":"sci-012","chapter":"Metals and Non-metals","text":"The process of extracting metals from their ores using reduction is called:","options":["Refining","Smelting","Roasting","Calcination"],"correct":1,"explanation":"Smelting: ore is heated with a reducing agent (coke) at high temperature to extract the metal. Reduction of metal oxide to metal."},
-  {"id":"sci-013","chapter":"Metals and Non-metals","text":"Which non-metal is a good conductor of electricity?","options":["Sulphur","Phosphorus","Graphite","Iodine"],"correct":2,"explanation":"Graphite (allotrope of carbon) has delocalized electrons in its layered structure → good conductor of electricity. All other non-metals are insulators."},
-  {"id":"sci-014","chapter":"Metals and Non-metals","text":"The protective coating of zinc on iron is called:","options":["Anodising","Galvanising","Alloying","Smelting"],"correct":1,"explanation":"Galvanising: coating iron/steel with zinc to prevent rusting. Zinc is more reactive and acts as sacrificial anode."},
-  {"id":"sci-015","chapter":"Metals and Non-metals","text":"Thermite reaction uses which metal to reduce iron oxide?","options":["Zinc","Aluminium","Copper","Lead"],"correct":1,"explanation":"Fe₂O₃ + 2Al → Al₂O₃ + 2Fe + heat. Aluminium (more reactive) displaces iron. Used for welding railway tracks."},
-  {"id":"sci-016","chapter":"Carbon and its Compounds","text":"The number of covalent bonds in a molecule of methane (CH₄) is:","options":["1","2","4","6"],"correct":2,"explanation":"Carbon forms 4 covalent bonds. In CH₄: each of the 4 H atoms shares one electron pair with C → 4 C–H bonds."},
-  {"id":"sci-017","chapter":"Carbon and its Compounds","text":"Ethanol (C₂H₅OH) reacts with sodium to give:","options":["CO₂ and H₂O","H₂ gas","C₂H₄","CH₄"],"correct":1,"explanation":"2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑. The –OH group reacts with sodium releasing hydrogen gas (like acid with metal)."},
-  {"id":"sci-018","chapter":"Carbon and its Compounds","text":"Which of the following is a saturated hydrocarbon?","options":["Ethene","Ethyne","Benzene","Ethane"],"correct":3,"explanation":"Saturated hydrocarbons have only C–C single bonds (alkanes). Ethane C₂H₆ is saturated. Ethene (C=C) and ethyne (C≡C) are unsaturated."},
-  {"id":"sci-019","chapter":"Carbon and its Compounds","text":"Saponification is the process of making:","options":["Plastics","Soap","Detergent","Alcohol"],"correct":1,"explanation":"Saponification: hydrolysis of fat/oil with NaOH → soap (sodium salt of fatty acid) + glycerol."},
-  {"id":"sci-020","chapter":"Carbon and its Compounds","text":"The functional group in carboxylic acids is:","options":["–OH","–CHO","–COOH","–CO–"],"correct":2,"explanation":"–COOH is the carboxyl group (functional group of carboxylic acids). –OH = alcohol; –CHO = aldehyde; –CO– = ketone."},
-  {"id":"sci-021","chapter":"Life Processes","text":"Which enzyme in saliva digests starch?","options":["Pepsin","Amylase","Lipase","Trypsin"],"correct":1,"explanation":"Salivary amylase (ptyalin) breaks starch → maltose. Pepsin digests proteins in stomach; lipase digests fats; trypsin works in small intestine."},
-  {"id":"sci-022","chapter":"Life Processes","text":"The mode of nutrition in which organisms use sunlight to synthesise food is:","options":["Holozoic","Saprophytic","Autotrophic","Parasitic"],"correct":2,"explanation":"Autotrophic nutrition: organisms (plants, algae, some bacteria) make their own food using CO₂, H₂O, and light energy via photosynthesis."},
-  {"id":"sci-023","chapter":"Life Processes","text":"In humans, the process of removing waste products from the blood is carried out by the:","options":["Liver","Lungs","Kidneys","Skin"],"correct":2,"explanation":"Kidneys filter blood to remove urea, excess salts, and water → urine. Lungs remove CO₂; skin removes some salts via sweat."},
-  {"id":"sci-024","chapter":"Life Processes","text":"Which type of blood vessels carry oxygenated blood from the heart to body organs?","options":["Veins","Arteries","Capillaries","Lymph vessels"],"correct":1,"explanation":"Arteries carry oxygenated blood away from the heart (exception: pulmonary artery carries deoxygenated blood to lungs). Veins carry blood back to the heart."},
-  {"id":"sci-025","chapter":"Life Processes","text":"The opening and closing of stomata is controlled by:","options":["Root hair cells","Guard cells","Mesophyll cells","Xylem cells"],"correct":1,"explanation":"Guard cells flank each stoma. When turgid → stoma opens; when flaccid → stoma closes, regulating gas exchange and transpiration."},
-  {"id":"sci-026","chapter":"Control and Coordination","text":"The basic structural and functional unit of the nervous system is:","options":["Nerve","Neuron","Brain","Spinal cord"],"correct":1,"explanation":"Neuron (nerve cell) is the structural and functional unit. Neurons transmit electrical impulses; nerves are bundles of neuron axons."},
-  {"id":"sci-027","chapter":"Control and Coordination","text":"Which hormone is produced by the pancreas to regulate blood glucose?","options":["Thyroxine","Adrenaline","Insulin","Testosterone"],"correct":2,"explanation":"Insulin (from β-cells of islets of Langerhans in pancreas) lowers blood glucose by promoting glucose uptake into cells and glycogen storage."},
-  {"id":"sci-028","chapter":"Control and Coordination","text":"The reflex arc involves which of the following in sequence?","options":["Receptor → Effector → Spinal cord","Receptor → Afferent nerve → Spinal cord → Efferent nerve → Effector","Brain → Spinal cord → Effector","Effector → Receptor → Brain"],"correct":1,"explanation":"Reflex arc: Receptor (detects stimulus) → Afferent (sensory) nerve → Spinal cord (nerve centre) → Efferent (motor) nerve → Effector (muscle/gland)."},
-  {"id":"sci-029","chapter":"Control and Coordination","text":"Phototropism in plants is controlled by:","options":["Gibberellin","Auxin","Cytokinin","Abscisic acid"],"correct":1,"explanation":"Auxin (IAA) accumulates on the shaded side of a shoot → cells elongate more → shoot bends toward light (phototropism)."},
-  {"id":"sci-030","chapter":"Control and Coordination","text":"The master gland of the endocrine system is:","options":["Thyroid","Adrenal","Pituitary","Pancreas"],"correct":2,"explanation":"Pituitary gland (hypophysis) is called the master gland as it secretes tropic hormones that regulate other endocrine glands."},
-  {"id":"sci-031","chapter":"How do Organisms Reproduce","text":"Which type of reproduction does not involve fusion of male and female gametes?","options":["Sexual reproduction","Asexual reproduction","Both","None"],"correct":1,"explanation":"Asexual reproduction: new individuals from a single parent without gamete fusion. Examples: binary fission, budding, fragmentation, spore formation."},
-  {"id":"sci-032","chapter":"How do Organisms Reproduce","text":"Vegetative propagation through leaves is seen in:","options":["Potato","Ginger","Bryophyllum","Banana"],"correct":2,"explanation":"Bryophyllum (Kalanchoe) produces adventitious buds along leaf margins → new plants form. Potato and ginger reproduce from stem modifications."},
-  {"id":"sci-033","chapter":"How do Organisms Reproduce","text":"The part of the flower that develops into fruit after fertilisation is:","options":["Stigma","Ovary","Ovule","Petals"],"correct":1,"explanation":"After fertilisation: ovary → fruit; ovule → seed; ovule integuments → seed coat. Petals and stigma wither and fall off."},
-  {"id":"sci-034","chapter":"How do Organisms Reproduce","text":"Double fertilisation is a feature of:","options":["Algae","Gymnosperms","Angiosperms","Fungi"],"correct":2,"explanation":"In angiosperms: one sperm + egg → zygote; second sperm + 2 polar nuclei → triploid endosperm (3n). This is double fertilisation."},
-  {"id":"sci-035","chapter":"How do Organisms Reproduce","text":"In Hydra, reproduction occurs by:","options":["Binary fission","Budding","Spore formation","Regeneration"],"correct":1,"explanation":"Hydra reproduces asexually by budding — a small outgrowth (bud) forms on the parent body, grows, and eventually detaches as a new individual."},
-  {"id":"sci-036","chapter":"Heredity and Evolution","text":"The physical appearance of an organism due to its genotype is called its:","options":["Genotype","Phenotype","Allele","Trait"],"correct":1,"explanation":"Phenotype is the observable characteristic (height, colour, etc.) resulting from gene expression and environment. Genotype is the genetic constitution."},
-  {"id":"sci-037","chapter":"Heredity and Evolution","text":"In a monohybrid cross between Tt × Tt, the phenotypic ratio of offspring is:","options":["1:2:1","3:1","1:1","9:3:3:1"],"correct":1,"explanation":"Tt × Tt → TT : Tt : tt = 1:2:1 (genotypic ratio). Since T is dominant, TT and Tt both show dominant phenotype → 3 dominant : 1 recessive (3:1 phenotypic ratio)."},
-  {"id":"sci-038","chapter":"Heredity and Evolution","text":"Sex determination in humans: a child's sex is determined by:","options":["Mother's X chromosome","Father's sex chromosome (X or Y)","Both parents equally","Neither parent"],"correct":1,"explanation":"All eggs carry X; sperm carry either X or Y. If X sperm fertilises egg → XX (female); if Y sperm → XY (male). Father determines the sex."},
-  {"id":"sci-039","chapter":"Heredity and Evolution","text":"Acquired characters are NOT inherited because they:","options":["Affect the DNA in germ cells","Do not affect DNA in germ cells","Are too complex to transmit","Are dominant traits"],"correct":1,"explanation":"Acquired characters (e.g., muscular body from exercise) do not change the DNA of gametes (germ cells) and therefore cannot be passed to offspring."},
-  {"id":"sci-040","chapter":"Heredity and Evolution","text":"Fossils help us understand evolution because they:","options":["Tell us the age of existing organisms","Provide evidence of organisms that lived in the past","Show how organisms will evolve","Are found only in oceans"],"correct":1,"explanation":"Fossils are preserved remains of past organisms, providing direct evidence of extinct species and showing evolutionary relationships between organisms."},
-  {"id":"sci-041","chapter":"Light – Reflection and Refraction","text":"The angle of incidence is equal to the angle of reflection. This is:","options":["Snell's law","Law of reflection","Law of refraction","Huygen's principle"],"correct":1,"explanation":"First law of reflection: angle of incidence = angle of reflection. Both angles are measured from the normal to the reflecting surface."},
-  {"id":"sci-042","chapter":"Light – Reflection and Refraction","text":"A concave mirror with focal length 15 cm is used. An object is placed 45 cm from the mirror. The image distance is:","options":["22.5 cm","45 cm","30 cm","90 cm"],"correct":0,"explanation":"1/v + 1/u = 1/f. u = –45 cm, f = –15 cm. 1/v = 1/f – 1/u = –1/15 + 1/45 = –3/45 + 1/45 = –2/45. v = –22.5 cm (real, inverted)."},
-  {"id":"sci-043","chapter":"Light – Reflection and Refraction","text":"Which mirror is used as a rear-view mirror in vehicles?","options":["Plane mirror","Concave mirror","Convex mirror","Biconcave lens"],"correct":2,"explanation":"Convex mirrors give an erect, diminished image with a wider field of view → used as rear-view mirrors. Concave mirrors are used as shaving/makeup mirrors."},
-  {"id":"sci-044","chapter":"Light – Reflection and Refraction","text":"The refractive index of glass is 1.5. The speed of light in glass is (speed in vacuum = 3×10⁸ m/s):","options":["4.5×10⁸ m/s","1.5×10⁸ m/s","2×10⁸ m/s","3×10⁸ m/s"],"correct":2,"explanation":"n = c/v → v = c/n = 3×10⁸/1.5 = 2×10⁸ m/s. Light slows down when entering a denser medium."},
-  {"id":"sci-045","chapter":"Light – Reflection and Refraction","text":"A convex lens has a focal length of 20 cm. Its power is:","options":["5 D","0.5 D","20 D","−5 D"],"correct":0,"explanation":"Power P = 1/f (in metres) = 1/0.20 = 5 dioptres (D). Convex (converging) lens has positive power."},
-  {"id":"sci-046","chapter":"The Human Eye and the Colourful World","text":"The defect of vision in which a person can see nearby objects clearly but not distant objects is:","options":["Hypermetropia","Myopia","Presbyopia","Astigmatism"],"correct":1,"explanation":"Myopia (short-sightedness): image forms in front of retina. Corrected with concave (diverging) lens. Hypermetropia: image behind retina — corrected with convex lens."},
-  {"id":"sci-047","chapter":"The Human Eye and the Colourful World","text":"The splitting of white light into its constituent colours is called:","options":["Refraction","Reflection","Dispersion","Scattering"],"correct":2,"explanation":"Dispersion: white light splits into VIBGYOR when passing through a prism because different wavelengths refract by different amounts (violet most, red least)."},
-  {"id":"sci-048","chapter":"The Human Eye and the Colourful World","text":"The sky appears blue because of:","options":["Reflection of sunlight","Dispersion by raindrops","Scattering of light by atmosphere","Refraction by atmosphere"],"correct":2,"explanation":"Rayleigh scattering: shorter wavelengths (blue, violet) scatter more in the atmosphere. We see blue because our eyes are more sensitive to blue than violet."},
-  {"id":"sci-049","chapter":"The Human Eye and the Colourful World","text":"The power of accommodation of the human eye is due to:","options":["Iris","Cornea","Ciliary muscles changing lens shape","Pupil"],"correct":2,"explanation":"Ciliary muscles adjust the curvature (and hence focal length) of the eye lens to focus objects at different distances — this is called accommodation."},
-  {"id":"sci-050","chapter":"The Human Eye and the Colourful World","text":"A person uses a concave lens of power –2.5 D. The defect of vision is:","options":["Hypermetropia","Presbyopia","Myopia","Astigmatism"],"correct":2,"explanation":"Concave (diverging) lens has negative power → used to correct myopia (near-sightedness), where the image forms in front of the retina."},
-  {"id":"sci-051","chapter":"Electricity","text":"Ohm's law states that at constant temperature:","options":["V ∝ R","I ∝ V","V ∝ I","R ∝ V"],"correct":2,"explanation":"Ohm's law: V ∝ I, i.e., V = IR where R is constant at constant temperature. More precisely V/I = constant = R."},
-  {"id":"sci-052","chapter":"Electricity","text":"Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. The equivalent resistance is:","options":["11 Ω","1 Ω","0.5 Ω","5 Ω"],"correct":1,"explanation":"1/R = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. Therefore R = 1 Ω. Parallel resistance is always less than the smallest individual resistance."},
-  {"id":"sci-053","chapter":"Electricity","text":"The SI unit of electric charge is:","options":["Ampere","Volt","Coulomb","Ohm"],"correct":2,"explanation":"Coulomb (C) is the SI unit of electric charge. Current (A) = charge (C) / time (s). Named after physicist Charles-Augustin de Coulomb."},
-  {"id":"sci-054","chapter":"Electricity","text":"The heating element of an electric iron is made of:","options":["Copper","Nichrome","Tungsten","Aluminium"],"correct":1,"explanation":"Nichrome (Ni-Cr alloy): high resistivity, high melting point, does not oxidise at high temperatures → ideal for heating elements in electric appliances."},
-  {"id":"sci-055","chapter":"Electricity","text":"If a bulb of 100 W is used for 10 hours, the electrical energy consumed is:","options":["1 kWh","10 kWh","0.1 kWh","100 kWh"],"correct":0,"explanation":"Energy = Power × Time = 100 W × 10 h = 1000 Wh = 1 kWh (1 unit of electricity). This is the unit used by electricity meters."},
-  {"id":"sci-056","chapter":"Magnetic Effects of Electric Current","text":"The magnetic field lines of a bar magnet:","options":["Begin at N and end at S externally","Are closed loops","Are straight lines","Only exist inside the magnet"],"correct":1,"explanation":"Magnetic field lines are always closed loops — outside the magnet from N to S, and inside from S to N. They never intersect each other."},
-  {"id":"sci-057","chapter":"Magnetic Effects of Electric Current","text":"A current-carrying conductor in a magnetic field experiences a force. This is the basis of:","options":["Generator","Transformer","Electric motor","Galvanometer only"],"correct":2,"explanation":"Electric motor uses the force on a current-carrying conductor in a magnetic field to convert electrical energy → mechanical (rotational) energy."},
-  {"id":"sci-058","chapter":"Magnetic Effects of Electric Current","text":"The device used to convert AC to DC is a:","options":["Transformer","Generator","Rectifier","Inductor"],"correct":2,"explanation":"Rectifier (using diodes) converts AC → DC. Transformers change AC voltage levels; generators produce electricity; inductors store magnetic energy."},
-  {"id":"sci-059","chapter":"Magnetic Effects of Electric Current","text":"According to Fleming's Right Hand Rule, if the thumb points in the direction of motion and the index finger in the direction of the field, the middle finger points in the direction of:","options":["Force","Current","Magnetic field","Both force and current"],"correct":1,"explanation":"Fleming's Right Hand Rule (for generators/electromagnetic induction): thumb = motion, index = field, middle finger = induced current direction."},
-  {"id":"sci-060","chapter":"Magnetic Effects of Electric Current","text":"The frequency of AC supply in India is:","options":["50 Hz","60 Hz","100 Hz","25 Hz"],"correct":0,"explanation":"India uses 50 Hz AC supply at 220 V (230 V nominal). USA uses 60 Hz at 110/120 V. Frequency = number of complete cycles per second."},
-  {"id":"sci-061","chapter":"Sources of Energy","text":"Which of the following is a non-renewable source of energy?","options":["Solar energy","Wind energy","Coal","Tidal energy"],"correct":2,"explanation":"Coal is a fossil fuel — formed over millions of years and cannot be replenished at human timescales. Solar, wind, and tidal are renewable sources."},
-  {"id":"sci-062","chapter":"Sources of Energy","text":"The energy released in a nuclear reactor comes from:","options":["Chemical reaction","Nuclear fission","Nuclear fusion","Combustion"],"correct":1,"explanation":"Nuclear reactors use controlled nuclear fission (splitting of heavy nuclei like U-235 or Pu-239) to release enormous amounts of energy (E = mc²)."},
-  {"id":"sci-063","chapter":"Sources of Energy","text":"Biogas is mainly composed of:","options":["Carbon dioxide","Methane","Hydrogen","Oxygen"],"correct":1,"explanation":"Biogas is ~55–65% methane (CH₄), plus CO₂ and traces of other gases. Produced by anaerobic decomposition of organic matter in biogas plants."},
-  {"id":"sci-064","chapter":"Sources of Energy","text":"Solar cells convert:","options":["Chemical energy to electrical energy","Light energy to electrical energy","Heat energy to electrical energy","Mechanical energy to electrical energy"],"correct":1,"explanation":"Solar cells (photovoltaic cells) use the photovoltaic effect to convert light energy (photons) directly to electrical energy (DC electricity)."},
-  {"id":"sci-065","chapter":"Sources of Energy","text":"The minimum temperature required for nuclear fusion is approximately:","options":["100°C","1000°C","10⁷ °C","10¹⁴ °C"],"correct":2,"explanation":"Nuclear fusion requires extremely high temperatures (~10–15 million °C / 10⁷ K) to overcome the electrostatic repulsion between positively charged nuclei."},
-  {"id":"sci-066","chapter":"Our Environment","text":"The flow of energy in a food chain is:","options":["Bidirectional","Unidirectional","Multidirectional","Circular"],"correct":1,"explanation":"Energy flows unidirectionally (one-way) from sun → producers → primary consumers → secondary consumers → tertiary consumers. It is not recycled."},
-  {"id":"sci-067","chapter":"Our Environment","text":"Which of the following is a biodegradable pollutant?","options":["Plastic bags","DDT","Sewage","Mercury compounds"],"correct":2,"explanation":"Sewage (organic waste) is decomposed by microorganisms → biodegradable. Plastic, DDT, and mercury are non-biodegradable and persist in the environment."},
-  {"id":"sci-068","chapter":"Our Environment","text":"Ozone (O₃) in the stratosphere protects us from:","options":["Infrared radiation","Visible light","Ultraviolet radiation","Gamma rays"],"correct":2,"explanation":"The stratospheric ozone layer absorbs harmful UV-B and UV-C radiation from the sun, protecting living organisms from DNA damage and skin cancer."},
-  {"id":"sci-069","chapter":"Our Environment","text":"The phenomenon of accumulation of non-biodegradable chemicals in organisms at each trophic level is called:","options":["Eutrophication","Biomagnification","Bioremediation","Pollution"],"correct":1,"explanation":"Biomagnification (biological magnification): concentration of persistent chemicals (DDT, mercury) increases at each successive trophic level in a food chain."},
-  {"id":"sci-070","chapter":"Our Environment","text":"The number of trophic levels in a food chain is generally limited to:","options":["2","3–4","7–8","10"],"correct":1,"explanation":"Only 10% of energy is transferred to the next trophic level (10% law). After 3–4 levels, energy is too little to sustain another consumer level."},
-  {"id":"sci-071","chapter":"Management of Natural Resources","text":"The 3 R's of waste management stand for:","options":["Reduce, Reuse, Recycle","Read, Respond, Resolve","Repair, Replace, Restore","Renew, Recharge, Recover"],"correct":0,"explanation":"The 3R principle: Reduce (use less), Reuse (use again), Recycle (process into new products). Followed in this priority order to minimise waste."},
-  {"id":"sci-072","chapter":"Management of Natural Resources","text":"The Bishnoi community of Rajasthan is known for protecting:","options":["Tiger","Khejri trees","Crocodiles","Rivers"],"correct":1,"explanation":"In 1730, Amrita Devi Bishnoi sacrificed her life along with 363 others protecting Khejri trees from being cut down by royal soldiers — a pioneering conservation movement."},
-  {"id":"sci-073","chapter":"Management of Natural Resources","text":"Coliform bacteria in drinking water indicates contamination from:","options":["Industrial chemicals","Human or animal waste","Heavy metals","Fertilisers"],"correct":1,"explanation":"Coliform bacteria (e.g., E. coli) originate in the gut of warm-blooded animals. Their presence in water is an indicator of faecal contamination."},
-  {"id":"sci-074","chapter":"Management of Natural Resources","text":"Chipko movement was started to protect:","options":["Rivers","Wildlife","Forests","Soil"],"correct":2,"explanation":"Chipko movement (1973, Uttarakhand): villagers hugged trees (chipko = embrace/cling) to prevent logging, protecting Himalayan forests from commercial felling."},
-  {"id":"sci-075","chapter":"Management of Natural Resources","text":"The 'Khadin' system is a traditional water harvesting structure found in:","options":["Kerala","Rajasthan","Assam","Maharashtra"],"correct":1,"explanation":"Khadin: an earthen embankment built across the foot of hill slopes in Rajasthan to trap monsoon runoff for cultivation — ancient rainwater harvesting technique."},
-  {"id":"sci-076","chapter":"Periodic Classification of Elements","text":"In the modern periodic table, elements are arranged in order of increasing:","options":["Atomic mass","Atomic number","Valency","Density"],"correct":1,"explanation":"Moseley's modern periodic law: properties of elements are periodic functions of their atomic numbers. Elements are arranged by increasing atomic number (Z)."},
-  {"id":"sci-077","chapter":"Periodic Classification of Elements","text":"The element in period 3 and group 1 is:","options":["Lithium","Potassium","Sodium","Magnesium"],"correct":2,"explanation":"Period 3 starts with Na (Z=11) in group 1. Li is period 2, group 1; K is period 4, group 1; Mg is period 3 but group 2."},
-  {"id":"sci-078","chapter":"Periodic Classification of Elements","text":"Which property generally decreases across a period from left to right?","options":["Electronegativity","Ionisation energy","Atomic radius","Nuclear charge"],"correct":2,"explanation":"Across a period: nuclear charge increases, pulling electrons closer → atomic radius decreases. Electronegativity and ionisation energy increase across a period."},
-  {"id":"sci-079","chapter":"Periodic Classification of Elements","text":"The valency of an element equals the number of:","options":["Protons","Electrons in outermost shell capable of bonding","Neutrons","Isotopes"],"correct":1,"explanation":"Valency = electrons in the outermost shell that can be lost, gained, or shared to achieve stability (8 electrons / noble gas configuration)."},
-  {"id":"sci-080","chapter":"Periodic Classification of Elements","text":"Non-metals are generally located in the periodic table at the:","options":["Left side","Bottom","Top right (with exceptions)","Centre"],"correct":2,"explanation":"Non-metals occupy the top-right portion of the periodic table (with exception of hydrogen at top-left). The staircase/zigzag line separates metals from non-metals."},
-  {"id":"sci-081","chapter":"Carbon and its Compounds","text":"Which of the following is an ester?","options":["CH₃COOH","CH₃OH","CH₃COOC₂H₅","C₂H₅OH"],"correct":2,"explanation":"Ethyl ethanoate (CH₃COOC₂H₅) is an ester formed by esterification of acetic acid and ethanol. Esters have the –COO– functional group and characteristic fruity smells."},
-  {"id":"sci-082","chapter":"Carbon and its Compounds","text":"The IUPAC name of CH₃-CH₂-OH is:","options":["Methanol","Propanol","Ethanol","Butanol"],"correct":2,"explanation":"CH₃-CH₂-OH has 2 carbons → ethanol (eth = 2 carbons, -ol suffix for alcohol). IUPAC name: ethanol. Common name: alcohol or ethyl alcohol."},
-  {"id":"sci-083","chapter":"Carbon and its Compounds","text":"Addition reaction is characteristic of:","options":["Saturated hydrocarbons only","Unsaturated hydrocarbons","Alcohols","Carboxylic acids"],"correct":1,"explanation":"Unsaturated compounds (alkenes, alkynes) undergo addition reactions across the double/triple bond. Saturated alkanes undergo substitution reactions."},
-  {"id":"sci-084","chapter":"Life Processes","text":"Stomata open during the day because:","options":["Temperature increases","Guard cells become turgid due to photosynthesis","CO₂ accumulates","O₂ decreases"],"correct":1,"explanation":"During daytime, guard cells photosynthesize → produce glucose → osmotic pressure increases → water enters → cells become turgid → stomata open for gas exchange."},
-  {"id":"sci-085","chapter":"Chemical Reactions and Equations","text":"Which of the following reactions is endothermic?","options":["Burning of wood","Respiration","Decomposition of calcium carbonate","Rusting of iron"],"correct":2,"explanation":"CaCO₃ → CaO + CO₂ requires heating (heat energy is absorbed from surroundings) → endothermic. Combustion and respiration are exothermic."},
-  {"id":"sci-086","chapter":"Electricity","text":"What happens to the resistance of a conductor when its length is doubled?","options":["Halved","Doubled","Quadrupled","Unchanged"],"correct":1,"explanation":"R = ρL/A. If L doubles (area constant): R doubles. Resistance is directly proportional to length and inversely proportional to cross-sectional area."},
-  {"id":"sci-087","chapter":"Electricity","text":"Two bulbs of 40 W and 60 W are connected in series. Which bulb glows brighter?","options":["40 W","60 W","Both equally","Neither glows"],"correct":0,"explanation":"In series, same current flows. P = I²R. R = V²/P, so 40 W bulb has higher resistance → dissipates more power in series → glows brighter. (Opposite of parallel.)"},
-  {"id":"sci-088","chapter":"Magnetic Effects of Electric Current","text":"An AC generator works on the principle of:","options":["Ohm's law","Faraday's law of electromagnetic induction","Newton's third law","Ampere's law"],"correct":1,"explanation":"AC generator converts mechanical energy → electrical energy using Faraday's law: a coil rotating in a magnetic field experiences changing flux → induces alternating EMF."},
-  {"id":"sci-089","chapter":"Heredity and Evolution","text":"The genotypic ratio from a monohybrid cross Tt × Tt is:","options":["3:1","1:2:1","1:1","9:3:3:1"],"correct":1,"explanation":"Tt × Tt → TT : Tt : tt = 1:2:1 (genotypic ratio). TT and Tt show dominant phenotype → phenotypic ratio is 3:1."},
-  {"id":"sci-090","chapter":"How do Organisms Reproduce","text":"In binary fission, a single organism divides into:","options":["4 equal parts","2 equal parts","Multiple spores","Many unequal parts"],"correct":1,"explanation":"Binary fission: the cell divides into two equal daughter cells (e.g., Amoeba, bacteria). It is the simplest form of asexual reproduction."},
-  {"id":"sci-091","chapter":"Light – Reflection and Refraction","text":"Virtual image is formed by a:","options":["Concave mirror when object is beyond C","Concave lens always","Convex mirror always","Both B and C"],"correct":3,"explanation":"Concave lens always forms virtual, erect, diminished images. Convex mirror always forms virtual, erect, diminished images. Both are correct."},
-  {"id":"sci-092","chapter":"Light – Reflection and Refraction","text":"A ray of light passing through the optical centre of a lens:","options":["Bends toward the principal axis","Passes without any deviation","Bends away from the principal axis","Gets totally internally reflected"],"correct":1,"explanation":"A ray through the optical centre of a lens passes straight through without any deviation, regardless of the lens type (concave or convex)."},
-  {"id":"sci-093","chapter":"Acids, Bases and Salts","text":"The acid present in vinegar is:","options":["Citric acid","Tartaric acid","Acetic acid","Oxalic acid"],"correct":2,"explanation":"Vinegar contains 5–8% acetic acid (ethanoic acid, CH₃COOH). Citric acid is in citrus fruits; tartaric acid in tamarind; oxalic acid in spinach."},
-  {"id":"sci-094","chapter":"Metals and Non-metals","text":"Metals are generally:","options":["Poor conductors of heat","Good conductors of electricity","Electronegative","Non-lustrous"],"correct":1,"explanation":"Metals have free electrons → good conductors of both heat and electricity. They are electropositive, lustrous (shiny), malleable, and ductile."},
-  {"id":"sci-095","chapter":"Our Environment","text":"Greenhouse gases trap heat energy and lead to:","options":["Cooling of Earth","Global warming","Ozone formation","Increased UV radiation"],"correct":1,"explanation":"Greenhouse gases (CO₂, CH₄, N₂O, H₂O vapour) absorb outgoing infrared radiation → trap heat → global warming → climate change."},
-  {"id":"sci-096","chapter":"Control and Coordination","text":"The neurotransmitter released at the synapse is:","options":["Acetylcholine","Insulin","Adrenaline","Thyroxine"],"correct":0,"explanation":"Acetylcholine (and other neurotransmitters like dopamine, serotonin) are released from synaptic vesicles at the synapse to transmit nerve impulses across the gap."},
-  {"id":"sci-097","chapter":"Sources of Energy","text":"Which fuel has the highest calorific value?","options":["Wood","Coal","Petroleum","Hydrogen"],"correct":3,"explanation":"Calorific values (kJ/g): wood ~17, coal ~30, petroleum ~45, hydrogen ~150. Hydrogen has the highest energy content per unit mass of all known fuels."},
-  {"id":"sci-098","chapter":"Life Processes","text":"The site of photosynthesis in a plant cell is:","options":["Mitochondria","Nucleus","Chloroplast","Ribosome"],"correct":2,"explanation":"Chloroplasts contain chlorophyll (green pigment) and are the site of photosynthesis. Mitochondria are sites of cellular respiration (energy release)."},
-  {"id":"sci-099","chapter":"Periodic Classification of Elements","text":"The number of periods in the modern periodic table is:","options":["7","8","18","4"],"correct":0,"explanation":"The modern periodic table has 7 horizontal rows called periods and 18 vertical columns called groups. Period 6 contains lanthanides; period 7 contains actinides."},
-  {"id":"sci-100","chapter":"Chemical Reactions and Equations","text":"A substance that speeds up a chemical reaction without being consumed is called a:","options":["Reactant","Product","Catalyst","Inhibitor"],"correct":2,"explanation":"A catalyst lowers the activation energy of a reaction, speeding it up without being consumed or appearing in the final products. MnO₂ catalyses H₂O₂ decomposition."},
-  {"id":"sci-101","chapter":"Acids, Bases and Salts","text":"Which of the following is amphoteric?","options":["NaOH","HCl","Al₂O₃","NaCl"],"correct":2,"explanation":"Al₂O₃ (aluminium oxide) is amphoteric — reacts with both acids (Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O) and bases (Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O)."},
-  {"id":"sci-102","chapter":"Carbon and its Compounds","text":"The next higher homologue of ethane in the alkane series is:","options":["Methane","Propane","Butane","Ethene"],"correct":1,"explanation":"Homologous series of alkanes: methane (CH₄), ethane (C₂H₆), propane (C₃H₈), butane (C₄H₁₀)... Each successive member has one more CH₂ unit."},
-  {"id":"sci-103","chapter":"Electricity","text":"The unit of electric potential difference is:","options":["Ampere","Coulomb","Watt","Volt"],"correct":3,"explanation":"Volt (V) is the SI unit of potential difference (voltage). 1 Volt = 1 Joule/Coulomb. Named after Alessandro Volta."},
-  {"id":"sci-104","chapter":"Magnetic Effects of Electric Current","text":"Which rule is used to find the direction of force on a current-carrying conductor in a magnetic field?","options":["Right hand thumb rule","Fleming's left hand rule","Lenz's law","Faraday's law"],"correct":1,"explanation":"Fleming's Left Hand Rule: for motors, when forefinger = field direction and middle finger = current direction, the thumb gives the direction of force (motion)."},
-  {"id":"sci-105","chapter":"Heredity and Evolution","text":"Darwin's theory of evolution is based on:","options":["Inheritance of acquired characters","Natural selection and survival of the fittest","Mutation alone","Genetic drift alone"],"correct":1,"explanation":"Darwin: organisms with favourable variations survive ('survival of the fittest') and reproduce more → these traits are passed to offspring → evolution by natural selection."}
+  {
+    "id": "sci-001",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "Which of the following is an example of a combination reaction?",
+    "options": [
+      "CaO + H₂O → Ca(OH)₂",
+      "2H₂O → 2H₂ + O₂",
+      "CaCO₃ → CaO + CO₂",
+      "Fe₂O₃ + 2Al → Al₂O₃ + 2Fe"
+    ],
+    "correct": 0,
+    "explanation": "Combination (synthesis) reaction: two or more substances combine to form a single product. CaO + H₂O → Ca(OH)₂ is a classic example."
+  },
+  {
+    "id": "sci-002",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "The chemical equation 2H₂ + O₂ → 2H₂O is an example of:",
+    "options": [
+      "Decomposition reaction",
+      "Combination reaction",
+      "Displacement reaction",
+      "Double displacement reaction"
+    ],
+    "correct": 1,
+    "explanation": "Two hydrogen molecules combine with one oxygen molecule to form water — this is a combination (synthesis) reaction."
+  },
+  {
+    "id": "sci-003",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "medium",
+    "text": "In the reaction ZnO + C → Zn + CO₂, zinc oxide is:",
+    "options": [
+      "Oxidised",
+      "Reduced",
+      "Both oxidised and reduced",
+      "Neither oxidised nor reduced"
+    ],
+    "correct": 1,
+    "explanation": "ZnO loses oxygen → zinc oxide is reduced. Carbon gains oxygen → carbon is oxidised. This is a redox reaction."
+  },
+  {
+    "id": "sci-004",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "Rancidity of food can be prevented by:",
+    "options": [
+      "Adding water",
+      "Keeping in airtight containers with nitrogen",
+      "Exposing to sunlight",
+      "Heating repeatedly"
+    ],
+    "correct": 1,
+    "explanation": "Rancidity is caused by oxidation of fats. Replacing air (oxygen) with inert nitrogen in airtight packaging prevents oxidation."
+  },
+  {
+    "id": "sci-005",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "medium",
+    "text": "The reaction between barium chloride and sodium sulphate is:",
+    "options": [
+      "Combination",
+      "Decomposition",
+      "Single displacement",
+      "Double displacement"
+    ],
+    "correct": 3,
+    "explanation": "BaCl₂ + Na₂SO₄ → BaSO₄↓ + 2NaCl. Both compounds exchange ions → double displacement (precipitation) reaction."
+  },
+  {
+    "id": "sci-006",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "The pH of a neutral solution is:",
+    "options": [
+      "0",
+      "7",
+      "14",
+      "Between 7 and 14"
+    ],
+    "correct": 1,
+    "explanation": "pH 7 is neutral. pH < 7 is acidic; pH > 7 is basic/alkaline. Pure water at 25°C has pH = 7."
+  },
+  {
+    "id": "sci-007",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "Which gas is produced when zinc reacts with dilute sulphuric acid?",
+    "options": [
+      "SO₂",
+      "H₂S",
+      "H₂",
+      "CO₂"
+    ],
+    "correct": 2,
+    "explanation": "Zn + H₂SO₄ → ZnSO₄ + H₂↑. Metals above hydrogen in reactivity series displace hydrogen from dilute acids."
+  },
+  {
+    "id": "sci-008",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "Baking soda is chemically:",
+    "options": [
+      "Na₂CO₃",
+      "NaHCO₃",
+      "NaOH",
+      "Na₂SO₄"
+    ],
+    "correct": 1,
+    "explanation": "Baking soda = sodium hydrogen carbonate (NaHCO₃). Washing soda is Na₂CO₃·10H₂O; caustic soda is NaOH."
+  },
+  {
+    "id": "sci-009",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "medium",
+    "text": "Plaster of Paris is obtained by heating:",
+    "options": [
+      "CaCO₃",
+      "CaSO₄·2H₂O",
+      "CaSO₄",
+      "Ca(OH)₂"
+    ],
+    "correct": 1,
+    "explanation": "Gypsum (CaSO₄·2H₂O) heated to ~120°C loses 1.5 water molecules → Plaster of Paris (CaSO₄·½H₂O)."
+  },
+  {
+    "id": "sci-010",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "The common name for sodium hydroxide is:",
+    "options": [
+      "Washing soda",
+      "Baking soda",
+      "Caustic soda",
+      "Bleaching powder"
+    ],
+    "correct": 2,
+    "explanation": "NaOH = caustic soda (strongly alkaline, corrosive). Na₂CO₃·10H₂O = washing soda; NaHCO₃ = baking soda."
+  },
+  {
+    "id": "sci-011",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "easy",
+    "text": "Which of the following is the most reactive metal?",
+    "options": [
+      "Gold",
+      "Copper",
+      "Potassium",
+      "Iron"
+    ],
+    "correct": 2,
+    "explanation": "The reactivity series (K > Na > Ca > Mg > Al > Zn > Fe > Pb > H > Cu > Ag > Au). Potassium is the most reactive among the options."
+  },
+  {
+    "id": "sci-012",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "medium",
+    "text": "The process of extracting metals from their ores using reduction is called:",
+    "options": [
+      "Refining",
+      "Smelting",
+      "Roasting",
+      "Calcination"
+    ],
+    "correct": 1,
+    "explanation": "Smelting: ore is heated with a reducing agent (coke) at high temperature to extract the metal. Reduction of metal oxide to metal."
+  },
+  {
+    "id": "sci-013",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "medium",
+    "text": "Which non-metal is a good conductor of electricity?",
+    "options": [
+      "Sulphur",
+      "Phosphorus",
+      "Graphite",
+      "Iodine"
+    ],
+    "correct": 2,
+    "explanation": "Graphite (allotrope of carbon) has delocalized electrons in its layered structure → good conductor of electricity. All other non-metals are insulators."
+  },
+  {
+    "id": "sci-014",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "easy",
+    "text": "The protective coating of zinc on iron is called:",
+    "options": [
+      "Anodising",
+      "Galvanising",
+      "Alloying",
+      "Smelting"
+    ],
+    "correct": 1,
+    "explanation": "Galvanising: coating iron/steel with zinc to prevent rusting. Zinc is more reactive and acts as sacrificial anode."
+  },
+  {
+    "id": "sci-015",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "medium",
+    "text": "Thermite reaction uses which metal to reduce iron oxide?",
+    "options": [
+      "Zinc",
+      "Aluminium",
+      "Copper",
+      "Lead"
+    ],
+    "correct": 1,
+    "explanation": "Fe₂O₃ + 2Al → Al₂O₃ + 2Fe + heat. Aluminium (more reactive) displaces iron. Used for welding railway tracks."
+  },
+  {
+    "id": "sci-016",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "The number of covalent bonds in a molecule of methane (CH₄) is:",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "Carbon forms 4 covalent bonds. In CH₄: each of the 4 H atoms shares one electron pair with C → 4 C–H bonds."
+  },
+  {
+    "id": "sci-017",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "Ethanol (C₂H₅OH) reacts with sodium to give:",
+    "options": [
+      "CO₂ and H₂O",
+      "H₂ gas",
+      "C₂H₄",
+      "CH₄"
+    ],
+    "correct": 1,
+    "explanation": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂↑. The –OH group reacts with sodium releasing hydrogen gas (like acid with metal)."
+  },
+  {
+    "id": "sci-018",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "Which of the following is a saturated hydrocarbon?",
+    "options": [
+      "Ethene",
+      "Ethyne",
+      "Benzene",
+      "Ethane"
+    ],
+    "correct": 3,
+    "explanation": "Saturated hydrocarbons have only C–C single bonds (alkanes). Ethane C₂H₆ is saturated. Ethene (C=C) and ethyne (C≡C) are unsaturated."
+  },
+  {
+    "id": "sci-019",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "Saponification is the process of making:",
+    "options": [
+      "Plastics",
+      "Soap",
+      "Detergent",
+      "Alcohol"
+    ],
+    "correct": 1,
+    "explanation": "Saponification: hydrolysis of fat/oil with NaOH → soap (sodium salt of fatty acid) + glycerol."
+  },
+  {
+    "id": "sci-020",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "The functional group in carboxylic acids is:",
+    "options": [
+      "–OH",
+      "–CHO",
+      "–COOH",
+      "–CO–"
+    ],
+    "correct": 2,
+    "explanation": "–COOH is the carboxyl group (functional group of carboxylic acids). –OH = alcohol; –CHO = aldehyde; –CO– = ketone."
+  },
+  {
+    "id": "sci-021",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "Which enzyme in saliva digests starch?",
+    "options": [
+      "Pepsin",
+      "Amylase",
+      "Lipase",
+      "Trypsin"
+    ],
+    "correct": 1,
+    "explanation": "Salivary amylase (ptyalin) breaks starch → maltose. Pepsin digests proteins in stomach; lipase digests fats; trypsin works in small intestine."
+  },
+  {
+    "id": "sci-022",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "The mode of nutrition in which organisms use sunlight to synthesise food is:",
+    "options": [
+      "Holozoic",
+      "Saprophytic",
+      "Autotrophic",
+      "Parasitic"
+    ],
+    "correct": 2,
+    "explanation": "Autotrophic nutrition: organisms (plants, algae, some bacteria) make their own food using CO₂, H₂O, and light energy via photosynthesis."
+  },
+  {
+    "id": "sci-023",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "In humans, the process of removing waste products from the blood is carried out by the:",
+    "options": [
+      "Liver",
+      "Lungs",
+      "Kidneys",
+      "Skin"
+    ],
+    "correct": 2,
+    "explanation": "Kidneys filter blood to remove urea, excess salts, and water → urine. Lungs remove CO₂; skin removes some salts via sweat."
+  },
+  {
+    "id": "sci-024",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "Which type of blood vessels carry oxygenated blood from the heart to body organs?",
+    "options": [
+      "Veins",
+      "Arteries",
+      "Capillaries",
+      "Lymph vessels"
+    ],
+    "correct": 1,
+    "explanation": "Arteries carry oxygenated blood away from the heart (exception: pulmonary artery carries deoxygenated blood to lungs). Veins carry blood back to the heart."
+  },
+  {
+    "id": "sci-025",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "The opening and closing of stomata is controlled by:",
+    "options": [
+      "Root hair cells",
+      "Guard cells",
+      "Mesophyll cells",
+      "Xylem cells"
+    ],
+    "correct": 1,
+    "explanation": "Guard cells flank each stoma. When turgid → stoma opens; when flaccid → stoma closes, regulating gas exchange and transpiration."
+  },
+  {
+    "id": "sci-026",
+    "chapter": "Control and Coordination",
+    "difficulty": "easy",
+    "text": "The basic structural and functional unit of the nervous system is:",
+    "options": [
+      "Nerve",
+      "Neuron",
+      "Brain",
+      "Spinal cord"
+    ],
+    "correct": 1,
+    "explanation": "Neuron (nerve cell) is the structural and functional unit. Neurons transmit electrical impulses; nerves are bundles of neuron axons."
+  },
+  {
+    "id": "sci-027",
+    "chapter": "Control and Coordination",
+    "difficulty": "easy",
+    "text": "Which hormone is produced by the pancreas to regulate blood glucose?",
+    "options": [
+      "Thyroxine",
+      "Adrenaline",
+      "Insulin",
+      "Testosterone"
+    ],
+    "correct": 2,
+    "explanation": "Insulin (from β-cells of islets of Langerhans in pancreas) lowers blood glucose by promoting glucose uptake into cells and glycogen storage."
+  },
+  {
+    "id": "sci-028",
+    "chapter": "Control and Coordination",
+    "difficulty": "medium",
+    "text": "The reflex arc involves which of the following in sequence?",
+    "options": [
+      "Receptor → Effector → Spinal cord",
+      "Receptor → Afferent nerve → Spinal cord → Efferent nerve → Effector",
+      "Brain → Spinal cord → Effector",
+      "Effector → Receptor → Brain"
+    ],
+    "correct": 1,
+    "explanation": "Reflex arc: Receptor (detects stimulus) → Afferent (sensory) nerve → Spinal cord (nerve centre) → Efferent (motor) nerve → Effector (muscle/gland)."
+  },
+  {
+    "id": "sci-029",
+    "chapter": "Control and Coordination",
+    "difficulty": "medium",
+    "text": "Phototropism in plants is controlled by:",
+    "options": [
+      "Gibberellin",
+      "Auxin",
+      "Cytokinin",
+      "Abscisic acid"
+    ],
+    "correct": 1,
+    "explanation": "Auxin (IAA) accumulates on the shaded side of a shoot → cells elongate more → shoot bends toward light (phototropism)."
+  },
+  {
+    "id": "sci-030",
+    "chapter": "Control and Coordination",
+    "difficulty": "easy",
+    "text": "The master gland of the endocrine system is:",
+    "options": [
+      "Thyroid",
+      "Adrenal",
+      "Pituitary",
+      "Pancreas"
+    ],
+    "correct": 2,
+    "explanation": "Pituitary gland (hypophysis) is called the master gland as it secretes tropic hormones that regulate other endocrine glands."
+  },
+  {
+    "id": "sci-031",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "easy",
+    "text": "Which type of reproduction does not involve fusion of male and female gametes?",
+    "options": [
+      "Sexual reproduction",
+      "Asexual reproduction",
+      "Both",
+      "None"
+    ],
+    "correct": 1,
+    "explanation": "Asexual reproduction: new individuals from a single parent without gamete fusion. Examples: binary fission, budding, fragmentation, spore formation."
+  },
+  {
+    "id": "sci-032",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "medium",
+    "text": "Vegetative propagation through leaves is seen in:",
+    "options": [
+      "Potato",
+      "Ginger",
+      "Bryophyllum",
+      "Banana"
+    ],
+    "correct": 2,
+    "explanation": "Bryophyllum (Kalanchoe) produces adventitious buds along leaf margins → new plants form. Potato and ginger reproduce from stem modifications."
+  },
+  {
+    "id": "sci-033",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "easy",
+    "text": "The part of the flower that develops into fruit after fertilisation is:",
+    "options": [
+      "Stigma",
+      "Ovary",
+      "Ovule",
+      "Petals"
+    ],
+    "correct": 1,
+    "explanation": "After fertilisation: ovary → fruit; ovule → seed; ovule integuments → seed coat. Petals and stigma wither and fall off."
+  },
+  {
+    "id": "sci-034",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "medium",
+    "text": "Double fertilisation is a feature of:",
+    "options": [
+      "Algae",
+      "Gymnosperms",
+      "Angiosperms",
+      "Fungi"
+    ],
+    "correct": 2,
+    "explanation": "In angiosperms: one sperm + egg → zygote; second sperm + 2 polar nuclei → triploid endosperm (3n). This is double fertilisation."
+  },
+  {
+    "id": "sci-035",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "easy",
+    "text": "In Hydra, reproduction occurs by:",
+    "options": [
+      "Binary fission",
+      "Budding",
+      "Spore formation",
+      "Regeneration"
+    ],
+    "correct": 1,
+    "explanation": "Hydra reproduces asexually by budding — a small outgrowth (bud) forms on the parent body, grows, and eventually detaches as a new individual."
+  },
+  {
+    "id": "sci-036",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "easy",
+    "text": "The physical appearance of an organism due to its genotype is called its:",
+    "options": [
+      "Genotype",
+      "Phenotype",
+      "Allele",
+      "Trait"
+    ],
+    "correct": 1,
+    "explanation": "Phenotype is the observable characteristic (height, colour, etc.) resulting from gene expression and environment. Genotype is the genetic constitution."
+  },
+  {
+    "id": "sci-037",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "In a monohybrid cross between Tt × Tt, the phenotypic ratio of offspring is:",
+    "options": [
+      "1:2:1",
+      "3:1",
+      "1:1",
+      "9:3:3:1"
+    ],
+    "correct": 1,
+    "explanation": "Tt × Tt → TT : Tt : tt = 1:2:1 (genotypic ratio). Since T is dominant, TT and Tt both show dominant phenotype → 3 dominant : 1 recessive (3:1 phenotypic ratio)."
+  },
+  {
+    "id": "sci-038",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "Sex determination in humans: a child's sex is determined by:",
+    "options": [
+      "Mother's X chromosome",
+      "Father's sex chromosome (X or Y)",
+      "Both parents equally",
+      "Neither parent"
+    ],
+    "correct": 1,
+    "explanation": "All eggs carry X; sperm carry either X or Y. If X sperm fertilises egg → XX (female); if Y sperm → XY (male). Father determines the sex."
+  },
+  {
+    "id": "sci-039",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "Acquired characters are NOT inherited because they:",
+    "options": [
+      "Affect the DNA in germ cells",
+      "Do not affect DNA in germ cells",
+      "Are too complex to transmit",
+      "Are dominant traits"
+    ],
+    "correct": 1,
+    "explanation": "Acquired characters (e.g., muscular body from exercise) do not change the DNA of gametes (germ cells) and therefore cannot be passed to offspring."
+  },
+  {
+    "id": "sci-040",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "easy",
+    "text": "Fossils help us understand evolution because they:",
+    "options": [
+      "Tell us the age of existing organisms",
+      "Provide evidence of organisms that lived in the past",
+      "Show how organisms will evolve",
+      "Are found only in oceans"
+    ],
+    "correct": 1,
+    "explanation": "Fossils are preserved remains of past organisms, providing direct evidence of extinct species and showing evolutionary relationships between organisms."
+  },
+  {
+    "id": "sci-041",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "easy",
+    "text": "The angle of incidence is equal to the angle of reflection. This is:",
+    "options": [
+      "Snell's law",
+      "Law of reflection",
+      "Law of refraction",
+      "Huygen's principle"
+    ],
+    "correct": 1,
+    "explanation": "First law of reflection: angle of incidence = angle of reflection. Both angles are measured from the normal to the reflecting surface."
+  },
+  {
+    "id": "sci-042",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "A concave mirror with focal length 15 cm is used. An object is placed 45 cm from the mirror. The image distance is:",
+    "options": [
+      "22.5 cm",
+      "45 cm",
+      "30 cm",
+      "90 cm"
+    ],
+    "correct": 0,
+    "explanation": "1/v + 1/u = 1/f. u = –45 cm, f = –15 cm. 1/v = 1/f – 1/u = –1/15 + 1/45 = –3/45 + 1/45 = –2/45. v = –22.5 cm (real, inverted)."
+  },
+  {
+    "id": "sci-043",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "easy",
+    "text": "Which mirror is used as a rear-view mirror in vehicles?",
+    "options": [
+      "Plane mirror",
+      "Concave mirror",
+      "Convex mirror",
+      "Biconcave lens"
+    ],
+    "correct": 2,
+    "explanation": "Convex mirrors give an erect, diminished image with a wider field of view → used as rear-view mirrors. Concave mirrors are used as shaving/makeup mirrors."
+  },
+  {
+    "id": "sci-044",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "medium",
+    "text": "The refractive index of glass is 1.5. The speed of light in glass is (speed in vacuum = 3×10⁸ m/s):",
+    "options": [
+      "4.5×10⁸ m/s",
+      "1.5×10⁸ m/s",
+      "2×10⁸ m/s",
+      "3×10⁸ m/s"
+    ],
+    "correct": 2,
+    "explanation": "n = c/v → v = c/n = 3×10⁸/1.5 = 2×10⁸ m/s. Light slows down when entering a denser medium."
+  },
+  {
+    "id": "sci-045",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "medium",
+    "text": "A convex lens has a focal length of 20 cm. Its power is:",
+    "options": [
+      "5 D",
+      "0.5 D",
+      "20 D",
+      "−5 D"
+    ],
+    "correct": 0,
+    "explanation": "Power P = 1/f (in metres) = 1/0.20 = 5 dioptres (D). Convex (converging) lens has positive power."
+  },
+  {
+    "id": "sci-046",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "easy",
+    "text": "The defect of vision in which a person can see nearby objects clearly but not distant objects is:",
+    "options": [
+      "Hypermetropia",
+      "Myopia",
+      "Presbyopia",
+      "Astigmatism"
+    ],
+    "correct": 1,
+    "explanation": "Myopia (short-sightedness): image forms in front of retina. Corrected with concave (diverging) lens. Hypermetropia: image behind retina — corrected with convex lens."
+  },
+  {
+    "id": "sci-047",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "easy",
+    "text": "The splitting of white light into its constituent colours is called:",
+    "options": [
+      "Refraction",
+      "Reflection",
+      "Dispersion",
+      "Scattering"
+    ],
+    "correct": 2,
+    "explanation": "Dispersion: white light splits into VIBGYOR when passing through a prism because different wavelengths refract by different amounts (violet most, red least)."
+  },
+  {
+    "id": "sci-048",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "medium",
+    "text": "The sky appears blue because of:",
+    "options": [
+      "Reflection of sunlight",
+      "Dispersion by raindrops",
+      "Scattering of light by atmosphere",
+      "Refraction by atmosphere"
+    ],
+    "correct": 2,
+    "explanation": "Rayleigh scattering: shorter wavelengths (blue, violet) scatter more in the atmosphere. We see blue because our eyes are more sensitive to blue than violet."
+  },
+  {
+    "id": "sci-049",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "easy",
+    "text": "The power of accommodation of the human eye is due to:",
+    "options": [
+      "Iris",
+      "Cornea",
+      "Ciliary muscles changing lens shape",
+      "Pupil"
+    ],
+    "correct": 2,
+    "explanation": "Ciliary muscles adjust the curvature (and hence focal length) of the eye lens to focus objects at different distances — this is called accommodation."
+  },
+  {
+    "id": "sci-050",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "medium",
+    "text": "A person uses a concave lens of power –2.5 D. The defect of vision is:",
+    "options": [
+      "Hypermetropia",
+      "Presbyopia",
+      "Myopia",
+      "Astigmatism"
+    ],
+    "correct": 2,
+    "explanation": "Concave (diverging) lens has negative power → used to correct myopia (near-sightedness), where the image forms in front of the retina."
+  },
+  {
+    "id": "sci-051",
+    "chapter": "Electricity",
+    "difficulty": "easy",
+    "text": "Ohm's law states that at constant temperature:",
+    "options": [
+      "V ∝ R",
+      "I ∝ V",
+      "V ∝ I",
+      "R ∝ V"
+    ],
+    "correct": 2,
+    "explanation": "Ohm's law: V ∝ I, i.e., V = IR where R is constant at constant temperature. More precisely V/I = constant = R."
+  },
+  {
+    "id": "sci-052",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "Three resistors of 2 Ω, 3 Ω, and 6 Ω are connected in parallel. The equivalent resistance is:",
+    "options": [
+      "11 Ω",
+      "1 Ω",
+      "0.5 Ω",
+      "5 Ω"
+    ],
+    "correct": 1,
+    "explanation": "1/R = 1/2 + 1/3 + 1/6 = 3/6 + 2/6 + 1/6 = 6/6 = 1. Therefore R = 1 Ω. Parallel resistance is always less than the smallest individual resistance."
+  },
+  {
+    "id": "sci-053",
+    "chapter": "Electricity",
+    "difficulty": "easy",
+    "text": "The SI unit of electric charge is:",
+    "options": [
+      "Ampere",
+      "Volt",
+      "Coulomb",
+      "Ohm"
+    ],
+    "correct": 2,
+    "explanation": "Coulomb (C) is the SI unit of electric charge. Current (A) = charge (C) / time (s). Named after physicist Charles-Augustin de Coulomb."
+  },
+  {
+    "id": "sci-054",
+    "chapter": "Electricity",
+    "difficulty": "easy",
+    "text": "The heating element of an electric iron is made of:",
+    "options": [
+      "Copper",
+      "Nichrome",
+      "Tungsten",
+      "Aluminium"
+    ],
+    "correct": 1,
+    "explanation": "Nichrome (Ni-Cr alloy): high resistivity, high melting point, does not oxidise at high temperatures → ideal for heating elements in electric appliances."
+  },
+  {
+    "id": "sci-055",
+    "chapter": "Electricity",
+    "difficulty": "medium",
+    "text": "If a bulb of 100 W is used for 10 hours, the electrical energy consumed is:",
+    "options": [
+      "1 kWh",
+      "10 kWh",
+      "0.1 kWh",
+      "100 kWh"
+    ],
+    "correct": 0,
+    "explanation": "Energy = Power × Time = 100 W × 10 h = 1000 Wh = 1 kWh (1 unit of electricity). This is the unit used by electricity meters."
+  },
+  {
+    "id": "sci-056",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "The magnetic field lines of a bar magnet:",
+    "options": [
+      "Begin at N and end at S externally",
+      "Are closed loops",
+      "Are straight lines",
+      "Only exist inside the magnet"
+    ],
+    "correct": 1,
+    "explanation": "Magnetic field lines are always closed loops — outside the magnet from N to S, and inside from S to N. They never intersect each other."
+  },
+  {
+    "id": "sci-057",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "A current-carrying conductor in a magnetic field experiences a force. This is the basis of:",
+    "options": [
+      "Generator",
+      "Transformer",
+      "Electric motor",
+      "Galvanometer only"
+    ],
+    "correct": 2,
+    "explanation": "Electric motor uses the force on a current-carrying conductor in a magnetic field to convert electrical energy → mechanical (rotational) energy."
+  },
+  {
+    "id": "sci-058",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "easy",
+    "text": "The device used to convert AC to DC is a:",
+    "options": [
+      "Transformer",
+      "Generator",
+      "Rectifier",
+      "Inductor"
+    ],
+    "correct": 2,
+    "explanation": "Rectifier (using diodes) converts AC → DC. Transformers change AC voltage levels; generators produce electricity; inductors store magnetic energy."
+  },
+  {
+    "id": "sci-059",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "According to Fleming's Right Hand Rule, if the thumb points in the direction of motion and the index finger in the direction of the field, the middle finger points in the direction of:",
+    "options": [
+      "Force",
+      "Current",
+      "Magnetic field",
+      "Both force and current"
+    ],
+    "correct": 1,
+    "explanation": "Fleming's Right Hand Rule (for generators/electromagnetic induction): thumb = motion, index = field, middle finger = induced current direction."
+  },
+  {
+    "id": "sci-060",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "easy",
+    "text": "The frequency of AC supply in India is:",
+    "options": [
+      "50 Hz",
+      "60 Hz",
+      "100 Hz",
+      "25 Hz"
+    ],
+    "correct": 0,
+    "explanation": "India uses 50 Hz AC supply at 220 V (230 V nominal). USA uses 60 Hz at 110/120 V. Frequency = number of complete cycles per second."
+  },
+  {
+    "id": "sci-061",
+    "chapter": "Sources of Energy",
+    "difficulty": "easy",
+    "text": "Which of the following is a non-renewable source of energy?",
+    "options": [
+      "Solar energy",
+      "Wind energy",
+      "Coal",
+      "Tidal energy"
+    ],
+    "correct": 2,
+    "explanation": "Coal is a fossil fuel — formed over millions of years and cannot be replenished at human timescales. Solar, wind, and tidal are renewable sources."
+  },
+  {
+    "id": "sci-062",
+    "chapter": "Sources of Energy",
+    "difficulty": "medium",
+    "text": "The energy released in a nuclear reactor comes from:",
+    "options": [
+      "Chemical reaction",
+      "Nuclear fission",
+      "Nuclear fusion",
+      "Combustion"
+    ],
+    "correct": 1,
+    "explanation": "Nuclear reactors use controlled nuclear fission (splitting of heavy nuclei like U-235 or Pu-239) to release enormous amounts of energy (E = mc²)."
+  },
+  {
+    "id": "sci-063",
+    "chapter": "Sources of Energy",
+    "difficulty": "easy",
+    "text": "Biogas is mainly composed of:",
+    "options": [
+      "Carbon dioxide",
+      "Methane",
+      "Hydrogen",
+      "Oxygen"
+    ],
+    "correct": 1,
+    "explanation": "Biogas is ~55–65% methane (CH₄), plus CO₂ and traces of other gases. Produced by anaerobic decomposition of organic matter in biogas plants."
+  },
+  {
+    "id": "sci-064",
+    "chapter": "Sources of Energy",
+    "difficulty": "easy",
+    "text": "Solar cells convert:",
+    "options": [
+      "Chemical energy to electrical energy",
+      "Light energy to electrical energy",
+      "Heat energy to electrical energy",
+      "Mechanical energy to electrical energy"
+    ],
+    "correct": 1,
+    "explanation": "Solar cells (photovoltaic cells) use the photovoltaic effect to convert light energy (photons) directly to electrical energy (DC electricity)."
+  },
+  {
+    "id": "sci-065",
+    "chapter": "Sources of Energy",
+    "difficulty": "medium",
+    "text": "The minimum temperature required for nuclear fusion is approximately:",
+    "options": [
+      "100°C",
+      "1000°C",
+      "10⁷ °C",
+      "10¹⁴ °C"
+    ],
+    "correct": 2,
+    "explanation": "Nuclear fusion requires extremely high temperatures (~10–15 million °C / 10⁷ K) to overcome the electrostatic repulsion between positively charged nuclei."
+  },
+  {
+    "id": "sci-066",
+    "chapter": "Our Environment",
+    "difficulty": "easy",
+    "text": "The flow of energy in a food chain is:",
+    "options": [
+      "Bidirectional",
+      "Unidirectional",
+      "Multidirectional",
+      "Circular"
+    ],
+    "correct": 1,
+    "explanation": "Energy flows unidirectionally (one-way) from sun → producers → primary consumers → secondary consumers → tertiary consumers. It is not recycled."
+  },
+  {
+    "id": "sci-067",
+    "chapter": "Our Environment",
+    "difficulty": "easy",
+    "text": "Which of the following is a biodegradable pollutant?",
+    "options": [
+      "Plastic bags",
+      "DDT",
+      "Sewage",
+      "Mercury compounds"
+    ],
+    "correct": 2,
+    "explanation": "Sewage (organic waste) is decomposed by microorganisms → biodegradable. Plastic, DDT, and mercury are non-biodegradable and persist in the environment."
+  },
+  {
+    "id": "sci-068",
+    "chapter": "Our Environment",
+    "difficulty": "easy",
+    "text": "Ozone (O₃) in the stratosphere protects us from:",
+    "options": [
+      "Infrared radiation",
+      "Visible light",
+      "Ultraviolet radiation",
+      "Gamma rays"
+    ],
+    "correct": 2,
+    "explanation": "The stratospheric ozone layer absorbs harmful UV-B and UV-C radiation from the sun, protecting living organisms from DNA damage and skin cancer."
+  },
+  {
+    "id": "sci-069",
+    "chapter": "Our Environment",
+    "difficulty": "medium",
+    "text": "The phenomenon of accumulation of non-biodegradable chemicals in organisms at each trophic level is called:",
+    "options": [
+      "Eutrophication",
+      "Biomagnification",
+      "Bioremediation",
+      "Pollution"
+    ],
+    "correct": 1,
+    "explanation": "Biomagnification (biological magnification): concentration of persistent chemicals (DDT, mercury) increases at each successive trophic level in a food chain."
+  },
+  {
+    "id": "sci-070",
+    "chapter": "Our Environment",
+    "difficulty": "medium",
+    "text": "The number of trophic levels in a food chain is generally limited to:",
+    "options": [
+      "2",
+      "3–4",
+      "7–8",
+      "10"
+    ],
+    "correct": 1,
+    "explanation": "Only 10% of energy is transferred to the next trophic level (10% law). After 3–4 levels, energy is too little to sustain another consumer level."
+  },
+  {
+    "id": "sci-071",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "easy",
+    "text": "The 3 R's of waste management stand for:",
+    "options": [
+      "Reduce, Reuse, Recycle",
+      "Read, Respond, Resolve",
+      "Repair, Replace, Restore",
+      "Renew, Recharge, Recover"
+    ],
+    "correct": 0,
+    "explanation": "The 3R principle: Reduce (use less), Reuse (use again), Recycle (process into new products). Followed in this priority order to minimise waste."
+  },
+  {
+    "id": "sci-072",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "easy",
+    "text": "The Bishnoi community of Rajasthan is known for protecting:",
+    "options": [
+      "Tiger",
+      "Khejri trees",
+      "Crocodiles",
+      "Rivers"
+    ],
+    "correct": 1,
+    "explanation": "In 1730, Amrita Devi Bishnoi sacrificed her life along with 363 others protecting Khejri trees from being cut down by royal soldiers — a pioneering conservation movement."
+  },
+  {
+    "id": "sci-073",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "easy",
+    "text": "Coliform bacteria in drinking water indicates contamination from:",
+    "options": [
+      "Industrial chemicals",
+      "Human or animal waste",
+      "Heavy metals",
+      "Fertilisers"
+    ],
+    "correct": 1,
+    "explanation": "Coliform bacteria (e.g., E. coli) originate in the gut of warm-blooded animals. Their presence in water is an indicator of faecal contamination."
+  },
+  {
+    "id": "sci-074",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "easy",
+    "text": "Chipko movement was started to protect:",
+    "options": [
+      "Rivers",
+      "Wildlife",
+      "Forests",
+      "Soil"
+    ],
+    "correct": 2,
+    "explanation": "Chipko movement (1973, Uttarakhand): villagers hugged trees (chipko = embrace/cling) to prevent logging, protecting Himalayan forests from commercial felling."
+  },
+  {
+    "id": "sci-075",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "medium",
+    "text": "The 'Khadin' system is a traditional water harvesting structure found in:",
+    "options": [
+      "Kerala",
+      "Rajasthan",
+      "Assam",
+      "Maharashtra"
+    ],
+    "correct": 1,
+    "explanation": "Khadin: an earthen embankment built across the foot of hill slopes in Rajasthan to trap monsoon runoff for cultivation — ancient rainwater harvesting technique."
+  },
+  {
+    "id": "sci-076",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "easy",
+    "text": "In the modern periodic table, elements are arranged in order of increasing:",
+    "options": [
+      "Atomic mass",
+      "Atomic number",
+      "Valency",
+      "Density"
+    ],
+    "correct": 1,
+    "explanation": "Moseley's modern periodic law: properties of elements are periodic functions of their atomic numbers. Elements are arranged by increasing atomic number (Z)."
+  },
+  {
+    "id": "sci-077",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "The element in period 3 and group 1 is:",
+    "options": [
+      "Lithium",
+      "Potassium",
+      "Sodium",
+      "Magnesium"
+    ],
+    "correct": 2,
+    "explanation": "Period 3 starts with Na (Z=11) in group 1. Li is period 2, group 1; K is period 4, group 1; Mg is period 3 but group 2."
+  },
+  {
+    "id": "sci-078",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "Which property generally decreases across a period from left to right?",
+    "options": [
+      "Electronegativity",
+      "Ionisation energy",
+      "Atomic radius",
+      "Nuclear charge"
+    ],
+    "correct": 2,
+    "explanation": "Across a period: nuclear charge increases, pulling electrons closer → atomic radius decreases. Electronegativity and ionisation energy increase across a period."
+  },
+  {
+    "id": "sci-079",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "The valency of an element equals the number of:",
+    "options": [
+      "Protons",
+      "Electrons in outermost shell capable of bonding",
+      "Neutrons",
+      "Isotopes"
+    ],
+    "correct": 1,
+    "explanation": "Valency = electrons in the outermost shell that can be lost, gained, or shared to achieve stability (8 electrons / noble gas configuration)."
+  },
+  {
+    "id": "sci-080",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "Non-metals are generally located in the periodic table at the:",
+    "options": [
+      "Left side",
+      "Bottom",
+      "Top right (with exceptions)",
+      "Centre"
+    ],
+    "correct": 2,
+    "explanation": "Non-metals occupy the top-right portion of the periodic table (with exception of hydrogen at top-left). The staircase/zigzag line separates metals from non-metals."
+  },
+  {
+    "id": "sci-081",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "Which of the following is an ester?",
+    "options": [
+      "CH₃COOH",
+      "CH₃OH",
+      "CH₃COOC₂H₅",
+      "C₂H₅OH"
+    ],
+    "correct": 2,
+    "explanation": "Ethyl ethanoate (CH₃COOC₂H₅) is an ester formed by esterification of acetic acid and ethanol. Esters have the –COO– functional group and characteristic fruity smells."
+  },
+  {
+    "id": "sci-082",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "The IUPAC name of CH₃-CH₂-OH is:",
+    "options": [
+      "Methanol",
+      "Propanol",
+      "Ethanol",
+      "Butanol"
+    ],
+    "correct": 2,
+    "explanation": "CH₃-CH₂-OH has 2 carbons → ethanol (eth = 2 carbons, -ol suffix for alcohol). IUPAC name: ethanol. Common name: alcohol or ethyl alcohol."
+  },
+  {
+    "id": "sci-083",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "Addition reaction is characteristic of:",
+    "options": [
+      "Saturated hydrocarbons only",
+      "Unsaturated hydrocarbons",
+      "Alcohols",
+      "Carboxylic acids"
+    ],
+    "correct": 1,
+    "explanation": "Unsaturated compounds (alkenes, alkynes) undergo addition reactions across the double/triple bond. Saturated alkanes undergo substitution reactions."
+  },
+  {
+    "id": "sci-084",
+    "chapter": "Life Processes",
+    "difficulty": "medium",
+    "text": "Stomata open during the day because:",
+    "options": [
+      "Temperature increases",
+      "Guard cells become turgid due to photosynthesis",
+      "CO₂ accumulates",
+      "O₂ decreases"
+    ],
+    "correct": 1,
+    "explanation": "During daytime, guard cells photosynthesize → produce glucose → osmotic pressure increases → water enters → cells become turgid → stomata open for gas exchange."
+  },
+  {
+    "id": "sci-085",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "medium",
+    "text": "Which of the following reactions is endothermic?",
+    "options": [
+      "Burning of wood",
+      "Respiration",
+      "Decomposition of calcium carbonate",
+      "Rusting of iron"
+    ],
+    "correct": 2,
+    "explanation": "CaCO₃ → CaO + CO₂ requires heating (heat energy is absorbed from surroundings) → endothermic. Combustion and respiration are exothermic."
+  },
+  {
+    "id": "sci-086",
+    "chapter": "Electricity",
+    "difficulty": "medium",
+    "text": "What happens to the resistance of a conductor when its length is doubled?",
+    "options": [
+      "Halved",
+      "Doubled",
+      "Quadrupled",
+      "Unchanged"
+    ],
+    "correct": 1,
+    "explanation": "R = ρL/A. If L doubles (area constant): R doubles. Resistance is directly proportional to length and inversely proportional to cross-sectional area."
+  },
+  {
+    "id": "sci-087",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "Two bulbs of 40 W and 60 W are connected in series. Which bulb glows brighter?",
+    "options": [
+      "40 W",
+      "60 W",
+      "Both equally",
+      "Neither glows"
+    ],
+    "correct": 0,
+    "explanation": "In series, same current flows. P = I²R. R = V²/P, so 40 W bulb has higher resistance → dissipates more power in series → glows brighter. (Opposite of parallel.)"
+  },
+  {
+    "id": "sci-088",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "easy",
+    "text": "An AC generator works on the principle of:",
+    "options": [
+      "Ohm's law",
+      "Faraday's law of electromagnetic induction",
+      "Newton's third law",
+      "Ampere's law"
+    ],
+    "correct": 1,
+    "explanation": "AC generator converts mechanical energy → electrical energy using Faraday's law: a coil rotating in a magnetic field experiences changing flux → induces alternating EMF."
+  },
+  {
+    "id": "sci-089",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "The genotypic ratio from a monohybrid cross Tt × Tt is:",
+    "options": [
+      "3:1",
+      "1:2:1",
+      "1:1",
+      "9:3:3:1"
+    ],
+    "correct": 1,
+    "explanation": "Tt × Tt → TT : Tt : tt = 1:2:1 (genotypic ratio). TT and Tt show dominant phenotype → phenotypic ratio is 3:1."
+  },
+  {
+    "id": "sci-090",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "easy",
+    "text": "In binary fission, a single organism divides into:",
+    "options": [
+      "4 equal parts",
+      "2 equal parts",
+      "Multiple spores",
+      "Many unequal parts"
+    ],
+    "correct": 1,
+    "explanation": "Binary fission: the cell divides into two equal daughter cells (e.g., Amoeba, bacteria). It is the simplest form of asexual reproduction."
+  },
+  {
+    "id": "sci-091",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "Virtual image is formed by a:",
+    "options": [
+      "Concave mirror when object is beyond C",
+      "Concave lens always",
+      "Convex mirror always",
+      "Both B and C"
+    ],
+    "correct": 3,
+    "explanation": "Concave lens always forms virtual, erect, diminished images. Convex mirror always forms virtual, erect, diminished images. Both are correct."
+  },
+  {
+    "id": "sci-092",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "easy",
+    "text": "A ray of light passing through the optical centre of a lens:",
+    "options": [
+      "Bends toward the principal axis",
+      "Passes without any deviation",
+      "Bends away from the principal axis",
+      "Gets totally internally reflected"
+    ],
+    "correct": 1,
+    "explanation": "A ray through the optical centre of a lens passes straight through without any deviation, regardless of the lens type (concave or convex)."
+  },
+  {
+    "id": "sci-093",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "The acid present in vinegar is:",
+    "options": [
+      "Citric acid",
+      "Tartaric acid",
+      "Acetic acid",
+      "Oxalic acid"
+    ],
+    "correct": 2,
+    "explanation": "Vinegar contains 5–8% acetic acid (ethanoic acid, CH₃COOH). Citric acid is in citrus fruits; tartaric acid in tamarind; oxalic acid in spinach."
+  },
+  {
+    "id": "sci-094",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "easy",
+    "text": "Metals are generally:",
+    "options": [
+      "Poor conductors of heat",
+      "Good conductors of electricity",
+      "Electronegative",
+      "Non-lustrous"
+    ],
+    "correct": 1,
+    "explanation": "Metals have free electrons → good conductors of both heat and electricity. They are electropositive, lustrous (shiny), malleable, and ductile."
+  },
+  {
+    "id": "sci-095",
+    "chapter": "Our Environment",
+    "difficulty": "easy",
+    "text": "Greenhouse gases trap heat energy and lead to:",
+    "options": [
+      "Cooling of Earth",
+      "Global warming",
+      "Ozone formation",
+      "Increased UV radiation"
+    ],
+    "correct": 1,
+    "explanation": "Greenhouse gases (CO₂, CH₄, N₂O, H₂O vapour) absorb outgoing infrared radiation → trap heat → global warming → climate change."
+  },
+  {
+    "id": "sci-096",
+    "chapter": "Control and Coordination",
+    "difficulty": "easy",
+    "text": "The neurotransmitter released at the synapse is:",
+    "options": [
+      "Acetylcholine",
+      "Insulin",
+      "Adrenaline",
+      "Thyroxine"
+    ],
+    "correct": 0,
+    "explanation": "Acetylcholine (and other neurotransmitters like dopamine, serotonin) are released from synaptic vesicles at the synapse to transmit nerve impulses across the gap."
+  },
+  {
+    "id": "sci-097",
+    "chapter": "Sources of Energy",
+    "difficulty": "medium",
+    "text": "Which fuel has the highest calorific value?",
+    "options": [
+      "Wood",
+      "Coal",
+      "Petroleum",
+      "Hydrogen"
+    ],
+    "correct": 3,
+    "explanation": "Calorific values (kJ/g): wood ~17, coal ~30, petroleum ~45, hydrogen ~150. Hydrogen has the highest energy content per unit mass of all known fuels."
+  },
+  {
+    "id": "sci-098",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "The site of photosynthesis in a plant cell is:",
+    "options": [
+      "Mitochondria",
+      "Nucleus",
+      "Chloroplast",
+      "Ribosome"
+    ],
+    "correct": 2,
+    "explanation": "Chloroplasts contain chlorophyll (green pigment) and are the site of photosynthesis. Mitochondria are sites of cellular respiration (energy release)."
+  },
+  {
+    "id": "sci-099",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "easy",
+    "text": "The number of periods in the modern periodic table is:",
+    "options": [
+      "7",
+      "8",
+      "18",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "The modern periodic table has 7 horizontal rows called periods and 18 vertical columns called groups. Period 6 contains lanthanides; period 7 contains actinides."
+  },
+  {
+    "id": "sci-100",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "A substance that speeds up a chemical reaction without being consumed is called a:",
+    "options": [
+      "Reactant",
+      "Product",
+      "Catalyst",
+      "Inhibitor"
+    ],
+    "correct": 2,
+    "explanation": "A catalyst lowers the activation energy of a reaction, speeding it up without being consumed or appearing in the final products. MnO₂ catalyses H₂O₂ decomposition."
+  },
+  {
+    "id": "sci-101",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "medium",
+    "text": "Which of the following is amphoteric?",
+    "options": [
+      "NaOH",
+      "HCl",
+      "Al₂O₃",
+      "NaCl"
+    ],
+    "correct": 2,
+    "explanation": "Al₂O₃ (aluminium oxide) is amphoteric — reacts with both acids (Al₂O₃ + 6HCl → 2AlCl₃ + 3H₂O) and bases (Al₂O₃ + 2NaOH → 2NaAlO₂ + H₂O)."
+  },
+  {
+    "id": "sci-102",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "The next higher homologue of ethane in the alkane series is:",
+    "options": [
+      "Methane",
+      "Propane",
+      "Butane",
+      "Ethene"
+    ],
+    "correct": 1,
+    "explanation": "Homologous series of alkanes: methane (CH₄), ethane (C₂H₆), propane (C₃H₈), butane (C₄H₁₀)... Each successive member has one more CH₂ unit."
+  },
+  {
+    "id": "sci-103",
+    "chapter": "Electricity",
+    "difficulty": "easy",
+    "text": "The unit of electric potential difference is:",
+    "options": [
+      "Ampere",
+      "Coulomb",
+      "Watt",
+      "Volt"
+    ],
+    "correct": 3,
+    "explanation": "Volt (V) is the SI unit of potential difference (voltage). 1 Volt = 1 Joule/Coulomb. Named after Alessandro Volta."
+  },
+  {
+    "id": "sci-104",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "Which rule is used to find the direction of force on a current-carrying conductor in a magnetic field?",
+    "options": [
+      "Right hand thumb rule",
+      "Fleming's left hand rule",
+      "Lenz's law",
+      "Faraday's law"
+    ],
+    "correct": 1,
+    "explanation": "Fleming's Left Hand Rule: for motors, when forefinger = field direction and middle finger = current direction, the thumb gives the direction of force (motion)."
+  },
+  {
+    "id": "sci-105",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "Darwin's theory of evolution is based on:",
+    "options": [
+      "Inheritance of acquired characters",
+      "Natural selection and survival of the fittest",
+      "Mutation alone",
+      "Genetic drift alone"
+    ],
+    "correct": 1,
+    "explanation": "Darwin: organisms with favourable variations survive ('survival of the fittest') and reproduce more → these traits are passed to offspring → evolution by natural selection."
+  },
+  {
+    "id": "sci-106",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "hard",
+    "text": "By the law of conservation of mass, if 4.8 g of magnesium burns completely in oxygen to form 8.0 g of magnesium oxide, the mass of oxygen that reacted is:",
+    "options": [
+      "3.2 g",
+      "4.8 g",
+      "8.0 g",
+      "12.8 g"
+    ],
+    "correct": 0,
+    "explanation": "Law of conservation of mass: total mass of reactants = total mass of products. Mass of oxygen = mass of MgO − mass of Mg = 8.0 − 4.8 = 3.2 g."
+  },
+  {
+    "id": "sci-107",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "hard",
+    "text": "When aluminium reacts with oxygen, the balanced equation is 4Al + 3O₂ → 2Al₂O₃. The sum of all the coefficients in this balanced equation is:",
+    "options": [
+      "9",
+      "7",
+      "6",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "Adding all coefficients: 4 (Al) + 3 (O₂) + 2 (Al₂O₃) = 9."
+  },
+  {
+    "id": "sci-108",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "hard",
+    "text": "In the thermite reaction Fe₂O₃ + 2Al → Al₂O₃ + 2Fe + heat, which statement best describes the reaction?",
+    "options": [
+      "It is both a displacement and a redox reaction, and it is exothermic",
+      "It is only a displacement reaction and is endothermic",
+      "It is a double displacement reaction only",
+      "It is a decomposition reaction that absorbs heat"
+    ],
+    "correct": 0,
+    "explanation": "Aluminium displaces iron from its oxide (displacement), Fe₂O₃ is reduced while Al is oxidised (redox), and large heat is released, melting the iron — so it is an exothermic displacement/redox reaction."
+  },
+  {
+    "id": "sci-109",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "medium",
+    "text": "The decomposition of silver bromide (2AgBr → 2Ag + Br₂), used in black-and-white photography, is triggered mainly by:",
+    "options": [
+      "Heat",
+      "Light",
+      "Electricity",
+      "Water"
+    ],
+    "correct": 1,
+    "explanation": "This is a photolytic (photochemical) decomposition reaction — light energy breaks AgBr into silver and bromine, which is the basis of photographic film development."
+  },
+  {
+    "id": "sci-110",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "medium",
+    "text": "In the reaction ZnO + C → Zn + CO, carbon acts as the:",
+    "options": [
+      "Oxidising agent",
+      "Reducing agent",
+      "Catalyst",
+      "Neither oxidising nor reducing agent"
+    ],
+    "correct": 1,
+    "explanation": "Carbon gains oxygen (C → CO) and is itself oxidised, which means it causes the reduction of ZnO to Zn — so carbon is the reducing agent."
+  },
+  {
+    "id": "sci-111",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "A reaction in which two compounds exchange ions to form two new compounds is called a:",
+    "options": [
+      "Combination reaction",
+      "Decomposition reaction",
+      "Double displacement reaction",
+      "Displacement reaction"
+    ],
+    "correct": 2,
+    "explanation": "Double displacement reaction: ions are exchanged between two reacting compounds, often forming an insoluble precipitate, e.g. AgNO₃ + NaCl → AgCl↓ + NaNO₃."
+  },
+  {
+    "id": "sci-112",
+    "chapter": "Chemical Reactions and Equations",
+    "difficulty": "easy",
+    "text": "Rusting of iron is a chemical process that mainly involves:",
+    "options": [
+      "Reduction of iron",
+      "Oxidation of iron",
+      "Decomposition of iron",
+      "Neutralisation of iron"
+    ],
+    "correct": 1,
+    "explanation": "Rusting is the oxidation of iron: iron reacts with oxygen and moisture in the air to form hydrated iron(III) oxide (rust), Fe₂O₃·xH₂O."
+  },
+  {
+    "id": "sci-113",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "hard",
+    "text": "The pH of a solution changes from 3 to 5. By what factor does the H⁺ ion concentration decrease?",
+    "options": [
+      "100 times",
+      "10 times",
+      "1000 times",
+      "2 times"
+    ],
+    "correct": 0,
+    "explanation": "pH = −log[H⁺], and pH is a logarithmic (base-10) scale. An increase in pH by 2 units means [H⁺] decreases by 10² = 100 times."
+  },
+  {
+    "id": "sci-114",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "hard",
+    "text": "Equal volumes of a strong HCl solution and a NaOH solution exactly neutralise each other. If the same volume of HCl is first diluted 10 times with water and then mixed with the same volume and concentration of the NaOH solution, the resulting mixture will be:",
+    "options": [
+      "Basic",
+      "Acidic",
+      "Neutral",
+      "Cannot be determined"
+    ],
+    "correct": 0,
+    "explanation": "Diluting the HCl reduces the moles of H⁺ available, while the amount of NaOH stays the same, so NaOH is now in excess after mixing — the resulting solution turns basic."
+  },
+  {
+    "id": "sci-115",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "hard",
+    "text": "Which pair of reactants, when combined in the correct proportion, produces a salt whose aqueous solution is neutral (pH = 7)?",
+    "options": [
+      "HCl and NaOH",
+      "CH₃COOH and NaOH",
+      "HCl and NH₄OH",
+      "H₂SO₄ and NH₄OH"
+    ],
+    "correct": 0,
+    "explanation": "A salt of a strong acid and a strong base (like NaCl from HCl + NaOH) is neutral. Salts formed from a weak acid/base combination (e.g. sodium acetate, ammonium chloride) are basic or acidic respectively."
+  },
+  {
+    "id": "sci-116",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "medium",
+    "text": "Tooth decay begins when the pH inside the mouth falls below approximately:",
+    "options": [
+      "5.5",
+      "7.0",
+      "8.5",
+      "3.0"
+    ],
+    "correct": 0,
+    "explanation": "Bacteria in the mouth produce acids from sugar residues. When mouth pH drops below 5.5, tooth enamel (calcium phosphate/hydroxyapatite) starts to corrode, causing decay."
+  },
+  {
+    "id": "sci-117",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "medium",
+    "text": "Which salt is commonly used to remove the permanent hardness of water and is also known as washing soda?",
+    "options": [
+      "Sodium carbonate (Na₂CO₃·10H₂O)",
+      "Sodium chloride (NaCl)",
+      "Calcium sulphate (CaSO₄)",
+      "Sodium bicarbonate (NaHCO₃)"
+    ],
+    "correct": 0,
+    "explanation": "Washing soda (Na₂CO₃·10H₂O) precipitates the Ca²⁺ and Mg²⁺ ions responsible for permanent hardness of water as insoluble carbonates, softening the water."
+  },
+  {
+    "id": "sci-118",
+    "chapter": "Acids, Bases and Salts",
+    "difficulty": "easy",
+    "text": "An acid turns blue litmus paper:",
+    "options": [
+      "Green",
+      "Red",
+      "Yellow",
+      "Colourless"
+    ],
+    "correct": 1,
+    "explanation": "Acids turn blue litmus paper red, while bases turn red litmus paper blue. This is a standard acid-base indicator test."
+  },
+  {
+    "id": "sci-119",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "hard",
+    "text": "A metal X displaces metal Y from its salt solution but does NOT react with dilute HCl to liberate hydrogen gas. X is most likely:",
+    "options": [
+      "Copper",
+      "Zinc",
+      "Magnesium",
+      "Sodium"
+    ],
+    "correct": 0,
+    "explanation": "Copper lies below hydrogen in the reactivity series, so it cannot displace H₂ from dilute acids, but it can still displace less reactive metals like silver from their salt solutions (Cu + 2AgNO₃ → Cu(NO₃)₂ + 2Ag)."
+  },
+  {
+    "id": "sci-120",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "hard",
+    "text": "An element X forms an oxide X₂O₃ that reacts with both acids and bases. X does not react with cold water but reacts with steam to liberate hydrogen. X is most likely:",
+    "options": [
+      "Aluminium",
+      "Sodium",
+      "Copper",
+      "Calcium"
+    ],
+    "correct": 0,
+    "explanation": "Aluminium forms the amphoteric oxide Al₂O₃ (reacts with both acids and alkalis) and, being moderately reactive, reacts with steam but not cold water — matching both given clues."
+  },
+  {
+    "id": "sci-121",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "medium",
+    "text": "Ionic compounds generally have high melting and boiling points because:",
+    "options": [
+      "They have covalent bonds that are weak",
+      "There is a strong electrostatic force of attraction between oppositely charged ions in the crystal lattice",
+      "They exist as small, light molecules",
+      "They contain only non-metal atoms"
+    ],
+    "correct": 1,
+    "explanation": "Ionic compounds form a rigid crystal lattice held together by strong electrostatic attraction between cations and anions, requiring a large amount of energy to break — hence high melting/boiling points."
+  },
+  {
+    "id": "sci-122",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "medium",
+    "text": "In the extraction of aluminium, the ore bauxite is first purified to remove impurities before electrolysis. This purification process is known as the:",
+    "options": [
+      "Baeyer's process",
+      "Froth flotation process",
+      "Roasting process",
+      "Calcination process"
+    ],
+    "correct": 0,
+    "explanation": "Bauxite (impure Al₂O₃) is purified by the Baeyer's process before it is subjected to electrolytic reduction (Hall-Héroult process) to extract aluminium metal."
+  },
+  {
+    "id": "sci-123",
+    "chapter": "Metals and Non-metals",
+    "difficulty": "easy",
+    "text": "Non-metals generally form oxides that are:",
+    "options": [
+      "Acidic or neutral",
+      "Basic",
+      "Amphoteric only",
+      "Always neutral"
+    ],
+    "correct": 0,
+    "explanation": "Non-metal oxides are generally acidic (e.g. CO₂, SO₂ dissolve in water to form acids) or occasionally neutral (e.g. CO, H₂O), unlike metal oxides which are usually basic."
+  },
+  {
+    "id": "sci-124",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "hard",
+    "text": "Using the general formula for alkanes, CₙH₂ₙ₊₂, the molecular formula of the alkane with n = 4 is:",
+    "options": [
+      "C₄H₁₀",
+      "C₄H₈",
+      "C₄H₆",
+      "C₅H₁₂"
+    ],
+    "correct": 0,
+    "explanation": "For alkanes, CₙH₂ₙ₊₂. With n = 4: C₄H(2×4+2) = C₄H₁₀, which is butane."
+  },
+  {
+    "id": "sci-125",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "hard",
+    "text": "How many structural isomers does butane (C₄H₁₀) have?",
+    "options": [
+      "2 (n-butane and isobutane)",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Butane (C₄H₁₀) has two structural isomers: straight-chain n-butane and branched isobutane (2-methylpropane), both with the same molecular formula but different structures."
+  },
+  {
+    "id": "sci-126",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "hard",
+    "text": "When a hydrocarbon burns in air with a yellow, sooty flame producing visible black smoke, this indicates that the hydrocarbon is most likely:",
+    "options": [
+      "Unsaturated (has double or triple bonds)",
+      "Fully saturated",
+      "An alcohol",
+      "An ester"
+    ],
+    "correct": 0,
+    "explanation": "Unsaturated hydrocarbons have a higher proportion of carbon and burn with incomplete combustion in air, producing a yellow sooty flame with unburnt carbon particles (soot/smoke)."
+  },
+  {
+    "id": "sci-127",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "hard",
+    "text": "Sodium hydrogen carbonate is added to ethanoic acid (vinegar), and the gas evolved is passed through freshly prepared lime water. What is observed?",
+    "options": [
+      "The lime water turns milky due to CO₂ formed",
+      "The lime water turns blue",
+      "No visible change occurs",
+      "The lime water catches fire"
+    ],
+    "correct": 0,
+    "explanation": "CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂↑. The CO₂ evolved reacts with lime water (Ca(OH)₂) to form insoluble CaCO₃, turning it milky — a standard confirmatory test for both the acid and the gas."
+  },
+  {
+    "id": "sci-128",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "Hard water containing dissolved Ca²⁺ and Mg²⁺ ions forms a scum with ordinary soap because:",
+    "options": [
+      "Soap reacts with these ions to form insoluble calcium/magnesium salts of fatty acids",
+      "Soap dissolves completely and the scum is just excess soap",
+      "The ions neutralise the soap's alkalinity",
+      "Hard water increases soap's solubility"
+    ],
+    "correct": 0,
+    "explanation": "Ca²⁺ and Mg²⁺ ions react with the sodium/potassium salts of fatty acids in soap to form insoluble calcium/magnesium stearate (scum), wasting the soap and reducing its cleaning efficiency."
+  },
+  {
+    "id": "sci-129",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "The IUPAC name of CH₃–CO–CH₃ is:",
+    "options": [
+      "Propanone",
+      "Propanol",
+      "Propanal",
+      "Propanoic acid"
+    ],
+    "correct": 0,
+    "explanation": "CH₃–CO–CH₃ (acetone) has a ketone (–CO–) functional group with 3 carbons, so its IUPAC name uses the suffix '-one' → propanone."
+  },
+  {
+    "id": "sci-130",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "medium",
+    "text": "Which of the following has the general molecular formula CₙH₂ₙ?",
+    "options": [
+      "Alkenes",
+      "Alkanes",
+      "Alkynes",
+      "Alcohols"
+    ],
+    "correct": 0,
+    "explanation": "Alkenes (containing one C=C double bond) follow the general formula CₙH₂ₙ. Alkanes follow CₙH₂ₙ₊₂ and alkynes follow CₙH₂ₙ₋₂."
+  },
+  {
+    "id": "sci-131",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "Carbon has how many valence electrons in its outermost shell?",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "correct": 0,
+    "explanation": "Carbon's electronic configuration is 2,4 — it has 4 electrons in its outermost shell, giving it a valency of 4 and allowing it to form 4 covalent bonds."
+  },
+  {
+    "id": "sci-132",
+    "chapter": "Carbon and its Compounds",
+    "difficulty": "easy",
+    "text": "The property of carbon atoms to form long chains by bonding with other carbon atoms is called:",
+    "options": [
+      "Catenation",
+      "Isomerism",
+      "Saponification",
+      "Polymerisation"
+    ],
+    "correct": 0,
+    "explanation": "Catenation is the self-linking property of carbon, allowing it to form long chains, branched chains, and rings — a key reason for the vast diversity of organic compounds."
+  },
+  {
+    "id": "sci-133",
+    "chapter": "Life Processes",
+    "difficulty": "hard",
+    "text": "Oxygenated blood returning from the lungs first enters which chamber of the human heart?",
+    "options": [
+      "Left atrium",
+      "Right atrium",
+      "Left ventricle",
+      "Right ventricle"
+    ],
+    "correct": 0,
+    "explanation": "The pulmonary vein carries oxygenated blood from the lungs into the left atrium, which then passes it to the left ventricle for pumping to the rest of the body."
+  },
+  {
+    "id": "sci-134",
+    "chapter": "Life Processes",
+    "difficulty": "hard",
+    "text": "Which sequence correctly represents the pathway of deoxygenated blood from the right ventricle to the left atrium?",
+    "options": [
+      "Right ventricle → pulmonary artery → lungs → pulmonary vein → left atrium",
+      "Right ventricle → pulmonary vein → lungs → pulmonary artery → left atrium",
+      "Right ventricle → aorta → lungs → pulmonary vein → left atrium",
+      "Right ventricle → vena cava → lungs → pulmonary artery → left atrium"
+    ],
+    "correct": 0,
+    "explanation": "Deoxygenated blood leaves the right ventricle via the pulmonary artery to the lungs for oxygenation, and returns as oxygenated blood via the pulmonary vein into the left atrium."
+  },
+  {
+    "id": "sci-135",
+    "chapter": "Life Processes",
+    "difficulty": "hard",
+    "text": "Bile, produced by the liver and stored in the gallbladder, aids fat digestion mainly by:",
+    "options": [
+      "Emulsifying large fat globules into smaller droplets, increasing surface area for enzyme action",
+      "Chemically breaking fat molecules into fatty acids and glycerol",
+      "Directly absorbing fat into the bloodstream",
+      "Neutralising excess acid produced in the small intestine only"
+    ],
+    "correct": 0,
+    "explanation": "Bile does not contain digestive enzymes; it emulsifies fats into tiny droplets, greatly increasing the surface area available for lipase enzymes to chemically digest the fat efficiently."
+  },
+  {
+    "id": "sci-136",
+    "chapter": "Life Processes",
+    "difficulty": "medium",
+    "text": "During heavy exercise, when the oxygen supply to muscle cells is insufficient, anaerobic respiration in muscles produces:",
+    "options": [
+      "Lactic acid",
+      "Ethanol and CO₂",
+      "Only CO₂ and water",
+      "Glucose"
+    ],
+    "correct": 0,
+    "explanation": "When oxygen is limited, muscle cells break down glucose anaerobically to lactic acid (instead of the complete aerobic breakdown to CO₂ and water), causing muscle fatigue and cramps."
+  },
+  {
+    "id": "sci-137",
+    "chapter": "Life Processes",
+    "difficulty": "medium",
+    "text": "Xylem tissue in plants transports water and dissolved minerals mainly in which direction?",
+    "options": [
+      "Upward, from roots to leaves (unidirectional)",
+      "Both upward and downward, depending on need",
+      "Downward, from leaves to roots only",
+      "Sideways, from stem to nearby plants"
+    ],
+    "correct": 0,
+    "explanation": "Unlike phloem (which transports food bidirectionally), xylem transports water and minerals unidirectionally, upward from the roots to the rest of the plant, driven mainly by transpiration pull."
+  },
+  {
+    "id": "sci-138",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "The functional and structural unit of the kidney is called the:",
+    "options": [
+      "Nephron",
+      "Neuron",
+      "Alveolus",
+      "Villus"
+    ],
+    "correct": 0,
+    "explanation": "Each kidney contains millions of nephrons, the basic filtration units responsible for forming urine by filtering blood and reabsorbing useful substances."
+  },
+  {
+    "id": "sci-139",
+    "chapter": "Life Processes",
+    "difficulty": "easy",
+    "text": "Which organ is primarily responsible for pumping blood throughout the human body?",
+    "options": [
+      "Heart",
+      "Liver",
+      "Lungs",
+      "Kidney"
+    ],
+    "correct": 0,
+    "explanation": "The heart is a muscular pump that rhythmically contracts to circulate blood through arteries, capillaries, and veins to all parts of the body."
+  },
+  {
+    "id": "sci-140",
+    "chapter": "Control and Coordination",
+    "difficulty": "hard",
+    "text": "In a knee-jerk reflex, the response occurs almost instantly and only afterward does the person consciously perceive the stimulus. This best demonstrates that:",
+    "options": [
+      "The reflex is controlled by the spinal cord independently, though the brain is informed of the stimulus afterward",
+      "Reflexes are always consciously controlled by the brain in real time",
+      "The spinal cord and brain act simultaneously with equal speed",
+      "Reflex actions do not involve the nervous system at all"
+    ],
+    "correct": 0,
+    "explanation": "Reflex arcs are processed at the spinal cord level for a rapid, involuntary response, bypassing the need to wait for the brain — the brain only becomes aware of the sensation slightly afterward via a separate pathway."
+  },
+  {
+    "id": "sci-141",
+    "chapter": "Control and Coordination",
+    "difficulty": "hard",
+    "text": "A person with damage to the cerebellum would most likely show problems with:",
+    "options": [
+      "Balance and coordination of voluntary movements",
+      "Long-term memory only",
+      "Involuntary control of heart rate and breathing",
+      "Regulation of body temperature"
+    ],
+    "correct": 0,
+    "explanation": "The cerebellum, part of the hindbrain, is responsible for maintaining posture, balance, and precise coordination of voluntary movements. Heart rate/breathing are controlled by the medulla; temperature by the hypothalamus."
+  },
+  {
+    "id": "sci-142",
+    "chapter": "Control and Coordination",
+    "difficulty": "medium",
+    "text": "Which plant hormone promotes cell division and helps delay the ageing (senescence) of leaves?",
+    "options": [
+      "Cytokinin",
+      "Auxin",
+      "Gibberellin",
+      "Abscisic acid"
+    ],
+    "correct": 0,
+    "explanation": "Cytokinins promote cell division (cytokinesis) and are known to delay senescence in leaves by keeping them metabolically active for longer."
+  },
+  {
+    "id": "sci-143",
+    "chapter": "Control and Coordination",
+    "difficulty": "medium",
+    "text": "Deficiency of iodine in the diet can lead to enlargement of which gland, a condition known as goitre?",
+    "options": [
+      "Thyroid gland",
+      "Pituitary gland",
+      "Adrenal gland",
+      "Pancreas"
+    ],
+    "correct": 0,
+    "explanation": "Iodine is essential for synthesising thyroxine in the thyroid gland. Iodine deficiency impairs thyroxine production, causing the thyroid gland to enlarge (goitre) as it tries to compensate."
+  },
+  {
+    "id": "sci-144",
+    "chapter": "Control and Coordination",
+    "difficulty": "easy",
+    "text": "The tiny gap between two neurons across which a nerve impulse passes is called a:",
+    "options": [
+      "Synapse",
+      "Axon",
+      "Dendrite",
+      "Node"
+    ],
+    "correct": 0,
+    "explanation": "A synapse is the junction between two neurons. Nerve impulses cross this gap chemically, via neurotransmitters released from synaptic vesicles."
+  },
+  {
+    "id": "sci-145",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "hard",
+    "text": "A couple wishes to prevent pregnancy using a method that also reduces the risk of transmitting sexually transmitted infections (STIs). The most appropriate choice among the following is:",
+    "options": [
+      "Condom (barrier method)",
+      "Oral contraceptive pills",
+      "Copper-T (intrauterine device)",
+      "Surgical methods (tubectomy/vasectomy)"
+    ],
+    "correct": 0,
+    "explanation": "Condoms act as a physical barrier that prevents both sperm from reaching the egg and the exchange of body fluids, making them the only listed method that also helps prevent STIs."
+  },
+  {
+    "id": "sci-146",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "hard",
+    "text": "In flowering plants, offspring produced through self-pollination followed by fertilisation are, on average, genetically:",
+    "options": [
+      "Less variable and more similar to the parent plant than those from cross-pollination",
+      "More variable than those from cross-pollination",
+      "Identical clones of the parent, exactly like asexual reproduction",
+      "Completely unrelated to the parent plant"
+    ],
+    "correct": 0,
+    "explanation": "Self-pollination combines gametes from the same plant, so it produces less genetic mixing and offspring more similar to the parent, whereas cross-pollination combines genetic material from two different plants, producing greater variation."
+  },
+  {
+    "id": "sci-147",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "medium",
+    "text": "Formation of new individuals from spores, seen in bread mould (Rhizopus), is an example of which mode of reproduction?",
+    "options": [
+      "Asexual reproduction by spore formation",
+      "Sexual reproduction",
+      "Vegetative propagation",
+      "Regeneration"
+    ],
+    "correct": 0,
+    "explanation": "Rhizopus produces spores in sporangia; under favourable conditions each spore germinates into a new individual — a form of asexual reproduction called spore formation."
+  },
+  {
+    "id": "sci-148",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "medium",
+    "text": "Which hormone in the human male reproductive system is mainly responsible for the development of secondary sexual characteristics during puberty?",
+    "options": [
+      "Testosterone",
+      "Insulin",
+      "Oestrogen",
+      "Thyroxine"
+    ],
+    "correct": 0,
+    "explanation": "Testosterone, secreted by the testes, regulates sperm production and triggers secondary sexual characteristics in males such as facial hair growth and voice deepening."
+  },
+  {
+    "id": "sci-149",
+    "chapter": "How do Organisms Reproduce",
+    "difficulty": "easy",
+    "text": "The male gamete produced in the human reproductive system is called the:",
+    "options": [
+      "Sperm",
+      "Ovum",
+      "Zygote",
+      "Embryo"
+    ],
+    "correct": 0,
+    "explanation": "Sperm are the male gametes produced in the testes. They fuse with the female gamete (ovum) during fertilisation to form a zygote."
+  },
+  {
+    "id": "sci-150",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "hard",
+    "text": "In Mendel's dihybrid cross for seed shape and colour (RrYy × RrYy), the phenotypic ratio of offspring (round-yellow : round-green : wrinkled-yellow : wrinkled-green) is:",
+    "options": [
+      "9 : 3 : 3 : 1",
+      "3 : 1 : 3 : 1",
+      "1 : 2 : 1 : 2",
+      "9 : 1 : 3 : 3"
+    ],
+    "correct": 0,
+    "explanation": "A dihybrid cross between two heterozygous parents (RrYy × RrYy) produces the classic 9:3:3:1 phenotypic ratio, showing independent assortment of the two traits."
+  },
+  {
+    "id": "sci-151",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "hard",
+    "text": "Human ABO blood groups are controlled by a single gene with three alleles (Iᴬ, Iᴮ, i), where Iᴬ and Iᴮ are both dominant over i but codominant with each other. This inheritance pattern, involving three alleles for one gene, is an example of:",
+    "options": [
+      "Multiple allelism",
+      "Dihybrid inheritance",
+      "Sex-linked inheritance",
+      "Polygenic inheritance"
+    ],
+    "correct": 0,
+    "explanation": "When a single gene has more than two allelic forms present in a population (here Iᴬ, Iᴮ, i), it is called multiple allelism. Blood group AB additionally shows codominance between Iᴬ and Iᴮ."
+  },
+  {
+    "id": "sci-152",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "hard",
+    "text": "The forelimbs of a human, a bat, and a whale have very different functions (grasping, flying, swimming) but share a similar underlying bone structure inherited from a common ancestor. Such organs are called:",
+    "options": [
+      "Homologous organs",
+      "Analogous organs",
+      "Vestigial organs",
+      "Convergent organs"
+    ],
+    "correct": 0,
+    "explanation": "Homologous organs have the same basic structure and evolutionary origin but may perform different functions, providing strong evidence of common ancestry (divergent evolution). Analogous organs, in contrast, have different origins but similar functions."
+  },
+  {
+    "id": "sci-153",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "The wings of a bird and the wings of a butterfly perform the same function (flight) but have completely different structures and evolutionary origins. Such organs are called:",
+    "options": [
+      "Analogous organs",
+      "Homologous organs",
+      "Vestigial organs",
+      "Rudimentary organs"
+    ],
+    "correct": 0,
+    "explanation": "Analogous organs perform similar functions but differ in structure and origin, arising from convergent evolution rather than shared ancestry — unlike homologous organs."
+  },
+  {
+    "id": "sci-154",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "medium",
+    "text": "The scientific study of fossils to trace the evolutionary history of organisms is called:",
+    "options": [
+      "Palaeontology",
+      "Genetics",
+      "Taxonomy",
+      "Embryology"
+    ],
+    "correct": 0,
+    "explanation": "Palaeontology is the branch of science dealing with the study of fossils, which provide direct evidence of organisms that existed in the past and their evolutionary relationships."
+  },
+  {
+    "id": "sci-155",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "easy",
+    "text": "A sudden, heritable change in the DNA sequence of an organism is called a:",
+    "options": [
+      "Mutation",
+      "Variation only",
+      "Adaptation",
+      "Speciation"
+    ],
+    "correct": 0,
+    "explanation": "A mutation is a change in the DNA sequence, which can arise spontaneously or due to external factors, and is one of the important sources of heritable variation for evolution."
+  },
+  {
+    "id": "sci-156",
+    "chapter": "Heredity and Evolution",
+    "difficulty": "easy",
+    "text": "Variations that improve an organism's chances of survival and reproduction in its environment are said to be:",
+    "options": [
+      "Advantageous (naturally selected)",
+      "Harmful",
+      "Neutral",
+      "Acquired"
+    ],
+    "correct": 0,
+    "explanation": "Advantageous variations increase an organism's fitness, giving it a better chance of surviving and passing the trait to offspring — the basis of natural selection."
+  },
+  {
+    "id": "sci-157",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "An object is placed 10 cm from a convex lens of focal length 15 cm. The nature of the image formed is:",
+    "options": [
+      "Virtual, erect, and magnified",
+      "Real, inverted, and diminished",
+      "Real, inverted, and magnified",
+      "Virtual, erect, and diminished"
+    ],
+    "correct": 0,
+    "explanation": "Using 1/v − 1/u = 1/f with u = −10 cm, f = +15 cm: 1/v = 1/15 − 1/10 = −1/30, so v = −30 cm. Since the object lies within the focal length, the lens forms a virtual, erect, magnified image on the same side as the object."
+  },
+  {
+    "id": "sci-158",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "A concave mirror forms a real image 3 times the size of an object placed 20 cm from the mirror. The focal length of the mirror is:",
+    "options": [
+      "15 cm",
+      "20 cm",
+      "60 cm",
+      "10 cm"
+    ],
+    "correct": 0,
+    "explanation": "For a real, magnified image, magnitude of magnification m = v/u = 3, so v = 3 × 20 = 60 cm (taking u = −20 cm, v = −60 cm). Using 1/v + 1/u = 1/f: 1/f = −1/60 − 1/20 = −4/60 = −1/15, giving f = −15 cm, i.e. 15 cm concave mirror."
+  },
+  {
+    "id": "sci-159",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "The refractive index of water is 4/3 and that of glass is 3/2 (both with respect to air). The refractive index of glass with respect to water is:",
+    "options": [
+      "9/8",
+      "8/9",
+      "2",
+      "0.5"
+    ],
+    "correct": 0,
+    "explanation": "Refractive index of glass w.r.t. water = (refractive index of glass w.r.t. air) / (refractive index of water w.r.t. air) = (3/2) / (4/3) = 9/8."
+  },
+  {
+    "id": "sci-160",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "hard",
+    "text": "An object 4 cm high is placed 30 cm in front of a concave mirror of focal length 10 cm. The height of the image formed is:",
+    "options": [
+      "2 cm",
+      "4 cm",
+      "8 cm",
+      "1 cm"
+    ],
+    "correct": 0,
+    "explanation": "Using 1/v + 1/u = 1/f with u = −30 cm, f = −10 cm: 1/v = −1/10 + 1/30 = −1/15, so v = −15 cm. Magnification m = −v/u = −(−15)/(−30) = −0.5. Image height = m × object height = −0.5 × 4 = −2 cm (real, inverted, 2 cm high)."
+  },
+  {
+    "id": "sci-161",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "medium",
+    "text": "A ray of light strikes a plane mirror making an angle of 30° with the mirror's surface. The angle of reflection, measured from the normal, is:",
+    "options": [
+      "60°",
+      "30°",
+      "90°",
+      "15°"
+    ],
+    "correct": 0,
+    "explanation": "Angles of incidence and reflection are measured from the normal, not the surface. If the ray makes 30° with the surface, it makes 90° − 30° = 60° with the normal, so the angle of reflection is also 60°."
+  },
+  {
+    "id": "sci-162",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "medium",
+    "text": "For a concave mirror, at which object position is a real, inverted image of the same size as the object formed?",
+    "options": [
+      "At the centre of curvature (C)",
+      "At the focus (F)",
+      "Between the pole and focus",
+      "At infinity"
+    ],
+    "correct": 0,
+    "explanation": "When an object is placed at the centre of curvature of a concave mirror, the image formed is real, inverted, and of the same size, also located at the centre of curvature."
+  },
+  {
+    "id": "sci-163",
+    "chapter": "Light – Reflection and Refraction",
+    "difficulty": "easy",
+    "text": "The image formed by a plane mirror is always:",
+    "options": [
+      "Virtual, erect, and of the same size as the object",
+      "Real, inverted, and magnified",
+      "Virtual, inverted, and diminished",
+      "Real, erect, and diminished"
+    ],
+    "correct": 0,
+    "explanation": "A plane mirror always forms a virtual, erect image that is laterally inverted and exactly the same size as the object, located as far behind the mirror as the object is in front."
+  },
+  {
+    "id": "sci-164",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "hard",
+    "text": "A person suffering from hypermetropia has his near point at 1 m instead of the normal 25 cm. To read a book held at 25 cm, the power of the corrective lens required is approximately:",
+    "options": [
+      "+3 D",
+      "+4 D",
+      "+0.75 D",
+      "+1 D"
+    ],
+    "correct": 0,
+    "explanation": "Using 1/f = 1/v − 1/u with the lens forming a virtual image of the near object at the person's actual near point (u = −25 cm, v = −100 cm): 1/f = −1/100 − (−1/25) = 0.03 per cm, f ≈ 33.3 cm = 1/3 m, so P = 1/f ≈ +3 D."
+  },
+  {
+    "id": "sci-165",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "medium",
+    "text": "Myopia (short-sightedness) is corrected using a lens with:",
+    "options": [
+      "Negative power (concave/diverging lens)",
+      "Positive power (convex/converging lens)",
+      "Zero power (plane glass)",
+      "Cylindrical power only"
+    ],
+    "correct": 0,
+    "explanation": "In myopia, the image forms in front of the retina. A concave (diverging) lens, which has negative power, diverges the incoming rays slightly before they enter the eye, shifting the image back onto the retina."
+  },
+  {
+    "id": "sci-166",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "medium",
+    "text": "The twinkling of stars observed from Earth is mainly caused by:",
+    "options": [
+      "Atmospheric refraction through continuously changing air layers of varying density",
+      "Scattering of starlight by dust particles",
+      "Reflection of starlight from the Moon",
+      "Dispersion of starlight by the atmosphere"
+    ],
+    "correct": 0,
+    "explanation": "Starlight passes through Earth's atmosphere, which has continuously varying air density and refractive index due to temperature changes. This causes the apparent position and brightness of stars to fluctuate rapidly, producing a twinkling effect."
+  },
+  {
+    "id": "sci-167",
+    "chapter": "The Human Eye and the Colourful World",
+    "difficulty": "easy",
+    "text": "The scattering of light by colloidal-sized particles suspended in a medium (making a beam of light visible), such as seen when a beam of sunlight passes through dust in a room, is called:",
+    "options": [
+      "The Tyndall effect",
+      "Dispersion",
+      "Total internal reflection",
+      "Diffraction"
+    ],
+    "correct": 0,
+    "explanation": "The Tyndall effect is the scattering of light by particles of colloidal size suspended in a medium (like dust in air or fine particles in a liquid), which makes the path of the light beam visible."
+  },
+  {
+    "id": "sci-168",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "A wire of resistance 5 Ω carries a current of 2 A for 10 minutes. The heat produced in the wire is:",
+    "options": [
+      "12,000 J",
+      "2,000 J",
+      "1,200 J",
+      "20,000 J"
+    ],
+    "correct": 0,
+    "explanation": "Heat produced H = I²Rt = (2)² × 5 × (10 × 60) = 4 × 5 × 600 = 12,000 J, using Joule's law of heating."
+  },
+  {
+    "id": "sci-169",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "Two resistors of 4 Ω and 6 Ω are connected in series to a 12 V battery. The current flowing through the circuit is:",
+    "options": [
+      "1.2 A",
+      "2 A",
+      "3 A",
+      "0.83 A"
+    ],
+    "correct": 0,
+    "explanation": "In series, total resistance R = 4 + 6 = 10 Ω. By Ohm's law, I = V/R = 12/10 = 1.2 A."
+  },
+  {
+    "id": "sci-170",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "A wire of resistance R is cut into 3 equal parts, and all three parts are then connected in parallel. The new equivalent resistance, in terms of R, is:",
+    "options": [
+      "R/9",
+      "3R",
+      "R/3",
+      "9R"
+    ],
+    "correct": 0,
+    "explanation": "Each piece has resistance R/3. For 3 equal resistors of R/3 in parallel: 1/R_eq = 3 ÷ (R/3) = 9/R, so R_eq = R/9."
+  },
+  {
+    "id": "sci-171",
+    "chapter": "Electricity",
+    "difficulty": "hard",
+    "text": "A 60 W bulb and a 100 W bulb, both rated for 220 V, are connected in parallel across a 220 V supply (unlike being connected in series). In this parallel arrangement:",
+    "options": [
+      "The 100 W bulb draws more current and glows brighter",
+      "The 60 W bulb draws more current and glows brighter",
+      "Both bulbs draw equal current and glow equally bright",
+      "Neither bulb glows since they have different power ratings"
+    ],
+    "correct": 0,
+    "explanation": "In parallel, both bulbs get the full rated voltage (220 V), so current I = P/V is higher for the higher-wattage (100 W) bulb, and it dissipates more power, glowing brighter — the opposite of what happens when such bulbs are connected in series."
+  },
+  {
+    "id": "sci-172",
+    "chapter": "Electricity",
+    "difficulty": "medium",
+    "text": "An electric heater draws a current of 5 A from a 220 V supply. Its power rating is:",
+    "options": [
+      "1100 W",
+      "44 W",
+      "1125 W",
+      "220 W"
+    ],
+    "correct": 0,
+    "explanation": "Electrical power P = V × I = 220 × 5 = 1100 W = 1.1 kW."
+  },
+  {
+    "id": "sci-173",
+    "chapter": "Electricity",
+    "difficulty": "medium",
+    "text": "Electrical power dissipated in a resistor can also be expressed, using Ohm's law, as:",
+    "options": [
+      "P = I²R",
+      "P = I/R",
+      "P = R/I",
+      "P = I − R"
+    ],
+    "correct": 0,
+    "explanation": "Since P = VI and V = IR (Ohm's law), substituting gives P = I²R. Equivalently, substituting I = V/R gives P = V²/R."
+  },
+  {
+    "id": "sci-174",
+    "chapter": "Electricity",
+    "difficulty": "medium",
+    "text": "To obtain the minimum possible equivalent resistance from two given resistors, they should be connected in:",
+    "options": [
+      "Parallel",
+      "Series",
+      "Either way — it makes no difference",
+      "Neither; a rheostat must be used"
+    ],
+    "correct": 0,
+    "explanation": "For resistors in parallel, the equivalent resistance is always less than the smallest individual resistance, whereas in series the equivalent resistance is the sum (always higher). So parallel gives minimum resistance."
+  },
+  {
+    "id": "sci-175",
+    "chapter": "Electricity",
+    "difficulty": "easy",
+    "text": "The commercial unit of electrical energy, as billed by electricity providers, is the:",
+    "options": [
+      "Kilowatt-hour (kWh)",
+      "Watt",
+      "Joule",
+      "Ampere-hour"
+    ],
+    "correct": 0,
+    "explanation": "1 kWh (also called 1 'unit' of electricity) = energy consumed by a 1000 W appliance running for 1 hour = 3.6 × 10⁶ J. This is the standard billing unit."
+  },
+  {
+    "id": "sci-176",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "hard",
+    "text": "A current-carrying straight conductor placed perpendicular to a uniform magnetic field experiences a force F = BIL. If the current through the conductor is doubled and the magnetic field strength is simultaneously halved, the force on the conductor will:",
+    "options": [
+      "Remain unchanged",
+      "Double",
+      "Halve",
+      "Become four times as large"
+    ],
+    "correct": 0,
+    "explanation": "F = BIL. Doubling I (×2) and halving B (×0.5) gives a net factor of 2 × 0.5 = 1, so the force remains unchanged."
+  },
+  {
+    "id": "sci-177",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "hard",
+    "text": "A bar magnet's north pole is pushed into a coil connected to a galvanometer. According to Lenz's law, the induced current in the coil flows in a direction such that it:",
+    "options": [
+      "Opposes the motion of the magnet (the near face of the coil behaves like a north pole, repelling the magnet)",
+      "Aids the motion of the magnet by attracting it inward faster",
+      "Has no relationship to the magnet's motion",
+      "Depends only on the material of the coil, not its direction"
+    ],
+    "correct": 0,
+    "explanation": "Lenz's law states that the induced current always opposes the change causing it (conservation of energy). As the magnet's N-pole approaches, the coil's near face becomes an induced N-pole to repel it, opposing the magnet's motion."
+  },
+  {
+    "id": "sci-178",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "Which of the following devices works on the principle of electromagnetic induction?",
+    "options": [
+      "AC generator",
+      "Electric motor",
+      "Electromagnet",
+      "Fuse"
+    ],
+    "correct": 0,
+    "explanation": "An AC generator converts mechanical energy into electrical energy using Faraday's law of electromagnetic induction — a coil rotating in a magnetic field experiences changing flux, inducing an alternating EMF."
+  },
+  {
+    "id": "sci-179",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "medium",
+    "text": "The magnetic field produced by a current-carrying circular loop is strongest at the:",
+    "options": [
+      "Centre of the loop",
+      "Edge of the loop, farthest from the wire",
+      "Outside the loop, far from the wire",
+      "It is the same everywhere along the loop's axis"
+    ],
+    "correct": 0,
+    "explanation": "The concentric magnetic field lines around each segment of the circular loop add up constructively at the centre, making the magnetic field strongest there."
+  },
+  {
+    "id": "sci-180",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "easy",
+    "text": "A current-carrying solenoid produces a magnetic field pattern similar to that of a bar magnet mainly because of:",
+    "options": [
+      "The current flowing through its tightly wound turns of wire",
+      "The metal used to make the wire",
+      "Its length being much greater than its diameter",
+      "The colour of the insulation on the wire"
+    ],
+    "correct": 0,
+    "explanation": "A solenoid is a coil of many circular turns of wire. When current flows through it, the magnetic fields of each turn add up, producing a strong, uniform field pattern similar to that of a bar magnet, with distinct N and S poles."
+  },
+  {
+    "id": "sci-181",
+    "chapter": "Magnetic Effects of Electric Current",
+    "difficulty": "easy",
+    "text": "An electromagnet is typically made by winding an insulated wire coil around a core of:",
+    "options": [
+      "Soft iron",
+      "Copper",
+      "Aluminium",
+      "Plastic"
+    ],
+    "correct": 0,
+    "explanation": "Soft iron is used as the core because it gets magnetised strongly when current flows through the coil but loses its magnetism almost completely once the current is switched off, making it ideal for temporary electromagnets."
+  },
+  {
+    "id": "sci-182",
+    "chapter": "Sources of Energy",
+    "difficulty": "hard",
+    "text": "In a box-type solar cooker, the glass cover placed over the blackened interior mainly helps by:",
+    "options": [
+      "Trapping infrared heat re-radiated by the blackened surfaces, reducing heat loss (a greenhouse-like effect)",
+      "Reflecting all incoming sunlight away from the cooker",
+      "Filtering out and blocking all visible light",
+      "Reducing the total intensity of sunlight reaching the interior"
+    ],
+    "correct": 0,
+    "explanation": "Sunlight passes through the glass and is absorbed by the black interior, which re-radiates it as infrared (heat) radiation. The glass cover traps much of this infrared radiation inside (similar to the greenhouse effect), raising and maintaining the internal temperature."
+  },
+  {
+    "id": "sci-183",
+    "chapter": "Sources of Energy",
+    "difficulty": "hard",
+    "text": "Despite having a high calorific value and producing only water on combustion, large-scale use of hydrogen as a fuel is currently limited mainly because:",
+    "options": [
+      "Safe, efficient storage and transportation of hydrogen gas are difficult and costly",
+      "Hydrogen has a very low calorific value",
+      "Hydrogen does not burn easily in air",
+      "Burning hydrogen produces large amounts of carbon dioxide"
+    ],
+    "correct": 0,
+    "explanation": "Hydrogen is highly inflammable and has very low density, making its storage, compression/liquefaction, and transportation technically challenging and expensive — this is the main practical barrier to its widespread use as a fuel."
+  },
+  {
+    "id": "sci-184",
+    "chapter": "Sources of Energy",
+    "difficulty": "medium",
+    "text": "Which of the following is considered the ultimate source of energy for wind, hydro, biomass, and fossil fuel energy (though not for nuclear, tidal, or geothermal energy)?",
+    "options": [
+      "The Sun",
+      "The Moon",
+      "The Earth's core",
+      "Ocean currents"
+    ],
+    "correct": 0,
+    "explanation": "Solar energy drives the water cycle (hydro energy), causes uneven heating that creates wind, and is captured by plants via photosynthesis (biomass and, ultimately, fossil fuels), making the Sun the ultimate source for most of these."
+  },
+  {
+    "id": "sci-185",
+    "chapter": "Sources of Energy",
+    "difficulty": "medium",
+    "text": "A hydroelectric power plant primarily converts which form of energy into electrical energy?",
+    "options": [
+      "The potential energy of water stored at a height into electrical energy",
+      "The chemical energy of water into electrical energy",
+      "The nuclear energy of water molecules into electrical energy",
+      "Solar energy directly into electrical energy"
+    ],
+    "correct": 0,
+    "explanation": "Water stored at height in a dam has potential energy. As it falls, this converts to kinetic energy, which turns turbines connected to generators, producing electrical energy."
+  },
+  {
+    "id": "sci-186",
+    "chapter": "Sources of Energy",
+    "difficulty": "easy",
+    "text": "Wind energy, used to generate electricity via windmills, is ultimately derived from:",
+    "options": [
+      "Solar energy (uneven heating of Earth's surface causing air movement)",
+      "Nuclear energy stored in the atmosphere",
+      "Tidal energy of the oceans",
+      "Geothermal energy from the Earth's core"
+    ],
+    "correct": 0,
+    "explanation": "The Sun heats different parts of the Earth's surface unequally, causing pressure differences in the atmosphere that drive air movement (wind) — so wind energy ultimately originates from solar energy."
+  },
+  {
+    "id": "sci-187",
+    "chapter": "Our Environment",
+    "difficulty": "hard",
+    "text": "In a food chain Grass → Grasshopper → Frog → Snake → Eagle, if grass fixes 10,000 J of energy, approximately how much energy is available to the eagle, applying the 10% law across all four transfers?",
+    "options": [
+      "1 J",
+      "10 J",
+      "100 J",
+      "1000 J"
+    ],
+    "correct": 0,
+    "explanation": "By the 10% law, only about 10% of energy is transferred at each trophic level. After 4 transfers: 10,000 × (0.1)⁴ = 10,000 × 0.0001 = 1 J available to the eagle."
+  },
+  {
+    "id": "sci-188",
+    "chapter": "Our Environment",
+    "difficulty": "hard",
+    "text": "Non-biodegradable pesticides like DDT show increasing concentration at each higher trophic level of a food chain (biomagnification) mainly because:",
+    "options": [
+      "Organisms cannot metabolise or excrete these chemicals efficiently, so they accumulate in body tissue and get further concentrated as predators eat many contaminated prey",
+      "Higher trophic level organisms are exposed to more sunlight, which increases the chemical's toxicity",
+      "Predators intentionally seek out contaminated prey",
+      "The chemicals become less stable and more concentrated over time on their own"
+    ],
+    "correct": 0,
+    "explanation": "Since these chemicals are not broken down or excreted, they accumulate in an organism's tissues. As each predator consumes many contaminated prey, the concentration increases at each successive trophic level — this is biomagnification."
+  },
+  {
+    "id": "sci-189",
+    "chapter": "Our Environment",
+    "difficulty": "medium",
+    "text": "Which of the following organisms acts as a decomposer in an ecosystem, breaking down dead organic matter?",
+    "options": [
+      "Fungi and bacteria",
+      "Grasshoppers",
+      "Frogs",
+      "Eagles"
+    ],
+    "correct": 0,
+    "explanation": "Decomposers like fungi and bacteria break down complex organic matter in dead plants and animals into simpler inorganic substances, which are then recycled back into the ecosystem (e.g. into the soil)."
+  },
+  {
+    "id": "sci-190",
+    "chapter": "Our Environment",
+    "difficulty": "medium",
+    "text": "The protective ozone layer, which absorbs harmful ultraviolet radiation, is located in which layer of the Earth's atmosphere?",
+    "options": [
+      "Stratosphere",
+      "Troposphere",
+      "Mesosphere",
+      "Thermosphere"
+    ],
+    "correct": 0,
+    "explanation": "The ozone layer is concentrated in the stratosphere, roughly 15–35 km above Earth's surface, where it absorbs most of the sun's harmful UV-B and UV-C radiation."
+  },
+  {
+    "id": "sci-191",
+    "chapter": "Our Environment",
+    "difficulty": "easy",
+    "text": "Green plants and other organisms that can produce their own food are collectively called:",
+    "options": [
+      "Producers (autotrophs)",
+      "Consumers",
+      "Decomposers",
+      "Detritivores"
+    ],
+    "correct": 0,
+    "explanation": "Producers (autotrophs), mainly green plants and algae, synthesise their own food using sunlight, CO₂, and water via photosynthesis, forming the base of every food chain."
+  },
+  {
+    "id": "sci-192",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "hard",
+    "text": "Sustainable management of natural resources primarily aims to balance which two considerations?",
+    "options": [
+      "Meeting present development needs while conserving resources so future generations can also meet their needs",
+      "Maximising short-term industrial profit regardless of environmental cost",
+      "Completely halting the use of all natural resources immediately",
+      "Using resources only in urban areas to protect rural ecosystems"
+    ],
+    "correct": 0,
+    "explanation": "Sustainable development means utilising natural resources to meet current human needs for development, while ensuring resources are conserved and not exhausted, so that future generations can also meet their own needs."
+  },
+  {
+    "id": "sci-193",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "medium",
+    "text": "Rainwater harvesting structures like check dams and percolation pits mainly help by:",
+    "options": [
+      "Recharging groundwater levels by allowing collected rainwater to seep into the soil",
+      "Directly purifying river water for drinking",
+      "Preventing all rainfall from reaching the ground",
+      "Generating hydroelectric power on a large scale"
+    ],
+    "correct": 0,
+    "explanation": "Rainwater harvesting structures collect and direct rainwater into the ground rather than letting it run off, allowing it to percolate and recharge the groundwater table, which is especially valuable in water-scarce regions."
+  },
+  {
+    "id": "sci-194",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "medium",
+    "text": "Switching off unnecessary lights and appliances to lower overall electricity consumption is an example of which of the '3 R's' of resource conservation?",
+    "options": [
+      "Reduce",
+      "Reuse",
+      "Recycle",
+      "None of these — it is unrelated to the 3 R's"
+    ],
+    "correct": 0,
+    "explanation": "'Reduce' means minimising the consumption of a resource in the first place. Cutting down unnecessary electricity use lowers demand on natural resources (like coal for power generation) at the source, rather than reusing or recycling something already used."
+  },
+  {
+    "id": "sci-195",
+    "chapter": "Management of Natural Resources",
+    "difficulty": "easy",
+    "text": "Which of the following is a renewable natural resource if it is managed and used sustainably?",
+    "options": [
+      "Forests",
+      "Coal",
+      "Petroleum",
+      "Natural gas"
+    ],
+    "correct": 0,
+    "explanation": "Forests can regenerate if harvested sustainably (replanting, controlled felling), making them renewable with proper management, unlike fossil fuels (coal, petroleum, natural gas) which take millions of years to form and are non-renewable on a human timescale."
+  },
+  {
+    "id": "sci-196",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "hard",
+    "text": "An element X has the electronic configuration 2, 8, 7. In the modern periodic table, X belongs to:",
+    "options": [
+      "Period 3, Group 17",
+      "Period 3, Group 7",
+      "Period 2, Group 17",
+      "Period 4, Group 7"
+    ],
+    "correct": 0,
+    "explanation": "The number of shells (3) gives the period, so X is in Period 3. Since it has 7 electrons in its outermost shell, it belongs to Group 17 (halogens) using modern group numbering — this element is chlorine."
+  },
+  {
+    "id": "sci-197",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "hard",
+    "text": "Element A has atomic number 12 (Mg) and element B has atomic number 17 (Cl), both in Period 3. Which statement correctly compares their atomic radius and electronegativity?",
+    "options": [
+      "B has a smaller atomic radius and higher electronegativity than A",
+      "A has a smaller atomic radius and higher electronegativity than B",
+      "Both have identical atomic radius and electronegativity since they are in the same period",
+      "A has a smaller atomic radius but lower electronegativity than B"
+    ],
+    "correct": 0,
+    "explanation": "Across a period, as atomic number increases, nuclear charge increases and atomic radius decreases while electronegativity increases. Since Cl (17) is further right than Mg (12) in the same period, Cl has a smaller atomic radius and higher electronegativity."
+  },
+  {
+    "id": "sci-198",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "Elements placed in the same group of the modern periodic table show similar chemical properties mainly because they have the same number of:",
+    "options": [
+      "Valence electrons (electrons in the outermost shell)",
+      "Total electrons",
+      "Neutrons",
+      "Protons"
+    ],
+    "correct": 0,
+    "explanation": "Elements in the same group have the same number of valence electrons, which determines their chemical bonding behaviour and reactivity, giving them similar chemical properties despite having different total electron counts."
+  },
+  {
+    "id": "sci-199",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "medium",
+    "text": "Considering the trend of atomic radius across Period 3, which of the following correctly orders sodium (Na), magnesium (Mg), and aluminium (Al) by increasing atomic radius?",
+    "options": [
+      "Al < Mg < Na",
+      "Na < Mg < Al",
+      "Mg < Na < Al",
+      "Al < Na < Mg"
+    ],
+    "correct": 0,
+    "explanation": "Atomic radius decreases across a period from left to right as nuclear charge increases and pulls electrons closer. Since the order across Period 3 is Na, Mg, Al (left to right), radius decreases in that order, so increasing radius is Al < Mg < Na."
+  },
+  {
+    "id": "sci-200",
+    "chapter": "Periodic Classification of Elements",
+    "difficulty": "easy",
+    "text": "The Modern Periodic Law, stating that properties of elements are periodic functions of their atomic number, was given by:",
+    "options": [
+      "Henry Moseley",
+      "Dmitri Mendeleev",
+      "John Newlands",
+      "John Dalton"
+    ],
+    "correct": 0,
+    "explanation": "Henry Moseley established in 1913 that atomic number (not atomic mass) is the fundamental property governing periodicity, leading to the Modern Periodic Law used in today's periodic table."
+  }
 ]
