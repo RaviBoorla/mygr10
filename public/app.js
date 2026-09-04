@@ -1998,70 +1998,79 @@ const app = {
 
   _screenResults() {
     return `
-      <div class="screen" id="results">
-        <h2 style="text-align:center;">Your Results</h2>
-        <div class="card score-card">
-          <div id="final-score" class="final-score"></div>
-          <p id="score-comment" class="score-comment"></p>
+      <div class="results-layout" id="results">
+        <div class="results-left">
+          <div class="score-summary">
+            <div class="score-tile correct-tile"><div class="tile-val" id="stat-correct">0</div><div class="tile-lbl">Correct</div></div>
+            <div class="score-tile wrong-tile"><div class="tile-val" id="stat-wrong">0</div><div class="tile-lbl">Incorrect</div></div>
+            <div class="score-tile skip-tile"><div class="tile-val" id="stat-skip">0</div><div class="tile-lbl">Not Attempted</div></div>
+          </div>
+          <div class="card" id="rev-card-area"></div>
+          <div class="rev-nav">
+            <button class="btn" onclick="app.showReviewQuestion(app.reviewIndex - 1)">&#8592; Prev</button>
+            <button class="btn" onclick="app.showReviewQuestion(app.reviewIndex + 1)">Next &#8594;</button>
+          </div>
+          <div class="results-actions">
+            <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
+            <button class="btn primary" onclick="app.navigate('dashboard')">Dashboard</button>
+            <button class="btn" onclick="app.goHome()">Change Board</button>
+          </div>
         </div>
-        <div class="review-filter-bar">
-          <button class="rfb active" id="rfb-all"       onclick="app.setResultsFilter('all')">All Questions</button>
-          <button class="rfb"        id="rfb-incorrect" onclick="app.setResultsFilter('incorrect')">Incorrect</button>
-          <button class="rfb"        id="rfb-correct"   onclick="app.setResultsFilter('correct')">Correct</button>
-        </div>
-        <div id="review-list"></div>
-        <div class="results-actions">
-          <button class="btn" onclick="app.navigate('subject-selection')">Try Again</button>
-          <button class="btn primary" onclick="app.navigate('dashboard')">Dashboard</button>
-          <button class="btn" onclick="app.goHome()">Change Board</button>
+        <div class="results-right">
+          <div class="rpal-title">Questions</div>
+          <div class="rpal-legend">
+            <div class="rpal-legend-row"><div class="rpal-dot g"></div> Correct</div>
+            <div class="rpal-legend-row"><div class="rpal-dot r"></div> Incorrect</div>
+            <div class="rpal-legend-row"><div class="rpal-dot w"></div> Not Attempted</div>
+          </div>
+          <div class="rpal-grid" id="rpal-grid"></div>
         </div>
       </div>`;
   },
 
-  setResultsFilter(f) {
-    this.resultsFilter = f;
-    ['all','incorrect','correct'].forEach(k => {
-      const el = document.getElementById('rfb-' + k);
-      if (el) el.classList.toggle('active', k === f);
+  showReviewQuestion(i) {
+    const data = this.reviewData || [];
+    if (!data.length) return;
+    this.reviewIndex = Math.max(0, Math.min(i, data.length - 1));
+    const r = data[this.reviewIndex];
+
+    const optHtml = r.options.map((opt, oi) => {
+      let cls = 'opt-neutral';
+      if (oi === r.correct) cls = 'opt-correct';
+      else if (oi === r.userAnswer && oi !== r.correct) cls = 'opt-wrong';
+      const label = String.fromCharCode(65 + oi);
+      const marker = oi === r.correct ? '✓' : (oi === r.userAnswer && !r.isCorrect ? '✗' : '');
+      return `<div class="rev-opt ${cls}"><span class="rev-opt-label">${label}</span><span>${esc(opt)}</span>${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}</div>`;
+    }).join('');
+
+    const badge = r.isCorrect
+      ? '<span class="rev-badge correct">Correct</span>'
+      : r.userAnswer === undefined
+        ? '<span class="rev-badge skipped">Not Attempted</span>'
+        : '<span class="rev-badge wrong">Incorrect</span>';
+
+    const area = document.getElementById('rev-card-area');
+    if (area) area.innerHTML = `
+      <div class="rev-card-header">
+        <span class="rev-q-num">Q${r.num} of ${data.length}</span>${badge}
+        <span style="margin-left:auto;font-size:12px;color:var(--text-light)">${esc(r.chapter || '')}</span>
+      </div>
+      <p class="rev-q-text">${esc(r.text)}</p>
+      <div class="rev-options">${optHtml}</div>
+      <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>`;
+
+    // Highlight active button in palette
+    document.querySelectorAll('.rpal-btn').forEach((btn, idx) => {
+      btn.classList.toggle('active-rev', idx === this.reviewIndex);
     });
-    this._renderReviewList();
   },
 
-  _renderReviewList() {
-    const list = document.getElementById('review-list');
-    if (!list) return;
-    const data = (this.reviewData || []).filter(r => {
-      if (this.resultsFilter === 'correct')   return r.isCorrect;
-      if (this.resultsFilter === 'incorrect') return !r.isCorrect;
-      return true;
-    });
-    if (!data.length) {
-      list.innerHTML = '<div class="card empty-state">No questions in this category.</div>';
-      return;
-    }
-    list.innerHTML = data.map((r, idx) => {
-      const optHtml = r.options.map((opt, oi) => {
-        let cls = 'opt-neutral';
-        if (oi === r.correct) cls = 'opt-correct';
-        else if (oi === r.userAnswer && oi !== r.correct) cls = 'opt-wrong';
-        const label = String.fromCharCode(65 + oi);
-        const marker = oi === r.correct ? '✓' : (oi === r.userAnswer && !r.isCorrect ? '✗' : '');
-        return `<div class="rev-opt ${cls}"><span class="rev-opt-label">${label}</span><span>${esc(opt)}</span>${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}</div>`;
-      }).join('');
-      const statusBadge = r.isCorrect
-        ? '<span class="rev-badge correct">Correct</span>'
-        : r.userAnswer === undefined
-          ? '<span class="rev-badge skipped">Skipped</span>'
-          : '<span class="rev-badge wrong">Incorrect</span>';
-      return `
-        <div class="card rev-card">
-          <div class="rev-card-header">
-            <span class="rev-q-num">Q${r.num}</span>${statusBadge}
-          </div>
-          <p class="rev-q-text">${esc(r.text)}</p>
-          <div class="rev-options">${optHtml}</div>
-          <div class="rev-explanation"><strong>Explanation:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
-        </div>`;
+  _buildReviewPalette() {
+    const grid = document.getElementById('rpal-grid');
+    if (!grid || !this.reviewData) return;
+    grid.innerHTML = this.reviewData.map((r, i) => {
+      const cls = r.isCorrect ? 'g' : r.userAnswer === undefined ? 'w' : 'r';
+      return `<button class="rpal-btn ${cls}" onclick="app.showReviewQuestion(${i})">${r.num}</button>`;
     }).join('');
   },
 
@@ -2342,22 +2351,20 @@ const app = {
       if (isCorrect) score++;
       return { num: i + 1, text: q.text, options: q.options, correct: q.correct, userAnswer: ua, isCorrect, explanation: q.explanation || '' };
     });
-    this.resultsFilter = 'all';
+    const wrong    = this.reviewData.filter(r => !r.isCorrect && r.userAnswer !== undefined).length;
+    const skipped  = this.reviewData.filter(r => r.userAnswer === undefined).length;
+    this.reviewIndex = 0;
 
     state.history = ['dashboard'];
     this.navigate('results');
 
-    const pct = Math.round(score / this.questions.length * 100);
-    const scoreEl   = document.getElementById('final-score');
-    const commentEl = document.getElementById('score-comment');
-    if (scoreEl)   scoreEl.textContent  = `${score} / ${this.questions.length}`;
-    if (commentEl) commentEl.textContent =
-      pct === 100 ? 'Perfect score! Outstanding.' :
-      pct >= 80   ? 'Great work — you\'re well prepared.' :
-      pct >= 60   ? 'Good effort — review the ones you missed.' :
-                    'Keep practising — you\'ll get there!';
+    const setEl = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+    setEl('stat-correct', score);
+    setEl('stat-wrong',   wrong);
+    setEl('stat-skip',    skipped);
 
-    this._renderReviewList();
+    this._buildReviewPalette();
+    this.showReviewQuestion(0);
   }
 };
 

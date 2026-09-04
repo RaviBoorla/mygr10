@@ -358,22 +358,32 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .omr-bubble.review.current     { border: 2px solid #92400e; }
 
 /* ─── Results ──────────────────────────────────────────────────────────────── */
-.score-card   { text-align: center; padding: 32px; }
-.final-score  { font-size: 56px; font-weight: 800; color: var(--primary); line-height: 1; }
-.score-comment{ color: var(--text-light); margin: 8px 0 0; font-size: 15px; }
-
-/* Filter bar */
-.review-filter-bar { display: flex; gap: 8px; padding: 0 16px; margin-bottom: 4px; }
-.rfb {
-  padding: 7px 18px; border-radius: 20px; border: 2px solid var(--border);
-  background: var(--surface); font-size: 13px; font-weight: 600; cursor: pointer; color: var(--text-light);
-  transition: border-color .15s, background .15s, color .15s;
+.results-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 16px;
+  height: calc(100vh - var(--header-h) - 16px);
+  overflow: hidden;
+  padding: 8px 16px;
+  box-sizing: border-box;
 }
-.rfb.active        { border-color: var(--primary); background: #eff6ff; color: var(--primary); }
-.rfb:hover:not(.active) { border-color: var(--primary); }
+.results-left  { display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+.results-right { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; }
 
-/* Review cards */
-.rev-card { margin-bottom: 12px; }
+/* Score summary row */
+.score-summary {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 10px; text-align: center;
+}
+.score-tile { border-radius: 10px; padding: 14px 8px; }
+.score-tile .tile-val { font-size: 32px; font-weight: 800; line-height: 1; }
+.score-tile .tile-lbl { font-size: 11px; font-weight: 600; margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+.score-tile.correct-tile  { background: #d1fae5; color: #065f46; }
+.score-tile.wrong-tile    { background: #fee2e2; color: #991b1b; }
+.score-tile.skip-tile     { background: #f1f5f9; color: #475569; }
+
+/* Single review card */
+.rev-card { flex: 1; }
 .rev-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
 .rev-q-num { font-size: 13px; font-weight: 700; color: var(--text-light); }
 .rev-badge { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 10px; }
@@ -398,11 +408,36 @@ h2 { margin: 0 0 4px; font-size: 22px; }
   padding: 8px 12px; background: #f8fafc; border-radius: 6px; border-left: 3px solid var(--primary);
 }
 
+/* Review navigation */
+.rev-nav { display: flex; gap: 8px; }
+.rev-nav .btn { flex: 1; text-align: center; font-size: 13px; padding: 8px; }
+
+/* Right palette panel */
+.rpal-title { font-size: 12px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .05em; }
+.rpal-legend { display: flex; flex-direction: column; gap: 5px; font-size: 11px; }
+.rpal-legend-row { display: flex; align-items: center; gap: 6px; }
+.rpal-dot { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+.rpal-dot.g { background: #10b981; }
+.rpal-dot.r { background: #ef4444; }
+.rpal-dot.w { background: var(--surface); border: 1.5px solid var(--border); position: relative; }
+.rpal-dot.w::after { content: '✕'; font-size: 9px; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #94a3b8; }
+.rpal-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 5px; }
+.rpal-btn {
+  aspect-ratio: 1; border-radius: 5px; border: none; font-size: 11px; font-weight: 700;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: transform .1s, box-shadow .1s;
+}
+.rpal-btn:hover { transform: scale(1.12); box-shadow: 0 2px 6px rgba(0,0,0,.15); }
+.rpal-btn.g { background: #10b981; color: #fff; }
+.rpal-btn.r { background: #ef4444; color: #fff; }
+.rpal-btn.w {
+  background: var(--surface); border: 1.5px solid var(--border); color: #94a3b8;
+  text-decoration: line-through;
+}
+.rpal-btn.active-rev { outline: 3px solid var(--primary); outline-offset: 1px; }
+
 .results-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 0 16px;
+  display: flex; gap: 10px; flex-wrap: wrap;
 }
 .results-actions .btn { flex: 1; text-align: center; min-width: 100px; }
 
