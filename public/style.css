@@ -70,26 +70,22 @@ body {
 .hdr-logo[aria-disabled="true"] { cursor: default; pointer-events: none; }
 .logo-icon { flex-shrink: 0; border-radius: 5px; }
 
-.hdr-back {
-  background: none; border: none;
-  padding: 6px 10px; border-radius: 6px;
-  cursor: pointer; font-size: 14px; font-family: inherit;
-  color: var(--text-light); font-weight: 500;
+.hdr-boards {
+  display: flex; gap: 4px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 20px; padding: 3px;
 }
-.hdr-back:hover { background: var(--bg); color: var(--text); }
-
-.hdr-board {
-  font-size: 13px; font-weight: 600;
-  color: var(--surface); background: var(--primary);
-  padding: 4px 12px; border-radius: 20px;
-}
-.hdr-board-select {
+.hdr-board-btn {
   font-family: inherit; font-size: 13px; font-weight: 600;
-  color: var(--primary); background: var(--primary-soft);
-  border: 1px solid #bfdbfe; border-radius: 20px;
-  padding: 5px 10px; cursor: pointer;
+  color: var(--text-light); background: transparent;
+  border: none; border-radius: 16px;
+  padding: 5px 14px; cursor: pointer;
+  transition: background .15s, color .15s;
 }
-.hdr-board-select:hover { border-color: var(--primary); }
+.hdr-board-btn:hover:not(:disabled):not(.active) { background: var(--surface); color: var(--text); }
+.hdr-board-btn.active { background: var(--primary); color: #fff; }
+.hdr-board-btn:disabled { cursor: not-allowed; }
+.hdr-board-btn:disabled:not(.active) { opacity: .5; }
 
 /* ─── Screen wrapper ───────────────────────────────────────────────────────── */
 .screen {
@@ -383,8 +379,22 @@ kbd {
 }
 
 .small-filters .filter-tab { padding: 4px 10px; font-size: 12px; }
-.results-actions { display: flex; gap: 6px; flex-direction: column; }
-.results-actions .btn { text-align: center; width: 100%; }
+.results-actions { display: flex; gap: 8px; }
+.results-actions .btn { text-align: center; flex: 1; padding: 10px 12px; font-size: 14px; }
+
+.exit-btn {
+  font-size: 13px; padding: 6px 16px; font-weight: 600;
+  color: var(--text-light); border-color: var(--border); margin-left: 4px;
+}
+.exit-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Both panels bottom-anchor their action row; equal padding and single-line labels
+   keep Prev/Next and Retry/Back on exactly the same line. */
+#results .palette-area { padding: 20px; }
+#results .results-actions { margin-top: auto; }
+#results .test-layout { grid-template-columns: 1fr 340px; }
+.results-actions .btn { white-space: nowrap; }
+@media (max-width: 820px) { #results .test-layout { grid-template-columns: 1fr; } }
 .empty-inline { font-size: 13px; color: var(--text-light); margin: 0; }
 
 /* ─── Modal ────────────────────────────────────────────────────────────────── */

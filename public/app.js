@@ -1829,9 +1829,9 @@ const BANKS = {
 };
 
 const BOARDS = [
-  { id: 'CBSE', name: 'CBSE',       desc: 'Central Board of Secondary Education' },
-  { id: 'ICSE', name: 'ICSE',       desc: 'Indian Certificate of Secondary Education' },
-  { id: 'IB',   name: 'IB Diploma', desc: 'International Baccalaureate (MYP-5)' }
+  { id: 'CBSE', name: 'CBSE',       short: 'CBSE', desc: 'Central Board of Secondary Education' },
+  { id: 'ICSE', name: 'ICSE',       short: 'ICSE', desc: 'Indian Certificate of Secondary Education' },
+  { id: 'IB',   name: 'IB Diploma', short: 'IB',   desc: 'International Baccalaureate (MYP-5)' }
 ];
 
 const MODES = {
@@ -1888,7 +1888,6 @@ function buildHash(parts) {
 // ─── App ──────────────────────────────────────────────────────────────────────
 const app = {
 
-  depth: 0,          // how many in-app navigations deep we are (drives the Back affordance)
   session: null,     // live test session
   reviewData: null,  // last completed attempt
 
@@ -1909,14 +1908,8 @@ const app = {
       location.replace(location.pathname + location.search + target);
       this.render();
     } else {
-      this.depth++;
       location.hash = target;   // hashchange fires → render()
     }
-  },
-
-  goBack() {
-    if (this.depth > 0) { this.depth--; history.back(); }
-    else this.go(['home'], true);
   },
 
   // ── Render ──────────────────────────────────────────────────────────────────
@@ -1930,6 +1923,12 @@ const app = {
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (!['home', 'notes', 'test', 'results', 'board'].includes(name)) name = 'home';
 
+    // A guarded redirect must correct the URL too, or the address bar claims a screen
+    // that is not on show and Back/refresh land somewhere unexpected.
+    if (name !== (r.name || 'home') && name !== 'board') {
+      location.replace(location.pathname + location.search + buildHash([name]));
+    }
+
     state.screen = name;
     state.params = r.parts;
 
@@ -1941,13 +1940,7 @@ const app = {
   _header() {
     if (state.screen === 'board') return '';
 
-    const inTest   = state.screen === 'test';
-    const showBack = !inTest && state.screen !== 'home';
-
-    const back = showBack
-      ? `<button class="hdr-back" onclick="app.goBack()" aria-label="Go back">&#8592; Back</button>`
-      : '';
-
+    const inTest = state.screen === 'test';
     const logoAttrs = inTest ? 'aria-disabled="true"' : `onclick="app.go(['home'])" title="Home"`;
     const logo = `<button class="hdr-logo" ${logoAttrs}>
       <svg class="logo-icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
@@ -1960,20 +1953,19 @@ const app = {
       <span>Rise</span>
     </button>`;
 
-    // Switching board is a one-step control, not a trip back to the welcome screen.
-    const right = inTest
-      ? `<span class="hdr-board">${esc(state.board)}</span>`
-      : `<label class="hdr-board-picker">
-           <span class="sr-only">Board</span>
-           <select class="hdr-board-select" onchange="app.switchBoard(this.value)">
-             ${BOARDS.map(b => `<option value="${b.id}" ${b.id === state.board ? 'selected' : ''}>${esc(b.name)}</option>`).join('')}
-           </select>
-         </label>`;
+    // Boards sit in the header as one always-visible button group — switching is a
+    // single click, and the group is locked (not hidden) mid-test so nothing reflows.
+    const boards = BOARDS.map(b => `
+      <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
+              aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
+              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
 
     return `
       <header class="app-header">
-        <div class="hdr-left">${back}${logo}</div>
-        <div class="hdr-right">${right}</div>
+        <div class="hdr-left">${logo}</div>
+        <div class="hdr-right">
+          <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
+        </div>
       </header>`;
   },
 
@@ -2233,7 +2225,7 @@ const app = {
           <div class="test-topbar-right">
             <span class="answered-count" id="answered-count"></span>
             <div id="timer" class="timer" role="timer" aria-live="off">--:--</div>
-            <button class="btn quit-btn" onclick="app.quitTest()">Quit</button>
+            <button class="btn quit-btn" onclick="app.quitTest()">Exit</button>
           </div>
         </div>
         <div class="progress-rail"><div class="progress-fill" id="progress-fill"></div></div>
@@ -2441,12 +2433,12 @@ const app = {
   },
 
   quitTest() {
-    this._showModal('Quit this test?', 'Your answers so far will be discarded.', () => {
+    this._showModal('Exit this test?', 'Your answers so far will be discarded.', () => {
       clearInterval(this.timerInterval);
       this.session = null;
       LS.del(KEY.draft);
       this.go(['home'], true);
-    }, 'Quit');
+    }, 'Exit');
   },
 
   submitTest(force = false) {
@@ -2512,6 +2504,7 @@ const app = {
             <div class="score-tile correct-tile"><span class="tile-val">${correct}</span><span class="tile-lbl">Correct</span></div>
             <div class="score-tile wrong-tile"><span class="tile-val">${wrong}</span><span class="tile-lbl">Incorrect</span></div>
             <div class="score-tile skip-tile"><span class="tile-val">${skipped}</span><span class="tile-lbl">Skipped</span></div>
+            <button class="btn exit-btn" onclick="app.exitReview()">Exit</button>
           </div>
         </div>
         <div class="test-layout">
@@ -2525,7 +2518,7 @@ const app = {
               <div id="rpal-grid" class="omr-grid"></div>
               <div class="results-actions">
                 <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : 'drill'}</button>
-                <button class="btn" onclick="app.go(['home'],true)">Back to practice</button>
+                <button class="btn" onclick="app.exitReview()">Back to practice</button>
               </div>
             </div>
           </div>
@@ -2609,6 +2602,12 @@ const app = {
   },
 
   retryLast() { this.startTest({ ...this.lastConfig }); },
+
+  // Leaving the review drops the attempt so a stray #/results cannot resurrect it.
+  exitReview() {
+    this.reviewData = null;
+    this.go(['home'], true);
+  },
 
   retryFromHistory(i) {
     const h = LS.get(KEY.results, [])[i];
