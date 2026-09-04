@@ -2464,10 +2464,10 @@ const app = {
     state.board = board;
     state.openPicker = null;
     LS.set(KEY.board, board);
-    // Revision notes are board-independent; only the results screen depends on the
-    // active board's history, so leaving it avoids showing a stale/mismatched screen.
+    // Notes and results don't reflect the newly chosen board on their own screen,
+    // so jump to that board's home page instead of leaving the click looking stuck.
     const cur = parseHash();
-    if (cur.name === 'results') {
+    if (cur.name === 'results' || cur.name === 'notes') {
       this.go(['home']);
     } else {
       this.render();
