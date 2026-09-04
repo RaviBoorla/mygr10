@@ -974,6 +974,188 @@ const REVISION = {
           'Balance pros and cons of globalisation — MCQs often ask for limitations',
           'Know the role of technology (telecom, internet) in enabling globalisation'
         ]
+      },
+      // ── CBSE Grade 10 History ──────────────────────────────────────────────
+      {
+        chapter: 'Rise of Nationalism in Europe',
+        formulae: [],
+        logic: [
+          'Nationalism: sense of shared identity based on common language, culture, history and territory',
+          'French Revolution (1789): introduced ideas of liberty, equality, fraternity; spread by Napoleon',
+          'Romanticism: cultural movement that emphasised emotion, folk traditions and national language to build national identity',
+          'Liberalism in Europe: individual freedom, constitutional government, end of aristocratic privilege',
+          'Conservatism (post-1815): stability, tradition, established institutions — reaction to revolutionary upheaval',
+          'Unification of Germany (1866–71): Bismarck used wars with Denmark, Austria, France; proclaimed empire at Versailles 1871',
+          'Unification of Italy (1848–71): Mazzini (ideology), Cavour (diplomacy), Garibaldi (military) — Rome became capital 1871',
+          'Balkans: rise of nationalism within the Ottoman Empire; "powder keg of Europe" — led to WWI'
+        ],
+        tips: [
+          'Ernst Moritz Arndt, Grimm Brothers: used folklore and language to unite Germans',
+          'Frankfurt Parliament (1848): liberal nationalists tried to unite Germany — failed; dissolved 1849',
+          'Victor Emmanuel II: first king of unified Italy',
+          'Frederic Sorrieu (1848): artist who visualised a utopia of democratic and social republics — "The Dream of Worldwide Democratic and Social Republics"',
+          'Zollverein (1834): German customs union — removed trade barriers, created economic unity before political unity'
+        ],
+        bestPractices: [
+          'Distinguish between liberal nationalism (individual rights + nation-state) and conservative nationalism (tradition + monarchy)',
+          'Timeline: 1789 French Revolution → 1815 Congress of Vienna → 1848 Revolutions → 1866-71 Unifications'
+        ]
+      },
+      {
+        chapter: 'Making of a Global World',
+        formulae: [],
+        logic: [
+          'Silk routes: pre-modern global links for trade and cultural exchange between Asia, Europe and Africa',
+          'Colonialism: European powers acquired territories, extracted resources, created new trade patterns (16th–20th c.)',
+          'Indentured labour: system of contract labour — Indian workers sent to Caribbean, Fiji, Mauritius (1830s–1920)',
+          'Great Depression (1929): collapse of US stock market → global fall in output, trade, incomes, employment',
+          'Bretton Woods (1944): post-WWII order — IMF for short-term credit, World Bank for reconstruction; fixed exchange rates',
+          'GATT → WTO: removal of trade barriers; shift to a liberalised global trade regime (1995)'
+        ],
+        tips: [
+          'Rinderpest (cattle plague, 1890s): devastated African cattle → Africans lost livelihoods → forced labour for colonists',
+          'Corn Laws (UK, repealed 1846): removal allowed cheap food imports → hurt British farmers, helped industrialists',
+          'Henry Ford: assembly-line mass production → workers could afford cars → model for global consumer society',
+          'Post-WWII: decolonisation + Cold War shaped new international economic institutions'
+        ],
+        bestPractices: [
+          'Sequence pre-modern → colonial → modern → contemporary globalisation stages',
+          'Know the role of technology (steam ships, telegraph, refrigeration) in enabling 19th c. globalisation'
+        ]
+      },
+      {
+        chapter: 'Age of Industrialisation',
+        formulae: [],
+        logic: [
+          'Proto-industrialisation: rural cottage industries supplying merchants before factory system; merchants gave raw materials, collected finished goods',
+          'First Industrial Revolution (Britain, ~1780–1850): textiles, iron, steam engine; mechanised production',
+          'Second Industrial Revolution (~1850–1914): steel, chemicals, electricity, precision tools spread to USA and Germany',
+          'Child and women labour: cheap, less resistant to new practices; widely used in early mills',
+          'India under colonialism: Indian textiles initially exported globally; British machine-cloth flooded India → Indian weavers ruined',
+          'Bombay cotton mills (1850s–): industrialisation in India; faced competition from Lancashire'
+        ],
+        tips: [
+          'Spinning Jenny (Hargreaves, 1764): multiple spindles from one wheel; cotton output soared',
+          'Steam engine (Watt, 1769, improved): freed factories from river locations',
+          'Staple industries (Victorian Britain): cotton, iron, coal — Britain called "workshop of the world"',
+          'Indian hand-loom survived because it produced finer cloth; coarser cloth market lost to mills',
+          'NWP, Agra: most weavers displaced by 1850s; Bengal muslin virtually wiped out'
+        ],
+        bestPractices: [
+          'Compare British and Indian industrialisation: scale, timing, colonial constraints',
+          'Know the difference between domestic system (putting-out) and factory system'
+        ]
+      },
+      {
+        chapter: 'Print Culture and the Modern World',
+        formulae: [],
+        logic: [
+          'Woodblock printing (China, 594 AD): earliest form; spread to Japan and Korea; used for Buddhist texts',
+          'Gutenberg press (c.1448): movable metal type; Bible first book printed (1450s); transformed Europe',
+          'Print capitalism (Benedict Anderson): newspapers + novels created shared language and identity → foundation of nationalism',
+          'Reformation (Luther, 1517): printing spread Protestant ideas rapidly across Europe; challenged the Church',
+          'India: first printing press introduced by Portuguese missionaries in Goa (1556); spread to Bombay, Calcutta',
+          'Raja Ram Mohan Roy: used print to campaign against sati; Sambad Kaumudi 1821'
+        ],
+        tips: [
+          'Erasmus (humanist): warned that print spreads both wisdom and heresy',
+          'Seditious Acts: colonial government tried to censor the press in India; Vernacular Press Act (1878) — gagged Indian-language newspapers',
+          'Bal Gangadhar Tilak: Kesari (Marathi) — radical nationalist writing',
+          'Women and print: reformers used print to debate women\'s education; women writers emerged 19th c. Bengal'
+        ],
+        bestPractices: [
+          'Trace print from China → Europe (Gutenberg) → Reformation → Nationalism → India',
+          'Connect print to each major movement: Reformation, Enlightenment, French Revolution, Indian nationalism'
+        ]
+      },
+      // ── CBSE Grade 10 Geography ────────────────────────────────────────────
+      {
+        chapter: 'Forest and Wildlife Resources',
+        formulae: [],
+        logic: [
+          'Biodiversity: variety of life forms at genetic, species and ecosystem levels; India has 8% of global species',
+          'IUCN categories: Normal, Vulnerable, Endangered, Extinct, Rare, Endemic',
+          'Deforestation causes: mining, dams, agriculture expansion, overgrazing, fuel-wood collection',
+          'Project Tiger (1973): to protect Bengal tiger; expanded to 50+ reserves by 2023',
+          'Community reserves: areas where local communities participate in conservation (Wildlife Protection Act 1972)'
+        ],
+        tips: [
+          'India has 4 biodiversity hotspots: Eastern Himalayas, Western Ghats, Indo-Burma, Sundaland (Andaman)',
+          'Sacred groves (Dev vans): traditionally protected forest patches in Rajasthan, Meghalaya, Himachal Pradesh',
+          'Chipko Movement (1970s): villagers hugged trees to prevent logging — Uttarakhand; led by Gaura Devi',
+          'Beej Bachao Andolan: seed conservation movement, Tehri Garhwal'
+        ],
+        bestPractices: [
+          'Classify: reserved forest (most protected, govt.) vs protected vs unclassed',
+          'Link each conservation law to what it protects and when it was enacted'
+        ]
+      },
+      {
+        chapter: 'Water Resources',
+        formulae: [],
+        logic: [
+          'Freshwater: 2.5% of total water; most locked in ice caps/groundwater — only 0.006% accessible',
+          'Multipurpose river projects: irrigation + electricity + flood control + navigation (e.g. Bhakra Nangal, Hirakud)',
+          'Water scarcity causes: overuse, population growth, pollution, poor management',
+          'Rainwater harvesting: storing runoff for local use; khadins (Rajasthan), kulhs (HP), johads (Rajasthan)',
+          'Groundwater depletion: over-extraction for agriculture (Punjab, Haryana) threatens long-term supply'
+        ],
+        tips: [
+          'Bhakra Nangal Dam: Sutlej River; tallest gravity dam in Asia; Gobind Sagar reservoir',
+          'Hirakud Dam: Mahanadi, Odisha; one of the longest earthen dams in the world',
+          'Indira Gandhi Canal: Rajasthan; transforms Thar Desert agriculture',
+          'Large dams cause displacement; destroy forests; change local ecology — social and environmental concerns'
+        ],
+        bestPractices: [
+          'Know river → dam → state for at least 5 major multipurpose projects',
+          'Compare traditional water harvesting systems by region — map-based MCQs common'
+        ]
+      },
+      {
+        chapter: 'Minerals and Energy Resources',
+        formulae: [],
+        logic: [
+          'Mineral types: metallic (ferrous: iron ore; non-ferrous: copper, bauxite) and non-metallic (mica, limestone)',
+          'Mining methods: open-cast (near surface), shaft (deep underground), quarrying (surface rocks)',
+          'Iron ore belts: Odisha-Jharkhand, Chhattisgarh-MP, Karnataka, Maharashtra-Goa',
+          'Coal types by rank: Anthracite (best) > Bituminous > Lignite > Peat (lowest)',
+          'Petroleum: Mumbai High, Gujarat coast, Assam (Digboi — oldest oil field of Asia)',
+          'Non-conventional energy: solar, wind, tidal, biogas, geothermal — renewable and cleaner'
+        ],
+        tips: [
+          'Mica: largely from Jharkhand, Rajasthan; used in electrical industries',
+          'Bauxite → Aluminium: Jharkhand, Odisha, Gujarat, Chhattisgarh',
+          'India is among the largest producers of iron ore and mica globally',
+          'Digboi (Assam): first oil refinery in Asia (1901)',
+          'Kudankulam: nuclear power plant, Tamil Nadu'
+        ],
+        bestPractices: [
+          'Link mineral → leading state(s) — MCQs frequently test this',
+          'Know the difference between conventional (coal, oil, gas, hydro, nuclear) and non-conventional energy'
+        ]
+      },
+      {
+        chapter: 'Lifelines of National Economy',
+        formulae: [],
+        logic: [
+          'Transport modes: roadways, railways, airways, waterways, pipelines',
+          'Railways: largest public sector enterprise in India; connects remote areas; broad gauge (1.676 m) is standard',
+          'Roadways: largest network; National Highways (NH) connect major cities; maintained by NHAI',
+          'Waterways: cheapest for heavy goods; National Waterways 1 (Ganga–Allahabad to Haldia) is longest',
+          'Airways: fastest; Indian Airlines (domestic), Air India (international)',
+          'Trade: imports (crude oil, gold, fertilisers) vs exports (IT, textiles, engineering goods)'
+        ],
+        tips: [
+          'Golden Quadrilateral: 6-lane highway connecting Delhi-Mumbai-Chennai-Kolkata; 5,846 km',
+          'North-South corridor: Srinagar to Kanyakumari; East-West: Silchar to Porbandar',
+          'Kandla: India\'s largest port by cargo volume; free trade zone (Gujarat)',
+          'Mumbai: largest natural harbour; Jawaharlal Nehru Port (JNPT): busiest container port',
+          'ONGC (Oil and Natural Gas Corporation): state oil company; manages pipelines across India'
+        ],
+        bestPractices: [
+          'Rank transport modes by cost (cheapest: waterways → railways → roads → airways) for heavy/bulky cargo',
+          'Know which port handles what type of cargo — map questions appear in CBSE'
+        ]
       }
     ],
   Physics: [
@@ -1109,6 +1291,136 @@ const REVISION = {
     Chemistry: [
       {
         chapter: 'Periodic Table',
+        html: function() {
+          // [Z, symbol, name, mass, valency, type, group, period]
+          // type: a=alkali, e=alkalineEarth, t=transition, p=postTransition,
+          //       m=metalloid, n=nonmetal, h=halogen, g=nobleGas, l=lanthanide, c=actinide
+          const E=[
+            [1,'H','Hydrogen','1',1,'n',1,1],[2,'He','Helium','4',0,'g',18,1],
+            [3,'Li','Lithium','7',1,'a',1,2],[4,'Be','Beryllium','9',2,'e',2,2],
+            [5,'B','Boron','11',3,'m',13,2],[6,'C','Carbon','12',4,'n',14,2],
+            [7,'N','Nitrogen','14',3,'n',15,2],[8,'O','Oxygen','16',2,'n',16,2],
+            [9,'F','Fluorine','19',1,'h',17,2],[10,'Ne','Neon','20',0,'g',18,2],
+            [11,'Na','Sodium','23',1,'a',1,3],[12,'Mg','Magnesium','24',2,'e',2,3],
+            [13,'Al','Aluminium','27',3,'p',13,3],[14,'Si','Silicon','28',4,'m',14,3],
+            [15,'P','Phosphorus','31','3,5','n',15,3],[16,'S','Sulphur','32','2,4,6','n',16,3],
+            [17,'Cl','Chlorine','35.5','1,3,5,7','h',17,3],[18,'Ar','Argon','40',0,'g',18,3],
+            [19,'K','Potassium','39',1,'a',1,4],[20,'Ca','Calcium','40',2,'e',2,4],
+            [21,'Sc','Scandium','45',3,'t',3,4],[22,'Ti','Titanium','48','2,3,4','t',4,4],
+            [23,'V','Vanadium','51','2,3,4,5','t',5,4],[24,'Cr','Chromium','52','2,3,6','t',6,4],
+            [25,'Mn','Manganese','55','2,4,7','t',7,4],[26,'Fe','Iron','56','2,3','t',8,4],
+            [27,'Co','Cobalt','59','2,3','t',9,4],[28,'Ni','Nickel','59','2,3','t',10,4],
+            [29,'Cu','Copper','63.5','1,2','t',11,4],[30,'Zn','Zinc','65',2,'t',12,4],
+            [31,'Ga','Gallium','70',3,'p',13,4],[32,'Ge','Germanium','73',4,'m',14,4],
+            [33,'As','Arsenic','75','3,5','m',15,4],[34,'Se','Selenium','79',2,'n',16,4],
+            [35,'Br','Bromine','80',1,'h',17,4],[36,'Kr','Krypton','84',0,'g',18,4],
+            [37,'Rb','Rubidium','85',1,'a',1,5],[38,'Sr','Strontium','88',2,'e',2,5],
+            [39,'Y','Yttrium','89',3,'t',3,5],[40,'Zr','Zirconium','91',4,'t',4,5],
+            [41,'Nb','Niobium','93','3,5','t',5,5],[42,'Mo','Molybdenum','96','2,3,4,6','t',6,5],
+            [43,'Tc','Technetium','98','4,7','t',7,5],[44,'Ru','Ruthenium','101','2,3,4','t',8,5],
+            [45,'Rh','Rhodium','103','2,3','t',9,5],[46,'Pd','Palladium','106','2,4','t',10,5],
+            [47,'Ag','Silver','108',1,'t',11,5],[48,'Cd','Cadmium','112',2,'t',12,5],
+            [49,'In','Indium','115',3,'p',13,5],[50,'Sn','Tin','119','2,4','p',14,5],
+            [51,'Sb','Antimony','122','3,5','m',15,5],[52,'Te','Tellurium','128','2,4,6','m',16,5],
+            [53,'I','Iodine','127','1,3,5,7','h',17,5],[54,'Xe','Xenon','131',0,'g',18,5],
+            [55,'Cs','Caesium','133',1,'a',1,6],[56,'Ba','Barium','137',2,'e',2,6],
+            [72,'Hf','Hafnium','178',4,'t',4,6],[73,'Ta','Tantalum','181',5,'t',5,6],
+            [74,'W','Tungsten','184','2,4,6','t',6,6],[75,'Re','Rhenium','186','2,4,6,7','t',7,6],
+            [76,'Os','Osmium','190','2,3,4','t',8,6],[77,'Ir','Iridium','192','3,4','t',9,6],
+            [78,'Pt','Platinum','195','2,4','t',10,6],[79,'Au','Gold','197','1,3','t',11,6],
+            [80,'Hg','Mercury','201','1,2','t',12,6],[81,'Tl','Thallium','204','1,3','p',13,6],
+            [82,'Pb','Lead','207','2,4','p',14,6],[83,'Bi','Bismuth','209','3,5','p',15,6],
+            [84,'Po','Polonium','209','2,4','m',16,6],[85,'At','Astatine','210',1,'h',17,6],
+            [86,'Rn','Radon','222',0,'g',18,6],
+            [87,'Fr','Francium','223',1,'a',1,7],[88,'Ra','Radium','226',2,'e',2,7],
+            [104,'Rf','Rutherfordium','267',4,'t',4,7],[105,'Db','Dubnium','268',5,'t',5,7],
+            [106,'Sg','Seaborgium','271',6,'t',6,7],[107,'Bh','Bohrium','272',7,'t',7,7],
+            [108,'Hs','Hassium','277','—','t',8,7],[109,'Mt','Meitnerium','276','—','t',9,7],
+            [110,'Ds','Darmstadtium','281','—','t',10,7],[111,'Rg','Roentgenium','282','—','t',11,7],
+            [112,'Cn','Copernicium','285','—','t',12,7],[113,'Nh','Nihonium','286',3,'p',13,7],
+            [114,'Fl','Flerovium','289',4,'p',14,7],[115,'Mc','Moscovium','289',5,'p',15,7],
+            [116,'Lv','Livermorium','293',2,'p',16,7],[117,'Ts','Tennessine','294',1,'h',17,7],
+            [118,'Og','Oganesson','294',0,'g',18,7],
+            // Lanthanides: placed in rows 8+ (rendered separately below main table)
+            [57,'La','Lanthanum','139',3,'l',1,8],[58,'Ce','Cerium','140','3,4','l',2,8],
+            [59,'Pr','Praseodymium','141',3,'l',3,8],[60,'Nd','Neodymium','144',3,'l',4,8],
+            [61,'Pm','Promethium','145',3,'l',5,8],[62,'Sm','Samarium','150','2,3','l',6,8],
+            [63,'Eu','Europium','152','2,3','l',7,8],[64,'Gd','Gadolinium','157',3,'l',8,8],
+            [65,'Tb','Terbium','159','3,4','l',9,8],[66,'Dy','Dysprosium','163',3,'l',10,8],
+            [67,'Ho','Holmium','165',3,'l',11,8],[68,'Er','Erbium','167',3,'l',12,8],
+            [69,'Tm','Thulium','169',3,'l',13,8],[70,'Yb','Ytterbium','173','2,3','l',14,8],
+            [71,'Lu','Lutetium','175',3,'l',15,8],
+            // Actinides
+            [89,'Ac','Actinium','227',3,'c',1,9],[90,'Th','Thorium','232',4,'c',2,9],
+            [91,'Pa','Protactinium','231','4,5','c',3,9],[92,'U','Uranium','238','3,4,5,6','c',4,9],
+            [93,'Np','Neptunium','237','3,4,5,6','c',5,9],[94,'Pu','Plutonium','244','3,4,5,6','c',6,9],
+            [95,'Am','Americium','243','2,3,4,5,6','c',7,9],[96,'Cm','Curium','247','3,4','c',8,9],
+            [97,'Bk','Berkelium','247','3,4','c',9,9],[98,'Cf','Californium','251',3,'c',10,9],
+            [99,'Es','Einsteinium','252',3,'c',11,9],[100,'Fm','Fermium','257',3,'c',12,9],
+            [101,'Md','Mendelevium','258',3,'c',13,9],[102,'No','Nobelium','259','2,3','c',14,9],
+            [103,'Lr','Lawrencium','266',3,'c',15,9]
+          ];
+          const TC={'a':'#fee2e2','e':'#fef3c7','t':'#dbeafe','p':'#e8e0f7','m':'#d1fae5','n':'#f0fdf4','h':'#fef9c3','g':'#f1f5f9','l':'#ffedd5','c':'#ffe4e6'};
+          const TL={'a':'Alkali','e':'Alk. Earth','t':'Transition','p':'Post-Trans.','m':'Metalloid','n':'Non-metal','h':'Halogen','g':'Noble Gas','l':'Lanthanide','c':'Actinide'};
+          const grid={}, lant=[], acti=[];
+          E.forEach(([z,sym,name,mass,val,typ,grp,per])=>{
+            if(per<=7) grid[`${per}-${grp}`]={z,sym,name,mass,val,typ};
+            else if(per===8) lant.push({z,sym,name,mass,val,typ});
+            else acti.push({z,sym,name,mass,val,typ});
+          });
+          const cell=(el)=>{
+            if(!el) return '<div class="ptc ptg0"></div>';
+            const cbse=el.z<=20;
+            return `<div class="ptc" style="background:${TC[el.typ]};${cbse?'outline:2px solid #2563eb;outline-offset:-1px;':''}">
+              <span class="ptz">${el.z}</span><span class="pts">${el.sym}</span>
+              <span class="ptm">${el.mass}</span><span class="ptv">v:${el.val}</span></div>`;
+          };
+          let rows='';
+          // Row labels: Group numbers
+          rows+=`<div class="ptrow"><div class="ptlbl">Per</div>${Array.from({length:18},(_,i)=>`<div class="ptgh">${i+1}</div>`).join('')}</div>`;
+          for(let p=1;p<=7;p++){
+            let r=`<div class="ptlbl">${p}</div>`;
+            for(let g=1;g<=18;g++){
+              const el=grid[`${p}-${g}`];
+              // Period 6 group 3: lanthanide placeholder; period 7 group 3: actinide placeholder
+              if(p===6&&g===3){ r+=`<div class="ptc ptf" style="background:#ffedd5;font-size:9px;line-height:1.2;color:#9a3412;">57–71<br>La–Lu</div>`; continue; }
+              if(p===7&&g===3){ r+=`<div class="ptc ptf" style="background:#ffe4e6;font-size:9px;line-height:1.2;color:#9f1239;">89–103<br>Ac–Lr</div>`; continue; }
+              r+=el?cell(el):'<div class="ptc ptg0"></div>';
+            }
+            rows+=`<div class="ptrow">${r}</div>`;
+          }
+          // Lanthanides/Actinides rows
+          const lrow=(arr,label,bg,tc)=>{
+            const spacer='<div class="ptc ptg0" style="grid-column:span 3"></div>';
+            return `<div class="ptrow">${spacer}<div class="ptlbl" style="font-size:9px;writing-mode:unset;color:${tc}">${label}</div>${arr.map(el=>cell(el)).join('')}</div>`;
+          };
+          rows+=lrow(lant,'La','#ffedd5','#9a3412');
+          rows+=lrow(acti,'Ac','#ffe4e6','#9f1239');
+          // Legend
+          const legend=Object.entries(TL).map(([k,l])=>`<span style="display:inline-flex;align-items:center;gap:3px;margin:2px 6px 2px 0;font-size:10px;color:#1e293b;">
+            <span style="width:12px;height:12px;border-radius:3px;background:${TC[k]};display:inline-block;border:1px solid #ccc;${k==='n'?'border-color:#86efac':''}"></span>${l}</span>`).join('');
+          const cbseLegend=`<span style="display:inline-flex;align-items:center;gap:3px;margin:2px 6px 2px 0;font-size:10px;color:#1e293b;">
+            <span style="width:12px;height:12px;border-radius:3px;background:#eff6ff;border:2px solid #2563eb;display:inline-block;"></span>CBSE focus (Z 1–20)</span>`;
+          return `<style>
+            .pt-wrap{overflow-x:auto;margin-bottom:16px;font-family:ui-monospace,SFMono-Regular,monospace;}
+            .ptrow{display:grid;grid-template-columns:24px repeat(18,1fr);gap:2px;margin-bottom:2px;}
+            .ptlbl{display:flex;align-items:center;justify-content:center;font-size:9px;color:#64748b;font-weight:600;}
+            .ptgh{display:flex;align-items:center;justify-content:center;font-size:9px;color:#64748b;font-weight:700;}
+            .ptc{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px 1px;border-radius:3px;border:1px solid #cbd5e1;min-width:30px;min-height:38px;cursor:default;transition:transform .1s;}
+            .ptc:hover{transform:scale(1.25);z-index:10;position:relative;box-shadow:0 4px 12px rgba(0,0,0,.2);}
+            .ptg0{background:transparent;border-color:transparent;}
+            .ptf{text-align:center;}
+            .ptz{font-size:8px;line-height:1;color:#64748b;align-self:flex-start;padding-left:2px;}
+            .pts{font-size:13px;font-weight:800;line-height:1.1;color:#1e293b;}
+            .ptm{font-size:7.5px;line-height:1;color:#334155;}
+            .ptv{font-size:7px;line-height:1;color:#2563eb;font-weight:600;}
+            .pt-leg{display:flex;flex-wrap:wrap;gap:2px;margin:8px 0 12px;padding:8px;background:#f8fafc;border-radius:6px;border:1px solid #e2e8f0;}
+          </style>
+          <div class="pt-wrap">
+            <div class="pt-leg">${cbseLegend}${legend}</div>
+            <div style="min-width:600px;">${rows}</div>
+          </div>`;
+        },
         formulae: [],
         logic: [
           'Period = same number of electron shells; properties change systematically across a period',
@@ -1124,8 +1436,83 @@ const REVISION = {
           'Alkali metals (Group 1): most reactive metals; reactivity increases down the group'
         ],
         bestPractices: [
-          'Memorise first 20 elements: H, He, Li, Be, B, C, N, O, F, Ne, Na, Mg, Al, Si, P, S, Cl, Ar, K, Ca',
+          'Memorise first 20 elements: H He Li Be B C N O F Ne Na Mg Al Si P S Cl Ar K Ca',
           'Link trends: smaller atom → stronger nuclear pull → higher IE and electronegativity'
+        ]
+      },
+      {
+        chapter: 'Anions and Cations',
+        formulae: [
+          'Ion = atom or group that has gained or lost electrons',
+          'Cation (+): loses electron(s); formed by metals and NH₄⁺',
+          'Anion (−): gains electron(s); formed by non-metals and polyatomic groups'
+        ],
+        logic: [
+          'Valency of a cation = number of electrons lost (charge on cation)',
+          'Valency of an anion = number of electrons gained (charge on anion)',
+          'Simple ions: single atom (Na⁺, Cl⁻); Polyatomic ions: group of atoms with a charge (SO₄²⁻)',
+          'Electrovalency: charge on the ion; used to balance ionic formulae',
+          'Cross-multiplication rule: cation charge becomes subscript of anion; anion charge becomes subscript of cation'
+        ],
+        tips: [
+          '── Monovalent Cations (charge +1) ──',
+          'H⁺  — Hydrogen ion (proton)',
+          'Na⁺ — Sodium ion',
+          'K⁺  — Potassium ion',
+          'Ag⁺ — Silver ion',
+          'Cu⁺ — Cuprous (Copper I)',
+          'Hg⁺ — Mercurous (rare; exists as Hg₂²⁺)',
+          'NH₄⁺ — Ammonium (polyatomic)',
+          '── Divalent Cations (charge +2) ──',
+          'Ca²⁺ — Calcium ion',
+          'Mg²⁺ — Magnesium ion',
+          'Zn²⁺ — Zinc ion',
+          'Fe²⁺ — Ferrous (Iron II)',
+          'Cu²⁺ — Cupric (Copper II)',
+          'Pb²⁺ — Lead II (Plumbous)',
+          'Ba²⁺ — Barium ion',
+          'Hg²⁺ — Mercuric (Mercury II)',
+          'Mn²⁺ — Manganese II',
+          'Ni²⁺ — Nickel II',
+          'Co²⁺ — Cobalt II',
+          '── Trivalent Cations (charge +3) ──',
+          'Al³⁺ — Aluminium ion',
+          'Fe³⁺ — Ferric (Iron III)',
+          'Cr³⁺ — Chromium III',
+          'Au³⁺ — Auric (Gold III)',
+          '── Monovalent Anions (charge −1) ──',
+          'F⁻  — Fluoride',
+          'Cl⁻ — Chloride',
+          'Br⁻ — Bromide',
+          'I⁻  — Iodide',
+          'OH⁻ — Hydroxide',
+          'NO₃⁻ — Nitrate',
+          'NO₂⁻ — Nitrite',
+          'HCO₃⁻ — Hydrogen carbonate (Bicarbonate)',
+          'CH₃COO⁻ — Acetate (Ethanoate)',
+          'MnO₄⁻ — Permanganate',
+          'H⁻  — Hydride',
+          '── Divalent Anions (charge −2) ──',
+          'O²⁻  — Oxide',
+          'S²⁻  — Sulphide',
+          'SO₄²⁻ — Sulphate',
+          'SO₃²⁻ — Sulphite',
+          'CO₃²⁻ — Carbonate',
+          'CrO₄²⁻ — Chromate',
+          'Cr₂O₇²⁻ — Dichromate',
+          'S₂O₃²⁻ — Thiosulphate',
+          'HPO₄²⁻ — Hydrogen phosphate',
+          '── Trivalent Anions (charge −3) ──',
+          'PO₄³⁻ — Phosphate',
+          'N³⁻  — Nitride',
+          'AsO₄³⁻ — Arsenate'
+        ],
+        bestPractices: [
+          'Write ions as: symbol → charge (e.g. Fe²⁺ not Fe+2)',
+          'To write a formula: cation first, anion second; cross-multiply charges; simplify if needed',
+          'Example: Al³⁺ + SO₄²⁻ → Al₂(SO₄)₃ (cross 3 and 2)',
+          'Know variable valency metals: Fe (2,3), Cu (1,2), Pb (2,4), Hg (1,2), Sn (2,4), Cr (2,3,6)',
+          'Polyatomic anions ending in -ate have more oxygen than -ite (e.g. SO₄²⁻ vs SO₃²⁻)'
         ]
       },
       {
@@ -2735,9 +3122,10 @@ const app = {
     }
 
     const items = this._chapterItems(key, chapters, idx).filter(inFilter);
-    return `<h3 class="rev-ch-title">${esc(chapters[idx].chapter)}</h3>
-      ${items.length ? `<ul class="rev-list">${items.map(it => this._noteItem(it, false)).join('')}</ul>`
-                     : '<div class="empty-state">Nothing under this filter — try “All”.</div>'}`;
+    const chHtml = typeof chapters[idx].html === 'function' ? chapters[idx].html() : '';
+    return `<h3 class=”rev-ch-title”>${esc(chapters[idx].chapter)}</h3>${chHtml}
+      ${items.length ? `<ul class=”rev-list”>${items.map(it => this._noteItem(it, false)).join('')}</ul>`
+                     : (chHtml ? '' : '<div class=”empty-state”>Nothing under this filter — try “All”.</div>')}`;
   },
 
   _noteItem(it, showChapter) {
