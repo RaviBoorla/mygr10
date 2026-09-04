@@ -157,13 +157,21 @@ const REVISION = {
           'Angle Bisector Theorem: BD/DC = AB/AC'
         ],
         logic: [
-          'Congruency criteria (Gr 9): SSS, SAS, ASA, AAS, RHS — all five sides/angles must correspond correctly',
-          'Similarity criteria: AA (two angles), SSS (all side ratios equal), SAS (two sides ratio + included angle)',
-          'AA is sufficient for similarity because the third angle is forced (angle sum = 180°)',
+          '── Congruence Criteria (triangles are identical in shape AND size) ──',
+          'SSS Congruence: If all three sides of one △ equal all three sides of another △, the triangles are congruent (AB=PQ, BC=QR, CA=RP ⟹ △ABC ≅ △PQR)',
+          'SAS Congruence: If two sides and the INCLUDED angle of one △ equal two sides and the included angle of another △, they are congruent (AB=PQ, ∠B=∠Q, BC=QR ⟹ △ABC ≅ △PQR)',
+          'ASA Congruence: If two angles and the INCLUDED side of one △ equal two angles and the included side of another △, they are congruent (∠B=∠Q, BC=QR, ∠C=∠R ⟹ △ABC ≅ △PQR)',
+          'AAS Congruence: If two angles and a NON-INCLUDED side of one △ equal the corresponding two angles and side of another △, they are congruent (∠A=∠P, ∠B=∠Q, BC=QR ⟹ △ABC ≅ △PQR)',
+          'RHS Congruence: If the hypotenuse and ONE side of a right triangle equal the hypotenuse and one side of another right triangle, they are congruent (right angle, AB=PQ hypotenuse, BC=QR ⟹ △ABC ≅ △PQR)',
+          '── Similarity Criteria (same shape, sides proportional) ──',
+          'AA Similarity (AAA): If two angles of one △ equal two angles of another △, the triangles are similar — the third angle is automatically equal (∠A=∠P, ∠B=∠Q ⟹ △ABC ~ △PQR)',
+          'SSS Similarity: If all three pairs of corresponding sides are proportional, the triangles are similar (AB/PQ = BC/QR = CA/RP ⟹ △ABC ~ △PQR)',
+          'SAS Similarity: If two sides are proportional AND the included angle is equal, the triangles are similar (AB/PQ = BC/QR, ∠B=∠Q ⟹ △ABC ~ △PQR)',
+          '── Other key theorems ──',
           'Converse of BPT: if AD/DB = AE/EC then DE ∥ BC',
           'Converse of Pythagoras: if a² + b² = c² then the angle opposite c = 90°',
-          'Similar triangles have equal angles AND proportional sides — both conditions hold together',
-          'All equilateral triangles are similar; all squares are similar'
+          'Similar triangles have equal corresponding angles AND proportional corresponding sides',
+          'All equilateral triangles are similar to each other; all squares are similar to each other'
         ],
         tips: [
           'Pythagorean triples: (3,4,5), (5,12,13), (6,8,10), (8,15,17), (7,24,25), (9,40,41)',

@@ -392,11 +392,11 @@ h2 { margin: 0 0 4px; font-size: 22px; }
   grid-template-columns: 220px 1fr;
   gap: 16px;
   padding: 0 16px 16px;
-  align-items: start;
+  height: calc(100vh - var(--header-h) - 100px);
 }
 @media (max-width: 640px) {
-  .rev-layout { grid-template-columns: 1fr; }
-  .rev-nav { display: flex; flex-wrap: wrap; gap: 6px; }
+  .rev-layout { grid-template-columns: 1fr; height: auto; }
+  .rev-nav { flex-direction: row; flex-wrap: wrap; max-height: none; overflow-y: visible; }
 }
 
 /* Chapter sidebar tabs */
@@ -404,8 +404,8 @@ h2 { margin: 0 0 4px; font-size: 22px; }
   display: flex;
   flex-direction: column;
   gap: 4px;
-  position: sticky;
-  top: calc(var(--header-h) + 8px);
+  overflow-y: auto;
+  padding-right: 4px;
 }
 
 .ch-tab {
@@ -425,7 +425,7 @@ h2 { margin: 0 0 4px; font-size: 22px; }
 .ch-tab.active { background: var(--primary); color: #fff; border-color: var(--primary); font-weight: 600; }
 
 /* Chapter content panel */
-.rev-content { padding: 20px 24px; }
+.rev-content { padding: 20px 24px; overflow-y: auto; }
 
 .rev-ch-title {
   margin: 0 0 16px;
