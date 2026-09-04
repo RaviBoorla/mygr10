@@ -10,10 +10,114 @@ const state = {
   history:         []      // stack of previous screen ids
 };
 
-// ─── Revision content ─────────────────────────────────────────────────────────
+// ─── Revision content (board-agnostic — all boards share one set) ─────────────
 const REVISION = {
-  CBSE: {
-    Mathematics: [
+  Mathematics: [
+      {
+        chapter: 'Foundations — Arithmetic',
+        formulae: [
+          'BODMAS / PEMDAS order: Brackets → Orders (powers/roots) → Division → Multiplication → Addition → Subtraction',
+          'Divisibility by 2: last digit even; by 3: digit-sum divisible by 3; by 4: last two digits divisible by 4; by 5: ends in 0 or 5; by 9: digit-sum divisible by 9; by 11: alternating digit-sum divisible by 11',
+          'LCM × HCF = product of the two numbers (for any two positive integers)',
+          'Percentage: part/whole × 100; Profit% = Profit/CP × 100; Loss% = Loss/CP × 100',
+          'Simple Interest: SI = PRT/100; Amount = P + SI',
+          'Compound Interest: A = P(1 + r/n)^(nt); CI = A − P',
+          'Ratio a:b in simplest form: divide both by HCF(a,b)',
+          'Proportion: a:b = c:d ↔ ad = bc (product of means = product of extremes)',
+          'Speed = Distance/Time; Average speed = Total distance / Total time',
+          'Work: if A takes n days, rate = 1/n per day; combined rate = sum of individual rates'
+        ],
+        logic: [
+          'BODMAS strictly left-to-right within same precedence level',
+          'Unitary method: find value of 1 unit first, then scale',
+          'For percentages: "X% more than Y" means Y + X%·Y = Y(1 + X/100)',
+          'Compound interest grows faster than simple interest for the same rate and time',
+          'In ratio problems: find the total parts first, then multiply by the given total value',
+          'Time–distance–speed: draw a table or number line to avoid sign errors',
+          'Work problems: always add rates (jobs per day), not times'
+        ],
+        tips: [
+          'Learn squares 1–25 and cubes 1–15 by heart — saves time on every paper',
+          'For CI problems without calculator: use (1 + r/100)² = 1 + 2r/100 + (r/100)² for 2 years',
+          'Percentage shortcut: 10% = move decimal one place left; 5% = half of 10%',
+          'Ratio "3:5" → total 8 parts — always think in parts first'
+        ],
+        bestPractices: [
+          'Show every step — partial credit is given for method in board exams',
+          'Convert mixed numbers to improper fractions before operating',
+          'Check the answer by substituting back into the original problem',
+          'Label units throughout: "₹", "km/h", "days" — losing units loses marks'
+        ]
+      },
+      {
+        chapter: 'Foundations — Number System',
+        formulae: [
+          'Natural numbers (ℕ): 1, 2, 3, …   Whole numbers (W): 0, 1, 2, …   Integers (ℤ): …, −2, −1, 0, 1, 2, …',
+          'Rational numbers (ℚ): p/q where p, q ∈ ℤ and q ≠ 0',
+          'Irrational numbers: non-terminating non-repeating decimals (√2, π, e)',
+          'Real numbers (ℝ) = ℚ ∪ Irrationals; every real number is on the number line',
+          'Decimal expansion: terminating ↔ q = 2ⁿ5ᵐ in lowest terms; non-terminating repeating ↔ rational; non-terminating non-repeating ↔ irrational',
+          'Absolute value: |x| = x if x ≥ 0; |x| = −x if x < 0',
+          'Scientific notation: a × 10ⁿ where 1 ≤ a < 10',
+          'Prime factorisation (Fundamental Theorem of Arithmetic): every integer > 1 is a unique product of primes'
+        ],
+        logic: [
+          'ℕ ⊂ W ⊂ ℤ ⊂ ℚ ⊂ ℝ — each set is a superset of the previous',
+          'Between any two rational numbers there is another rational (density property)',
+          '√2 is irrational: proved by contradiction (if √2 = p/q in lowest terms, then 2 | p and 2 | q — contradiction)',
+          'Sum/product of rational and irrational is irrational',
+          'Sum of two irrationals can be rational (e.g. √2 + (−√2) = 0)',
+          'Consecutive integers: n and n+1; their product n(n+1) is always even',
+          'Every even number = 2k; every odd = 2k+1 for some integer k'
+        ],
+        tips: [
+          'To convert a recurring decimal to a fraction: let x = 0.a̅b̅, multiply by 100 (for 2-repeating digits), subtract original, solve',
+          'Zero is neither positive nor negative; it is a whole number and an integer but NOT a natural number',
+          'π ≈ 22/7 is an approximation — 22/7 is rational, π is not',
+          'Negative numbers on the number line: −3 < −2 < −1 < 0 (more negative = further left = smaller)'
+        ],
+        bestPractices: [
+          'Always classify a number (natural / whole / integer / rational / irrational) before solving classification MCQs',
+          'Write set membership clearly: 0 ∈ W but 0 ∉ ℕ',
+          'When finding HCF/LCM use prime factorisation for numbers > 100 to avoid errors',
+          'Double-check: is your irrational proof by contradiction fully circular-free?'
+        ]
+      },
+      {
+        chapter: 'Foundations — Mathematical Operations',
+        formulae: [
+          'Commutative law: a + b = b + a;  a × b = b × a  (NOT for − or ÷)',
+          'Associative law: (a + b) + c = a + (b + c);  (a × b) × c = a × (b × c)',
+          'Distributive law: a(b + c) = ab + ac;  a(b − c) = ab − ac',
+          'Identity elements: 0 for addition (a + 0 = a);  1 for multiplication (a × 1 = a)',
+          'Inverse elements: −a is additive inverse of a;  1/a is multiplicative inverse (a ≠ 0)',
+          'Closure: ℤ is closed under +, −, ×; NOT under ÷ (7÷2 ∉ ℤ)',
+          'Exponent rules: aᵐaⁿ = aᵐ⁺ⁿ; aᵐ/aⁿ = aᵐ⁻ⁿ; (aᵐ)ⁿ = aᵐⁿ; a⁰ = 1; a⁻ⁿ = 1/aⁿ',
+          'Surds: √a × √b = √(ab);  √a / √b = √(a/b);  (√a + √b)(√a − √b) = a − b',
+          'Rationalising denominator: multiply top and bottom by conjugate'
+        ],
+        logic: [
+          'Division by zero is undefined — no real number satisfies a/0',
+          'Subtraction and division are NOT commutative: 5 − 3 ≠ 3 − 5',
+          'Order of operations failure is the most common arithmetic error — always apply BODMAS',
+          'Negative × Negative = Positive; Negative × Positive = Negative',
+          'Even + Even = Even; Even + Odd = Odd; Odd + Odd = Even',
+          'a² − b² = (a+b)(a−b);  (a+b)² = a² + 2ab + b²;  (a−b)² = a² − 2ab + b²',
+          'a³ + b³ = (a+b)(a² − ab + b²);  a³ − b³ = (a−b)(a² + ab + b²)'
+        ],
+        tips: [
+          'Memorise (a+b)², (a−b)², (a+b)³, (a−b)³ — appear directly in factorisation and algebra',
+          'To rationalise 1/(√a + √b): multiply by (√a − √b)/(√a − √b)',
+          'Always simplify surds before adding: √12 + √3 = 2√3 + √3 = 3√3',
+          'When distributing, include the sign: −(a − b) = −a + b not −a − b'
+        ],
+        bestPractices: [
+          'Write the law used in each step for proofs (commutative, associative, etc.)',
+          'Bracket negative terms when substituting: substitute −2 as (−2) to avoid sign errors',
+          'Expand fully before simplifying — do not skip steps in surds or polynomials',
+          'Verify factorisation by expanding back'
+        ]
+      },
       {
         chapter: 'Real Numbers',
         formulae: [
@@ -397,6 +501,53 @@ const REVISION = {
           'Write out S (sample space) first, then count favourable outcomes',
           'Double-check: P(E) + P(Ē) must equal 1',
           'Read carefully — "at least one", "at most two", "exactly three" all mean different things'
+        ]
+      },
+      {
+        chapter: 'Quadrilaterals',
+        formulae: [
+          'Sum of interior angles of any quadrilateral = 360°',
+          'Area of parallelogram = base × height = ab sin θ (a, b = sides, θ = included angle)',
+          'Area of rectangle = length × breadth;  Perimeter = 2(l + b)',
+          'Area of square = side²;  Perimeter = 4 × side;  Diagonal = side × √2',
+          'Area of rhombus = ½ × d₁ × d₂ (d₁, d₂ = diagonals)',
+          'Area of trapezium = ½ × (sum of parallel sides) × height = ½(a + b)h',
+          'Diagonal of rectangle: d = √(l² + b²)',
+          'Diagonals of rhombus bisect at 90°: side² = (d₁/2)² + (d₂/2)²'
+        ],
+        logic: [
+          'Parallelogram (llgm): both pairs of opposite sides parallel and equal; opposite angles equal; diagonals bisect each other',
+          'Rectangle: parallelogram with all angles 90°; diagonals equal in length',
+          'Rhombus: parallelogram with all sides equal; diagonals bisect each other at right angles; diagonals bisect the vertex angles',
+          'Square: rectangle + rhombus; all sides equal, all angles 90°, diagonals equal, bisect at 90°, bisect vertex angles (45° each)',
+          'Trapezium: exactly one pair of parallel sides (called the parallel sides or bases)',
+          'Isosceles trapezium: non-parallel sides equal; base angles equal; diagonals equal',
+          'Hierarchy: Square ⊂ Rectangle ⊂ Parallelogram ⊂ Quadrilateral; Square ⊂ Rhombus ⊂ Parallelogram',
+          'Converse: a quadrilateral is a parallelogram if: (i) both pairs of opposite sides are equal, OR (ii) both pairs of opposite angles are equal, OR (iii) diagonals bisect each other, OR (iv) one pair of sides is both parallel and equal',
+          'Mid-point theorem for quadrilaterals: the quadrilateral formed by joining midpoints of any quadrilateral is a parallelogram'
+        ],
+        theorems: [
+          'Theorem: A diagonal of a parallelogram divides it into two congruent triangles.',
+          'Theorem: In a parallelogram, opposite sides are equal. Converse: If opposite sides of a quadrilateral are equal, it is a parallelogram.',
+          'Theorem: In a parallelogram, opposite angles are equal. Converse: If opposite angles of a quadrilateral are equal, it is a parallelogram.',
+          'Theorem: The diagonals of a parallelogram bisect each other. Converse: If the diagonals of a quadrilateral bisect each other, it is a parallelogram.',
+          'Theorem: The diagonals of a rectangle are equal.',
+          'Theorem: The diagonals of a rhombus are perpendicular bisectors of each other.',
+          'Theorem: The diagonals of a square are equal and perpendicular bisectors of each other.',
+          'Mid-Point Theorem (Gr 9): The line segment joining the mid-points of two sides of a triangle is parallel to the third side and equal to half of it. (Used to prove properties of special quadrilaterals.)'
+        ],
+        tips: [
+          'Every square is a rectangle and a rhombus — but NOT every rectangle is a square',
+          'For rhombus area: you need BOTH diagonals — they are NOT given as sides',
+          'Draw the figure and mark all known properties before writing proof steps',
+          'CPCT (Corresponding Parts of Congruent Triangles) — state the congruence first, THEN use CPCT',
+          'Trapezium area: the two parallel sides go in the formula — identify them first'
+        ],
+        bestPractices: [
+          'In proofs: establish congruence of triangles using SAS/ASA/SSS/AAS, then apply CPCT',
+          'Label all angles and sides in the figure with the same symbols as in the question',
+          'State the theorem or property used at each step — method marks depend on it',
+          'For MCQs on area: rewrite every formula in your rough work before substituting numbers'
         ]
       }
     ],
@@ -836,10 +987,8 @@ const REVISION = {
           'Know the role of technology (telecom, internet) in enabling globalisation'
         ]
       }
-    ]
-  },
-  ICSE: {
-    Physics: [
+    ],
+  Physics: [
       {
         chapter: 'Force & Pressure',
         formulae: [
@@ -1067,7 +1216,7 @@ const REVISION = {
         ]
       }
     ],
-    Mathematics: [
+  'ICSE Mathematics': [
       {
         chapter: 'Mensuration',
         formulae: [
@@ -1263,10 +1412,8 @@ const REVISION = {
           'Verify A·A⁻¹ = I after computing the inverse'
         ]
       }
-    ]
-  },
-  IB: {
-    Mathematics: [
+    ],
+  'IB Mathematics': [
       {
         chapter: 'Algebra & Indices',
         formulae: [
@@ -1446,13 +1593,18 @@ const REVISION = {
         ]
       }
     ]
-  }
 };
+
+// merge IB and ICSE Mathematics chapters into the main Mathematics array
+REVISION.Mathematics = REVISION.Mathematics
+  .concat(REVISION['ICSE Mathematics'] || [])
+  .concat(REVISION['IB Mathematics'] || []);
+delete REVISION['ICSE Mathematics'];
+delete REVISION['IB Mathematics'];
 
 // ─── Theorems by chapter ─────────────────────────────────────────────────────
 const THEOREMS = {
-  CBSE: {
-    Mathematics: {
+  Mathematics: {
       'Real Numbers': [
         "Fundamental Theorem of Arithmetic: Every composite number can be expressed as a product of primes, and this factorisation is unique (up to order of factors). [Gr 10]",
         "Euclid's Division Lemma: For any two positive integers a and b, there exist unique integers q and r such that a = bq + r, where 0 ≤ r < b. [Gr 10]",
@@ -1502,8 +1654,8 @@ const THEOREMS = {
         "Theorem: For any event E, 0 ≤ P(E) ≤ 1.",
         "Complementary Event Theorem: P(E) + P(Ē) = 1."
       ]
-    },
-    Science: {
+  },
+  Science: {
       'Chemical Reactions & Equations': [
         "Law of Conservation of Mass (Lavoisier, Gr 10): In any chemical reaction, the total mass of reactants equals the total mass of products.",
         "Law of Definite Proportions (Proust, Gr 9): A chemical compound always contains the same elements in the same fixed proportion by mass, regardless of source or method of preparation."
@@ -1531,10 +1683,8 @@ const THEOREMS = {
       'Life Processes': [
         "Cell Theory (Gr 9): (1) All organisms are made of one or more cells. (2) The cell is the basic structural and functional unit of life. (3) All cells arise from pre-existing cells (Virchow)."
       ]
-    }
   },
-  ICSE: {
-    Physics: {
+  Physics: {
       'Force & Pressure': [
         "Newton's First Law of Motion (Gr 9): A body at rest remains at rest, and a body in uniform motion continues in uniform motion in a straight line, unless acted upon by a net external force.",
         "Newton's Second Law of Motion (Gr 9): The net force on a body equals the rate of change of its momentum. For constant mass: F = ma.",
@@ -1575,7 +1725,7 @@ const THEOREMS = {
         "Gay-Lussac's Law of Combining Volumes (Gr 10): Gases react in volumes that bear a simple whole-number ratio to each other and to the volume of any gaseous product, at the same temperature and pressure."
       ]
     },
-    Mathematics: {
+  'ICSE Mathematics': {
       'Similarity': [
         "Basic Proportionality Theorem (Thales, Gr 9/10): If a line is drawn parallel to one side of a triangle, it divides the other two sides in the same ratio.",
         "Converse of BPT: If a line divides two sides of a triangle in the same ratio, it is parallel to the third side.",
@@ -1591,10 +1741,8 @@ const THEOREMS = {
         "Theorem: The perpendicular bisector of a line segment is the locus of all points equidistant from the two endpoints.",
         "Thales' Theorem in Coordinate Geometry: The angle subtended by a diameter of a circle at any point on the circle is 90°."
       ]
-    }
   },
-  IB: {
-    Mathematics: {
+  'IB Mathematics': {
       'Geometry & Trigonometry': [
         "Sine Rule: a/sin A = b/sin B = c/sin C — valid for all triangles.",
         "Cosine Rule: c² = a² + b² − 2ab cos C — generalisation of Pythagoras.",
@@ -1613,8 +1761,8 @@ const THEOREMS = {
         "Theorem: log_b x is defined only for x > 0 and b > 0, b ≠ 1.",
         "Change of Base Theorem: log_b x = log_a x / log_a b (for any valid base a)."
       ]
-    },
-    Sciences: {
+  },
+  Sciences: {
       'Cell Biology': [
         "Cell Theory (3 postulates): (1) All living organisms are made of one or more cells. (2) The cell is the smallest unit of life. (3) All cells arise from pre-existing cells.",
         "Osmosis Theorem: Water moves by osmosis from a region of higher water potential to lower water potential across a partially permeable membrane."
@@ -1630,9 +1778,14 @@ const THEOREMS = {
         "Semi-Conservative Replication Theorem (Meselson–Stahl): Each new DNA molecule retains one parental strand and one newly synthesised strand.",
         "Watson–Crick Base Pairing: In DNA, A pairs with T and G pairs with C via hydrogen bonds. In RNA, A pairs with U and G with C."
       ]
-    }
   }
 };
+
+// merge ICSE and IB theorem chapters into main Mathematics key
+Object.assign(THEOREMS.Mathematics, THEOREMS['ICSE Mathematics'] || {});
+Object.assign(THEOREMS.Mathematics, THEOREMS['IB Mathematics'] || {});
+delete THEOREMS['ICSE Mathematics'];
+delete THEOREMS['IB Mathematics'];
 
 // ─── HTML escape helper ───────────────────────────────────────────────────────
 function esc(str) {
@@ -1913,7 +2066,7 @@ const app = {
   },
 
   _screenRevisionList() {
-    const btns = (SUBJECTS[state.board] || []).map(s =>
+    const btns = Object.keys(REVISION).map(s =>
       `<button class="btn subject-btn" onclick="app.openRevisionSubject('${esc(s)}')">${esc(s)}</button>`
     ).join('');
     return `
@@ -1926,7 +2079,7 @@ const app = {
 
   _screenRevisionContent() {
     const subject  = state.revisionSubject;
-    const chapters = (REVISION[state.board] || {})[subject];
+    const chapters = REVISION[subject];
 
     if (!chapters || chapters.length === 0) {
       return `
@@ -1956,7 +2109,7 @@ const app = {
     ];
 
     // Merge theorems from the separate THEOREMS lookup into this chapter
-    const chapterTheorems = ((THEOREMS[state.board] || {})[subject] || {})[ch.chapter] || [];
+    const chapterTheorems = (THEOREMS[subject] || {})[ch.chapter] || [];
     const enrichedCh = { ...ch, theorems: [...(ch.theorems || []), ...chapterTheorems] };
 
     const chapterTabs = chapters.map((c, i) =>
