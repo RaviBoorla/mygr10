@@ -3683,5 +3683,890 @@
     "correct": 2,
     "explanation": "√3+√5 is indeed irrational, so A is true. But R is false in general — e.g. √2 + (−√2) = 0 is rational, so the sum of two irrationals is not always irrational.",
     "priority": true
+  },
+  {
+    "id": "math-260",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If α and β are the zeroes of polynomial 3x² + 6x + k such that α + β + αβ = −2/3, then the value of k is: (2025 Board)",
+    "options": [
+      "−8",
+      "8",
+      "−4",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "α+β = −6/3 = −2 and αβ = k/3. Setting −2 + k/3 = −2/3 gives k/3 = 4/3, so k = 4.",
+    "priority": true
+  },
+  {
+    "id": "math-261",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "If x = 1 and y = 2 is a solution of the pair of linear equations 2x − 3y + a = 0 and 2x + 3y − b = 0, then: (2025 Board)",
+    "options": [
+      "a = 2b",
+      "2a = b",
+      "a + 2b = 0",
+      "2a + b = 0"
+    ],
+    "correct": 1,
+    "explanation": "Substituting gives 2−6+a=0 so a=4, and 2+6−b=0 so b=8; checking the options, 2a = 8 = b holds.",
+    "priority": true
+  },
+  {
+    "id": "math-262",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The mid-point of the line segment joining the points P(−4, 5) and Q(4, 6) lies on: (2025 Board)",
+    "options": [
+      "x-axis",
+      "y-axis",
+      "origin",
+      "neither x-axis nor y-axis"
+    ],
+    "correct": 1,
+    "explanation": "The mid-point is ((−4+4)/2, (5+6)/2) = (0, 5.5), which has x-coordinate 0, so it lies on the y-axis.",
+    "priority": true
+  },
+  {
+    "id": "math-263",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "If θ is an acute angle and 7 + 4 sin θ = 9, then the value of θ is: (2025 Board)",
+    "options": [
+      "90°",
+      "30°",
+      "45°",
+      "60°"
+    ],
+    "correct": 1,
+    "explanation": "sin θ = 2/4 = 1/2, so θ = 30°.",
+    "priority": true
+  },
+  {
+    "id": "math-264",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "The value of tan² θ − (1/cos θ × sec θ) is: (2025 Board)",
+    "options": [
+      "1",
+      "0",
+      "−1",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "1/cosθ × secθ = sec²θ, so the expression is tan²θ − sec²θ = −(sec²θ − tan²θ) = −1.",
+    "priority": true
+  },
+  {
+    "id": "math-265",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "If HCF(98, 28) = m and LCM(98, 28) = n, then the value of n − 7m is: (2025 Board)",
+    "options": [
+      "0",
+      "28",
+      "98",
+      "198"
+    ],
+    "correct": 2,
+    "explanation": "98 = 2×7², 28 = 2²×7, so HCF = 14 = m and LCM = 196 = n. n − 7m = 196 − 98 = 98.",
+    "priority": true
+  },
+  {
+    "id": "math-266",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The tangents drawn at the extremities of the diameter of a circle are always: (2025 Board)",
+    "options": [
+      "parallel",
+      "perpendicular",
+      "equal",
+      "intersecting"
+    ],
+    "correct": 0,
+    "explanation": "Tangents at the two ends of a diameter are both perpendicular to the same diameter line, so they are parallel to each other.",
+    "priority": true
+  },
+  {
+    "id": "math-267",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In triangles ABC and DEF, ∠B = ∠E, ∠F = ∠C and AB = 3 DE. Then, the two triangles are: (2025 Board)",
+    "options": [
+      "congruent but not similar",
+      "congruent as well as similar",
+      "neither congruent nor similar",
+      "similar but not congruent"
+    ],
+    "correct": 3,
+    "explanation": "Two equal angles (AA) make the triangles similar, but since AB = 3DE (a scale factor of 3, not 1), corresponding sides are not equal, so they are similar but not congruent.",
+    "priority": true
+  },
+  {
+    "id": "math-268",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "If (−1)ⁿ + (−1)⁸ = 0, then n is: (2025 Board)",
+    "options": [
+      "any positive integer",
+      "any negative integer",
+      "any odd number",
+      "any even number"
+    ],
+    "correct": 2,
+    "explanation": "(−1)⁸ = 1, so (−1)ⁿ must equal −1, which happens exactly when n is odd.",
+    "priority": true
+  },
+  {
+    "id": "math-269",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "Two polynomials are shown in a graph: a downward \"hill\"-shaped curve crossing the x-axis at two points near the origin, overlaid with two straight lines crossing the x-axis further out. The number of distinct zeroes of both the polynomials combined is: (2025 Board)",
+    "options": [
+      "3",
+      "5",
+      "2",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "The hill-shaped curve contributes 2 distinct x-intercepts and the two crossing lines contribute 2 more distinct x-intercepts further from the origin, giving 4 distinct zeroes in total.",
+    "priority": true
+  },
+  {
+    "id": "math-270",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "If the sum of first m terms of an AP is 2m² + 3m, then its second term is: (2025 Board)",
+    "options": [
+      "10",
+      "9",
+      "12",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "S₁ = 2+3 = 5 = a₁. S₂ = 8+6 = 14. The second term a₂ = S₂ − S₁ = 14 − 5 = 9.",
+    "priority": true
+  },
+  {
+    "id": "math-271",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Mode and Mean of a data are 15x and 18x, respectively. Then the median of the data is: (2025 Board)",
+    "options": [
+      "x",
+      "11x",
+      "17x",
+      "34x"
+    ],
+    "correct": 2,
+    "explanation": "Using Mode = 3×Median − 2×Mean: 15x = 3×Median − 36x, so 3×Median = 51x, giving Median = 17x.",
+    "priority": true
+  },
+  {
+    "id": "math-272",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A card is selected at random from a deck of 52 playing cards. The probability of it being a red face card is: (2025 Board)",
+    "options": [
+      "3/13",
+      "2/13",
+      "1/2",
+      "3/26"
+    ],
+    "correct": 3,
+    "explanation": "There are 2 red suits × 3 face cards each = 6 red face cards out of 52, giving a probability of 6/52 = 3/26.",
+    "priority": true
+  },
+  {
+    "id": "math-273",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "Which of the following is a rational number between √3 and √5? (2025 Board)",
+    "options": [
+      "1.4142387954012….",
+      "2.326̄",
+      "π",
+      "1.857142"
+    ],
+    "correct": 3,
+    "explanation": "√3 ≈ 1.732 and √5 ≈ 2.236. Only 1.857142 (a terminating/repeating decimal, hence rational) falls strictly between these two values.",
+    "priority": true
+  },
+  {
+    "id": "math-274",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "If a sector of a circle has an area of 40π sq. units and a central angle of 72°, the radius of the circle is: (2025 Board)",
+    "options": [
+      "200 units",
+      "100 units",
+      "20 units",
+      "10√2 units"
+    ],
+    "correct": 3,
+    "explanation": "Sector area = (72/360)πr² = 40π, so (1/5)r² = 40, giving r² = 200, so r = 10√2 units.",
+    "priority": true
+  },
+  {
+    "id": "math-275",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "PA is a tangent from an external point P to a circle with centre O, and B is a point on the circle such that P, O, B are such that ∠POB = 115°. Then ∠APO is equal to: (2025 Board)",
+    "options": [
+      "25°",
+      "65°",
+      "90°",
+      "35°"
+    ],
+    "correct": 0,
+    "explanation": "Since OA ⊥ PA (radius ⊥ tangent), and P-O-B is a straight secant line through the centre, ∠AOP = 180° − 115° = 65°. In right triangle OAP, ∠APO = 180° − 90° − 65° = 25°.",
+    "priority": true
+  },
+  {
+    "id": "math-276",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "medium",
+    "text": "A kite is flying at a height of 150 m from the ground. It is attached to a string inclined at an angle of 30° to the horizontal. The length of the string is: (2025 Board)",
+    "options": [
+      "100√3 m",
+      "300 m",
+      "150√2 m",
+      "150√3 m"
+    ],
+    "correct": 1,
+    "explanation": "sin 30° = height / string length, so string length = 150 / (1/2) = 300 m.",
+    "priority": true
+  },
+  {
+    "id": "math-277",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "A piece of wire 20 cm long is bent into the form of an arc of a circle of radius 60/π cm. The angle subtended by the arc at the centre of the circle is: (2025 Board)",
+    "options": [
+      "30°",
+      "60°",
+      "90°",
+      "50°"
+    ],
+    "correct": 1,
+    "explanation": "Arc length = rθ (θ in radians): 20 = (60/π)θ, so θ = π/3 radians = 60°.",
+    "priority": true
+  },
+  {
+    "id": "math-278",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Assertion (A): The probability of selecting a number at random from the numbers 1 to 20 is 1. Reason (R): For any event E, if P(E) = 1, then E is called a sure event. Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 0,
+    "explanation": "Selecting some number from 1 to 20 is certain to happen, so its probability is 1 — and this is exactly the definition of a sure event given in R, correctly explaining A.",
+    "priority": true
+  },
+  {
+    "id": "math-279",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "Assertion (A): If we join two hemispheres of the same radius along their bases, then we get a sphere. Reason (R): Total Surface Area of a sphere of radius r is 3πr². Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 2,
+    "explanation": "Joining two hemispheres at their flat circular bases does form a complete sphere, so A is true. But the correct total surface area formula for a sphere is 4πr², not 3πr², so R is false.",
+    "priority": true
+  },
+  {
+    "id": "math-280",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If 7 cos² θ + 3 sin² θ = 4, then the value of θ is: (2025 Board)",
+    "options": [
+      "30°",
+      "45°",
+      "60°",
+      "90°"
+    ],
+    "correct": 2,
+    "explanation": "7cos²θ + 3(1−cos²θ) = 4 gives 4cos²θ = 1, so cos²θ = 1/4, cos θ = 1/2, giving θ = 60°.",
+    "priority": true
+  },
+  {
+    "id": "math-281",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The probability of drawing an even prime number out of numbers from 1 to 30 is: (2025 Board)",
+    "options": [
+      "1/30",
+      "4/15",
+      "7/30",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "2 is the only even prime number, so there is exactly 1 favourable outcome out of 30, giving a probability of 1/30.",
+    "priority": true
+  },
+  {
+    "id": "math-282",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The quadratic equation whose roots are 7 and 1/7 is: (2025 Board)",
+    "options": [
+      "7x² − 50x + 7 = 0",
+      "7x² − 50x + 1 = 0",
+      "7x² + 50x − 7 = 0",
+      "7x² + 50x − 1 = 0"
+    ],
+    "correct": 0,
+    "explanation": "Sum of roots = 7 + 1/7 = 50/7, product = 1. The equation x² − (sum)x + product = 0 becomes x² − (50/7)x + 1 = 0; multiplying by 7 gives 7x² − 50x + 7 = 0.",
+    "priority": true
+  },
+  {
+    "id": "math-283",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The coordinates of the end points of a diameter of a circle are (5, −2) and (5, 2). The length of the radius of the circle is: (2025 Board)",
+    "options": [
+      "±2",
+      "±4",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "The diameter length is the distance between (5,−2) and (5,2), which is √(0² + 4²) = 4, so the radius is 4/2 = 2.",
+    "priority": true
+  },
+  {
+    "id": "math-284",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The points (−5, 0), (5, 0) and (0, 4) are the vertices of a triangle which is a/an: (2025 Board)",
+    "options": [
+      "right-angled triangle",
+      "isosceles triangle",
+      "equilateral triangle",
+      "scalene triangle"
+    ],
+    "correct": 1,
+    "explanation": "The distance between (−5,0) and (5,0) is 10, while the distances from (0,4) to each of these points are both √(25+16) = √41 — two equal sides make it isosceles.",
+    "priority": true
+  },
+  {
+    "id": "math-285",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "In a given figure, RS is the tangent to the circle at the point L and MN is the diameter. If ∠NML = 30°, then ∠RLM is: (2025 Board)",
+    "options": [
+      "30°",
+      "60°",
+      "90°",
+      "120°"
+    ],
+    "correct": 1,
+    "explanation": "Since MN is a diameter, ∠MLN = 90° (angle in a semicircle), so in triangle MLN, ∠MNL = 180° − 90° − 30° = 60°. By the tangent-chord angle theorem, ∠RLM equals the angle in the alternate segment, ∠MNL = 60°.",
+    "priority": true
+  },
+  {
+    "id": "math-286",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In a given figure, PQ ∥ BC. If AP/PB = 4/13 and AC = 20.4 cm, then the length of AQ is: (2025 Board)",
+    "options": [
+      "2.8 cm",
+      "5.8 cm",
+      "3.8 cm",
+      "4.8 cm"
+    ],
+    "correct": 3,
+    "explanation": "AP/AB = 4/17 (since AB = AP+PB = 17 parts). By similar triangles, AQ/AC = AP/AB = 4/17, so AQ = 20.4 × 4/17 = 4.8 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-287",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "Which of the following statements is incorrect? (2025 Board)",
+    "options": [
+      "Two congruent figures are always similar",
+      "A square and a rhombus of the same area are always similar",
+      "Two equilateral triangles are always similar",
+      "Two similar triangles need not be congruent"
+    ],
+    "correct": 1,
+    "explanation": "A square has all right angles while a general rhombus doesn't, so equal area alone doesn't make a square and rhombus similar — this statement is false.",
+    "priority": true
+  },
+  {
+    "id": "math-288",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "The sum of the exponents of prime factors in the prime factorisation of 4004 is: (2025 Board)",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "4004 = 2² × 7¹ × 11¹ × 13¹, so the sum of the exponents is 2+1+1+1 = 5.",
+    "priority": true
+  },
+  {
+    "id": "math-289",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "In a cricket match, a batsman hits the boundary 7 times out of the 42 balls he plays. The probability of his not hitting a boundary is: (2025 Board)",
+    "options": [
+      "1/7",
+      "2/7",
+      "5/6",
+      "1/6"
+    ],
+    "correct": 2,
+    "explanation": "P(boundary) = 7/42 = 1/6, so P(not boundary) = 1 − 1/6 = 5/6.",
+    "priority": true
+  },
+  {
+    "id": "math-290",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "easy",
+    "text": "If a large circular pizza is divided into 5 equal sectors, then the central angle of each sector will be: (2025 Board)",
+    "options": [
+      "60°",
+      "90°",
+      "45°",
+      "72°"
+    ],
+    "correct": 3,
+    "explanation": "Dividing 360° into 5 equal sectors gives 360/5 = 72° per sector.",
+    "priority": true
+  },
+  {
+    "id": "math-291",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If sin 30° tan 45° = sec 60° / k, then the value of k is: (2025 Board)",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "sin30° × tan45° = (1/2)(1) = 1/2. sec60° = 2. Setting 1/2 = 2/k gives k = 4.",
+    "priority": true
+  },
+  {
+    "id": "math-292",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The line represented by the equation x − y = 0 is: (2025 Board)",
+    "options": [
+      "parallel to x-axis",
+      "parallel to y-axis",
+      "passing through the origin",
+      "passing through the point (3, 2)"
+    ],
+    "correct": 2,
+    "explanation": "x − y = 0 means y = x, which is satisfied by (0,0), so the line passes through the origin.",
+    "priority": true
+  },
+  {
+    "id": "math-293",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "The 10th term of the AP 5, 19/4, 9/2, 17/4, … is: (2025 Board)",
+    "options": [
+      "11/4",
+      "4/11",
+      "13/4",
+      "4/13"
+    ],
+    "correct": 0,
+    "explanation": "Writing terms as 20/4, 19/4, 18/4, 17/4,… the common difference is −1/4, so a₁₀ = 20/4 + 9(−1/4) = 11/4.",
+    "priority": true
+  },
+  {
+    "id": "math-294",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If −4 is a zero of the polynomial p(x) = x² − x − (2 + 2k), then the value of k is: (2025 Board)",
+    "options": [
+      "3",
+      "9",
+      "6",
+      "−9"
+    ],
+    "correct": 1,
+    "explanation": "p(−4) = 16 + 4 − (2+2k) = 18 − 2k = 0, so k = 9.",
+    "priority": true
+  },
+  {
+    "id": "math-295",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The equation of a line parallel to the x-axis and at a distance of 3 units below x-axis is: (2025 Board)",
+    "options": [
+      "x = 3",
+      "x = −3",
+      "y = −3",
+      "y = 3"
+    ],
+    "correct": 2,
+    "explanation": "A line parallel to the x-axis has the form y = c; being 3 units below the x-axis means c = −3, giving y = −3.",
+    "priority": true
+  },
+  {
+    "id": "math-296",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "The HCF of 40, 110 and 360 is: (2025 Board)",
+    "options": [
+      "40",
+      "110",
+      "360",
+      "10"
+    ],
+    "correct": 3,
+    "explanation": "40 = 2³×5, 110 = 2×5×11, 360 = 2³×3²×5. The only common factors are 2¹ and 5¹, giving HCF = 10.",
+    "priority": true
+  },
+  {
+    "id": "math-297",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "Assertion (A): Common difference of the AP: 5, 1, −3, −7, … is 4. Reason (R): Common difference of the AP a₁, a₂, a₃, …, aₙ is obtained by d = aₙ − aₙ₋₁. Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 3,
+    "explanation": "The actual common difference is 1 − 5 = −4, not 4, so A is false. The general formula for common difference stated in R is correct.",
+    "priority": true
+  },
+  {
+    "id": "math-298",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "Assertion (A): The pair of linear equations px + 3y + 59 = 0 and 2x + 6y + 118 = 0 will have infinitely many solutions if p = 1. Reason (R): If the pair of linear equations px + 3y + 19 = 0 and 2x + 6y + 157 = 0 has a unique solution, then p ≠ 1. Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "Checking ratios for the first pair with p=1 confirms all three ratios equal 1/2, giving infinitely many solutions — A is true. R is also a true general statement, but it concerns a different equation pair and does not itself establish the specific result in A.",
+    "priority": true
+  },
+  {
+    "id": "math-299",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If tan 3θ = √3, then θ/2 equals: (2025 Board)",
+    "options": [
+      "60°",
+      "30°",
+      "20°",
+      "10°"
+    ],
+    "correct": 3,
+    "explanation": "3θ = 60°, so θ = 20°, and θ/2 = 10°.",
+    "priority": true
+  },
+  {
+    "id": "math-300",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "If x is the LCM of 4, 6, 8 and y is the LCM of 3, 5, 7 and p is the LCM of x and y, then which of the following is true? (2025 Board)",
+    "options": [
+      "p = 35x",
+      "p = 4y",
+      "p = 8x",
+      "p = 16y"
+    ],
+    "correct": 0,
+    "explanation": "x = LCM(4,6,8) = 24 and y = LCM(3,5,7) = 105. p = LCM(24,105) = 840, and 35 × 24 = 840, so p = 35x.",
+    "priority": true
+  },
+  {
+    "id": "math-301",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The value of \"k\" for which the system of linear equations 6x + y = 3k and 36x + 6y = 3 have infinitely many solutions is: (2025 Board)",
+    "options": [
+      "6",
+      "1/6",
+      "1/2",
+      "1/3"
+    ],
+    "correct": 1,
+    "explanation": "The ratio of coefficients a1/a2 = 6/36 = 1/6 and b1/b2 = 1/6; for infinitely many solutions the constant ratio must also equal 1/6, so 3k/3 = 1/6, giving k = 1/6.",
+    "priority": true
+  },
+  {
+    "id": "math-302",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If α and β are the zeroes of the polynomial p(x) = x² − ax − b, then the value of (α + β + αβ) is equal to: (2025 Board)",
+    "options": [
+      "a + b",
+      "−a − b",
+      "a − b",
+      "−a + b"
+    ],
+    "correct": 2,
+    "explanation": "α+β = a (since sum = −(−a)) and αβ = −b, so α+β+αβ = a + (−b) = a − b.",
+    "priority": true
+  },
+  {
+    "id": "math-303",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If x/12 − 3/x = 0, then the values of x are: (2025 Board)",
+    "options": [
+      "±6",
+      "±4",
+      "±12",
+      "±3"
+    ],
+    "correct": 0,
+    "explanation": "Multiplying through by 12x gives x² = 36, so x = ±6.",
+    "priority": true
+  },
+  {
+    "id": "math-304",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The line represented by x/4 + y/6 = 1, intersects x-axis and y-axis respectively at P and Q. The coordinates of the mid-point of line segment PQ are: (2025 Board)",
+    "options": [
+      "(2, 3)",
+      "(3, 2)",
+      "(2, 0)",
+      "(0, 3)"
+    ],
+    "correct": 0,
+    "explanation": "Setting y=0 gives P=(4,0); setting x=0 gives Q=(0,6). The mid-point of PQ is ((4+0)/2, (0+6)/2) = (2, 3).",
+    "priority": true
+  },
+  {
+    "id": "math-305",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "Two of the vertices of a triangle PQR are P(−1, 5) and Q(5, 2). The coordinates of a point which divides PQ in the ratio 2 : 1 are: (2025 Board)",
+    "options": [
+      "(3, −3)",
+      "(5, 5)",
+      "(3, 3)",
+      "(5, 1)"
+    ],
+    "correct": 2,
+    "explanation": "Using the section formula for a 2:1 ratio from P to Q: x = (2×5 + 1×(−1))/3 = 3, y = (2×2 + 1×5)/3 = 3, giving (3, 3).",
+    "priority": true
+  },
+  {
+    "id": "math-306",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "If tangents PA and PB drawn from an external point P to the circle with centre O are inclined to each other at an angle of 80°, then the measure of ∠POA is: (2025 Board)",
+    "options": [
+      "40°",
+      "50°",
+      "60°",
+      "80°"
+    ],
+    "correct": 1,
+    "explanation": "∠AOB = 180° − 80° = 100° (from quadrilateral OAPB with two right angles), and since OP bisects ∠AOB, ∠POA = 100°/2 = 50°.",
+    "priority": true
+  },
+  {
+    "id": "math-307",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "(cot θ + tan θ) equals: (2025 Board)",
+    "options": [
+      "cosec θ sec θ",
+      "sin θ sec θ",
+      "cos θ tan θ",
+      "sin θ cos θ"
+    ],
+    "correct": 0,
+    "explanation": "cotθ + tanθ = cosθ/sinθ + sinθ/cosθ = (cos²θ+sin²θ)/(sinθcosθ) = 1/(sinθcosθ) = cosecθ secθ.",
+    "priority": true
+  },
+  {
+    "id": "math-308",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "If in two triangles Δ DEF and Δ PQR, ∠D = ∠Q and ∠R = ∠E, then which of the following is not true? (2025 Board)",
+    "options": [
+      "DE/QR = DF/PQ",
+      "EF/PR = DF/PQ",
+      "EF/RP = DE/QR",
+      "DE/PQ = EF/RP"
+    ],
+    "correct": 3,
+    "explanation": "Since ∠D=∠Q and ∠E=∠R, the correct correspondence is D↔Q, E↔R, F↔P, meaning DE corresponds to QR (not PQ) — so the ratio DE/PQ paired with EF/RP mismatches the correspondence and is not a valid equal ratio.",
+    "priority": true
+  },
+  {
+    "id": "math-309",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "The measurements of Δ LMN and Δ ABC show LM = 45 cm, MN = 63 cm, LN = 72 cm, ∠M = 130°, ∠N = 28°, and AB = 5 cm, ∠B = 130°, ∠A = 22°. The length of side AC is: (2025 Board)",
+    "options": [
+      "16 cm",
+      "7 cm",
+      "8 cm",
+      "4 cm"
+    ],
+    "correct": 2,
+    "explanation": "Since ∠L = 180−130−28 = 22° = ∠A and ∠M = ∠B, triangles LMN ~ ABC with scale factor LM/AB = 45/5 = 9. Since LN corresponds to AC, AC = LN/9 = 72/9 = 8 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-310",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "If the volumes of two cubes are in the ratio 8 : 125, then the ratio of their surface areas is: (2025 Board)",
+    "options": [
+      "8 : 125",
+      "4 : 25",
+      "2 : 5",
+      "16 : 25"
+    ],
+    "correct": 1,
+    "explanation": "The ratio of sides is the cube root of the volume ratio: (8:125)^(1/3) = 2:5. Surface area scales as the square of the side ratio, giving 4:25.",
+    "priority": true
+  },
+  {
+    "id": "math-311",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "If the area of a sector of circle of radius 36 cm is 54π cm², then the length of the corresponding arc of the sector is: (2025 Board)",
+    "options": [
+      "8π cm",
+      "6π cm",
+      "4π cm",
+      "3π cm"
+    ],
+    "correct": 3,
+    "explanation": "Sector area = (θ/360)πr² = 54π with r=36 gives θ = 15°. Arc length = r × (θ in radians) = 36 × (15π/180) = 3π cm.",
+    "priority": true
+  },
+  {
+    "id": "math-312",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A die is thrown once. The probability of getting a number which is not a factor of 36, is: (2025 Board)",
+    "options": [
+      "1/2",
+      "2/3",
+      "1/6",
+      "5/6"
+    ],
+    "correct": 2,
+    "explanation": "The factors of 36 among 1–6 are 1, 2, 3, 4, 6 (five numbers); only 5 is not a factor, giving a probability of 1/6.",
+    "priority": true
+  },
+  {
+    "id": "math-313",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "If the mean of 2, 9, x+6, 2x+3, 5, 10, 5 is 7, then the value of x is: (2025 Board)",
+    "options": [
+      "9",
+      "6",
+      "5",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "The sum of the seven values is 40 + 3x, and mean 7 means the sum is 49, so 40+3x=49, giving x=3.",
+    "priority": true
+  },
+  {
+    "id": "math-314",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "AOBC is a rectangle whose three vertices are A(0, 2), O(0, 0) and B(4, 0). The square of the length of its diagonal is equal to: (2025 Board)",
+    "options": [
+      "36",
+      "20",
+      "16",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "The fourth vertex is C(4,2); the diagonal OC has squared length 4² + 2² = 20 (equal to diagonal AB by rectangle symmetry).",
+    "priority": true
+  },
+  {
+    "id": "math-315",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "Zeroes of the polynomial p(x) = x² − 3√2 x + 4 are: (2025 Board)",
+    "options": [
+      "2, √2",
+      "2√2, √2",
+      "4√2, −√2",
+      "√2, 2"
+    ],
+    "correct": 1,
+    "explanation": "Sum = 3√2 and product = 4; testing 2√2 and √2 gives sum = 3√2 and product = 2√2×√2 = 4, matching both conditions.",
+    "priority": true
+  },
+  {
+    "id": "math-316",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In Δ ABC, AD ⊥ BC and ∠BAC = 90°. If BC = 16 cm and DC = 4 cm, then the value of AC (x) is: (2025 Board)",
+    "options": [
+      "4 cm",
+      "5 cm",
+      "8 cm",
+      "3 cm"
+    ],
+    "correct": 2,
+    "explanation": "For a right triangle with the altitude drawn from the right angle to the hypotenuse, AC² = DC × BC = 4 × 16 = 64, so AC = 8 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-317",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "medium",
+    "text": "Assertion (A): A ladder leaning against a wall, stands at a horizontal distance of 6 m from the wall. If the height of the wall up to which the ladder reaches is 8 m, then the length of the ladder is 10 m. Reason (R): The ladder makes an angle of 60° with the ground. Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 2,
+    "explanation": "By Pythagoras, the ladder length is √(6²+8²) = 10 m, so A is true. But the actual angle with the ground is arctan(8/6) ≈ 53.13°, not 60°, so R is false.",
+    "priority": true
+  },
+  {
+    "id": "math-318",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "Assertion (A): If two tangents are drawn to a circle from an external point, then they subtend equal angles at the centre of the circle. Reason (R): A parallelogram circumscribing a circle is a rhombus. Which is correct? (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "The line from the external point to the centre bisects the angle between the two radii to the points of tangency, so the two tangents do subtend equal angles at the centre — A is true. R is also a true, standard fact about circumscribing parallelograms, but it is unrelated to explaining A.",
+    "priority": true
   }
 ]
