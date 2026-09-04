@@ -2637,7 +2637,10 @@ const app = {
       .then(all => {
         const pool = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
         if (!pool.length) throw new Error('No questions in this chapter yet.');
-        const picked = shuffle(pool).slice(0, cfg.count);
+        // Mock tests surface real board-paper questions first, filling remaining slots at random.
+        const picked = mode === 'mock'
+          ? shuffle(pool.filter(q => q.priority)).concat(shuffle(pool.filter(q => !q.priority))).slice(0, cfg.count)
+          : shuffle(pool).slice(0, cfg.count);
         this.session.questions = picked.map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
         this.session.loading = false;
         if (state.screen !== 'test') return;

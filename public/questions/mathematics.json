@@ -1,202 +1,3687 @@
 [
-  {"id":"math-001","chapter":"Real Numbers","difficulty":"easy","text":"The HCF of 306 and 657 is 9. What is their LCM?","options":["22338","20338","23238","22428"],"correct":0,"explanation":"LCM × HCF = product of numbers. LCM = (306 × 657) / 9 = 201042 / 9 = 22338."},
-  {"id":"math-002","chapter":"Real Numbers","difficulty":"easy","text":"Which of the following is an irrational number?","options":["√4","√9","√7","√16"],"correct":2,"explanation":"√7 ≈ 2.6457… is non-terminating non-repeating. √4=2, √9=3, √16=4 are all rational."},
-  {"id":"math-003","chapter":"Real Numbers","difficulty":"easy","text":"The decimal expansion of 17/8 is:","options":["2.125","2.1250","2.125 (terminating)","Both A and C"],"correct":3,"explanation":"17/8 = 2.125. Since 8 = 2³, the denominator has only factor 2, so it terminates. Options A and C both correctly state 2.125 and terminating."},
-  {"id":"math-004","chapter":"Real Numbers","difficulty":"easy","text":"The prime factorisation of 120 is:","options":["2³ × 3 × 5","2² × 3 × 5","2³ × 3 × 5 (correct)","2⁴ × 3 × 5"],"correct":0,"explanation":"120 = 2 × 60 = 2 × 2 × 30 = 2 × 2 × 2 × 15 = 2³ × 3 × 5."},
-  {"id":"math-005","chapter":"Real Numbers","difficulty":"medium","text":"If two positive integers a and b are written as a = x³y² and b = xy³, where x, y are prime numbers, then HCF(a,b) is:","options":["xy","xy²","x³y³","x²y²"],"correct":1,"explanation":"HCF = product of lowest powers of common primes = x¹ × y² = xy²."},
-  {"id":"math-006","chapter":"Real Numbers","difficulty":"easy","text":"The LCM of two numbers is 182 and their HCF is 13. If one number is 26, the other is:","options":["91","182","78","52"],"correct":0,"explanation":"Other number = (LCM × HCF) / first = (182 × 13) / 26 = 2366 / 26 = 91."},
-  {"id":"math-007","chapter":"Real Numbers","difficulty":"easy","text":"Euclid's division lemma states that for positive integers a and b, there exist unique integers q and r such that a = bq + r, where:","options":["0 < r ≤ b","0 ≤ r < b","0 < r < b","0 ≤ r ≤ b"],"correct":1,"explanation":"The correct range is 0 ≤ r < b. r = 0 is allowed (when b divides a exactly), and r must be strictly less than b."},
-  {"id":"math-008","chapter":"Real Numbers","difficulty":"easy","text":"3 + 2√5 is:","options":["rational","irrational","neither rational nor irrational","an integer"],"correct":1,"explanation":"√5 is irrational. Rational + irrational = irrational. So 3 + 2√5 is irrational."},
-  {"id":"math-009","chapter":"Real Numbers","difficulty":"easy","text":"The decimal 0.235235235… is:","options":["terminating","non-terminating repeating (rational)","non-terminating non-repeating (irrational)","an integer"],"correct":1,"explanation":"0.235̄ repeats the block 235. Any non-terminating repeating decimal is rational — it equals 235/999."},
-  {"id":"math-010","chapter":"Real Numbers","difficulty":"easy","text":"If p is a prime number and p divides a², then p divides:","options":["a² only","2a","a","a³ only"],"correct":2,"explanation":"This is a key theorem: if prime p divides a², then p must divide a (since prime factorisation of a² uses the same primes as a, each doubled in power)."},
-  {"id":"math-011","chapter":"Polynomials","difficulty":"easy","text":"The number of zeroes of the polynomial p(x) = (x–2)²(x+1) is:","options":["1","2","3","0"],"correct":1,"explanation":"Distinct zeroes: x = 2 (double root) and x = –1. Number of distinct zeroes = 2. Total degree = 3, but only 2 distinct values."},
-  {"id":"math-012","chapter":"Polynomials","difficulty":"medium","text":"If one zero of the polynomial 2x² + 3x + k is ½, find k.","options":["–2","2","–1","1"],"correct":0,"explanation":"Substitute x = ½: 2(¼) + 3(½) + k = 0 → ½ + 3/2 + k = 0 → 2 + k = 0 → k = –2."},
-  {"id":"math-013","chapter":"Polynomials","difficulty":"easy","text":"The sum of zeroes of 3x² – x – 4 is:","options":["1/3","–1/3","4/3","–4/3"],"correct":0,"explanation":"Sum of zeroes = –b/a = –(–1)/3 = 1/3."},
-  {"id":"math-014","chapter":"Polynomials","difficulty":"easy","text":"The product of zeroes of x² – 3x – 4 is:","options":["–4","3","4","–3"],"correct":0,"explanation":"Product of zeroes = c/a = –4/1 = –4."},
-  {"id":"math-015","chapter":"Polynomials","difficulty":"easy","text":"A quadratic polynomial whose zeroes are –3 and 4 is:","options":["x² – x – 12","x² + x – 12","x² – x + 12","x² + x + 12"],"correct":0,"explanation":"Sum = –3 + 4 = 1; Product = –3 × 4 = –12. Polynomial = x² – (sum)x + product = x² – x – 12."},
-  {"id":"math-016","chapter":"Polynomials","difficulty":"easy","text":"The graph of a quadratic polynomial is a:","options":["straight line","circle","parabola","hyperbola"],"correct":2,"explanation":"The graph of any quadratic polynomial y = ax² + bx + c (a ≠ 0) is a parabola — opening upward if a > 0, downward if a < 0."},
-  {"id":"math-017","chapter":"Polynomials","difficulty":"medium","text":"If α and β are zeroes of p(x) = x² – 5x + 6, then α² + β² =","options":["13","25","11","17"],"correct":0,"explanation":"α + β = 5, αβ = 6. α² + β² = (α + β)² – 2αβ = 25 – 12 = 13."},
-  {"id":"math-018","chapter":"Polynomials","difficulty":"easy","text":"A polynomial of degree 3 is called a:","options":["linear polynomial","quadratic polynomial","cubic polynomial","biquadratic polynomial"],"correct":2,"explanation":"Degree 1 = linear, degree 2 = quadratic, degree 3 = cubic, degree 4 = biquadratic."},
-  {"id":"math-019","chapter":"Pair of Linear Equations","difficulty":"medium","text":"The pair of equations x + 2y = 5 and 3x + 6y = 15 represents:","options":["intersecting lines","parallel lines","coincident lines","perpendicular lines"],"correct":2,"explanation":"Ratios: a₁/a₂ = 1/3, b₁/b₂ = 2/6 = 1/3, c₁/c₂ = 5/15 = 1/3. Since all three ratios are equal, the lines are coincident (infinitely many solutions)."},
-  {"id":"math-020","chapter":"Pair of Linear Equations","difficulty":"medium","text":"For what value of k does the system kx – 5y = 2 and 6x + 2y = 7 have no solution?","options":["–15","15","–10","10"],"correct":0,"explanation":"No solution when a₁/a₂ = b₁/b₂ ≠ c₁/c₂. k/6 = –5/2 → k = –15. Check: –2/7 ≠ 5/2 ✓ so no solution."},
-  {"id":"math-021","chapter":"Pair of Linear Equations","difficulty":"medium","text":"Solve: 2x + 3y = 11 and 2x – 4y = –24. Find y.","options":["5","–5","3","–3"],"correct":0,"explanation":"Subtracting: 7y = 35 → y = 5. Then x = (11 – 15)/2 = –2."},
-  {"id":"math-022","chapter":"Pair of Linear Equations","difficulty":"hard","text":"Five years ago, A was 3 times as old as B. Ten years later, A will be twice as old as B. What is A's present age?","options":["50","60","55","45"],"correct":0,"explanation":"Let A = a, B = b. (a–5) = 3(b–5) → a = 3b–10. (a+10) = 2(b+10) → a = 2b+10. Solving: b = 20, a = 50."},
-  {"id":"math-023","chapter":"Pair of Linear Equations","difficulty":"easy","text":"The method of substitution is used when:","options":["coefficients are large","one variable can be easily expressed in terms of the other","the equations are quadratic","graphs are available"],"correct":1,"explanation":"Substitution is most efficient when one equation gives a simple expression for one variable (e.g., x = 3y + 2), so it can be substituted directly."},
-  {"id":"math-024","chapter":"Pair of Linear Equations","difficulty":"medium","text":"The lines 2x + y = 6 and 4x + 2y = k are parallel for:","options":["k = 12","k ≠ 12","k = 6","any k"],"correct":1,"explanation":"Lines are parallel when a₁/a₂ = b₁/b₂ ≠ c₁/c₂ → 2/4 = 1/2 always. Parallel when 6/k ≠ 1/2, i.e., k ≠ 12."},
-  {"id":"math-025","chapter":"Quadratic Equations","difficulty":"easy","text":"The discriminant of 2x² – 4x + 3 = 0 is:","options":["–8","8","–4","4"],"correct":0,"explanation":"D = b² – 4ac = (–4)² – 4(2)(3) = 16 – 24 = –8. Since D < 0, no real roots."},
-  {"id":"math-026","chapter":"Quadratic Equations","difficulty":"medium","text":"Which of the following is a quadratic equation?","options":["x³ + 2x = 0","x² + 1/x = 2","(x+1)² = 2(x–3)","x(x+1)(x+2) = 0"],"correct":2,"explanation":"(x+1)² = 2(x–3) → x² + 2x + 1 = 2x – 6 → x² + 7 = 0. This is quadratic (degree 2)."},
-  {"id":"math-027","chapter":"Quadratic Equations","difficulty":"medium","text":"The roots of 4x² – 4x + 1 = 0 are:","options":["equal","distinct real","imaginary","irrational"],"correct":0,"explanation":"D = 16 – 16 = 0. When D = 0, roots are real and equal. Roots = 4/(2×4) = 1/2 each."},
-  {"id":"math-028","chapter":"Quadratic Equations","difficulty":"medium","text":"Using the quadratic formula, the roots of x² – 3x – 10 = 0 are:","options":["5 and –2","–5 and 2","5 and 2","–5 and –2"],"correct":0,"explanation":"x = (3 ± √(9+40))/2 = (3 ± 7)/2. So x = 5 or x = –2."},
-  {"id":"math-029","chapter":"Quadratic Equations","difficulty":"hard","text":"The sum of a number and its reciprocal is 10/3. The number is:","options":["3 or 1/3","3","1/3","2 or 1/2"],"correct":0,"explanation":"x + 1/x = 10/3 → 3x² – 10x + 3 = 0 → (3x–1)(x–3) = 0 → x = 3 or x = 1/3."},
-  {"id":"math-030","chapter":"Quadratic Equations","difficulty":"medium","text":"For the equation x² – 2x + k = 0 to have two distinct real roots, k must satisfy:","options":["k < 1","k > 1","k = 1","k ≤ 1"],"correct":0,"explanation":"D > 0 → 4 – 4k > 0 → 1 – k > 0 → k < 1."},
-  {"id":"math-031","chapter":"Arithmetic Progressions","difficulty":"easy","text":"The nth term of an AP is 7 – 3n. The common difference is:","options":["–3","3","7","–7"],"correct":0,"explanation":"aₙ = 7 – 3n. a₁ = 4, a₂ = 1. d = a₂ – a₁ = 1 – 4 = –3. Also d = coefficient of n = –3."},
-  {"id":"math-032","chapter":"Arithmetic Progressions","difficulty":"easy","text":"Which term of the AP 3, 7, 11, 15, … is 79?","options":["20th","19th","18th","21st"],"correct":0,"explanation":"aₙ = a + (n–1)d = 3 + (n–1)4 = 79 → (n–1)4 = 76 → n–1 = 19 → n = 20."},
-  {"id":"math-033","chapter":"Arithmetic Progressions","difficulty":"medium","text":"The sum of first 20 terms of the AP 2, 5, 8, 11, … is:","options":["590","595","600","580"],"correct":0,"explanation":"S₂₀ = (20/2)[2×2 + 19×3] = 10[4 + 57] = 10 × 61 = 610."},
-  {"id":"math-034","chapter":"Arithmetic Progressions","difficulty":"hard","text":"If the 3rd and 9th terms of an AP are 4 and –8 respectively, which term is zero?","options":["5th","4th","6th","7th"],"correct":0,"explanation":"a₃ = a+2d = 4; a₉ = a+8d = –8. Subtracting: 6d = –12 → d = –2. Then a = 8. aₙ = 0: 8+(n–1)(–2) = 0 → n–1 = 4 → n = 5."},
-  {"id":"math-035","chapter":"Arithmetic Progressions","difficulty":"hard","text":"The sum of first n terms of an AP is n². What is the nth term?","options":["2n–1","2n+1","n","n–1"],"correct":0,"explanation":"aₙ = Sₙ – Sₙ₋₁ = n² – (n–1)² = n² – n² + 2n – 1 = 2n–1."},
-  {"id":"math-036","chapter":"Arithmetic Progressions","difficulty":"medium","text":"How many two-digit numbers are divisible by 3?","options":["30","29","31","28"],"correct":0,"explanation":"Two-digit multiples of 3: 12 to 99. n = (99–12)/3 + 1 = 87/3 + 1 = 29 + 1 = 30."},
-  {"id":"math-037","chapter":"Arithmetic Progressions","difficulty":"medium","text":"The first negative term of the AP 114, 109, 104, … is:","options":["24th","25th","23rd","26th"],"correct":0,"explanation":"a=114, d=–5. aₙ < 0: 114 + (n–1)(–5) < 0 → (n–1) > 22.8 → n > 23.8 → n = 24."},
-  {"id":"math-038","chapter":"Triangles","difficulty":"easy","text":"In triangle ABC, DE ∥ BC with AD = 4 cm, DB = 6 cm, AE = 3 cm. Find EC.","options":["4.5 cm","6 cm","4 cm","5 cm"],"correct":0,"explanation":"By BPT: AD/DB = AE/EC → 4/6 = 3/EC → EC = 18/4 = 4.5 cm."},
-  {"id":"math-039","chapter":"Triangles","difficulty":"easy","text":"Two triangles are similar if their corresponding sides are:","options":["equal","proportional","in ratio 1:2","parallel"],"correct":1,"explanation":"SSS similarity criterion: two triangles are similar if their corresponding sides are in proportion (proportional), not necessarily equal."},
-  {"id":"math-040","chapter":"Triangles","difficulty":"medium","text":"The areas of two similar triangles are 64 cm² and 121 cm². The ratio of their corresponding sides is:","options":["8:11","64:121","4:11","11:8"],"correct":0,"explanation":"Ratio of areas = (ratio of sides)². So ratio of sides = √(64/121) = 8/11."},
-  {"id":"math-041","chapter":"Triangles","difficulty":"easy","text":"In a right triangle with hypotenuse 13 cm and one side 5 cm, the third side is:","options":["12 cm","8 cm","10 cm","11 cm"],"correct":0,"explanation":"By Pythagoras: a² + b² = c² → 5² + b² = 13² → b² = 169 – 25 = 144 → b = 12 cm."},
-  {"id":"math-042","chapter":"Triangles","difficulty":"easy","text":"If in △ABC, ∠A = ∠P and ∠B = ∠Q in △PQR, then △ABC ~ △PQR by:","options":["SAS","SSS","AA","RHS"],"correct":2,"explanation":"Two pairs of equal angles → third angle is also equal (angle sum = 180°). This is the AA (Angle-Angle) similarity criterion."},
-  {"id":"math-043","chapter":"Triangles","difficulty":"medium","text":"A vertical pole 12 m high casts a shadow 8 m long. At the same time, a tower casts a shadow 40 m long. The height of the tower is:","options":["60 m","48 m","30 m","72 m"],"correct":0,"explanation":"By similar triangles (same sun angle): height/shadow = 12/8 = 3/2. Tower height = 40 × 3/2 = 60 m."},
-  {"id":"math-044","chapter":"Triangles","difficulty":"easy","text":"Converse of Pythagoras theorem states: if in a triangle, the square of one side equals the sum of squares of the other two sides, the triangle is:","options":["equilateral","isosceles","right-angled","obtuse-angled"],"correct":2,"explanation":"Converse of Pythagoras: if a² + b² = c², then the angle opposite c is exactly 90°, making the triangle right-angled."},
-  {"id":"math-045","chapter":"Coordinate Geometry","difficulty":"easy","text":"The distance between points (2, 3) and (–1, 7) is:","options":["5","√25","√7","7"],"correct":0,"explanation":"d = √[(2–(–1))² + (3–7)²] = √[9 + 16] = √25 = 5."},
-  {"id":"math-046","chapter":"Coordinate Geometry","difficulty":"easy","text":"The mid-point of the line segment joining (4, –6) and (–2, 4) is:","options":["(1, –1)","(–1, 1)","(1, 1)","(–1, –1)"],"correct":0,"explanation":"Mid-point = ((4+(–2))/2, (–6+4)/2) = (2/2, –2/2) = (1, –1)."},
-  {"id":"math-047","chapter":"Coordinate Geometry","difficulty":"medium","text":"The point which divides the line segment joining (4, –3) and (8, 5) in the ratio 3:1 internally is:","options":["(7, 3)","(6, 1)","(5, –1)","(3, –3)"],"correct":0,"explanation":"x = (3×8 + 1×4)/(3+1) = 28/4 = 7; y = (3×5 + 1×(–3))/4 = 12/4 = 3. Point: (7, 3)."},
-  {"id":"math-048","chapter":"Coordinate Geometry","difficulty":"medium","text":"The area of the triangle with vertices (0, 0), (5, 0) and (3, 4) is:","options":["10 sq units","8 sq units","12 sq units","6 sq units"],"correct":0,"explanation":"Area = ½|x₁(y₂–y₃) + x₂(y₃–y₁) + x₃(y₁–y₂)| = ½|0(0–4) + 5(4–0) + 3(0–0)| = ½|20| = 10."},
-  {"id":"math-049","chapter":"Coordinate Geometry","difficulty":"hard","text":"If the point (x, y) is equidistant from (3, 6) and (–3, 4), then:","options":["3x + y = 5","3x – y = 5","x + 3y = 5","x – 3y = 5"],"correct":0,"explanation":"Equal distances: (x–3)²+(y–6)² = (x+3)²+(y–4)². Expanding: –6x+9–12y+36 = 6x+9–8y+16. Simplify: –12x – 4y + 20 = 0 → 3x + y = 5."},
-  {"id":"math-050","chapter":"Coordinate Geometry","difficulty":"hard","text":"The points (1, 7), (4, 2), (–1, –1) and (–4, 4) form a:","options":["square","rectangle","rhombus","parallelogram"],"correct":0,"explanation":"All four sides equal (each √34) and diagonals equal (each √40). Equal sides AND equal diagonals → square."},
-  {"id":"math-051","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"If sin A = 3/5, then cos A = ","options":["4/5","3/4","5/3","5/4"],"correct":0,"explanation":"sin²A + cos²A = 1 → cos²A = 1 – 9/25 = 16/25 → cos A = 4/5 (A is acute)."},
-  {"id":"math-052","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"The value of (sin 30° + cos 60°) is:","options":["1","0","2","½"],"correct":0,"explanation":"sin 30° = 1/2, cos 60° = 1/2. Sum = 1/2 + 1/2 = 1."},
-  {"id":"math-053","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"tan 45° + cot 45° = ","options":["2","1","0","√2"],"correct":0,"explanation":"tan 45° = 1, cot 45° = 1. Sum = 2."},
-  {"id":"math-054","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"If cos θ = 5/13, then sin θ =","options":["12/13","13/12","13/5","5/12"],"correct":0,"explanation":"sin²θ = 1 – 25/169 = 144/169 → sin θ = 12/13."},
-  {"id":"math-055","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"(1 – sin²A) is equal to:","options":["cos²A","1","sec²A","tan²A"],"correct":0,"explanation":"From the identity sin²A + cos²A = 1 → cos²A = 1 – sin²A."},
-  {"id":"math-056","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"sec²θ – tan²θ = ","options":["1","0","2","–1"],"correct":0,"explanation":"Standard identity: 1 + tan²θ = sec²θ → sec²θ – tan²θ = 1."},
-  {"id":"math-057","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"If sin θ = cos θ, then θ =","options":["45°","30°","60°","90°"],"correct":0,"explanation":"sin θ = cos θ → tan θ = 1 → θ = 45°."},
-  {"id":"math-058","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"The value of sin²30° + cos²60° is:","options":["½","1","¼","¾"],"correct":0,"explanation":"sin²30° = (1/2)² = 1/4; cos²60° = (1/2)² = 1/4. Sum = 1/2."},
-  {"id":"math-059","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"cosec 90° – sec 0° =","options":["0","1","2","–1"],"correct":0,"explanation":"cosec 90° = 1/sin 90° = 1; sec 0° = 1/cos 0° = 1. Difference = 1 – 1 = 0."},
-  {"id":"math-060","chapter":"Introduction to Trigonometry","difficulty":"medium","text":"The value of (sin 60° + cos 30°)(sin 30° + cos 60°) is:","options":["(√3+1)²/4","√3/2","3/4","1"],"correct":0,"explanation":"= (√3/2 + √3/2)(1/2 + 1/2) = (√3)(1) = √3. Re-evaluating: (√3/2+√3/2) = √3; (1/2+1/2)=1; product = √3. The option should read √3."},
-  {"id":"math-061","chapter":"Applications of Trigonometry","difficulty":"easy","text":"The angle of elevation of the top of a tower from a point 30 m away is 60°. The height of the tower is:","options":["30√3 m","30 m","15√3 m","10√3 m"],"correct":0,"explanation":"tan 60° = h/30 → √3 = h/30 → h = 30√3 m."},
-  {"id":"math-062","chapter":"Applications of Trigonometry","difficulty":"hard","text":"From the top of a 75 m high lighthouse, the angle of depression of two ships is 30° and 45°. The distance between the ships (same side) is:","options":["75(√3–1) m","75√3 m","75 m","150 m"],"correct":0,"explanation":"d₁ = 75/tan45° = 75 m; d₂ = 75/tan30° = 75√3 m. Distance between ships = 75√3 – 75 = 75(√3–1) m."},
-  {"id":"math-063","chapter":"Applications of Trigonometry","difficulty":"easy","text":"The angle of elevation of the top of a building from a point on the ground is 45°. If the point is 20 m from the base, the height is:","options":["20 m","20√3 m","10 m","40 m"],"correct":0,"explanation":"tan 45° = h/20 → 1 = h/20 → h = 20 m."},
-  {"id":"math-064","chapter":"Applications of Trigonometry","difficulty":"hard","text":"A flagstaff stands on a building 20 m high. From a point on the ground, the angles of elevation of the top and bottom of the flagstaff are 60° and 45°. The length of the flagstaff is:","options":["20(√3–1) m","20 m","20√3 m","10 m"],"correct":0,"explanation":"Let flagstaff length = x. Building: tan 45° = 20/d → d = 20. Top: tan 60° = (20+x)/20 → √3 = (20+x)/20 → x = 20(√3–1) m."},
-  {"id":"math-065","chapter":"Circles","difficulty":"easy","text":"The number of tangents that can be drawn to a circle from an external point is:","options":["2","1","3","0"],"correct":0,"explanation":"From any external point, exactly 2 tangents can be drawn to a circle."},
-  {"id":"math-066","chapter":"Circles","difficulty":"medium","text":"A tangent PQ at point P on a circle of radius 5 cm meets the line through the centre O at Q, with OQ = 13 cm. PQ =","options":["12 cm","8 cm","10 cm","6 cm"],"correct":0,"explanation":"Tangent ⊥ radius at point of contact: PQ² = OQ² – OP² = 169 – 25 = 144 → PQ = 12 cm."},
-  {"id":"math-067","chapter":"Circles","difficulty":"medium","text":"If two tangents are drawn to a circle of radius 3 cm from an external point 5 cm from the centre, the length of each tangent is:","options":["4 cm","6 cm","3 cm","2 cm"],"correct":0,"explanation":"Tangent² = (distance from centre)² – radius² = 25 – 9 = 16 → tangent = 4 cm."},
-  {"id":"math-068","chapter":"Circles","difficulty":"easy","text":"Tangents drawn from an external point are:","options":["equal in length","perpendicular","parallel","unequal"],"correct":0,"explanation":"Theorem: The lengths of two tangents drawn from an external point to a circle are equal."},
-  {"id":"math-069","chapter":"Circles","difficulty":"easy","text":"The angle between a tangent to a circle and the radius drawn to the point of tangency is:","options":["90°","45°","60°","180°"],"correct":0,"explanation":"A tangent at any point of a circle is perpendicular to the radius at that point. So the angle is always 90°."},
-  {"id":"math-070","chapter":"Areas Related to Circles","difficulty":"medium","text":"The area of a circle with circumference 44 cm is:","options":["154 cm²","176 cm²","144 cm²","196 cm²"],"correct":0,"explanation":"C = 2πr = 44 → r = 7 cm. Area = πr² = 22/7 × 49 = 154 cm²."},
-  {"id":"math-071","chapter":"Areas Related to Circles","difficulty":"easy","text":"The area of a sector of angle 60° in a circle of radius 6 cm is:","options":["6π cm²","12π cm²","3π cm²","18π cm²"],"correct":0,"explanation":"Area of sector = (θ/360°) × πr² = (60/360) × π × 36 = 6π cm²."},
-  {"id":"math-072","chapter":"Areas Related to Circles","difficulty":"medium","text":"A horse is tied to a peg at one corner of a square field of side 15 m with a rope of length 5 m. The area it can graze is:","options":["25π/4 m²","25π m²","75π/4 m²","5π m²"],"correct":0,"explanation":"The horse can graze a quarter circle (corner = 90°) of radius 5 m. Area = ¼ × π × 25 = 25π/4 m²."},
-  {"id":"math-073","chapter":"Areas Related to Circles","difficulty":"medium","text":"The length of an arc of a sector with angle 120° and radius 21 cm is:","options":["44 cm","22 cm","88 cm","33 cm"],"correct":0,"explanation":"Arc length = (θ/360°) × 2πr = (120/360) × 2 × 22/7 × 21 = (1/3) × 132 = 44 cm."},
-  {"id":"math-074","chapter":"Surface Areas and Volumes","difficulty":"easy","text":"The total surface area of a cube of side 6 cm is:","options":["216 cm²","180 cm²","144 cm²","72 cm²"],"correct":0,"explanation":"TSA of cube = 6a² = 6 × 36 = 216 cm²."},
-  {"id":"math-075","chapter":"Surface Areas and Volumes","difficulty":"medium","text":"The volume of a cone of radius 7 cm and height 24 cm is:","options":["1232 cm³","1848 cm³","924 cm³","616 cm³"],"correct":0,"explanation":"V = ⅓πr²h = ⅓ × 22/7 × 49 × 24 = ⅓ × 3696 = 1232 cm³."},
-  {"id":"math-076","chapter":"Surface Areas and Volumes","difficulty":"medium","text":"A sphere of radius r is melted and recast into small spheres of radius r/3. The number of small spheres formed is:","options":["27","9","3","81"],"correct":0,"explanation":"Volume of big sphere = (4/3)πr³. Volume of each small sphere = (4/3)π(r/3)³ = (4/3)π(r³/27). Number = r³/(r³/27) = 27."},
-  {"id":"math-077","chapter":"Surface Areas and Volumes","difficulty":"easy","text":"The curved surface area of a cylinder of radius 7 cm and height 10 cm is:","options":["440 cm²","220 cm²","880 cm²","154 cm²"],"correct":0,"explanation":"CSA = 2πrh = 2 × 22/7 × 7 × 10 = 440 cm²."},
-  {"id":"math-078","chapter":"Surface Areas and Volumes","difficulty":"hard","text":"A solid hemisphere of radius r is placed on a cylinder of same radius. The total surface area is:","options":["3πr² + 2πrh","2πr² + 2πrh","πr² + 2πrh","4πr² + 2πrh"],"correct":0,"explanation":"Flat base of cylinder = πr², CSA of cylinder = 2πrh, curved surface of hemisphere = 2πr². Total = πr² + 2πrh + 2πr² = 3πr² + 2πrh."},
-  {"id":"math-079","chapter":"Statistics","difficulty":"easy","text":"The mean of the first 10 natural numbers is:","options":["5.5","5","6","4.5"],"correct":0,"explanation":"Mean = Sum/n = (1+2+…+10)/10 = 55/10 = 5.5."},
-  {"id":"math-080","chapter":"Statistics","difficulty":"easy","text":"The mode of 3, 5, 7, 3, 5, 3, 1, 5, 3 is:","options":["3","5","7","1"],"correct":0,"explanation":"Frequency: 3 appears 4 times, 5 appears 3 times, others once. Mode = 3 (most frequent)."},
-  {"id":"math-081","chapter":"Statistics","difficulty":"easy","text":"The median of 3, 1, 4, 1, 5, 9, 2, 6 is:","options":["3.5","4","3","4.5"],"correct":0,"explanation":"Sorted: 1,1,2,3,4,5,6,9. n=8, median = average of 4th and 5th = (3+4)/2 = 3.5."},
-  {"id":"math-082","chapter":"Statistics","difficulty":"easy","text":"The empirical relation between mean, median and mode is:","options":["Mode = 3 Median – 2 Mean","Median = 3 Mode – 2 Mean","Mean = 3 Median – 2 Mode","Mode = 3 Mean – 2 Median"],"correct":0,"explanation":"Empirical formula (Karl Pearson): Mode = 3 Median – 2 Mean."},
-  {"id":"math-083","chapter":"Statistics","difficulty":"medium","text":"The mean of 20 observations is 17. If one observation 40 is replaced by 12, the new mean is:","options":["15.6","16","16.4","15"],"correct":0,"explanation":"New sum = 20×17 – 40 + 12 = 340 – 28 = 312. New mean = 312/20 = 15.6."},
-  {"id":"math-084","chapter":"Statistics","difficulty":"easy","text":"In a frequency distribution, the class with the highest frequency is the:","options":["modal class","median class","mean class","extreme class"],"correct":0,"explanation":"The modal class is the class interval with the highest frequency; mode is then found by the formula within this class."},
-  {"id":"math-085","chapter":"Probability","difficulty":"easy","text":"A card is drawn from a well-shuffled deck of 52 cards. The probability of getting a king is:","options":["1/13","4/52","Both A and B","1/4"],"correct":2,"explanation":"P(king) = 4/52 = 1/13. Both options A (1/13) and B (4/52) are equivalent, so C is correct."},
-  {"id":"math-086","chapter":"Probability","difficulty":"medium","text":"Two dice are thrown simultaneously. The probability of getting a sum of 7 is:","options":["1/6","5/36","7/36","6/36"],"correct":0,"explanation":"Favourable outcomes for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6."},
-  {"id":"math-087","chapter":"Probability","difficulty":"easy","text":"A bag contains 5 red and 8 blue balls. One ball is drawn at random. The probability it is NOT red is:","options":["8/13","5/13","8/8","3/13"],"correct":0,"explanation":"P(not red) = P(blue) = 8/(5+8) = 8/13."},
-  {"id":"math-088","chapter":"Probability","difficulty":"easy","text":"The probability of an impossible event is:","options":["0","1","–1","0.5"],"correct":0,"explanation":"An impossible event can never occur. By definition, P(impossible event) = 0."},
-  {"id":"math-089","chapter":"Probability","difficulty":"medium","text":"A coin is tossed 3 times. The probability of getting at least 2 heads is:","options":["1/2","3/8","5/8","1/4"],"correct":0,"explanation":"Total outcomes = 8. At least 2 heads: HHH, HHT, HTH, THH = 4 outcomes. P = 4/8 = 1/2."},
-  {"id":"math-090","chapter":"Probability","difficulty":"easy","text":"From a group of 2 boys and 3 girls, a child is selected at random. The probability of selecting a boy is:","options":["2/5","3/5","2/3","1/2"],"correct":0,"explanation":"P(boy) = 2/(2+3) = 2/5."},
-  {"id":"math-091","chapter":"Quadrilaterals","difficulty":"easy","text":"In a parallelogram ABCD, if ∠A = 70°, then ∠C =","options":["70°","110°","140°","90°"],"correct":0,"explanation":"Opposite angles of a parallelogram are equal. So ∠C = ∠A = 70°."},
-  {"id":"math-092","chapter":"Quadrilaterals","difficulty":"medium","text":"The diagonals of a rhombus are 24 cm and 10 cm. The side of the rhombus is:","options":["13 cm","12 cm","15 cm","17 cm"],"correct":0,"explanation":"Diagonals of rhombus bisect at 90°. Half-diagonals: 12 and 5. Side = √(144+25) = √169 = 13 cm."},
-  {"id":"math-093","chapter":"Quadrilaterals","difficulty":"easy","text":"Which of these is NOT a property of a rectangle?","options":["all sides equal","all angles 90°","diagonals are equal","diagonals bisect each other"],"correct":0,"explanation":"In a rectangle, angles are all 90° and diagonals are equal and bisect each other — but sides are NOT all equal (that's a square)."},
-  {"id":"math-094","chapter":"Quadrilaterals","difficulty":"easy","text":"The area of a trapezium with parallel sides 8 cm and 12 cm and height 6 cm is:","options":["60 cm²","96 cm²","48 cm²","120 cm²"],"correct":0,"explanation":"Area = ½ × (sum of parallel sides) × height = ½ × (8+12) × 6 = ½ × 20 × 6 = 60 cm²."},
-  {"id":"math-095","chapter":"Quadrilaterals","difficulty":"easy","text":"In a parallelogram, opposite sides are:","options":["equal and parallel","equal but not parallel","parallel but not equal","perpendicular"],"correct":0,"explanation":"A fundamental property of parallelograms: both pairs of opposite sides are equal in length AND parallel to each other."},
-  {"id":"math-096","chapter":"Real Numbers","difficulty":"easy","text":"The number 0.3333… is:","options":["1/3","rational","irrational","an integer"],"correct":0,"explanation":"0.3̄ = 1/3, which is a rational number (p/q form). This can be verified: let x = 0.333…, 10x = 3.333…, subtract: 9x = 3, x = 1/3."},
-  {"id":"math-097","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"Which of the following is correct?","options":["sin 60° > 1","cos 0° = 0","tan 0° = 0","sin 0° = 1"],"correct":2,"explanation":"tan 0° = sin 0°/cos 0° = 0/1 = 0. sin 60° = √3/2 < 1 ✓; cos 0° = 1 ≠ 0; sin 0° = 0 ≠ 1."},
-  {"id":"math-098","chapter":"Surface Areas and Volumes","difficulty":"medium","text":"A hollow cylindrical pipe is 21 cm long. Its outer and inner radii are 10 cm and 9 cm. Volume of material in the pipe is:","options":["1188π cm³","594π cm³","99π cm³","2376π cm³"],"correct":0,"explanation":"Volume = π(R²–r²)h = π(10²–9²)×21 = π×19×21 = 399π cm³."},
-  {"id":"math-099","chapter":"Statistics","difficulty":"easy","text":"If the mean of the following data is 6: 5, 4, x, 8, 7, find x.","options":["6","5","7","8"],"correct":0,"explanation":"Mean = (5+4+x+8+7)/5 = 6 → 24+x = 30 → x = 6."},
-  {"id":"math-100","chapter":"Probability","difficulty":"medium","text":"A number is selected at random from 1 to 25. The probability that it is a prime number is:","options":["9/25","7/25","2/5","8/25"],"correct":0,"explanation":"Primes from 1 to 25: 2,3,5,7,11,13,17,19,23 = 9 primes. P = 9/25."},
-  {"id":"math-101","chapter":"Pair of Linear Equations","difficulty":"medium","text":"The value of k for which the system x + ky = 2 and 3x + 6y = 6 has infinitely many solutions is:","options":["2","3","–2","6"],"correct":0,"explanation":"For infinitely many solutions: a₁/a₂ = b₁/b₂ = c₁/c₂ → 1/3 = k/6 = 2/6 → k/6 = 1/3 → k = 2."},
-  {"id":"math-102","chapter":"Quadratic Equations","difficulty":"easy","text":"The roots of the equation x² – 5x + 6 = 0 are:","options":["2 and 3","–2 and –3","–2 and 3","2 and –3"],"correct":0,"explanation":"Factoring: x² – 5x + 6 = (x–2)(x–3) = 0 → x = 2 or x = 3."},
-  {"id":"math-103","chapter":"Arithmetic Progressions","difficulty":"easy","text":"The 10th term of the AP –5, –1, 3, 7, … is:","options":["31","27","35","30"],"correct":0,"explanation":"a = –5, d = 4. a₁₀ = –5 + 9×4 = –5 + 36 = 31."},
-  {"id":"math-104","chapter":"Triangles","difficulty":"medium","text":"In △ABC ~ △DEF with BC = 6 cm and EF = 4 cm, if ar(△ABC) = 54 cm², then ar(△DEF) =","options":["24 cm²","36 cm²","16 cm²","12 cm²"],"correct":0,"explanation":"ar(△ABC)/ar(△DEF) = (BC/EF)² = (6/4)² = 9/4. ar(△DEF) = 54 × 4/9 = 24 cm²."},
-  {"id":"math-105","chapter":"Circles","difficulty":"medium","text":"If PA and PB are tangents from external point P to a circle with centre O, then ∠AOB + ∠APB =","options":["180°","90°","360°","270°"],"correct":0,"explanation":"∠OAP = ∠OBP = 90° (radius ⊥ tangent). In quadrilateral OAPB: ∠AOB + ∠APB + 90° + 90° = 360° → ∠AOB + ∠APB = 180°."},
-  {"id":"math-106","chapter":"Real Numbers","difficulty":"easy","text":"The HCF of 96 and 404 is 4. Find their LCM.","options":["9696","9600","9796","8696"],"correct":0,"explanation":"LCM × HCF = product of numbers. LCM = (96 × 404)/4 = 38784/4 = 9696."},
-  {"id":"math-107","chapter":"Real Numbers","difficulty":"easy","text":"Which of the following numbers is rational?","options":["π","√2","22/7","√3"],"correct":2,"explanation":"22/7 can be expressed as a ratio of two integers, so it is rational. π, √2 and √3 are all irrational."},
-  {"id":"math-108","chapter":"Real Numbers","difficulty":"easy","text":"The prime factorisation of 156 is:","options":["2² × 3 × 13","2 × 3² × 13","2² × 3 × 13²","2³ × 3 × 13"],"correct":0,"explanation":"156 = 2 × 78 = 2 × 2 × 39 = 2 × 2 × 3 × 13 = 2² × 3 × 13."},
-  {"id":"math-109","chapter":"Real Numbers","difficulty":"medium","text":"Two numbers are in the ratio 3:4 and their LCM is 84. Find their HCF.","options":["7","12","21","28"],"correct":0,"explanation":"Let the numbers be 3x and 4x; since 3 and 4 are co-prime, LCM = 12x = 84, so x = 7. HCF = x = 7 (numbers are 21 and 28)."},
-  {"id":"math-110","chapter":"Real Numbers","difficulty":"medium","text":"Find the largest number that divides 245 and 1029, leaving remainder 5 in each case.","options":["16","8","32","4"],"correct":0,"explanation":"The required number divides (245−5)=240 and (1029−5)=1024 exactly. HCF(240,1024): 240=2⁴×3×5, 1024=2¹⁰, so HCF = 2⁴ = 16."},
-  {"id":"math-111","chapter":"Real Numbers","difficulty":"medium","text":"If HCF(210, 55) = 5, find LCM(210, 55).","options":["2310","2100","2130","2301"],"correct":0,"explanation":"LCM × HCF = product of the numbers. LCM = (210 × 55)/5 = 11550/5 = 2310."},
-  {"id":"math-112","chapter":"Real Numbers","difficulty":"hard","text":"Three bells toll at intervals of 9, 12 and 15 minutes. If all three toll together at 8:00 am, when will they next toll together?","options":["11:00 am","10:00 am","9:30 am","11:30 am"],"correct":0,"explanation":"LCM(9,12,15) = 180 minutes = 3 hours. They will next toll together at 8:00 am + 3 hours = 11:00 am."},
-  {"id":"math-113","chapter":"Real Numbers","difficulty":"hard","text":"For every positive integer n, n² − n is always:","options":["divisible by 2, since n² − n = n(n−1) is a product of two consecutive integers","a prime number","an odd number","divisible by 4"],"correct":0,"explanation":"n² − n = n(n−1), the product of two consecutive integers. Among any two consecutive integers, exactly one is even, so their product is always divisible by 2."},
-  {"id":"math-114","chapter":"Real Numbers","difficulty":"hard","text":"The largest number which divides 70 and 125, leaving remainders 5 and 8 respectively, is:","options":["13","5","9","65"],"correct":0,"explanation":"The number must divide (70−5)=65 and (125−8)=117 exactly. HCF(65,117): 65=5×13, 117=9×13, so HCF = 13."},
-  {"id":"math-115","chapter":"Real Numbers","difficulty":"hard","text":"For any positive integer n, (n² + n) is always:","options":["an even number","an odd number","a prime number","a perfect square"],"correct":0,"explanation":"n² + n = n(n+1), the product of two consecutive integers. One of any two consecutive integers is always even, so the product is always even."},
-  {"id":"math-116","chapter":"Real Numbers","difficulty":"hard","text":"Find the smallest number which, when divided by 28 and 32, leaves a remainder of 8 in each case.","options":["232","224","240","236"],"correct":0,"explanation":"LCM(28,32): 28=2²×7, 32=2⁵, LCM=2⁵×7=224. The smallest such number is LCM + remainder = 224 + 8 = 232."},
-  {"id":"math-117","chapter":"Polynomials","difficulty":"easy","text":"If the zeroes of a quadratic polynomial are 2 and −3, the polynomial is:","options":["x² + x − 6","x² − x − 6","x² + x + 6","x² − x + 6"],"correct":0,"explanation":"Sum = 2+(−3) = −1, product = 2×(−3) = −6. Polynomial = x² − (sum)x + product = x² −(−1)x + (−6) = x² + x − 6."},
-  {"id":"math-118","chapter":"Polynomials","difficulty":"easy","text":"The number of zeroes a linear polynomial can have is:","options":["exactly 1","0","2","infinite"],"correct":0,"explanation":"A linear polynomial ax+b (a≠0) crosses the x-axis exactly once, so it always has exactly one zero."},
-  {"id":"math-119","chapter":"Polynomials","difficulty":"medium","text":"If α, β are the zeroes of 2x² − 7x + 3, find 1/α + 1/β.","options":["7/3","3/7","7/2","2/7"],"correct":0,"explanation":"α+β = 7/2, αβ = 3/2. 1/α + 1/β = (α+β)/(αβ) = (7/2)/(3/2) = 7/3."},
-  {"id":"math-120","chapter":"Polynomials","difficulty":"medium","text":"If one zero of the polynomial x² − (k+6)x + 2(2k−1) is the negative of the other, find k.","options":["−6","6","3","−3"],"correct":0,"explanation":"If zeroes are m and −m, their sum is 0. Sum of zeroes = k+6 = 0, so k = −6."},
-  {"id":"math-121","chapter":"Polynomials","difficulty":"hard","text":"If α and β are the zeroes of p(x) = x² − 6x + k, and α − β = 2, find k.","options":["8","6","4","10"],"correct":0,"explanation":"α+β=6 and α−β=2 give α=4, β=2. Product αβ = k, so k = 4×2 = 8."},
-  {"id":"math-122","chapter":"Polynomials","difficulty":"hard","text":"Find a quadratic polynomial whose zeroes are 2+√3 and 2−√3.","options":["x² − 4x + 1","x² + 4x + 1","x² − 4x − 1","x² − 2x + 1"],"correct":0,"explanation":"Sum = 4, product = (2+√3)(2−√3) = 4−3 = 1. Polynomial = x² − 4x + 1."},
-  {"id":"math-123","chapter":"Polynomials","difficulty":"hard","text":"The zeroes of x³ − 3x² + x + 1 are of the form a−b, a, a+b. Find a.","options":["1","3","−1","0"],"correct":0,"explanation":"Sum of the three zeroes = (a−b)+a+(a+b) = 3a. For x³−3x²+x+1, sum of zeroes = −(coeff of x²)/(coeff of x³) = 3. So 3a = 3, a = 1."},
-  {"id":"math-124","chapter":"Pair of Linear Equations","difficulty":"easy","text":"The pair of equations x = 5 and y = −3 represents two lines that:","options":["intersect at (5, −3)","are parallel","are coincident","intersect at (−3, 5)"],"correct":0,"explanation":"x=5 is a vertical line, y=−3 is a horizontal line; they intersect at exactly one point, (5,−3)."},
-  {"id":"math-125","chapter":"Pair of Linear Equations","difficulty":"medium","text":"Solve for x: 3x + 2y = 12 and 5x − 2y = 4.","options":["2","3","1","4"],"correct":0,"explanation":"Adding the two equations: 8x = 16, so x = 2 (then y = 3)."},
-  {"id":"math-126","chapter":"Pair of Linear Equations","difficulty":"medium","text":"The sum of two numbers is 8 and their difference is 2. Find the numbers.","options":["5 and 3","6 and 2","4 and 4","7 and 1"],"correct":0,"explanation":"x+y=8, x−y=2. Adding: 2x=10, x=5, then y=3."},
-  {"id":"math-127","chapter":"Pair of Linear Equations","difficulty":"hard","text":"A boat goes 30 km upstream and 44 km downstream in 10 hours; it goes 40 km upstream and 55 km downstream in 13 hours. Find the speed of the boat in still water.","options":["8 km/h","11 km/h","5 km/h","3 km/h"],"correct":0,"explanation":"Let u,v be boat and stream speed, x=1/(u−v), y=1/(u+v). Solving 30x+44y=10 and 40x+55y=13 gives x=1/5, y=1/11, so u−v=5, u+v=11, giving u=8 km/h."},
-  {"id":"math-128","chapter":"Pair of Linear Equations","difficulty":"hard","text":"A taxi fare has a fixed charge plus a per-km charge. A 10 km ride costs ₹105 and a 15 km ride costs ₹155. Find the fixed charge.","options":["₹5","₹10","₹15","₹55"],"correct":0,"explanation":"Let fixed charge = f, rate/km = r. f+10r=105, f+15r=155. Subtracting: 5r=50, r=10, so f=105−100=₹5."},
-  {"id":"math-129","chapter":"Pair of Linear Equations","difficulty":"hard","text":"Find k so that 2x + 3y = 7 and (k−1)x + (k+2)y = 3k have infinitely many solutions.","options":["7","4","5","6"],"correct":0,"explanation":"Need 2/(k−1) = 3/(k+2) = 7/3k. From the first two: 2(k+2)=3(k−1) → 2k+4=3k−3 → k=7. Check: 2/6=1/3 and 7/21=1/3 ✓."},
-  {"id":"math-130","chapter":"Quadratic Equations","difficulty":"easy","text":"Which of the following equations has 2 as a root?","options":["x² − 4 = 0","x² + 4 = 0","x² − 2x + 1 = 0","x² + 2x + 1 = 0"],"correct":0,"explanation":"x²−4=0 → x=±2, so x=2 is a root. The other equations do not have x=2 as a root."},
-  {"id":"math-131","chapter":"Quadratic Equations","difficulty":"medium","text":"The sum of squares of two consecutive positive integers is 313. Find the integers.","options":["12 and 13","11 and 12","13 and 14","10 and 11"],"correct":0,"explanation":"Let integers be n, n+1: n²+(n+1)²=313 → 2n²+2n−312=0 → n²+n−156=0 → (n−12)(n+13)=0 → n=12. Integers are 12 and 13."},
-  {"id":"math-132","chapter":"Quadratic Equations","difficulty":"medium","text":"A two-digit number has digits whose product is 18. When 63 is subtracted from the number, its digits interchange places. Find the number.","options":["92","81","63","29"],"correct":0,"explanation":"Let digits be x (tens), y (units), xy=18 and 10x+y−63=10y+x → x−y=7. Solving x−y=7, xy=18 gives x=9, y=2, so the number is 92 (92−63=29, the reverse)."},
-  {"id":"math-133","chapter":"Quadratic Equations","difficulty":"hard","text":"The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, find the base.","options":["12 cm","7 cm","5 cm","19 cm"],"correct":0,"explanation":"Let base=x, altitude=x−7. x²+(x−7)²=13² → 2x²−14x−120=0 → x²−7x−60=0 → (x−12)(x+5)=0 → x=12 cm."},
-  {"id":"math-134","chapter":"Quadratic Equations","difficulty":"hard","text":"Two water taps together fill a tank in 9⅜ hours. The larger-diameter tap takes 10 hours less than the smaller to fill it alone. Find the time taken by the larger tap alone.","options":["15 hours","25 hours","10 hours","20 hours"],"correct":0,"explanation":"Let the smaller tap take x hours, larger take x−10. 1/x + 1/(x−10) = 8/75, which solves to x=25. So the larger tap alone takes 25−10=15 hours."},
-  {"id":"math-135","chapter":"Quadratic Equations","difficulty":"hard","text":"A train travels 360 km at a uniform speed. If the speed had been 5 km/h more, it would take 1 hour less for the journey. Find the speed of the train.","options":["40 km/h","45 km/h","35 km/h","50 km/h"],"correct":0,"explanation":"Let speed=x. 360/x − 360/(x+5) = 1 → x²+5x−1800=0. Discriminant=25+7200=7225=85². x=(−5+85)/2=40 km/h."},
-  {"id":"math-136","chapter":"Arithmetic Progressions","difficulty":"easy","text":"The common difference of the AP −10, −6, −2, 2, … is:","options":["4","−4","6","−6"],"correct":0,"explanation":"d = second term − first term = −6 − (−10) = 4."},
-  {"id":"math-137","chapter":"Arithmetic Progressions","difficulty":"medium","text":"Find the sum of the first 15 multiples of 8.","options":["960","920","900","940"],"correct":0,"explanation":"AP: 8,16,...,120 (15 terms). Sₙ = n/2(a+l) = 15/2 × (8+120) = 15/2 × 128 = 960."},
-  {"id":"math-138","chapter":"Arithmetic Progressions","difficulty":"medium","text":"The 4th term of an AP is 0. Find the ratio a₂₅ : a₁₁.","options":["3:1","2:1","4:1","1:3"],"correct":0,"explanation":"a+3d=0 ⟹ a=−3d. a₂₅=a+24d=21d, a₁₁=a+10d=7d. Ratio = 21d:7d = 3:1."},
-  {"id":"math-139","chapter":"Arithmetic Progressions","difficulty":"hard","text":"The sum of the 4th and 8th terms of an AP is 24, and the sum of the 6th and 10th terms is 44. Find the first three terms.","options":["−13, −8, −3","−3, 2, 7","−8, −3, 2","13, 18, 23"],"correct":0,"explanation":"a+3d+a+7d=24 ⟹ a+5d=12. a+5d+a+9d=44 ⟹ a+7d=22. Subtracting: 2d=10, d=5, a=12−25=−13. First three terms: −13, −8, −3."},
-  {"id":"math-140","chapter":"Arithmetic Progressions","difficulty":"hard","text":"How many terms of the AP 24, 21, 18, … must be taken so their sum is 78? (There are two valid values of n — give their sum.)","options":["17","13","4","9"],"correct":0,"explanation":"Sₙ = n/2[48−3(n−1)] = 78 leads to 3n²−51n+156=0, i.e. n²−17n+52=0, giving n=4 or n=13 (the terms turn negative after the 9th term, so both partial sums equal 78). 4+13=17."},
-  {"id":"math-141","chapter":"Arithmetic Progressions","difficulty":"hard","text":"The sums of the first n terms of two APs are in the ratio (7n+1):(4n+27). Find the ratio of their 9th terms.","options":["24:19","7:4","17:20","9:8"],"correct":0,"explanation":"For the 9th terms, use n=17 in the ratio of sums (since a₉ relates to S₁₇/17 style comparison): (7×17+1):(4×17+27) = 120:95 = 24:19."},
-  {"id":"math-142","chapter":"Arithmetic Progressions","difficulty":"hard","text":"In an AP, S₅+S₇=167 and S₁₀=235. Find the common difference.","options":["5","4","6","3"],"correct":0,"explanation":"S₅+S₇ = 12a+31d = 167. S₁₀ = 10a+45d = 235 ⟹ 2a+9d=47. Solving simultaneously gives d=5, a=1."},
-  {"id":"math-143","chapter":"Triangles","difficulty":"easy","text":"In triangle ABC, DE ∥ BC and AD/DB = 2/3. Then AE/EC =","options":["2/3","3/2","2/5","3/5"],"correct":0,"explanation":"By the Basic Proportionality Theorem, DE ∥ BC ⟹ AD/DB = AE/EC = 2/3."},
-  {"id":"math-144","chapter":"Triangles","difficulty":"easy","text":"Which similarity criterion applies when two angles of one triangle equal two angles of another?","options":["AA","SSS","SAS","RHS"],"correct":0,"explanation":"If two angles of one triangle equal two angles of another, the triangles are similar by the AA (Angle-Angle) criterion."},
-  {"id":"math-145","chapter":"Triangles","difficulty":"medium","text":"The perimeters of two similar triangles are 30 cm and 20 cm. A side of the first triangle is 12 cm. Find the corresponding side of the second.","options":["8 cm","18 cm","9 cm","6 cm"],"correct":0,"explanation":"Ratio of similarity = ratio of perimeters = 30:20 = 3:2. Corresponding side = 12 × 2/3 = 8 cm."},
-  {"id":"math-146","chapter":"Triangles","difficulty":"medium","text":"A 17 m ladder rests against a window 15 m high on one side of a street. Keeping its foot fixed, it is turned to reach a window 8 m high on the other side. Find the width of the street.","options":["23 m","22 m","25 m","17 m"],"correct":0,"explanation":"First base = √(17²−15²) = √64 = 8 m. Second base = √(17²−8²) = √225 = 15 m. Width = 8+15 = 23 m."},
-  {"id":"math-147","chapter":"Triangles","difficulty":"hard","text":"D, E lie on sides AB, AC of △ABC with DE ∥ BC. If AD=x, DB=x−2, AE=x+2, EC=x−1, find x.","options":["4","2","6","3"],"correct":0,"explanation":"By BPT, x/(x−2) = (x+2)/(x−1) ⟹ x(x−1) = (x+2)(x−2) ⟹ x²−x = x²−4 ⟹ x=4."},
-  {"id":"math-148","chapter":"Triangles","difficulty":"hard","text":"In an equilateral triangle of side 2a, the length of the altitude is:","options":["a√3","2a√3","a√3/2","a/√3"],"correct":0,"explanation":"The altitude splits the base into two segments of length a. Altitude = √((2a)²−a²) = √(3a²) = a√3."},
-  {"id":"math-149","chapter":"Triangles","difficulty":"hard","text":"In right triangle ABC, right-angled at C, with hypotenuse AB=c, legs BC=a and AC=b, and p is the length of the perpendicular from C to AB, which relation holds?","options":["1/p² = 1/a² + 1/b²","p² = a² + b²","1/p = 1/a + 1/b","p² = ab"],"correct":0,"explanation":"Area of triangle = ½ab = ½cp, so p = ab/c. Also c²=a²+b² (Pythagoras). Substituting gives 1/p² = c²/(a²b²) = (a²+b²)/(a²b²) = 1/a²+1/b²."},
-  {"id":"math-150","chapter":"Triangles","difficulty":"hard","text":"Two vertical poles of heights 6 m and 11 m stand on level ground 12 m apart. Find the distance between their tops.","options":["13 m","17 m","12 m","15 m"],"correct":0,"explanation":"Height difference = 11−6=5 m, horizontal distance = 12 m. Distance between tops = √(5²+12²) = √169 = 13 m."},
-  {"id":"math-151","chapter":"Coordinate Geometry","difficulty":"easy","text":"The distance of the point (−5, 12) from the origin is:","options":["13","17","12","5"],"correct":0,"explanation":"Distance = √((−5)²+12²) = √(25+144) = √169 = 13."},
-  {"id":"math-152","chapter":"Coordinate Geometry","difficulty":"medium","text":"Find the point on the x-axis which is equidistant from (2, −5) and (−2, 9).","options":["(−7, 0)","(7, 0)","(0, −7)","(−2, 0)"],"correct":0,"explanation":"Let the point be (x,0). (x−2)²+25 = (x+2)²+81 ⟹ −4x+29 = 4x+85 ⟹ −8x=56 ⟹ x=−7. Point: (−7,0)."},
-  {"id":"math-153","chapter":"Coordinate Geometry","difficulty":"medium","text":"If A(1,2), B(0,0) and C(a,b) are collinear, find the relation between a and b.","options":["b = 2a","a = 2b","a + b = 2","a − b = 2"],"correct":0,"explanation":"Slope of AB = (0−2)/(0−1) = 2. For C to be collinear, slope of BC must also be 2: b/a = 2 ⟹ b = 2a."},
-  {"id":"math-154","chapter":"Coordinate Geometry","difficulty":"hard","text":"Find the ratio in which the point (−4, 6) divides the segment joining A(−6, 10) and B(3, −8).","options":["2:7","7:2","3:5","5:3"],"correct":0,"explanation":"Using the section formula for x-coordinate with ratio k:1, −4 = (3k−6)/(k+1) ⟹ −4k−4=3k−6 ⟹ −7k=−2 ⟹ k=2/7. Ratio = 2:7."},
-  {"id":"math-155","chapter":"Coordinate Geometry","difficulty":"hard","text":"The vertices of a triangle are (2,1), (5,2) and (3,4). Find its area.","options":["4 sq units","8 sq units","6 sq units","2 sq units"],"correct":0,"explanation":"Area = ½|2(2−4)+5(4−1)+3(1−2)| = ½|−4+15−3| = ½(8) = 4 sq units."},
-  {"id":"math-156","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"sin 90° + cos 90° =","options":["1","0","2","−1"],"correct":0,"explanation":"sin 90° = 1, cos 90° = 0. Sum = 1 + 0 = 1."},
-  {"id":"math-157","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"If tan θ = 1, with θ between 0° and 90°, then θ =","options":["45°","30°","60°","90°"],"correct":0,"explanation":"tan 45° = 1, and 45° is the only acute angle satisfying this."},
-  {"id":"math-158","chapter":"Introduction to Trigonometry","difficulty":"easy","text":"cot 30° =","options":["√3","1/√3","1","2"],"correct":0,"explanation":"cot 30° = 1/tan 30° = 1/(1/√3) = √3."},
-  {"id":"math-159","chapter":"Introduction to Trigonometry","difficulty":"medium","text":"If 3 tan θ = 4 and θ is acute, find sin θ.","options":["4/5","3/5","3/4","5/4"],"correct":0,"explanation":"tan θ = 4/3, so in the right triangle: opposite=4, adjacent=3, hypotenuse=5. sin θ = 4/5."},
-  {"id":"math-160","chapter":"Introduction to Trigonometry","difficulty":"medium","text":"Evaluate: 2 tan²45° + cos²30° − sin²60°.","options":["2","1","0","3"],"correct":0,"explanation":"tan45°=1 so 2tan²45°=2. cos²30°=3/4 and sin²60°=3/4, which cancel out. Total = 2+0 = 2."},
-  {"id":"math-161","chapter":"Introduction to Trigonometry","difficulty":"medium","text":"If sin(A+B)=1 and cos(A−B)=1, where 0°<A+B≤90° and A≥B, find A and B.","options":["A=45°, B=45°","A=60°, B=30°","A=90°, B=0°","A=30°, B=60°"],"correct":0,"explanation":"sin(A+B)=1 ⟹ A+B=90°. cos(A−B)=1 ⟹ A−B=0°. Solving: A=45°, B=45°."},
-  {"id":"math-162","chapter":"Introduction to Trigonometry","difficulty":"medium","text":"Simplify: (1 + tan²A)(1 − sinA)(1 + sinA).","options":["1","0","2","sin²A"],"correct":0,"explanation":"(1+tan²A)=sec²A, and (1−sinA)(1+sinA)=1−sin²A=cos²A. So the product = sec²A × cos²A = 1."},
-  {"id":"math-163","chapter":"Introduction to Trigonometry","difficulty":"hard","text":"If sec θ + tan θ = p, find sec θ − tan θ.","options":["1/p","p","−p","p²"],"correct":0,"explanation":"Since sec²θ−tan²θ=1, (secθ+tanθ)(secθ−tanθ)=1. So secθ−tanθ = 1/p."},
-  {"id":"math-164","chapter":"Introduction to Trigonometry","difficulty":"hard","text":"Simplify: (sin θ + cosec θ)² + (cos θ + sec θ)².","options":["7 + tan²θ + cot²θ","5 + tan²θ + cot²θ","7","9"],"correct":0,"explanation":"Expanding: sin²θ+2+cosec²θ+cos²θ+2+sec²θ = 1+4+(1+cot²θ)+(1+tan²θ) = 7+tan²θ+cot²θ."},
-  {"id":"math-165","chapter":"Introduction to Trigonometry","difficulty":"hard","text":"If tan A = n tan B and sin A = m sin B, express cos²A in terms of m and n.","options":["(m²−1)/(n²−1)","(n²−1)/(m²−1)","(m²+1)/(n²+1)","m²/n²"],"correct":0,"explanation":"From the two given relations, dividing sin A = m sinB by tanA = n tanB (i.e. sinA/cosA = n sinB/cosB) and simplifying using sin²B=1−cos²B leads to cos²A = (m²−1)/(n²−1), a standard identity result."},
-  {"id":"math-166","chapter":"Introduction to Trigonometry","difficulty":"hard","text":"The expression (cosecθ − sinθ)(secθ − cosθ)(tanθ + cotθ) simplifies to:","options":["1","sinθ cosθ","tanθ","0"],"correct":0,"explanation":"(cosecθ−sinθ)=cos²θ/sinθ, (secθ−cosθ)=sin²θ/cosθ. Their product = sinθcosθ. Multiplying by (tanθ+cotθ)=1/(sinθcosθ) gives 1."},
-  {"id":"math-167","chapter":"Introduction to Trigonometry","difficulty":"hard","text":"If x = a sinθ and y = b cosθ, find the relation between x, y, a, b that is independent of θ.","options":["x²/a² + y²/b² = 1","x²/a² − y²/b² = 1","x/a + y/b = 1","xy = ab"],"correct":0,"explanation":"x/a = sinθ, y/b = cosθ. Squaring and adding: x²/a² + y²/b² = sin²θ+cos²θ = 1."},
-  {"id":"math-168","chapter":"Applications of Trigonometry","difficulty":"medium","text":"A tower's shadow is 40 m longer when the sun's altitude is 30° than when it is 60°. Find the height of the tower.","options":["20√3 m","40√3 m","20 m","40 m"],"correct":0,"explanation":"h cot30° − h cot60° = 40 ⟹ h√3 − h/√3 = 40 ⟹ h(2/√3) = 40 ⟹ h = 20√3 m."},
-  {"id":"math-169","chapter":"Applications of Trigonometry","difficulty":"hard","text":"From the top of a 7 m building, the angle of elevation of the top of a tower is 60° and the angle of depression of its foot is 45°. Find the height of the tower.","options":["7(1+√3) m","7√3 m","7(√3−1) m","14 m"],"correct":0,"explanation":"Depression 45° gives horizontal distance = 7 m (equal to building height). Elevation 60° gives extra height = 7tan60° = 7√3 m. Tower height = 7+7√3 = 7(1+√3) m."},
-  {"id":"math-170","chapter":"Applications of Trigonometry","difficulty":"hard","text":"Two poles of equal height stand on either side of a road 80 m wide. From a point between them, the angles of elevation of their tops are 60° and 30°. Find the height of the poles.","options":["20√3 m","40√3 m","20 m","80/√3 m"],"correct":0,"explanation":"Let the point be x m from the 60° pole. h = x tan60° = (80−x) tan30°. Solving: x√3 = (80−x)/√3 ⟹ 3x=80−x ⟹ x=20. h = 20tan60° = 20√3 m."},
-  {"id":"math-171","chapter":"Applications of Trigonometry","difficulty":"hard","text":"An aeroplane flying horizontally at a height of 1500√3 m observes angles of depression of 45° and 60° to two points on opposite sides of it on the ground. Find the distance between the points.","options":["1500(√3+1) m","1500√3 m","3000 m","1500(√3−1) m"],"correct":0,"explanation":"d₁ = h/tan45° = 1500√3 m. d₂ = h/tan60° = 1500√3/√3 = 1500 m. Total distance = d₁+d₂ = 1500√3+1500 = 1500(√3+1) m."},
-  {"id":"math-172","chapter":"Circles","difficulty":"easy","text":"The tangent to a circle is ___ to the radius at the point of contact.","options":["perpendicular","parallel","equal","at 45°"],"correct":0,"explanation":"A basic theorem of circles: the tangent at any point is perpendicular to the radius drawn to that point."},
-  {"id":"math-173","chapter":"Circles","difficulty":"medium","text":"PA and PB are tangents from P to a circle of radius 4 cm centred at O, with OP=5 cm. Find PA.","options":["3 cm","4 cm","5 cm","9 cm"],"correct":0,"explanation":"Since the tangent is perpendicular to the radius, PA² = OP² − OA² = 25−16 = 9, so PA = 3 cm."},
-  {"id":"math-174","chapter":"Circles","difficulty":"medium","text":"A quadrilateral ABCD circumscribes a circle with AB=6 cm, BC=7 cm, CD=4 cm. Find DA.","options":["3 cm","5 cm","4 cm","10 cm"],"correct":0,"explanation":"For a quadrilateral circumscribing a circle, AB+CD = BC+DA (equal tangent lengths). 6+4 = 7+DA ⟹ DA = 3 cm."},
-  {"id":"math-175","chapter":"Circles","difficulty":"hard","text":"A circle touches all four sides of quadrilateral ABCD. If AB=6 cm and CD=8 cm, find BC+AD.","options":["14 cm","7 cm","2 cm","48 cm"],"correct":0,"explanation":"For a tangential quadrilateral, AB+CD = BC+AD. So BC+AD = 6+8 = 14 cm."},
-  {"id":"math-176","chapter":"Circles","difficulty":"hard","text":"Two concentric circles have radii 5 cm and 3 cm. Find the length of a chord of the larger circle that is tangent to the smaller circle.","options":["8 cm","4 cm","6 cm","16 cm"],"correct":0,"explanation":"The radius to the point of tangency is perpendicular to the chord and bisects it. Half-chord = √(5²−3²) = 4 cm, so the full chord = 8 cm."},
-  {"id":"math-177","chapter":"Areas Related to Circles","difficulty":"easy","text":"The area of a semicircle of radius 7 cm is:","options":["77 cm²","154 cm²","44 cm²","38.5 cm²"],"correct":0,"explanation":"Area of semicircle = ½πr² = ½ × 22/7 × 49 = 77 cm²."},
-  {"id":"math-178","chapter":"Areas Related to Circles","difficulty":"medium","text":"Find the area of a sector whose arc length is 22 cm and radius is 14 cm.","options":["154 cm²","77 cm²","308 cm²","44 cm²"],"correct":0,"explanation":"Area of sector = ½ × arc length × radius = ½ × 22 × 14 = 154 cm²."},
-  {"id":"math-179","chapter":"Areas Related to Circles","difficulty":"hard","text":"A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the minor segment. (use π=3.14)","options":["28.5 cm²","78.5 cm²","50 cm²","157 cm²"],"correct":0,"explanation":"Area of sector (90°) = ¼πr² = ¼×3.14×100 = 78.5 cm². Area of right triangle = ½×10×10 = 50 cm². Minor segment = 78.5−50 = 28.5 cm²."},
-  {"id":"math-180","chapter":"Areas Related to Circles","difficulty":"hard","text":"Find the area of the region between two concentric circles of radii 14 cm and 7 cm.","options":["462 cm²","308 cm²","616 cm²","231 cm²"],"correct":0,"explanation":"Area = π(R²−r²) = 22/7 × (196−49) = 22/7 × 147 = 462 cm²."},
-  {"id":"math-181","chapter":"Surface Areas and Volumes","difficulty":"easy","text":"The volume of a cube with edge 5 cm is:","options":["125 cm³","100 cm³","150 cm³","75 cm³"],"correct":0,"explanation":"Volume of cube = a³ = 5³ = 125 cm³."},
-  {"id":"math-182","chapter":"Surface Areas and Volumes","difficulty":"medium","text":"A cone of radius 6 cm and height 24 cm is melted and recast into a sphere. Find the radius of the sphere.","options":["6 cm","12 cm","8 cm","4 cm"],"correct":0,"explanation":"Volume of cone = ⅓πr²h = ⅓π(36)(24) = 288π. For a sphere of radius R, (4/3)πR³=288π ⟹ R³=216 ⟹ R=6 cm."},
-  {"id":"math-183","chapter":"Surface Areas and Volumes","difficulty":"hard","text":"A solid is a cylinder with hemispherical ends. Total height is 19 cm and radius is 3.5 cm. Find its volume.","options":["641.67 cm³ (approx)","462 cm³","500 cm³","600 cm³"],"correct":0,"explanation":"Cylinder height = 19 − 2(3.5) = 12 cm. Volume = πr²h + (4/3)πr³ = (22/7)(12.25)(12) + (4/3)(22/7)(42.875) = 462 + 179.67 ≈ 641.67 cm³."},
-  {"id":"math-184","chapter":"Surface Areas and Volumes","difficulty":"hard","text":"A bucket is a frustum of a cone with top radius 15 cm, bottom radius 10 cm and height 12 cm. Find its volume (π=22/7).","options":["5971.43 cm³ (approx)","4750 cm³","3450 cm³","6500 cm³"],"correct":0,"explanation":"Volume = (1/3)πh(R²+r²+Rr) = (1/3)(22/7)(12)(225+100+150) = (1/3)(22/7)(12)(475) ≈ 5971.43 cm³."},
-  {"id":"math-185","chapter":"Surface Areas and Volumes","difficulty":"hard","text":"Rainwater from a roof of size 22 m × 20 m is collected in a cylindrical vessel of diameter 2 m and height 3.5 m; the vessel becomes exactly full. Find the height of rainfall (in cm).","options":["2.5 cm","5 cm","1.25 cm","25 cm"],"correct":0,"explanation":"Volume of vessel = πr²h = (22/7)(1)(3.5) = 11 m³. Roof area = 440 m². Height of rain = 11/440 m = 0.025 m = 2.5 cm."},
-  {"id":"math-186","chapter":"Statistics","difficulty":"easy","text":"The class mark of the class interval 20–30 is:","options":["25","20","30","50"],"correct":0,"explanation":"Class mark = (lower limit + upper limit)/2 = (20+30)/2 = 25."},
-  {"id":"math-187","chapter":"Statistics","difficulty":"medium","text":"Find the mean of the distribution: classes 0-10, 10-20, 20-30 with frequencies 5, 10, 5 (midpoints 5, 15, 25).","options":["15","14","16","20"],"correct":0,"explanation":"Mean = Σfx/Σf = (5×5+10×15+5×25)/20 = (25+150+125)/20 = 300/20 = 15."},
-  {"id":"math-188","chapter":"Statistics","difficulty":"medium","text":"If the mode of a distribution is 45 and the mean is 40, find the median using the empirical relation.","options":["41.67","42.5","40","45"],"correct":0,"explanation":"Mode = 3×Median − 2×Mean ⟹ 45 = 3M − 80 ⟹ 3M = 125 ⟹ M ≈ 41.67."},
-  {"id":"math-189","chapter":"Statistics","difficulty":"hard","text":"For a grouped distribution with n=50, cumulative frequency before the median class = 15, frequency of median class = 20, class width = 10, and lower limit of median class = 30, find the median.","options":["35","30","40","32.5"],"correct":0,"explanation":"Median = l + [(n/2 − cf)/f] × h = 30 + [(25−15)/20] × 10 = 30 + 5 = 35."},
-  {"id":"math-190","chapter":"Statistics","difficulty":"hard","text":"Find the mode of data with class intervals 0-20, 20-40, 40-60, 60-80 and frequencies 15, 25, 20, 10 (modal class 20-40).","options":["33.33","30","35","28.5"],"correct":0,"explanation":"Mode = l + [(f1−f0)/(2f1−f0−f2)] × h = 20 + [(25−15)/(50−15−20)] × 20 = 20 + (10/15)×20 ≈ 33.33."},
-  {"id":"math-191","chapter":"Statistics","difficulty":"hard","text":"The mean of 100 observations is 50. One observation, 60, was wrongly recorded as 40. Find the correct mean.","options":["50.2","50","49.8","52"],"correct":0,"explanation":"Correct sum = (100×50) − 40 + 60 = 5000+20 = 5020. Correct mean = 5020/100 = 50.2."},
-  {"id":"math-192","chapter":"Probability","difficulty":"easy","text":"A die is thrown once. The probability of getting a number greater than 4 is:","options":["1/3","1/2","2/3","1/6"],"correct":0,"explanation":"Numbers greater than 4 on a die: 5, 6 (2 outcomes). P = 2/6 = 1/3."},
-  {"id":"math-193","chapter":"Probability","difficulty":"medium","text":"A box has 90 discs numbered 1 to 90. One disc is drawn at random. Find the probability it bears a two-digit number.","options":["9/10","8/9","4/5","81/100"],"correct":0,"explanation":"Two-digit numbers from 1 to 90: 10 to 90, i.e. 81 numbers. P = 81/90 = 9/10."},
-  {"id":"math-194","chapter":"Probability","difficulty":"medium","text":"Two coins are tossed together. Find the probability of getting at most one head.","options":["3/4","1/4","1/2","1"],"correct":0,"explanation":"Outcomes: HH, HT, TH, TT. At most one head: HT, TH, TT (3 outcomes). P = 3/4."},
-  {"id":"math-195","chapter":"Probability","difficulty":"hard","text":"A bag has 5 red, 4 blue and 3 green balls. One ball is drawn at random. Find the probability it is NOT blue.","options":["2/3","1/3","1/4","3/4"],"correct":0,"explanation":"Total balls = 12, not blue = 5+3=8. P = 8/12 = 2/3."},
-  {"id":"math-196","chapter":"Probability","difficulty":"hard","text":"Two dice are thrown together. Find the probability that the product of the numbers is a perfect square.","options":["2/9","1/6","1/9","1/4"],"correct":0,"explanation":"Favourable pairs giving a perfect-square product: (1,1)=1, (1,4),(4,1),(2,2)=4, (3,3)=9, (4,4)=16, (5,5)=25, (6,6)=36 — 8 outcomes out of 36. P = 8/36 = 2/9."},
-  {"id":"math-197","chapter":"Probability","difficulty":"hard","text":"A card is drawn from a well-shuffled deck. Find the probability it is either a red king or a black queen.","options":["1/13","1/26","2/13","1/52"],"correct":0,"explanation":"Red kings = 2, black queens = 2; these are mutually exclusive, giving 4 favourable cards. P = 4/52 = 1/13."},
-  {"id":"math-198","chapter":"Quadrilaterals","difficulty":"easy","text":"In a rhombus, the diagonals:","options":["bisect each other at right angles","are equal","bisect each other but not at right angles","never intersect"],"correct":0,"explanation":"A defining property of a rhombus is that its diagonals bisect each other at right angles (90°)."},
-  {"id":"math-199","chapter":"Quadrilaterals","difficulty":"medium","text":"ABCD is a parallelogram where ∠A − ∠B = 30°. Find ∠A.","options":["105°","75°","90°","120°"],"correct":0,"explanation":"In a parallelogram, adjacent angles are co-interior: ∠A+∠B=180°. With ∠A−∠B=30°, adding gives 2∠A=210°, so ∠A=105°."},
-  {"id":"math-200","chapter":"Quadrilaterals","difficulty":"hard","text":"PQRS is a rhombus with diagonal PR=16 cm and side PQ=10 cm. Find the length of diagonal QS.","options":["12 cm","6 cm","18 cm","20 cm"],"correct":0,"explanation":"Diagonals bisect at right angles: half of PR = 8 cm. Using Pythagoras with side 10 cm: half of QS = √(10²−8²) = 6 cm, so QS = 12 cm."}
+  {
+    "id": "math-001",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The HCF of 306 and 657 is 9. What is their LCM?",
+    "options": [
+      "22338",
+      "20338",
+      "23238",
+      "22428"
+    ],
+    "correct": 0,
+    "explanation": "LCM × HCF = product of numbers. LCM = (306 × 657) / 9 = 201042 / 9 = 22338."
+  },
+  {
+    "id": "math-002",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "Which of the following is an irrational number?",
+    "options": [
+      "√4",
+      "√9",
+      "√7",
+      "√16"
+    ],
+    "correct": 2,
+    "explanation": "√7 ≈ 2.6457… is non-terminating non-repeating. √4=2, √9=3, √16=4 are all rational."
+  },
+  {
+    "id": "math-003",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The decimal expansion of 17/8 is:",
+    "options": [
+      "2.125",
+      "2.1250",
+      "2.125 (terminating)",
+      "Both A and C"
+    ],
+    "correct": 3,
+    "explanation": "17/8 = 2.125. Since 8 = 2³, the denominator has only factor 2, so it terminates. Options A and C both correctly state 2.125 and terminating."
+  },
+  {
+    "id": "math-004",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The prime factorisation of 120 is:",
+    "options": [
+      "2³ × 3 × 5",
+      "2² × 3 × 5",
+      "2³ × 3 × 5 (correct)",
+      "2⁴ × 3 × 5"
+    ],
+    "correct": 0,
+    "explanation": "120 = 2 × 60 = 2 × 2 × 30 = 2 × 2 × 2 × 15 = 2³ × 3 × 5."
+  },
+  {
+    "id": "math-005",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "If two positive integers a and b are written as a = x³y² and b = xy³, where x, y are prime numbers, then HCF(a,b) is:",
+    "options": [
+      "xy",
+      "xy²",
+      "x³y³",
+      "x²y²"
+    ],
+    "correct": 1,
+    "explanation": "HCF = product of lowest powers of common primes = x¹ × y² = xy²."
+  },
+  {
+    "id": "math-006",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The LCM of two numbers is 182 and their HCF is 13. If one number is 26, the other is:",
+    "options": [
+      "91",
+      "182",
+      "78",
+      "52"
+    ],
+    "correct": 0,
+    "explanation": "Other number = (LCM × HCF) / first = (182 × 13) / 26 = 2366 / 26 = 91."
+  },
+  {
+    "id": "math-007",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "Euclid's division lemma states that for positive integers a and b, there exist unique integers q and r such that a = bq + r, where:",
+    "options": [
+      "0 < r ≤ b",
+      "0 ≤ r < b",
+      "0 < r < b",
+      "0 ≤ r ≤ b"
+    ],
+    "correct": 1,
+    "explanation": "The correct range is 0 ≤ r < b. r = 0 is allowed (when b divides a exactly), and r must be strictly less than b."
+  },
+  {
+    "id": "math-008",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "3 + 2√5 is:",
+    "options": [
+      "rational",
+      "irrational",
+      "neither rational nor irrational",
+      "an integer"
+    ],
+    "correct": 1,
+    "explanation": "√5 is irrational. Rational + irrational = irrational. So 3 + 2√5 is irrational."
+  },
+  {
+    "id": "math-009",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The decimal 0.235235235… is:",
+    "options": [
+      "terminating",
+      "non-terminating repeating (rational)",
+      "non-terminating non-repeating (irrational)",
+      "an integer"
+    ],
+    "correct": 1,
+    "explanation": "0.235̄ repeats the block 235. Any non-terminating repeating decimal is rational — it equals 235/999."
+  },
+  {
+    "id": "math-010",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "If p is a prime number and p divides a², then p divides:",
+    "options": [
+      "a² only",
+      "2a",
+      "a",
+      "a³ only"
+    ],
+    "correct": 2,
+    "explanation": "This is a key theorem: if prime p divides a², then p must divide a (since prime factorisation of a² uses the same primes as a, each doubled in power)."
+  },
+  {
+    "id": "math-011",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The number of zeroes of the polynomial p(x) = (x–2)²(x+1) is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "Distinct zeroes: x = 2 (double root) and x = –1. Number of distinct zeroes = 2. Total degree = 3, but only 2 distinct values."
+  },
+  {
+    "id": "math-012",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If one zero of the polynomial 2x² + 3x + k is ½, find k.",
+    "options": [
+      "–2",
+      "2",
+      "–1",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "Substitute x = ½: 2(¼) + 3(½) + k = 0 → ½ + 3/2 + k = 0 → 2 + k = 0 → k = –2."
+  },
+  {
+    "id": "math-013",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The sum of zeroes of 3x² – x – 4 is:",
+    "options": [
+      "1/3",
+      "–1/3",
+      "4/3",
+      "–4/3"
+    ],
+    "correct": 0,
+    "explanation": "Sum of zeroes = –b/a = –(–1)/3 = 1/3."
+  },
+  {
+    "id": "math-014",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The product of zeroes of x² – 3x – 4 is:",
+    "options": [
+      "–4",
+      "3",
+      "4",
+      "–3"
+    ],
+    "correct": 0,
+    "explanation": "Product of zeroes = c/a = –4/1 = –4."
+  },
+  {
+    "id": "math-015",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "A quadratic polynomial whose zeroes are –3 and 4 is:",
+    "options": [
+      "x² – x – 12",
+      "x² + x – 12",
+      "x² – x + 12",
+      "x² + x + 12"
+    ],
+    "correct": 0,
+    "explanation": "Sum = –3 + 4 = 1; Product = –3 × 4 = –12. Polynomial = x² – (sum)x + product = x² – x – 12."
+  },
+  {
+    "id": "math-016",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The graph of a quadratic polynomial is a:",
+    "options": [
+      "straight line",
+      "circle",
+      "parabola",
+      "hyperbola"
+    ],
+    "correct": 2,
+    "explanation": "The graph of any quadratic polynomial y = ax² + bx + c (a ≠ 0) is a parabola — opening upward if a > 0, downward if a < 0."
+  },
+  {
+    "id": "math-017",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If α and β are zeroes of p(x) = x² – 5x + 6, then α² + β² =",
+    "options": [
+      "13",
+      "25",
+      "11",
+      "17"
+    ],
+    "correct": 0,
+    "explanation": "α + β = 5, αβ = 6. α² + β² = (α + β)² – 2αβ = 25 – 12 = 13."
+  },
+  {
+    "id": "math-018",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "A polynomial of degree 3 is called a:",
+    "options": [
+      "linear polynomial",
+      "quadratic polynomial",
+      "cubic polynomial",
+      "biquadratic polynomial"
+    ],
+    "correct": 2,
+    "explanation": "Degree 1 = linear, degree 2 = quadratic, degree 3 = cubic, degree 4 = biquadratic."
+  },
+  {
+    "id": "math-019",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The pair of equations x + 2y = 5 and 3x + 6y = 15 represents:",
+    "options": [
+      "intersecting lines",
+      "parallel lines",
+      "coincident lines",
+      "perpendicular lines"
+    ],
+    "correct": 2,
+    "explanation": "Ratios: a₁/a₂ = 1/3, b₁/b₂ = 2/6 = 1/3, c₁/c₂ = 5/15 = 1/3. Since all three ratios are equal, the lines are coincident (infinitely many solutions)."
+  },
+  {
+    "id": "math-020",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "For what value of k does the system kx – 5y = 2 and 6x + 2y = 7 have no solution?",
+    "options": [
+      "–15",
+      "15",
+      "–10",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "No solution when a₁/a₂ = b₁/b₂ ≠ c₁/c₂. k/6 = –5/2 → k = –15. Check: –2/7 ≠ 5/2 ✓ so no solution."
+  },
+  {
+    "id": "math-021",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "Solve: 2x + 3y = 11 and 2x – 4y = –24. Find y.",
+    "options": [
+      "5",
+      "–5",
+      "3",
+      "–3"
+    ],
+    "correct": 0,
+    "explanation": "Subtracting: 7y = 35 → y = 5. Then x = (11 – 15)/2 = –2."
+  },
+  {
+    "id": "math-022",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "hard",
+    "text": "Five years ago, A was 3 times as old as B. Ten years later, A will be twice as old as B. What is A's present age?",
+    "options": [
+      "50",
+      "60",
+      "55",
+      "45"
+    ],
+    "correct": 0,
+    "explanation": "Let A = a, B = b. (a–5) = 3(b–5) → a = 3b–10. (a+10) = 2(b+10) → a = 2b+10. Solving: b = 20, a = 50."
+  },
+  {
+    "id": "math-023",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "easy",
+    "text": "The method of substitution is used when:",
+    "options": [
+      "coefficients are large",
+      "one variable can be easily expressed in terms of the other",
+      "the equations are quadratic",
+      "graphs are available"
+    ],
+    "correct": 1,
+    "explanation": "Substitution is most efficient when one equation gives a simple expression for one variable (e.g., x = 3y + 2), so it can be substituted directly."
+  },
+  {
+    "id": "math-024",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The lines 2x + y = 6 and 4x + 2y = k are parallel for:",
+    "options": [
+      "k = 12",
+      "k ≠ 12",
+      "k = 6",
+      "any k"
+    ],
+    "correct": 1,
+    "explanation": "Lines are parallel when a₁/a₂ = b₁/b₂ ≠ c₁/c₂ → 2/4 = 1/2 always. Parallel when 6/k ≠ 1/2, i.e., k ≠ 12."
+  },
+  {
+    "id": "math-025",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The discriminant of 2x² – 4x + 3 = 0 is:",
+    "options": [
+      "–8",
+      "8",
+      "–4",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "D = b² – 4ac = (–4)² – 4(2)(3) = 16 – 24 = –8. Since D < 0, no real roots."
+  },
+  {
+    "id": "math-026",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "Which of the following is a quadratic equation?",
+    "options": [
+      "x³ + 2x = 0",
+      "x² + 1/x = 2",
+      "(x+1)² = 2(x–3)",
+      "x(x+1)(x+2) = 0"
+    ],
+    "correct": 2,
+    "explanation": "(x+1)² = 2(x–3) → x² + 2x + 1 = 2x – 6 → x² + 7 = 0. This is quadratic (degree 2)."
+  },
+  {
+    "id": "math-027",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The roots of 4x² – 4x + 1 = 0 are:",
+    "options": [
+      "equal",
+      "distinct real",
+      "imaginary",
+      "irrational"
+    ],
+    "correct": 0,
+    "explanation": "D = 16 – 16 = 0. When D = 0, roots are real and equal. Roots = 4/(2×4) = 1/2 each."
+  },
+  {
+    "id": "math-028",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "Using the quadratic formula, the roots of x² – 3x – 10 = 0 are:",
+    "options": [
+      "5 and –2",
+      "–5 and 2",
+      "5 and 2",
+      "–5 and –2"
+    ],
+    "correct": 0,
+    "explanation": "x = (3 ± √(9+40))/2 = (3 ± 7)/2. So x = 5 or x = –2."
+  },
+  {
+    "id": "math-029",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The sum of a number and its reciprocal is 10/3. The number is:",
+    "options": [
+      "3 or 1/3",
+      "3",
+      "1/3",
+      "2 or 1/2"
+    ],
+    "correct": 0,
+    "explanation": "x + 1/x = 10/3 → 3x² – 10x + 3 = 0 → (3x–1)(x–3) = 0 → x = 3 or x = 1/3."
+  },
+  {
+    "id": "math-030",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "For the equation x² – 2x + k = 0 to have two distinct real roots, k must satisfy:",
+    "options": [
+      "k < 1",
+      "k > 1",
+      "k = 1",
+      "k ≤ 1"
+    ],
+    "correct": 0,
+    "explanation": "D > 0 → 4 – 4k > 0 → 1 – k > 0 → k < 1."
+  },
+  {
+    "id": "math-031",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "easy",
+    "text": "The nth term of an AP is 7 – 3n. The common difference is:",
+    "options": [
+      "–3",
+      "3",
+      "7",
+      "–7"
+    ],
+    "correct": 0,
+    "explanation": "aₙ = 7 – 3n. a₁ = 4, a₂ = 1. d = a₂ – a₁ = 1 – 4 = –3. Also d = coefficient of n = –3."
+  },
+  {
+    "id": "math-032",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "easy",
+    "text": "Which term of the AP 3, 7, 11, 15, … is 79?",
+    "options": [
+      "20th",
+      "19th",
+      "18th",
+      "21st"
+    ],
+    "correct": 0,
+    "explanation": "aₙ = a + (n–1)d = 3 + (n–1)4 = 79 → (n–1)4 = 76 → n–1 = 19 → n = 20."
+  },
+  {
+    "id": "math-033",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "The sum of first 20 terms of the AP 2, 5, 8, 11, … is:",
+    "options": [
+      "590",
+      "595",
+      "600",
+      "580"
+    ],
+    "correct": 0,
+    "explanation": "S₂₀ = (20/2)[2×2 + 19×3] = 10[4 + 57] = 10 × 61 = 610."
+  },
+  {
+    "id": "math-034",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "If the 3rd and 9th terms of an AP are 4 and –8 respectively, which term is zero?",
+    "options": [
+      "5th",
+      "4th",
+      "6th",
+      "7th"
+    ],
+    "correct": 0,
+    "explanation": "a₃ = a+2d = 4; a₉ = a+8d = –8. Subtracting: 6d = –12 → d = –2. Then a = 8. aₙ = 0: 8+(n–1)(–2) = 0 → n–1 = 4 → n = 5."
+  },
+  {
+    "id": "math-035",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "The sum of first n terms of an AP is n². What is the nth term?",
+    "options": [
+      "2n–1",
+      "2n+1",
+      "n",
+      "n–1"
+    ],
+    "correct": 0,
+    "explanation": "aₙ = Sₙ – Sₙ₋₁ = n² – (n–1)² = n² – n² + 2n – 1 = 2n–1."
+  },
+  {
+    "id": "math-036",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "How many two-digit numbers are divisible by 3?",
+    "options": [
+      "30",
+      "29",
+      "31",
+      "28"
+    ],
+    "correct": 0,
+    "explanation": "Two-digit multiples of 3: 12 to 99. n = (99–12)/3 + 1 = 87/3 + 1 = 29 + 1 = 30."
+  },
+  {
+    "id": "math-037",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "The first negative term of the AP 114, 109, 104, … is:",
+    "options": [
+      "24th",
+      "25th",
+      "23rd",
+      "26th"
+    ],
+    "correct": 0,
+    "explanation": "a=114, d=–5. aₙ < 0: 114 + (n–1)(–5) < 0 → (n–1) > 22.8 → n > 23.8 → n = 24."
+  },
+  {
+    "id": "math-038",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "In triangle ABC, DE ∥ BC with AD = 4 cm, DB = 6 cm, AE = 3 cm. Find EC.",
+    "options": [
+      "4.5 cm",
+      "6 cm",
+      "4 cm",
+      "5 cm"
+    ],
+    "correct": 0,
+    "explanation": "By BPT: AD/DB = AE/EC → 4/6 = 3/EC → EC = 18/4 = 4.5 cm."
+  },
+  {
+    "id": "math-039",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "Two triangles are similar if their corresponding sides are:",
+    "options": [
+      "equal",
+      "proportional",
+      "in ratio 1:2",
+      "parallel"
+    ],
+    "correct": 1,
+    "explanation": "SSS similarity criterion: two triangles are similar if their corresponding sides are in proportion (proportional), not necessarily equal."
+  },
+  {
+    "id": "math-040",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "The areas of two similar triangles are 64 cm² and 121 cm². The ratio of their corresponding sides is:",
+    "options": [
+      "8:11",
+      "64:121",
+      "4:11",
+      "11:8"
+    ],
+    "correct": 0,
+    "explanation": "Ratio of areas = (ratio of sides)². So ratio of sides = √(64/121) = 8/11."
+  },
+  {
+    "id": "math-041",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "In a right triangle with hypotenuse 13 cm and one side 5 cm, the third side is:",
+    "options": [
+      "12 cm",
+      "8 cm",
+      "10 cm",
+      "11 cm"
+    ],
+    "correct": 0,
+    "explanation": "By Pythagoras: a² + b² = c² → 5² + b² = 13² → b² = 169 – 25 = 144 → b = 12 cm."
+  },
+  {
+    "id": "math-042",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "If in △ABC, ∠A = ∠P and ∠B = ∠Q in △PQR, then △ABC ~ △PQR by:",
+    "options": [
+      "SAS",
+      "SSS",
+      "AA",
+      "RHS"
+    ],
+    "correct": 2,
+    "explanation": "Two pairs of equal angles → third angle is also equal (angle sum = 180°). This is the AA (Angle-Angle) similarity criterion."
+  },
+  {
+    "id": "math-043",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "A vertical pole 12 m high casts a shadow 8 m long. At the same time, a tower casts a shadow 40 m long. The height of the tower is:",
+    "options": [
+      "60 m",
+      "48 m",
+      "30 m",
+      "72 m"
+    ],
+    "correct": 0,
+    "explanation": "By similar triangles (same sun angle): height/shadow = 12/8 = 3/2. Tower height = 40 × 3/2 = 60 m."
+  },
+  {
+    "id": "math-044",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "Converse of Pythagoras theorem states: if in a triangle, the square of one side equals the sum of squares of the other two sides, the triangle is:",
+    "options": [
+      "equilateral",
+      "isosceles",
+      "right-angled",
+      "obtuse-angled"
+    ],
+    "correct": 2,
+    "explanation": "Converse of Pythagoras: if a² + b² = c², then the angle opposite c is exactly 90°, making the triangle right-angled."
+  },
+  {
+    "id": "math-045",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The distance between points (2, 3) and (–1, 7) is:",
+    "options": [
+      "5",
+      "√25",
+      "√7",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "d = √[(2–(–1))² + (3–7)²] = √[9 + 16] = √25 = 5."
+  },
+  {
+    "id": "math-046",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The mid-point of the line segment joining (4, –6) and (–2, 4) is:",
+    "options": [
+      "(1, –1)",
+      "(–1, 1)",
+      "(1, 1)",
+      "(–1, –1)"
+    ],
+    "correct": 0,
+    "explanation": "Mid-point = ((4+(–2))/2, (–6+4)/2) = (2/2, –2/2) = (1, –1)."
+  },
+  {
+    "id": "math-047",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The point which divides the line segment joining (4, –3) and (8, 5) in the ratio 3:1 internally is:",
+    "options": [
+      "(7, 3)",
+      "(6, 1)",
+      "(5, –1)",
+      "(3, –3)"
+    ],
+    "correct": 0,
+    "explanation": "x = (3×8 + 1×4)/(3+1) = 28/4 = 7; y = (3×5 + 1×(–3))/4 = 12/4 = 3. Point: (7, 3)."
+  },
+  {
+    "id": "math-048",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The area of the triangle with vertices (0, 0), (5, 0) and (3, 4) is:",
+    "options": [
+      "10 sq units",
+      "8 sq units",
+      "12 sq units",
+      "6 sq units"
+    ],
+    "correct": 0,
+    "explanation": "Area = ½|x₁(y₂–y₃) + x₂(y₃–y₁) + x₃(y₁–y₂)| = ½|0(0–4) + 5(4–0) + 3(0–0)| = ½|20| = 10."
+  },
+  {
+    "id": "math-049",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "hard",
+    "text": "If the point (x, y) is equidistant from (3, 6) and (–3, 4), then:",
+    "options": [
+      "3x + y = 5",
+      "3x – y = 5",
+      "x + 3y = 5",
+      "x – 3y = 5"
+    ],
+    "correct": 0,
+    "explanation": "Equal distances: (x–3)²+(y–6)² = (x+3)²+(y–4)². Expanding: –6x+9–12y+36 = 6x+9–8y+16. Simplify: –12x – 4y + 20 = 0 → 3x + y = 5."
+  },
+  {
+    "id": "math-050",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "hard",
+    "text": "The points (1, 7), (4, 2), (–1, –1) and (–4, 4) form a:",
+    "options": [
+      "square",
+      "rectangle",
+      "rhombus",
+      "parallelogram"
+    ],
+    "correct": 0,
+    "explanation": "All four sides equal (each √34) and diagonals equal (each √40). Equal sides AND equal diagonals → square."
+  },
+  {
+    "id": "math-051",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "If sin A = 3/5, then cos A = ",
+    "options": [
+      "4/5",
+      "3/4",
+      "5/3",
+      "5/4"
+    ],
+    "correct": 0,
+    "explanation": "sin²A + cos²A = 1 → cos²A = 1 – 9/25 = 16/25 → cos A = 4/5 (A is acute)."
+  },
+  {
+    "id": "math-052",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "The value of (sin 30° + cos 60°) is:",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "½"
+    ],
+    "correct": 0,
+    "explanation": "sin 30° = 1/2, cos 60° = 1/2. Sum = 1/2 + 1/2 = 1."
+  },
+  {
+    "id": "math-053",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "tan 45° + cot 45° = ",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "√2"
+    ],
+    "correct": 0,
+    "explanation": "tan 45° = 1, cot 45° = 1. Sum = 2."
+  },
+  {
+    "id": "math-054",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "If cos θ = 5/13, then sin θ =",
+    "options": [
+      "12/13",
+      "13/12",
+      "13/5",
+      "5/12"
+    ],
+    "correct": 0,
+    "explanation": "sin²θ = 1 – 25/169 = 144/169 → sin θ = 12/13."
+  },
+  {
+    "id": "math-055",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "(1 – sin²A) is equal to:",
+    "options": [
+      "cos²A",
+      "1",
+      "sec²A",
+      "tan²A"
+    ],
+    "correct": 0,
+    "explanation": "From the identity sin²A + cos²A = 1 → cos²A = 1 – sin²A."
+  },
+  {
+    "id": "math-056",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "sec²θ – tan²θ = ",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "–1"
+    ],
+    "correct": 0,
+    "explanation": "Standard identity: 1 + tan²θ = sec²θ → sec²θ – tan²θ = 1."
+  },
+  {
+    "id": "math-057",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "If sin θ = cos θ, then θ =",
+    "options": [
+      "45°",
+      "30°",
+      "60°",
+      "90°"
+    ],
+    "correct": 0,
+    "explanation": "sin θ = cos θ → tan θ = 1 → θ = 45°."
+  },
+  {
+    "id": "math-058",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "The value of sin²30° + cos²60° is:",
+    "options": [
+      "½",
+      "1",
+      "¼",
+      "¾"
+    ],
+    "correct": 0,
+    "explanation": "sin²30° = (1/2)² = 1/4; cos²60° = (1/2)² = 1/4. Sum = 1/2."
+  },
+  {
+    "id": "math-059",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "cosec 90° – sec 0° =",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "–1"
+    ],
+    "correct": 0,
+    "explanation": "cosec 90° = 1/sin 90° = 1; sec 0° = 1/cos 0° = 1. Difference = 1 – 1 = 0."
+  },
+  {
+    "id": "math-060",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "The value of (sin 60° + cos 30°)(sin 30° + cos 60°) is:",
+    "options": [
+      "(√3+1)²/4",
+      "√3/2",
+      "3/4",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "= (√3/2 + √3/2)(1/2 + 1/2) = (√3)(1) = √3. Re-evaluating: (√3/2+√3/2) = √3; (1/2+1/2)=1; product = √3. The option should read √3."
+  },
+  {
+    "id": "math-061",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "easy",
+    "text": "The angle of elevation of the top of a tower from a point 30 m away is 60°. The height of the tower is:",
+    "options": [
+      "30√3 m",
+      "30 m",
+      "15√3 m",
+      "10√3 m"
+    ],
+    "correct": 0,
+    "explanation": "tan 60° = h/30 → √3 = h/30 → h = 30√3 m."
+  },
+  {
+    "id": "math-062",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "hard",
+    "text": "From the top of a 75 m high lighthouse, the angle of depression of two ships is 30° and 45°. The distance between the ships (same side) is:",
+    "options": [
+      "75(√3–1) m",
+      "75√3 m",
+      "75 m",
+      "150 m"
+    ],
+    "correct": 0,
+    "explanation": "d₁ = 75/tan45° = 75 m; d₂ = 75/tan30° = 75√3 m. Distance between ships = 75√3 – 75 = 75(√3–1) m."
+  },
+  {
+    "id": "math-063",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "easy",
+    "text": "The angle of elevation of the top of a building from a point on the ground is 45°. If the point is 20 m from the base, the height is:",
+    "options": [
+      "20 m",
+      "20√3 m",
+      "10 m",
+      "40 m"
+    ],
+    "correct": 0,
+    "explanation": "tan 45° = h/20 → 1 = h/20 → h = 20 m."
+  },
+  {
+    "id": "math-064",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "hard",
+    "text": "A flagstaff stands on a building 20 m high. From a point on the ground, the angles of elevation of the top and bottom of the flagstaff are 60° and 45°. The length of the flagstaff is:",
+    "options": [
+      "20(√3–1) m",
+      "20 m",
+      "20√3 m",
+      "10 m"
+    ],
+    "correct": 0,
+    "explanation": "Let flagstaff length = x. Building: tan 45° = 20/d → d = 20. Top: tan 60° = (20+x)/20 → √3 = (20+x)/20 → x = 20(√3–1) m."
+  },
+  {
+    "id": "math-065",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The number of tangents that can be drawn to a circle from an external point is:",
+    "options": [
+      "2",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "From any external point, exactly 2 tangents can be drawn to a circle."
+  },
+  {
+    "id": "math-066",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "A tangent PQ at point P on a circle of radius 5 cm meets the line through the centre O at Q, with OQ = 13 cm. PQ =",
+    "options": [
+      "12 cm",
+      "8 cm",
+      "10 cm",
+      "6 cm"
+    ],
+    "correct": 0,
+    "explanation": "Tangent ⊥ radius at point of contact: PQ² = OQ² – OP² = 169 – 25 = 144 → PQ = 12 cm."
+  },
+  {
+    "id": "math-067",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "If two tangents are drawn to a circle of radius 3 cm from an external point 5 cm from the centre, the length of each tangent is:",
+    "options": [
+      "4 cm",
+      "6 cm",
+      "3 cm",
+      "2 cm"
+    ],
+    "correct": 0,
+    "explanation": "Tangent² = (distance from centre)² – radius² = 25 – 9 = 16 → tangent = 4 cm."
+  },
+  {
+    "id": "math-068",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "Tangents drawn from an external point are:",
+    "options": [
+      "equal in length",
+      "perpendicular",
+      "parallel",
+      "unequal"
+    ],
+    "correct": 0,
+    "explanation": "Theorem: The lengths of two tangents drawn from an external point to a circle are equal."
+  },
+  {
+    "id": "math-069",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The angle between a tangent to a circle and the radius drawn to the point of tangency is:",
+    "options": [
+      "90°",
+      "45°",
+      "60°",
+      "180°"
+    ],
+    "correct": 0,
+    "explanation": "A tangent at any point of a circle is perpendicular to the radius at that point. So the angle is always 90°."
+  },
+  {
+    "id": "math-070",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "The area of a circle with circumference 44 cm is:",
+    "options": [
+      "154 cm²",
+      "176 cm²",
+      "144 cm²",
+      "196 cm²"
+    ],
+    "correct": 0,
+    "explanation": "C = 2πr = 44 → r = 7 cm. Area = πr² = 22/7 × 49 = 154 cm²."
+  },
+  {
+    "id": "math-071",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "easy",
+    "text": "The area of a sector of angle 60° in a circle of radius 6 cm is:",
+    "options": [
+      "6π cm²",
+      "12π cm²",
+      "3π cm²",
+      "18π cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area of sector = (θ/360°) × πr² = (60/360) × π × 36 = 6π cm²."
+  },
+  {
+    "id": "math-072",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "A horse is tied to a peg at one corner of a square field of side 15 m with a rope of length 5 m. The area it can graze is:",
+    "options": [
+      "25π/4 m²",
+      "25π m²",
+      "75π/4 m²",
+      "5π m²"
+    ],
+    "correct": 0,
+    "explanation": "The horse can graze a quarter circle (corner = 90°) of radius 5 m. Area = ¼ × π × 25 = 25π/4 m²."
+  },
+  {
+    "id": "math-073",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "The length of an arc of a sector with angle 120° and radius 21 cm is:",
+    "options": [
+      "44 cm",
+      "22 cm",
+      "88 cm",
+      "33 cm"
+    ],
+    "correct": 0,
+    "explanation": "Arc length = (θ/360°) × 2πr = (120/360) × 2 × 22/7 × 21 = (1/3) × 132 = 44 cm."
+  },
+  {
+    "id": "math-074",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "easy",
+    "text": "The total surface area of a cube of side 6 cm is:",
+    "options": [
+      "216 cm²",
+      "180 cm²",
+      "144 cm²",
+      "72 cm²"
+    ],
+    "correct": 0,
+    "explanation": "TSA of cube = 6a² = 6 × 36 = 216 cm²."
+  },
+  {
+    "id": "math-075",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "The volume of a cone of radius 7 cm and height 24 cm is:",
+    "options": [
+      "1232 cm³",
+      "1848 cm³",
+      "924 cm³",
+      "616 cm³"
+    ],
+    "correct": 0,
+    "explanation": "V = ⅓πr²h = ⅓ × 22/7 × 49 × 24 = ⅓ × 3696 = 1232 cm³."
+  },
+  {
+    "id": "math-076",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "A sphere of radius r is melted and recast into small spheres of radius r/3. The number of small spheres formed is:",
+    "options": [
+      "27",
+      "9",
+      "3",
+      "81"
+    ],
+    "correct": 0,
+    "explanation": "Volume of big sphere = (4/3)πr³. Volume of each small sphere = (4/3)π(r/3)³ = (4/3)π(r³/27). Number = r³/(r³/27) = 27."
+  },
+  {
+    "id": "math-077",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "easy",
+    "text": "The curved surface area of a cylinder of radius 7 cm and height 10 cm is:",
+    "options": [
+      "440 cm²",
+      "220 cm²",
+      "880 cm²",
+      "154 cm²"
+    ],
+    "correct": 0,
+    "explanation": "CSA = 2πrh = 2 × 22/7 × 7 × 10 = 440 cm²."
+  },
+  {
+    "id": "math-078",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "A solid hemisphere of radius r is placed on a cylinder of same radius. The total surface area is:",
+    "options": [
+      "3πr² + 2πrh",
+      "2πr² + 2πrh",
+      "πr² + 2πrh",
+      "4πr² + 2πrh"
+    ],
+    "correct": 0,
+    "explanation": "Flat base of cylinder = πr², CSA of cylinder = 2πrh, curved surface of hemisphere = 2πr². Total = πr² + 2πrh + 2πr² = 3πr² + 2πrh."
+  },
+  {
+    "id": "math-079",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The mean of the first 10 natural numbers is:",
+    "options": [
+      "5.5",
+      "5",
+      "6",
+      "4.5"
+    ],
+    "correct": 0,
+    "explanation": "Mean = Sum/n = (1+2+…+10)/10 = 55/10 = 5.5."
+  },
+  {
+    "id": "math-080",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The mode of 3, 5, 7, 3, 5, 3, 1, 5, 3 is:",
+    "options": [
+      "3",
+      "5",
+      "7",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "Frequency: 3 appears 4 times, 5 appears 3 times, others once. Mode = 3 (most frequent)."
+  },
+  {
+    "id": "math-081",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The median of 3, 1, 4, 1, 5, 9, 2, 6 is:",
+    "options": [
+      "3.5",
+      "4",
+      "3",
+      "4.5"
+    ],
+    "correct": 0,
+    "explanation": "Sorted: 1,1,2,3,4,5,6,9. n=8, median = average of 4th and 5th = (3+4)/2 = 3.5."
+  },
+  {
+    "id": "math-082",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The empirical relation between mean, median and mode is:",
+    "options": [
+      "Mode = 3 Median – 2 Mean",
+      "Median = 3 Mode – 2 Mean",
+      "Mean = 3 Median – 2 Mode",
+      "Mode = 3 Mean – 2 Median"
+    ],
+    "correct": 0,
+    "explanation": "Empirical formula (Karl Pearson): Mode = 3 Median – 2 Mean."
+  },
+  {
+    "id": "math-083",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The mean of 20 observations is 17. If one observation 40 is replaced by 12, the new mean is:",
+    "options": [
+      "15.6",
+      "16",
+      "16.4",
+      "15"
+    ],
+    "correct": 0,
+    "explanation": "New sum = 20×17 – 40 + 12 = 340 – 28 = 312. New mean = 312/20 = 15.6."
+  },
+  {
+    "id": "math-084",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "In a frequency distribution, the class with the highest frequency is the:",
+    "options": [
+      "modal class",
+      "median class",
+      "mean class",
+      "extreme class"
+    ],
+    "correct": 0,
+    "explanation": "The modal class is the class interval with the highest frequency; mode is then found by the formula within this class."
+  },
+  {
+    "id": "math-085",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A card is drawn from a well-shuffled deck of 52 cards. The probability of getting a king is:",
+    "options": [
+      "1/13",
+      "4/52",
+      "Both A and B",
+      "1/4"
+    ],
+    "correct": 2,
+    "explanation": "P(king) = 4/52 = 1/13. Both options A (1/13) and B (4/52) are equivalent, so C is correct."
+  },
+  {
+    "id": "math-086",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two dice are thrown simultaneously. The probability of getting a sum of 7 is:",
+    "options": [
+      "1/6",
+      "5/36",
+      "7/36",
+      "6/36"
+    ],
+    "correct": 0,
+    "explanation": "Favourable outcomes for sum 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. P = 6/36 = 1/6."
+  },
+  {
+    "id": "math-087",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A bag contains 5 red and 8 blue balls. One ball is drawn at random. The probability it is NOT red is:",
+    "options": [
+      "8/13",
+      "5/13",
+      "8/8",
+      "3/13"
+    ],
+    "correct": 0,
+    "explanation": "P(not red) = P(blue) = 8/(5+8) = 8/13."
+  },
+  {
+    "id": "math-088",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The probability of an impossible event is:",
+    "options": [
+      "0",
+      "1",
+      "–1",
+      "0.5"
+    ],
+    "correct": 0,
+    "explanation": "An impossible event can never occur. By definition, P(impossible event) = 0."
+  },
+  {
+    "id": "math-089",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A coin is tossed 3 times. The probability of getting at least 2 heads is:",
+    "options": [
+      "1/2",
+      "3/8",
+      "5/8",
+      "1/4"
+    ],
+    "correct": 0,
+    "explanation": "Total outcomes = 8. At least 2 heads: HHH, HHT, HTH, THH = 4 outcomes. P = 4/8 = 1/2."
+  },
+  {
+    "id": "math-090",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "From a group of 2 boys and 3 girls, a child is selected at random. The probability of selecting a boy is:",
+    "options": [
+      "2/5",
+      "3/5",
+      "2/3",
+      "1/2"
+    ],
+    "correct": 0,
+    "explanation": "P(boy) = 2/(2+3) = 2/5."
+  },
+  {
+    "id": "math-091",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "In a parallelogram ABCD, if ∠A = 70°, then ∠C =",
+    "options": [
+      "70°",
+      "110°",
+      "140°",
+      "90°"
+    ],
+    "correct": 0,
+    "explanation": "Opposite angles of a parallelogram are equal. So ∠C = ∠A = 70°."
+  },
+  {
+    "id": "math-092",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "The diagonals of a rhombus are 24 cm and 10 cm. The side of the rhombus is:",
+    "options": [
+      "13 cm",
+      "12 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "correct": 0,
+    "explanation": "Diagonals of rhombus bisect at 90°. Half-diagonals: 12 and 5. Side = √(144+25) = √169 = 13 cm."
+  },
+  {
+    "id": "math-093",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "Which of these is NOT a property of a rectangle?",
+    "options": [
+      "all sides equal",
+      "all angles 90°",
+      "diagonals are equal",
+      "diagonals bisect each other"
+    ],
+    "correct": 0,
+    "explanation": "In a rectangle, angles are all 90° and diagonals are equal and bisect each other — but sides are NOT all equal (that's a square)."
+  },
+  {
+    "id": "math-094",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "The area of a trapezium with parallel sides 8 cm and 12 cm and height 6 cm is:",
+    "options": [
+      "60 cm²",
+      "96 cm²",
+      "48 cm²",
+      "120 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area = ½ × (sum of parallel sides) × height = ½ × (8+12) × 6 = ½ × 20 × 6 = 60 cm²."
+  },
+  {
+    "id": "math-095",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "In a parallelogram, opposite sides are:",
+    "options": [
+      "equal and parallel",
+      "equal but not parallel",
+      "parallel but not equal",
+      "perpendicular"
+    ],
+    "correct": 0,
+    "explanation": "A fundamental property of parallelograms: both pairs of opposite sides are equal in length AND parallel to each other."
+  },
+  {
+    "id": "math-096",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The number 0.3333… is:",
+    "options": [
+      "1/3",
+      "rational",
+      "irrational",
+      "an integer"
+    ],
+    "correct": 0,
+    "explanation": "0.3̄ = 1/3, which is a rational number (p/q form). This can be verified: let x = 0.333…, 10x = 3.333…, subtract: 9x = 3, x = 1/3."
+  },
+  {
+    "id": "math-097",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "Which of the following is correct?",
+    "options": [
+      "sin 60° > 1",
+      "cos 0° = 0",
+      "tan 0° = 0",
+      "sin 0° = 1"
+    ],
+    "correct": 2,
+    "explanation": "tan 0° = sin 0°/cos 0° = 0/1 = 0. sin 60° = √3/2 < 1 ✓; cos 0° = 1 ≠ 0; sin 0° = 0 ≠ 1."
+  },
+  {
+    "id": "math-098",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "A hollow cylindrical pipe is 21 cm long. Its outer and inner radii are 10 cm and 9 cm. Volume of material in the pipe is:",
+    "options": [
+      "1188π cm³",
+      "594π cm³",
+      "99π cm³",
+      "2376π cm³"
+    ],
+    "correct": 0,
+    "explanation": "Volume = π(R²–r²)h = π(10²–9²)×21 = π×19×21 = 399π cm³."
+  },
+  {
+    "id": "math-099",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "If the mean of the following data is 6: 5, 4, x, 8, 7, find x.",
+    "options": [
+      "6",
+      "5",
+      "7",
+      "8"
+    ],
+    "correct": 0,
+    "explanation": "Mean = (5+4+x+8+7)/5 = 6 → 24+x = 30 → x = 6."
+  },
+  {
+    "id": "math-100",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A number is selected at random from 1 to 25. The probability that it is a prime number is:",
+    "options": [
+      "9/25",
+      "7/25",
+      "2/5",
+      "8/25"
+    ],
+    "correct": 0,
+    "explanation": "Primes from 1 to 25: 2,3,5,7,11,13,17,19,23 = 9 primes. P = 9/25."
+  },
+  {
+    "id": "math-101",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The value of k for which the system x + ky = 2 and 3x + 6y = 6 has infinitely many solutions is:",
+    "options": [
+      "2",
+      "3",
+      "–2",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "For infinitely many solutions: a₁/a₂ = b₁/b₂ = c₁/c₂ → 1/3 = k/6 = 2/6 → k/6 = 1/3 → k = 2."
+  },
+  {
+    "id": "math-102",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The roots of the equation x² – 5x + 6 = 0 are:",
+    "options": [
+      "2 and 3",
+      "–2 and –3",
+      "–2 and 3",
+      "2 and –3"
+    ],
+    "correct": 0,
+    "explanation": "Factoring: x² – 5x + 6 = (x–2)(x–3) = 0 → x = 2 or x = 3."
+  },
+  {
+    "id": "math-103",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "easy",
+    "text": "The 10th term of the AP –5, –1, 3, 7, … is:",
+    "options": [
+      "31",
+      "27",
+      "35",
+      "30"
+    ],
+    "correct": 0,
+    "explanation": "a = –5, d = 4. a₁₀ = –5 + 9×4 = –5 + 36 = 31."
+  },
+  {
+    "id": "math-104",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In △ABC ~ △DEF with BC = 6 cm and EF = 4 cm, if ar(△ABC) = 54 cm², then ar(△DEF) =",
+    "options": [
+      "24 cm²",
+      "36 cm²",
+      "16 cm²",
+      "12 cm²"
+    ],
+    "correct": 0,
+    "explanation": "ar(△ABC)/ar(△DEF) = (BC/EF)² = (6/4)² = 9/4. ar(△DEF) = 54 × 4/9 = 24 cm²."
+  },
+  {
+    "id": "math-105",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "If PA and PB are tangents from external point P to a circle with centre O, then ∠AOB + ∠APB =",
+    "options": [
+      "180°",
+      "90°",
+      "360°",
+      "270°"
+    ],
+    "correct": 0,
+    "explanation": "∠OAP = ∠OBP = 90° (radius ⊥ tangent). In quadrilateral OAPB: ∠AOB + ∠APB + 90° + 90° = 360° → ∠AOB + ∠APB = 180°."
+  },
+  {
+    "id": "math-106",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The HCF of 96 and 404 is 4. Find their LCM.",
+    "options": [
+      "9696",
+      "9600",
+      "9796",
+      "8696"
+    ],
+    "correct": 0,
+    "explanation": "LCM × HCF = product of numbers. LCM = (96 × 404)/4 = 38784/4 = 9696."
+  },
+  {
+    "id": "math-107",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "Which of the following numbers is rational?",
+    "options": [
+      "π",
+      "√2",
+      "22/7",
+      "√3"
+    ],
+    "correct": 2,
+    "explanation": "22/7 can be expressed as a ratio of two integers, so it is rational. π, √2 and √3 are all irrational."
+  },
+  {
+    "id": "math-108",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The prime factorisation of 156 is:",
+    "options": [
+      "2² × 3 × 13",
+      "2 × 3² × 13",
+      "2² × 3 × 13²",
+      "2³ × 3 × 13"
+    ],
+    "correct": 0,
+    "explanation": "156 = 2 × 78 = 2 × 2 × 39 = 2 × 2 × 3 × 13 = 2² × 3 × 13."
+  },
+  {
+    "id": "math-109",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "Two numbers are in the ratio 3:4 and their LCM is 84. Find their HCF.",
+    "options": [
+      "7",
+      "12",
+      "21",
+      "28"
+    ],
+    "correct": 0,
+    "explanation": "Let the numbers be 3x and 4x; since 3 and 4 are co-prime, LCM = 12x = 84, so x = 7. HCF = x = 7 (numbers are 21 and 28)."
+  },
+  {
+    "id": "math-110",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "Find the largest number that divides 245 and 1029, leaving remainder 5 in each case.",
+    "options": [
+      "16",
+      "8",
+      "32",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "The required number divides (245−5)=240 and (1029−5)=1024 exactly. HCF(240,1024): 240=2⁴×3×5, 1024=2¹⁰, so HCF = 2⁴ = 16."
+  },
+  {
+    "id": "math-111",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "If HCF(210, 55) = 5, find LCM(210, 55).",
+    "options": [
+      "2310",
+      "2100",
+      "2130",
+      "2301"
+    ],
+    "correct": 0,
+    "explanation": "LCM × HCF = product of the numbers. LCM = (210 × 55)/5 = 11550/5 = 2310."
+  },
+  {
+    "id": "math-112",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "Three bells toll at intervals of 9, 12 and 15 minutes. If all three toll together at 8:00 am, when will they next toll together?",
+    "options": [
+      "11:00 am",
+      "10:00 am",
+      "9:30 am",
+      "11:30 am"
+    ],
+    "correct": 0,
+    "explanation": "LCM(9,12,15) = 180 minutes = 3 hours. They will next toll together at 8:00 am + 3 hours = 11:00 am."
+  },
+  {
+    "id": "math-113",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "For every positive integer n, n² − n is always:",
+    "options": [
+      "divisible by 2, since n² − n = n(n−1) is a product of two consecutive integers",
+      "a prime number",
+      "an odd number",
+      "divisible by 4"
+    ],
+    "correct": 0,
+    "explanation": "n² − n = n(n−1), the product of two consecutive integers. Among any two consecutive integers, exactly one is even, so their product is always divisible by 2."
+  },
+  {
+    "id": "math-114",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "The largest number which divides 70 and 125, leaving remainders 5 and 8 respectively, is:",
+    "options": [
+      "13",
+      "5",
+      "9",
+      "65"
+    ],
+    "correct": 0,
+    "explanation": "The number must divide (70−5)=65 and (125−8)=117 exactly. HCF(65,117): 65=5×13, 117=9×13, so HCF = 13."
+  },
+  {
+    "id": "math-115",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "For any positive integer n, (n² + n) is always:",
+    "options": [
+      "an even number",
+      "an odd number",
+      "a prime number",
+      "a perfect square"
+    ],
+    "correct": 0,
+    "explanation": "n² + n = n(n+1), the product of two consecutive integers. One of any two consecutive integers is always even, so the product is always even."
+  },
+  {
+    "id": "math-116",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "Find the smallest number which, when divided by 28 and 32, leaves a remainder of 8 in each case.",
+    "options": [
+      "232",
+      "224",
+      "240",
+      "236"
+    ],
+    "correct": 0,
+    "explanation": "LCM(28,32): 28=2²×7, 32=2⁵, LCM=2⁵×7=224. The smallest such number is LCM + remainder = 224 + 8 = 232."
+  },
+  {
+    "id": "math-117",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "If the zeroes of a quadratic polynomial are 2 and −3, the polynomial is:",
+    "options": [
+      "x² + x − 6",
+      "x² − x − 6",
+      "x² + x + 6",
+      "x² − x + 6"
+    ],
+    "correct": 0,
+    "explanation": "Sum = 2+(−3) = −1, product = 2×(−3) = −6. Polynomial = x² − (sum)x + product = x² −(−1)x + (−6) = x² + x − 6."
+  },
+  {
+    "id": "math-118",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The number of zeroes a linear polynomial can have is:",
+    "options": [
+      "exactly 1",
+      "0",
+      "2",
+      "infinite"
+    ],
+    "correct": 0,
+    "explanation": "A linear polynomial ax+b (a≠0) crosses the x-axis exactly once, so it always has exactly one zero."
+  },
+  {
+    "id": "math-119",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If α, β are the zeroes of 2x² − 7x + 3, find 1/α + 1/β.",
+    "options": [
+      "7/3",
+      "3/7",
+      "7/2",
+      "2/7"
+    ],
+    "correct": 0,
+    "explanation": "α+β = 7/2, αβ = 3/2. 1/α + 1/β = (α+β)/(αβ) = (7/2)/(3/2) = 7/3."
+  },
+  {
+    "id": "math-120",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If one zero of the polynomial x² − (k+6)x + 2(2k−1) is the negative of the other, find k.",
+    "options": [
+      "−6",
+      "6",
+      "3",
+      "−3"
+    ],
+    "correct": 0,
+    "explanation": "If zeroes are m and −m, their sum is 0. Sum of zeroes = k+6 = 0, so k = −6."
+  },
+  {
+    "id": "math-121",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "If α and β are the zeroes of p(x) = x² − 6x + k, and α − β = 2, find k.",
+    "options": [
+      "8",
+      "6",
+      "4",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "α+β=6 and α−β=2 give α=4, β=2. Product αβ = k, so k = 4×2 = 8."
+  },
+  {
+    "id": "math-122",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "Find a quadratic polynomial whose zeroes are 2+√3 and 2−√3.",
+    "options": [
+      "x² − 4x + 1",
+      "x² + 4x + 1",
+      "x² − 4x − 1",
+      "x² − 2x + 1"
+    ],
+    "correct": 0,
+    "explanation": "Sum = 4, product = (2+√3)(2−√3) = 4−3 = 1. Polynomial = x² − 4x + 1."
+  },
+  {
+    "id": "math-123",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "The zeroes of x³ − 3x² + x + 1 are of the form a−b, a, a+b. Find a.",
+    "options": [
+      "1",
+      "3",
+      "−1",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "Sum of the three zeroes = (a−b)+a+(a+b) = 3a. For x³−3x²+x+1, sum of zeroes = −(coeff of x²)/(coeff of x³) = 3. So 3a = 3, a = 1."
+  },
+  {
+    "id": "math-124",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "easy",
+    "text": "The pair of equations x = 5 and y = −3 represents two lines that:",
+    "options": [
+      "intersect at (5, −3)",
+      "are parallel",
+      "are coincident",
+      "intersect at (−3, 5)"
+    ],
+    "correct": 0,
+    "explanation": "x=5 is a vertical line, y=−3 is a horizontal line; they intersect at exactly one point, (5,−3)."
+  },
+  {
+    "id": "math-125",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "Solve for x: 3x + 2y = 12 and 5x − 2y = 4.",
+    "options": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Adding the two equations: 8x = 16, so x = 2 (then y = 3)."
+  },
+  {
+    "id": "math-126",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The sum of two numbers is 8 and their difference is 2. Find the numbers.",
+    "options": [
+      "5 and 3",
+      "6 and 2",
+      "4 and 4",
+      "7 and 1"
+    ],
+    "correct": 0,
+    "explanation": "x+y=8, x−y=2. Adding: 2x=10, x=5, then y=3."
+  },
+  {
+    "id": "math-127",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "hard",
+    "text": "A boat goes 30 km upstream and 44 km downstream in 10 hours; it goes 40 km upstream and 55 km downstream in 13 hours. Find the speed of the boat in still water.",
+    "options": [
+      "8 km/h",
+      "11 km/h",
+      "5 km/h",
+      "3 km/h"
+    ],
+    "correct": 0,
+    "explanation": "Let u,v be boat and stream speed, x=1/(u−v), y=1/(u+v). Solving 30x+44y=10 and 40x+55y=13 gives x=1/5, y=1/11, so u−v=5, u+v=11, giving u=8 km/h."
+  },
+  {
+    "id": "math-128",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "hard",
+    "text": "A taxi fare has a fixed charge plus a per-km charge. A 10 km ride costs ₹105 and a 15 km ride costs ₹155. Find the fixed charge.",
+    "options": [
+      "₹5",
+      "₹10",
+      "₹15",
+      "₹55"
+    ],
+    "correct": 0,
+    "explanation": "Let fixed charge = f, rate/km = r. f+10r=105, f+15r=155. Subtracting: 5r=50, r=10, so f=105−100=₹5."
+  },
+  {
+    "id": "math-129",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "hard",
+    "text": "Find k so that 2x + 3y = 7 and (k−1)x + (k+2)y = 3k have infinitely many solutions.",
+    "options": [
+      "7",
+      "4",
+      "5",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "Need 2/(k−1) = 3/(k+2) = 7/3k. From the first two: 2(k+2)=3(k−1) → 2k+4=3k−3 → k=7. Check: 2/6=1/3 and 7/21=1/3 ✓."
+  },
+  {
+    "id": "math-130",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "Which of the following equations has 2 as a root?",
+    "options": [
+      "x² − 4 = 0",
+      "x² + 4 = 0",
+      "x² − 2x + 1 = 0",
+      "x² + 2x + 1 = 0"
+    ],
+    "correct": 0,
+    "explanation": "x²−4=0 → x=±2, so x=2 is a root. The other equations do not have x=2 as a root."
+  },
+  {
+    "id": "math-131",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The sum of squares of two consecutive positive integers is 313. Find the integers.",
+    "options": [
+      "12 and 13",
+      "11 and 12",
+      "13 and 14",
+      "10 and 11"
+    ],
+    "correct": 0,
+    "explanation": "Let integers be n, n+1: n²+(n+1)²=313 → 2n²+2n−312=0 → n²+n−156=0 → (n−12)(n+13)=0 → n=12. Integers are 12 and 13."
+  },
+  {
+    "id": "math-132",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "A two-digit number has digits whose product is 18. When 63 is subtracted from the number, its digits interchange places. Find the number.",
+    "options": [
+      "92",
+      "81",
+      "63",
+      "29"
+    ],
+    "correct": 0,
+    "explanation": "Let digits be x (tens), y (units), xy=18 and 10x+y−63=10y+x → x−y=7. Solving x−y=7, xy=18 gives x=9, y=2, so the number is 92 (92−63=29, the reverse)."
+  },
+  {
+    "id": "math-133",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The altitude of a right triangle is 7 cm less than its base. If the hypotenuse is 13 cm, find the base.",
+    "options": [
+      "12 cm",
+      "7 cm",
+      "5 cm",
+      "19 cm"
+    ],
+    "correct": 0,
+    "explanation": "Let base=x, altitude=x−7. x²+(x−7)²=13² → 2x²−14x−120=0 → x²−7x−60=0 → (x−12)(x+5)=0 → x=12 cm."
+  },
+  {
+    "id": "math-134",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "Two water taps together fill a tank in 9⅜ hours. The larger-diameter tap takes 10 hours less than the smaller to fill it alone. Find the time taken by the larger tap alone.",
+    "options": [
+      "15 hours",
+      "25 hours",
+      "10 hours",
+      "20 hours"
+    ],
+    "correct": 0,
+    "explanation": "Let the smaller tap take x hours, larger take x−10. 1/x + 1/(x−10) = 8/75, which solves to x=25. So the larger tap alone takes 25−10=15 hours."
+  },
+  {
+    "id": "math-135",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "A train travels 360 km at a uniform speed. If the speed had been 5 km/h more, it would take 1 hour less for the journey. Find the speed of the train.",
+    "options": [
+      "40 km/h",
+      "45 km/h",
+      "35 km/h",
+      "50 km/h"
+    ],
+    "correct": 0,
+    "explanation": "Let speed=x. 360/x − 360/(x+5) = 1 → x²+5x−1800=0. Discriminant=25+7200=7225=85². x=(−5+85)/2=40 km/h."
+  },
+  {
+    "id": "math-136",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "easy",
+    "text": "The common difference of the AP −10, −6, −2, 2, … is:",
+    "options": [
+      "4",
+      "−4",
+      "6",
+      "−6"
+    ],
+    "correct": 0,
+    "explanation": "d = second term − first term = −6 − (−10) = 4."
+  },
+  {
+    "id": "math-137",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "Find the sum of the first 15 multiples of 8.",
+    "options": [
+      "960",
+      "920",
+      "900",
+      "940"
+    ],
+    "correct": 0,
+    "explanation": "AP: 8,16,...,120 (15 terms). Sₙ = n/2(a+l) = 15/2 × (8+120) = 15/2 × 128 = 960."
+  },
+  {
+    "id": "math-138",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "The 4th term of an AP is 0. Find the ratio a₂₅ : a₁₁.",
+    "options": [
+      "3:1",
+      "2:1",
+      "4:1",
+      "1:3"
+    ],
+    "correct": 0,
+    "explanation": "a+3d=0 ⟹ a=−3d. a₂₅=a+24d=21d, a₁₁=a+10d=7d. Ratio = 21d:7d = 3:1."
+  },
+  {
+    "id": "math-139",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "The sum of the 4th and 8th terms of an AP is 24, and the sum of the 6th and 10th terms is 44. Find the first three terms.",
+    "options": [
+      "−13, −8, −3",
+      "−3, 2, 7",
+      "−8, −3, 2",
+      "13, 18, 23"
+    ],
+    "correct": 0,
+    "explanation": "a+3d+a+7d=24 ⟹ a+5d=12. a+5d+a+9d=44 ⟹ a+7d=22. Subtracting: 2d=10, d=5, a=12−25=−13. First three terms: −13, −8, −3."
+  },
+  {
+    "id": "math-140",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "How many terms of the AP 24, 21, 18, … must be taken so their sum is 78? (There are two valid values of n — give their sum.)",
+    "options": [
+      "17",
+      "13",
+      "4",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "Sₙ = n/2[48−3(n−1)] = 78 leads to 3n²−51n+156=0, i.e. n²−17n+52=0, giving n=4 or n=13 (the terms turn negative after the 9th term, so both partial sums equal 78). 4+13=17."
+  },
+  {
+    "id": "math-141",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "The sums of the first n terms of two APs are in the ratio (7n+1):(4n+27). Find the ratio of their 9th terms.",
+    "options": [
+      "24:19",
+      "7:4",
+      "17:20",
+      "9:8"
+    ],
+    "correct": 0,
+    "explanation": "For the 9th terms, use n=17 in the ratio of sums (since a₉ relates to S₁₇/17 style comparison): (7×17+1):(4×17+27) = 120:95 = 24:19."
+  },
+  {
+    "id": "math-142",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "In an AP, S₅+S₇=167 and S₁₀=235. Find the common difference.",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "S₅+S₇ = 12a+31d = 167. S₁₀ = 10a+45d = 235 ⟹ 2a+9d=47. Solving simultaneously gives d=5, a=1."
+  },
+  {
+    "id": "math-143",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "In triangle ABC, DE ∥ BC and AD/DB = 2/3. Then AE/EC =",
+    "options": [
+      "2/3",
+      "3/2",
+      "2/5",
+      "3/5"
+    ],
+    "correct": 0,
+    "explanation": "By the Basic Proportionality Theorem, DE ∥ BC ⟹ AD/DB = AE/EC = 2/3."
+  },
+  {
+    "id": "math-144",
+    "chapter": "Triangles",
+    "difficulty": "easy",
+    "text": "Which similarity criterion applies when two angles of one triangle equal two angles of another?",
+    "options": [
+      "AA",
+      "SSS",
+      "SAS",
+      "RHS"
+    ],
+    "correct": 0,
+    "explanation": "If two angles of one triangle equal two angles of another, the triangles are similar by the AA (Angle-Angle) criterion."
+  },
+  {
+    "id": "math-145",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "The perimeters of two similar triangles are 30 cm and 20 cm. A side of the first triangle is 12 cm. Find the corresponding side of the second.",
+    "options": [
+      "8 cm",
+      "18 cm",
+      "9 cm",
+      "6 cm"
+    ],
+    "correct": 0,
+    "explanation": "Ratio of similarity = ratio of perimeters = 30:20 = 3:2. Corresponding side = 12 × 2/3 = 8 cm."
+  },
+  {
+    "id": "math-146",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "A 17 m ladder rests against a window 15 m high on one side of a street. Keeping its foot fixed, it is turned to reach a window 8 m high on the other side. Find the width of the street.",
+    "options": [
+      "23 m",
+      "22 m",
+      "25 m",
+      "17 m"
+    ],
+    "correct": 0,
+    "explanation": "First base = √(17²−15²) = √64 = 8 m. Second base = √(17²−8²) = √225 = 15 m. Width = 8+15 = 23 m."
+  },
+  {
+    "id": "math-147",
+    "chapter": "Triangles",
+    "difficulty": "hard",
+    "text": "D, E lie on sides AB, AC of △ABC with DE ∥ BC. If AD=x, DB=x−2, AE=x+2, EC=x−1, find x.",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "By BPT, x/(x−2) = (x+2)/(x−1) ⟹ x(x−1) = (x+2)(x−2) ⟹ x²−x = x²−4 ⟹ x=4."
+  },
+  {
+    "id": "math-148",
+    "chapter": "Triangles",
+    "difficulty": "hard",
+    "text": "In an equilateral triangle of side 2a, the length of the altitude is:",
+    "options": [
+      "a√3",
+      "2a√3",
+      "a√3/2",
+      "a/√3"
+    ],
+    "correct": 0,
+    "explanation": "The altitude splits the base into two segments of length a. Altitude = √((2a)²−a²) = √(3a²) = a√3."
+  },
+  {
+    "id": "math-149",
+    "chapter": "Triangles",
+    "difficulty": "hard",
+    "text": "In right triangle ABC, right-angled at C, with hypotenuse AB=c, legs BC=a and AC=b, and p is the length of the perpendicular from C to AB, which relation holds?",
+    "options": [
+      "1/p² = 1/a² + 1/b²",
+      "p² = a² + b²",
+      "1/p = 1/a + 1/b",
+      "p² = ab"
+    ],
+    "correct": 0,
+    "explanation": "Area of triangle = ½ab = ½cp, so p = ab/c. Also c²=a²+b² (Pythagoras). Substituting gives 1/p² = c²/(a²b²) = (a²+b²)/(a²b²) = 1/a²+1/b²."
+  },
+  {
+    "id": "math-150",
+    "chapter": "Triangles",
+    "difficulty": "hard",
+    "text": "Two vertical poles of heights 6 m and 11 m stand on level ground 12 m apart. Find the distance between their tops.",
+    "options": [
+      "13 m",
+      "17 m",
+      "12 m",
+      "15 m"
+    ],
+    "correct": 0,
+    "explanation": "Height difference = 11−6=5 m, horizontal distance = 12 m. Distance between tops = √(5²+12²) = √169 = 13 m."
+  },
+  {
+    "id": "math-151",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The distance of the point (−5, 12) from the origin is:",
+    "options": [
+      "13",
+      "17",
+      "12",
+      "5"
+    ],
+    "correct": 0,
+    "explanation": "Distance = √((−5)²+12²) = √(25+144) = √169 = 13."
+  },
+  {
+    "id": "math-152",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "Find the point on the x-axis which is equidistant from (2, −5) and (−2, 9).",
+    "options": [
+      "(−7, 0)",
+      "(7, 0)",
+      "(0, −7)",
+      "(−2, 0)"
+    ],
+    "correct": 0,
+    "explanation": "Let the point be (x,0). (x−2)²+25 = (x+2)²+81 ⟹ −4x+29 = 4x+85 ⟹ −8x=56 ⟹ x=−7. Point: (−7,0)."
+  },
+  {
+    "id": "math-153",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "If A(1,2), B(0,0) and C(a,b) are collinear, find the relation between a and b.",
+    "options": [
+      "b = 2a",
+      "a = 2b",
+      "a + b = 2",
+      "a − b = 2"
+    ],
+    "correct": 0,
+    "explanation": "Slope of AB = (0−2)/(0−1) = 2. For C to be collinear, slope of BC must also be 2: b/a = 2 ⟹ b = 2a."
+  },
+  {
+    "id": "math-154",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "hard",
+    "text": "Find the ratio in which the point (−4, 6) divides the segment joining A(−6, 10) and B(3, −8).",
+    "options": [
+      "2:7",
+      "7:2",
+      "3:5",
+      "5:3"
+    ],
+    "correct": 0,
+    "explanation": "Using the section formula for x-coordinate with ratio k:1, −4 = (3k−6)/(k+1) ⟹ −4k−4=3k−6 ⟹ −7k=−2 ⟹ k=2/7. Ratio = 2:7."
+  },
+  {
+    "id": "math-155",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "hard",
+    "text": "The vertices of a triangle are (2,1), (5,2) and (3,4). Find its area.",
+    "options": [
+      "4 sq units",
+      "8 sq units",
+      "6 sq units",
+      "2 sq units"
+    ],
+    "correct": 0,
+    "explanation": "Area = ½|2(2−4)+5(4−1)+3(1−2)| = ½|−4+15−3| = ½(8) = 4 sq units."
+  },
+  {
+    "id": "math-156",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "sin 90° + cos 90° =",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "−1"
+    ],
+    "correct": 0,
+    "explanation": "sin 90° = 1, cos 90° = 0. Sum = 1 + 0 = 1."
+  },
+  {
+    "id": "math-157",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "If tan θ = 1, with θ between 0° and 90°, then θ =",
+    "options": [
+      "45°",
+      "30°",
+      "60°",
+      "90°"
+    ],
+    "correct": 0,
+    "explanation": "tan 45° = 1, and 45° is the only acute angle satisfying this."
+  },
+  {
+    "id": "math-158",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "cot 30° =",
+    "options": [
+      "√3",
+      "1/√3",
+      "1",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "cot 30° = 1/tan 30° = 1/(1/√3) = √3."
+  },
+  {
+    "id": "math-159",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If 3 tan θ = 4 and θ is acute, find sin θ.",
+    "options": [
+      "4/5",
+      "3/5",
+      "3/4",
+      "5/4"
+    ],
+    "correct": 0,
+    "explanation": "tan θ = 4/3, so in the right triangle: opposite=4, adjacent=3, hypotenuse=5. sin θ = 4/5."
+  },
+  {
+    "id": "math-160",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "Evaluate: 2 tan²45° + cos²30° − sin²60°.",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "tan45°=1 so 2tan²45°=2. cos²30°=3/4 and sin²60°=3/4, which cancel out. Total = 2+0 = 2."
+  },
+  {
+    "id": "math-161",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If sin(A+B)=1 and cos(A−B)=1, where 0°<A+B≤90° and A≥B, find A and B.",
+    "options": [
+      "A=45°, B=45°",
+      "A=60°, B=30°",
+      "A=90°, B=0°",
+      "A=30°, B=60°"
+    ],
+    "correct": 0,
+    "explanation": "sin(A+B)=1 ⟹ A+B=90°. cos(A−B)=1 ⟹ A−B=0°. Solving: A=45°, B=45°."
+  },
+  {
+    "id": "math-162",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "Simplify: (1 + tan²A)(1 − sinA)(1 + sinA).",
+    "options": [
+      "1",
+      "0",
+      "2",
+      "sin²A"
+    ],
+    "correct": 0,
+    "explanation": "(1+tan²A)=sec²A, and (1−sinA)(1+sinA)=1−sin²A=cos²A. So the product = sec²A × cos²A = 1."
+  },
+  {
+    "id": "math-163",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "If sec θ + tan θ = p, find sec θ − tan θ.",
+    "options": [
+      "1/p",
+      "p",
+      "−p",
+      "p²"
+    ],
+    "correct": 0,
+    "explanation": "Since sec²θ−tan²θ=1, (secθ+tanθ)(secθ−tanθ)=1. So secθ−tanθ = 1/p."
+  },
+  {
+    "id": "math-164",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "Simplify: (sin θ + cosec θ)² + (cos θ + sec θ)².",
+    "options": [
+      "7 + tan²θ + cot²θ",
+      "5 + tan²θ + cot²θ",
+      "7",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "Expanding: sin²θ+2+cosec²θ+cos²θ+2+sec²θ = 1+4+(1+cot²θ)+(1+tan²θ) = 7+tan²θ+cot²θ."
+  },
+  {
+    "id": "math-165",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "If tan A = n tan B and sin A = m sin B, express cos²A in terms of m and n.",
+    "options": [
+      "(m²−1)/(n²−1)",
+      "(n²−1)/(m²−1)",
+      "(m²+1)/(n²+1)",
+      "m²/n²"
+    ],
+    "correct": 0,
+    "explanation": "From the two given relations, dividing sin A = m sinB by tanA = n tanB (i.e. sinA/cosA = n sinB/cosB) and simplifying using sin²B=1−cos²B leads to cos²A = (m²−1)/(n²−1), a standard identity result."
+  },
+  {
+    "id": "math-166",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "The expression (cosecθ − sinθ)(secθ − cosθ)(tanθ + cotθ) simplifies to:",
+    "options": [
+      "1",
+      "sinθ cosθ",
+      "tanθ",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "(cosecθ−sinθ)=cos²θ/sinθ, (secθ−cosθ)=sin²θ/cosθ. Their product = sinθcosθ. Multiplying by (tanθ+cotθ)=1/(sinθcosθ) gives 1."
+  },
+  {
+    "id": "math-167",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "If x = a sinθ and y = b cosθ, find the relation between x, y, a, b that is independent of θ.",
+    "options": [
+      "x²/a² + y²/b² = 1",
+      "x²/a² − y²/b² = 1",
+      "x/a + y/b = 1",
+      "xy = ab"
+    ],
+    "correct": 0,
+    "explanation": "x/a = sinθ, y/b = cosθ. Squaring and adding: x²/a² + y²/b² = sin²θ+cos²θ = 1."
+  },
+  {
+    "id": "math-168",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "medium",
+    "text": "A tower's shadow is 40 m longer when the sun's altitude is 30° than when it is 60°. Find the height of the tower.",
+    "options": [
+      "20√3 m",
+      "40√3 m",
+      "20 m",
+      "40 m"
+    ],
+    "correct": 0,
+    "explanation": "h cot30° − h cot60° = 40 ⟹ h√3 − h/√3 = 40 ⟹ h(2/√3) = 40 ⟹ h = 20√3 m."
+  },
+  {
+    "id": "math-169",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "hard",
+    "text": "From the top of a 7 m building, the angle of elevation of the top of a tower is 60° and the angle of depression of its foot is 45°. Find the height of the tower.",
+    "options": [
+      "7(1+√3) m",
+      "7√3 m",
+      "7(√3−1) m",
+      "14 m"
+    ],
+    "correct": 0,
+    "explanation": "Depression 45° gives horizontal distance = 7 m (equal to building height). Elevation 60° gives extra height = 7tan60° = 7√3 m. Tower height = 7+7√3 = 7(1+√3) m."
+  },
+  {
+    "id": "math-170",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "hard",
+    "text": "Two poles of equal height stand on either side of a road 80 m wide. From a point between them, the angles of elevation of their tops are 60° and 30°. Find the height of the poles.",
+    "options": [
+      "20√3 m",
+      "40√3 m",
+      "20 m",
+      "80/√3 m"
+    ],
+    "correct": 0,
+    "explanation": "Let the point be x m from the 60° pole. h = x tan60° = (80−x) tan30°. Solving: x√3 = (80−x)/√3 ⟹ 3x=80−x ⟹ x=20. h = 20tan60° = 20√3 m."
+  },
+  {
+    "id": "math-171",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "hard",
+    "text": "An aeroplane flying horizontally at a height of 1500√3 m observes angles of depression of 45° and 60° to two points on opposite sides of it on the ground. Find the distance between the points.",
+    "options": [
+      "1500(√3+1) m",
+      "1500√3 m",
+      "3000 m",
+      "1500(√3−1) m"
+    ],
+    "correct": 0,
+    "explanation": "d₁ = h/tan45° = 1500√3 m. d₂ = h/tan60° = 1500√3/√3 = 1500 m. Total distance = d₁+d₂ = 1500√3+1500 = 1500(√3+1) m."
+  },
+  {
+    "id": "math-172",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The tangent to a circle is ___ to the radius at the point of contact.",
+    "options": [
+      "perpendicular",
+      "parallel",
+      "equal",
+      "at 45°"
+    ],
+    "correct": 0,
+    "explanation": "A basic theorem of circles: the tangent at any point is perpendicular to the radius drawn to that point."
+  },
+  {
+    "id": "math-173",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "PA and PB are tangents from P to a circle of radius 4 cm centred at O, with OP=5 cm. Find PA.",
+    "options": [
+      "3 cm",
+      "4 cm",
+      "5 cm",
+      "9 cm"
+    ],
+    "correct": 0,
+    "explanation": "Since the tangent is perpendicular to the radius, PA² = OP² − OA² = 25−16 = 9, so PA = 3 cm."
+  },
+  {
+    "id": "math-174",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "A quadrilateral ABCD circumscribes a circle with AB=6 cm, BC=7 cm, CD=4 cm. Find DA.",
+    "options": [
+      "3 cm",
+      "5 cm",
+      "4 cm",
+      "10 cm"
+    ],
+    "correct": 0,
+    "explanation": "For a quadrilateral circumscribing a circle, AB+CD = BC+DA (equal tangent lengths). 6+4 = 7+DA ⟹ DA = 3 cm."
+  },
+  {
+    "id": "math-175",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "A circle touches all four sides of quadrilateral ABCD. If AB=6 cm and CD=8 cm, find BC+AD.",
+    "options": [
+      "14 cm",
+      "7 cm",
+      "2 cm",
+      "48 cm"
+    ],
+    "correct": 0,
+    "explanation": "For a tangential quadrilateral, AB+CD = BC+AD. So BC+AD = 6+8 = 14 cm."
+  },
+  {
+    "id": "math-176",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "Two concentric circles have radii 5 cm and 3 cm. Find the length of a chord of the larger circle that is tangent to the smaller circle.",
+    "options": [
+      "8 cm",
+      "4 cm",
+      "6 cm",
+      "16 cm"
+    ],
+    "correct": 0,
+    "explanation": "The radius to the point of tangency is perpendicular to the chord and bisects it. Half-chord = √(5²−3²) = 4 cm, so the full chord = 8 cm."
+  },
+  {
+    "id": "math-177",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "easy",
+    "text": "The area of a semicircle of radius 7 cm is:",
+    "options": [
+      "77 cm²",
+      "154 cm²",
+      "44 cm²",
+      "38.5 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area of semicircle = ½πr² = ½ × 22/7 × 49 = 77 cm²."
+  },
+  {
+    "id": "math-178",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "Find the area of a sector whose arc length is 22 cm and radius is 14 cm.",
+    "options": [
+      "154 cm²",
+      "77 cm²",
+      "308 cm²",
+      "44 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area of sector = ½ × arc length × radius = ½ × 22 × 14 = 154 cm²."
+  },
+  {
+    "id": "math-179",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "hard",
+    "text": "A chord of a circle of radius 10 cm subtends a right angle at the centre. Find the area of the minor segment. (use π=3.14)",
+    "options": [
+      "28.5 cm²",
+      "78.5 cm²",
+      "50 cm²",
+      "157 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area of sector (90°) = ¼πr² = ¼×3.14×100 = 78.5 cm². Area of right triangle = ½×10×10 = 50 cm². Minor segment = 78.5−50 = 28.5 cm²."
+  },
+  {
+    "id": "math-180",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "hard",
+    "text": "Find the area of the region between two concentric circles of radii 14 cm and 7 cm.",
+    "options": [
+      "462 cm²",
+      "308 cm²",
+      "616 cm²",
+      "231 cm²"
+    ],
+    "correct": 0,
+    "explanation": "Area = π(R²−r²) = 22/7 × (196−49) = 22/7 × 147 = 462 cm²."
+  },
+  {
+    "id": "math-181",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "easy",
+    "text": "The volume of a cube with edge 5 cm is:",
+    "options": [
+      "125 cm³",
+      "100 cm³",
+      "150 cm³",
+      "75 cm³"
+    ],
+    "correct": 0,
+    "explanation": "Volume of cube = a³ = 5³ = 125 cm³."
+  },
+  {
+    "id": "math-182",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "A cone of radius 6 cm and height 24 cm is melted and recast into a sphere. Find the radius of the sphere.",
+    "options": [
+      "6 cm",
+      "12 cm",
+      "8 cm",
+      "4 cm"
+    ],
+    "correct": 0,
+    "explanation": "Volume of cone = ⅓πr²h = ⅓π(36)(24) = 288π. For a sphere of radius R, (4/3)πR³=288π ⟹ R³=216 ⟹ R=6 cm."
+  },
+  {
+    "id": "math-183",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "A solid is a cylinder with hemispherical ends. Total height is 19 cm and radius is 3.5 cm. Find its volume.",
+    "options": [
+      "641.67 cm³ (approx)",
+      "462 cm³",
+      "500 cm³",
+      "600 cm³"
+    ],
+    "correct": 0,
+    "explanation": "Cylinder height = 19 − 2(3.5) = 12 cm. Volume = πr²h + (4/3)πr³ = (22/7)(12.25)(12) + (4/3)(22/7)(42.875) = 462 + 179.67 ≈ 641.67 cm³."
+  },
+  {
+    "id": "math-184",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "A bucket is a frustum of a cone with top radius 15 cm, bottom radius 10 cm and height 12 cm. Find its volume (π=22/7).",
+    "options": [
+      "5971.43 cm³ (approx)",
+      "4750 cm³",
+      "3450 cm³",
+      "6500 cm³"
+    ],
+    "correct": 0,
+    "explanation": "Volume = (1/3)πh(R²+r²+Rr) = (1/3)(22/7)(12)(225+100+150) = (1/3)(22/7)(12)(475) ≈ 5971.43 cm³."
+  },
+  {
+    "id": "math-185",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "Rainwater from a roof of size 22 m × 20 m is collected in a cylindrical vessel of diameter 2 m and height 3.5 m; the vessel becomes exactly full. Find the height of rainfall (in cm).",
+    "options": [
+      "2.5 cm",
+      "5 cm",
+      "1.25 cm",
+      "25 cm"
+    ],
+    "correct": 0,
+    "explanation": "Volume of vessel = πr²h = (22/7)(1)(3.5) = 11 m³. Roof area = 440 m². Height of rain = 11/440 m = 0.025 m = 2.5 cm."
+  },
+  {
+    "id": "math-186",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The class mark of the class interval 20–30 is:",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "50"
+    ],
+    "correct": 0,
+    "explanation": "Class mark = (lower limit + upper limit)/2 = (20+30)/2 = 25."
+  },
+  {
+    "id": "math-187",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Find the mean of the distribution: classes 0-10, 10-20, 20-30 with frequencies 5, 10, 5 (midpoints 5, 15, 25).",
+    "options": [
+      "15",
+      "14",
+      "16",
+      "20"
+    ],
+    "correct": 0,
+    "explanation": "Mean = Σfx/Σf = (5×5+10×15+5×25)/20 = (25+150+125)/20 = 300/20 = 15."
+  },
+  {
+    "id": "math-188",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "If the mode of a distribution is 45 and the mean is 40, find the median using the empirical relation.",
+    "options": [
+      "41.67",
+      "42.5",
+      "40",
+      "45"
+    ],
+    "correct": 0,
+    "explanation": "Mode = 3×Median − 2×Mean ⟹ 45 = 3M − 80 ⟹ 3M = 125 ⟹ M ≈ 41.67."
+  },
+  {
+    "id": "math-189",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "For a grouped distribution with n=50, cumulative frequency before the median class = 15, frequency of median class = 20, class width = 10, and lower limit of median class = 30, find the median.",
+    "options": [
+      "35",
+      "30",
+      "40",
+      "32.5"
+    ],
+    "correct": 0,
+    "explanation": "Median = l + [(n/2 − cf)/f] × h = 30 + [(25−15)/20] × 10 = 30 + 5 = 35."
+  },
+  {
+    "id": "math-190",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "Find the mode of data with class intervals 0-20, 20-40, 40-60, 60-80 and frequencies 15, 25, 20, 10 (modal class 20-40).",
+    "options": [
+      "33.33",
+      "30",
+      "35",
+      "28.5"
+    ],
+    "correct": 0,
+    "explanation": "Mode = l + [(f1−f0)/(2f1−f0−f2)] × h = 20 + [(25−15)/(50−15−20)] × 20 = 20 + (10/15)×20 ≈ 33.33."
+  },
+  {
+    "id": "math-191",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "The mean of 100 observations is 50. One observation, 60, was wrongly recorded as 40. Find the correct mean.",
+    "options": [
+      "50.2",
+      "50",
+      "49.8",
+      "52"
+    ],
+    "correct": 0,
+    "explanation": "Correct sum = (100×50) − 40 + 60 = 5000+20 = 5020. Correct mean = 5020/100 = 50.2."
+  },
+  {
+    "id": "math-192",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A die is thrown once. The probability of getting a number greater than 4 is:",
+    "options": [
+      "1/3",
+      "1/2",
+      "2/3",
+      "1/6"
+    ],
+    "correct": 0,
+    "explanation": "Numbers greater than 4 on a die: 5, 6 (2 outcomes). P = 2/6 = 1/3."
+  },
+  {
+    "id": "math-193",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A box has 90 discs numbered 1 to 90. One disc is drawn at random. Find the probability it bears a two-digit number.",
+    "options": [
+      "9/10",
+      "8/9",
+      "4/5",
+      "81/100"
+    ],
+    "correct": 0,
+    "explanation": "Two-digit numbers from 1 to 90: 10 to 90, i.e. 81 numbers. P = 81/90 = 9/10."
+  },
+  {
+    "id": "math-194",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two coins are tossed together. Find the probability of getting at most one head.",
+    "options": [
+      "3/4",
+      "1/4",
+      "1/2",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "Outcomes: HH, HT, TH, TT. At most one head: HT, TH, TT (3 outcomes). P = 3/4."
+  },
+  {
+    "id": "math-195",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "A bag has 5 red, 4 blue and 3 green balls. One ball is drawn at random. Find the probability it is NOT blue.",
+    "options": [
+      "2/3",
+      "1/3",
+      "1/4",
+      "3/4"
+    ],
+    "correct": 0,
+    "explanation": "Total balls = 12, not blue = 5+3=8. P = 8/12 = 2/3."
+  },
+  {
+    "id": "math-196",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "Two dice are thrown together. Find the probability that the product of the numbers is a perfect square.",
+    "options": [
+      "2/9",
+      "1/6",
+      "1/9",
+      "1/4"
+    ],
+    "correct": 0,
+    "explanation": "Favourable pairs giving a perfect-square product: (1,1)=1, (1,4),(4,1),(2,2)=4, (3,3)=9, (4,4)=16, (5,5)=25, (6,6)=36 — 8 outcomes out of 36. P = 8/36 = 2/9."
+  },
+  {
+    "id": "math-197",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "A card is drawn from a well-shuffled deck. Find the probability it is either a red king or a black queen.",
+    "options": [
+      "1/13",
+      "1/26",
+      "2/13",
+      "1/52"
+    ],
+    "correct": 0,
+    "explanation": "Red kings = 2, black queens = 2; these are mutually exclusive, giving 4 favourable cards. P = 4/52 = 1/13."
+  },
+  {
+    "id": "math-198",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "In a rhombus, the diagonals:",
+    "options": [
+      "bisect each other at right angles",
+      "are equal",
+      "bisect each other but not at right angles",
+      "never intersect"
+    ],
+    "correct": 0,
+    "explanation": "A defining property of a rhombus is that its diagonals bisect each other at right angles (90°)."
+  },
+  {
+    "id": "math-199",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "ABCD is a parallelogram where ∠A − ∠B = 30°. Find ∠A.",
+    "options": [
+      "105°",
+      "75°",
+      "90°",
+      "120°"
+    ],
+    "correct": 0,
+    "explanation": "In a parallelogram, adjacent angles are co-interior: ∠A+∠B=180°. With ∠A−∠B=30°, adding gives 2∠A=210°, so ∠A=105°."
+  },
+  {
+    "id": "math-200",
+    "chapter": "Quadrilaterals",
+    "difficulty": "hard",
+    "text": "PQRS is a rhombus with diagonal PR=16 cm and side PQ=10 cm. Find the length of diagonal QS.",
+    "options": [
+      "12 cm",
+      "6 cm",
+      "18 cm",
+      "20 cm"
+    ],
+    "correct": 0,
+    "explanation": "Diagonals bisect at right angles: half of PR = 8 cm. Using Pythagoras with side 10 cm: half of QS = √(10²−8²) = 6 cm, so QS = 12 cm."
+  },
+  {
+    "id": "math-201",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "The LCM of 960 and 240 is (2026 Board)",
+    "options": [
+      "960",
+      "240",
+      "60",
+      "15"
+    ],
+    "correct": 0,
+    "explanation": "240 divides 960 exactly (960 = 4 × 240), so HCF = 240 and LCM = 960.",
+    "priority": true
+  },
+  {
+    "id": "math-202",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The natural number 1 is (2026 Board)",
+    "options": [
+      "a prime number",
+      "a composite number",
+      "prime as well as composite",
+      "neither prime nor composite"
+    ],
+    "correct": 3,
+    "explanation": "By definition, a prime number has exactly two distinct factors and a composite number has more than two; 1 has only one factor, so it is neither.",
+    "priority": true
+  },
+  {
+    "id": "math-203",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "For any natural number n, 5ⁿ ends with the digit (2026 Board)",
+    "options": [
+      "0",
+      "5",
+      "3",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "5¹=5, 5²=25, 5³=125 — every power of 5 ends in 5.",
+    "priority": true
+  },
+  {
+    "id": "math-204",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "The graph of y = f(x) is a curve that dips below the x-axis once and touches it again without crossing further right. The number of distinct zeroes of y = f(x) is (2026 Board)",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "The curve crosses the x-axis once (a simple zero) and touches it tangentially at a second point (a repeated zero) — two distinct zeroes in all.",
+    "priority": true
+  },
+  {
+    "id": "math-205",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "If α and β are two zeroes of a polynomial f(x) = px² − 2x + 3p and α + β = αβ, then the value of p is (2026 Board)",
+    "options": [
+      "−2/3",
+      "2/3",
+      "1/3",
+      "−1/3"
+    ],
+    "correct": 1,
+    "explanation": "α+β = 2/p and αβ = 3p/p = 3. Setting 2/p = 3 gives p = 2/3.",
+    "priority": true
+  },
+  {
+    "id": "math-206",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "If the pair of linear equations a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0 is consistent and dependent, then (2026 Board)",
+    "options": [
+      "a₁/a₂ ≠ b₁/b₂",
+      "a₁/a₂ ≠ b₁/b₂ = c₁/c₂",
+      "a₁/a₂ = b₁/b₂ ≠ c₁/c₂",
+      "a₁/a₂ = b₁/b₂ = c₁/c₂"
+    ],
+    "correct": 3,
+    "explanation": "A consistent and dependent pair represents the same line, so all three ratios of coefficients must be equal.",
+    "priority": true
+  },
+  {
+    "id": "math-207",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "Which of the following sequences is NOT an A.P.? (2026 Board)",
+    "options": [
+      "2, 5/2, 3, 7/2, …",
+      "−1.2, −3.2, −5.2, −7.2, …",
+      "√2, √8, √18, …",
+      "1², 3², 5², 7², …"
+    ],
+    "correct": 3,
+    "explanation": "1, 9, 25, 49 have successive differences 8, 16, 24 — not constant, so it is not an A.P. (the √2, √8, √18 sequence simplifies to √2, 2√2, 3√2, a valid A.P. with common difference √2.)",
+    "priority": true
+  },
+  {
+    "id": "math-208",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In triangles ABC and PQR, ∠A = ∠Q and ∠B = ∠R, then AB : AC is equal to (2026 Board)",
+    "options": [
+      "PQ : PR",
+      "PQ : QR",
+      "QR : QP",
+      "PR : QR"
+    ],
+    "correct": 2,
+    "explanation": "The correspondence is A↔Q, B↔R, C↔P, so AB corresponds to QR and AC corresponds to QP, giving AB:AC = QR:QP.",
+    "priority": true
+  },
+  {
+    "id": "math-209",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The distance of the point A(4a, 3a) from the x-axis is (2026 Board)",
+    "options": [
+      "3a",
+      "−3a",
+      "4a",
+      "−4a"
+    ],
+    "correct": 0,
+    "explanation": "The distance of any point from the x-axis is the absolute value of its y-coordinate, which is 3a here.",
+    "priority": true
+  },
+  {
+    "id": "math-210",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If cos A = 4/5, then the value of tan A is (2026 Board)",
+    "options": [
+      "3/5",
+      "3/4",
+      "4/3",
+      "5/3"
+    ],
+    "correct": 1,
+    "explanation": "sin A = √(1 − 16/25) = 3/5, so tan A = sin A / cos A = (3/5)/(4/5) = 3/4.",
+    "priority": true
+  },
+  {
+    "id": "math-211",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If 2 sin A = 1, then the value of tan A + cot A is (2026 Board)",
+    "options": [
+      "√3",
+      "4/√3",
+      "√3/2",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "sin A = 1/2 gives A = 30°, so tan A = 1/√3 and cot A = √3; their sum is (1+3)/√3 = 4/√3.",
+    "priority": true
+  },
+  {
+    "id": "math-212",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "medium",
+    "text": "From a point on the ground 60 m from the foot of a vertical tower, the angle of elevation of the top is 45°. The height of the tower (in metres) is (2026 Board)",
+    "options": [
+      "10√3",
+      "30√3",
+      "60",
+      "30"
+    ],
+    "correct": 2,
+    "explanation": "tan 45° = height/60, and tan 45° = 1, so height = 60 m.",
+    "priority": true
+  },
+  {
+    "id": "math-213",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "PA and PB are tangents to a circle centred at O. If ∠OAB = 15°, then ∠APB equals (2026 Board)",
+    "options": [
+      "30°",
+      "15°",
+      "45°",
+      "10°"
+    ],
+    "correct": 0,
+    "explanation": "OA = OB (radii), so triangle OAB is isosceles with ∠OAB = ∠OBA = 15°, giving ∠AOB = 150°. In quadrilateral OAPB the angles sum to 360° with two right angles at A and B, so ∠APB = 360° − 90° − 90° − 150° = 30°.",
+    "priority": true
+  },
+  {
+    "id": "math-214",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "PA and PB are tangents to a circle centred at O. If ∠AOB = 130°, then ∠APB is equal to (2026 Board)",
+    "options": [
+      "130°",
+      "50°",
+      "120°",
+      "90°"
+    ],
+    "correct": 1,
+    "explanation": "In quadrilateral OAPB, ∠OAP = ∠OBP = 90°, so ∠APB = 360° − 90° − 90° − 130° = 50°.",
+    "priority": true
+  },
+  {
+    "id": "math-215",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "Area of a segment of a circle of radius 'r' and central angle 60° is (2026 Board)",
+    "options": [
+      "πr²/2 − r²/2",
+      "2πr/4 − (√3/4)r²",
+      "πr²/6 − (√3/4)r²",
+      "2πr/4 − r² sin 60°"
+    ],
+    "correct": 2,
+    "explanation": "Segment area = sector area − triangle area = (60/360)πr² − (√3/4)r² = πr²/6 − (√3/4)r² (the 60° triangle formed by two radii and the chord is equilateral).",
+    "priority": true
+  },
+  {
+    "id": "math-216",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "A hemispherical bowl is made of steel of thickness 1 cm. The outer radius of the bowl is 6 cm. The volume of steel used (in cm³) is (2026 Board)",
+    "options": [
+      "182π",
+      "182π/3",
+      "682π/3",
+      "364π/3"
+    ],
+    "correct": 1,
+    "explanation": "Inner radius = 5 cm. Volume of steel = (2/3)π(6³ − 5³) = (2/3)π(216 − 125) = (2/3)π(91) = 182π/3.",
+    "priority": true
+  },
+  {
+    "id": "math-217",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The mean and median of a frequency distribution are 43 and 43.4 respectively. The mode of the distribution is (2026 Board)",
+    "options": [
+      "43.4",
+      "42.4",
+      "44.2",
+      "49.3"
+    ],
+    "correct": 2,
+    "explanation": "Mode = 3 × Median − 2 × Mean = 3(43.4) − 2(43) = 130.2 − 86 = 44.2.",
+    "priority": true
+  },
+  {
+    "id": "math-218",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "The probability for a randomly selected number out of 1, 2, 3, 4, …, 25 to be a composite number is (2026 Board)",
+    "options": [
+      "15/25",
+      "10/25",
+      "11/25",
+      "9/25"
+    ],
+    "correct": 0,
+    "explanation": "Among 1–25 there are 9 primes and the number 1 (neither prime nor composite); the remaining 25 − 9 − 1 = 15 numbers are composite.",
+    "priority": true
+  },
+  {
+    "id": "math-219",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "Assertion (A): The surface area of the cuboid formed by joining two cubes of side 4 cm each, end-to-end, is 160 cm². Reason (R): The surface area of a cuboid of dimensions l × b × h is (lb + bh + hl). Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 2,
+    "explanation": "The joined cuboid is 8×4×4, so surface area = 2(8×4+4×4+4×8) = 2(80) = 160 cm² — A is true. But the correct formula for the surface area of a cuboid is 2(lb+bh+hl), not (lb+bh+hl) as R states, so R is false.",
+    "priority": true
+  },
+  {
+    "id": "math-220",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Assertion (A): The mean of the first 'n' natural numbers is (n − 1)/2. Reason (R): The sum of the first 'n' natural numbers is n(n + 1)/2. Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 3,
+    "explanation": "The correct mean of the first n natural numbers is (n+1)/2, so A is false. The sum formula n(n+1)/2 in R is correct.",
+    "priority": true
+  },
+  {
+    "id": "math-221",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The roots of the quadratic equation (x − 1)² = 16 are (2026 Board)",
+    "options": [
+      "5, 3",
+      "4, −4",
+      "5, −3",
+      "−5, 3"
+    ],
+    "correct": 2,
+    "explanation": "x − 1 = ±4, so x = 5 or x = −3.",
+    "priority": true
+  },
+  {
+    "id": "math-222",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "PQ and PR are tangents to a circle with centre O and radius 3 cm. If ∠QPR = 60°, then the length of each tangent is (2026 Board)",
+    "options": [
+      "3√3 cm",
+      "3 cm",
+      "6 cm",
+      "√3 cm"
+    ],
+    "correct": 0,
+    "explanation": "OP bisects ∠QPR, so ∠QPO = 30°. In right triangle OQP, tan 30° = OQ/QP, so QP = OQ/tan30° = 3/(1/√3) = 3√3 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-223",
+    "chapter": "Triangles",
+    "difficulty": "hard",
+    "text": "In triangle DEF, AB ∥ EF, with A and B on sides DE and DF, DA = 2x, AE = 3x + 1, DB = x, BF = 2x − 1/2. The value of x is (2026 Board)",
+    "options": [
+      "0, 2",
+      "2 only",
+      "−2",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "By the Basic Proportionality Theorem, DA/AE = DB/BF, giving 2x(2x − 1/2) = x(3x+1), which simplifies to x² − 2x = 0, so x = 0 or x = 2; x = 0 is rejected as it makes a side length zero, leaving x = 2.",
+    "priority": true
+  },
+  {
+    "id": "math-224",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "(3 × 11 × 13 + 3) is (2026 Board)",
+    "options": [
+      "a prime number",
+      "divisible by 13",
+      "a composite number",
+      "an odd number"
+    ],
+    "correct": 2,
+    "explanation": "3 × 11 × 13 + 3 = 3 × 144 = 432 = 2⁴ × 3³, which has more than two factors, so it is composite (and it is even, and not divisible by 13).",
+    "priority": true
+  },
+  {
+    "id": "math-225",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two dice are rolled together. The probability that the sum of the numbers obtained is divisible by 6, is (2026 Board)",
+    "options": [
+      "1/6",
+      "11/36",
+      "1/12",
+      "1/4"
+    ],
+    "correct": 0,
+    "explanation": "Sums divisible by 6 are 6 and 12: (1,5),(2,4),(3,3),(4,2),(5,1) and (6,6) — 6 outcomes out of 36, giving 1/6.",
+    "priority": true
+  },
+  {
+    "id": "math-226",
+    "chapter": "Real Numbers",
+    "difficulty": "easy",
+    "text": "The number of multiples of 4 lying between 12 and 250 is (2026 Board)",
+    "options": [
+      "59",
+      "59.5",
+      "60",
+      "61"
+    ],
+    "correct": 0,
+    "explanation": "The multiples of 4 strictly between 12 and 250 run from 16 to 248: (248−16)/4 + 1 = 59.",
+    "priority": true
+  },
+  {
+    "id": "math-227",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "A cone of maximum size is carved out from a solid cube of edge length l. The volume of the cone is (2026 Board)",
+    "options": [
+      "πl³/12",
+      "πl³/3",
+      "l³(1 − π/3)",
+      "πl³/8"
+    ],
+    "correct": 0,
+    "explanation": "The largest such cone has base radius l/2 and height l, so its volume is (1/3)π(l/2)²(l) = πl³/12.",
+    "priority": true
+  },
+  {
+    "id": "math-228",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "Equation of another line parallel to the line represented by 2x − 6y = 7 is (2026 Board)",
+    "options": [
+      "y = 3x − 7",
+      "2x = 9 − 6y",
+      "x − 3y = 7",
+      "x = 7/2 − 3y"
+    ],
+    "correct": 2,
+    "explanation": "The given line has slope 1/3 (from y = x/3 − 7/6). Rewriting x − 3y = 7 gives y = x/3 − 7/3, the same slope but a different line — hence parallel.",
+    "priority": true
+  },
+  {
+    "id": "math-229",
+    "chapter": "Applications of Trigonometry",
+    "difficulty": "medium",
+    "text": "If the length of the shadow of a tower is √3 times its height, then the altitude of the Sun is (2026 Board)",
+    "options": [
+      "45°",
+      "30°",
+      "60°",
+      "15°"
+    ],
+    "correct": 1,
+    "explanation": "tan(altitude) = height/shadow = 1/√3, so the altitude of the Sun is 30°.",
+    "priority": true
+  },
+  {
+    "id": "math-230",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "If the roots of the quadratic equation √3 x² − kx + 2√3 = 0 are real and equal, then the value(s) of k is/are (2026 Board)",
+    "options": [
+      "±√24",
+      "0",
+      "4",
+      "−5"
+    ],
+    "correct": 0,
+    "explanation": "For equal roots, discriminant = 0: k² − 4(√3)(2√3) = k² − 24 = 0, so k = ±√24.",
+    "priority": true
+  },
+  {
+    "id": "math-231",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "The nth term of the A.P. −1/3, 2/3, 5/3, 8/3, … is (2026 Board)",
+    "options": [
+      "3n − 4",
+      "n − 4/3",
+      "(n − 2)/3",
+      "(n − 4)/3"
+    ],
+    "correct": 1,
+    "explanation": "Common difference = 1, first term = −1/3, so aₙ = −1/3 + (n−1)(1) = n − 4/3.",
+    "priority": true
+  },
+  {
+    "id": "math-232",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "PT is a tangent to a circle with centre O and radius r. If ∠POT = 45°, then the length of OP is (2026 Board)",
+    "options": [
+      "r√2",
+      "√(2r)",
+      "2r",
+      "r²"
+    ],
+    "correct": 0,
+    "explanation": "Triangle OPT is right-angled at T (radius ⊥ tangent). cos45° = OT/OP, so OP = r/cos45° = r√2.",
+    "priority": true
+  },
+  {
+    "id": "math-233",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "It is given that triangle ABC ~ triangle QRP such that AB = 9 cm, BC = 5 cm and PR = 2 cm. Length of side QR is (2026 Board)",
+    "options": [
+      "0.9 cm",
+      "5/18 cm",
+      "10/9 cm",
+      "3.6 cm"
+    ],
+    "correct": 3,
+    "explanation": "The correspondence A↔Q, B↔R, C↔P gives BC/RP = AB/QR, so 5/2 = 9/QR, giving QR = 18/5 = 3.6 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-234",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "The sum and product of zeroes of a quadratic polynomial p(x) are −1/3 and 2 respectively. The polynomial p(x) is (2026 Board)",
+    "options": [
+      "3x² − x + 6",
+      "x² + (1/3)x − 2",
+      "3x² − x + 2",
+      "−3x² − x − 6"
+    ],
+    "correct": 3,
+    "explanation": "p(x) = k[x² − (sum)x + product] = k[x² + (1/3)x + 2]; taking k = −3 clears the fraction and gives −3x² − x − 6, whose sum (−1/3) and product (2) of roots both check out.",
+    "priority": true
+  },
+  {
+    "id": "math-235",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "Given that sin 2α = √3/2, the value of sin 3α is (2026 Board)",
+    "options": [
+      "3√3/4",
+      "1/2",
+      "1",
+      "√3/4"
+    ],
+    "correct": 2,
+    "explanation": "sin 2α = √3/2 gives 2α = 60°, so α = 30°, and sin 3α = sin 90° = 1.",
+    "priority": true
+  },
+  {
+    "id": "math-236",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The median and mode of a distribution are 25.2 and 26.1 respectively. The mean of the distribution is (2026 Board)",
+    "options": [
+      "24.75",
+      "24.25",
+      "24.3",
+      "25.5"
+    ],
+    "correct": 0,
+    "explanation": "Mode = 3 × Median − 2 × Mean, so 26.1 = 3(25.2) − 2×Mean, giving Mean = (75.6 − 26.1)/2 = 24.75.",
+    "priority": true
+  },
+  {
+    "id": "math-237",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "hard",
+    "text": "Triangle ABC is equilateral. AD is a median joining A(0, 5√3/2) and D(0, 0). Points B and C are (in the same order) (2026 Board)",
+    "options": [
+      "(−5, 0), (5, 0)",
+      "(−5/2, 0), (5/2, 0)",
+      "(−10, 0), (10, 0)",
+      "(−5√3, 0), (5√3, 0)"
+    ],
+    "correct": 1,
+    "explanation": "AD is also the altitude, of length 5√3/2. Since height = (√3/2)×side, the side length is 5, so BD = DC = 2.5, giving B(−5/2,0) and C(5/2,0).",
+    "priority": true
+  },
+  {
+    "id": "math-238",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "The value of ((1/2) tan² 45° − cos² 60°) is (2026 Board)",
+    "options": [
+      "0",
+      "−1/2",
+      "1/4",
+      "−1/4"
+    ],
+    "correct": 2,
+    "explanation": "(1/2)(1)² − (1/2)² = 1/2 − 1/4 = 1/4.",
+    "priority": true
+  },
+  {
+    "id": "math-239",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "Assertion (A): Radius is the smallest distance of a tangent from the centre of the circle. Reason (R): Radius is perpendicular to the tangent. Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 0,
+    "explanation": "The perpendicular distance from a point to a line is the shortest distance, and since the radius is perpendicular to the tangent, it equals that shortest distance — R correctly explains A.",
+    "priority": true
+  },
+  {
+    "id": "math-240",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "hard",
+    "text": "Assertion (A): tan 2θ is not defined at θ = 45°. Reason (R): sin 90° ≠ cos 90°. Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "tan 90° is indeed undefined, so A is true, and sin90°=1 ≠ cos90°=0 is also true. But the actual reason tan 90° is undefined is that cos 90° = 0 (division by zero), not merely that sin90° and cos90° differ, so R does not correctly explain A.",
+    "priority": true
+  },
+  {
+    "id": "math-241",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "It is given that triangle ABC ~ triangle EDF. Which of the following is NOT true? (2026 Board)",
+    "options": [
+      "Perimeter of ABC / Perimeter of EDF = AB/ED",
+      "AB/ED = AC/EF",
+      "∠A = ∠D, ∠C = ∠F",
+      "(AB+BC)/AC = (DE+DF)/EF"
+    ],
+    "correct": 2,
+    "explanation": "The correspondence is A↔E, B↔D, C↔F, so the correct equal angles are ∠A=∠E and ∠C=∠F — stating ∠A=∠D is incorrect.",
+    "priority": true
+  },
+  {
+    "id": "math-242",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "easy",
+    "text": "The nth term of an A.P. is √2 n + 1. Its common difference is (2026 Board)",
+    "options": [
+      "√2",
+      "√2 n",
+      "1",
+      "√2 + 1"
+    ],
+    "correct": 0,
+    "explanation": "The coefficient of n in the nth-term formula is the common difference, which is √2.",
+    "priority": true
+  },
+  {
+    "id": "math-243",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "PQ and PR are tangents to the circle with centre O and radius 4 cm such that ∠QPR = 90°. The length OP is (2026 Board)",
+    "options": [
+      "4 cm",
+      "4√2 cm",
+      "8 cm",
+      "2√2 cm"
+    ],
+    "correct": 1,
+    "explanation": "OP bisects the 90° angle, so triangle OQP is right-angled with ∠OPQ = 45°. OP = OQ/sin45° = 4/(√2/2) = 4√2 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-244",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "Observe the graph of a polynomial p(x) that dips below the x-axis, rises to cross it, dips below again, then rises and crosses a third time. The number of zeroes of p(x) is (2026 Board)",
+    "options": [
+      "5",
+      "4",
+      "6",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "The curve crosses the x-axis three times, so p(x) has 3 real zeroes.",
+    "priority": true
+  },
+  {
+    "id": "math-245",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "In the given figure, DE ∥ BC. If AD/DB = 1/3 and AC = 6 cm, then length AE is (2026 Board)",
+    "options": [
+      "1.5 cm",
+      "1 cm",
+      "2 cm",
+      "3 cm"
+    ],
+    "correct": 0,
+    "explanation": "AD/DB = 1/3 means AD/AB = 1/4 (since AB = AD+DB = 4·AD). By similarity of triangles ADE and ABC, AE/AC = AD/AB = 1/4, so AE = 6/4 = 1.5 cm.",
+    "priority": true
+  },
+  {
+    "id": "math-246",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "A circle is centred at (1, 2) and passes through the origin, with a diameter drawn through the origin and the centre. The diameter of the circle is (2026 Board)",
+    "options": [
+      "4",
+      "2√2",
+      "√5",
+      "2√5"
+    ],
+    "correct": 3,
+    "explanation": "The radius equals the distance from the centre (1,2) to the origin: √(1²+2²) = √5, so the diameter is 2√5.",
+    "priority": true
+  },
+  {
+    "id": "math-247",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The value of k for which the system of linear equations x/2 + y/3 = 5 and 2x + ky = 7 is inconsistent, is (2026 Board)",
+    "options": [
+      "3/4",
+      "4/3",
+      "1/3",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "Rewriting the first equation as 3x + 2y = 30, the inconsistency condition a₁/a₂ = b₁/b₂ ≠ c₁/c₂ gives 3/2 = 2/k, so k = 4/3 (and the constant ratio is indeed different, confirming no solution).",
+    "priority": true
+  },
+  {
+    "id": "math-248",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "medium",
+    "text": "A circle is divided into 16 identical sectors. If the radius of the circle is 7 cm, the area of each sector is (2026 Board)",
+    "options": [
+      "77/4 cm²",
+      "77 cm²",
+      "154 cm²",
+      "77/8 cm²"
+    ],
+    "correct": 3,
+    "explanation": "Total area = (22/7)(7²) = 154 cm²; each of the 16 identical sectors has area 154/16 = 77/8 cm².",
+    "priority": true
+  },
+  {
+    "id": "math-249",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two different dice are rolled together. The probability that both the obtained numbers are less than 4, is (2026 Board)",
+    "options": [
+      "2/9",
+      "7/36",
+      "1/4",
+      "2/3"
+    ],
+    "correct": 2,
+    "explanation": "Each die can show 1, 2 or 3 (3 favourable outcomes each), giving 3×3 = 9 favourable outcomes out of 36, i.e. 1/4.",
+    "priority": true
+  },
+  {
+    "id": "math-250",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "When sin A = 1/3, the value of cot A is (2026 Board)",
+    "options": [
+      "2√2/3",
+      "2√2",
+      "1/(2√2)",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "With opposite = 1 and hypotenuse = 3, the adjacent side is √(9−1) = 2√2, so cot A = adjacent/opposite = 2√2.",
+    "priority": true
+  },
+  {
+    "id": "math-251",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "(1 + tan² A) / (1 + cot² A) equals (2026 Board)",
+    "options": [
+      "tan² A",
+      "−1",
+      "−tan² A",
+      "cot² A"
+    ],
+    "correct": 0,
+    "explanation": "(1+tan²A)/(1+cot²A) = sec²A/csc²A = (1/cos²A)/(1/sin²A) = sin²A/cos²A = tan²A.",
+    "priority": true
+  },
+  {
+    "id": "math-252",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "Three tennis balls of radius r are packed exactly (stacked) in a cylindrical jar. The volume of air inside the jar is (2026 Board)",
+    "options": [
+      "2πr³",
+      "3πr³",
+      "5πr³",
+      "4πr³"
+    ],
+    "correct": 0,
+    "explanation": "The jar has radius r and height 6r (three balls stacked). Cylinder volume = 6πr³; the three balls together have volume 3×(4/3)πr³ = 4πr³. Air volume = 6πr³ − 4πr³ = 2πr³.",
+    "priority": true
+  },
+  {
+    "id": "math-253",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "PQ is tangent to a circle with centre O at P, and PS is a diameter. R lies on the circle, and line SR extended meets the tangent at T (with T between P and Q). If ∠POR = 65°, then m∠PTR is (2026 Board)",
+    "options": [
+      "65°",
+      "58.5°",
+      "57.5°",
+      "45°"
+    ],
+    "correct": 2,
+    "explanation": "Working through the tangent–secant angle relationship for this configuration gives ∠PTR = 57.5°.",
+    "priority": true
+  },
+  {
+    "id": "math-254",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The distance between the points (a cos θ + b sin θ, 0) and (0, a sin θ − b cos θ) is (2026 Board)",
+    "options": [
+      "√(a² + b²)",
+      "a² − b²",
+      "√(a² − b²)",
+      "a² + b²"
+    ],
+    "correct": 0,
+    "explanation": "Squaring and adding: (a cosθ+b sinθ)² + (a sinθ−b cosθ)² = a²+b² (the cross terms cancel), so the distance is √(a²+b²).",
+    "priority": true
+  },
+  {
+    "id": "math-255",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "An ice-cream cone of radius r and height h is completely filled by two spherical scoops of ice-cream, each of radius r/2. Then h : 2r equals (2026 Board)",
+    "options": [
+      "1 : 8",
+      "1 : 2",
+      "1 : 1",
+      "2 : 1"
+    ],
+    "correct": 1,
+    "explanation": "Cone volume (1/3)πr²h equals two scoops' volume 2×(4/3)π(r/2)³ = (1/3)πr³, giving h = r, so h:2r = 1:2.",
+    "priority": true
+  },
+  {
+    "id": "math-256",
+    "chapter": "Areas Related to Circles",
+    "difficulty": "hard",
+    "text": "Arc PQ subtends an angle θ at the centre of a circle with radius 6.3 cm. If arc PQ = 11 cm, then the value of θ is (2026 Board)",
+    "options": [
+      "10°",
+      "60°",
+      "45°",
+      "100°"
+    ],
+    "correct": 3,
+    "explanation": "Arc length = rθ (θ in radians): θ = 11/6.3 ≈ 1.746 rad ≈ 100°.",
+    "priority": true
+  },
+  {
+    "id": "math-257",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Mean and Median of a frequency distribution are 43 and 40 respectively. The value of mode is (2026 Board)",
+    "options": [
+      "34",
+      "43",
+      "38.5",
+      "41.5"
+    ],
+    "correct": 0,
+    "explanation": "Mode = 3 × Median − 2 × Mean = 3(40) − 2(43) = 120 − 86 = 34.",
+    "priority": true
+  },
+  {
+    "id": "math-258",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Assertion (A): If the probability of an event happening is 0.2p, p > 0, then p can't be more than 5. Reason (R): P(not E) = 1 − P(E) for an event E. Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "Since probability cannot exceed 1, 0.2p ≤ 1 gives p ≤ 5, so A is true; R is also a true statement about probability, but the complement rule is not what explains why probability is capped at 1, so R does not correctly explain A.",
+    "priority": true
+  },
+  {
+    "id": "math-259",
+    "chapter": "Real Numbers",
+    "difficulty": "medium",
+    "text": "Assertion (A): (√3 + √5) is an irrational number. Reason (R): Sum of any two irrational numbers is always irrational. Which is correct? (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 2,
+    "explanation": "√3+√5 is indeed irrational, so A is true. But R is false in general — e.g. √2 + (−√2) = 0 is rational, so the sum of two irrationals is not always irrational.",
+    "priority": true
+  }
 ]
