@@ -1929,7 +1929,7 @@ const app = {
           <div class="mode-card card" onclick="app.setMode('mock')">
             <div class="mode-icon">&#128221;</div>
             <h3>Full Mock Test</h3>
-            <p>40 MCQs &bull; 90 min &bull; Full syllabus</p>
+            <p>50 MCQs &bull; 40 min &bull; Full syllabus</p>
             <button class="btn primary">Start Mock</button>
           </div>
           <div class="mode-card card" onclick="app.setMode('drill')">
