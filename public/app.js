@@ -2230,7 +2230,8 @@ const BANKS = {
   'X ICSE Biology':               'X-ICSE-Biology',
   'X ICSE History & Civics':      'X-ICSE-History-Civics',
   'X ICSE Geography':             'X-ICSE-Geography',
-  'X ICSE English':               'X-ICSE-English'
+  'X ICSE English':               'X-ICSE-English',
+  'X CBSE Hindi':                  'X-CBSE-Hindi'
 };
 // Returns the question-bank file slug for (subject, board, grade), or undefined if none.
 function bankSlug(subject, board, grade) {
@@ -2606,12 +2607,13 @@ const app = {
 
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
-    // Grade X's CBSE English and Hindi have no question bank at all — hide those
-    // placeholder cards there rather than show a permanent "coming soon" dead end.
+    // Grade X's CBSE English still has no question bank — hide that placeholder
+    // card there rather than show a permanent "coming soon" dead end. Hindi now
+    // has a real bank (Course A, objective sections only) so it stays visible.
     // Grade XII has no banks yet for *any* subject, so every card there is meant to
     // show "coming soon" instead — that's the whole point of the XII shell.
     const subjects = (SUBJECTS[state.board] || [])
-      .filter(s => !(state.grade === 'X' && state.board === 'CBSE' && (s === 'English' || s === 'Hindi')));
+      .filter(s => !(state.grade === 'X' && state.board === 'CBSE' && s === 'English'));
     const draft    = this._draft();
 
     const resume = draft ? `
