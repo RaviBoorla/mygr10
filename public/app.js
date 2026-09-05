@@ -3832,7 +3832,7 @@ const app = {
         if (isCorrect) correct++;
         return {
           id: q.id, num: i + 1, text: q.text, options: q.options, correct: q.correct,
-          userAnswer: ua, isCorrect, explanation: q.explanation || '', chapter: q.chapter || ''
+          userAnswer: ua, isCorrect, explanation: q.explanation || '', whyWrong: q.whyWrong || null, chapter: q.chapter || ''
         };
       });
       const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
@@ -4039,6 +4039,15 @@ const app = {
     const prevR = pos > 0 ? visible[pos - 1] : null;
     const nextR = pos > -1 && pos < visible.length - 1 ? visible[pos + 1] : null;
 
+    // Optional per-question content: why each *wrong* option is wrong, keyed by
+    // option index (r.correct's own reasoning already lives in r.explanation).
+    // Absent for most questions today — renders nothing when it's not there.
+    const wrongWhyItems = (r.whyWrong || [])
+      .map((txt, oi) => (txt && oi !== r.correct) ? `<li><strong>${String.fromCharCode(65 + oi)}:</strong> ${esc(txt)}</li>` : '')
+      .join('');
+    const wrongWhyBlock = wrongWhyItems
+      ? `<div class="rev-wrong-why"><strong>Why the others are wrong:</strong><ul>${wrongWhyItems}</ul></div>` : '';
+
     const area = document.getElementById('rev-card-area');
     if (area) area.innerHTML = `
       <div class="rev-card-header">
@@ -4050,6 +4059,7 @@ const app = {
       <p class="rev-q-text">${esc(r.text)}</p>
       <div class="rev-options">${optHtml}</div>
       <div class="rev-explanation"><strong>Why:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
+      ${wrongWhyBlock}
       <div class="test-nav">
         <button class="btn nav-btn" ${prevR ? `onclick="app.showReviewQuestion(${data.indexOf(prevR)})"` : 'disabled'}>&#8592; Prev</button>
         <button class="btn primary nav-btn" ${nextR ? `onclick="app.showReviewQuestion(${data.indexOf(nextR)})"` : 'disabled'}>Next &#8594;</button>

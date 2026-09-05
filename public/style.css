@@ -535,6 +535,12 @@ kbd {
   font-size: var(--fs-ui); line-height: 1.55; color: var(--text-light);
   padding: 10px 12px; background: var(--explain-bg); border-radius: var(--radius-sm); border-left: 3px solid var(--primary);
 }
+.rev-wrong-why {
+  font-size: var(--fs-ui); line-height: 1.55; color: var(--text-light);
+  padding: 10px 12px; background: var(--explain-bg); border-radius: var(--radius-sm); border-left: 3px solid var(--skip-fg);
+}
+.rev-wrong-why ul  { margin: 6px 0 0; padding-left: 18px; }
+.rev-wrong-why li + li { margin-top: 4px; }
 
 .small-filters .filter-tab { padding: 4px 10px; font-size: var(--fs-note); }
 .results-actions { display: flex; gap: 8px; }
