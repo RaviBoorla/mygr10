@@ -1967,6 +1967,658 @@ const REVISION = {
           'For Hardy-Weinberg: check the five assumptions first (large population, no mutation/selection/migration, random mating)'
         ]
       }
+    ],
+  English: [
+      {
+        chapter: 'Tenses — Present, Past & Future',
+        formulae: [
+          'Simple Present: Subject + V1 (+s/es for he/she/it) — "She writes a letter." Negative/question use do/does. [Gr 8]',
+          'Present Continuous: Subject + is/am/are + V-ing — "She is writing a letter." [Gr 8]',
+          'Present Perfect: Subject + has/have + V3 — "She has written a letter." [Gr 9]',
+          'Present Perfect Continuous: Subject + has/have + been + V-ing — "She has been writing since noon." [Gr 10]',
+          'Simple Past: Subject + V2 — "She wrote a letter." Negative/question use did + V1. [Gr 8]',
+          'Past Continuous: Subject + was/were + V-ing — "She was writing when I called." [Gr 8]',
+          'Past Perfect: Subject + had + V3 — "She had written before he arrived." [Gr 9]',
+          'Past Perfect Continuous: Subject + had been + V-ing — "She had been writing for an hour." [Gr 10]',
+          'Simple Future: Subject + shall/will + V1 — "She will write a letter." [Gr 8]',
+          'Future Continuous: Subject + will be + V-ing — "She will be writing at 5 pm." [Gr 9]',
+          'Future Perfect: Subject + will have + V3 — "She will have written it by Monday." [Gr 10]',
+          'Future Perfect Continuous: Subject + will have been + V-ing — "By June she will have been writing for a year." [Gr 10]'
+        ],
+        logic: [
+          'Present Perfect vs Simple Past: Present Perfect = unspecified/recent past time with present relevance ("has gone"); Simple Past = definite, finished past time ("went yesterday")',
+          'Continuous tenses show an action in progress at a stated moment; Perfect tenses show completion before a reference point; Perfect Continuous shows duration up to that point',
+          'Time markers → tense: always/usually/every day/never → Simple Present; now/at present/Look!/Listen! → Present Continuous; since/for/just/already/yet/ever/never → Present Perfect; yesterday/ago/last week/in 2019 → Simple Past',
+          '"since" is used with a point in time (since 2020, since Monday); "for" is used with a duration (for two years, for a while) — never interchange them',
+          'Sequence of tense: if the main clause is in the past, the subordinate clause is usually also in the past ("He said he was tired") — except for universal truths ("He said the sun rises in the east")',
+          'Conditional sentences: Type 1 (If + present, will + V1 — real future); Type 2 (If + past, would + V1 — unreal present); Type 3 (If + past perfect, would have + V3 — unreal past)'
+        ],
+        tips: [
+          '"Yet" is used in questions and negatives ("Has she left yet?"); "already" is used in affirmatives ("She has already left")',
+          'Never mix "since" with a duration or "for" with a point in time — this is one of the most common CBSE editing-exercise errors',
+          'Stative verbs (know, believe, love, want, belong, seem) are not normally used in continuous forms: say "I know" not "I am knowing"'
+        ],
+        bestPractices: [
+          'Underline the time-marker word in the sentence first, then decide the tense — do not guess from meaning alone',
+          'In gap-filling exercises, check the tense of the surrounding sentences (narrative tense) before choosing the verb form',
+          'For modal + perfect constructions (should have gone, must have left), remember it is always modal + have + V3, never modal + had'
+        ]
+      },
+      {
+        chapter: 'Modals',
+        formulae: [
+          'Can/Could — ability, permission, possibility: "She can swim." / "Could you help me?" [Gr 8]',
+          'May/Might — permission, possibility (might = more uncertain): "You may leave now." / "It might rain." [Gr 8]',
+          'Must — strong obligation or logical certainty: "You must wear a seatbelt." / "He must be tired." [Gr 9]',
+          'Have to / Has to — external obligation (rule imposed by someone else): "I have to submit the form by Friday." [Gr 9]',
+          'Should / Ought to — advice or moral duty: "You should apologise." [Gr 8]',
+          'Shall / Will — future, offer, promise: "Shall I open the window?" [Gr 8]',
+          'Would — past habit, polite request, hypothetical: "He would walk to school every day." [Gr 9]',
+          'Need(n\'t) / Dare — semi-modals of necessity: "You needn\'t come if you\'re busy." [Gr 10]',
+          'Used to — past habit that no longer continues: "She used to play the violin." [Gr 9]'
+        ],
+        logic: [
+          'A modal is always followed by the base form (V1) of the verb — never add -s, -ed or "to" directly after a modal (except ought to, used to, have to)',
+          'Must (internal, speaker\'s own obligation) vs Have to (external, imposed by rule/authority) — both translate as "must" in meaning but differ in source of obligation',
+          'Mustn\'t (prohibition — it is forbidden) vs Don\'t have to (no obligation — free choice, not forbidden) — a very common confusion',
+          'Can (ability/informal permission) vs May (formal permission) vs Could/Might (more polite or less certain versions of the same)',
+          'Two modals cannot normally be used together (say "will be able to" not "will can")'
+        ],
+        tips: [
+          'For deduction/certainty: must (very sure, positive) — can\'t (very sure, negative) — might/may/could (not sure)',
+          '"Had better" + V1 gives strong advice with an implied negative consequence: "You had better leave now (or you will be late)."',
+          '"Would rather" + V1 expresses preference: "I would rather stay home."'
+        ],
+        bestPractices: [
+          'In error-correction exercises, check that no "to" follows a modal (wrong: "he can to swim"; right: "he can swim")',
+          'Read the full sentence for degree of certainty/obligation intended before picking between must/should/may/might'
+        ]
+      },
+      {
+        chapter: 'Subject–Verb Agreement (Concord)',
+        formulae: [
+          'A singular subject takes a singular verb; a plural subject takes a plural verb — "The boy plays." / "The boys play." [Gr 8]',
+          'Two singular subjects joined by "and" take a plural verb: "Ram and Shyam are friends." [Gr 8]',
+          'Subjects joined by either/or, neither/nor, or, nor — the verb agrees with the subject nearer to it: "Neither the teacher nor the students were present." [Gr 9]',
+          'Collective nouns (team, family, jury, committee) take a singular verb when acting as one unit, plural when members act individually: "The team is playing well." / "The team are arguing among themselves." [Gr 9]',
+          'Indefinite pronouns — each, every, either, neither, someone, everybody, nobody — always take a singular verb: "Everyone is ready." [Gr 8]',
+          'A fraction/percentage + of + noun — the verb agrees with the noun after "of": "Half the mangoes are rotten." / "Half the class is absent." [Gr 10]',
+          'Words joined by "with", "along with", "as well as", "together with" do NOT make the subject plural — the verb agrees with the main subject only: "The captain, along with his team, was praised." [Gr 10]'
+        ],
+        logic: [
+          'Titles of books, names of countries, and amounts of money/distance/time are treated as singular even if plural in form: "The Arabian Nights is a classic." / "Ten thousand rupees is a large sum."',
+          '"A number of" + plural noun takes a plural verb (a number of students were absent); "The number of" + plural noun takes a singular verb (the number of students is rising)',
+          'When the subject is a clause or gerund phrase, the verb is singular: "Playing games keeps you fit."'
+        ],
+        tips: [
+          'Ignore words in between the subject and the verb (phrases starting with of, with, including) — find the true grammatical subject first',
+          '"None" can take a singular or plural verb depending on meaning, but in formal CBSE usage treat it as singular: "None of the students has finished."'
+        ],
+        bestPractices: [
+          'In a long sentence, mentally delete the prepositional phrase between subject and verb to check agreement',
+          'Watch out for inverted sentences (there is/are, here comes) — the verb still agrees with the noun that follows it'
+        ]
+      },
+      {
+        chapter: 'Determiners',
+        formulae: [
+          '"A/An" — used before singular countable nouns, first mention, or general reference; "a" before consonant sounds, "an" before vowel sounds ("an hour", "a university"). [Gr 8]',
+          '"The" — used for specific/already-mentioned nouns, unique objects (the sun), superlatives (the best), and proper nouns like rivers/mountain ranges/oceans (the Ganga, the Himalayas). [Gr 8]',
+          'This/That + singular noun; These/Those + plural noun — this/these for near, that/those for far. [Gr 8]',
+          'Some — affirmative sentences and offers ("I have some money", "Would you like some tea?"); Any — negatives and questions ("I don\'t have any money"). [Gr 8]',
+          'Much + uncountable noun ("much water"); Many + countable plural noun ("many books"); a lot of/lots of works for both. [Gr 9]',
+          'Little/a little + uncountable noun (little hope = almost none, a little hope = some); Few/a few + countable noun (few friends = almost none, a few friends = some). [Gr 9]',
+          'All/Both/Half + noun; Each + singular noun (each student); Every + singular noun, implies the whole group. [Gr 9]'
+        ],
+        logic: [
+          'Zero article is used before plural/uncountable nouns for general statements ("Dogs are loyal"), and before most proper nouns, meals, languages, and abstract nouns in general sense',
+          'Little/Few (without "a") carry a negative meaning (almost none); a little/a few carry a positive meaning (some, a small amount)',
+          '"The" is NOT used before names of countries (unless plural/republic: the USA, the Netherlands, the Philippines) or before continents, cities, single mountains/lakes'
+        ],
+        tips: [
+          'For editing exercises, check every noun phrase for a missing/extra/wrong article — this is one of the most frequently tested error types',
+          'Superlative adjectives almost always need "the" before them ("the tallest building")'
+        ],
+        bestPractices: [
+          'Read the noun immediately after the determiner to decide countable/uncountable before choosing much/many or little/few',
+          'When in doubt between "a" and "an", say the word aloud — the choice depends on the sound, not the spelling ("an hour" — silent h)'
+        ]
+      },
+      {
+        chapter: 'Prepositions',
+        formulae: [
+          'Time: "in" for months/years/seasons (in May, in 2020); "on" for days/dates (on Monday, on 2 October); "at" for precise clock time/points (at 5 o\'clock, at noon). [Gr 8]',
+          'Place: "in" for enclosed spaces (in the box); "on" for surfaces (on the table); "at" for a point/address (at the door, at 221B Baker Street). [Gr 8]',
+          'Movement: into, onto, through, across, along, towards. [Gr 8]',
+          'Verb + preposition collocations: depend ON, listen TO, look AFTER (take care of), look FOR (search), look INTO (investigate), apply FOR, arrive AT/IN, agree WITH (a person) / TO (a proposal). [Gr 9]',
+          'Adjective + preposition: afraid OF, angry WITH (a person) / AT (a situation), good AT, interested IN, famous FOR, proud OF. [Gr 9]',
+          'Preposition + gerund: after the verb (after finishing), before leaving, without asking, by working hard, instead of complaining — a preposition is always followed by a V-ing form, not the base verb. [Gr 10]'
+        ],
+        logic: [
+          'A preposition always takes an object (noun, pronoun, or gerund) — never a bare infinitive; say "good at swimming", not "good at swim"',
+          'In "in/on/at" for time, the rule moves from largest to smallest unit: in (year/month/season) → on (day/date) → at (exact time)',
+          'Some words take different prepositions in British vs everyday Indian usage (e.g. "different from" is the standard form tested in CBSE, though "different than" is common in American English)'
+        ],
+        tips: [
+          'Never end a formal written sentence unnecessarily with a stray preposition in editing/gap-fill exercises where a cleaner structure is expected',
+          'Learn verb-preposition pairs as fixed phrases (a single vocabulary unit), not word-by-word translations from Hindi'
+        ],
+        bestPractices: [
+          'When a blank in a cloze/editing exercise is preceded by a verb or adjective you know, recall its fixed preposition rather than guessing from meaning',
+          'For time expressions, check whether the noun is a specific date, a day, or a broader period before choosing in/on/at'
+        ]
+      },
+      {
+        chapter: 'Conjunctions & Clauses',
+        formulae: [
+          'Coordinating conjunctions (FANBOYS): For, And, Nor, But, Or, Yet, So — join two independent clauses of equal rank. [Gr 8]',
+          'Subordinating conjunctions: because, since, as, although, though, if, unless, when, while, until, so that — introduce a dependent (subordinate) clause. [Gr 9]',
+          'Correlative conjunctions (used in pairs): either…or, neither…nor, not only…but also, both…and, whether…or. [Gr 9]',
+          'Noun clause — functions as a subject/object of the sentence, usually begins with that/what/who/whether/if: "I know that he is honest." [Gr 10]',
+          'Adjective clause — modifies a noun, begins with who/whom/whose/which/that: "The man who called is my uncle." [Gr 10]',
+          'Adverb clause — modifies a verb, begins with when/where/why/because/although/if: "She left because she was tired." [Gr 10]'
+        ],
+        logic: [
+          'A clause has its own subject and verb; a phrase does not — this distinguishes clauses from prepositional/participial phrases',
+          'A simple sentence has one independent clause; a compound sentence has two or more independent clauses joined by a coordinating conjunction; a complex sentence has one independent clause plus one or more dependent clauses',
+          '"Not only…but also" requires parallel grammatical structure on both sides: "She is not only intelligent but also hardworking" (adjective…adjective)'
+        ],
+        tips: [
+          'Do not use "because" and "so" in the same sentence — pick one to show cause-effect ("Because it rained, we stayed in" OR "It rained, so we stayed in", never both)',
+          'Relative pronoun "who" refers to people, "which" to things/animals, "that" to either (informal), "whose" shows possession'
+        ],
+        bestPractices: [
+          'When combining two sentences, first decide whether the relationship is addition, contrast, cause-effect, or condition — this decides which conjunction to use',
+          'Check comma placement: a comma usually precedes a coordinating conjunction joining two independent clauses, but not before "because" when it starts a subordinate clause at the end of a sentence'
+        ]
+      },
+      {
+        chapter: 'Active & Passive Voice',
+        formulae: [
+          'Active: Subject + Verb + Object. Passive: Object (becomes new subject) + be + V3 + "by" + agent. [Gr 9]',
+          'Simple Present passive: is/am/are + V3 — "The letter is written by her."',
+          'Simple Past passive: was/were + V3 — "The letter was written by her."',
+          'Present Continuous passive: is/am/are + being + V3 — "The letter is being written."',
+          'Present Perfect passive: has/have + been + V3 — "The letter has been written."',
+          'Future passive: will be + V3 — "The letter will be written."',
+          'Modal passive: modal + be + V3 — "The letter must be written."',
+          'Imperative passive: Let + object + be + V3 — "Open the door" → "Let the door be opened." [Gr 10]'
+        ],
+        logic: [
+          'Only transitive verbs (verbs that take a direct object) can be changed into the passive voice — intransitive verbs (sleep, arrive, die) cannot',
+          'The tense of the sentence never changes during active-passive conversion, only the structure changes',
+          'When the agent (doer) is unknown, unimportant, or obvious, it is dropped: "Rice is grown in India" (not "by farmers")',
+          'Sentences with two objects (indirect + direct) can form two different passive sentences: "She gave him a book" → "He was given a book" OR "A book was given to him"'
+        ],
+        tips: [
+          'Questions in passive voice: move the auxiliary verb to the front — "Did she write the letter?" → "Was the letter written by her?"',
+          'Passive voice is preferred in scientific/formal writing when the action matters more than who performed it'
+        ],
+        bestPractices: [
+          'First identify the tense of the active sentence correctly — an error here cascades into the wrong "be" form in the passive',
+          'Check subject-verb agreement in the passive sentence: the new subject (former object) decides singular/plural "be" form'
+        ]
+      },
+      {
+        chapter: 'Narration (Direct & Indirect Speech)',
+        formulae: [
+          'Statement: reporting verb "said" → "said/told + that" — tense shifts one step back (present→past, past→past perfect). [Gr 9]',
+          'Yes/No question: reporting verb changes to "asked", add "if/whether", subject before verb, question mark removed: \'He said, "Do you like tea?"\' → "He asked if I liked tea." [Gr 10]',
+          'Wh- question: reporting verb "asked", keep the Wh-word, subject-verb order (not question order): \'She said, "Where do you live?"\' → "She asked where I lived." [Gr 10]',
+          'Imperative: reporting verb becomes "ordered/requested/advised" + to-infinitive: \'He said, "Shut the door."\' → "He ordered me to shut the door." [Gr 10]',
+          'Exclamatory: reporting verb becomes "exclaimed with joy/sorrow that", exclamation removed, "Alas/Hurrah" converted to feeling words: \'She said, "Alas! I have lost my ring."\' → "She exclaimed with sorrow that she had lost her ring." [Gr 10]'
+        ],
+        logic: [
+          'Pronoun changes follow the person speaking and being spoken to: I → he/she, we → they, you → I/we/he/she (depending on context)',
+          'Tense back-shift: present simple → past simple, present continuous → past continuous, present perfect → past perfect, simple past → past perfect, will → would, can → could, may → might, must → had to',
+          'Time and place words change: now → then, today → that day, tomorrow → the next day, yesterday → the day before, here → there, this → that, these → those, ago → before',
+          'No back-shift is needed for universal truths ("She said the earth revolves around the sun") or when the reporting verb is in the present tense'
+        ],
+        tips: [
+          'Always change the inverted commas and punctuation of direct speech into a plain, comma-free reported clause',
+          '"Said to" changes to "told" when a listener is mentioned; plain "said" stays "said" when no listener is mentioned'
+        ],
+        bestPractices: [
+          'Convert in this fixed order: reporting verb → conjunction/question word → pronoun → tense → time/place words — doing it out of order causes errors',
+          'Re-read the reported sentence to check it reads as a natural, complete sentence, not just a mechanical substitution'
+        ]
+      },
+      {
+        chapter: 'Question Tags',
+        formulae: [
+          'Positive statement → negative tag: "She is happy, isn\'t she?" [Gr 8]',
+          'Negative statement → positive tag: "He doesn\'t like tea, does he?" [Gr 8]',
+          'The tag repeats the auxiliary/modal verb of the main sentence and the subject as a pronoun: "They have finished, haven\'t they?" [Gr 9]',
+          'If there is no auxiliary verb in the main sentence, use do/does/did in the tag: "She sings well, doesn\'t she?" [Gr 9]',
+          'Special cases: "I am right," tag = "aren\'t I?"; "Let\'s go," tag = "shall we?"; imperative "Close the door," tag = "will you?"; "Nothing/Nobody" (negative meaning) takes a positive tag: "Nobody called, did they?" [Gr 10]'
+        ],
+        logic: [
+          'A question tag is used to confirm information or seek agreement — the intonation (rising/falling) changes the meaning between a genuine question and a rhetorical check',
+          '"There is/are" sentences use "there" in the tag: "There is a problem, isn\'t there?"'
+        ],
+        tips: [
+          'Words like hardly, scarcely, seldom, never, rarely make a sentence grammatically negative even without "not" — so the tag must be positive: "He hardly speaks, does he?"'
+        ],
+        bestPractices: [
+          'Check the main verb/auxiliary of the sentence first, then flip its polarity for the tag, then match the subject pronoun exactly'
+        ]
+      },
+      {
+        chapter: 'Editing & Omission (Error Correction)',
+        formulae: [
+          'Editing task format: a passage with one error per line; underline the incorrect word, write the correction beside it. [Gr 10]',
+          'Omission task format: a passage with one word missing per line; mark the gap with a caret (^) and write the missing word. [Gr 10]',
+          'Most frequently tested error categories: articles (a/an/the), prepositions, subject-verb agreement, tense forms, plural/singular nouns, and pronoun case. [Gr 9]'
+        ],
+        logic: [
+          'Read the whole line (not just the underlined word) to understand context before deciding the correction — the error is always grammatical, never a spelling mistake',
+          'For omission exercises, missing words are typically small function words: articles, prepositions, auxiliary verbs (is/was/has), or conjunctions',
+          'The correction should fit the exact grammatical slot — check number (singular/plural), tense, and part of speech before finalising'
+        ],
+        tips: [
+          'Common patterns to check first: missing "the" before superlatives, wrong preposition after a fixed verb, singular verb with plural subject, wrong tense in a narrative passage',
+          'Write only the corrected word, not the whole phrase, unless the exercise instructions ask for the full phrase'
+        ],
+        bestPractices: [
+          'Practise identifying error types by category (article/preposition/tense/agreement) rather than memorising specific sentences — the categories repeat across papers',
+          'Double-check your correction by re-reading the full corrected sentence aloud to confirm it now sounds grammatically complete'
+        ]
+      },
+      {
+        chapter: 'Non-Finite Verbs — Gerund, Infinitive & Participle',
+        formulae: [
+          'Gerund (V-ing used as a noun): "Swimming is good exercise." / "I enjoy reading." — can be subject, object, or object of a preposition. [Gr 9]',
+          'Infinitive (to + V1): "To err is human." / "She wants to dance." — can act as noun, adjective, or adverb. [Gr 9]',
+          'Present Participle (V-ing used as an adjective): "The barking dog scared the child." [Gr 8]',
+          'Past Participle (V3 used as an adjective): "The broken window let in rain." [Gr 8]',
+          'Perfect Participle (having + V3): "Having finished her homework, she went out to play." [Gr 10]'
+        ],
+        logic: [
+          'Certain verbs are always followed by a gerund: enjoy, avoid, finish, suggest, admit, deny, consider, mind, practise, risk',
+          'Certain verbs are always followed by an infinitive: want, decide, hope, plan, promise, refuse, agree, manage, offer',
+          'Some verbs can take either with a change in meaning: "stop to smoke" (pause in order to smoke) vs "stop smoking" (quit the habit)',
+          'A preposition is always followed by a gerund, never a plain infinitive: "good at swimming", "interested in learning", "instead of complaining"'
+        ],
+        tips: [
+          'If a sentence starts with a V-ing form acting as the subject, it must be treated as singular for verb agreement: "Reading books is her hobby."',
+          'Dangling participles (a participle phrase with no clear subject to modify) are a common error: "Walking to school, the rain started" should be "Walking to school, I got caught in the rain."'
+        ],
+        bestPractices: [
+          'When unsure whether a verb takes gerund or infinitive, learn it as part of a fixed phrase rather than translating word-for-word',
+          'Check that every participle phrase clearly modifies the noun right next to it to avoid a dangling modifier'
+        ]
+      },
+      {
+        chapter: 'Sentence Types & Transformation',
+        formulae: [
+          'Simple sentence — one subject, one finite verb (one independent clause): "She sings well." [Gr 8]',
+          'Compound sentence — two or more independent clauses joined by a coordinating conjunction: "She sings well, and she dances too." [Gr 8]',
+          'Complex sentence — one independent clause + one or more dependent clauses: "She sings well although she has never had lessons." [Gr 9]',
+          'Assertive → Negative: add "not" appropriately, or use a negative word ("all" → "not a single…is left out"). [Gr 9]',
+          'Assertive → Interrogative: invert subject and auxiliary, add question mark; if no auxiliary, add do/does/did. [Gr 9]',
+          'Assertive → Exclamatory: begin with What/How, rearrange for emphasis: "It is a beautiful flower." → "What a beautiful flower it is!" [Gr 10]'
+        ],
+        logic: [
+          'To combine simple sentences into a compound sentence, choose the coordinating conjunction that matches the logical relationship (addition = and, contrast = but, choice = or, result = so)',
+          'To combine into a complex sentence, convert one clause into a subordinate clause using a relative pronoun (who/which/that) or subordinating conjunction (because/although/when/if)',
+          'Degree of comparison transformation: Positive ("no other boy is as tall as Ram") ↔ Comparative ("Ram is taller than any other boy") ↔ Superlative ("Ram is the tallest boy") — must keep the same overall meaning'
+        ],
+        tips: [
+          'When converting positive to superlative, remember to add "the" before the superlative adjective, and change "any other" to nothing (Ram is the tallest of all boys)',
+          'When converting a sentence with "too…to" into "so…that", flip the meaning correctly: "He is too weak to walk" = "He is so weak that he cannot walk"'
+        ],
+        bestPractices: [
+          'Read the instruction carefully — "rewrite as directed" questions specify exactly which sentence type or degree is required; do not change more than asked',
+          'After transforming, re-read the new sentence to confirm the meaning of the original sentence has not changed'
+        ]
+      },
+      {
+        chapter: 'Commonly Confused Words & Usage',
+        formulae: [
+          '"Their" (possession) vs "There" (place) vs "They\'re" (they are). [Gr 8]',
+          '"Its" (possession) vs "It\'s" (it is/it has). [Gr 8]',
+          '"Your" (possession) vs "You\'re" (you are). [Gr 8]',
+          '"Effect" (noun — result) vs "Affect" (verb — to influence). [Gr 9]',
+          '"Fewer" (countable nouns) vs "Less" (uncountable nouns): "fewer chairs", "less water". [Gr 9]',
+          '"Lay" (to place something — takes an object) vs "Lie" (to recline — no object); past forms: lay→laid, lie→lay (this is why it is confusing). [Gr 10]',
+          '"Farther" (physical distance) vs "Further" (figurative/additional): "further discussion", "farther away". [Gr 10]'
+        ],
+        logic: [
+          'Homophones (words that sound alike but differ in spelling and meaning) are a major source of error in written English — memorise them in contrastive pairs, never in isolation',
+          'Countable vs uncountable distinction governs many word choices: few/fewer/many for countables, little/less/much for uncountables'
+        ],
+        tips: [
+          'To remember its/it\'s: mentally expand the sentence — if you can say "it is" or "it has" in its place, use the apostrophe',
+          'To remember affect/effect: Affect is an Action (verb); Effect is the End result (noun)'
+        ],
+        bestPractices: [
+          'Proofread written answers specifically for homophone slips — they are invisible when reading for meaning but easily caught when reading word by word'
+        ]
+      }
+    ],
+  Hindi: [
+      {
+        chapter: 'वर्ण-विचार (स्वर, व्यंजन एवं उच्चारण)',
+        formulae: [
+          'स्वर (11): अ, आ, इ, ई, उ, ऊ, ऋ, ए, ऐ, ओ, औ — जिनके उच्चारण में किसी अन्य वर्ण की सहायता नहीं ली जाती। [कक्षा 8]',
+          'ह्रस्व स्वर (मात्रा में कम समय): अ, इ, उ, ऋ — दीर्घ स्वर (अधिक समय): आ, ई, ऊ, ए, ऐ, ओ, औ। [कक्षा 8]',
+          'व्यंजन (33+): क वर्ग (क, ख, ग, घ, ङ) से लेकर ह तक — जिनके उच्चारण में स्वर की सहायता आवश्यक होती है। [कक्षा 8]',
+          'उच्चारण-स्थान के आधार पर वर्गीकरण: कंठ्य (क वर्ग), तालव्य (च वर्ग), मूर्धन्य (ट वर्ग), दंत्य (त वर्ग), ओष्ठ्य (प वर्ग)। [कक्षा 9]',
+          'संयुक्त व्यंजन: क्ष (क्+ष), त्र (त्+र), ज्ञ (ज्+ञ), श्र (श्+र)। [कक्षा 8]',
+          'अनुस्वार (ं) और अनुनासिक (ँ) — अनुस्वार शुद्ध नासिक्य ध्वनि, अनुनासिक स्वर सहित नासिक्य उच्चारण। [कक्षा 9]'
+        ],
+        logic: [
+          'स्वर स्वतंत्र रूप से बोले जा सकते हैं; व्यंजन के उच्चारण में सदैव किसी न किसी स्वर की सहायता आवश्यक होती है (क = क् + अ)',
+          'हिंदी वर्णमाला में मात्राएँ स्वरों के ह्रस्व/दीर्घ रूप का प्रतिनिधित्व करती हैं जब वे व्यंजन के साथ जुड़ती हैं',
+          'घोष (सघोष) व्यंजन (ग, घ, ज, झ आदि) उच्चारण में स्वर-तंत्रियों का कंपन होता है; अघोष (क, ख, च, छ आदि) में नहीं'
+        ],
+        tips: [
+          'स्वर याद रखने की सरल विधि: पहले ह्रस्व (अ, इ, उ, ऋ), फिर दीर्घ (आ, ई, ऊ), फिर संयुक्त (ए, ऐ, ओ, औ)',
+          'उच्चारण-स्थान पहचानने के लिए वर्ग के पहले अक्षर को ध्यान से बोलें — जीभ जहाँ स्पर्श करे, वही स्थान'
+        ],
+        bestPractices: [
+          'वर्तनी (स्पेलिंग) की शुद्धता के लिए मात्राओं (ि, ी, ु, ू आदि) का सही स्थान याद रखें — यह परीक्षा में सबसे अधिक अंक कटने का कारण है',
+          'संयुक्ताक्षर लिखते समय आधे व्यंजन का सही रूप प्रयोग करें (क् + ष = क्ष, न कि क्श)'
+        ]
+      },
+      {
+        chapter: 'संधि (स्वर, व्यंजन एवं विसर्ग संधि)',
+        formulae: [
+          'संधि की परिभाषा: दो निकटवर्ती वर्णों (स्वर या व्यंजन) के मेल से होने वाला विकार/परिवर्तन संधि कहलाता है। [कक्षा 9]',
+          'स्वर संधि — दीर्घ संधि: अ/आ + अ/आ = आ (विद्या+आलय = विद्यालय); गुण संधि: अ/आ + इ/ई = ए (नर+इंद्र = नरेंद्र), अ/आ + उ/ऊ = ओ (सूर्य+उदय = सूर्योदय); वृद्धि संधि: अ/आ + ए/ऐ = ऐ (एक+एक = एकैक), अ/आ + ओ/औ = औ (परम+औषध = परमौषध); यण संधि: इ/ई+असमान स्वर = य्, उ/ऊ+असमान स्वर = व् (यदि+अपि = यद्यपि)। [कक्षा 9]',
+          'व्यंजन संधि: जब व्यंजन के साथ स्वर या व्यंजन मिलकर परिवर्तन करता है — जगत्+ईश = जगदीश, सत्+जन = सज्जन, दिक्+अंत = दिगंत। [कक्षा 10]',
+          'विसर्ग संधि: विसर्ग (:) के आगे स्वर/व्यंजन आने पर होने वाला परिवर्तन — मनः+रथ = मनोरथ, निः+रोग = निरोग, निः+चल = निश्चल। [कक्षा 10]'
+        ],
+        logic: [
+          'संधि-विच्छेद (संधि को अलग करना) करते समय पहले यह पहचानें कि मेल स्वर+स्वर, व्यंजन+स्वर/व्यंजन, या विसर्ग से जुड़ा है',
+          'गुण संधि में परिणामी स्वर हमेशा "ए" या "ओ" होता है; वृद्धि संधि में हमेशा "ऐ" या "औ" — यह भेद याद रखने से पहचान आसान होती है',
+          'व्यंजन संधि में अक्सर पहले शब्द का अंतिम वर्ण अगले शब्द के पहले वर्ण के अनुसार बदलता है (सत्+चित् = सच्चित्)'
+        ],
+        tips: [
+          'दीर्घ संधि में दोनों वर्ण समान होने चाहिए (अ+अ, आ+आ, अ+आ) — परिणाम सदैव संगत दीर्घ स्वर',
+          'विसर्ग संधि याद रखने की कुंजी: विसर्ग के बाद कोमल/घोष वर्ण आने पर विसर्ग प्रायः "ओ" या "र" में बदलता है'
+        ],
+        bestPractices: [
+          'संधि करने और संधि-विच्छेद करने दोनों का अभ्यास करें — परीक्षा में दोनों प्रकार के प्रश्न पूछे जाते हैं',
+          'प्रत्येक संधि के 3-4 प्रामाणिक उदाहरण कंठस्थ रखें ताकि नए शब्दों में भी पैटर्न पहचान सकें'
+        ]
+      },
+      {
+        chapter: 'समास (छह भेद)',
+        formulae: [
+          'समास की परिभाषा: दो या दो से अधिक शब्दों के मेल से बनने वाला एक नया, संक्षिप्त शब्द जिसमें कारक-चिह्न (विभक्ति) लुप्त हो जाते हैं। [कक्षा 9]',
+          'अव्ययीभाव समास: पहला पद प्रधान, संपूर्ण पद अव्यय बन जाता है — यथाशक्ति (शक्ति के अनुसार), प्रतिदिन (प्रत्येक दिन)। [कक्षा 9]',
+          'तत्पुरुष समास: दूसरा पद प्रधान, कारक-चिह्न का लोप — राजपुत्र (राजा का पुत्र), विद्यालय (विद्या के लिए आलय)। [कक्षा 9]',
+          'कर्मधारय समास: दोनों पद विशेषण-विशेष्य या उपमान-उपमेय संबंध में, दूसरा पद प्रधान — नीलकमल (नीला है जो कमल), चंद्रमुख (चंद्र जैसा मुख)। [कक्षा 10]',
+          'द्विगु समास: पहला पद संख्यावाचक, समूह/समाहार का बोध — नवरात्र (नौ रात्रियों का समूह), त्रिभुज (तीन भुजाओं का समूह)। [कक्षा 10]',
+          'द्वंद्व समास: दोनों पद प्रधान, "और" का लोप — माता-पिता (माता और पिता), राम-लक्ष्मण। [कक्षा 9]',
+          'बहुव्रीहि समास: कोई पद प्रधान नहीं, संपूर्ण पद किसी अन्य (तीसरे) अर्थ की ओर संकेत करता है — दशानन (दस आनन वाला अर्थात् रावण), चक्रपाणि (चक्र है पाणि में जिसके अर्थात् विष्णु)। [कक्षा 10]'
+        ],
+        logic: [
+          'तत्पुरुष और बहुव्रीहि में भ्रम होता है: तत्पुरुष में समास का अर्थ स्वयं समास के भीतर के पदों से निकलता है, बहुव्रीहि में अर्थ किसी बाहरी/तीसरे व्यक्ति-वस्तु की ओर संकेत करता है',
+          'कर्मधारय और द्विगु दोनों में पहला पद विशेषण जैसा होता है, पर द्विगु में पहला पद सदैव संख्यावाचक होता है, कर्मधारय में नहीं',
+          'द्वंद्व समास पहचानने की सरल कसौटी: दोनों पदों के बीच "और" जोड़कर अर्थ पूर्ण बनता हो'
+        ],
+        tips: [
+          'समास का विग्रह (विस्तार) करते समय कारक-चिह्न (का, के, की, में, पर आदि) को पुनः जोड़ें — यही समास-विग्रह कहलाता है',
+          'बहुव्रीहि पहचानने की तरकीब: विग्रह में "जिसका/जिसके/जो...वह" जैसे वाक्यांश का प्रयोग होता है'
+        ],
+        bestPractices: [
+          'प्रत्येक भेद के कम से कम 5 उदाहरण याद करें और उनका विग्रह लिखने का अभ्यास करें',
+          'परीक्षा में समास पहचानने के लिए पहले विग्रह लिखें, फिर यह देखें कि कौन-सा पद प्रधान है'
+        ]
+      },
+      {
+        chapter: 'उपसर्ग और प्रत्यय',
+        formulae: [
+          'उपसर्ग: शब्द के आरंभ में जुड़कर नया अर्थ देने वाला शब्दांश — प्र, परा, अप, सम, अनु, अव, निर्/निस्, दुर्/दुस्, वि, आ, नि, अधि, सु, उत्, अभि, प्रति, अति, उप। [कक्षा 8]',
+          'उदाहरण: प्र+गति=प्रगति, सु+पुत्र=सुपुत्र, दुर्+आचार=दुराचार, अनु+गमन=अनुगमन, वि+सम्=विषम। [कक्षा 8]',
+          'प्रत्यय: शब्द के अंत में जुड़कर नया शब्द बनाने वाला शब्दांश — कृत् प्रत्यय (क्रिया से) और तद्धित प्रत्यय (संज्ञा/विशेषण से)। [कक्षा 9]',
+          'कृत् प्रत्यय उदाहरण: लिख+अक=लेखक, पढ़+आई=पढ़ाई, खेल+आड़ी=खिलाड़ी। [कक्षा 9]',
+          'तद्धित प्रत्यय उदाहरण: बुद्धि+मान=बुद्धिमान, समाज+इक=सामाजिक, मानव+ता=मानवता, दूध+वाला=दूधवाला। [कक्षा 10]'
+        ],
+        logic: [
+          'उपसर्ग शब्द के अर्थ को बदलता या विशिष्ट करता है, पर स्वयं स्वतंत्र शब्द नहीं होता (जैसे "प्र" अकेले प्रयोग नहीं होता)',
+          'प्रत्यय शब्द की श्रेणी (संज्ञा/विशेषण/क्रिया) भी बदल सकता है — जैसे क्रिया "पढ़ना" से संज्ञा "पढ़ाई" बनना',
+          'एक ही मूल शब्द में उपसर्ग और प्रत्यय दोनों जुड़ सकते हैं: सु+फल+दायक = सुफलदायक'
+        ],
+        tips: [
+          'संस्कृत के प्रमुख उपसर्ग (प्र, परा, अप, सम, अनु, अव आदि) कंठस्थ करें — परीक्षा में शब्द-निर्माण प्रश्नों का आधार यही हैं',
+          'प्रत्यय पहचानने के लिए शब्द को मूल धातु/शब्द और शेष अंश में विभाजित करने का अभ्यास करें'
+        ],
+        bestPractices: [
+          'नए शब्द बनाने के प्रश्नों में सही उपसर्ग/प्रत्यय चुनने से पहले शब्द का अर्थ पहले समझ लें',
+          'उपसर्ग और प्रत्यय की सूचियाँ अलग-अलग तालिका बनाकर याद करें, ताकि परीक्षा में भ्रम न हो'
+        ]
+      },
+      {
+        chapter: 'संज्ञा, सर्वनाम एवं विशेषण',
+        formulae: [
+          'संज्ञा के भेद: व्यक्तिवाचक (राम, दिल्ली), जातिवाचक (लड़का, नदी), भाववाचक (सुंदरता, बुढ़ापा), समूहवाचक (सेना, भीड़), द्रव्यवाचक (सोना, पानी)। [कक्षा 8]',
+          'लिंग: पुल्लिंग एवं स्त्रीलिंग — वचन: एकवचन एवं बहुवचन — कारक: कर्ता, कर्म, करण, संप्रदान, अपादान, संबंध, अधिकरण, संबोधन (8 कारक, प्रत्येक की विभक्ति चिह्न सहित)। [कक्षा 9]',
+          'सर्वनाम के भेद: पुरुषवाचक (मैं, तू, वह), निश्चयवाचक (यह, वह), अनिश्चयवाचक (कोई, कुछ), संबंधवाचक (जो...वह), प्रश्नवाचक (कौन, क्या), निजवाचक (आप, स्वयं)। [कक्षा 8]',
+          'विशेषण के भेद: गुणवाचक (सुंदर, काला), संख्यावाचक (पाँच, कुछ), परिमाणवाचक (थोड़ा, सारा), सार्वनामिक (यह, वह पुस्तक)। [कक्षा 8]',
+          'विशेषण की अवस्थाएँ: मूलावस्था (अच्छा), उत्तरावस्था/तुलनात्मक (अच्छा से बेहतर — "अधिक अच्छा"), उत्तमावस्था/सर्वोत्तम ("सबसे अच्छा")। [कक्षा 9]'
+        ],
+        logic: [
+          'कारक की पहचान क्रिया से शब्द का संबंध देखकर होती है — कर्ता क्रिया करता है, कर्म पर क्रिया का प्रभाव पड़ता है, करण साधन है जिससे क्रिया होती है',
+          'सार्वनामिक विशेषण और सर्वनाम में भेद: जब सर्वनाम किसी संज्ञा के पहले आकर उसकी विशेषता बताए (यह पुस्तक), तब वह सार्वनामिक विशेषण है, स्वतंत्र सर्वनाम नहीं',
+          'भाववाचक संज्ञा प्रायः विशेषण/क्रिया में प्रत्यय जोड़कर बनती है (सुंदर+ता=सुंदरता, मीठा+पन=मिठास)'
+        ],
+        tips: [
+          'आठों कारकों के विभक्ति-चिह्न तालिका बनाकर याद रखें: कर्ता(ने), कर्म(को), करण(से/द्वारा), संप्रदान(के लिए), अपादान(से-अलगाव), संबंध(का/की/के), अधिकरण(में/पर), संबोधन(हे/अरे)',
+          'लिंग-निर्णय में संदेह होने पर वाक्य में प्रयुक्त क्रिया के रूप से जाँच करें (गया/गई, अच्छा/अच्छी)'
+        ],
+        bestPractices: [
+          'पद-परिचय लिखते समय क्रम याद रखें: शब्द भेद → लिंग → वचन → कारक/काल (जो लागू हो) → संबंधित शब्द (विशेष्य/क्रिया)',
+          'हर कारक के लिए कम से कम दो उदाहरण वाक्य में प्रयोग करके अभ्यास करें'
+        ]
+      },
+      {
+        chapter: 'क्रिया और काल',
+        formulae: [
+          'क्रिया के भेद: सकर्मक (कर्म सहित — "राम पुस्तक पढ़ता है"), अकर्मक (कर्म रहित — "बच्चा सोता है")। [कक्षा 8]',
+          'काल के तीन मुख्य भेद: वर्तमान काल, भूतकाल, भविष्यत् काल — प्रत्येक के सामान्य, अपूर्ण (जारी) और पूर्ण उपभेद। [कक्षा 8]',
+          'सामान्य वर्तमान: वह पढ़ता है। अपूर्ण वर्तमान: वह पढ़ रहा है। पूर्ण वर्तमान: उसने पढ़ लिया है। संदिग्ध वर्तमान: वह पढ़ता होगा। [कक्षा 9]',
+          'सामान्य भूत: वह पढ़ा। अपूर्ण भूत: वह पढ़ रहा था। पूर्ण भूत: उसने पढ़ लिया था। संदिग्ध भूत: वह पढ़ा होगा। हेतुहेतुमद् भूत: यदि वह पढ़ता तो पास होता। [कक्षा 10]',
+          'सामान्य भविष्यत्: वह पढ़ेगा। संभाव्य भविष्यत्: वह पढ़े। अपूर्ण भविष्यत्: वह पढ़ रहा होगा। [कक्षा 9]'
+        ],
+        logic: [
+          'सकर्मक/अकर्मक की पहचान: क्रिया से पूछें "क्या/किसे" — उत्तर मिले तो सकर्मक (कर्म है), न मिले तो अकर्मक',
+          'प्रत्येक काल की पहचान क्रिया के अंतिम रूप (रहा है/रहा था/चुका है/गा/एगा आदि) से होती है, न कि केवल समय-सूचक शब्दों से',
+          'संयुक्त क्रिया (दो क्रियाओं का मेल, जैसे "उठ बैठा", "खा लिया") एक ही क्रिया की तरह कार्य करती है'
+        ],
+        tips: [
+          'हेतुहेतुमद् भूत काल पहचानने की कुंजी: वाक्य में "यदि...तो" जैसी शर्त और काल्पनिक परिणाम होता है',
+          'वाच्य (कर्तृ/कर्म/भाव) के साथ काल बदलने पर क्रिया रूप में जो अंतर आता है, उसका अलग से अभ्यास करें'
+        ],
+        bestPractices: [
+          'काल पहचानने के लिए वाक्य के अंत की क्रिया को रेखांकित कर उसका रूप विश्लेषण करने की आदत डालें',
+          'हर काल के 2-3 उदाहरण वाक्य स्वयं बनाने का अभ्यास करें ताकि पहचान में भ्रम न हो'
+        ]
+      },
+      {
+        chapter: 'वाच्य (कर्तृवाच्य, कर्मवाच्य, भाववाच्य)',
+        formulae: [
+          'कर्तृवाच्य: क्रिया का रूप कर्ता के अनुसार बदलता है, कर्ता प्रधान होता है — "राम पत्र लिखता है।" [कक्षा 10]',
+          'कर्मवाच्य: क्रिया का रूप कर्म के अनुसार बदलता है, कर्ता के साथ "द्वारा/से" जुड़ता है — "राम द्वारा पत्र लिखा जाता है।" [कक्षा 10]',
+          'भाववाच्य: क्रिया सदैव एकवचन, पुल्लिंग, अन्यपुरुष रहती है; प्रायः अकर्मक क्रिया के साथ, कर्ता "से" सहित — "मुझसे चला नहीं जाता।" [कक्षा 10]',
+          'कर्मवाच्य बनाने का सूत्र: कर्ता+द्वारा + कर्म + क्रिया का "जाना" रूप (काल के अनुसार) — जैसे लिखा जाता है/लिखा गया/लिखा जाएगा। [कक्षा 10]',
+          'भाववाच्य केवल अकर्मक क्रियाओं से बनता है और इसका कोई कर्म नहीं होता — "मुझसे हँसा नहीं जाता", "उससे बैठा नहीं गया।" [कक्षा 10]'
+        ],
+        logic: [
+          'भाववाच्य और कर्मवाच्य में भेद: भाववाच्य में क्रिया अकर्मक और कर्म अनुपस्थित होता है; कर्मवाच्य में क्रिया सकर्मक होती है और कर्म स्पष्ट रूप से उपस्थित रहता है',
+          'वाच्य-परिवर्तन में मूल वाक्य का काल कभी नहीं बदलता, केवल वाक्य की संरचना (कर्ता/कर्म प्रधानता) बदलती है',
+          'कर्तृवाच्य को कर्मवाच्य में बदलते समय कर्ता के साथ "ने" की जगह "के द्वारा/से" तथा क्रिया के साथ "जाना" धातु जुड़ती है'
+        ],
+        tips: [
+          'भाववाच्य पहचानने की सरल कसौटी: वाक्य में "से" + क्रिया का "नहीं जाता/नहीं गया" रूप और कोई कर्म (वस्तु) नहीं होता',
+          'वाच्य बदलते समय क्रिया के काल को ध्यान से देखें — भूतकाल में "गया", वर्तमान में "जाता है", भविष्यत् में "जाएगा"'
+        ],
+        bestPractices: [
+          'तीनों वाच्यों के बीच रूपांतरण का अभ्यास एक ही मूल वाक्य से बार-बार करें (कर्तृ→कर्म→भाव)',
+          'परीक्षा में वाच्य पहचानने से पहले पहले क्रिया सकर्मक है या अकर्मक, यह जाँच लें'
+        ]
+      },
+      {
+        chapter: 'वाक्य भेद एवं वाक्य-रूपांतरण',
+        formulae: [
+          'रचना के आधार पर वाक्य भेद: सरल वाक्य (एक उद्देश्य + एक विधेय, कोई योजक नहीं), संयुक्त वाक्य (दो स्वतंत्र उपवाक्य "और/तथा/या/फिर भी" से जुड़े), मिश्र वाक्य (एक प्रधान उपवाक्य + एक/अधिक आश्रित उपवाक्य "जो/कि/जब/यदि/क्योंकि" से जुड़े)। [कक्षा 10]',
+          'अर्थ के आधार पर वाक्य भेद: विधानवाचक, निषेधवाचक, प्रश्नवाचक, विस्मयादिवाचक, आज्ञावाचक, इच्छावाचक, संदेहवाचक, संकेतवाचक। [कक्षा 9]',
+          'सरल वाक्य में एक ही क्रिया प्रधान होती है; मिश्र वाक्य में आश्रित उपवाक्य प्रधान उपवाक्य पर निर्भर करता है और अकेला अर्थपूर्ण नहीं होता। [कक्षा 10]'
+        ],
+        logic: [
+          'सरल→मिश्र रूपांतरण: संयोजक क्रिया रूप (कर, करके) को आश्रित उपवाक्य में विस्तारित करें — "सोकर उठा" → "जब वह सोकर उठा"',
+          'मिश्र→संयुक्त रूपांतरण: "जो...वह/जब...तब" के स्थान पर "और/इसलिए" जैसे समुच्चयबोधक का प्रयोग करें',
+          'संयुक्त→सरल रूपांतरण: दो स्वतंत्र उपवाक्यों में से एक को संयोजक क्रिया (करके/कर) के रूप में समाहित करें'
+        ],
+        tips: [
+          'मिश्र वाक्य पहचानने की कुंजी: "जो-वह", "जब-तब", "जैसे-वैसे", "यदि-तो", "क्योंकि", "कि" जैसे युग्म-योजक शब्द खोजें',
+          'संयुक्त वाक्य पहचानने की कुंजी: "और", "तथा", "या", "अथवा", "फिर भी", "इसलिए", "परंतु" जैसे समुच्चयबोधक अव्यय खोजें'
+        ],
+        bestPractices: [
+          'रूपांतरण करते समय मूल वाक्य का अर्थ न बदले, यह बार-बार जाँचें',
+          'एक ही वाक्य के तीनों रूप (सरल/संयुक्त/मिश्र) लिखने का अभ्यास करें ताकि परीक्षा में किसी भी दिशा में प्रश्न आए तो कठिनाई न हो'
+        ]
+      },
+      {
+        chapter: 'अलंकार',
+        formulae: [
+          'अलंकार की परिभाषा: वे भाषिक चमत्कार/युक्तियाँ जो काव्य की शोभा बढ़ाती हैं। मुख्यतः शब्दालंकार और अर्थालंकार दो भेद। [कक्षा 9]',
+          'यमक अलंकार: एक ही शब्द का वाक्य में एक से अधिक बार भिन्न-भिन्न अर्थों में प्रयोग — "काली घटा का घमंड घटा।" [कक्षा 9]',
+          'श्लेष अलंकार: एक ही शब्द के एक साथ (एक ही बार प्रयोग में) दो या अधिक अर्थ निकलना — "रहिमन पानी राखिए, बिन पानी सब सून।" [कक्षा 10]',
+          'उपमा अलंकार: उपमेय की उपमान से "सा/सी/जैसा/समान" द्वारा तुलना — "मुख चंद्रमा जैसा है।" [कक्षा 9]',
+          'रूपक अलंकार: उपमेय पर उपमान का सीधा आरोप, बिना तुलनावाचक शब्द के — "चरण-कमल बंदौ हरि राई" (चरण ही कमल हैं)। [कक्षा 10]',
+          'उत्प्रेक्षा अलंकार: उपमेय में उपमान होने की संभावना/कल्पना — "मानो/जनु/जानो" शब्दों का प्रयोग — "मुख मानो चंद्रमा है।" [कक्षा 10]',
+          'मानवीकरण अलंकार: निर्जीव वस्तुओं पर मानवीय क्रियाओं/भावों का आरोपण — "मेघ आए बड़े बन-ठन के, सँवर के।" [कक्षा 10]',
+          'अतिशयोक्ति अलंकार: किसी बात को बहुत बढ़ा-चढ़ाकर, वास्तविकता से परे प्रस्तुत करना — "हनुमान की पूँछ में लगन न पाई आग, लंका सारी जल गई गए निशाचर भाग।" [कक्षा 10]'
+        ],
+        logic: [
+          'यमक और श्लेष में भेद: यमक में शब्द बार-बार दोहराया जाता है (हर बार भिन्न अर्थ में); श्लेष में शब्द एक ही बार आता है पर उसके एक साथ कई अर्थ निकलते हैं',
+          'उपमा और रूपक में भेद: उपमा में तुलनावाचक शब्द (सा/जैसा/समान) स्पष्ट रहता है; रूपक में उपमेय और उपमान में पूर्ण अभेद (एकरूपता) मान लिया जाता है, कोई तुलनावाचक शब्द नहीं होता',
+          'उत्प्रेक्षा में "मानो/जनु" जैसे संभावनासूचक शब्द अनिवार्य होते हैं — यही इसे उपमा/रूपक से अलग करता है',
+          'कथन-कारण या वस्तु के वर्णन में अत्यधिक बढ़ा-चढ़ाकर कहना (वास्तविकता से बहुत आगे) अतिशयोक्ति की पहचान है'
+        ],
+        tips: [
+          'हर अलंकार का एक प्रतिनिधि उदाहरण याद रखें और उसके पहचान-चिह्न (तुलनावाचक शब्द/मानवीय क्रिया/शब्द-दोहराव) को रेखांकित करने का अभ्यास करें',
+          'काव्य-पंक्ति पढ़ते समय पहले जाँचें — क्या कोई शब्द दोहराया गया है (यमक), कोई तुलनावाचक शब्द है (उपमा/उत्प्रेक्षा), या निर्जीव को सजीव बताया गया है (मानवीकरण)'
+        ],
+        bestPractices: [
+          'अलंकार पहचानने के प्रश्नों में विकल्पों को हल करते समय पहले यह तय करें कि पंक्ति शब्दालंकार (शब्द पर आधारित) है या अर्थालंकार (अर्थ/भाव पर आधारित)',
+          'हर अलंकार के लक्षण को एक पंक्ति में सूत्र रूप में लिखकर रिवीज़न करें'
+        ]
+      },
+      {
+        chapter: 'मुहावरे एवं लोकोक्तियाँ',
+        formulae: [
+          'मुहावरा: वाक्यांश जिसका शाब्दिक अर्थ नहीं बल्कि लाक्षणिक/विशेष अर्थ लिया जाता है — जैसे "आँखें खुलना" (सच्चाई का पता चलना)। [कक्षा 8]',
+          'लोकोक्ति (कहावत): पूर्ण वाक्य जो जनश्रुति से बना हो और उपदेशात्मक/नीतिपरक अर्थ रखता हो — जैसे "अंधों में काना राजा" (योग्यों के अभाव में अल्प-योग्य ही श्रेष्ठ माना जाता है)। [कक्षा 8]',
+          'सामान्य मुहावरे: नाकों चने चबाना (कठिनाई में डालना), आँखों में धूल झोंकना (धोखा देना), दाँतों तले उँगली दबाना (आश्चर्यचकित होना), कान भरना (चुगली करना), खून-पसीना एक करना (कड़ी मेहनत करना)। [कक्षा 9]',
+          'सामान्य लोकोक्तियाँ: "नाच न जाने आँगन टेढ़ा" (अपनी अयोग्यता छिपाने के लिए बहाना बनाना), "ऊँट के मुँह में जीरा" (आवश्यकता से बहुत कम), "जिसकी लाठी उसकी भैंस" (शक्तिशाली की ही चलती है)। [कक्षा 10]'
+        ],
+        logic: [
+          'मुहावरे वाक्य में सदैव क्रिया के साथ प्रयुक्त होते हैं और वाक्य के अनुसार काल/वचन में बदलते हैं (आँखें खुलीं/खुलेंगी/खुल जाएँगी)',
+          'लोकोक्ति सामान्यतः स्वयं में पूर्ण वाक्य होती है और बिना बदलाव के प्रयुक्त होती है — यह मुहावरे से इसका मुख्य अंतर है'
+        ],
+        tips: [
+          'मुहावरे का अर्थ लिखने के बाद उसका वाक्य में प्रयोग अवश्य करें — केवल अर्थ लिखने पर पूरे अंक नहीं मिलते',
+          'विषय (परिश्रम, साहस, चतुराई, धोखा आदि) के अनुसार मुहावरों को समूहों में याद करें, इससे स्मरण आसान होता है'
+        ],
+        bestPractices: [
+          'प्रत्येक सप्ताह 8-10 नए मुहावरे/लोकोक्ति सीखकर वाक्य-प्रयोग की एक नोटबुक बनाएँ',
+          'परीक्षा में दिए गए मुहावरे का अर्थ पहले स्पष्ट करें, फिर स्वयं का सार्थक वाक्य बनाएँ जिसमें प्रसंग स्पष्ट झलके'
+        ]
+      },
+      {
+        chapter: 'पद-परिचय',
+        formulae: [
+          'पद-परिचय: वाक्य में प्रयुक्त प्रत्येक शब्द (पद) के व्याकरणिक रूप का पूर्ण विश्लेषण। [कक्षा 10]',
+          'संज्ञा का पद-परिचय क्रम: भेद (व्यक्तिवाचक/जातिवाचक आदि) → लिंग → वचन → कारक → संबंधित क्रिया। [कक्षा 10]',
+          'सर्वनाम का पद-परिचय क्रम: भेद (पुरुषवाचक/निश्चयवाचक आदि) → पुरुष → लिंग → वचन → कारक। [कक्षा 10]',
+          'विशेषण का पद-परिचय क्रम: भेद (गुणवाचक/संख्यावाचक आदि) → लिंग → वचन → विशेष्य (जिस संज्ञा की विशेषता बताई जा रही है)। [कक्षा 10]',
+          'क्रिया का पद-परिचय क्रम: भेद (सकर्मक/अकर्मक) → काल → वचन → लिंग → पुरुष → कर्ता/कर्म से संबंध। [कक्षा 10]',
+          'अव्यय (क्रियाविशेषण/समुच्चयबोधक/संबंधबोधक/विस्मयादिबोधक) का पद-परिचय: भेद → किस शब्द/क्रिया की विशेषता बता रहा है। [कक्षा 10]'
+        ],
+        logic: [
+          'पद-परिचय लिखते समय शब्द को अलग से न देखकर पूरे वाक्य में उसकी भूमिका के आधार पर विश्लेषण करें — एक ही शब्द भिन्न वाक्यों में भिन्न भेद का हो सकता है',
+          'क्रिया-विशेषण अव्यय हमेशा किसी क्रिया, विशेषण, या दूसरे क्रिया-विशेषण की विशेषता बताता है — इसका उल्लेख पद-परिचय में अनिवार्य है',
+          'सार्वनामिक विशेषण का पद-परिचय लिखते समय ध्यान दें कि यह मूलतः सर्वनाम है पर वाक्य में विशेषण की तरह कार्य कर रहा है'
+        ],
+        tips: [
+          'हर पद-परिचय के अंत में "विशेष्य" या "क्रिया" के साथ संबंध अवश्य लिखें — इसके बिना उत्तर अधूरा माना जाता है',
+          'रेखांकित शब्द से पहले और बाद के शब्दों को ध्यान से पढ़ें — इसी से कारक और विशेष्य का पता चलता है'
+        ],
+        bestPractices: [
+          'पद-परिचय के प्रत्येक भेद (संज्ञा/सर्वनाम/विशेषण/क्रिया/अव्यय) के लिए निश्चित क्रम में उत्तर लिखने का अभ्यास करें, ताकि कोई अंश छूटे नहीं',
+          'रोज़ एक अनुच्छेद से 5 शब्द चुनकर उनका पूर्ण पद-परिचय लिखने का अभ्यास करें'
+        ]
+      },
+      {
+        chapter: 'विराम-चिह्न',
+        formulae: [
+          'पूर्ण विराम (।): वाक्य समाप्ति पर। अल्प विराम (,): वाक्य में संक्षिप्त ठहराव/सूची पृथक्करण पर। [कक्षा 8]',
+          'प्रश्नवाचक चिह्न (?): प्रश्नवाचक वाक्य के अंत में। विस्मयादिबोधक चिह्न (!): आश्चर्य/हर्ष/शोक भाव व्यक्त करने वाले वाक्य के अंत में। [कक्षा 8]',
+          'उद्धरण चिह्न (" " या \' \'): किसी के कहे गए वाक्य को ज्यों का त्यों उद्धृत करने पर। [कक्षा 9]',
+          'योजक चिह्न (-): दो शब्दों को जोड़ने पर (माता-पिता), सामासिक/द्वंद्व शब्दों में। अर्ध विराम (;): दो स्वतंत्र किंतु संबंधित उपवाक्यों के बीच। [कक्षा 9]',
+          'विवरण चिह्न/निर्देशक चिह्न (:), (—): किसी सूची या स्पष्टीकरण से पहले। कोष्ठक ( ): अतिरिक्त जानकारी या स्पष्टीकरण के लिए। [कक्षा 10]'
+        ],
+        logic: [
+          'विराम-चिह्नों का सही प्रयोग वाक्य के अर्थ को स्पष्ट व अस्पष्टता-रहित बनाता है — गलत स्थान पर लगाया गया अल्प विराम अर्थ बदल सकता है',
+          'संवाद/उद्धरण लिखते समय उद्धरण-चिह्न के भीतर ही पूर्ण विराम/प्रश्नवाचक/विस्मयादिबोधक चिह्न लगाया जाता है'
+        ],
+        tips: [
+          'लंबे वाक्यों को पढ़ते समय स्वाभाविक ठहराव के स्थान चिह्नित करने का अभ्यास करें — यही अल्प विराम के सही स्थान बताते हैं',
+          'निबंध/पत्र लेखन में विराम-चिह्नों के सही प्रयोग पर अलग से अंक निर्धारित होते हैं, अतः पुनरीक्षण में विशेष ध्यान दें'
+        ],
+        bestPractices: [
+          'लेखन के बाद प्रत्येक वाक्य को पुनः पढ़कर जाँचें कि पूर्ण विराम/प्रश्नवाचक/विस्मयादिबोधक चिह्न उचित स्थान पर है या नहीं',
+          'बिना विराम चिह्नों वाले अनुच्छेद में चिह्न लगाने का साप्ताहिक अभ्यास करें'
+        ]
+      },
+      {
+        chapter: 'शब्द-ज्ञान (पर्यायवाची, विलोम, अनेकार्थी शब्द)',
+        formulae: [
+          'पर्यायवाची शब्द (समानार्थी): एक ही अर्थ देने वाले भिन्न शब्द — सूर्य: रवि, भानु, दिनकर, आदित्य, सूरज। जल: नीर, पानी, वारि, तोय, सलिल। [कक्षा 8]',
+          'विलोम शब्द (विपरीतार्थक): विपरीत अर्थ देने वाले शब्द — दिन×रात, जीवन×मृत्यु, आदि×अंत, प्रिय×अप्रिय, गुण×दोष, आशा×निराशा। [कक्षा 8]',
+          'अनेकार्थी शब्द: एक ही शब्द के भिन्न संदर्भ में भिन्न अर्थ — "कर" (हाथ / टैक्स / करना), "फल" (परिणाम / मीठा फल)। [कक्षा 9]',
+          'तत्सम-तद्भव शब्द: तत्सम — संस्कृत से ज्यों का त्यों लिया गया शब्द (अग्नि, सूर्य, हस्त); तद्भव — संस्कृत से बदलकर बना शब्द (आग, सूरज, हाथ)। [कक्षा 9]',
+          'देशज एवं विदेशज शब्द: देशज — स्थानीय बोलियों से आए शब्द (खिड़की, लोटा); विदेशज — अन्य भाषाओं से आए शब्द (स्कूल-अंग्रेज़ी, कमीज़-पुर्तगाली, कुर्सी-अरबी)। [कक्षा 10]'
+        ],
+        logic: [
+          'पर्यायवाची शब्द भी सूक्ष्म अर्थ-भेद रखते हैं (जैसे "नीर" काव्यात्मक है, "पानी" सामान्य बोलचाल का) — प्रसंग के अनुसार उचित शब्द चुनें',
+          'विलोम शब्द बनाते समय उपसर्ग जोड़कर भी बनाया जा सकता है (योग्य×अयोग्य, स्वदेश×विदेश), इसलिए उपसर्ग का ज्ञान यहाँ भी सहायक है'
+        ],
+        tips: [
+          'शब्द-भंडार बढ़ाने के लिए हर पाठ से नए पर्यायवाची/विलोम शब्दों की एक निजी शब्दावली-सूची बनाएँ',
+          'अनेकार्थी शब्दों के दोनों/सभी अर्थ वाक्य में प्रयोग करके याद करें, ताकि प्रसंग के अनुसार सही अर्थ पहचान सकें'
+        ],
+        bestPractices: [
+          'साप्ताहिक रूप से 15-20 पर्यायवाची और विलोम शब्द-युग्मों का पुनरीक्षण करें',
+          'तत्सम-तद्भव, देशज-विदेशज वर्गीकरण के प्रश्नों में शब्द की उत्पत्ति (मूल भाषा) पर ध्यान दें, न कि केवल प्रयोग पर'
+        ]
+      },
+      {
+        chapter: 'अशुद्धि-शोधन (सामान्य भाषिक त्रुटियाँ)',
+        formulae: [
+          'लिंग-दोष: "वह अच्छा लड़की है" (अशुद्ध) → "वह अच्छी लड़की है" (शुद्ध)। [कक्षा 9]',
+          'वचन-दोष: "बहुत सारे बच्चा खेल रहे हैं" (अशुद्ध) → "बहुत सारे बच्चे खेल रहे हैं" (शुद्ध)। [कक्षा 9]',
+          'कारक-दोष: "मैं घर को जा रहा हूँ" (अशुद्ध, अनावश्यक "को") → "मैं घर जा रहा हूँ" (शुद्ध)। [कक्षा 10]',
+          'शब्द-क्रम दोष: वाक्य में उद्देश्य-विधेय का क्रम गड़बड़ाने पर अर्थ अस्पष्ट होता है — क्रम ठीक कर वाक्य सुधारें। [कक्षा 10]',
+          'पुनरुक्ति दोष: एक ही अर्थ के दो शब्दों का अनावश्यक प्रयोग — "वापस लौटना" (अशुद्ध, लौटना में ही वापसी का भाव है) → "लौटना" (शुद्ध)। [कक्षा 10]'
+        ],
+        logic: [
+          'अशुद्धि-शोधन प्रश्नों में सर्वप्रथम वाक्य के मूल भाव को समझें, फिर लिंग/वचन/कारक/क्रम की जाँच क्रमशः करें',
+          'हिंदी में विशेषण संज्ञा के लिंग-वचन के अनुसार बदलता है (अच्छा लड़का/अच्छी लड़की/अच्छे लड़के) — यह अंग्रेज़ी से बड़ा अंतर है और अक्सर त्रुटि का स्रोत है'
+        ],
+        tips: [
+          'वाक्य में क्रिया के अंत रूप (आ/ई/ए) से जाँचें कि वह कर्ता के लिंग-वचन से मेल खाता है या नहीं',
+          'अंग्रेज़ी-प्रभावित वाक्य-रचना (जैसे शब्दशः अनुवाद) से बचें — हिंदी का स्वाभाविक वाक्य-क्रम कर्ता-कर्म-क्रिया है'
+        ],
+        bestPractices: [
+          'लिखे गए उत्तर को दोबारा पढ़कर हर वाक्य में लिंग-वचन का मेल जाँचने की आदत डालें',
+          'सामान्य त्रुटियों की एक सूची बनाकर बार-बार होने वाली अपनी गलतियों को चिह्नित करें और उन्हें दूर करने का अभ्यास करें'
+        ]
+      }
     ]
 };
 
@@ -2297,8 +2949,13 @@ const NOTES_SOURCES = {
     ['ICSE', 'Biology', 'Biology'],
     ['IB',   'Biology', 'Biology']
   ],
-  English: [],
-  Hindi:   []
+  English: [
+    ['CBSE', 'English', 'English'],
+    ['ICSE', 'English', 'English']
+  ],
+  Hindi: [
+    ['CBSE', 'Hindi', 'Hindi']
+  ]
 };
 const _consolidatedCache = {};
 function consolidatedChapters(subjectId) {
