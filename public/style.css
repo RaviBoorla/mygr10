@@ -190,6 +190,35 @@ body {
 .hdr-board-btn:disabled { cursor: not-allowed; }
 .hdr-board-btn:disabled:not(.active) { opacity: .5; }
 
+/* Narrow screens collapse boards + Revision Notes + Progress behind a hamburger. */
+.hdr-desktop-actions { display: flex; align-items: center; gap: 10px; }
+.hdr-hamburger {
+  display: none; flex-direction: column; justify-content: center; align-items: center; gap: 4px;
+  width: 36px; height: 36px; padding: 0; flex-shrink: 0;
+  background: transparent; border: 1px solid var(--border); border-radius: var(--radius-board);
+  cursor: pointer;
+}
+.hdr-hamburger span { display: block; width: 18px; height: 2px; background: var(--text); border-radius: 2px; }
+.hdr-hamburger:disabled { opacity: .5; cursor: not-allowed; }
+.hdr-mobile-menu { display: none; }
+.hdr-mobile-boards {
+  display: flex; gap: 4px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-pill); padding: 3px;
+}
+.hdr-mobile-boards .hdr-board-btn { flex: 1; text-align: center; }
+
+@media (max-width: 680px) {
+  .hdr-desktop-actions { display: none; }
+  .hdr-hamburger { display: flex; }
+  .hdr-mobile-menu:not([hidden]) {
+    display: flex; flex-direction: column; gap: 8px;
+    position: absolute; top: var(--header-h); right: 16px; left: 16px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+    padding: 12px; box-shadow: var(--shadow-lg); z-index: 20;
+  }
+}
+
 /* ─── Screen wrapper ───────────────────────────────────────────────────────── */
 .screen {
   display: flex; flex-direction: column; gap: 16px;

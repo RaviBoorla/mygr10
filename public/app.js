@@ -2314,7 +2314,8 @@ const state = {
   notesFilter: 'all',
   openPicker: null,  // subject whose chapter list is expanded on the home screen
   difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
-  boardMenuOpen: false  // CBSE collapses ICSE/IB out of the header until this is toggled on
+  boardMenuOpen: false,  // CBSE collapses ICSE/IB out of the header until this is toggled on
+  mobileMenuOpen: false  // narrow screens tuck boards + Revision Notes + Progress behind a hamburger
 };
 
 // ─── Routing (real URLs → real Back button, refresh-safe, shareable) ──────────
@@ -2344,6 +2345,7 @@ const app = {
 
   // ── Navigation ─────────────────────────────────────────────────────────────
   go(parts, replace = false) {
+    state.mobileMenuOpen = false;
     const target = buildHash(parts);
     if (location.hash === target) { this.render(); return; }
     if (replace) {
@@ -2418,15 +2420,42 @@ const app = {
     const progressBtn = `<button class="btn small ${progressActive ? 'primary' : 'ghost'}"
               ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>`;
 
+    // Narrow screens swap the whole board/notes/progress row for one hamburger button —
+    // the dropdown always lists all boards (no CBSE-collapse) since it's tucked away already.
+    const mobileBoards = BOARDS.map(b => `
+      <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
+              aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
+              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
+    const hamburgerBtn = `
+      <button class="hdr-hamburger" aria-label="Menu" aria-expanded="${state.mobileMenuOpen}"
+              ${inTest ? 'disabled' : ''} onclick="app.toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>`;
+    const mobileMenu = `
+      <div class="hdr-mobile-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
+        <div class="hdr-mobile-boards" role="group" aria-label="Board">${mobileBoards}</div>
+        <button class="btn small ${progressActive ? 'primary' : 'ghost'}" onclick="app.go(['progress'])">Progress</button>
+        <button class="btn small ${notesActive ? 'primary' : 'ghost'}" onclick="app.go(['notes'])">Revision Notes</button>
+      </div>`;
+
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}</div>
         <div class="hdr-right">
-          ${progressBtn}
-          ${notesBtn}
-          <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
+          <div class="hdr-desktop-actions">
+            ${progressBtn}
+            ${notesBtn}
+            <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
+          </div>
+          ${hamburgerBtn}
         </div>
+        ${mobileMenu}
       </header>`;
+  },
+
+  toggleMobileMenu() {
+    state.mobileMenuOpen = !state.mobileMenuOpen;
+    this.render();
   },
 
   _screen(name, params) {
@@ -2487,6 +2516,7 @@ const app = {
     state.board = board;
     state.openPicker = null;
     state.boardMenuOpen = false;   // re-collapse ICSE/IB once we're back on CBSE
+    state.mobileMenuOpen = false;
     LS.set(KEY.board, board);
     // Notes and results don't reflect the newly chosen board on their own screen,
     // so jump to that board's home page instead of leaving the click looking stuck.
