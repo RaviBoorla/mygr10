@@ -254,6 +254,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   font-size: var(--fs-btn); font-weight: 500; font-family: inherit;
   transition: border-color var(--tx-base), background var(--tx-base);
   text-align: left; line-height: 1.4;
+  display: inline-block; text-decoration: none;
 }
 .btn:hover:not(:disabled) { border-color: var(--primary); background: var(--primary-soft); }
 .btn:disabled { opacity: .45; cursor: not-allowed; }

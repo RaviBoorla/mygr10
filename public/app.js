@@ -2433,6 +2433,9 @@ const app = {
     const progressBtn = `<button class="btn small ${progressActive ? 'primary' : 'ghost'}"
               ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>`;
 
+    const careersBtn = `<a class="btn small ghost" href="careers.html" target="_blank" rel="noopener"
+              ${inTest ? 'aria-disabled="true" tabindex="-1"' : ''}>Career Pathing</a>`;
+
     // Narrow screens swap the whole board/notes/progress row for one hamburger button —
     // the dropdown always lists all boards (no CBSE-collapse) since it's tucked away already.
     const mobileBoards = BOARDS.map(b => `
@@ -2449,6 +2452,7 @@ const app = {
         <div class="hdr-mobile-boards" role="group" aria-label="Board">${mobileBoards}</div>
         <button class="btn small ${progressActive ? 'primary' : 'ghost'}" onclick="app.go(['progress'])">Progress</button>
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}" onclick="app.go(['notes'])">Revision Notes</button>
+        <a class="btn small ghost" href="careers.html" target="_blank" rel="noopener">Career Pathing</a>
       </div>`;
 
     return `
@@ -2458,6 +2462,7 @@ const app = {
           <div class="hdr-desktop-actions">
             ${progressBtn}
             ${notesBtn}
+            ${careersBtn}
             <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
           </div>
           ${hamburgerBtn}

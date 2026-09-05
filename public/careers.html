@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Pathing · Grade 10 &amp; 12 — Rise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=DM+Mono:wght@400;500&display=swap">
+
+<style>
+:root {
+  --bg:      #FFFFFF;
+  --surf:    #FFFFFF;
+  --surf2:   #F5F7FB;
+  --border:  #DCE3EF;
+  --text1:   #0B1220;
+  --text2:   #55647C;
+  --text3:   #C4CEDD;
+  --sci:     #0EA5E9;
+  --com:     #059669;
+  --hum:     #8B5CF6;
+  --voc:     #EA7C1C;
+  --bar-bg:  rgba(255,255,255,.94);
+  --pan-bg:  rgba(255,255,255,.98);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sans',system-ui,sans-serif;overflow:hidden}
+
+/* ── TOOLBAR ─────────────────────────────────────────────── */
+#bar{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:8px 16px;
+  background:var(--bar-bg);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+#back-link{
+  font-family:'DM Mono',monospace;font-size:11.5px;color:var(--text2);
+  text-decoration:none;flex-shrink:0;padding:4px 8px;border:1px solid var(--border);
+  border-radius:7px;transition:color .12s,border-color .12s;
+}
+#back-link:hover{color:var(--text1);border-color:var(--text2)}
+#bar h1{
+  font-family:'Syne',sans-serif;font-size:13.5px;font-weight:700;
+  letter-spacing:-.02em;white-space:nowrap;color:var(--text1);flex-shrink:0;
+}
+#bar h1 em{font-style:normal;font-weight:400;opacity:.45}
+
+#sw{position:relative;flex:1;min-width:130px;max-width:220px}
+#sw svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text2);pointer-events:none}
+#search{
+  width:100%;padding:6px 10px 6px 28px;
+  background:var(--surf);border:1px solid var(--border);border-radius:7px;
+  font-family:'DM Sans',sans-serif;font-size:12.5px;color:var(--text1);outline:none;
+}
+#search:focus{border-color:var(--text2)}
+#search::placeholder{color:var(--text2)}
+
+#chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{
+  padding:4px 9px;border-radius:20px;font-size:11px;font-weight:500;
+  font-family:'DM Sans',sans-serif;border:1px solid var(--border);
+  background:transparent;color:var(--text2);cursor:pointer;transition:all .15s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--text2);color:var(--text1)}
+.chip.on{border-color:transparent;color:#07090F}
+
+#acts{display:flex;gap:5px;margin-left:auto;flex-shrink:0}
+.act{
+  padding:4px 9px;border-radius:7px;font-size:11px;font-family:'DM Mono',monospace;
+  border:1px solid var(--border);background:var(--surf);color:var(--text2);cursor:pointer;
+  transition:color .12s;white-space:nowrap;
+}
+.act:hover{color:var(--text1)}
+
+/* ── TREE SCROLL AREA ────────────────────────────────────── */
+#wrap{
+  position:fixed;top:52px;left:0;right:340px;bottom:0;
+  overflow-x:auto;overflow-y:auto;
+  border-right:1px solid var(--border);
+}
+#inner{
+  display:inline-block;
+  transform-origin:top left;
+  line-height:0;
+}
+#tsvg{display:block}
+
+/* ── ZOOM ────────────────────────────────────────────────── */
+#zc{
+  position:fixed;bottom:18px;right:16px;z-index:200;
+  display:flex;gap:4px;
+}
+.zb{
+  width:30px;height:30px;background:var(--surf);border:1px solid var(--border);
+  border-radius:7px;font-size:16px;line-height:30px;text-align:center;
+  color:var(--text2);cursor:pointer;user-select:none;transition:color .1s;
+}
+.zb:hover{color:var(--text1)}
+
+/* ── LEGEND ──────────────────────────────────────────────── */
+#leg{
+  position:fixed;bottom:18px;left:16px;z-index:200;
+  background:var(--bar-bg);backdrop-filter:blur(12px);
+  border:1px solid var(--border);border-radius:9px;
+  padding:9px 12px;display:flex;flex-direction:column;gap:5px;
+}
+.li{display:flex;align-items:center;gap:7px;font-size:10.5px;font-family:'DM Mono',monospace;color:var(--text2)}
+.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+/* ── DETAIL PANEL ────────────────────────────────────────── */
+#det{
+  position:fixed;top:52px;right:0;bottom:0;width:330px;z-index:199;
+  background:var(--pan-bg);backdrop-filter:blur(18px);
+  border-left:1px solid var(--border);
+  padding:16px 14px;overflow-y:auto;
+  transform:translateX(100%);
+  transition:transform .22s cubic-bezier(.4,0,.2,1);
+}
+#det.open{transform:none}
+#dclose{
+  float:right;margin-top:-1px;
+  background:var(--surf);border:1px solid var(--border);
+  border-radius:5px;padding:3px 8px;font-size:10px;
+  font-family:'DM Mono',monospace;color:var(--text2);cursor:pointer;
+}
+#dcrumb{font-size:10px;font-family:'DM Mono',monospace;color:var(--text2);line-height:1.8;margin-bottom:9px;padding-right:44px}
+#det h2{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;text-wrap:balance;margin-bottom:2px;line-height:1.25}
+.dsub{font-size:11px;font-family:'DM Mono',monospace;color:var(--text2);margin-bottom:12px}
+.dlbl{font-size:9px;font-family:'DM Mono',monospace;color:var(--text3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;margin-top:11px}
+.dval{font-size:12px;color:var(--text1);line-height:1.55}
+.dval.mono{font-family:'DM Mono',monospace;font-size:11px}
+.dtags{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
+.dtag{padding:2px 7px;border-radius:10px;font-size:9.5px;font-family:'DM Mono',monospace;border:1px solid var(--border);color:var(--text2)}
+.dkids{font-size:11px;color:var(--text2);line-height:1.7}
+.dpath{margin-top:14px;padding:9px 10px;background:var(--surf);border:1px solid var(--border);border-radius:7px;font-size:10.5px;font-family:'DM Mono',monospace;color:var(--text2);line-height:1.8}
+
+/* Node hover */
+.ngrp{cursor:pointer}
+.ngrp:hover .nbg{filter:brightness(1.18)}
+
+@media(prefers-reduced-motion:reduce){#det{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- TOOLBAR -->
+<div id="bar">
+  <a id="back-link" href="index.html" title="Back to Rise">&larr; Rise</a>
+  <h1>Career Pathing <em>· Grade 10 &amp; 12</em></h1>
+  <div id="sw">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="search" placeholder="Search any career, exam…" autocomplete="off" spellcheck="false">
+  </div>
+  <div id="chips">
+    <button class="chip" data-f="high-salary" data-c="#34D399">💰 High Salary</button>
+    <button class="chip" data-f="govt"        data-c="#38BDF8">🏛 Govt / PSU</button>
+    <button class="chip" data-f="abroad"      data-c="#B57BF5">✈ Global</button>
+    <button class="chip" data-f="no-math"     data-c="#FB923C">∑ No Math</button>
+    <button class="chip" data-f="exam-free"   data-c="#F472B6">🎯 Exam-free</button>
+  </div>
+  <div id="acts">
+    <button class="act" id="btn-expand">Expand All</button>
+    <button class="act" id="btn-collapse">Collapse</button>
+  </div>
+</div>
+
+<!-- TREE -->
+<div id="wrap"><div id="inner"><svg id="tsvg"></svg></div></div>
+
+<!-- LEGEND -->
+<div id="leg">
+  <div class="li"><div class="ld" style="background:var(--sci)"></div>Science</div>
+  <div class="li"><div class="ld" style="background:var(--com)"></div>Commerce</div>
+  <div class="li"><div class="ld" style="background:var(--hum)"></div>Humanities</div>
+  <div class="li"><div class="ld" style="background:var(--voc)"></div>Vocational</div>
+</div>
+
+<!-- ZOOM -->
+<div id="zc">
+  <div class="zb" id="zi">+</div>
+  <div class="zb" id="zo">−</div>
+  <div class="zb" id="zr" title="Reset zoom">⌂</div>
+</div>
+
+<!-- DETAIL -->
+<div id="det">
+  <button id="dclose">esc</button>
+  <div id="dcrumb"></div>
+  <div id="dcont"></div>
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────────
+const T = {
+  id:'root',label:'Grade 10 & 12',kind:'root',_exp:true,
+  meta:{note:'A pivotal crossroads. Every stream leads to outstanding careers — the difference is the route, not the destination.'},
+  children:[
+
+  // ─── SCIENCE ──────────────────────────────────────────────────────────────
+  {id:'sci',label:'Science',kind:'stream',color:'#38BDF8',_exp:true,
+   meta:{note:'Broadest doorway — engineering, medicine, research, design, defence.'},
+   children:[
+    {id:'pcm',label:'PCM',sublabel:'Physics · Chemistry · Math',kind:'path',
+     meta:{exams:'JEE Main · JEE Adv · BITSAT · VITEEE · MHT-CET · WBJEE · KCET · CUET · NDA · IISER-AT · NEST',
+           note:'The engineering superhighway. Also opens architecture, design, merchant navy, and defence.'},
+     children:[
+      {id:'btech',label:'B.Tech / B.E.',sublabel:'4 yr · JEE / state CET',kind:'degree',
+       meta:{exams:'JEE Main/Adv, BITSAT, VITEEE, state CETs',duration:'4 years',salary:'₹4–45 LPA'},
+       children:[
+        {id:'cse',label:'Computer Science',kind:'spec',tags:['high-salary','abroad'],
+         meta:{salary:'₹6–45+ LPA',note:'Largest hiring market globally. Remote-first roles, world-class demand.'},
+         children:[
+          {id:'sde',label:'Software Engineer',kind:'career',tags:['high-salary','abroad']},
+          {id:'ml',label:'ML / AI Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'machine learning engineer, prompt engineer, LLM engineer, generative AI'},
+          {id:'dataeng',label:'Data Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'big data engineer, ETL, data pipelines'},
+          {id:'datascid',label:'Data Scientist',kind:'career',tags:['high-salary','abroad']},
+          {id:'cyber',label:'Cybersecurity Analyst',kind:'career',tags:['high-salary','abroad'],keywords:'data privacy officer, DPO, ethical hacker, infosec'},
+          {id:'devops',label:'Cloud / DevOps Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'cloud architect, AWS architect, GCP architect, SRE'},
+          {id:'pm',label:'Product Manager',kind:'career',tags:['high-salary']},
+          {id:'blockchain',label:'Blockchain Developer',kind:'career',tags:['high-salary','abroad'],keywords:'web3 developer, crypto developer, smart contract engineer, NFT'},
+         ]},
+        {id:'ece',label:'Electronics & Comm',kind:'spec',tags:['high-salary'],
+         meta:{salary:'₹4–25 LPA',note:'Chip design, embedded systems, telecom infrastructure.'},
+         children:[
+          {id:'vlsi',label:'VLSI Design Engineer',kind:'career',tags:['high-salary','abroad']},
+          {id:'embed',label:'Embedded Systems',kind:'career',tags:['high-salary']},
+          {id:'telecom',label:'Telecom Engineer',kind:'career'},
+          {id:'iot',label:'IoT Engineer',kind:'career',tags:['high-salary']},
+          {id:'isrodrdo',label:'ISRO / DRDO Scientist',kind:'career',tags:['govt']},
+         ]},
+        {id:'mech',label:'Mechanical',kind:'spec',meta:{salary:'₹3–18 LPA'},
+         children:[
+          {id:'cadcae',label:'Design Engineer (CAD/CAE)',kind:'career'},
+          {id:'ev',label:'EV / Automotive Engineer',kind:'career',tags:['high-salary']},
+          {id:'robot',label:'Robotics Engineer',kind:'career',tags:['high-salary','abroad']},
+          {id:'hvac',label:'HVAC Engineer',kind:'career'},
+         ]},
+        {id:'civil',label:'Civil',kind:'spec',meta:{salary:'₹3–15 LPA'},
+         children:[
+          {id:'struct',label:'Structural Engineer',kind:'career'},
+          {id:'transport',label:'Transport Planner',kind:'career'},
+          {id:'urbanp',label:'Urban Planner',kind:'career'},
+          {id:'gate-civil',label:'PSU Engineer (GATE)',kind:'career',tags:['govt']},
+         ]},
+        {id:'elec',label:'Electrical',kind:'spec',meta:{salary:'₹3–20 LPA'},
+         children:[
+          {id:'power',label:'Power Systems Engineer',kind:'career'},
+          {id:'solar',label:'Renewables / Solar',kind:'career',tags:['high-salary'],keywords:'renewable energy engineer, green energy, wind energy, solar power'},
+          {id:'rrb',label:'Railways (RRB)',kind:'career',tags:['govt']},
+          {id:'psu',label:'PSU Engineer (NTPC/ONGC)',kind:'career',tags:['govt']},
+         ]},
+        {id:'aero',label:'Aerospace',kind:'spec',tags:['high-salary'],meta:{salary:'₹5–30 LPA'},
+         children:[
+          {id:'isro',label:'ISRO Scientist',kind:'career',tags:['govt']},
+          {id:'hal',label:'HAL / Defence R&D',kind:'career',tags:['govt']},
+          {id:'airbus',label:'Airbus / Boeing',kind:'career',tags:['high-salary','abroad']},
+          {id:'drone',label:'Drone Technology',kind:'career',tags:['high-salary'],keywords:'drone pilot, UAV engineer'},
+          {id:'spacetech',label:'Space-Tech Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'space technology, satellite engineer, private space industry, SpaceX'},
+         ]},
+        {id:'chem',label:'Chemical',kind:'spec',meta:{salary:'₹3–15 LPA'},
+         children:[
+          {id:'petro',label:'Petrochemical Engineer',kind:'career'},
+          {id:'pharmaproc',label:'Pharma Process Engineer',kind:'career'},
+          {id:'energy',label:'Energy / Refining',kind:'career'},
+         ]},
+        {id:'others-bt',label:'More Branches',kind:'spec',
+         children:[
+          {id:'biotech-bt',label:'Biotechnology',kind:'career'},
+          {id:'aids',label:'AI & Data Science (B.Tech)',kind:'career',tags:['high-salary']},
+          {id:'mechatronics',label:'Mechatronics',kind:'career'},
+          {id:'marine-bt',label:'Marine Engineering',kind:'career',tags:['abroad']},
+          {id:'metallurgy',label:'Metallurgy / Materials',kind:'career'},
+         ]},
+       ]},
+      {id:'bsc-pcm',label:'B.Sc.',sublabel:'3–4 yr · CUET / IISER-AT',kind:'degree',
+       meta:{exams:'CUET, IISER-AT, IIT JAM (PG)',duration:'3–4 years',salary:'₹2–12 LPA → research stipends'},
+       children:[
+        {id:'bsc-math',label:'Mathematics',kind:'spec',
+         children:[
+          {id:'actuary',label:'Actuary (IAI / IFoA)',kind:'career',tags:['high-salary','abroad']},
+          {id:'quant',label:'Quant Analyst',kind:'career',tags:['high-salary','abroad']},
+          {id:'crypto',label:'Cryptographer',kind:'career',tags:['high-salary','abroad']},
+          {id:'stats',label:'Statistician',kind:'career'},
+         ]},
+        {id:'bsc-phy',label:'Physics',kind:'spec',
+         children:[
+          {id:'astrophys',label:'Astrophysicist',kind:'career',tags:['abroad']},
+          {id:'phd-phys',label:'Research / PhD (IISc / TIFR)',kind:'career',tags:['abroad']},
+          {id:'nuclear',label:'Nuclear Scientist (BARC)',kind:'career',tags:['govt']},
+         ]},
+        {id:'bsc-cs',label:'CS / IT',kind:'spec',
+         children:[
+          {id:'dev-bsc',label:'Developer',kind:'career',tags:['high-salary']},
+          {id:'analyst',label:'Data Analyst',kind:'career',tags:['high-salary']},
+          {id:'mca',label:'MCA → Developer',kind:'career',tags:['high-salary']},
+         ]},
+        {id:'bsc-stat',label:'Statistics / Data Sci',kind:'spec',
+         children:[
+          {id:'isi',label:'ISI Graduate → Industry',kind:'career',tags:['high-salary']},
+          {id:'risk',label:'Risk Analyst',kind:'career',tags:['high-salary']},
+         ]},
+       ]},
+      {id:'barch',label:'B.Arch',sublabel:'5 yr · NATA / JEE-2',kind:'degree',
+       meta:{exams:'NATA, JEE Paper-2',duration:'5 years',salary:'₹3–20 LPA'},
+       children:[
+        {id:'architect',label:'Architect',kind:'career'},
+        {id:'urbdes',label:'Urban Designer',kind:'career'},
+        {id:'landscape',label:'Landscape Architect',kind:'career',tags:['abroad']},
+        {id:'interior',label:'Interior Designer',kind:'career'},
+       ]},
+      {id:'bdes-pcm',label:'B.Des',sublabel:'UCEED · NID · NIFT',kind:'degree',
+       meta:{exams:'UCEED, NID DAT, NIFT Entrance',duration:'4 years',salary:'₹4–25 LPA'},
+       children:[
+        {id:'proddes',label:'Product Designer',kind:'career',tags:['high-salary','abroad']},
+        {id:'uxui',label:'UX / UI Designer',kind:'career',tags:['high-salary','abroad']},
+        {id:'autodes',label:'Auto / Transport Designer',kind:'career',tags:['high-salary']},
+        {id:'gamedes',label:'Game Designer',kind:'career',tags:['high-salary','abroad']},
+        {id:'vfx',label:'VFX / Animation',kind:'career',tags:['abroad']},
+       ]},
+      {id:'mernavy',label:'Merchant Navy',sublabel:'IMU-CET',kind:'degree',
+       tags:['high-salary','abroad'],
+       meta:{exams:'IMU-CET',duration:'3–4 years',salary:'₹8–50 LPA'},
+       children:[
+        {id:'deckoff',label:'Deck Officer',kind:'career',tags:['high-salary','abroad']},
+        {id:'marineeng',label:'Marine Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'naval engineer, naval architect, ship engineer, marine engineering'},
+        {id:'captain',label:'Ship Captain',kind:'career',tags:['high-salary','abroad']},
+       ]},
+      {id:'def-pcm',label:'Defence',sublabel:'NDA · CDS · AFCAT',kind:'degree',
+       tags:['govt'],
+       meta:{exams:'NDA (after 12th), CDS / AFCAT (after grad)',salary:'₹6–20 LPA + perks + grade pay'},
+       children:[
+        {id:'army',label:'Indian Army Officer',kind:'career',tags:['govt']},
+        {id:'navy-off',label:'Indian Navy Officer',kind:'career',tags:['govt']},
+        {id:'airforce',label:'Air Force (Flying / Tech)',kind:'career',tags:['govt']},
+       ]},
+      {id:'imsc',label:'Integrated M.Sc.',sublabel:'IISER · NISER · IIT 5yr',kind:'degree',
+       meta:{exams:'IISER-AT, KVPY, NEST',duration:'5 years',salary:'₹6–20 LPA + research fellowships'},
+       children:[
+        {id:'phd-sci',label:'PhD → Research Scientist',kind:'career',tags:['abroad']},
+        {id:'prof',label:'Professor / Faculty',kind:'career'},
+        {id:'sci-govt',label:'Scientist (Govt Lab)',kind:'career',tags:['govt']},
+       ]},
+     ]},
+    {id:'pcb',label:'PCB',sublabel:'Physics · Chemistry · Biology',kind:'path',
+     meta:{exams:'NEET-UG · CUET · ICAR-AIEEA · AIAPGET',
+           note:'Medicine, allied health, life sciences. NEET-UG is the single gateway to MBBS/BDS across India.'},
+     children:[
+      {id:'mbbs',label:'MBBS',sublabel:'5.5 yr · NEET-UG',kind:'degree',
+       meta:{exams:'NEET-UG → NEET-PG → super-specialty',duration:'5.5 + 3 years PG',salary:'₹8–60 LPA (specialist)'},
+       children:[
+        {id:'surgeon',label:'Surgeon (MS / MCh)',kind:'career',tags:['high-salary']},
+        {id:'cardio',label:'Cardiologist (DM)',kind:'career',tags:['high-salary']},
+        {id:'radio',label:'Radiologist',kind:'career',tags:['high-salary']},
+        {id:'gp',label:'General Practitioner',kind:'career'},
+        {id:'pubhealth',label:'Public Health (MPH)',kind:'career',tags:['abroad']},
+       ]},
+      {id:'bds',label:'BDS',sublabel:'5 yr · NEET-UG',kind:'degree',
+       meta:{exams:'NEET-UG',duration:'5 years',salary:'₹4–20 LPA'},
+       children:[
+        {id:'dentist',label:'Dentist',kind:'career'},
+        {id:'ortho',label:'Orthodontist',kind:'career',tags:['high-salary']},
+        {id:'maxillo',label:'Maxillofacial Surgeon',kind:'career',tags:['high-salary']},
+       ]},
+      {id:'ayush',label:'AYUSH',sublabel:'BAMS · BHMS · BUMS',kind:'degree',
+       meta:{exams:'NEET-UG',duration:'5.5 years',salary:'₹3–12 LPA'},
+       children:[
+        {id:'ayush-p',label:'AYUSH Practitioner',kind:'career'},
+        {id:'wellness',label:'Wellness Consultant',kind:'career'},
+        {id:'ayush-r',label:'Herbal / Drug Research',kind:'career'},
+       ]},
+      {id:'bvsc',label:'B.V.Sc & AH',sublabel:'Veterinary',kind:'degree',
+       meta:{exams:'NEET-UG, state Vet CET',duration:'5.5 years',salary:'₹3–15 LPA'},
+       children:[
+        {id:'vet',label:'Veterinarian',kind:'career'},
+        {id:'wildvet',label:'Wildlife Vet (WII)',kind:'career',tags:['govt']},
+        {id:'anim-hub',label:'Animal Husbandry Officer',kind:'career',tags:['govt']},
+       ]},
+      {id:'bpharm',label:'B.Pharm / Pharm.D',kind:'degree',
+       meta:{exams:'NEET-UG (some states), CUET',duration:'4–6 years',salary:'₹3–20 LPA'},
+       children:[
+        {id:'clinpharm',label:'Clinical Pharmacist',kind:'career'},
+        {id:'drugreg',label:'Drug Regulatory Affairs',kind:'career',tags:['abroad']},
+        {id:'pharmvig',label:'Pharmacovigilance',kind:'career',tags:['abroad']},
+       ]},
+      {id:'allied',label:'Allied Health',sublabel:'BPT · BOT · Nursing',kind:'degree',
+       meta:{exams:'State CETs, CUET',duration:'3–4.5 years',salary:'₹2–12 LPA; nursing abroad much higher'},
+       children:[
+        {id:'physio',label:'Physiotherapist',kind:'career'},
+        {id:'occ',label:'Occupational Therapist',kind:'career'},
+        {id:'nurse',label:'Nurse (NCLEX / abroad)',kind:'career',tags:['abroad']},
+        {id:'radiotech',label:'Radiology Technician',kind:'career'},
+        {id:'optom',label:'Optometrist',kind:'career'},
+        {id:'diet',label:'Dietician / Nutritionist',kind:'career'},
+        {id:'audio',label:'Audiologist',kind:'career'},
+       ]},
+      {id:'lifesci',label:'B.Sc. Life Sciences',kind:'degree',
+       meta:{exams:'CUET, ICAR, CSIR-NET (PG)',duration:'3 years + PG',salary:'₹2–18 LPA'},
+       children:[
+        {id:'biotech',label:'Biotechnologist',kind:'career',tags:['abroad']},
+        {id:'micro',label:'Microbiologist',kind:'career'},
+        {id:'genetics',label:'Geneticist / Genomics',kind:'career',tags:['abroad','high-salary']},
+        {id:'bioinfor',label:'Bioinformatician',kind:'career',tags:['high-salary','abroad']},
+        {id:'forensic',label:'Forensic Scientist',kind:'career',tags:['govt']},
+        {id:'clinres',label:'Clinical Researcher',kind:'career',tags:['abroad']},
+       ]},
+      {id:'agri',label:'Agriculture & Allied',kind:'degree',
+       meta:{exams:'ICAR-AIEEA, state CETs',duration:'4 years',salary:'₹2–15 LPA'},
+       children:[
+        {id:'agrisci',label:'Agri Scientist (ARS)',kind:'career',tags:['govt']},
+        {id:'agribiz',label:'Agri-Business (IIM-A ABM)',kind:'career',tags:['high-salary']},
+        {id:'foodtech',label:'Food Technologist (FSSAI)',kind:'career',tags:['govt']},
+        {id:'horti',label:'Horticulturist',kind:'career'},
+       ]},
+     ]},
+    {id:'pcmb',label:'PCMB',sublabel:'All four subjects',kind:'path',
+     meta:{note:'Keep both doors open — heavier workload. Choose PCM vs PCB focus at Grade 12 exam selection. Recommended if genuinely undecided.'},
+     children:[
+      {id:'pcmb-a',label:'→ All PCM paths remain open',kind:'career'},
+      {id:'pcmb-b',label:'→ All PCB paths remain open',kind:'career'},
+      {id:'pcmb-c',label:'Decide final stream at Grade 12',kind:'career'},
+     ]},
+   ]},
+
+  // ─── COMMERCE ─────────────────────────────────────────────────────────────
+  {id:'comm',label:'Commerce',kind:'stream',color:'#34D399',_exp:true,
+   meta:{note:'Finance, law, business, entrepreneurship. Math optional but unlocks actuarial, quant, and analytics paths.'},
+   children:[
+    {id:'comm-math',label:'With Mathematics',kind:'path',
+     meta:{note:'Accounts + Business Studies + Math. Full access to CA, actuarial science, quant finance, analytics.'},
+     children:[
+      {id:'prof-certs',label:'Professional Certifications',sublabel:'CA · CS · CMA · CFA · ACCA',kind:'degree',
+       meta:{exams:'CA Foundation, ICSI Foundation, CMA Foundation, CFA L1',duration:'3–5 years alongside/after graduation',salary:'₹6–40 LPA; Big-4 CA ₹7–15 LPA start'},
+       children:[
+        {id:'ca',label:'Chartered Accountant (ICAI)',kind:'career',tags:['high-salary','exam-free']},
+        {id:'cs',label:'Company Secretary (ICSI)',kind:'career'},
+        {id:'cma',label:'Cost Accountant (ICMAI)',kind:'career'},
+        {id:'cfa',label:'CFA (Investment Analysis)',kind:'career',tags:['high-salary','abroad']},
+        {id:'frm',label:'FRM (Risk Management)',kind:'career',tags:['high-salary','abroad']},
+        {id:'acca',label:'ACCA (Global Accounting)',kind:'career',tags:['abroad']},
+        {id:'actuarial',label:'Actuarial Scientist (IAI)',kind:'career',tags:['high-salary','abroad']},
+       ]},
+      {id:'bcom',label:'B.Com (Hons)',sublabel:'3 yr · CUET / DU JAT',kind:'degree',
+       meta:{exams:'CUET, DU JAT, SET',duration:'3 years',salary:'₹3–15 LPA'},
+       children:[
+        {id:'audit',label:'Auditor / Accountant',kind:'career'},
+        {id:'taxation',label:'Tax Consultant (GST/IT)',kind:'career'},
+        {id:'banking',label:'Banking (IBPS/SBI/RBI Gr-B)',kind:'career',tags:['govt']},
+        {id:'corpfin',label:'Corporate Finance',kind:'career',tags:['high-salary']},
+       ]},
+      {id:'bba',label:'BBA / BMS',sublabel:'IPMAT · CUET · NPAT',kind:'degree',
+       meta:{exams:'IPMAT (IIM Indore/Rohtak), CUET, NPAT, SET',duration:'3 years + MBA',salary:'₹3–12 LPA; MBA → ₹12–50 LPA'},
+       children:[
+        {id:'mba',label:'MBA (CAT / XAT / GMAT)',kind:'spec',tags:['high-salary'],
+         children:[
+          {id:'consult',label:'Management Consultant',kind:'career',tags:['high-salary','abroad']},
+          {id:'mktg',label:'Brand / Marketing Manager',kind:'career',tags:['high-salary']},
+          {id:'hr',label:'HR / People Manager',kind:'career'},
+          {id:'scm',label:'Operations / Supply Chain',kind:'career',tags:['high-salary'],keywords:'supply chain analyst, logistics manager'},
+          {id:'fin-mba',label:'Investment Banker',kind:'career',tags:['high-salary','abroad'],keywords:'investment banking, IB analyst'},
+          {id:'pm-mba',label:'Product Manager',kind:'career',tags:['high-salary']},
+          {id:'vc',label:'Venture Capitalist',kind:'career',tags:['high-salary','abroad'],keywords:'venture capital, VC associate, startup investor'},
+          {id:'pe',label:'Private Equity Analyst',kind:'career',tags:['high-salary','abroad'],keywords:'private equity, buyout analyst'},
+          {id:'wealthmgr',label:'Wealth Manager',kind:'career',tags:['high-salary'],keywords:'private banker, relationship manager, wealth management'},
+         ]},
+       ]},
+      {id:'bba-llb',label:'BBA-LLB / B.Com-LLB',sublabel:'5 yr · CLAT',kind:'degree',
+       tags:['high-salary'],
+       meta:{exams:'CLAT, AILET, SLAT, MH-CET Law',duration:'5 years',salary:'₹5–40 LPA'},
+       children:[
+        {id:'corp-law',label:'Corporate Lawyer',kind:'career',tags:['high-salary']},
+        {id:'tax-law',label:'Tax Lawyer',kind:'career',tags:['high-salary']},
+        {id:'ma-law',label:'M&A / Securities Lawyer',kind:'career',tags:['high-salary','abroad']},
+       ]},
+      {id:'eco-comm',label:'Economics (Hons)',kind:'degree',
+       meta:{exams:'CUET, DU, JNU, DSE',duration:'3 years + MA / PhD',salary:'₹4–25 LPA'},
+       children:[
+        {id:'ies',label:'Indian Economic Service',kind:'career',tags:['govt']},
+        {id:'rbi',label:'RBI Grade B (Economics)',kind:'career',tags:['govt','high-salary']},
+        {id:'policy',label:'Policy Analyst (NITI Aayog)',kind:'career',tags:['govt']},
+        {id:'eco-res',label:'Economist (DSE/ISI/JNU)',kind:'career',tags:['abroad']},
+        {id:'quant-eco',label:'Quant / FinTech Analyst',kind:'career',tags:['high-salary']},
+       ]},
+      {id:'ipm',label:'Integrated IPM',sublabel:'IIM 5-yr BBA+MBA',kind:'degree',
+       tags:['high-salary'],
+       meta:{exams:'IPMAT (IIM Indore, Rohtak, Ranchi, Jammu)',duration:'5 years',salary:'₹15–60 LPA'},
+       children:[
+        {id:'iim-grad',label:'IIM Graduate → All MBA careers',kind:'career',tags:['high-salary']},
+       ]},
+      {id:'bscfin',label:'B.Sc. Finance / Analytics',kind:'degree',
+       meta:{exams:'CUET, NMIMS, Symbiosis',duration:'3 years',salary:'₹4–20 LPA'},
+       children:[
+        {id:'ib',label:'Investment Banker',kind:'career',tags:['high-salary','abroad'],keywords:'investment banking, IB analyst'},
+        {id:'equity',label:'Equity Research Analyst',kind:'career',tags:['high-salary']},
+        {id:'fintech',label:'FinTech Product / Analyst',kind:'career',tags:['high-salary']},
+       ]},
+     ]},
+    {id:'comm-nomath',label:'Without Mathematics',kind:'path',
+     tags:['no-math'],
+     meta:{note:'Accounts + Business Studies. CA/CS still accessible. Quant papers are harder, but management and retail paths stay fully open.'},
+     children:[
+      {id:'bcom-gen',label:'B.Com Gen / BBA',kind:'degree',
+       children:[
+        {id:'retail',label:'Retail Management',kind:'career'},
+        {id:'event',label:'Event Management',kind:'career'},
+        {id:'travel',label:'Travel & Tourism',kind:'career',tags:['abroad']},
+       ]},
+      {id:'hotel',label:'Hotel Management',sublabel:'NCHMCT JEE',kind:'degree',
+       meta:{exams:'NCHM JEE',duration:'3 years',salary:'₹3–20 LPA; abroad higher'},
+       children:[
+        {id:'hotelier',label:'Hotel General Manager',kind:'career',tags:['abroad']},
+        {id:'chef',label:'Executive Chef',kind:'career',tags:['abroad']},
+        {id:'fnb',label:'F&B Manager',kind:'career'},
+       ]},
+      {id:'digimktg',label:'Digital Marketing',kind:'degree',
+       tags:['no-math','exam-free'],
+       children:[
+        {id:'socmedia',label:'Social Media Manager',kind:'career'},
+        {id:'content',label:'Content Creator / Strategist',kind:'career',tags:['exam-free'],keywords:'podcaster, youtuber, influencer, creator economy'},
+        {id:'seo',label:'SEO / Performance Marketing',kind:'career'},
+        {id:'brand',label:'Brand Manager',kind:'career',tags:['high-salary']},
+       ]},
+     ]},
+    {id:'entrepr',label:'Entrepreneurship',kind:'path',
+     tags:['exam-free'],
+     meta:{note:'Commerce fundamentals — accounting, GST, corporate law, marketing — are the toolkit every entrepreneur needs.'},
+     children:[
+      {id:'fambiz',label:'Family Business Scale-up',kind:'career',tags:['exam-free']},
+      {id:'d2c',label:'D2C / E-commerce Brand',kind:'career',tags:['exam-free']},
+      {id:'startup',label:'Startup Founder',kind:'career',tags:['high-salary','exam-free']},
+      {id:'franchise',label:'Franchise Owner',kind:'career',tags:['exam-free']},
+     ]},
+   ]},
+
+  // ─── HUMANITIES ───────────────────────────────────────────────────────────
+  {id:'hum',label:'Humanities',kind:'stream',color:'#B57BF5',_exp:true,
+   meta:{note:'UPSC, law, media, design, psychology, diplomacy, social impact. Surprisingly wide salary range at the top.'},
+   children:[
+    {id:'civ-serv',label:'Civil Services',sublabel:'History · PolSci · Geography',kind:'path',
+     tags:['govt','no-math'],
+     meta:{exams:'UPSC CSE (Prelims → Mains → Interview), State PSC',duration:'BA 3yr + 2–4yr prep',salary:'₹56,100–₹2,50,000/month + allowances + pension'},
+     children:[
+      {id:'ba-civ',label:'B.A. (Hist / PolSci / Geo)',kind:'degree',
+       children:[
+        {id:'ias',label:'IAS – District Collector / Secretary',kind:'career',tags:['govt']},
+        {id:'ips',label:'IPS – Police Service',kind:'career',tags:['govt']},
+        {id:'ifs-forest',label:'IFS – Foreign Service / Diplomat',kind:'career',tags:['govt','abroad']},
+        {id:'irs',label:'IRS – Revenue Service',kind:'career',tags:['govt']},
+        {id:'statepsc',label:'State PSC / PCS Officer',kind:'career',tags:['govt']},
+       ]},
+     ]},
+    {id:'law-hum',label:'Law',sublabel:'CLAT · AILET · LSAT',kind:'path',
+     meta:{exams:'CLAT, AILET, LSAT-India, MH-CET Law',duration:'5 years BA-LLB',salary:'₹4–40 LPA; elite firms ₹15–60 LPA'},
+     children:[
+      {id:'ballb',label:'BA-LLB (5 years)',kind:'degree',
+       children:[
+        {id:'litig',label:'Advocate / Litigator',kind:'career'},
+        {id:'corp-h',label:'Corporate Lawyer',kind:'career',tags:['high-salary']},
+        {id:'judic',label:'Judiciary (PCS-J)',kind:'career',tags:['govt']},
+        {id:'hr-law',label:'Human Rights Lawyer',kind:'career'},
+        {id:'ip-law',label:'IP / Patent Attorney',kind:'career',tags:['high-salary','abroad']},
+        {id:'cyber-law',label:'Cyber / Tech Lawyer',kind:'career',tags:['high-salary']},
+        {id:'llm',label:'LLM (Oxford / NUS / abroad)',kind:'career',tags:['abroad','high-salary']},
+       ]},
+     ]},
+    {id:'psych',label:'Psychology',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'CUET, DU, JNU, TISS',duration:'BA 3yr + MA/MPhil (RCI for clinical)',salary:'₹3–18 LPA'},
+     children:[
+      {id:'ba-psych',label:'B.A. / B.Sc. Psychology',kind:'degree',
+       children:[
+        {id:'clin-psych',label:'Clinical Psychologist (RCI)',kind:'career'},
+        {id:'counsel',label:'Counsellor / Therapist',kind:'career'},
+        {id:'org-psych',label:'Organisational Psychologist',kind:'career',tags:['high-salary']},
+        {id:'sports-p',label:'Sports Psychologist',kind:'career'},
+        {id:'neuro-p',label:'Neuropsychologist',kind:'career'},
+       ]},
+     ]},
+    {id:'media',label:'Media & Communication',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'IIMC, FTII (JET), SRFTI, Symbiosis, CUET',duration:'3–4 years',salary:'₹2–20 LPA; OTT / senior roles higher'},
+     children:[
+      {id:'bjmc',label:'BJMC / BA Film / Mass Comm',kind:'degree',
+       children:[
+        {id:'journ',label:'Journalist / Reporter',kind:'career'},
+        {id:'anchor',label:'TV / YouTube Anchor',kind:'career'},
+        {id:'filmmaker',label:'Filmmaker / Director',kind:'career',tags:['abroad']},
+        {id:'dop',label:'Cinematographer / DoP',kind:'career'},
+        {id:'pr-comm',label:'PR / Communications',kind:'career'},
+        {id:'ott',label:'OTT Content Producer',kind:'career',tags:['high-salary']},
+       ]},
+     ]},
+    {id:'des-hum',label:'Design & Fine Arts',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'NID DAT, NIFT, UCEED, CEED, BFA Entrance',duration:'4 years',salary:'₹3–25 LPA'},
+     children:[
+      {id:'nid-nift',label:'NID / NIFT / BFA',kind:'degree',
+       children:[
+        {id:'fashion',label:'Fashion Designer',kind:'career'},
+        {id:'textile',label:'Textile Designer',kind:'career'},
+        {id:'graphic',label:'Graphic Designer',kind:'career'},
+        {id:'illust',label:'Illustrator',kind:'career'},
+        {id:'photo',label:'Photographer',kind:'career'},
+        {id:'ux-hum',label:'UX Researcher',kind:'career',tags:['high-salary']},
+       ]},
+     ]},
+    {id:'lit',label:'Literature & Languages',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'CUET, JNU, DU, foreign language institutes',duration:'3 years + MA',salary:'₹2–15 LPA; content / translation higher'},
+     children:[
+      {id:'ba-lit',label:'B.A. English / Hindi / Foreign Lang',kind:'degree',
+       children:[
+        {id:'transl',label:'Translator / Interpreter (MEA/UN)',kind:'career',tags:['abroad','govt']},
+        {id:'editor',label:'Editor / Publisher',kind:'career'},
+        {id:'content-s',label:'Content Strategist',kind:'career',tags:['high-salary']},
+        {id:'academic',label:'Academic (NET / JRF)',kind:'career'},
+       ]},
+     ]},
+    {id:'socwork',label:'Social Work & Dev',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'TISS NET, CUET, IGNOU',duration:'BSW 3yr + MSW 2yr',salary:'₹2–12 LPA; intl NGOs higher'},
+     children:[
+      {id:'bsw',label:'BSW → MSW (TISS)',kind:'degree',
+       children:[
+        {id:'ngo',label:'NGO Programme Manager',kind:'career'},
+        {id:'csr',label:'CSR Manager',kind:'career'},
+        {id:'un-org',label:'UN / UNICEF / UNDP Officer',kind:'career',tags:['abroad','high-salary']},
+        {id:'poldev',label:'Policy Researcher',kind:'career'},
+       ]},
+     ]},
+    {id:'perf-arts',label:'Performing Arts',kind:'path',
+     tags:['no-math','exam-free'],
+     meta:{exams:'NSD Entrance, Sangeet Natak Akademi, state music colleges',duration:'3–4 years',salary:'Highly variable; top performers earn crores'},
+     children:[
+      {id:'nsd',label:'Music / Dance / Theatre (NSD)',kind:'degree',
+       children:[
+        {id:'performer',label:'Classical Performer',kind:'career',tags:['exam-free']},
+        {id:'composer',label:'Composer / Music Director',kind:'career',tags:['high-salary']},
+        {id:'theatre-d',label:'Theatre Director',kind:'career'},
+        {id:'arts-teach',label:'Performing Arts Teacher',kind:'career'},
+       ]},
+     ]},
+    {id:'geo-gis',label:'Geography & GIS',kind:'path',
+     meta:{exams:'CUET, DU, JNU',duration:'3 years + MA/M.Sc.',salary:'₹3–15 LPA; GIS specialists ₹6–20 LPA'},
+     children:[
+      {id:'ba-geo',label:'B.A. / B.Sc. Geography',kind:'degree',
+       children:[
+        {id:'gis',label:'GIS / Remote Sensing (ISRO-IIRS)',kind:'career',tags:['govt','high-salary']},
+        {id:'urban-p2',label:'Urban / Regional Planner',kind:'career',tags:['govt']},
+        {id:'climate',label:'Climate / ESG Analyst',kind:'career',tags:['high-salary','abroad'],keywords:'sustainability analyst, ESG consultant, climate risk'},
+       ]},
+     ]},
+    {id:'polsci',label:'Political Science & IR',kind:'path',
+     tags:['no-math'],
+     meta:{exams:'CUET, JNU, Ashoka, TISS',duration:'3 years + MA',salary:'₹3–20 LPA; IFS / think-tank higher'},
+     children:[
+      {id:'ba-pol',label:'B.A. Political Science',kind:'degree',
+       children:[
+        {id:'diplomat',label:'Diplomat / IFS Officer',kind:'career',tags:['govt','abroad']},
+        {id:'thinktank',label:'Think-tank Analyst (ORF/Carnegie)',kind:'career',tags:['high-salary']},
+        {id:'geopol',label:'Geopolitical Analyst',kind:'career'},
+        {id:'intelserv',label:'Intelligence Services',kind:'career',tags:['govt']},
+       ]},
+     ]},
+    {id:'edu',label:'Education',kind:'path',
+     tags:['no-math','govt'],
+     meta:{exams:'CUET, state B.El.Ed / B.Ed entrance',duration:'4yr B.El.Ed or 3yr BA + 2yr B.Ed',salary:'₹2–10 LPA; ed-tech higher'},
+     children:[
+      {id:'beled',label:'B.El.Ed / B.Ed',kind:'degree',
+       children:[
+        {id:'teacher',label:'Teacher (Central / State school)',kind:'career',tags:['govt']},
+        {id:'edtech',label:'Ed-Tech Content Creator',kind:'career',tags:['high-salary']},
+        {id:'curriculum',label:'Curriculum Designer',kind:'career'},
+       ]},
+     ]},
+   ]},
+
+  // ─── VOCATIONAL ───────────────────────────────────────────────────────────
+  {id:'voc',label:'Vocational',kind:'stream',color:'#FB923C',_exp:true,
+   meta:{note:'Shorter, job-ready programs. ITI → Polytechnic Diploma → Lateral Entry B.Tech keeps engineering door open.'},
+   children:[
+    {id:'iti',label:'ITI',sublabel:'1–2 years · open merit',kind:'path',
+     tags:['exam-free','govt'],
+     meta:{exams:'State ITI admission (open merit), NCVT / SCVT certification',duration:'1–2 years',salary:'₹1.5–8 LPA; skilled trades rising with infrastructure boom'},
+     children:[
+      {id:'electrician',label:'Electrician (LT/HT)',kind:'career',tags:['govt']},
+      {id:'welder',label:'Welder / Pipe Fitter',kind:'career'},
+      {id:'mechanic-v',label:'Motor Vehicle Mechanic',kind:'career'},
+      {id:'plumber',label:'Plumber / HVAC Technician',kind:'career'},
+      {id:'copa',label:'COPA → IT Support',kind:'career'},
+      {id:'beauty-v',label:'Cosmetologist / Beautician',kind:'career',tags:['exam-free']},
+     ]},
+    {id:'poly',label:'Polytechnic / Diploma',sublabel:'3 yr · state JEEP',kind:'path',
+     meta:{exams:'State JEEP / Polycet, DASA',duration:'3 years → lateral B.Tech entry (2nd year)',salary:'₹2–10 LPA; lateral B.Tech → ₹4–25 LPA'},
+     children:[
+      {id:'dipl-eng',label:'Diploma Engineer',kind:'career'},
+      {id:'lateral',label:'Lateral Entry B.Tech (2nd year)',kind:'career',tags:['high-salary']},
+      {id:'apprentice',label:'PSU / Industrial Apprentice',kind:'career',tags:['govt']},
+     ]},
+    {id:'pmkvy',label:'PMKVY / Skill India',kind:'path',
+     tags:['exam-free','govt'],
+     meta:{exams:'None — free government training',salary:'₹1–5 LPA entry-level; skilled technicians rise to ₹8 LPA'},
+     children:[
+      {id:'logistics-v',label:'Logistics / Warehousing',kind:'career'},
+      {id:'construct',label:'Construction Supervisor',kind:'career'},
+      {id:'agri-skill',label:'Agri / Rural Tech',kind:'career'},
+     ]},
+    {id:'sports-mgmt',label:'Sports & Fitness',sublabel:'NIS · SAI · IHM',kind:'path',
+     meta:{exams:'NIS Patiala, SAI, NSNIS',duration:'1–4 years',salary:'₹2–15 LPA; top coaches / physios higher'},
+     children:[
+      {id:'coach',label:'Sports Coach / Manager',kind:'career'},
+      {id:'physio-s',label:'Sports Physiotherapist',kind:'career',tags:['abroad']},
+      {id:'sports-sci',label:'Sports Scientist / Analyst',kind:'career',tags:['high-salary']},
+     ]},
+   ]},
+ ]
+};
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+const TEXT_INK = { sci:'#0369A1', comm:'#047857', hum:'#6D28D9', voc:'#C2410C' };
+const nodeOf = new Map();
+function initTree(n, parent, sc) {
+  n._parent = parent || null;
+  n._sc = n.kind==='stream' ? n.id : (sc||'root');
+  n._color = n.kind==='stream' ? n.color : (parent?._color || '#EEF2FF');
+  n._colorText = TEXT_INK[n._sc] || '#111827';
+  if(n.kind!=='stream' && n.kind!=='root') n._exp = n._exp || false;
+  nodeOf.set(n.id, n);
+  n.children?.forEach(c => initTree(c, n, n._sc));
+}
+initTree(T, null, null);
+
+// ── SECTOR CLASSIFICATION (drives colleges/companies lookups) ─────────────────
+const SECTOR_MAP = {
+  'cse':'tech','bsc-cs':'tech',
+  'ece':'electronics','mech':'mechanical','civil':'civil','elec':'electrical',
+  'aero':'aerospace','chem':'chemical','others-bt':'engineering-other',
+  'bsc-math':'quant','bsc-phy':'physics-research','bsc-stat':'analytics',
+  'barch':'architecture','bdes-pcm':'design','mernavy':'maritime','def-pcm':'defence','imsc':'research-sci',
+  'mbbs':'medicine','bds':'dentistry','ayush':'ayush','bvsc':'veterinary','bpharm':'pharma',
+  'allied':'allied-health','lifesci':'life-sciences','agri':'agriculture',
+  'prof-certs':'finance-ca','bcom':'commerce-general','bcom-gen':'commerce-general',
+  'mba':'management','ipm':'management','bba-llb':'law-corporate','eco-comm':'economics',
+  'vc':'venture-capital','pe':'venture-capital','wealthmgr':'wealth-management',
+  'bscfin':'finance-analytics','hotel':'hospitality','digimktg':'digital-marketing','entrepr':'entrepreneurship',
+  'ba-civ':'civil-services','ballb':'law-humanities','ba-psych':'psychology','bjmc':'media',
+  'nid-nift':'design-arts','ba-lit':'literature','bsw':'social-work','nsd':'performing-arts',
+  'ba-geo':'geography-gis','ba-pol':'polsci-ir','beled':'education',
+  'iti':'iti-trades','poly':'polytechnic','pmkvy':'skill-india','sports-mgmt':'sports'
+};
+function sectorOf(n){
+  let cur=n;
+  while(cur){ if(SECTOR_MAP[cur.id]) return SECTOR_MAP[cur.id]; cur=cur._parent; }
+  return null;
+}
+
+// ── TOP-10 COLLEGES BY DEGREE (indicative NIRF / QS-style rankings) ───────────
+const COLLEGES = {
+'btech':{examScore:'JEE Adv AIR <2,500 (IITs) · JEE Main 99.5+ percentile (NITs) · BITSAT 350+',
+ india:['IIT Bombay','IIT Delhi','IIT Madras','IIT Kanpur','IIT Kharagpur','IIT Roorkee','BITS Pilani','IIT Guwahati','NIT Trichy','VIT Vellore'],
+ global:['MIT','Stanford University','UC Berkeley','Caltech','Carnegie Mellon University','ETH Zurich','National University of Singapore','Imperial College London','Tsinghua University','Georgia Tech']},
+'bsc-pcm':{examScore:'CUET 700+/800 (top DU colleges) · IISER-AT rank <1,000',
+ india:['IISc Bangalore','IISER Pune','IISER Kolkata',"St. Stephen's Delhi",'Hindu College Delhi','Miranda House Delhi','Presidency Kolkata','Loyola Chennai','Fergusson Pune','Christ Bangalore'],
+ global:['MIT','Caltech','University of Cambridge','University of Oxford','Princeton University','ETH Zurich','University of Chicago','Harvard University','UCLA','University of Toronto']},
+'barch':{examScore:'NATA 130+/200 · JEE Paper-2 AIR <5,000',
+ india:['SPA Delhi','IIT Roorkee','CEPT Ahmedabad','SPA Bhopal','Jamia Millia Islamia','VNIT Nagpur','MNIT Jaipur','BIT Mesra','Sir JJ College of Architecture Mumbai','Anna University Chennai'],
+ global:['MIT','ETH Zurich','TU Delft','UC Berkeley','Bartlett School (UCL)','Harvard GSD','AA School London','Cornell University','Tsinghua University','Politecnico di Milano']},
+'bdes-pcm':{examScore:'UCEED rank <300 · NID DAT top 5% · NIFT rank <200',
+ india:['NID Ahmedabad','IIT Bombay IDC','NIFT Delhi','NID Gandhinagar','IIT Guwahati Design','MIT Institute of Design Pune','Srishti Bangalore','Symbiosis Pune','Pearl Academy','DJ Academy Coimbatore'],
+ global:['Royal College of Art London','Parsons School of Design','Rhode Island School of Design','ArtCenter Pasadena','Politecnico di Milano','Design Academy Eindhoven','Central Saint Martins','Pratt Institute','SVA New York','KAIST']},
+'mernavy':{examScore:'IMU-CET rank <2,000',
+ india:['IMU Chennai','TS Chanakya Mumbai','TS Rahaman Kerala','MERI Kolkata','Vels Academy Chennai','Coimbatore Marine College','Great Eastern Institute Pune','AMET Chennai','Samundra Institute Lonavala','Anglo Eastern Maritime Academy'],
+ global:['World Maritime University (Sweden)','Warsash Maritime Academy (UK)','Maine Maritime Academy (USA)','Massachusetts Maritime Academy','Australian Maritime College','Southampton Solent University','City University of London','Nippon Maritime Academy (Japan)','Norwegian Maritime Academy','STC Netherlands Maritime Institute']},
+'def-pcm':{examScore:'NDA written + SSB interview · UPSC CDS merit list',
+ india:['NDA Khadakwasla','IMA Dehradun','OTA Chennai','INA Ezhimala','AFA Hyderabad','Sainik School network','RIMC Dehradun','Officers Training Academy','National Defence College','Rashtriya Military School network'],
+ global:['West Point (USA)','Sandhurst (UK)','US Naval Academy','US Air Force Academy','Royal Military College (Canada)','ADFA (Australia)','Saint-Cyr (France)','Fort Leavenworth (USA)','NATO Defense College','Royal Military Academy (Belgium)']},
+'imsc':{examScore:'IISER-AT rank <1,000 · NEST rank <500',
+ india:['IISER Pune','IISER Kolkata','IISc Bangalore','IISER Mohali','NISER Bhubaneswar','IISER Bhopal','IISER Thiruvananthapuram','TIFR Mumbai','IIT Kanpur (Int. M.Sc.)','CMI Chennai'],
+ global:['MIT','Caltech','Princeton University','University of Cambridge','ETH Zurich','Max Planck Institutes (Germany)','University of Tokyo','Stanford University','University of Oxford','UC Berkeley']},
+'mbbs':{examScore:'NEET-UG 99.9+ percentile (AIIMS / govt colleges)',
+ india:['AIIMS Delhi','CMC Vellore','AFMC Pune','JIPMER Puducherry','Maulana Azad Medical College Delhi',"King George's Medical University Lucknow",'BHU Institute of Medical Sciences','Grant Medical College Mumbai','Kasturba Medical College Manipal','Lady Hardinge Medical College Delhi'],
+ global:['Harvard Medical School','Johns Hopkins University','University of Oxford Medicine','Stanford Medicine','Karolinska Institute','University of Cambridge','UCL Medical School','University of Melbourne','University of Toronto','NUS Medicine']},
+'bds':{examScore:'NEET-UG 98+ percentile',
+ india:['Maulana Azad Institute of Dental Sciences Delhi','Manipal College of Dental Sciences','Christian Dental College Ludhiana','Government Dental College Mumbai','SDM Dental College Dharwad','Government Dental College Bangalore',"King George's Dental College Lucknow",'Sri Ramachandra Dental College Chennai','DY Patil Dental College Mumbai','Nair Hospital Dental College Mumbai'],
+ global:['University of Michigan Dentistry','Harvard School of Dental Medicine',"King's College London Dentistry",'University of Hong Kong Dentistry','University of Melbourne Dentistry','University of Toronto Dentistry','Karolinska Institute','NUS Dentistry','UCLA School of Dentistry','University of Sydney Dentistry']},
+'ayush':{examScore:'NEET-UG 90+ percentile',
+ india:['National Institute of Ayurveda Jaipur','IPGT&RA Jamnagar','Banaras Hindu University (AYUSH)','National Institute of Homoeopathy Kolkata','National Institute of Unani Medicine Bangalore','RGUHS Bangalore','Government Ayurved College Nagpur','Patanjali University Haridwar','SDM College of Ayurveda Udupi','Ayurveda Mahavidyalaya Pune'],
+ global:['Bastyr University (USA)','Exeter Medical School (Integrative Medicine)','Middlesex University London','Australian College of Natural Medicine','University of Westminster','European Institute of Vedic Studies','Ayurvedic Institute New Mexico','College of Ayurveda (UK)','Kerala Ayurveda Academy (Global)','Maharishi Ayurveda Programs Netherlands']},
+'bvsc':{examScore:'NEET-UG 90+ percentile · state Vet CET rank <2,000',
+ india:['Indian Veterinary Research Institute Bareilly','Madras Veterinary College Chennai','GB Pant University of Agriculture & Technology','Bombay Veterinary College Mumbai','College of Veterinary Science Hebbal Bangalore','Guru Angad Dev Veterinary University Ludhiana','WB University of Animal & Fishery Sciences','Rajiv Gandhi College of Veterinary Science','SVPU of Agriculture & Technology','Nagpur Veterinary College'],
+ global:['Royal Veterinary College London','UC Davis Veterinary Medicine','Cornell Veterinary College','University of Edinburgh Vet School','University of Sydney Veterinary Science','Utrecht University Veterinary Medicine','University of Melbourne Veterinary Science','Texas A&M Veterinary Medicine','University of Guelph (Canada)','Ghent University (Belgium)']},
+'bpharm':{examScore:'CUET / state CET rank <5,000 · GATE/GPAT for M.Pharm',
+ india:['NIPER Mohali','Jamia Hamdard Delhi','ICT Mumbai','BITS Pilani Pharmacy','Manipal College of Pharmaceutical Sciences','Panjab University Chandigarh','JSS College of Pharmacy Mysuru','Birla Institute of Technology Mesra','LM College of Pharmacy Ahmedabad','Poona College of Pharmacy'],
+ global:['MIT Pharmaceutical Sciences','UC San Francisco','University of Cambridge','Monash University (Australia)','University of Toronto Pharmacy',"King's College London",'University of Nottingham','Purdue University','University of Michigan','University of Copenhagen']},
+'allied':{examScore:'State CET rank <5,000 · CUET 600+',
+ india:['CMC Vellore (Allied Health)','AIIMS Delhi (Paramedical)','Manipal College of Health Professions','NIMHANS Bangalore (Rehab Sciences)','Maharashtra University of Health Sciences','Sri Ramachandra Institute Chennai','Jamia Hamdard Physiotherapy','Amity Institute of Physiotherapy','DY Patil College of Physiotherapy','Kasturba Medical College Allied Health'],
+ global:['University of Melbourne Physiotherapy','University of Toronto Rehabilitation Sciences',"King's College London",'University of Queensland','Johns Hopkins School of Nursing','University of Otago (New Zealand)','Karolinska Institute','University of Southampton','McMaster University (Canada)','University of Sydney Health Sciences']},
+'lifesci':{examScore:'CUET 650+ · CSIR-NET for PhD entry',
+ india:['IISc Bangalore','JNU New Delhi','Delhi University','Banaras Hindu University','University of Hyderabad','Madras University','Panjab University','TIFR Mumbai','NCBS Bangalore','CCMB Hyderabad'],
+ global:['MIT','Harvard University','Stanford University','University of Cambridge','ETH Zurich','Max Planck Institutes','University of Oxford','UC San Diego','University of Tokyo','Karolinska Institute']},
+'agri':{examScore:'ICAR-AIEEA rank <2,000',
+ india:['Indian Agricultural Research Institute Delhi','Punjab Agricultural University Ludhiana','Tamil Nadu Agricultural University','GB Pant University of Agri & Tech','Anand Agricultural University','University of Agricultural Sciences Bangalore','CCS Haryana Agricultural University','Acharya NG Ranga Agricultural University','Assam Agricultural University','Kerala Agricultural University'],
+ global:['Wageningen University (Netherlands)','UC Davis','Cornell University','China Agricultural University','UC Berkeley (Agri Econ)','University of Reading (UK)','James Cook University (Australia)','University of Guelph (Canada)','Rothamsted Research (UK)','Swedish University of Agricultural Sciences']},
+'prof-certs':{examScore:"CA Foundation 40%+ per paper · CFA L1 pass rate ~45%",
+ india:['ICAI National Toppers Programs','ICSI Delhi','ICMAI Kolkata','IIM Ahmedabad (Exec Fin Cert)','NISM Mumbai','Indian Institute of Banking & Finance','SP Jain Institute','Narsee Monjee Institute','Symbiosis Centre for Management','XLRI Jamshedpur'],
+ global:['CFA Institute (USA)','ACCA (UK)','London School of Economics','Wharton School','University of Chicago Booth','INSEAD','HEC Paris','University of Cambridge Judge Business School','NYU Stern','Frankfurt School of Finance & Management']},
+'bcom':{examScore:'CUET 650+/800 (for DU / top colleges)',
+ india:['Shri Ram College of Commerce Delhi','Lady Shri Ram College Delhi','Hindu College Delhi','Christ University Bangalore','Loyola College Chennai',"St. Xavier's Mumbai",'Narsee Monjee College of Commerce','Symbiosis College of Arts & Commerce','Presidency College Kolkata','Madras Christian College'],
+ global:['London School of Economics','University of Pennsylvania (Wharton UG)','University of Melbourne','University of Warwick','HEC Paris','National University of Singapore','University of Toronto (Rotman Commerce)','University of Hong Kong','Bocconi University Milan','Erasmus University Rotterdam']},
+'bba':{examScore:'IPMAT 99+ percentile · CUET 650+',
+ india:['IIM Indore (IPM)','Christ University Bangalore','NMIMS Mumbai','Symbiosis Pune','Shaheed Sukhdev College Delhi','Loyola College Chennai','IIM Rohtak (IPM)','Xavier Institute of Management Bhubaneswar','Amity Business School','IIM Ranchi (IPM)'],
+ global:['University of Pennsylvania Wharton','HEC Paris','Bocconi University Milan','Erasmus University Rotterdam','University of Michigan Ross','London Business School','Nanyang Business School Singapore','University of Melbourne','ESSEC Business School','University of Hong Kong Business']},
+'bba-llb':{examScore:'CLAT AIR <2,000 · AILET AIR <500',
+ india:['NLSIU Bangalore','NALSAR Hyderabad','NLU Delhi','NLU Jodhpur','WBNUJS Kolkata','GNLU Gandhinagar','NLU Bhopal','Jindal Global Law School','ILS Law College Pune','Symbiosis Law School Pune'],
+ global:['Harvard Law School','Yale Law School','University of Oxford Law','University of Cambridge Law','Stanford Law School','London School of Economics Law','NUS Law Singapore','UCL Laws','Columbia Law School','Melbourne Law School']},
+'eco-comm':{examScore:'CUET 700+/800 · DSE entrance top 100',
+ india:['Delhi School of Economics',"St. Stephen's College Delhi",'Presidency University Kolkata','Madras School of Economics','Indian Statistical Institute Kolkata','Shri Ram College of Commerce','Jawaharlal Nehru University','Gokhale Institute Pune','Hindu College Delhi','Fergusson College Pune'],
+ global:['London School of Economics','Harvard University','MIT','University of Chicago','University of Oxford','University of Cambridge','UC Berkeley','Stanford University','Toulouse School of Economics','Paris School of Economics']},
+'ipm':{examScore:'IPMAT 99.5+ percentile',
+ india:['IIM Indore','IIM Rohtak','IIM Ranchi','IIM Jammu','IIM Bodh Gaya','IIM Sambalpur','IIM Amritsar','IIM Nagpur (integrated tracks)','IIM Kashipur (integrated tracks)','IIM Udaipur (integrated tracks)'],
+ global:['HEC Paris','Bocconi University Milan','ESSEC Business School','Nanyang Business School','Rotterdam School of Management','University of Warwick','Bayes Business School (Cass)','IE Business School Madrid','Copenhagen Business School','Melbourne Business School']},
+'bscfin':{examScore:'CUET 650+ · NMIMS NPAT top 10%',
+ india:['NMIMS Mumbai','Symbiosis School of Economics','Christ University Bangalore','Narsee Monjee Institute',"St. Xavier's Mumbai",'Shaheed Sukhdev College of Business Studies','Loyola College Chennai','Amity School of Business','IIM Ahmedabad (Fin electives)','ISB Hyderabad (allied programs)'],
+ global:['London School of Economics','NYU Stern','Wharton School','University of Chicago Booth','University of Cambridge','Bocconi University Milan','HEC Paris','National University of Singapore','University of Hong Kong','Imperial College Business School']},
+'bcom-gen':{examScore:'CUET 550+ / state merit',
+ india:['Ramjas College Delhi','Kirori Mal College Delhi','Mount Carmel Bangalore','Stella Maris Chennai','Jai Hind College Mumbai','Symbiosis College of Arts & Commerce','Loyola College Chennai','Christ University Bangalore',"St. Joseph's Bangalore",'Presidency College Chennai'],
+ global:['University of Melbourne','University of Toronto','University of Warwick','University of Manchester','National University of Singapore','University of Hong Kong','University of Sydney','University of British Columbia','Monash University','University of Auckland']},
+'hotel':{examScore:'NCHM JEE AIR <5,000',
+ india:['IHM Mumbai','IHM Delhi (Pusa)','IHM Bangalore','WGSHA Manipal','IHM Chennai','Christ University Hotel Management','Oberoi Centre of Learning & Development','IHM Ahmedabad','Amity School of Hospitality','IHM Delhi (Bhimrao Ambedkar)'],
+ global:['Ecole Hoteliere de Lausanne (Switzerland)','Cornell School of Hotel Administration','Les Roches (Switzerland)','Glion Institute (Switzerland)','University of Nevada Las Vegas','Hong Kong Polytechnic University','University of Surrey (UK)','Oxford Brookes University','Griffith University (Australia)','Blue Mountains Intl Hotel Mgmt (Australia)']},
+'digimktg':{examScore:'No standard entrance — portfolio / CUET based',
+ india:['MICA Ahmedabad','Xavier Institute of Communications Mumbai','Symbiosis Institute of Media & Comm','IIM Ahmedabad (Digital Mktg Cert)','NMIMS School of Branded Content',"St. Xavier's Mass Comm Mumbai",'Indian Institute of Digital Education','National Institute of Advertising','Amity School of Communication','IIDE Mumbai'],
+ global:['Northwestern Medill','USC Marshall School of Business','Kellogg School of Management','University of Texas Austin (Advertising)','Emerson College Boston','University of Leeds','IE Business School','HEC Paris (Marketing)','University of Melbourne','National University of Singapore']},
+'ba-civ':{examScore:'UPSC CSE Prelims cutoff ~90–100/200 · Mains + Interview merit',
+ india:["St. Stephen's College Delhi",'Hindu College Delhi','Lady Shri Ram College','JNU New Delhi','Delhi University Faculty of Arts','Presidency University Kolkata','Miranda House Delhi','Fergusson College Pune','Loyola College Chennai','Christ University Bangalore'],
+ global:['Harvard Kennedy School','London School of Economics','Oxford Blavatnik School of Government','Sciences Po Paris','Australian National University','NUS Lee Kuan Yew School','Columbia SIPA','Georgetown University','University of Cambridge','Fletcher School (Tufts)']},
+'ballb':{examScore:'CLAT AIR <500 (top NLUs)',
+ india:['NLSIU Bangalore','NALSAR Hyderabad','NLU Delhi','WBNUJS Kolkata','NLU Jodhpur','GNLU Gandhinagar','Jindal Global Law School','Symbiosis Law School Pune','ILS Law College Pune','Faculty of Law Delhi University'],
+ global:['Harvard Law School','Yale Law School','Stanford Law School','University of Oxford','University of Cambridge','UCL Laws','London School of Economics','NUS Law Singapore','Melbourne Law School','Columbia Law School']},
+'ba-psych':{examScore:'CUET 650+ · DU merit ~95%',
+ india:['Delhi University (LSR / Jesus & Mary)','Christ University Bangalore','Ashoka University','TISS Mumbai','Fergusson College Pune','Loyola College Chennai','Amity Institute of Psychology','NIMHANS Bangalore (Clinical)','Jamia Millia Islamia','Banaras Hindu University'],
+ global:['Stanford University','Harvard University','University of Oxford','University of Cambridge','UC Berkeley','University of Melbourne','University of Toronto',"King's College London",'University of Amsterdam','McGill University']},
+'bjmc':{examScore:'IIMC entrance top 5% · CUET 600+',
+ india:['Indian Institute of Mass Communication Delhi','Xavier Institute of Communications Mumbai','Symbiosis Institute of Media & Comm Pune','Asian College of Journalism Chennai','Jamia Millia Islamia Mass Comm','Manipal Institute of Communication','Mudra Institute of Communications Ahmedabad','FTII Pune','SRFTI Kolkata','Christ University Media Studies'],
+ global:['Columbia Journalism School','Northwestern Medill','USC Annenberg','City University of London Journalism','University of Missouri Journalism','London College of Communication','NYU Journalism','University of Sydney Media & Comm','Cardiff University Journalism','University of Amsterdam Comm Science']},
+'nid-nift':{examScore:'NID DAT rank <150 · NIFT rank <500 · UCEED rank <300',
+ india:['National Institute of Design Ahmedabad','NIFT Delhi','NID Gandhinagar','Pearl Academy','Srishti Manipal Institute Bangalore','Symbiosis Institute of Design Pune','MIT Institute of Design Pune','DJ Academy of Design Coimbatore','Footwear Design & Development Institute','Indian Institute of Craft & Design Jaipur'],
+ global:['Royal College of Art London','Parsons School of Design','Rhode Island School of Design','Central Saint Martins London','ArtCenter College of Design','Pratt Institute New York','Politecnico di Milano','Design Academy Eindhoven','Aalto University (Finland)','KAIST Industrial Design']},
+'ba-lit':{examScore:'CUET 600+ / DU merit',
+ india:["St. Stephen's College Delhi",'Lady Shri Ram College','Jadavpur University Kolkata','Jawaharlal Nehru University','Elphinstone College Mumbai','Presidency University Kolkata','Loyola College Chennai','Miranda House Delhi','English & Foreign Languages University Hyderabad','Fergusson College Pune'],
+ global:['University of Oxford','University of Cambridge','Harvard University','University of Edinburgh','Trinity College Dublin','UC Berkeley','University of Toronto','University of Melbourne',"King's College London",'Sorbonne University Paris']},
+'bsw':{examScore:'TISS NET rank <500 · CUET 550+',
+ india:['Tata Institute of Social Sciences Mumbai','Delhi University Dept of Social Work','Loyola College Chennai','Jamia Millia Islamia','Nirmala Niketan Mumbai','Madras School of Social Work','Christ University Bangalore','Visva-Bharati Santiniketan','Rajagiri College Kochi','Banaras Hindu University'],
+ global:['Columbia School of Social Work','University of Michigan','University of Chicago Crown School','University of Melbourne','McGill University','University of Toronto','London School of Economics',"King's College London",'University of Sydney','University of Cape Town']},
+'nsd':{examScore:'NSD entrance (interview + workshop) — ~20 seats/yr',
+ india:['National School of Drama Delhi','Film & Television Institute of India Pune','Bhartendu Natya Akademi Lucknow','Shri Ram Centre for Performing Arts','Gandharva Mahavidyalaya Delhi','Rabindra Bharati University Kolkata','Karnataka State Akademi','MIT School of Film & Television Pune','ITM Vocational University','Kalakshetra Foundation Chennai'],
+ global:['Juilliard School New York','Royal Academy of Dramatic Art London','London Academy of Music & Dramatic Art','Yale School of Drama','Tisch School of the Arts NYU','Berklee College of Music','Royal College of Music London','Curtis Institute of Music','Paris Conservatoire','Sydney Conservatorium of Music']},
+'ba-geo':{examScore:'CUET 600+ / DU merit',
+ india:['Delhi School of Economics (Geography)','Jawaharlal Nehru University','Banaras Hindu University','University of Calcutta','Panjab University Chandigarh','IIRS Dehradun (ISRO)','Andhra University Visakhapatnam','Aligarh Muslim University','Utkal University Bhubaneswar','Savitribai Phule Pune University'],
+ global:['University of Oxford','University of Cambridge','UCL London','ETH Zurich','National University of Singapore','University of Melbourne','University of British Columbia','University of Wisconsin-Madison','Wageningen University','Australian National University']},
+'ba-pol':{examScore:'CUET 650+ / DU merit ~97%',
+ india:["St. Stephen's College Delhi",'Hindu College Delhi','Jawaharlal Nehru University','Presidency University Kolkata','Miranda House Delhi','Ashoka University','Lady Shri Ram College','Jadavpur University','Symbiosis School of International Studies','OP Jindal Global University'],
+ global:['Sciences Po Paris','London School of Economics','Harvard University','University of Oxford','University of Cambridge','Georgetown University (SFS)','Columbia SIPA','Australian National University','University of Geneva','Leiden University (Netherlands)']},
+'beled':{examScore:'CUET 500+ / state B.El.Ed entrance',
+ india:['Delhi University (LSR / Miranda House B.El.Ed)','Jamia Millia Islamia','Regional Institute of Education Mysuru','Banaras Hindu University','Tata Institute of Social Sciences (Education)','Azim Premji University Bangalore','Ambedkar University Delhi','Ravenshaw University Odisha','Panjab University Chandigarh','Central Institute of Education Delhi'],
+ global:['Harvard Graduate School of Education','UCL Institute of Education London','Stanford Graduate School of Education','University of Melbourne Education','University of Toronto OISE','Columbia Teachers College','University of Cambridge Faculty of Education','University of Oxford Dept of Education','University of Hong Kong Education','Monash University Education']}
+};
+
+// ── TOP-10 COMPANIES BY SECTOR (India + Global hiring leaders) ────────────────
+const COMPANIES = {
+'tech':{india:['TCS','Infosys','Wipro','HCLTech','Tech Mahindra','Flipkart','Zoho','Freshworks','Paytm','Swiggy'],
+ global:['Google','Microsoft','Amazon','Meta','Apple','Netflix','Nvidia','Salesforce','Adobe','IBM']},
+'electronics':{india:['Bharat Electronics','Tata Electronics','HCL','Continental India','Samsung R&D India','Qualcomm India','Intel India','Texas Instruments India','Bosch India','L&T Technology Services'],
+ global:['Intel','Qualcomm','Texas Instruments','Samsung Electronics','TSMC','Broadcom','Nvidia','Sony','Bosch','Siemens']},
+'mechanical':{india:['Tata Motors','Mahindra & Mahindra','Larsen & Toubro','Maruti Suzuki','Bajaj Auto','Ashok Leyland','BHEL','Godrej & Boyce','TVS Motor','Hero MotoCorp'],
+ global:['General Electric','Siemens','Boeing','Caterpillar','Rolls-Royce','Honeywell','Toyota','Volkswagen','ABB','Schneider Electric']},
+'civil':{india:['L&T Construction','DLF','Shapoorji Pallonji','GMR Group','Tata Projects','NBCC','IRCON International','Adani Infrastructure','HCC (Hindustan Construction)','Godrej Properties'],
+ global:['Bechtel','AECOM','Skanska','Vinci Construction','China State Construction','Fluor Corporation','Turner Construction','Balfour Beatty','Hochtief','Arup']},
+'electrical':{india:['NTPC','Power Grid Corporation','BHEL','Siemens India','ABB India','Havells','Tata Power','Adani Power','ONGC','CESC Limited'],
+ global:['Siemens','ABB','Schneider Electric','General Electric','Eaton','Hitachi Energy','Mitsubishi Electric','Toshiba','Enel','National Grid']},
+'aerospace':{india:['Hindustan Aeronautics (HAL)','ISRO','DRDO','Tata Advanced Systems','Bharat Dynamics','Mahindra Aerospace','Adani Defence','L&T Aerospace','Boeing India','Airbus India'],
+ global:['Boeing','Airbus','Lockheed Martin','SpaceX','NASA','Northrop Grumman','Raytheon Technologies','Rolls-Royce','Blue Origin','Safran']},
+'chemical':{india:['Reliance Industries','Tata Chemicals','UPL Limited','Pidilite Industries','Asian Paints','Aarti Industries','SRF Limited','Deepak Nitrite','GAIL India','BASF India'],
+ global:['BASF','Dow Chemical','DuPont','Shell Chemicals','ExxonMobil Chemical','Bayer','LyondellBasell','SABIC','Sinopec','Air Liquide']},
+'engineering-other':{india:['Larsen & Toubro','Tata Steel','Biocon','Reliance Industries','Mahindra Group','Godrej Group','JSW Steel','Adani Group','Bharat Forge','Cummins India'],
+ global:['Siemens','General Electric','ThyssenKrupp','Honeywell','3M','Cummins','Emerson Electric','Johnson Controls','Danaher','Illinois Tool Works']},
+'quant':{india:['WorldQuant India','Tower Research Capital India','Goldman Sachs India','DE Shaw India','Graviton Research Capital','Jane Street India','Morgan Stanley India','Flow Traders India','ICICI Securities Quant Desk','Nomura India'],
+ global:['Renaissance Technologies','Jane Street','Two Sigma','Citadel Securities','DE Shaw','Goldman Sachs','Jump Trading','Optiver','Susquehanna International Group','AQR Capital']},
+'physics-research':{india:['Bhabha Atomic Research Centre','Tata Institute of Fundamental Research','ISRO','Raman Research Institute','Indian Institute of Astrophysics','Saha Institute of Nuclear Physics','DRDO Labs','Institute of Physics Bhubaneswar','IUCAA Pune','Variable Energy Cyclotron Centre'],
+ global:['CERN','NASA','Max Planck Institute','Fermilab','Lawrence Berkeley National Lab','MIT Lincoln Laboratory','Los Alamos National Laboratory','RIKEN (Japan)','DESY (Germany)','Institute for Advanced Study Princeton']},
+'analytics':{india:['Mu Sigma','Fractal Analytics','Tiger Analytics','EXL Analytics','LatentView Analytics','Genpact Analytics','Accenture Analytics India','American Express Analytics India','ZS Associates','Nielsen India'],
+ global:['McKinsey Analytics','Deloitte Analytics','IBM','SAS Institute','Accenture','Palantir Technologies','Nielsen','Kantar','Gartner','Bain & Company']},
+'architecture':{india:['Hafeez Contractor & Associates','Morphogenesis','Sanjay Puri Architects','CP Kukreja Architects','RSP Design Consultants','Edifice Consultants','Studio Lotus','Design Cell Architects','DLF Design Studio','Somaya & Kalappa Consultants'],
+ global:['Foster + Partners','Zaha Hadid Architects','Gensler','SOM (Skidmore Owings & Merrill)','BIG (Bjarke Ingels Group)','OMA','Herzog & de Meuron','AECOM','HOK','Arup']},
+'design':{india:['Titan Company Design Studio','Godrej Design Lab','Tata Elxsi Design','Wipro Designit','Tech Mahindra Makers Lab','Samsung Design Delhi','Ather Energy Design','Mahindra Design Studio','Zoho Design','Myntra Design Studio'],
+ global:['Apple','IDEO','Frog Design','Nike Design Studio','IBM Design','Google Design','Tesla Design Studio','Dyson','BMW Designworks','Samsung Design']},
+'maritime':{india:['Shipping Corporation of India','Great Eastern Shipping','Essar Shipping','Anglo-Eastern Ship Management','Fleet Management India','Varun Shipping','Wallem Ship Management India','V.Ships India','Synergy Maritime','Ocean Sparkle'],
+ global:['Maersk','Mediterranean Shipping Company','CMA CGM','Hapag-Lloyd','COSCO Shipping','Anglo-Eastern','V.Group','Bernhard Schulte Shipmanagement','Wallem Group','Star Bulk Carriers']},
+'defence':{india:['Indian Army','Indian Navy','Indian Air Force','Hindustan Aeronautics','Bharat Electronics','DRDO','Border Security Force','Bharat Dynamics','Ordnance Factory Board','Indian Coast Guard'],
+ global:['Lockheed Martin','Raytheon Technologies','Northrop Grumman','BAE Systems','Boeing Defense','General Dynamics','Thales Group','Leonardo','Rheinmetall','L3Harris Technologies']},
+'research-sci':{india:['CSIR Labs','ISRO','DRDO','Tata Institute of Fundamental Research','Indian Institute of Science','National Chemical Laboratory','Bhabha Atomic Research Centre','Serum Institute of India R&D','Biocon Research','Dr. Reddy’s Research Labs'],
+ global:['NASA','CERN','Max Planck Society','National Institutes of Health (USA)','Google DeepMind','Genentech','Novartis Research','Pfizer R&D','Roche Research','MIT Lincoln Laboratory']},
+'medicine':{india:['AIIMS Hospitals','Apollo Hospitals','Fortis Healthcare','Max Healthcare','Manipal Hospitals','Narayana Health','Medanta','CMC Vellore','Tata Memorial Hospital','Kokilaben Dhirubhai Ambani Hospital'],
+ global:['Mayo Clinic','Cleveland Clinic','Johns Hopkins Hospital','Massachusetts General Hospital','Mount Sinai Health System','Cedars-Sinai','NHS (UK)','Charite Berlin','Singapore General Hospital','Toronto General Hospital']},
+'dentistry':{india:['Apollo Dental Care','Clove Dental','Manipal Dental College Hospital','Sabka Dentist',"Dr. Chopra's Dental Clinics",'Maulana Azad Dental Hospital','32 Watts Dental','Vatsalya Dental','Smile Delhi','Dentzz'],
+ global:['Aspen Dental (USA)','Bupa Dental Care (UK)','Q&M Dental Singapore','Heartland Dental (USA)','Pacific Dental Services','Dental Corporation Australia','Colgate-Palmolive R&D','Straumann Group','Dentsply Sirona','Align Technology']},
+'ayush':{india:['Patanjali Ayurved','Himalaya Wellness','Dabur India','Kerala Ayurveda Limited','Baidyanath','Zandu Pharmaceuticals','AyurVAID Hospitals','Jiva Ayurveda','VLCC Wellness','Arya Vaidya Sala Kottakkal'],
+ global:['Weleda (Switzerland)','Ayush Ayurveda Clinics (UK)','Traditional Chinese Medicine Hospitals (China)','Kerala Ayurveda USA','Chopra Global (USA)','Bastyr Center for Natural Health','Neal’s Yard Remedies (UK)','Ayurvedic Institute New Mexico','Sivananda Ashram Network','WHO Traditional Medicine Programs']},
+'veterinary':{india:['Vets4Pets India','IVRI-affiliated Clinics','Cargill Animal Nutrition India','Zoetis India','Mars Petcare India','Heads Up For Tails','CPPR Veterinary Services','Wiggles Veterinary Hospital','Pashudhan Vikas','Indian Immunologicals'],
+ global:['Zoetis','IDEXX Laboratories','Mars Petcare','Merck Animal Health','Elanco','Banfield Pet Hospital','VCA Animal Hospitals','Boehringer Ingelheim Animal Health','Royal Canin','PetSmart Veterinary Services']},
+'pharma':{india:['Sun Pharmaceutical',"Dr. Reddy's Laboratories",'Cipla','Lupin','Aurobindo Pharma','Biocon','Zydus Lifesciences','Torrent Pharmaceuticals','Glenmark Pharmaceuticals','Cadila Healthcare'],
+ global:['Pfizer','Johnson & Johnson','Roche','Novartis','Merck & Co','AbbVie','AstraZeneca','GlaxoSmithKline','Sanofi','Bristol Myers Squibb']},
+'allied-health':{india:['Apollo Rehabilitation','Fortis Rehab Centres','Max Healthcare Physiotherapy','Manipal Physiotherapy','Practo','QI Spine Clinic','Continua Kinetics','Kayakalp Physiotherapy','Portea Medical','Vardaan Rehabilitation'],
+ global:['Kaiser Permanente','HCA Healthcare','Bupa','ATI Physical Therapy','Select Medical','Cleveland Clinic Rehab','NHS Physiotherapy Services','Physiotherapy Associates','Athletico Physical Therapy','Ramsay Health Care']},
+'life-sciences':{india:['Biocon','Serum Institute of India','Bharat Biotech','Panacea Biotec','Reliance Life Sciences','Piramal Life Sciences','Syngene International',"Dr. Reddy's Labs",'Indian Immunologicals','Advanced Enzyme Technologies'],
+ global:['Roche','Novartis','Thermo Fisher Scientific','Illumina','Amgen','Genentech','Moderna','Regeneron Pharmaceuticals','Bayer CropScience','Merck KGaA']},
+'agriculture':{india:['ITC Agri Business','Godrej Agrovet','UPL Limited','Rallis India','Mahindra Agri Solutions','DCM Shriram','Coromandel International','National Dairy Development Board','NAFED','Kaveri Seed Company'],
+ global:['Bayer Crop Science','Syngenta','Corteva Agriscience','Cargill','ADM (Archer Daniels Midland)','John Deere','BASF Agricultural Solutions','Nutrien','Yara International','Olam Group']},
+'finance-ca':{india:['Deloitte India','PwC India','EY India','KPMG India','ICICI Bank','HDFC Bank','SBI','Grant Thornton India','BDO India','Axis Bank'],
+ global:['Deloitte','PwC','EY','KPMG','Goldman Sachs','JPMorgan Chase','Morgan Stanley','Citigroup','HSBC','Bank of America']},
+'commerce-general':{india:['HDFC Bank','ICICI Bank','State Bank of India','Axis Bank','Kotak Mahindra Bank','Reliance Retail','Aditya Birla Group','ITC Limited','Bajaj Finserv','Tata Consumer Products'],
+ global:['JPMorgan Chase','HSBC','Citigroup','Walmart','Unilever','Procter & Gamble','Nestle','Amazon Retail','PepsiCo','Berkshire Hathaway']},
+'management':{india:['Tata Group','Reliance Industries','McKinsey & Company India','Boston Consulting Group India','Bain & Company India','Hindustan Unilever','ITC Limited','Aditya Birla Group','Mahindra Group','Godrej Group'],
+ global:['McKinsey & Company','Boston Consulting Group','Bain & Company','Goldman Sachs','Amazon','Procter & Gamble','Unilever','Google','Deloitte Consulting','Accenture']},
+'law-corporate':{india:['AZB & Partners','Cyril Amarchand Mangaldas','Khaitan & Co','Shardul Amarchand Mangaldas','Trilegal','J. Sagar Associates','Luthra & Luthra','AMSS','Talwar Thakore & Associates','S&R Associates'],
+ global:['Kirkland & Ellis','Latham & Watkins','Clifford Chance','Linklaters','Baker McKenzie','Allen & Overy','DLA Piper','Freshfields Bruckhaus Deringer','Skadden Arps','White & Case']},
+'economics':{india:['Reserve Bank of India','NITI Aayog','Ministry of Finance (IES cadre)','ICRIER','National Council of Applied Economic Research','CRISIL','ICRA Limited','World Bank India Office','IMF India Office','NIPFP'],
+ global:['World Bank','International Monetary Fund','Federal Reserve','McKinsey Global Institute','Goldman Sachs Economic Research','JPMorgan Economic Research','Brookings Institution','OECD','Bank of England','European Central Bank']},
+'finance-analytics':{india:['JPMorgan India','Goldman Sachs India','Morgan Stanley India','Nomura India','Deutsche Bank India','ICICI Securities','HDFC Securities','Motilal Oswal','Edelweiss Financial Services','Kotak Investment Banking'],
+ global:['Goldman Sachs','JPMorgan Chase','Morgan Stanley','BlackRock','Bloomberg LP','Citadel','Bridgewater Associates','UBS','Credit Suisse','Deutsche Bank']},
+'venture-capital':{india:['Sequoia Capital India (Peak XV Partners)','Accel India','Blume Ventures','Nexus Venture Partners','Elevation Capital','Chiratae Ventures','Kalaari Capital','Matrix Partners India','Lightspeed India','India Quotient'],
+ global:['Sequoia Capital','Andreessen Horowitz (a16z)','Accel','Tiger Global Management','SoftBank Vision Fund','General Catalyst','Y Combinator','Kleiner Perkins','Benchmark','Insight Partners']},
+'wealth-management':{india:['HDFC Bank Private Banking','ICICI Wealth Management','Kotak Private Banking','Julius Baer India','Avendus Wealth Management','Motilal Oswal Private Wealth','Anand Rathi Wealth','IIFL Wealth (360 ONE)','Edelweiss Wealth Management','Waterfield Advisors'],
+ global:['UBS Wealth Management','Morgan Stanley Wealth Management','Goldman Sachs Private Wealth','JPMorgan Private Bank','Credit Suisse Private Banking','Julius Baer','Citi Private Bank','BNP Paribas Wealth Management','Northern Trust','Charles Schwab']},
+'hospitality':{india:['Taj Hotels (IHCL)','Oberoi Hotels & Resorts','ITC Hotels','Lemon Tree Hotels','Leela Palaces','Marriott India','Radisson India','Accor India','OYO Rooms','Sarovar Hotels'],
+ global:['Marriott International','Hilton Worldwide','InterContinental Hotels Group','Accor','Hyatt Hotels','Four Seasons Hotels','Shangri-La Hotels','Wyndham Hotels','Best Western','Radisson Hotel Group']},
+'digital-marketing':{india:['Ogilvy India','WPP India','Dentsu India','Publicis India','Wavemaker India','Interactive Avenues','iProspect India','Social Beat','Gozoop','WATConsult'],
+ global:['Ogilvy','WPP','Publicis Groupe','Omnicom Group','Dentsu','Google Marketing','Meta Marketing Partners','HubSpot','Salesforce Marketing Cloud','Adobe Experience Cloud']},
+'entrepreneurship':{india:['Flipkart','Zomato','Nykaa',"Byju's",'OYO','Zerodha','Razorpay','Meesho','PhonePe','CRED'],
+ global:['Y Combinator portfolio startups','Stripe','Airbnb','SpaceX','OpenAI','Shopify','Notion','Canva','Figma','ByteDance']},
+'civil-services':{india:['Government of India (IAS/IPS/IFS cadres)','State Secretariats','Ministry of Home Affairs','Ministry of External Affairs','Cabinet Secretariat','NITI Aayog','Election Commission of India','Comptroller & Auditor General','District Administration Offices','Union Public Service Commission-recruited depts'],
+ global:['UK Civil Service','US Foreign Service','Singapore Administrative Service','Australian Public Service','United Nations Secretariat','European Commission','World Bank Group','IMF','OECD','World Trade Organization']},
+'law-humanities':{india:['AZB & Partners','Cyril Amarchand Mangaldas','Khaitan & Co','Shardul Amarchand Mangaldas','Trilegal','J. Sagar Associates','Luthra & Luthra','AMSS','Supreme Court Chambers (Sr. Advocates)','District & High Court Practices'],
+ global:['Kirkland & Ellis','Latham & Watkins','Clifford Chance','Linklaters','Baker McKenzie','Allen & Overy','DLA Piper','Freshfields Bruckhaus Deringer','Skadden Arps','White & Case']},
+'psychology':{india:['NIMHANS Bangalore','Fortis Mental Health','Apollo Clinics Psychology','Manas Foundation','Mpower Minds','iCall (TISS)','Cadabams Hospitals','Vandrevala Foundation','Practo Psychology Network','Amaha (InnerHour)'],
+ global:['Kaiser Permanente Behavioral Health','Mayo Clinic Psychiatry & Psychology','Talkspace','BetterHelp','Priory Group (UK)','Headspace Health','Mind (UK)','Beyond Blue (Australia)','WHO Mental Health Programs','American Psychological Assoc.-affiliated clinics']},
+'media':{india:['Times of India Group','NDTV','Network18','Zee Entertainment','Star India','Viacom18','ABP Group','India Today Group','Hindustan Times','Republic Media Network'],
+ global:['BBC','CNN','The New York Times','Reuters','Bloomberg','Al Jazeera','Netflix','Disney','Warner Bros Discovery','News Corp']},
+'design-arts':{india:['Titan Design Studio','Fabindia Design','Nykaa Fashion Design','Myntra Design Lab','Raymond Group Design','Arvind Fashions','Good Earth Design','Anita Dongre Studio','Sabyasachi Couture','FabAlley Design'],
+ global:['Nike','Adidas','LVMH','Kering','Gucci','IKEA Design','Apple Design','Chanel','Zara / Inditex','H&M Design']},
+'literature':{india:['Penguin Random House India','HarperCollins India','Rupa Publications','Juggernaut Books','Westland Books','The Hindu Editorial','Indian Express Editorial','Sahitya Akademi','National Book Trust','Oxford University Press India'],
+ global:['Penguin Random House','HarperCollins','Simon & Schuster','Macmillan Publishers','Hachette Book Group','The New Yorker','The Guardian','BBC World Service','United Nations Translation Services','European Commission Translation Directorate']},
+'social-work':{india:['Tata Trusts','Akshaya Patra Foundation','Pratham Education Foundation','CRY (Child Rights and You)','Smile Foundation','Goonj','SEWA','HelpAge India','Save the Children India','Teach For India'],
+ global:['United Nations (UNICEF/UNDP)','World Health Organization','Oxfam International','Save the Children','Doctors Without Borders (MSF)','Red Cross / Red Crescent','World Vision','BRAC','CARE International','Amnesty International']},
+'performing-arts':{india:['Zee Studios','T-Series','Yash Raj Films','Excel Entertainment','National School of Drama Repertory','Prithvi Theatre','Shankar Mahadevan Academy','SaReGaMa','Kalakshetra Foundation','Sangeet Natak Akademi'],
+ global:['Netflix Studios','Walt Disney Studios','Warner Bros','Sony Music','Universal Music Group','Broadway League','Royal Opera House London','Lincoln Center NYC','BBC Proms','Cirque du Soleil']},
+'geography-gis':{india:['ISRO / IIRS Dehradun','Survey of India','Esri India','Genesys International','RMSI','National Remote Sensing Centre','Rolta India','MapmyIndia','National Atlas & Thematic Mapping Org','C-DAC'],
+ global:['Esri','Google Earth Engine Team','Maxar Technologies','Planet Labs','NASA Earth Science Division','European Space Agency','National Geographic Society','HERE Technologies','TomTom','Trimble']},
+'polsci-ir':{india:['Ministry of External Affairs','Observer Research Foundation','Institute for Defence Studies & Analyses','Carnegie India','Gateway House','Vivekananda International Foundation','Centre for Policy Research','United Nations India Office','World Economic Forum India','Brookings India'],
+ global:['United Nations','World Economic Forum','Brookings Institution','Council on Foreign Relations','Chatham House','RAND Corporation','Carnegie Endowment','CSIS','International Crisis Group','European Council on Foreign Relations']},
+'education':{india:["Byju's",'Unacademy','Vedantu','Extramarks','CBSE Schools Network','Delhi Public School Society','Kendriya Vidyalaya Sangathan','Ryan International Group','Amity Education Group','Teach For India'],
+ global:['Pearson Education','McGraw Hill Education','Khan Academy','Coursera','Cengage Learning','International Baccalaureate Organization','British Council','Scholastic Corporation','EdX','Duolingo']},
+'iti-trades':{india:['Larsen & Toubro (Skilled Trades)','Tata Motors Service Network','Bosch Service Network','Havells Technician Network','Godrej Appliances Service','Maruti Suzuki Service Centres','NTPC Technician Cadre','Indian Railways Technical Cadre','Siemens Service Technicians','ONGC Technical Staff'],
+ global:['Siemens Vocational Programs','Bosch Global Service Network','General Electric Technician Programs','Volkswagen Apprenticeship (Germany)','Rolls-Royce Technical Apprenticeships','UK/US Skilled Trades Unions','Toyota Technical Training','ABB Service Technicians','Hitachi Field Service','Schneider Electric Field Engineers']},
+'polytechnic':{india:['Larsen & Toubro','Tata Projects','BHEL','NTPC','Indian Railways','ONGC','Hindustan Aeronautics','Bharat Electronics','Power Grid Corporation','Godrej & Boyce'],
+ global:['Siemens','General Electric','Bosch','ABB','Schneider Electric','Honeywell','Emerson Electric','Rolls-Royce','Hitachi','Mitsubishi Heavy Industries']},
+'skill-india':{india:['L&T Skill Academy','NSDC Training Partners','Reliance Foundation Skilling','Tata STRIVE','Amazon Logistics','Flipkart Supply Chain','DTDC Courier','Delhivery','Ecom Express','Adani Logistics'],
+ global:['DHL','FedEx','UPS','Amazon Logistics (Global)','Maersk Logistics','DB Schenker','XPO Logistics','Kuehne+Nagel','C.H. Robinson','Nippon Express']},
+'sports':{india:['Sports Authority of India','JSW Sports','IPL Franchises','Reliance Foundation Young Champs','GoSports Foundation','Olympic Gold Quest','Football Sports Development Ltd','Pro Kabaddi League','Hockey India','Athletics Federation of India'],
+ global:['Nike','Adidas','FIFA','International Olympic Committee','NBA','English Premier League Clubs','Under Armour','Puma','ESPN','IMG (International Management Group)']}
+};
+function numList(arr){ return arr.map((x,i)=>`${i+1}. ${x}`).join('<br>'); }
+
+// ── STATE & MATCH ─────────────────────────────────────────────────────────────
+const S = { zoom:1, q:'', filters:new Set(), sel:null };
+
+function searchText(n){
+  return [n.label,n.sublabel,n.keywords,n.meta?.note,n.meta?.exams,n.meta?.salary,n.meta?.duration,(n.tags||[]).join(' ')]
+    .filter(Boolean).join(' ').toLowerCase();
+}
+function matchQ(n,q){
+  if(!q) return true;
+  const tokens=q.toLowerCase().split(/\s+/).filter(Boolean);
+  const txt=searchText(n);
+  if(tokens.every(t=>txt.includes(t))) return true;
+  return n.children?.some(c=>matchQ(c,q))||false;
+}
+function matchF(n,fs){
+  if(!fs.size) return true;
+  for(const f of fs){
+    if(n.tags?.includes(f)) return true;
+    if(n.children?.some(c=>matchF(c,new Set([f])))) return true;
+  }
+  return false;
+}
+function nodeOp(n){
+  const qOk = !S.q || matchQ(n,S.q);
+  const fOk = !S.filters.size || matchF(n,S.filters);
+  return (qOk && fOk) ? 1 : 0.07;
+}
+
+// ── LAYOUT ────────────────────────────────────────────────────────────────────
+const STEP  = 205;  // x distance between level left-edges
+const NW    = 160;  // node width
+const NH    = [46,40,34,30,27,25]; // node heights by depth
+const ROW   = 40;   // slot height for leaf node
+const PAD_X = 24;
+const PAD_Y = 42;
+
+function slotH(n){
+  if(!n.children?.length||!n._exp) return ROW;
+  return n.children.reduce((s,c)=>s+slotH(c),0);
+}
+function doLayout(n,x,topY,d){
+  n._d=d; n._x=x;
+  const h=slotH(n);
+  n._y=topY+h/2;
+  if(n.children?.length&&n._exp){
+    let cy=topY;
+    n.children.forEach(c=>{ doLayout(c,x+STEP,cy,d+1); cy+=slotH(c); });
+  }
+}
+function maxX(n,cur=0){
+  const x=n._x+NW; let m=Math.max(cur,x);
+  if(n.children?.length&&n._exp) n.children.forEach(c=>{ m=maxX(c,m); });
+  return m;
+}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+const NS='http://www.w3.org/2000/svg';
+function el(tag,attrs={}){
+  const e=document.createElementNS(NS,tag);
+  for(const[k,v] of Object.entries(attrs)) e.setAttribute(k,v);
+  return e;
+}
+
+const tsvg = document.getElementById('tsvg');
+const inner = document.getElementById('inner');
+
+function renderAll(){
+  doLayout(T,PAD_X,PAD_Y,0);
+  const tw = maxX(T)+PAD_X+10;
+  const th = slotH(T)+PAD_Y*2+10;
+  tsvg.setAttribute('width',tw);
+  tsvg.setAttribute('height',th);
+  tsvg.innerHTML='';
+
+  const lg=el('g'); tsvg.appendChild(lg);
+  const ng=el('g'); tsvg.appendChild(ng);
+
+  function visit(n){
+    if(n.children?.length&&n._exp){
+      n.children.forEach(c=>{ drawLink(n,c,lg); visit(c); });
+    }
+    drawNode(n,ng);
+  }
+  visit(T);
+  applyZoom();
+}
+
+function drawLink(p,c,g){
+  const op=Math.min(nodeOp(p),nodeOp(c));
+  const sw=Math.max(0.5,1.6-c._d*0.22);
+  const px=p._x+NW, py=p._y;
+  const cx=c._x,    cy=c._y;
+  const mx=(px+cx)/2;
+  g.appendChild(el('path',{
+    d:`M${px},${py} C${mx},${py} ${mx},${cy} ${cx},${cy}`,
+    fill:'none', stroke:c._color,
+    'stroke-opacity': op*0.45,
+    'stroke-width': sw
+  }));
+}
+
+function drawNode(n,g){
+  const d=Math.min(n._d,NH.length-1);
+  const nh=NH[d];
+  const x=n._x, y=n._y-nh/2;
+  const color=n._color||'#EEF2FF';
+  const ink=n._colorText||'#111827';
+  const op=nodeOp(n);
+  const hasCh=!!n.children?.length;
+  const isSelected=n.id===S.sel;
+
+  const grp=document.createElementNS(NS,'g');
+  grp.classList.add('ngrp');
+  grp.dataset.id=n.id;
+
+  // Background
+  let bgFill = n._d===0 ? '#EEF1F8' : n._d===1 ? color+'1c' : '#FFFFFF';
+  const bgStroke = n._d===1 ? ink : (isSelected ? ink : '#DCE3EF');
+  const bgSW = n._d===1 ? 1.5 : isSelected ? 1.5 : 1;
+
+  const bg=el('rect',{
+    x,y,width:NW,height:nh,rx:6,
+    class:'nbg',
+    fill:bgFill, stroke:bgStroke,
+    'stroke-width':bgSW, opacity:op
+  });
+  grp.appendChild(bg);
+
+  // Left accent stripe (depth > 0)
+  if(n._d>0){
+    grp.appendChild(el('rect',{x,y,width:3,height:nh,rx:3,fill:color,opacity:op}));
+  }
+
+  // Label
+  const fs=[13.5,12,10.5,9.5,8.5,8][d];
+  const fw=n._d<=1?'700':n._d===2?'600':'500';
+  const hasSub=n.sublabel&&n._d<=3;
+  const ty=hasSub ? y+nh*0.36 : y+nh/2;
+  const avail=NW-14-(hasCh?14:0);
+  const maxCh=Math.floor(avail/(fs*0.57));
+  const lbl=n.label.length>maxCh ? n.label.slice(0,maxCh-1)+'…' : n.label;
+
+  const t=el('text',{
+    x:x+9, y:ty,
+    'dominant-baseline':'central',
+    fill: n._d===1?ink:'#111827',
+    opacity:op,
+    'font-family':"'Syne',sans-serif",
+    'font-size':fs,'font-weight':fw
+  });
+  t.style.pointerEvents='none';
+  t.textContent=lbl;
+  grp.appendChild(t);
+
+  if(hasSub){
+    const ss=fs*0.73;
+    const sub=el('text',{
+      x:x+9, y:y+nh*0.68,
+      'dominant-baseline':'central',
+      fill:ink, opacity:op*0.85,
+      'font-family':"'DM Mono',monospace",'font-size':ss
+    });
+    sub.style.pointerEvents='none';
+    const subText=n.sublabel.length>24?n.sublabel.slice(0,23)+'…':n.sublabel;
+    sub.textContent=subText;
+    grp.appendChild(sub);
+  }
+
+  // Expand chevron
+  if(hasCh){
+    const chev=el('text',{
+      x:x+NW-10, y:y+nh/2,
+      'dominant-baseline':'central','text-anchor':'middle',
+      fill:ink,opacity:op*0.8,
+      'font-size':9,'font-family':'system-ui,sans-serif'
+    });
+    chev.style.pointerEvents='none';
+    chev.textContent=n._exp?'▾':'▸';
+    grp.appendChild(chev);
+  }
+
+  grp.addEventListener('click',e=>{ e.stopPropagation(); handleClick(n); });
+  g.appendChild(grp);
+}
+
+// ── INTERACTION ───────────────────────────────────────────────────────────────
+function handleClick(n){
+  S.sel=n.id;
+  if(n.children?.length) n._exp=!n._exp;
+  showDetail(n);
+  renderAll();
+}
+
+// Zoom
+function applyZoom(){
+  inner.style.transform=`scale(${S.zoom})`;
+  inner.style.transformOrigin='top left';
+  const w=parseFloat(tsvg.getAttribute('width')||0);
+  const h=parseFloat(tsvg.getAttribute('height')||0);
+  inner.style.width=w*S.zoom+'px';
+  inner.style.height=h*S.zoom+'px';
+}
+document.getElementById('zi').addEventListener('click',()=>{ S.zoom=Math.min(2,+(S.zoom*1.2).toFixed(2)); applyZoom(); });
+document.getElementById('zo').addEventListener('click',()=>{ S.zoom=Math.max(0.3,+(S.zoom/1.2).toFixed(2)); applyZoom(); });
+document.getElementById('zr').addEventListener('click',()=>{ S.zoom=1; renderAll(); });
+
+// Expand / Collapse all
+function setAll(node,val){
+  if(node.children?.length){ node._exp=val; node.children.forEach(c=>setAll(c,val)); }
+}
+document.getElementById('btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
+document.getElementById('btn-collapse').addEventListener('click',()=>{
+  T.children?.forEach(s=>{ s._exp=true; s.children?.forEach(p=>{ p._exp=false; p.children?.forEach(d=>setAll(d,false)); }); });
+  renderAll();
+});
+
+// Search
+document.getElementById('search').addEventListener('input',e=>{ S.q=e.target.value; renderAll(); });
+
+// Filters
+document.querySelectorAll('.chip').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const f=btn.dataset.f;
+    if(S.filters.has(f)){
+      S.filters.delete(f); btn.classList.remove('on');
+      btn.style.background=''; btn.style.color='';
+    } else {
+      S.filters.add(f); btn.classList.add('on');
+      btn.style.background=btn.dataset.c; btn.style.color='#07090F';
+    }
+    renderAll();
+  });
+});
+
+// ── DETAIL ────────────────────────────────────────────────────────────────────
+const det=document.getElementById('det');
+const TL={'high-salary':'💰 High salary','govt':'🏛 Govt / PSU','abroad':'✈ Global demand','no-math':'∑ No math','exam-free':'🎯 No compet. exam'};
+
+function crumbOf(n){
+  const c=[]; let cur=n;
+  while(cur){ c.unshift(cur.label); cur=cur._parent; }
+  c.shift(); return c;
+}
+
+function showDetail(n){
+  const crumbs=crumbOf(n);
+  const dcrumb=document.getElementById('dcrumb');
+  dcrumb.textContent=crumbs.slice(0,-1).join(' › ')||'';
+  dcrumb.style.color=n._colorText;
+
+  const ch=n.children||[];
+  const leaves=ch.filter(c=>c.kind==='career');
+  const branches=ch.filter(c=>c.kind!=='career');
+
+  const collegeInfo = n.kind==='degree' ? COLLEGES[n.id] : null;
+  const collegeBlock = collegeInfo ? `
+    <div class="dlbl">Score Needed</div><div class="dval mono">${collegeInfo.examScore}</div>
+    <div class="dlbl">Top 10 Colleges — India</div><div class="dval">${numList(collegeInfo.india)}</div>
+    <div class="dlbl">Top 10 Universities — Global</div><div class="dval">${numList(collegeInfo.global)}</div>
+  ` : '';
+
+  const sector = n.kind==='career' ? sectorOf(n) : null;
+  const companyInfo = sector ? COMPANIES[sector] : null;
+  const companyBlock = companyInfo ? `
+    <div class="dlbl">Top 10 Hiring Companies — India</div><div class="dval">${numList(companyInfo.india)}</div>
+    <div class="dlbl">Top 10 Hiring Companies — Global</div><div class="dval">${numList(companyInfo.global)}</div>
+  ` : '';
+
+  document.getElementById('dcont').innerHTML=`
+    <h2 style="color:${n._colorText}">${n.label}</h2>
+    ${n.sublabel?`<div class="dsub">${n.sublabel}</div>`:'<div style="height:10px"></div>'}
+    ${n.meta?.note?`<div class="dlbl">About</div><div class="dval">${n.meta.note}</div>`:''}
+    ${n.meta?.exams?`<div class="dlbl">Key Exams</div><div class="dval mono">${n.meta.exams}</div>`:''}
+    ${n.meta?.duration?`<div class="dlbl">Duration</div><div class="dval">${n.meta.duration}</div>`:''}
+    ${n.meta?.salary?`<div class="dlbl">Salary Range</div><div class="dval mono">${n.meta.salary}</div>`:''}
+    ${collegeBlock}
+    ${companyBlock}
+    ${n.tags?.length?`<div class="dlbl">Tags</div><div class="dtags">${n.tags.map(t=>`<span class="dtag">${TL[t]||t}</span>`).join('')}</div>`:''}
+    ${branches.length?`<div class="dlbl">Sub-paths (${branches.length})</div><div class="dkids">${branches.map(c=>c.label).join(' · ')}</div>`:''}
+    ${leaves.length?`<div class="dlbl">Careers (${leaves.length})</div><div class="dkids">${leaves.map(c=>c.label).join(' · ')}</div>`:''}
+    ${n.kind==='career'?`<div class="dpath">Stream → ${crumbs[0]||''}<br>${crumbs[1]?`Path → ${crumbs[1]}<br>`:''} ${crumbs[2]?`Degree → ${crumbs[2]}<br>`:''} ${crumbs[3]?`Specialisation → ${crumbs[3]}`:''}</div>`:''}
+  `;
+  det.classList.add('open');
+}
+function hideDetail(){
+  S.sel=null; det.classList.remove('open'); renderAll();
+}
+document.getElementById('dclose').addEventListener('click',hideDetail);
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideDetail(); });
+
+// ── BOOTSTRAP ─────────────────────────────────────────────────────────────────
+renderAll();
+window.addEventListener('resize',renderAll);
+</script>
+</body>
+</html>
