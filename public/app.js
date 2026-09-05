@@ -3105,7 +3105,7 @@ const app = {
                 ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
                 ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>
-        <a class="btn small ghost" href="careers.html" target="_blank" rel="noopener">Career Pathing</a>
+        <a class="btn small ghost" href="careers.html">Career Pathing</a>
       </div>`;
 
     return `

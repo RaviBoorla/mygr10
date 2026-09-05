@@ -4,63 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Career Pathing · Grade 10 &amp; 12 — Rise</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
 
 <style>
 :root {
   --bg:      #FFFFFF;
   --surf:    #FFFFFF;
   --surf2:   #F5F7FB;
-  --border:  #DCE3EF;
-  --text1:   #0B1220;
-  --text2:   #55647C;
+  --border:  #e2e8f0;
+  --text1:   #1e293b;
+  --text2:   #64748b;
   --text3:   #C4CEDD;
+  --primary: #2563eb;
   --sci:     #0EA5E9;
   --com:     #059669;
   --hum:     #8B5CF6;
   --voc:     #EA7C1C;
   --bar-bg:  rgba(255,255,255,.94);
   --pan-bg:  rgba(255,255,255,.98);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+          "Noto Sans Devanagari", sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sans',system-ui,sans-serif;overflow:hidden}
+html,body{height:100%;background:var(--bg);color:var(--text1);font-family:var(--font);overflow:hidden}
+
+/* ── RISE HEADER — same brand mark, height and colours as the main app ──── */
+#rise-hdr{
+  position:fixed;top:0;left:0;right:0;z-index:210;height:48px;
+  display:flex;align-items:center;gap:10px;padding:0 16px;
+  background:var(--surf);border-bottom:1px solid var(--border);
+}
+#rise-logo{
+  display:flex;align-items:center;gap:7px;text-decoration:none;
+  font-family:var(--font);font-size:18px;font-weight:800;color:var(--primary);
+  letter-spacing:-.3px;flex-shrink:0;
+}
+#rise-logo svg{flex-shrink:0;border-radius:5px}
+#rise-crumb{font-family:var(--font);font-size:13px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 /* ── TOOLBAR ─────────────────────────────────────────────── */
 #bar{
-  position:fixed;top:0;left:0;right:0;z-index:200;
+  position:fixed;top:48px;left:0;right:0;z-index:200;
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
   padding:8px 16px;
   background:var(--bar-bg);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
 }
-#back-link{
-  font-family:'DM Mono',monospace;font-size:11.5px;color:var(--text2);
-  text-decoration:none;flex-shrink:0;padding:4px 8px;border:1px solid var(--border);
-  border-radius:7px;transition:color .12s,border-color .12s;
-}
-#back-link:hover{color:var(--text1);border-color:var(--text2)}
-#bar h1{
-  font-family:'Syne',sans-serif;font-size:13.5px;font-weight:700;
-  letter-spacing:-.02em;white-space:nowrap;color:var(--text1);flex-shrink:0;
-}
-#bar h1 em{font-style:normal;font-weight:400;opacity:.45}
 
 #sw{position:relative;flex:1;min-width:130px;max-width:220px}
 #sw svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text2);pointer-events:none}
 #search{
   width:100%;padding:6px 10px 6px 28px;
   background:var(--surf);border:1px solid var(--border);border-radius:7px;
-  font-family:'DM Sans',sans-serif;font-size:12.5px;color:var(--text1);outline:none;
+  font-family:var(--font);font-size:12.5px;color:var(--text1);outline:none;
 }
-#search:focus{border-color:var(--text2)}
+#search:focus{border-color:var(--primary)}
 #search::placeholder{color:var(--text2)}
 
 #chips{display:flex;gap:5px;flex-wrap:wrap}
 .chip{
   padding:4px 9px;border-radius:20px;font-size:11px;font-weight:500;
-  font-family:'DM Sans',sans-serif;border:1px solid var(--border);
+  font-family:var(--font);border:1px solid var(--border);
   background:transparent;color:var(--text2);cursor:pointer;transition:all .15s;white-space:nowrap;
 }
 .chip:hover{border-color:var(--text2);color:var(--text1)}
@@ -68,17 +76,18 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sa
 
 #acts{display:flex;gap:5px;margin-left:auto;flex-shrink:0}
 .act{
-  padding:4px 9px;border-radius:7px;font-size:11px;font-family:'DM Mono',monospace;
+  padding:4px 9px;border-radius:7px;font-size:11px;font-family:var(--mono);
   border:1px solid var(--border);background:var(--surf);color:var(--text2);cursor:pointer;
   transition:color .12s;white-space:nowrap;
 }
 .act:hover{color:var(--text1)}
 
-/* ── TREE SCROLL AREA ────────────────────────────────────── */
+/* ── TREE SCROLL AREA ─── full width always; the detail panel overlays
+   it rather than permanently reserving space, so mobile/tablet keep a
+   usable canvas whether or not a node is selected. ─────────────────── */
 #wrap{
-  position:fixed;top:52px;left:0;right:340px;bottom:0;
+  position:fixed;top:var(--chrome-h,92px);left:0;right:0;bottom:0;
   overflow-x:auto;overflow-y:auto;
-  border-right:1px solid var(--border);
 }
 #inner{
   display:inline-block;
@@ -89,7 +98,7 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sa
 
 /* ── ZOOM ────────────────────────────────────────────────── */
 #zc{
-  position:fixed;bottom:18px;right:16px;z-index:200;
+  position:fixed;bottom:18px;right:16px;z-index:190;
   display:flex;gap:4px;
 }
 .zb{
@@ -101,54 +110,81 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sa
 
 /* ── LEGEND ──────────────────────────────────────────────── */
 #leg{
-  position:fixed;bottom:18px;left:16px;z-index:200;
+  position:fixed;bottom:18px;left:16px;z-index:190;
   background:var(--bar-bg);backdrop-filter:blur(12px);
   border:1px solid var(--border);border-radius:9px;
   padding:9px 12px;display:flex;flex-direction:column;gap:5px;
 }
-.li{display:flex;align-items:center;gap:7px;font-size:10.5px;font-family:'DM Mono',monospace;color:var(--text2)}
+.li{display:flex;align-items:center;gap:7px;font-size:10.5px;font-family:var(--mono);color:var(--text2)}
 .ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
 
-/* ── DETAIL PANEL ────────────────────────────────────────── */
+/* ── DETAIL PANEL — overlays the canvas (doesn't reserve permanent
+   space), full-width on phones so career details are actually readable ── */
 #det{
-  position:fixed;top:52px;right:0;bottom:0;width:330px;z-index:199;
+  position:fixed;top:var(--chrome-h,92px);right:0;bottom:0;width:330px;max-width:100vw;z-index:199;
   background:var(--pan-bg);backdrop-filter:blur(18px);
   border-left:1px solid var(--border);
+  box-shadow:-8px 0 24px rgba(15,23,42,.08);
   padding:16px 14px;overflow-y:auto;
   transform:translateX(100%);
   transition:transform .22s cubic-bezier(.4,0,.2,1);
 }
 #det.open{transform:none}
+@media (max-width:560px){
+  #det{width:100%}
+}
 #dclose{
   float:right;margin-top:-1px;
   background:var(--surf);border:1px solid var(--border);
   border-radius:5px;padding:3px 8px;font-size:10px;
-  font-family:'DM Mono',monospace;color:var(--text2);cursor:pointer;
+  font-family:var(--mono);color:var(--text2);cursor:pointer;
 }
-#dcrumb{font-size:10px;font-family:'DM Mono',monospace;color:var(--text2);line-height:1.8;margin-bottom:9px;padding-right:44px}
-#det h2{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;text-wrap:balance;margin-bottom:2px;line-height:1.25}
-.dsub{font-size:11px;font-family:'DM Mono',monospace;color:var(--text2);margin-bottom:12px}
-.dlbl{font-size:9px;font-family:'DM Mono',monospace;color:#4E4E50;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;margin-top:11px}
+#dcrumb{font-size:10px;font-family:var(--mono);color:var(--text2);line-height:1.8;margin-bottom:9px;padding-right:44px}
+#det h2{font-family:var(--font);font-size:16px;font-weight:700;text-wrap:balance;margin-bottom:2px;line-height:1.25}
+.dsub{font-size:11px;font-family:var(--mono);color:var(--text2);margin-bottom:12px}
+.dlbl{font-size:9px;font-family:var(--mono);color:#4E4E50;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;margin-top:11px}
 .dval{font-size:12px;color:var(--text1);line-height:1.55}
-.dval.mono{font-family:'DM Mono',monospace;font-size:11px}
+.dval.mono{font-family:var(--mono);font-size:11px}
 .dtags{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
-.dtag{padding:2px 7px;border-radius:10px;font-size:9.5px;font-family:'DM Mono',monospace;border:1px solid var(--border);color:var(--text2)}
+.dtag{padding:2px 7px;border-radius:10px;font-size:9.5px;font-family:var(--mono);border:1px solid var(--border);color:var(--text2)}
 .dkids{font-size:11px;color:var(--text2);line-height:1.7}
-.dpath{margin-top:14px;padding:9px 10px;background:var(--surf);border:1px solid var(--border);border-radius:7px;font-size:10.5px;font-family:'DM Mono',monospace;color:var(--text2);line-height:1.8}
+.dpath{margin-top:14px;padding:9px 10px;background:var(--surf);border:1px solid var(--border);border-radius:7px;font-size:10.5px;font-family:var(--mono);color:var(--text2);line-height:1.8}
 
 /* Node hover */
 .ngrp{cursor:pointer}
 .ngrp:hover .nbg{filter:brightness(1.18)}
+
+/* ── Small screens: let the toolbar's search+chips+actions wrap onto
+   their own rows below the back/title row so nothing gets clipped ──── */
+@media (max-width:640px){
+  #bar{ top:48px; align-items:flex-start; }
+  #sw{ order:1; flex:1 1 100%; max-width:none; }
+  #chips{ order:2; flex:1 1 100%; }
+  #acts{ order:3; margin-left:0; }
+}
 
 @media(prefers-reduced-motion:reduce){#det{transition:none}}
 </style>
 </head>
 <body>
 
+<!-- RISE BRAND HEADER — same mark used across the app, so this never reads as a separate tool -->
+<div id="rise-hdr">
+  <a id="rise-logo" href="index.html" title="Back to Rise">
+    <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="7" fill="#2563eb"/>
+      <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+      <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+      <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+      <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+    </svg>
+    <span>Rise</span>
+  </a>
+  <span id="rise-crumb">Career Pathing · Grade 10 &amp; 12</span>
+</div>
+
 <!-- TOOLBAR -->
 <div id="bar">
-  <a id="back-link" href="index.html" title="Back to Rise">&larr; Rise</a>
-  <h1>Career Pathing <em>· Grade 10 &amp; 12</em></h1>
   <div id="sw">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     <input id="search" placeholder="Search any career, exam…" autocomplete="off" spellcheck="false">
@@ -192,6 +228,11 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:'DM Sa
 </div>
 
 <script>
+// Same font stack as the main Rise app (style.css) — SVG text needs the literal
+// value since presentation attributes don't resolve CSS custom properties.
+const RISE_FONT = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Noto Sans Devanagari", sans-serif';
+const RISE_MONO = 'ui-monospace, SFMono-Regular, Menlo, monospace';
+
 // ── DATA ──────────────────────────────────────────────────────────────────────
 const T = {
   id:'root',label:'Grade 10 & 12',kind:'root',_exp:true,
@@ -1112,7 +1153,7 @@ function drawNode(n,g){
   const hasSub=n.sublabel&&n._d<=3;
   const ty=hasSub ? y+nh*0.36 : y+nh/2;
   const avail=NW-14-(hasCh?14:0);
-  const maxCh=Math.floor(avail/(fs*0.57));
+  const maxCh=Math.floor(avail/(fs*0.62));
   const lbl=n.label.length>maxCh ? n.label.slice(0,maxCh-1)+'…' : n.label;
 
   const t=el('text',{
@@ -1120,7 +1161,7 @@ function drawNode(n,g){
     'dominant-baseline':'central',
     fill: n._d===1?ink:'#111827',
     opacity:op,
-    'font-family':"'Syne',sans-serif",
+    'font-family':RISE_FONT,
     'font-size':fs,'font-weight':fw
   });
   t.style.pointerEvents='none';
@@ -1133,7 +1174,7 @@ function drawNode(n,g){
       x:x+9, y:y+nh*0.68,
       'dominant-baseline':'central',
       fill:ink, opacity:op*0.85,
-      'font-family':"'DM Mono',monospace",'font-size':ss
+      'font-family':RISE_MONO,'font-size':ss
     });
     sub.style.pointerEvents='none';
     const subText=n.sublabel.length>24?n.sublabel.slice(0,23)+'…':n.sublabel;
@@ -1263,9 +1304,19 @@ function hideDetail(){
 document.getElementById('dclose').addEventListener('click',hideDetail);
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideDetail(); });
 
+// ── CHROME HEIGHT ─── the toolbar wraps onto extra rows at narrow widths, so
+// the canvas/detail-panel top offset is measured from the real DOM, not a
+// guessed constant that would drift out of sync and hide panel content
+// under the toolbar. ─────────────────────────────────────────────────────────
+function syncChromeHeight(){
+  const bottom = document.getElementById('bar').getBoundingClientRect().bottom;
+  document.documentElement.style.setProperty('--chrome-h', bottom+'px');
+}
+
 // ── BOOTSTRAP ─────────────────────────────────────────────────────────────────
+syncChromeHeight();
 renderAll();
-window.addEventListener('resize',renderAll);
+window.addEventListener('resize',()=>{ syncChromeHeight(); renderAll(); });
 </script>
 </body>
 </html>
