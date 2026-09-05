@@ -173,18 +173,6 @@ body {
 .hdr-logo[aria-disabled="true"] { cursor: default; pointer-events: none; }
 .logo-icon { flex-shrink: 0; border-radius: var(--radius-logo); }
 
-.hdr-board-btn {
-  font-family: inherit; font-size: var(--fs-ui); font-weight: 600;
-  color: var(--text-light); background: transparent;
-  border: none; border-radius: var(--radius-board);
-  padding: 5px 14px; cursor: pointer;
-  transition: background var(--tx-base), color var(--tx-base);
-}
-.hdr-board-btn:hover:not(:disabled):not(.active) { background: var(--surface); color: var(--text); }
-.hdr-board-btn.active { background: var(--primary); color: var(--white); }
-.hdr-board-btn:disabled { cursor: not-allowed; }
-.hdr-board-btn:disabled:not(.active) { opacity: .5; }
-
 /* Every header action lives behind one hamburger, on every screen size. */
 .hdr-hamburger {
   display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4px;
@@ -195,13 +183,8 @@ body {
 .hdr-hamburger span { display: block; width: 18px; height: 2px; background: var(--text); border-radius: 2px; }
 .hdr-hamburger:disabled { opacity: .5; cursor: not-allowed; }
 
-.hdr-menu-boards {
-  display: flex; gap: 4px;
-  background: var(--bg); border: 1px solid var(--border);
-  border-radius: var(--radius-pill); padding: 3px;
-}
-.hdr-menu-boards .hdr-board-btn { flex: 1; text-align: center; }
-
+/* Every item — boards, Progress, Revision Notes, Career Pathing — stacks full-width,
+   one after another; nothing is grouped into its own row. */
 .hdr-menu:not([hidden]) {
   display: flex; flex-direction: column; gap: 8px;
   position: absolute; top: var(--header-h); right: 16px;
@@ -209,6 +192,7 @@ body {
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 12px; box-shadow: var(--shadow-lg); z-index: 20;
 }
+.hdr-menu .btn { width: 100%; text-align: center; }
 
 /* ─── Screen wrapper ───────────────────────────────────────────────────────── */
 .screen {

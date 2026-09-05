@@ -2429,11 +2429,12 @@ const app = {
     const progressActive = state.screen === 'progress';
 
     // Every header action — boards, Progress, Revision Notes, Career Pathing — lives
-    // behind one hamburger menu on every screen size. No collapsing, nothing hidden.
+    // behind one hamburger menu on every screen size, each item stacked full-width
+    // one after another. No collapsing, no grouping, nothing hidden.
     const menuBoards = BOARDS.map(b => `
-      <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
+      <button class="btn small ${b.id === state.board ? 'primary' : 'ghost'}"
               aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
-              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
+              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.name)}</button>`).join('');
     const hamburgerBtn = `
       <button class="hdr-hamburger" aria-label="Menu" aria-expanded="${state.mobileMenuOpen}"
               ${inTest ? 'disabled' : ''} onclick="app.toggleMobileMenu()">
@@ -2441,7 +2442,7 @@ const app = {
       </button>`;
     const menu = `
       <div class="hdr-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
-        <div class="hdr-menu-boards" role="group" aria-label="Board">${menuBoards}</div>
+        ${menuBoards}
         <button class="btn small ${progressActive ? 'primary' : 'ghost'}"
                 ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
@@ -2592,6 +2593,17 @@ const app = {
       </div>`;
   },
 
+  // Top-level X / XII tab pair — shared by the Home and Revision Notes screens so
+  // switching grade anywhere carries over everywhere (it's one global toggle).
+  _gradeTabs() {
+    return `
+      <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
+        ${GRADES.map(g => `
+          <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
+                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
+      </div>`;
+  },
+
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
     // Grade X's CBSE English and Hindi have no question bank at all — hide those
@@ -2601,13 +2613,6 @@ const app = {
     const subjects = (SUBJECTS[state.board] || [])
       .filter(s => !(state.grade === 'X' && state.board === 'CBSE' && (s === 'English' || s === 'Hindi')));
     const draft    = this._draft();
-
-    const gradeTabs = `
-      <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
-        ${GRADES.map(g => `
-          <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
-                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
-      </div>`;
 
     const resume = draft ? `
       <section class="resume-banner card">
@@ -2680,7 +2685,7 @@ const app = {
 
     return `
       <div class="screen home-screen">
-        ${gradeTabs}
+        ${this._gradeTabs()}
         ${resume}
         <section class="home-section">
           <h2 class="section-title">Practice</h2>
@@ -3347,12 +3352,15 @@ const app = {
   // ── Screen: revision notes (consolidated across CBSE, ICSE and IB) ──────────
   _screenNotes(subjectId, chapterIdx) {
     const id = NOTES_CATALOG.some(s => s.id === subjectId) ? subjectId : NOTES_CATALOG[0].id;
-    const chapters = consolidatedChapters(id);
+    // Notes content only exists for Grade X so far — Grade XII falls back to the
+    // existing "coming soon" empty-state below rather than a separate code path.
+    const chapters = state.grade === 'XII' ? [] : consolidatedChapters(id);
     const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
         <h2>Revision notes</h2>
         <p class="subtitle">Formulae, theorems, logic and exam tips — CBSE, ICSE &amp; IB combined</p>
+        ${this._gradeTabs()}
         <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
         ${chapters.length ? `
         <div class="rev-topbar">
@@ -3464,7 +3472,7 @@ const app = {
   // Notes interactions repaint only the two panels — scroll and focus stay put.
   _repaintNotes() {
     const id = NOTES_CATALOG.some(s => s.id === state.params[0]) ? state.params[0] : NOTES_CATALOG[0].id;
-    const chapters = consolidatedChapters(id);
+    const chapters = state.grade === 'XII' ? [] : consolidatedChapters(id);
     if (!chapters.length) return;
     const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));
     const nav  = document.getElementById('notes-nav');
