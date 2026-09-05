@@ -3358,9 +3358,10 @@ const app = {
     const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
-        <h2>Revision notes</h2>
-        <p class="subtitle">Formulae, theorems, logic and exam tips — CBSE, ICSE &amp; IB combined</p>
-        ${this._gradeTabs()}
+        <div class="rev-heading-row">
+          <h2>Revision notes</h2>
+          ${this._gradeTabs()}
+        </div>
         <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
         ${chapters.length ? `
         <div class="rev-topbar">

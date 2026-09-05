@@ -545,6 +545,11 @@ kbd {
   height: calc(100dvh - var(--header-h));
   overflow: hidden;
 }
+.rev-heading-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.rev-heading-row h2 { margin: 0; }
+.rev-heading-row .grade-tabs { margin: 0; }
 
 .rev-topbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .rev-topbar h2 { margin: 0; white-space: nowrap; }
