@@ -3028,7 +3028,10 @@ function chaptersOf(list) {
 // ─── State ────────────────────────────────────────────────────────────────────
 const state = {
   board:   LS.get(KEY.board, null),
-  grade:   LS.get(KEY.grade, 'X'),  // 'X' | 'XII' — top-level tab on the home screen
+  // 'X' | 'XII' — top-level tab on the home screen. XII has no question banks
+  // yet (see GRADES below), so a stored 'XII' from before that tab was
+  // disabled must not resurrect a dead-end screen.
+  grade:   (g => g === 'XII' ? 'X' : g)(LS.get(KEY.grade, 'X')),
   screen:  'board',
   params:  [],
   notesQuery: '',
@@ -3298,9 +3301,14 @@ const app = {
   _gradeTabs() {
     return `
       <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
-        ${GRADES.map(g => `
+        ${GRADES.map(g => {
+          // XII has no question banks yet on any board — grey it out and make it
+          // unselectable rather than let students land on an all-"coming soon" screen.
+          const noData = g.id === 'XII';
+          return `
           <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
-                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
+                  aria-pressed="${g.id === state.grade}" ${noData ? 'disabled title="Coming soon — no question banks yet"' : `onclick="app.setGrade('${g.id}')"`}>${esc(g.label)}</button>`;
+        }).join('')}
       </div>`;
   },
 
