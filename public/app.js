@@ -2842,7 +2842,7 @@ const KEY = {
   autoNext:  'rise.autoNext',
   progress:  'rise.progress',   // "grade::board::subject" → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
   bookmarks: 'rise.bookmarks',  // "grade::board::subject" → qid → { at }
-  streak:    'rise.streak'      // { current, longest, lastDate, todayDate, todayCount } — global, not scoped per board/subject
+  streak:    'rise.streak'      // "grade::board" → { current, longest, lastDate, todayDate, todayCount }
 };
 // One storage bucket per grade+board+subject so X-CBSE-Mathematics, XII-CBSE-Mathematics
 // and ICSE's own Mathematics never share progress, bookmarks or due-review counts.
@@ -3894,14 +3894,20 @@ const app = {
     LS.set(KEY.progress, store);
   },
 
-  // Daily streak (global, any board/subject) + a lightweight "questions today"
-  // tally for the goal nudge. The streak only counts calendar days with at
-  // least one answered question — it does not require hitting the daily goal,
-  // which is just a motivational target shown alongside it.
+  // Daily streak + a lightweight "questions today" tally for the goal nudge,
+  // scoped per grade+board — same X-CBSE vs XII-CBSE vs X-ICSE isolation used
+  // for progress/bookmarks, so switching board/grade shows that board's own
+  // streak instead of one shared across everything. The streak only counts
+  // calendar days with at least one answered question — it does not require
+  // hitting the daily goal, which is just a motivational target shown alongside it.
+  _streakScopeKey(grade, board) { return `${grade || state.grade}::${board || state.board}`; },
+
   _recordStreakActivity(answeredCount) {
     if (!answeredCount) return;
     const today = todayStr();
-    const st = LS.get(KEY.streak, { current: 0, longest: 0, lastDate: null, todayDate: null, todayCount: 0 });
+    const store = LS.get(KEY.streak, {});
+    const key = this._streakScopeKey();
+    const st = store[key] || (store[key] = { current: 0, longest: 0, lastDate: null, todayDate: null, todayCount: 0 });
     if (st.todayDate !== today) { st.todayDate = today; st.todayCount = 0; }
     st.todayCount += answeredCount;
     if (st.lastDate !== today) {
@@ -3909,11 +3915,12 @@ const app = {
       st.longest = Math.max(st.longest || 0, st.current);
       st.lastDate = today;
     }
-    LS.set(KEY.streak, st);
+    LS.set(KEY.streak, store);
   },
 
   _streakBanner() {
-    const st = LS.get(KEY.streak, null);
+    const store = LS.get(KEY.streak, {});
+    const st = store[this._streakScopeKey()];
     if (!st || !st.current) return '';
     const today = todayStr();
     const activeToday = st.lastDate === today;
