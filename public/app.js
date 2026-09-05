@@ -2313,7 +2313,8 @@ const state = {
   notesQuery: '',
   notesFilter: 'all',
   openPicker: null,  // subject whose chapter list is expanded on the home screen
-  difficulty: {}     // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
+  difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
+  boardMenuOpen: false  // CBSE collapses ICSE/IB out of the header until this is toggled on
 };
 
 // ─── Routing (real URLs → real Back button, refresh-safe, shareable) ──────────
@@ -2394,12 +2395,20 @@ const app = {
       <span>Rise</span>
     </button>`;
 
-    // Boards sit in the header as one always-visible button group — switching is a
-    // single click, and the group is locked (not hidden) mid-test so nothing reflows.
-    const boards = BOARDS.map(b => `
-      <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
-              aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
-              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
+    // Boards sit in the header as one button group — switching is a single click, and
+    // the group is locked (not hidden) mid-test so nothing reflows. CBSE is the only
+    // board with real content so far, so its header collapses ICSE/IB out of the way
+    // until "Switch board" is tapped — never hidden without a way back to them.
+    const showAllBoards = state.board !== 'CBSE' || state.boardMenuOpen;
+    const boards = showAllBoards
+      ? BOARDS.map(b => `
+          <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
+                  aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
+                  title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('')
+      : `<button class="hdr-board-btn active" aria-pressed="true" ${inTest ? 'disabled' : ''}
+                 title="${esc(BOARDS[0].desc)}">${esc(BOARDS[0].short)}</button>
+         <button class="hdr-board-btn" ${inTest ? 'disabled' : ''}
+                 title="Show ICSE and IB" onclick="app.toggleBoardMenu()">Switch board</button>`;
 
     const notesActive = state.screen === 'notes';
     const notesBtn = `<button class="btn small ${notesActive ? 'primary' : 'ghost'}"
@@ -2477,6 +2486,7 @@ const app = {
     if (board === state.board) return;
     state.board = board;
     state.openPicker = null;
+    state.boardMenuOpen = false;   // re-collapse ICSE/IB once we're back on CBSE
     LS.set(KEY.board, board);
     // Notes and results don't reflect the newly chosen board on their own screen,
     // so jump to that board's home page instead of leaving the click looking stuck.
@@ -2486,6 +2496,11 @@ const app = {
     } else {
       this.render();
     }
+  },
+
+  toggleBoardMenu() {
+    state.boardMenuOpen = !state.boardMenuOpen;
+    this.render();
   },
 
   // ── Screen: progress — per-chapter accuracy, weakest chapters first ─────────
@@ -2542,7 +2557,10 @@ const app = {
 
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
-    const subjects = SUBJECTS[state.board] || [];
+    // CBSE's English and Hindi have no question bank yet — hide those placeholder
+    // cards there rather than show a permanent "coming soon" dead end.
+    const subjects = (SUBJECTS[state.board] || [])
+      .filter(s => !(state.board === 'CBSE' && (s === 'English' || s === 'Hindi')));
     const draft    = this._draft();
 
     const resume = draft ? `
