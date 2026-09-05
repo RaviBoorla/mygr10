@@ -3002,10 +3002,27 @@ function loadBank(subject) {
     .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
     .then(list => { bankCache[cacheKey] = list; return list; });
 }
+// A question is "real" if it was actually sourced from a board paper rather
+// than authored to the syllabus — every such question carries its exam year
+// somewhere (Hindi: in `chapter`/`id`; CBSE Maths/Science: inline in `text`).
+// See docs/inventory.md for which banks currently have any of these at all.
+function realBoardYear(q) {
+  const blob = `${q.text || ''} ${q.chapter || ''} ${q.id || ''}`;
+  return (blob.match(/(20\d\d)[ -]?Board/) || blob.match(/hindi-(\d{4})-/) || [])[1] || null;
+}
+
 function chaptersOf(list) {
   const seen = new Map();
-  list.forEach(q => seen.set(q.chapter || 'General', (seen.get(q.chapter || 'General') || 0) + 1));
-  return [...seen.entries()].map(([name, count]) => ({ name, count }));
+  list.forEach(q => {
+    const name = q.chapter || 'General';
+    const c = seen.get(name) || { count: 0, real: 0, years: new Set() };
+    c.count++;
+    const year = realBoardYear(q);
+    if (year) { c.real++; c.years.add(year); }
+    seen.set(name, c);
+  });
+  return [...seen.entries()].map(([name, c]) =>
+    ({ name, count: c.count, real: c.real, years: [...c.years].sort() }));
 }
 
 // ─── State ────────────────────────────────────────────────────────────────────
@@ -3445,9 +3462,17 @@ const app = {
     this._chapterIndex = this._chapterIndex || {};
     this._chapterIndex[subject] = chapters.map(c => c.name);
     box.innerHTML = chapters
-      .map((c, i) => `<button class="chip" onclick="app.drillChapter('${esc(subject)}',${i})">
-                   ${esc(c.name)}<span class="chip-count">${c.count}</span>
-                 </button>`).join('');
+      .map((c, i) => {
+        // "High-yield": this many of the chapter's questions were actually sourced
+        // from a real board paper (not authored to the syllabus) — see realBoardYear().
+        // Absent entirely for banks with no real-question data (most of them today).
+        const badge = c.real
+          ? `<span class="chip-badge" title="${esc(c.real)} of ${esc(c.count)} questions are from real board papers (${esc(c.years.join(', '))})">&#128293; ${esc(c.real)}</span>`
+          : '';
+        return `<button class="chip" onclick="app.drillChapter('${esc(subject)}',${i})">
+                   ${esc(c.name)}<span class="chip-count">${c.count}</span>${badge}
+                 </button>`;
+      }).join('');
   },
 
   drillChapter(subject, i) {

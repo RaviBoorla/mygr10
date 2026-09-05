@@ -57,3 +57,12 @@ Language & Literature) — every card shows "coming soon".
   (not a separate chapter) — e.g. `"text": "The LCM of 960 and 240 is (2026 Board)"`.
 - **Everything else** (Social Science, all of ICSE): no year tag anywhere — every
   question was authored to the syllabus rather than sourced from a specific paper.
+
+## High-yield chapter badges
+
+The Chapter Drill picker (app.js: `chaptersOf()` / `_renderChips()`) shows a
+🔥 badge on any chapter chip that has at least one real board-sourced question,
+with the count and a tooltip naming the years — e.g. "Introduction to
+Trigonometry 36 🔥13" means 13 of its 36 questions are real, from 2025/2026
+board papers. Chapters/subjects with no real-question data (everything in the
+table above marked "None") show no badge at all, rather than a fabricated one.
