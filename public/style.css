@@ -376,6 +376,10 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .question-area {
   display: flex; flex-direction: column; gap: 14px;
   overflow-y: auto; max-height: 100%;
+  /* +2 option rows over its natural content height, so it defaults to
+     roughly the same height as .palette-area rather than looking short
+     beside it — shared across mock, drill and results (same class). */
+  min-height: 480px;
 }
 .q-number  { margin: 0; font-size: var(--fs-ui); font-weight: 600; color: var(--text-light); }
 .q-chapter { margin: -10px 0 0; font-size: var(--fs-note); color: var(--primary); font-weight: 600; }
@@ -425,7 +429,10 @@ kbd {
 }
 
 /* Palette panel (a <details> so it can collapse on small screens) */
-.palette-area { max-height: 100%; overflow: hidden; padding: 12px; display: flex; flex-direction: column; }
+/* +1 palette row over its natural content height (see .question-area above),
+   so a short chapter drill's grid isn't noticeably shorter than the mock
+   test's by default. */
+.palette-area { max-height: 100%; overflow: hidden; padding: 12px; display: flex; flex-direction: column; min-height: 480px; }
 .palette-inner { display: flex; flex-direction: column; gap: 10px; flex: 1; min-height: 0; }
 .palette-summary {
   font-size: var(--fs-body); font-weight: 600; cursor: pointer; list-style: none;
@@ -648,6 +655,9 @@ kbd {
   .test-layout, .rev-layout { grid-template-columns: 1fr; height: auto; overflow: visible; }
   .question-area, .rev-content, .rev-nav { height: auto; overflow: visible; }
   .palette-area { height: auto; }
+  /* The shared min-height keeps the two side-by-side panels visually matched
+     on wide screens; stacked on mobile, it would just add pointless scroll. */
+  .question-area, .palette-area { min-height: 0; }
   .omr-grid { max-height: 34vh; }
   .rev-nav { display: none; }
   .ch-select-wrap { display: block; }
