@@ -2863,7 +2863,7 @@ function shuffle(list) {
 function plural(n, word) { return `${n} ${word}${n === 1 ? '' : 's'}`; }
 
 // ─── Streak / daily goal ───────────────────────────────────────────────────────
-const DAILY_GOAL = 15; // questions/day to keep the streak nudge feeling "met"
+const DAILY_GOAL = 30; // questions/day — under one mock test's worth, so it stays a meaningful target
 
 // Local calendar date as 'YYYY-MM-DD' — never UTC, so the streak flips at
 // midnight where the student actually is, not at UTC midnight.
@@ -3926,7 +3926,9 @@ const app = {
         ? `Nice — ${plural(doneToday, 'question')} today, goal met.`
         : `${doneToday}/${DAILY_GOAL} questions today — keep going to hit your goal.`;
 
-    const showBar = !activeToday || !goalMet;
+    // Always show the bar (capped at 100%) rather than swapping it out once the
+    // goal is met — a single mock test alone clears a modest daily goal, so a
+    // bar that disappears on success reads as "broken" rather than "done".
     const pct = Math.min(100, Math.round(doneToday / DAILY_GOAL * 100));
 
     return `
@@ -3935,7 +3937,7 @@ const app = {
         <div class="streak-body">
           <p class="streak-count">${st.current}-day streak</p>
           <p class="streak-sub">${sub}</p>
-          ${showBar ? `<div class="streak-goal-bar"><div class="streak-goal-fill" style="width:${pct}%"></div></div>` : ''}
+          <div class="streak-goal-bar"><div class="streak-goal-fill ${goalMet ? 'met' : ''}" style="width:${pct}%"></div></div>
         </div>
       </section>`;
   },

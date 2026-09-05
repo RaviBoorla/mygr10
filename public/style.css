@@ -292,6 +292,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   background: var(--border); overflow: hidden;
 }
 .streak-goal-fill { height: 100%; background: var(--primary); border-radius: var(--radius-pill); transition: width var(--tx-slow) ease; }
+.streak-goal-fill.met { background: var(--success); }
 
 .subj-grid {
   display: grid;
