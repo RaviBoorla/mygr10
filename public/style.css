@@ -442,7 +442,7 @@ kbd {
 .dot.rev-wrong   { background: var(--error); }
 
 .autonext { display: flex; align-items: center; gap: 8px; font-size: var(--fs-note); color: var(--text-light); cursor: pointer; }
-.submit-btn { width: 100%; flex-shrink: 0; text-align: center; }
+.submit-btn { flex-shrink: 0; text-align: center; font-size: var(--fs-ui); padding: 6px 14px; }
 
 /* ─── OMR palette bubbles ──────────────────────────────────────────────────── */
 .omr-grid {
@@ -553,9 +553,10 @@ kbd {
   overflow: hidden;
 }
 .rev-heading-row {
-  display: flex; align-items: center; justify-content: flex-end; gap: 12px; flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
 }
-.rev-heading-row .grade-tabs { margin: 0; }
+.rev-heading-row .grade-tabs { margin: 0; flex-shrink: 0; }
+.rev-heading-row .notes-subj-tabs { margin: 0; }
 
 .home-heading-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;

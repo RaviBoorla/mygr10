@@ -3085,10 +3085,11 @@ const app = {
 
     // The current screen's name beside the wordmark — so the header always answers
     // "where am I", instead of repeating it as a second heading in the body below.
-    const crumbLabel = state.screen === 'home'     ? (BOARDS.find(b => b.id === state.board)?.name || '')
-                      : state.screen === 'notes'    ? 'Revision Notes'
+    // Every screen falls back to the board name, so the header looks the same
+    // one component everywhere instead of only home/notes/progress having a crumb.
+    const crumbLabel = state.screen === 'notes'    ? 'Revision Notes'
                       : state.screen === 'progress' ? 'Progress'
-                      : '';
+                      : (BOARDS.find(b => b.id === state.board)?.name || '');
     const crumb = crumbLabel ? `<span class="hdr-crumb">${esc(crumbLabel)}</span>` : '';
 
     const notesActive = state.screen === 'notes';
@@ -3541,6 +3542,7 @@ const app = {
             <span class="answered-count" id="answered-count"></span>
             <div id="timer" class="timer" role="timer" aria-live="off">--:--</div>
             <button class="btn quit-btn" onclick="app.quitTest()">Exit</button>
+            <button class="btn primary submit-btn" onclick="app.submitTest()">Submit test</button>
           </div>
         </div>
         <div class="progress-rail"><div class="progress-fill" id="progress-fill"></div></div>
@@ -3568,13 +3570,12 @@ const app = {
                 <span><span class="dot review"></span>Marked</span>
                 <span><span class="dot current-dot"></span>Current</span>
               </div>
-              <div id="palette" class="omr-grid"></div>
               <label class="autonext">
                 <input type="checkbox" id="autonext-toggle" ${this.autoNext ? 'checked' : ''}
                        onchange="app.setAutoNext(this.checked)">
                 Jump to next question after answering
               </label>
-              <button class="btn primary submit-btn" onclick="app.submitTest()">Submit test</button>
+              <div id="palette" class="omr-grid"></div>
             </div>
           </details>
         </div>
@@ -4026,9 +4027,9 @@ const app = {
     return `
       <div class="screen rev-screen">
         <div class="rev-heading-row">
+          <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
           ${this._gradeTabs()}
         </div>
-        <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
         ${chapters.length ? `
         <div class="rev-topbar">
           <input class="notes-search" id="notes-search" type="search" placeholder="Search all chapters…  ( / )"
