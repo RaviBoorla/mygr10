@@ -2904,7 +2904,7 @@ const GRADES = [
 ];
 
 const MODES = {
-  mock:     { label: 'Full Mock Test',    count: 50, seconds: 40 * 60 },
+  mock:     { label: 'Full Mock Test',    count: 49, seconds: 40 * 60 },
   drill:    { label: 'Chapter Drill',     count: 25, seconds: null },
   bookmark: { label: 'Bookmarked Review', count: 50, seconds: null },
   srs:      { label: 'Spaced Review',     count: 30, seconds: null }

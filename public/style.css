@@ -433,7 +433,12 @@ kbd {
    so a short chapter drill's grid isn't noticeably shorter than the mock
    test's by default. */
 .palette-area { max-height: 100%; overflow: hidden; padding: 12px; display: flex; flex-direction: column; min-height: 480px; }
-.palette-inner { display: flex; flex-direction: column; gap: 10px; flex: 1; min-height: 0; }
+/* flex-grow:0 (not the shorthand "flex: 1") so this sizes to its own content —
+   the question grid, not a stretched box — and the buttons after it sit right
+   below the last row instead of being pushed to the bottom of the panel;
+   max-height still caps it (with omr-grid's own overflow-y:auto) for a
+   genuinely long list of questions. */
+.palette-inner { display: flex; flex-direction: column; gap: 10px; flex: 0 1 auto; max-height: 100%; min-height: 0; }
 .palette-summary {
   font-size: var(--fs-body); font-weight: 600; cursor: pointer; list-style: none;
   padding-bottom: 8px;
