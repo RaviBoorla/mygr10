@@ -10,4 +10,4 @@ Not scheduled unless marked done — just captured for later.
 - **ICSE/IB question banks** — only CBSE has real content; other boards' subjects say "coming soon."
 - **PWA/offline support** — installable, works without network.
 - **Explanations toggle in results** — currently shown, but could add "why wrong options are wrong" for deeper review.
-- **Streaks/daily goal** nudges to build a study habit.
+- **Streaks/daily goal** nudges to build a study habit. *(done)* Home screen shows a "🔥 N-day streak" banner once the student has completed at least one graded attempt; a day counts once any mock/drill is submitted with ≥1 answered question, consecutive days increment the streak, a gap resets it to 1 (longest streak kept separately). A daily goal (15 questions) shows a progress bar until met, then a "goal met" note instead.

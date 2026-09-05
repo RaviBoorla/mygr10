@@ -2841,7 +2841,8 @@ const KEY = {
   results:   'rise.results',
   autoNext:  'rise.autoNext',
   progress:  'rise.progress',   // "grade::board::subject" → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
-  bookmarks: 'rise.bookmarks'   // "grade::board::subject" → qid → { at }
+  bookmarks: 'rise.bookmarks',  // "grade::board::subject" → qid → { at }
+  streak:    'rise.streak'      // { current, longest, lastDate, todayDate, todayCount } — global, not scoped per board/subject
 };
 // One storage bucket per grade+board+subject so X-CBSE-Mathematics, XII-CBSE-Mathematics
 // and ICSE's own Mathematics never share progress, bookmarks or due-review counts.
@@ -2860,6 +2861,22 @@ function shuffle(list) {
 }
 
 function plural(n, word) { return `${n} ${word}${n === 1 ? '' : 's'}`; }
+
+// ─── Streak / daily goal ───────────────────────────────────────────────────────
+const DAILY_GOAL = 15; // questions/day to keep the streak nudge feeling "met"
+
+// Local calendar date as 'YYYY-MM-DD' — never UTC, so the streak flips at
+// midnight where the student actually is, not at UTC midnight.
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+}
+function addDaysStr(dateStr, delta) {
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  dt.setDate(dt.getDate() + delta);
+  return `${dt.getFullYear()}-${String(dt.getMonth() + 1).padStart(2, '0')}-${String(dt.getDate()).padStart(2, '0')}`;
+}
 
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
@@ -3356,6 +3373,7 @@ const app = {
           ${this._gradeTabs()}
           <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
         </div>
+        ${this._streakBanner()}
         ${resume}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>
@@ -3826,6 +3844,7 @@ const app = {
       this.summary = { correct, wrong, skipped, total: this.reviewData.length };
 
       this._updateProgress(s.subject, this.reviewData);
+      this._recordStreakActivity(correct + wrong);
 
       const now = Date.now();
       const past = LS.get(KEY.results, []);
@@ -3873,6 +3892,52 @@ const app = {
       bySubj[r.id] = rec;
     });
     LS.set(KEY.progress, store);
+  },
+
+  // Daily streak (global, any board/subject) + a lightweight "questions today"
+  // tally for the goal nudge. The streak only counts calendar days with at
+  // least one answered question — it does not require hitting the daily goal,
+  // which is just a motivational target shown alongside it.
+  _recordStreakActivity(answeredCount) {
+    if (!answeredCount) return;
+    const today = todayStr();
+    const st = LS.get(KEY.streak, { current: 0, longest: 0, lastDate: null, todayDate: null, todayCount: 0 });
+    if (st.todayDate !== today) { st.todayDate = today; st.todayCount = 0; }
+    st.todayCount += answeredCount;
+    if (st.lastDate !== today) {
+      st.current = (st.lastDate === addDaysStr(today, -1)) ? st.current + 1 : 1;
+      st.longest = Math.max(st.longest || 0, st.current);
+      st.lastDate = today;
+    }
+    LS.set(KEY.streak, st);
+  },
+
+  _streakBanner() {
+    const st = LS.get(KEY.streak, null);
+    if (!st || !st.current) return '';
+    const today = todayStr();
+    const activeToday = st.lastDate === today;
+    const doneToday = st.todayDate === today ? st.todayCount : 0;
+    const goalMet = doneToday >= DAILY_GOAL;
+
+    const sub = !activeToday
+      ? `Answer ${plural(DAILY_GOAL, 'question')} today to keep it going.`
+      : goalMet
+        ? `Nice — ${plural(doneToday, 'question')} today, goal met.`
+        : `${doneToday}/${DAILY_GOAL} questions today — keep going to hit your goal.`;
+
+    const showBar = !activeToday || !goalMet;
+    const pct = Math.min(100, Math.round(doneToday / DAILY_GOAL * 100));
+
+    return `
+      <section class="streak-banner card">
+        <span class="streak-flame" aria-hidden="true">&#128293;</span>
+        <div class="streak-body">
+          <p class="streak-count">${st.current}-day streak</p>
+          <p class="streak-sub">${sub}</p>
+          ${showBar ? `<div class="streak-goal-bar"><div class="streak-goal-fill" style="width:${pct}%"></div></div>` : ''}
+        </div>
+      </section>`;
   },
 
   // ── Screen: results ─────────────────────────────────────────────────────────

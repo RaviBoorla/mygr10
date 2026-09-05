@@ -279,6 +279,20 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .resume-sub   { margin: 0; font-size: var(--fs-ui); color: var(--resume-fg); }
 .resume-actions { display: flex; gap: 8px; }
 
+.streak-banner {
+  display: flex; align-items: flex-start; gap: 12px;
+  border-left: 4px solid var(--primary); background: var(--primary-soft);
+}
+.streak-flame { font-size: 22px; line-height: 1; flex-shrink: 0; }
+.streak-body  { flex: 1; min-width: 0; }
+.streak-count { margin: 0 0 2px; font-weight: 700; font-size: var(--fs-btn); }
+.streak-sub   { margin: 0; font-size: var(--fs-ui); color: var(--text-light); }
+.streak-goal-bar {
+  margin-top: 8px; height: 6px; border-radius: var(--radius-pill);
+  background: var(--border); overflow: hidden;
+}
+.streak-goal-fill { height: 100%; background: var(--primary); border-radius: var(--radius-pill); transition: width var(--tx-slow) ease; }
+
 .subj-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
