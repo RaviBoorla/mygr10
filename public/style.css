@@ -367,6 +367,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .test-layout {
   display: grid;
   grid-template-columns: 1fr 300px;
+  align-items: start;
   gap: var(--exam-gutter);
   padding: var(--exam-gutter) var(--exam-gutter) var(--exam-bottom);
   flex: 1; min-height: 0;
@@ -374,7 +375,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 }
 .question-area {
   display: flex; flex-direction: column; gap: 14px;
-  overflow-y: auto; height: 100%;
+  overflow-y: auto; max-height: 100%;
 }
 .q-number  { margin: 0; font-size: var(--fs-ui); font-weight: 600; color: var(--text-light); }
 .q-chapter { margin: -10px 0 0; font-size: var(--fs-note); color: var(--primary); font-weight: 600; }
@@ -424,7 +425,7 @@ kbd {
 }
 
 /* Palette panel (a <details> so it can collapse on small screens) */
-.palette-area { height: 100%; overflow: hidden; padding: 12px; display: flex; flex-direction: column; }
+.palette-area { max-height: 100%; overflow: hidden; padding: 12px; display: flex; flex-direction: column; }
 .palette-inner { display: flex; flex-direction: column; gap: 10px; flex: 1; min-height: 0; }
 .palette-summary {
   font-size: var(--fs-body); font-weight: 600; cursor: pointer; list-style: none;
