@@ -3051,7 +3051,7 @@ const app = {
     if (!state.board)                        name = 'board';
     else if (name === 'test' && !this.session)    name = 'home';
     else if (name === 'results' && !this.reviewData) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board'].includes(name)) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress'].includes(name)) name = 'home';
 
     // A guarded redirect must correct the URL too, or the address bar claims a screen
     // that is not on show and Back/refresh land somewhere unexpected.
@@ -3335,7 +3335,7 @@ const app = {
               <span class="recent-score ${h.correct / h.total >= 0.6 ? 'good' : 'weak'}">${Math.round(h.correct / h.total * 100)}%</span>
               <span class="recent-desc">
                 <strong>${esc(h.subject)}</strong>
-                <small>${esc(MODES[h.mode].label)}${h.chapter ? ' · ' + esc(h.chapter) : ''} · ${h.correct}/${h.total} · ${esc(h.when)}</small>
+                <small>${esc(MODES[h.mode]?.label || h.mode)}${h.chapter ? ' · ' + esc(h.chapter) : ''} · ${h.correct}/${h.total} · ${esc(h.when)}</small>
               </span>
               <button class="btn small" onclick="app.retryFromHistory(${h.ts})">Retry</button>
             </li>`).join('')}

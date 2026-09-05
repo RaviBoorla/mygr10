@@ -970,7 +970,8 @@ const COMPANIES = {
 'sports':{india:['Sports Authority of India','JSW Sports','IPL Franchises','Reliance Foundation Young Champs','GoSports Foundation','Olympic Gold Quest','Football Sports Development Ltd','Pro Kabaddi League','Hockey India','Athletics Federation of India'],
  global:['Nike','Adidas','FIFA','International Olympic Committee','NBA','English Premier League Clubs','Under Armour','Puma','ESPN','IMG (International Management Group)']}
 };
-function numList(arr){ return arr.map((x,i)=>`${i+1}. ${x}`).join('<br>'); }
+function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function numList(arr){ return arr.map((x,i)=>`${i+1}. ${esc(x)}`).join('<br>'); }
 
 // ── STATE & MATCH ─────────────────────────────────────────────────────────────
 const S = { zoom:1, q:'', filters:new Set(), sel:null };
@@ -1228,7 +1229,7 @@ function showDetail(n){
 
   const collegeInfo = n.kind==='degree' ? COLLEGES[n.id] : null;
   const collegeBlock = collegeInfo ? `
-    <div class="dlbl">Score Needed</div><div class="dval mono">${collegeInfo.examScore}</div>
+    <div class="dlbl">Score Needed</div><div class="dval mono">${esc(collegeInfo.examScore)}</div>
     <div class="dlbl">Top 10 Colleges — India</div><div class="dval">${numList(collegeInfo.india)}</div>
     <div class="dlbl">Top 10 Universities — Global</div><div class="dval">${numList(collegeInfo.global)}</div>
   ` : '';
@@ -1241,18 +1242,18 @@ function showDetail(n){
   ` : '';
 
   document.getElementById('dcont').innerHTML=`
-    <h2 style="color:${n._colorText}">${n.label}</h2>
-    ${n.sublabel?`<div class="dsub">${n.sublabel}</div>`:'<div style="height:10px"></div>'}
-    ${n.meta?.note?`<div class="dlbl">About</div><div class="dval">${n.meta.note}</div>`:''}
-    ${n.meta?.exams?`<div class="dlbl">Key Exams</div><div class="dval mono">${n.meta.exams}</div>`:''}
-    ${n.meta?.duration?`<div class="dlbl">Duration</div><div class="dval">${n.meta.duration}</div>`:''}
-    ${n.meta?.salary?`<div class="dlbl">Salary Range</div><div class="dval mono">${n.meta.salary}</div>`:''}
+    <h2 style="color:${n._colorText}">${esc(n.label)}</h2>
+    ${n.sublabel?`<div class="dsub">${esc(n.sublabel)}</div>`:'<div style="height:10px"></div>'}
+    ${n.meta?.note?`<div class="dlbl">About</div><div class="dval">${esc(n.meta.note)}</div>`:''}
+    ${n.meta?.exams?`<div class="dlbl">Key Exams</div><div class="dval mono">${esc(n.meta.exams)}</div>`:''}
+    ${n.meta?.duration?`<div class="dlbl">Duration</div><div class="dval">${esc(n.meta.duration)}</div>`:''}
+    ${n.meta?.salary?`<div class="dlbl">Salary Range</div><div class="dval mono">${esc(n.meta.salary)}</div>`:''}
     ${collegeBlock}
     ${companyBlock}
-    ${n.tags?.length?`<div class="dlbl">Tags</div><div class="dtags">${n.tags.map(t=>`<span class="dtag">${TL[t]||t}</span>`).join('')}</div>`:''}
-    ${branches.length?`<div class="dlbl">Sub-paths (${branches.length})</div><div class="dkids">${branches.map(c=>c.label).join(' · ')}</div>`:''}
-    ${leaves.length?`<div class="dlbl">Careers (${leaves.length})</div><div class="dkids">${leaves.map(c=>c.label).join(' · ')}</div>`:''}
-    ${n.kind==='career'?`<div class="dpath">Stream → ${crumbs[0]||''}<br>${crumbs[1]?`Path → ${crumbs[1]}<br>`:''} ${crumbs[2]?`Degree → ${crumbs[2]}<br>`:''} ${crumbs[3]?`Specialisation → ${crumbs[3]}`:''}</div>`:''}
+    ${n.tags?.length?`<div class="dlbl">Tags</div><div class="dtags">${n.tags.map(t=>`<span class="dtag">${esc(TL[t]||t)}</span>`).join('')}</div>`:''}
+    ${branches.length?`<div class="dlbl">Sub-paths (${branches.length})</div><div class="dkids">${branches.map(c=>esc(c.label)).join(' · ')}</div>`:''}
+    ${leaves.length?`<div class="dlbl">Careers (${leaves.length})</div><div class="dkids">${leaves.map(c=>esc(c.label)).join(' · ')}</div>`:''}
+    ${n.kind==='career'?`<div class="dpath">Stream → ${esc(crumbs[0]||'')}<br>${crumbs[1]?`Path → ${esc(crumbs[1])}<br>`:''} ${crumbs[2]?`Degree → ${esc(crumbs[2])}<br>`:''} ${crumbs[3]?`Specialisation → ${esc(crumbs[3])}`:''}</div>`:''}
   `;
   det.classList.add('open');
 }
