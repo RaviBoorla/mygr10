@@ -2210,12 +2210,24 @@ const SUBJECTS = {
   IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
 };
 
-// Subject → question-bank file. Subjects absent here have no bank yet.
+// Subject → question-bank file. Board-prefixed keys take priority over bare subject names.
 const BANKS = {
-  'Mathematics':    'mathematics',
-  'Science':        'science',
-  'Social Science': 'social-science'
+  'Mathematics':             'mathematics',
+  'Science':                 'science',
+  'Social Science':          'social-science',
+  'ICSE Mathematics':        'icse-mathematics',
+  'ICSE Physics':            'icse-physics',
+  'ICSE Chemistry':          'icse-chemistry',
+  'ICSE Biology':            'icse-biology',
+  'ICSE History & Civics':   'icse-history-civics',
+  'ICSE Geography':          'icse-geography',
+  'ICSE English':            'icse-english'
 };
+// Returns the question-bank file slug for (subject, board), or undefined if none.
+function bankSlug(subject, board) {
+  board = board || state.board;
+  return BANKS[board + ' ' + subject] || BANKS[subject];
+}
 
 const BOARDS = [
   { id: 'CBSE', name: 'CBSE',       short: 'CBSE', desc: 'Central Board of Secondary Education' },
@@ -2292,12 +2304,13 @@ function consolidatedChapters(subjectId) {
 // ─── Question bank loading (cached — one fetch per subject per session) ───────
 const bankCache = {};
 function loadBank(subject) {
-  if (bankCache[subject]) return Promise.resolve(bankCache[subject]);
-  const slug = BANKS[subject];
+  const slug = bankSlug(subject);
+  const cacheKey = slug || subject;
+  if (bankCache[cacheKey]) return Promise.resolve(bankCache[cacheKey]);
   if (!slug) return Promise.reject(new Error('No question bank for ' + subject));
   return fetch(`questions/${slug}.json`)
     .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
-    .then(list => { bankCache[subject] = list; return list; });
+    .then(list => { bankCache[cacheKey] = list; return list; });
 }
 function chaptersOf(list) {
   const seen = new Map();
@@ -2535,7 +2548,7 @@ const app = {
 
   // ── Screen: progress — per-chapter accuracy, weakest chapters first ─────────
   _screenProgress() {
-    const subjects = (SUBJECTS[state.board] || []).filter(s => BANKS[s]);
+    const subjects = (SUBJECTS[state.board] || []).filter(s => bankSlug(s));
     const store = LS.get(KEY.progress, {});
     const now = Date.now();
 
@@ -2607,7 +2620,7 @@ const app = {
       </section>` : '';
 
     const cards = subjects.map(subject => {
-      const hasBank  = !!BANKS[subject];
+      const hasBank  = !!bankSlug(subject);
       const open     = state.openPicker === subject;
 
       const actions = hasBank
@@ -2674,7 +2687,7 @@ const app = {
 
   // Fill in question/chapter counts once banks load; keeps the first paint instant.
   _hydrateHome() {
-    (SUBJECTS[state.board] || []).filter(s => BANKS[s]).forEach(subject => {
+    (SUBJECTS[state.board] || []).filter(s => bankSlug(s)).forEach(subject => {
       loadBank(subject).then(list => {
         const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
         if (meta) meta.textContent = `${list.length} questions · ${chaptersOf(list).length} chapters`;
