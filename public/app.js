@@ -3083,6 +3083,14 @@ const app = {
       <span>Rise</span>
     </button>`;
 
+    // The current screen's name beside the wordmark — so the header always answers
+    // "where am I", instead of repeating it as a second heading in the body below.
+    const crumbLabel = state.screen === 'home'     ? (BOARDS.find(b => b.id === state.board)?.name || '')
+                      : state.screen === 'notes'    ? 'Revision Notes'
+                      : state.screen === 'progress' ? 'Progress'
+                      : '';
+    const crumb = crumbLabel ? `<span class="hdr-crumb">${esc(crumbLabel)}</span>` : '';
+
     const notesActive = state.screen === 'notes';
     const progressActive = state.screen === 'progress';
 
@@ -3110,7 +3118,7 @@ const app = {
 
     return `
       <header class="app-header">
-        <div class="hdr-left">${logo}</div>
+        <div class="hdr-left">${logo}${crumb}</div>
         <div class="hdr-right">${hamburgerBtn}</div>
         ${menu}
       </header>`;
@@ -3183,7 +3191,7 @@ const app = {
     // Notes and results don't reflect the newly chosen board on their own screen,
     // so jump to that board's home page instead of leaving the click looking stuck.
     const cur = parseHash();
-    if (cur.name === 'results' || cur.name === 'notes') {
+    if (cur.name === 'results' || cur.name === 'notes' || cur.name === 'progress') {
       this.go(['home']);
     } else {
       this.render();
@@ -3245,7 +3253,6 @@ const app = {
 
     return `
       <div class="screen">
-        <h2>Progress</h2>
         <p class="subtitle">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
       </div>`;
@@ -3344,11 +3351,12 @@ const app = {
 
     return `
       <div class="screen home-screen">
-        ${this._gradeTabs()}
+        <div class="home-heading-row">
+          ${this._gradeTabs()}
+          <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
+        </div>
         ${resume}
         <section class="home-section">
-          <h2 class="section-title">Practice</h2>
-          <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
           <div class="subj-grid">${cards}</div>
         </section>
         ${recent}
@@ -4018,7 +4026,6 @@ const app = {
     return `
       <div class="screen rev-screen">
         <div class="rev-heading-row">
-          <h2>Revision notes</h2>
           ${this._gradeTabs()}
         </div>
         <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>

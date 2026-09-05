@@ -44,7 +44,33 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:var(--
   letter-spacing:-.3px;flex-shrink:0;
 }
 #rise-logo svg{flex-shrink:0;border-radius:5px}
-#rise-crumb{font-family:var(--font);font-size:13px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#rise-crumb{
+  font-family:var(--font);font-size:13px;color:var(--text2);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto;
+  padding-left:8px;border-left:1px solid var(--border);
+}
+
+/* Same hamburger + dropdown pattern as the main app header */
+#rise-hamburger{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;
+  width:32px;height:32px;padding:0;flex-shrink:0;margin-left:auto;
+  background:transparent;border:1px solid var(--border);border-radius:10px;cursor:pointer;
+}
+#rise-hamburger span{display:block;width:16px;height:2px;background:var(--text1);border-radius:2px}
+#rise-menu{
+  display:flex;flex-direction:column;gap:8px;
+  position:absolute;top:48px;right:16px;z-index:220;
+  width:220px;background:var(--surf);border:1px solid var(--border);border-radius:12px;
+  padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+#rise-menu[hidden]{display:none}
+.rmi{
+  padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surf);
+  font-family:var(--font);font-size:13px;font-weight:600;color:var(--text1);
+  text-align:left;text-decoration:none;cursor:pointer;display:block;
+}
+.rmi:hover{border-color:var(--text2)}
+.rmi.active{background:var(--primary);border-color:var(--primary);color:#fff}
 
 /* ── TOOLBAR ─────────────────────────────────────────────── */
 #bar{
@@ -100,7 +126,11 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:var(--
 #zc{
   position:fixed;bottom:18px;right:16px;z-index:190;
   display:flex;gap:4px;
+  transition:right .22s cubic-bezier(.4,0,.2,1);
 }
+/* Slide the zoom/home controls clear of the detail panel while it's open,
+   instead of stacking under it where they'd be unclickable. */
+body:has(#det.open) #zc{ right:calc(min(330px,100vw) + 16px); }
 .zb{
   width:30px;height:30px;background:var(--surf);border:1px solid var(--border);
   border-radius:7px;font-size:16px;line-height:30px;text-align:center;
@@ -181,6 +211,16 @@ html,body{height:100%;background:var(--bg);color:var(--text1);font-family:var(--
     <span>Rise</span>
   </a>
   <span id="rise-crumb">Career Pathing · Grade 10 &amp; 12</span>
+  <button id="rise-hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleRiseMenu()">
+    <span></span><span></span><span></span>
+  </button>
+  <div id="rise-menu" hidden>
+    <button class="rmi" data-board="CBSE">CBSE</button>
+    <button class="rmi" data-board="ICSE">ICSE</button>
+    <button class="rmi" data-board="IB">IB Diploma</button>
+    <a class="rmi" href="index.html#/progress">Progress</a>
+    <a class="rmi" href="index.html#/notes">Revision Notes</a>
+  </div>
 </div>
 
 <!-- TOOLBAR -->
@@ -1218,17 +1258,29 @@ function applyZoom(){
 }
 document.getElementById('zi').addEventListener('click',()=>{ S.zoom=Math.min(2,+(S.zoom*1.2).toFixed(2)); applyZoom(); });
 document.getElementById('zo').addEventListener('click',()=>{ S.zoom=Math.max(0.3,+(S.zoom/1.2).toFixed(2)); applyZoom(); });
-document.getElementById('zr').addEventListener('click',()=>{ S.zoom=1; renderAll(); });
+document.getElementById('zr').addEventListener('click',resetView);
 
 // Expand / Collapse all
 function setAll(node,val){
   if(node.children?.length){ node._exp=val; node.children.forEach(c=>setAll(c,val)); }
 }
-document.getElementById('btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
-document.getElementById('btn-collapse').addEventListener('click',()=>{
-  T.children?.forEach(s=>{ s._exp=true; s.children?.forEach(p=>{ p._exp=false; p.children?.forEach(d=>setAll(d,false)); }); });
+
+// Default view: the root expanded just enough to show the four streams,
+// each stream itself collapsed. Used on load, by "Collapse", and by the
+// zoom-reset ("home") button, so there's one consistent resting state.
+function collapseToDefault(){
+  T._exp=true;
+  T.children?.forEach(s=>setAll(s,false));
+}
+function resetView(){
+  collapseToDefault();
+  S.sel=null;
+  S.zoom=1;
+  det.classList.remove('open');
   renderAll();
-});
+}
+document.getElementById('btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
+document.getElementById('btn-collapse').addEventListener('click',()=>{ collapseToDefault(); renderAll(); });
 
 // Search
 document.getElementById('search').addEventListener('input',e=>{ S.q=e.target.value; renderAll(); });
@@ -1313,7 +1365,32 @@ function syncChromeHeight(){
   document.documentElement.style.setProperty('--chrome-h', bottom+'px');
 }
 
+// ── HEADER MENU — same board/Progress/Notes items as the main app's hamburger,
+// reading/writing the same localStorage key so switching board here carries
+// over when the user goes back to Rise. ───────────────────────────────────────
+function toggleRiseMenu(){
+  const menu = document.getElementById('rise-menu');
+  const btn = document.getElementById('rise-hamburger');
+  const open = menu.hasAttribute('hidden');
+  if (open) menu.removeAttribute('hidden'); else menu.setAttribute('hidden','');
+  btn.setAttribute('aria-expanded', String(open));
+}
+document.querySelectorAll('.rmi[data-board]').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    localStorage.setItem('rise.board', JSON.stringify(btn.dataset.board));
+    location.href = 'index.html#/home';
+  });
+});
+(function markActiveBoard(){
+  let current = null;
+  try { current = JSON.parse(localStorage.getItem('rise.board')); } catch {}
+  document.querySelectorAll('.rmi[data-board]').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.board === current);
+  });
+})();
+
 // ── BOOTSTRAP ─────────────────────────────────────────────────────────────────
+collapseToDefault();
 syncChromeHeight();
 renderAll();
 window.addEventListener('resize',()=>{ syncChromeHeight(); renderAll(); });
