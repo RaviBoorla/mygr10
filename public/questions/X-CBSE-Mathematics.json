@@ -2812,6 +2812,7 @@
     ],
     "correct": 0,
     "explanation": "240 divides 960 exactly (960 = 4 × 240), so HCF = 240 and LCM = 960.",
+    "whyWrong": ["", "240 is the HCF here (it divides 960 exactly), not the LCM.", "60 is a common factor, far smaller than the LCM.", "15 is just a common factor, not the LCM."],
     "priority": true
   },
   {
@@ -2827,6 +2828,7 @@
     ],
     "correct": 3,
     "explanation": "By definition, a prime number has exactly two distinct factors and a composite number has more than two; 1 has only one factor, so it is neither.",
+    "whyWrong": ["1 has only one factor (itself), so it fails the definition of a prime (which needs exactly two distinct factors).", "1 is not composite either — composite numbers need more than two factors.", "1 cannot be both, since it satisfies neither definition.", ""],
     "priority": true
   },
   {
@@ -2842,6 +2844,7 @@
     ],
     "correct": 1,
     "explanation": "5¹=5, 5²=25, 5³=125 — every power of 5 ends in 5.",
+    "whyWrong": ["5^n never ends in 0 since 5^n is never divisible by 10 (no factor of 2).", "", "5^n is odd, so it can't end in an even digit like 2.", "5^n is odd, so it can't end in the even digit 2."],
     "priority": true
   },
   {
@@ -2857,6 +2860,7 @@
     ],
     "correct": 2,
     "explanation": "The curve crosses the x-axis once (a simple zero) and touches it tangentially at a second point (a repeated zero) — two distinct zeroes in all.",
+    "whyWrong": ["0 zeroes would mean the curve never touches the x-axis at all.", "1 zero ignores that dipping below and coming back up crosses the axis twice.", "", "3 would require another separate crossing, which isn't described."],
     "priority": true
   },
   {
@@ -2872,6 +2876,7 @@
     ],
     "correct": 1,
     "explanation": "α+β = 2/p and αβ = 3p/p = 3. Setting 2/p = 3 gives p = 2/3.",
+    "whyWrong": ["This is the negative of the correct value — a sign error in solving 2/p = 3.", "", "This equals p/3 not 2/p — a mis-simplification.", "Negative of 1/3; doesn't satisfy 2/p = 3."],
     "priority": true
   },
   {
@@ -2887,6 +2892,7 @@
     ],
     "correct": 3,
     "explanation": "A consistent and dependent pair represents the same line, so all three ratios of coefficients must be equal.",
+    "whyWrong": ["This alone doesn't describe any specific case.", "A ratio can't be both ≠ and = at once — self-contradictory.", "This describes inconsistent (parallel, no solution) lines, not dependent ones.", ""],
     "priority": true
   },
   {
@@ -2902,6 +2908,7 @@
     ],
     "correct": 3,
     "explanation": "1, 9, 25, 49 have successive differences 8, 16, 24 — not constant, so it is not an A.P. (the √2, √8, √18 sequence simplifies to √2, 2√2, 3√2, a valid A.P. with common difference √2.)",
+    "whyWrong": ["Common difference is 1/2 throughout — this is a valid A.P.", "Common difference is −2 throughout — this is a valid A.P.", "√2,√8,√18=√2,2√2,3√2 — common difference √2 — this is a valid A.P.", ""],
     "priority": true
   },
   {
@@ -2917,6 +2924,7 @@
     ],
     "correct": 2,
     "explanation": "The correspondence is A↔Q, B↔R, C↔P, so AB corresponds to QR and AC corresponds to QP, giving AB:AC = QR:QP.",
+    "whyWrong": ["This swaps the correspondence — P corresponds to C, not the ratio shown.", "This inverts the correct ratio.", "", "This uses the wrong vertex correspondence for AC."],
     "priority": true
   },
   {
@@ -2932,6 +2940,7 @@
     ],
     "correct": 0,
     "explanation": "The distance of any point from the x-axis is the absolute value of its y-coordinate, which is 3a here.",
+    "whyWrong": ["", "Distance is always non-negative; −3a would be negative if a>0.", "4a is the x-coordinate (distance from y-axis), not from the x-axis.", "This is the negative of the x-coordinate, irrelevant to distance from the x-axis."],
     "priority": true
   },
   {
@@ -2947,6 +2956,7 @@
     ],
     "correct": 1,
     "explanation": "sin A = √(1 − 16/25) = 3/5, so tan A = sin A / cos A = (3/5)/(4/5) = 3/4.",
+    "whyWrong": ["This is sinA, not tanA.", "", "This is the reciprocal of tanA (i.e., cotA).", "This is secA, not tanA."],
     "priority": true
   },
   {
@@ -2962,6 +2972,7 @@
     ],
     "correct": 1,
     "explanation": "sin A = 1/2 gives A = 30°, so tan A = 1/√3 and cot A = √3; their sum is (1+3)/√3 = 4/√3.",
+    "whyWrong": ["This is tanA·cotA... actually √3 alone is just cotA, not the sum.", "", "This is half of cotA, not the required sum.", "This equals 1 only if tanA=cotA=1/2, which isn't the case at A=30°."],
     "priority": true
   },
   {
@@ -2977,6 +2988,7 @@
     ],
     "correct": 2,
     "explanation": "tan 45° = height/60, and tan 45° = 1, so height = 60 m.",
+    "whyWrong": ["This would be h if the angle were 30°, not 45°.", "This would apply for a 60° angle, not 45°.", "", "This is half the actual height."],
     "priority": true
   },
   {
@@ -2992,6 +3004,7 @@
     ],
     "correct": 0,
     "explanation": "OA = OB (radii), so triangle OAB is isosceles with ∠OAB = ∠OBA = 15°, giving ∠AOB = 150°. In quadrilateral OAPB the angles sum to 360° with two right angles at A and B, so ∠APB = 360° − 90° − 90° − 150° = 30°.",
+    "whyWrong": ["", "This equals angle OAB itself, not angle APB.", "This would arise from a different angle relationship.", "This is far too small given the geometry."],
     "priority": true
   },
   {
@@ -3007,6 +3020,7 @@
     ],
     "correct": 1,
     "explanation": "In quadrilateral OAPB, ∠OAP = ∠OBP = 90°, so ∠APB = 360° − 90° − 90° − 130° = 50°.",
+    "whyWrong": ["This equals angle AOB itself, not the supplementary angle APB.", "", "This doesn't satisfy the quadrilateral angle sum with the two right angles.", "This would only occur if AOB were 180°."],
     "priority": true
   },
   {
@@ -3022,6 +3036,7 @@
     ],
     "correct": 2,
     "explanation": "Segment area = sector area − triangle area = (60/360)πr² − (√3/4)r² = πr²/6 − (√3/4)r² (the 60° triangle formed by two radii and the chord is equilateral).",
+    "whyWrong": ["This is the formula for a semicircle segment (180°), not 60°.", "This uses degrees not converted to the correct sector fraction.", "", "This uses sin60° instead of the correct triangle-area term for an equilateral configuration."],
     "priority": true
   },
   {
@@ -3037,6 +3052,7 @@
     ],
     "correct": 1,
     "explanation": "Inner radius = 5 cm. Volume of steel = (2/3)π(6³ − 5³) = (2/3)π(216 − 125) = (2/3)π(91) = 182π/3.",
+    "whyWrong": ["This is the volume of the outer hemisphere alone, not the steel shell.", "", "This looks like a wrong subtraction/multiplication of the radii cubes.", "This double-counts a factor of 2 in the shell volume."],
     "priority": true
   },
   {
@@ -3052,6 +3068,7 @@
     ],
     "correct": 2,
     "explanation": "Mode = 3 × Median − 2 × Mean = 3(43.4) − 2(43) = 130.2 − 86 = 44.2.",
+    "whyWrong": ["This is just the given median, not the computed mode.", "This is close but doesn't match 3×median−2×mean.", "", "This overshoots — check 3(43.4)−2(43) = 130.2−86 = 44.2, not 49.3."],
     "priority": true
   },
   {
@@ -3067,6 +3084,7 @@
     ],
     "correct": 0,
     "explanation": "Among 1–25 there are 9 primes and the number 1 (neither prime nor composite); the remaining 25 − 9 − 1 = 15 numbers are composite.",
+    "whyWrong": ["", "This undercounts — there are 9 primes and 1 (neither) among 1–25, leaving 15 composites, not 10.", "11 composites is close but not exact — recount: 4,6,8,9,10,12,14,15,16,18,20,21,22,24,25 = 15 numbers.", "9 is the count of primes, not composites."],
     "priority": true
   },
   {
@@ -3082,6 +3100,7 @@
     ],
     "correct": 2,
     "explanation": "The joined cuboid is 8×4×4, so surface area = 2(8×4+4×4+4×8) = 2(80) = 160 cm² — A is true. But the correct formula for the surface area of a cuboid is 2(lb+bh+hl), not (lb+bh+hl) as R states, so R is false.",
+    "whyWrong": ["A and R can't both be true since R (as stated) omits the required factor of 2 in the surface-area formula.", "Same issue — R is not merely 'not the correct explanation', it is factually false as written (missing the 2).", "", "A is true (160 cm² is correct), so this option is wrong to call A false."],
     "priority": true
   },
   {
@@ -3097,6 +3116,7 @@
     ],
     "correct": 3,
     "explanation": "The correct mean of the first n natural numbers is (n+1)/2, so A is false. The sum formula n(n+1)/2 in R is correct.",
+    "whyWrong": ["A and R can't both be true — A's formula (n−1)/2 is incorrect; the correct mean is (n+1)/2.", "Same issue — A is false, not merely unexplained by R.", "A is false, not true — the correct mean formula is (n+1)/2, not (n−1)/2.", ""],
     "priority": true
   },
   {
@@ -3112,6 +3132,7 @@
     ],
     "correct": 2,
     "explanation": "x − 1 = ±4, so x = 5 or x = −3.",
+    "whyWrong": ["5 is correct but 3 is wrong — should be −3, not 3.", "Sign error on both roots.", "", "5 is wrong here — should be 5, not −5 (mixed up signs)."],
     "priority": true
   },
   {
@@ -3127,6 +3148,7 @@
     ],
     "correct": 0,
     "explanation": "OP bisects ∠QPR, so ∠QPO = 30°. In right triangle OQP, tan 30° = OQ/QP, so QP = OQ/tan30° = 3/(1/√3) = 3√3 cm.",
+    "whyWrong": ["", "This equals the radius itself, not the tangent length.", "This is double the radius, not matching the required trig relation.", "This is r/√3 (inverted), not r√3."],
     "priority": true
   },
   {
@@ -3142,6 +3164,7 @@
     ],
     "correct": 1,
     "explanation": "By the Basic Proportionality Theorem, DA/AE = DB/BF, giving 2x(2x − 1/2) = x(3x+1), which simplifies to x² − 2x = 0, so x = 0 or x = 2; x = 0 is rejected as it makes a side length zero, leaving x = 2.",
+    "whyWrong": ["x=0 makes DA=0, which isn't a valid triangle configuration, so it must be excluded.", "", "Sign error in solving the proportion.", "Doesn't satisfy the basic proportionality equation."],
     "priority": true
   },
   {
@@ -3157,6 +3180,7 @@
     ],
     "correct": 2,
     "explanation": "3 × 11 × 13 + 3 = 3 × 144 = 432 = 2⁴ × 3³, which has more than two factors, so it is composite (and it is even, and not divisible by 13).",
+    "whyWrong": ["432 has many factors, far from prime.", "432/13 is not a whole number, so it's not divisible by 13.", "", "432 is even, not odd."],
     "priority": true
   },
   {
@@ -3172,6 +3196,7 @@
     ],
     "correct": 0,
     "explanation": "Sums divisible by 6 are 6 and 12: (1,5),(2,4),(3,3),(4,2),(5,1) and (6,6) — 6 outcomes out of 36, giving 1/6.",
+    "whyWrong": ["", "11/36 doesn't match any clean count of favourable outcomes here.", "1/12 undercounts — there are 6 favourable outcomes out of 36, not 3.", "1/4 greatly overcounts the favourable outcomes."],
     "priority": true
   },
   {
@@ -3187,6 +3212,7 @@
     ],
     "correct": 0,
     "explanation": "The multiples of 4 strictly between 12 and 250 run from 16 to 248: (248−16)/4 + 1 = 59.",
+    "whyWrong": ["", "59.5 isn't a whole count — the actual count (59) must be an integer.", "60 overcounts by one.", "61 overcounts further."],
     "priority": true
   },
   {
@@ -3202,6 +3228,7 @@
     ],
     "correct": 0,
     "explanation": "The largest such cone has base radius l/2 and height l, so its volume is (1/3)π(l/2)²(l) = πl³/12.",
+    "whyWrong": ["", "This is the volume of a cylinder inscribed in the cube, not the cone.", "This equals cube minus a hemisphere-like shape, not the cone volume.", "This uses r=l/2 but wrong height factor."],
     "priority": true
   },
   {
@@ -3217,6 +3244,7 @@
     ],
     "correct": 2,
     "explanation": "The given line has slope 1/3 (from y = x/3 − 7/6). Rewriting x − 3y = 7 gives y = x/3 − 7/3, the same slope but a different line — hence parallel.",
+    "whyWrong": ["Slope here is 3 (y=3x-7), but original line has slope 1/3 — not parallel.", "Rearranged: 2x+6y=9, slope -1/3, not matching original slope 1/3.", "", "Rearranged: x+3y=7/2, slope -1/3, not matching."],
     "priority": true
   },
   {
@@ -3232,6 +3260,7 @@
     ],
     "correct": 1,
     "explanation": "tan(altitude) = height/shadow = 1/√3, so the altitude of the Sun is 30°.",
+    "whyWrong": ["45° would mean shadow=height, not √3×height.", "", "60° would mean shadow=height/√3, the reciprocal case.", "15° doesn't satisfy tan(θ)=1/√3."],
     "priority": true
   },
   {
@@ -3247,6 +3276,7 @@
     ],
     "correct": 0,
     "explanation": "For equal roots, discriminant = 0: k² − 4(√3)(2√3) = k² − 24 = 0, so k = ±√24.",
+    "whyWrong": ["", "k=0 doesn't satisfy k²=24.", "k=4 gives k²=16≠24.", "k=−5 gives k²=25≠24, and sign convention aside this doesn't match either."],
     "priority": true
   },
   {
@@ -3262,6 +3292,7 @@
     ],
     "correct": 1,
     "explanation": "Common difference = 1, first term = −1/3, so aₙ = −1/3 + (n−1)(1) = n − 4/3.",
+    "whyWrong": ["This has the wrong coefficient structure — should reduce to n − 4/3.", "", "This omits scaling by 1 properly — check: a1=-1/3 -1(4/3)= -1/3? Doesn't match n=1 case.", "This is missing simplification consistent with the first term at n=1."],
     "priority": true
   },
   {
@@ -3277,6 +3308,7 @@
     ],
     "correct": 0,
     "explanation": "Triangle OPT is right-angled at T (radius ⊥ tangent). cos45° = OT/OP, so OP = r/cos45° = r√2.",
+    "whyWrong": ["", "This isn't a valid simplification of r/cos45°.", "This would apply for a different angle, not 45°.", "This is r², not a length — dimensionally wrong."],
     "priority": true
   },
   {
@@ -3292,6 +3324,7 @@
     ],
     "correct": 3,
     "explanation": "The correspondence A↔Q, B↔R, C↔P gives BC/RP = AB/QR, so 5/2 = 9/QR, giving QR = 18/5 = 3.6 cm.",
+    "whyWrong": ["Far too small given the 9:5 ratio scale relative to PR=2.", "Very small — doesn't satisfy the similarity ratio.", "Doesn't match AB/QR=BC/PR proportion.", ""],
     "priority": true
   },
   {
@@ -3307,6 +3340,7 @@
     ],
     "correct": 3,
     "explanation": "p(x) = k[x² − (sum)x + product] = k[x² + (1/3)x + 2]; taking k = −3 clears the fraction and gives −3x² − x − 6, whose sum (−1/3) and product (2) of roots both check out.",
+    "whyWrong": ["Sign error: should be 3x²+x+6 or a scalar multiple, not with −x.", "This omits the needed scaling by 3 to clear the fraction.", "Sign error on the linear term (+x, not −x).", ""],
     "priority": true
   },
   {
@@ -3322,6 +3356,7 @@
     ],
     "correct": 2,
     "explanation": "sin 2α = √3/2 gives 2α = 60°, so α = 30°, and sin 3α = sin 90° = 1.",
+    "whyWrong": ["This is close to but not sin(90°).", "This is sin(30°), not sin(90°).", "", "This is sin(60°)/... doesn't equal sin(90°)=1."],
     "priority": true
   },
   {
@@ -3337,6 +3372,7 @@
     ],
     "correct": 0,
     "explanation": "Mode = 3 × Median − 2 × Mean, so 26.1 = 3(25.2) − 2×Mean, giving Mean = (75.6 − 26.1)/2 = 24.75.",
+    "whyWrong": ["", "Close but arithmetic slip — recompute (3×25.2−26.1)/2 = 49.5/2 = 24.75, not 24.25.", "Doesn't match the empirical mean-median-mode relation computation.", "Overshoots the correct value."],
     "priority": true
   },
   {
@@ -3352,6 +3388,7 @@
     ],
     "correct": 1,
     "explanation": "AD is also the altitude, of length 5√3/2. Since height = (√3/2)×side, the side length is 5, so BD = DC = 2.5, giving B(−5/2,0) and C(5/2,0).",
+    "whyWrong": ["Side length would be 10 here, inconsistent with AD=5√3/2.", "", "Side length 20, far too large.", "This uses 5√3 as half-side, inconsistent with the median length formula."],
     "priority": true
   },
   {
@@ -3367,6 +3404,7 @@
     ],
     "correct": 2,
     "explanation": "(1/2)(1)² − (1/2)² = 1/2 − 1/4 = 1/4.",
+    "whyWrong": ["This would occur only if both terms cancelled exactly, which they don't.", "Sign error — the result is positive, not negative.", "", "Sign error — should be +1/4, not −1/4."],
     "priority": true
   },
   {
@@ -3382,6 +3420,7 @@
     ],
     "correct": 0,
     "explanation": "The perpendicular distance from a point to a line is the shortest distance, and since the radius is perpendicular to the tangent, it equals that shortest distance — R correctly explains A.",
+    "whyWrong": ["", "R does explain A — perpendicularity is exactly why the radius gives the shortest distance to the tangent line.", "A is true, not false.", "A is true and R is also true, not false."],
     "priority": true
   },
   {
@@ -3397,6 +3436,7 @@
     ],
     "correct": 1,
     "explanation": "tan 90° is indeed undefined, so A is true, and sin90°=1 ≠ cos90°=0 is also true. But the actual reason tan 90° is undefined is that cos 90° = 0 (division by zero), not merely that sin90° and cos90° differ, so R does not correctly explain A.",
+    "whyWrong": ["A and R are indeed both true, but R doesn't explain A (see next option), so 'correct explanation' is wrong here.", "", "A is true, not false.", "Both A and R are true, so this option is wrong on both counts."],
     "priority": true
   },
   {
@@ -3412,6 +3452,7 @@
     ],
     "correct": 2,
     "explanation": "The correspondence is A↔E, B↔D, C↔F, so the correct equal angles are ∠A=∠E and ∠C=∠F — stating ∠A=∠D is incorrect.",
+    "whyWrong": ["This ratio (using AB/ED etc.) correctly reflects the similarity correspondence.", "This ratio also correctly reflects the correspondence.", "", "This combined ratio is also a valid consequence of the similarity."],
     "priority": true
   },
   {
@@ -3427,6 +3468,7 @@
     ],
     "correct": 0,
     "explanation": "The coefficient of n in the nth-term formula is the common difference, which is √2.",
+    "whyWrong": ["", "This is not a constant — common difference must be a fixed number.", "1 is the constant term, not the common difference.", "This combines both terms incorrectly."],
     "priority": true
   },
   {
@@ -3442,6 +3484,7 @@
     ],
     "correct": 1,
     "explanation": "OP bisects the 90° angle, so triangle OQP is right-angled with ∠OPQ = 45°. OP = OQ/sin45° = 4/(√2/2) = 4√2 cm.",
+    "whyWrong": ["This equals the radius itself, not OP.", "", "This is double the radius but doesn't match the trig relation.", "This is r/√2, the reciprocal of the correct factor."],
     "priority": true
   },
   {
@@ -3457,6 +3500,7 @@
     ],
     "correct": 3,
     "explanation": "The curve crosses the x-axis three times, so p(x) has 3 real zeroes.",
+    "whyWrong": ["5 overcounts the described crossings.", "4 overcounts by one.", "6 overcounts significantly.", ""],
     "priority": true
   },
   {
@@ -3472,6 +3516,7 @@
     ],
     "correct": 0,
     "explanation": "AD/DB = 1/3 means AD/AB = 1/4 (since AB = AD+DB = 4·AD). By similarity of triangles ADE and ABC, AE/AC = AD/AB = 1/4, so AE = 6/4 = 1.5 cm.",
+    "whyWrong": ["", "This would be AE if the ratio were taken differently (AD/DB itself, not AD/AB).", "This doesn't match the 1:4 ratio applied to AC=6.", "This is double the correct value."],
     "priority": true
   },
   {
@@ -3487,6 +3532,7 @@
     ],
     "correct": 3,
     "explanation": "The radius equals the distance from the centre (1,2) to the origin: √(1²+2²) = √5, so the diameter is 2√5.",
+    "whyWrong": ["This is less than the radius itself — impossible for a diameter.", "This equals the radius, not the diameter.", "This IS the radius (√5), not the diameter.", ""],
     "priority": true
   },
   {
@@ -3502,6 +3548,7 @@
     ],
     "correct": 1,
     "explanation": "Rewriting the first equation as 3x + 2y = 30, the inconsistency condition a₁/a₂ = b₁/b₂ ≠ c₁/c₂ gives 3/2 = 2/k, so k = 4/3 (and the constant ratio is indeed different, confirming no solution).",
+    "whyWrong": ["This is the reciprocal of the correct value.", "", "This doesn't satisfy a1/a2=b1/b2 for the given coefficients.", "This is 4 times too large."],
     "priority": true
   },
   {
@@ -3517,6 +3564,7 @@
     ],
     "correct": 3,
     "explanation": "Total area = (22/7)(7²) = 154 cm²; each of the 16 identical sectors has area 154/16 = 77/8 cm².",
+    "whyWrong": ["This is total area /2, not /16.", "This is the full circle's area, not one sector.", "This is double the correct per-sector area.", ""],
     "priority": true
   },
   {
@@ -3532,6 +3580,7 @@
     ],
     "correct": 2,
     "explanation": "Each die can show 1, 2 or 3 (3 favourable outcomes each), giving 3×3 = 9 favourable outcomes out of 36, i.e. 1/4.",
+    "whyWrong": ["This doesn't match 9/36 simplified.", "This is less than the correct probability.", "", "This overcounts — actual favourable outcomes are 9, not 24."],
     "priority": true
   },
   {
@@ -3547,6 +3596,7 @@
     ],
     "correct": 1,
     "explanation": "With opposite = 1 and hypotenuse = 3, the adjacent side is √(9−1) = 2√2, so cot A = adjacent/opposite = 2√2.",
+    "whyWrong": ["This is cotA/√2 roughly, not matching the direct ratio.", "", "This is 1/cotA (i.e., tanA), the reciprocal.", "This equals the hypotenuse, not the cotangent ratio."],
     "priority": true
   },
   {
@@ -3562,6 +3612,7 @@
     ],
     "correct": 0,
     "explanation": "(1+tan²A)/(1+cot²A) = sec²A/csc²A = (1/cos²A)/(1/sin²A) = sin²A/cos²A = tan²A.",
+    "whyWrong": ["", "Sign/value error — the identity simplifies to a positive tan²A, not −1.", "Missing the correct sign — should be positive tan²A.", "This is the reciprocal of the correct simplification."],
     "priority": true
   },
   {
@@ -3577,6 +3628,7 @@
     ],
     "correct": 0,
     "explanation": "The jar has radius r and height 6r (three balls stacked). Cylinder volume = 6πr³; the three balls together have volume 3×(4/3)πr³ = 4πr³. Air volume = 6πr³ − 4πr³ = 2πr³.",
+    "whyWrong": ["", "This would result from an under-count of the cylinder's height or ball volume.", "This overcounts the air gap.", "This overcounts further."],
     "priority": true
   },
   {
@@ -3592,6 +3644,7 @@
     ],
     "correct": 2,
     "explanation": "Working through the tangent–secant angle relationship for this configuration gives ∠PTR = 57.5°.",
+    "whyWrong": ["This equals the central angle itself, not the resulting tangent angle at T.", "Close but not matching the exact angle sum from the tangent–radius right angle.", "", "This is the angle for a different configuration (45° case), not this one."],
     "priority": true
   },
   {
@@ -3607,6 +3660,7 @@
     ],
     "correct": 0,
     "explanation": "Squaring and adding: (a cosθ+b sinθ)² + (a sinθ−b cosθ)² = a²+b² (the cross terms cancel), so the distance is √(a²+b²).",
+    "whyWrong": ["", "This would be the result only if the cross-terms didn't cancel, which they do.", "This drops the square root — dimensionally inconsistent with 'distance'.", "Same issue — missing the square root of a²+b²."],
     "priority": true
   },
   {
@@ -3622,6 +3676,7 @@
     ],
     "correct": 1,
     "explanation": "Cone volume (1/3)πr²h equals two scoops' volume 2×(4/3)π(r/2)³ = (1/3)πr³, giving h = r, so h:2r = 1:2.",
+    "whyWrong": ["This would require the scoops to fill 1/8 of the cone's implied volume, not match exactly.", "", "This would mean h=2r, twice the correct height.", "This inverts the correct ratio."],
     "priority": true
   },
   {
@@ -3637,6 +3692,7 @@
     ],
     "correct": 3,
     "explanation": "Arc length = rθ (θ in radians): θ = 11/6.3 ≈ 1.746 rad ≈ 100°.",
+    "whyWrong": ["Far too small for the given arc length and radius.", "Doesn't match rθ=11 with r=6.3.", "Also too small.", ""],
     "priority": true
   },
   {
@@ -3652,6 +3708,7 @@
     ],
     "correct": 0,
     "explanation": "Mode = 3 × Median − 2 × Mean = 3(40) − 2(43) = 120 − 86 = 34.",
+    "whyWrong": ["", "This is the given mean itself, not the computed mode.", "Doesn't match 3×median−2×mean=34.", "Doesn't match the computation either."],
     "priority": true
   },
   {
@@ -3667,6 +3724,7 @@
     ],
     "correct": 1,
     "explanation": "Since probability cannot exceed 1, 0.2p ≤ 1 gives p ≤ 5, so A is true; R is also a true statement about probability, but the complement rule is not what explains why probability is capped at 1, so R does not correctly explain A.",
+    "whyWrong": ["Both A and R are indeed true, but R doesn't correctly explain A — the cap p≤5 comes from probability never exceeding 1, not from the complement rule R states.", "", "A is true (p≤5 does follow), so calling it false is incorrect.", "Both A and R are true, so calling one of them false is incorrect."],
     "priority": true
   },
   {
@@ -3682,6 +3740,7 @@
     ],
     "correct": 2,
     "explanation": "√3+√5 is indeed irrational, so A is true. But R is false in general — e.g. √2 + (−√2) = 0 is rational, so the sum of two irrationals is not always irrational.",
+    "whyWrong": ["A and R can't both be true — R's blanket claim is false in general (counterexamples exist), even though A itself is correct.", "Same issue — R is a false generalisation.", "", "A is true, not false — √3+√5 is indeed irrational."],
     "priority": true
   },
   {
@@ -3697,6 +3756,7 @@
     ],
     "correct": 3,
     "explanation": "α+β = −6/3 = −2 and αβ = k/3. Setting −2 + k/3 = −2/3 gives k/3 = 4/3, so k = 4.",
+    "whyWrong": ["Sign error in solving for k.", "This would result from a sign slip on the sum term.", "Sign error again — check −2+k/3=−2/3 gives k=4, not −4.", ""],
     "priority": true
   },
   {
@@ -3712,6 +3772,7 @@
     ],
     "correct": 1,
     "explanation": "Substituting gives 2−6+a=0 so a=4, and 2+6−b=0 so b=8; checking the options, 2a = 8 = b holds.",
+    "whyWrong": ["Doesn't satisfy a=4,b=8 (a=2b would need a=16).", "", "a+2b=0 would need a=-16, not matching.", "2a+b=0 would need a=-4, not matching."],
     "priority": true
   },
   {
@@ -3727,6 +3788,7 @@
     ],
     "correct": 1,
     "explanation": "The mid-point is ((−4+4)/2, (5+6)/2) = (0, 5.5), which has x-coordinate 0, so it lies on the y-axis.",
+    "whyWrong": ["x-coordinate is 0, not y — so it lies on the y-axis, not the x-axis.", "", "It does lie on an axis (y-axis), not off both.", "It lies exactly on the y-axis (x=0 satisfies this)."],
     "priority": true
   },
   {
@@ -3742,6 +3804,7 @@
     ],
     "correct": 1,
     "explanation": "sin θ = 2/4 = 1/2, so θ = 30°.",
+    "whyWrong": ["sin90=1, giving 7+4=11≠9.", "", "sin45=√2/2, giving a non-matching value.", "sin60=√3/2, giving a non-matching value."],
     "priority": true
   },
   {
@@ -3757,6 +3820,7 @@
     ],
     "correct": 2,
     "explanation": "1/cosθ × secθ = sec²θ, so the expression is tan²θ − sec²θ = −(sec²θ − tan²θ) = −1.",
+    "whyWrong": ["This would be the result of sec²θ−tan²θ (=+1), not tan²θ−sec²θ.", "This isn't consistent with the identity sec²θ−tan²θ=1.", "", "This doesn't match the standard identity result of −1."],
     "priority": true
   },
   {
@@ -3772,6 +3836,7 @@
     ],
     "correct": 2,
     "explanation": "98 = 2×7², 28 = 2²×7, so HCF = 14 = m and LCM = 196 = n. n − 7m = 196 − 98 = 98.",
+    "whyWrong": ["This would result if n−7m were computed as 0, which needs n=7m=98 — but n is actually 196.", "This undercounts n−7m.", "", "This overshoots — recompute n−7m=196−98=98, not 198."],
     "priority": true
   },
   {
@@ -3787,6 +3852,7 @@
     ],
     "correct": 0,
     "explanation": "Tangents at the two ends of a diameter are both perpendicular to the same diameter line, so they are parallel to each other.",
+    "whyWrong": ["", "They can't be perpendicular to each other since both are perpendicular to the same diameter line, making them parallel to each other.", "'Equal' doesn't describe the geometric relationship (they're lines, not measured lengths here).", "Parallel lines never intersect, so 'intersecting' is wrong."],
     "priority": true
   },
   {
@@ -3802,6 +3868,7 @@
     ],
     "correct": 3,
     "explanation": "Two equal angles (AA) make the triangles similar, but since AB = 3DE (a scale factor of 3, not 1), corresponding sides are not equal, so they are similar but not congruent.",
+    "whyWrong": ["Congruent requires equal corresponding sides, but AB=3DE means sides differ — not congruent.", "Same reason — can't be congruent with unequal corresponding sides.", "Two equal angles (AA) already guarantees similarity, so 'neither' is wrong.", ""],
     "priority": true
   },
   {
@@ -3817,6 +3884,7 @@
     ],
     "correct": 2,
     "explanation": "(−1)⁸ = 1, so (−1)ⁿ must equal −1, which happens exactly when n is odd.",
+    "whyWrong": ["A positive even integer would give (−1)ⁿ=+1, not −1.", "The sign of n doesn't matter for parity — only odd/even matters, and this option is about sign not oddness.", "", "An even number would give (−1)ⁿ=+1, not −1 as required."],
     "priority": true
   },
   {
@@ -3832,6 +3900,7 @@
     ],
     "correct": 3,
     "explanation": "The hill-shaped curve contributes 2 distinct x-intercepts and the two crossing lines contribute 2 more distinct x-intercepts further from the origin, giving 4 distinct zeroes in total.",
+    "whyWrong": ["3 undercounts the total distinct crossing points described.", "5 overcounts.", "2 accounts for only the curve's zeroes, ignoring the two lines.", ""],
     "priority": true
   },
   {
@@ -3847,6 +3916,7 @@
     ],
     "correct": 1,
     "explanation": "S₁ = 2+3 = 5 = a₁. S₂ = 8+6 = 14. The second term a₂ = S₂ − S₁ = 14 − 5 = 9.",
+    "whyWrong": ["This is close to a1, not a2.", "", "This overshoots a2.", "This is far too small for a2."],
     "priority": true
   },
   {
@@ -3862,6 +3932,7 @@
     ],
     "correct": 2,
     "explanation": "Using Mode = 3×Median − 2×Mean: 15x = 3×Median − 36x, so 3×Median = 51x, giving Median = 17x.",
+    "whyWrong": ["This is far too small — check (15x+2×18x)/3 = 51x/3 = 17x.", "This doesn't match the mode-mean-median relation.", "", "This overshoots the correct relation result."],
     "priority": true
   },
   {
@@ -3877,6 +3948,7 @@
     ],
     "correct": 3,
     "explanation": "There are 2 red suits × 3 face cards each = 6 red face cards out of 52, giving a probability of 6/52 = 3/26.",
+    "whyWrong": ["This overcounts — there are only 6 red face cards, not 12.", "This undercounts slightly.", "This is the probability of any red card (26/52), not just face cards.", ""],
     "priority": true
   },
   {
@@ -3892,6 +3964,7 @@
     ],
     "correct": 3,
     "explanation": "√3 ≈ 1.732 and √5 ≈ 2.236. Only 1.857142 (a terminating/repeating decimal, hence rational) falls strictly between these two values.",
+    "whyWrong": ["This is an irrational, non-repeating decimal (looks like √3's expansion) — not rational.", "This repeating decimal 2.326̄ ≈2.329, which is greater than √5≈2.236, outside the range.", "π is irrational and also outside the range.", ""],
     "priority": true
   },
   {
@@ -3907,6 +3980,7 @@
     ],
     "correct": 3,
     "explanation": "Sector area = (72/360)πr² = 40π, so (1/5)r² = 40, giving r² = 200, so r = 10√2 units.",
+    "whyWrong": ["This is r² essentially, not r — dimensionally too large.", "Also too large — doesn't match r²=200.", "This undercounts — 20²=400≠200.", ""],
     "priority": true
   },
   {
@@ -3922,6 +3996,7 @@
     ],
     "correct": 0,
     "explanation": "Since OA ⊥ PA (radius ⊥ tangent), and P-O-B is a straight secant line through the centre, ∠AOP = 180° − 115° = 65°. In right triangle OAP, ∠APO = 180° − 90° − 65° = 25°.",
+    "whyWrong": ["", "This equals 90° minus a different (uncomputed) angle, not matching this configuration.", "90° would mean OA⊥OP directly, which isn't the case here.", "This doesn't satisfy the right-triangle angle sum with the given 115°."],
     "priority": true
   },
   {
@@ -3937,6 +4012,7 @@
     ],
     "correct": 1,
     "explanation": "sin 30° = height / string length, so string length = 150 / (1/2) = 300 m.",
+    "whyWrong": ["This uses cos30 instead of sin30 for the height relation.", "", "This uses a different trig ratio (√2 factor), not matching sin30°.", "This overshoots — should be exactly 300 m, not 150√3."],
     "priority": true
   },
   {
@@ -3952,6 +4028,7 @@
     ],
     "correct": 1,
     "explanation": "Arc length = rθ (θ in radians): 20 = (60/π)θ, so θ = π/3 radians = 60°.",
+    "whyWrong": ["This undercounts — recompute θ=20π/60 rad = π/3 rad = 60°, not 30°.", "", "This overcounts.", "Doesn't match the exact computation of π/3 rad."],
     "priority": true
   },
   {
@@ -3967,6 +4044,7 @@
     ],
     "correct": 0,
     "explanation": "Selecting some number from 1 to 20 is certain to happen, so its probability is 1 — and this is exactly the definition of a sure event given in R, correctly explaining A.",
+    "whyWrong": ["", "R does correctly explain A here (selecting some number from a finite set is indeed a certain event, so P=1) — this pairing describes the right relationship, making it the answer rather than a wrong option.", "A is true (P=1, a certain event), so calling it false is incorrect.", "Both A and R are true here, so calling one of them false is incorrect."],
     "priority": true
   },
   {
@@ -3982,6 +4060,7 @@
     ],
     "correct": 2,
     "explanation": "Joining two hemispheres at their flat circular bases does form a complete sphere, so A is true. But the correct total surface area formula for a sphere is 4πr², not 3πr², so R is false.",
+    "whyWrong": ["A and R can't both be true — R's formula 3πr² is wrong; the correct TSA of a sphere is 4πr².", "Same issue — R is factually false, not just an unrelated true fact.", "", "A is true — joining two equal hemispheres at their bases does form a complete sphere."],
     "priority": true
   },
   {
@@ -3997,6 +4076,7 @@
     ],
     "correct": 2,
     "explanation": "7cos²θ + 3(1−cos²θ) = 4 gives 4cos²θ = 1, so cos²θ = 1/4, cos θ = 1/2, giving θ = 60°.",
+    "whyWrong": ["cos30=√3/2, giving cos²=3/4≠1/4.", "cos45=√2/2, giving cos²=1/2≠1/4.", "", "cos90=0, giving cos²=0≠1/4."],
     "priority": true
   },
   {
@@ -4012,6 +4092,7 @@
     ],
     "correct": 0,
     "explanation": "2 is the only even prime number, so there is exactly 1 favourable outcome out of 30, giving a probability of 1/30.",
+    "whyWrong": ["", "This overcounts — there's exactly one even prime (2), giving 1/30, not 4/15.", "This also overcounts.", "This wrongly assumes there's no even prime, but 2 qualifies."],
     "priority": true
   },
   {
@@ -4027,6 +4108,7 @@
     ],
     "correct": 0,
     "explanation": "Sum of roots = 7 + 1/7 = 50/7, product = 1. The equation x² − (sum)x + product = 0 becomes x² − (50/7)x + 1 = 0; multiplying by 7 gives 7x² − 50x + 7 = 0.",
+    "whyWrong": ["", "Product term should be 7, not 1, to match root product=1 scaled by 7.", "Sign error on the middle term.", "Sign errors on both terms."],
     "priority": true
   },
   {
@@ -4042,6 +4124,7 @@
     ],
     "correct": 3,
     "explanation": "The diameter length is the distance between (5,−2) and (5,2), which is √(0² + 4²) = 4, so the radius is 4/2 = 2.",
+    "whyWrong": ["Radius can't be expressed with a ± sign as a single geometric length.", "This is the diameter, not the radius.", "This is also the diameter (4), not radius.", ""],
     "priority": true
   },
   {
@@ -4057,6 +4140,7 @@
     ],
     "correct": 1,
     "explanation": "The distance between (−5,0) and (5,0) is 10, while the distances from (0,4) to each of these points are both √(25+16) = √41 — two equal sides make it isosceles.",
+    "whyWrong": ["No right angle exists among these side lengths (10,√41,√41) — check 10²≠41+41.", "", "All three sides aren't equal (10≠√41), so not equilateral.", "Two sides are equal (√41 each), so it's not scalene."],
     "priority": true
   },
   {
@@ -4072,6 +4156,7 @@
     ],
     "correct": 1,
     "explanation": "Since MN is a diameter, ∠MLN = 90° (angle in a semicircle), so in triangle MLN, ∠MNL = 180° − 90° − 30° = 60°. By the tangent-chord angle theorem, ∠RLM equals the angle in the alternate segment, ∠MNL = 60°.",
+    "whyWrong": ["This equals the given angle NML itself, not the tangent-chord angle.", "", "This would be the full right angle at L (angle MLN), not angle RLM.", "This overshoots — no angle in this configuration reaches 120° for RLM."],
     "priority": true
   },
   {
@@ -4087,6 +4172,7 @@
     ],
     "correct": 3,
     "explanation": "AP/AB = 4/17 (since AB = AP+PB = 17 parts). By similar triangles, AQ/AC = AP/AB = 4/17, so AQ = 20.4 × 4/17 = 4.8 cm.",
+    "whyWrong": ["This doesn't match 4/17 of 20.4.", "Also doesn't match the ratio.", "Close but not exact — recompute 20.4×4/17=4.8.", ""],
     "priority": true
   },
   {
@@ -4102,6 +4188,7 @@
     ],
     "correct": 1,
     "explanation": "A square has all right angles while a general rhombus doesn't, so equal area alone doesn't make a square and rhombus similar — this statement is false.",
+    "whyWrong": ["This is a true statement (congruent figures are always similar) — not the incorrect one being asked for.", "", "This is true — all equilateral triangles are similar (same angles).", "This is true — similar doesn't require congruent, so this correctly describes similarity."],
     "priority": true
   },
   {
@@ -4117,6 +4204,7 @@
     ],
     "correct": 0,
     "explanation": "4004 = 2² × 7¹ × 11¹ × 13¹, so the sum of the exponents is 2+1+1+1 = 5.",
+    "whyWrong": ["", "This undercounts one of the prime factors' exponents.", "This omits two exponents.", "This omits three exponents."],
     "priority": true
   },
   {
@@ -4132,6 +4220,7 @@
     ],
     "correct": 2,
     "explanation": "P(boundary) = 7/42 = 1/6, so P(not boundary) = 1 − 1/6 = 5/6.",
+    "whyWrong": ["This is 7/42 simplified (probability OF hitting boundary), the complement of what's asked.", "This doesn't match 1−1/6.", "", "This is 1/6, the probability of hitting a boundary, not the complement."],
     "priority": true
   },
   {
@@ -4147,6 +4236,7 @@
     ],
     "correct": 3,
     "explanation": "Dividing 360° into 5 equal sectors gives 360/5 = 72° per sector.",
+    "whyWrong": ["This would be for 6 equal sectors (360/6), not 5.", "This would be for 4 equal sectors (360/4), not 5.", "This would be for 8 equal sectors (360/8), not 5.", ""],
     "priority": true
   },
   {
@@ -4162,6 +4252,7 @@
     ],
     "correct": 0,
     "explanation": "sin30° × tan45° = (1/2)(1) = 1/2. sec60° = 2. Setting 1/2 = 2/k gives k = 4.",
+    "whyWrong": ["", "This gives sec60/k=2/3, not matching 1/2.", "This gives sec60/k=1, not matching 1/2.", "This gives sec60/k=2, not matching 1/2."],
     "priority": true
   },
   {
@@ -4177,6 +4268,7 @@
     ],
     "correct": 2,
     "explanation": "x − y = 0 means y = x, which is satisfied by (0,0), so the line passes through the origin.",
+    "whyWrong": ["This line has slope 1, not horizontal (parallel to x-axis would need y=constant).", "This line isn't vertical either (parallel to y-axis needs x=constant).", "", "Check (3,2): 3−2=1≠0, so it doesn't pass through this point."],
     "priority": true
   },
   {
@@ -4192,6 +4284,7 @@
     ],
     "correct": 0,
     "explanation": "Writing terms as 20/4, 19/4, 18/4, 17/4,… the common difference is −1/4, so a₁₀ = 20/4 + 9(−1/4) = 11/4.",
+    "whyWrong": ["", "This is the reciprocal-looking form, not matching 5+9(−1/4).", "Sign error in the common difference application.", "Same reciprocal-form error."],
     "priority": true
   },
   {
@@ -4207,6 +4300,7 @@
     ],
     "correct": 1,
     "explanation": "p(−4) = 16 + 4 − (2+2k) = 18 − 2k = 0, so k = 9.",
+    "whyWrong": ["Doesn't satisfy p(−4)=0 with this k.", "", "Doesn't satisfy the equation either.", "Sign error — should be positive 9, not negative."],
     "priority": true
   },
   {
@@ -4222,6 +4316,7 @@
     ],
     "correct": 2,
     "explanation": "A line parallel to the x-axis has the form y = c; being 3 units below the x-axis means c = −3, giving y = −3.",
+    "whyWrong": ["x=3 is a vertical line (parallel to y-axis), not horizontal.", "x=−3 is also vertical, not horizontal.", "", "y=3 is 3 units ABOVE the x-axis, not below."],
     "priority": true
   },
   {
@@ -4237,6 +4332,7 @@
     ],
     "correct": 3,
     "explanation": "40 = 2³×5, 110 = 2×5×11, 360 = 2³×3²×5. The only common factors are 2¹ and 5¹, giving HCF = 10.",
+    "whyWrong": ["40 is one of the numbers itself, far larger than the HCF.", "110 is one of the numbers, not the HCF.", "360 is one of the numbers, not the HCF.", ""],
     "priority": true
   },
   {
@@ -4252,6 +4348,7 @@
     ],
     "correct": 3,
     "explanation": "The actual common difference is 1 − 5 = −4, not 4, so A is false. The general formula for common difference stated in R is correct.",
+    "whyWrong": ["A and R can't both be true — A states d=4 but the actual difference (1−5=−4) is negative.", "Same issue — A is false, not just unexplained.", "A is false (d=−4, not 4), so this option is wrong.", ""],
     "priority": true
   },
   {
@@ -4267,6 +4364,7 @@
     ],
     "correct": 1,
     "explanation": "Checking ratios for the first pair with p=1 confirms all three ratios equal 1/2, giving infinitely many solutions — A is true. R is also a true general statement, but it concerns a different equation pair and does not itself establish the specific result in A.",
+    "whyWrong": ["Both A and R are true, but R's example equations differ from A's (19/157 vs 59/118) and describe a separate, unrelated case — R doesn't explain why A's specific pair has infinitely many solutions.", "", "A is true — p=1 does make the first pair have infinitely many solutions, so calling A false is incorrect.", "Both A and R are independently true statements, so calling one of them false is incorrect."],
     "priority": true
   },
   {
@@ -4282,6 +4380,7 @@
     ],
     "correct": 3,
     "explanation": "3θ = 60°, so θ = 20°, and θ/2 = 10°.",
+    "whyWrong": ["This would need θ=120, inconsistent with 3θ=60.", "This would need θ=60, inconsistent with 3θ=60.", "This would need θ=40, inconsistent with 3θ=60.", ""],
     "priority": true
   },
   {
@@ -4297,6 +4396,7 @@
     ],
     "correct": 0,
     "explanation": "x = LCM(4,6,8) = 24 and y = LCM(3,5,7) = 105. p = LCM(24,105) = 840, and 35 × 24 = 840, so p = 35x.",
+    "whyWrong": ["", "4y=420≠840.", "8x=192≠840.", "16y=1680≠840."],
     "priority": true
   },
   {
@@ -4312,6 +4412,7 @@
     ],
     "correct": 1,
     "explanation": "The ratio of coefficients a1/a2 = 6/36 = 1/6 and b1/b2 = 1/6; for infinitely many solutions the constant ratio must also equal 1/6, so 3k/3 = 1/6, giving k = 1/6.",
+    "whyWrong": ["This would make the ratios inconsistent with 6/36=1/6.", "", "Doesn't satisfy the required equal-ratios condition.", "Doesn't satisfy it either."],
     "priority": true
   },
   {
@@ -4327,6 +4428,7 @@
     ],
     "correct": 2,
     "explanation": "α+β = a (since sum = −(−a)) and αβ = −b, so α+β+αβ = a + (−b) = a − b.",
+    "whyWrong": ["This inverts the sign relationship.", "This has wrong sign on both.", "", "This inverts the sign relationship the other way."],
     "priority": true
   },
   {
@@ -4342,6 +4444,7 @@
     ],
     "correct": 0,
     "explanation": "Multiplying through by 12x gives x² = 36, so x = ±6.",
+    "whyWrong": ["", "Doesn't satisfy x²=36.", "Doesn't satisfy x²=36 either.", "Doesn't satisfy x²=36."],
     "priority": true
   },
   {
@@ -4357,6 +4460,7 @@
     ],
     "correct": 0,
     "explanation": "Setting y=0 gives P=(4,0); setting x=0 gives Q=(0,6). The mid-point of PQ is ((4+0)/2, (0+6)/2) = (2, 3).",
+    "whyWrong": ["", "This swaps the coordinates.", "This only uses the x-intercept information.", "This only uses the y-intercept information."],
     "priority": true
   },
   {
@@ -4372,6 +4476,7 @@
     ],
     "correct": 2,
     "explanation": "Using the section formula for a 2:1 ratio from P to Q: x = (2×5 + 1×(−1))/3 = 3, y = (2×2 + 1×5)/3 = 3, giving (3, 3).",
+    "whyWrong": ["Sign error on the y-coordinate.", "Doesn't match the section formula computation.", "", "Doesn't match either coordinate correctly."],
     "priority": true
   },
   {
@@ -4387,6 +4492,7 @@
     ],
     "correct": 1,
     "explanation": "∠AOB = 180° − 80° = 100° (from quadrilateral OAPB with two right angles), and since OP bisects ∠AOB, ∠POA = 100°/2 = 50°.",
+    "whyWrong": ["This is half of the correct angle POA.", "", "This is more than half of AOB, doesn't match symmetry.", "This equals the full angle APB, not half of AOB."],
     "priority": true
   },
   {
@@ -4402,6 +4508,7 @@
     ],
     "correct": 0,
     "explanation": "cotθ + tanθ = cosθ/sinθ + sinθ/cosθ = (cos²θ+sin²θ)/(sinθcosθ) = 1/(sinθcosθ) = cosecθ secθ.",
+    "whyWrong": ["", "This is sinθ·secθ=tanθ, not the full sum.", "This is cosθ·tanθ=sinθ, not the full sum.", "This is sinθ·cosθ, the reciprocal of the correct answer, not the sum itself."],
     "priority": true
   },
   {
@@ -4417,6 +4524,7 @@
     ],
     "correct": 3,
     "explanation": "Since ∠D=∠Q and ∠E=∠R, the correct correspondence is D↔Q, E↔R, F↔P, meaning DE corresponds to QR (not PQ) — so the ratio DE/PQ paired with EF/RP mismatches the correspondence and is not a valid equal ratio.",
+    "whyWrong": ["This ratio correctly matches the correspondence D↔Q, E↔R, F↔P (DE/QR = DF/QP is a valid equal pair).", "This ratio is also valid — EF corresponds to RP and DF to PQ under the correct correspondence.", "This ratio is also valid — both EF/RP and DE/QR equal the same similarity ratio.", ""],
     "priority": true
   },
   {
@@ -4432,6 +4540,7 @@
     ],
     "correct": 2,
     "explanation": "Since ∠L = 180−130−28 = 22° = ∠A and ∠M = ∠B, triangles LMN ~ ABC with scale factor LM/AB = 45/5 = 9. Since LN corresponds to AC, AC = LN/9 = 72/9 = 8 cm.",
+    "whyWrong": ["This doesn't match the 9:1 similarity ratio (LM:AB=45:5).", "Also doesn't match the ratio.", "", "This overshoots — LN/9=72/9=8, not 4."],
     "priority": true
   },
   {
@@ -4447,6 +4556,7 @@
     ],
     "correct": 1,
     "explanation": "The ratio of sides is the cube root of the volume ratio: (8:125)^(1/3) = 2:5. Surface area scales as the square of the side ratio, giving 4:25.",
+    "whyWrong": ["This is the volume ratio itself, not the surface-area ratio.", "", "This is the linear (side) ratio, not the area ratio.", "Doesn't match (2:5)²=4:25."],
     "priority": true
   },
   {
@@ -4462,6 +4572,7 @@
     ],
     "correct": 3,
     "explanation": "Sector area = (θ/360)πr² = 54π with r=36 gives θ = 15°. Arc length = r × (θ in radians) = 36 × (15π/180) = 3π cm.",
+    "whyWrong": ["This overcounts — recompute using θ=15°, giving arc=3π cm, not 8π.", "Also overcounts.", "Also overcounts slightly.", ""],
     "priority": true
   },
   {
@@ -4477,6 +4588,7 @@
     ],
     "correct": 2,
     "explanation": "The factors of 36 among 1–6 are 1, 2, 3, 4, 6 (five numbers); only 5 is not a factor, giving a probability of 1/6.",
+    "whyWrong": ["This overcounts — only the number 5 (out of 1-6) is not a factor of 36.", "This overcounts significantly.", "", "This undercounts — probability isn't 0, since 5 is indeed not a factor of 36."],
     "priority": true
   },
   {
@@ -4492,6 +4604,7 @@
     ],
     "correct": 3,
     "explanation": "The sum of the seven values is 40 + 3x, and mean 7 means the sum is 49, so 40+3x=49, giving x=3.",
+    "whyWrong": ["Doesn't satisfy 40+3x=49.", "Doesn't satisfy the equation either.", "Close but not exact — recompute 3x=9 gives x=3, not 5.", ""],
     "priority": true
   },
   {
@@ -4507,6 +4620,7 @@
     ],
     "correct": 1,
     "explanation": "The fourth vertex is C(4,2); the diagonal OC has squared length 4² + 2² = 20 (equal to diagonal AB by rectangle symmetry).",
+    "whyWrong": ["This overcounts the diagonal length squared.", "", "This is just AB²-ish partial computation, not the full diagonal.", "This is far too small for the diagonal²."],
     "priority": true
   },
   {
@@ -4522,6 +4636,7 @@
     ],
     "correct": 1,
     "explanation": "Sum = 3√2 and product = 4; testing 2√2 and √2 gives sum = 3√2 and product = 2√2×√2 = 4, matching both conditions.",
+    "whyWrong": ["Sum here is 2+√2 (not 3√2) and product is 2√2 (not 4) — doesn't satisfy either condition.", "", "Product here is 4√2×(−√2)=−8, not +4 — sign mismatch with the required product.", "Sum here is √2+2 (not 3√2) and product is 2√2 (not 4) — same mismatch as option A, just reordered."],
     "priority": true
   },
   {
@@ -4537,6 +4652,7 @@
     ],
     "correct": 2,
     "explanation": "For a right triangle with the altitude drawn from the right angle to the hypotenuse, AC² = DC × BC = 4 × 16 = 64, so AC = 8 cm.",
+    "whyWrong": ["Doesn't satisfy AC²=DC×BC=64.", "Doesn't satisfy it either.", "", "Doesn't satisfy AC²=64 (9≠64)."],
     "priority": true
   },
   {
@@ -4552,6 +4668,7 @@
     ],
     "correct": 2,
     "explanation": "By Pythagoras, the ladder length is √(6²+8²) = 10 m, so A is true. But the actual angle with the ground is arctan(8/6) ≈ 53.13°, not 60°, so R is false.",
+    "whyWrong": ["A and R can't both be true — the angle from tan⁻¹(8/6)≈53°, not 60°, so R is false even though A (ladder=10m) is correct.", "Same issue — R is false, not merely a non-explanation.", "", "A is true — by Pythagoras, √(6²+8²)=10 m is correct."],
     "priority": true
   },
   {
@@ -4567,6 +4684,7 @@
     ],
     "correct": 1,
     "explanation": "The line from the external point to the centre bisects the angle between the two radii to the points of tangency, so the two tangents do subtend equal angles at the centre — A is true. R is also a true, standard fact about circumscribing parallelograms, but it is unrelated to explaining A.",
+    "whyWrong": ["A is true — congruent triangles OAP and OBP (SSS: OA=OB=radius, OP common, PA=PB tangent lengths) guarantee equal angles at O.", "", "A is true, not false.", "Both A and R are true, so this option is wrong on that count."],
     "priority": true
   }
 ]
