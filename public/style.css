@@ -406,7 +406,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 }
 .option-btn.selected .option-letter { background: var(--primary); border-color: var(--primary); color: var(--white); }
 
-.test-nav { display: flex; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 8px; }
+.test-nav { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; padding-top: 8px; }
 .nav-btn, .review-btn { flex: 1; text-align: center; font-size: var(--fs-body); padding: 10px; }
 .review-btn.marked { background: var(--resume-bg); border-color: var(--warning); color: var(--resume-fg); }
 
@@ -640,7 +640,6 @@ kbd {
   .rev-layout { grid-template-columns: 1fr; }
   .test-topbar { position: static; }
   .progress-rail { position: static; }
-  .subj-grid { grid-template-columns: 1fr; }
   .recent-row { flex-wrap: wrap; }
 }
 @media (max-width: 480px) {
