@@ -2184,12 +2184,18 @@ const LS = {
 
 const KEY = {
   board:     'rise.board',
+  grade:     'rise.grade',
   draft:     'rise.draft',
   results:   'rise.results',
   autoNext:  'rise.autoNext',
-  progress:  'rise.progress',   // subject → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
-  bookmarks: 'rise.bookmarks'   // subject → qid → { at }
+  progress:  'rise.progress',   // "grade::board::subject" → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
+  bookmarks: 'rise.bookmarks'   // "grade::board::subject" → qid → { at }
 };
+// One storage bucket per grade+board+subject so X-CBSE-Mathematics, XII-CBSE-Mathematics
+// and ICSE's own Mathematics never share progress, bookmarks or due-review counts.
+function scopeKey(subject, grade, board) {
+  return `${grade || state.grade}::${board || state.board}::${subject}`;
+}
 
 // Unbiased Fisher–Yates on a copy (Array#sort with a random comparator is biased)
 function shuffle(list) {
@@ -2210,29 +2216,38 @@ const SUBJECTS = {
   IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
 };
 
-// Subject → question-bank file. Board-prefixed keys take priority over bare subject names.
+// "grade board subject" → question-bank file slug (public/questions/<slug>.json).
+// Every bank is named <grade>-<board>-<subject> on disk (spaces/punctuation stripped),
+// so a grade+board+subject combination with no entry here simply has no bank yet —
+// that's the "coming soon" case, not a fallback to some other grade or board's file.
 const BANKS = {
-  'Mathematics':             'mathematics',
-  'Science':                 'science',
-  'Social Science':          'social-science',
-  'ICSE Mathematics':        'icse-mathematics',
-  'ICSE Physics':            'icse-physics',
-  'ICSE Chemistry':          'icse-chemistry',
-  'ICSE Biology':            'icse-biology',
-  'ICSE History & Civics':   'icse-history-civics',
-  'ICSE Geography':          'icse-geography',
-  'ICSE English':            'icse-english'
+  'X CBSE Mathematics':           'X-CBSE-Mathematics',
+  'X CBSE Science':               'X-CBSE-Science',
+  'X CBSE Social Science':        'X-CBSE-Social-Science',
+  'X ICSE Mathematics':           'X-ICSE-Mathematics',
+  'X ICSE Physics':               'X-ICSE-Physics',
+  'X ICSE Chemistry':             'X-ICSE-Chemistry',
+  'X ICSE Biology':               'X-ICSE-Biology',
+  'X ICSE History & Civics':      'X-ICSE-History-Civics',
+  'X ICSE Geography':             'X-ICSE-Geography',
+  'X ICSE English':               'X-ICSE-English'
 };
-// Returns the question-bank file slug for (subject, board), or undefined if none.
-function bankSlug(subject, board) {
+// Returns the question-bank file slug for (subject, board, grade), or undefined if none.
+function bankSlug(subject, board, grade) {
   board = board || state.board;
-  return BANKS[board + ' ' + subject] || BANKS[subject];
+  grade = grade || state.grade;
+  return BANKS[`${grade} ${board} ${subject}`];
 }
 
 const BOARDS = [
   { id: 'CBSE', name: 'CBSE',       short: 'CBSE', desc: 'Central Board of Secondary Education' },
   { id: 'ICSE', name: 'ICSE',       short: 'ICSE', desc: 'Indian Certificate of Secondary Education' },
   { id: 'IB',   name: 'IB Diploma', short: 'IB',   desc: 'International Baccalaureate (MYP-5)' }
+];
+
+const GRADES = [
+  { id: 'X',   label: 'X Board' },
+  { id: 'XII', label: 'XII Board' }
 ];
 
 const MODES = {
@@ -2321,14 +2336,14 @@ function chaptersOf(list) {
 // ─── State ────────────────────────────────────────────────────────────────────
 const state = {
   board:   LS.get(KEY.board, null),
+  grade:   LS.get(KEY.grade, 'X'),  // 'X' | 'XII' — top-level tab on the home screen
   screen:  'board',
   params:  [],
   notesQuery: '',
   notesFilter: 'all',
   openPicker: null,  // subject whose chapter list is expanded on the home screen
   difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
-  boardMenuOpen: false,  // CBSE collapses ICSE/IB out of the header until this is toggled on
-  mobileMenuOpen: false  // narrow screens tuck boards + Revision Notes + Progress behind a hamburger
+  mobileMenuOpen: false  // the header's single hamburger menu (Progress / Notes / Career Pathing / boards)
 };
 
 // ─── Routing (real URLs → real Back button, refresh-safe, shareable) ──────────
@@ -2410,35 +2425,12 @@ const app = {
       <span>Rise</span>
     </button>`;
 
-    // Boards sit in the header as one button group — switching is a single click, and
-    // the group is locked (not hidden) mid-test so nothing reflows. CBSE is the only
-    // board with real content so far, so its header collapses ICSE/IB out of the way
-    // until "Switch board" is tapped — never hidden without a way back to them.
-    const showAllBoards = state.board !== 'CBSE' || state.boardMenuOpen;
-    const boards = showAllBoards
-      ? BOARDS.map(b => `
-          <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
-                  aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
-                  title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('')
-      : `<button class="hdr-board-btn active" aria-pressed="true" ${inTest ? 'disabled' : ''}
-                 title="${esc(BOARDS[0].desc)}">${esc(BOARDS[0].short)}</button>
-         <button class="hdr-board-btn" ${inTest ? 'disabled' : ''}
-                 title="Show ICSE and IB" onclick="app.toggleBoardMenu()">Switch board</button>`;
-
     const notesActive = state.screen === 'notes';
-    const notesBtn = `<button class="btn small ${notesActive ? 'primary' : 'ghost'}"
-              ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>`;
-
     const progressActive = state.screen === 'progress';
-    const progressBtn = `<button class="btn small ${progressActive ? 'primary' : 'ghost'}"
-              ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>`;
 
-    const careersBtn = `<a class="btn small ghost" href="careers.html" target="_blank" rel="noopener"
-              ${inTest ? 'aria-disabled="true" tabindex="-1"' : ''}>Career Pathing</a>`;
-
-    // Narrow screens swap the whole board/notes/progress row for one hamburger button —
-    // the dropdown always lists all boards (no CBSE-collapse) since it's tucked away already.
-    const mobileBoards = BOARDS.map(b => `
+    // Every header action — boards, Progress, Revision Notes, Career Pathing — lives
+    // behind one hamburger menu on every screen size. No collapsing, nothing hidden.
+    const menuBoards = BOARDS.map(b => `
       <button class="hdr-board-btn ${b.id === state.board ? 'active' : ''}"
               aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
               title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.short)}</button>`).join('');
@@ -2447,27 +2439,21 @@ const app = {
               ${inTest ? 'disabled' : ''} onclick="app.toggleMobileMenu()">
         <span></span><span></span><span></span>
       </button>`;
-    const mobileMenu = `
-      <div class="hdr-mobile-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
-        <div class="hdr-mobile-boards" role="group" aria-label="Board">${mobileBoards}</div>
-        <button class="btn small ${progressActive ? 'primary' : 'ghost'}" onclick="app.go(['progress'])">Progress</button>
-        <button class="btn small ${notesActive ? 'primary' : 'ghost'}" onclick="app.go(['notes'])">Revision Notes</button>
+    const menu = `
+      <div class="hdr-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
+        <div class="hdr-menu-boards" role="group" aria-label="Board">${menuBoards}</div>
+        <button class="btn small ${progressActive ? 'primary' : 'ghost'}"
+                ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>
+        <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
+                ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>
         <a class="btn small ghost" href="careers.html" target="_blank" rel="noopener">Career Pathing</a>
       </div>`;
 
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}</div>
-        <div class="hdr-right">
-          <div class="hdr-desktop-actions">
-            ${progressBtn}
-            ${notesBtn}
-            ${careersBtn}
-            <div class="hdr-boards" role="group" aria-label="Board">${boards}</div>
-          </div>
-          ${hamburgerBtn}
-        </div>
-        ${mobileMenu}
+        <div class="hdr-right">${hamburgerBtn}</div>
+        ${menu}
       </header>`;
   },
 
@@ -2511,7 +2497,7 @@ const app = {
           </svg>
           Rise
         </div>
-        <p class="welcome-sub">Grade 10 board exam practice</p>
+        <p class="welcome-sub">Grade X &amp; XII board exam practice</p>
         <div class="board-list">
           ${BOARDS.map(b => `
             <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
@@ -2519,7 +2505,7 @@ const app = {
               <span>${esc(b.desc)}</span>
             </button>`).join('')}
         </div>
-        <p class="welcome-foot">We remember your choice — you can switch boards any time from the header.</p>
+        <p class="welcome-foot">We remember your choice — you can switch boards any time from the ☰ menu.</p>
       </div>`;
   },
 
@@ -2533,7 +2519,6 @@ const app = {
     if (board === state.board) return;
     state.board = board;
     state.openPicker = null;
-    state.boardMenuOpen = false;   // re-collapse ICSE/IB once we're back on CBSE
     state.mobileMenuOpen = false;
     LS.set(KEY.board, board);
     // Notes and results don't reflect the newly chosen board on their own screen,
@@ -2546,8 +2531,12 @@ const app = {
     }
   },
 
-  toggleBoardMenu() {
-    state.boardMenuOpen = !state.boardMenuOpen;
+  // Top-level X / XII tab on the home screen — same board, different grade's banks.
+  setGrade(grade) {
+    if (grade === state.grade) return;
+    state.grade = grade;
+    state.openPicker = null;
+    LS.set(KEY.grade, grade);
     this.render();
   },
 
@@ -2558,7 +2547,7 @@ const app = {
     const now = Date.now();
 
     const sections = subjects.map(subject => {
-      const bySubj = store[subject] || {};
+      const bySubj = store[scopeKey(subject)] || {};
       const chapters = {};
       Object.values(bySubj).forEach(r => {
         const name = r.chapter || 'General';
@@ -2605,11 +2594,20 @@ const app = {
 
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
-    // CBSE's English and Hindi have no question bank yet — hide those placeholder
-    // cards there rather than show a permanent "coming soon" dead end.
+    // Grade X's CBSE English and Hindi have no question bank at all — hide those
+    // placeholder cards there rather than show a permanent "coming soon" dead end.
+    // Grade XII has no banks yet for *any* subject, so every card there is meant to
+    // show "coming soon" instead — that's the whole point of the XII shell.
     const subjects = (SUBJECTS[state.board] || [])
-      .filter(s => !(state.board === 'CBSE' && (s === 'English' || s === 'Hindi')));
+      .filter(s => !(state.grade === 'X' && state.board === 'CBSE' && (s === 'English' || s === 'Hindi')));
     const draft    = this._draft();
+
+    const gradeTabs = `
+      <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
+        ${GRADES.map(g => `
+          <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
+                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
+      </div>`;
 
     const resume = draft ? `
       <section class="resume-banner card">
@@ -2661,25 +2659,28 @@ const app = {
         </article>`;
     }).join('');
 
-    const history = LS.get(KEY.results, []).slice(0, 5);
+    const history = LS.get(KEY.results, [])
+      .filter(h => (h.grade || 'X') === state.grade && h.board === state.board)
+      .slice(0, 5);
     const recent = history.length ? `
       <section class="home-section">
         <h2 class="section-title">Recent attempts</h2>
         <ul class="recent-list">
-          ${history.map((h, i) => `
+          ${history.map(h => `
             <li class="recent-row card">
               <span class="recent-score ${h.correct / h.total >= 0.6 ? 'good' : 'weak'}">${Math.round(h.correct / h.total * 100)}%</span>
               <span class="recent-desc">
                 <strong>${esc(h.subject)}</strong>
                 <small>${esc(MODES[h.mode].label)}${h.chapter ? ' · ' + esc(h.chapter) : ''} · ${h.correct}/${h.total} · ${esc(h.when)}</small>
               </span>
-              <button class="btn small" onclick="app.retryFromHistory(${i})">Retry</button>
+              <button class="btn small" onclick="app.retryFromHistory(${h.ts})">Retry</button>
             </li>`).join('')}
         </ul>
       </section>` : '';
 
     return `
       <div class="screen home-screen">
+        ${gradeTabs}
         ${resume}
         <section class="home-section">
           <h2 class="section-title">Practice</h2>
@@ -2841,14 +2842,14 @@ const app = {
 
   startBookmarkReview(subject) {
     const store = LS.get(KEY.bookmarks, {});
-    const ids = Object.keys(store[subject] || {});
+    const ids = Object.keys(store[scopeKey(subject)] || {});
     if (!ids.length) return;
     loadBank(subject).then(all => this.startCustomTest(subject, 'bookmark', all.filter(q => ids.includes(q.id))));
   },
 
   startSpacedReview(subject) {
     const store = LS.get(KEY.progress, {});
-    const bySubj = store[subject] || {};
+    const bySubj = store[scopeKey(subject)] || {};
     const now = Date.now();
     const dueIds = Object.keys(bySubj).filter(id => bySubj[id].due <= now);
     if (!dueIds.length) return;
@@ -2858,7 +2859,7 @@ const app = {
   _screenTest() {
     const s = this.session;
     const diffTag = s.difficulty && s.difficulty !== 'all' ? ` · ${esc(s.difficulty)}` : '';
-    const title = `${state.board} · ${esc(s.subject)}${s.chapter ? ' · ' + esc(s.chapter) : ''} · ${MODES[s.mode].label}${diffTag}`;
+    const title = `${state.grade} · ${state.board} · ${esc(s.subject)}${s.chapter ? ' · ' + esc(s.chapter) : ''} · ${MODES[s.mode].label}${diffTag}`;
     return `
       <div class="screen test-screen" id="test-session">
         ${this._modalMarkup()}
@@ -2964,18 +2965,19 @@ const app = {
 
   _isBookmarked(subject, id) {
     const store = LS.get(KEY.bookmarks, {});
-    return !!(store[subject] && store[subject][id]);
+    const key = scopeKey(subject);
+    return !!(store[key] && store[key][id]);
   },
 
   _bookmarkCount(subject) {
     const store = LS.get(KEY.bookmarks, {});
-    return Object.keys(store[subject] || {}).length;
+    return Object.keys(store[scopeKey(subject)] || {}).length;
   },
 
   _dueCount(subject) {
     const store = LS.get(KEY.progress, {});
     const now = Date.now();
-    return Object.values(store[subject] || {}).filter(r => r.due <= now).length;
+    return Object.values(store[scopeKey(subject)] || {}).filter(r => r.due <= now).length;
   },
 
   _renderBookmarkBtn(btnId, subject, id) {
@@ -2994,7 +2996,8 @@ const app = {
       id = s.questions[s.index].id;
     }
     const store = LS.get(KEY.bookmarks, {});
-    const bySubj = store[subject] || (store[subject] = {});
+    const key = scopeKey(subject);
+    const bySubj = store[key] || (store[key] = {});
     if (bySubj[id]) delete bySubj[id]; else bySubj[id] = { at: Date.now() };
     LS.set(KEY.bookmarks, store);
     this._renderBookmarkBtn('bookmark-btn', subject, id);
@@ -3154,7 +3157,7 @@ const app = {
       const now = Date.now();
       const past = LS.get(KEY.results, []);
       past.unshift({
-        ...this.lastConfig, board: state.board, correct, total: this.reviewData.length,
+        ...this.lastConfig, grade: state.grade, board: state.board, correct, total: this.reviewData.length,
         ts: now,
         when: new Date(now).toLocaleString(undefined,
           { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' })
@@ -3177,7 +3180,8 @@ const app = {
   // or resets to 0 (wrong), which sets when it's next due for review.
   _updateProgress(subject, reviewData) {
     const store = LS.get(KEY.progress, {});
-    const bySubj = store[subject] || (store[subject] = {});
+    const key = scopeKey(subject);
+    const bySubj = store[key] || (store[key] = {});
     const now = Date.now();
     reviewData.forEach(r => {
       if (r.userAnswer === undefined) return;
@@ -3332,8 +3336,8 @@ const app = {
     this.go(['home'], true);
   },
 
-  retryFromHistory(i) {
-    const h = LS.get(KEY.results, [])[i];
+  retryFromHistory(ts) {
+    const h = LS.get(KEY.results, []).find(r => r.ts === ts);
     if (!h) return;
     if (h.mode === 'bookmark') { this.startBookmarkReview(h.subject); return; }
     if (h.mode === 'srs')      { this.startSpacedReview(h.subject);  return; }
