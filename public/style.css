@@ -1,129 +1,15 @@
-/* ─── Design Register ───────────────────────────────────────────────────────
-   Single source of truth for every colour, size, radius, shadow and timing
-   used in the app. Change a value here and it propagates everywhere.
+/* ─── Design tokens ──────────────────────────────────────────────────────────
+   All fonts/colours/sizes/radii/shadows/timing live in design-config.css
+   (loaded right before this file in index.html) as :root custom properties —
+   this file only ever consumes them via var(--token-name). Add or change a
+   design value there, never inline here.
    ─────────────────────────────────────────────────────────────────────────── */
-:root {
-  /* ── Brand ── */
-  --primary:       #2563eb;
-  --primary-dark:  #1d4ed8;
-  --primary-soft:  #eff6ff;
-
-  /* ── Surface & text ── */
-  --bg:            #f1f5f9;
-  --surface:       #ffffff;
-  --border:        #e2e8f0;
-  --text:          #1e293b;
-  --text-light:    #64748b;
-  --white:         #ffffff;
-
-  /* ── Semantic states ── */
-  --success:       #22c55e;
-  --error:         #ef4444;
-  --warning:       #f59e0b;
-
-  /* ── Correct / wrong / skipped — results, review badges, OMR palette ── */
-  --correct-bg:    #d1fae5;
-  --correct-fg:    #065f46;
-  --correct-em:    #10b981;   /* border accent & dot */
-  --wrong-bg:      #fee2e2;
-  --wrong-fg:      #991b1b;
-  --skip-fg:       #475569;
-  --skip-muted:    #94a3b8;   /* struck-through skip bubble text */
-  --skip-badge-bg: #fef9c3;
-  --skip-badge-fg: #713f12;
-
-  /* ── Timer ── */
-  --timer-bg:      #0f172a;
-  --timer-ok:      #4ade80;
-  --timer-low:     #f87171;
-
-  /* ── Resume / draft banner ── */
-  --resume-bg:     #fffbeb;
-  --resume-border: #fde68a;
-  --resume-fg:     #92400e;
-
-  /* ── Danger / soft-error ── */
-  --danger-border: #fecaca;
-  --error-soft:    #fef2f2;   /* quit-btn hover, inline error state */
-
-  /* ── Score tiles (percentage) ── */
-  --tile-weak-bg:  #fef3c7;
-  --tile-weak-fg:  #92400e;   /* shares resume amber */
-
-  /* ── Explanation block ── */
-  --explain-bg:    #f8fafc;
-
-  /* ── Overlays ── */
-  --overlay:        rgba(15, 23, 42, .5);    /* modal backdrop */
-  --active-overlay: rgba(255, 255, 255, .25); /* chip-count on coloured bg */
-
-  /* ── Note category badge palette ── */
-  --badge-th-bg:   #e0e7ff;   /* theorem  — indigo */
-  --badge-th-fg:   #3730a3;
-  --badge-f-bg:    #dbeafe;   /* formula  — blue */
-  --badge-f-fg:    #1d4ed8;
-  --badge-l-bg:    #f3e8ff;   /* logic    — purple */
-  --badge-l-fg:    #7c3aed;
-  --badge-t-bg:    #dcfce7;   /* tip       — green */
-  --badge-t-fg:    #15803d;
-  --badge-b-bg:    #fef3c7;   /* practice — amber */
-  --badge-b-fg:    #b45309;
-
-  /* ── History / recent score ── */
-  --score-good:    #15803d;
-  --score-weak:    #b45309;
-
-  /* ── Border-radius scale ── */
-  --radius-2xs:   3px;    /* decorative dots */
-  --radius-xs:    4px;    /* kbd */
-  --radius-sm:    6px;    /* omr bubbles, timer, focus rings */
-  --radius-md:    8px;    /* buttons, options, score tiles */
-  --radius:       10px;   /* review badges */
-  --radius-lg:    12px;   /* cards, note badges */
-  --radius-xl:    14px;   /* modal box, welcome logo icon */
-  --radius-board: 16px;   /* board toggle buttons, chapter chips */
-  --radius-pill:  20px;   /* pill buttons & search inputs */
-  --radius-logo:  5px;    /* header logo icon */
-  --radius-rev:   7px;    /* review option rows */
-
-  /* ── Typography scale ── */
-  --fs-2xs:   10.5px;   /* chip counts, kbd */
-  --fs-xs:    11px;     /* palette legend, badge labels */
-  --fs-sm:    11.5px;   /* kbd hint, note source */
-  --fs-note:  12px;     /* meta labels, hints */
-  --fs-chip:  12.5px;   /* chapter chips */
-  --fs-ui:    13px;     /* topbar text, board buttons, UI labels */
-  --fs-body:  14px;     /* body content, options, list rows */
-  --fs-btn:   15px;     /* default button text */
-  --fs-read:  16px;     /* question text, inputs */
-  --fs-card:  17px;     /* card headings, modal title */
-  --fs-sec:   18px;     /* section titles, logo, large scores */
-  --fs-tim:   19px;     /* timer digits */
-  --fs-num:   20px;     /* score tile value */
-  --fs-h2:    22px;     /* page headings */
-  --fs-hero:  42px;     /* welcome screen logo */
-
-  /* ── Transitions ── */
-  --tx-fast:  .1s;
-  --tx-base:  .15s;
-  --tx-slow:  .2s;
-
-  /* ── Shadows ── */
-  --shadow-sm:  0 1px 3px rgba(0, 0, 0, .06);
-  --shadow-lg:  0 20px 60px rgba(0, 0, 0, .25);
-
-  /* ── Layout geometry ── */
-  --header-h:    48px;
-  --exam-gutter: 12px;   /* space around and between exam panels */
-  --exam-bottom: max(5vh, 44px); /* breathing room under action rows */
-}
 
 /* ─── Reset / base ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-               "Noto Sans Devanagari", sans-serif;
+  font-family: var(--font-sans);
   background: var(--surface);
   color: var(--text);
   margin: 0;
@@ -446,7 +332,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .progress-fill { height: 100%; width: 0; background: var(--success); transition: width var(--tx-slow) ease; }
 
 .timer {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: var(--fs-tim); font-weight: 700;
   background: var(--timer-bg); color: var(--timer-ok);
   padding: 4px 10px; border-radius: var(--radius-sm);
@@ -517,7 +403,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 
 .kbd-hint { margin: 0; font-size: var(--fs-sm); color: var(--text-light); }
 kbd {
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: var(--fs-2xs);
+  font-family: var(--font-mono); font-size: var(--fs-2xs);
   background: var(--bg); border: 1px solid var(--border); border-bottom-width: 2px;
   border-radius: var(--radius-xs); padding: 1px 5px;
 }
