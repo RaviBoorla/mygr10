@@ -61,6 +61,7 @@ marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
 |---|---|---|---|
 | CBSE Mathematics | `X-CBSE-Mathematics-ShortAnswers.json` | 41 | 2022 Board (13), 2023 Board (13) and 2024 Board (15) VSA/SA sections, real past papers |
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
+| CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 22 | 2022 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
 
 ## How to tell, per question, whether it's from a real paper
 
