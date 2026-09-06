@@ -3501,18 +3501,27 @@ const app = {
   },
 
   // ── Screen: Solved Exercises — textbook question + full worked solution ─────
-  // Grouped by chapter (tabs, same pattern as Short Answers) then by exercise
-  // within a chapter. Not self-assessed like Short Answers (there's no "your
-  // answer" to compare against a rubric) — a solution is either shown or not.
+  // Chapter picked from a single dropdown (same row as Exit, same pattern as
+  // Short Answers) since a subject can have a dozen-plus chapters; once a
+  // chapter is chosen, its exercises (usually just a handful) show as a row
+  // of tab pills — a second dropdown would be overkill for that few options,
+  // and tabs let you see every exercise's question count at a glance.
+  // Not self-assessed like Short Answers (no "your answer" to compare against
+  // a rubric) — a solution is either shown or not.
   _screenSolvedExercises(subject) {
     return `
       <div class="screen sa-screen">
         <div class="sa-topbar">
-          <div class="sa-tabs" id="sol-tabs" role="tablist" aria-label="Chapter"><span class="sa-tabs-loading">Loading chapters…</span></div>
+          <label class="sa-chapter-select-wrap">
+            <span class="sr-only">Chapter</span>
+            <select class="sa-chapter-select" id="sol-chapter-select" aria-label="Chapter"
+                    onchange="app.setSolvedChapter('${esc(subject)}', this.value)">
+              <option>Loading chapters…</option>
+            </select>
+          </label>
           <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
         </div>
         <div class="sa-tabs sol-exercise-tabs" id="sol-exercise-tabs" role="tablist" aria-label="Exercise" hidden></div>
-        <p class="subtitle">${esc(subject)} · Textbook exercise questions with full worked solutions, grouped by chapter and exercise.</p>
         <div id="sol-list" class="sa-list">Loading…</div>
       </div>`;
   },
@@ -3520,7 +3529,7 @@ const app = {
   _hydrateSolvedExercises(subject) {
     loadSolvedBank(subject)
       .then(list => {
-        this._renderSolvedTabs(subject, list);
+        this._renderSolvedChapterSelect(subject, list);
         this._renderSolvedExerciseTabs(subject, list);
         this._renderSolvedList(subject, list);
       })
@@ -3530,37 +3539,34 @@ const app = {
       });
   },
 
-  _renderSolvedTabs(subject, list) {
-    const box = document.getElementById('sol-tabs');
+  _renderSolvedChapterSelect(subject, list) {
+    const box = document.getElementById('sol-chapter-select');
     if (!box) return;
     const chapters = chaptersOf(list);
+    // No "All chapters" option — always land on a specific chapter.
+    if (!state.solvedChapter[subject] && chapters.length) state.solvedChapter[subject] = chapters[0].name;
     const active = state.solvedChapter[subject] || '';
-    this._solvedChapterIndex = this._solvedChapterIndex || {};
-    this._solvedChapterIndex[subject] = chapters.map(c => c.name);
-    const tab = (name, label, count) => `
-      <button class="filter-tab ${active === name ? 'active' : ''}" aria-pressed="${active === name}"
-              onclick="app.setSolvedChapter('${esc(subject)}','${esc(name)}')">${esc(label)}${count != null ? ` <small>${count}</small>` : ''}</button>`;
-    box.innerHTML = tab('', 'All chapters', list.length)
-      + chapters.map(c => tab(c.name, c.name, c.count)).join('');
+    box.innerHTML = chapters.map(c => `
+      <option value="${esc(c.name)}" ${active === c.name ? 'selected' : ''}>${esc(c.name)} (${c.count})</option>`).join('');
   },
 
   setSolvedChapter(subject, name) {
     state.solvedChapter[subject] = name;
     state.solvedExercise[subject] = '';   // changing chapter invalidates any exercise filter from the old chapter
     loadSolvedBank(subject).then(list => {
-      this._renderSolvedTabs(subject, list);
+      this._renderSolvedChapterSelect(subject, list);
       this._renderSolvedExerciseTabs(subject, list);
       this._renderSolvedList(subject, list);
     });
   },
 
-  // Only meaningful once a specific chapter is selected — hidden on "All chapters"
-  // since exercise numbers (Exercise 1.1, 2.1, ...) aren't unique across chapters.
+  // Exercise pills for the active chapter — hidden entirely when that chapter
+  // only has one exercise (nothing to filter).
   _renderSolvedExerciseTabs(subject, list) {
     const box = document.getElementById('sol-exercise-tabs');
     if (!box) return;
-    const activeChapter = state.solvedChapter[subject] || '';
-    if (!activeChapter) { box.hidden = true; box.innerHTML = ''; return; }
+    const chapters = chaptersOf(list);
+    const activeChapter = state.solvedChapter[subject] || (chapters[0] && chapters[0].name) || '';
 
     const inChapter = list.filter(q => (q.chapter || 'General') === activeChapter);
     const exercises = [];
@@ -3591,29 +3597,23 @@ const app = {
     const box = document.getElementById('sol-list');
     if (!box) return;
     const revealed = LS.get(KEY.solvedRevealed, {})[scopeKey(subject)] || {};
-    const activeChapter = state.solvedChapter[subject] || '';
-    const activeExercise = activeChapter ? (state.solvedExercise[subject] || '') : '';
-    const chapters = activeChapter ? [{ name: activeChapter }] : chaptersOf(list);
+    const chapters = chaptersOf(list);
+    const activeChapter = state.solvedChapter[subject] || (chapters[0] && chapters[0].name) || '';
+    const activeExercise = state.solvedExercise[subject] || '';
 
-    box.innerHTML = chapters.map(ch => {
-      let qs = list.filter(q => (q.chapter || 'General') === ch.name);
-      if (activeExercise) qs = qs.filter(q => (q.exercise || 'General') === activeExercise);
-      if (!qs.length) return '';
-      // Group this chapter's questions by exercise, preserving first-seen order.
-      const byExercise = new Map();
-      qs.forEach(q => {
-        const ex = q.exercise || 'General';
-        (byExercise.get(ex) || byExercise.set(ex, []).get(ex)).push(q);
-      });
-      const exerciseSections = [...byExercise.entries()].map(([ex, exQs]) => `
-        <h3 class="sol-exercise-title">${esc(ex)}</h3>
-        ${exQs.map(q => this._renderSolvedCard(subject, q, !!revealed[q.id])).join('')}`).join('');
-      return `
-        <section class="home-section">
-          <h2 class="section-title">${esc(ch.name)}</h2>
-          ${exerciseSections}
-        </section>`;
-    }).join('');
+    let qs = list.filter(q => (q.chapter || 'General') === activeChapter);
+    if (activeExercise) qs = qs.filter(q => (q.exercise || 'General') === activeExercise);
+
+    // Group by exercise (preserving first-seen order) so each exercise still
+    // gets its own heading when "All exercises" is showing more than one.
+    const byExercise = new Map();
+    qs.forEach(q => {
+      const ex = q.exercise || 'General';
+      (byExercise.get(ex) || byExercise.set(ex, []).get(ex)).push(q);
+    });
+    box.innerHTML = [...byExercise.entries()].map(([ex, exQs]) => `
+      <h3 class="sol-exercise-title">${esc(ex)}</h3>
+      ${exQs.map(q => this._renderSolvedCard(subject, q, !!revealed[q.id])).join('')}`).join('');
   },
 
   _renderSolvedCard(subject, q, isRevealed) {
