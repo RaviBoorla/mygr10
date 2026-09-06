@@ -79,7 +79,7 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 
 | Subject | File | Total Qs | Source |
 |---|---|---|---|
-| CBSE Mathematics | `X-CBSE-Mathematics-Solved.json` | 10 | Chapter 1 "Real Numbers" only (first pass) — both exercises in full: Exercise 1.1 (Q1–Q7) and Exercise 1.2 (Q1–Q3), from the current (2025–26 reprint) NCERT Class X Mathematics textbook. Remaining chapters not yet done. |
+| CBSE Mathematics | `X-CBSE-Mathematics-Solved.json` | 253 | All 14 NCERT Class X Mathematics chapters, from the current (2025–26 reprint) textbook — every exercise question that is fully answerable from text alone (a question requiring an unavailable textbook figure/graph to interpret is skipped). Per-chapter counts: Real Numbers 10, Polynomials 2, Pair of Linear Equations in Two Variables 12, Quadratic Equations 13, Arithmetic Progressions 49, Triangles 21, Coordinate Geometry 19, Introduction to Trigonometry 18, Some Applications of Trigonometry 15, Circles 16, Areas Related to Circles 14, Surface Areas and Volumes 17, Statistics 22, Probability 25. |
 
 ## Chapter → subject-area mapping (Science and Social Science)
 
