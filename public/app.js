@@ -2907,7 +2907,8 @@ const BANKS = {
 // separate, much smaller catalogue: most subjects have none yet, so a missing
 // entry here just means "no Short Answers section", same convention as BANKS.
 const SA_BANKS = {
-  'X CBSE Mathematics': 'X-CBSE-Mathematics-ShortAnswers'
+  'X CBSE Mathematics':     'X-CBSE-Mathematics-ShortAnswers',
+  'X CBSE Social Science':  'X-CBSE-Social-Science-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
