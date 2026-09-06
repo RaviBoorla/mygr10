@@ -4686,5 +4686,645 @@
     "explanation": "The line from the external point to the centre bisects the angle between the two radii to the points of tangency, so the two tangents do subtend equal angles at the centre — A is true. R is also a true, standard fact about circumscribing parallelograms, but it is unrelated to explaining A.",
     "whyWrong": ["A is true — congruent triangles OAP and OBP (SSS: OA=OB=radius, OP common, PA=PB tangent lengths) guarantee equal angles at O.", "", "A is true, not false.", "Both A and R are true, so this option is wrong on that count."],
     "priority": true
+  },
+  {
+    "id": "math-319",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "The graph of y = p(x) is given, for a polynomial p(x). The number of zeroes of p(x) from the graph is (2023 Board)",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "The graph touches the x-axis at exactly one point (a repeated zero), so p(x) has 1 zero visible on the graph.",
+    "whyWrong": ["The graph doesn't cross or touch the x-axis three times.", "", "The curve touches the x-axis at only one point, not two.", "The curve does touch the x-axis once, so the count isn't zero."],
+    "priority": true
+  },
+  {
+    "id": "math-320",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "medium",
+    "text": "The value of k for which the pair of equations kx = y + 2 and 6x = 2y + 3 has infinitely many solutions, is (2023 Board)",
+    "options": [
+      "is k = 3",
+      "does not exist",
+      "is k = -3",
+      "is k = 4"
+    ],
+    "correct": 1,
+    "explanation": "Writing both as kx − y − 2 = 0 and 6x − 2y − 3 = 0, infinitely many solutions need a1/a2 = b1/b2 = c1/c2. Here b1/b2 = 1/2 but c1/c2 = 2/3, which never match, so no value of k works.",
+    "whyWrong": ["k = 3 doesn't make all three ratios equal, since b1/b2 ≠ c1/c2 regardless of k.", "", "k = −3 doesn't satisfy the required ratio condition either.", "k = 4 doesn't satisfy the required ratio condition either."],
+    "priority": true
+  },
+  {
+    "id": "math-321",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "medium",
+    "text": "If p − 1, p + 1 and 2p + 3 are three consecutive terms of an A.P., then the value of p is (2023 Board)",
+    "options": [
+      "-2",
+      "4",
+      "0",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "For three terms in AP, twice the middle term equals the sum of the outer terms: 2(p+1) = (p−1)+(2p+3), which gives p = 0.",
+    "whyWrong": ["Substituting p = −2 doesn't satisfy 2(p+1) = (p−1)+(2p+3).", "Substituting p = 4 doesn't satisfy the AP condition.", "", "Substituting p = 2 doesn't satisfy the AP condition."],
+    "priority": true
+  },
+  {
+    "id": "math-322",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "In what ratio, does the x-axis divide the line segment joining the points A(3, 6) and B(-12, -3)? (2023 Board)",
+    "options": [
+      "1:2",
+      "1:4",
+      "4:1",
+      "2:1"
+    ],
+    "correct": 3,
+    "explanation": "Using the section formula on the y-coordinates, if the ratio is k:1, then (−3k+6)/(k+1) = 0, giving k = 2, i.e. the ratio is 2:1.",
+    "whyWrong": ["This ratio doesn't make the y-coordinate zero in the section formula.", "This ratio doesn't make the y-coordinate zero in the section formula.", "This ratio doesn't make the y-coordinate zero in the section formula.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-323",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "In the given figure, PQ is a tangent to a circle centred at O. If ∠AOB = 95°, then the measure of ∠ABQ will be (2023 Board)",
+    "options": [
+      "47.5°",
+      "42.5°",
+      "85°",
+      "95°"
+    ],
+    "correct": 0,
+    "explanation": "Since OA = OB (radii), triangle OAB is isosceles, so ∠OAB = ∠OBA = (180° − 95°)/2 = 42.5°. Since OB ⊥ BQ (tangent ⊥ radius), ∠ABQ = ∠OBQ − ∠OBA = 90° − 42.5° = 47.5°.",
+    "whyWrong": ["", "42.5° is ∠OBA itself, not ∠ABQ, which also involves subtracting from the 90° tangent-radius angle.", "85° is ∠OAB+∠OBA, not ∠ABQ.", "95° is ∠AOB itself, not ∠ABQ."],
+    "priority": true
+  },
+  {
+    "id": "math-324",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If 2 tan A = 3, then the value of (4 sin A + 3 cos A) / (4 sin A - 3 cos A) is (2023 Board)",
+    "options": [
+      "7/√13",
+      "1/√13",
+      "3",
+      "does not exist"
+    ],
+    "correct": 2,
+    "explanation": "tan A = 3/2. Dividing numerator and denominator by cos A gives (4 tan A + 3)/(4 tan A − 3) = (6+3)/(6−3) = 9/3 = 3.",
+    "whyWrong": ["This doesn't match the simplified value after dividing by cos A.", "This doesn't match the simplified value after dividing by cos A.", "", "The expression is well-defined here, since 4 tan A − 3 = 3 ≠ 0."],
+    "priority": true
+  },
+  {
+    "id": "math-325",
+    "chapter": "Polynomials",
+    "difficulty": "easy",
+    "text": "If α, β are the zeroes of a polynomial p(x) = x² + x - 1, then 1/α + 1/β equals to (2023 Board)",
+    "options": [
+      "1",
+      "2",
+      "-1",
+      "-1/2"
+    ],
+    "correct": 0,
+    "explanation": "α+β = −1 and αβ = −1, so 1/α + 1/β = (α+β)/(αβ) = (−1)/(−1) = 1.",
+    "whyWrong": ["", "This isn't the value of (α+β)/(αβ) for this polynomial.", "This isn't the value of (α+β)/(αβ) for this polynomial.", "This isn't the value of (α+β)/(αβ) for this polynomial."],
+    "priority": true
+  },
+  {
+    "id": "math-326",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The least positive value of k, for which the quadratic equation 2x² + kx - 4 = 0 has rational roots, is (2023 Board)",
+    "options": [
+      "±2√2",
+      "2",
+      "±2",
+      "√2"
+    ],
+    "correct": 1,
+    "explanation": "Roots are rational when the discriminant k² + 32 is a perfect square. k = 2 gives 4 + 32 = 36 = 6², a perfect square, and no smaller positive k works, so the least positive value is 2.",
+    "whyWrong": ["This isn't stated as a single least positive value, and involves a larger magnitude than necessary.", "", "The question asks for the least positive value, which is 2, not ±2.", "This doesn't make the discriminant a perfect square."],
+    "priority": true
+  },
+  {
+    "id": "math-327",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "easy",
+    "text": "[(3/4) tan²30° - sec²45° + sin²60°] is equal to (2023 Board)",
+    "options": [
+      "-1",
+      "5/6",
+      "-3/2",
+      "1/6"
+    ],
+    "correct": 0,
+    "explanation": "(3/4)(1/3) − 2 + (3/4) = 1/4 − 2 + 3/4 = 1 − 2 = −1.",
+    "whyWrong": ["", "This doesn't match the computed value.", "This doesn't match the computed value.", "This doesn't match the computed value."],
+    "priority": true
+  },
+  {
+    "id": "math-328",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "easy",
+    "text": "Curved surface area of a cylinder of height 5 cm is 94.2 cm². Radius of the cylinder is (Take π = 3.14) (2023 Board)",
+    "options": [
+      "2 cm",
+      "3 cm",
+      "2.9 cm",
+      "6 cm"
+    ],
+    "correct": 1,
+    "explanation": "CSA = 2πrh, so 94.2 = 2 × 3.14 × r × 5 = 31.4r, giving r = 3 cm.",
+    "whyWrong": ["This doesn't satisfy 2πrh = 94.2 for h = 5.", "", "This doesn't satisfy 2πrh = 94.2 for h = 5.", "This doesn't satisfy 2πrh = 94.2 for h = 5."],
+    "priority": true
+  },
+  {
+    "id": "math-329",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The distribution below gives the marks obtained by 80 students on a test (as a less-than cumulative frequency table). The modal class of this distribution is (2023 Board)",
+    "options": [
+      "10-20",
+      "20-30",
+      "30-40",
+      "50-60"
+    ],
+    "correct": 2,
+    "explanation": "Converting the cumulative frequencies to class frequencies gives 3, 9, 15, 30, 18, 5; the highest frequency (30) occurs in the class 30–40, which is the modal class.",
+    "whyWrong": ["This class has a frequency of only 9, not the highest.", "This class has a frequency of only 15, not the highest.", "", "This class has a frequency of only 5, not the highest."],
+    "priority": true
+  },
+  {
+    "id": "math-330",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "The curved surface area of a cone having height 24 cm and radius 7 cm, is (2023 Board)",
+    "options": [
+      "528 cm²",
+      "1056 cm²",
+      "550 cm²",
+      "500 cm²"
+    ],
+    "correct": 2,
+    "explanation": "Slant height l = √(r²+h²) = √(49+576) = √625 = 25. CSA = πrl = (22/7)×7×25 = 550 cm².",
+    "whyWrong": ["This doesn't match πrl with l = 25.", "This is roughly double the correct value.", "", "This doesn't match πrl with l = 25."],
+    "priority": true
+  },
+  {
+    "id": "math-331",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The distance between the points (0, 2√5) and (-2√5, 0) is (2023 Board)",
+    "options": [
+      "2√10 units",
+      "4√10 units",
+      "2√20 units",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "Distance = √[(2√5)² + (2√5)²] = √(20+20) = √40 = 2√10 units.",
+    "whyWrong": ["", "This is double the correct distance.", "This doesn't match the simplified form of √40.", "The two points aren't the same, so the distance isn't zero."],
+    "priority": true
+  },
+  {
+    "id": "math-332",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "Which of the following is a quadratic polynomial having zeroes -2/3 and 2/3 ? (2023 Board)",
+    "options": [
+      "4x² - 9",
+      "(4/9)(9x² + 4)",
+      "x² + 9/4",
+      "5(9x² - 4)"
+    ],
+    "correct": 3,
+    "explanation": "Zeroes ±2/3 satisfy 9x² − 4 = 0, so any nonzero multiple of (9x² − 4), such as 5(9x² − 4), is a valid quadratic polynomial with these zeroes.",
+    "whyWrong": ["The zeroes of 4x² − 9 are ±3/2, not ±2/3.", "9x² + 4 = 0 has no real zeroes at all.", "x² + 9/4 = 0 has no real zeroes at all.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-333",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "If the value of each observation of a statistical data is increased by 3, then the mean of the data (2023 Board)",
+    "options": [
+      "remains unchanged",
+      "increases by 3",
+      "increases by 6",
+      "increases by 3n"
+    ],
+    "correct": 1,
+    "explanation": "Adding a constant to every observation increases the mean by that same constant, so the mean increases by 3.",
+    "whyWrong": ["Adding a constant to every value does change the mean.", "", "The mean increases by exactly the constant added (3), not double it.", "The increase in mean doesn't depend on the number of observations n."],
+    "priority": true
+  },
+  {
+    "id": "math-334",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "Probability of happening of an event is denoted by p and probability of non-happening of the event is denoted by q. Relation between p and q is (2023 Board)",
+    "options": [
+      "p + q = 1",
+      "p = 1, q = 1",
+      "p = q - 1",
+      "p + q + 1 = 0"
+    ],
+    "correct": 0,
+    "explanation": "An event and its complement together cover all outcomes, so their probabilities always add up to 1: p + q = 1.",
+    "whyWrong": ["", "p and q can't both always equal 1, since together they must sum to 1.", "This isn't the correct relation between complementary probabilities.", "Probabilities are non-negative, so this relation can't hold."],
+    "priority": true
+  },
+  {
+    "id": "math-335",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A girl calculates that the probability of her winning the first prize in a lottery is 0.08. If 6000 tickets are sold, how many tickets has she bought? (2023 Board)",
+    "options": [
+      "40",
+      "240",
+      "480",
+      "750"
+    ],
+    "correct": 2,
+    "explanation": "Number of tickets bought = probability × total tickets = 0.08 × 6000 = 480.",
+    "whyWrong": ["This doesn't equal 0.08 × 6000.", "This doesn't equal 0.08 × 6000.", "", "This doesn't equal 0.08 × 6000."],
+    "priority": true
+  },
+  {
+    "id": "math-336",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "In a group of 20 people, 5 can't swim. If one person is selected at random, then the probability that he/she can swim, is (2023 Board)",
+    "options": [
+      "3/4",
+      "1/3",
+      "1",
+      "1/4"
+    ],
+    "correct": 0,
+    "explanation": "15 out of 20 people can swim, so the probability is 15/20 = 3/4.",
+    "whyWrong": ["", "This isn't the fraction of people who can swim.", "Not everyone can swim (5 can't), so it isn't certain.", "This is the fraction who CANNOT swim, not who can."],
+    "priority": true
+  },
+  {
+    "id": "math-337",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "Assertion (A): Point P(0, 2) is the point of intersection of y-axis with the line 3x + 2y = 4. Reason (R): The distance of point P(0, 2) from x-axis is 2 units. Which is correct? (2023 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "Substituting x=0 into 3x+2y=4 gives y=2, confirming P(0,2) is on both the line and the y-axis, so A is true. R is also true (distance from x-axis equals the y-coordinate, 2), but R doesn't explain why P is the intersection point — that follows from substitution, not from its distance to the x-axis.",
+    "whyWrong": ["R is true but doesn't explain A, so R is not the correct explanation.", "", "R is also true, not false.", "A is true, not false."],
+    "priority": true
+  },
+  {
+    "id": "math-338",
+    "chapter": "Triangles",
+    "difficulty": "medium",
+    "text": "Assertion (A): The perimeter of a right triangle ABC, right-angled at B with AB = 2 cm and BC = 3 cm, is a rational number. Reason (R): The sum of the squares of two rational numbers is always rational. Which is correct? (2023 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 3,
+    "explanation": "By Pythagoras, AC = √(2²+3²) = √13, which is irrational, so the perimeter 2+3+√13 is irrational, making A false. R is a true general fact about rational numbers, unrelated to whether A holds.",
+    "whyWrong": ["R is true, but that alone doesn't make A true — the perimeter here works out irrational.", "A is actually false, not true.", "A is false, not true.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-339",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "If the sum of zeroes of the polynomial p(x) = 2x² - k√2 x + 1 is √2, then value of k is (2024 Board)",
+    "options": [
+      "√2",
+      "2",
+      "2√2",
+      "1/2"
+    ],
+    "correct": 1,
+    "explanation": "Sum of zeroes = k√2/2 = √2, so k√2 = 2√2, giving k = 2.",
+    "whyWrong": ["This doesn't satisfy k√2/2 = √2.", "", "This doesn't satisfy k√2/2 = √2.", "This doesn't satisfy k√2/2 = √2."],
+    "priority": true
+  },
+  {
+    "id": "math-340",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "If the probability of a player winning a game is 0.79, then the probability of his losing the same game is (2024 Board)",
+    "options": [
+      "1.79",
+      "0.31",
+      "0.21%",
+      "0.21"
+    ],
+    "correct": 3,
+    "explanation": "P(lose) = 1 − P(win) = 1 − 0.79 = 0.21.",
+    "whyWrong": ["Probabilities can't exceed 1.", "This doesn't equal 1 − 0.79.", "This confuses a percentage with the probability value itself.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-341",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If the roots of equation ax² + bx + c = 0, a ≠ 0 are real and equal, then which of the following relation is true? (2024 Board)",
+    "options": [
+      "a = b²/c",
+      "b² = ac",
+      "ac = b²/4",
+      "c = b²/a"
+    ],
+    "correct": 2,
+    "explanation": "Real and equal roots require discriminant b² − 4ac = 0, i.e. b² = 4ac, which rearranges to ac = b²/4.",
+    "whyWrong": ["This isn't the correct rearrangement of b² = 4ac.", "This is missing the factor of 4 from b² = 4ac.", "", "This isn't the correct rearrangement of b² = 4ac."],
+    "priority": true
+  },
+  {
+    "id": "math-342",
+    "chapter": "Arithmetic Progressions",
+    "difficulty": "hard",
+    "text": "In an A.P., if the first term a = 7, nth term aₙ = 84 and the sum of first n terms Sₙ = 2093/2, then n is equal to (2024 Board)",
+    "options": [
+      "22",
+      "24",
+      "23",
+      "26"
+    ],
+    "correct": 2,
+    "explanation": "Sₙ = n/2 × (a + aₙ) = n/2 × (7+84) = 91n/2. Setting 91n/2 = 2093/2 gives n = 2093/91 = 23.",
+    "whyWrong": ["This doesn't satisfy 91n = 2093.", "This doesn't satisfy 91n = 2093.", "", "This doesn't satisfy 91n = 2093."],
+    "priority": true
+  },
+  {
+    "id": "math-343",
+    "chapter": "Real Numbers",
+    "difficulty": "hard",
+    "text": "If two positive integers p and q can be expressed as p = 18 a²b⁴ and q = 20 a³b², where a and b are prime numbers, then LCM (p, q) is (2024 Board)",
+    "options": [
+      "2a²b²",
+      "180a²b²",
+      "12a²b²",
+      "180a³b⁴"
+    ],
+    "correct": 3,
+    "explanation": "18=2×3², 20=2²×5, so the LCM of the numeric parts is 2²×3²×5=180; the LCM also takes the higher power of each prime variable: a³ and b⁴. So LCM(p,q) = 180a³b⁴.",
+    "whyWrong": ["This uses neither the correct numeric LCM nor the higher powers of a and b.", "This uses the correct powers of a and b but the wrong numeric factor.", "This uses neither the correct numeric LCM nor the higher powers of a and b.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-344",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "AD is a median of ΔABC with vertices A(5, -6), B(6, 4) and C(0, 0). Length AD is equal to (2024 Board)",
+    "options": [
+      "√68 units",
+      "2√15 units",
+      "√101 units",
+      "10 units"
+    ],
+    "correct": 0,
+    "explanation": "D, the midpoint of BC, is (3, 2). AD = √[(5−3)² + (−6−2)²] = √(4+64) = √68 units.",
+    "whyWrong": ["", "This doesn't match √[(5−3)²+(−6−2)²].", "This doesn't match √[(5−3)²+(−6−2)²].", "This doesn't match √[(5−3)²+(−6−2)²]."],
+    "priority": true
+  },
+  {
+    "id": "math-345",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If sec θ - tan θ = m, then the value of sec θ + tan θ is (2024 Board)",
+    "options": [
+      "1 - 1/m",
+      "m² - 1",
+      "1/m",
+      "-m"
+    ],
+    "correct": 2,
+    "explanation": "Since (sec θ − tan θ)(sec θ + tan θ) = sec²θ − tan²θ = 1, sec θ + tan θ = 1/m.",
+    "whyWrong": ["This isn't the correct identity result.", "This isn't the correct identity result.", "", "This isn't the correct identity result."],
+    "priority": true
+  },
+  {
+    "id": "math-346",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "From the data 1, 4, 7, 9, 16, 21, 25, if all the even numbers are removed, then the probability of getting at random a prime number from the remaining is (2024 Board)",
+    "options": [
+      "2/5",
+      "1/5",
+      "1/7",
+      "2/7"
+    ],
+    "correct": 1,
+    "explanation": "Removing the even numbers (4, 16) leaves 1, 7, 9, 21, 25 — 5 numbers. Only 7 is prime, so the probability is 1/5.",
+    "whyWrong": ["Only one number (7) among the remaining 5 is prime, not two.", "", "There are 5 remaining numbers, not 7.", "There are 5 remaining numbers, not 7, and only 1 of them is prime."],
+    "priority": true
+  },
+  {
+    "id": "math-347",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "For some data x1, x2, ..., xn with respective frequencies f1, f2, ..., fn, the value of Σ fi(xi - x̄) is equal to (2024 Board)",
+    "options": [
+      "nx̄",
+      "1",
+      "Σfi",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "Σfi(xi − x̄) = Σfixi − x̄Σfi = nx̄ − x̄·n = 0, since x̄ = Σfixi/n.",
+    "whyWrong": ["This doesn't match the algebraic simplification, which cancels to zero.", "This doesn't match the algebraic simplification, which cancels to zero.", "This doesn't match the algebraic simplification, which cancels to zero.", ""],
+    "priority": true
+  },
+  {
+    "id": "math-348",
+    "chapter": "Polynomials",
+    "difficulty": "hard",
+    "text": "The zeroes of a polynomial x² + px + q are twice the zeroes of the polynomial 4x² - 5x - 6. The value of p is (2024 Board)",
+    "options": [
+      "-5/2",
+      "5/2",
+      "-5",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "For 4x²−5x−6, sum of zeroes = 5/4. The new zeroes are twice these, so their sum = 2×5/4 = 5/2, giving p = −(sum) = −5/2.",
+    "whyWrong": ["", "This is the correct sum of the new zeroes, but p is the negative of that sum.", "This doesn't match −(2×5/4).", "This doesn't match −(2×5/4)."],
+    "priority": true
+  },
+  {
+    "id": "math-349",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "If the distance between the points (3, -5) and (x, -5) is 15 units, then the values of x are (2024 Board)",
+    "options": [
+      "12, -18",
+      "-12, 18",
+      "18, 5",
+      "-9, -12"
+    ],
+    "correct": 1,
+    "explanation": "Since the y-coordinates match, distance = |x−3| = 15, giving x = 18 or x = −12.",
+    "whyWrong": ["This doesn't satisfy |x−3|=15 for either value.", "", "18 satisfies |x−3|=15, but 5 does not.", "Neither value satisfies |x−3|=15."],
+    "priority": true
+  },
+  {
+    "id": "math-350",
+    "chapter": "Introduction to Trigonometry",
+    "difficulty": "medium",
+    "text": "If cos (α + β) = 0, then value of cos((α + β)/2) is equal to (2024 Board)",
+    "options": [
+      "1/√2",
+      "1/2",
+      "0",
+      "√2"
+    ],
+    "correct": 0,
+    "explanation": "cos(α+β)=0 means α+β=90°, so cos((α+β)/2) = cos(45°) = 1/√2.",
+    "whyWrong": ["", "This isn't cos(45°).", "This isn't cos(45°).", "This isn't cos(45°)."],
+    "priority": true
+  },
+  {
+    "id": "math-351",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "hard",
+    "text": "A solid sphere is cut into two hemispheres. The ratio of the surface areas of sphere to that of two hemispheres taken together, is (2024 Board)",
+    "options": [
+      "1:1",
+      "1:4",
+      "2:3",
+      "3:2"
+    ],
+    "correct": 2,
+    "explanation": "Sphere's surface area = 4πr². Each hemisphere has surface area 2πr² (curved) + πr² (flat face) = 3πr², so two hemispheres together = 6πr². Ratio = 4πr² : 6πr² = 2:3.",
+    "whyWrong": ["The two surface areas aren't equal — the hemispheres include extra flat faces.", "This doesn't match the computed ratio of 4πr² to 6πr².", "", "This is the reverse of the correct ratio."],
+    "priority": true
+  },
+  {
+    "id": "math-352",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The middle most observation of every data arranged in order is called (2024 Board)",
+    "options": [
+      "mode",
+      "median",
+      "mean",
+      "deviation"
+    ],
+    "correct": 1,
+    "explanation": "The middle-most value of data arranged in order is, by definition, the median.",
+    "whyWrong": ["Mode is the most frequently occurring value, not the middle one.", "", "Mean is the average, not the middle-most value.", "Deviation measures spread, not a middle value."],
+    "priority": true
+  },
+  {
+    "id": "math-353",
+    "chapter": "Surface Areas and Volumes",
+    "difficulty": "medium",
+    "text": "The volume of the largest right circular cone that can be carved out from a solid cube of edge 2 cm is (2024 Board)",
+    "options": [
+      "4π/3 cu cm",
+      "5π/3 cu cm",
+      "8π/3 cu cm",
+      "2π/3 cu cm"
+    ],
+    "correct": 3,
+    "explanation": "The largest such cone has base diameter = cube edge = 2 cm (radius 1 cm) and height = 2 cm. Volume = (1/3)πr²h = (1/3)π(1)²(2) = 2π/3 cu cm.",
+    "whyWrong": ["This doesn't match (1/3)π(1)²(2).", "This doesn't match (1/3)π(1)²(2).", "This doesn't match (1/3)π(1)²(2).", ""],
+    "priority": true
+  },
+  {
+    "id": "math-354",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two dice are rolled together. The probability of getting sum of numbers on the two dice as 2, 3 or 5, is (2024 Board)",
+    "options": [
+      "7/36",
+      "11/36",
+      "5/36",
+      "4/9"
+    ],
+    "correct": 0,
+    "explanation": "Sum=2: 1 way; sum=3: 2 ways; sum=5: 4 ways; total 7 favourable outcomes out of 36, so probability = 7/36.",
+    "whyWrong": ["", "This overcounts the favourable outcomes.", "This only counts one of the three sums.", "This doesn't match 7/36."],
+    "priority": true
+  },
+  {
+    "id": "math-355",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "The centre of a circle is at (2, 0). If one end of a diameter is at (6, 0), then the other end is at (2024 Board)",
+    "options": [
+      "(0,0)",
+      "(4,0)",
+      "(-2,0)",
+      "(-6,0)"
+    ],
+    "correct": 2,
+    "explanation": "The centre is the midpoint of the diameter, so the other end = 2×(2,0) − (6,0) = (−2,0).",
+    "whyWrong": ["This doesn't make (2,0) the midpoint of the diameter.", "This doesn't make (2,0) the midpoint of the diameter.", "", "This doesn't make (2,0) the midpoint of the diameter."],
+    "priority": true
+  },
+  {
+    "id": "math-356",
+    "chapter": "Pair of Linear Equations",
+    "difficulty": "easy",
+    "text": "In the given figure, graphs of two linear equations are shown, crossing each other at one point. The pair of these linear equations is (2024 Board)",
+    "options": [
+      "consistent with unique solution",
+      "consistent with infinitely many solutions",
+      "inconsistent",
+      "inconsistent but can be made consistent by extending these lines"
+    ],
+    "correct": 0,
+    "explanation": "The two lines intersect at exactly one point (not parallel, not coincident), so the pair is consistent with a unique solution.",
+    "whyWrong": ["", "Infinitely many solutions would require the lines to coincide, but they only cross at one point.", "The lines do intersect, so the pair is not inconsistent.", "The lines already intersect as drawn — no extension is needed."],
+    "priority": true
+  },
+  {
+    "id": "math-357",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "Assertion (A): The tangents drawn at the end points of a diameter of a circle, are parallel. Reason (R): Diameter of a circle is the longest chord. Which is correct? (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 1,
+    "explanation": "Both statements are true — tangents at the ends of a diameter are parallel (each is perpendicular to the same diameter line), and the diameter is indeed the longest chord — but R doesn't explain why the tangents are parallel; that follows from the tangent-perpendicular-to-radius property, not from the diameter being the longest chord.",
+    "whyWrong": ["R is true but doesn't explain A.", "", "R is also true, not false.", "A is true, not false."],
+    "priority": true
+  },
+  {
+    "id": "math-358",
+    "chapter": "Polynomials",
+    "difficulty": "medium",
+    "text": "Assertion (A): If the graph of a polynomial touches x-axis at only one point, then the polynomial cannot be a quadratic polynomial. Reason (R): A polynomial of degree n (n>1) can have at most n zeroes. Which is correct? (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true, but R is false",
+      "A is false, but R is true"
+    ],
+    "correct": 3,
+    "explanation": "A quadratic with equal (repeated) roots, such as (x−2)², touches the x-axis at exactly one point, so A is false. R is a true general fact about polynomial degree and zero count.",
+    "whyWrong": ["R is true, but that doesn't make A true — a quadratic with a repeated root is a counterexample to A.", "A is actually false, not true.", "A is false, not true.", ""],
+    "priority": true
   }
 ]
