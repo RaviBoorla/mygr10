@@ -15,12 +15,13 @@ and question style.
 
 | Mode | Questions | Time | Coverage |
 |---|---|---|---|
-| Full mock test | 50 MCQs | 40 min (auto-submit) | Whole subject |
+| Full mock test | 49 MCQs | 40 min (auto-submit) | Whole subject |
 | Chapter drill | up to 25 MCQs | Untimed | One chapter |
+| Short Answers (VSA/SA) | Self-paced, self-assessed | Untimed | One chapter or all |
 
-Both modes are started from the home screen — a mock is one click, a chapter
-drill is two (subject → chapter). Revision notes for a subject are one click
-from the same card.
+Mock and drill are started from the home screen — a mock is one click, a
+chapter drill is two (subject → chapter). Revision notes and Short Answers for
+a subject are one click from the same card, where a bank exists.
 
 ## Project layout
 
@@ -30,61 +31,33 @@ from the same card.
 │   ├── index.html          # Single-page app shell
 │   ├── app.js              # Revision content + hash router + screen renderer
 │   ├── style.css           # OMR-themed UI
-│   └── questions/*.json    # Client-side question banks (one per subject)
-├── src/
-│   ├── index.js            # Cloudflare Workers entry point + middleware wiring
-│   ├── router.js           # Zero-dep pattern router (:params, * wildcards)
-│   ├── middleware/
-│   │   ├── cors.js         # CORS (origin allow-list, preflight short-circuit)
-│   │   ├── auth.js         # Bearer token (constant-time compare)
-│   │   └── rateLimit.js    # KV sliding window
-│   ├── handlers/
-│   │   ├── root.js         # /, /favicon.ico
-│   │   ├── health.js       # /health
-│   │   ├── api.js          # /api/v1/* — boards, subjects, chapters, questions
-│   │   └── errors.js       # 404, 405, error boundary
-│   └── utils/
-│       ├── response.js     # json/text/redirect helpers
-│       ├── logger.js       # Structured JSON logger
-│       └── validators.js   # Input validation + readJson
-├── wrangler.toml           # Cloudflare config (entry, compat date, KV bindings)
+│   ├── careers.html        # Career Pathing standalone page
+│   ├── manifest.json, sw.js, icons/, .well-known/  # PWA / installability
+│   └── questions/*.json    # Client-side question banks (MCQ + Short Answers, one pair per subject)
+├── docs/                   # Design log, content inventory, feature specs
+├── wrangler.toml           # Cloudflare Pages config (static site deploy)
 ├── package.json
 ├── README.md
 ├── LICENSE
 └── CHANGELOG.md
 ```
 
-## API endpoints
-
-| Method | Path | Description |
-|---|---|---|
-| GET | `/health` | Liveness/readiness probe |
-| GET | `/api/v1/boards` | List supported boards |
-| GET | `/api/v1/boards/:board/subjects` | Subjects for a board |
-| GET | `/api/v1/boards/:board/subjects/:subject/chapters` | Chapters for a subject |
-| GET | `/api/v1/boards/:board/subjects/:subject/chapters/:chapter/questions` | Questions (correct answer omitted) |
-| POST | `/api/v1/boards/:board/subjects/:subject/chapters/:chapter/submit` | Reveal correct answers + explanations |
+Everything the app needs at runtime lives under `public/` and is served as a
+static site — there is no backend API. Question banks are plain JSON fetched
+directly by the client; grading, progress, bookmarks and streaks are computed
+client-side and persisted to `localStorage`.
 
 ## Getting started
 
-Prerequisites: Node 18+ and a Cloudflare account.
+Prerequisites: Node 18+ and a Cloudflare account (for deployment only — no
+account is needed to run the app locally).
 
 ```bash
-npm install
-npm run dev          # local dev with wrangler
-npm run deploy       # deploy to Cloudflare
+npx serve public        # or any static file server
 ```
 
-## Configuration
-
-| Variable | Purpose |
-|---|---|
-| `CORS_ORIGIN` | Allowed Origin, `*`, or comma-separated list |
-| `RATE_LIMIT_KV` | KV namespace binding (configured in wrangler) |
-| `LOG_LEVEL` | `debug` \| `info` \| `warn` \| `error` |
-| `ENVIRONMENT` | `development` enables verbose error responses |
-
-For local development, copy `.dev.vars.example` to `.dev.vars` and fill in the values.
+Deployment is a static Cloudflare Pages project (`pages_build_output_dir =
+"public"` in `wrangler.toml`) — no build step, no server-side code.
 
 ## Client behaviour
 
@@ -99,13 +72,6 @@ For local development, copy `.dev.vars.example` to `.dev.vars` and fill in the v
   `M` marks for review, `Enter` advances; answering auto-advances by default.
 - **No fabricated questions** — a subject without a bank is labelled
   "coming soon" and a failed load shows an error, never placeholder answers.
-
-## Architecture notes
-
-- **Content is data-driven** — adding a new board or chapter is a data change in `src/handlers/api.js`; no code changes required elsewhere.
-- **Correct answers are server-side only** — `GET /questions` strips `correct` and `explanation` fields; they are returned only by `POST /submit`.
-- **Storage** — question bank is in-memory (per-isolate) for v1. Production should migrate to Cloudflare D1 or KV.
-- **Middleware ordering** — CORS first so rejections still carry the right headers; rate limit before auth so attackers cannot burn CPU on token compares.
 
 ## License
 

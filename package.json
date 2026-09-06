@@ -5,26 +5,12 @@
   "description": "Practice and self-assessment app for Indian Grade 10 board exam students (CBSE / ICSE / IB).",
   "license": "MIT",
   "type": "module",
-  "main": "src/index.js",
   "scripts": {
     "build": "echo 'Static site — no build step required'",
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "deploy:staging": "wrangler deploy --env staging",
-    "deploy:production": "wrangler deploy --env production",
-    "tail": "wrangler tail",
-    "test": "node --test test/",
-    "test:watch": "node --test --watch test/"
+    "dev": "npx serve public",
+    "deploy": "wrangler pages deploy public"
   },
   "engines": {
     "node": ">=18"
-  },
-  "cloudflare": {
-    "kv_namespaces": [
-      {
-        "binding": "RATE_LIMIT_KV",
-        "id": "REPLACE_WITH_KV_NAMESPACE_ID"
-      }
-    ]
   }
 }

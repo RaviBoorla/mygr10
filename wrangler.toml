@@ -15,16 +15,3 @@ name = "mygr10-preview"
 
 [env.production]
 name = "mygr10-production"
-
-# --- Secrets -----------------------------------------------------------
-#
-# Set with `wrangler pages secret put NAME`.
-#
-#   CORS_ORIGIN      Allowed origin(s) for CORS
-#   LOG_LEVEL        debug | info | warn | error
-
-# --- Vars (non-secret) -------------------------------------------------
-#
-# [vars]
-# LOG_LEVEL = "info"
-# ENVIRONMENT = "production"

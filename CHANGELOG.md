@@ -7,8 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+- Unused Cloudflare Workers API scaffold (`src/`: router, CORS/auth/rate-limit
+  middleware, logger, example `/api/v1/*` endpoints) — never wired into the
+  live app, which fetches question banks as static JSON directly from
+  `public/questions/`. Trimmed the matching references from `package.json`,
+  `wrangler.toml`, and `README.md`.
+
 ### Added
-- Initial release: zero-dep router, CORS / auth / rate-limit middleware,
-  structured logger, JSON response helpers, and a small example API.
-- `GET /health` endpoint with region/colo information.
-- `GET /api/v1` version banner, `/api/v1/echo` and `/api/v1/items` CRUD.
+- Practice modes: timed full mock test, untimed chapter drill, and untimed
+  self-assessed Short Answers (VSA/SA), across CBSE, ICSE and IB Diploma.
+- Progress tracking, bookmarks, spaced-repetition (Leitner) review queue, and
+  study streaks — see `docs/design.md` for the full feature log.
