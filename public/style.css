@@ -250,7 +250,11 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
    chapter dropdown on Short Answers; dropdown + exercise pills on Solved
    Exercises) — everything before it just flows left-to-right. */
 .sa-topbar .quit-btn { margin-left: auto; }
-.sa-tabs { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
+/* flex-basis 220px (not the usual 0%) so the wrapping algorithm judges this
+   against its real content width — with a 0% basis it was treated as "fits
+   trivially", getting squeezed into a sliver next to the chapter dropdown
+   and overflowing horizontally instead of wrapping to its own line. */
+.sa-tabs { display: flex; gap: 6px; flex-wrap: wrap; flex: 1 1 220px; min-width: 0; }
 .sa-tabs-loading { font-size: var(--fs-ui); color: var(--text-light); }
 .sa-tabs .filter-tab small { opacity: .75; margin-left: 2px; }
 
