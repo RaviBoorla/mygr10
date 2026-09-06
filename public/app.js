@@ -2824,6 +2824,12 @@ function esc(str) {
     .replace(/>/g, '&gt;');
 }
 
+// Multi-part questions — "(i) ... (ii) ... (iii) ..." / "(a) ... (b) ..." — read
+// better with each part on its own line rather than running together.
+function breakParts(str) {
+  return String(str).replace(/\s+(?=\((?:[ivxlcdm]{1,6}|[a-hA-H])\))/g, '\n');
+}
+
 // localStorage that never throws (private mode, quota, disabled cookies)
 const LS = {
   get(key, fallback) {
@@ -3455,10 +3461,9 @@ const app = {
           <span class="sa-marks">${q.marks} mark${q.marks === 1 ? '' : 's'}</span>
           ${status ? `<span class="sa-status ${status}">${status === 'got-it' ? '&#10003; Got it' : '&#8635; Review again'}</span>` : ''}
         </header>
-        <p class="sa-question">${esc(q.text)}</p>
+        <p class="sa-question">${esc(breakParts(q.text)).replace(/\n/g, '<br>')}</p>
         <div class="sa-body">
           <div class="sa-your-answer">
-            <label for="sa-ta-${esc(q.id)}">Your answer</label>
             <textarea id="sa-ta-${esc(q.id)}" class="sa-textarea" placeholder="Write your answer here (saved automatically)…"
                       oninput="app.saveSADraft('${esc(subject)}','${esc(q.id)}', this.value)">${esc(draft.text || '')}</textarea>
           </div>
@@ -3635,8 +3640,7 @@ const app = {
         </header>
         <div class="sa-body">
           <div class="sa-your-answer">
-            <label>Question</label>
-            <p class="sa-question">${esc(q.question).replace(/\n/g, '<br>')}</p>
+            <p class="sa-question">${esc(breakParts(q.question)).replace(/\n/g, '<br>')}</p>
           </div>
           ${solutionCol}
         </div>
@@ -4030,7 +4034,7 @@ const app = {
 
     numEl.textContent  = `Question ${s.index + 1} of ${s.questions.length}`;
     if (chEl) chEl.textContent = q.chapter || '';
-    textEl.textContent = q.text;
+    textEl.textContent = breakParts(q.text);
 
     optEl.innerHTML = q.options.map((opt, i) => {
       const selected = s.answers[q.id] === i;
@@ -4461,7 +4465,7 @@ const app = {
         <button class="btn small review-btn" id="review-bookmark-btn"
                 onclick="app.toggleBookmark('${esc(this.lastConfig.subject)}','${esc(r.id)}')">&#9734; Bookmark</button>
       </div>
-      <p class="rev-q-text">${esc(r.text)}</p>
+      <p class="rev-q-text">${esc(breakParts(r.text)).replace(/\n/g, '<br>')}</p>
       <div class="rev-options">${optHtml}</div>
       <div class="rev-explanation"><strong>Why:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
       ${wrongWhyBlock}
