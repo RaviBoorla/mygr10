@@ -1,0 +1,254 @@
+[
+  {
+    "id": "sa-math-001",
+    "chapter": "Pair of Linear Equations",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "Solve the pair of equations x = 3 and y = -4 graphically. (2023 Board)",
+    "modelAnswer": "x = 3 is a vertical line through (3, 0); y = -4 is a horizontal line through (0, -4). Plotting both, they intersect at the single point (3, -4), which is the solution.",
+    "keyPoints": ["Recognise x = 3 as a vertical line, y = -4 as a horizontal line.", "Draw both lines on the same graph.", "Read off the intersection point: (3, -4)."]
+  },
+  {
+    "id": "sa-math-002",
+    "chapter": "Pair of Linear Equations",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "OR: Using the graphical method, find whether the following system of linear equations is consistent or not: x = 0, y = -7 (2023 Board)",
+    "modelAnswer": "x = 0 is the y-axis; y = -7 is a horizontal line. These two lines are neither parallel nor coincident, so they intersect at exactly one point, (0, -7). Since a solution exists, the system is consistent.",
+    "keyPoints": ["x = 0 is the y-axis; y = -7 is a horizontal line.", "The two lines intersect at exactly one point: (0, -7).", "Conclude the system is consistent (has a unique solution)."]
+  },
+  {
+    "id": "sa-math-003",
+    "chapter": "Triangles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "In the given figure, XZ is parallel to BC. AZ = 3 cm, ZC = 2 cm, BM = 3 cm and MC = 5 cm. Find the length of XY, where Y is the point where cevian AM crosses XZ. (2023 Board)",
+    "modelAnswer": "Since XZ || BC, by the Basic Proportionality Theorem, AX/XB = AZ/ZC = 3/2, so AX/AB = 3/5. Since XY || BM (both lie along the parallel lines XZ and BC), triangles AXY and ABM are similar, giving XY/BM = AX/AB = 3/5. So XY = BM × 3/5 = 3 × 3/5 = 9/5 = 1.8 cm.",
+    "keyPoints": ["Use the Basic Proportionality Theorem on XZ || BC to get AX/AB = 3/5.", "Recognise triangle AXY ~ triangle ABM (since XY || BM).", "XY = BM × (AX/AB) = 3 × 3/5 = 1.8 cm."]
+  },
+  {
+    "id": "sa-math-004",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If sin θ + cos θ = √3, then find the value of sin θ · cos θ. (2023 Board)",
+    "modelAnswer": "Squaring both sides: (sin θ + cos θ)² = 3, so sin²θ + cos²θ + 2 sin θ cos θ = 3. Since sin²θ + cos²θ = 1, this gives 1 + 2 sin θ cos θ = 3, so sin θ cos θ = 1.",
+    "keyPoints": ["Square both sides of the given equation.", "Use sin²θ + cos²θ = 1 to simplify.", "Solve for sin θ cos θ = 1."]
+  },
+  {
+    "id": "sa-math-005",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: If sin α = 1/√2 and cot β = √3, then find the value of cosec α + cosec β. (2023 Board)",
+    "modelAnswer": "sin α = 1/√2 means α = 45°, so cosec α = √2. cot β = √3 means β = 30°, so cosec β = 2. Therefore cosec α + cosec β = √2 + 2.",
+    "keyPoints": ["Identify α = 45° from sin α = 1/√2, giving cosec α = √2.", "Identify β = 30° from cot β = √3, giving cosec β = 2.", "Add: cosec α + cosec β = √2 + 2."]
+  },
+  {
+    "id": "sa-math-006",
+    "chapter": "Real Numbers",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Find the greatest number which divides 85 and 72 leaving remainders 1 and 2 respectively. (2023 Board)",
+    "modelAnswer": "The required number must exactly divide (85 - 1) = 84 and (72 - 2) = 70. So find HCF(84, 70). 84 = 2² × 3 × 7 and 70 = 2 × 5 × 7, so HCF = 2 × 7 = 14.",
+    "keyPoints": ["Subtract the remainders: 85 - 1 = 84 and 72 - 2 = 70.", "The answer is HCF(84, 70).", "Compute HCF(84, 70) = 14 via prime factorisation."]
+  },
+  {
+    "id": "sa-math-007",
+    "chapter": "Probability",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "A bag contains 4 red, 3 blue and 2 yellow balls. One ball is drawn at random from the bag. Find the probability that this ball is (i) red (ii) yellow. (2023 Board)",
+    "modelAnswer": "Total balls = 4 + 3 + 2 = 9. P(red) = 4/9. P(yellow) = 2/9.",
+    "keyPoints": ["Total number of balls = 9.", "P(red) = (favourable red)/(total) = 4/9.", "P(yellow) = (favourable yellow)/(total) = 2/9."]
+  },
+  {
+    "id": "sa-math-008",
+    "chapter": "Pair of Linear Equations",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Half of the difference between two numbers is 2. The sum of the greater number and twice the smaller number is 13. Find the numbers. (2023 Board)",
+    "modelAnswer": "Let the greater number be g and smaller be s. Half the difference is 2, so g - s = 4. The sum of the greater and twice the smaller is 13, so g + 2s = 13. Subtracting the first from the second: 3s = 9, so s = 3, and g = 3 + 4 = 7. The numbers are 7 and 3.",
+    "keyPoints": ["Set up g - s = 4 from 'half the difference is 2'.", "Set up g + 2s = 13 from the second condition.", "Solve simultaneously to get g = 7, s = 3."]
+  },
+  {
+    "id": "sa-math-009",
+    "chapter": "Real Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that √5 is an irrational number. (2023 Board)",
+    "modelAnswer": "Assume, for contradiction, that √5 is rational, so √5 = p/q where p and q are coprime integers, q ≠ 0. Squaring, 5q² = p², so 5 divides p², and hence 5 divides p. Write p = 5m; then 5q² = 25m², so q² = 5m², meaning 5 divides q² and hence 5 divides q. But then 5 divides both p and q, contradicting that they are coprime. Hence √5 is irrational.",
+    "keyPoints": ["Assume √5 = p/q in lowest terms (p, q coprime) for contradiction.", "Show 5 divides p (from 5q² = p²), so p = 5m.", "Substitute back to show 5 also divides q, contradicting coprimality — hence √5 is irrational."]
+  },
+  {
+    "id": "sa-math-010",
+    "chapter": "Coordinate Geometry",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "If (-5, 3) and (5, 3) are two vertices of an equilateral triangle, then find the coordinates of the third vertex, given that the origin lies in the interior of the triangle. (Take √3 = 1.7) (2023 Board)",
+    "modelAnswer": "The side length is the distance between (-5,3) and (5,3), which is 10. The third vertex lies on the perpendicular bisector x = 0, at height (√3/2)×10 = 5√3 ≈ 8.5 from the midpoint (0, 3). This gives two candidates: (0, 11.5) or (0, -5.5). Since the origin (0,0) must lie inside the triangle, and a triangle spanning y = 3 to y = 11.5 doesn't contain y = 0, the third vertex must be (0, -5.5), giving a triangle spanning y = -5.5 to 3, which does contain the origin.",
+    "keyPoints": ["Find the side length = 10 (distance between the two given vertices).", "Use the equilateral-triangle height formula (√3/2 × side) ≈ 8.5 to get two candidate points on x = 0.", "Pick the vertex (0, -5.5) that makes the origin lie inside the triangle."]
+  },
+  {
+    "id": "sa-math-011",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Two tangents TP and TQ are drawn to a circle with centre O from an external point T. Prove that ∠PTQ = 2∠OPQ. (2023 Board)",
+    "modelAnswer": "Since OP = OQ (radii), triangle OPQ is isosceles, so ∠OPQ = ∠OQP; call this x. Since OP ⊥ TP and OQ ⊥ TQ (tangent ⊥ radius), the quadrilateral OPTQ has angles ∠OPT = ∠OQT = 90°. The angles of quadrilateral OPTQ sum to 360°, so ∠PTQ + ∠POQ = 360° - 90° - 90° = 180°. Also, in triangle OPQ, ∠POQ = 180° - 2x. Substituting, ∠PTQ = 180° - (180° - 2x) = 2x = 2∠OPQ.",
+    "keyPoints": ["Note OP = OQ (radii) makes triangle OPQ isosceles with ∠OPQ = ∠OQP = x.", "Use tangent ⊥ radius to get ∠OPT = ∠OQT = 90° in quadrilateral OPTQ.", "Use the quadrilateral's angle sum (360°) together with ∠POQ = 180° - 2x to derive ∠PTQ = 2x."]
+  },
+  {
+    "id": "sa-math-012",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "OR: In the given figure, a circle is inscribed in a quadrilateral ABCD in which ∠B = 90°. If AD = 17 cm, AB = 20 cm and DS = 3 cm (S being the point of tangency on AD), then find the radius of the circle. (2023 Board)",
+    "modelAnswer": "Since ∠B = 90° and the two radii to the tangent points on AB and BC are perpendicular to those sides, the corner at B forms a square of side r (the radius), so the tangent lengths from B equal r. Let the tangent points on AB and AD be P and R respectively; tangent segments from the same external point are equal, so AP = AR. AP = AB - (tangent length from B) = 20 - r. AR = AD - DR = 17 - 3 = 14 (since DR = DS = 3, tangents from D). Setting AP = AR: 20 - r = 14, so r = 6 cm.",
+    "keyPoints": ["Recognise that the right angle at B makes the tangent length from B equal to the radius r.", "Use DR = DS = 3 (equal tangents from D) to get AR = AD - DR = 14.", "Equate AP = AR, where AP = AB - r = 20 - r, to solve r = 6 cm."]
+  },
+  {
+    "id": "sa-math-013",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "Prove that: (tan θ + sec θ - 1) / (tan θ - sec θ + 1) = (1 + sin θ) / cos θ (2023 Board)",
+    "modelAnswer": "Using sec²θ - tan²θ = 1, rewrite the numerator: tan θ + sec θ - 1 = tan θ + sec θ - (sec θ - tan θ)(sec θ + tan θ) = (sec θ + tan θ)[1 - (sec θ - tan θ)] = (sec θ + tan θ)(1 - sec θ + tan θ). The denominator is exactly (1 - sec θ + tan θ) rearranged as (tan θ - sec θ + 1). Cancelling this common factor leaves sec θ + tan θ, which equals (1 + sin θ)/cos θ.",
+    "keyPoints": ["Replace '1' in the numerator with (sec²θ - tan²θ) to factor it.", "Factor out (sec θ + tan θ), leaving a factor identical to the denominator.", "Cancel the common factor to get sec θ + tan θ = (1 + sin θ)/cos θ."]
+  },
+  {
+    "id": "sa-math-014",
+    "chapter": "Pair of Linear Equations",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "Solve the following system of linear equations and verify your answer: 7x - 2y = 5 and 8x + 7y = 15 (2024 Board)",
+    "modelAnswer": "Multiply the first equation by 7 and the second by 2: 49x - 14y = 35 and 16x + 14y = 30. Adding: 65x = 65, so x = 1. Substituting into 7x - 2y = 5: 7 - 2y = 5, so y = 1. Verify in the second equation: 8(1) + 7(1) = 15 ✓.",
+    "keyPoints": ["Eliminate y by scaling the equations so the y-coefficients match (×7 and ×2).", "Add the equations to solve x = 1.", "Substitute back to find y = 1, and verify in the other original equation."]
+  },
+  {
+    "id": "sa-math-015",
+    "chapter": "Probability",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "In a pack of 52 playing cards one card is lost. From the remaining cards, a card is drawn at random. Find the probability that the drawn card is queen of heart, if the lost card is a black card. (2024 Board)",
+    "modelAnswer": "Since the lost card is black, all 26 red cards (including the queen of hearts) remain among the 51 remaining cards. So P(queen of hearts) = 1/51.",
+    "keyPoints": ["Note the lost card is black, so the queen of hearts (a red card) is definitely still in the pack.", "Total remaining cards = 51.", "P(queen of hearts) = 1/51."]
+  },
+  {
+    "id": "sa-math-016",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "Evaluate: 2√2 cos45° sin30° + 2√3 cos30° (2024 Board)",
+    "modelAnswer": "2√2 × (1/√2) × (1/2) + 2√3 × (√3/2) = 1 + 3 = 4.",
+    "keyPoints": ["Substitute cos45° = 1/√2, sin30° = 1/2, cos30° = √3/2.", "First term: 2√2 × (1/√2) × (1/2) = 1.", "Second term: 2√3 × (√3/2) = 3, so total = 4."]
+  },
+  {
+    "id": "sa-math-017",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "OR: If A = 60° and B = 30°, verify that: sin(A + B) = sin A cos B + cos A sin B (2024 Board)",
+    "modelAnswer": "LHS: sin(90°) = 1. RHS: sin60°cos30° + cos60°sin30° = (√3/2)(√3/2) + (1/2)(1/2) = 3/4 + 1/4 = 1. Since LHS = RHS = 1, the identity is verified.",
+    "keyPoints": ["Compute LHS = sin(60°+30°) = sin90° = 1.", "Compute RHS = sin60°cos30° + cos60°sin30° = 3/4 + 1/4 = 1.", "Confirm LHS = RHS."]
+  },
+  {
+    "id": "sa-math-018",
+    "chapter": "Triangles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "In the given figure, ABCD is a quadrilateral. Diagonal BD bisects ∠B and ∠D both. Prove that: (i) ΔABD ~ ΔCBD (ii) AB = BC (2024 Board)",
+    "modelAnswer": "In triangles ABD and CBD: ∠ABD = ∠CBD (BD bisects ∠B), ∠ADB = ∠CDB (BD bisects ∠D), and BD = BD (common). By ASA, ΔABD ≅ ΔCBD, and congruent triangles are similar, proving (i). By CPCT (corresponding parts of congruent triangles), AB = CB, proving (ii).",
+    "keyPoints": ["Identify the two pairs of equal angles from BD bisecting ∠B and ∠D, plus the shared side BD.", "Apply the ASA congruence criterion to get ΔABD ≅ ΔCBD (hence also similar).", "Use CPCT to conclude AB = BC."]
+  },
+  {
+    "id": "sa-math-019",
+    "chapter": "Real Numbers",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Prove that 5 - 2√3 is an irrational number. It is given that √3 is an irrational number. (2024 Board)",
+    "modelAnswer": "Suppose, for contradiction, that 5 - 2√3 = r is rational. Then 2√3 = 5 - r, so √3 = (5 - r)/2, which is a ratio of rational numbers and hence rational. This contradicts the given fact that √3 is irrational. Therefore 5 - 2√3 is irrational.",
+    "keyPoints": ["Assume 5 - 2√3 is rational, call it r, for contradiction.", "Rearrange to isolate √3 = (5 - r)/2.", "This makes √3 rational, contradicting the given fact — so the assumption is false."]
+  },
+  {
+    "id": "sa-math-020",
+    "chapter": "Real Numbers",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "OR: Show that the number 5×11×17 + 3×11 is a composite number. (2024 Board)",
+    "modelAnswer": "5×11×17 + 3×11 = 11×(5×17 + 3) = 11×(85 + 3) = 11×88. Since this number has factors 11 and 88 (both greater than 1), it is a composite number.",
+    "keyPoints": ["Factor out the common term 11 from both parts.", "Simplify inside the bracket: 5×17 + 3 = 88.", "Conclude the number = 11×88 has factors other than 1 and itself, so it is composite."]
+  },
+  {
+    "id": "sa-math-021",
+    "chapter": "Coordinate Geometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Find the ratio in which the point (8/5, y) divides the line segment joining the points (1, 2) and (2, 3). Also, find the value of y. (2024 Board)",
+    "modelAnswer": "Let the ratio be k:1. Using the section formula on the x-coordinate: (2k+1)/(k+1) = 8/5. Solving: 5(2k+1) = 8(k+1) → 10k+5 = 8k+8 → 2k=3 → k = 3/2, i.e. ratio 3:2. For y: y = [(3/2)(3) + 1(2)] / (3/2 + 1) = (4.5+2)/2.5 = 13/5.",
+    "keyPoints": ["Set up the section formula for the x-coordinate with ratio k:1.", "Solve to get k = 3/2, i.e. the ratio 3:2.", "Substitute k back into the section formula for y to get y = 13/5."]
+  },
+  {
+    "id": "sa-math-022",
+    "chapter": "Coordinate Geometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "OR: ABCD is a rectangle formed by the points A(-1,-1), B(-1,6), C(3,6) and D(3,-1). P, Q, R and S are mid-points of sides AB, BC, CD and DA respectively. Show that the diagonals of the quadrilateral PQRS bisect each other. (2024 Board)",
+    "modelAnswer": "P = midpoint of AB = (-1, 2.5), Q = midpoint of BC = (1, 6), R = midpoint of CD = (3, 2.5), S = midpoint of DA = (1, -1). Midpoint of diagonal PR = ((-1+3)/2, (2.5+2.5)/2) = (1, 2.5). Midpoint of diagonal QS = ((1+1)/2, (6+(-1))/2) = (1, 2.5). Since both diagonals share the same midpoint, they bisect each other.",
+    "keyPoints": ["Compute the four midpoints P, Q, R, S using the midpoint formula.", "Find the midpoint of diagonal PR.", "Find the midpoint of diagonal QS and show it equals the midpoint of PR."]
+  },
+  {
+    "id": "sa-math-023",
+    "chapter": "Real Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "In a teachers' workshop, the number of teachers teaching French, Hindi and English are 48, 80 and 144 respectively. Find the minimum number of rooms required if in each room the same number of teachers are seated and all of them are of the same subject. (2024 Board)",
+    "modelAnswer": "The room capacity must divide 48, 80 and 144 exactly, so the largest possible (and most efficient) capacity is HCF(48, 80, 144). Since 48 = 2⁴×3, 80 = 2⁴×5, 144 = 2⁴×3², the HCF = 2⁴ = 16. Number of rooms = 48/16 + 80/16 + 144/16 = 3 + 5 + 9 = 17.",
+    "keyPoints": ["Recognise the room capacity should be HCF(48, 80, 144).", "Compute HCF(48, 80, 144) = 16 via prime factorisation.", "Add the rooms needed per subject: 3 + 5 + 9 = 17 rooms."]
+  },
+  {
+    "id": "sa-math-024",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "Prove that: tan θ/(1 - cot θ) + cot θ/(1 - tan θ) = 1 + sec θ cosec θ (2024 Board)",
+    "modelAnswer": "Let t = tan θ. LHS = t/(1-1/t) + (1/t)/(1-t) = t²/(t-1) - 1/[t(t-1)] = [t³-1]/[t(t-1)] = (t-1)(t²+t+1)/[t(t-1)] = (t²+t+1)/t = t + 1 + 1/t = tan θ + cot θ + 1. Since tan θ + cot θ = 1/(sin θ cos θ) = sec θ cosec θ, this equals 1 + sec θ cosec θ.",
+    "keyPoints": ["Rewrite cot θ as 1/tan θ and simplify each fraction in terms of t = tan θ.", "Combine into a single fraction and factor the numerator (t³-1) as (t-1)(t²+t+1).", "Simplify to tan θ + cot θ + 1, and use tan θ + cot θ = sec θ cosec θ to finish."]
+  },
+  {
+    "id": "sa-math-025",
+    "chapter": "Arithmetic Progressions",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Three years ago, Rashmi was thrice as old as Nazma. Ten years later, Rashmi will be twice as old as Nazma. How old are Rashmi and Nazma now? (2024 Board)",
+    "modelAnswer": "Let present ages be R and N. Three years ago: R-3 = 3(N-3), so R = 3N-6. Ten years later: R+10 = 2(N+10). Substituting: 3N-6+10 = 2N+20, so N = 16, and R = 3(16)-6 = 42. Rashmi is 42 and Nazma is 16.",
+    "keyPoints": ["Set up R - 3 = 3(N - 3) from the first condition.", "Set up R + 10 = 2(N + 10) from the second condition.", "Solve the two equations together to get R = 42, N = 16."]
+  },
+  {
+    "id": "sa-math-026",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "In the given figure, AB is a diameter of the circle with centre O. AQ, BP and PQ are tangents to the circle. Prove that ∠POQ = 90°. (2024 Board)",
+    "modelAnswer": "Let C be the point where PQ touches the circle. Since OQ bisects the angle between the two radii to the tangent points A and C (equal tangent lengths from Q give congruent triangles), and similarly OP bisects the angle between the radii to B and C, we have ∠QOC = ½∠AOC and ∠POC = ½∠BOC. Since AB is a diameter, ∠AOC + ∠BOC = 180°. So ∠POQ = ∠QOC + ∠POC = ½(∠AOC + ∠BOC) = ½(180°) = 90°.",
+    "keyPoints": ["Let C be the tangency point of PQ, and note OQ, OP each bisect an angle at O (from equal tangent-length triangles).", "Use that A, O, B are collinear (AB is a diameter), so ∠AOC + ∠BOC = 180°.", "Add the two half-angles to get ∠POQ = 90°."]
+  },
+  {
+    "id": "sa-math-027",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "OR: A circle with centre O and radius 8 cm is inscribed in a quadrilateral ABCD in which P, Q, R, S are the points of contact. If AD is perpendicular to DC, BC = 30 cm and BS = 24 cm, then find the length DC. (2024 Board)",
+    "modelAnswer": "Since BS and BR are tangents from B, BR = BS = 24 cm, so RC = BC - BR = 30 - 24 = 6 cm. Since RC and QC are tangents from C, QC = RC = 6 cm. Since AD ⊥ DC and the radii to the tangent points on AD and DC are perpendicular to those sides, DPOQ (at corner D) is a square of side r = 8, so DQ = 8 cm. Therefore DC = DQ + QC = 8 + 6 = 14 cm.",
+    "keyPoints": ["Use BR = BS = 24 (equal tangents from B) to get RC = BC - BR = 6.", "Use QC = RC = 6 (equal tangents from C).", "Use the right angle at D to get DQ = radius = 8, so DC = DQ + QC = 14 cm."]
+  },
+  {
+    "id": "sa-math-028",
+    "chapter": "Surface Areas and Volumes",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "The difference between the outer and inner radii of a hollow right circular cylinder of length 14 cm is 1 cm. If the volume of the metal used in making the cylinder is 176 cm³, find the outer and inner radii of the cylinder. (2024 Board)",
+    "modelAnswer": "Let outer radius R and inner radius r, with R - r = 1. Volume of metal = π(R²-r²)(14) = π(R-r)(R+r)(14) = 176. Using π = 22/7: 176 = (22/7)(1)(R+r)(14) = 44(R+r), so R+r = 4. Solving with R-r=1: R = 2.5 cm, r = 1.5 cm.",
+    "keyPoints": ["Write the metal volume as π(R-r)(R+r)(length), using the difference-of-squares factorisation.", "Substitute R-r=1, length=14, π=22/7 to solve R+r = 4.", "Solve the pair R-r=1, R+r=4 to get R = 2.5 cm, r = 1.5 cm."]
+  }
+]

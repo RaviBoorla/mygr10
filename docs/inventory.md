@@ -48,6 +48,19 @@ for f in sorted(glob.glob('public/questions/*.json')):
 No question banks exist yet for any subject (Mathematics, Biology, Individuals & Societies,
 Language & Literature) — every card shows "coming soon".
 
+## Short Answers banks (separate from the MCQ banks above)
+
+A parallel, much smaller catalogue for VSA (2-mark) and SA (3-mark) questions —
+these have no `options`/`correct` field (free-text, self-assessed against a
+model answer), so they're intentionally kept out of the MCQ banks above and
+the mock/drill logic never touches them. Schema per question: `{id, chapter,
+marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
+`app.js`; a subject with no entry there simply has no "Short Answers" button.
+
+| Subject | File | Total Qs | Source |
+|---|---|---|---|
+| CBSE Mathematics | `X-CBSE-Mathematics-ShortAnswers.json` | 28 | 2023 Board (13) and 2024 Board (15) VSA/SA sections, real past papers |
+
 ## How to tell, per question, whether it's from a real paper
 
 - **Hindi**: every question is real; its `chapter` field and `id` prefix both carry the

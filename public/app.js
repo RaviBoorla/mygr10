@@ -2842,7 +2842,8 @@ const KEY = {
   autoNext:  'rise.autoNext',
   progress:  'rise.progress',   // "grade::board::subject" → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
   bookmarks: 'rise.bookmarks',  // "grade::board::subject" → qid → { at }
-  streak:    'rise.streak'      // "grade::board" → { current, longest, lastDate, todayDate, todayCount }
+  streak:    'rise.streak',     // "grade::board" → { current, longest, lastDate, todayDate, todayCount }
+  saDrafts:  'rise.saDrafts'    // "grade::board::subject" → qid → { text, revealed, status, at } — Short Answers
 };
 // One storage bucket per grade+board+subject so X-CBSE-Mathematics, XII-CBSE-Mathematics
 // and ICSE's own Mathematics never share progress, bookmarks or due-review counts.
@@ -2902,6 +2903,17 @@ const BANKS = {
   'X ICSE English':               'X-ICSE-English',
   'X CBSE Hindi':                  'X-CBSE-Hindi'
 };
+// Short-answer banks (VSA/SA, self-assessed — no options/correct field) are a
+// separate, much smaller catalogue: most subjects have none yet, so a missing
+// entry here just means "no Short Answers section", same convention as BANKS.
+const SA_BANKS = {
+  'X CBSE Mathematics': 'X-CBSE-Mathematics-ShortAnswers'
+};
+function saBankSlug(subject, board, grade) {
+  board = board || state.board;
+  grade = grade || state.grade;
+  return SA_BANKS[`${grade} ${board} ${subject}`];
+}
 // Returns the question-bank file slug for (subject, board, grade), or undefined if none.
 function bankSlug(subject, board, grade) {
   board = board || state.board;
@@ -3002,6 +3014,17 @@ function loadBank(subject) {
     .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
     .then(list => { bankCache[cacheKey] = list; return list; });
 }
+// Same caching pattern as loadBank, but for the separate Short Answers catalogue.
+const saBankCache = {};
+function loadSABank(subject) {
+  const slug = saBankSlug(subject);
+  const cacheKey = slug || subject;
+  if (saBankCache[cacheKey]) return Promise.resolve(saBankCache[cacheKey]);
+  if (!slug) return Promise.reject(new Error('No Short Answers bank for ' + subject));
+  return fetch(`questions/${slug}.json`)
+    .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
+    .then(list => { saBankCache[cacheKey] = list; return list; });
+}
 // A question is "real" if it was actually sourced from a board paper rather
 // than authored to the syllabus — every such question carries its exam year
 // somewhere (Hindi: in `chapter`/`id`; CBSE Maths/Science: inline in `text`).
@@ -3088,7 +3111,8 @@ const app = {
     if (!state.board)                        name = 'board';
     else if (name === 'test' && !this.session)    name = 'home';
     else if (name === 'results' && !this.reviewData) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board', 'progress'].includes(name)) name = 'home';
+    else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers'].includes(name)) name = 'home';
 
     // A guarded redirect must correct the URL too, or the address bar claims a screen
     // that is not on show and Back/refresh land somewhere unexpected.
@@ -3175,6 +3199,7 @@ const app = {
       case 'progress': return this._screenProgress();
       case 'test':     return this._screenTest();
       case 'results':  return this._screenResults();
+      case 'shortanswers': return this._screenShortAnswers(params[0]);
       default:         return '';
     }
   },
@@ -3186,6 +3211,7 @@ const app = {
       if (this.session.questions.length) this.startTimer();
     }
     if (name === 'results') { this._buildReviewPalette(); this.showReviewQuestion(this.reviewIndex || 0); }
+    if (name === 'shortanswers') this._hydrateShortAnswers(params[0]);
   },
 
   // ── Screen: board selection (first run only) ────────────────────────────────
@@ -3296,6 +3322,105 @@ const app = {
       </div>`;
   },
 
+  // ── Screen: Short Answers — VSA/SA practice, self-assessed against a model
+  // answer (there's no options/correct field to auto-grade free text against).
+  // Content loads async after the initial paint, same pattern as _hydrateHome.
+  _screenShortAnswers(subject) {
+    return `
+      <div class="screen">
+        <p class="subtitle">${esc(subject)} · Very Short &amp; Short Answer questions from real board papers. Write your own answer, then reveal the model answer to self-check.</p>
+        <div id="sa-list" class="sa-list">Loading…</div>
+      </div>`;
+  },
+
+  _hydrateShortAnswers(subject) {
+    loadSABank(subject)
+      .then(list => this._renderSAList(subject, list))
+      .catch(err => {
+        const box = document.getElementById('sa-list');
+        if (box) box.textContent = err.message;
+      });
+  },
+
+  _renderSAList(subject, list) {
+    const box = document.getElementById('sa-list');
+    if (!box) return;
+    const drafts = LS.get(KEY.saDrafts, {})[scopeKey(subject)] || {};
+    const chapters = chaptersOf(list);
+
+    box.innerHTML = chapters.map(ch => {
+      const qs = list.filter(q => (q.chapter || 'General') === ch.name);
+      const gotIt = qs.filter(q => drafts[q.id]?.status === 'got-it').length;
+      return `
+        <section class="home-section">
+          <h2 class="section-title">${esc(ch.name)} <small class="sa-chapter-count">${gotIt}/${qs.length} got it</small></h2>
+          ${qs.map(q => this._renderSACard(subject, q, drafts[q.id])).join('')}
+        </section>`;
+    }).join('');
+  },
+
+  _renderSACard(subject, q, draft) {
+    draft = draft || {};
+    const revealed = !!draft.revealed;
+    const status = draft.status || '';
+    return `
+      <article class="card sa-card" data-sa-id="${esc(q.id)}">
+        <header class="sa-card-head">
+          <span class="sa-marks">${q.marks} mark${q.marks === 1 ? '' : 's'}</span>
+          ${status ? `<span class="sa-status ${status}">${status === 'got-it' ? '&#10003; Got it' : '&#8635; Review again'}</span>` : ''}
+        </header>
+        <p class="sa-question">${esc(q.text)}</p>
+        <textarea class="sa-textarea" placeholder="Write your answer here (saved automatically)…"
+                  oninput="app.saveSADraft('${esc(subject)}','${esc(q.id)}', this.value)">${esc(draft.text || '')}</textarea>
+        ${revealed ? `
+          <div class="sa-model">
+            <strong>Model answer:</strong>
+            <p>${esc(q.modelAnswer)}</p>
+            ${q.keyPoints && q.keyPoints.length ? `
+              <strong>Key points to cover:</strong>
+              <ul>${q.keyPoints.map(k => `<li>${esc(k)}</li>`).join('')}</ul>` : ''}
+          </div>
+          <div class="sa-markrow">
+            <button class="btn small ${status === 'got-it' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','got-it')">&#10003; Got it</button>
+            <button class="btn small ${status === 'review' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','review')">&#8635; Review again</button>
+          </div>`
+        : `<button class="btn act-btn" onclick="app.revealSA('${esc(subject)}','${esc(q.id)}')">Show model answer</button>`}
+      </article>`;
+  },
+
+  _saveSATimer: null,
+  saveSADraft(subject, id, text) {
+    const store = LS.get(KEY.saDrafts, {});
+    const scope = store[scopeKey(subject)] || (store[scopeKey(subject)] = {});
+    scope[id] = { ...(scope[id] || {}), text, at: Date.now() };
+    // Debounced write — typing fires this on every keystroke, but localStorage
+    // is synchronous, so batching avoids janking a fast typist.
+    clearTimeout(this._saveSATimer);
+    this._saveSATimer = setTimeout(() => LS.set(KEY.saDrafts, store), 300);
+  },
+
+  revealSA(subject, id) {
+    const store = LS.get(KEY.saDrafts, {});
+    const scope = store[scopeKey(subject)] || (store[scopeKey(subject)] = {});
+    scope[id] = { ...(scope[id] || {}), revealed: true };
+    LS.set(KEY.saDrafts, store);
+    const card = document.querySelector(`[data-sa-id="${CSS.escape(id)}"]`);
+    if (card) loadSABank(subject).then(list => {
+      const q = list.find(x => x.id === id);
+      if (q) card.outerHTML = this._renderSACard(subject, q, scope[id]);
+    });
+  },
+
+  markSA(subject, id, status) {
+    const store = LS.get(KEY.saDrafts, {});
+    const scope = store[scopeKey(subject)] || (store[scopeKey(subject)] = {});
+    // Tapping the already-active status again clears it back to unmarked.
+    const next = scope[id]?.status === status ? '' : status;
+    scope[id] = { ...(scope[id] || {}), status: next };
+    LS.set(KEY.saDrafts, store);
+    loadSABank(subject).then(list => this._renderSAList(subject, list));
+  },
+
   // Top-level X / XII tab pair — shared by the Home and Revision Notes screens so
   // switching grade anywhere carries over everywhere (it's one global toggle).
   _gradeTabs() {
@@ -3349,6 +3474,11 @@ const app = {
            </button>`
         : `<span class="soon-tag">Question bank coming soon</span>`;
 
+      const saSlug = saBankSlug(subject);
+      const saLink = saSlug
+        ? `<button class="btn act-btn ghost" onclick="app.go(['shortanswers','${esc(subject)}'])">Short Answers</button>`
+        : '';
+
       const bmCount  = hasBank ? this._bookmarkCount(subject) : 0;
       const dueCount = hasBank ? this._dueCount(subject) : 0;
       const reviewLinks = (bmCount || dueCount) ? `
@@ -3364,7 +3494,7 @@ const app = {
             <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
           </header>
           ${hasBank ? this._difficultyBar(subject) : ''}
-          <div class="subj-actions">${actions}</div>
+          <div class="subj-actions">${actions}${saLink}</div>
           ${reviewLinks}
           <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
             <p class="picker-hint">Pick a chapter to drill</p>

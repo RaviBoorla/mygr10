@@ -345,6 +345,27 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .recent-desc { display: flex; flex-direction: column; flex: 1; min-width: 0; }
 .recent-desc small { color: var(--text-light); font-size: var(--fs-note); }
 
+/* ─── Short Answers (VSA/SA self-assessed practice) ───────────────────────── */
+.sa-list { display: flex; flex-direction: column; gap: 20px; }
+.sa-chapter-count { font-weight: 400; color: var(--text-light); font-size: var(--fs-note); }
+.sa-card { display: flex; flex-direction: column; gap: 10px; }
+.sa-card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sa-marks { font-size: var(--fs-2xs); font-weight: 700; color: var(--text-light); background: var(--bg); border-radius: var(--radius-md); padding: 2px 8px; }
+.sa-status { font-size: var(--fs-2xs); font-weight: 700; border-radius: var(--radius-md); padding: 2px 8px; }
+.sa-status.got-it { color: var(--score-good); }
+.sa-status.review { color: var(--score-weak); background: var(--tile-weak-bg); }
+.sa-question { margin: 0; font-weight: 600; }
+.sa-textarea {
+  width: 100%; min-height: 90px; resize: vertical; font: inherit; padding: 10px 12px;
+  border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg);
+  color: var(--text); box-sizing: border-box;
+}
+.sa-model { border-top: 1px dashed var(--border); padding-top: 10px; font-size: var(--fs-ui); }
+.sa-model p { margin: 4px 0 8px; }
+.sa-model ul { margin: 0; padding-left: 20px; }
+.sa-model li { margin-bottom: 4px; }
+.sa-markrow { display: flex; gap: 8px; }
+
 /* ─── Test session ─────────────────────────────────────────────────────────── */
 /* Mock test, chapter drill and the question-and-answer review all share this
    shell: header, then a natural-height topbar, then panels taking the rest.
