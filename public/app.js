@@ -3702,12 +3702,12 @@ const app = {
 
       const saSlug = saBankSlug(subject);
       const saLink = saSlug
-        ? `<button class="btn act-btn ghost" onclick="app.go(['shortanswers','${esc(subject)}'])">Short Answers</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">Board Short Answers</button>`
         : '';
 
       const solvedSlug = solvedBankSlug(subject);
       const solvedLink = solvedSlug
-        ? `<button class="btn act-btn ghost" onclick="app.go(['solved','${esc(subject)}'])">Solved Exercises</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['solved','${esc(subject)}'])">Textbook Solved Exercises</button>`
         : '';
 
       const bmCount  = hasBank ? this._bookmarkCount(subject) : 0;

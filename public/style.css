@@ -308,6 +308,9 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .act-btn { flex: 1 1 140px; text-align: center; padding: 10px 12px; font-size: var(--fs-body); }
 .act-btn small { display: block; font-size: var(--fs-xs); font-weight: 400; opacity: .8; margin-top: 2px; }
 .act-btn.ghost { flex-basis: 100%; }
+/* Board Short Answers + Textbook Solved Exercises sit side by side, not
+   stacked full-width like a lone secondary action. */
+.act-btn.ghost.half { flex-basis: 140px; }
 
 .soon-tag {
   font-size: var(--fs-ui); color: var(--text-light);
