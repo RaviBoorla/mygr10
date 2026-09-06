@@ -29,7 +29,7 @@ for f in sorted(glob.glob('public/questions/*.json')):
 | Science | `X-CBSE-Science.json` | 360 | 2023 Board (20), 2024 Board (20), 2025 Board (60), 2026 Board (60) — 160 real; remaining 200 curriculum-authored. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped, same as Math/Social Science's 2022 papers.) |
 | Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
 | Hindi | `X-CBSE-Hindi.json` | 125 | 2023 Board (49), 2024 Board (44), 2025 Board (16), 2026 Board (16) — **all 125 from real past papers** (Course A only; Sets 1/2/3 per year were confirmed identical content, so only one deduplicated copy per year is kept) |
-| English | — | 0 | No bank yet — card shows "Question bank coming soon" for Grade X |
+| English | `X-CBSE-English.json` | 42 | 2023 Board (17), 2024 Board (8), 2025 Board (9), 2026 Board (8) — **all 42 from real past papers**: standalone Grammar MCQs (tenses, subject-verb agreement, reported speech, error correction, etc.) and Literature extract-based MCQs (the extract is quoted inline in the question). 2022's paper was the COVID-era Term 2 all-subjective format — no MCQs at all — so it's skipped. Unseen-passage Reading-section MCQs are skipped throughout (same reasoning as Hindi: the source passage isn't stored in the bank), as is one 2025 Board rhyme/theme MCQ whose official answer was too ambiguous to source confidently. |
 
 ## ICSE
 
@@ -62,6 +62,7 @@ marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
 | CBSE Mathematics | `X-CBSE-Mathematics-ShortAnswers.json` | 69 | 2022 Board (13), 2023 Board (13), 2024 Board (15), 2025 Board (13) and 2026 Board (15) VSA/SA sections, real past papers |
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
 | CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 63 | 2022 Board (12), 2023 Board (16), 2024 Board (13), 2025 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
+| CBSE English | `X-CBSE-English-ShortAnswers.json` | 90 | 2022 Board (8), 2023 Board (17), 2024 Board (20), 2025 Board (21) and 2026 Board (24) — real past papers. Two content types: (1) Grammar transformation exercises (reported speech, editing/error correction, fill-in-the-blank) that have no fixed 4-option answer; (2) Literature short-answer questions from the prescribed First Flight / Footprints Without Feet texts (known, syllabus-fixed works, not unseen passages). Creative-writing tasks (letters, analytical paragraphs/notices) are skipped as open-ended with no single model answer. |
 
 ## How to tell, per question, whether it's from a real paper
 

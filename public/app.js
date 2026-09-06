@@ -2901,7 +2901,8 @@ const BANKS = {
   'X ICSE History & Civics':      'X-ICSE-History-Civics',
   'X ICSE Geography':             'X-ICSE-Geography',
   'X ICSE English':               'X-ICSE-English',
-  'X CBSE Hindi':                  'X-CBSE-Hindi'
+  'X CBSE Hindi':                  'X-CBSE-Hindi',
+  'X CBSE English':               'X-CBSE-English'
 };
 // Short-answer banks (VSA/SA, self-assessed — no options/correct field) are a
 // separate, much smaller catalogue: most subjects have none yet, so a missing
@@ -2909,7 +2910,8 @@ const BANKS = {
 const SA_BANKS = {
   'X CBSE Mathematics':     'X-CBSE-Mathematics-ShortAnswers',
   'X CBSE Social Science':  'X-CBSE-Social-Science-ShortAnswers',
-  'X CBSE Science':         'X-CBSE-Science-ShortAnswers'
+  'X CBSE Science':         'X-CBSE-Science-ShortAnswers',
+  'X CBSE English':         'X-CBSE-English-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -3483,13 +3485,9 @@ const app = {
 
   // ── Screen: home — practice, resume and history on one page ─────────────────
   _screenHome() {
-    // Grade X's CBSE English still has no question bank — hide that placeholder
-    // card there rather than show a permanent "coming soon" dead end. Hindi now
-    // has a real bank (Course A, objective sections only) so it stays visible.
     // Grade XII has no banks yet for *any* subject, so every card there is meant to
     // show "coming soon" instead — that's the whole point of the XII shell.
-    const subjects = (SUBJECTS[state.board] || [])
-      .filter(s => !(state.grade === 'X' && state.board === 'CBSE' && s === 'English'));
+    const subjects = SUBJECTS[state.board] || [];
     const draft    = this._draft();
 
     const resume = draft ? `
