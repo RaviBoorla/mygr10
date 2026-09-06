@@ -26,8 +26,8 @@ for f in sorted(glob.glob('public/questions/*.json')):
 | Subject | File | Total Qs | Real board papers included |
 |---|---|---|---|
 | Mathematics | `X-CBSE-Mathematics.json` | 358 | 2023 Board (20), 2024 Board (20), 2025 Board (59), 2026 Board (59) — 158 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
-| Science | `X-CBSE-Science.json` | 360 | 2023 Board (20), 2024 Board (20), 2025 Board (60), 2026 Board (60) — 160 real; remaining 200 curriculum-authored. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped, same as Math/Social Science's 2022 papers.) |
-| Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
+| Science | `X-CBSE-Science.json` | 360 | 2023 Board (20), 2024 Board (20), 2025 Board (60), 2026 Board (60) — 160 real; remaining 200 curriculum-authored. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped, same as Math/Social Science's 2022 papers.) Every question also carries a `subject` field (`Physics`/`Chemistry`/`Biology`), derived from its `chapter`. |
+| Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) Every question also carries a `subject` field (`History`/`Geography`/`Civics`/`Economics`), derived from its `chapter`. |
 | Hindi | `X-CBSE-Hindi.json` | 125 | 2023 Board (49), 2024 Board (44), 2025 Board (16), 2026 Board (16) — **all 125 from real past papers** (Course A only; Sets 1/2/3 per year were confirmed identical content, so only one deduplicated copy per year is kept) |
 | English | `X-CBSE-English.json` | 42 | 2023 Board (17), 2024 Board (8), 2025 Board (9), 2026 Board (8) — **all 42 from real past papers**: standalone Grammar MCQs (tenses, subject-verb agreement, reported speech, error correction, etc.) and Literature extract-based MCQs (the extract is quoted inline in the question). 2022's paper was the COVID-era Term 2 all-subjective format — no MCQs at all — so it's skipped. Unseen-passage Reading-section MCQs are skipped throughout (same reasoning as Hindi: the source passage isn't stored in the bank), as is one 2025 Board rhyme/theme MCQ whose official answer was too ambiguous to source confidently. |
 
@@ -54,8 +54,10 @@ A parallel, much smaller catalogue for VSA (2-mark) and SA (3-mark) questions �
 these have no `options`/`correct` field (free-text, self-assessed against a
 model answer), so they're intentionally kept out of the MCQ banks above and
 the mock/drill logic never touches them. Schema per question: `{id, chapter,
-marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
-`app.js`; a subject with no entry there simply has no "Short Answers" button.
+marks, difficulty, text, modelAnswer, keyPoints[]}` (Science and Social Science
+also carry a `subject` field, same as their MCQ banks — see below). Listed in
+`SA_BANKS` in `app.js`; a subject with no entry there simply has no "Short
+Answers" button.
 
 | Subject | File | Total Qs | Source |
 |---|---|---|---|
@@ -63,6 +65,33 @@ marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
 | CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 63 | 2022 Board (12), 2023 Board (16), 2024 Board (13), 2025 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
 | CBSE English | `X-CBSE-English-ShortAnswers.json` | 90 | 2022 Board (8), 2023 Board (17), 2024 Board (20), 2025 Board (21) and 2026 Board (24) — real past papers. Two content types: (1) Grammar transformation exercises (reported speech, editing/error correction, fill-in-the-blank) that have no fixed 4-option answer; (2) Literature short-answer questions from the prescribed First Flight / Footprints Without Feet texts (known, syllabus-fixed works, not unseen passages). Creative-writing tasks (letters, analytical paragraphs/notices) are skipped as open-ended with no single model answer. |
+
+## Chapter → subject-area mapping (Science and Social Science)
+
+Every Science and Social Science question (both MCQ and Short Answers banks)
+carries a `subject` field alongside `chapter`, so a Chemistry-only or
+History-only drill/report is possible without string-matching chapter names.
+Derived once from `chapter` and written directly into the JSON (not computed
+at runtime) — regenerate with the same mapping if a new chapter is ever added:
+
+**Science** — Chemistry: Acids/Bases and Salts, Carbon and its Compounds,
+Chemical Reactions and Equations, Metals and Non-metals, Periodic
+Classification of Elements. Physics: Electricity, Light — Reflection and
+Refraction, Magnetic Effects of Electric Current, Sources of Energy, The
+Human Eye and the Colourful World. Biology: Control and Coordination,
+Heredity and Evolution, How do Organisms Reproduce, Life Processes,
+Management of Natural Resources, Our Environment.
+
+**Social Science** — History: Nationalism in India, The Rise of Nationalism
+in Europe, The Age of Industrialisation, Print Culture and the Modern World,
+The Making of a Global World. Geography: Resources and Development, Forest
+and Wildlife Resources, Water Resources, Agriculture, Minerals and Energy
+Resources, Manufacturing Industries, Lifelines of National Economy. Civics:
+Power Sharing, Federalism, Democracy and Diversity, Gender/Religion and
+Caste, Popular Struggles and Movements, Political Parties, Outcomes of
+Democracy, Challenges to Democracy. Economics: Development, Sectors of the
+Indian Economy, Money and Credit, Globalisation and the Indian Economy,
+Consumer Rights.
 
 ## How to tell, per question, whether it's from a real paper
 
