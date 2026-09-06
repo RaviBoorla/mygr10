@@ -3178,14 +3178,23 @@ const app = {
       <span>Rise</span>
     </button>`;
 
-    // The current screen's name beside the wordmark — so the header always answers
-    // "where am I", instead of repeating it as a second heading in the body below.
-    // Every screen falls back to the board name, so the header looks the same
-    // one component everywhere instead of only home/notes/progress having a crumb.
-    const crumbLabel = state.screen === 'notes'    ? 'Revision Notes'
-                      : state.screen === 'progress' ? 'Progress'
-                      : (BOARDS.find(b => b.id === state.board)?.name || '');
-    const crumb = crumbLabel ? `<span class="hdr-crumb">${esc(crumbLabel)}</span>` : '';
+    // The full path to the current screen, beside the wordmark — so the header
+    // always answers "where am I", instead of repeating it as a second heading
+    // in the body below. Every screen starts from the board name; deeper screens
+    // (a subject's Short Answers/Solved Exercises/Test/Results) append their own
+    // segments, so the crumb reads like "CBSE → Mathematics → Board Short Answers".
+    const params = state.params || [];
+    const crumbParts = [BOARDS.find(b => b.id === state.board)?.name || ''].filter(Boolean);
+    if (state.screen === 'notes') crumbParts.push('Revision Notes');
+    else if (state.screen === 'progress') crumbParts.push('Progress');
+    else if (state.screen === 'shortanswers') { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Board Short Answers'); }
+    else if (state.screen === 'solved')       { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Textbook Solved Exercises'); }
+    else if (state.screen === 'test' && this.session) {
+      crumbParts.push(this.session.subject, MODES[this.session.mode]?.label || 'Test');
+    } else if (state.screen === 'results' && this.lastConfig) {
+      crumbParts.push(this.lastConfig.subject, (MODES[this.lastConfig.mode]?.label || 'Test') + ' Results');
+    }
+    const crumb = crumbParts.length ? `<span class="hdr-crumb">${crumbParts.map(esc).join(' <span class="hdr-crumb-sep">&rarr;</span> ')}</span>` : '';
 
     const notesActive = state.screen === 'notes';
     const progressActive = state.screen === 'progress';
@@ -3367,10 +3376,15 @@ const app = {
     return `
       <div class="screen sa-screen">
         <div class="sa-topbar">
-          <div class="sa-tabs" id="sa-tabs" role="tablist" aria-label="Chapter"><span class="sa-tabs-loading">Loading chapters…</span></div>
+          <label class="sa-chapter-select-wrap">
+            <span class="sr-only">Chapter</span>
+            <select class="sa-chapter-select" id="sa-chapter-select" aria-label="Chapter"
+                    onchange="app.setSAChapter('${esc(subject)}', this.value)">
+              <option>Loading chapters…</option>
+            </select>
+          </label>
           <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
         </div>
-        <p class="subtitle">${esc(subject)} · Very Short &amp; Short Answer questions from real board papers. Write your own answer, then reveal the model answer alongside it to self-check.</p>
         <div id="sa-list" class="sa-list">Loading…</div>
       </div>`;
   },
@@ -3378,7 +3392,7 @@ const app = {
   _hydrateShortAnswers(subject) {
     loadSABank(subject)
       .then(list => {
-        this._renderSATabs(subject, list);
+        this._renderSAChapterSelect(subject, list);
         this._renderSAList(subject, list);
       })
       .catch(err => {
@@ -3387,24 +3401,21 @@ const app = {
       });
   },
 
-  _renderSATabs(subject, list) {
-    const box = document.getElementById('sa-tabs');
+  _renderSAChapterSelect(subject, list) {
+    const box = document.getElementById('sa-chapter-select');
     if (!box) return;
     const chapters = chaptersOf(list);
+    // No "All chapters" option any more — always land on a specific chapter.
+    if (!state.saChapter[subject] && chapters.length) state.saChapter[subject] = chapters[0].name;
     const active = state.saChapter[subject] || '';
-    this._saChapterIndex = this._saChapterIndex || {};
-    this._saChapterIndex[subject] = chapters.map(c => c.name);
-    const tab = (name, label, count) => `
-      <button class="filter-tab ${active === name ? 'active' : ''}" aria-pressed="${active === name}"
-              onclick="app.setSAChapter('${esc(subject)}','${esc(name)}')">${esc(label)}${count != null ? ` <small>${count}</small>` : ''}</button>`;
-    box.innerHTML = tab('', 'All chapters', list.length)
-      + chapters.map(c => tab(c.name, c.name, c.count)).join('');
+    box.innerHTML = chapters.map(c => `
+      <option value="${esc(c.name)}" ${active === c.name ? 'selected' : ''}>${esc(c.name)} (${c.count})</option>`).join('');
   },
 
   setSAChapter(subject, name) {
     state.saChapter[subject] = name;
     loadSABank(subject).then(list => {
-      this._renderSATabs(subject, list);
+      this._renderSAChapterSelect(subject, list);
       this._renderSAList(subject, list);
     });
   },
@@ -3413,19 +3424,10 @@ const app = {
     const box = document.getElementById('sa-list');
     if (!box) return;
     const drafts = LS.get(KEY.saDrafts, {})[scopeKey(subject)] || {};
-    const activeChapter = state.saChapter[subject] || '';
-    const chapters = activeChapter ? [{ name: activeChapter }] : chaptersOf(list);
-
-    box.innerHTML = chapters.map(ch => {
-      const qs = list.filter(q => (q.chapter || 'General') === ch.name);
-      if (!qs.length) return '';
-      const gotIt = qs.filter(q => drafts[q.id]?.status === 'got-it').length;
-      return `
-        <section class="home-section">
-          <h2 class="section-title">${esc(ch.name)} <small class="sa-chapter-count">${gotIt}/${qs.length} got it</small></h2>
-          ${qs.map(q => this._renderSACard(subject, q, drafts[q.id])).join('')}
-        </section>`;
-    }).join('');
+    const chapters = chaptersOf(list);
+    const activeChapter = state.saChapter[subject] || (chapters[0] && chapters[0].name) || '';
+    const qs = list.filter(q => (q.chapter || 'General') === activeChapter);
+    box.innerHTML = qs.map(q => this._renderSACard(subject, q, drafts[q.id])).join('');
   },
 
   _renderSACard(subject, q, draft) {

@@ -164,6 +164,7 @@ body {
   z-index: 10;
 }
 .hdr-left, .hdr-right { display: flex; align-items: center; gap: 10px; }
+.hdr-left { min-width: 0; }
 
 .hdr-logo {
   display: flex; align-items: center; gap: 7px;
@@ -174,11 +175,14 @@ body {
 .hdr-logo[aria-disabled="true"] { cursor: default; pointer-events: none; }
 .logo-icon { flex-shrink: 0; border-radius: var(--radius-logo); }
 
-/* Current screen's name, beside the wordmark — "Rise · CBSE" / "Rise · Progress" */
+/* Full path to the current screen, beside the wordmark — e.g.
+   "Rise | CBSE → Mathematics → Board Short Answers" */
 .hdr-crumb {
   font-size: var(--fs-ui); color: var(--text-light); white-space: nowrap;
   padding-left: 8px; border-left: 1px solid var(--border); margin-left: 2px;
+  overflow: hidden; text-overflow: ellipsis;
 }
+.hdr-crumb-sep { color: var(--border); padding: 0 2px; }
 
 /* Every header action lives behind one hamburger, on every screen size. */
 .hdr-hamburger {
@@ -359,6 +363,15 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .sa-tabs { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; min-width: 0; }
 .sa-tabs-loading { font-size: var(--fs-ui); color: var(--text-light); }
 .sa-tabs .filter-tab small { opacity: .75; margin-left: 2px; }
+
+/* Board Short Answers: a single chapter dropdown replaces the chapter-tabs row,
+   sharing the topbar with Exit instead of a separate "All chapters" tab set. */
+.sa-chapter-select-wrap { flex: 1; min-width: 0; max-width: 360px; }
+.sa-chapter-select {
+  width: 100%; padding: 8px 12px; font-size: var(--fs-ui); font-family: inherit;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--surface); color: var(--text); cursor: pointer;
+}
 
 .sa-list { display: flex; flex-direction: column; gap: 20px; }
 .sa-chapter-count { font-weight: 400; color: var(--text-light); font-size: var(--fs-note); }
