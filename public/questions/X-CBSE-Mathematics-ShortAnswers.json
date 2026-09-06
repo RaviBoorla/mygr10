@@ -367,5 +367,257 @@
     "text": "Following is the daily expenditure on lunch by 30 employees of a company: Daily expenditure (Rs) 100-120,120-140,140-160,160-180,180-200 with number of employees 8,3,8,6,5. Find the mean daily expenditure of the employees. (2022 Board)",
     "modelAnswer": "Using class midpoints 110,130,150,170,190: Sum(f×x) = 110(8)+130(3)+150(8)+170(6)+190(5) = 880+390+1200+1020+950 = 4440. Total frequency = 30. Mean = 4440/30 = Rs 148.",
     "keyPoints": ["Find the midpoint of each class (110, 130, 150, 170, 190).", "Compute Σ(f×midpoint) = 4440.", "Divide by total frequency (30) to get Mean = Rs 148."]
+  },
+  {
+    "id": "sa-math-042",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If x cos 60° + y cos 0° + sin 30° · cot 45° = 5, then find the value of x + 2y. (2025 Board)",
+    "modelAnswer": "cos 60° = 1/2, cos 0° = 1, sin 30° = 1/2, cot 45° = 1. Substituting: x(1/2) + y(1) + (1/2)(1) = 5, i.e. x/2 + y = 4.5. Multiplying by 2: x + 2y = 9.",
+    "keyPoints": ["Substitute the standard values: cos60°=1/2, cos0°=1, sin30°·cot45°=1/2", "Simplify to x/2 + y = 4.5", "Multiply by 2 to get x + 2y = 9"]
+  },
+  {
+    "id": "sa-math-043",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: Evaluate: tan²60° / (sin²60° + cos²30°). (2025 Board)",
+    "modelAnswer": "tan²60°=3, sin²60°=3/4, cos²30°=3/4, so the denominator = 3/4+3/4 = 3/2. Value = 3 ÷ 3/2 = 2.",
+    "keyPoints": ["tan 60° = √3, so tan²60° = 3", "sin²60° = cos²30° = 3/4, sum = 3/2", "3 ÷ 3/2 = 2"]
+  },
+  {
+    "id": "sa-math-044",
+    "chapter": "Polynomials",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Find the zeroes of the polynomial p(x) = x² + (4/3)x − 4/3. (2025 Board)",
+    "modelAnswer": "Multiply through by 3: 3x² + 4x − 4 = 0. Factorise: 3x² + 6x − 2x − 4 = 3x(x+2) − 2(x+2) = (3x−2)(x+2) = 0. So the zeroes are x = 2/3 and x = −2.",
+    "keyPoints": ["Clear fractions: 3x²+4x−4=0", "Factorise by splitting the middle term", "Zeroes: x = 2/3 and x = −2"]
+  },
+  {
+    "id": "sa-math-045",
+    "chapter": "Coordinate Geometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "The coordinates of the centre of a circle are (2a, a − 7). Find the value(s) of 'a' if the circle passes through the point (11, −9) and has diameter 10√2 units. (2025 Board)",
+    "modelAnswer": "Radius = half of diameter = 5√2, so radius² = 50. Distance from centre (2a, a−7) to the point (11, −9) equals the radius: (2a−11)² + (a+2)² = 50. Expanding: 4a²−44a+121 + a²+4a+4 = 50 → 5a²−40a+75 = 0 → a²−8a+15 = 0 → (a−3)(a−5) = 0. So a = 3 or a = 5.",
+    "keyPoints": ["Radius² = (half of 10√2)² = 50", "Set distance from centre to given point equal to radius, square both sides", "Solve the quadratic: a = 3 or a = 5"]
+  },
+  {
+    "id": "sa-math-046",
+    "chapter": "Triangles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If ΔABC ~ ΔPQR in which AB = 6 cm, BC = 4 cm, AC = 8 cm and PR = 6 cm, then find the length of (PQ + QR). (2025 Board)",
+    "modelAnswer": "Since ΔABC ~ ΔPQR, AC/PR = AB/PQ = BC/QR. AC/PR = 8/6 = 4/3, so PQ = AB × (3/4) = 6 × 3/4 = 4.5 cm and QR = BC × (3/4) = 4 × 3/4 = 3 cm. So PQ + QR = 4.5 + 3 = 7.5 cm.",
+    "keyPoints": ["Similar triangles: corresponding sides are in the same ratio AC/PR = AB/PQ = BC/QR", "Scale factor = AC/PR = 8/6 = 4/3", "PQ = 4.5 cm, QR = 3 cm, so PQ+QR = 7.5 cm"]
+  },
+  {
+    "id": "sa-math-047",
+    "chapter": "Circles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "A person is standing at P outside a circular ground at a distance of 26 m from the centre of the ground. He found that his distances from the points A and B on the ground are 10 m (PA and PB are tangents to the circle). Find the radius of the circular ground. (2025 Board)",
+    "modelAnswer": "OA is a radius and PA is a tangent at A, so OA ⊥ PA. In right triangle OAP: OP² = OA² + PA², so OA² = 26² − 10² = 676 − 100 = 576, giving OA = 24 m. The radius of the ground is 24 m.",
+    "keyPoints": ["Radius ⊥ tangent at the point of contact", "Apply Pythagoras in right triangle OAP: OA² = OP² − PA²", "OA² = 676 − 100 = 576 → radius = 24 m"]
+  },
+  {
+    "id": "sa-math-048",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that opposite sides of a quadrilateral circumscribing a circle subtend supplementary angles at the centre of the circle. (2025 Board)",
+    "modelAnswer": "Let quadrilateral ABCD circumscribe a circle with centre O, touching the sides AB, BC, CD, DA at P, Q, R, S respectively. Join OA, OB, OC, OD and OP, OQ, OR, OS. Since the two tangents from an external point subtend equal angles at the centre, ∠AOP=∠AOS, ∠BOP=∠BOQ, ∠COQ=∠COR, ∠DOR=∠DOS. These eight angles around O add up to 360°, and grouping them shows ∠AOB+∠COD=180° and ∠BOC+∠DOA=180°. Hence each pair of opposite sides subtends supplementary angles at the centre.",
+    "keyPoints": ["Join the centre to all four vertices and all four points of contact", "Tangents from each vertex are equally inclined to the line joining that vertex to the centre", "The eight angles around O sum to 360°, giving ∠AOB+∠COD = 180° and ∠BOC+∠DOA = 180°"]
+  },
+  {
+    "id": "sa-math-049",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that: tanθ/(1−cotθ) + cotθ/(1−tanθ) = 1 + secθ cosecθ. (2025 Board)",
+    "modelAnswer": "Let s = sinθ, c = cosθ. LHS = (s/c)/(1−c/s) + (c/s)/(1−s/c) = s²/[c(s−c)] − c²/[s(s−c)] = [s³−c³]/[sc(s−c)] = (s²+sc+c²)/(sc) [since s³−c³=(s−c)(s²+sc+c²)] = (s²+c²)/(sc) + 1 = 1/(sc) + 1 = secθ cosecθ + 1, which is the RHS.",
+    "keyPoints": ["Write tanθ, cotθ in terms of sinθ, cosθ and combine over a common denominator", "Factor s³−c³ = (s−c)(s²+sc+c²) to cancel (s−c)", "Use s²+c²=1 to reach 1+secθcosecθ"]
+  },
+  {
+    "id": "sa-math-050",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "OR: Prove that: (sinA+cosA)/(sinA−cosA) + (sinA−cosA)/(sinA+cosA) = 2/(2sin²A−1). (2025 Board)",
+    "modelAnswer": "Combine over a common denominator: [(sinA+cosA)² + (sinA−cosA)²] / [(sinA−cosA)(sinA+cosA)] = [2sin²A+2cos²A]/(sin²A−cos²A) = 2/(sin²A−cos²A). Since cos²A = 1−sin²A, sin²A−cos²A = 2sin²A−1, so the expression equals 2/(2sin²A−1), which is the RHS.",
+    "keyPoints": ["Combine the two fractions over the common denominator (sinA−cosA)(sinA+cosA)", "Expand the squares: sum = 2sin²A+2cos²A = 2", "Denominator sin²A−cos²A = 2sin²A−1 using cos²A=1−sin²A"]
+  },
+  {
+    "id": "sa-math-051",
+    "chapter": "Coordinate Geometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Find the ratio in which the y-axis divides the line segment joining the points (5, −6) and (−1, −4). Also find the point of intersection. (2025 Board)",
+    "modelAnswer": "Let the y-axis divide the segment in ratio k:1 from (5,−6) to (−1,−4). Its x-coordinate is 0: (k(−1)+5)/(k+1)=0 → −k+5=0 → k=5, so the ratio is 5:1. The y-coordinate of the point is (5(−4)+1(−6))/6 = (−20−6)/6 = −26/6 = −13/3. So the y-axis divides the segment in the ratio 5:1, at the point (0, −13/3).",
+    "keyPoints": ["Set the x-coordinate of the section-formula point to 0 (since it's on the y-axis)", "Solve for the ratio k:1 → k=5, i.e. ratio 5:1", "Substitute k=5 into the y-coordinate formula to get the point (0, −13/3)"]
+  },
+  {
+    "id": "sa-math-052",
+    "chapter": "Real Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that 1/√5 is an irrational number. (2025 Board)",
+    "modelAnswer": "Suppose, for contradiction, that 1/√5 is rational, i.e. 1/√5 = p/q for integers p, q (q≠0, gcd(p,q)=1). Then √5 = q/p, a ratio of integers, so √5 would be rational. But √5 is known to be irrational (if √5=a/b in lowest terms, then 5b²=a², so 5 divides a², hence 5 divides a; writing a=5c gives 5b²=25c², so b²=5c², so 5 divides b too — contradicting gcd(a,b)=1). This contradiction shows √5 is irrational, so 1/√5 cannot be rational either; hence 1/√5 is irrational.",
+    "keyPoints": ["Assume 1/√5 = p/q in lowest terms, for contradiction", "This would make √5 = q/p, i.e. rational", "But √5 is irrational (standard proof by contradiction using prime factorisation), so the assumption is false"]
+  },
+  {
+    "id": "sa-math-053",
+    "chapter": "Surface Areas and Volumes",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "A room is in the form of a cylinder surmounted by a hemispherical dome. The base radius of the hemisphere is half of the height of the cylindrical part. If the room contains 1408/21 m³ of air, find the height of the cylindrical part. (Use π = 22/7) (2025 Board)",
+    "modelAnswer": "Let the cylindrical height be h, so the hemisphere's radius r = h/2, which is also the cylinder's radius. Total volume = πr²h + (2/3)πr³ = π(h/2)²h + (2/3)π(h/2)³ = πh³/4 + πh³/12 = πh³/3. Setting πh³/3 = 1408/21 with π=22/7: (22/7)(h³)/3 = 1408/21 → h³ = 1408/21 × 21/22 = 1408/22 = 64 → h = 4. The height of the cylindrical part is 4 m.",
+    "keyPoints": ["Radius of both cylinder and hemisphere r = h/2", "Total volume = πr²h + (2/3)πr³ simplifies to πh³/3", "Solve πh³/3 = 1408/21 to get h³=64, so h = 4 m"]
+  },
+  {
+    "id": "sa-math-054",
+    "chapter": "Probability",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Two dice are thrown at the same time. Determine the probability that the difference of the numbers on the two dice is 2. (2025 Board)",
+    "modelAnswer": "There are 36 equally likely outcomes. The pairs with |difference|=2 are (1,3),(3,1),(2,4),(4,2),(3,5),(5,3),(4,6),(6,4) — 8 outcomes. So the probability is 8/36 = 2/9.",
+    "keyPoints": ["Total outcomes when two dice are thrown = 36", "List the 8 pairs whose numbers differ by 2", "Probability = 8/36 = 2/9"]
+  },
+  {
+    "id": "sa-math-055",
+    "chapter": "Polynomials",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If α, β are the zeroes of the quadratic polynomial px² + qx + r, then find the value of α³β + β³α. (2026 Board)",
+    "modelAnswer": "α³β+β³α = αβ(α²+β²) = αβ[(α+β)²−2αβ]. For px²+qx+r: α+β = −q/p, αβ = r/p. So the expression = (r/p)[(q²/p²) − 2r/p] = (r/p) × (q²−2pr)/p² = r(q²−2pr)/p³.",
+    "keyPoints": ["Factor as αβ(α²+β²) and use α²+β²=(α+β)²−2αβ", "Use α+β=−q/p and αβ=r/p from the coefficients", "Simplify to r(q²−2pr)/p³"]
+  },
+  {
+    "id": "sa-math-056",
+    "chapter": "Triangles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "In the given figure, ΔAHK ~ ΔABC. If AK = 10 cm, BC = 3.5 cm and HK = 7 cm, find the length of AC. (2026 Board)",
+    "modelAnswer": "Since ΔAHK ~ ΔABC (A↔A, H↔B, K↔C), corresponding sides are proportional: HK/BC = AK/AC. So 7/3.5 = 10/AC, giving AC = 10 × 3.5/7 = 5 cm.",
+    "keyPoints": ["Match up corresponding vertices: A↔A, H↔B, K↔C", "Use HK/BC = AK/AC from the similarity", "AC = 10 × 3.5 / 7 = 5 cm"]
+  },
+  {
+    "id": "sa-math-057",
+    "chapter": "Triangles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: In the given figure, XY || QR, PQ/XQ = 7/3 and PR = 6.3 cm. Find the length of YR. (2026 Board)",
+    "modelAnswer": "Since XY || QR, by the Basic Proportionality Theorem, PX/XQ = PY/YR. PQ/XQ = 7/3 means PX/XQ = PQ/XQ − 1 = 7/3 − 1 = 4/3, so PY/YR = 4/3 too. Since PY+YR = PR = 6.3, write PY=4k, YR=3k: 7k=6.3 → k=0.9. So YR = 3 × 0.9 = 2.7 cm.",
+    "keyPoints": ["XY || QR gives PX/XQ = PY/YR by the Basic Proportionality Theorem", "PQ/XQ = 7/3 → PX/XQ = 4/3", "Split PR = 6.3 in ratio 4:3 to get YR = 2.7 cm"]
+  },
+  {
+    "id": "sa-math-058",
+    "chapter": "Coordinate Geometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If the points A(4, 5), B(m, 6), C(4, 3) and D(1, n) taken in this order are the vertices of a parallelogram ABCD, then find the values of m and n. (2026 Board)",
+    "modelAnswer": "In a parallelogram, the diagonals bisect each other, so the midpoint of AC equals the midpoint of BD. Midpoint of AC = ((4+4)/2, (5+3)/2) = (4, 4). Midpoint of BD = ((m+1)/2, (6+n)/2). Equating: (m+1)/2=4 → m=7, and (6+n)/2=4 → n=2.",
+    "keyPoints": ["Diagonals of a parallelogram bisect each other: midpoint AC = midpoint BD", "Midpoint of AC = (4, 4)", "Solve (m+1)/2=4 and (6+n)/2=4 to get m=7, n=2"]
+  },
+  {
+    "id": "sa-math-059",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "If tanθ + 1/tanθ = 2, find the value of tan²θ + 1/tan²θ. (2026 Board)",
+    "modelAnswer": "Let t=tanθ. From t+1/t=2, squaring both sides gives t²+1/t²+2=4, so t²+1/t²=2. (This is consistent with t+1/t=2 forcing (t−1)²=0, i.e. tanθ=1, giving tan²θ+1/tan²θ=1+1=2.)",
+    "keyPoints": ["Square tanθ + 1/tanθ = 2: tan²θ + 1/tan²θ + 2 = 4", "So tan²θ + 1/tan²θ = 2", "(Equivalently, t+1/t=2 forces tanθ=1)"]
+  },
+  {
+    "id": "sa-math-060",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: Prove that: √[(1 − sinθ)/(1 + sinθ)] = secθ − tanθ. (2026 Board)",
+    "modelAnswer": "Multiply the fraction inside the root, top and bottom, by (1−sinθ): (1−sinθ)²/[(1+sinθ)(1−sinθ)] = (1−sinθ)²/(1−sin²θ) = (1−sinθ)²/cos²θ. Taking the square root: (1−sinθ)/cosθ = 1/cosθ − sinθ/cosθ = secθ − tanθ.",
+    "keyPoints": ["Multiply numerator and denominator inside the root by (1−sinθ)", "Use 1−sin²θ = cos²θ in the denominator", "√[(1−sinθ)²/cos²θ] = (1−sinθ)/cosθ = secθ−tanθ"]
+  },
+  {
+    "id": "sa-math-061",
+    "chapter": "Circles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "In the given figure, O is the centre of the circle. PQ and PR are tangents. Show that the quadrilateral PQOR is cyclic. (2026 Board)",
+    "modelAnswer": "OQ ⊥ PQ and OR ⊥ PR, since a tangent is perpendicular to the radius at the point of contact. So ∠OQP = ∠ORP = 90°, and ∠OQP + ∠ORP = 180°. Since one pair of opposite angles of quadrilateral PQOR sums to 180°, PQOR is a cyclic quadrilateral.",
+    "keyPoints": ["Radius ⊥ tangent at the point of contact: ∠OQP = ∠ORP = 90°", "These are opposite angles of quadrilateral PQOR and sum to 180°", "A quadrilateral with a pair of opposite angles summing to 180° is cyclic"]
+  },
+  {
+    "id": "sa-math-062",
+    "chapter": "Real Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that √5 is an irrational number. (2026 Board)",
+    "modelAnswer": "Suppose, for contradiction, √5 = a/b where a, b are integers with no common factor (b≠0). Then 5 = a²/b², so a² = 5b², meaning 5 divides a², and hence 5 divides a. Write a = 5c; then 25c² = 5b², so b² = 5c², meaning 5 divides b² and hence 5 divides b. But then 5 divides both a and b, contradicting that they have no common factor. Hence √5 is irrational.",
+    "keyPoints": ["Assume √5 = a/b in lowest terms, for contradiction", "Show 5 divides a (from a²=5b²), then substitute a=5c to show 5 divides b too", "This contradicts gcd(a,b)=1, so √5 must be irrational"]
+  },
+  {
+    "id": "sa-math-063",
+    "chapter": "Coordinate Geometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Find the coordinates of the points of trisection of the line segment joining the points A(−1, 4) and B(−3, −2). (2026 Board)",
+    "modelAnswer": "The two trisection points divide AB in ratio 1:2 and 2:1 from A. First point P (1/3 of the way from A to B) = (−1 + (1/3)(−3−(−1)), 4 + (1/3)(−2−4)) = (−1−2/3, 4−2) = (−5/3, 2). Second point Q (2/3 of the way) = (−1 + (2/3)(−2), 4 + (2/3)(−6)) = (−1−4/3, 0) = (−7/3, 0). So the trisection points are (−5/3, 2) and (−7/3, 0).",
+    "keyPoints": ["Trisection points sit 1/3 and 2/3 of the way from A to B", "Use P = A + (1/3)(B−A) and Q = A + (2/3)(B−A)", "Points: (−5/3, 2) and (−7/3, 0)"]
+  },
+  {
+    "id": "sa-math-064",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that: sec³θ/(sec²θ−1) + cosec³θ/(cosec²θ−1) = secθ · cosecθ (secθ + cosecθ). (2026 Board)",
+    "modelAnswer": "sec²θ−1 = tan²θ and cosec²θ−1 = cot²θ. So sec³θ/tan²θ = (1/cos³θ)(cos²θ/sin²θ) = 1/(cosθ sin²θ), and cosec³θ/cot²θ = (1/sin³θ)(sin²θ/cos²θ) = 1/(sinθ cos²θ). Adding, with common denominator sin²θcos²θ: (cosθ+sinθ)/(sin²θcos²θ). The RHS secθcosecθ(secθ+cosecθ) = [1/(sinθcosθ)]×[(sinθ+cosθ)/(sinθcosθ)] = (sinθ+cosθ)/(sin²θcos²θ), the same expression.",
+    "keyPoints": ["Use sec²θ−1=tan²θ and cosec²θ−1=cot²θ to simplify each term", "Both terms reduce to a fraction over sin²θcos²θ", "The sum matches secθcosecθ(secθ+cosecθ) exactly"]
+  },
+  {
+    "id": "sa-math-065",
+    "chapter": "Introduction to Trigonometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "OR: If secα/cosecβ = p and tanα/cosecβ = q, then prove that (p² − q²) sec²α = p². (2026 Board)",
+    "modelAnswer": "p²−q² = sec²α/cosec²β − tan²α/cosec²β = (sec²α−tan²α)/cosec²β = 1/cosec²β = sin²β (using sec²α−tan²α=1). So (p²−q²)sec²α = sin²β·sec²α. Also p² = sec²α/cosec²β = sec²α·sin²β. Both sides equal sec²α sin²β, so (p²−q²)sec²α = p².",
+    "keyPoints": ["p²−q² simplifies using sec²α−tan²α=1 to just 1/cosec²β = sin²β", "So (p²−q²)sec²α = sin²β sec²α", "p² also equals sec²α sin²β, so the identity holds"]
+  },
+  {
+    "id": "sa-math-066",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Prove that the lengths of tangents drawn from an external point to a circle are equal. (2026 Board)",
+    "modelAnswer": "Let TP and TQ be two tangents from external point T to a circle with centre O, touching it at P and Q. Join OP, OQ and OT. Since a tangent is perpendicular to the radius at the point of contact, ∠OPT=∠OQT=90°. In right triangles OPT and OQT: OP=OQ (radii), OT is common, so by RHS congruence ΔOPT ≅ ΔOQT. Hence TP=TQ, i.e. the tangents from an external point are equal in length.",
+    "keyPoints": ["Join the centre to the external point and both points of contact", "∠OPT=∠OQT=90° since tangent ⊥ radius", "ΔOPT≅ΔOQT by RHS (OP=OQ, OT common), so TP=TQ"]
+  },
+  {
+    "id": "sa-math-067",
+    "chapter": "Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "OR: Two tangents TP and TQ are drawn to a circle with centre O from an external point T. Prove that ∠PTQ = 2∠OPQ. (2026 Board)",
+    "modelAnswer": "Let ∠PTQ = 2θ. Since TP=TQ (tangents from an external point are equal) and OT bisects the angle between the two tangents, ∠OTP=∠OTQ=θ. In right triangle OPT (∠OPT=90°, since tangent ⊥ radius), ∠POT = 90°−θ; similarly ∠QOT=90°−θ, so ∠POQ=180°−2θ. Since OP=OQ (radii), triangle OPQ is isosceles, so its base angles are ∠OPQ=∠OQP = [180°−(180°−2θ)]/2 = θ. So ∠OPQ=θ = ∠PTQ/2, i.e. ∠PTQ=2∠OPQ.",
+    "keyPoints": ["OT bisects ∠PTQ (tangents TP=TQ), so ∠OTP=∠OTQ=∠PTQ/2", "In right triangle OPT, ∠POT=90°−∠OTP; similarly for ∠QOT, giving ∠POQ", "Isosceles ΔOPQ (OP=OQ) gives ∠OPQ = ∠PTQ/2, i.e. ∠PTQ=2∠OPQ"]
+  },
+  {
+    "id": "sa-math-068",
+    "chapter": "Areas Related to Circles",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Find the area of the sector of a circle of radius 42 cm and of central angle 30°. Also, find the area of the corresponding major sector. [Use π = 22/7] (2026 Board)",
+    "modelAnswer": "Area of sector = (30/360)×πr² = (1/12)×(22/7)×42² = (1/12)×(22/7)×1764 = (1/12)×5544 = 462 cm². Total area of circle = πr² = (22/7)×1764 = 5544 cm². Area of major sector = 5544 − 462 = 5082 cm².",
+    "keyPoints": ["Sector area = (angle/360°) × πr²", "Minor sector area = 462 cm²", "Major sector = total circle area (5544 cm²) − minor sector = 5082 cm²"]
+  },
+  {
+    "id": "sa-math-069",
+    "chapter": "Probability",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Two dice are thrown at the same time. Determine the probability that the (i) sum of the numbers on the two dice is 5, and (ii) difference of the numbers on the two dice is 3. (2026 Board)",
+    "modelAnswer": "There are 36 equally likely outcomes. (i) Pairs with sum 5: (1,4),(4,1),(2,3),(3,2) — 4 outcomes, so P(sum=5) = 4/36 = 1/9. (ii) Pairs with |difference|=3: (1,4),(4,1),(2,5),(5,2),(3,6),(6,3) — 6 outcomes, so P(difference=3) = 6/36 = 1/6.",
+    "keyPoints": ["Total equally likely outcomes for two dice = 36", "Sum = 5 in 4 outcomes → probability 1/9", "Difference = 3 in 6 outcomes → probability 1/6"]
   }
 ]
