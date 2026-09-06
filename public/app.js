@@ -3519,9 +3519,9 @@ const app = {
               <option>Loading chapters…</option>
             </select>
           </label>
+          <div class="sa-tabs sol-exercise-tabs" id="sol-exercise-tabs" role="tablist" aria-label="Exercise" hidden></div>
           <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
         </div>
-        <div class="sa-tabs sol-exercise-tabs" id="sol-exercise-tabs" role="tablist" aria-label="Exercise" hidden></div>
         <div id="sol-list" class="sa-list">Loading…</div>
       </div>`;
   },
