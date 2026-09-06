@@ -390,6 +390,11 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .sa-model li { margin-bottom: 4px; }
 .sa-markrow { display: flex; gap: 8px; }
 
+/* Solved Exercises reuses the Short Answers card/model styling above, but
+   there's no "your answer" column — one column, no self-marking. */
+.sol-body { grid-template-columns: 1fr; }
+.sol-exercise-title { margin: 4px 0 -8px; font-size: var(--fs-ui); color: var(--text-light); }
+
 /* ─── Test session ─────────────────────────────────────────────────────────── */
 /* Mock test, chapter drill and the question-and-answer review all share this
    shell: header, then a natural-height topbar, then panels taking the rest.

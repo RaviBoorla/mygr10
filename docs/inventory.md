@@ -25,7 +25,7 @@ for f in sorted(glob.glob('public/questions/*.json')):
 
 | Subject | File | Total Qs | Real board papers included |
 |---|---|---|---|
-| Mathematics | `X-CBSE-Mathematics.json` | 358 | 2023 Board (20), 2024 Board (20), 2025 Board (59), 2026 Board (59) — 158 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
+| Mathematics | `X-CBSE-Mathematics.json` | 350 | 2023 Board (20), 2024 Board (20), 2025 Board (59), 2026 Board (59) — 158 real; remaining 192 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) The 8 "Quadrilaterals" questions were removed — that chapter is Grade IX syllabus, not Grade X. |
 | Science | `X-CBSE-Science.json` | 360 | 2023 Board (20), 2024 Board (20), 2025 Board (60), 2026 Board (60) — 160 real; remaining 200 curriculum-authored. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped, same as Math/Social Science's 2022 papers.) Every question also carries a `subject` field (`Physics`/`Chemistry`/`Biology`), derived from its `chapter`. |
 | Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) Every question also carries a `subject` field (`History`/`Geography`/`Civics`/`Economics`), derived from its `chapter`. |
 | Hindi | `X-CBSE-Hindi.json` | 125 | 2023 Board (49), 2024 Board (44), 2025 Board (16), 2026 Board (16) — **all 125 from real past papers** (Course A only; Sets 1/2/3 per year were confirmed identical content, so only one deduplicated copy per year is kept) |
@@ -65,6 +65,21 @@ Answers" button.
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
 | CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 63 | 2022 Board (12), 2023 Board (16), 2024 Board (13), 2025 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
 | CBSE English | `X-CBSE-English-ShortAnswers.json` | 90 | 2022 Board (8), 2023 Board (17), 2024 Board (20), 2025 Board (21) and 2026 Board (24) — real past papers. Two content types: (1) Grammar transformation exercises (reported speech, editing/error correction, fill-in-the-blank) that have no fixed 4-option answer; (2) Literature short-answer questions from the prescribed First Flight / Footprints Without Feet texts (known, syllabus-fixed works, not unseen passages). Creative-writing tasks (letters, analytical paragraphs/notices) are skipped as open-ended with no single model answer. |
+
+## Solved Exercises banks (a third catalogue, separate again)
+
+Full NCERT textbook exercise questions with a complete worked solution —
+answers the "how do I actually solve Q5 of Exercise 1.1" need, distinct from
+both the MCQ banks (board-exam style) and the Short Answers banks (board-exam
+VSA/SA style). Schema per question: `{id, chapter, exercise, number, question,
+solution, steps[]}`. Listed in `SOLVED_BANKS` in `app.js`; a subject with no
+entry there simply has no "Solved Exercises" button. Not self-assessed against
+a typed answer (unlike Short Answers) — a solution is either shown or hidden,
+tracked per question id in `localStorage` (`rise.solvedRevealed`).
+
+| Subject | File | Total Qs | Source |
+|---|---|---|---|
+| CBSE Mathematics | `X-CBSE-Mathematics-Solved.json` | 10 | Chapter 1 "Real Numbers" only (first pass) — both exercises in full: Exercise 1.1 (Q1–Q7) and Exercise 1.2 (Q1–Q3), from the current (2025–26 reprint) NCERT Class X Mathematics textbook. Remaining chapters not yet done. |
 
 ## Chapter → subject-area mapping (Science and Social Science)
 

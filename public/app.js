@@ -2843,7 +2843,8 @@ const KEY = {
   progress:  'rise.progress',   // "grade::board::subject" → qid → { box, due, chapter, correctCount, wrongCount, lastAt }
   bookmarks: 'rise.bookmarks',  // "grade::board::subject" → qid → { at }
   streak:    'rise.streak',     // "grade::board" → { current, longest, lastDate, todayDate, todayCount }
-  saDrafts:  'rise.saDrafts'    // "grade::board::subject" → qid → { text, revealed, status, at } — Short Answers
+  saDrafts:  'rise.saDrafts',   // "grade::board::subject" → qid → { text, revealed, status, at } — Short Answers
+  solvedRevealed: 'rise.solvedRevealed' // "grade::board::subject" → qid → true — Solved Exercises
 };
 // One storage bucket per grade+board+subject so X-CBSE-Mathematics, XII-CBSE-Mathematics
 // and ICSE's own Mathematics never share progress, bookmarks or due-review counts.
@@ -2917,6 +2918,18 @@ function saBankSlug(subject, board, grade) {
   board = board || state.board;
   grade = grade || state.grade;
   return SA_BANKS[`${grade} ${board} ${subject}`];
+}
+// Solved Exercises (textbook question + full worked solution, grouped by
+// chapter → exercise) are a third, separate catalogue — same "missing entry
+// means no section" convention as BANKS/SA_BANKS. Seeded so far with just
+// Mathematics' first chapter; see docs/inventory.md for progress.
+const SOLVED_BANKS = {
+  'X CBSE Mathematics': 'X-CBSE-Mathematics-Solved'
+};
+function solvedBankSlug(subject, board, grade) {
+  board = board || state.board;
+  grade = grade || state.grade;
+  return SOLVED_BANKS[`${grade} ${board} ${subject}`];
 }
 // Returns the question-bank file slug for (subject, board, grade), or undefined if none.
 function bankSlug(subject, board, grade) {
@@ -3029,6 +3042,17 @@ function loadSABank(subject) {
     .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
     .then(list => { saBankCache[cacheKey] = list; return list; });
 }
+// Same caching pattern again, for the Solved Exercises catalogue.
+const solvedBankCache = {};
+function loadSolvedBank(subject) {
+  const slug = solvedBankSlug(subject);
+  const cacheKey = slug || subject;
+  if (solvedBankCache[cacheKey]) return Promise.resolve(solvedBankCache[cacheKey]);
+  if (!slug) return Promise.reject(new Error('No Solved Exercises bank for ' + subject));
+  return fetch(`questions/${slug}.json`)
+    .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
+    .then(list => { solvedBankCache[cacheKey] = list; return list; });
+}
 // A question is "real" if it was actually sourced from a board paper rather
 // than authored to the syllabus — every such question carries its exam year
 // somewhere (Hindi: in `chapter`/`id`; CBSE Maths/Science: inline in `text`).
@@ -3066,6 +3090,7 @@ const state = {
   openPicker: null,  // subject whose chapter list is expanded on the home screen
   difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
   saChapter: {},     // subject → chapter name filter on the Short Answers screen, '' = all chapters
+  solvedChapter: {}, // subject → chapter name filter on the Solved Exercises screen, '' = all chapters
   mobileMenuOpen: false  // the header's single hamburger menu (Progress / Notes / Career Pathing / boards)
 };
 
@@ -3117,7 +3142,8 @@ const app = {
     else if (name === 'test' && !this.session)    name = 'home';
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers'].includes(name)) name = 'home';
+    else if (name === 'solved' && !solvedBankSlug(r.parts[0])) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved'].includes(name)) name = 'home';
 
     // A guarded redirect must correct the URL too, or the address bar claims a screen
     // that is not on show and Back/refresh land somewhere unexpected.
@@ -3205,6 +3231,7 @@ const app = {
       case 'test':     return this._screenTest();
       case 'results':  return this._screenResults();
       case 'shortanswers': return this._screenShortAnswers(params[0]);
+      case 'solved':   return this._screenSolvedExercises(params[0]);
       default:         return '';
     }
   },
@@ -3217,6 +3244,7 @@ const app = {
     }
     if (name === 'results') { this._buildReviewPalette(); this.showReviewQuestion(this.reviewIndex || 0); }
     if (name === 'shortanswers') this._hydrateShortAnswers(params[0]);
+    if (name === 'solved') this._hydrateSolvedExercises(params[0]);
   },
 
   // ── Screen: board selection (first run only) ────────────────────────────────
@@ -3467,6 +3495,119 @@ const app = {
     loadSABank(subject).then(list => this._renderSAList(subject, list));
   },
 
+  // ── Screen: Solved Exercises — textbook question + full worked solution ─────
+  // Grouped by chapter (tabs, same pattern as Short Answers) then by exercise
+  // within a chapter. Not self-assessed like Short Answers (there's no "your
+  // answer" to compare against a rubric) — a solution is either shown or not.
+  _screenSolvedExercises(subject) {
+    return `
+      <div class="screen sa-screen">
+        <div class="sa-topbar">
+          <div class="sa-tabs" id="sol-tabs" role="tablist" aria-label="Chapter"><span class="sa-tabs-loading">Loading chapters…</span></div>
+          <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
+        </div>
+        <p class="subtitle">${esc(subject)} · Textbook exercise questions with full worked solutions, grouped by chapter and exercise.</p>
+        <div id="sol-list" class="sa-list">Loading…</div>
+      </div>`;
+  },
+
+  _hydrateSolvedExercises(subject) {
+    loadSolvedBank(subject)
+      .then(list => {
+        this._renderSolvedTabs(subject, list);
+        this._renderSolvedList(subject, list);
+      })
+      .catch(err => {
+        const box = document.getElementById('sol-list');
+        if (box) box.textContent = err.message;
+      });
+  },
+
+  _renderSolvedTabs(subject, list) {
+    const box = document.getElementById('sol-tabs');
+    if (!box) return;
+    const chapters = chaptersOf(list);
+    const active = state.solvedChapter[subject] || '';
+    this._solvedChapterIndex = this._solvedChapterIndex || {};
+    this._solvedChapterIndex[subject] = chapters.map(c => c.name);
+    const tab = (name, label, count) => `
+      <button class="filter-tab ${active === name ? 'active' : ''}" aria-pressed="${active === name}"
+              onclick="app.setSolvedChapter('${esc(subject)}','${esc(name)}')">${esc(label)}${count != null ? ` <small>${count}</small>` : ''}</button>`;
+    box.innerHTML = tab('', 'All chapters', list.length)
+      + chapters.map(c => tab(c.name, c.name, c.count)).join('');
+  },
+
+  setSolvedChapter(subject, name) {
+    state.solvedChapter[subject] = name;
+    loadSolvedBank(subject).then(list => {
+      this._renderSolvedTabs(subject, list);
+      this._renderSolvedList(subject, list);
+    });
+  },
+
+  _renderSolvedList(subject, list) {
+    const box = document.getElementById('sol-list');
+    if (!box) return;
+    const revealed = LS.get(KEY.solvedRevealed, {})[scopeKey(subject)] || {};
+    const activeChapter = state.solvedChapter[subject] || '';
+    const chapters = activeChapter ? [{ name: activeChapter }] : chaptersOf(list);
+
+    box.innerHTML = chapters.map(ch => {
+      const qs = list.filter(q => (q.chapter || 'General') === ch.name);
+      if (!qs.length) return '';
+      // Group this chapter's questions by exercise, preserving first-seen order.
+      const byExercise = new Map();
+      qs.forEach(q => {
+        const ex = q.exercise || 'General';
+        (byExercise.get(ex) || byExercise.set(ex, []).get(ex)).push(q);
+      });
+      const exerciseSections = [...byExercise.entries()].map(([ex, exQs]) => `
+        <h3 class="sol-exercise-title">${esc(ex)}</h3>
+        ${exQs.map(q => this._renderSolvedCard(subject, q, !!revealed[q.id])).join('')}`).join('');
+      return `
+        <section class="home-section">
+          <h2 class="section-title">${esc(ch.name)}</h2>
+          ${exerciseSections}
+        </section>`;
+    }).join('');
+  },
+
+  _renderSolvedCard(subject, q, isRevealed) {
+    const solutionCol = isRevealed ? `
+        <div class="sa-model">
+          <strong>Solution</strong>
+          <p>${esc(q.solution).replace(/\n/g, '<br>')}</p>
+          ${q.steps && q.steps.length ? `
+            <strong>Working, step by step</strong>
+            <ul>${q.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ul>` : ''}
+        </div>`
+      : `<div class="sa-model sa-model-placeholder">
+          <button class="btn act-btn" onclick="app.revealSolved('${esc(subject)}','${esc(q.id)}')">Show solution</button>
+        </div>`;
+    return `
+      <article class="card sa-card" data-sol-id="${esc(q.id)}">
+        <header class="sa-card-head">
+          <span class="sa-marks">${esc(q.number)}</span>
+        </header>
+        <p class="sa-question">${esc(q.question).replace(/\n/g, '<br>')}</p>
+        <div class="sa-body sol-body">
+          ${solutionCol}
+        </div>
+      </article>`;
+  },
+
+  revealSolved(subject, id) {
+    const store = LS.get(KEY.solvedRevealed, {});
+    const scope = store[scopeKey(subject)] || (store[scopeKey(subject)] = {});
+    scope[id] = true;
+    LS.set(KEY.solvedRevealed, store);
+    const card = document.querySelector(`[data-sol-id="${CSS.escape(id)}"]`);
+    if (card) loadSolvedBank(subject).then(list => {
+      const q = list.find(x => x.id === id);
+      if (q) card.outerHTML = this._renderSolvedCard(subject, q, true);
+    });
+  },
+
   // Top-level X / XII tab pair — shared by the Home and Revision Notes screens so
   // switching grade anywhere carries over everywhere (it's one global toggle).
   _gradeTabs() {
@@ -3521,6 +3662,11 @@ const app = {
         ? `<button class="btn act-btn ghost" onclick="app.go(['shortanswers','${esc(subject)}'])">Short Answers</button>`
         : '';
 
+      const solvedSlug = solvedBankSlug(subject);
+      const solvedLink = solvedSlug
+        ? `<button class="btn act-btn ghost" onclick="app.go(['solved','${esc(subject)}'])">Solved Exercises</button>`
+        : '';
+
       const bmCount  = hasBank ? this._bookmarkCount(subject) : 0;
       const dueCount = hasBank ? this._dueCount(subject) : 0;
       const reviewLinks = (bmCount || dueCount) ? `
@@ -3536,7 +3682,7 @@ const app = {
             <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
           </header>
           ${hasBank ? this._difficultyBar(subject) : ''}
-          <div class="subj-actions">${actions}${saLink}</div>
+          <div class="subj-actions">${actions}${saLink}${solvedLink}</div>
           ${reviewLinks}
           <div class="chapter-picker" data-picker="${esc(subject)}" ${open ? '' : 'hidden'}>
             <p class="picker-hint">Pick a chapter to drill</p>

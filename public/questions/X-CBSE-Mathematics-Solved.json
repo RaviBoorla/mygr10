@@ -1,0 +1,132 @@
+[
+  {
+    "id": "sol-math-r1-1-1-1",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q1",
+    "question": "Express each number as a product of its prime factors: (i) 140 (ii) 156 (iii) 3825 (iv) 5005 (v) 7429",
+    "solution": "(i) 140 = 2 × 2 × 5 × 7 = 2² × 5 × 7\n(ii) 156 = 2 × 2 × 3 × 13 = 2² × 3 × 13\n(iii) 3825 = 3 × 3 × 5 × 5 × 17 = 3² × 5² × 17\n(iv) 5005 = 5 × 7 × 11 × 13\n(v) 7429 = 17 × 19 × 23",
+    "steps": [
+      "Repeatedly divide by the smallest prime that goes in evenly, until only 1 remains",
+      "140 → ÷2 → 70 → ÷2 → 35 → ÷5 → 7 → ÷7 → 1, giving 2²×5×7",
+      "3825 → ÷3 → 1275 → ÷3 → 425 → ÷5 → 85 → ÷5 → 17, giving 3²×5²×17"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-2",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q2",
+    "question": "Find the LCM and HCF of the following pairs of integers and verify that LCM × HCF = product of the two numbers: (i) 26 and 91 (ii) 510 and 92 (iii) 336 and 54",
+    "solution": "(i) 26 = 2×13, 91 = 7×13. HCF = 13, LCM = 2×7×13 = 182. Check: 26×91 = 2366 = 13×182. ✓\n(ii) 510 = 2×3×5×17, 92 = 2²×23. HCF = 2, LCM = 2²×3×5×17×23 = 23460. Check: 510×92 = 46920 = 2×23460. ✓\n(iii) 336 = 2⁴×3×7, 54 = 2×3³. HCF = 2×3 = 6, LCM = 2⁴×3³×7 = 3024. Check: 336×54 = 18144 = 6×3024. ✓",
+    "steps": [
+      "Prime-factorise both numbers first",
+      "HCF = product of the smallest power of each COMMON prime; LCM = product of the greatest power of every prime that appears",
+      "Verify by checking HCF × LCM equals the product of the original two numbers"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-3",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q3",
+    "question": "Find the LCM and HCF of the following integers by applying the prime factorisation method: (i) 12, 15 and 21 (ii) 17, 23 and 29 (iii) 8, 9 and 25",
+    "solution": "(i) 12 = 2²×3, 15 = 3×5, 21 = 3×7. HCF = 3, LCM = 2²×3×5×7 = 420.\n(ii) 17, 23, 29 are all primes with no common factor. HCF = 1, LCM = 17×23×29 = 11339.\n(iii) 8 = 2³, 9 = 3², 25 = 5². No common prime factor. HCF = 1, LCM = 2³×3²×5² = 1800.",
+    "steps": [
+      "Prime-factorise all three numbers",
+      "HCF = smallest power of any prime common to ALL of them (1 if none is common to all three)",
+      "LCM = product of the greatest power of every prime appearing in any of the numbers"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-4",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q4",
+    "question": "Given that HCF (306, 657) = 9, find LCM (306, 657).",
+    "solution": "For any two positive integers, HCF × LCM = product of the numbers. So LCM = (306 × 657) ÷ 9 = 201042 ÷ 9 = 22338.",
+    "steps": [
+      "Use the identity HCF(a,b) × LCM(a,b) = a × b",
+      "306 × 657 = 201042",
+      "LCM = 201042 ÷ 9 = 22338"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-5",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q5",
+    "question": "Check whether 6ⁿ can end with the digit 0 for any natural number n.",
+    "solution": "6ⁿ = (2×3)ⁿ = 2ⁿ×3ⁿ. For a number to end in 0, it must be divisible by 10 = 2×5, so its prime factorisation must include both 2 and 5. But the only prime factors of 6ⁿ are 2 and 3 — 5 never appears, no matter what n is. So 6ⁿ can never end with the digit 0.",
+    "steps": [
+      "Ending in 0 means the number is divisible by 10 = 2 × 5",
+      "Prime-factorise 6ⁿ = 2ⁿ × 3ⁿ — its only prime factors are 2 and 3",
+      "Since 5 is never a factor of 6ⁿ, it can never end in 0 (Fundamental Theorem of Arithmetic guarantees uniqueness of prime factors)"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-6",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q6",
+    "question": "Explain why 7 × 11 × 13 + 13 and 7 × 6 × 5 × 4 × 3 × 2 × 1 + 5 are composite numbers.",
+    "solution": "7×11×13 + 13 = 13×(7×11 + 1) = 13×78 = 13×2×3×13. This is a product of factors other than 1 and itself, so it is composite.\n7×6×5×4×3×2×1 + 5 = 5040 + 5 = 5045 = 5×(1008 + 1) = 5×1009. Since it can be written as a product of two integers greater than 1 (5 and 1009), it is composite.",
+    "steps": [
+      "Factor out the common term 13 from the first expression: 13×(7×11+1) = 13×78",
+      "Factor out the common term 5 from the second expression: 5×(1008+1) = 5×1009",
+      "Any number expressible as a product of two integers greater than 1 is, by definition, composite"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-1-7",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.1",
+    "number": "Q7",
+    "question": "There is a circular path around a sports field. Sonia takes 18 minutes to drive one round of the field, while Ravi takes 12 minutes for the same. Suppose they both start at the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+    "solution": "They will next be together at the starting point after LCM(18, 12) minutes. 18 = 2×3², 12 = 2²×3, so LCM = 2²×3² = 36. They will meet again at the starting point after 36 minutes.",
+    "steps": [
+      "The time to meet again at the START is the LCM of their individual lap times, not the HCF",
+      "18 = 2×3², 12 = 2²×3",
+      "LCM = 2²×3² = 36 minutes"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-2-1",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.2",
+    "number": "Q1",
+    "question": "Prove that √5 is irrational.",
+    "solution": "Assume, to the contrary, that √5 is rational. Then √5 = a/b for coprime integers a, b (b≠0). Squaring: 5b² = a², so 5 divides a², and hence 5 divides a. Write a = 5c. Substituting: 5b² = 25c², so b² = 5c², which means 5 divides b² and hence 5 divides b. But then 5 divides both a and b, contradicting that they are coprime. This contradiction shows our assumption was wrong, so √5 is irrational.",
+    "steps": [
+      "Assume √5 = a/b in lowest terms (a, b coprime), for contradiction",
+      "Show 5 | a² ⟹ 5 | a, substitute a = 5c",
+      "Show this forces 5 | b too — contradicting that a, b share no common factor"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-2-2",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.2",
+    "number": "Q2",
+    "question": "Prove that 3 + 2√5 is irrational.",
+    "solution": "Assume, to the contrary, that 3 + 2√5 is rational. Then 3 + 2√5 = a/b for some integers a, b (b≠0). Rearranging: 2√5 = a/b − 3, so √5 = (a − 3b)/(2b). Since a and b are integers, the right-hand side is a ratio of integers, i.e. a rational number. But this contradicts the fact that √5 is irrational. Hence 3 + 2√5 is irrational.",
+    "steps": [
+      "Assume 3 + 2√5 = a/b is rational, for contradiction",
+      "Isolate √5: √5 = (a − 3b)/(2b), a ratio of integers",
+      "This would make √5 rational, contradicting the known fact that √5 is irrational"
+    ]
+  },
+  {
+    "id": "sol-math-r1-1-2-3",
+    "chapter": "Real Numbers",
+    "exercise": "Exercise 1.2",
+    "number": "Q3",
+    "question": "Prove that the following are irrationals: (i) 1/√2 (ii) 7√5 (iii) 6 + √2",
+    "solution": "(i) If 1/√2 = a/b were rational, then √2 = b/a would also be rational — contradicting that √2 is irrational. So 1/√2 is irrational.\n(ii) If 7√5 = a/b were rational, then √5 = a/(7b) would be a ratio of integers, i.e. rational — contradicting that √5 is irrational. So 7√5 is irrational.\n(iii) If 6 + √2 = a/b were rational, then √2 = a/b − 6 = (a−6b)/b would be rational — contradicting that √2 is irrational. So 6 + √2 is irrational.",
+    "steps": [
+      "In each case, assume the expression is rational (equal to a/b) and rearrange to isolate the known irrational (√2 or √5)",
+      "The rearranged form is always a ratio of integers, i.e. rational",
+      "This contradicts the known irrationality of √2/√5, so the original expression must be irrational"
+    ]
+  }
+]
