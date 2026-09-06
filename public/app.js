@@ -2924,7 +2924,8 @@ function saBankSlug(subject, board, grade) {
 // means no section" convention as BANKS/SA_BANKS. Seeded so far with just
 // Mathematics' first chapter; see docs/inventory.md for progress.
 const SOLVED_BANKS = {
-  'X CBSE Mathematics': 'X-CBSE-Mathematics-Solved'
+  'X CBSE Mathematics': 'X-CBSE-Mathematics-Solved',
+  'X CBSE Science':     'X-CBSE-Science-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
