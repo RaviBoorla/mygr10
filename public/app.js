@@ -3091,6 +3091,7 @@ const state = {
   difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
   saChapter: {},     // subject → chapter name filter on the Short Answers screen, '' = all chapters
   solvedChapter: {}, // subject → chapter name filter on the Solved Exercises screen, '' = all chapters
+  solvedExercise: {},// subject → exercise name filter (only meaningful once a chapter is picked), '' = all exercises
   mobileMenuOpen: false  // the header's single hamburger menu (Progress / Notes / Career Pathing / boards)
 };
 
@@ -3506,6 +3507,7 @@ const app = {
           <div class="sa-tabs" id="sol-tabs" role="tablist" aria-label="Chapter"><span class="sa-tabs-loading">Loading chapters…</span></div>
           <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
         </div>
+        <div class="sa-tabs sol-exercise-tabs" id="sol-exercise-tabs" role="tablist" aria-label="Exercise" hidden></div>
         <p class="subtitle">${esc(subject)} · Textbook exercise questions with full worked solutions, grouped by chapter and exercise.</p>
         <div id="sol-list" class="sa-list">Loading…</div>
       </div>`;
@@ -3515,6 +3517,7 @@ const app = {
     loadSolvedBank(subject)
       .then(list => {
         this._renderSolvedTabs(subject, list);
+        this._renderSolvedExerciseTabs(subject, list);
         this._renderSolvedList(subject, list);
       })
       .catch(err => {
@@ -3539,8 +3542,43 @@ const app = {
 
   setSolvedChapter(subject, name) {
     state.solvedChapter[subject] = name;
+    state.solvedExercise[subject] = '';   // changing chapter invalidates any exercise filter from the old chapter
     loadSolvedBank(subject).then(list => {
       this._renderSolvedTabs(subject, list);
+      this._renderSolvedExerciseTabs(subject, list);
+      this._renderSolvedList(subject, list);
+    });
+  },
+
+  // Only meaningful once a specific chapter is selected — hidden on "All chapters"
+  // since exercise numbers (Exercise 1.1, 2.1, ...) aren't unique across chapters.
+  _renderSolvedExerciseTabs(subject, list) {
+    const box = document.getElementById('sol-exercise-tabs');
+    if (!box) return;
+    const activeChapter = state.solvedChapter[subject] || '';
+    if (!activeChapter) { box.hidden = true; box.innerHTML = ''; return; }
+
+    const inChapter = list.filter(q => (q.chapter || 'General') === activeChapter);
+    const exercises = [];
+    const counts = new Map();
+    inChapter.forEach(q => {
+      const ex = q.exercise || 'General';
+      counts.set(ex, (counts.get(ex) || 0) + 1);
+      if (!exercises.includes(ex)) exercises.push(ex);
+    });
+    box.hidden = exercises.length < 2;
+    const active = state.solvedExercise[subject] || '';
+    const tab = (name, label, count) => `
+      <button class="filter-tab ${active === name ? 'active' : ''}" aria-pressed="${active === name}"
+              onclick="app.setSolvedExercise('${esc(subject)}','${esc(name)}')">${esc(label)}${count != null ? ` <small>${count}</small>` : ''}</button>`;
+    box.innerHTML = tab('', 'All exercises', inChapter.length)
+      + exercises.map(ex => tab(ex, ex, counts.get(ex))).join('');
+  },
+
+  setSolvedExercise(subject, name) {
+    state.solvedExercise[subject] = name;
+    loadSolvedBank(subject).then(list => {
+      this._renderSolvedExerciseTabs(subject, list);
       this._renderSolvedList(subject, list);
     });
   },
@@ -3550,10 +3588,12 @@ const app = {
     if (!box) return;
     const revealed = LS.get(KEY.solvedRevealed, {})[scopeKey(subject)] || {};
     const activeChapter = state.solvedChapter[subject] || '';
+    const activeExercise = activeChapter ? (state.solvedExercise[subject] || '') : '';
     const chapters = activeChapter ? [{ name: activeChapter }] : chaptersOf(list);
 
     box.innerHTML = chapters.map(ch => {
-      const qs = list.filter(q => (q.chapter || 'General') === ch.name);
+      let qs = list.filter(q => (q.chapter || 'General') === ch.name);
+      if (activeExercise) qs = qs.filter(q => (q.exercise || 'General') === activeExercise);
       if (!qs.length) return '';
       // Group this chapter's questions by exercise, preserving first-seen order.
       const byExercise = new Map();

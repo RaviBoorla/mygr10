@@ -393,6 +393,10 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 /* Solved Exercises reuses the Short Answers card/model styling above,
    with the question itself (instead of a typed answer) in the left column. */
 .sol-exercise-title { margin: 4px 0 -8px; font-size: var(--fs-ui); color: var(--text-light); }
+/* Second-tier tabs (exercise numbers within the selected chapter) — only
+   shown once "All chapters" has been narrowed down to one specific chapter. */
+.sol-exercise-tabs { padding: 10px 0 2px; }
+.sol-exercise-tabs .filter-tab { font-size: var(--fs-note); }
 
 /* ─── Test session ─────────────────────────────────────────────────────────── */
 /* Mock test, chapter drill and the question-and-answer review all share this
