@@ -26,7 +26,7 @@ for f in sorted(glob.glob('public/questions/*.json')):
 | Subject | File | Total Qs | Real board papers included |
 |---|---|---|---|
 | Mathematics | `X-CBSE-Mathematics.json` | 358 | 2023 Board (20), 2024 Board (20), 2025 Board (59), 2026 Board (59) — 158 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
-| Science | `X-CBSE-Science.json` | 320 | 2025 Board (60), 2026 Board (60) — 120 real; remaining 200 curriculum-authored |
+| Science | `X-CBSE-Science.json` | 340 | 2024 Board (20), 2025 Board (60), 2026 Board (60) — 140 real; remaining 200 curriculum-authored. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped, same as Math/Social Science's 2022 papers.) |
 | Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
 | Hindi | `X-CBSE-Hindi.json` | 125 | 2023 Board (49), 2024 Board (44), 2025 Board (16), 2026 Board (16) — **all 125 from real past papers** (Course A only; Sets 1/2/3 per year were confirmed identical content, so only one deduplicated copy per year is kept) |
 | English | — | 0 | No bank yet — card shows "Question bank coming soon" for Grade X |
@@ -61,7 +61,7 @@ marks, difficulty, text, modelAnswer, keyPoints[]}`. Listed in `SA_BANKS` in
 |---|---|---|---|
 | CBSE Mathematics | `X-CBSE-Mathematics-ShortAnswers.json` | 69 | 2022 Board (13), 2023 Board (13), 2024 Board (15), 2025 Board (13) and 2026 Board (15) VSA/SA sections, real past papers |
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
-| CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 22 | 2022 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
+| CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 47 | 2022 Board (12), 2024 Board (13), 2025 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
 
 ## How to tell, per question, whether it's from a real paper
 
