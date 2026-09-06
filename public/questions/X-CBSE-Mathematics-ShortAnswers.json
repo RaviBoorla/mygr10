@@ -250,5 +250,122 @@
     "text": "The difference between the outer and inner radii of a hollow right circular cylinder of length 14 cm is 1 cm. If the volume of the metal used in making the cylinder is 176 cm³, find the outer and inner radii of the cylinder. (2024 Board)",
     "modelAnswer": "Let outer radius R and inner radius r, with R - r = 1. Volume of metal = π(R²-r²)(14) = π(R-r)(R+r)(14) = 176. Using π = 22/7: 176 = (22/7)(1)(R+r)(14) = 44(R+r), so R+r = 4. Solving with R-r=1: R = 2.5 cm, r = 1.5 cm.",
     "keyPoints": ["Write the metal volume as π(R-r)(R+r)(length), using the difference-of-squares factorisation.", "Substitute R-r=1, length=14, π=22/7 to solve R+r = 4.", "Solve the pair R-r=1, R+r=4 to get R = 2.5 cm, r = 1.5 cm."]
+  },
+  {
+    "id": "sa-math-029",
+    "chapter": "Arithmetic Progressions",
+    "marks": 2,
+    "difficulty": "easy",
+    "text": "Find the sum of first 30 terms of AP: 30, 24, 18, ..... (2022 Board)",
+    "modelAnswer": "First term a = 30, common difference d = 24-30 = -6. Sn = n/2[2a+(n-1)d]. S30 = 30/2[2(30)+29(-6)] = 15[60-174] = 15(-114) = -1710.",
+    "keyPoints": ["Identify a = 30 and d = -6.", "Apply Sn = n/2[2a+(n-1)d] with n = 30.", "Compute S30 = -1710."]
+  },
+  {
+    "id": "sa-math-030",
+    "chapter": "Arithmetic Progressions",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: In an AP, if Sn = n(4n+1), then find the AP. (2022 Board)",
+    "modelAnswer": "an = Sn - Sn-1 = n(4n+1) - (n-1)(4(n-1)+1) = (4n²+n) - (4n²-7n+3) = 8n-3. So a1=5, a2=13, a3=21, ..., giving the AP 5, 13, 21, 29, ... with common difference 8.",
+    "keyPoints": ["Use an = Sn - Sn-1 to find the general term.", "Simplify to get an = 8n - 3.", "List the first few terms: 5, 13, 21, 29, ... (common difference 8)."]
+  },
+  {
+    "id": "sa-math-031",
+    "chapter": "Surface Areas and Volumes",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "A solid metallic sphere of radius 10.5 cm is melted and recast into a number of smaller cones, each of radius 3.5 cm and height 3 cm. Find the number of cones so formed. (2022 Board)",
+    "modelAnswer": "Number of cones = Volume of sphere / Volume of one cone = [(4/3)πR³] / [(1/3)πr²h] = 4R³/(r²h) = 4(10.5)³/[(3.5)²(3)] = 4(1157.625)/36.75 = 126.",
+    "keyPoints": ["Recognise the melted volume is conserved: number of cones = sphere volume ÷ cone volume.", "Substitute R=10.5, r=3.5, h=3 into 4R³/(r²h).", "Compute the answer: 126 cones."]
+  },
+  {
+    "id": "sa-math-032",
+    "chapter": "Quadratic Equations",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Find the value of m for which the quadratic equation (m-1)x² + 2(m-1)x + 1 = 0 has two real and equal roots. (2022 Board)",
+    "modelAnswer": "For equal roots, discriminant = 0: [2(m-1)]² - 4(m-1)(1) = 0, so 4(m-1)² - 4(m-1) = 0, i.e. 4(m-1)(m-2) = 0. So m = 1 or m = 2. But m = 1 makes the x² and x coefficients both zero (not a quadratic), so it's rejected. Hence m = 2.",
+    "keyPoints": ["Set the discriminant b²-4ac = 0.", "Factor to get 4(m-1)(m-2) = 0, giving m=1 or m=2.", "Reject m=1 (it makes the equation not quadratic), so m = 2."]
+  },
+  {
+    "id": "sa-math-033",
+    "chapter": "Quadratic Equations",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "OR: Solve the following quadratic equation for x: √3x² + 10x + 7√3 = 0 (2022 Board)",
+    "modelAnswer": "Split the middle term: √3x² + 3x + 7x + 7√3 = 0 → √3x(x+√3) + 7(x+√3) = 0 → (x+√3)(√3x+7) = 0. So x = -√3 or x = -7/√3 = -7√3/3.",
+    "keyPoints": ["Split 10x into 3x + 7x so common factors emerge.", "Factor by grouping into (x+√3)(√3x+7) = 0.", "Solve for the two roots: x = -√3 and x = -7√3/3."]
+  },
+  {
+    "id": "sa-math-034",
+    "chapter": "Statistics",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Find the mode of the following frequency distribution: Class 10-20, 20-30, 30-40, 40-50, 50-60 with frequencies 15, 10, 12, 17, 4 respectively. (2022 Board)",
+    "modelAnswer": "The highest frequency is 17, so the modal class is 40-50. Mode = l + [(f1-f0)/(2f1-f0-f2)]×h, with l=40, f1=17, f0=12, f2=4, h=10. Mode = 40 + [(17-12)/(34-12-4)]×10 = 40 + (5/18)×10 ≈ 42.78.",
+    "keyPoints": ["Identify the modal class (highest frequency): 40-50.", "Apply the mode formula with l=40, f1=17, f0=12, f2=4, h=10.", "Compute Mode ≈ 42.78."]
+  },
+  {
+    "id": "sa-math-035",
+    "chapter": "Quadratic Equations",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Rohan's age 5 years ago (in years) and the product of that with his age 7 years from now, is one more than twice his present age. Find his present age. (2022 Board)",
+    "modelAnswer": "Let present age = x. (x-5)(x+7) = 2x+1. Expanding: x²+2x-35 = 2x+1, so x² = 36, giving x = 6 (rejecting the negative root).",
+    "keyPoints": ["Set up (x-5)(x+7) = 2x+1 from the given condition.", "Expand and simplify to x² = 36.", "Take the positive root: present age = 6 years."]
+  },
+  {
+    "id": "sa-math-036",
+    "chapter": "Circles",
+    "marks": 2,
+    "difficulty": "medium",
+    "text": "Two concentric circles are of radii 4 cm and 3 cm. Find the length of the chord of the larger circle which touches the smaller circle. (2022 Board)",
+    "modelAnswer": "The chord touches (is tangent to) the smaller circle, so the radius of the smaller circle is perpendicular to the chord at its midpoint. Half the chord length = √(4²-3²) = √7. So the full chord length = 2√7 cm.",
+    "keyPoints": ["Recognise the smaller circle's radius meets the chord at 90° at its midpoint.", "Apply the Pythagorean theorem: half-chord = √(R²-r²) = √(16-9) = √7.", "Double it: chord length = 2√7 cm."]
+  },
+  {
+    "id": "sa-math-037",
+    "chapter": "Statistics",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "For what value of x, is the median of the following frequency distribution 34.5? Classes 0-10,10-20,20-30,30-40,40-50,50-60,60-70 with frequencies 3,5,11,10,x,3,2. (2022 Board)",
+    "modelAnswer": "Total N = 34+x. Cumulative frequency before the 30-40 class = 3+5+11 = 19, and the median 34.5 falls in class 30-40, so: 34.5 = 30 + [(N/2-19)/10]×10 = 30 + (N/2-19). This gives N/2 = 23.5, so N = 47, and x = 47-34 = 13.",
+    "keyPoints": ["Recognise the median (34.5) falls in the class 30-40, with cumulative frequency 19 before it.", "Apply the median formula to solve N/2 = 23.5, so N = 47.", "Solve x = N - 34 = 13."]
+  },
+  {
+    "id": "sa-math-038",
+    "chapter": "Constructions",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Draw a circle of radius 3 cm. Take two points P and Q on one of its extended diameters, each at a distance of 7 cm from its centre. Construct tangents to the circle from these two points P and Q. (2022 Board)",
+    "modelAnswer": "Draw a circle of radius 3 cm with centre O, then extend a diameter and mark P and Q each 7 cm from O (on either side). For each external point, bisect the segment from that point to O, draw a circle with that segment as diameter — this circle intersects the original circle at the two tangent points, and joining the external point to each gives the tangents. Each tangent has length √(7²-3²) = √40 = 2√10 cm ≈ 6.32 cm, by the tangent-length formula from an external point.",
+    "keyPoints": ["Draw circle radius 3 cm; mark P, Q at 7 cm from centre O along the extended diameter.", "Use the standard tangent construction: bisect OP (and OQ), draw a circle on that segment as diameter to find the tangent points.", "State the tangent length = √(7²-3²) = 2√10 cm from each of P and Q."]
+  },
+  {
+    "id": "sa-math-039",
+    "chapter": "Applications of Trigonometry",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "The angle of elevation of the top of a building from the foot of a tower is 30° and the angle of elevation of the top of the tower from the foot of the building is 60°. If the tower is 50 m high, then find the height of the building. (2022 Board)",
+    "modelAnswer": "Let building height = B, distance between them = d. From the building's foot: tan60° = 50/d, so d = 50/√3. From the tower's foot: tan30° = B/d, so B = d×tan30° = (50/√3)×(1/√3) = 50/3 ≈ 16.67 m.",
+    "keyPoints": ["Set up tan60° = 50/d using the tower's height and angle from the building's foot.", "Set up tan30° = B/d using the building's height and angle from the tower's foot.", "Solve for B = 50/3 ≈ 16.67 m."]
+  },
+  {
+    "id": "sa-math-040",
+    "chapter": "Applications of Trigonometry",
+    "marks": 3,
+    "difficulty": "hard",
+    "text": "OR: From a point on a bridge across a river, the angles of depression of the banks on opposite sides of the river are 30° and 45° respectively. If the bridge is at a height of 3 m from the banks, then find the width of the river. (2022 Board)",
+    "modelAnswer": "Let the bridge point be directly above the river, at height 3 m above both banks. Horizontal distance to the bank with 30° depression = 3/tan30° = 3√3 m. Horizontal distance to the bank with 45° depression = 3/tan45° = 3 m. Total width = 3√3 + 3 = 3(√3+1) ≈ 8.2 m.",
+    "keyPoints": ["Use tan30° = 3/(distance to one bank) to get 3√3 m.", "Use tan45° = 3/(distance to other bank) to get 3 m.", "Add both distances: width ≈ 8.2 m."]
+  },
+  {
+    "id": "sa-math-041",
+    "chapter": "Statistics",
+    "marks": 3,
+    "difficulty": "medium",
+    "text": "Following is the daily expenditure on lunch by 30 employees of a company: Daily expenditure (Rs) 100-120,120-140,140-160,160-180,180-200 with number of employees 8,3,8,6,5. Find the mean daily expenditure of the employees. (2022 Board)",
+    "modelAnswer": "Using class midpoints 110,130,150,170,190: Sum(f×x) = 110(8)+130(3)+150(8)+170(6)+190(5) = 880+390+1200+1020+950 = 4440. Total frequency = 30. Mean = 4440/30 = Rs 148.",
+    "keyPoints": ["Find the midpoint of each class (110, 130, 150, 170, 190).", "Compute Σ(f×midpoint) = 4440.", "Divide by total frequency (30) to get Mean = Rs 148."]
   }
 ]
