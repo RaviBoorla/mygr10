@@ -27,7 +27,7 @@ for f in sorted(glob.glob('public/questions/*.json')):
 |---|---|---|---|
 | Mathematics | `X-CBSE-Mathematics.json` | 358 | 2023 Board (20), 2024 Board (20), 2025 Board (59), 2026 Board (59) — 158 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
 | Science | `X-CBSE-Science.json` | 320 | 2025 Board (60), 2026 Board (60) — 120 real; remaining 200 curriculum-authored |
-| Social Science | `X-CBSE-Social-Science.json` | 260 | 2024 Board (20), 2025 Board (20), 2026 Board (20) — 60 real; remaining 200 are curriculum-authored, not from a specific paper |
+| Social Science | `X-CBSE-Social-Science.json` | 280 | 2023 Board (20), 2024 Board (20), 2025 Board (20), 2026 Board (20) — 80 real; remaining 200 are curriculum-authored, not from a specific paper. (2022's paper was the COVID-era Term 2 descriptive-only format — no MCQs — so it's skipped.) |
 | Hindi | `X-CBSE-Hindi.json` | 125 | 2023 Board (49), 2024 Board (44), 2025 Board (16), 2026 Board (16) — **all 125 from real past papers** (Course A only; Sets 1/2/3 per year were confirmed identical content, so only one deduplicated copy per year is kept) |
 | English | — | 0 | No bank yet — card shows "Question bank coming soon" for Grade X |
 
