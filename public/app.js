@@ -3589,8 +3589,11 @@ const app = {
         <header class="sa-card-head">
           <span class="sa-marks">${esc(q.number)}</span>
         </header>
-        <p class="sa-question">${esc(q.question).replace(/\n/g, '<br>')}</p>
-        <div class="sa-body sol-body">
+        <div class="sa-body">
+          <div class="sa-your-answer">
+            <label>Question</label>
+            <p class="sa-question">${esc(q.question).replace(/\n/g, '<br>')}</p>
+          </div>
           ${solutionCol}
         </div>
       </article>`;
