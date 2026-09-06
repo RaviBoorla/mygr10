@@ -3061,6 +3061,7 @@ const state = {
   notesFilter: 'all',
   openPicker: null,  // subject whose chapter list is expanded on the home screen
   difficulty: {},    // subject → 'all' | 'easy' | 'medium' | 'hard', for Mock/Drill
+  saChapter: {},     // subject → chapter name filter on the Short Answers screen, '' = all chapters
   mobileMenuOpen: false  // the header's single hamburger menu (Progress / Notes / Career Pathing / boards)
 };
 
@@ -3325,31 +3326,64 @@ const app = {
   // ── Screen: Short Answers — VSA/SA practice, self-assessed against a model
   // answer (there's no options/correct field to auto-grade free text against).
   // Content loads async after the initial paint, same pattern as _hydrateHome.
+  // The chapter-tabs + Exit bar is sticky (frozen) directly under the app header,
+  // same z-index tier as the timed-test topbar, so it's always reachable.
   _screenShortAnswers(subject) {
     return `
-      <div class="screen">
-        <p class="subtitle">${esc(subject)} · Very Short &amp; Short Answer questions from real board papers. Write your own answer, then reveal the model answer to self-check.</p>
+      <div class="screen sa-screen">
+        <div class="sa-topbar">
+          <div class="sa-tabs" id="sa-tabs" role="tablist" aria-label="Chapter"><span class="sa-tabs-loading">Loading chapters…</span></div>
+          <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
+        </div>
+        <p class="subtitle">${esc(subject)} · Very Short &amp; Short Answer questions from real board papers. Write your own answer, then reveal the model answer alongside it to self-check.</p>
         <div id="sa-list" class="sa-list">Loading…</div>
       </div>`;
   },
 
   _hydrateShortAnswers(subject) {
     loadSABank(subject)
-      .then(list => this._renderSAList(subject, list))
+      .then(list => {
+        this._renderSATabs(subject, list);
+        this._renderSAList(subject, list);
+      })
       .catch(err => {
         const box = document.getElementById('sa-list');
         if (box) box.textContent = err.message;
       });
   },
 
+  _renderSATabs(subject, list) {
+    const box = document.getElementById('sa-tabs');
+    if (!box) return;
+    const chapters = chaptersOf(list);
+    const active = state.saChapter[subject] || '';
+    this._saChapterIndex = this._saChapterIndex || {};
+    this._saChapterIndex[subject] = chapters.map(c => c.name);
+    const tab = (name, label, count) => `
+      <button class="filter-tab ${active === name ? 'active' : ''}" aria-pressed="${active === name}"
+              onclick="app.setSAChapter('${esc(subject)}','${esc(name)}')">${esc(label)}${count != null ? ` <small>${count}</small>` : ''}</button>`;
+    box.innerHTML = tab('', 'All chapters', list.length)
+      + chapters.map(c => tab(c.name, c.name, c.count)).join('');
+  },
+
+  setSAChapter(subject, name) {
+    state.saChapter[subject] = name;
+    loadSABank(subject).then(list => {
+      this._renderSATabs(subject, list);
+      this._renderSAList(subject, list);
+    });
+  },
+
   _renderSAList(subject, list) {
     const box = document.getElementById('sa-list');
     if (!box) return;
     const drafts = LS.get(KEY.saDrafts, {})[scopeKey(subject)] || {};
-    const chapters = chaptersOf(list);
+    const activeChapter = state.saChapter[subject] || '';
+    const chapters = activeChapter ? [{ name: activeChapter }] : chaptersOf(list);
 
     box.innerHTML = chapters.map(ch => {
       const qs = list.filter(q => (q.chapter || 'General') === ch.name);
+      if (!qs.length) return '';
       const gotIt = qs.filter(q => drafts[q.id]?.status === 'got-it').length;
       return `
         <section class="home-section">
@@ -3363,6 +3397,21 @@ const app = {
     draft = draft || {};
     const revealed = !!draft.revealed;
     const status = draft.status || '';
+    const modelCol = revealed ? `
+        <div class="sa-model">
+          <strong>Model answer</strong>
+          <p>${esc(q.modelAnswer)}</p>
+          ${q.keyPoints && q.keyPoints.length ? `
+            <strong>Key points to cover</strong>
+            <ul>${q.keyPoints.map(k => `<li>${esc(k)}</li>`).join('')}</ul>` : ''}
+          <div class="sa-markrow">
+            <button class="btn small ${status === 'got-it' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','got-it')">&#10003; Got it</button>
+            <button class="btn small ${status === 'review' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','review')">&#8635; Review again</button>
+          </div>
+        </div>`
+      : `<div class="sa-model sa-model-placeholder">
+          <button class="btn act-btn" onclick="app.revealSA('${esc(subject)}','${esc(q.id)}')">Show model answer</button>
+        </div>`;
     return `
       <article class="card sa-card" data-sa-id="${esc(q.id)}">
         <header class="sa-card-head">
@@ -3370,21 +3419,14 @@ const app = {
           ${status ? `<span class="sa-status ${status}">${status === 'got-it' ? '&#10003; Got it' : '&#8635; Review again'}</span>` : ''}
         </header>
         <p class="sa-question">${esc(q.text)}</p>
-        <textarea class="sa-textarea" placeholder="Write your answer here (saved automatically)…"
-                  oninput="app.saveSADraft('${esc(subject)}','${esc(q.id)}', this.value)">${esc(draft.text || '')}</textarea>
-        ${revealed ? `
-          <div class="sa-model">
-            <strong>Model answer:</strong>
-            <p>${esc(q.modelAnswer)}</p>
-            ${q.keyPoints && q.keyPoints.length ? `
-              <strong>Key points to cover:</strong>
-              <ul>${q.keyPoints.map(k => `<li>${esc(k)}</li>`).join('')}</ul>` : ''}
+        <div class="sa-body">
+          <div class="sa-your-answer">
+            <label for="sa-ta-${esc(q.id)}">Your answer</label>
+            <textarea id="sa-ta-${esc(q.id)}" class="sa-textarea" placeholder="Write your answer here (saved automatically)…"
+                      oninput="app.saveSADraft('${esc(subject)}','${esc(q.id)}', this.value)">${esc(draft.text || '')}</textarea>
           </div>
-          <div class="sa-markrow">
-            <button class="btn small ${status === 'got-it' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','got-it')">&#10003; Got it</button>
-            <button class="btn small ${status === 'review' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','review')">&#8635; Review again</button>
-          </div>`
-        : `<button class="btn act-btn" onclick="app.revealSA('${esc(subject)}','${esc(q.id)}')">Show model answer</button>`}
+          ${modelCol}
+        </div>
       </article>`;
   },
 
