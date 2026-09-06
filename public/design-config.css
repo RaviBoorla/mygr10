@@ -71,7 +71,10 @@
 
   /* ── Overlays ── */
   --overlay:        rgba(15, 23, 42, .5);    /* modal backdrop */
-  --active-overlay: rgba(255, 255, 255, .25); /* chip-count on coloured bg */
+  --active-overlay: rgba(0, 0, 0, .2);       /* chip-count on coloured bg — darkens
+                                                 the tab's own bg so white text clears
+                                                 WCAG AA (4.5:1); a lightening overlay
+                                                 here failed contrast */
 
   /* ── Note category badge palette ── */
   --badge-th-bg:   #e0e7ff;   /* theorem  — indigo */

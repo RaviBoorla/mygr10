@@ -220,7 +220,8 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 }
 .chip:hover { border-color: var(--primary); background: var(--primary-soft); color: var(--primary); }
 .chip-count {
-  font-size: var(--fs-2xs); font-weight: 700; color: var(--text-light);
+  /* --skip-fg (not --text-light) on --bg clears WCAG AA 4.5:1 — --text-light here was 4.34:1 */
+  font-size: var(--fs-2xs); font-weight: 700; color: var(--skip-fg);
   background: var(--bg); border-radius: var(--radius-md); padding: 1px 6px;
 }
 /* How many of a chapter's questions are sourced from real board papers, not

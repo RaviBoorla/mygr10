@@ -3157,7 +3157,7 @@ const app = {
     state.screen = name;
     state.params = r.parts;
 
-    document.getElementById('app').innerHTML = this._header() + this._screen(name, r.parts);
+    document.getElementById('app').innerHTML = this._header() + `<main>${this._screen(name, r.parts)}</main>`;
     window.scrollTo(0, 0);
     this._afterRender(name, r.parts);
   },
