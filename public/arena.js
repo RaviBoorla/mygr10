@@ -538,7 +538,7 @@ function renderArenaSetup() {
   }
   const opts = available.map((s, i) => `
     <label class="arena-subj-opt">
-      <input type="checkbox" name="arena-subj" value="${esc(s)}" ${i < 3 ? 'checked' : ''}>
+      <input type="checkbox" name="arena-subj" value="${esc(s)}" ${!['Hindi','English'].includes(s) ? 'checked' : ''}>
       <span>${esc(s)}</span>
     </label>`).join('');
 
@@ -570,9 +570,9 @@ function renderArenaSetup() {
 
         <!-- Right: subject picker + start -->
         <div class="arena-picker">
-          <p class="arena-pick-label">Choose 3 subjects</p>
+          <p class="arena-pick-label">Choose subjects (3 or more)</p>
           <div class="arena-subj-grid">${opts}</div>
-          <p class="arena-subj-hint">Select exactly 3 subjects to begin.</p>
+          <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
           <div class="arena-setup-actions">
             <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
@@ -781,8 +781,8 @@ function arenaStartTimer(secs) {
 // ─── Actions (called from HTML onclick) ──────────────────────────────────────
 window.arenaBegin = async function() {
   const checked = Array.from(document.querySelectorAll('input[name="arena-subj"]:checked')).map(el => el.value);
-  if (checked.length !== 3) {
-    alert('Please select exactly 3 subjects.');
+  if (checked.length < 3) {
+    alert('Please select at least 3 subjects.');
     return;
   }
   const btn = document.querySelector('.arena-go-btn');
