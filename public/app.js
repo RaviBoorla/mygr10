@@ -3368,10 +3368,6 @@ const app = {
                 <span class="wf-icon">🔥</span>
                 <div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div>
               </li>
-              <li>
-                <span class="wf-icon">📴</span>
-                <div><strong>Works offline</strong><span>Installed as a PWA — all progress saved locally, no account needed</span></div>
-              </li>
             </ul>
           </div>
 
