@@ -359,15 +359,26 @@ function renderArenaGameOver() {
 
   const cleared = ar._cleared ? '<p class="arena-cleared">🏆 Full clear! All 10 stages!</p>' : '';
 
-  // Build missed-questions review list
-  const missedHtml = ar.missedQuestions.length === 0 ? '<p class="arena-no-missed">No questions missed — perfect run!</p>' :
-    ar.missedQuestions.map(q => `
-      <div class="arena-review-item">
-        <p class="arena-review-subj">${esc(q._subject)}</p>
+  // Build full question review list (all attempted, correct + wrong)
+  const allAnswered = ar._allAnswered || [];
+  const reviewHtml = allAnswered.length === 0
+    ? '<p class="arena-no-missed">No questions attempted.</p>'
+    : allAnswered.map((q, i) => {
+        const isRight = q.isCorrect;
+        const userOpt = q.userAnswer !== undefined ? q.options[q.userAnswer] : null;
+        return `
+      <div class="arena-review-item ${isRight ? 'arena-review-correct' : 'arena-review-wrong'}">
+        <div class="arena-review-header">
+          <span class="arena-review-badge">${isRight ? '✓' : '✗'}</span>
+          <span class="arena-review-subj">${esc(q._subject)}${q.chapter ? ` · ${esc(q.chapter)}` : ''}</span>
+        </div>
         <p class="arena-review-q">${esc(q.text)}</p>
-        <p class="arena-review-ans">✓ ${esc(q.options[q.correct])}</p>
+        ${!isRight && userOpt ? `<p class="arena-review-user-ans">Your answer: ${esc(userOpt)}</p>` : ''}
+        ${!isRight && q.userAnswer === undefined ? `<p class="arena-review-user-ans">Timed out</p>` : ''}
+        <p class="arena-review-ans">Correct: ${esc(q.options[q.correct])}</p>
         ${q.explanation ? `<p class="arena-review-exp">${esc(q.explanation)}</p>` : ''}
-      </div>`).join('');
+      </div>`;
+      }).join('');
 
   return `
     <div class="screen arena-gameover">
@@ -392,8 +403,8 @@ function renderArenaGameOver() {
         </div>
         <div class="arena-go-right">
           <div class="arena-missed-section">
-            <h3>Missed questions</h3>
-            ${missedHtml}
+            <h3>Questions attempted <span class="arena-review-count">${allAnswered.length}</span></h3>
+            ${reviewHtml}
           </div>
         </div>
       </div>

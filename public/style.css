@@ -800,9 +800,9 @@ kbd {
 
 /* Game over — 50-50 split */
 .arena-gameover { max-width: 960px; }
-.arena-go-layout { display: flex; gap: 24px; align-items: flex-start; }
-.arena-go-left { flex: 1 1 0; min-width: 0; }
-.arena-go-right { flex: 1 1 0; min-width: 0; max-height: 80vh; overflow-y: auto; }
+.arena-go-layout { display: flex; gap: 0; align-items: flex-start; }
+.arena-go-left { flex: 2 1 0; min-width: 0; padding-right: 28px; border-right: 1px solid var(--border); }
+.arena-go-right { flex: 3 1 0; min-width: 0; padding-left: 28px; max-height: 80vh; overflow-y: auto; }
 .arena-go-title { font-size: var(--fs-h2); font-weight: 800; margin: 0 0 4px; }
 .arena-cleared, .arena-new-best { font-size: var(--fs-body); margin-bottom: 4px; }
 .arena-go-stats { display: flex; gap: 16px; margin: 12px 0; flex-wrap: wrap; }
@@ -816,19 +816,30 @@ kbd {
   color: var(--text-light); }
 .arena-go-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
 .arena-missed-section { text-align: left; }
-.arena-missed-section h3 { font-size: var(--fs-btn); font-weight: 700; margin: 0 0 8px; }
-.arena-review-item { border: 1px solid var(--border); border-radius: var(--radius-md);
-  padding: 10px; margin-bottom: 8px; }
+.arena-missed-section h3 { font-size: var(--fs-btn); font-weight: 700; margin: 0 0 10px;
+  display: flex; align-items: center; gap: 8px; }
+.arena-review-count { font-size: var(--fs-note); font-weight: 400; color: var(--text-light);
+  background: var(--surface); border: 1px solid var(--border); border-radius: 99px;
+  padding: 1px 8px; }
+.arena-review-item { border-radius: var(--radius-md); padding: 10px 12px; margin-bottom: 8px;
+  border-left: 3px solid transparent; border: 1px solid var(--border); }
+.arena-review-item.arena-review-correct { border-left: 3px solid var(--score-good); background: color-mix(in srgb, var(--score-good) 5%, transparent); }
+.arena-review-item.arena-review-wrong   { border-left: 3px solid var(--error);      background: color-mix(in srgb, var(--error) 5%,      transparent); }
+.arena-review-header { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.arena-review-badge { font-size: 13px; font-weight: 800; flex-shrink: 0; }
+.arena-review-correct .arena-review-badge { color: var(--score-good); }
+.arena-review-wrong   .arena-review-badge { color: var(--error); }
 .arena-review-subj { font-size: var(--fs-2xs); font-weight: 700; color: var(--text-light);
-  text-transform: uppercase; margin: 0 0 3px; }
+  text-transform: uppercase; }
 .arena-review-q { font-size: var(--fs-ui); margin: 0 0 4px; }
-.arena-review-ans { font-size: var(--fs-ui); color: var(--score-good);
-  font-weight: 600; margin: 0 0 3px; }
-.arena-review-exp { font-size: var(--fs-note); color: var(--text-light); margin: 0; }
+.arena-review-user-ans { font-size: var(--fs-ui); color: var(--error); margin: 0 0 2px; }
+.arena-review-ans { font-size: var(--fs-ui); color: var(--score-good); font-weight: 600; margin: 0 0 3px; }
+.arena-review-exp { font-size: var(--fs-note); color: var(--text-light); margin: 4px 0 0; border-top: 1px solid var(--border); padding-top: 4px; }
 .arena-no-missed { color: var(--score-good); font-weight: 600; }
 @media (max-width: 640px) {
   .arena-go-layout { flex-direction: column; }
-  .arena-go-right { max-height: none; }
+  .arena-go-left { border-right: none; border-bottom: 1px solid var(--border); padding-right: 0; padding-bottom: 20px; }
+  .arena-go-right { max-height: none; padding-left: 0; }
   .arena-setup-screen, .arena-screen, .arena-interstitial, .arena-gameover { padding: 8px 10px; }
   .arena-hud { flex-wrap: wrap; gap: 4px; }
   .arena-go-stats { gap: 10px; }
