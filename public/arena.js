@@ -263,10 +263,12 @@ function renderArenaQuestion() {
         </div>
       </div>
 
-      <div class="arena-timer-wrap">
-        <div class="arena-timer-bar" id="arena-timer-bar"></div>
+      <div class="arena-timer-row">
+        <div class="arena-timer-wrap">
+          <div class="arena-timer-bar" id="arena-timer-bar"></div>
+        </div>
+        <div class="arena-timer-label"><span id="arena-timer-secs">${spec.secs}</span>s</div>
       </div>
-      <div class="arena-timer-label"><span id="arena-timer-secs">${spec.secs}</span>s</div>
 
       <div class="arena-subject-tag">${esc(q._subject)}</div>
       <div class="arena-question-text">${esc(q.text)}</div>
@@ -289,7 +291,7 @@ function renderArenaInterstitial() {
       ${liveLost ? `<p class="arena-inter-life">Lost a life — ${ar.lives} remaining</p>` : ''}
       <p class="arena-inter-next">Stage ${ar.stage + 1} next</p>
       <button class="btn primary arena-go-btn" onclick="arenaContinue()">Continue</button>
-      <button class="btn ghost" onclick="arenaQuit()">Quit Run</button>
+      <button class="btn arena-quit-btn" onclick="arenaQuit()">Quit Run</button>
     </div>`;
 }
 
@@ -334,25 +336,31 @@ function renderArenaGameOver() {
 
   return `
     <div class="screen arena-gameover">
-      ${cleared}
-      <h2 class="arena-go-title">${ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
-      ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
-      <div class="arena-go-stats">
-        <div class="arena-stat"><span class="arena-stat-val">${ar.score.toLocaleString()}</span><span class="arena-stat-lbl">Score</span></div>
-        <div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest Stage</span></div>
-        <div class="arena-stat"><span class="arena-stat-val">${ar.longestCombo}</span><span class="arena-stat-lbl">Longest Combo</span></div>
-      </div>
-      <div class="arena-go-hi">
-        <span class="arena-hi-label">Personal Best</span>
-        <span>${hi.score.toLocaleString()} pts · Stage ${hi.stage} · ${hi.combo}× combo</span>
-      </div>
-      <div class="arena-missed-section">
-        <h3>Missed questions</h3>
-        ${missedHtml}
-      </div>
-      <div class="arena-go-actions">
-        <button class="btn primary" onclick="app.go(['arena'])">Play Again</button>
-        <button class="btn ghost" onclick="app.go(['home'])">Home</button>
+      <div class="arena-go-layout">
+        <div class="arena-go-left">
+          ${cleared}
+          <h2 class="arena-go-title">${ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
+          ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
+          <div class="arena-go-stats">
+            <div class="arena-stat"><span class="arena-stat-val">${ar.score.toLocaleString()}</span><span class="arena-stat-lbl">Score</span></div>
+            <div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest Stage</span></div>
+            <div class="arena-stat"><span class="arena-stat-val">${ar.longestCombo}</span><span class="arena-stat-lbl">Longest Combo</span></div>
+          </div>
+          <div class="arena-go-hi">
+            <span class="arena-hi-label">Personal Best</span>
+            <span>${hi.score.toLocaleString()} pts · Stage ${hi.stage} · ${hi.combo}× combo</span>
+          </div>
+          <div class="arena-go-actions">
+            <button class="btn primary" onclick="app.go(['arena'])">Play Again</button>
+            <button class="btn ghost" onclick="app.go(['home'])">Home</button>
+          </div>
+        </div>
+        <div class="arena-go-right">
+          <div class="arena-missed-section">
+            <h3>Missed questions</h3>
+            ${missedHtml}
+          </div>
+        </div>
       </div>
     </div>`;
 }
