@@ -221,15 +221,38 @@ function renderArenaSetup() {
 
   return `
     <div class="screen arena-setup-screen">
-      <h1 class="arena-title">⚡ Arena</h1>
-      <p class="arena-sub">Fast-paced MCQ blitz · 2–3 min per run · ${esc(state.board)}</p>
-      <p class="arena-rule">Pick 3 subjects, then go. Each stage is 5 questions.
-         Beat each stage to advance — the clock is per question.</p>
-      <div class="arena-subj-grid">${opts}</div>
-      <p class="arena-subj-hint">Select exactly 3 subjects.</p>
-      <div class="arena-setup-actions">
-        <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
-        <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+      <div class="arena-setup-layout">
+
+        <!-- Left: explainer -->
+        <div class="arena-explainer">
+          <h1 class="arena-title">⚡ Arena</h1>
+          <p class="arena-sub">Fast MCQ blitz · ${esc(state.board)} · race the clock</p>
+
+          <div class="arena-how">
+            <p class="arena-how-heading">How to play</p>
+            <ul class="arena-how-list">
+              <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your 3 chosen subjects.</span></li>
+              <li><span class="arena-how-icon">⏱️</span><span>A <strong>timer</strong> counts down per question — answer fast for bonus points.</span></li>
+              <li><span class="arena-how-icon">♥</span><span>You start with <strong>7 hearts</strong>. Every correct answer earns +½ heart (capped at 7).</span></li>
+              <li><span class="arena-how-icon">⚠️</span><span>Poor stages <strong>drain hearts</strong>: 0 right → −3, 1 right → −1.5, 2 right → −1, 3 right → −0.5.</span></li>
+              <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
+              <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
+              <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: subject picker + start -->
+        <div class="arena-picker">
+          <p class="arena-pick-label">Choose 3 subjects</p>
+          <div class="arena-subj-grid">${opts}</div>
+          <p class="arena-subj-hint">Select exactly 3 subjects to begin.</p>
+          <div class="arena-setup-actions">
+            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
+            <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+          </div>
+        </div>
+
       </div>
     </div>`;
 }
