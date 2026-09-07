@@ -3280,6 +3280,7 @@ const app = {
         <p>If this policy changes (for example, if an optional account/sync feature is introduced in the future), this page will be updated and the "Last updated" date above will change accordingly.</p>
         <h2>Contact</h2>
         <p>Questions about this policy can be sent to <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+        <button class="btn ghost legal-back" onclick="app.go(['home'])" style="margin-top:24px">&larr; Home</button>
       </div>`;
   },
 
@@ -3306,6 +3307,7 @@ const app = {
         <p>These terms are governed by the laws of India.</p>
         <h2>Contact</h2>
         <p>Questions about these terms? Email us at <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+        <button class="btn ghost legal-back" onclick="app.go(['home'])" style="margin-top:24px">&larr; Home</button>
       </div>`;
   },
 
