@@ -153,31 +153,29 @@ async function arenaStartRun(subjects) {
   saveRun();
 }
 
-// Called after all questions in the current stage have been answered
+// Called after all questions in the current stage have been answered.
+// Lives are tracked as floats (half-heart granularity).
+// Gain: +0.5 per correct answer. Cost: 0→3 lives, 1→2, 2→1, 3+→0.
 function arenaEndStage(correct) {
   const total = ar.stageQuestions.length;
-  let liveLost = 0;
 
-  if (correct <= 1) {
-    // 0–1 of 5 correct → game over
+  const gained = correct * 0.5;
+  const cost = correct === 0 ? 3 : correct === 1 ? 2 : correct === 2 ? 1 : 0;
+
+  ar.lives = Math.min(ARENA_LIVES, ar.lives + gained - cost);
+
+  if (ar.lives <= 0) {
+    ar.lives = 0;
     ar.phase = 'gameover';
     return;
   }
-  if (correct === 2) {
-    // 2 of 5 correct → advance but lose a life
-    ar.lives -= 1;
-    liveLost = 1;
-    if (ar.lives <= 0) {
-      ar.phase = 'gameover';
-      return;
-    }
-  }
-  // 3–5 of 5 → advance cleanly
+
   ar.deepestStage = Math.max(ar.deepestStage, ar.stage);
   ar.stageStartedAt = Date.now();
   ar.phase = 'interstitial';
   ar._lastStageCorrect = correct;
-  ar._lastStageLiveLost = liveLost;
+  ar._lastStageLiveLost = cost;
+  ar._lastStageHeartGained = gained;
   ar._lastStageTotal = total;
 }
 
@@ -250,8 +248,12 @@ function renderArenaQuestion() {
       <span class="arena-opt-text">${esc(opt)}</span>
     </button>`).join('');
 
-  const livePips = Array.from({ length: ARENA_LIVES }, (_, i) =>
-    `<span class="arena-life-pip ${i < ar.lives ? 'alive' : 'lost'}">♥</span>`).join('');
+  const fullHearts = Math.floor(ar.lives);
+  const hasHalf = (ar.lives - fullHearts) >= 0.5;
+  const livePips = Array.from({ length: ARENA_LIVES }, (_, i) => {
+    const cls = i < fullHearts ? 'alive' : (i === fullHearts && hasHalf ? 'half' : 'lost');
+    return `<span class="arena-life-pip ${cls}">♥</span>`;
+  }).join('');
 
   return `
     <div class="screen arena-screen" id="arena-screen">
@@ -285,8 +287,13 @@ function renderArenaQuestion() {
 function renderArenaInterstitial() {
   const correct = ar._lastStageCorrect;
   const total = ar._lastStageTotal;
-  const liveLost = ar._lastStageLiveLost;
+  const cost = ar._lastStageLiveLost || 0;
+  const gained = ar._lastStageHeartGained || 0;
+  const net = gained - cost;
   const scoreMsg = ar._lastStageScore ? `+${ar._lastStageScore.toLocaleString()} pts` : '';
+  const lifeMsg = net > 0 ? `+${net}♥ gained — ${ar.lives.toFixed(1)} remaining`
+    : net < 0 ? `${net}♥ — ${ar.lives.toFixed(1)} remaining`
+    : '';
 
   return `
     <div class="screen arena-interstitial">
@@ -294,7 +301,7 @@ function renderArenaInterstitial() {
         ${correct === total ? '✦ Stage Cleared!' : '⚡ Advance'}
       </div>
       <p class="arena-inter-detail">${correct}/${total} correct ${scoreMsg}</p>
-      ${liveLost ? `<p class="arena-inter-life">Lost a life — ${ar.lives} remaining</p>` : ''}
+      ${lifeMsg ? `<p class="arena-inter-life ${net >= 0 ? 'gained' : ''}">${lifeMsg}</p>` : ''}
       <p class="arena-inter-next">Stage ${ar.stage + 1} next</p>
       <button class="btn primary arena-go-btn" onclick="arenaContinue()">Continue</button>
       <button class="btn arena-quit-btn" onclick="arenaQuit()">Quit Run</button>

@@ -734,7 +734,9 @@ kbd {
 .arena-combo.hot { color: var(--warning); }
 .arena-score { font-size: var(--fs-sec); font-weight: 800; }
 .arena-life-pip { font-size: var(--fs-btn); color: var(--error); }
+.arena-life-pip.half { opacity: .5; }
 .arena-life-pip.lost { color: var(--border); opacity: .5; }
+.arena-inter-life.gained { color: var(--score-good); }
 
 /* Timer bar — bar and seconds label side-by-side */
 .arena-timer-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
