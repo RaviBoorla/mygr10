@@ -762,8 +762,18 @@ kbd {
 .arena-no-missed { color: #16a34a; font-weight: 600; }
 .arena-go-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
 
-.arena-home-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 4px 0; }
-.arena-home-btn { background: #1e293b; color: #f8fafc; border-color: #1e293b;
-  font-weight: 700; letter-spacing: .02em; }
-.arena-home-btn:hover { background: #0f172a; border-color: #0f172a; }
-.arena-home-hint { font-size: .8rem; color: var(--text-light); }
+/* streak + arena side-by-side row */
+.streak-arena-row { display: flex; gap: 12px; margin-bottom: 16px; }
+.streak-arena-half { flex: 1 1 0; min-width: 0; display: flex; }
+.streak-arena-half .streak-banner { flex: 1; margin: 0; }
+.streak-arena-card { flex: 1; display: flex; align-items: center; gap: 14px;
+  cursor: pointer; text-decoration: none; color: inherit;
+  transition: border-color .18s, background .18s; }
+.streak-arena-card:hover { border-color: #16a34a; background: #f0fdf4; }
+.arena-card-icon { font-size: 1.8rem; line-height: 1; flex-shrink: 0; }
+.arena-card-body { display: flex; flex-direction: column; gap: 3px; }
+.arena-card-title { font-weight: 800; font-size: 1rem; margin: 0; }
+.arena-card-sub { font-size: .78rem; color: var(--text-light); margin: 0; }
+@media (max-width: 520px) {
+  .streak-arena-row { flex-direction: column; }
+}

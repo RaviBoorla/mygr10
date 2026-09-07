@@ -3762,11 +3762,21 @@ const app = {
         </ul>
       </section>` : '';
 
-    const arenaBtn = state.board === 'CBSE' ? `
-      <section class="home-section arena-home-row">
-        <button class="btn arena-home-btn" onclick="app.go(['arena'])">⚡ Arena — fast MCQ blitz</button>
-        <span class="arena-home-hint">2–3 min per run · 3 subjects · race the clock</span>
-      </section>` : '';
+    const streakHtml = this._streakBanner();
+    const arenaCard = state.board === 'CBSE' ? `
+      <a class="streak-arena-card card arena-card" onclick="app.go(['arena'])" role="button" tabindex="0">
+        <span class="arena-card-icon">⚡</span>
+        <div class="arena-card-body">
+          <p class="arena-card-title">Arena</p>
+          <p class="arena-card-sub">Fast MCQ blitz · 3 subjects · race the clock</p>
+        </div>
+      </a>` : '';
+
+    const streakArenaRow = (streakHtml || arenaCard) ? `
+      <div class="streak-arena-row">
+        ${streakHtml ? `<div class="streak-arena-half">${streakHtml}</div>` : ''}
+        ${arenaCard  ? `<div class="streak-arena-half">${arenaCard}</div>` : ''}
+      </div>` : '';
 
     return `
       <div class="screen home-screen">
@@ -3774,9 +3784,8 @@ const app = {
           ${this._gradeTabs()}
           <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
         </div>
-        ${this._streakBanner()}
+        ${streakArenaRow}
         ${resume}
-        ${arenaBtn}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>
         </section>
