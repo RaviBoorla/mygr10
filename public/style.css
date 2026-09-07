@@ -803,6 +803,9 @@ kbd {
 .site-footer a:hover { color: var(--primary); text-decoration: underline; }
 .site-footer-sep { opacity: .4; }
 
+/* Back-to-home button on standalone screens (Progress, Notes) */
+.screen-home-btn { margin-bottom: 12px; }
+
 /* Legal screens (Privacy, Terms) */
 .legal-screen { max-width: 680px; margin: 0 auto; padding-bottom: 48px; }
 .legal-screen h2 { margin-top: 1.75em; font-size: var(--fs-base); }

@@ -12,10 +12,10 @@ const ARENA_SUBJECTS_CBSE = ['Mathematics', 'Science', 'Social Science', 'Englis
 // Stage table per arena.md
 const ARENA_STAGES = [
   // [stageFrom, stageTo, difficulty, secondsPerQ, questionsPerStage]
-  { from: 1,  to: 3,  diff: 'easy',   secs: 30, qPerSubject: 1 },
-  { from: 4,  to: 6,  diff: 'medium', secs: 25, qPerSubject: 1 },
-  { from: 7,  to: 9,  diff: 'medium', secs: 20, qPerSubject: 1 }, // hard also OK at 7-9
-  { from: 10, to: 10, diff: 'hard',   secs: 20, qPerSubject: 2 }, // boss: 5 questions total (2+2+1 across 3 subjects)
+  { from: 1,  to: 3,  diff: 'easy',   secs: 45, qPerSubject: 1 },
+  { from: 4,  to: 6,  diff: 'medium', secs: 40, qPerSubject: 1 },
+  { from: 7,  to: 9,  diff: 'medium', secs: 35, qPerSubject: 1 }, // hard also OK at 7-9
+  { from: 10, to: 10, diff: 'hard',   secs: 35, qPerSubject: 2 }, // boss: 5 questions total (2+2+1 across 3 subjects)
 ];
 const ARENA_LIVES = 3;
 const COMBO_THRESHOLD_1 = 5;   // 1.5× at 5 in a row
