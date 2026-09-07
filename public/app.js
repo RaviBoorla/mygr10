@@ -3152,7 +3152,7 @@ const app = {
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
     else if (name === 'solved' && !solvedBankSlug(r.parts[0])) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved'].includes(name)) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved', 'privacy', 'terms'].includes(name)) name = 'home';
 
     // A guarded redirect must correct the URL too, or the address bar claims a screen
     // that is not on show and Back/refresh land somewhere unexpected.
@@ -3195,6 +3195,9 @@ const app = {
     else if (state.screen === 'progress') crumbParts.push('Progress');
     else if (state.screen === 'shortanswers') { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Board Short Answers'); }
     else if (state.screen === 'solved')       { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Textbook Solved Exercises'); }
+    else if (state.screen === 'privacy')      crumbParts.push('Privacy Policy');
+    else if (state.screen === 'terms')        crumbParts.push('Terms & Conditions');
+    else if (['arena','arena-run','arena-inter','arena-over'].includes(state.screen)) crumbParts.push('Arena');
     else if (state.screen === 'test' && this.session) {
       crumbParts.push(this.session.subject, MODES[this.session.mode]?.label || 'Test');
     } else if (state.screen === 'results' && this.lastConfig) {
@@ -3250,8 +3253,60 @@ const app = {
       case 'results':  return this._screenResults();
       case 'shortanswers': return this._screenShortAnswers(params[0]);
       case 'solved':   return this._screenSolvedExercises(params[0]);
+      case 'privacy':  return this._screenPrivacy();
+      case 'terms':    return this._screenTerms();
       default:         return '';
     }
+  },
+
+  _screenPrivacy() {
+    return `
+      <div class="screen legal-screen">
+        <button class="btn ghost legal-back" onclick="app.go(['home'])">&larr; Back</button>
+        <h1 class="legal-title">Privacy Policy</h1>
+        <p class="legal-updated">Last updated: September 2026</p>
+        <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students. This policy explains what happens to your data when you use it.</p>
+        <h2>No account, no personal data collection</h2>
+        <p>Rise does not require sign-up or login, and does not ask for your name, email, or any other personal information.</p>
+        <h2>Everything stays on your device</h2>
+        <p>Your progress, test attempts, bookmarks, streaks, and settings are stored only in your browser's or app's local storage, directly on your device. This data is never transmitted to, or stored on, any server we operate. Uninstalling the app or clearing site data permanently deletes it, since no copy exists anywhere else.</p>
+        <h2>Question content</h2>
+        <p>The app downloads question-bank content (practice questions, answers, explanations) from our servers so it can display them. These are static content files — no information about you or your device is attached to these requests beyond what any standard web request includes (e.g. IP address, handled transiently by our hosting provider and not linked to any profile).</p>
+        <h2>No advertising, no analytics trackers, no third-party sharing</h2>
+        <p>Rise does not embed advertising SDKs, analytics/tracking scripts, or any mechanism that shares your activity with third parties.</p>
+        <h2>Children's privacy</h2>
+        <p>Rise is designed for use by school students. Since no personal data is collected or transmitted, no personal data about children is gathered by this app.</p>
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes (for example, if an optional account/sync feature is introduced in the future), this page will be updated and the "Last updated" date above will change accordingly.</p>
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent to <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+      </div>`;
+  },
+
+  _screenTerms() {
+    return `
+      <div class="screen legal-screen">
+        <button class="btn ghost legal-back" onclick="app.go(['home'])">&larr; Back</button>
+        <h1 class="legal-title">Terms &amp; Conditions</h1>
+        <p class="legal-updated">Last updated: September 2026</p>
+        <p>These terms govern your use of Rise, a free self-study practice tool for Grade 10 board-exam students. By using the app you agree to these terms.</p>
+        <h2>Use of the app</h2>
+        <p>Rise is provided for personal, non-commercial educational use. You may not copy, redistribute, or use the question content or software for commercial purposes without written permission.</p>
+        <h2>Content accuracy</h2>
+        <p>Practice questions and explanations are authored for study purposes. While we take care to ensure accuracy, Rise is a revision aid and not a substitute for your school curriculum, textbooks, or official board guidance. Always verify important information with your teacher or official sources.</p>
+        <h2>No warranty</h2>
+        <p>Rise is provided "as is", without warranty of any kind. We do not guarantee uninterrupted access, error-free content, or specific exam outcomes. Your use is at your own risk.</p>
+        <h2>Intellectual property</h2>
+        <p>All question content, explanations, and software in Rise are the property of Strat101 or used under appropriate licence. Reproduction or redistribution without permission is prohibited.</p>
+        <h2>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, Strat101 is not liable for any indirect, incidental, or consequential damages arising from your use of Rise.</p>
+        <h2>Changes to these terms</h2>
+        <p>We may update these terms from time to time. Continued use of the app after an update constitutes acceptance of the revised terms. The "Last updated" date above will reflect any changes.</p>
+        <h2>Governing law</h2>
+        <p>These terms are governed by the laws of India.</p>
+        <h2>Contact</h2>
+        <p>Questions about these terms? Email us at <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+      </div>`;
   },
 
   _afterRender(name, params) {
@@ -3269,25 +3324,67 @@ const app = {
   _screenBoard() {
     return `
       <div class="screen welcome-screen">
-        <div class="welcome-logo">
-          <svg class="welcome-logo-icon" width="52" height="52" viewBox="0 0 32 32" aria-hidden="true">
-            <rect width="32" height="32" rx="7" fill="#2563eb"/>
-            <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
-            <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
-            <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
-            <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
-          </svg>
-          Rise
+        <div class="welcome-layout">
+
+          <!-- Left panel: app brief -->
+          <div class="welcome-left">
+            <div class="welcome-logo">
+              <svg class="welcome-logo-icon" width="48" height="48" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="7" fill="#2563eb"/>
+                <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+                <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+                <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+                <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+              </svg>
+              <span>Rise</span>
+            </div>
+            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free, no login.</p>
+            <ul class="welcome-features">
+              <li>
+                <span class="wf-icon">📝</span>
+                <div><strong>Mock tests</strong><span>Timed chapter &amp; full-paper MCQ mocks with instant scoring</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">⚡</span>
+                <div><strong>Arena</strong><span>Fast-paced blitz mode — beat the clock, build combos, earn points</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">✏️</span>
+                <div><strong>Short answers</strong><span>Board-style VSA &amp; SA questions with model answers</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">📖</span>
+                <div><strong>Solved exercises</strong><span>Textbook questions worked step-by-step</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🗒️</span>
+                <div><strong>Revision notes</strong><span>Key formulae, theorems, logic &amp; tips per chapter</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🔁</span>
+                <div><strong>Spaced repetition</strong><span>Leitner system resurfaces your weak questions automatically</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🔥</span>
+                <div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right panel: board picker -->
+          <div class="welcome-right">
+            <p class="welcome-pick-label">Choose your board to get started</p>
+            <div class="board-list">
+              ${BOARDS.map(b => `
+                <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
+                  <strong>${esc(b.name)}</strong>
+                  <span>${esc(b.desc)}</span>
+                </button>`).join('')}
+            </div>
+            <p class="welcome-foot">You can switch boards any time from the ☰ menu.</p>
+          </div>
+
         </div>
-        <p class="welcome-sub">Grade X &amp; XII board exam practice</p>
-        <div class="board-list">
-          ${BOARDS.map(b => `
-            <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
-              <strong>${esc(b.name)}</strong>
-              <span>${esc(b.desc)}</span>
-            </button>`).join('')}
-        </div>
-        <p class="welcome-foot">We remember your choice — you can switch boards any time from the ☰ menu.</p>
       </div>`;
   },
 
@@ -3368,7 +3465,10 @@ const app = {
 
     return `
       <div class="screen">
-        <p class="subtitle">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+        <div class="progress-topbar">
+          <p class="subtitle" style="margin:0">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+          <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+        </div>
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
       </div>`;
   },
@@ -3761,13 +3861,29 @@ const app = {
         </ul>
       </section>` : '';
 
+    const streakHtml = this._streakBanner();
+    const arenaCard = `
+      <a class="streak-arena-card card arena-card" onclick="app.go(['arena'])" role="button" tabindex="0">
+        <span class="arena-card-icon">⚡</span>
+        <div class="arena-card-body">
+          <p class="arena-card-title">Arena</p>
+          <p class="arena-card-sub">Fast MCQ blitz · 3 subjects · race the clock</p>
+        </div>
+      </a>`;
+
+    const streakArenaRow = `
+      <div class="streak-arena-row">
+        <div class="streak-arena-half">${streakHtml}</div>
+        <div class="streak-arena-half">${arenaCard}</div>
+      </div>`;
+
     return `
       <div class="screen home-screen">
         <div class="home-heading-row">
           ${this._gradeTabs()}
           <p class="subtitle">Pick a subject and start — no extra screens in between.</p>
         </div>
-        ${this._streakBanner()}
+        ${streakArenaRow}
         ${resume}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>
@@ -4323,7 +4439,15 @@ const app = {
   _streakBanner() {
     const store = LS.get(KEY.streak, {});
     const st = store[this._streakScopeKey()];
-    if (!st || !st.current) return '';
+    if (!st || !st.current) return `
+      <section class="streak-banner card">
+        <span class="streak-flame" aria-hidden="true">&#128293;</span>
+        <div class="streak-body">
+          <p class="streak-count">No streak yet</p>
+          <p class="streak-sub">Answer ${plural(DAILY_GOAL, 'question')} today to start your streak.</p>
+          <div class="streak-goal-bar"><div class="streak-goal-fill" style="width:0%"></div></div>
+        </div>
+      </section>`;
     const today = todayStr();
     const activeToday = st.lastDate === today;
     const doneToday = st.todayDate === today ? st.todayCount : 0;
@@ -4514,7 +4638,10 @@ const app = {
       <div class="screen rev-screen">
         <div class="rev-heading-row">
           <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
-          ${this._gradeTabs()}
+          <div class="rev-heading-right">
+            ${this._gradeTabs()}
+            <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+          </div>
         </div>
         ${chapters.length ? `
         <div class="rev-topbar">
