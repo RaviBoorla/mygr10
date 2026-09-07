@@ -160,7 +160,7 @@ function arenaEndStage(correct) {
   const total = ar.stageQuestions.length;
 
   const gained = correct * 0.5;
-  const cost = correct === 0 ? 3 : correct === 1 ? 2 : correct === 2 ? 1 : 0;
+  const cost = correct === 0 ? 3 : correct === 1 ? 2 : correct === 2 ? 2 : correct === 3 ? 1 : 0;
 
   ar.lives = Math.min(ARENA_LIVES, ar.lives + gained - cost);
 
