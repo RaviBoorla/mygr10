@@ -6,7 +6,45 @@
 const ARENA_KEY = 'rise.arena';           // run state (resume mid-run)
 const ARENA_HI_KEY = 'rise.arena.hi';    // high scores per grade::board
 const ARENA_SKINS_KEY = 'rise.arena.skins'; // unlock state + active skin
-const ARENA_COL_KEY  = 'rise.arena.collectibles'; // collectibles unlock state
+const ARENA_COL_KEY   = 'rise.arena.collectibles'; // collectibles unlock state
+const ARENA_DAILY_KEY = 'rise.arena.daily';        // daily challenge results
+const DAILY_Q_COUNT   = 15;
+const DAILY_SECS      = 40; // seconds per question in daily challenge
+
+function todayStr() {
+  return new Date().toISOString().slice(0, 10); // 'YYYY-MM-DD'
+}
+function dailyStorageKey() {
+  return `${todayStr()}::${state.grade}::${state.board}`;
+}
+function getDailyResult() {
+  return (LS.get(ARENA_DAILY_KEY, {}))[dailyStorageKey()] || null;
+}
+function saveDailyResult(r) {
+  const all = LS.get(ARENA_DAILY_KEY, {});
+  const prev = all[dailyStorageKey()];
+  all[dailyStorageKey()] = (!prev || r.score > prev.score) ? r : prev;
+  LS.set(ARENA_DAILY_KEY, all);
+}
+
+// Seeded LCG random + shuffle for deterministic daily question selection
+function seededRng(seed) {
+  let s = seed >>> 0;
+  return () => { s = (Math.imul(1664525, s) + 1013904223) >>> 0; return s / 4294967296; };
+}
+function seededShuffle(arr, rng) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function dateSeed(str) {
+  let h = 5381;
+  for (const c of str) h = ((Math.imul(33, h) ^ c.charCodeAt(0)) >>> 0);
+  return h;
+}
 
 // ─── Skin definitions ─────────────────────────────────────────────────────────
 const ARENA_SKINS = [
@@ -517,7 +555,8 @@ function renderSkinPicker() {
       ${unlocked ? '' : 'disabled'}
     ></button>`;
   }).join('');
-  return `<div class="arena-skin-row"><span class="arena-skin-label">Skin</span>${swatches}</div>`;
+  const unlockedCount = s.unlocked.length;
+  return `<div class="arena-skin-row"><span class="arena-skin-label">Skins <span class="arena-meta-count">${unlockedCount}/${ARENA_SKINS.length}</span></span>${swatches}</div>`;
 }
 
 function renderArenaSetup() {
@@ -568,17 +607,47 @@ function renderArenaSetup() {
         <!-- Divider -->
         <div class="arena-setup-divider"></div>
 
-        <!-- Right: subject picker + start -->
+        <!-- Right: daily + free run + skins/collectibles -->
         <div class="arena-picker">
-          <p class="arena-pick-label">Choose subjects (3 or more)</p>
+
+          <!-- Daily challenge card -->
+          ${(function() {
+            const dr = getDailyResult();
+            const dateLabel = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+            if (dr) {
+              return `<div class="arena-daily-card arena-daily-done-card">
+                <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${dateLabel}</span></div>
+                <p class="arena-daily-result">✓ ${dr.correct}/${dr.total} correct · <strong>${dr.score.toLocaleString()}</strong> pts</p>
+                <button class="btn ghost arena-daily-btn" onclick="arenaDailyBegin()">Play Again</button>
+              </div>`;
+            }
+            return `<div class="arena-daily-card">
+              <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${dateLabel}</span></div>
+              <p class="arena-daily-sub">${DAILY_Q_COUNT} questions · same set for everyone · one attempt</p>
+              <button class="btn primary arena-daily-btn" onclick="arenaDailyBegin()">Start Daily</button>
+            </div>`;
+          })()}
+
+          <div class="arena-picker-sep"></div>
+
+          <!-- Free run -->
+          <p class="arena-pick-label">Free Run</p>
           <div class="arena-subj-grid">${opts}</div>
           <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
           <div class="arena-setup-actions">
-            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
+            <button class="btn ghost arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
           </div>
-          <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
+
+          <div class="arena-picker-sep"></div>
+
+          <!-- Skins + collectibles -->
           ${renderSkinPicker()}
+          <div class="arena-col-row">
+            <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
+            <span class="arena-meta-count">${getCollectibleState().unlocked.length}/${COLLECTIBLES.length} items</span>
+          </div>
+
         </div>
 
       </div>
@@ -589,6 +658,7 @@ function renderArenaQuestion() {
   if (!ar || !ar.stageQuestions) return renderArenaSetup();
   const q = ar.stageQuestions[ar.stageIndex];
   const spec = stageSpec(ar.stage);
+  const timerSecs = ar.isDaily ? DAILY_SECS : spec.secs;
   const total = ar.stageQuestions.length;
   const qNum = ar.stageIndex + 1;
   const comboMult = ar.combo >= COMBO_THRESHOLD_2 ? '2.0×' : ar.combo >= COMBO_THRESHOLD_1 ? '1.5×' : '1.0×';
@@ -610,7 +680,7 @@ function renderArenaQuestion() {
     <div class="screen arena-screen" id="arena-screen">
       <div class="arena-hud">
         <div class="arena-hud-left">
-          <span class="arena-hud-stage">Stage ${ar.stage}</span>
+          <span class="arena-hud-stage">${ar.isDaily ? '📅 Daily' : `Stage ${ar.stage}`}</span>
           <span class="arena-hud-q">Q${qNum}/${total}</span>
         </div>
         <div class="arena-hud-center">
@@ -626,7 +696,7 @@ function renderArenaQuestion() {
         <div class="arena-timer-wrap">
           <div class="arena-timer-bar" id="arena-timer-bar"></div>
         </div>
-        <div class="arena-timer-label"><span id="arena-timer-secs">${spec.secs}</span>s</div>
+        <div class="arena-timer-label"><span id="arena-timer-secs">${timerSecs}</span>s</div>
       </div>
 
       <div class="arena-subject-tag">${esc(q._subject)}</div>
@@ -676,6 +746,10 @@ function renderArenaGameOver() {
       });
     }
     if (ar._answeredForStreak) app._recordStreakActivity(ar._answeredForStreak);
+    if (ar.isDaily) {
+      const correct = (ar._allAnswered || []).filter(q => q.isCorrect).length;
+      saveDailyResult({ score: ar.score, correct, total: (ar._allAnswered || []).length, combo: ar.longestCombo, completedAt: Date.now() });
+    }
     saveHiScore(ar.score, ar.deepestStage, ar.longestCombo);
     clearSavedRun();
     ar._newSkins = checkAndUnlockSkins(ar);
@@ -720,7 +794,7 @@ function renderArenaGameOver() {
       <div class="arena-go-layout">
         <div class="arena-go-left">
           ${cleared}
-          <h2 class="arena-go-title">${ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
+          <h2 class="arena-go-title">${ar.isDaily ? `Daily · ${ar.dailyDate}` : ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
           ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
           ${newSkinsHtml}
           ${newColsHtml}
@@ -734,7 +808,10 @@ function renderArenaGameOver() {
             <span>${hi.score.toLocaleString()} pts · Stage ${hi.stage} · ${hi.combo}× combo</span>
           </div>
           <div class="arena-go-actions">
-            <button class="btn primary" onclick="app.go(['arena'])">Play Again</button>
+            ${ar.isDaily
+              ? `<button class="btn primary" onclick="arenaDailyBegin()">Play Again</button>`
+              : `<button class="btn primary" onclick="app.go(['arena'])">Play Again</button>`}
+            <button class="btn ghost" onclick="app.go(['arena'])">Arena</button>
             <button class="btn ghost" onclick="app.go(['home'])">Home</button>
             <button class="btn ghost" onclick="app.go(['collection'])">🎒 Collection</button>
           </div>
@@ -791,6 +868,70 @@ window.arenaBegin = async function() {
   app.go(['arena-run'], true);
 };
 
+window.arenaDailyBegin = async function() {
+  const btn = document.querySelector('.arena-daily-btn');
+  if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
+
+  // Load all available banks for this board
+  const boardSubjects = ARENA_SUBJECTS[state.board] || [];
+  const available = boardSubjects.filter(s => {
+    if (bankSlug(s, state.board, state.grade)) return true;
+    if (SCIENCE_VIRTUAL.has(s)) return !!bankSlug('Science', state.board, state.grade);
+    return false;
+  });
+
+  const banks = {};
+  const virtualSubjs = available.filter(s =>
+    SCIENCE_VIRTUAL.has(s) && !bankSlug(s, state.board, state.grade) && !!bankSlug('Science', state.board, state.grade)
+  );
+  const directSubjs = available.filter(s => !virtualSubjs.includes(s));
+  const loaders = directSubjs.map(s => loadBank(s).then(qs => { banks[s] = qs; }));
+  if (virtualSubjs.length) {
+    loaders.push(loadBank('Science').then(qs => {
+      virtualSubjs.forEach(s => { banks[s] = qs.filter(q => q.subject === s); });
+    }));
+  }
+  await Promise.all(loaders);
+
+  const today = todayStr();
+  const seed = dateSeed(`${today}::${state.grade}::${state.board}`);
+  const rng = seededRng(seed);
+
+  // Pool all questions tagged with subject, seeded-shuffle, take DAILY_Q_COUNT
+  let pool = [];
+  available.forEach(s => { (banks[s] || []).forEach(q => pool.push({ ...q, _subject: s })); });
+  const picked = seededShuffle(pool, rng).slice(0, DAILY_Q_COUNT);
+
+  const hiAtStart = getHiScores();
+  ar = {
+    runId: `daily-${today}`,
+    board: state.board,
+    grade: state.grade,
+    subjects: available,
+    isDaily: true,
+    dailyDate: today,
+    stage: 1,
+    lives: ARENA_LIVES,
+    score: 0,
+    combo: 0,
+    longestCombo: 0,
+    deepestStage: 1,
+    servedIds: picked.map(q => q.id),
+    startedAt: Date.now(),
+    stageStartedAt: Date.now(),
+    stageQuestions: picked,
+    stageIndex: 0,
+    stageResults: [],
+    missedQuestions: [],
+    phase: 'question',
+    _banks: banks,
+    _virtualSet: new Set(virtualSubjs),
+    _prevHiBefore: hiAtStart.score,
+  };
+  saveRun();
+  app.go(['arena-run'], true);
+};
+
 window.arenaAnswer = function(idx) {
   if (!ar || ar.phase !== 'question') return;
   arenaClearTimer();
@@ -843,6 +984,19 @@ window.arenaAnswer = function(idx) {
 function arenaAdvance() {
   if (!ar) return;
   ar.stageIndex += 1;
+
+  if (ar.isDaily) {
+    // Daily: no stage structure — all questions in one flat sequence
+    if (ar.stageIndex < ar.stageQuestions.length) {
+      ar.phase = 'question';
+      app.go(['arena-run'], true);
+    } else {
+      ar.phase = 'gameover';
+      app.go(['arena-over'], true);
+    }
+    saveRun();
+    return;
+  }
 
   if (ar.stageIndex < ar.stageQuestions.length) {
     // More questions in this stage
@@ -897,8 +1051,8 @@ window.arenaQuit = function() {
   const origAfter = app._afterRender.bind(app);
   app._afterRender = function(name, params) {
     if (name === 'arena-run' && ar && ar.phase === 'question') {
-      const spec = stageSpec(ar.stage);
-      arenaStartTimer(spec.secs);
+      const secs = ar.isDaily ? DAILY_SECS : stageSpec(ar.stage).secs;
+      arenaStartTimer(secs);
     } else {
       arenaClearTimer();
     }

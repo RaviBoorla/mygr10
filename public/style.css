@@ -1032,3 +1032,22 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 /* Collectibles unlock banner on gameover */
 .arena-unlock-col { background: linear-gradient(90deg,#fef3c7,#fde68a20); border-color: #d97706; }
 
+
+/* ─── Arena Daily Challenge card (setup screen) ───────────────────────────── */
+.arena-daily-card { background: linear-gradient(135deg,var(--primary-soft),#ede9fe30); border: 1.5px solid var(--primary); border-radius: 10px; padding: 14px 16px; margin-bottom: 4px; }
+.arena-daily-done-card { background: linear-gradient(135deg,#f0fdf430,#dcfce730); border-color: var(--score-good, #16a34a); }
+.arena-daily-card-title { font-weight: 700; font-size: var(--fs-base); display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.arena-daily-date { font-size: var(--fs-sm); font-weight: 500; color: var(--text-light); }
+.arena-daily-sub { font-size: var(--fs-sm); color: var(--text-light); margin: 0 0 10px; }
+.arena-daily-result { font-size: var(--fs-sm); color: var(--text); margin: 0 0 10px; }
+.arena-daily-btn { padding: 7px 18px; font-size: var(--fs-sm); }
+
+.arena-picker-sep { height: 1px; background: var(--border); margin: 14px 0; opacity: .6; }
+
+/* Skins meta count label */
+.arena-meta-count { font-size: 11px; font-weight: 600; color: var(--text-light); background: var(--surface-alt, #f1f5f9); border-radius: 8px; padding: 1px 7px; white-space: nowrap; }
+.arena-skin-label { display: flex; align-items: center; gap: 6px; font-size: var(--fs-sm); color: var(--text-light); }
+
+/* Collection row on setup screen */
+.arena-col-row { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+
