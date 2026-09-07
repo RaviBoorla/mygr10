@@ -578,7 +578,8 @@ function renderDailyCard() {
 
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
-  const boardSubjects = ARENA_SUBJECTS[state.board] || [];
+  const ARENA_EXCLUDE = new Set(['Hindi', 'English']);
+  const boardSubjects = (ARENA_SUBJECTS[state.board] || []).filter(s => !ARENA_EXCLUDE.has(s));
   const available = boardSubjects.filter(s => {
     if (bankSlug(s, state.board, state.grade)) return true;  // has own bank
     if (SCIENCE_VIRTUAL.has(s)) return !!bankSlug('Science', state.board, state.grade); // virtual via Science
@@ -874,8 +875,9 @@ window.arenaDailyBegin = async function() {
   const btn = document.querySelector('.arena-daily-btn');
   if (btn) { btn.disabled = true; btn.textContent = 'Loading…'; }
 
-  // Load all available banks for this board
-  const boardSubjects = ARENA_SUBJECTS[state.board] || [];
+  // Load all available banks for this board (exclude Hindi/English)
+  const _excludeD = new Set(['Hindi', 'English']);
+  const boardSubjects = (ARENA_SUBJECTS[state.board] || []).filter(s => !_excludeD.has(s));
   const available = boardSubjects.filter(s => {
     if (bankSlug(s, state.board, state.grade)) return true;
     if (SCIENCE_VIRTUAL.has(s)) return !!bankSlug('Science', state.board, state.grade);
