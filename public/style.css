@@ -986,13 +986,14 @@ body[data-arena-skin="gold"] .btn.primary:hover { background: #a16207; }
 body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { background: #fef9c3; border-color: #ca8a04; }
 
 /* Legal screens (Privacy, Terms) */
-.legal-screen { max-width: 680px; margin: 0 auto; padding-bottom: 48px; }
+.legal-screen { max-width: 680px; margin: 0 auto; padding-bottom: 48px; padding-top: 0; }
 .legal-screen h2 { margin-top: 1.75em; font-size: var(--fs-base); }
 .legal-screen p { line-height: 1.7; color: var(--text); }
 .legal-screen a { color: var(--primary); }
 .legal-title { color: var(--primary); font-size: var(--fs-xl); margin-bottom: 4px; }
 .legal-updated { color: var(--text-light); font-size: var(--fs-sm); margin-top: 0; }
-.legal-back { margin-bottom: 16px; padding: 6px 12px; font-size: var(--fs-sm); }
+.legal-sticky-bar { position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 8px 0; margin-bottom: 12px; border-bottom: 1px solid var(--border); }
+.legal-back { padding: 6px 14px; font-size: var(--fs-sm); }
 
 /* ─── Arena Collection screen ──────────────────────────────────────────────── */
 .arena-col-screen { padding: 24px 0 48px; }
