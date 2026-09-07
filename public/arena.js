@@ -242,6 +242,9 @@ function renderArenaSetup() {
           </div>
         </div>
 
+        <!-- Divider -->
+        <div class="arena-setup-divider"></div>
+
         <!-- Right: subject picker + start -->
         <div class="arena-picker">
           <p class="arena-pick-label">Choose 3 subjects</p>

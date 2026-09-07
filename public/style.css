@@ -719,9 +719,10 @@ kbd {
 .arena-subj-opt:has(input:checked) { border-color: var(--primary); background: var(--primary-soft); }
 .arena-subj-opt input { accent-color: var(--primary); }
 .arena-subj-hint { font-size: var(--fs-note); color: var(--text-light); margin-bottom: 10px; }
-.arena-setup-layout { display: flex; gap: 32px; align-items: flex-start; }
-.arena-explainer { flex: 3 1 0; min-width: 0; }
-.arena-picker { flex: 2 1 0; min-width: 0; }
+.arena-setup-layout { display: flex; gap: 0; align-items: flex-start; }
+.arena-explainer { flex: 3 1 0; min-width: 0; padding-right: 32px; }
+.arena-setup-divider { width: 1px; flex-shrink: 0; align-self: stretch; background: var(--primary); opacity: .25; box-shadow: 0 0 6px 1px rgba(37,99,235,.18); }
+.arena-picker { flex: 2 1 0; min-width: 0; padding-left: 40px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; }
 .arena-pick-label { font-size: var(--fs-btn); font-weight: 700; margin: 0 0 10px; }
 
 .arena-how { margin-top: 20px; }
@@ -736,6 +737,9 @@ kbd {
 
 @media (max-width: 640px) {
   .arena-setup-layout { flex-direction: column; gap: 20px; }
+  .arena-setup-divider { display: none; }
+  .arena-explainer { padding-right: 0; }
+  .arena-picker { padding-left: 0; }
 }
 
 /* HUD */
