@@ -676,10 +676,21 @@ function renderArenaQuestion() {
   const qNum = ar.stageIndex + 1;
   const comboMult = ar.combo >= COMBO_THRESHOLD_2 ? '2.0×' : ar.combo >= COMBO_THRESHOLD_1 ? '1.5×' : '1.0×';
 
-  const opts = q.options.map((opt, i) => `
-    <button class="arena-opt-btn" onclick="arenaAnswer(${i})" data-idx="${i}">
-      <span class="arena-opt-letter">${'ABCD'[i]}</span>
-      <span class="arena-opt-text">${esc(opt)}</span>
+  // Shuffle display order once per question; store on the question object so
+  // re-renders (e.g. after pause/resume) keep the same layout.
+  if (!q._displayOrder) {
+    const order = q.options.map((_, i) => i);
+    for (let i = order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [order[i], order[j]] = [order[j], order[i]];
+    }
+    q._displayOrder = order;
+    q._displayCorrect = order.indexOf(q.correct);
+  }
+  const opts = q._displayOrder.map((origIdx, displayIdx) => `
+    <button class="arena-opt-btn" onclick="arenaAnswer(${displayIdx})" data-idx="${displayIdx}">
+      <span class="arena-opt-letter">${'ABCD'[displayIdx]}</span>
+      <span class="arena-opt-text">${esc(q.options[origIdx])}</span>
     </button>`).join('');
 
 
@@ -749,7 +760,7 @@ function renderArenaInterstitial() {
       ${lifeMsg ? `<p class="arena-inter-life ${net >= 0 ? 'gained' : ''}">${lifeMsg}</p>` : ''}
       <p class="arena-inter-next">Stage ${ar.stage + 1} next</p>
       <button class="btn primary arena-go-btn" onclick="arenaContinue()">Continue</button>
-      <button class="btn arena-quit-btn" onclick="arenaQuit()">Quit Run</button>
+      <button class="btn arena-quit-btn" onclick="arenaForfeit()">Quit Run</button>
     </div>`;
 }
 
@@ -1003,13 +1014,15 @@ window.arenaAnswer = function(idx) {
 
   const q = ar.stageQuestions[ar.stageIndex];
   const spec = stageSpec(ar.stage);
-  const isCorrect = idx === q.correct;
+  // idx is the display index; _displayCorrect is the display index of the right answer
+  const isCorrect = idx !== -1 && idx === (q._displayCorrect ?? q.correct);
   const secondsRemaining = Math.max(0, _arenaSecsLeft);
 
-  // Track for Leitner + streak
+  // Track for Leitner + streak — store in original (non-shuffled) terms
+  const origUserAnswer = idx === -1 ? undefined : (q._displayOrder ? q._displayOrder[idx] : idx);
   const reviewRec = {
     id: q.id, text: q.text, options: q.options, correct: q.correct,
-    userAnswer: idx === -1 ? undefined : idx,
+    userAnswer: origUserAnswer,
     isCorrect, explanation: q.explanation || '', chapter: q.chapter || '',
     _subject: q._subject,
   };
@@ -1039,7 +1052,8 @@ window.arenaAnswer = function(idx) {
       const clicked = opts.querySelector(`[data-idx="${idx}"]`);
       if (clicked) clicked.classList.add(isCorrect ? 'correct' : 'wrong');
     }
-    const correctBtn = opts.querySelector(`[data-idx="${q.correct}"]`);
+    const correctDisplayIdx = q._displayCorrect ?? q.correct;
+    const correctBtn = opts.querySelector(`[data-idx="${correctDisplayIdx}"]`);
     if (correctBtn && !isCorrect) correctBtn.classList.add('reveal');
   }
 
@@ -1093,7 +1107,7 @@ window.arenaContinue = function() {
   }
 };
 
-window.arenaQuit = function() {
+window.arenaForfeit = function() {
   arenaClearTimer();
   ar.phase = 'gameover';
   app.go(['arena-over'], true);
