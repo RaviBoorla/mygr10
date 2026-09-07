@@ -3820,14 +3820,14 @@ const app = {
       </section>` : '';
 
     const streakHtml = this._streakBanner();
-    const arenaCard = state.board === 'CBSE' ? `
+    const arenaCard = `
       <a class="streak-arena-card card arena-card" onclick="app.go(['arena'])" role="button" tabindex="0">
         <span class="arena-card-icon">⚡</span>
         <div class="arena-card-body">
           <p class="arena-card-title">Arena</p>
           <p class="arena-card-sub">Fast MCQ blitz · 3 subjects · race the clock</p>
         </div>
-      </a>` : '';
+      </a>`;
 
     const streakArenaRow = (streakHtml || arenaCard) ? `
       <div class="streak-arena-row">

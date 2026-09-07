@@ -6,8 +6,12 @@
 const ARENA_KEY = 'rise.arena';           // run state (resume mid-run)
 const ARENA_HI_KEY = 'rise.arena.hi';    // high scores per grade::board
 
-// CBSE subjects available for Arena (those with an MCQ bank)
-const ARENA_SUBJECTS_CBSE = ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'];
+// Subjects available for Arena per board (those with an MCQ bank)
+const ARENA_SUBJECTS = {
+  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
+  IB:   [], // no IB MCQ banks yet
+};
 
 // Stage table per arena.md
 const ARENA_STAGES = [
@@ -200,8 +204,17 @@ function arenaNextStage() {
 // All render functions return HTML strings and are called by app._screen / app._afterRender.
 
 function renderArenaSetup() {
-  // Which CBSE subjects have a bank?
-  const available = ARENA_SUBJECTS_CBSE.filter(s => bankSlug(s, 'CBSE', state.grade));
+  // Which subjects for this board have a bank?
+  const boardSubjects = ARENA_SUBJECTS[state.board] || [];
+  const available = boardSubjects.filter(s => bankSlug(s, state.board, state.grade));
+  if (!available.length) {
+    return `<div class="screen arena-setup-screen">
+      <h1 class="arena-title">⚡ Arena</h1>
+      <p class="arena-sub">Coming soon for ${esc(state.board)}!</p>
+      <p>Question banks for Arena are not yet available for your board.</p>
+      <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+    </div>`;
+  }
   const opts = available.map((s, i) => `
     <label class="arena-subj-opt">
       <input type="checkbox" name="arena-subj" value="${esc(s)}" ${i < 3 ? 'checked' : ''}>
@@ -211,8 +224,8 @@ function renderArenaSetup() {
   return `
     <div class="screen arena-setup-screen">
       <h1 class="arena-title">⚡ Arena</h1>
-      <p class="arena-sub">Fast-paced MCQ blitz · 2–3 min per run · CBSE</p>
-      <p class="arena-rule">Pick 3 subjects, then go. Each stage is 3 questions, one per subject.
+      <p class="arena-sub">Fast-paced MCQ blitz · 2–3 min per run · ${esc(state.board)}</p>
+      <p class="arena-rule">Pick 3 subjects, then go. Each stage is 5 questions.
          Beat each stage to advance — the clock is per question.</p>
       <div class="arena-subj-grid">${opts}</div>
       <p class="arena-subj-hint">Select exactly 3 subjects.</p>
