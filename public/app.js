@@ -3423,8 +3423,10 @@ const app = {
 
     return `
       <div class="screen">
-        <button class="btn ghost small screen-home-btn" onclick="app.go(['home'])">&larr; Home</button>
-        <p class="subtitle">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+        <div class="progress-topbar">
+          <p class="subtitle" style="margin:0">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+          <button class="btn screen-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+        </div>
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
       </div>`;
   },
@@ -4584,10 +4586,12 @@ const app = {
     const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
-        <button class="btn ghost small screen-home-btn" onclick="app.go(['home'])">&larr; Home</button>
         <div class="rev-heading-row">
           <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
-          ${this._gradeTabs()}
+          <div class="rev-heading-right">
+            ${this._gradeTabs()}
+            <button class="btn screen-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+          </div>
         </div>
         ${chapters.length ? `
         <div class="rev-topbar">

@@ -803,8 +803,19 @@ kbd {
 .site-footer a:hover { color: var(--primary); text-decoration: underline; }
 .site-footer-sep { opacity: .4; }
 
-/* Back-to-home button on standalone screens (Progress, Notes) */
-.screen-home-btn { margin-bottom: 12px; }
+/* Home button — top-right on Progress and Notes screens */
+.screen-home-btn {
+  background: var(--primary-soft); color: var(--primary);
+  border: 1px solid var(--primary-soft); border-radius: var(--radius-pill);
+  font-size: var(--fs-sm); padding: 4px 14px; white-space: nowrap; flex-shrink: 0;
+}
+.screen-home-btn:hover { background: var(--primary); color: var(--white); }
+
+/* Row that holds grade-tabs + home button in Notes */
+.rev-heading-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+
+/* Row that holds subtitle + home button in Progress */
+.progress-topbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
 
 /* Legal screens (Privacy, Terms) */
 .legal-screen { max-width: 680px; margin: 0 auto; padding-bottom: 48px; }
