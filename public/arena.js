@@ -25,10 +25,6 @@ const DIFF_MULT = { easy: 1.0, medium: 1.5, hard: 2.0, '': 1.0 };
 // ─── Run state ────────────────────────────────────────────────────────────────
 let ar = null; // active arena run object
 
-function arenaRunKey() {
-  return `${state.grade}::${state.board}`;
-}
-
 function arenaHiKey() {
   return `${state.grade}::${state.board}`;
 }
@@ -47,10 +43,6 @@ function clearSavedRun() {
 // ─── Stage helpers ────────────────────────────────────────────────────────────
 function stageSpec(stageNum) {
   return ARENA_STAGES.find(s => stageNum >= s.from && stageNum <= s.to) || ARENA_STAGES[ARENA_STAGES.length - 1];
-}
-
-function stageQCount(stageNum) {
-  return stageSpec(stageNum).qTotal;
 }
 
 // Build the question list for one stage from loaded banks (flat qTotal across subjects)
@@ -128,6 +120,7 @@ async function arenaStartRun(subjects) {
   const banks = {};
   await Promise.all(subjects.map(s => loadBank(s).then(qs => { banks[s] = qs; })));
 
+  const hiAtStart = getHiScores();
   ar = {
     runId: Date.now().toString(36),
     board: state.board,
@@ -148,6 +141,7 @@ async function arenaStartRun(subjects) {
     missedQuestions: [],
     phase: 'question', // 'question' | 'interstitial' | 'gameover'
     _banks: banks,
+    _prevHiBefore: hiAtStart.score,  // for newBest detection on game-over
   };
 
   ar.stageQuestions = pickStageQuestions(subjects, stageSpec(1).diff, 1);
@@ -161,12 +155,12 @@ function arenaEndStage(correct) {
   let liveLost = 0;
 
   if (correct <= 1) {
-    // 0 or 1 correct → game over
+    // 0–1 of 5 correct → game over
     ar.phase = 'gameover';
     return;
   }
   if (correct === 2) {
-    // 2 of 3 → advance but lose a life
+    // 2 of 5 correct → advance but lose a life
     ar.lives -= 1;
     liveLost = 1;
     if (ar.lives <= 0) {
@@ -174,7 +168,7 @@ function arenaEndStage(correct) {
       return;
     }
   }
-  // 3 of 3 (or 5 of boss) → advance cleanly
+  // 3–5 of 5 → advance cleanly
   ar.deepestStage = Math.max(ar.deepestStage, ar.stage);
   ar.stageStartedAt = Date.now();
   ar.phase = 'interstitial';
@@ -295,31 +289,27 @@ function renderArenaInterstitial() {
 }
 
 function renderArenaGameOver() {
-  const hi = getHiScores();
-  const newBest = ar.score > hi.score;
-
-  // Flush progress + streak
-  if (ar.missedQuestions.length > 0 || ar._answeredForStreak > 0) {
-    // Update Leitner per subject
-    const bySubject = {};
-    ar.missedQuestions.forEach(m => {
-      (bySubject[m._subject] = bySubject[m._subject] || []).push(m);
-    });
-    if (ar._allAnswered) {
+  // Flush Leitner + streak exactly once (guard against re-render on back-nav)
+  if (!ar._flushed) {
+    ar._flushed = true;
+    if (ar._allAnswered && ar._allAnswered.length > 0) {
+      const bySubject = {};
       ar._allAnswered.forEach(m => {
         (bySubject[m._subject] = bySubject[m._subject] || []).push(m);
       });
+      Object.keys(bySubject).forEach(subj => {
+        const seen = {};
+        bySubject[subj].forEach(r => { seen[r.id] = r; });
+        app._updateProgress(subj, Object.values(seen));
+      });
     }
-    // Deduplicate by id per subject (keep last)
-    Object.keys(bySubject).forEach(subj => {
-      const seen = {};
-      bySubject[subj].forEach(r => { seen[r.id] = r; });
-      app._updateProgress(subj, Object.values(seen));
-    });
     if (ar._answeredForStreak) app._recordStreakActivity(ar._answeredForStreak);
+    saveHiScore(ar.score, ar.deepestStage, ar.longestCombo);
+    clearSavedRun();
   }
-  saveHiScore(ar.score, ar.deepestStage, ar.longestCombo);
-  clearSavedRun();
+
+  const newBest = ar.score > (ar._prevHiBefore || 0);
+  const hi = getHiScores(); // read after save so panel shows updated best
 
   const cleared = ar._cleared ? '<p class="arena-cleared">🏆 Full clear! All 10 stages!</p>' : '';
 

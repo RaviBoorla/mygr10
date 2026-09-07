@@ -701,8 +701,8 @@ kbd {
   transition: color var(--tx-base); }
 .arena-combo.hot { color: var(--warning); }
 .arena-score { font-size: var(--fs-sec); font-weight: 800; }
-.arena-life-pip { font-size: var(--fs-btn); }
-.arena-life-pip.lost { opacity: .2; }
+.arena-life-pip { font-size: var(--fs-btn); color: var(--error); }
+.arena-life-pip.lost { color: var(--border); opacity: .5; }
 
 /* Timer bar — bar and seconds label side-by-side */
 .arena-timer-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
