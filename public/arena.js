@@ -694,6 +694,15 @@ function renderArenaQuestion() {
         <div class="arena-hud-right">
           <span class="arena-combo ${ar.combo >= COMBO_THRESHOLD_1 ? 'hot' : ''}">⚡${ar.combo} ${comboMult}</span>
           <span class="arena-score">${ar.score.toLocaleString()}</span>
+          <button class="arena-pause-btn" onclick="arenaPause()" title="Pause">⏸</button>
+        </div>
+      </div>
+      <div class="arena-pause-overlay" id="arena-pause-overlay" hidden>
+        <div class="arena-pause-card">
+          <p class="arena-pause-title">⏸ Paused</p>
+          <p class="arena-pause-sub">Stage ${ar.stage} · ${ar.score.toLocaleString()} pts · ${ar.lives.toFixed(1)}♥</p>
+          <button class="btn primary arena-pause-resume" onclick="arenaResume()">▶ Resume</button>
+          <button class="btn ghost" onclick="arenaQuit()">↩ Back to Arena</button>
         </div>
       </div>
 
@@ -860,6 +869,43 @@ function arenaStartTimer(secs) {
   }, 1000);
 }
 
+let _arenaPaused = false;
+
+window.arenaPause = function() {
+  if (_arenaPaused) return;
+  _arenaPaused = true;
+  arenaClearTimer();
+  const overlay = document.getElementById('arena-pause-overlay');
+  if (overlay) overlay.hidden = false;
+};
+
+window.arenaResume = function() {
+  _arenaPaused = false;
+  const overlay = document.getElementById('arena-pause-overlay');
+  if (overlay) overlay.hidden = true;
+  const spec = stageSpec(ar.stage);
+  const secs = ar.isDaily ? DAILY_SECS : spec.secs;
+  // Resume from remaining time, not full duration
+  const remaining = _arenaSecsLeft > 0 ? _arenaSecsLeft : secs;
+  _arenaSecsLeft = remaining;
+  _arenaTimer = setInterval(() => {
+    _arenaSecsLeft -= 1;
+    const bar = document.getElementById('arena-timer-bar');
+    const lbl = document.getElementById('arena-timer-secs');
+    if (lbl) lbl.textContent = _arenaSecsLeft;
+    if (bar) bar.style.width = `${(_arenaSecsLeft / secs) * 100}%`;
+    if (_arenaSecsLeft <= 5 && bar) bar.classList.add('low');
+    if (_arenaSecsLeft <= 0) { arenaClearTimer(); arenaAnswer(-1); }
+  }, 1000);
+};
+
+window.arenaQuit = function() {
+  _arenaPaused = false;
+  arenaClearTimer();
+  ar = null;
+  app.go(['arena']);
+};
+
 // ─── Actions (called from HTML onclick) ──────────────────────────────────────
 window.arenaBegin = async function() {
   const checked = Array.from(document.querySelectorAll('input[name="arena-subj"]:checked')).map(el => el.value);
@@ -908,6 +954,7 @@ window.arenaDailyBegin = async function() {
   available.forEach(s => { (banks[s] || []).forEach(q => pool.push({ ...q, _subject: s })); });
   const picked = seededShuffle(pool, rng).slice(0, DAILY_Q_COUNT);
 
+  _arenaPaused = false;
   const hiAtStart = getHiScores();
   ar = {
     runId: `daily-${today}`,
