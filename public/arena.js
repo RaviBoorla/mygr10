@@ -7,8 +7,12 @@ const ARENA_KEY = 'rise.arena';           // run state (resume mid-run)
 const ARENA_HI_KEY = 'rise.arena.hi';    // high scores per grade::board
 
 // Subjects available for Arena per board (those with an MCQ bank)
+// Physics, Chemistry, Biology are virtual subjects — all drawn from Science bank,
+// filtered by q.subject. No separate bank files needed.
+const SCIENCE_VIRTUAL = new Set(['Physics', 'Chemistry', 'Biology']);
+
 const ARENA_SUBJECTS = {
-  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+  CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'English', 'Hindi'],
   ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
   IB:   [], // no IB MCQ banks yet
 };
@@ -66,7 +70,8 @@ function pickStageQuestions(subjects, difficulty, stageNum) {
     let pool = bank.filter(q => !servedSet.has(q.id));
     let narrowPool = allowed ? pool.filter(q => allowed.includes((q.difficulty || '').toLowerCase())) : pool;
     if (narrowPool.length === 0) narrowPool = pool;
-    const bySubj = progStore[scopeKey(subject)] || {};
+    const leitnerSubject = SCIENCE_VIRTUAL.has(subject) ? 'Science' : subject;
+    const bySubj = progStore[scopeKey(leitnerSubject)] || {};
     narrowPool.forEach(q => {
       const r = bySubj[q.id];
       (r && r.due <= now ? allDue : allNotDue).push({ ...q, _subject: subject });
@@ -120,9 +125,20 @@ function saveHiScore(score, stage, combo) {
 
 // ─── Run lifecycle ────────────────────────────────────────────────────────────
 async function arenaStartRun(subjects) {
-  // Load all banks for chosen subjects
+  // Load all banks for chosen subjects.
+  // Physics/Chemistry/Biology are virtual — sourced from the Science bank filtered by q.subject.
   const banks = {};
-  await Promise.all(subjects.map(s => loadBank(s).then(qs => { banks[s] = qs; })));
+  const needsScienceBank = subjects.some(s => SCIENCE_VIRTUAL.has(s));
+  const realSubjects = subjects.filter(s => !SCIENCE_VIRTUAL.has(s));
+  const loaders = realSubjects.map(s => loadBank(s).then(qs => { banks[s] = qs; }));
+  if (needsScienceBank) {
+    loaders.push(loadBank('Science').then(qs => {
+      subjects.filter(s => SCIENCE_VIRTUAL.has(s)).forEach(s => {
+        banks[s] = qs.filter(q => q.subject === s);
+      });
+    }));
+  }
+  await Promise.all(loaders);
 
   const hiAtStart = getHiScores();
   ar = {
@@ -346,7 +362,8 @@ function renderArenaGameOver() {
       Object.keys(bySubject).forEach(subj => {
         const seen = {};
         bySubject[subj].forEach(r => { seen[r.id] = r; });
-        app._updateProgress(subj, Object.values(seen));
+        const leitnerSubj = SCIENCE_VIRTUAL.has(subj) ? 'Science' : subj;
+        app._updateProgress(leitnerSubj, Object.values(seen));
       });
     }
     if (ar._answeredForStreak) app._recordStreakActivity(ar._answeredForStreak);
