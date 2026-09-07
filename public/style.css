@@ -784,3 +784,14 @@ kbd {
 @media (max-width: 520px) {
   .streak-arena-row { flex-direction: column; }
 }
+
+/* ─── Site footer ────────────────────────────────────────────────────────── */
+.site-footer {
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+  gap: 6px 10px; padding: 10px 16px;
+  border-top: 1px solid var(--border);
+  font-size: .75rem; color: var(--text-light);
+}
+.site-footer a { color: var(--text-light); text-decoration: none; }
+.site-footer a:hover { color: var(--primary); text-decoration: underline; }
+.site-footer-sep { opacity: .4; }
