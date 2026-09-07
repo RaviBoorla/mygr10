@@ -3338,7 +3338,7 @@ const app = {
               </svg>
               <span>Rise</span>
             </div>
-            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free, offline, no login.</p>
+            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free, no login.</p>
             <ul class="welcome-features">
               <li>
                 <span class="wf-icon">📝</span>
