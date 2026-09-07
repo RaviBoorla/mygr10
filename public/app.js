@@ -3875,11 +3875,11 @@ const app = {
         </div>
       </a>`;
 
-    const streakArenaRow = (streakHtml || arenaCard) ? `
+    const streakArenaRow = `
       <div class="streak-arena-row">
-        ${streakHtml ? `<div class="streak-arena-half">${streakHtml}</div>` : ''}
-        ${arenaCard  ? `<div class="streak-arena-half">${arenaCard}</div>` : ''}
-      </div>` : '';
+        <div class="streak-arena-half">${streakHtml}</div>
+        <div class="streak-arena-half">${arenaCard}</div>
+      </div>`;
 
     return `
       <div class="screen home-screen">
@@ -4443,7 +4443,15 @@ const app = {
   _streakBanner() {
     const store = LS.get(KEY.streak, {});
     const st = store[this._streakScopeKey()];
-    if (!st || !st.current) return '';
+    if (!st || !st.current) return `
+      <section class="streak-banner card">
+        <span class="streak-flame" aria-hidden="true">&#128293;</span>
+        <div class="streak-body">
+          <p class="streak-count">No streak yet</p>
+          <p class="streak-sub">Answer ${plural(DAILY_GOAL, 'question')} today to start your streak.</p>
+          <div class="streak-goal-bar"><div class="streak-goal-fill" style="width:0%"></div></div>
+        </div>
+      </section>`;
     const today = todayStr();
     const activeToday = st.lastDate === today;
     const doneToday = st.todayDate === today ? st.todayCount : 0;
