@@ -234,7 +234,7 @@ function renderArenaSetup() {
               <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your 3 chosen subjects.</span></li>
               <li><span class="arena-how-icon">⏱️</span><span>A <strong>timer</strong> counts down per question — answer fast for bonus points.</span></li>
               <li><span class="arena-how-icon">♥</span><span>You start with <strong>7 hearts</strong>. Every correct answer earns +½ heart (capped at 7).</span></li>
-              <li><span class="arena-how-icon">⚠️</span><span>Poor stages <strong>drain hearts</strong>: 0 right → −3, 1 right → −1.5, 2 right → −1, 3 right → −0.5.</span></li>
+              <li><span class="arena-how-icon">⚠️</span><span>Stages <strong>drain hearts</strong> if you score &lt;3: 0 right → −3, 1 right → −1.5, 2 right → −1. Score 3+ to break even or gain.</span></li>
               <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
               <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
               <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
