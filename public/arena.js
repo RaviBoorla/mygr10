@@ -12,12 +12,12 @@ const ARENA_SUBJECTS_CBSE = ['Mathematics', 'Science', 'Social Science', 'Englis
 // Stage table per arena.md
 const ARENA_STAGES = [
   // [stageFrom, stageTo, difficulty, secondsPerQ, questionsPerStage]
-  { from: 1,  to: 3,  diff: 'easy',   secs: 45, qPerSubject: 1 },
-  { from: 4,  to: 6,  diff: 'medium', secs: 40, qPerSubject: 1 },
-  { from: 7,  to: 9,  diff: 'medium', secs: 35, qPerSubject: 1 }, // hard also OK at 7-9
-  { from: 10, to: 10, diff: 'hard',   secs: 35, qPerSubject: 2 }, // boss: 5 questions total (2+2+1 across 3 subjects)
+  { from: 1,  to: 3,  diff: 'easy',   secs: 45, qTotal: 5 },
+  { from: 4,  to: 6,  diff: 'medium', secs: 40, qTotal: 5 },
+  { from: 7,  to: 9,  diff: 'medium', secs: 35, qTotal: 5 },
+  { from: 10, to: 10, diff: 'hard',   secs: 35, qTotal: 5 },
 ];
-const ARENA_LIVES = 3;
+const ARENA_LIVES = 7;
 const COMBO_THRESHOLD_1 = 5;   // 1.5× at 5 in a row
 const COMBO_THRESHOLD_2 = 10;  // 2.0× at 10 in a row
 const DIFF_MULT = { easy: 1.0, medium: 1.5, hard: 2.0, '': 1.0 };
@@ -50,50 +50,49 @@ function stageSpec(stageNum) {
 }
 
 function stageQCount(stageNum) {
-  const spec = stageSpec(stageNum);
-  return spec.qPerSubject * ar.subjects.length; // 3 subjects × 1 (or 2 for boss)
+  return stageSpec(stageNum).qTotal;
 }
 
-// Build the question list for one stage from loaded banks
+// Build the question list for one stage from loaded banks (flat qTotal across subjects)
 function pickStageQuestions(subjects, difficulty, stageNum) {
   const spec = stageSpec(stageNum);
-  const nPerSubject = spec.qPerSubject;
-  const questions = [];
+  const nTotal = spec.qTotal;
   const servedSet = new Set(ar.servedIds);
+  const progStore = LS.get(KEY.progress, {});
+  const diffMap = { easy: ['easy'], medium: ['medium'], hard: ['hard', 'medium'] };
+  const allowed = diffMap[difficulty] || null;
+  const now = Date.now();
 
+  // Build a pool from all subjects, tagging each question with its subject
+  const allDue = [], allNotDue = [];
   for (const subject of subjects) {
     const bank = ar._banks[subject] || [];
-    const now = Date.now();
-
-    // Filter by difficulty band (easy=box0, medium=box1-3, hard=box4-5)
-    // Also exclude already-served questions
     let pool = bank.filter(q => !servedSet.has(q.id));
-
-    // Difficulty filter
-    const diffMap = { easy: ['easy'], medium: ['medium'], hard: ['hard', 'medium'] };
-    const allowed = diffMap[difficulty] || null;
     let narrowPool = allowed ? pool.filter(q => allowed.includes((q.difficulty || '').toLowerCase())) : pool;
-    if (narrowPool.length === 0) narrowPool = pool; // fallback to anything unserved
-
-    // Prefer Leitner-due questions
-    const progStore = LS.get(KEY.progress, {});
+    if (narrowPool.length === 0) narrowPool = pool;
     const bySubj = progStore[scopeKey(subject)] || {};
-
-    const due     = narrowPool.filter(q => { const r = bySubj[q.id]; return r && r.due <= now; });
-    const notDue  = narrowPool.filter(q => { const r = bySubj[q.id]; return !(r && r.due <= now); });
-
-    const combined = shuffle(due).concat(shuffle(notDue));
-    const picked = combined.slice(0, nPerSubject);
-    if (picked.length === 0) {
-      // fallback: any unserved question from bank
-      const fallback = shuffle(bank.filter(q => !servedSet.has(q.id))).slice(0, nPerSubject);
-      picked.push(...fallback);
-    }
-    picked.forEach(q => questions.push({ ...q, _subject: subject }));
-    picked.forEach(q => servedSet.add(q.id));
+    narrowPool.forEach(q => {
+      const r = bySubj[q.id];
+      (r && r.due <= now ? allDue : allNotDue).push({ ...q, _subject: subject });
+    });
   }
 
-  return shuffle(questions);
+  const combined = shuffle(allDue).concat(shuffle(allNotDue));
+  let picked = combined.slice(0, nTotal);
+
+  // Fallback: pull from any unserved question if pool was too small
+  if (picked.length < nTotal) {
+    for (const subject of subjects) {
+      const bank = ar._banks[subject] || [];
+      bank.filter(q => !servedSet.has(q.id) && !picked.find(p => p.id === q.id))
+        .forEach(q => picked.push({ ...q, _subject: subject }));
+      if (picked.length >= nTotal) break;
+    }
+    picked = picked.slice(0, nTotal);
+  }
+
+  picked.forEach(q => servedSet.add(q.id));
+  return shuffle(picked);
 }
 
 // ─── Scoring ─────────────────────────────────────────────────────────────────
