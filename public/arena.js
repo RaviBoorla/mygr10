@@ -672,6 +672,8 @@ function renderArenaQuestion() {
       <span class="arena-opt-text">${esc(opt)}</span>
     </button>`).join('');
 
+
+
   const fullHearts = Math.floor(ar.lives);
   const hasHalf = (ar.lives - fullHearts) >= 0.5;
   const livePips = Array.from({ length: ARENA_LIVES }, (_, i) => {
@@ -704,7 +706,7 @@ function renderArenaQuestion() {
 
       <div class="arena-subject-tag">${esc(q._subject)}</div>
       <div class="arena-question-text">${esc(q.text)}</div>
-      <div class="arena-opts" id="arena-opts">${opts}</div>
+      <div class="arena-opts-grid" id="arena-opts">${opts}</div>
     </div>`;
 }
 
