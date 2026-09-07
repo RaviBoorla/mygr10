@@ -5,6 +5,74 @@
 // ─── Constants ────────────────────────────────────────────────────────────────
 const ARENA_KEY = 'rise.arena';           // run state (resume mid-run)
 const ARENA_HI_KEY = 'rise.arena.hi';    // high scores per grade::board
+const ARENA_SKINS_KEY = 'rise.arena.skins'; // unlock state + active skin
+
+// ─── Skin definitions ─────────────────────────────────────────────────────────
+const ARENA_SKINS = [
+  { id: 'default', name: 'Classic',  color: '#2563eb', unlockDesc: 'Always available',           unlock: null },
+  { id: 'midnight',name: 'Midnight', color: '#4f46e5', unlockDesc: 'Complete 5 arena runs',       unlock: { type: 'runs', n: 5 } },
+  { id: 'blaze',   name: 'Blaze',    color: '#ef4444', unlockDesc: 'Achieve a 20× combo',         unlock: { type: 'combo', n: 20 } },
+  { id: 'solar',   name: 'Solar',    color: '#f59e0b', unlockDesc: 'Reach stage 5 with Physics',  unlock: { type: 'stage_subject', n: 5, subj: 'Physics' } },
+  { id: 'jungle',  name: 'Jungle',   color: '#16a34a', unlockDesc: 'Reach stage 7 with Biology',  unlock: { type: 'stage_subject', n: 7, subj: 'Biology' } },
+  { id: 'lab',     name: 'Lab',      color: '#0891b2', unlockDesc: 'Reach stage 7 with Chemistry',unlock: { type: 'stage_subject', n: 7, subj: 'Chemistry' } },
+  { id: 'gold',    name: 'Golden',   color: '#d97706', unlockDesc: 'Complete a full clear',       unlock: { type: 'full_clear' } },
+];
+
+function getSkinState() {
+  const s = LS.get(ARENA_SKINS_KEY, {});
+  if (!s.unlocked) s.unlocked = ['default'];
+  if (!s.active) s.active = 'default';
+  if (!s.runCount) s.runCount = 0;
+  if (!s.allTimeCombo) s.allTimeCombo = 0;
+  if (!s.stageReached) s.stageReached = {};
+  return s;
+}
+
+function saveSkinState(s) { LS.set(ARENA_SKINS_KEY, s); }
+
+function applyActiveSkin() {
+  const s = getSkinState();
+  document.body.dataset.arenaSkin = s.active || 'default';
+}
+
+function clearActiveSkin() {
+  delete document.body.dataset.arenaSkin;
+}
+
+function checkAndUnlockSkins(ar) {
+  const s = getSkinState();
+  s.runCount += 1;
+  s.allTimeCombo = Math.max(s.allTimeCombo, ar.longestCombo);
+  (ar.subjects || []).forEach(subj => {
+    const prev = s.stageReached[subj] || 0;
+    s.stageReached[subj] = Math.max(prev, ar.deepestStage);
+  });
+
+  const newlyUnlocked = [];
+  ARENA_SKINS.forEach(skin => {
+    if (!skin.unlock || s.unlocked.includes(skin.id)) return;
+    const u = skin.unlock;
+    let earned = false;
+    if (u.type === 'runs')          earned = s.runCount >= u.n;
+    if (u.type === 'combo')         earned = s.allTimeCombo >= u.n;
+    if (u.type === 'stage_subject') earned = (s.stageReached[u.subj] || 0) >= u.n;
+    if (u.type === 'full_clear')    earned = !!ar._cleared;
+    if (earned) { s.unlocked.push(skin.id); newlyUnlocked.push(skin); }
+  });
+
+  saveSkinState(s);
+  return newlyUnlocked;
+}
+
+window.arenaSetSkin = function(id) {
+  const s = getSkinState();
+  if (!s.unlocked.includes(id)) return;
+  s.active = id;
+  saveSkinState(s);
+  applyActiveSkin();
+  // Re-render the setup screen to refresh swatch selection state
+  app.render();
+};
 
 // Subjects available for Arena per board (those with an MCQ bank)
 // Physics, Chemistry, Biology are virtual subjects — all drawn from Science bank,
@@ -217,6 +285,22 @@ function arenaNextStage() {
 // ─── Screen rendering ─────────────────────────────────────────────────────────
 // All render functions return HTML strings and are called by app._screen / app._afterRender.
 
+function renderSkinPicker() {
+  const s = getSkinState();
+  const swatches = ARENA_SKINS.map(skin => {
+    const unlocked = s.unlocked.includes(skin.id);
+    const active = s.active === skin.id;
+    return `<button
+      class="arena-skin-swatch ${active ? 'active' : ''} ${unlocked ? '' : 'locked'}"
+      style="background:${skin.color}"
+      title="${unlocked ? skin.name : '🔒 ' + skin.unlockDesc}"
+      onclick="${unlocked ? `arenaSetSkin('${skin.id}')` : ''}"
+      ${unlocked ? '' : 'disabled'}
+    ></button>`;
+  }).join('');
+  return `<div class="arena-skin-row"><span class="arena-skin-label">Skin</span>${swatches}</div>`;
+}
+
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
   const boardSubjects = ARENA_SUBJECTS[state.board] || [];
@@ -270,6 +354,7 @@ function renderArenaSetup() {
             <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
           </div>
+          ${renderSkinPicker()}
         </div>
 
       </div>
@@ -369,12 +454,17 @@ function renderArenaGameOver() {
     if (ar._answeredForStreak) app._recordStreakActivity(ar._answeredForStreak);
     saveHiScore(ar.score, ar.deepestStage, ar.longestCombo);
     clearSavedRun();
+    ar._newSkins = checkAndUnlockSkins(ar);
   }
 
   const newBest = ar.score > (ar._prevHiBefore || 0);
   const hi = getHiScores(); // read after save so panel shows updated best
 
   const cleared = ar._cleared ? '<p class="arena-cleared">🏆 Full clear! All 10 stages!</p>' : '';
+
+  const newSkinsHtml = (ar._newSkins || []).length
+    ? `<div class="arena-unlock-banner">🎨 New skin${ar._newSkins.length > 1 ? 's' : ''} unlocked: <strong>${ar._newSkins.map(s => s.name).join(', ')}</strong> — pick it on the setup screen!</div>`
+    : '';
 
   // Build full question review list (all attempted, correct + wrong)
   const allAnswered = ar._allAnswered || [];
@@ -404,6 +494,7 @@ function renderArenaGameOver() {
           ${cleared}
           <h2 class="arena-go-title">${ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
           ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
+          ${newSkinsHtml}
           <div class="arena-go-stats">
             <div class="arena-stat"><span class="arena-stat-val">${ar.score.toLocaleString()}</span><span class="arena-stat-lbl">Score</span></div>
             <div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest Stage</span></div>
@@ -580,7 +671,10 @@ window.arenaQuit = function() {
     } else {
       arenaClearTimer();
     }
-    if (!['arena', 'arena-run', 'arena-inter', 'arena-over'].includes(name)) {
+    if (['arena', 'arena-run', 'arena-inter', 'arena-over'].includes(name)) {
+      applyActiveSkin();
+    } else {
+      clearActiveSkin();
       origAfter(name, params);
     }
   };
@@ -601,6 +695,7 @@ window.arenaQuit = function() {
       app._afterRender(r.name, r.parts || []);
       return;
     }
+    clearActiveSkin();
     origRender();
   };
 }());
