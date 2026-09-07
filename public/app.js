@@ -3152,7 +3152,7 @@ const app = {
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
     else if (name === 'solved' && !solvedBankSlug(r.parts[0])) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved'].includes(name)) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved', 'privacy', 'terms'].includes(name)) name = 'home';
 
     // A guarded redirect must correct the URL too, or the address bar claims a screen
     // that is not on show and Back/refresh land somewhere unexpected.
@@ -3195,6 +3195,8 @@ const app = {
     else if (state.screen === 'progress') crumbParts.push('Progress');
     else if (state.screen === 'shortanswers') { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Board Short Answers'); }
     else if (state.screen === 'solved')       { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Textbook Solved Exercises'); }
+    else if (state.screen === 'privacy')      crumbParts.push('Privacy Policy');
+    else if (state.screen === 'terms')        crumbParts.push('Terms & Conditions');
     else if (['arena','arena-run','arena-inter','arena-over'].includes(state.screen)) crumbParts.push('Arena');
     else if (state.screen === 'test' && this.session) {
       crumbParts.push(this.session.subject, MODES[this.session.mode]?.label || 'Test');
@@ -3251,8 +3253,60 @@ const app = {
       case 'results':  return this._screenResults();
       case 'shortanswers': return this._screenShortAnswers(params[0]);
       case 'solved':   return this._screenSolvedExercises(params[0]);
+      case 'privacy':  return this._screenPrivacy();
+      case 'terms':    return this._screenTerms();
       default:         return '';
     }
+  },
+
+  _screenPrivacy() {
+    return `
+      <div class="screen legal-screen">
+        <button class="btn ghost legal-back" onclick="app.go(['home'])">&larr; Back</button>
+        <h1 class="legal-title">Privacy Policy</h1>
+        <p class="legal-updated">Last updated: September 2026</p>
+        <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students. This policy explains what happens to your data when you use it.</p>
+        <h2>No account, no personal data collection</h2>
+        <p>Rise does not require sign-up or login, and does not ask for your name, email, or any other personal information.</p>
+        <h2>Everything stays on your device</h2>
+        <p>Your progress, test attempts, bookmarks, streaks, and settings are stored only in your browser's or app's local storage, directly on your device. This data is never transmitted to, or stored on, any server we operate. Uninstalling the app or clearing site data permanently deletes it, since no copy exists anywhere else.</p>
+        <h2>Question content</h2>
+        <p>The app downloads question-bank content (practice questions, answers, explanations) from our servers so it can display them. These are static content files — no information about you or your device is attached to these requests beyond what any standard web request includes (e.g. IP address, handled transiently by our hosting provider and not linked to any profile).</p>
+        <h2>No advertising, no analytics trackers, no third-party sharing</h2>
+        <p>Rise does not embed advertising SDKs, analytics/tracking scripts, or any mechanism that shares your activity with third parties.</p>
+        <h2>Children's privacy</h2>
+        <p>Rise is designed for use by school students. Since no personal data is collected or transmitted, no personal data about children is gathered by this app.</p>
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes (for example, if an optional account/sync feature is introduced in the future), this page will be updated and the "Last updated" date above will change accordingly.</p>
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent to <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+      </div>`;
+  },
+
+  _screenTerms() {
+    return `
+      <div class="screen legal-screen">
+        <button class="btn ghost legal-back" onclick="app.go(['home'])">&larr; Back</button>
+        <h1 class="legal-title">Terms &amp; Conditions</h1>
+        <p class="legal-updated">Last updated: September 2026</p>
+        <p>These terms govern your use of Rise, a free self-study practice tool for Grade 10 board-exam students. By using the app you agree to these terms.</p>
+        <h2>Use of the app</h2>
+        <p>Rise is provided for personal, non-commercial educational use. You may not copy, redistribute, or use the question content or software for commercial purposes without written permission.</p>
+        <h2>Content accuracy</h2>
+        <p>Practice questions and explanations are authored for study purposes. While we take care to ensure accuracy, Rise is a revision aid and not a substitute for your school curriculum, textbooks, or official board guidance. Always verify important information with your teacher or official sources.</p>
+        <h2>No warranty</h2>
+        <p>Rise is provided "as is", without warranty of any kind. We do not guarantee uninterrupted access, error-free content, or specific exam outcomes. Your use is at your own risk.</p>
+        <h2>Intellectual property</h2>
+        <p>All question content, explanations, and software in Rise are the property of Strat101 or used under appropriate licence. Reproduction or redistribution without permission is prohibited.</p>
+        <h2>Limitation of liability</h2>
+        <p>To the maximum extent permitted by law, Strat101 is not liable for any indirect, incidental, or consequential damages arising from your use of Rise.</p>
+        <h2>Changes to these terms</h2>
+        <p>We may update these terms from time to time. Continued use of the app after an update constitutes acceptance of the revised terms. The "Last updated" date above will reflect any changes.</p>
+        <h2>Governing law</h2>
+        <p>These terms are governed by the laws of India.</p>
+        <h2>Contact</h2>
+        <p>Questions about these terms? Email us at <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+      </div>`;
   },
 
   _afterRender(name, params) {
