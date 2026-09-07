@@ -1,13 +1,13 @@
 # Arena — game mode
 
-Status: **not built.** This document is the agreed design; implement against it.
+Status: **Phase 1 built and live.** This document reflects the implemented design.
 
 Arena is a fast, arcade-style practice mode sitting alongside Mock test and
 Chapter drill. It exists because the current modes reward patience, and most
 students won't open a 90-minute mock on a weekday evening. Arena is the mode
 they open instead — 2–3 minutes, high pressure, a score to beat.
 
-Arena is a **warm-up and revision tool, not exam preparation.** A 25-second
+Arena is a **warm-up and revision tool, not exam preparation.** A timed
 answer clock trains the opposite habit to a board paper. The home screen must
 keep pushing the Mock test as the primary mode; Arena is the second button, not
 the first.
@@ -33,35 +33,47 @@ These are decisions, not suggestions.
    loud. Mock and drill screens stay clean and exam-like. The skin system
    applies to Arena only.
 
-## Phase 1 — solo Arena (build this first)
+## Phase 1 — solo Arena *(built)*
 
-Scope: ICSE only, solo only, localStorage only, no accounts, no network.
+Scope: CBSE and ICSE (IB shows "Coming soon"), solo only, localStorage only, no accounts, no network.
 
 ### Run structure
 
-A **run** is a sequence of **stages**. Each stage serves 3 questions, one from
-each of 3 chosen subjects. Clearing a stage advances to the next.
+A **run** is a sequence of **stages**. Each stage serves **5 questions** drawn from a flat pool across the 3 chosen subjects (not one-per-subject). The run continues until lives are exhausted or all 10 stages are cleared.
 
 | Stage | Difficulty | Seconds per question |
 |---|---|---|
-| 1–3 | Easy | 30 |
-| 4–6 | Medium | 25 |
-| 7–9 | Medium / Hard | 20 |
-| 10 (boss) | Hard | 20, 5 questions |
+| 1–3 | Easy | 45 |
+| 4–6 | Medium | 40 |
+| 7–9 | Medium / Hard | 35 |
+| 10 (boss) | Hard | 35, 5 questions |
 
 The timer is **per question**, not per stage — the per-question clock is what
 creates the tension.
 
-Stage outcome:
+#### Life system
 
-- 3 of 3 correct → stage cleared, advance
-- 2 of 3 → advance, lose a life
-- 0 or 1 of 3 → run ends
+- Players start with **7 hearts** (stored as a float for half-heart granularity).
+- **Every correct answer earns +0.5 hearts**, capped at 7.
+- At stage end, hearts are drained based on how many questions were answered correctly:
 
-Lives: 3 per run. A run must be losable, or it is not a game.
+| Correct | Heart drain | Net at break-even |
+|---|---|---|
+| 0/5 | −3 | −3 |
+| 1/5 | −2 | −1.5 |
+| 2/5 | −2 | −1.0 |
+| 3/5 | −1 | +0.5 (gain) |
+| 4/5 | 0 | +2.0 (gain) |
+| 5/5 | 0 | +2.5 (gain) |
 
-Subjects are chosen at run start from those with a bank for the current board.
-ICSE gives Physics, Chemistry, Biology, Mathematics; pick 3.
+Break-even accuracy is ~52% (scoring 3+ of 5 every stage). The run ends only when hearts reach 0.
+
+Subjects are chosen at run start (exactly 3) from those with a bank for the
+current board. The first 3 subjects are pre-checked by default.
+
+#### Setup explainer
+
+The Arena setup screen has a two-column layout: left panel shows a "How to play" list (stages, timer, hearts system, drain table, gameover condition, combo multiplier, spaced repetition); right panel has the subject picker and Start/Back buttons. The two panels are separated by a thin blue vertical divider line.
 
 ### Scoring
 
@@ -105,9 +117,7 @@ draining timer bar, and a HUD showing stage, lives, combo and running score.
 Between stages: a short interstitial showing stage cleared, score gained, lives
 remaining. This beat matters — it is where the sense of progress lives.
 
-Run end: final score, deepest stage, longest combo, personal best comparison,
-and a list of every question missed with the correct answer and explanation
-(reuse the existing results-review component).
+Run end: split 40:60 layout — left panel shows final score, deepest stage, longest combo, personal best comparison, and Play Again / Home buttons; right panel lists **all questions attempted** (not just missed), each card colour-coded green (correct) or red (wrong) with a left border, the student's wrong answer shown when applicable, the correct answer, and the explanation. A count badge in the heading shows total questions attempted.
 
 ### Persistence
 
