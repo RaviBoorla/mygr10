@@ -304,7 +304,9 @@ function renderSkinPicker() {
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
   const boardSubjects = ARENA_SUBJECTS[state.board] || [];
-  const available = boardSubjects.filter(s => bankSlug(s, state.board, state.grade));
+  const available = boardSubjects.filter(s =>
+    SCIENCE_VIRTUAL.has(s) ? !!bankSlug('Science', state.board, state.grade) : !!bankSlug(s, state.board, state.grade)
+  );
   if (!available.length) {
     return `<div class="screen arena-setup-screen">
       <h1 class="arena-title">⚡ Arena</h1>
