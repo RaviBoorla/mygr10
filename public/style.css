@@ -139,22 +139,54 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .btn.ghost { background: transparent; color: var(--text-light); }
 
 /* ─── Board selection (first run) ──────────────────────────────────────────── */
-.welcome-screen {
-  min-height: 100vh;
-  justify-content: center; align-items: center; text-align: center;
+.welcome-screen { min-height: calc(100vh - 40px); align-items: stretch; padding: 0; }
+
+.welcome-layout {
+  display: flex; flex: 1; min-height: calc(100vh - 40px);
+}
+
+/* Left — brand + features */
+.welcome-left {
+  flex: 1 1 0; min-width: 0;
+  background: var(--primary); color: var(--white);
+  padding: 40px 36px; display: flex; flex-direction: column; gap: 20px;
+  justify-content: center;
 }
 .welcome-logo {
-  display: flex; flex-direction: column; align-items: center; gap: 10px;
-  font-size: var(--fs-hero); font-weight: 800; color: var(--primary); letter-spacing: -1px;
+  display: flex; align-items: center; gap: 12px;
+  font-size: var(--fs-h2); font-weight: 800; color: var(--white); letter-spacing: -0.5px;
 }
-.welcome-logo-icon { border-radius: var(--radius-xl); }
-.welcome-sub  { color: var(--text-light); font-size: var(--fs-read); margin: 0 0 8px; }
-.welcome-foot { color: var(--text-light); font-size: var(--fs-ui); margin: 4px 0 0; }
-.board-list   { display: grid; gap: 12px; width: 100%; max-width: 460px; }
+.welcome-logo-icon { border-radius: var(--radius-xl); flex-shrink: 0; }
+.welcome-tagline { font-size: var(--fs-body); opacity: .85; margin: 0; line-height: 1.5; }
+
+.welcome-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.welcome-features li { display: flex; align-items: flex-start; gap: 12px; }
+.wf-icon { font-size: 18px; line-height: 1.3; flex-shrink: 0; }
+.welcome-features li div { display: flex; flex-direction: column; gap: 1px; }
+.welcome-features li strong { font-size: var(--fs-btn); font-weight: 700; }
+.welcome-features li span { font-size: var(--fs-ui); opacity: .75; line-height: 1.4; }
+
+/* Right — board picker */
+.welcome-right {
+  flex: 0 0 340px; display: flex; flex-direction: column;
+  justify-content: center; align-items: flex-start;
+  padding: 40px 36px; gap: 16px;
+  background: var(--surface);
+}
+.welcome-pick-label { font-size: var(--fs-card); font-weight: 700; margin: 0; color: var(--text); }
+.welcome-foot { color: var(--text-light); font-size: var(--fs-note); margin: 0; }
+.board-list   { display: grid; gap: 12px; width: 100%; }
 
 .board-btn { display: flex; flex-direction: column; gap: 2px; padding: 16px 20px; }
 .board-btn strong { font-size: var(--fs-card); color: var(--text); }
 .board-btn span   { font-size: var(--fs-ui); color: var(--text-light); font-weight: 400; }
+
+@media (max-width: 720px) {
+  .welcome-layout { flex-direction: column; min-height: unset; }
+  .welcome-left { padding: 28px 20px; gap: 16px; }
+  .welcome-right { flex: unset; padding: 24px 20px; align-items: stretch; }
+  .welcome-features { gap: 10px; }
+}
 
 /* ─── Home ─────────────────────────────────────────────────────────────────── */
 .home-screen   { gap: 24px; }

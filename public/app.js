@@ -3324,25 +3324,71 @@ const app = {
   _screenBoard() {
     return `
       <div class="screen welcome-screen">
-        <div class="welcome-logo">
-          <svg class="welcome-logo-icon" width="52" height="52" viewBox="0 0 32 32" aria-hidden="true">
-            <rect width="32" height="32" rx="7" fill="#2563eb"/>
-            <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
-            <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
-            <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
-            <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
-          </svg>
-          Rise
+        <div class="welcome-layout">
+
+          <!-- Left panel: app brief -->
+          <div class="welcome-left">
+            <div class="welcome-logo">
+              <svg class="welcome-logo-icon" width="48" height="48" viewBox="0 0 32 32" aria-hidden="true">
+                <rect width="32" height="32" rx="7" fill="#2563eb"/>
+                <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+                <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+                <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+                <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+              </svg>
+              <span>Rise</span>
+            </div>
+            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free, offline, no login.</p>
+            <ul class="welcome-features">
+              <li>
+                <span class="wf-icon">📝</span>
+                <div><strong>Mock tests</strong><span>Timed chapter &amp; full-paper MCQ mocks with instant scoring</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">⚡</span>
+                <div><strong>Arena</strong><span>Fast-paced blitz mode — beat the clock, build combos, earn points</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">✏️</span>
+                <div><strong>Short answers</strong><span>Board-style VSA &amp; SA questions with model answers</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">📖</span>
+                <div><strong>Solved exercises</strong><span>Textbook questions worked step-by-step</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🗒️</span>
+                <div><strong>Revision notes</strong><span>Key formulae, theorems, logic &amp; tips per chapter</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🔁</span>
+                <div><strong>Spaced repetition</strong><span>Leitner system resurfaces your weak questions automatically</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">🔥</span>
+                <div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div>
+              </li>
+              <li>
+                <span class="wf-icon">📴</span>
+                <div><strong>Works offline</strong><span>Installed as a PWA — all progress saved locally, no account needed</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right panel: board picker -->
+          <div class="welcome-right">
+            <p class="welcome-pick-label">Choose your board to get started</p>
+            <div class="board-list">
+              ${BOARDS.map(b => `
+                <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
+                  <strong>${esc(b.name)}</strong>
+                  <span>${esc(b.desc)}</span>
+                </button>`).join('')}
+            </div>
+            <p class="welcome-foot">You can switch boards any time from the ☰ menu.</p>
+          </div>
+
         </div>
-        <p class="welcome-sub">Grade X &amp; XII board exam practice</p>
-        <div class="board-list">
-          ${BOARDS.map(b => `
-            <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
-              <strong>${esc(b.name)}</strong>
-              <span>${esc(b.desc)}</span>
-            </button>`).join('')}
-        </div>
-        <p class="welcome-foot">We remember your choice — you can switch boards any time from the ☰ menu.</p>
       </div>`;
   },
 
