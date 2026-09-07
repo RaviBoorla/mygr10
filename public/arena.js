@@ -559,6 +559,23 @@ function renderSkinPicker() {
   return `<div class="arena-skin-row"><span class="arena-skin-label">Skins <span class="arena-meta-count">${unlockedCount}/${ARENA_SKINS.length}</span></span>${swatches}</div>`;
 }
 
+function renderDailyCard() {
+  const dr = getDailyResult();
+  const dateLabel = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  if (dr) {
+    return `<div class="arena-daily-card arena-daily-done-card">
+      <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${esc(dateLabel)}</span></div>
+      <p class="arena-daily-result">✓ ${dr.correct}/${dr.total} correct · <strong>${dr.score.toLocaleString()}</strong> pts</p>
+      <button class="btn ghost arena-daily-btn" onclick="arenaDailyBegin()">Play Again</button>
+    </div>`;
+  }
+  return `<div class="arena-daily-card">
+    <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${esc(dateLabel)}</span></div>
+    <p class="arena-daily-sub">${DAILY_Q_COUNT} questions · same set for everyone · one attempt</p>
+    <button class="btn primary arena-daily-btn" onclick="arenaDailyBegin()">Start Daily</button>
+  </div>`;
+}
+
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
   const boardSubjects = ARENA_SUBJECTS[state.board] || [];
@@ -611,22 +628,7 @@ function renderArenaSetup() {
         <div class="arena-picker">
 
           <!-- Daily challenge card -->
-          ${(function() {
-            const dr = getDailyResult();
-            const dateLabel = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
-            if (dr) {
-              return `<div class="arena-daily-card arena-daily-done-card">
-                <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${dateLabel}</span></div>
-                <p class="arena-daily-result">✓ ${dr.correct}/${dr.total} correct · <strong>${dr.score.toLocaleString()}</strong> pts</p>
-                <button class="btn ghost arena-daily-btn" onclick="arenaDailyBegin()">Play Again</button>
-              </div>`;
-            }
-            return `<div class="arena-daily-card">
-              <div class="arena-daily-card-title">📅 Daily Challenge <span class="arena-daily-date">${dateLabel}</span></div>
-              <p class="arena-daily-sub">${DAILY_Q_COUNT} questions · same set for everyone · one attempt</p>
-              <button class="btn primary arena-daily-btn" onclick="arenaDailyBegin()">Start Daily</button>
-            </div>`;
-          })()}
+          ${renderDailyCard()}
 
           <div class="arena-picker-sep"></div>
 
@@ -635,7 +637,7 @@ function renderArenaSetup() {
           <div class="arena-subj-grid">${opts}</div>
           <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
           <div class="arena-setup-actions">
-            <button class="btn ghost arena-go-btn" onclick="arenaBegin()">Start Run</button>
+            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
           </div>
 
