@@ -3425,7 +3425,7 @@ const app = {
       <div class="screen">
         <div class="progress-topbar">
           <p class="subtitle" style="margin:0">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
-          <button class="btn screen-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+          <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
       </div>`;
@@ -4590,7 +4590,7 @@ const app = {
           <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
           <div class="rev-heading-right">
             ${this._gradeTabs()}
-            <button class="btn screen-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+            <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
           </div>
         </div>
         ${chapters.length ? `
