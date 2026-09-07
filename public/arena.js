@@ -697,7 +697,7 @@ function renderArenaQuestion() {
           <button class="arena-pause-btn" onclick="arenaPause()" title="Pause">⏸</button>
         </div>
       </div>
-      <div class="arena-pause-overlay" id="arena-pause-overlay" hidden>
+      <div class="arena-pause-overlay" id="arena-pause-overlay">
         <div class="arena-pause-card">
           <p class="arena-pause-title">⏸ Paused</p>
           <p class="arena-pause-sub">Stage ${ar.stage} · ${ar.score.toLocaleString()} pts · ${ar.lives.toFixed(1)}♥</p>
@@ -876,13 +876,13 @@ window.arenaPause = function() {
   _arenaPaused = true;
   arenaClearTimer();
   const overlay = document.getElementById('arena-pause-overlay');
-  if (overlay) overlay.hidden = false;
+  if (overlay) overlay.classList.add('active');
 };
 
 window.arenaResume = function() {
   _arenaPaused = false;
   const overlay = document.getElementById('arena-pause-overlay');
-  if (overlay) overlay.hidden = true;
+  if (overlay) overlay.classList.remove('active');
   const spec = stageSpec(ar.stage);
   const secs = ar.isDaily ? DAILY_SECS : spec.secs;
   // Resume from remaining time, not full duration
