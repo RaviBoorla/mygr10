@@ -3262,7 +3262,7 @@ const app = {
   _screenPrivacy() {
     return `
       <div class="screen legal-screen">
-        <div class="legal-sticky-bar"><button class="btn ghost legal-back" onclick="app.go(['home'])">&#8962; Home</button></div>
+        <button class="legal-back" onclick="app.go(['home'])">&#8962; Home</button>
         <h1 class="legal-title">Privacy Policy</h1>
         <p class="legal-updated">Last updated: September 2026</p>
         <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students. This policy explains what happens to your data when you use it.</p>
@@ -3286,7 +3286,7 @@ const app = {
   _screenTerms() {
     return `
       <div class="screen legal-screen">
-        <div class="legal-sticky-bar"><button class="btn ghost legal-back" onclick="app.go(['home'])">&#8962; Home</button></div>
+        <button class="legal-back" onclick="app.go(['home'])">&#8962; Home</button>
         <h1 class="legal-title">Terms &amp; Conditions</h1>
         <p class="legal-updated">Last updated: September 2026</p>
         <p>These terms govern your use of Rise, a free self-study practice tool for Grade 10 board-exam students. By using the app you agree to these terms.</p>
