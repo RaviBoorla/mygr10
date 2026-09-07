@@ -6,6 +6,7 @@
 const ARENA_KEY = 'rise.arena';           // run state (resume mid-run)
 const ARENA_HI_KEY = 'rise.arena.hi';    // high scores per grade::board
 const ARENA_SKINS_KEY = 'rise.arena.skins'; // unlock state + active skin
+const ARENA_COL_KEY  = 'rise.arena.collectibles'; // collectibles unlock state
 
 // ─── Skin definitions ─────────────────────────────────────────────────────────
 const ARENA_SKINS = [
@@ -48,6 +49,8 @@ function checkAndUnlockSkins(ar) {
     s.stageReached[subj] = Math.max(prev, ar.deepestStage);
   });
 
+  s.maxStage = Math.max(s.maxStage || 0, ar.deepestStage);
+
   const newlyUnlocked = [];
   ARENA_SKINS.forEach(skin => {
     if (!skin.unlock || s.unlocked.includes(skin.id)) return;
@@ -73,6 +76,216 @@ window.arenaSetSkin = function(id) {
   // Re-render the setup screen to refresh swatch selection state
   app.render();
 };
+
+// ─── Collectibles ─────────────────────────────────────────────────────────────
+const COLLECTIBLES = [
+  // ── Instruments ──
+  {
+    id: 'brass-compass', set: 'Instruments', name: 'Brass Compass', rarity: 'common',
+    desc: 'A draftsman\'s divider compass — used to scribe arcs and transfer measurements since antiquity.',
+    unlock: { type: 'runs', n: 1 }, unlockDesc: 'Complete your first Arena run',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="18" r="4"/><line x1="40" y1="22" x2="24" y2="66"/><line x1="40" y1="22" x2="56" y2="66"/><circle cx="24" cy="66" r="3"/><circle cx="56" cy="66" r="3"/><line x1="28" y1="50" x2="52" y2="50" stroke-dasharray="3,2" opacity=".4"/></svg>`,
+  },
+  {
+    id: 'spirit-level', set: 'Instruments', name: 'Spirit Level', rarity: 'common',
+    desc: 'A sealed glass tube of liquid with an air bubble — the bubble centres only when the surface is perfectly horizontal.',
+    unlock: { type: 'runs', n: 2 }, unlockDesc: 'Complete 2 Arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="8" y="32" width="64" height="16" rx="5"/><ellipse cx="40" cy="40" rx="14" ry="6"/><circle cx="41" cy="40" r="3.5" fill="currentColor" opacity=".45"/><line x1="8" y1="40" x2="22" y2="40" opacity=".3"/><line x1="58" y1="40" x2="72" y2="40" opacity=".3"/></svg>`,
+  },
+  {
+    id: 'slide-rule', set: 'Instruments', name: 'Slide Rule', rarity: 'common',
+    desc: 'An analogue calculator using logarithmic scales — standard engineering tool from the 1600s until the 1970s pocket calculator.',
+    unlock: { type: 'runs', n: 5 }, unlockDesc: 'Complete 5 Arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="5" y="28" width="70" height="10" rx="1"/><rect x="5" y="42" width="70" height="10" rx="1"/><line x1="18" y1="28" x2="18" y2="52"/><line x1="32" y1="28" x2="32" y2="52"/><line x1="46" y1="28" x2="46" y2="52"/><line x1="60" y1="28" x2="60" y2="52"/><rect x="24" y="22" width="5" height="36" fill="currentColor" opacity=".18"/></svg>`,
+  },
+  {
+    id: 'abacus', set: 'Instruments', name: 'Abacus', rarity: 'common',
+    desc: 'A frame of sliding beads on rods — one of the oldest calculating devices, still used in parts of Asia today.',
+    unlock: { type: 'runs', n: 10 }, unlockDesc: 'Complete 10 Arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="8" y="12" width="64" height="56" rx="2"/><line x1="8" y1="37" x2="72" y2="37"/><line x1="23" y1="12" x2="23" y2="68"/><line x1="40" y1="12" x2="40" y2="68"/><line x1="57" y1="12" x2="57" y2="68"/><circle cx="23" cy="26" r="4.5" fill="currentColor" opacity=".4"/><circle cx="40" cy="23" r="4.5" fill="currentColor" opacity=".4"/><circle cx="57" cy="29" r="4.5" fill="currentColor" opacity=".4"/><circle cx="23" cy="52" r="4.5" fill="currentColor" opacity=".4"/><circle cx="40" cy="55" r="4.5" fill="currentColor" opacity=".4"/><circle cx="57" cy="50" r="4.5" fill="currentColor" opacity=".4"/></svg>`,
+  },
+  {
+    id: 'balance-scale', set: 'Instruments', name: 'Balance Scale', rarity: 'common',
+    desc: 'The oldest weighing instrument — two pans suspended from a beam; equality of weight means equality of mass.',
+    unlock: { type: 'answers', n: 50 }, unlockDesc: 'Answer 50 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><line x1="40" y1="10" x2="40" y2="68"/><line x1="14" y1="24" x2="66" y2="24"/><circle cx="40" cy="10" r="3.5"/><path d="M14,24 Q8,36 14,44 Q20,36 14,24"/><path d="M66,24 Q60,36 66,44 Q72,36 66,24"/><line x1="9" y1="44" x2="19" y2="44"/><line x1="61" y1="44" x2="71" y2="44"/></svg>`,
+  },
+  {
+    id: 'vernier-caliper', set: 'Instruments', name: 'Vernier Caliper', rarity: 'rare',
+    desc: 'A precision measuring tool invented by Pierre Vernier in 1631 — reads lengths to 0.1 mm via a sliding auxiliary scale.',
+    unlock: { type: 'combo', n: 15 }, unlockDesc: 'Achieve a 15× combo',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="5" y="34" width="68" height="9" rx="1"/><rect x="5" y="34" width="30" height="9" rx="1" fill="currentColor" opacity=".12"/><line x1="5" y1="29" x2="5" y2="50"/><line x1="19" y1="43" x2="19" y2="57"/><line x1="35" y1="29" x2="35" y2="50"/><line x1="45" y1="43" x2="45" y2="57"/><line x1="15" y1="36" x2="15" y2="43" opacity=".4"/><line x1="24" y1="36" x2="24" y2="43" opacity=".4"/><line x1="43" y1="34" x2="43" y2="43" opacity=".4"/><line x1="55" y1="34" x2="55" y2="43" opacity=".4"/></svg>`,
+  },
+  {
+    id: 'prism', set: 'Instruments', name: 'Prism', rarity: 'rare',
+    desc: 'A glass triangular prism — Newton used one in 1666 to split white sunlight into its constituent colours.',
+    unlock: { type: 'stage', n: 5 }, unlockDesc: 'Reach stage 5',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><polygon points="40,10 10,66 70,66"/><line x1="40" y1="10" x2="40" y2="66"/><line x1="40" y1="10" x2="68" y2="66" stroke="#f59e0b" opacity=".5"/><line x1="68" y1="66" x2="78" y2="54" stroke="#ef4444" opacity=".7"/><line x1="68" y1="66" x2="78" y2="63" stroke="#f59e0b" opacity=".7"/><line x1="68" y1="66" x2="76" y2="72" stroke="#22c55e" opacity=".7"/></svg>`,
+  },
+  {
+    id: 'sextant', set: 'Instruments', name: 'Sextant', rarity: 'rare',
+    desc: 'A navigational instrument measuring the angle between a celestial body and the horizon — ships used it to find latitude at sea.',
+    unlock: { type: 'stage', n: 7 }, unlockDesc: 'Reach stage 7',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><path d="M40,12 L10,66 L70,66 Z"/><path d="M40,12 A40,40 0 0,1 70,66" stroke-dasharray="4,3"/><line x1="40" y1="12" x2="58" y2="42"/><circle cx="40" cy="12" r="3.5"/><circle cx="58" cy="42" r="3" fill="currentColor" opacity=".35"/><line x1="25" y1="66" x2="55" y2="66"/></svg>`,
+  },
+  {
+    id: 'astrolabe', set: 'Instruments', name: 'Astrolabe', rarity: 'rare',
+    desc: 'A medieval astronomical computer — used to tell time, find latitude, and locate stars; predates the telescope by a millennium.',
+    unlock: { type: 'stage_subject', n: 5, subj: 'Mathematics' }, unlockDesc: 'Reach stage 5 with Mathematics',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="42" r="28"/><circle cx="40" cy="42" r="20"/><circle cx="40" cy="42" r="10"/><line x1="12" y1="42" x2="68" y2="42"/><line x1="40" y1="14" x2="40" y2="70"/><line x1="40" y1="42" x2="58" y2="26"/><circle cx="40" cy="13" r="3.5"/></svg>`,
+  },
+  {
+    id: 'armillary-sphere', set: 'Instruments', name: 'Armillary Sphere', rarity: 'exceptional',
+    desc: 'A model of the celestial sphere with Earth at centre — used by ancient Greek and Chinese astronomers to map the heavens.',
+    unlock: { type: 'combo', n: 20 }, unlockDesc: 'Achieve a 20× combo',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="40" r="26"/><ellipse cx="40" cy="40" rx="26" ry="10"/><ellipse cx="40" cy="40" rx="10" ry="26"/><line x1="40" y1="14" x2="40" y2="66"/><circle cx="40" cy="40" r="5" fill="currentColor" opacity=".35"/></svg>`,
+  },
+  {
+    id: 'planimeter', set: 'Instruments', name: 'Planimeter', rarity: 'exceptional',
+    desc: 'A mechanical integrator that traces a closed curve on a map and directly measures the enclosed area — no formulae needed.',
+    unlock: { type: 'runs', n: 20 }, unlockDesc: 'Complete 20 Arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="14" cy="40" r="7"/><line x1="21" y1="40" x2="44" y2="25"/><line x1="44" y1="25" x2="66" y2="40"/><circle cx="44" cy="25" r="4.5"/><circle cx="66" cy="40" r="3"/><ellipse cx="44" cy="54" rx="16" ry="10" stroke-dasharray="3,2"/></svg>`,
+  },
+  {
+    id: 'pantograph', set: 'Instruments', name: 'Pantograph', rarity: 'exceptional',
+    desc: 'A linkage of four bars — tracing one point copies or scales a drawing at another point; used by cartographers and engravers.',
+    unlock: { type: 'answers', n: 100 }, unlockDesc: 'Answer 100 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><line x1="8" y1="22" x2="50" y2="22"/><line x1="8" y1="52" x2="50" y2="52"/><line x1="8" y1="22" x2="8" y2="52"/><line x1="29" y1="22" x2="29" y2="52"/><line x1="50" y1="22" x2="70" y2="37"/><line x1="50" y1="52" x2="70" y2="67"/><line x1="70" y1="37" x2="70" y2="67"/><circle cx="8" cy="22" r="3" fill="currentColor"/><circle cx="70" cy="37" r="2.5" fill="currentColor" opacity=".4"/></svg>`,
+  },
+  {
+    id: 'orrery', set: 'Instruments', name: 'Orrery', rarity: 'exceptional',
+    desc: 'A clockwork mechanical model of the solar system — named after the Earl of Orrery; built c. 1704 by George Graham.',
+    unlock: { type: 'full_clear' }, unlockDesc: 'Complete a full clear (all 10 stages)',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="40" r="7" fill="currentColor" opacity=".3"/><circle cx="40" cy="40" r="15"/><circle cx="40" cy="40" r="25"/><circle cx="40" cy="25" r="3.5" fill="currentColor"/><circle cx="65" cy="40" r="2.5" fill="currentColor"/><circle cx="40" cy="15" r="2" fill="currentColor" opacity=".5"/></svg>`,
+  },
+
+  // ── Antiques ──
+  {
+    id: 'napiers-bones', set: 'Antiques', name: "Napier's Bones", rarity: 'common',
+    desc: 'Numbered rods invented by John Napier in 1617 — a manual multiplication tool that preceded the slide rule.',
+    unlock: { type: 'stage_subject', n: 3, subj: 'Mathematics' }, unlockDesc: 'Reach stage 3 with Mathematics',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="10" y="10" width="12" height="60" rx="1"/><rect x="24" y="10" width="12" height="60" rx="1"/><rect x="38" y="10" width="12" height="60" rx="1"/><rect x="52" y="10" width="12" height="60" rx="1"/><line x1="10" y1="26" x2="22" y2="26"/><line x1="24" y1="26" x2="36" y2="26"/><line x1="38" y1="26" x2="50" y2="26"/><line x1="52" y1="26" x2="64" y2="26"/><line x1="10" y1="43" x2="22" y2="43"/><line x1="24" y1="43" x2="36" y2="43"/><line x1="38" y1="43" x2="50" y2="43"/><line x1="52" y1="43" x2="64" y2="43"/><line x1="10" y1="58" x2="22" y2="58"/><line x1="24" y1="58" x2="36" y2="58"/><line x1="38" y1="58" x2="50" y2="58"/><line x1="52" y1="58" x2="64" y2="58"/></svg>`,
+  },
+  {
+    id: 'microscope', set: 'Antiques', name: 'Early Microscope', rarity: 'common',
+    desc: 'The compound microscope, developed c. 1590 by the Janssen family — opened the invisible world of cells and microbes.',
+    unlock: { type: 'stage_subject', n: 3, subj: 'Biology' }, unlockDesc: 'Reach stage 3 with Biology',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><line x1="40" y1="10" x2="40" y2="52"/><ellipse cx="40" cy="18" rx="9" ry="5"/><ellipse cx="40" cy="33" rx="7" ry="4.5"/><line x1="28" y1="52" x2="52" y2="52"/><line x1="28" y1="52" x2="22" y2="68"/><line x1="52" y1="52" x2="58" y2="68"/><line x1="18" y1="68" x2="62" y2="68"/></svg>`,
+  },
+  {
+    id: 'pendulum-clock', set: 'Antiques', name: 'Pendulum Clock', rarity: 'common',
+    desc: 'Invented by Christiaan Huygens in 1656 — the pendulum\'s isochronous swing made it the world\'s most accurate clock for 270 years.',
+    unlock: { type: 'runs', n: 5 }, unlockDesc: 'Complete 5 Arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="22" y="6" width="36" height="46" rx="3"/><circle cx="40" cy="27" r="12"/><line x1="40" y1="27" x2="40" y2="18"/><line x1="40" y1="27" x2="49" y2="33"/><line x1="40" y1="52" x2="40" y2="67"/><ellipse cx="40" cy="70" rx="7" ry="3.5"/></svg>`,
+  },
+  {
+    id: 'tuning-fork', set: 'Antiques', name: 'Tuning Fork Set', rarity: 'common',
+    desc: 'Invented by John Shore in 1711 — vibrating steel tines produce a pure musical tone used to tune instruments and measure frequency.',
+    unlock: { type: 'answers', n: 30 }, unlockDesc: 'Answer 30 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><line x1="26" y1="55" x2="26" y2="72"/><path d="M20,20 Q15,8 20,26 Q25,38 26,55"/><path d="M32,20 Q37,8 32,26 Q27,38 26,55"/><line x1="52" y1="55" x2="52" y2="72"/><path d="M45,18 Q40,6 45,24 Q50,36 52,55"/><path d="M59,18 Q64,6 59,24 Q54,36 52,55"/><line x1="16" y1="36" x2="36" y2="36"/></svg>`,
+  },
+  {
+    id: 'lodestone', set: 'Antiques', name: 'Lodestone', rarity: 'rare',
+    desc: 'A naturally magnetised piece of magnetite — ancient navigators noticed it always pointed north, making it the world\'s first compass.',
+    unlock: { type: 'stage_subject', n: 5, subj: 'Physics' }, unlockDesc: 'Reach stage 5 with Physics',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><path d="M30,18 Q18,14 13,28 Q8,44 18,56 Q28,68 46,62 Q62,56 64,40 Q66,22 50,16 Q40,12 30,18Z"/><path d="M13,40 Q5,40 3,30" stroke-dasharray="2,2"/><path d="M13,40 Q5,40 3,50" stroke-dasharray="2,2"/><path d="M64,40 Q74,40 77,30" stroke-dasharray="2,2"/><path d="M64,40 Q74,40 77,50" stroke-dasharray="2,2"/></svg>`,
+  },
+  {
+    id: 'leyden-jar', set: 'Antiques', name: 'Leyden Jar', rarity: 'rare',
+    desc: 'The first electrical capacitor, invented 1745 in Leiden — an inner and outer metal foil separated by glass; stored static charge for experiments.',
+    unlock: { type: 'stage_subject', n: 5, subj: 'Chemistry' }, unlockDesc: 'Reach stage 5 with Chemistry',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><path d="M28,20 Q18,26 18,46 Q18,66 40,69 Q62,66 62,46 Q62,26 52,20Z"/><rect x="28" y="11" width="24" height="11" rx="2"/><line x1="40" y1="11" x2="40" y2="4"/><circle cx="40" cy="3.5" r="3"/><path d="M29,46 Q40,39 51,46" stroke-dasharray="3,2"/></svg>`,
+  },
+  {
+    id: 'camera-obscura', set: 'Antiques', name: 'Camera Obscura', rarity: 'rare',
+    desc: 'A darkened box with a small lens that projects an inverted image of the outside onto its interior — a direct ancestor of the photographic camera.',
+    unlock: { type: 'combo', n: 25 }, unlockDesc: 'Achieve a 25× combo',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="14" y="18" width="42" height="42" rx="2"/><circle cx="56" cy="39" r="9"/><line x1="65" y1="39" x2="74" y2="39"/><line x1="56" y1="18" x2="72" y2="8"/><line x1="56" y1="60" x2="72" y2="70"/><rect x="14" y="24" width="10" height="30" fill="currentColor" opacity=".1"/></svg>`,
+  },
+  {
+    id: 'wimshurst', set: 'Antiques', name: 'Wimshurst Machine', rarity: 'exceptional',
+    desc: 'An electrostatic generator invented by James Wimshurst c. 1880 — two contra-rotating discs build up charge and produce dramatic sparks.',
+    unlock: { type: 'combo', n: 30 }, unlockDesc: 'Achieve a 30× combo',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="28" cy="38" r="20"/><circle cx="52" cy="38" r="20"/><line x1="8" y1="38" x2="72" y2="38"/><line x1="28" y1="18" x2="28" y2="58"/><line x1="52" y1="18" x2="52" y2="58"/><line x1="15" y1="25" x2="41" y2="51"/><line x1="15" y1="51" x2="41" y2="25"/><circle cx="28" cy="38" r="5" fill="currentColor" opacity=".25"/><circle cx="52" cy="38" r="5" fill="currentColor" opacity=".25"/><line x1="40" y1="10" x2="40" y2="5" stroke-width="3"/><line x1="40" y1="5" x2="44" y2="1"/></svg>`,
+  },
+];
+
+function getCollectibleState() {
+  const s = LS.get(ARENA_COL_KEY, {});
+  if (!s.unlocked) s.unlocked = [];
+  if (!s.totalAnswers) s.totalAnswers = 0;
+  return s;
+}
+
+function saveCollectibleState(s) { LS.set(ARENA_COL_KEY, s); }
+
+function checkAndUnlockCollectibles(ar) {
+  const cs = getCollectibleState();
+  const ss = getSkinState(); // already updated by checkAndUnlockSkins above
+  cs.totalAnswers += (ar._allAnswered || []).length;
+
+  const newlyUnlocked = [];
+  COLLECTIBLES.forEach(col => {
+    if (cs.unlocked.includes(col.id)) return;
+    const u = col.unlock;
+    let earned = false;
+    if (u.type === 'runs')          earned = ss.runCount >= u.n;
+    if (u.type === 'combo')         earned = ss.allTimeCombo >= u.n;
+    if (u.type === 'stage')         earned = (ss.maxStage || 0) >= u.n;
+    if (u.type === 'stage_subject') earned = (ss.stageReached[u.subj] || 0) >= u.n;
+    if (u.type === 'answers')       earned = cs.totalAnswers >= u.n;
+    if (u.type === 'full_clear')    earned = !!ar._cleared;
+    if (earned) { cs.unlocked.push(col.id); newlyUnlocked.push(col); }
+  });
+
+  saveCollectibleState(cs);
+  return newlyUnlocked;
+}
+
+function renderArenaCollection() {
+  const cs = getCollectibleState();
+  const totalUnlocked = cs.unlocked.length;
+  const rarityOrder = { common: 0, rare: 1, exceptional: 2 };
+  const rarityLabel  = { common: 'Common', rare: 'Rare', exceptional: 'Exceptional' };
+
+  function itemCard(col) {
+    const unlocked = cs.unlocked.includes(col.id);
+    return `
+      <div class="arena-col-card ${unlocked ? '' : 'locked'} rarity-${col.rarity}">
+        <div class="arena-col-art">${col.svg}</div>
+        <div class="arena-col-info">
+          <span class="arena-col-name">${esc(col.name)}</span>
+          <span class="arena-col-rarity rarity-${col.rarity}">${rarityLabel[col.rarity]}</span>
+          ${unlocked
+            ? `<p class="arena-col-desc">${esc(col.desc)}</p>`
+            : `<p class="arena-col-hint">🔒 ${esc(col.unlockDesc)}</p>`}
+        </div>
+      </div>`;
+  }
+
+  function section(setName) {
+    const items = COLLECTIBLES.filter(c => c.set === setName)
+      .sort((a, b) => rarityOrder[a.rarity] - rarityOrder[b.rarity]);
+    const unlockedCount = items.filter(c => cs.unlocked.includes(c.id)).length;
+    return `
+      <div class="arena-col-section">
+        <h2 class="arena-col-section-title">${esc(setName)} <span class="arena-col-section-count">${unlockedCount}/${items.length}</span></h2>
+        <div class="arena-col-grid">${items.map(itemCard).join('')}</div>
+      </div>`;
+  }
+
+  return `
+    <div class="screen arena-col-screen">
+      <div class="arena-col-header">
+        <h1 class="arena-col-title">🎒 Collection</h1>
+        <span class="arena-col-total">${totalUnlocked} / ${COLLECTIBLES.length} unlocked</span>
+        <button class="btn ghost arena-col-back" onclick="app.go(['arena'])">← Arena</button>
+      </div>
+      <p class="arena-col-sub">Scientific instruments and historical curiosities — each item carries one line of real history.</p>
+      ${section('Instruments')}
+      ${section('Antiques')}
+    </div>`;
+}
 
 // Subjects available for Arena per board (those with an MCQ bank)
 // Physics, Chemistry, Biology are virtual subjects — all drawn from Science bank,
@@ -356,6 +569,7 @@ function renderArenaSetup() {
             <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
           </div>
+          <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
           ${renderSkinPicker()}
         </div>
 
@@ -457,6 +671,7 @@ function renderArenaGameOver() {
     saveHiScore(ar.score, ar.deepestStage, ar.longestCombo);
     clearSavedRun();
     ar._newSkins = checkAndUnlockSkins(ar);
+    ar._newCols  = checkAndUnlockCollectibles(ar);
   }
 
   const newBest = ar.score > (ar._prevHiBefore || 0);
@@ -466,6 +681,9 @@ function renderArenaGameOver() {
 
   const newSkinsHtml = (ar._newSkins || []).length
     ? `<div class="arena-unlock-banner">🎨 New skin${ar._newSkins.length > 1 ? 's' : ''} unlocked: <strong>${ar._newSkins.map(s => s.name).join(', ')}</strong> — pick it on the setup screen!</div>`
+    : '';
+  const newColsHtml = (ar._newCols || []).length
+    ? `<div class="arena-unlock-banner arena-unlock-col">🎒 New collectible${ar._newCols.length > 1 ? 's' : ''} unlocked: <strong>${ar._newCols.map(c => c.name).join(', ')}</strong></div>`
     : '';
 
   // Build full question review list (all attempted, correct + wrong)
@@ -497,6 +715,7 @@ function renderArenaGameOver() {
           <h2 class="arena-go-title">${ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
           ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
           ${newSkinsHtml}
+          ${newColsHtml}
           <div class="arena-go-stats">
             <div class="arena-stat"><span class="arena-stat-val">${ar.score.toLocaleString()}</span><span class="arena-stat-lbl">Score</span></div>
             <div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest Stage</span></div>
@@ -509,6 +728,7 @@ function renderArenaGameOver() {
           <div class="arena-go-actions">
             <button class="btn primary" onclick="app.go(['arena'])">Play Again</button>
             <button class="btn ghost" onclick="app.go(['home'])">Home</button>
+            <button class="btn ghost" onclick="app.go(['collection'])">🎒 Collection</button>
           </div>
         </div>
         <div class="arena-go-right">
@@ -662,6 +882,7 @@ window.arenaQuit = function() {
     if (name === 'arena-run')   return ar ? renderArenaQuestion() : renderArenaSetup();
     if (name === 'arena-inter') return ar ? renderArenaInterstitial() : renderArenaSetup();
     if (name === 'arena-over')  return ar ? renderArenaGameOver() : renderArenaSetup();
+    if (name === 'collection')  return renderArenaCollection();
     return origScreen(name, params);
   };
 
@@ -673,7 +894,7 @@ window.arenaQuit = function() {
     } else {
       arenaClearTimer();
     }
-    if (['arena', 'arena-run', 'arena-inter', 'arena-over'].includes(name)) {
+    if (['arena', 'arena-run', 'arena-inter', 'arena-over', 'collection'].includes(name)) {
       applyActiveSkin();
     } else {
       clearActiveSkin();
@@ -686,7 +907,7 @@ window.arenaQuit = function() {
   const origRender = app.render.bind(app);
   app.render = function() {
     const r = parseHash();
-    const arenaRoutes = ['arena', 'arena-run', 'arena-inter', 'arena-over'];
+    const arenaRoutes = ['arena', 'arena-run', 'arena-inter', 'arena-over', 'collection'];
     if (arenaRoutes.includes(r.name)) {
       // Bypass app.js guard — handle arena screens directly
       if (!state.board) { app.go(['board'], true); return; }
