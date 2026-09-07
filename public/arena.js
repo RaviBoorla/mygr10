@@ -322,6 +322,7 @@ function saveRun() {
   if (!ar) return;
   const toSave = Object.assign({}, ar);
   delete toSave._banks;        // don't serialise loaded banks
+  delete toSave._virtualSet;   // Set is not JSON-serialisable
   LS.set(ARENA_KEY, toSave);
 }
 
@@ -351,7 +352,7 @@ function pickStageQuestions(subjects, difficulty, stageNum) {
     let pool = bank.filter(q => !servedSet.has(q.id));
     let narrowPool = allowed ? pool.filter(q => allowed.includes((q.difficulty || '').toLowerCase())) : pool;
     if (narrowPool.length === 0) narrowPool = pool;
-    const leitnerSubject = SCIENCE_VIRTUAL.has(subject) ? 'Science' : subject;
+    const leitnerSubject = (ar._virtualSet && ar._virtualSet.has(subject)) ? 'Science' : subject;
     const bySubj = progStore[scopeKey(leitnerSubject)] || {};
     narrowPool.forEach(q => {
       const r = bySubj[q.id];
@@ -409,17 +410,21 @@ async function arenaStartRun(subjects) {
   // Load all banks for chosen subjects.
   // Physics/Chemistry/Biology are virtual — sourced from the Science bank filtered by q.subject.
   const banks = {};
-  const needsScienceBank = subjects.some(s => SCIENCE_VIRTUAL.has(s));
-  const realSubjects = subjects.filter(s => !SCIENCE_VIRTUAL.has(s));
-  const loaders = realSubjects.map(s => loadBank(s).then(qs => { banks[s] = qs; }));
-  if (needsScienceBank) {
+  // A subject is "virtual" only when it has no own bank but Science bank exists.
+  // ICSE Physics/Chemistry/Biology have their own banks — load them directly.
+  const virtualSubjs = subjects.filter(s =>
+    SCIENCE_VIRTUAL.has(s) && !bankSlug(s, state.board, state.grade) && !!bankSlug('Science', state.board, state.grade)
+  );
+  const directSubjs = subjects.filter(s => !virtualSubjs.includes(s));
+  const loaders = directSubjs.map(s => loadBank(s).then(qs => { banks[s] = qs; }));
+  if (virtualSubjs.length) {
     loaders.push(loadBank('Science').then(qs => {
-      subjects.filter(s => SCIENCE_VIRTUAL.has(s)).forEach(s => {
-        banks[s] = qs.filter(q => q.subject === s);
-      });
+      virtualSubjs.forEach(s => { banks[s] = qs.filter(q => q.subject === s); });
     }));
   }
   await Promise.all(loaders);
+  // Record which subjects are virtual (drawn from Science bank) for Leitner mapping
+  const virtualSet = new Set(virtualSubjs);
 
   const hiAtStart = getHiScores();
   ar = {
@@ -442,6 +447,7 @@ async function arenaStartRun(subjects) {
     missedQuestions: [],
     phase: 'question', // 'question' | 'interstitial' | 'gameover'
     _banks: banks,
+    _virtualSet: virtualSet,         // subjects drawn from Science bank (CBSE only currently)
     _prevHiBefore: hiAtStart.score,  // for newBest detection on game-over
   };
 
@@ -517,9 +523,11 @@ function renderSkinPicker() {
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
   const boardSubjects = ARENA_SUBJECTS[state.board] || [];
-  const available = boardSubjects.filter(s =>
-    SCIENCE_VIRTUAL.has(s) ? !!bankSlug('Science', state.board, state.grade) : !!bankSlug(s, state.board, state.grade)
-  );
+  const available = boardSubjects.filter(s => {
+    if (bankSlug(s, state.board, state.grade)) return true;  // has own bank
+    if (SCIENCE_VIRTUAL.has(s)) return !!bankSlug('Science', state.board, state.grade); // virtual via Science
+    return false;
+  });
   if (!available.length) {
     return `<div class="screen arena-setup-screen">
       <h1 class="arena-title">⚡ Arena</h1>
@@ -663,7 +671,7 @@ function renderArenaGameOver() {
       Object.keys(bySubject).forEach(subj => {
         const seen = {};
         bySubject[subj].forEach(r => { seen[r.id] = r; });
-        const leitnerSubj = SCIENCE_VIRTUAL.has(subj) ? 'Science' : subj;
+        const leitnerSubj = (ar._virtualSet && ar._virtualSet.has(subj)) ? 'Science' : subj;
         app._updateProgress(leitnerSubj, Object.values(seen));
       });
     }
