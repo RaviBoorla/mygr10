@@ -3220,6 +3220,7 @@ const app = {
               ${inTest ? 'disabled' : ''} onclick="app.toggleMobileMenu()">
         <span></span><span></span><span></span>
       </button>`;
+    const authUser = window.riseAuth?.user;
     const menu = `
       <div class="hdr-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
         ${menuBoards}
@@ -3230,8 +3231,6 @@ const app = {
         <a class="btn small ghost" href="careers.html">Career Pathing</a>
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
-
-    const authUser = window.riseAuth?.user;
     const loginBtn = authUser
       ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
            ${authUser.photoURL
