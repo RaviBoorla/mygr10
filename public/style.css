@@ -86,7 +86,7 @@ body {
 .hdr-menu:not([hidden]) {
   display: flex; flex-direction: column; gap: 8px;
   position: absolute; top: var(--header-h); right: 16px;
-  width: 260px; max-width: calc(100vw - 32px);
+  width: 208px; max-width: calc(100vw - 32px);
   background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
   padding: 12px; box-shadow: var(--shadow-lg); z-index: 20;
 }
