@@ -3613,6 +3613,7 @@ const app = {
     const next = scope[id]?.status === status ? '' : status;
     scope[id] = { ...(scope[id] || {}), status: next };
     LS.set(KEY.saDrafts, store);
+    if (window.riseSync) riseSync.push();
     loadSABank(subject).then(list => this._renderSAList(subject, list));
   },
 
@@ -3763,6 +3764,7 @@ const app = {
     const scope = store[scopeKey(subject)] || (store[scopeKey(subject)] = {});
     scope[id] = true;
     LS.set(KEY.solvedRevealed, store);
+    if (window.riseSync) riseSync.push();
     const card = document.querySelector(`[data-sol-id="${CSS.escape(id)}"]`);
     if (card) loadSolvedBank(subject).then(list => {
       const q = list.find(x => x.id === id);
@@ -4220,6 +4222,7 @@ const app = {
     const bySubj = store[key] || (store[key] = {});
     if (bySubj[id]) delete bySubj[id]; else bySubj[id] = { at: Date.now() };
     LS.set(KEY.bookmarks, store);
+    if (window.riseSync) riseSync.push();
     this._renderBookmarkBtn('bookmark-btn', subject, id);
     this._renderBookmarkBtn('review-bookmark-btn', subject, id);
   },
@@ -4387,6 +4390,7 @@ const app = {
 
       this.session = null;
       LS.del(KEY.draft);
+      if (window.riseSync) riseSync.push();
       this.go(['results'], true);
     };
 

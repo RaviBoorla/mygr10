@@ -1,6 +1,4 @@
-// ── Firebase Auth ─────────────────────────────────────────────────────────────
-// Replace FIREBASE_CONFIG with your project's values from the Firebase console
-// (Project Settings → Your apps → SDK setup and configuration).
+// ── Firebase Auth + Firestore Sync ────────────────────────────────────────────
 const FIREBASE_CONFIG = {
   apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
   authDomain:        "rise.strat101.com",
@@ -11,14 +9,25 @@ const FIREBASE_CONFIG = {
   measurementId:     "G-VCPY26R09E"
 };
 
+// localStorage keys that are synced to Firestore (keyed as Firestore doc names)
+// draft and results are session-only — not synced.
+const SYNC_KEYS = {
+  progress:      'rise.progress',
+  bookmarks:     'rise.bookmarks',
+  streak:        'rise.streak',
+  saDrafts:      'rise.saDrafts',
+  solvedRevealed:'rise.solvedRevealed'
+};
+
 (function () {
   'use strict';
 
   // ── Init ────────────────────────────────────────────────────────────────────
-  let fbApp, fbAuth;
+  let fbAuth, db;
   try {
-    fbApp  = firebase.initializeApp(FIREBASE_CONFIG);
+    firebase.initializeApp(FIREBASE_CONFIG);
     fbAuth = firebase.auth();
+    db     = firebase.firestore();
   } catch (e) {
     console.warn('[Rise auth] Firebase init failed — login disabled.', e);
     window.riseAuth = { user: null, openModal() {}, signOut() {} };
@@ -26,9 +35,85 @@ const FIREBASE_CONFIG = {
   }
 
   // ── State ───────────────────────────────────────────────────────────────────
-  let currentUser = null;
+  let currentUser  = null;
+  let _unsubscribe = null; // Firestore real-time listener teardown
 
-  // ── Modal markup (injected once into <body>, persists across app re-renders) ─
+  // ── Firestore helpers ────────────────────────────────────────────────────────
+  function userDoc(name) {
+    return db.collection('users').doc(currentUser.uid).collection('sync').doc(name);
+  }
+
+  // Push all localStorage sync keys up to Firestore
+  async function pushToCloud() {
+    if (!currentUser) return;
+    const batch = db.batch();
+    for (const [name, lsKey] of Object.entries(SYNC_KEYS)) {
+      try {
+        const raw = localStorage.getItem(lsKey);
+        const data = raw ? JSON.parse(raw) : {};
+        batch.set(userDoc(name), { _v: Date.now(), data });
+      } catch (_) {}
+    }
+    await batch.commit();
+  }
+
+  // Pull Firestore docs down and merge into localStorage.
+  // Firestore wins for progress/bookmarks/streak (cross-device truth).
+  // saDrafts and solvedRevealed merge (union) so reveals on either device are kept.
+  async function pullFromCloud() {
+    if (!currentUser) return;
+    for (const [name, lsKey] of Object.entries(SYNC_KEYS)) {
+      try {
+        const snap = await userDoc(name).get();
+        if (!snap.exists) continue;
+        const cloudData = snap.data().data || {};
+        if (name === 'saDrafts' || name === 'solvedRevealed') {
+          // merge: local union cloud (don't lose local reveals)
+          const raw   = localStorage.getItem(lsKey);
+          const local = raw ? JSON.parse(raw) : {};
+          const merged = Object.assign({}, cloudData, local);
+          localStorage.setItem(lsKey, JSON.stringify(merged));
+        } else {
+          // cloud wins (authoritative cross-device state)
+          localStorage.setItem(lsKey, JSON.stringify(cloudData));
+        }
+      } catch (_) {}
+    }
+  }
+
+  // Start a real-time listener so changes made on another device arrive live.
+  // We only listen to the streak doc (lightweight) — the others are pulled once
+  // on login and pushed on every submit (app.js already calls riseSync.push()).
+  function startLiveListener() {
+    stopLiveListener();
+    _unsubscribe = userDoc('streak').onSnapshot(snap => {
+      if (!snap.exists) return;
+      try {
+        const cloudStreak = snap.data().data || {};
+        const raw   = localStorage.getItem(SYNC_KEYS.streak);
+        const local = raw ? JSON.parse(raw) : {};
+        // Only overwrite if cloud version is newer
+        const cloudTs = snap.data()._v || 0;
+        const localTs = local._ts || 0;
+        if (cloudTs > localTs) {
+          localStorage.setItem(SYNC_KEYS.streak, JSON.stringify(cloudStreak));
+          if (typeof app !== 'undefined' && app.render) app.render();
+        }
+      } catch (_) {}
+    }, () => {}); // ignore listener errors silently
+  }
+
+  function stopLiveListener() {
+    if (_unsubscribe) { _unsubscribe(); _unsubscribe = null; }
+  }
+
+  // ── Public sync API (called by app.js after each graded submit) ──────────────
+  window.riseSync = {
+    // Call after any graded attempt, bookmark change, or SA self-mark
+    push: pushToCloud
+  };
+
+  // ── Modal markup ─────────────────────────────────────────────────────────────
   const MODAL_ID = 'rise-auth-modal';
 
   function injectModal() {
@@ -82,7 +167,6 @@ const FIREBASE_CONFIG = {
     document.body.appendChild(el);
   }
 
-  // ── Modal helpers ────────────────────────────────────────────────────────────
   function showError(msg) {
     const el = document.getElementById('auth-error');
     if (!el) return;
@@ -92,7 +176,7 @@ const FIREBASE_CONFIG = {
 
   let _emailSignup = false;
 
-  // ── Public API ───────────────────────────────────────────────────────────────
+  // ── Public auth API ──────────────────────────────────────────────────────────
   window.riseAuth = {
     get user() { return currentUser; },
 
@@ -164,29 +248,38 @@ const FIREBASE_CONFIG = {
     },
 
     async signOut() {
+      if (currentUser) await pushToCloud(); // final push before signing out
+      stopLiveListener();
       await fbAuth.signOut();
     }
   };
 
   // ── Auth state listener ──────────────────────────────────────────────────────
-  fbAuth.onAuthStateChanged(user => {
+  fbAuth.onAuthStateChanged(async user => {
     currentUser = user || null;
-    // Re-render the app header to reflect sign-in state
+    if (user) {
+      // Pull cloud → local (merge), then push local → cloud, then start live listener
+      await pullFromCloud();
+      await pushToCloud();
+      startLiveListener();
+    } else {
+      stopLiveListener();
+    }
     if (typeof app !== 'undefined' && app.render) app.render();
   });
 
   // ── Error messages ───────────────────────────────────────────────────────────
   function _friendlyError(e) {
     const map = {
-      'auth/invalid-email':            'Invalid email address.',
-      'auth/user-not-found':           'No account with that email.',
-      'auth/wrong-password':           'Incorrect password.',
-      'auth/email-already-in-use':     'An account with that email already exists.',
-      'auth/weak-password':            'Password must be at least 6 characters.',
-      'auth/too-many-requests':        'Too many attempts — try again later.',
-      'auth/popup-closed-by-user':     '',
-      'auth/cancelled-popup-request':  '',
-      'auth/network-request-failed':   'Network error — check your connection.',
+      'auth/invalid-email':           'Invalid email address.',
+      'auth/user-not-found':          'No account with that email.',
+      'auth/wrong-password':          'Incorrect password.',
+      'auth/email-already-in-use':    'An account with that email already exists.',
+      'auth/weak-password':           'Password must be at least 6 characters.',
+      'auth/too-many-requests':       'Too many attempts — try again later.',
+      'auth/popup-closed-by-user':    '',
+      'auth/cancelled-popup-request': '',
+      'auth/network-request-failed':  'Network error — check your connection.',
     };
     return map[e.code] || e.message || 'Something went wrong.';
   }
