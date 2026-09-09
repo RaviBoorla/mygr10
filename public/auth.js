@@ -136,7 +136,7 @@ const SYNC_KEYS = {
             <input id="auth-email-input" type="email" autocomplete="email" required placeholder="you@example.com">
           </label>
           <label class="auth-label">Password
-            <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="6">
+            <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="8">
           </label>
           <button type="submit" id="auth-email-btn" class="btn primary" style="width:100%">Sign in</button>
         </form>
@@ -211,6 +211,10 @@ const SYNC_KEYS = {
       showError('');
       const email = document.getElementById('auth-email-input')?.value.trim();
       const pw    = document.getElementById('auth-pw-input')?.value;
+      if (_emailSignup) {
+        const pwErr = _validatePassword(pw);
+        if (pwErr) { showError(pwErr); return; }
+      }
       try {
         if (_emailSignup) {
           await fbAuth.createUserWithEmailAndPassword(email, pw);
@@ -255,6 +259,16 @@ const SYNC_KEYS = {
     if (typeof app !== 'undefined' && app.render) app.render();
   });
 
+  // ── Password validation (signup only) ───────────────────────────────────────
+  function _validatePassword(pw) {
+    if (pw.length < 8)          return 'Password must be at least 8 characters.';
+    if (!/[A-Z]/.test(pw))      return 'Password must include at least one uppercase letter.';
+    if (!/[a-z]/.test(pw))      return 'Password must include at least one lowercase letter.';
+    if (!/[0-9]/.test(pw))      return 'Password must include at least one number.';
+    if (!/[^A-Za-z0-9]/.test(pw)) return 'Password must include at least one special character.';
+    return '';
+  }
+
   // ── Error messages ───────────────────────────────────────────────────────────
   function _friendlyError(e) {
     const map = {
@@ -262,7 +276,7 @@ const SYNC_KEYS = {
       'auth/user-not-found':          'No account with that email.',
       'auth/wrong-password':          'Incorrect password.',
       'auth/email-already-in-use':    'An account with that email already exists.',
-      'auth/weak-password':           'Password must be at least 6 characters.',
+      'auth/weak-password':           'Password too weak — min 8 chars with uppercase, lowercase, number, and special character.',
       'auth/too-many-requests':       'Too many attempts — try again later.',
       'auth/popup-closed-by-user':    '',
       'auth/cancelled-popup-request': '',
