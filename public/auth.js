@@ -2,12 +2,13 @@
 // Replace FIREBASE_CONFIG with your project's values from the Firebase console
 // (Project Settings → Your apps → SDK setup and configuration).
 const FIREBASE_CONFIG = {
-  apiKey:            "YOUR_API_KEY",
-  authDomain:        "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId:         "YOUR_PROJECT_ID",
-  storageBucket:     "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId:             "YOUR_APP_ID"
+  apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
+  authDomain:        "rise-511c6.firebaseapp.com",
+  projectId:         "rise-511c6",
+  storageBucket:     "rise-511c6.firebasestorage.app",
+  messagingSenderId: "226917606953",
+  appId:             "1:226917606953:web:c3f108c2c29ab2acc95e38",
+  measurementId:     "G-VCPY26R09E"
 };
 
 (function () {
