@@ -660,7 +660,7 @@ function renderArenaSetup() {
 
           <div class="arena-picker-sep"></div>
 
-          <!-- Challenge code entry -->
+          <!-- Async challenge code entry -->
           <p class="arena-pick-label">Join a Challenge</p>
           <div class="arena-challenge-entry">
             <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
@@ -668,6 +668,37 @@ function renderArenaSetup() {
             <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
           </div>
           <p id="arena-code-error" class="arena-code-error" hidden></p>
+
+          <div class="arena-picker-sep"></div>
+
+          <!-- Live Room -->
+          <p class="arena-pick-label">⚡ Live Room <span class="arena-pick-badge">Real-time</span></p>
+          <div class="arena-live-options">
+            <div class="arena-live-row">
+              <label class="arena-live-label">Questions</label>
+              <select id="live-q-count" class="arena-live-select">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+              </select>
+              <label class="arena-live-label">Seconds/Q</label>
+              <select id="live-timer-secs" class="arena-live-select">
+                <option value="15">15s</option>
+                <option value="20" selected>20s</option>
+                <option value="30">30s</option>
+                <option value="45">45s</option>
+              </select>
+            </div>
+            <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
+          </div>
+          <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
+          <div class="arena-challenge-entry">
+            <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
+                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
+          </div>
+          <p id="live-join-error" class="arena-code-error" hidden></p>
 
           <div class="arena-picker-sep"></div>
 
