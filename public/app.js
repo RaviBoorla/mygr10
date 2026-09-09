@@ -3228,16 +3228,16 @@ const app = {
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
                 ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>
         <a class="btn small ghost" href="careers.html">Career Pathing</a>
+        ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
 
     const authUser = window.riseAuth?.user;
     const loginBtn = authUser
-      ? `<button class="hdr-avatar" title="${esc(authUser.displayName || authUser.email || 'Account')}"
-                 onclick="riseAuth.signOut()" aria-label="Sign out">
+      ? `<div class="hdr-avatar" title="${esc(authUser.displayName || authUser.email || 'Account')}">
            ${authUser.photoURL
              ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28">`
              : `<span>${esc((authUser.displayName || authUser.email || '?')[0].toUpperCase())}</span>`}
-         </button>`
+         </div>`
       : `<button class="btn small ghost hdr-signin" ${inTest ? 'disabled' : ''}
                  onclick="riseAuth.openModal()">Sign in</button>`;
 
