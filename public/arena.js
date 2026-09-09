@@ -542,9 +542,15 @@ function arenaNextStage() {
     return;
   }
 
-  const spec = stageSpec(ar.stage);
-  ar.stageQuestions = pickStageQuestions(ar.subjects, spec.diff, ar.stage);
-  ar.servedIds.push(...ar.stageQuestions.map(q => q.id));
+  if (ar._challengeQs) {
+    // Challenge run: serve the next 5 pre-determined questions
+    const start = (ar.stage - 1) * 5;
+    ar.stageQuestions = ar._challengeQs.slice(start, start + 5);
+  } else {
+    const spec = stageSpec(ar.stage);
+    ar.stageQuestions = pickStageQuestions(ar.subjects, spec.diff, ar.stage);
+    ar.servedIds.push(...ar.stageQuestions.map(q => q.id));
+  }
   ar.phase = 'question';
   saveRun();
 }
@@ -651,6 +657,17 @@ function renderArenaSetup() {
             <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
             <button class="btn ghost" onclick="app.go(['home'])">Back</button>
           </div>
+
+          <div class="arena-picker-sep"></div>
+
+          <!-- Challenge code entry -->
+          <p class="arena-pick-label">Join a Challenge</p>
+          <div class="arena-challenge-entry">
+            <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
+                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
+          </div>
+          <p id="arena-code-error" class="arena-code-error" hidden></p>
 
           <div class="arena-picker-sep"></div>
 
@@ -789,6 +806,17 @@ function renderArenaGameOver() {
     clearSavedRun();
     ar._newSkins = checkAndUnlockSkins(ar);
     ar._newCols  = checkAndUnlockCollectibles(ar);
+
+    // Challenge: submit score, then load leaderboard asynchronously
+    if (ar._challengeCode && window.riseChallenge) {
+      riseChallenge.submitChallengeResult(ar._challengeCode, {
+        score: ar.score, stage: ar.deepestStage, combo: ar.longestCombo
+      }).then(() => riseChallenge.fetchLeaderboard(ar._challengeCode))
+        .then(results => {
+          const lb = document.getElementById('arena-leaderboard-box');
+          if (lb) lb.innerHTML = renderChallengeLeaderboard(results);
+        }).catch(() => {});
+    }
   }
 
   const newBest = ar.score > (ar._prevHiBefore || 0);
@@ -849,7 +877,10 @@ function renderArenaGameOver() {
             <button class="btn ghost" onclick="app.go(['arena'])">Arena</button>
             <button class="btn ghost" onclick="app.go(['home'])">Home</button>
             <button class="btn ghost" onclick="app.go(['collection'])">🎒 Collection</button>
+            ${!ar.isDaily ? `<button class="btn ghost arena-challenge-btn" id="arena-challenge-btn" onclick="arenaCreateChallenge()">⚡ Challenge Friends</button>` : ''}
           </div>
+          <div id="arena-challenge-box" class="arena-challenge-box" hidden></div>
+          ${ar._challengeCode ? `<div id="arena-leaderboard-box" class="arena-leaderboard-box"><p class="arena-lb-loading">Loading leaderboard…</p></div>` : ''}
         </div>
         <div class="arena-go-right">
           <div class="arena-missed-section">
@@ -858,6 +889,144 @@ function renderArenaGameOver() {
           </div>
         </div>
       </div>
+    </div>`;
+}
+
+// ─── Challenge: create ───────────────────────────────────────────────────────
+async function arenaCreateChallenge() {
+  if (!window.riseChallenge) return;
+  const btn = document.getElementById('arena-challenge-btn');
+  const box = document.getElementById('arena-challenge-box');
+  if (!box) return;
+  if (btn) { btn.disabled = true; btn.textContent = 'Creating…'; }
+  try {
+    const code = await riseChallenge.createChallenge({
+      board:       ar.board,
+      grade:       ar.grade,
+      subjects:    ar.subjects,
+      questionIds: ar.servedIds.slice(),
+      score:       ar.score,
+      stage:       ar.deepestStage,
+      combo:       ar.longestCombo
+    });
+    box.hidden = false;
+    box.innerHTML = `
+      <p class="arena-challenge-label">Share this code with friends:</p>
+      <div class="arena-code-display">
+        <span class="arena-code-text">${esc(code)}</span>
+        <button class="btn small ghost" onclick="navigator.clipboard.writeText('${esc(code)}').then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})">Copy</button>
+      </div>
+      <p class="arena-challenge-note">Code expires in 7 days · friends enter it on the Arena setup screen</p>`;
+    if (btn) btn.hidden = true;
+  } catch (e) {
+    if (btn) { btn.disabled = false; btn.textContent = '⚡ Challenge Friends'; }
+    box.hidden = false;
+    box.innerHTML = `<p class="arena-code-error" style="display:block">Could not create challenge — are you online?</p>`;
+  }
+}
+
+// ─── Challenge: join ──────────────────────────────────────────────────────────
+async function arenaJoinChallenge() {
+  if (!window.riseChallenge) return;
+  const input = document.getElementById('arena-code-input');
+  const errEl = document.getElementById('arena-code-error');
+  const code  = (input?.value || '').trim().toUpperCase();
+  if (errEl) errEl.hidden = true;
+
+  if (code.length !== 6) {
+    if (errEl) { errEl.textContent = 'Enter the full 6-letter code.'; errEl.hidden = false; }
+    return;
+  }
+  try {
+    const data = await riseChallenge.loadChallenge(code);
+    // Start a run using the stored question IDs
+    await arenaBeginChallenge(data, code);
+  } catch (e) {
+    if (errEl) { errEl.textContent = e.message || 'Invalid or expired code.'; errEl.hidden = false; }
+  }
+}
+
+async function arenaBeginChallenge(data, code) {
+  // Load the banks needed for the challenge's board/grade/subjects
+  const banks = {};
+  await Promise.all(data.subjects.map(async s => {
+    try {
+      const slug = bankSlug(s, data.board, data.grade) || bankSlug('Science', data.board, data.grade);
+      if (!slug) return;
+      const qs = await loadBank(s, data.board, data.grade);
+      banks[s] = qs;
+    } catch (_) {}
+  }));
+
+  // Build ordered question list from IDs
+  const allQ = Object.values(banks).flat();
+  const byId = {};
+  allQ.forEach(q => { byId[q.id] = q; });
+  const questions = data.questionIds.map(id => byId[id]).filter(Boolean);
+  if (!questions.length) {
+    const errEl = document.getElementById('arena-code-error');
+    if (errEl) { errEl.textContent = 'Could not load challenge questions.'; errEl.hidden = false; }
+    return;
+  }
+
+  // Assign subject tag to each question
+  questions.forEach(q => {
+    if (!q._subject) {
+      const subj = data.subjects.find(s => (banks[s] || []).some(x => x.id === q.id));
+      q._subject = subj || data.subjects[0];
+    }
+  });
+
+  const hiAtStart = getHiScores();
+  ar = {
+    runId: Date.now().toString(36),
+    board: data.board,
+    grade: data.grade,
+    subjects: data.subjects,
+    stage: 1,
+    lives: ARENA_LIVES,
+    score: 0,
+    combo: 0,
+    longestCombo: 0,
+    deepestStage: 1,
+    goodStages: 0,
+    perfectStages: 0,
+    servedIds: data.questionIds.slice(),
+    startedAt: Date.now(),
+    stageStartedAt: Date.now(),
+    stageQuestions: questions.slice(0, 5),
+    stageIndex: 0,
+    stageResults: [],
+    missedQuestions: [],
+    phase: 'question',
+    _banks: banks,
+    _virtualSet: new Set(),
+    _prevHiBefore: hiAtStart.score,
+    _challengeCode: code,   // track so we can submit score on game-over
+    _challengeQs: questions // full ordered list for stage serving
+  };
+  saveRun();
+  app.go(['arena-run'], true);
+}
+
+// ─── Challenge: render leaderboard ──────────────────────────────────────────
+function renderChallengeLeaderboard(results) {
+  if (!results || !results.length) return '';
+  const rows = results.map((r, i) => `
+    <tr class="${i === 0 ? 'arena-lb-top' : ''}">
+      <td>${i + 1}</td>
+      <td>${esc(r.screenName)}</td>
+      <td>${r.score.toLocaleString()}</td>
+      <td>Stage ${r.stage}</td>
+      <td>${r.combo}×</td>
+    </tr>`).join('');
+  return `
+    <div class="arena-leaderboard">
+      <h3 class="arena-lb-title">⚡ Challenge Leaderboard</h3>
+      <table class="arena-lb-table">
+        <thead><tr><th>#</th><th>Player</th><th>Score</th><th>Stage</th><th>Combo</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
     </div>`;
 }
 
