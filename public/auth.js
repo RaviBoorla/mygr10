@@ -109,9 +109,58 @@ const SYNC_KEYS = {
 
   // ── Public sync API (called by app.js after each graded submit) ──────────────
   window.riseSync = {
-    // Call after any graded attempt, bookmark change, or SA self-mark
     push: pushToCloud
   };
+
+  // ── Profile (nickname, country, city) ────────────────────────────────────────
+  let _profile = { nickname: '', country: '', city: '' };
+
+  function profileDoc() {
+    return db.collection('users').doc(currentUser.uid).collection('sync').doc('profile');
+  }
+
+  async function loadProfile() {
+    try {
+      const snap = await profileDoc().get();
+      if (snap.exists) _profile = { nickname: '', country: '', city: '', ...snap.data() };
+    } catch (_) {}
+  }
+
+  async function saveProfile(nickname, country, city) {
+    _profile = { nickname, country, city };
+    try { await profileDoc().set(_profile); } catch (_) {}
+  }
+
+  // ── Profile modal ─────────────────────────────────────────────────────────────
+  const PROFILE_MODAL_ID = 'rise-profile-modal';
+
+  function injectProfileModal() {
+    if (document.getElementById(PROFILE_MODAL_ID)) return;
+    const el = document.createElement('div');
+    el.id = PROFILE_MODAL_ID;
+    el.setAttribute('hidden', '');
+    el.innerHTML = `
+      <div class="auth-backdrop" onclick="riseAuth.closeProfile()"></div>
+      <div class="auth-dialog" role="dialog" aria-modal="true" aria-label="Your profile">
+        <button class="auth-close" onclick="riseAuth.closeProfile()" aria-label="Close">&times;</button>
+        <h2 class="auth-title">Your Profile</h2>
+        <p class="auth-sub">Used in Arena group mode to identify you to other players.</p>
+        <form onsubmit="riseAuth._saveProfile(event)" class="auth-form">
+          <label class="auth-label">Screen Name
+            <input id="profile-nickname" type="text" maxlength="30" placeholder="e.g. StarStudent42" autocomplete="off">
+          </label>
+          <label class="auth-label">Country
+            <input id="profile-country" type="text" maxlength="50" placeholder="e.g. India" autocomplete="off">
+          </label>
+          <label class="auth-label">City
+            <input id="profile-city" type="text" maxlength="50" placeholder="e.g. Mumbai" autocomplete="off">
+          </label>
+          <button type="submit" class="btn primary" style="width:100%">Save</button>
+        </form>
+        <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
+      </div>`;
+    document.body.appendChild(el);
+  }
 
   // ── Modal markup ─────────────────────────────────────────────────────────────
   const MODAL_ID = 'rise-auth-modal';
@@ -241,9 +290,36 @@ const SYNC_KEYS = {
       }
     },
 
+    openProfile() {
+      injectProfileModal();
+      document.getElementById('profile-nickname').value = _profile.nickname || '';
+      document.getElementById('profile-country').value  = _profile.country  || '';
+      document.getElementById('profile-city').value     = _profile.city     || '';
+      const msg = document.getElementById('profile-msg');
+      if (msg) msg.hidden = true;
+      document.getElementById(PROFILE_MODAL_ID).hidden = false;
+    },
+
+    closeProfile() {
+      const m = document.getElementById(PROFILE_MODAL_ID);
+      if (m) m.hidden = true;
+    },
+
+    async _saveProfile(e) {
+      e.preventDefault();
+      const nickname = document.getElementById('profile-nickname').value.trim();
+      const country  = document.getElementById('profile-country').value.trim();
+      const city     = document.getElementById('profile-city').value.trim();
+      await saveProfile(nickname, country, city);
+      const msg = document.getElementById('profile-msg');
+      if (msg) { msg.textContent = 'Saved!'; msg.hidden = false; }
+      setTimeout(() => this.closeProfile(), 800);
+    },
+
     async signOut() {
       if (currentUser) await pushToCloud(); // final push before signing out
       stopLiveListener();
+      _profile = { nickname: '', country: '', city: '' };
       await fbAuth.signOut();
     }
   };
@@ -252,9 +328,9 @@ const SYNC_KEYS = {
   fbAuth.onAuthStateChanged(async user => {
     currentUser = user || null;
     if (user) {
-      // Pull cloud → local (merge), then push local → cloud, then start live listener
       await pullFromCloud();
       await pushToCloud();
+      await loadProfile();
       startLiveListener();
     } else {
       stopLiveListener();

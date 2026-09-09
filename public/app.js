@@ -3233,11 +3233,11 @@ const app = {
 
     const authUser = window.riseAuth?.user;
     const loginBtn = authUser
-      ? `<div class="hdr-avatar" title="${esc(authUser.displayName || authUser.email || 'Account')}">
+      ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
            ${authUser.photoURL
              ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28">`
              : `<span>${esc((authUser.displayName || authUser.email || '?')[0].toUpperCase())}</span>`}
-         </div>`
+         </button>`
       : `<button class="btn small ghost hdr-signin" ${inTest ? 'disabled' : ''}
                  onclick="riseAuth.openModal()">Sign in</button>`;
 
