@@ -3124,6 +3124,12 @@ const app = {
     this.autoNext = LS.get(KEY.autoNext, true);
     window.addEventListener('hashchange', () => this.render());
     document.addEventListener('keydown', e => this.onKey(e));
+    document.addEventListener('click', e => {
+      if (state.mobileMenuOpen && !e.target.closest('.hdr-menu') && !e.target.closest('.hdr-hamburger')) {
+        state.mobileMenuOpen = false;
+        this.render();
+      }
+    });
     if (!location.hash && state.board) this.go(['home'], true);
     this.render();
   },
