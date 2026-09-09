@@ -3230,10 +3230,21 @@ const app = {
         <a class="btn small ghost" href="careers.html">Career Pathing</a>
       </div>`;
 
+    const authUser = window.riseAuth?.user;
+    const loginBtn = authUser
+      ? `<button class="hdr-avatar" title="${esc(authUser.displayName || authUser.email || 'Account')}"
+                 onclick="riseAuth.signOut()" aria-label="Sign out">
+           ${authUser.photoURL
+             ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28">`
+             : `<span>${esc((authUser.displayName || authUser.email || '?')[0].toUpperCase())}</span>`}
+         </button>`
+      : `<button class="btn small ghost hdr-signin" ${inTest ? 'disabled' : ''}
+                 onclick="riseAuth.openModal()">Sign in</button>`;
+
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}${crumb}</div>
-        <div class="hdr-right">${hamburgerBtn}</div>
+        <div class="hdr-right">${loginBtn}${hamburgerBtn}</div>
         ${menu}
       </header>`;
   },
