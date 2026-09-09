@@ -41,6 +41,10 @@ All grading, progress, bookmarks, and streaks are computed client-side and
 persisted to `localStorage`, keyed per `grade::board` so different
 grade/board combinations don't share progress.
 
+## Branching
+
+Always commit and push directly to `main`. Never push to a feature branch.
+
 ## Working conventions
 
 - No build step, no bundler, no framework — plain HTML/CSS/JS. Keep new code
