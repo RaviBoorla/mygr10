@@ -137,6 +137,7 @@ const SYNC_KEYS = {
           </label>
           <label class="auth-label">Password
             <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="8">
+            <span id="auth-pw-hint" class="auth-pw-hint" hidden>Min 8 chars · uppercase · lowercase · number · special character</span>
           </label>
           <button type="submit" id="auth-email-btn" class="btn primary" style="width:100%">Sign in</button>
         </form>
@@ -187,10 +188,12 @@ const SYNC_KEYS = {
     _emailMode(mode) {
       _emailSignup = mode === 'signup';
       document.querySelectorAll('.auth-sub-tab').forEach((t, i) => t.classList.toggle('active', _emailSignup ? i === 1 : i === 0));
-      const btn = document.getElementById('auth-email-btn');
-      const pw  = document.getElementById('auth-pw-input');
-      if (btn) btn.textContent = _emailSignup ? 'Create account' : 'Sign in';
-      if (pw)  pw.setAttribute('autocomplete', _emailSignup ? 'new-password' : 'current-password');
+      const btn  = document.getElementById('auth-email-btn');
+      const pw   = document.getElementById('auth-pw-input');
+      const hint = document.getElementById('auth-pw-hint');
+      if (btn)  btn.textContent = _emailSignup ? 'Create account' : 'Sign in';
+      if (pw)   pw.setAttribute('autocomplete', _emailSignup ? 'new-password' : 'current-password');
+      if (hint) hint.hidden = !_emailSignup;
       showError('');
     },
 
