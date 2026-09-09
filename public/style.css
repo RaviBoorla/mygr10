@@ -1104,8 +1104,15 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 
 .auth-panel { display: flex; flex-direction: column; gap: 10px; }
 .auth-google-btn {
-  display: flex; align-items: center; justify-content: center; gap: 10px;
-  width: 100%; padding: 10px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%;
+}
+.auth-divider {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--text-light); font-size: var(--fs-sm);
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
 }
 
 .auth-sub-tabs { display: flex; gap: 8px; }

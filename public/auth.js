@@ -125,42 +125,35 @@ const SYNC_KEYS = {
       <div class="auth-backdrop" onclick="riseAuth.closeModal()"></div>
       <div class="auth-dialog" role="dialog" aria-modal="true" aria-label="Sign in to Rise">
         <button class="auth-close" onclick="riseAuth.closeModal()" aria-label="Close">&times;</button>
-        <h2 class="auth-title">Sign in to Rise</h2>
-        <p class="auth-sub">Your progress, bookmarks, and streaks sync across devices when you're signed in.</p>
 
-        <div class="auth-tabs">
-          <button class="auth-tab active" data-tab="google" onclick="riseAuth._tab('google')">Google</button>
-          <button class="auth-tab" data-tab="email"  onclick="riseAuth._tab('email')">Email</button>
+        <div class="auth-sub-tabs">
+          <button class="auth-sub-tab active" onclick="riseAuth._emailMode('signin')">Sign in</button>
+          <button class="auth-sub-tab" onclick="riseAuth._emailMode('signup')">Create account</button>
         </div>
 
-        <div id="auth-panel-google" class="auth-panel">
-          <button class="btn primary auth-google-btn" onclick="riseAuth._googleSignIn()">
-            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-              <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/>
-              <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/>
-              <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
-              <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"/>
-            </svg>
-            Continue with Google
-          </button>
-        </div>
+        <form onsubmit="riseAuth._emailSubmit(event)" class="auth-form">
+          <label class="auth-label">Email
+            <input id="auth-email-input" type="email" autocomplete="email" required placeholder="you@example.com">
+          </label>
+          <label class="auth-label">Password
+            <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="6">
+          </label>
+          <button type="submit" id="auth-email-btn" class="btn primary" style="width:100%">Sign in</button>
+        </form>
 
-        <div id="auth-panel-email" class="auth-panel" hidden>
-          <div id="auth-email-tabs" class="auth-sub-tabs">
-            <button class="auth-sub-tab active" onclick="riseAuth._emailMode('signin')">Sign in</button>
-            <button class="auth-sub-tab" onclick="riseAuth._emailMode('signup')">Create account</button>
-          </div>
-          <form onsubmit="riseAuth._emailSubmit(event)" class="auth-form">
-            <label class="auth-label">Email
-              <input id="auth-email-input" type="email" autocomplete="email" required placeholder="you@example.com">
-            </label>
-            <label class="auth-label">Password
-              <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="6">
-            </label>
-            <button type="submit" id="auth-email-btn" class="btn primary" style="width:100%">Sign in</button>
-          </form>
-          <button class="auth-reset-link" onclick="riseAuth._resetPassword()">Forgot password?</button>
-        </div>
+        <button class="auth-reset-link" onclick="riseAuth._resetPassword()">Forgot password?</button>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <button class="btn ghost auth-google-btn" onclick="riseAuth._googleSignIn()">
+          <svg width="16" height="16" viewBox="0 0 18 18" aria-hidden="true">
+            <path fill="#4285F4" d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"/>
+            <path fill="#34A853" d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 0 0 9 18z"/>
+            <path fill="#FBBC05" d="M3.964 10.71A5.41 5.41 0 0 1 3.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 0 0 0 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"/>
+            <path fill="#EA4335" d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 0 0 .957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"/>
+          </svg>
+          Sign in with Google
+        </button>
 
         <p id="auth-error" class="auth-error" hidden></p>
       </div>`;
@@ -191,13 +184,6 @@ const SYNC_KEYS = {
       if (m) m.hidden = true;
     },
 
-    _tab(name) {
-      document.querySelectorAll('.auth-tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
-      document.getElementById('auth-panel-google').hidden = name !== 'google';
-      document.getElementById('auth-panel-email').hidden  = name !== 'email';
-      showError('');
-    },
-
     _emailMode(mode) {
       _emailSignup = mode === 'signup';
       document.querySelectorAll('.auth-sub-tab').forEach((t, i) => t.classList.toggle('active', _emailSignup ? i === 1 : i === 0));
@@ -207,6 +193,7 @@ const SYNC_KEYS = {
       if (pw)  pw.setAttribute('autocomplete', _emailSignup ? 'new-password' : 'current-password');
       showError('');
     },
+
 
     async _googleSignIn() {
       showError('');
