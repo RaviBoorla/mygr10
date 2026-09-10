@@ -255,10 +255,10 @@ const app = {
         <h1 class="legal-title">Privacy Policy</h1>
         <p class="legal-updated">Last updated: September 2026</p>
         <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE and ICSE board-exam students. This policy explains what happens to your data when you use it.</p>
-        <h2>No account, no personal data collection</h2>
-        <p>Rise does not require sign-up or login, and does not ask for your name, email, or any other personal information.</p>
+        <h2>Optional sign-in</h2>
+        <p>Rise does not require sign-up or login. An optional "Sign in with Google" feature is available solely to back up and sync your progress across your own devices. If you choose to sign in, Google provides your name and email address so the app can identify your backup — no other personal data is collected or stored by us. You can use Rise fully without signing in.</p>
         <h2>Everything stays on your device</h2>
-        <p>Your progress, test attempts, bookmarks, streaks, and settings are stored only in your browser's or app's local storage, directly on your device. This data is never transmitted to, or stored on, any server we operate. Uninstalling the app or clearing site data permanently deletes it, since no copy exists anywhere else.</p>
+        <p>Your progress, test attempts, bookmarks, streaks, and settings are stored in your browser's local storage on your device. If you use optional sign-in, a copy is also synced to cloud storage tied to your account so you can restore it on another device. Signing out or clearing site data removes the local copy; deleting your account removes the cloud copy.</p>
         <h2>Question content</h2>
         <p>The app downloads question-bank content (practice questions, answers, explanations) from our servers so it can display them. These are static content files — no information about you or your device is attached to these requests beyond what any standard web request includes (e.g. IP address, handled transiently by our hosting provider and not linked to any profile).</p>
         <h2>No advertising, no analytics trackers, no third-party sharing</h2>
@@ -266,7 +266,7 @@ const app = {
         <h2>Children's privacy</h2>
         <p>Rise is designed for use by school students. Since no personal data is collected or transmitted, no personal data about children is gathered by this app.</p>
         <h2>Changes to this policy</h2>
-        <p>If this policy changes (for example, if an optional account/sync feature is introduced in the future), this page will be updated and the "Last updated" date above will change accordingly.</p>
+        <p>If this policy changes, this page will be updated and the "Last updated" date above will change accordingly.</p>
         <h2>Contact</h2>
         <p>Questions about this policy can be sent to <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
       </div>`;
@@ -281,6 +281,8 @@ const app = {
         <p>These terms govern your use of Rise, a free self-study practice tool for Grade 10 board-exam students. By using the app you agree to these terms.</p>
         <h2>Use of the app</h2>
         <p>Rise is provided for personal, non-commercial educational use. You may not copy, redistribute, or use the question content or software for commercial purposes without written permission.</p>
+        <h2>Optional sign-in</h2>
+        <p>Rise offers an optional "Sign in with Google" feature to sync your progress across devices. Sign-in is never required to use the app. By signing in you agree that your email address may be stored to identify your backup data, and that data may be synced to cloud storage. You may sign out or request deletion of your cloud data at any time by contacting us.</p>
         <h2>Content accuracy</h2>
         <p>Practice questions and explanations are authored for study purposes. While we take care to ensure accuracy, Rise is a revision aid and not a substitute for your school curriculum, textbooks, or official board guidance. Always verify important information with your teacher or official sources.</p>
         <h2>No warranty</h2>
