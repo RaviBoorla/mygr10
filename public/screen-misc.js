@@ -16,10 +16,10 @@ Object.assign(app, {
               </svg>
               <span>Rise</span>
             </div>
-            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free, no login.</p>
+            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free. Sign-in optional.</p>
             <ul class="welcome-features">
               <li><span class="wf-icon">📝</span><div><strong>Mock tests</strong><span>Timed chapter &amp; full-paper MCQ mocks with instant scoring</span></div></li>
-              <li><span class="wf-icon">⚡</span><div><strong>Arena</strong><span>Fast-paced blitz mode — beat the clock, build combos, earn points</span></div></li>
+              <li><span class="wf-icon">⚡</span><div><strong>Arena</strong><span>Solo blitz &amp; live challenge rooms — beat the clock, build combos, race friends</span></div></li>
               <li><span class="wf-icon">✏️</span><div><strong>Short answers</strong><span>Board-style VSA &amp; SA questions with model answers</span></div></li>
               <li><span class="wf-icon">📖</span><div><strong>Solved exercises</strong><span>Textbook questions worked step-by-step</span></div></li>
               <li><span class="wf-icon">🗒️</span><div><strong>Revision notes</strong><span>Key formulae, theorems, logic &amp; tips per chapter</span></div></li>
