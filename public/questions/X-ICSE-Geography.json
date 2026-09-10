@@ -1,102 +1,2318 @@
 [
-  {"id":"geo001","chapter":"Map Work","difficulty":"easy","text":"Which type of scale expresses the relationship between map distance and ground distance as a fraction?","options":["Graphical scale","Representative Fraction","Verbal scale","Linear scale"],"correct":1,"explanation":"A Representative Fraction (RF) expresses map distance as a fraction of actual ground distance, e.g., 1:50,000.","whyWrong":["A graphical scale is a line marked with distances, read with a ruler — not a fraction.","","A verbal scale states the relationship in words (e.g., '1 cm to 1 km'), not as a numerical fraction.","A linear scale is a graduated straight line for measuring distances, not a fractional ratio."],"priority":true},
-  {"id":"geo002","chapter":"Map Work","difficulty":"easy","text":"On a topographical map, contour lines that are close together indicate:","options":["Gentle slope","Flat terrain","Steep slope","Depression"],"correct":2,"explanation":"Closely spaced contour lines indicate a steep slope because elevation changes rapidly over a short horizontal distance.","whyWrong":["Widely spaced contours, not closely spaced ones, indicate a gentle slope.","Flat terrain has very few or no contour lines at all, since elevation barely changes.","","A depression is shown by contours with inward-pointing hachures, not simply by close spacing."],"priority":true},
-  {"id":"geo003","chapter":"Map Work","difficulty":"medium","text":"If the RF of a map is 1:25,000, what does 4 cm on the map represent on the ground?","options":["1 km","10 km","100 m","500 m"],"correct":0,"explanation":"4 cm × 25,000 = 100,000 cm = 1 km on the ground.","whyWrong":["","10 km would need an RF of about 1:250,000 — ten times smaller-scale than the given 1:25,000.","100 m is far too small — even 1 cm alone at 1:25,000 already equals 250 m.","500 m is half the actual distance: 4 cm × 25,000 = 100,000 cm = 1,000 m = 1 km, not 500 m."],"priority":true},
-  {"id":"geo004","chapter":"Map Work","difficulty":"medium","text":"A contour line with a value lower than the surrounding contours and hachures pointing inward represents a:","options":["Hill","Plateau","Depression","Valley"],"correct":2,"explanation":"A closed contour with hachures pointing inward (toward the centre) indicates a depression or hollow in the ground.","whyWrong":["A hill has hachures pointing outward with higher values at the centre — the opposite pattern.","A plateau is a flat-topped elevated area with widely spaced contours at the top, not a closed lower ring.","","A valley is shown by 'V'-shaped contours pointing upstream, not a closed depression symbol."],"priority":true},
-  {"id":"geo005","chapter":"Map Work","difficulty":"hard","text":"The difference in elevation between two successive contour lines is called the:","options":["Vertical interval","Horizontal equivalent","Scale interval","Contour gradient"],"correct":0,"explanation":"The Vertical Interval (VI) is the constant difference in elevation between consecutive contour lines on a topographic map.","whyWrong":["","Horizontal equivalent is the ground distance between two contours — a horizontal measure, not a height difference.","'Scale interval' isn't a standard cartographic term for this idea.","Gradient describes steepness (height difference over horizontal distance), not the height difference alone."],"priority":true},
-  {"id":"geo006","chapter":"Map Work","difficulty":"easy","text":"The blue colour on a Survey of India topographical map represents:","options":["Forests","Water bodies","Roads","Relief features"],"correct":1,"explanation":"Blue is the conventional colour used for water bodies such as rivers, lakes, and canals on Survey of India maps.","whyWrong":["Forests and vegetation are conventionally shown in green, not blue.","","Roads are typically shown in black or red, not blue.","Relief (contours and hills) is shown in brown, not blue."],"priority":true},
-  {"id":"geo007","chapter":"Map Work","difficulty":"medium","text":"A 'V'-shaped contour pattern pointing upstream indicates:","options":["A hill spur","A valley or river course","A cliff","A plateau"],"correct":1,"explanation":"Contours forming a 'V' that points upstream (toward higher elevation) indicate a valley or the course of a stream.","whyWrong":["A spur's contours bulge outward toward lower ground — the opposite of a valley's inward-pointing V.","","A cliff is shown by contours crowded very close together or touching, not a V-shaped bend.","A plateau shows widely spaced contours around a flat elevated top, not a narrow V."],"priority":true},
-  {"id":"geo008","chapter":"Map Work","difficulty":"hard","text":"On a 1:50,000 Survey of India map, the grid squares are each:","options":["1 km × 1 km","2 km × 2 km","500 m × 500 m","5 km × 5 km"],"correct":0,"explanation":"Standard SOI 1:50,000 maps use a 2 cm grid, which at that scale represents 1 km × 1 km on the ground.","whyWrong":["","2 km × 2 km squares belong to a smaller-scale map, not the standard 1:50,000 sheet.","500 m × 500 m squares are finer than the standard SOI grid interval at this scale.","5 km × 5 km squares belong to a much smaller-scale map, not 1:50,000."],"priority":true},
-  {"id":"geo009","chapter":"Physical Features of India","difficulty":"easy","text":"The Western Ghats are also known as:","options":["Sahyadris","Vindhyas","Aravallis","Satpuras"],"correct":0,"explanation":"The Western Ghats running along India's west coast are locally known as Sahyadri Mountains.","priority":true},
-  {"id":"geo010","chapter":"Physical Features of India","difficulty":"easy","text":"The Deccan Plateau is bounded on the east by:","options":["Western Ghats","Eastern Ghats","Vindhya Range","Satpura Range"],"correct":1,"explanation":"The Eastern Ghats form the eastern boundary of the Deccan Plateau, bordering the Coromandel Coast.","priority":true},
-  {"id":"geo011","chapter":"Physical Features of India","difficulty":"medium","text":"The Terai region is a characteristic feature of:","options":["The Western Ghats foothills","The northern plains near the Himalayas","The Deccan Plateau","The Thar Desert"],"correct":1,"explanation":"The Terai is a belt of marshy, forested lowland along the southern edge of the Himalayan foothills in the northern plains.","priority":true},
-  {"id":"geo012","chapter":"Physical Features of India","difficulty":"medium","text":"Which of the following rivers flows through the Deccan trap region?","options":["Ganga","Brahmaputra","Godavari","Beas"],"correct":2,"explanation":"The Godavari flows through the Deccan trap (basaltic lava) region in peninsular India, draining much of the Maharashtra plateau.","priority":true},
-  {"id":"geo013","chapter":"Physical Features of India","difficulty":"hard","text":"The Bhabar zone is characterised by:","options":["Fine alluvial deposits","Coarse pebbles and boulders through which streams disappear underground","Waterlogged marshy land","Sandy desert terrain"],"correct":1,"explanation":"Bhabar is a narrow zone at the foothills of Himalayas where rivers deposit coarse pebbles and streams sink underground due to high porosity.","priority":true},
-  {"id":"geo014","chapter":"Physical Features of India","difficulty":"easy","text":"The Lakshadweep Islands are composed of:","options":["Volcanic rocks","Coral reefs","Granite","Limestone"],"correct":1,"explanation":"Lakshadweep Islands are coral islands formed by the accumulation of coral reefs in the Arabian Sea.","priority":true},
-  {"id":"geo015","chapter":"Physical Features of India","difficulty":"medium","text":"Barchans are a type of:","options":["Coastal landform","Glacial deposit","Crescent-shaped sand dune","Erosional feature in rivers"],"correct":2,"explanation":"Barchans are crescent-shaped sand dunes with the horns pointing in the direction of wind movement, common in the Thar Desert.","priority":true},
-  {"id":"geo016","chapter":"Physical Features of India","difficulty":"hard","text":"The eastern coastal plain is also called the:","options":["Malabar Coast","Coromandel Coast","Konkan Coast","Canara Coast"],"correct":1,"explanation":"The eastern coastal plain, especially between Chennai and Rajahmundry, is known as the Coromandel Coast.","priority":true},
-  {"id":"geo017","chapter":"Climate","difficulty":"easy","text":"The monsoon season in India is caused primarily by:","options":["The rotation of the Earth","Differential heating of land and sea","Ocean currents","High-pressure systems over oceans"],"correct":1,"explanation":"Monsoons arise from the differential heating between the Indian subcontinent and the surrounding oceans, creating seasonal pressure differences that drive wind reversal.","priority":true},
-  {"id":"geo018","chapter":"Climate","difficulty":"easy","text":"Which region of India receives the highest annual rainfall?","options":["Rajasthan","Mawsynram, Meghalaya","Chennai","Mumbai"],"correct":1,"explanation":"Mawsynram in Meghalaya receives the world's highest average annual rainfall, due to orographic uplift of moist Bay of Bengal winds.","priority":true},
-  {"id":"geo019","chapter":"Climate","difficulty":"medium","text":"The 'October Heat' in India refers to:","options":["High temperatures in October due to clear skies after the withdrawal of the South-West monsoon","Onset of the North-East monsoon","Cyclonic storms in the Bay of Bengal","Cold wave from the north-west"],"correct":0,"explanation":"After the South-West monsoon withdraws in October, clear skies and high humidity combine to produce oppressive heat, called 'October Heat.'","priority":true},
-  {"id":"geo020","chapter":"Climate","difficulty":"medium","text":"The Western Disturbances that cause winter rainfall in north-west India originate from:","options":["The Bay of Bengal","The Arabian Sea","The Mediterranean Sea","The Indian Ocean"],"correct":2,"explanation":"Western Disturbances are extra-tropical cyclones that originate over the Mediterranean Sea and travel east to bring winter rains to north-west India.","priority":true},
-  {"id":"geo021","chapter":"Climate","difficulty":"hard","text":"The 'burst of monsoon' is characterised by:","options":["A gradual increase in rainfall over several weeks","A sudden onset of heavy rain with strong winds along the Kerala coast around June 1","Light drizzle over the Deccan Plateau","Dry westerly winds replacing the monsoon"],"correct":1,"explanation":"The burst of monsoon refers to the sudden, dramatic onset of the South-West monsoon along the Kerala coast, usually around June 1, with thunder, lightning, and heavy rain.","priority":true},
-  {"id":"geo022","chapter":"Climate","difficulty":"medium","text":"Loo is a:","options":["Cold, moist wind in winter","Hot, dry, dust-laden wind in summer in north India","Moist sea breeze along the western coast","Cold wind descending from the Himalayas"],"correct":1,"explanation":"Loo is a hot, dry, and dust-laden local wind that blows during summer afternoons over the plains of Punjab, Haryana, and UP.","priority":true},
-  {"id":"geo023","chapter":"Climate","difficulty":"easy","text":"Chennai receives most of its rainfall during:","options":["South-West Monsoon (June–September)","North-East Monsoon (October–December)","Winter (January–February)","Spring (March–April)"],"correct":1,"explanation":"Chennai lies on the leeward side of the Western Ghats and receives most of its rainfall during the retreating (North-East) monsoon from October to December.","priority":true},
-  {"id":"geo024","chapter":"Soils","difficulty":"easy","text":"Which type of soil is most suitable for growing cotton?","options":["Red soil","Alluvial soil","Black soil (Regur)","Laterite soil"],"correct":2,"explanation":"Black soil (Regur/cotton soil) has high clay content, retains moisture well, and is rich in calcium and magnesium — ideal for cotton cultivation.","priority":true},
-  {"id":"geo025","chapter":"Soils","difficulty":"easy","text":"Laterite soils are formed due to:","options":["Deposition by rivers","Intense leaching in regions of heavy rainfall","Volcanic activity","Wind deposition"],"correct":1,"explanation":"Laterite soils are formed by intense leaching of silica and other soluble minerals in hot, wet tropical regions, leaving behind iron and aluminium oxides.","priority":true},
-  {"id":"geo026","chapter":"Soils","difficulty":"medium","text":"Alluvial soils in the Indo-Gangetic Plain are divided into Bhangar and Khadar. Khadar is:","options":["Older alluvium found on higher terraces","Newer alluvium deposited in floodplains, more fertile","Rocky soil with low moisture","Sandy desert soil"],"correct":1,"explanation":"Khadar is newer, finer alluvium deposited in floodplains and river valleys, renewed annually by floods and very fertile for agriculture.","priority":true},
-  {"id":"geo027","chapter":"Soils","difficulty":"medium","text":"Which soil type is deficient in nitrogen, phosphate, and humus but rich in potash?","options":["Alluvial soil","Red soil","Black soil","Laterite soil"],"correct":2,"explanation":"Black soil is rich in lime, iron, magnesia, and potash but deficient in nitrogen, phosphoric acid, and organic matter.","priority":true},
-  {"id":"geo028","chapter":"Soils","difficulty":"hard","text":"Soil erosion caused by the action of wind is more common in:","options":["Coastal regions","Himalayan foothills","Arid and semi-arid regions","Tropical rainforests"],"correct":2,"explanation":"Wind erosion (aeolian erosion) is dominant in arid and semi-arid regions like Rajasthan, where sparse vegetation and dry soil make it easy for wind to remove topsoil.","priority":true},
-  {"id":"geo029","chapter":"Soils","difficulty":"easy","text":"The method of ploughing along the contours of a hillside to reduce soil erosion is called:","options":["Strip cropping","Contour ploughing","Terrace farming","Mulching"],"correct":1,"explanation":"Contour ploughing involves tilling along elevation contour lines, creating ridges that slow water run-off and reduce soil erosion on slopes.","priority":true},
-  {"id":"geo030","chapter":"Natural Vegetation","difficulty":"easy","text":"Tropical Evergreen Forests in India are found in regions receiving an annual rainfall of more than:","options":["50 cm","100 cm","200 cm","400 cm"],"correct":2,"explanation":"Tropical Evergreen Forests require heavy rainfall above 200 cm annually, and are found in the Western Ghats, Andaman & Nicobar Islands, and northeast India.","priority":true},
-  {"id":"geo031","chapter":"Natural Vegetation","difficulty":"easy","text":"Which forest type sheds its leaves during the dry season?","options":["Tropical Evergreen Forest","Tropical Deciduous Forest","Mangrove Forest","Temperate Forest"],"correct":1,"explanation":"Tropical Deciduous Forests (also called Monsoon Forests) shed their leaves during the dry season to conserve water, hence the name 'deciduous.'","priority":true},
-  {"id":"geo032","chapter":"Natural Vegetation","difficulty":"medium","text":"Mangrove forests in India are mainly found in:","options":["The Thar Desert","The Sundarbans delta of West Bengal","The Himalayan foothills","The Deccan Plateau"],"correct":1,"explanation":"The Sundarbans in the Ganga-Brahmaputra delta of West Bengal is the world's largest mangrove forest, adapted to tidal saline conditions.","priority":true},
-  {"id":"geo033","chapter":"Natural Vegetation","difficulty":"medium","text":"The Shola forests are a type of:","options":["Tropical dry deciduous forest","Montane temperate forest found in the high ranges of Western Ghats","Thorn scrub forest","Alpine vegetation"],"correct":1,"explanation":"Shola forests are a unique type of montane tropical cloud forest found in valleys of the high-altitude Western Ghats, typically above 1500 m.","priority":true},
-  {"id":"geo034","chapter":"Natural Vegetation","difficulty":"hard","text":"Which of the following trees is predominantly found in the Tropical Moist Deciduous Forests and is valuable for its timber?","options":["Ebony","Teak","Deodar","Sundri"],"correct":1,"explanation":"Teak (Tectona grandis) is the most commercially valuable timber tree found in tropical moist deciduous forests of MP, Maharashtra, and Karnataka.","priority":true},
-  {"id":"geo035","chapter":"Water Resources","difficulty":"easy","text":"The highest waterfall in India is:","options":["Jog Falls","Chitrakote Falls","Kunchikal Falls","Dudhsagar Falls"],"correct":2,"explanation":"Kunchikal Falls on the Varahi River in Karnataka is the highest waterfall in India at about 455 m.","priority":true},
-  {"id":"geo036","chapter":"Water Resources","difficulty":"easy","text":"Drip irrigation is most useful for:","options":["Wet paddy cultivation","Water-scarce regions and row crops like sugarcane and cotton","Flood-prone areas","Winter wheat cultivation"],"correct":1,"explanation":"Drip irrigation delivers water directly to plant roots with minimal evaporation loss, making it ideal for water-scarce areas and crops like sugarcane, cotton, and vegetables.","priority":true},
-  {"id":"geo037","chapter":"Water Resources","difficulty":"medium","text":"The Tehri Dam, one of the tallest in India, is built across which river?","options":["Ganga","Yamuna","Bhagirathi","Alaknanda"],"correct":2,"explanation":"The Tehri Dam is built across the Bhagirathi River in Uttarakhand and is among the tallest dams in the world.","priority":true},
-  {"id":"geo038","chapter":"Water Resources","difficulty":"medium","text":"Groundwater recharge can be enhanced by:","options":["Increasing surface run-off","Constructing check dams and bunds","Deforestation","Draining wetlands"],"correct":1,"explanation":"Check dams and bunds slow water flow, allowing it to percolate into the ground and recharge aquifers, increasing groundwater availability.","priority":true},
-  {"id":"geo039","chapter":"Water Resources","difficulty":"hard","text":"The Indira Gandhi Canal (Rajasthan Canal) draws water from:","options":["The Chambal River","The Harike Barrage on the Sutlej River","The Ravi River","The Beas River"],"correct":1,"explanation":"The Indira Gandhi Canal originates at the Harike Barrage, where the Beas meets the Sutlej, and carries water to the arid Thar Desert regions of Rajasthan.","priority":true},
-  {"id":"geo040","chapter":"Mineral Resources","difficulty":"easy","text":"Jharkhand is the leading producer of which mineral in India?","options":["Coal","Copper","Iron Ore","Bauxite"],"correct":0,"explanation":"Jharkhand (Damodar Valley region) is the largest producer of coal in India, accounting for over a quarter of India's coal output.","priority":true},
-  {"id":"geo041","chapter":"Mineral Resources","difficulty":"easy","text":"Mica is mainly found in which state of India?","options":["Goa","Rajasthan & Jharkhand","Kerala","Punjab"],"correct":1,"explanation":"Rajasthan and Jharkhand are the largest producers of mica in India, which is used extensively in the electrical industry.","priority":true},
-  {"id":"geo042","chapter":"Mineral Resources","difficulty":"medium","text":"The Kudremukh iron ore deposit is located in:","options":["Odisha","Goa","Karnataka","Chhattisgarh"],"correct":2,"explanation":"The Kudremukh deposit in the Western Ghats of Karnataka is one of India's largest iron ore deposits, though mining has been restricted due to environmental concerns.","priority":true},
-  {"id":"geo043","chapter":"Mineral Resources","difficulty":"medium","text":"Petroleum in India is mainly extracted from:","options":["Rajasthan and Assam","Punjab and Haryana","Uttar Pradesh and Bihar","Tamil Nadu and Kerala"],"correct":0,"explanation":"Major oil-producing regions in India include the Bombay High offshore field, and onshore fields in Assam (Digboi) and Rajasthan (Barmer).","priority":true},
-  {"id":"geo044","chapter":"Mineral Resources","difficulty":"hard","text":"Which mineral is essential for the nuclear power programme and is found in Kerala's beaches?","options":["Uranium","Thorium (monazite sand)","Beryllium","Zirconium"],"correct":1,"explanation":"Kerala's coastal sands, particularly at Chavara and Manavalakurichi, contain monazite which is rich in thorium — a key fuel for India's three-stage nuclear power programme.","priority":true},
-  {"id":"geo045","chapter":"Energy Resources","difficulty":"easy","text":"India's largest solar power plant (by installed capacity) is located in:","options":["Rajasthan","Gujarat","Tamil Nadu","Telangana"],"correct":0,"explanation":"Rajasthan, with its vast desert land and high solar irradiation, hosts several of India's largest solar parks including Bhadla Solar Park — the world's largest.","priority":true},
-  {"id":"geo046","chapter":"Energy Resources","difficulty":"easy","text":"Hydroelectric power in India is mainly generated in:","options":["Peninsular rivers only","Himalayan and peninsular river regions","Coastal regions","The Thar Desert"],"correct":1,"explanation":"Both Himalayan rivers (fast-flowing, large volume) and peninsular rivers (plateau rivers with waterfalls) contribute to India's hydroelectric power generation.","priority":true},
-  {"id":"geo047","chapter":"Energy Resources","difficulty":"medium","text":"The Tarapur Atomic Power Station is located in:","options":["Gujarat","Maharashtra","Rajasthan","Uttar Pradesh"],"correct":1,"explanation":"Tarapur in Maharashtra was India's first nuclear power station, established in 1969 and still in operation.","priority":true},
-  {"id":"geo048","chapter":"Energy Resources","difficulty":"medium","text":"Which state leads India in wind energy generation?","options":["Rajasthan","Maharashtra","Tamil Nadu","Karnataka"],"correct":2,"explanation":"Tamil Nadu has traditionally been India's top wind energy producer, with the Muppandal wind farm being among the largest in Asia.","priority":true},
-  {"id":"geo049","chapter":"Energy Resources","difficulty":"hard","text":"The Puga Valley in Ladakh is significant for:","options":["Coal deposits","Geothermal energy potential","Solar energy farms","Uranium mining"],"correct":1,"explanation":"Puga Valley in Ladakh has hot springs and geothermal activity, making it a potential site for geothermal energy development in India.","priority":true},
-  {"id":"geo050","chapter":"Agricultural Resources","difficulty":"easy","text":"The 'Green Revolution' in India was mainly associated with the introduction of High-Yielding Varieties (HYV) of:","options":["Cotton and jute","Wheat and rice","Tea and coffee","Sugarcane and maize"],"correct":1,"explanation":"The Green Revolution (1960s) introduced HYV seeds of wheat (especially in Punjab) and rice, dramatically increasing food grain production in India.","priority":true},
-  {"id":"geo051","chapter":"Agricultural Resources","difficulty":"easy","text":"Which state is the largest producer of rice in India?","options":["Punjab","West Bengal","Uttar Pradesh","Andhra Pradesh"],"correct":1,"explanation":"West Bengal leads India in rice production due to its alluvial delta soil, heavy monsoon rainfall, and double/triple cropping in the Ganga delta.","priority":true},
-  {"id":"geo052","chapter":"Agricultural Resources","difficulty":"medium","text":"Tea cultivation in India requires:","options":["Dry, sandy soil and low rainfall","Cool climate with heavy rainfall and well-drained sloping land","Waterlogged flat terrain","Hot, arid climate"],"correct":1,"explanation":"Tea needs a cool, moist climate, 150–250 cm annual rainfall, high humidity, and well-drained acid soils on slopes — conditions found in Assam and Darjeeling.","priority":true},
-  {"id":"geo053","chapter":"Agricultural Resources","difficulty":"medium","text":"Jute is mainly grown in:","options":["The Deccan Plateau","The Ganga delta and adjoining areas in West Bengal and Bangladesh","The Punjab Plains","The Konkan Coast"],"correct":1,"explanation":"Jute (the 'Golden Fibre') requires hot, humid climate and well-drained alluvial soil, making the Ganga delta and Brahmaputra valley ideal growing regions.","priority":true},
-  {"id":"geo054","chapter":"Agricultural Resources","difficulty":"hard","text":"The Blue Revolution in India is associated with:","options":["Increased milk production","Expansion of fish and aquaculture production","Growth of solar energy","Development of water conservation"],"correct":1,"explanation":"The Blue Revolution refers to rapid growth in fish production through inland and marine fisheries and aquaculture, boosting India's status as a leading fish-producing nation.","priority":true},
-  {"id":"geo055","chapter":"Agricultural Resources","difficulty":"easy","text":"Punjab and Haryana are called the 'granary of India' primarily because of their production of:","options":["Rice and jute","Wheat and rice","Sugarcane and cotton","Tea and coffee"],"correct":1,"explanation":"Punjab and Haryana produce enormous quantities of wheat and rice (from irrigated HYV cultivation), feeding much of India's food reserve stocks — hence 'granary of India.'","priority":true},
-  {"id":"geo056","chapter":"Industries","difficulty":"easy","text":"The first successful cotton textile mill in India was established in:","options":["Ahmedabad","Surat","Mumbai (Bombay)","Chennai"],"correct":2,"explanation":"India's first successful cotton textile mill was established in Mumbai (Bombay) in 1854, and the city remained the dominant centre for cotton textiles into the 20th century.","priority":true},
-  {"id":"geo057","chapter":"Industries","difficulty":"easy","text":"Jamshedpur is famous for:","options":["Cotton textiles","Iron and Steel industry","Petrochemicals","IT industry"],"correct":1,"explanation":"Jamshedpur in Jharkhand is the site of TISCO (Tata Iron and Steel Company), India's first integrated private iron and steel plant, established in 1907.","priority":true},
-  {"id":"geo058","chapter":"Industries","difficulty":"medium","text":"The Petrochemical industry in India is concentrated around:","options":["Delhi–NCR corridor","Mumbai–Vadodara–Surat corridor","Chennai–Bengaluru corridor","Kolkata–Asansol corridor"],"correct":1,"explanation":"India's petrochemical industry is concentrated in Gujarat and Maharashtra, especially around Vadodara (IPCL), Jamnagar (Reliance), and Surat, close to crude oil refineries.","priority":true},
-  {"id":"geo059","chapter":"Industries","difficulty":"medium","text":"Which factor is MOST important for the location of an iron and steel plant?","options":["Proximity to ports","Availability of coal (coking coal) and iron ore","Skilled labour","Government policy"],"correct":1,"explanation":"Iron and steel plants need huge quantities of coking coal and iron ore, making proximity to these raw materials (or transport links to them) the most critical locational factor.","priority":true},
-  {"id":"geo060","chapter":"Industries","difficulty":"hard","text":"Silicon Valley of India refers to:","options":["Mumbai","Hyderabad","Bengaluru","Pune"],"correct":2,"explanation":"Bengaluru (Bangalore) is known as India's Silicon Valley due to its large concentration of IT and software companies, driven by its skilled workforce and pleasant climate.","priority":true},
-  {"id":"geo061","chapter":"Industries","difficulty":"medium","text":"Cottage industries in India are characterised by:","options":["Large-scale mechanised production","Small-scale production using family labour with simple tools, often in homes","Centralised factory production","Export-oriented mass manufacturing"],"correct":1,"explanation":"Cottage industries involve small-scale, home-based production using family labour and simple tools, like handloom weaving, pottery, and cane work.","priority":true},
-  {"id":"geo062","chapter":"Industries","difficulty":"easy","text":"Which city is known as the 'Manchester of India'?","options":["Mumbai","Ahmedabad","Kanpur","Coimbatore"],"correct":1,"explanation":"Ahmedabad in Gujarat is called the 'Manchester of India' due to its large number of cotton textile mills and its historical dominance in the cotton textile industry.","priority":true},
-  {"id":"geo063","chapter":"Industries","difficulty":"hard","text":"Agro-based industries use agricultural produce as raw material. Which of the following is NOT an agro-based industry?","options":["Sugar industry","Cotton textile industry","Iron and steel industry","Jute industry"],"correct":2,"explanation":"Iron and steel industry uses mineral raw materials (iron ore and coal), making it a mineral-based industry, not agro-based.","priority":true},
-  {"id":"geo064","chapter":"Transport","difficulty":"easy","text":"The National Highways in India are maintained by:","options":["State governments","National Highways Authority of India (NHAI)","Railways","Ministry of Rural Development"],"correct":1,"explanation":"National Highways are built and maintained by the National Highways Authority of India (NHAI) under the central government.","priority":true},
-  {"id":"geo065","chapter":"Transport","difficulty":"easy","text":"India has the _____ largest railway network in the world.","options":["Largest","Second","Third","Fourth"],"correct":3,"explanation":"India has the fourth largest railway network in the world (after the USA, China, and Russia) in terms of route length.","priority":true},
-  {"id":"geo066","chapter":"Transport","difficulty":"medium","text":"The Konkan Railway connects:","options":["Mumbai to Goa and Mangaluru","Delhi to Amritsar","Kolkata to Chennai","Chennai to Kochi"],"correct":0,"explanation":"The Konkan Railway (760 km) runs along the Konkan coast from Roha (near Mumbai) through Goa to Mangaluru in Karnataka.","priority":true},
-  {"id":"geo067","chapter":"Transport","difficulty":"medium","text":"Which type of transport is most suitable for the movement of heavy bulk goods over long distances at low cost?","options":["Road transport","Air transport","Pipeline transport","Inland waterways / sea transport"],"correct":3,"explanation":"Sea (and inland waterway) transport is the cheapest mode for carrying heavy bulk goods like coal, iron ore, grain, and petroleum over long distances.","priority":true},
-  {"id":"geo068","chapter":"Transport","difficulty":"hard","text":"The Pradhan Mantri Gram Sadak Yojana (PMGSY) aims to:","options":["Build expressways between metro cities","Provide all-weather road connectivity to rural habitations","Construct flyovers in urban areas","Develop coastal shipping routes"],"correct":1,"explanation":"PMGSY, launched in 2000, aims to provide all-weather road connectivity to unconnected rural habitations across India.","priority":true},
-  {"id":"geo069","chapter":"Map Work","difficulty":"medium","text":"On a Survey of India map, the colour green is used to show:","options":["Cultivated land","Forests and vegetation","Water bodies","Settlements"],"correct":1,"explanation":"Green is the conventional colour for forests and vegetation on Survey of India topographical maps.","whyWrong":["Cultivated land is conventionally left uncoloured (white) on SOI maps, not shown in green.","","Water bodies are shown in blue, not green.","Settlements are shown in black, not green."],"priority":true},
-  {"id":"geo070","chapter":"Map Work","difficulty":"hard","text":"Two points on a map are 5 cm apart. If the RF is 1:100,000, what is the actual distance between them?","options":["5 km","10 km","50 km","500 m"],"correct":0,"explanation":"5 cm × 100,000 = 500,000 cm = 5 km actual distance.","whyWrong":["","10 km would need the map distance to be 10 cm at this scale, not 5 cm.","50 km would need an RF of about 1:1,000,000 — a far smaller scale than 1:100,000.","500 m is ten times too small — at 1:100,000, even 1 cm alone equals 1 km."],"priority":true},
-  {"id":"geo071","chapter":"Physical Features of India","difficulty":"medium","text":"The Karakoram Range is significant because:","options":["It is the lowest mountain range in India","It contains K2, the second highest peak in the world","It lies entirely within India","It forms the southern boundary of the Himalayas"],"correct":1,"explanation":"The Karakoram Range in the north-west contains K2 (8,611 m), the second highest mountain in the world after Everest.","priority":true},
-  {"id":"geo072","chapter":"Climate","difficulty":"medium","text":"The normal date of onset of the South-West Monsoon over Kerala is approximately:","options":["June 1","July 1","May 15","August 1"],"correct":0,"explanation":"The South-West monsoon normally arrives over the Kerala coast on June 1, signalling the start of the monsoon season across India.","priority":true},
-  {"id":"geo073","chapter":"Soils","difficulty":"medium","text":"Which soil type is typically acidic in nature and poor in fertility?","options":["Alluvial soil","Black soil","Laterite soil","Red soil"],"correct":2,"explanation":"Laterite soils are acidic (pH below 6) and poor in nutrients like nitrogen, potash, and lime due to heavy leaching in high-rainfall regions.","priority":true},
-  {"id":"geo074","chapter":"Natural Vegetation","difficulty":"medium","text":"The Sundri tree, which gives the Sundarbans its name, belongs to which forest type?","options":["Tropical Evergreen Forest","Tropical Dry Deciduous Forest","Mangrove Forest","Thorn and Scrub Forest"],"correct":2,"explanation":"The Sundri (Heritiera fomes) is the dominant tree of the Sundarbans mangrove forest in the Ganga delta, which is a tidal, saline ecosystem.","priority":true},
-  {"id":"geo075","chapter":"Water Resources","difficulty":"medium","text":"The Sardar Sarovar Dam is built on which river?","options":["Narmada","Tapi","Mahanadi","Godavari"],"correct":0,"explanation":"The Sardar Sarovar Dam is the largest dam of the Narmada Valley Project, built on the Narmada River in Gujarat.","priority":true},
-  {"id":"geo076","chapter":"Mineral Resources","difficulty":"medium","text":"Bauxite, the ore of aluminium, is mainly found in:","options":["Kerala and Tamil Nadu","Odisha, Jharkhand, and Chhattisgarh","Punjab and Haryana","Rajasthan and Gujarat"],"correct":1,"explanation":"Odisha has the largest reserves of bauxite in India; Jharkhand and Chhattisgarh also have significant deposits.","priority":true},
-  {"id":"geo077","chapter":"Energy Resources","difficulty":"medium","text":"The Bhakra Nangal Dam, one of India's highest gravity dams, is built on which river?","options":["Beas","Ravi","Sutlej","Chenab"],"correct":2,"explanation":"The Bhakra Dam is built on the Sutlej River in Himachal Pradesh. Together with Nangal Dam, it forms the Bhakra-Nangal Project.","priority":true},
-  {"id":"geo078","chapter":"Agricultural Resources","difficulty":"medium","text":"Which crop is known as the 'Black Gold' of agriculture because of its high commercial value?","options":["Cotton","Sugarcane","Coffee","Pepper (spices)"],"correct":0,"explanation":"Cotton is called 'White Gold' (not black gold); however, in many ICSE contexts, cotton is the high-value cash crop. Pepper is sometimes called black gold — but in most ICSE textbooks it is black pepper/spices.","priority":false},
-  {"id":"geo079","chapter":"Industries","difficulty":"medium","text":"Which of the following is an example of a market-oriented industry?","options":["Cement industry","Bread and bakery industry","Iron and steel industry","Aluminium smelting"],"correct":1,"explanation":"Bread and bakery industries are market-oriented — they need to be close to consumers because of perishability and daily demand, not near raw materials.","priority":true},
-  {"id":"geo080","chapter":"Transport","difficulty":"easy","text":"The largest port in India in terms of cargo handled is:","options":["Chennai Port","Nhava Sheva (JNPT)","Mumbai Port","Kolkata Port"],"correct":1,"explanation":"Jawaharlal Nehru Port Trust (JNPT) at Nhava Sheva near Mumbai is India's largest container port handling the most cargo.","priority":true},
-  {"id":"geo081","chapter":"Physical Features of India","difficulty":"easy","text":"The Thar Desert is located in:","options":["Haryana","Rajasthan","Gujarat","Madhya Pradesh"],"correct":1,"explanation":"The Thar Desert (Great Indian Desert) lies mainly in western Rajasthan, extending slightly into Gujarat, Punjab, and Haryana.","priority":true},
-  {"id":"geo082","chapter":"Physical Features of India","difficulty":"medium","text":"The Pir Panjal and Dhaula Dhar are ranges of:","options":["The Great Himalayas","The Lesser Himalayas (Himachal)","The Outer Himalayas (Siwaliks)","The Trans-Himalayas"],"correct":1,"explanation":"Pir Panjal and Dhaula Dhar are sub-ranges of the Middle or Lesser Himalayas (Himachal), lying between the Great Himalayas and the Siwaliks.","priority":true},
-  {"id":"geo083","chapter":"Climate","difficulty":"hard","text":"Monsoon rainfall in India is described as 'orographic' when:","options":["It occurs over the ocean","It is caused by forced uplift of moist air over mountain barriers","It results from convectional heating","It comes from western disturbances"],"correct":1,"explanation":"Orographic rainfall occurs when moisture-laden winds are forced to rise over a mountain range, cool adiabatically, and precipitate on the windward side.","priority":true},
-  {"id":"geo084","chapter":"Soils","difficulty":"hard","text":"Sheet erosion is caused by:","options":["Concentrated flow of water in channels","Thin sheets of water flowing over the land surface after heavy rain","Wind action on sandy soil","Underground water movement"],"correct":1,"explanation":"Sheet erosion occurs when a thin layer of topsoil is uniformly removed over large areas by rainwater flowing as a sheet across the land surface.","priority":true},
-  {"id":"geo085","chapter":"Natural Vegetation","difficulty":"hard","text":"Thorn forests in India are characterised by trees with:","options":["Large, broad leaves","Thorny branches, small leaves, and deep root systems to conserve water","Dense canopy blocking sunlight","Aerial roots adapted to waterlogged conditions"],"correct":1,"explanation":"Thorn forests (semi-arid areas with 25–75 cm rainfall) have thorny shrubs, small waxy leaves, and deep roots to minimise water loss and access groundwater.","priority":true},
-  {"id":"geo086","chapter":"Water Resources","difficulty":"hard","text":"The concept of 'watershed management' involves:","options":["Managing a single river dam","Integrated management of land, water, and vegetation within a drainage basin","Only controlling flood waters","Desalination of seawater"],"correct":1,"explanation":"Watershed management is an integrated approach that manages land, water, and vegetation within a drainage basin to conserve soil, recharge groundwater, and reduce floods.","priority":true},
-  {"id":"geo087","chapter":"Mineral Resources","difficulty":"hard","text":"India's coal is mainly of the type called Gondwana coal. Why is it significant?","options":["It is the purest form of coal with highest carbon content","It accounts for about 98% of India's coal reserves and was formed from ancient Gondwana forests","It is found only in river valleys","It is used exclusively for electricity generation"],"correct":1,"explanation":"Gondwana coal, formed from fossils of Gondwana flora about 250 million years ago, accounts for ~98% of India's total coal deposits found in peninsular states.","priority":true},
-  {"id":"geo088","chapter":"Energy Resources","difficulty":"hard","text":"Biogas is produced by:","options":["Burning coal","Anaerobic decomposition of organic matter (cattle dung, crop waste)","Refining petroleum","Nuclear fission"],"correct":1,"explanation":"Biogas (mainly methane) is generated by anaerobic decomposition of animal waste and agricultural residues in biogas plants, providing a renewable energy source for rural India.","priority":true},
-  {"id":"geo089","chapter":"Agricultural Resources","difficulty":"hard","text":"The practice of growing two or more crops simultaneously on the same field is called:","options":["Crop rotation","Mixed cropping","Intercropping","Multiple cropping"],"correct":1,"explanation":"Mixed cropping (also called mixed farming) involves growing two or more crops together in the same field at the same time, reducing risk of complete crop failure.","priority":true},
-  {"id":"geo090","chapter":"Industries","difficulty":"hard","text":"Which of the following best explains why the cotton textile industry shifted from Mumbai to Ahmedabad?","options":["Ahmedabad has a port","Lower production costs, proximity to cotton-growing areas, and availability of power in Ahmedabad","Better skilled labour in Mumbai","Government subsidy for Mumbai mills"],"correct":1,"explanation":"Ahmedabad (Gujarat) benefits from proximity to Rajasthan and Gujarat cotton farms, lower labour and land costs, and availability of thermal power, making it more competitive than Mumbai.","priority":true},
-  {"id":"geo091","chapter":"Transport","difficulty":"hard","text":"The Golden Quadrilateral connects:","options":["Delhi, Mumbai, Kolkata, and Chennai — India's four metro cities","Four major ports of India","Four industrial corridors","Four state capitals in south India"],"correct":0,"explanation":"The Golden Quadrilateral is a National Highway network connecting Delhi, Mumbai, Chennai, and Kolkata — India's four largest cities — forming a hexagonal shape.","priority":true},
-  {"id":"geo092","chapter":"Map Work","difficulty":"easy","text":"What does the symbol of a red circle with a dot represent on a Survey of India map?","options":["A village","A district headquarters","A state capital","A national capital"],"correct":1,"explanation":"On SOI topographical maps, a red circle with a dot typically indicates a district headquarters or a town, depending on map conventions.","whyWrong":["A village is usually marked with a small dot or square, not a red circle with a dot.","","A state capital has its own distinct, larger symbol, not this district-level marking.","The national capital uses a unique special symbol, not the district-headquarters marking."],"priority":false},
-  {"id":"geo093","chapter":"Physical Features of India","difficulty":"hard","text":"The Siwaliks (Outer Himalayas) are composed mainly of:","options":["Hard crystalline rocks","Soft sedimentary rocks — sandstone, silt, and conglomerate","Volcanic basalt","Metamorphic schist"],"correct":1,"explanation":"The Siwaliks are made of geologically young, soft sedimentary rocks (sandstone, mudstone, conglomerate) formed from debris eroded from the rising Himalayas.","priority":true},
-  {"id":"geo094","chapter":"Climate","difficulty":"medium","text":"The Monsoon Trough is:","options":["A cold front over the Himalayas","A band of low pressure running east-west over the plains, along which the monsoon advances","A high-pressure belt over peninsular India","An ocean current off India's west coast"],"correct":1,"explanation":"The Monsoon Trough is a zone of low atmospheric pressure that runs roughly east-west across the Indian subcontinent, guiding monsoon rainfall northward into the continent.","priority":true},
-  {"id":"geo095","chapter":"Soils","difficulty":"medium","text":"Which practice helps in conserving soil and improving fertility?","options":["Monoculture over many seasons","Crop rotation","Overgrazing","Burning stubble"],"correct":1,"explanation":"Crop rotation (changing the type of crop grown in a field each season) prevents nutrient depletion, reduces pests, and can add nitrogen to the soil when legumes are included.","priority":true},
-  {"id":"geo096","chapter":"Water Resources","difficulty":"easy","text":"The Hirakud Dam is built on which river?","options":["Damodar","Mahanadi","Tungabhadra","Cauvery"],"correct":1,"explanation":"The Hirakud Dam, one of India's longest dams, is built across the Mahanadi River in Odisha.","priority":true},
-  {"id":"geo097","chapter":"Mineral Resources","difficulty":"easy","text":"The Kolar Gold Field is located in:","options":["Rajasthan","Karnataka","Odisha","Tamil Nadu"],"correct":1,"explanation":"The Kolar Gold Field (KGF) in Karnataka was one of the world's deepest gold mines; it is now largely exhausted and closed.","priority":true},
-  {"id":"geo098","chapter":"Agricultural Resources","difficulty":"easy","text":"Rubber is mainly grown in:","options":["Punjab","Kerala","Assam","Karnataka"],"correct":1,"explanation":"Kerala produces over 90% of India's natural rubber, grown in the laterite hills of its central and southern districts.","priority":true},
-  {"id":"geo099","chapter":"Industries","difficulty":"easy","text":"Which of the following is a labour-intensive industry?","options":["Petrochemical industry","Cement industry","Handloom textile industry","Nuclear power plant"],"correct":2,"explanation":"The handloom textile industry is highly labour-intensive, employing millions of weavers using manual looms with little mechanisation.","priority":true},
-  {"id":"geo100","chapter":"Transport","difficulty":"medium","text":"Which is the longest National Highway in India?","options":["NH 44","NH 27","NH 48","NH 19"],"correct":0,"explanation":"NH 44 (formerly NH 7) stretching from Srinagar to Kanyakumari (~3,745 km) is the longest National Highway in India.","priority":true}
+  {
+    "id": "geo001",
+    "chapter": "Map Work",
+    "difficulty": "easy",
+    "text": "Which type of scale expresses the relationship between map distance and ground distance as a fraction?",
+    "options": [
+      "Graphical scale",
+      "Representative Fraction",
+      "Verbal scale",
+      "Linear scale"
+    ],
+    "correct": 1,
+    "explanation": "A Representative Fraction (RF) expresses map distance as a fraction of actual ground distance, e.g., 1:50,000.",
+    "whyWrong": [
+      "A graphical scale is a line marked with distances, read with a ruler — not a fraction.",
+      "",
+      "A verbal scale states the relationship in words (e.g., '1 cm to 1 km'), not as a numerical fraction.",
+      "A linear scale is a graduated straight line for measuring distances, not a fractional ratio."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo002",
+    "chapter": "Map Work",
+    "difficulty": "easy",
+    "text": "On a topographical map, contour lines that are close together indicate:",
+    "options": [
+      "Gentle slope",
+      "Flat terrain",
+      "Steep slope",
+      "Depression"
+    ],
+    "correct": 2,
+    "explanation": "Closely spaced contour lines indicate a steep slope because elevation changes rapidly over a short horizontal distance.",
+    "whyWrong": [
+      "Widely spaced contours, not closely spaced ones, indicate a gentle slope.",
+      "Flat terrain has very few or no contour lines at all, since elevation barely changes.",
+      "",
+      "A depression is shown by contours with inward-pointing hachures, not simply by close spacing."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo003",
+    "chapter": "Map Work",
+    "difficulty": "medium",
+    "text": "If the RF of a map is 1:25,000, what does 4 cm on the map represent on the ground?",
+    "options": [
+      "1 km",
+      "10 km",
+      "100 m",
+      "500 m"
+    ],
+    "correct": 0,
+    "explanation": "4 cm × 25,000 = 100,000 cm = 1 km on the ground.",
+    "whyWrong": [
+      "",
+      "10 km would need an RF of about 1:250,000 — ten times smaller-scale than the given 1:25,000.",
+      "100 m is far too small — even 1 cm alone at 1:25,000 already equals 250 m.",
+      "500 m is half the actual distance: 4 cm × 25,000 = 100,000 cm = 1,000 m = 1 km, not 500 m."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo004",
+    "chapter": "Map Work",
+    "difficulty": "medium",
+    "text": "A contour line with a value lower than the surrounding contours and hachures pointing inward represents a:",
+    "options": [
+      "Hill",
+      "Plateau",
+      "Depression",
+      "Valley"
+    ],
+    "correct": 2,
+    "explanation": "A closed contour with hachures pointing inward (toward the centre) indicates a depression or hollow in the ground.",
+    "whyWrong": [
+      "A hill has hachures pointing outward with higher values at the centre — the opposite pattern.",
+      "A plateau is a flat-topped elevated area with widely spaced contours at the top, not a closed lower ring.",
+      "",
+      "A valley is shown by 'V'-shaped contours pointing upstream, not a closed depression symbol."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo005",
+    "chapter": "Map Work",
+    "difficulty": "hard",
+    "text": "The difference in elevation between two successive contour lines is called the:",
+    "options": [
+      "Vertical interval",
+      "Horizontal equivalent",
+      "Scale interval",
+      "Contour gradient"
+    ],
+    "correct": 0,
+    "explanation": "The Vertical Interval (VI) is the constant difference in elevation between consecutive contour lines on a topographic map.",
+    "whyWrong": [
+      "",
+      "Horizontal equivalent is the ground distance between two contours — a horizontal measure, not a height difference.",
+      "'Scale interval' isn't a standard cartographic term for this idea.",
+      "Gradient describes steepness (height difference over horizontal distance), not the height difference alone."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo006",
+    "chapter": "Map Work",
+    "difficulty": "easy",
+    "text": "The blue colour on a Survey of India topographical map represents:",
+    "options": [
+      "Forests",
+      "Water bodies",
+      "Roads",
+      "Relief features"
+    ],
+    "correct": 1,
+    "explanation": "Blue is the conventional colour used for water bodies such as rivers, lakes, and canals on Survey of India maps.",
+    "whyWrong": [
+      "Forests and vegetation are conventionally shown in green, not blue.",
+      "",
+      "Roads are typically shown in black or red, not blue.",
+      "Relief (contours and hills) is shown in brown, not blue."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo007",
+    "chapter": "Map Work",
+    "difficulty": "medium",
+    "text": "A 'V'-shaped contour pattern pointing upstream indicates:",
+    "options": [
+      "A hill spur",
+      "A valley or river course",
+      "A cliff",
+      "A plateau"
+    ],
+    "correct": 1,
+    "explanation": "Contours forming a 'V' that points upstream (toward higher elevation) indicate a valley or the course of a stream.",
+    "whyWrong": [
+      "A spur's contours bulge outward toward lower ground — the opposite of a valley's inward-pointing V.",
+      "",
+      "A cliff is shown by contours crowded very close together or touching, not a V-shaped bend.",
+      "A plateau shows widely spaced contours around a flat elevated top, not a narrow V."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo008",
+    "chapter": "Map Work",
+    "difficulty": "hard",
+    "text": "On a 1:50,000 Survey of India map, the grid squares are each:",
+    "options": [
+      "1 km × 1 km",
+      "2 km × 2 km",
+      "500 m × 500 m",
+      "5 km × 5 km"
+    ],
+    "correct": 0,
+    "explanation": "Standard SOI 1:50,000 maps use a 2 cm grid, which at that scale represents 1 km × 1 km on the ground.",
+    "whyWrong": [
+      "",
+      "2 km × 2 km squares belong to a smaller-scale map, not the standard 1:50,000 sheet.",
+      "500 m × 500 m squares are finer than the standard SOI grid interval at this scale.",
+      "5 km × 5 km squares belong to a much smaller-scale map, not 1:50,000."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo009",
+    "chapter": "Physical Features of India",
+    "difficulty": "easy",
+    "text": "The Western Ghats are also known as:",
+    "options": [
+      "Sahyadris",
+      "Vindhyas",
+      "Aravallis",
+      "Satpuras"
+    ],
+    "correct": 0,
+    "explanation": "The Western Ghats running along India's west coast are locally known as Sahyadri Mountains.",
+    "priority": true
+  },
+  {
+    "id": "geo010",
+    "chapter": "Physical Features of India",
+    "difficulty": "easy",
+    "text": "The Deccan Plateau is bounded on the east by:",
+    "options": [
+      "Western Ghats",
+      "Eastern Ghats",
+      "Vindhya Range",
+      "Satpura Range"
+    ],
+    "correct": 1,
+    "explanation": "The Eastern Ghats form the eastern boundary of the Deccan Plateau, bordering the Coromandel Coast.",
+    "priority": true
+  },
+  {
+    "id": "geo011",
+    "chapter": "Physical Features of India",
+    "difficulty": "medium",
+    "text": "The Terai region is a characteristic feature of:",
+    "options": [
+      "The Western Ghats foothills",
+      "The northern plains near the Himalayas",
+      "The Deccan Plateau",
+      "The Thar Desert"
+    ],
+    "correct": 1,
+    "explanation": "The Terai is a belt of marshy, forested lowland along the southern edge of the Himalayan foothills in the northern plains.",
+    "priority": true
+  },
+  {
+    "id": "geo012",
+    "chapter": "Physical Features of India",
+    "difficulty": "medium",
+    "text": "Which of the following rivers flows through the Deccan trap region?",
+    "options": [
+      "Ganga",
+      "Brahmaputra",
+      "Godavari",
+      "Beas"
+    ],
+    "correct": 2,
+    "explanation": "The Godavari flows through the Deccan trap (basaltic lava) region in peninsular India, draining much of the Maharashtra plateau.",
+    "priority": true
+  },
+  {
+    "id": "geo013",
+    "chapter": "Physical Features of India",
+    "difficulty": "hard",
+    "text": "The Bhabar zone is characterised by:",
+    "options": [
+      "Fine alluvial deposits",
+      "Coarse pebbles and boulders through which streams disappear underground",
+      "Waterlogged marshy land",
+      "Sandy desert terrain"
+    ],
+    "correct": 1,
+    "explanation": "Bhabar is a narrow zone at the foothills of Himalayas where rivers deposit coarse pebbles and streams sink underground due to high porosity.",
+    "priority": true
+  },
+  {
+    "id": "geo014",
+    "chapter": "Physical Features of India",
+    "difficulty": "easy",
+    "text": "The Lakshadweep Islands are composed of:",
+    "options": [
+      "Volcanic rocks",
+      "Coral reefs",
+      "Granite",
+      "Limestone"
+    ],
+    "correct": 1,
+    "explanation": "Lakshadweep Islands are coral islands formed by the accumulation of coral reefs in the Arabian Sea.",
+    "priority": true
+  },
+  {
+    "id": "geo015",
+    "chapter": "Physical Features of India",
+    "difficulty": "medium",
+    "text": "Barchans are a type of:",
+    "options": [
+      "Coastal landform",
+      "Glacial deposit",
+      "Crescent-shaped sand dune",
+      "Erosional feature in rivers"
+    ],
+    "correct": 2,
+    "explanation": "Barchans are crescent-shaped sand dunes with the horns pointing in the direction of wind movement, common in the Thar Desert.",
+    "priority": true
+  },
+  {
+    "id": "geo016",
+    "chapter": "Physical Features of India",
+    "difficulty": "hard",
+    "text": "The eastern coastal plain is also called the:",
+    "options": [
+      "Malabar Coast",
+      "Coromandel Coast",
+      "Konkan Coast",
+      "Canara Coast"
+    ],
+    "correct": 1,
+    "explanation": "The eastern coastal plain, especially between Chennai and Rajahmundry, is known as the Coromandel Coast.",
+    "priority": true
+  },
+  {
+    "id": "geo017",
+    "chapter": "Climate",
+    "difficulty": "easy",
+    "text": "The monsoon season in India is caused primarily by:",
+    "options": [
+      "The rotation of the Earth",
+      "Differential heating of land and sea",
+      "Ocean currents",
+      "High-pressure systems over oceans"
+    ],
+    "correct": 1,
+    "explanation": "Monsoons arise from the differential heating between the Indian subcontinent and the surrounding oceans, creating seasonal pressure differences that drive wind reversal.",
+    "priority": true
+  },
+  {
+    "id": "geo018",
+    "chapter": "Climate",
+    "difficulty": "easy",
+    "text": "Which region of India receives the highest annual rainfall?",
+    "options": [
+      "Rajasthan",
+      "Mawsynram, Meghalaya",
+      "Chennai",
+      "Mumbai"
+    ],
+    "correct": 1,
+    "explanation": "Mawsynram in Meghalaya receives the world's highest average annual rainfall, due to orographic uplift of moist Bay of Bengal winds.",
+    "priority": true
+  },
+  {
+    "id": "geo019",
+    "chapter": "Climate",
+    "difficulty": "medium",
+    "text": "The 'October Heat' in India refers to:",
+    "options": [
+      "High temperatures in October due to clear skies after the withdrawal of the South-West monsoon",
+      "Onset of the North-East monsoon",
+      "Cyclonic storms in the Bay of Bengal",
+      "Cold wave from the north-west"
+    ],
+    "correct": 0,
+    "explanation": "After the South-West monsoon withdraws in October, clear skies and high humidity combine to produce oppressive heat, called 'October Heat.'",
+    "priority": true
+  },
+  {
+    "id": "geo020",
+    "chapter": "Climate",
+    "difficulty": "medium",
+    "text": "The Western Disturbances that cause winter rainfall in north-west India originate from:",
+    "options": [
+      "The Bay of Bengal",
+      "The Arabian Sea",
+      "The Mediterranean Sea",
+      "The Indian Ocean"
+    ],
+    "correct": 2,
+    "explanation": "Western Disturbances are extra-tropical cyclones that originate over the Mediterranean Sea and travel east to bring winter rains to north-west India.",
+    "priority": true
+  },
+  {
+    "id": "geo021",
+    "chapter": "Climate",
+    "difficulty": "hard",
+    "text": "The 'burst of monsoon' is characterised by:",
+    "options": [
+      "A gradual increase in rainfall over several weeks",
+      "A sudden onset of heavy rain with strong winds along the Kerala coast around June 1",
+      "Light drizzle over the Deccan Plateau",
+      "Dry westerly winds replacing the monsoon"
+    ],
+    "correct": 1,
+    "explanation": "The burst of monsoon refers to the sudden, dramatic onset of the South-West monsoon along the Kerala coast, usually around June 1, with thunder, lightning, and heavy rain.",
+    "priority": true
+  },
+  {
+    "id": "geo022",
+    "chapter": "Climate",
+    "difficulty": "medium",
+    "text": "Loo is a:",
+    "options": [
+      "Cold, moist wind in winter",
+      "Hot, dry, dust-laden wind in summer in north India",
+      "Moist sea breeze along the western coast",
+      "Cold wind descending from the Himalayas"
+    ],
+    "correct": 1,
+    "explanation": "Loo is a hot, dry, and dust-laden local wind that blows during summer afternoons over the plains of Punjab, Haryana, and UP.",
+    "priority": true
+  },
+  {
+    "id": "geo023",
+    "chapter": "Climate",
+    "difficulty": "easy",
+    "text": "Chennai receives most of its rainfall during:",
+    "options": [
+      "South-West Monsoon (June–September)",
+      "North-East Monsoon (October–December)",
+      "Winter (January–February)",
+      "Spring (March–April)"
+    ],
+    "correct": 1,
+    "explanation": "Chennai lies on the leeward side of the Western Ghats and receives most of its rainfall during the retreating (North-East) monsoon from October to December.",
+    "priority": true
+  },
+  {
+    "id": "geo024",
+    "chapter": "Soils",
+    "difficulty": "easy",
+    "text": "Which type of soil is most suitable for growing cotton?",
+    "options": [
+      "Red soil",
+      "Alluvial soil",
+      "Black soil (Regur)",
+      "Laterite soil"
+    ],
+    "correct": 2,
+    "explanation": "Black soil (Regur/cotton soil) has high clay content, retains moisture well, and is rich in calcium and magnesium — ideal for cotton cultivation.",
+    "priority": true
+  },
+  {
+    "id": "geo025",
+    "chapter": "Soils",
+    "difficulty": "easy",
+    "text": "Laterite soils are formed due to:",
+    "options": [
+      "Deposition by rivers",
+      "Intense leaching in regions of heavy rainfall",
+      "Volcanic activity",
+      "Wind deposition"
+    ],
+    "correct": 1,
+    "explanation": "Laterite soils are formed by intense leaching of silica and other soluble minerals in hot, wet tropical regions, leaving behind iron and aluminium oxides.",
+    "priority": true
+  },
+  {
+    "id": "geo026",
+    "chapter": "Soils",
+    "difficulty": "medium",
+    "text": "Alluvial soils in the Indo-Gangetic Plain are divided into Bhangar and Khadar. Khadar is:",
+    "options": [
+      "Older alluvium found on higher terraces",
+      "Newer alluvium deposited in floodplains, more fertile",
+      "Rocky soil with low moisture",
+      "Sandy desert soil"
+    ],
+    "correct": 1,
+    "explanation": "Khadar is newer, finer alluvium deposited in floodplains and river valleys, renewed annually by floods and very fertile for agriculture.",
+    "priority": true
+  },
+  {
+    "id": "geo027",
+    "chapter": "Soils",
+    "difficulty": "medium",
+    "text": "Which soil type is deficient in nitrogen, phosphate, and humus but rich in potash?",
+    "options": [
+      "Alluvial soil",
+      "Red soil",
+      "Black soil",
+      "Laterite soil"
+    ],
+    "correct": 2,
+    "explanation": "Black soil is rich in lime, iron, magnesia, and potash but deficient in nitrogen, phosphoric acid, and organic matter.",
+    "priority": true
+  },
+  {
+    "id": "geo028",
+    "chapter": "Soils",
+    "difficulty": "hard",
+    "text": "Soil erosion caused by the action of wind is more common in:",
+    "options": [
+      "Coastal regions",
+      "Himalayan foothills",
+      "Arid and semi-arid regions",
+      "Tropical rainforests"
+    ],
+    "correct": 2,
+    "explanation": "Wind erosion (aeolian erosion) is dominant in arid and semi-arid regions like Rajasthan, where sparse vegetation and dry soil make it easy for wind to remove topsoil.",
+    "priority": true
+  },
+  {
+    "id": "geo029",
+    "chapter": "Soils",
+    "difficulty": "easy",
+    "text": "The method of ploughing along the contours of a hillside to reduce soil erosion is called:",
+    "options": [
+      "Strip cropping",
+      "Contour ploughing",
+      "Terrace farming",
+      "Mulching"
+    ],
+    "correct": 1,
+    "explanation": "Contour ploughing involves tilling along elevation contour lines, creating ridges that slow water run-off and reduce soil erosion on slopes.",
+    "priority": true
+  },
+  {
+    "id": "geo030",
+    "chapter": "Natural Vegetation",
+    "difficulty": "easy",
+    "text": "Tropical Evergreen Forests in India are found in regions receiving an annual rainfall of more than:",
+    "options": [
+      "50 cm",
+      "100 cm",
+      "200 cm",
+      "400 cm"
+    ],
+    "correct": 2,
+    "explanation": "Tropical Evergreen Forests require heavy rainfall above 200 cm annually, and are found in the Western Ghats, Andaman & Nicobar Islands, and northeast India.",
+    "priority": true
+  },
+  {
+    "id": "geo031",
+    "chapter": "Natural Vegetation",
+    "difficulty": "easy",
+    "text": "Which forest type sheds its leaves during the dry season?",
+    "options": [
+      "Tropical Evergreen Forest",
+      "Tropical Deciduous Forest",
+      "Mangrove Forest",
+      "Temperate Forest"
+    ],
+    "correct": 1,
+    "explanation": "Tropical Deciduous Forests (also called Monsoon Forests) shed their leaves during the dry season to conserve water, hence the name 'deciduous.'",
+    "priority": true
+  },
+  {
+    "id": "geo032",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "Mangrove forests in India are mainly found in:",
+    "options": [
+      "The Thar Desert",
+      "The Sundarbans delta of West Bengal",
+      "The Himalayan foothills",
+      "The Deccan Plateau"
+    ],
+    "correct": 1,
+    "explanation": "The Sundarbans in the Ganga-Brahmaputra delta of West Bengal is the world's largest mangrove forest, adapted to tidal saline conditions.",
+    "priority": true
+  },
+  {
+    "id": "geo033",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "The Shola forests are a type of:",
+    "options": [
+      "Tropical dry deciduous forest",
+      "Montane temperate forest found in the high ranges of Western Ghats",
+      "Thorn scrub forest",
+      "Alpine vegetation"
+    ],
+    "correct": 1,
+    "explanation": "Shola forests are a unique type of montane tropical cloud forest found in valleys of the high-altitude Western Ghats, typically above 1500 m.",
+    "priority": true
+  },
+  {
+    "id": "geo034",
+    "chapter": "Natural Vegetation",
+    "difficulty": "hard",
+    "text": "Which of the following trees is predominantly found in the Tropical Moist Deciduous Forests and is valuable for its timber?",
+    "options": [
+      "Ebony",
+      "Teak",
+      "Deodar",
+      "Sundri"
+    ],
+    "correct": 1,
+    "explanation": "Teak (Tectona grandis) is the most commercially valuable timber tree found in tropical moist deciduous forests of MP, Maharashtra, and Karnataka.",
+    "priority": true
+  },
+  {
+    "id": "geo035",
+    "chapter": "Water Resources",
+    "difficulty": "easy",
+    "text": "The highest waterfall in India is:",
+    "options": [
+      "Jog Falls",
+      "Chitrakote Falls",
+      "Kunchikal Falls",
+      "Dudhsagar Falls"
+    ],
+    "correct": 2,
+    "explanation": "Kunchikal Falls on the Varahi River in Karnataka is the highest waterfall in India at about 455 m.",
+    "priority": true
+  },
+  {
+    "id": "geo036",
+    "chapter": "Water Resources",
+    "difficulty": "easy",
+    "text": "Drip irrigation is most useful for:",
+    "options": [
+      "Wet paddy cultivation",
+      "Water-scarce regions and row crops like sugarcane and cotton",
+      "Flood-prone areas",
+      "Winter wheat cultivation"
+    ],
+    "correct": 1,
+    "explanation": "Drip irrigation delivers water directly to plant roots with minimal evaporation loss, making it ideal for water-scarce areas and crops like sugarcane, cotton, and vegetables.",
+    "priority": true
+  },
+  {
+    "id": "geo037",
+    "chapter": "Water Resources",
+    "difficulty": "medium",
+    "text": "The Tehri Dam, one of the tallest in India, is built across which river?",
+    "options": [
+      "Ganga",
+      "Yamuna",
+      "Bhagirathi",
+      "Alaknanda"
+    ],
+    "correct": 2,
+    "explanation": "The Tehri Dam is built across the Bhagirathi River in Uttarakhand and is among the tallest dams in the world.",
+    "priority": true
+  },
+  {
+    "id": "geo038",
+    "chapter": "Water Resources",
+    "difficulty": "medium",
+    "text": "Groundwater recharge can be enhanced by:",
+    "options": [
+      "Increasing surface run-off",
+      "Constructing check dams and bunds",
+      "Deforestation",
+      "Draining wetlands"
+    ],
+    "correct": 1,
+    "explanation": "Check dams and bunds slow water flow, allowing it to percolate into the ground and recharge aquifers, increasing groundwater availability.",
+    "priority": true
+  },
+  {
+    "id": "geo039",
+    "chapter": "Water Resources",
+    "difficulty": "hard",
+    "text": "The Indira Gandhi Canal (Rajasthan Canal) draws water from:",
+    "options": [
+      "The Chambal River",
+      "The Harike Barrage on the Sutlej River",
+      "The Ravi River",
+      "The Beas River"
+    ],
+    "correct": 1,
+    "explanation": "The Indira Gandhi Canal originates at the Harike Barrage, where the Beas meets the Sutlej, and carries water to the arid Thar Desert regions of Rajasthan.",
+    "priority": true
+  },
+  {
+    "id": "geo040",
+    "chapter": "Mineral Resources",
+    "difficulty": "easy",
+    "text": "Jharkhand is the leading producer of which mineral in India?",
+    "options": [
+      "Coal",
+      "Copper",
+      "Iron Ore",
+      "Bauxite"
+    ],
+    "correct": 0,
+    "explanation": "Jharkhand (Damodar Valley region) is the largest producer of coal in India, accounting for over a quarter of India's coal output.",
+    "priority": true
+  },
+  {
+    "id": "geo041",
+    "chapter": "Mineral Resources",
+    "difficulty": "easy",
+    "text": "Mica is mainly found in which state of India?",
+    "options": [
+      "Goa",
+      "Rajasthan & Jharkhand",
+      "Kerala",
+      "Punjab"
+    ],
+    "correct": 1,
+    "explanation": "Rajasthan and Jharkhand are the largest producers of mica in India, which is used extensively in the electrical industry.",
+    "priority": true
+  },
+  {
+    "id": "geo042",
+    "chapter": "Mineral Resources",
+    "difficulty": "medium",
+    "text": "The Kudremukh iron ore deposit is located in:",
+    "options": [
+      "Odisha",
+      "Goa",
+      "Karnataka",
+      "Chhattisgarh"
+    ],
+    "correct": 2,
+    "explanation": "The Kudremukh deposit in the Western Ghats of Karnataka is one of India's largest iron ore deposits, though mining has been restricted due to environmental concerns.",
+    "priority": true
+  },
+  {
+    "id": "geo043",
+    "chapter": "Mineral Resources",
+    "difficulty": "medium",
+    "text": "Petroleum in India is mainly extracted from:",
+    "options": [
+      "Rajasthan and Assam",
+      "Punjab and Haryana",
+      "Uttar Pradesh and Bihar",
+      "Tamil Nadu and Kerala"
+    ],
+    "correct": 0,
+    "explanation": "Major oil-producing regions in India include the Bombay High offshore field, and onshore fields in Assam (Digboi) and Rajasthan (Barmer).",
+    "priority": true
+  },
+  {
+    "id": "geo044",
+    "chapter": "Mineral Resources",
+    "difficulty": "hard",
+    "text": "Which mineral is essential for the nuclear power programme and is found in Kerala's beaches?",
+    "options": [
+      "Uranium",
+      "Thorium (monazite sand)",
+      "Beryllium",
+      "Zirconium"
+    ],
+    "correct": 1,
+    "explanation": "Kerala's coastal sands, particularly at Chavara and Manavalakurichi, contain monazite which is rich in thorium — a key fuel for India's three-stage nuclear power programme.",
+    "priority": true
+  },
+  {
+    "id": "geo045",
+    "chapter": "Energy Resources",
+    "difficulty": "easy",
+    "text": "India's largest solar power plant (by installed capacity) is located in:",
+    "options": [
+      "Rajasthan",
+      "Gujarat",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "correct": 0,
+    "explanation": "Rajasthan, with its vast desert land and high solar irradiation, hosts several of India's largest solar parks including Bhadla Solar Park — the world's largest.",
+    "priority": true
+  },
+  {
+    "id": "geo046",
+    "chapter": "Energy Resources",
+    "difficulty": "easy",
+    "text": "Hydroelectric power in India is mainly generated in:",
+    "options": [
+      "Peninsular rivers only",
+      "Himalayan and peninsular river regions",
+      "Coastal regions",
+      "The Thar Desert"
+    ],
+    "correct": 1,
+    "explanation": "Both Himalayan rivers (fast-flowing, large volume) and peninsular rivers (plateau rivers with waterfalls) contribute to India's hydroelectric power generation.",
+    "priority": true
+  },
+  {
+    "id": "geo047",
+    "chapter": "Energy Resources",
+    "difficulty": "medium",
+    "text": "The Tarapur Atomic Power Station is located in:",
+    "options": [
+      "Gujarat",
+      "Maharashtra",
+      "Rajasthan",
+      "Uttar Pradesh"
+    ],
+    "correct": 1,
+    "explanation": "Tarapur in Maharashtra was India's first nuclear power station, established in 1969 and still in operation.",
+    "priority": true
+  },
+  {
+    "id": "geo048",
+    "chapter": "Energy Resources",
+    "difficulty": "medium",
+    "text": "Which state leads India in wind energy generation?",
+    "options": [
+      "Rajasthan",
+      "Maharashtra",
+      "Tamil Nadu",
+      "Karnataka"
+    ],
+    "correct": 2,
+    "explanation": "Tamil Nadu has traditionally been India's top wind energy producer, with the Muppandal wind farm being among the largest in Asia.",
+    "priority": true
+  },
+  {
+    "id": "geo049",
+    "chapter": "Energy Resources",
+    "difficulty": "hard",
+    "text": "The Puga Valley in Ladakh is significant for:",
+    "options": [
+      "Coal deposits",
+      "Geothermal energy potential",
+      "Solar energy farms",
+      "Uranium mining"
+    ],
+    "correct": 1,
+    "explanation": "Puga Valley in Ladakh has hot springs and geothermal activity, making it a potential site for geothermal energy development in India.",
+    "priority": true
+  },
+  {
+    "id": "geo050",
+    "chapter": "Agricultural Resources",
+    "difficulty": "easy",
+    "text": "The 'Green Revolution' in India was mainly associated with the introduction of High-Yielding Varieties (HYV) of:",
+    "options": [
+      "Cotton and jute",
+      "Wheat and rice",
+      "Tea and coffee",
+      "Sugarcane and maize"
+    ],
+    "correct": 1,
+    "explanation": "The Green Revolution (1960s) introduced HYV seeds of wheat (especially in Punjab) and rice, dramatically increasing food grain production in India.",
+    "priority": true
+  },
+  {
+    "id": "geo051",
+    "chapter": "Agricultural Resources",
+    "difficulty": "easy",
+    "text": "Which state is the largest producer of rice in India?",
+    "options": [
+      "Punjab",
+      "West Bengal",
+      "Uttar Pradesh",
+      "Andhra Pradesh"
+    ],
+    "correct": 1,
+    "explanation": "West Bengal leads India in rice production due to its alluvial delta soil, heavy monsoon rainfall, and double/triple cropping in the Ganga delta.",
+    "priority": true
+  },
+  {
+    "id": "geo052",
+    "chapter": "Agricultural Resources",
+    "difficulty": "medium",
+    "text": "Tea cultivation in India requires:",
+    "options": [
+      "Dry, sandy soil and low rainfall",
+      "Cool climate with heavy rainfall and well-drained sloping land",
+      "Waterlogged flat terrain",
+      "Hot, arid climate"
+    ],
+    "correct": 1,
+    "explanation": "Tea needs a cool, moist climate, 150–250 cm annual rainfall, high humidity, and well-drained acid soils on slopes — conditions found in Assam and Darjeeling.",
+    "priority": true
+  },
+  {
+    "id": "geo053",
+    "chapter": "Agricultural Resources",
+    "difficulty": "medium",
+    "text": "Jute is mainly grown in:",
+    "options": [
+      "The Deccan Plateau",
+      "The Ganga delta and adjoining areas in West Bengal and Bangladesh",
+      "The Punjab Plains",
+      "The Konkan Coast"
+    ],
+    "correct": 1,
+    "explanation": "Jute (the 'Golden Fibre') requires hot, humid climate and well-drained alluvial soil, making the Ganga delta and Brahmaputra valley ideal growing regions.",
+    "priority": true
+  },
+  {
+    "id": "geo054",
+    "chapter": "Agricultural Resources",
+    "difficulty": "hard",
+    "text": "The Blue Revolution in India is associated with:",
+    "options": [
+      "Increased milk production",
+      "Expansion of fish and aquaculture production",
+      "Growth of solar energy",
+      "Development of water conservation"
+    ],
+    "correct": 1,
+    "explanation": "The Blue Revolution refers to rapid growth in fish production through inland and marine fisheries and aquaculture, boosting India's status as a leading fish-producing nation.",
+    "priority": true
+  },
+  {
+    "id": "geo055",
+    "chapter": "Agricultural Resources",
+    "difficulty": "easy",
+    "text": "Punjab and Haryana are called the 'granary of India' primarily because of their production of:",
+    "options": [
+      "Rice and jute",
+      "Wheat and rice",
+      "Sugarcane and cotton",
+      "Tea and coffee"
+    ],
+    "correct": 1,
+    "explanation": "Punjab and Haryana produce enormous quantities of wheat and rice (from irrigated HYV cultivation), feeding much of India's food reserve stocks — hence 'granary of India.'",
+    "priority": true
+  },
+  {
+    "id": "geo056",
+    "chapter": "Industries",
+    "difficulty": "easy",
+    "text": "The first successful cotton textile mill in India was established in:",
+    "options": [
+      "Ahmedabad",
+      "Surat",
+      "Mumbai (Bombay)",
+      "Chennai"
+    ],
+    "correct": 2,
+    "explanation": "India's first successful cotton textile mill was established in Mumbai (Bombay) in 1854, and the city remained the dominant centre for cotton textiles into the 20th century.",
+    "priority": true
+  },
+  {
+    "id": "geo057",
+    "chapter": "Industries",
+    "difficulty": "easy",
+    "text": "Jamshedpur is famous for:",
+    "options": [
+      "Cotton textiles",
+      "Iron and Steel industry",
+      "Petrochemicals",
+      "IT industry"
+    ],
+    "correct": 1,
+    "explanation": "Jamshedpur in Jharkhand is the site of TISCO (Tata Iron and Steel Company), India's first integrated private iron and steel plant, established in 1907.",
+    "priority": true
+  },
+  {
+    "id": "geo058",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "The Petrochemical industry in India is concentrated around:",
+    "options": [
+      "Delhi–NCR corridor",
+      "Mumbai–Vadodara–Surat corridor",
+      "Chennai–Bengaluru corridor",
+      "Kolkata–Asansol corridor"
+    ],
+    "correct": 1,
+    "explanation": "India's petrochemical industry is concentrated in Gujarat and Maharashtra, especially around Vadodara (IPCL), Jamnagar (Reliance), and Surat, close to crude oil refineries.",
+    "priority": true
+  },
+  {
+    "id": "geo059",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "Which factor is MOST important for the location of an iron and steel plant?",
+    "options": [
+      "Proximity to ports",
+      "Availability of coal (coking coal) and iron ore",
+      "Skilled labour",
+      "Government policy"
+    ],
+    "correct": 1,
+    "explanation": "Iron and steel plants need huge quantities of coking coal and iron ore, making proximity to these raw materials (or transport links to them) the most critical locational factor.",
+    "priority": true
+  },
+  {
+    "id": "geo060",
+    "chapter": "Industries",
+    "difficulty": "hard",
+    "text": "Silicon Valley of India refers to:",
+    "options": [
+      "Mumbai",
+      "Hyderabad",
+      "Bengaluru",
+      "Pune"
+    ],
+    "correct": 2,
+    "explanation": "Bengaluru (Bangalore) is known as India's Silicon Valley due to its large concentration of IT and software companies, driven by its skilled workforce and pleasant climate.",
+    "priority": true
+  },
+  {
+    "id": "geo061",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "Cottage industries in India are characterised by:",
+    "options": [
+      "Large-scale mechanised production",
+      "Small-scale production using family labour with simple tools, often in homes",
+      "Centralised factory production",
+      "Export-oriented mass manufacturing"
+    ],
+    "correct": 1,
+    "explanation": "Cottage industries involve small-scale, home-based production using family labour and simple tools, like handloom weaving, pottery, and cane work.",
+    "priority": true
+  },
+  {
+    "id": "geo062",
+    "chapter": "Industries",
+    "difficulty": "easy",
+    "text": "Which city is known as the 'Manchester of India'?",
+    "options": [
+      "Mumbai",
+      "Ahmedabad",
+      "Kanpur",
+      "Coimbatore"
+    ],
+    "correct": 1,
+    "explanation": "Ahmedabad in Gujarat is called the 'Manchester of India' due to its large number of cotton textile mills and its historical dominance in the cotton textile industry.",
+    "priority": true
+  },
+  {
+    "id": "geo063",
+    "chapter": "Industries",
+    "difficulty": "hard",
+    "text": "Agro-based industries use agricultural produce as raw material. Which of the following is NOT an agro-based industry?",
+    "options": [
+      "Sugar industry",
+      "Cotton textile industry",
+      "Iron and steel industry",
+      "Jute industry"
+    ],
+    "correct": 2,
+    "explanation": "Iron and steel industry uses mineral raw materials (iron ore and coal), making it a mineral-based industry, not agro-based.",
+    "priority": true
+  },
+  {
+    "id": "geo064",
+    "chapter": "Transport",
+    "difficulty": "easy",
+    "text": "The National Highways in India are maintained by:",
+    "options": [
+      "State governments",
+      "National Highways Authority of India (NHAI)",
+      "Railways",
+      "Ministry of Rural Development"
+    ],
+    "correct": 1,
+    "explanation": "National Highways are built and maintained by the National Highways Authority of India (NHAI) under the central government.",
+    "priority": true
+  },
+  {
+    "id": "geo065",
+    "chapter": "Transport",
+    "difficulty": "easy",
+    "text": "India has the _____ largest railway network in the world.",
+    "options": [
+      "Largest",
+      "Second",
+      "Third",
+      "Fourth"
+    ],
+    "correct": 3,
+    "explanation": "India has the fourth largest railway network in the world (after the USA, China, and Russia) in terms of route length.",
+    "priority": true
+  },
+  {
+    "id": "geo066",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "The Konkan Railway connects:",
+    "options": [
+      "Mumbai to Goa and Mangaluru",
+      "Delhi to Amritsar",
+      "Kolkata to Chennai",
+      "Chennai to Kochi"
+    ],
+    "correct": 0,
+    "explanation": "The Konkan Railway (760 km) runs along the Konkan coast from Roha (near Mumbai) through Goa to Mangaluru in Karnataka.",
+    "priority": true
+  },
+  {
+    "id": "geo067",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "Which type of transport is most suitable for the movement of heavy bulk goods over long distances at low cost?",
+    "options": [
+      "Road transport",
+      "Air transport",
+      "Pipeline transport",
+      "Inland waterways / sea transport"
+    ],
+    "correct": 3,
+    "explanation": "Sea (and inland waterway) transport is the cheapest mode for carrying heavy bulk goods like coal, iron ore, grain, and petroleum over long distances.",
+    "priority": true
+  },
+  {
+    "id": "geo068",
+    "chapter": "Transport",
+    "difficulty": "hard",
+    "text": "The Pradhan Mantri Gram Sadak Yojana (PMGSY) aims to:",
+    "options": [
+      "Build expressways between metro cities",
+      "Provide all-weather road connectivity to rural habitations",
+      "Construct flyovers in urban areas",
+      "Develop coastal shipping routes"
+    ],
+    "correct": 1,
+    "explanation": "PMGSY, launched in 2000, aims to provide all-weather road connectivity to unconnected rural habitations across India.",
+    "priority": true
+  },
+  {
+    "id": "geo069",
+    "chapter": "Map Work",
+    "difficulty": "medium",
+    "text": "On a Survey of India map, the colour green is used to show:",
+    "options": [
+      "Cultivated land",
+      "Forests and vegetation",
+      "Water bodies",
+      "Settlements"
+    ],
+    "correct": 1,
+    "explanation": "Green is the conventional colour for forests and vegetation on Survey of India topographical maps.",
+    "whyWrong": [
+      "Cultivated land is conventionally left uncoloured (white) on SOI maps, not shown in green.",
+      "",
+      "Water bodies are shown in blue, not green.",
+      "Settlements are shown in black, not green."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo070",
+    "chapter": "Map Work",
+    "difficulty": "hard",
+    "text": "Two points on a map are 5 cm apart. If the RF is 1:100,000, what is the actual distance between them?",
+    "options": [
+      "5 km",
+      "10 km",
+      "50 km",
+      "500 m"
+    ],
+    "correct": 0,
+    "explanation": "5 cm × 100,000 = 500,000 cm = 5 km actual distance.",
+    "whyWrong": [
+      "",
+      "10 km would need the map distance to be 10 cm at this scale, not 5 cm.",
+      "50 km would need an RF of about 1:1,000,000 — a far smaller scale than 1:100,000.",
+      "500 m is ten times too small — at 1:100,000, even 1 cm alone equals 1 km."
+    ],
+    "priority": true
+  },
+  {
+    "id": "geo071",
+    "chapter": "Physical Features of India",
+    "difficulty": "medium",
+    "text": "The Karakoram Range is significant because:",
+    "options": [
+      "It is the lowest mountain range in India",
+      "It contains K2, the second highest peak in the world",
+      "It lies entirely within India",
+      "It forms the southern boundary of the Himalayas"
+    ],
+    "correct": 1,
+    "explanation": "The Karakoram Range in the north-west contains K2 (8,611 m), the second highest mountain in the world after Everest.",
+    "priority": true
+  },
+  {
+    "id": "geo072",
+    "chapter": "Climate",
+    "difficulty": "medium",
+    "text": "The normal date of onset of the South-West Monsoon over Kerala is approximately:",
+    "options": [
+      "June 1",
+      "July 1",
+      "May 15",
+      "August 1"
+    ],
+    "correct": 0,
+    "explanation": "The South-West monsoon normally arrives over the Kerala coast on June 1, signalling the start of the monsoon season across India.",
+    "priority": true
+  },
+  {
+    "id": "geo073",
+    "chapter": "Soils",
+    "difficulty": "medium",
+    "text": "Which soil type is typically acidic in nature and poor in fertility?",
+    "options": [
+      "Alluvial soil",
+      "Black soil",
+      "Laterite soil",
+      "Red soil"
+    ],
+    "correct": 2,
+    "explanation": "Laterite soils are acidic (pH below 6) and poor in nutrients like nitrogen, potash, and lime due to heavy leaching in high-rainfall regions.",
+    "priority": true
+  },
+  {
+    "id": "geo074",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "The Sundri tree, which gives the Sundarbans its name, belongs to which forest type?",
+    "options": [
+      "Tropical Evergreen Forest",
+      "Tropical Dry Deciduous Forest",
+      "Mangrove Forest",
+      "Thorn and Scrub Forest"
+    ],
+    "correct": 2,
+    "explanation": "The Sundri (Heritiera fomes) is the dominant tree of the Sundarbans mangrove forest in the Ganga delta, which is a tidal, saline ecosystem.",
+    "priority": true
+  },
+  {
+    "id": "geo075",
+    "chapter": "Water Resources",
+    "difficulty": "medium",
+    "text": "The Sardar Sarovar Dam is built on which river?",
+    "options": [
+      "Narmada",
+      "Tapi",
+      "Mahanadi",
+      "Godavari"
+    ],
+    "correct": 0,
+    "explanation": "The Sardar Sarovar Dam is the largest dam of the Narmada Valley Project, built on the Narmada River in Gujarat.",
+    "priority": true
+  },
+  {
+    "id": "geo076",
+    "chapter": "Mineral Resources",
+    "difficulty": "medium",
+    "text": "Bauxite, the ore of aluminium, is mainly found in:",
+    "options": [
+      "Kerala and Tamil Nadu",
+      "Odisha, Jharkhand, and Chhattisgarh",
+      "Punjab and Haryana",
+      "Rajasthan and Gujarat"
+    ],
+    "correct": 1,
+    "explanation": "Odisha has the largest reserves of bauxite in India; Jharkhand and Chhattisgarh also have significant deposits.",
+    "priority": true
+  },
+  {
+    "id": "geo077",
+    "chapter": "Energy Resources",
+    "difficulty": "medium",
+    "text": "The Bhakra Nangal Dam, one of India's highest gravity dams, is built on which river?",
+    "options": [
+      "Beas",
+      "Ravi",
+      "Sutlej",
+      "Chenab"
+    ],
+    "correct": 2,
+    "explanation": "The Bhakra Dam is built on the Sutlej River in Himachal Pradesh. Together with Nangal Dam, it forms the Bhakra-Nangal Project.",
+    "priority": true
+  },
+  {
+    "id": "geo078",
+    "chapter": "Agricultural Resources",
+    "difficulty": "medium",
+    "text": "Which crop is known as the 'Black Gold' of agriculture because of its high commercial value?",
+    "options": [
+      "Cotton",
+      "Sugarcane",
+      "Coffee",
+      "Pepper (spices)"
+    ],
+    "correct": 0,
+    "explanation": "Cotton is called 'White Gold' (not black gold); however, in many ICSE contexts, cotton is the high-value cash crop. Pepper is sometimes called black gold — but in most ICSE textbooks it is black pepper/spices.",
+    "priority": false
+  },
+  {
+    "id": "geo079",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "Which of the following is an example of a market-oriented industry?",
+    "options": [
+      "Cement industry",
+      "Bread and bakery industry",
+      "Iron and steel industry",
+      "Aluminium smelting"
+    ],
+    "correct": 1,
+    "explanation": "Bread and bakery industries are market-oriented — they need to be close to consumers because of perishability and daily demand, not near raw materials.",
+    "priority": true
+  },
+  {
+    "id": "geo080",
+    "chapter": "Transport",
+    "difficulty": "easy",
+    "text": "The largest port in India in terms of cargo handled is:",
+    "options": [
+      "Chennai Port",
+      "Nhava Sheva (JNPT)",
+      "Mumbai Port",
+      "Kolkata Port"
+    ],
+    "correct": 1,
+    "explanation": "Jawaharlal Nehru Port Trust (JNPT) at Nhava Sheva near Mumbai is India's largest container port handling the most cargo.",
+    "priority": true
+  },
+  {
+    "id": "geo081",
+    "chapter": "Physical Features of India",
+    "difficulty": "easy",
+    "text": "The Thar Desert is located in:",
+    "options": [
+      "Haryana",
+      "Rajasthan",
+      "Gujarat",
+      "Madhya Pradesh"
+    ],
+    "correct": 1,
+    "explanation": "The Thar Desert (Great Indian Desert) lies mainly in western Rajasthan, extending slightly into Gujarat, Punjab, and Haryana.",
+    "priority": true
+  },
+  {
+    "id": "geo082",
+    "chapter": "Physical Features of India",
+    "difficulty": "medium",
+    "text": "The Pir Panjal and Dhaula Dhar are ranges of:",
+    "options": [
+      "The Great Himalayas",
+      "The Lesser Himalayas (Himachal)",
+      "The Outer Himalayas (Siwaliks)",
+      "The Trans-Himalayas"
+    ],
+    "correct": 1,
+    "explanation": "Pir Panjal and Dhaula Dhar are sub-ranges of the Middle or Lesser Himalayas (Himachal), lying between the Great Himalayas and the Siwaliks.",
+    "priority": true
+  },
+  {
+    "id": "geo083",
+    "chapter": "Climate",
+    "difficulty": "hard",
+    "text": "Monsoon rainfall in India is described as 'orographic' when:",
+    "options": [
+      "It occurs over the ocean",
+      "It is caused by forced uplift of moist air over mountain barriers",
+      "It results from convectional heating",
+      "It comes from western disturbances"
+    ],
+    "correct": 1,
+    "explanation": "Orographic rainfall occurs when moisture-laden winds are forced to rise over a mountain range, cool adiabatically, and precipitate on the windward side.",
+    "priority": true
+  },
+  {
+    "id": "geo084",
+    "chapter": "Soils",
+    "difficulty": "hard",
+    "text": "Sheet erosion is caused by:",
+    "options": [
+      "Concentrated flow of water in channels",
+      "Thin sheets of water flowing over the land surface after heavy rain",
+      "Wind action on sandy soil",
+      "Underground water movement"
+    ],
+    "correct": 1,
+    "explanation": "Sheet erosion occurs when a thin layer of topsoil is uniformly removed over large areas by rainwater flowing as a sheet across the land surface.",
+    "priority": true
+  },
+  {
+    "id": "geo085",
+    "chapter": "Natural Vegetation",
+    "difficulty": "hard",
+    "text": "Thorn forests in India are characterised by trees with:",
+    "options": [
+      "Large, broad leaves",
+      "Thorny branches, small leaves, and deep root systems to conserve water",
+      "Dense canopy blocking sunlight",
+      "Aerial roots adapted to waterlogged conditions"
+    ],
+    "correct": 1,
+    "explanation": "Thorn forests (semi-arid areas with 25–75 cm rainfall) have thorny shrubs, small waxy leaves, and deep roots to minimise water loss and access groundwater.",
+    "priority": true
+  },
+  {
+    "id": "geo086",
+    "chapter": "Water Resources",
+    "difficulty": "hard",
+    "text": "The concept of 'watershed management' involves:",
+    "options": [
+      "Managing a single river dam",
+      "Integrated management of land, water, and vegetation within a drainage basin",
+      "Only controlling flood waters",
+      "Desalination of seawater"
+    ],
+    "correct": 1,
+    "explanation": "Watershed management is an integrated approach that manages land, water, and vegetation within a drainage basin to conserve soil, recharge groundwater, and reduce floods.",
+    "priority": true
+  },
+  {
+    "id": "geo087",
+    "chapter": "Mineral Resources",
+    "difficulty": "hard",
+    "text": "India's coal is mainly of the type called Gondwana coal. Why is it significant?",
+    "options": [
+      "It is the purest form of coal with highest carbon content",
+      "It accounts for about 98% of India's coal reserves and was formed from ancient Gondwana forests",
+      "It is found only in river valleys",
+      "It is used exclusively for electricity generation"
+    ],
+    "correct": 1,
+    "explanation": "Gondwana coal, formed from fossils of Gondwana flora about 250 million years ago, accounts for ~98% of India's total coal deposits found in peninsular states.",
+    "priority": true
+  },
+  {
+    "id": "geo088",
+    "chapter": "Energy Resources",
+    "difficulty": "hard",
+    "text": "Biogas is produced by:",
+    "options": [
+      "Burning coal",
+      "Anaerobic decomposition of organic matter (cattle dung, crop waste)",
+      "Refining petroleum",
+      "Nuclear fission"
+    ],
+    "correct": 1,
+    "explanation": "Biogas (mainly methane) is generated by anaerobic decomposition of animal waste and agricultural residues in biogas plants, providing a renewable energy source for rural India.",
+    "priority": true
+  },
+  {
+    "id": "geo089",
+    "chapter": "Agricultural Resources",
+    "difficulty": "hard",
+    "text": "The practice of growing two or more crops simultaneously on the same field is called:",
+    "options": [
+      "Crop rotation",
+      "Mixed cropping",
+      "Intercropping",
+      "Multiple cropping"
+    ],
+    "correct": 1,
+    "explanation": "Mixed cropping (also called mixed farming) involves growing two or more crops together in the same field at the same time, reducing risk of complete crop failure.",
+    "priority": true
+  },
+  {
+    "id": "geo090",
+    "chapter": "Industries",
+    "difficulty": "hard",
+    "text": "Which of the following best explains why the cotton textile industry shifted from Mumbai to Ahmedabad?",
+    "options": [
+      "Ahmedabad has a port",
+      "Lower production costs, proximity to cotton-growing areas, and availability of power in Ahmedabad",
+      "Better skilled labour in Mumbai",
+      "Government subsidy for Mumbai mills"
+    ],
+    "correct": 1,
+    "explanation": "Ahmedabad (Gujarat) benefits from proximity to Rajasthan and Gujarat cotton farms, lower labour and land costs, and availability of thermal power, making it more competitive than Mumbai.",
+    "priority": true
+  },
+  {
+    "id": "geo091",
+    "chapter": "Transport",
+    "difficulty": "hard",
+    "text": "The Golden Quadrilateral connects:",
+    "options": [
+      "Delhi, Mumbai, Kolkata, and Chennai — India's four metro cities",
+      "Four major ports of India",
+      "Four industrial corridors",
+      "Four state capitals in south India"
+    ],
+    "correct": 0,
+    "explanation": "The Golden Quadrilateral is a National Highway network connecting Delhi, Mumbai, Chennai, and Kolkata — India's four largest cities — forming a hexagonal shape.",
+    "priority": true
+  },
+  {
+    "id": "geo092",
+    "chapter": "Map Work",
+    "difficulty": "easy",
+    "text": "What does the symbol of a red circle with a dot represent on a Survey of India map?",
+    "options": [
+      "A village",
+      "A district headquarters",
+      "A state capital",
+      "A national capital"
+    ],
+    "correct": 1,
+    "explanation": "On SOI topographical maps, a red circle with a dot typically indicates a district headquarters or a town, depending on map conventions.",
+    "whyWrong": [
+      "A village is usually marked with a small dot or square, not a red circle with a dot.",
+      "",
+      "A state capital has its own distinct, larger symbol, not this district-level marking.",
+      "The national capital uses a unique special symbol, not the district-headquarters marking."
+    ],
+    "priority": false
+  },
+  {
+    "id": "geo093",
+    "chapter": "Physical Features of India",
+    "difficulty": "hard",
+    "text": "The Siwaliks (Outer Himalayas) are composed mainly of:",
+    "options": [
+      "Hard crystalline rocks",
+      "Soft sedimentary rocks — sandstone, silt, and conglomerate",
+      "Volcanic basalt",
+      "Metamorphic schist"
+    ],
+    "correct": 1,
+    "explanation": "The Siwaliks are made of geologically young, soft sedimentary rocks (sandstone, mudstone, conglomerate) formed from debris eroded from the rising Himalayas.",
+    "priority": true
+  },
+  {
+    "id": "geo094",
+    "chapter": "Climate",
+    "difficulty": "medium",
+    "text": "The Monsoon Trough is:",
+    "options": [
+      "A cold front over the Himalayas",
+      "A band of low pressure running east-west over the plains, along which the monsoon advances",
+      "A high-pressure belt over peninsular India",
+      "An ocean current off India's west coast"
+    ],
+    "correct": 1,
+    "explanation": "The Monsoon Trough is a zone of low atmospheric pressure that runs roughly east-west across the Indian subcontinent, guiding monsoon rainfall northward into the continent.",
+    "priority": true
+  },
+  {
+    "id": "geo095",
+    "chapter": "Soils",
+    "difficulty": "medium",
+    "text": "Which practice helps in conserving soil and improving fertility?",
+    "options": [
+      "Monoculture over many seasons",
+      "Crop rotation",
+      "Overgrazing",
+      "Burning stubble"
+    ],
+    "correct": 1,
+    "explanation": "Crop rotation (changing the type of crop grown in a field each season) prevents nutrient depletion, reduces pests, and can add nitrogen to the soil when legumes are included.",
+    "priority": true
+  },
+  {
+    "id": "geo096",
+    "chapter": "Water Resources",
+    "difficulty": "easy",
+    "text": "The Hirakud Dam is built on which river?",
+    "options": [
+      "Damodar",
+      "Mahanadi",
+      "Tungabhadra",
+      "Cauvery"
+    ],
+    "correct": 1,
+    "explanation": "The Hirakud Dam, one of India's longest dams, is built across the Mahanadi River in Odisha.",
+    "priority": true
+  },
+  {
+    "id": "geo097",
+    "chapter": "Mineral Resources",
+    "difficulty": "easy",
+    "text": "The Kolar Gold Field is located in:",
+    "options": [
+      "Rajasthan",
+      "Karnataka",
+      "Odisha",
+      "Tamil Nadu"
+    ],
+    "correct": 1,
+    "explanation": "The Kolar Gold Field (KGF) in Karnataka was one of the world's deepest gold mines; it is now largely exhausted and closed.",
+    "priority": true
+  },
+  {
+    "id": "geo098",
+    "chapter": "Agricultural Resources",
+    "difficulty": "easy",
+    "text": "Rubber is mainly grown in:",
+    "options": [
+      "Punjab",
+      "Kerala",
+      "Assam",
+      "Karnataka"
+    ],
+    "correct": 1,
+    "explanation": "Kerala produces over 90% of India's natural rubber, grown in the laterite hills of its central and southern districts.",
+    "priority": true
+  },
+  {
+    "id": "geo099",
+    "chapter": "Industries",
+    "difficulty": "easy",
+    "text": "Which of the following is a labour-intensive industry?",
+    "options": [
+      "Petrochemical industry",
+      "Cement industry",
+      "Handloom textile industry",
+      "Nuclear power plant"
+    ],
+    "correct": 2,
+    "explanation": "The handloom textile industry is highly labour-intensive, employing millions of weavers using manual looms with little mechanisation.",
+    "priority": true
+  },
+  {
+    "id": "geo100",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "Which is the longest National Highway in India?",
+    "options": [
+      "NH 44",
+      "NH 27",
+      "NH 48",
+      "NH 19"
+    ],
+    "correct": 0,
+    "explanation": "NH 44 (formerly NH 7) stretching from Srinagar to Kanyakumari (~3,745 km) is the longest National Highway in India.",
+    "priority": true
+  },
+  {
+    "id": "geo101",
+    "source": "Board 2017",
+    "chapter": "Climate of India",
+    "difficulty": "medium",
+    "text": "The monsoon season in India (southwest monsoon) lasts from:",
+    "options": [
+      "June to September",
+      "October to November",
+      "December to February",
+      "March to May"
+    ],
+    "correct": 0,
+    "explanation": "Southwest monsoon enters India around June 1 (Kerala) and retreats by September end — bringing 75% of India's annual rainfall. [Board 2017] Oct-Nov = northeast monsoon (retreating); Dec-Feb = winter; March-May = pre-monsoon."
+  },
+  {
+    "id": "geo102",
+    "source": "Board 2017",
+    "chapter": "Soils of India",
+    "difficulty": "medium",
+    "text": "Black cotton soil (Regur) is most suitable for growing:",
+    "options": [
+      "Cotton",
+      "Rice",
+      "Tea",
+      "Coffee"
+    ],
+    "correct": 0,
+    "explanation": "Black soil (Regur) retains moisture, has high clay content and iron, making it ideal for cotton cultivation in the Deccan Plateau. [Board 2017] Rice = alluvial soil; Tea = laterite/hilly soil; Coffee = red/laterite soil."
+  },
+  {
+    "id": "geo103",
+    "source": "Board 2017",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "The Sundarbans mangrove forests are located in:",
+    "options": [
+      "West Bengal",
+      "Rajasthan",
+      "Kerala",
+      "Assam"
+    ],
+    "correct": 0,
+    "explanation": "The Sundarbans, world's largest mangrove delta, is in the Ganga-Brahmaputra delta in West Bengal (also Bangladesh). [Board 2017] Rajasthan = desert; Kerala = tropical rainforest; Assam = moist deciduous forest."
+  },
+  {
+    "id": "geo104",
+    "source": "Board 2017",
+    "chapter": "Minerals",
+    "difficulty": "medium",
+    "text": "The Kolar Gold Field (KGF) is located in:",
+    "options": [
+      "Karnataka",
+      "Jharkhand",
+      "Rajasthan",
+      "Odisha"
+    ],
+    "correct": 0,
+    "explanation": "Kolar Gold Field is in Karnataka — one of the deepest gold mines in the world (now mostly closed). [Board 2017] Jharkhand = coal, iron; Rajasthan = silver, zinc; Odisha = iron ore, bauxite."
+  },
+  {
+    "id": "geo105",
+    "source": "Board 2017",
+    "chapter": "Agriculture",
+    "difficulty": "easy",
+    "text": "India is the largest producer of which crop in the world?",
+    "options": [
+      "Jute",
+      "Wheat",
+      "Rice",
+      "Cotton"
+    ],
+    "correct": 0,
+    "explanation": "India is the largest producer of jute in the world (followed by Bangladesh). West Bengal is the largest jute-producing state. [Board 2017] China leads wheat and rice; USA/India share cotton production."
+  },
+  {
+    "id": "geo106",
+    "source": "Board 2017",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "The iron and steel plant at Jamshedpur was set up by:",
+    "options": [
+      "Tata Iron and Steel Company",
+      "Government of India",
+      "SAIL",
+      "British East India Company"
+    ],
+    "correct": 0,
+    "explanation": "Jamshedpur (Tata Steel) was established in 1907 by Jamsetji Tata — India's first modern steel plant. [Board 2017] SAIL runs Bhilai, Durgapur, Rourkela; British didn't set up Jamshedpur; Government took over some plants post-independence."
+  },
+  {
+    "id": "geo107",
+    "source": "Board 2017",
+    "chapter": "Population",
+    "difficulty": "medium",
+    "text": "The most densely populated state of India is:",
+    "options": [
+      "West Bengal",
+      "Uttar Pradesh",
+      "Bihar",
+      "Maharashtra"
+    ],
+    "correct": 2,
+    "explanation": "Bihar has the highest population density (~1,102 persons/km²) among all states. [Board 2017] West Bengal is 2nd; UP is most populous state but not most dense; Maharashtra has large area."
+  },
+  {
+    "id": "geo108",
+    "source": "Board 2017",
+    "chapter": "Transport",
+    "difficulty": "easy",
+    "text": "The Golden Quadrilateral highway project connects:",
+    "options": [
+      "Delhi, Mumbai, Chennai, Kolkata",
+      "Mumbai, Pune, Goa, Hyderabad",
+      "Delhi, Jaipur, Ahmedabad, Mumbai",
+      "Kolkata, Bhubaneswar, Chennai, Kochi"
+    ],
+    "correct": 0,
+    "explanation": "Golden Quadrilateral connects India's four major metros: Delhi (north), Mumbai (west), Chennai (south), Kolkata (east) via 5,846 km of highways. [Board 2017]"
+  },
+  {
+    "id": "geo109",
+    "source": "Board 2017",
+    "chapter": "Maps",
+    "difficulty": "easy",
+    "text": "The representative fraction (RF) of 1:50,000 means:",
+    "options": [
+      "1 cm on map = 50,000 cm on ground",
+      "1 cm = 50,000 m",
+      "1 inch = 50,000 feet",
+      "1 m = 50,000 m"
+    ],
+    "correct": 0,
+    "explanation": "RF of 1:50,000 means 1 unit on map equals 50,000 same units on ground (1 cm = 50,000 cm = 500 m). [Board 2017] The unit must be the same on both sides; m and m is also valid but 50,000 m would be 1:50,000,000."
+  },
+  {
+    "id": "geo110",
+    "source": "Board 2017",
+    "chapter": "Climate of India",
+    "difficulty": "medium",
+    "text": "Mawsynram in Meghalaya receives the highest rainfall in India because:",
+    "options": [
+      "Funnel-shaped relief forces monsoon winds up",
+      "It is near the sea",
+      "It is in the desert area",
+      "Cold winds from Himalayas"
+    ],
+    "correct": 0,
+    "explanation": "Mawsynram (world's wettest place) receives extreme orographic rainfall as the funnel-shaped Khasi Hills force moist Bay of Bengal monsoon winds to rise rapidly. [Board 2017]"
+  },
+  {
+    "id": "geo111",
+    "source": "Board 2018",
+    "chapter": "Soils of India",
+    "difficulty": "medium",
+    "text": "Laterite soil is formed due to:",
+    "options": [
+      "Leaching in high rainfall areas",
+      "Alluvial deposits",
+      "Volcanic activity",
+      "Wind deposition"
+    ],
+    "correct": 0,
+    "explanation": "Laterite soil forms in high temperature-high rainfall areas through intense leaching — silica is washed away, leaving iron and aluminium oxides (red color). [Board 2018] Alluvial = river deposits; volcanic = black soil; wind = desert/loess soil."
+  },
+  {
+    "id": "geo112",
+    "source": "Board 2018",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "Tropical Evergreen forests are found in areas with annual rainfall above:",
+    "options": [
+      "200 cm",
+      "100 cm",
+      "75 cm",
+      "50 cm"
+    ],
+    "correct": 0,
+    "explanation": "Tropical Evergreen (rainforest) vegetation requires >200 cm annual rainfall and high temperatures (Western Ghats, Assam, Andaman). [Board 2018] 100 cm = moist deciduous; 75 cm = dry deciduous; 50 cm = thorny/shrub."
+  },
+  {
+    "id": "geo113",
+    "source": "Board 2018",
+    "chapter": "Agriculture",
+    "difficulty": "medium",
+    "text": "The state leading in wheat production in India is:",
+    "options": [
+      "Uttar Pradesh",
+      "Punjab",
+      "Haryana",
+      "Madhya Pradesh"
+    ],
+    "correct": 0,
+    "explanation": "Uttar Pradesh is the largest wheat producing state, followed by Punjab and Haryana. [Board 2018] Punjab has highest yield per hectare but UP has more land under cultivation; Haryana = 3rd; MP = 4th."
+  },
+  {
+    "id": "geo114",
+    "source": "Board 2018",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "The Silicon Valley of India is:",
+    "options": [
+      "Bengaluru",
+      "Hyderabad",
+      "Mumbai",
+      "Chennai"
+    ],
+    "correct": 0,
+    "explanation": "Bengaluru (Bangalore) is known as the 'Silicon Valley of India' due to its concentration of IT companies. [Board 2018] Hyderabad = Cyberabad; Mumbai = financial capital; Chennai = Detroit of India (automobiles)."
+  },
+  {
+    "id": "geo115",
+    "source": "Board 2018",
+    "chapter": "Population",
+    "difficulty": "medium",
+    "text": "The sex ratio in India (Census 2011) is:",
+    "options": [
+      "940 females per 1000 males",
+      "960 females",
+      "1000 females",
+      "900 females"
+    ],
+    "correct": 0,
+    "explanation": "India's sex ratio (Census 2011) = 940 females per 1000 males. Kerala has highest (1084); Haryana lowest (877). [Board 2018] 960 was pre-2011 estimate; 1000 is ideal but not India's actual; 900 is below actual."
+  },
+  {
+    "id": "geo116",
+    "source": "Board 2018",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "The longest railway zone in India is:",
+    "options": [
+      "Northern Railway",
+      "Central Railway",
+      "Southern Railway",
+      "Eastern Railway"
+    ],
+    "correct": 0,
+    "explanation": "Northern Railway (HQ: New Delhi) is the largest railway zone by route length, covering states like UP, Rajasthan, Punjab etc. [Board 2018]"
+  },
+  {
+    "id": "geo117",
+    "source": "Board 2018",
+    "chapter": "Minerals",
+    "difficulty": "medium",
+    "text": "Jharkhand has the largest reserves of:",
+    "options": [
+      "Coal",
+      "Iron ore",
+      "Mica",
+      "Petroleum"
+    ],
+    "correct": 0,
+    "explanation": "Jharkhand has the largest coal reserves in India (Damodar Valley — Jharia, Bokaro coalfields). [Board 2018] Odisha leads in iron ore; Jharkhand/Andhra share mica; petroleum is in Assam/Gujarat/offshore."
+  },
+  {
+    "id": "geo118",
+    "source": "Board 2018",
+    "chapter": "Climate of India",
+    "difficulty": "medium",
+    "text": "The Loo is a hot, dry dusty wind that blows over:",
+    "options": [
+      "Indo-Gangetic Plains in summer",
+      "Western Ghats",
+      "Coastal areas",
+      "Himalayan region"
+    ],
+    "correct": 0,
+    "explanation": "The Loo is a hot, dry, desiccating wind that blows over the Indo-Gangetic Plains (Punjab to Bihar) in summer (May-June). [Board 2018] Western Ghats get moist winds; coastal areas get sea breeze; Himalayas get cold winds."
+  },
+  {
+    "id": "geo119",
+    "source": "Board 2018",
+    "chapter": "Maps",
+    "difficulty": "medium",
+    "text": "Contour lines close together on a topographic map indicate:",
+    "options": [
+      "Steep slope",
+      "Gentle slope",
+      "Flat terrain",
+      "Valley"
+    ],
+    "correct": 0,
+    "explanation": "Closely spaced contour lines indicate rapid change in elevation — steep slope. Wide spacing indicates gentle slope. [Board 2018] Gentle slope = widely spaced; flat terrain = no contours or very widely spaced; valley shows V-shaped contours."
+  },
+  {
+    "id": "geo120",
+    "source": "Board 2018",
+    "chapter": "Agriculture",
+    "difficulty": "easy",
+    "text": "The two main staple food crops of India are:",
+    "options": [
+      "Rice and wheat",
+      "Jowar and Bajra",
+      "Maize and barley",
+      "Tea and coffee"
+    ],
+    "correct": 0,
+    "explanation": "Rice and wheat are India's most important food crops, together accounting for over 70% of total foodgrain production. [Board 2018] Jowar and Bajra are millets; maize/barley are secondary; tea/coffee are beverages."
+  },
+  {
+    "id": "geo121",
+    "source": "Board 2019",
+    "chapter": "Soils of India",
+    "difficulty": "medium",
+    "text": "Alluvial soil found in the Gangetic plains is:",
+    "options": [
+      "Most fertile and suitable for multiple crops",
+      "Infertile and rocky",
+      "Only suitable for cotton",
+      "Formed from volcanic lava"
+    ],
+    "correct": 0,
+    "explanation": "Alluvial soil (Indo-Gangetic plains) is India's most productive soil — rich in potash, phosphate; suitable for rice, wheat, sugarcane. [Board 2019] Cotton grows on black soil; volcanic = black soil; alluvial is the most fertile."
+  },
+  {
+    "id": "geo122",
+    "source": "Board 2019",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "The jute industry in India is concentrated mainly in:",
+    "options": [
+      "West Bengal",
+      "Maharashtra",
+      "Assam",
+      "Bihar"
+    ],
+    "correct": 0,
+    "explanation": "Over 75% of India's jute mills are in West Bengal (Hooghly river banks), close to jute growing areas of Bengal-Bangladesh. [Board 2019] Maharashtra = cotton textiles; Assam grows jute but processing is in WB; Bihar = sugarcane."
+  },
+  {
+    "id": "geo123",
+    "source": "Board 2019",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "Teak and Sal are the most important trees of which forest type?",
+    "options": [
+      "Moist Deciduous",
+      "Dry Deciduous",
+      "Tropical Evergreen",
+      "Montane forests"
+    ],
+    "correct": 0,
+    "explanation": "Teak and Sal are characteristic trees of Tropical Moist Deciduous forests found in areas with 100-200 cm rainfall. [Board 2019] Dry deciduous has thorn trees; evergreen has mahogany/ebony; montane has oaks/rhododendrons."
+  },
+  {
+    "id": "geo124",
+    "source": "Board 2019",
+    "chapter": "Population",
+    "difficulty": "medium",
+    "text": "Urbanisation in India has increased because of:",
+    "options": [
+      "Rural-urban migration for employment",
+      "Decrease in agricultural land",
+      "Decline in birth rate",
+      "Increase in death rate"
+    ],
+    "correct": 0,
+    "explanation": "The major cause of urbanisation is rural-urban migration as people move to cities seeking better employment and education. [Board 2019] Agricultural land decrease is effect; birth/death rates affect population size not urbanisation directly."
+  },
+  {
+    "id": "geo125",
+    "source": "Board 2019",
+    "chapter": "Climate of India",
+    "difficulty": "hard",
+    "text": "The Coromandel Coast (Tamil Nadu) receives maximum rainfall during:",
+    "options": [
+      "October to December (northeast monsoon)",
+      "June to September (southwest monsoon)",
+      "January to March (western disturbances)",
+      "April to May (convectional)"
+    ],
+    "correct": 0,
+    "explanation": "The Coromandel Coast lies on the leeward side of southwest monsoon but receives heavy northeast monsoon (Oct-Dec) rainfall — opposite of most of India. [Board 2019]"
+  },
+  {
+    "id": "geo126",
+    "source": "Board 2019",
+    "chapter": "Minerals",
+    "difficulty": "medium",
+    "text": "The Singhbhum district of Jharkhand is famous for:",
+    "options": [
+      "Copper mining",
+      "Diamond mining",
+      "Petroleum extraction",
+      "Salt mining"
+    ],
+    "correct": 0,
+    "explanation": "Singhbhum (Jharkhand) contains India's largest copper ore reserves at Ghatsila, Rakha, Mosabani. [Board 2019] Diamonds = Panna (MP); petroleum = Assam/Gujarat; salt = Rajasthan/Gujarat coast."
+  },
+  {
+    "id": "geo127",
+    "source": "Board 2019",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "The Konkan Railway connects:",
+    "options": [
+      "Roha (Maharashtra) to Mangaluru (Karnataka)",
+      "Delhi to Mumbai",
+      "Mumbai to Goa",
+      "Chennai to Kochi"
+    ],
+    "correct": 0,
+    "explanation": "Konkan Railway (760 km) runs along the west coast from Roha (near Mumbai) to Mangaluru, passing through Goa. [Board 2019] Delhi-Mumbai is Western Railway; Mumbai-Goa is partial (Konkan goes further); Chennai-Kochi is on east coast."
+  },
+  {
+    "id": "geo128",
+    "source": "Board 2019",
+    "chapter": "Agriculture",
+    "difficulty": "medium",
+    "text": "The crop that requires standing water in fields during growth is:",
+    "options": [
+      "Rice",
+      "Wheat",
+      "Jowar",
+      "Cotton"
+    ],
+    "correct": 0,
+    "explanation": "Rice (paddy) cultivation requires waterlogged/flooded fields — it grows in standing water. [Board 2019] Wheat needs well-drained soil; Jowar is drought-resistant; Cotton needs moderate moisture."
+  },
+  {
+    "id": "geo129",
+    "source": "Board 2019",
+    "chapter": "Maps",
+    "difficulty": "medium",
+    "text": "A map with scale 1:25,000 is called:",
+    "options": [
+      "Large scale map",
+      "Small scale map",
+      "Atlas map",
+      "Thematic map"
+    ],
+    "correct": 0,
+    "explanation": "1:25,000 shows a small area with great detail — it is a large scale map. 1:1,000,000 is small scale (less detail, larger area). [Board 2019] Small scale = 1:1,000,000+; atlas maps can be any scale; thematic shows specific data."
+  },
+  {
+    "id": "geo130",
+    "source": "Board 2019",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "TISCO (Tata Iron and Steel Company) is located at Jamshedpur because:",
+    "options": [
+      "Proximity to iron ore, coal and water",
+      "Near the sea for export",
+      "Government policy",
+      "Cheap labour only"
+    ],
+    "correct": 0,
+    "explanation": "Jamshedpur was chosen for: Noamundi iron ore, Jharia coal, Subarnarekha and Kharkai rivers (water), good railway connectivity. [Board 2019] It's inland not coastal; government didn't set it up (private); labour alone doesn't explain location."
+  },
+  {
+    "id": "geo131",
+    "source": "Board 2020",
+    "chapter": "Climate of India",
+    "difficulty": "medium",
+    "text": "Western disturbances that bring rainfall to northwestern India in winter originate from:",
+    "options": [
+      "Mediterranean Sea",
+      "Bay of Bengal",
+      "Arabian Sea",
+      "Indian Ocean"
+    ],
+    "correct": 0,
+    "explanation": "Western disturbances are extra-tropical cyclones originating over the Mediterranean Sea, bringing winter rainfall to Punjab, Haryana and western UP. [Board 2020]"
+  },
+  {
+    "id": "geo132",
+    "source": "Board 2020",
+    "chapter": "Soils of India",
+    "difficulty": "easy",
+    "text": "Red soil gets its colour from:",
+    "options": [
+      "Presence of iron oxides",
+      "High humus content",
+      "High clay content",
+      "Saline minerals"
+    ],
+    "correct": 0,
+    "explanation": "Red soil is red due to high iron oxide (Fe₂O₃) content. Poor in nitrogen, phosphorus but suitable for groundnut, rice with irrigation. [Board 2020] Humus makes soil dark; clay is in black soil; saline = saline soils."
+  },
+  {
+    "id": "geo133",
+    "source": "Board 2020",
+    "chapter": "Population",
+    "difficulty": "medium",
+    "text": "The literacy rate of India according to Census 2011 is approximately:",
+    "options": [
+      "74%",
+      "64%",
+      "82%",
+      "85%"
+    ],
+    "correct": 0,
+    "explanation": "India's literacy rate (Census 2011) = 74.04% (Males: 82.14%, Females: 65.46%). [Board 2020] 64% = 2001 census; 82% = male literacy; 85% = Kerala's state literacy."
+  },
+  {
+    "id": "geo134",
+    "source": "Board 2020",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "The main reason for deforestation in India is:",
+    "options": [
+      "Agricultural expansion and development projects",
+      "Rainfall decrease",
+      "Natural forest fires",
+      "Soil erosion"
+    ],
+    "correct": 0,
+    "explanation": "The primary causes of deforestation are: agricultural land expansion, urbanisation, infrastructure projects (dams, roads, industries). [Board 2020] Rainfall decrease is a consequence; natural fires are minor; soil erosion is a consequence."
+  },
+  {
+    "id": "geo135",
+    "source": "Board 2020",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "Which of the following is the busiest airport in India?",
+    "options": [
+      "Indira Gandhi International Airport, Delhi",
+      "Chhatrapati Shivaji Airport, Mumbai",
+      "Kempegowda Airport, Bengaluru",
+      "Rajiv Gandhi Airport, Hyderabad"
+    ],
+    "correct": 0,
+    "explanation": "Indira Gandhi International Airport (Delhi) is India's busiest airport by passenger traffic. [Board 2020] Mumbai is 2nd; Bengaluru is 3rd; Hyderabad is further down."
+  },
+  {
+    "id": "geo136",
+    "source": "Board 2020",
+    "chapter": "Minerals",
+    "difficulty": "medium",
+    "text": "Which state is the leading producer of mica in India?",
+    "options": [
+      "Rajasthan",
+      "Jharkhand",
+      "Andhra Pradesh",
+      "Karnataka"
+    ],
+    "correct": 0,
+    "explanation": "Rajasthan is the largest mica producing state in India, followed by Andhra Pradesh and Jharkhand. [Board 2020] Jharkhand was historically major but Rajasthan now leads; Karnataka produces other minerals."
+  },
+  {
+    "id": "geo137",
+    "source": "Board 2020",
+    "chapter": "Agriculture",
+    "difficulty": "hard",
+    "text": "The Green Revolution in India was associated with:",
+    "options": [
+      "HYV seeds, irrigation and chemical fertilisers",
+      "Organic farming",
+      "Shifting cultivation",
+      "Natural farming"
+    ],
+    "correct": 0,
+    "explanation": "Green Revolution (1960s-70s) used High Yielding Variety (HYV) seeds (especially wheat by Dr M.S. Swaminathan), irrigation and chemical inputs. [Board 2020] Organic farming is opposite; shifting cultivation is tribal; natural farming predates Green Revolution."
+  },
+  {
+    "id": "geo138",
+    "source": "Board 2020",
+    "chapter": "Maps",
+    "difficulty": "medium",
+    "text": "The distance between two points on a map is 5 cm. If the scale is 1:200,000, the actual distance is:",
+    "options": [
+      "10 km",
+      "1 km",
+      "5 km",
+      "20 km"
+    ],
+    "correct": 0,
+    "explanation": "Actual distance = 5 cm × 200,000 = 1,000,000 cm = 10,000 m = 10 km. [Board 2020] 1 km = 100,000 cm; 5 km = wrong multiplier; 20 km = 4× actual."
+  },
+  {
+    "id": "geo139",
+    "source": "Board 2020",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "The Cotton Textile Industry is concentrated in Maharashtra and Gujarat because:",
+    "options": [
+      "Moist climate, raw cotton, port facilities",
+      "Cheap labour only",
+      "Government subsidy",
+      "Coal availability"
+    ],
+    "correct": 0,
+    "explanation": "The cotton belt has: raw cotton from Deccan, humid coastal climate (good for spinning), Kandla/Mumbai ports for exports, and skilled labour. [Board 2020] Labour is one factor; government subsidy is recent; coal is not the primary factor."
+  },
+  {
+    "id": "geo140",
+    "source": "Board 2020",
+    "chapter": "Climate of India",
+    "difficulty": "medium",
+    "text": "The Deccan Plateau lies in the rain shadow region of:",
+    "options": [
+      "Western Ghats",
+      "Eastern Ghats",
+      "Himalayas",
+      "Aravallis"
+    ],
+    "correct": 0,
+    "explanation": "The Western Ghats intercept the Southwest Monsoon. The Deccan Plateau on the eastern/leeward side receives little rainfall — it's in the rain shadow zone. [Board 2020] Eastern Ghats = low; Himalayas are in north; Aravallis cause rain shadow for Rajasthan."
+  },
+  {
+    "id": "geo141",
+    "source": "Board 2023",
+    "chapter": "Soils of India",
+    "difficulty": "medium",
+    "text": "Which soil is also known as the 'self-ploughing soil'?",
+    "options": [
+      "Black soil (Regur)",
+      "Red soil",
+      "Laterite soil",
+      "Alluvial soil"
+    ],
+    "correct": 0,
+    "explanation": "Black soil cracks during the dry season due to its high clay content — the natural cracking loosens and aerates the soil, earning it the name 'self-ploughing' or 'self-tilling' soil. [Board 2023]"
+  },
+  {
+    "id": "geo142",
+    "source": "Board 2023",
+    "chapter": "Natural Vegetation",
+    "difficulty": "medium",
+    "text": "Coniferous forests in India are found in:",
+    "options": [
+      "Himalayan region above 1500 m",
+      "Western Ghats",
+      "Thar Desert",
+      "Andaman Islands"
+    ],
+    "correct": 0,
+    "explanation": "Coniferous (montane) forests of pine, deodar, fir, spruce grow in Himalayan slopes above 1500 m altitude. [Board 2023] Western Ghats = tropical; Thar = thorny scrub; Andaman = tropical rainforest."
+  },
+  {
+    "id": "geo143",
+    "source": "Board 2023",
+    "chapter": "Agriculture",
+    "difficulty": "medium",
+    "text": "India's largest sugar producing state is:",
+    "options": [
+      "Uttar Pradesh",
+      "Maharashtra",
+      "Bihar",
+      "Punjab"
+    ],
+    "correct": 0,
+    "explanation": "Uttar Pradesh is the largest sugarcane and sugar producing state in India. [Board 2023] Maharashtra is 2nd (but highest productivity); Bihar is 5th; Punjab focuses on wheat."
+  },
+  {
+    "id": "geo144",
+    "source": "Board 2023",
+    "chapter": "Industries",
+    "difficulty": "medium",
+    "text": "Petrochemical industries are mainly located near:",
+    "options": [
+      "Oil refineries",
+      "Coal mines",
+      "Forest areas",
+      "Agricultural land"
+    ],
+    "correct": 0,
+    "explanation": "Petrochemical industries are located near refineries as they use petroleum products (naphtha, ethylene) as raw material — e.g., Vadodara, Jamnagar. [Board 2023] Coal mines support steel industry; forests don't support petrochemicals; agricultural land is irrelevant."
+  },
+  {
+    "id": "geo145",
+    "source": "Board 2023",
+    "chapter": "Population",
+    "difficulty": "easy",
+    "text": "The largest state in India by area is:",
+    "options": [
+      "Rajasthan",
+      "Madhya Pradesh",
+      "Maharashtra",
+      "Uttar Pradesh"
+    ],
+    "correct": 0,
+    "explanation": "Rajasthan (342,239 km²) is the largest state by area in India, followed by Madhya Pradesh. [Board 2023] Madhya Pradesh is 2nd; Maharashtra 3rd; UP is most populous but not largest by area."
+  },
+  {
+    "id": "geo146",
+    "source": "Board 2023",
+    "chapter": "Transport",
+    "difficulty": "medium",
+    "text": "The term 'NSEW corridor' in India refers to:",
+    "options": [
+      "North-South and East-West highway corridors",
+      "National Sea Expressway",
+      "New State Economic Waterway",
+      "National Surface Electric Way"
+    ],
+    "correct": 0,
+    "explanation": "NSEW corridor = North-South corridor (Srinagar to Kanyakumari, 4,016 km) and East-West corridor (Porbandar to Silchar, 3,640 km) of the National Highways Development Project. [Board 2023]"
+  },
+  {
+    "id": "geo147",
+    "source": "Board 2023",
+    "chapter": "Minerals",
+    "difficulty": "medium",
+    "text": "Bailadila in Chhattisgarh is famous for:",
+    "options": [
+      "Iron ore",
+      "Copper",
+      "Coal",
+      "Gold"
+    ],
+    "correct": 0,
+    "explanation": "Bailadila (Dantewada, Chhattisgarh) has one of India's richest iron ore deposits — high-grade haematite ore exported to Japan. [Board 2023] Copper = Singhbhum; coal = Damodar Valley; gold = Kolar, Karnataka."
+  },
+  {
+    "id": "geo148",
+    "source": "Board 2023",
+    "chapter": "Maps",
+    "difficulty": "medium",
+    "text": "Which of the following is NOT shown on a physical map?",
+    "options": [
+      "Population distribution",
+      "Mountains and rivers",
+      "Elevation (contours)",
+      "Plains and plateaus"
+    ],
+    "correct": 0,
+    "explanation": "Population distribution is shown on population maps (demographic/thematic maps), not physical maps. Physical maps show relief, elevation, rivers, mountains. [Board 2023]"
+  },
+  {
+    "id": "geo149",
+    "source": "Board 2023",
+    "chapter": "Climate of India",
+    "difficulty": "hard",
+    "text": "El Niño phenomenon affects India's monsoon by:",
+    "options": [
+      "Weakening the southwest monsoon causing drought",
+      "Strengthening monsoon",
+      "Causing floods in all regions",
+      "No effect on India"
+    ],
+    "correct": 0,
+    "explanation": "El Niño (warming of Pacific Ocean) reduces the pressure gradient, weakening India's Southwest Monsoon and leading to drought/below-normal rainfall years. [Board 2023] La Niña strengthens monsoon; not all regions flood; El Niño has a clear correlation with Indian monsoon variability."
+  },
+  {
+    "id": "geo150",
+    "source": "Board 2023",
+    "chapter": "Agriculture",
+    "difficulty": "medium",
+    "text": "'White Revolution' in India is associated with:",
+    "options": [
+      "Milk production (Operation Flood)",
+      "Cotton production",
+      "Sugar production",
+      "Egg production"
+    ],
+    "correct": 0,
+    "explanation": "White Revolution (Operation Flood, 1970-96) by Dr Verghese Kurien boosted milk production, making India the world's largest milk producer. [Board 2023] Cotton = no specific revolution; sugar = no revolution; egg = 'yellow revolution'."
+  }
 ]

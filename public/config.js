@@ -1,7 +1,7 @@
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
-  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
+  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
   IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
 };
 
@@ -16,6 +16,7 @@ const BANKS = {
   'X ICSE History & Civics':      'X-ICSE-History-Civics',
   'X ICSE Geography':             'X-ICSE-Geography',
   'X ICSE English':               'X-ICSE-English',
+  'X ICSE Computer Science':      'X-ICSE-Computer-Science',
   'X CBSE Hindi':                  'X-CBSE-Hindi',
   'X CBSE English':               'X-CBSE-English'
 };
