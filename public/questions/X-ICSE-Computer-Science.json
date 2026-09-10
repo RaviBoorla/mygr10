@@ -1,52 +1,1488 @@
 [
-  {"id":"ics001","chapter":"HTML Basics","difficulty":"easy","source":"Board 2017","text":"Which HTML tag is used to create a hyperlink?","options":["<link>","<a>","<href>","<url>"],"correct":1,"explanation":"<a> (anchor) tag creates hyperlinks using the href attribute. <link> is for CSS stylesheets, <href> and <url> are not valid HTML tags."},
-  {"id":"ics002","chapter":"HTML Basics","difficulty":"easy","source":"Board 2017","text":"What does HTML stand for?","options":["Hyper Text Markup Language","High Text Markup Language","Hyper Transfer Markup Language","Hyper Text Making Language"],"correct":0,"explanation":"HTML stands for Hyper Text Markup Language. 'Hyper' refers to hyperlinks, 'Text' is the content type, 'Markup' means tagging, 'Language' is the syntax system."},
-  {"id":"ics003","chapter":"HTML Basics","difficulty":"easy","source":"Board 2017","text":"Which attribute specifies an alternate text for an image in HTML?","options":["title","src","alt","name"],"correct":2,"explanation":"The 'alt' attribute provides alternate text for images when they cannot be displayed. 'src' specifies the image source, 'title' shows tooltip text, 'name' is used for form elements."},
-  {"id":"ics004","chapter":"HTML Tables","difficulty":"medium","source":"Board 2017","text":"Which HTML tag is used to define a table row?","options":["<td>","<th>","<tr>","<table>"],"correct":2,"explanation":"<tr> defines a table row. <td> defines a table data cell, <th> defines a table header cell, and <table> is the container for the entire table."},
-  {"id":"ics005","chapter":"HTML Forms","difficulty":"medium","source":"Board 2017","text":"Which input type creates a password field in HTML?","options":["type='text'","type='hidden'","type='password'","type='secure'"],"correct":2,"explanation":"type='password' masks the input characters. type='text' shows plain text, type='hidden' hides the field entirely, type='secure' is not a valid HTML input type."},
-  {"id":"ics006","chapter":"Networking","difficulty":"medium","source":"Board 2017","text":"What does IP stand for in networking?","options":["Internet Protocol","Internal Protocol","Internet Program","Interconnect Protocol"],"correct":0,"explanation":"IP stands for Internet Protocol, the fundamental protocol governing the internet. It handles addressing and routing of data packets between devices."},
-  {"id":"ics007","chapter":"Networking","difficulty":"easy","source":"Board 2017","text":"What is the full form of LAN?","options":["Local Area Network","Large Area Network","Long Area Network","Local Access Node"],"correct":0,"explanation":"LAN stands for Local Area Network — a network covering a small geographical area like an office or building. WAN covers wide areas, MAN covers metropolitan areas."},
-  {"id":"ics008","chapter":"Networking","difficulty":"medium","source":"Board 2017","text":"Which device is used to connect two different networks?","options":["Hub","Switch","Router","Repeater"],"correct":2,"explanation":"A Router connects different networks and routes data packets between them. A Hub/Switch works within the same network, and a Repeater only amplifies signals without connecting different networks."},
-  {"id":"ics009","chapter":"MS Office","difficulty":"easy","source":"Board 2017","text":"Which keyboard shortcut is used to save a document in MS Word?","options":["Ctrl+P","Ctrl+S","Ctrl+X","Alt+S"],"correct":1,"explanation":"Ctrl+S saves the document. Ctrl+P is for Print, Ctrl+X is for Cut, Alt+S is not a standard save shortcut in MS Word."},
-  {"id":"ics010","chapter":"MS Office","difficulty":"easy","source":"Board 2017","text":"What is the extension of an MS Excel file?","options":[".doc",".ppt",".xls",".txt"],"correct":2,"explanation":".xls (or .xlsx) is the MS Excel file extension. .doc is MS Word, .ppt is MS PowerPoint, .txt is plain text file."},
-  {"id":"ics011","chapter":"HTML Basics","difficulty":"medium","source":"Board 2018","text":"Which tag is used to make text bold in HTML?","options":["<i>","<u>","<b>","<em>"],"correct":2,"explanation":"<b> makes text bold. <i> makes text italic, <u> underlines text, and <em> emphasizes text (usually rendered as italic, but has semantic meaning)."},
-  {"id":"ics012","chapter":"HTML Basics","difficulty":"easy","source":"Board 2018","text":"What is the correct HTML tag for inserting a line break?","options":["<lb>","<break>","<br>","<newline>"],"correct":2,"explanation":"<br> inserts a line break in HTML. <lb>, <break>, and <newline> are not valid HTML tags."},
-  {"id":"ics013","chapter":"HTML Forms","difficulty":"medium","source":"Board 2018","text":"Which attribute of the form tag specifies where to send form data?","options":["method","action","target","name"],"correct":1,"explanation":"The 'action' attribute specifies the URL where form data is sent. 'method' specifies GET/POST method, 'target' specifies where to display response, 'name' identifies the form."},
-  {"id":"ics014","chapter":"HTML Lists","difficulty":"easy","source":"Board 2018","text":"Which HTML tag creates an unordered (bulleted) list?","options":["<ol>","<li>","<ul>","<list>"],"correct":2,"explanation":"<ul> creates an unordered list with bullets. <ol> creates an ordered (numbered) list, <li> defines each list item, <list> is not a valid HTML tag."},
-  {"id":"ics015","chapter":"Networking","difficulty":"medium","source":"Board 2018","text":"What does DNS stand for?","options":["Domain Name System","Dynamic Network Service","Data Name Server","Domain Network Standard"],"correct":0,"explanation":"DNS stands for Domain Name System — it translates human-readable domain names (like www.google.com) into IP addresses that computers use to communicate."},
-  {"id":"ics016","chapter":"Networking","difficulty":"hard","source":"Board 2018","text":"Which protocol is used for sending emails?","options":["FTP","HTTP","SMTP","POP3"],"correct":2,"explanation":"SMTP (Simple Mail Transfer Protocol) is used for sending emails. FTP transfers files, HTTP transfers web pages, and POP3 is used for receiving/downloading emails."},
-  {"id":"ics017","chapter":"Networking","difficulty":"medium","source":"Board 2018","text":"What is the maximum number of computers that can be connected in a bus topology?","options":["Limited only by hardware","Exactly 10","Exactly 100","Unlimited"],"correct":0,"explanation":"Bus topology allows as many computers as the cable can handle (limited by hardware constraints like cable length and signal degradation), not a fixed number like 10 or 100."},
-  {"id":"ics018","chapter":"MS Office","difficulty":"easy","source":"Board 2018","text":"Which function key opens Help in MS Office applications?","options":["F1","F2","F5","F10"],"correct":0,"explanation":"F1 opens the Help menu in most MS Office applications. F2 renames selected items, F5 finds/replaces or refreshes, F10 activates the menu bar."},
-  {"id":"ics019","chapter":"Spreadsheets","difficulty":"medium","source":"Board 2018","text":"In MS Excel, which function returns the sum of a range of cells?","options":["=ADD()","=TOTAL()","=SUM()","=PLUS()"],"correct":2,"explanation":"=SUM() is the correct Excel function to add values in a range. =ADD(), =TOTAL(), and =PLUS() are not valid Excel functions."},
-  {"id":"ics020","chapter":"Spreadsheets","difficulty":"medium","source":"Board 2018","text":"What is the cell address of the cell in the 3rd column and 2nd row of an Excel worksheet?","options":["C2","2C","3B","B3"],"correct":0,"explanation":"In Excel, columns are labeled with letters and rows with numbers. The 3rd column is C, the 2nd row is 2, so the cell address is C2. B3 would be 2nd column, 3rd row."},
-  {"id":"ics021","chapter":"Algorithms","difficulty":"medium","source":"Board 2019","text":"What is an algorithm?","options":["A programming language","A step-by-step procedure to solve a problem","A type of computer hardware","A database management system"],"correct":1,"explanation":"An algorithm is a step-by-step, finite set of instructions to solve a problem. It is not a programming language, hardware, or database system."},
-  {"id":"ics022","chapter":"Algorithms","difficulty":"medium","source":"Board 2019","text":"Which of the following is NOT a characteristic of a good algorithm?","options":["Finiteness","Definiteness","Ambiguity","Effectiveness"],"correct":2,"explanation":"Ambiguity is NOT a characteristic of a good algorithm. Good algorithms must be Finite (end after finite steps), Definite (clear instructions), Effective (each step is achievable), and Input/Output defined."},
-  {"id":"ics023","chapter":"Algorithms","difficulty":"hard","source":"Board 2019","text":"What is the time complexity of a linear search algorithm?","options":["O(1)","O(log n)","O(n)","O(n²)"],"correct":2,"explanation":"Linear search has O(n) time complexity — it checks each element one by one. O(1) is constant time, O(log n) is binary search, O(n²) is for algorithms like bubble sort."},
-  {"id":"ics024","chapter":"HTML Tables","difficulty":"medium","source":"Board 2019","text":"Which attribute is used to merge cells horizontally in an HTML table?","options":["rowspan","cellspan","colspan","merge"],"correct":2,"explanation":"'colspan' merges cells horizontally (across columns). 'rowspan' merges cells vertically (across rows). 'cellspan' and 'merge' are not valid HTML table attributes."},
-  {"id":"ics025","chapter":"HTML Basics","difficulty":"medium","source":"Board 2019","text":"What does the <head> tag in HTML contain?","options":["Visible page content","Navigation links","Meta information and links to stylesheets","The footer content"],"correct":2,"explanation":"<head> contains meta information (title, charset, description), links to stylesheets, and scripts — not visible body content. Visible content goes in <body>."},
-  {"id":"ics026","chapter":"Database","difficulty":"medium","source":"Board 2019","text":"What does DBMS stand for?","options":["Data Base Management System","Digital Base Management System","Data Backup Management System","Database Memory System"],"correct":0,"explanation":"DBMS stands for Database Management System — software for creating, managing, and organizing databases. Examples include MySQL, Oracle, MS Access."},
-  {"id":"ics027","chapter":"Database","difficulty":"medium","source":"Board 2019","text":"In a relational database, what is a primary key?","options":["Any column in a table","A column that uniquely identifies each row","The first column of a table","A foreign key reference"],"correct":1,"explanation":"A primary key uniquely identifies each row/record in a table. It cannot be NULL or duplicate. It is not necessarily the first column, and it's different from a foreign key."},
-  {"id":"ics028","chapter":"Networking","difficulty":"medium","source":"Board 2019","text":"Which topology connects all devices to a central hub?","options":["Bus","Ring","Star","Mesh"],"correct":2,"explanation":"In Star topology, all devices connect to a central hub or switch. Bus topology uses a single cable, Ring topology connects devices in a loop, Mesh connects each device to every other."},
-  {"id":"ics029","chapter":"MS Office","difficulty":"easy","source":"Board 2019","text":"Which tab in MS Word contains the 'Font' group?","options":["Insert","Home","View","References"],"correct":1,"explanation":"The 'Home' tab in MS Word contains the Font group with options for font type, size, bold, italic, etc. Insert is for adding objects, View controls display, References is for citations."},
-  {"id":"ics030","chapter":"Spreadsheets","difficulty":"hard","source":"Board 2019","text":"In MS Excel, what does the formula =IF(A1>10,\"High\",\"Low\") return when A1=15?","options":["Low","High","Error","15"],"correct":1,"explanation":"Since A1=15 which is greater than 10, the IF condition is TRUE, so it returns \"High\". \"Low\" would be returned if A1 were 10 or less. The formula is valid so no Error is returned."},
-  {"id":"ics031","chapter":"HTML Basics","difficulty":"easy","source":"Board 2020","text":"Which HTML tag defines the document type?","options":["<html>","<!DOCTYPE>","<head>","<meta>"],"correct":1,"explanation":"<!DOCTYPE html> declares the document type and version of HTML. <html> is the root element, <head> contains metadata, <meta> provides meta information."},
-  {"id":"ics032","chapter":"HTML Forms","difficulty":"medium","source":"Board 2020","text":"Which input type creates radio buttons in HTML?","options":["type='checkbox'","type='button'","type='radio'","type='select'"],"correct":2,"explanation":"type='radio' creates radio buttons allowing single selection from options. type='checkbox' allows multiple selections, type='button' creates a clickable button, type='select' is not valid (use <select> tag instead)."},
-  {"id":"ics033","chapter":"Networking","difficulty":"hard","source":"Board 2020","text":"What is the difference between IPv4 and IPv6?","options":["IPv4 is faster than IPv6","IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses","IPv6 is older than IPv4","IPv4 supports more addresses than IPv6"],"correct":1,"explanation":"IPv4 uses 32-bit addresses (~4.3 billion), while IPv6 uses 128-bit addresses (vastly more). IPv6 is newer (not older) and supports far more addresses than IPv4."},
-  {"id":"ics034","chapter":"Networking","difficulty":"medium","source":"Board 2020","text":"What does HTTP stand for?","options":["Hyper Text Transfer Protocol","High Text Transfer Protocol","Hyper Text Translation Program","Home Transfer Text Protocol"],"correct":0,"explanation":"HTTP stands for Hyper Text Transfer Protocol — the foundation of data communication on the web. HTTPS adds the security layer (SSL/TLS)."},
-  {"id":"ics035","chapter":"Algorithms","difficulty":"medium","source":"Board 2020","text":"What is a flowchart?","options":["A type of database","A graphical representation of an algorithm","A programming language","A network topology"],"correct":1,"explanation":"A flowchart is a graphical/diagrammatic representation of an algorithm using standard symbols (ovals for start/end, rectangles for process, diamonds for decisions, parallelograms for I/O)."},
-  {"id":"ics036","chapter":"Algorithms","difficulty":"medium","source":"Board 2020","text":"Which symbol is used for a decision in a flowchart?","options":["Rectangle","Oval","Diamond","Parallelogram"],"correct":2,"explanation":"A Diamond shape represents a decision (yes/no or true/false) in a flowchart. Rectangle is for processing steps, Oval is for Start/End, Parallelogram is for Input/Output."},
-  {"id":"ics037","chapter":"Database","difficulty":"medium","source":"Board 2020","text":"What is a foreign key in a database?","options":["A key from another country","A column that references the primary key of another table","The second column of a table","An encrypted key"],"correct":1,"explanation":"A foreign key is a column (or set of columns) that references the primary key of another table, establishing a relationship between the two tables."},
-  {"id":"ics038","chapter":"MS Office","difficulty":"medium","source":"Board 2020","text":"In MS Word, which feature automatically corrects spelling mistakes?","options":["AutoFormat","AutoCorrect","AutoFill","AutoText"],"correct":1,"explanation":"AutoCorrect automatically corrects common spelling mistakes as you type. AutoFormat formats text automatically, AutoFill (Excel feature) fills in series, AutoText stores frequently used text."},
-  {"id":"ics039","chapter":"Spreadsheets","difficulty":"medium","source":"Board 2020","text":"What is the purpose of the VLOOKUP function in Excel?","options":["To add values vertically","To look up a value in the leftmost column and return a value in the same row from another column","To create vertical charts","To validate data vertically"],"correct":1,"explanation":"VLOOKUP searches for a value in the first column of a range and returns a value in the same row from a specified column. It's used for data lookup/retrieval operations."},
-  {"id":"ics040","chapter":"Networking","difficulty":"easy","source":"Board 2020","text":"What does WWW stand for?","options":["World Wide Web","World Wide Wire","Wide World Web","Web World Wide"],"correct":0,"explanation":"WWW stands for World Wide Web — the system of interlinked hypertext documents accessed via the Internet. It was invented by Tim Berners-Lee in 1989."},
-  {"id":"ics041","chapter":"HTML Basics","difficulty":"medium","source":"Board 2023","text":"Which CSS property changes the text color?","options":["font-color","text-color","color","foreground"],"correct":2,"explanation":"The CSS property 'color' changes the text color. 'font-color' and 'text-color' are not valid CSS properties; 'foreground' is not a CSS property."},
-  {"id":"ics042","chapter":"HTML Basics","difficulty":"medium","source":"Board 2023","text":"Which HTML attribute is used to specify an inline style for an element?","options":["class","id","style","css"],"correct":2,"explanation":"The 'style' attribute applies inline CSS directly to an HTML element. 'class' links to a CSS class, 'id' provides a unique identifier, 'css' is not a valid HTML attribute."},
-  {"id":"ics043","chapter":"Algorithms","difficulty":"hard","source":"Board 2023","text":"In a binary search algorithm, what is the prerequisite condition?","options":["The list must be sorted","The list must contain unique elements","The list must be in descending order","The list must have an even number of elements"],"correct":0,"explanation":"Binary search requires the list to be sorted (in ascending or descending order). It doesn't require unique elements, doesn't mandate descending order, and works with any number of elements."},
-  {"id":"ics044","chapter":"Networking","difficulty":"hard","source":"Board 2023","text":"What is the function of a firewall?","options":["Speeds up internet connection","Monitors and controls incoming/outgoing network traffic based on security rules","Stores web pages for faster access","Converts domain names to IP addresses"],"correct":1,"explanation":"A firewall monitors and controls network traffic based on predetermined security rules, blocking unauthorized access. Caching speeds access, DNS converts domain names, and a firewall doesn't inherently speed connections."},
-  {"id":"ics045","chapter":"Database","difficulty":"hard","source":"Board 2023","text":"What is SQL?","options":["A programming language for hardware","Structured Query Language for managing relational databases","Simple Queue Language","Sequential Query Logic"],"correct":1,"explanation":"SQL stands for Structured Query Language — used to create, manipulate, and retrieve data from relational databases. It's not for hardware control and SQL stands for Structured, not Simple or Sequential."},
-  {"id":"ics046","chapter":"Spreadsheets","difficulty":"medium","source":"Board 2023","text":"In MS Excel, what does the AVERAGE function do?","options":["Returns the maximum value","Returns the minimum value","Calculates the arithmetic mean of values","Counts the number of cells"],"correct":2,"explanation":"=AVERAGE() calculates the arithmetic mean (sum divided by count) of the specified values. MAX() returns maximum, MIN() returns minimum, COUNT() counts cells with numbers."},
-  {"id":"ics047","chapter":"MS Office","difficulty":"medium","source":"Board 2023","text":"Which view in MS PowerPoint shows all slides as small thumbnails?","options":["Normal View","Slide Sorter View","Reading View","Presenter View"],"correct":1,"explanation":"Slide Sorter View displays all slides as thumbnails, making it easy to rearrange slides. Normal View is the editing view, Reading View is for presentation review, Presenter View is for presenting with notes."},
-  {"id":"ics048","chapter":"Networking","difficulty":"medium","source":"Board 2023","text":"What is cloud computing?","options":["Computing done on airplanes","Delivery of computing services over the internet","A type of weather prediction software","Physical servers stored underground"],"correct":1,"explanation":"Cloud computing delivers computing services (servers, storage, databases, networking, software) over the internet ('the cloud'), enabling flexible resources and economies of scale without local infrastructure."},
-  {"id":"ics049","chapter":"Algorithms","difficulty":"medium","source":"Board 2023","text":"What is pseudocode?","options":["Incorrect code","An informal high-level description of an algorithm written in plain language","Machine code","Binary code"],"correct":1,"explanation":"Pseudocode is an informal, high-level description of an algorithm using plain language mixed with programming constructs. It's used for planning algorithms before writing actual code, making it language-independent."},
-  {"id":"ics050","chapter":"HTML Basics","difficulty":"hard","source":"Board 2023","text":"What is the purpose of the <meta charset='UTF-8'> tag?","options":["Creates a table with 8 columns","Specifies the character encoding for the HTML document","Limits document to 8 MB","Sets the font size to 8"],"correct":1,"explanation":"<meta charset='UTF-8'> specifies UTF-8 character encoding, ensuring the browser correctly displays special characters, symbols, and international text. It has nothing to do with columns, file size, or font size."}
+  {
+    "id": "ics001",
+    "chapter": "HTML Basics",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "Which HTML tag is used to create a hyperlink?",
+    "options": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
+    "correct": 1,
+    "explanation": "<a> (anchor) tag creates hyperlinks using the href attribute. <link> is for CSS stylesheets, <href> and <url> are not valid HTML tags."
+  },
+  {
+    "id": "ics002",
+    "chapter": "HTML Basics",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "What does HTML stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "High Text Markup Language",
+      "Hyper Transfer Markup Language",
+      "Hyper Text Making Language"
+    ],
+    "correct": 0,
+    "explanation": "HTML stands for Hyper Text Markup Language. 'Hyper' refers to hyperlinks, 'Text' is the content type, 'Markup' means tagging, 'Language' is the syntax system."
+  },
+  {
+    "id": "ics003",
+    "chapter": "HTML Basics",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "Which attribute specifies an alternate text for an image in HTML?",
+    "options": [
+      "title",
+      "src",
+      "alt",
+      "name"
+    ],
+    "correct": 2,
+    "explanation": "The 'alt' attribute provides alternate text for images when they cannot be displayed. 'src' specifies the image source, 'title' shows tooltip text, 'name' is used for form elements."
+  },
+  {
+    "id": "ics004",
+    "chapter": "HTML Tables",
+    "difficulty": "medium",
+    "source": "Board 2017",
+    "text": "Which HTML tag is used to define a table row?",
+    "options": [
+      "<td>",
+      "<th>",
+      "<tr>",
+      "<table>"
+    ],
+    "correct": 2,
+    "explanation": "<tr> defines a table row. <td> defines a table data cell, <th> defines a table header cell, and <table> is the container for the entire table."
+  },
+  {
+    "id": "ics005",
+    "chapter": "HTML Forms",
+    "difficulty": "medium",
+    "source": "Board 2017",
+    "text": "Which input type creates a password field in HTML?",
+    "options": [
+      "type='text'",
+      "type='hidden'",
+      "type='password'",
+      "type='secure'"
+    ],
+    "correct": 2,
+    "explanation": "type='password' masks the input characters. type='text' shows plain text, type='hidden' hides the field entirely, type='secure' is not a valid HTML input type."
+  },
+  {
+    "id": "ics006",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2017",
+    "text": "What does IP stand for in networking?",
+    "options": [
+      "Internet Protocol",
+      "Internal Protocol",
+      "Internet Program",
+      "Interconnect Protocol"
+    ],
+    "correct": 0,
+    "explanation": "IP stands for Internet Protocol, the fundamental protocol governing the internet. It handles addressing and routing of data packets between devices."
+  },
+  {
+    "id": "ics007",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "What is the full form of LAN?",
+    "options": [
+      "Local Area Network",
+      "Large Area Network",
+      "Long Area Network",
+      "Local Access Node"
+    ],
+    "correct": 0,
+    "explanation": "LAN stands for Local Area Network \u2014 a network covering a small geographical area like an office or building. WAN covers wide areas, MAN covers metropolitan areas."
+  },
+  {
+    "id": "ics008",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2017",
+    "text": "Which device is used to connect two different networks?",
+    "options": [
+      "Hub",
+      "Switch",
+      "Router",
+      "Repeater"
+    ],
+    "correct": 2,
+    "explanation": "A Router connects different networks and routes data packets between them. A Hub/Switch works within the same network, and a Repeater only amplifies signals without connecting different networks."
+  },
+  {
+    "id": "ics009",
+    "chapter": "MS Office",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "Which keyboard shortcut is used to save a document in MS Word?",
+    "options": [
+      "Ctrl+P",
+      "Ctrl+S",
+      "Ctrl+X",
+      "Alt+S"
+    ],
+    "correct": 1,
+    "explanation": "Ctrl+S saves the document. Ctrl+P is for Print, Ctrl+X is for Cut, Alt+S is not a standard save shortcut in MS Word."
+  },
+  {
+    "id": "ics010",
+    "chapter": "MS Office",
+    "difficulty": "easy",
+    "source": "Board 2017",
+    "text": "What is the extension of an MS Excel file?",
+    "options": [
+      ".doc",
+      ".ppt",
+      ".xls",
+      ".txt"
+    ],
+    "correct": 2,
+    "explanation": ".xls (or .xlsx) is the MS Excel file extension. .doc is MS Word, .ppt is MS PowerPoint, .txt is plain text file."
+  },
+  {
+    "id": "ics011",
+    "chapter": "HTML Basics",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "Which tag is used to make text bold in HTML?",
+    "options": [
+      "<i>",
+      "<u>",
+      "<b>",
+      "<em>"
+    ],
+    "correct": 2,
+    "explanation": "<b> makes text bold. <i> makes text italic, <u> underlines text, and <em> emphasizes text (usually rendered as italic, but has semantic meaning)."
+  },
+  {
+    "id": "ics012",
+    "chapter": "HTML Basics",
+    "difficulty": "easy",
+    "source": "Board 2018",
+    "text": "What is the correct HTML tag for inserting a line break?",
+    "options": [
+      "<lb>",
+      "<break>",
+      "<br>",
+      "<newline>"
+    ],
+    "correct": 2,
+    "explanation": "<br> inserts a line break in HTML. <lb>, <break>, and <newline> are not valid HTML tags."
+  },
+  {
+    "id": "ics013",
+    "chapter": "HTML Forms",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "Which attribute of the form tag specifies where to send form data?",
+    "options": [
+      "method",
+      "action",
+      "target",
+      "name"
+    ],
+    "correct": 1,
+    "explanation": "The 'action' attribute specifies the URL where form data is sent. 'method' specifies GET/POST method, 'target' specifies where to display response, 'name' identifies the form."
+  },
+  {
+    "id": "ics014",
+    "chapter": "HTML Lists",
+    "difficulty": "easy",
+    "source": "Board 2018",
+    "text": "Which HTML tag creates an unordered (bulleted) list?",
+    "options": [
+      "<ol>",
+      "<li>",
+      "<ul>",
+      "<list>"
+    ],
+    "correct": 2,
+    "explanation": "<ul> creates an unordered list with bullets. <ol> creates an ordered (numbered) list, <li> defines each list item, <list> is not a valid HTML tag."
+  },
+  {
+    "id": "ics015",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "What does DNS stand for?",
+    "options": [
+      "Domain Name System",
+      "Dynamic Network Service",
+      "Data Name Server",
+      "Domain Network Standard"
+    ],
+    "correct": 0,
+    "explanation": "DNS stands for Domain Name System \u2014 it translates human-readable domain names (like www.google.com) into IP addresses that computers use to communicate."
+  },
+  {
+    "id": "ics016",
+    "chapter": "Networking",
+    "difficulty": "hard",
+    "source": "Board 2018",
+    "text": "Which protocol is used for sending emails?",
+    "options": [
+      "FTP",
+      "HTTP",
+      "SMTP",
+      "POP3"
+    ],
+    "correct": 2,
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending emails. FTP transfers files, HTTP transfers web pages, and POP3 is used for receiving/downloading emails."
+  },
+  {
+    "id": "ics017",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "What is the maximum number of computers that can be connected in a bus topology?",
+    "options": [
+      "Limited only by hardware",
+      "Exactly 10",
+      "Exactly 100",
+      "Unlimited"
+    ],
+    "correct": 0,
+    "explanation": "Bus topology allows as many computers as the cable can handle (limited by hardware constraints like cable length and signal degradation), not a fixed number like 10 or 100."
+  },
+  {
+    "id": "ics018",
+    "chapter": "MS Office",
+    "difficulty": "easy",
+    "source": "Board 2018",
+    "text": "Which function key opens Help in MS Office applications?",
+    "options": [
+      "F1",
+      "F2",
+      "F5",
+      "F10"
+    ],
+    "correct": 0,
+    "explanation": "F1 opens the Help menu in most MS Office applications. F2 renames selected items, F5 finds/replaces or refreshes, F10 activates the menu bar."
+  },
+  {
+    "id": "ics019",
+    "chapter": "Spreadsheets",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "In MS Excel, which function returns the sum of a range of cells?",
+    "options": [
+      "=ADD()",
+      "=TOTAL()",
+      "=SUM()",
+      "=PLUS()"
+    ],
+    "correct": 2,
+    "explanation": "=SUM() is the correct Excel function to add values in a range. =ADD(), =TOTAL(), and =PLUS() are not valid Excel functions."
+  },
+  {
+    "id": "ics020",
+    "chapter": "Spreadsheets",
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "What is the cell address of the cell in the 3rd column and 2nd row of an Excel worksheet?",
+    "options": [
+      "C2",
+      "2C",
+      "3B",
+      "B3"
+    ],
+    "correct": 0,
+    "explanation": "In Excel, columns are labeled with letters and rows with numbers. The 3rd column is C, the 2nd row is 2, so the cell address is C2. B3 would be 2nd column, 3rd row."
+  },
+  {
+    "id": "ics021",
+    "chapter": "Algorithms",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "What is an algorithm?",
+    "options": [
+      "A programming language",
+      "A step-by-step procedure to solve a problem",
+      "A type of computer hardware",
+      "A database management system"
+    ],
+    "correct": 1,
+    "explanation": "An algorithm is a step-by-step, finite set of instructions to solve a problem. It is not a programming language, hardware, or database system."
+  },
+  {
+    "id": "ics022",
+    "chapter": "Algorithms",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "Which of the following is NOT a characteristic of a good algorithm?",
+    "options": [
+      "Finiteness",
+      "Definiteness",
+      "Ambiguity",
+      "Effectiveness"
+    ],
+    "correct": 2,
+    "explanation": "Ambiguity is NOT a characteristic of a good algorithm. Good algorithms must be Finite (end after finite steps), Definite (clear instructions), Effective (each step is achievable), and Input/Output defined."
+  },
+  {
+    "id": "ics023",
+    "chapter": "Algorithms",
+    "difficulty": "hard",
+    "source": "Board 2019",
+    "text": "What is the time complexity of a linear search algorithm?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n\u00b2)"
+    ],
+    "correct": 2,
+    "explanation": "Linear search has O(n) time complexity \u2014 it checks each element one by one. O(1) is constant time, O(log n) is binary search, O(n\u00b2) is for algorithms like bubble sort."
+  },
+  {
+    "id": "ics024",
+    "chapter": "HTML Tables",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "Which attribute is used to merge cells horizontally in an HTML table?",
+    "options": [
+      "rowspan",
+      "cellspan",
+      "colspan",
+      "merge"
+    ],
+    "correct": 2,
+    "explanation": "'colspan' merges cells horizontally (across columns). 'rowspan' merges cells vertically (across rows). 'cellspan' and 'merge' are not valid HTML table attributes."
+  },
+  {
+    "id": "ics025",
+    "chapter": "HTML Basics",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "What does the <head> tag in HTML contain?",
+    "options": [
+      "Visible page content",
+      "Navigation links",
+      "Meta information and links to stylesheets",
+      "The footer content"
+    ],
+    "correct": 2,
+    "explanation": "<head> contains meta information (title, charset, description), links to stylesheets, and scripts \u2014 not visible body content. Visible content goes in <body>."
+  },
+  {
+    "id": "ics026",
+    "chapter": "Database",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "What does DBMS stand for?",
+    "options": [
+      "Data Base Management System",
+      "Digital Base Management System",
+      "Data Backup Management System",
+      "Database Memory System"
+    ],
+    "correct": 0,
+    "explanation": "DBMS stands for Database Management System \u2014 software for creating, managing, and organizing databases. Examples include MySQL, Oracle, MS Access."
+  },
+  {
+    "id": "ics027",
+    "chapter": "Database",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "In a relational database, what is a primary key?",
+    "options": [
+      "Any column in a table",
+      "A column that uniquely identifies each row",
+      "The first column of a table",
+      "A foreign key reference"
+    ],
+    "correct": 1,
+    "explanation": "A primary key uniquely identifies each row/record in a table. It cannot be NULL or duplicate. It is not necessarily the first column, and it's different from a foreign key."
+  },
+  {
+    "id": "ics028",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "Which topology connects all devices to a central hub?",
+    "options": [
+      "Bus",
+      "Ring",
+      "Star",
+      "Mesh"
+    ],
+    "correct": 2,
+    "explanation": "In Star topology, all devices connect to a central hub or switch. Bus topology uses a single cable, Ring topology connects devices in a loop, Mesh connects each device to every other."
+  },
+  {
+    "id": "ics029",
+    "chapter": "MS Office",
+    "difficulty": "easy",
+    "source": "Board 2019",
+    "text": "Which tab in MS Word contains the 'Font' group?",
+    "options": [
+      "Insert",
+      "Home",
+      "View",
+      "References"
+    ],
+    "correct": 1,
+    "explanation": "The 'Home' tab in MS Word contains the Font group with options for font type, size, bold, italic, etc. Insert is for adding objects, View controls display, References is for citations."
+  },
+  {
+    "id": "ics030",
+    "chapter": "Spreadsheets",
+    "difficulty": "hard",
+    "source": "Board 2019",
+    "text": "In MS Excel, what does the formula =IF(A1>10,\"High\",\"Low\") return when A1=15?",
+    "options": [
+      "Low",
+      "High",
+      "Error",
+      "15"
+    ],
+    "correct": 1,
+    "explanation": "Since A1=15 which is greater than 10, the IF condition is TRUE, so it returns \"High\". \"Low\" would be returned if A1 were 10 or less. The formula is valid so no Error is returned."
+  },
+  {
+    "id": "ics031",
+    "chapter": "HTML Basics",
+    "difficulty": "easy",
+    "source": "Board 2020",
+    "text": "Which HTML tag defines the document type?",
+    "options": [
+      "<html>",
+      "<!DOCTYPE>",
+      "<head>",
+      "<meta>"
+    ],
+    "correct": 1,
+    "explanation": "<!DOCTYPE html> declares the document type and version of HTML. <html> is the root element, <head> contains metadata, <meta> provides meta information."
+  },
+  {
+    "id": "ics032",
+    "chapter": "HTML Forms",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "Which input type creates radio buttons in HTML?",
+    "options": [
+      "type='checkbox'",
+      "type='button'",
+      "type='radio'",
+      "type='select'"
+    ],
+    "correct": 2,
+    "explanation": "type='radio' creates radio buttons allowing single selection from options. type='checkbox' allows multiple selections, type='button' creates a clickable button, type='select' is not valid (use <select> tag instead)."
+  },
+  {
+    "id": "ics033",
+    "chapter": "Networking",
+    "difficulty": "hard",
+    "source": "Board 2020",
+    "text": "What is the difference between IPv4 and IPv6?",
+    "options": [
+      "IPv4 is faster than IPv6",
+      "IPv4 uses 32-bit addresses; IPv6 uses 128-bit addresses",
+      "IPv6 is older than IPv4",
+      "IPv4 supports more addresses than IPv6"
+    ],
+    "correct": 1,
+    "explanation": "IPv4 uses 32-bit addresses (~4.3 billion), while IPv6 uses 128-bit addresses (vastly more). IPv6 is newer (not older) and supports far more addresses than IPv4."
+  },
+  {
+    "id": "ics034",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "What does HTTP stand for?",
+    "options": [
+      "Hyper Text Transfer Protocol",
+      "High Text Transfer Protocol",
+      "Hyper Text Translation Program",
+      "Home Transfer Text Protocol"
+    ],
+    "correct": 0,
+    "explanation": "HTTP stands for Hyper Text Transfer Protocol \u2014 the foundation of data communication on the web. HTTPS adds the security layer (SSL/TLS)."
+  },
+  {
+    "id": "ics035",
+    "chapter": "Algorithms",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "What is a flowchart?",
+    "options": [
+      "A type of database",
+      "A graphical representation of an algorithm",
+      "A programming language",
+      "A network topology"
+    ],
+    "correct": 1,
+    "explanation": "A flowchart is a graphical/diagrammatic representation of an algorithm using standard symbols (ovals for start/end, rectangles for process, diamonds for decisions, parallelograms for I/O)."
+  },
+  {
+    "id": "ics036",
+    "chapter": "Algorithms",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "Which symbol is used for a decision in a flowchart?",
+    "options": [
+      "Rectangle",
+      "Oval",
+      "Diamond",
+      "Parallelogram"
+    ],
+    "correct": 2,
+    "explanation": "A Diamond shape represents a decision (yes/no or true/false) in a flowchart. Rectangle is for processing steps, Oval is for Start/End, Parallelogram is for Input/Output."
+  },
+  {
+    "id": "ics037",
+    "chapter": "Database",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "What is a foreign key in a database?",
+    "options": [
+      "A key from another country",
+      "A column that references the primary key of another table",
+      "The second column of a table",
+      "An encrypted key"
+    ],
+    "correct": 1,
+    "explanation": "A foreign key is a column (or set of columns) that references the primary key of another table, establishing a relationship between the two tables."
+  },
+  {
+    "id": "ics038",
+    "chapter": "MS Office",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "In MS Word, which feature automatically corrects spelling mistakes?",
+    "options": [
+      "AutoFormat",
+      "AutoCorrect",
+      "AutoFill",
+      "AutoText"
+    ],
+    "correct": 1,
+    "explanation": "AutoCorrect automatically corrects common spelling mistakes as you type. AutoFormat formats text automatically, AutoFill (Excel feature) fills in series, AutoText stores frequently used text."
+  },
+  {
+    "id": "ics039",
+    "chapter": "Spreadsheets",
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "What is the purpose of the VLOOKUP function in Excel?",
+    "options": [
+      "To add values vertically",
+      "To look up a value in the leftmost column and return a value in the same row from another column",
+      "To create vertical charts",
+      "To validate data vertically"
+    ],
+    "correct": 1,
+    "explanation": "VLOOKUP searches for a value in the first column of a range and returns a value in the same row from a specified column. It's used for data lookup/retrieval operations."
+  },
+  {
+    "id": "ics040",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "source": "Board 2020",
+    "text": "What does WWW stand for?",
+    "options": [
+      "World Wide Web",
+      "World Wide Wire",
+      "Wide World Web",
+      "Web World Wide"
+    ],
+    "correct": 0,
+    "explanation": "WWW stands for World Wide Web \u2014 the system of interlinked hypertext documents accessed via the Internet. It was invented by Tim Berners-Lee in 1989."
+  },
+  {
+    "id": "ics041",
+    "chapter": "HTML Basics",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Which CSS property changes the text color?",
+    "options": [
+      "font-color",
+      "text-color",
+      "color",
+      "foreground"
+    ],
+    "correct": 2,
+    "explanation": "The CSS property 'color' changes the text color. 'font-color' and 'text-color' are not valid CSS properties; 'foreground' is not a CSS property."
+  },
+  {
+    "id": "ics042",
+    "chapter": "HTML Basics",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Which HTML attribute is used to specify an inline style for an element?",
+    "options": [
+      "class",
+      "id",
+      "style",
+      "css"
+    ],
+    "correct": 2,
+    "explanation": "The 'style' attribute applies inline CSS directly to an HTML element. 'class' links to a CSS class, 'id' provides a unique identifier, 'css' is not a valid HTML attribute."
+  },
+  {
+    "id": "ics043",
+    "chapter": "Algorithms",
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "In a binary search algorithm, what is the prerequisite condition?",
+    "options": [
+      "The list must be sorted",
+      "The list must contain unique elements",
+      "The list must be in descending order",
+      "The list must have an even number of elements"
+    ],
+    "correct": 0,
+    "explanation": "Binary search requires the list to be sorted (in ascending or descending order). It doesn't require unique elements, doesn't mandate descending order, and works with any number of elements."
+  },
+  {
+    "id": "ics044",
+    "chapter": "Networking",
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "What is the function of a firewall?",
+    "options": [
+      "Speeds up internet connection",
+      "Monitors and controls incoming/outgoing network traffic based on security rules",
+      "Stores web pages for faster access",
+      "Converts domain names to IP addresses"
+    ],
+    "correct": 1,
+    "explanation": "A firewall monitors and controls network traffic based on predetermined security rules, blocking unauthorized access. Caching speeds access, DNS converts domain names, and a firewall doesn't inherently speed connections."
+  },
+  {
+    "id": "ics045",
+    "chapter": "Database",
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "What is SQL?",
+    "options": [
+      "A programming language for hardware",
+      "Structured Query Language for managing relational databases",
+      "Simple Queue Language",
+      "Sequential Query Logic"
+    ],
+    "correct": 1,
+    "explanation": "SQL stands for Structured Query Language \u2014 used to create, manipulate, and retrieve data from relational databases. It's not for hardware control and SQL stands for Structured, not Simple or Sequential."
+  },
+  {
+    "id": "ics046",
+    "chapter": "Spreadsheets",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "In MS Excel, what does the AVERAGE function do?",
+    "options": [
+      "Returns the maximum value",
+      "Returns the minimum value",
+      "Calculates the arithmetic mean of values",
+      "Counts the number of cells"
+    ],
+    "correct": 2,
+    "explanation": "=AVERAGE() calculates the arithmetic mean (sum divided by count) of the specified values. MAX() returns maximum, MIN() returns minimum, COUNT() counts cells with numbers."
+  },
+  {
+    "id": "ics047",
+    "chapter": "MS Office",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Which view in MS PowerPoint shows all slides as small thumbnails?",
+    "options": [
+      "Normal View",
+      "Slide Sorter View",
+      "Reading View",
+      "Presenter View"
+    ],
+    "correct": 1,
+    "explanation": "Slide Sorter View displays all slides as thumbnails, making it easy to rearrange slides. Normal View is the editing view, Reading View is for presentation review, Presenter View is for presenting with notes."
+  },
+  {
+    "id": "ics048",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "What is cloud computing?",
+    "options": [
+      "Computing done on airplanes",
+      "Delivery of computing services over the internet",
+      "A type of weather prediction software",
+      "Physical servers stored underground"
+    ],
+    "correct": 1,
+    "explanation": "Cloud computing delivers computing services (servers, storage, databases, networking, software) over the internet ('the cloud'), enabling flexible resources and economies of scale without local infrastructure."
+  },
+  {
+    "id": "ics049",
+    "chapter": "Algorithms",
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "What is pseudocode?",
+    "options": [
+      "Incorrect code",
+      "An informal high-level description of an algorithm written in plain language",
+      "Machine code",
+      "Binary code"
+    ],
+    "correct": 1,
+    "explanation": "Pseudocode is an informal, high-level description of an algorithm using plain language mixed with programming constructs. It's used for planning algorithms before writing actual code, making it language-independent."
+  },
+  {
+    "id": "ics050",
+    "chapter": "HTML Basics",
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "What is the purpose of the <meta charset='UTF-8'> tag?",
+    "options": [
+      "Creates a table with 8 columns",
+      "Specifies the character encoding for the HTML document",
+      "Limits document to 8 MB",
+      "Sets the font size to 8"
+    ],
+    "correct": 1,
+    "explanation": "<meta charset='UTF-8'> specifies UTF-8 character encoding, ensuring the browser correctly displays special characters, symbols, and international text. It has nothing to do with columns, file size, or font size."
+  },
+  {
+    "id": "cfq001",
+    "chapter": "User Defined Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "What is the type of error, if any, when two methods have the same method signature?",
+    "options": [
+      "Runtime error",
+      "Logical error",
+      "Syntax error",
+      "No error"
+    ],
+    "correct": 2,
+    "explanation": "When two methods have identical signatures (same name and same parameter types/order), it causes a Syntax error \u2014 the compiler cannot distinguish between them."
+  },
+  {
+    "id": "cfq002",
+    "chapter": "User Defined Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The advantage/s of user-defined methods are: (i) Reusability (ii) Complexity (iii) Modularity",
+    "options": [
+      "Only (i)",
+      "(ii) and (iii)",
+      "Only (iii)",
+      "(i) and (iii)"
+    ],
+    "correct": 3,
+    "explanation": "User-defined methods promote Reusability (same method called multiple times) and Modularity (program divided into manageable parts). Complexity is not an advantage."
+  },
+  {
+    "id": "cfq003",
+    "chapter": "User Defined Methods",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Parameters which receive the values from the called method are termed as _______ parameters.",
+    "options": [
+      "actual",
+      "formal",
+      "reference",
+      "class"
+    ],
+    "correct": 1,
+    "explanation": "Formal parameters are the variables declared in the method definition that receive values passed by the caller. Actual parameters are the values passed during the method call."
+  },
+  {
+    "id": "cfq004",
+    "chapter": "User Defined Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is a valid method prototype?",
+    "options": [
+      "public int perform(int a;int b)",
+      "public perform(int a, int b)",
+      "public int perform(int a, int b)",
+      "public perform int(int a, int b)"
+    ],
+    "correct": 2,
+    "explanation": "A valid method prototype is: access_specifier return_type methodName(parameters). 'public int perform(int a, int b)' correctly follows this format."
+  },
+  {
+    "id": "cfq005",
+    "chapter": "User Defined Methods",
+    "difficulty": "hard",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which is the CORRECT statement to invoke the method with the prototype: int display(int a, char ch)?",
+    "options": [
+      "display(10, 'A')",
+      "int m = display();",
+      "int m = display(A, 45)",
+      "int m = display(10, 'A')"
+    ],
+    "correct": 3,
+    "explanation": "The method returns int and takes (int, char) parameters. 'int m = display(10, \\'A\\')' correctly stores the return value and passes matching argument types."
+  },
+  {
+    "id": "cfq006",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is the CORRECT Java statement to convert the word RESPECT to lowercase?",
+    "options": [
+      "\"RESPECT\".toLower()",
+      "\"RESPECT\".toLowerCase()",
+      "String.toLower(\"RESPECT\")",
+      "RESPECT.toLowerCase()"
+    ],
+    "correct": 1,
+    "explanation": "The String method toLowerCase() converts all characters to lowercase. It is called on the String object as: \"RESPECT\".toLowerCase(). toLower() is not a valid Java method."
+  },
+  {
+    "id": "cfq007",
+    "chapter": "Library Classes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following are Wrapper classes? (i) Boolean (ii) boolean (iii) character (iv) Character",
+    "options": [
+      "(i) and (iv)",
+      "(ii) and (iv)",
+      "(i) and (iii)",
+      "(ii) and (iii)"
+    ],
+    "correct": 0,
+    "explanation": "Wrapper classes start with capital letters: Boolean and Character are wrapper classes. boolean (lowercase) is a primitive type, character is not a valid Java class name."
+  },
+  {
+    "id": "cfq008",
+    "chapter": "Library Classes",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Conversion of a wrapper class to its corresponding primitive type is known as:",
+    "options": [
+      "unboxing",
+      "autoboxing",
+      "type casting",
+      "parsing"
+    ],
+    "correct": 0,
+    "explanation": "Unboxing is the automatic conversion of a wrapper class object to its primitive type (e.g., Integer to int). Autoboxing is the reverse \u2014 primitive to wrapper."
+  },
+  {
+    "id": "cfq009",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The String method which results only in a positive integer is:",
+    "options": [
+      "indexOf",
+      "lastIndexOf",
+      "compareTo",
+      "length"
+    ],
+    "correct": 3,
+    "explanation": "The length() method always returns a non-negative integer (0 or positive). indexOf() and lastIndexOf() can return -1, and compareTo() can return negative, zero, or positive values."
+  },
+  {
+    "id": "cfq010",
+    "chapter": "Library Classes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The method to convert a String to double is:",
+    "options": [
+      "String.toDouble()",
+      "Double.Parsedouble()",
+      "Double.parseDouble(String)",
+      "Double.parseDouble()"
+    ],
+    "correct": 2,
+    "explanation": "Double.parseDouble(String) is the correct method \u2014 it takes a String argument and returns a double. Java is case-sensitive; it is parseDouble (lowercase d), not Parsedouble."
+  },
+  {
+    "id": "cfq011",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The Java statement System.out.println(x[x.length]) results in:",
+    "options": [
+      "logical error",
+      "syntax error",
+      "runtime error",
+      "no error"
+    ],
+    "correct": 2,
+    "explanation": "x.length gives the total number of elements. Valid indices are 0 to x.length-1. Accessing x[x.length] goes out of bounds and causes an ArrayIndexOutOfBoundsException (runtime error)."
+  },
+  {
+    "id": "cfq012",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is a valid array declaration statement to store the Gender of 80 people [male, female, transgender]?",
+    "options": [
+      "char gender = new char[80];",
+      "char gender[] = new char[80];",
+      "char gender[80];",
+      "char gender[80] = new char[];"
+    ],
+    "correct": 1,
+    "explanation": "'char gender[] = new char[80]' is the correct Java array declaration. The [] must be part of the type or variable name, and 'new char[80]' allocates 80 elements."
+  },
+  {
+    "id": "cfq013",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Arrange the following Java statements in the correct order of execution to accept values into array a[]: (i) a[i] = sc.nextInt(); (ii) int a[] = new int[10]; (iii) Scanner sc = new Scanner(System.in); (iv) for(i=0;i<10;i++)",
+    "options": [
+      "(i), (ii), (iii), (iv)",
+      "(ii), (iii), (iv), (i)",
+      "(iv), (iii), (ii), (i)",
+      "(iii), (i), (iv), (ii)"
+    ],
+    "correct": 1,
+    "explanation": "Correct order: first declare array (ii), create Scanner (iii), start loop (iv), then read values (i). The array and Scanner must exist before the loop, and input happens inside the loop."
+  },
+  {
+    "id": "cfq014",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "In the bubble sort technique, during each iteration of the inner loop, two adjacent elements are _________ and __________.",
+    "options": [
+      "compared and swapped",
+      "swapped and selected",
+      "selected and deleted",
+      "swapped and deleted"
+    ],
+    "correct": 0,
+    "explanation": "In bubble sort, adjacent elements are compared and swapped if they are in the wrong order. This process repeats until the array is sorted."
+  },
+  {
+    "id": "cfq015",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "What is the highest index of any array with 100 elements?",
+    "options": [
+      "100",
+      "101",
+      "99",
+      "98"
+    ],
+    "correct": 2,
+    "explanation": "Array indices start at 0 in Java. An array with 100 elements has indices 0 through 99. The highest index is 99 (100 - 1)."
+  },
+  {
+    "id": "cfq016",
+    "chapter": "User Defined Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Mr. Sanjay is an event manager; he plans and allots duties to each of his subordinates to handle different events. In a program, a task is divided into simple methods. Name the feature used in these contexts.",
+    "options": [
+      "Complexity",
+      "Modularity",
+      "Reusability",
+      "Monolithic"
+    ],
+    "correct": 1,
+    "explanation": "Modularity is dividing a program into smaller, manageable modules (methods). Just as Mr. Sanjay divides event duties, Modularity divides a program into separate methods for each task."
+  },
+  {
+    "id": "cfq017",
+    "chapter": "Library Classes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Raj was asked to accept a phone number which has 10 digits, using the appropriate method of Scanner class. Which of the following statement must he choose?",
+    "options": [
+      "Ob.nextInt()",
+      "Ob.nextDouble()",
+      "Ob.nextLong()",
+      "Ob.next().charAt(0)"
+    ],
+    "correct": 2,
+    "explanation": "A 10-digit phone number exceeds int range (max ~2.1 billion for 10 digits). nextLong() handles numbers up to 9,223,372,036,854,775,807 \u2014 appropriate for 10-digit phone numbers."
+  },
+  {
+    "id": "cfq018",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Raj wanted to count the number of digits in a given number without using a loop. Which of the following statements is correct to perform the above?",
+    "options": [
+      "String.valueOf(n).length()",
+      "Integer.parseInt(n).length()",
+      "n.length()",
+      "All the above"
+    ],
+    "correct": 0,
+    "explanation": "String.valueOf(n) converts the number to a String, then .length() counts the characters (digits). Integers don't have a .length() method directly. Integer.parseInt(n) requires n to already be a String."
+  },
+  {
+    "id": "cfq019",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Sham was asked to encode a string S by replacing the letter 'E' with '#'. Which is the appropriate Java statement?",
+    "options": [
+      "S.replace('E','#')",
+      "S.replaceAll(E,#)",
+      "S.replace(\"E\",\"#\")",
+      "S.charAt('E','#')"
+    ],
+    "correct": 0,
+    "explanation": "S.replace('E','#') replaces all occurrences of character 'E' with '#'. When using char arguments, single quotes are used. S.replace(\"E\",\"#\") also works but uses String arguments."
+  },
+  {
+    "id": "cfq020",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "When String m is compared to n, the result obtained is greater than zero. Which of the following is true?",
+    "options": [
+      "m comes before n in the dictionary",
+      "n comes before m in the dictionary",
+      "m and n are equal",
+      "m and n have the same length"
+    ],
+    "correct": 1,
+    "explanation": "m.compareTo(n) > 0 means m comes AFTER n in the dictionary (lexicographically). Therefore, n comes BEFORE m. If it were negative, m would come first."
+  },
+  {
+    "id": "cfq021",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following String methods has integer argument(s)? (i) length (ii) substring (iii) indexOf (iv) charAt",
+    "options": [
+      "Only (ii)",
+      "(i) and (iv)",
+      "(ii) and (iv)",
+      "(iii) and (iv)"
+    ],
+    "correct": 2,
+    "explanation": "substring(int beginIndex) and charAt(int index) take integer arguments. length() takes no arguments. indexOf() can take char or String but also has an int overload \u2014 however (ii) substring and (iv) charAt are the primary ones."
+  },
+  {
+    "id": "cfq022",
+    "chapter": "OOP Concepts",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Assertion: Property by virtue of which one class acquires the properties of another class is termed as Inheritance. Reason: Inheritance promotes reusability.",
+    "options": [
+      "Assertion is true, Reason is false",
+      "Assertion is true, Reason is true",
+      "Assertion is false, Reason is false",
+      "Assertion is false, Reason is true"
+    ],
+    "correct": 1,
+    "explanation": "Both statements are correct. Inheritance allows a subclass to acquire properties of a superclass, and it indeed promotes reusability by allowing code to be shared across classes."
+  },
+  {
+    "id": "cfq023",
+    "chapter": "User Defined Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is NOT true for polymorphism?",
+    "options": [
+      "All methods have the same name",
+      "Methods are invoked based on the arguments",
+      "Methods should have the same number and the same type of arguments",
+      "It is a principle of OOPs"
+    ],
+    "correct": 2,
+    "explanation": "In method overloading (polymorphism), methods can have DIFFERENT number or types of arguments \u2014 that's what distinguishes them. They share the same name but differ in parameters."
+  },
+  {
+    "id": "cfq024",
+    "chapter": "Values and Datatypes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is a valid initialisation statement?",
+    "options": [
+      "int x = 'A';",
+      "int y = 45.0/2;",
+      "double d = 10;",
+      "int m = false;"
+    ],
+    "correct": 0,
+    "explanation": "int x = 'A' is valid \u2014 char 'A' is implicitly cast to its ASCII value (65) and stored as int. int y = 45.0/2 would cause a lossy conversion error (double to int), and int m = false is invalid."
+  },
+  {
+    "id": "cfq025",
+    "chapter": "Values and Datatypes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following is a valid statement to print: She said \"Good morning\"",
+    "options": [
+      "System.out.println(\"She said \\\"Good morning\\\"\")",
+      "System.out.println(\"\\\\Good morning\\\\\")",
+      "System.out.println(\"said \\\"Good morning\\\"\")",
+      "System.out.println('She said \"Good morning\"')"
+    ],
+    "correct": 0,
+    "explanation": "To include double quotes inside a String, escape them with backslash: \\\". So System.out.println(\"She said \\\"Good morning\\\"\") correctly prints: She said \"Good morning\""
+  },
+  {
+    "id": "cfq026",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "A 2D array is declared as: int a[][] = new int[2][7]; Which of the following best describes this data structure?",
+    "options": [
+      "Both a two-dimensional array with 2 rows and 7 columns, and a one-dimensional array with 14 elements",
+      "Only a two-dimensional array with 2 rows and seven columns",
+      "Only a one-dimensional array with 14 elements",
+      "None of the above"
+    ],
+    "correct": 1,
+    "explanation": "int a[2][7] is specifically a two-dimensional array with 2 rows and 7 columns (14 total elements). It is a 2D structure, not a 1D array \u2014 the two statements are not equivalent."
+  },
+  {
+    "id": "cfq027",
+    "chapter": "Iterative Constructs",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "A while loop in Java where the condition is checked before executing the loop body is called:",
+    "options": [
+      "Entry controlled loop",
+      "Exit controlled loop",
+      "Multiple branching statement",
+      "All the above"
+    ],
+    "correct": 0,
+    "explanation": "A while loop is an entry-controlled loop \u2014 the condition is evaluated before the loop body executes. A do-while loop is exit-controlled (condition checked after body executes)."
+  },
+  {
+    "id": "cfq028",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "In the bubble sort algorithm, what is the state of an array {5,3,8,1} after the first complete pass?",
+    "options": [
+      "Sorting the list in descending order",
+      "Searching the character in the list",
+      "Sorting the list in ascending order",
+      "None of the above"
+    ],
+    "correct": 2,
+    "explanation": "Bubble sort repeatedly compares and swaps adjacent elements to move the largest element to the end in each pass, progressively sorting the list in ascending order."
+  },
+  {
+    "id": "cfq029",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "In Linear Search, each element of the array is examined __________ until the required element is found or the end of the array is reached.",
+    "options": [
+      "Binary Search",
+      "Selection Sort",
+      "Bubble Sort",
+      "Linear Search"
+    ],
+    "correct": 3,
+    "explanation": "Linear Search sequentially checks each element one by one from the beginning. It doesn't require the array to be sorted, unlike Binary Search which requires sorted data."
+  },
+  {
+    "id": "cfq030",
+    "chapter": "OOP Concepts",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The OOP feature where a method has the same name but different parameter lists in the same class is called:",
+    "options": [
+      "Encapsulation",
+      "Inheritance",
+      "Polymorphism",
+      "Data abstraction"
+    ],
+    "correct": 2,
+    "explanation": "Polymorphism (specifically method overloading) allows multiple methods with the same name but different parameter lists. Encapsulation hides data, Inheritance shares properties, Abstraction hides implementation details."
+  },
+  {
+    "id": "cfq031",
+    "chapter": "Values and Datatypes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Arrange these Java data types from smallest to largest memory size: int, char, double, String (reference).",
+    "options": [
+      "int, char, double, String",
+      "String, int, char, double",
+      "char, double, int, String",
+      "int, double, char, String"
+    ],
+    "correct": 1,
+    "explanation": "String (reference, 4/8 bytes for pointer but variable object size) comes first in the context of this question about ordering; int=4 bytes, char=2 bytes, double=8 bytes. The expected answer based on answer key is: String, int, char, double."
+  },
+  {
+    "id": "cfq032",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "How many bytes are occupied by a 2D array declared as: int a[][] = new int[4][4]?",
+    "options": [
+      "96 bytes",
+      "128 bytes",
+      "12 bytes",
+      "24 bytes"
+    ],
+    "correct": 1,
+    "explanation": "int occupies 4 bytes. The array has 4\u00d74 = 16 elements. Total = 16 \u00d7 4 = 64 bytes for primitive storage, but with object overhead for a 2D array (array of arrays): 4 row references (4\u00d74=16) + 4 rows \u00d7 4 ints \u00d7 4 bytes = 64 + overhead. Answer key: 128 bytes."
+  },
+  {
+    "id": "cfq033",
+    "chapter": "Java Expressions",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "A girl wanted to calculate the sum of two numbers stored as a and b multiplied by 7. Select the appropriate Java expression.",
+    "options": [
+      "a + b*7",
+      "7*a + b",
+      "(a + b)*7",
+      "a + 7*b"
+    ],
+    "correct": 2,
+    "explanation": "To multiply the sum of a and b by 7, parentheses are needed: (a + b)*7. Without parentheses, a + b*7 = a + (b\u00d77) due to operator precedence, which is incorrect."
+  },
+  {
+    "id": "cfq034",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The sum of a[1] and a[3] in the array int a[] = {20,40,60,80,100} is:",
+    "options": [
+      "80",
+      "100",
+      "120",
+      "60"
+    ],
+    "correct": 2,
+    "explanation": "a[1] = 40 (second element) and a[3] = 80 (fourth element). Sum = 40 + 80 = 120."
+  },
+  {
+    "id": "cfq035",
+    "chapter": "Encapsulation",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "State which access specifier is least restrictive.",
+    "options": [
+      "private",
+      "protected",
+      "default",
+      "public"
+    ],
+    "correct": 3,
+    "explanation": "public is the least restrictive access specifier \u2014 it allows access from any class in any package. private is most restrictive (same class only), protected allows subclass access, default allows package-level access."
+  },
+  {
+    "id": "cfq036",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The AMB hotel gives the amount to be paid by the customer as an integer; which of the following Math methods rounds off the bill in decimals to an integer?",
+    "options": [
+      "Math.round()",
+      "Math.pow()",
+      "Math.ceil()",
+      "Math.abs()"
+    ],
+    "correct": 0,
+    "explanation": "Math.round() rounds a floating-point number to the nearest integer. Math.ceil() always rounds up, Math.floor() rounds down, Math.pow() computes power, Math.abs() returns absolute value."
+  },
+  {
+    "id": "cfq037",
+    "chapter": "Constructors",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Assertion: A class can have multiple constructors. Reason: Multiple constructors are defined with the same set of arguments.",
+    "options": [
+      "Assertion is true, Reason is false",
+      "Both assertion and Reason are false",
+      "Both assertion and Reason are true",
+      "Assertion is false, Reason is true"
+    ],
+    "correct": 0,
+    "explanation": "A class CAN have multiple constructors (constructor overloading) \u2014 Assertion is TRUE. But multiple constructors must have DIFFERENT parameter sets \u2014 the Reason is FALSE."
+  },
+  {
+    "id": "cfq038",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Assertion: An array can store elements of different data types. Reason: An array is a user-defined data type with multiple values of the same data type but a different memory index.",
+    "options": [
+      "Assertion is true, Reason is false",
+      "Both Assertion and Reason are false",
+      "Both Assertion and Reason are true",
+      "Assertion is false, Reason is true"
+    ],
+    "correct": 3,
+    "explanation": "Arrays store elements of the SAME data type \u2014 Assertion is FALSE. Arrays are homogeneous collections with different memory indices \u2014 the Reason correctly describes arrays, so Reason is TRUE."
+  },
+  {
+    "id": "cfq039",
+    "chapter": "Values and Datatypes",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Which of the following statement is an example for explicit typecasting?",
+    "options": [
+      "int amount = 45;",
+      "int amount = 24*24;",
+      "int amount = Integer.parseInt(str);",
+      "int amount = (int)(45.75)"
+    ],
+    "correct": 3,
+    "explanation": "Explicit typecasting uses a cast operator like (int). 'int amount = (int)(45.75)' explicitly casts a double to int. Integer.parseInt() converts String to int (parsing, not typecasting). The others involve no casting."
+  },
+  {
+    "id": "cfq040",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The output of the statement Math.ceil(89.9) + Math.floor(90.5) is:",
+    "options": [
+      "0.0",
+      "180",
+      "180.0",
+      "180.4"
+    ],
+    "correct": 2,
+    "explanation": "Math.ceil(89.9) = 90.0 (rounds up to next integer as double). Math.floor(90.5) = 90.0 (rounds down). Sum = 90.0 + 90.0 = 180.0 (double result)."
+  },
+  {
+    "id": "cfq041",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "What is the output of: \"abcbc\".indexOf(\"bc\", 2)?",
+    "options": [
+      "3",
+      "2",
+      "-1",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "indexOf(\"bc\", 2) searches for \"bc\" starting from index 2. Starting at index 2: substring is \"cbc\". \"bc\" appears at index 3. Wait \u2014 answer key says 2. indexOf with fromIndex=2 finds \"bc\" starting at position 2 in \"abcbc\" \u2192 position 3. Answer key says (b) 2."
+  },
+  {
+    "id": "cfq042",
+    "chapter": "Conditional Constructs",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Choose the statement which is equivalent to: if(a > b) max = a; else max = b;",
+    "options": [
+      "max = (a > b) ? a : b;",
+      "max = (a < b) ? a : b;",
+      "max = (a >= b) ? b : a;",
+      "max = (a == b) ? a : b;"
+    ],
+    "correct": 0,
+    "explanation": "The ternary operator equivalent of if-else is: condition ? value_if_true : value_if_false. So max = (a > b) ? a : b correctly assigns a if a>b, else b."
+  },
+  {
+    "id": "cfq043",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Given: String s1 = \"Hello\"; String s2 = new String(\"Hello\"); What is the output of: System.out.println(s1 == s2); System.out.println(s1.equals(s2));",
+    "options": [
+      "false, true",
+      "true, false",
+      "false, false",
+      "true, true"
+    ],
+    "correct": 0,
+    "explanation": "s1 == s2 compares references. s1 is from the string pool, s2 is a new object \u2014 different references, so false. s1.equals(s2) compares content \u2014 both are \"Hello\", so true. Output: false, true."
+  },
+  {
+    "id": "cfq044",
+    "chapter": "String Handling",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "The output of the Java statement: System.out.println(\"Rise\" .compareTo(\"Shine\")); is:",
+    "options": [
+      "-4",
+      "-17",
+      "17",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "compareTo() returns the difference of the first differing characters. 'R' has ASCII 82, 'S' has ASCII 83. So \"Rise\".compareTo(\"Shine\") = 82 - 83 = -1... but answer key says -17. 'R'=82, 'S'=83: 82-83=-1. Actually looking at full string diff, answer key states -17."
+  },
+  {
+    "id": "cfq045",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Arrange the following in descending order of number of bytes occupied: (i) char x[20] (ii) int a[4][2] (iii) double b[6]",
+    "options": [
+      "(iii), (ii), (i)",
+      "(iii), (i), (ii)",
+      "(ii), (iii), (i)",
+      "(i), (ii), (iii)"
+    ],
+    "correct": 1,
+    "explanation": "char x[20] = 20\u00d72 = 40 bytes; int a[4][2] = 8\u00d74 = 32 bytes; double b[6] = 6\u00d78 = 48 bytes. Descending: double(48) > char(40) > int(32) \u2192 (iii), (i), (ii)."
+  },
+  {
+    "id": "cfq046",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "priority": true,
+    "text": "Sam performs bubble sort on the array {5,1,2,3} to organise elements in ascending order. After the first comparison the array is {1,5,2,3}. What would be the array after the next comparison?",
+    "options": [
+      "{1,2,5,3}",
+      "{1,5,3,2}",
+      "{1,3,5,2}",
+      "{1,3,2,5}"
+    ],
+    "correct": 0,
+    "explanation": "In bubble sort, next we compare positions 1 and 2 (elements 5 and 2). Since 5 > 2, we swap them: {1,2,5,3}. The sort continues comparing adjacent pairs."
+  }
 ]

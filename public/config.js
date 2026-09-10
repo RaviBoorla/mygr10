@@ -31,7 +31,8 @@ const SA_BANKS = {
   'X ICSE Chemistry':              'X-ICSE-Chemistry-ShortAnswers',
   'X ICSE Biology':                'X-ICSE-Biology-ShortAnswers',
   'X ICSE History & Civics':       'X-ICSE-History-Civics-ShortAnswers',
-  'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers'
+  'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers',
+  'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;

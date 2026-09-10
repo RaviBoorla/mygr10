@@ -42,6 +42,7 @@ for f in sorted(glob.glob('public/questions/*.json')):
 | History & Civics | `X-ICSE-History-Civics.json` | 198 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
 | Geography | `X-ICSE-Geography.json` | 180 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
 | English | `X-ICSE-English.json` | 178 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| Computer Science | `X-ICSE-Computer-Science.json` | 96 | Board 2017–2023 (50 Qs) + CISCE CFQ 2024 (46 MCQs, `priority:true`) — covers HTML, Networking, MS Office, Databases, Algorithms, and Java-based Computer Applications topics (User Defined Methods, Arrays, String Handling, OOP Concepts) |
 
 **Note on sourcing (2017–2023):** ICSE PDFs for 2017–2023 are image-based scans (no text layer). Questions for those years are curriculum-representative — authored to match the Section B MCQ style and topics from each year's syllabus — and labelled `"source": "Board 20XX"`. PDFs from 2024 onward have text layers and were extracted directly with PyMuPDF.
 
@@ -78,6 +79,7 @@ Answers" button.
 | ICSE Biology | `X-ICSE-Biology-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all major Biology chapters (Cell, Photosynthesis, Transpiration, Genetics, etc.) |
 | ICSE History & Civics | `X-ICSE-History-Civics-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers Civics (Parliament, Executive, Judiciary) and History (World Wars, Cold War, UN, Nationalism) |
 | ICSE Geography | `X-ICSE-Geography-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all Geography chapters (Climate, Soils, Natural Vegetation, Agriculture, Minerals, Industries, Transport) |
+| ICSE Computer Science | `X-ICSE-Computer-Science-ShortAnswers.json` | 20 | CISCE Competency-Focused Questions (CFQ 2024) — 20 VSA questions (2 marks each) from official CISCE item bank; covers Mathematical Library Methods, String Handling, Arrays, Iterative Constructs, Operators, OOP Concepts |
 
 ## Solved Exercises banks (a third catalogue, separate again)
 
