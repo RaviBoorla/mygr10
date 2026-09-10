@@ -748,6 +748,8 @@ const T = {
        children:[
         {id:'performer',label:'Classical Performer',kind:'career',tags:['exam-free']},
         {id:'composer',label:'Composer / Music Director',kind:'career',tags:['high-salary']},
+        {id:'actor',label:'Actor / Film & TV',kind:'career',tags:['exam-free'],keywords:'actor actress bollywood film tv ott web series drama'},
+        {id:'theatre-artist',label:'Theatre Artist',kind:'career',tags:['exam-free'],keywords:'theatre theater stage actor drama playwright mime street play'},
         {id:'theatre-d',label:'Theatre Director',kind:'career'},
         {id:'arts-teach',label:'Performing Arts Teacher',kind:'career'},
         {id:'astrologer',label:'Astrologer / Vedic Scholar',kind:'career',tags:['exam-free'],keywords:'astrologer, jyotish, vedic astrology, numerologist, astrology'},
@@ -1388,7 +1390,7 @@ const _clearEl  = document.getElementById('search-clear');
 function _applySearch(val){
   const prev=S.q; S.q=val;
   _clearEl.hidden = !val;
-  if(prev && !S.q) restoreExpansion();
+  if(prev && !S.q){ _matchSet=null; _expSaved=null; collapseToDefault(); return; }
   else if(S.q !== prev) _expSaved=null;
   renderAll();
 }
