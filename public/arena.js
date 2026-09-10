@@ -654,7 +654,10 @@ function renderArenaSetup() {
           <h1 class="arena-title">⚡ Arena</h1>
           <p class="arena-sub">Fast MCQ blitz · ${esc(state.board)} · race the clock</p>
         </div>
-        <button class="btn ghost arena-how-btn" onclick="document.getElementById('arena-how-modal').hidden=false;document.getElementById('arena-how-backdrop').hidden=false">How to play</button>
+        <div class="arena-setup-header-btns">
+          <button class="btn ghost arena-how-btn" onclick="document.getElementById('arena-how-modal').hidden=false;document.getElementById('arena-how-backdrop').hidden=false">How to play</button>
+          <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+        </div>
       </div>
 
       <!-- Daily challenge card -->
@@ -668,7 +671,6 @@ function renderArenaSetup() {
       <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
       <div class="arena-setup-actions">
         <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
-        <button class="btn ghost" onclick="app.go(['home'])">Back</button>
       </div>
 
       <div class="arena-picker-sep"></div>

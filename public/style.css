@@ -722,6 +722,7 @@ kbd {
 .arena-subj-hint { font-size: var(--fs-note); color: var(--text-light); margin-bottom: 10px; }
 /* Arena setup — single column */
 .arena-setup-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.arena-setup-header-btns { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
 .arena-how-btn { flex-shrink: 0; font-size: var(--fs-sm); }
 .arena-pick-label { font-size: var(--fs-btn); font-weight: 700; margin: 0 0 8px; }
 .arena-setup-actions { display: flex; gap: 10px; margin-top: 10px; }
@@ -750,8 +751,8 @@ kbd {
 .arena-hud-stage { font-weight: 700; font-size: var(--fs-btn); }
 .arena-hud-q { font-size: var(--fs-note); color: var(--text-light); }
 .arena-hud-right { display: flex; gap: 10px; align-items: center; }
-.arena-pause-btn { background: none; border: none; cursor: pointer; font-size: 18px; line-height: 1; color: var(--text-light); padding: 0 2px; }
-.arena-pause-btn:hover { color: var(--primary); }
+.arena-pause-btn { background: #dc2626; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; line-height: 1; color: #fff; padding: 4px 8px; }
+.arena-pause-btn:hover { background: #b91c1c; }
 .arena-pause-overlay { position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,.55); display: none; align-items: center; justify-content: center; }
 .arena-pause-overlay.active { display: flex; }
 .arena-pause-card { background: var(--bg); border-radius: var(--radius-md); padding: 32px 28px; text-align: center; max-width: 300px; width: 90%; display: flex; flex-direction: column; gap: 12px; box-shadow: 0 8px 32px rgba(0,0,0,.25); }
