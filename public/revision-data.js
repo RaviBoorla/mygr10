@@ -1286,6 +1286,123 @@ window.REVISION = {
           'For Doppler effect: use + or − correctly based on whether observer/source is approaching or receding',
           'Always state the unit of frequency (Hz) and wavelength (m)'
         ]
+      },
+      {
+        chapter: 'Refraction at Plane Surfaces',
+        formulae: [
+          "Snell's Law: n₁ sin i = n₂ sin r  (i = angle of incidence, r = angle of refraction)",
+          'Refractive index: n = speed of light in vacuum (c) / speed in medium (v)',
+          'n = sin(angle of incidence) / sin(angle of refraction) — when light goes from air/vacuum into medium',
+          'Critical angle C: sin C = 1/n  (n = refractive index of denser medium relative to air)',
+          'Lateral displacement: d = t · sin(i−r) / cos r  (t = slab thickness); zero at normal incidence'
+        ],
+        logic: [
+          'Refraction: change in direction of light crossing a boundary between two media due to change in speed',
+          'Light from rarer (lower n) to denser (higher n) medium: bends TOWARD the normal',
+          'Light from denser to rarer medium: bends AWAY from the normal; frequency unchanged, speed and wavelength change',
+          'Total Internal Reflection (TIR): only when (1) light travels denser → rarer medium AND (2) angle of incidence > critical angle',
+          'Glass slab: emergent ray is parallel to incident ray but laterally displaced; no angular deviation',
+          'Optical fibre: light undergoes TIR repeatedly inside the core (high n) and cannot escape through cladding (low n) → used for communication',
+          'Apparent depth: object in denser medium appears closer to surface; apparent depth = real depth / n'
+        ],
+        tips: [
+          'n(air) ≈ 1.00; n(water) ≈ 1.33 (≈ 4/3); n(glass) ≈ 1.5; n(diamond) ≈ 2.42 — smallest critical angle (~24°)',
+          'TIR applications: optical fibres (internet cables), endoscopes, totally reflecting prisms in binoculars, mirage',
+          'Mirage: hot air layers near road have lower n → TIR of light from sky → appears like water on road'
+        ],
+        bestPractices: [
+          'Angles in Snell\'s law are always measured from the NORMAL, never from the surface',
+          'Identify the denser medium first — direction of bending depends on which side is denser',
+          'For TIR: verify BOTH conditions — medium change (denser→rarer) AND angle > critical angle'
+        ]
+      },
+      {
+        chapter: 'Refraction through Lenses',
+        formulae: [
+          'Lens formula: 1/v − 1/u = 1/f  (new Cartesian sign convention)',
+          'Magnification: m = v/u = h_image / h_object',
+          'Power: P = 1/f  (f in metres); unit = dioptre (D); P > 0 convex, P < 0 concave',
+          'Two thin lenses in contact: 1/f = 1/f₁ + 1/f₂; P = P₁ + P₂'
+        ],
+        logic: [
+          'Convex (converging) lens: thicker at centre; f > 0; P > 0; brings parallel rays to a real focus',
+          'Concave (diverging) lens: thinner at centre; f < 0; P < 0; spreads parallel rays as if from a virtual focus',
+          'Convex lens image positions: object beyond 2F → real, inverted, diminished; at 2F → real, inverted, same size; between F and 2F → real, inverted, magnified; at F → image at infinity; inside F → virtual, erect, magnified',
+          'Concave lens: ALWAYS produces virtual, erect, diminished image on the same side as the object',
+          'm > 0 → erect (virtual) image; m < 0 → inverted (real) image',
+          'u is always negative (real object on left); sign of v tells you real (+v) or virtual (−v)'
+        ],
+        tips: [
+          'Myopia → concave lens (−D); Hypermetropia → convex lens (+D)',
+          'P = +2 D means f = 0.5 m converging; P = −4 D means f = −0.25 m diverging',
+          'Two principal rays: (1) ray parallel to axis → refracts through F; (2) ray through optical centre → passes straight'
+        ],
+        bestPractices: [
+          'Apply sign convention before substituting — u is always negative for real object',
+          'Sanity check: virtual image ↔ negative v (for lens); positive v ↔ real image',
+          'Draw the lens, mark F and 2F on both sides, then trace two rays for image location'
+        ]
+      },
+      {
+        chapter: 'Current Electricity (ICSE)',
+        formulae: [
+          'Terminal voltage: V = ε − Ir  (ε = EMF, I = current, r = internal resistance)',
+          'Cells in series: ε_total = Σεᵢ; r_total = Σrᵢ',
+          'n identical cells in parallel: ε_total = ε; r_total = r/n',
+          "Kirchhoff's Current Law (KCL): Σ I_in = Σ I_out at any junction",
+          "Kirchhoff's Voltage Law (KVL): Σ EMF = Σ IR around any closed loop",
+          'Wheatstone bridge (balanced): P/Q = R/S → galvanometer reads zero',
+          'Galvanometer → Ammeter: shunt S = G·Iₘ / (I − Iₘ)  (S in parallel)',
+          'Galvanometer → Voltmeter: series resistance R = V/Iₘ − G'
+        ],
+        logic: [
+          'EMF (ε): total energy supplied per unit charge by the cell around the complete circuit',
+          'Internal resistance r: resistance of the cell itself; terminal voltage drops as current increases',
+          'Open circuit (I = 0): terminal voltage = EMF (no voltage drop across r)',
+          'Short circuit: external R → 0, current I = ε/r → very large; cell drains rapidly',
+          'Ammeter: very low resistance — connected in series; voltmeter: very high resistance — in parallel',
+          'Conventional current flows from + to − externally; electrons flow from − to + externally'
+        ],
+        tips: [
+          'Terminal voltage is always less than EMF when current flows (V = ε − Ir)',
+          'Resistor colour code mnemonic: Black Brown Red Orange Yellow Green Blue Violet Grey White = 0–9',
+          'Balanced Wheatstone bridge: if P/Q = R/S, no current through galvanometer — used to find unknown resistance'
+        ],
+        bestPractices: [
+          'Label all current directions and EMF polarities before applying KCL/KVL',
+          'Choose a consistent loop direction (clockwise) when writing KVL equations',
+          'For galvanometer conversion: use the formula, not intuition — one mistake affects all subsequent marks'
+        ]
+      },
+      {
+        chapter: 'Radioactivity',
+        formulae: [
+          'Alpha emission: ᴬᴢX → ᴬ⁻⁴ᴢ₋₂Y + ₂⁴He  (A −4, Z −2)',
+          'Beta (β⁻) emission: ᴬᴢX → ᴬᴢ₊₁Y + ₋₁⁰e  (A unchanged, Z +1)',
+          'Gamma (γ) emission: ᴬᴢX → ᴬᴢX + γ  (A and Z unchanged — nucleus just loses energy)',
+          'Half-life T½: time for half of the radioactive nuclei to decay',
+          'Remaining amount: N = N₀ × (½)ⁿ  where n = number of half-lives elapsed = t / T½'
+        ],
+        logic: [
+          'Radioactivity: spontaneous, random decay of unstable nuclei — NUCLEAR process, unaffected by temperature, pressure, or chemical state',
+          'Alpha (α): charge +2, mass 4 u; most ionising; least penetrating (stopped by paper or 5 cm of air)',
+          'Beta (β⁻): charge −1, negligible mass; medium ionising and penetrating (stopped by a few mm of aluminium)',
+          'Gamma (γ): no charge, no mass; least ionising; most penetrating (significantly reduced only by thick lead/concrete)',
+          'Nuclear fission: U-235 + slow neutron → two lighter nuclei + 2–3 neutrons + large energy → chain reaction → nuclear reactor / bomb',
+          'Nuclear fusion: H isotopes (deuterium + tritium) merge → He + enormous energy per kg → powers stars; not yet commercially harnessed',
+          'Background radiation: always present from cosmic rays, rocks (radon gas), food, medical sources'
+        ],
+        tips: [
+          'Half-life is completely independent of temperature, pressure, or chemical environment',
+          'After n half-lives: fraction remaining = (½)ⁿ; e.g. 3 half-lives → ⅛ = 12.5%',
+          'Carbon-14 dating: T½ = 5730 years — useful for organic samples up to ~50 000 years old',
+          'Uses: nuclear power, radiotherapy (cancer treatment), medical imaging tracers (Tc-99m), food irradiation'
+        ],
+        bestPractices: [
+          'Balance nuclear equations: check both A (top) and Z (bottom) are conserved on each side',
+          'Identify decay type from change: A−4, Z−2 → alpha; A same, Z+1 → beta; A and Z same → gamma',
+          'For half-life problems: first find n = total time / T½, then apply N = N₀(½)ⁿ'
+        ]
       }
     ],
     Chemistry: [
@@ -1588,6 +1705,126 @@ window.REVISION = {
         bestPractices: [
           'Always write a balanced equation before mole calculations',
           'Show units at each step — mole calculations often lose marks due to unit errors'
+        ]
+      },
+      {
+        chapter: 'Electrolysis',
+        formulae: [
+          "Faraday's 1st Law: mass deposited m = ZIt  (Z = electrochemical equivalent, I = current in A, t = time in s)",
+          "Faraday's 2nd Law: for same charge, masses deposited ∝ equivalent weights (M/valency)",
+          '1 Faraday (F) = 96500 C = charge carried by 1 mole of electrons'
+        ],
+        logic: [
+          'Electrolysis: decomposition of an ionic compound in molten or dissolved state by passing electricity',
+          'Electrolyte: ionic compound that conducts electricity when molten or in aqueous solution',
+          'Cathode (−, negative electrode): cations migrate here; undergo REDUCTION (gain electrons)',
+          'Anode (+, positive electrode): anions migrate here; undergo OXIDATION (lose electrons)',
+          'Mnemonic: AN OX RED CAT — ANnode = OXidation; REDuction at CAThode',
+          'Active (reactive) anode (e.g. copper anode in CuSO₄ solution): anode dissolves; mass transfers from anode to cathode — used in electroplating and electrolytic refining',
+          'Inert anode (platinum or graphite): does not dissolve; O₂ gas or Cl₂ gas discharged at anode',
+          'Selective discharge: when multiple ions compete at electrode, ion requiring least energy is discharged first (based on electrochemical series)',
+          'Chlor-alkali process: electrolysis of brine (NaCl aq) → Cl₂ at anode + H₂ at cathode + NaOH in solution'
+        ],
+        tips: [
+          'CuSO₄ with Cu electrodes: cathode gains Cu, anode loses Cu — electrolyte concentration stays constant',
+          'CuSO₄ with Pt/graphite electrodes: cathode gains Cu, anode gives O₂ — solution becomes acidic',
+          'Dilute H₂SO₄ electrolysis: H₂ at cathode (2 vol.), O₂ at anode (1 vol.) — ratio 2:1 by volume',
+          'Electroplating setup: object to plate = cathode; plating metal = anode; salt of plating metal = electrolyte'
+        ],
+        bestPractices: [
+          'Always identify anode/cathode from diagram polarity before writing electrode half-equations',
+          'Write half-equations for both electrodes; verify electrons balance',
+          'For selective discharge MCQs: ions in the middle of the electrochemical series (H⁺, Cu²⁺) are preferentially discharged over extreme positions (K⁺, SO₄²⁻)'
+        ]
+      },
+      {
+        chapter: 'Metallurgy (ICSE)',
+        formulae: [
+          'Iron extraction (blast furnace): Fe₂O₃ + 3CO → 2Fe + 3CO₂; slag: CaO + SiO₂ → CaSiO₃',
+          'Aluminium extraction (Hall-Héroult): 2Al₂O₃ → 4Al + 3O₂  (electrolysis in molten cryolite)',
+          'Thermite reaction: Fe₂O₃ + 2Al → Al₂O₃ + 2Fe  (used in railway track welding)'
+        ],
+        logic: [
+          'Ore: naturally occurring mineral from which metal can be profitably extracted; Gangue: unwanted impurities',
+          'Extraction steps: (1) Concentration/dressing → (2) Reduction/smelting → (3) Refining',
+          'Concentration methods: gravity separation, froth flotation (sulphide ores — ore floats), magnetic separation, leaching',
+          'Highly reactive metals (K, Na, Ca, Mg, Al): extracted by electrolysis of molten halide',
+          'Moderately reactive metals (Zn, Fe, Sn, Pb): extracted by reduction with coke (C) or CO',
+          'Less reactive metals (Cu, Hg, Ag, Au): found native or extracted by gentle heating/reduction',
+          'Refining: electrolytic refining (Cu, Ag, Au — impure anode, pure cathode), distillation (Zn, Hg), liquation (Sn, Pb)',
+          'Zone refining: ultra-pure semiconductors (Si, Ge) produced by moving molten zone through solid rod'
+        ],
+        tips: [
+          'Cryolite (Na₃AlF₆): lowers Al₂O₃ melting point from ~2050°C to ~960°C — makes electrolysis economical',
+          'Key ores: haematite (Fe₂O₃), bauxite (Al₂O₃·2H₂O), chalcopyrite (CuFeS₂), galena (PbS)',
+          'Carbon content of iron products: pig iron 3.5–4.5% C (brittle); cast iron 2–4% C; steel 0.1–1.5% C (tough); wrought iron < 0.1% C (most malleable)',
+          'Anode mud: impurities (Au, Ag, Pt, Bi) that fall below the anode during copper electrolytic refining — more valuable than the copper!'
+        ],
+        bestPractices: [
+          'Link reactivity to extraction method: more reactive metal → higher energy needed → electrolysis',
+          'For ICSE: iron, aluminium, copper are the three most tested — know ore, method, and refining for each',
+          'Know alloys: brass (Cu + Zn), bronze (Cu + Sn), steel (Fe + C), duralumin (Al + Cu + Mg + Mn), solder (Sn + Pb)'
+        ]
+      },
+      {
+        chapter: 'Organic Chemistry (ICSE)',
+        formulae: [
+          'Alkanes: CₙH₂ₙ₊₂ (saturated); Alkenes: CₙH₂ₙ (one C=C double bond); Alkynes: CₙH₂ₙ₋₂ (one C≡C triple bond)',
+          'Esterification: RCOOH + R\'OH ⇌ RCOOR\' + H₂O  (reversible; acid catalyst, heat)',
+          'Saponification: RCOOR\' + NaOH → RCOONa + R\'OH  (soap-making; irreversible)',
+          'Fermentation: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂  (yeast, anaerobic, ~37°C)'
+        ],
+        logic: [
+          'Organic chemistry: chemistry of carbon compounds; enabled by carbon\'s tetravalency (4 bonds) and catenation (C−C chains)',
+          'Homologous series: compounds with same functional group, differing by −CH₂− (M.W. +14); properties change gradually',
+          'Functional groups: −OH (alcohol), −COOH (carboxylic acid), −CHO (aldehyde), C=O (ketone), −NH₂ (amine), −X (haloalkane)',
+          'Saturated (alkanes): only single bonds → undergo SUBSTITUTION (e.g. halogenation under UV light)',
+          'Unsaturated (alkenes, alkynes): contain double/triple bonds → undergo ADDITION (e.g. Br₂ adds across C=C)',
+          'Isomers: same molecular formula, different structural formula — number of isomers increases rapidly with carbon count',
+          'Test for unsaturation: decolourises orange bromine water (Br₂) or acidic KMnO₄'
+        ],
+        tips: [
+          'Alkanes: methane (CH₄), ethane (C₂H₆), propane (C₃H₈), butane (C₄H₁₀) — learn these by heart',
+          'Ethanol: produced industrially by hydration of ethene; also by fermentation of glucose',
+          'Ethanoic acid (CH₃COOH) = vinegar; reacts with NaHCO₃ → CO₂ effervescence (distinguishes acid from alcohol)',
+          'Polymerisation: addition (e.g. polythene from ethylene: n CH₂=CH₂ → −[CH₂CH₂]ₙ−)',
+          'Aldehyde test: Tollens\' reagent → silver mirror; Fehling\'s solution → brick-red precipitate'
+        ],
+        bestPractices: [
+          'Draw structural formulas for isomers — molecular formula alone is insufficient in board exam answers',
+          'IUPAC naming: (1) find longest chain → prefix; (2) identify functional group → suffix; (3) number from end nearer functional group',
+          'Know functional group identification tests — they appear as 2-mark questions in ICSE Chemistry papers'
+        ]
+      },
+      {
+        chapter: 'Analytical Chemistry (ICSE)',
+        formulae: [
+          'Flame tests: Na⁺ = golden yellow; K⁺ = lilac; Ca²⁺ = brick red; Cu²⁺ = blue-green; Li⁺ = crimson',
+          'Lime water test: Ca(OH)₂ + CO₂ → CaCO₃↓ (milky) + H₂O  — confirms CO₂ gas',
+          'Lead acetate paper test: Pb(CH₃COO)₂ + H₂S → PbS↓ (black)  — confirms H₂S gas'
+        ],
+        logic: [
+          'Cation tests: Cu²⁺ — blue solution + NaOH → blue gelatinous ppt (Cu(OH)₂); with excess NH₃ → deep blue [Cu(NH₃)₄]²⁺ complex',
+          'Fe²⁺ — green solution + NaOH → dirty green ppt (Fe(OH)₂); oxidises to Fe³⁺ (red-brown) in air',
+          'Fe³⁺ — yellow/brown + NaOH → red-brown ppt (Fe(OH)₃); + KSCN → blood red solution',
+          'Zn²⁺ — colourless + NaOH → white ppt; ppt dissolves in excess NaOH (amphoteric → zincate ZnO₂²⁻)',
+          'Pb²⁺ — colourless + H₂SO₄ → white ppt (PbSO₄, insoluble in HNO₃); + KI → yellow ppt (PbI₂)',
+          'Anion tests: Cl⁻ — + AgNO₃ (acidified with HNO₃) → white curdy ppt (AgCl), soluble in NH₃',
+          'SO₄²⁻ — + BaCl₂ (acidified with HCl) → white ppt (BaSO₄), INSOLUBLE in HCl (distinguishes from SO₃²⁻)',
+          'CO₃²⁻ — + dilute HCl → effervescence (CO₂), turns limewater milky',
+          'NO₃⁻ — brown ring test: add FeSO₄ solution, carefully add conc. H₂SO₄ along side → brown ring at junction',
+          'Amphoteric hydroxides dissolve in both acid AND excess NaOH: Al(OH)₃, Zn(OH)₂, Pb(OH)₂ (mnemonic: AZP)'
+        ],
+        tips: [
+          'Na⁺ flame is so bright (golden yellow) it masks all other flame colours — remove Na⁺ contamination first',
+          'Silver halide colours: AgCl = white, AgBr = pale yellow, AgI = yellow — solubility in NH₃ decreases in that order',
+          'BaSO₄ precipitate is INSOLUBLE in HCl — this property distinguishes SO₄²⁻ from SO₃²⁻',
+          'NaOH with ammonium salt on heating → NH₃ gas (pungent, turns moist red litmus blue)'
+        ],
+        bestPractices: [
+          'For identification questions: start with the most distinctive observation (solution colour, gas evolved) before confirmatory tests',
+          'Write each step as: (i) reagent added → (ii) observation → (iii) inference',
+          'Know precipitate colours: white (AgCl, BaSO₄, PbSO₄, ZnS), blue (Cu(OH)₂), red-brown (Fe(OH)₃), black (PbS, CuS)'
         ]
       }
     ],
@@ -1965,6 +2202,153 @@ window.REVISION = {
         bestPractices: [
           'Always state the genotypic ratio AND phenotypic ratio separately',
           'For Hardy-Weinberg: check the five assumptions first (large population, no mutation/selection/migration, random mating)'
+        ]
+      },
+      {
+        chapter: 'Absorption by Roots & Transpiration',
+        formulae: [
+          'Osmosis: net movement of water from high water potential (dilute) to low water potential (concentrated) through a semi-permeable membrane',
+          'Transpiration pull (cohesion-tension): evaporation from leaves → tension in xylem → water drawn up as continuous column'
+        ],
+        logic: [
+          'Root hair cells: long extensions that maximise surface area for absorption of water and mineral ions',
+          'Pathway of water: soil solution → root hair → cortex → endodermis (Casparian strip) → xylem → stem → leaf',
+          'Casparian strip: water-impermeable band in endodermis forces water to pass through cell cytoplasm (symplastic path), not along cell walls',
+          'Mineral ions: absorbed by active transport (requires ATP; works against concentration gradient)',
+          'Xylem: transports water + dissolved minerals upward; dead lignified cells (vessels and tracheids) forming continuous tube',
+          'Phloem: transports dissolved food (mainly sucrose) up AND down; living sieve tube cells + companion cells',
+          'Transpiration: evaporation of water vapour from aerial parts — mainly through stomata, some through cuticle',
+          'Guard cells: control stomata; turgid (high water) → stomata open; flaccid (low water) → stomata close',
+          'Factors increasing transpiration: higher temperature, lower humidity, higher wind, higher light intensity (opens stomata)',
+          'Root pressure: osmosis from root cells creates positive pressure in xylem → causes guttation (water droplets at leaf margins)'
+        ],
+        tips: [
+          'Wilting: loss of turgor; stomata close → less CO₂ entry → reduced photosynthesis',
+          'Leaf adaptations to reduce transpiration: thick waxy cuticle, sunken stomata, leaf hairs, reduced leaf size',
+          'Cohesion (H-bonds between water molecules) allows water to be pulled as an unbroken column — key to cohesion-tension theory'
+        ],
+        bestPractices: [
+          'For osmosis questions: identify which solution is more concentrated → water moves INTO it',
+          'State the full pathway: soil → root hair → cortex → endodermis → xylem → mesophyll → stomata → atmosphere',
+          'Distinguish osmosis (passive, semi-permeable membrane) from active transport (requires energy, no membrane needed)'
+        ]
+      },
+      {
+        chapter: 'Photosynthesis (ICSE)',
+        formulae: [
+          '6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂  (in presence of chlorophyll)',
+          'Light-dependent reactions (thylakoid membranes): H₂O → O₂ + ATP + NADPH  (photolysis)',
+          'Calvin cycle / dark reactions (stroma): CO₂ + ATP + NADPH → glucose  (via RuBisCO enzyme)'
+        ],
+        logic: [
+          'Chloroplast structure: outer and inner membranes, grana (stacks of thylakoids) in stroma',
+          'Chlorophyll: green pigment in thylakoid membranes; absorbs red and blue light; reflects green',
+          'Light reactions: light energy → photolysis of water → release of O₂ + production of ATP and NADPH',
+          'Calvin cycle: ATP + NADPH from light reactions used to fix CO₂ into 3-carbon compounds → glucose',
+          'O₂ released comes from water (H₂O), NOT from CO₂ — confirmed by isotope-labelling experiments',
+          'Limiting factors: rate is limited by whichever factor is lowest — light intensity, CO₂ concentration, temperature',
+          'Compensation point: light intensity where photosynthesis rate = respiration rate (net gas exchange = 0)',
+          'Starch test: iodine (I₂/KI) turns blue-black in presence of starch — proves photosynthesis occurred'
+        ],
+        tips: [
+          'Variegated leaf experiment: only green parts (with chlorophyll) test positive for starch with iodine',
+          'Destarching: keep plant in dark 48 h before experiments to ensure no starch remains from before',
+          'Aquatic plant (Elodea/Hydrilla): count O₂ bubbles produced per minute to measure photosynthesis rate',
+          'Accessory pigments (carotenoids): capture additional wavelengths and transfer energy to chlorophyll'
+        ],
+        bestPractices: [
+          'Draw and label a chloroplast: outer membrane, inner membrane, thylakoid, granum, stroma',
+          'Always state the site: light reactions → thylakoid membranes; Calvin cycle → stroma',
+          'For limiting factor graphs: identify which variable is being changed and which are being held constant'
+        ]
+      },
+      {
+        chapter: 'Excretion (ICSE)',
+        formulae: [
+          'Daily filtrate: ~180 L produced; ~1.5 L urine excreted (>99% reabsorbed)',
+          'Urine composition (approximate): 95% water, 2% urea, 2% inorganic salts, traces of creatinine and uric acid'
+        ],
+        logic: [
+          'Excretion: removal of metabolic waste products from the body (urea, CO₂, excess water and salts)',
+          'Osmoregulation: regulation of water and salt balance in body fluids — mainly by kidneys',
+          'Nephron: functional unit of kidney; each kidney has ~1 million nephrons',
+          'Glomerular filtration: blood pressure forces water, glucose, amino acids, urea, salts out of glomerulus into Bowman\'s capsule; proteins and RBCs are too large and remain in blood',
+          'Selective reabsorption: all glucose, all amino acids, most water and useful salts reabsorbed back into blood in tubules',
+          'Tubular secretion: some substances (H⁺, K⁺, drugs, creatinine) actively secreted from blood into tubule',
+          'Loop of Henle: creates a concentration gradient in medulla; descending limb permeable to water; ascending limb permeable to salts',
+          'ADH (antidiuretic hormone): secreted by posterior pituitary; increases water reabsorption in collecting duct → concentrated urine',
+          'Other excretory organs: lungs (CO₂ + water vapour), skin (water + salts + trace urea in sweat), liver (bile pigments from haemoglobin breakdown)'
+        ],
+        tips: [
+          'Glucose in urine (glycosuria) indicates diabetes mellitus — tubules cannot reabsorb all the glucose',
+          'Protein in urine (proteinuria) indicates damaged glomerular membrane — proteins normally can\'t pass',
+          'Dialysis (artificial kidney): waste removed by diffusion across semi-permeable membrane; used in kidney failure',
+          'Nitrogenous waste: mammals = urea; birds/reptiles = uric acid; fish = ammonia (most toxic, least water needed)'
+        ],
+        bestPractices: [
+          'Draw and label a nephron — minimum 6 structures: Bowman\'s capsule, glomerulus, proximal tubule, loop of Henle, distal tubule, collecting duct',
+          'Know what IS filtered (small molecules: glucose, urea, water, salts) and what is NOT (proteins, blood cells)',
+          'Normal urine: no glucose, no protein — their presence indicates disease'
+        ]
+      },
+      {
+        chapter: 'Nervous System (ICSE)',
+        formulae: [
+          'Resting membrane potential: ≈ −70 mV (inside negative); depolarisation raises to +40 mV when Na⁺ rushes in',
+          'Reflex arc: Stimulus → Receptor → Sensory neuron → Spinal cord (relay neuron) → Motor neuron → Effector (muscle/gland) → Response'
+        ],
+        logic: [
+          'Neuron: structural and functional unit of nervous system; parts: dendrites (receive impulse) → cell body (nucleus here) → axon (conducts impulse) → axon terminals',
+          'Functional types: sensory/afferent (sense organ → CNS), motor/efferent (CNS → effector), relay/interneuron (within CNS)',
+          'Synapse: gap between two neurons; neurotransmitter released from pre-synaptic membrane → diffuses → binds to post-synaptic receptors',
+          'Myelin sheath: fatty insulation around axon (Schwann cells); speeds impulse; nodes of Ranvier = gaps where impulse jumps (saltatory conduction)',
+          'CNS: brain + spinal cord; PNS: all nerves outside CNS; ANS: autonomic (sympathetic + parasympathetic)',
+          'Cerebrum: voluntary movements, memory, intelligence, speech, sensory perception',
+          'Cerebellum: balance, muscular coordination, posture, fine movement control',
+          'Medulla oblongata: involuntary vital functions — heartbeat, breathing rate, blood pressure, swallowing',
+          'Reflex action: rapid, involuntary, stereotyped response — does NOT involve cerebrum (conscious thought)',
+          'Spinal cord: both a relay pathway to/from brain AND an independent reflex centre'
+        ],
+        tips: [
+          'Knee-jerk reflex: 2-neuron arc (sensory + motor only, no relay) — fastest reflexes',
+          'Withdrawal reflex: 3-neuron arc (sensory + relay + motor)',
+          'Sympathetic NS: "fight or flight" — pupils dilate, heart rate ↑, blood to muscles ↑, digestion ↓',
+          'Parasympathetic NS: "rest and digest" — pupils constrict, heart rate ↓, digestion ↑'
+        ],
+        bestPractices: [
+          'Draw a labelled neuron: dendrites, cell body, nucleus, axon, myelin sheath, node of Ranvier, axon terminal',
+          'Draw the reflex arc with all 5 components labelled — standard 3-mark board question',
+          'For brain questions: cerebrum (largest, top), cerebellum (back/bottom), medulla (connects to spinal cord)'
+        ]
+      },
+      {
+        chapter: 'Endocrine System (ICSE)',
+        formulae: [
+          'Negative feedback (blood glucose example): high glucose → insulin secreted → glucose taken up by cells → glucose falls → insulin secretion stops → homeostasis'
+        ],
+        logic: [
+          'Endocrine glands: ductless; secrete hormones directly into blood; effects are slower but longer-lasting than nervous system responses',
+          'Hormones: chemical messengers; effective in tiny amounts; transported in blood to specific target organs',
+          'Pituitary ("master gland"): GH (growth hormone), TSH (thyroid stimulating), FSH + LH (gonads), ADH (water reabsorption), oxytocin (uterine contractions)',
+          'Thyroid: thyroxine — regulates metabolic rate, growth, brain development; requires iodine',
+          'Parathyroid: PTH — raises blood Ca²⁺ by mobilising calcium from bones',
+          'Adrenal cortex: cortisol (stress, anti-inflammatory), aldosterone (Na⁺/K⁺/water balance)',
+          'Adrenal medulla: adrenaline (epinephrine) — "fight or flight"; raises heart rate, blood glucose, blood pressure',
+          'Pancreas (islets of Langerhans): β-cells → insulin (lowers blood glucose); α-cells → glucagon (raises blood glucose)',
+          'Testes: testosterone — secondary male characteristics, sperm production',
+          'Ovaries: oestrogen (secondary female characteristics, uterine lining growth); progesterone (maintains pregnancy)'
+        ],
+        tips: [
+          'Hypothyroidism: weight gain, sluggishness, goitre (enlarged thyroid, often due to iodine deficiency)',
+          'Hyperthyroidism: weight loss, anxiety, rapid heartbeat, exophthalmos',
+          'Diabetes mellitus Type 1: autoimmune, β-cells destroyed, no insulin — requires insulin injections',
+          'Diabetes mellitus Type 2: insulin resistance (cells don\'t respond) — managed by diet, exercise, oral medication',
+          'Dwarfism: insufficient GH in childhood; Gigantism: excess GH in childhood; Acromegaly: excess GH in adulthood'
+        ],
+        bestPractices: [
+          'Know gland → hormone → function → disorder for each major endocrine gland — board questions test all four',
+          'Contrast nervous vs endocrine: nervous (fast, short-lived, electrical, specific path); endocrine (slow, long-lasting, chemical, bloodstream)',
+          'For diabetes MCQs: state whether Type 1 (no insulin) or Type 2 (insulin resistance) and reason for high blood glucose'
         ]
       }
     ],
@@ -2922,6 +3306,334 @@ REVISION['Computer Science'] = [
     bestPractices: [
       'Keep fields private; provide public getters/setters — this is proper encapsulation',
       'Name classes with nouns (BankAccount), methods with verbs (calculateInterest), constants in ALL_CAPS'
+    ]
+  },
+  {
+    chapter: 'HTML & Web Technology',
+    formulae: [
+      'Basic HTML document: <!DOCTYPE html> → <html> → <head> → <body>',
+      'Headings: <h1> (largest) to <h6> (smallest); Paragraph: <p>; Line break: <br>; Horizontal rule: <hr>',
+      'Anchor: <a href="url">text</a>; Image: <img src="url" alt="text" width="n" height="n">',
+      'Table: <table> → <tr> (row) → <th> (header cell) / <td> (data cell)',
+      'colspan="n" merges n columns; rowspan="n" merges n rows',
+      'Lists: <ul> (unordered/bulleted), <ol> (ordered/numbered); each item in <li>',
+      'Form: <form action="url" method="get/post"> with <input>, <textarea>, <select>, <button>',
+      'Input types: type="text", "password", "radio", "checkbox", "submit", "reset", "email", "number"',
+      'Containers: <div> (block-level); <span> (inline); attributes: id (unique), class (reusable), style, name'
+    ],
+    logic: [
+      'HTML is a markup language describing document structure — NOT a programming language (no logic, loops, or variables)',
+      'Most tags: opening + closing pair; void/self-closing elements: <br>, <hr>, <img>, <input>, <meta>, <link>',
+      'Nesting rule: inner tag must close before outer: <b><i>text</i></b> ✓; <b><i>text</b></i> ✗',
+      'id must be unique per page; class can appear on multiple elements — classes are for styling groups',
+      'GET method: data appended to URL (visible, limited ~2 KB); POST: data in request body (hidden, large data allowed)',
+      'Absolute path: from root (/images/pic.jpg) or full URL; relative path: from current file (../images/pic.jpg)',
+      'HTML5 semantic tags: <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>',
+      'HTML comment: <!-- this is a comment --> — ignored by browser; used to document code'
+    ],
+    tips: [
+      'Always include alt on <img> — displays when image fails to load; required for accessibility',
+      'Use <th> for header cells — bold and centred by default; improves accessibility over <td>',
+      'Radio buttons with the same name attribute form a group — only one selectable at a time',
+      '<meta charset="UTF-8"> in <head> ensures correct display of special characters and symbols'
+    ],
+    bestPractices: [
+      'Always start with <!DOCTYPE html> — tells browser to render in HTML5 standards mode',
+      'Validate nesting carefully — MCQ distractors often use incorrect nesting as the wrong answer',
+      'For table questions: sketch the table on rough paper first, then write HTML',
+      'Put <link rel="stylesheet"> in <head> and <script> just before </body> for best performance'
+    ]
+  },
+  {
+    chapter: 'CSS Basics',
+    formulae: [
+      'CSS rule syntax: selector { property: value; }',
+      'Inline (highest priority): <p style="color:red;">; Internal: <style> in <head>; External: <link href="style.css" rel="stylesheet">',
+      'Colour: color: red; color: #FF0000; color: rgb(255,0,0); color: rgba(255,0,0,0.5);',
+      'Font: font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; font-style: italic;',
+      'Box model (inside → out): content → padding → border → margin',
+      'Shorthand: margin: top right bottom left (clockwise from top); padding: same pattern',
+      'Background: background-color: #fff; background-image: url("bg.jpg");',
+      'Text: text-align: left/center/right/justify; text-decoration: underline/none; text-transform: uppercase;'
+    ],
+    logic: [
+      'Specificity (low → high): element tag (1 pt) < class/pseudo-class (10 pt) < id (100 pt) < inline style (1000 pt)',
+      'Cascade: when two rules have equal specificity, the LAST rule in the file wins',
+      'Inheritance: color, font-family, font-size inherit from parent; border, margin, padding do NOT',
+      'Block elements (div, p, h1): take full available width; start on a new line',
+      'Inline elements (span, a, strong): take only content width; do not start a new line',
+      'display: none removes element from layout entirely; visibility: hidden hides it but keeps space',
+      'Margin collapse: adjacent vertical margins of block elements collapse to the LARGER of the two values'
+    ],
+    tips: [
+      'Class selector prefix: .highlight { } — note the dot',
+      'ID selector prefix: #header { } — note the hash',
+      'em is relative to current element\'s font size; rem is relative to root (html) font size',
+      'Hex shorthand: #RGB where each digit doubles: #f00 = #ff0000, #abc = #aabbcc'
+    ],
+    bestPractices: [
+      'Use class selectors for reusable styles; id selectors only for unique, one-off elements',
+      'Avoid inline styles — hard to maintain; they override external stylesheets and are not reusable',
+      'Always provide a generic fallback font: font-family: Georgia, "Times New Roman", serif;',
+      'For MCQ specificity questions: count ids × 100 + classes × 10 + elements × 1 and compare'
+    ]
+  },
+  {
+    chapter: 'Networking & Internet',
+    formulae: [
+      'URL structure: protocol://domain:port/path?query#fragment — e.g. https://www.site.com/page',
+      'IPv4: 32-bit address, 4 octets — e.g. 192.168.1.1 (each octet 0–255)',
+      'Bandwidth: 1 kbps = 1000 bps; 1 Mbps = 10⁶ bps; 1 Gbps = 10⁹ bps',
+      'Transfer time (seconds) = File size (bits) ÷ Bandwidth (bps)'
+    ],
+    logic: [
+      'Network types by size: PAN (~10 m, Bluetooth) → LAN (building) → MAN (city) → WAN (global)',
+      'Client-server model: client requests resource; server provides it; e.g. browser = client, web server = server',
+      'Peer-to-peer (P2P): every node can be client and server simultaneously (torrents, blockchain)',
+      'Key protocols: HTTP (web, port 80), HTTPS (secure web, port 443), FTP (files, port 21), SMTP (send email, port 25), DNS (name resolution, port 53), TCP/IP (reliable transport)',
+      'DNS: translates domain names (www.google.com) to IP addresses — like a phone book for the internet',
+      'Router: forwards packets between DIFFERENT networks; Switch: connects devices within a LAN; Hub: broadcasts to all ports (obsolete)',
+      'HTTPS uses SSL/TLS encryption — data encrypted between browser and server; look for padlock icon',
+      'Circuit switching: dedicated path for entire call (phone network); Packet switching: data split into packets, each routed independently (internet)'
+    ],
+    tips: [
+      'Standard ports to know: HTTP=80, HTTPS=443, FTP=21, SMTP=25, DNS=53, POP3=110, IMAP=143',
+      'Modem: MOdulator-DEModulator — converts digital ↔ analogue for telephone line transmission',
+      'MAC address: 48-bit hardware identifier on every network interface card (e.g. AA:BB:CC:DD:EE:FF)',
+      'ISP (Internet Service Provider): company that provides internet connectivity to homes and businesses'
+    ],
+    bestPractices: [
+      'Know full forms for MCQs: LAN, WAN, MAN, PAN, ISP, DNS, HTTP, HTTPS, FTP, SMTP, TCP, IP, URL, MAC, WWW',
+      'Network topologies: bus (single cable), star (central hub/switch), ring (circular loop), mesh (every node connected)',
+      'The Internet = the physical infrastructure; WWW = a service running on it. Other services: email, FTP, VoIP'
+    ]
+  },
+  {
+    chapter: 'Database Management & SQL',
+    formulae: [
+      'SELECT col1, col2 FROM table WHERE condition ORDER BY col ASC/DESC LIMIT n;',
+      'INSERT INTO table (col1, col2) VALUES (val1, val2);',
+      'UPDATE table SET col = val WHERE condition;',
+      'DELETE FROM table WHERE condition;',
+      'CREATE TABLE name (col1 datatype, col2 datatype, PRIMARY KEY(col1));',
+      'Aggregates: COUNT(*), SUM(col), AVG(col), MAX(col), MIN(col)',
+      'GROUP BY col HAVING aggregate_condition  — HAVING filters groups; WHERE filters rows'
+    ],
+    logic: [
+      'DBMS: software system to create, manage, and query databases (MySQL, SQLite, LibreOffice Base, MS Access)',
+      'Table (relation): 2D structure; rows = records/tuples; columns = fields/attributes',
+      'Primary key: uniquely identifies each row — must be NOT NULL and UNIQUE; usually one column',
+      'Foreign key: column in one table that references the primary key of another table — enforces integrity',
+      'WHERE filters INDIVIDUAL ROWS before aggregation; HAVING filters GROUPS after GROUP BY',
+      'ORDER BY default: ASC (ascending); add DESC for descending',
+      'DISTINCT removes duplicate rows from result: SELECT DISTINCT city FROM customers;',
+      'NULL = missing/unknown — NOT zero, NOT empty string; use IS NULL or IS NOT NULL to check',
+      'DDL (structure): CREATE, ALTER, DROP; DML (data): SELECT, INSERT, UPDATE, DELETE'
+    ],
+    tips: [
+      'DANGER: UPDATE or DELETE without WHERE affects ALL rows in the table — always add a WHERE clause',
+      'LIKE operator: % = any sequence of characters; _ = exactly one character',
+      'BETWEEN a AND b: inclusive of both endpoints',
+      'COUNT(*) counts all rows; COUNT(col) counts non-NULL values in that column',
+      'Primary key automatically has both NOT NULL and UNIQUE constraints'
+    ],
+    bestPractices: [
+      'Write SQL keywords in UPPERCASE; table and column names in lowercase — standard convention',
+      'Never use = NULL; always IS NULL or IS NOT NULL',
+      'For exam: identify table → required columns → filter condition → sort order → then write the query',
+      'Test queries mentally with sample data before finalising — especially for WHERE conditions with AND/OR'
+    ]
+  },
+  {
+    chapter: 'Cybersecurity & Digital Safety',
+    formulae: [
+      'Strong password: ≥ 8 characters, uppercase + lowercase + digits + symbols; unique per account',
+      'Encryption converts plaintext → ciphertext (using a key); decryption reverses it'
+    ],
+    logic: [
+      'Malware types: virus (attaches to files, executes when file runs), worm (self-replicates through network, no host file needed), trojan (disguises as legitimate software), ransomware (encrypts files, demands payment), spyware (monitors user silently), adware (unwanted advertisements)',
+      'Phishing: fraudulent emails/websites impersonating trusted entities to steal credentials or money',
+      'Vishing: voice phishing (phone calls); Smishing: SMS phishing',
+      'Social engineering: manipulating people (not technical systems) to reveal confidential information',
+      'Firewall: monitors and filters incoming/outgoing network traffic based on security rules',
+      'Antivirus: detects and removes malware using signature databases and heuristic analysis',
+      'HTTPS/SSL-TLS: encrypts data in transit between browser and server — prevents eavesdropping',
+      'Two-factor authentication (2FA): password + OTP/authenticator app — adds a second verification step',
+      'Cyberbullying: harassment, threats, or humiliation using digital technology (social media, messaging)',
+      'Digital footprint: permanent trail of data left by online activity — search history, social posts, emails, transactions'
+    ],
+    tips: [
+      'Never click links in unexpected emails — navigate directly to the website by typing the URL',
+      'Software updates patch security vulnerabilities — always keep OS and applications up to date',
+      'Public Wi-Fi is insecure — avoid banking or sensitive logins; use VPN if necessary',
+      '3-2-1 backup rule: 3 copies of data, on 2 different media types, with 1 copy stored offsite'
+    ],
+    bestPractices: [
+      'Know the differences: virus (needs host file), worm (self-spreads), trojan (disguised), ransomware (encrypts for ransom)',
+      'IT Act 2000 (India): Sec 43 (unauthorised access), Sec 66 (hacking), Sec 66C (identity theft), Sec 66D (cheating by impersonation)',
+      'Intellectual property: copyright (literary/creative works), trademark (brand identity), patent (inventions)',
+      'Creative Commons licence: allows others to use/share work under specified conditions; check the licence type before using'
+    ]
+  },
+  {
+    chapter: 'Spreadsheet Essentials',
+    formulae: [
+      'Arithmetic: =A1+B1, =A1-B1, =A1*B1, =A1/B1, =A1^2 (power)',
+      'SUM: =SUM(A1:A10); AVERAGE: =AVERAGE(A1:A10); COUNT: =COUNT(A1:A10) — numeric cells only',
+      'MAX: =MAX(range); MIN: =MIN(range); COUNTA: =COUNTA(range) — all non-empty cells',
+      'IF: =IF(condition, value_if_true, value_if_false) — e.g. =IF(B2>=50,"Pass","Fail")',
+      'ROUND: =ROUND(n, digits); ROUNDUP (always rounds up); ROUNDDOWN (always rounds down)',
+      'COUNTIF: =COUNTIF(range, criteria); SUMIF: =SUMIF(criteria_range, criteria, sum_range)',
+      'Text: =UPPER(A1); =LOWER(A1); =LEN(A1); =LEFT(A1,n); =RIGHT(A1,n); =MID(A1,start,len)',
+      'Concatenate: =A1&" "&B1  or  =CONCATENATE(A1," ",B1)'
+    ],
+    logic: [
+      'Cell reference types: A1 (relative — row and column shift when copied); $A$1 (absolute — stays fixed); $A1 / A$1 (mixed — one axis fixed)',
+      'When formula is copied RIGHT: column letters increase (A→B→C); copied DOWN: row numbers increase (1→2→3) — applies to relative references only',
+      'Range A1:A10 = vertical 10 cells; A1:C5 = rectangle (3 col × 5 row)',
+      'Another sheet: Sheet2!A1 — use ! between sheet name and cell reference',
+      'Circular reference: formula that refers to its own cell — causes error; avoid',
+      'Charts: select data first; column/bar = compare categories; pie = show proportions; line = show trends over time'
+    ],
+    tips: [
+      'F4 key: cycle between relative (A1) → absolute ($A$1) → mixed ($A1) → mixed (A$1) while editing',
+      'COUNT counts only numeric cells; COUNTA counts all non-empty cells (text, numbers, dates)',
+      'Sort: Data → Sort; Filter: Data → AutoFilter — fundamental data analysis operations',
+      'Freeze panes (View menu): keeps headers visible when scrolling large spreadsheets'
+    ],
+    bestPractices: [
+      'Always reference cells in formulas, never type hardcoded numbers — makes the sheet maintainable',
+      'Use absolute references ($) for constants (tax rate, discount percentage) shared across multiple formulas',
+      'Test IF formulas at boundary values: does IF(B2>=50,...) handle exactly 50 correctly?',
+      'Use meaningful sheet names and column headers — spreadsheets should be readable without explanation'
+    ]
+  },
+  {
+    chapter: 'Inheritance in Java',
+    formulae: [
+      'Syntax: class Child extends Parent { }',
+      'super() must be the FIRST statement in child constructor; calls parent constructor',
+      'super.methodName(): calls the parent class\'s version of an overridden method',
+      '@Override annotation: before method signature; compiler verifies the override is valid',
+      'Object class: root of all Java class hierarchies — every class implicitly extends Object'
+    ],
+    logic: [
+      'Inheritance models IS-A: if Dog extends Animal, then Dog IS-A Animal — every Dog is an Animal',
+      'Child inherits all non-private members of parent; private members still exist in child objects but are inaccessible',
+      'If child constructor omits super(), compiler inserts super() automatically — fails if parent has no no-arg constructor',
+      'Overriding: same method name + same parameter list in child class → replaces parent behaviour at runtime',
+      'Overloading (same class): same name, different parameter list → resolved at compile time',
+      'Runtime polymorphism: Animal a = new Dog(); then a.sound() calls Dog\'s version at runtime (dynamic dispatch)',
+      'Java: single inheritance for classes (one parent only); multiple interfaces allowed',
+      'final class: cannot be subclassed; final method: cannot be overridden'
+    ],
+    tips: [
+      'instanceof operator: if (a instanceof Dog) — true if a is a Dog or any subclass of Dog',
+      'Upcasting (Dog → Animal) is automatic; downcasting (Animal → Dog) requires explicit cast and may throw ClassCastException',
+      'protected: accessible in class, same package, AND all subclasses (even in different package)',
+      'Override toString() from Object to get meaningful output when printing custom objects'
+    ],
+    bestPractices: [
+      'Use @Override every time you intend to override — catches method-name typos (a typo creates an overload, not an override)',
+      'Keep parent class general; put specific behaviour in child classes',
+      'Prefer composition (HAS-A) over inheritance (IS-A) when the relationship is not truly is-a',
+      'Call super.method() to extend parent behaviour (not completely replace it)'
+    ]
+  },
+  {
+    chapter: 'Exception Handling',
+    formulae: [
+      'try { risky code } catch (ExType e) { handler } finally { always runs }',
+      'Multiple catch: catch(IOException e) { } catch(Exception e) { } — specific → general order required',
+      'Throw: throw new ExceptionType("message");',
+      'Declare: void method() throws IOException { }',
+      'Try-with-resources: try (Scanner sc = new Scanner(System.in)) { } — auto-closes sc'
+    ],
+    logic: [
+      'Exception: runtime event that disrupts normal execution; can be caught and recovered from',
+      'Checked exceptions: must be declared or caught at compile time — e.g. IOException, FileNotFoundException, SQLException',
+      'Unchecked (RuntimeException subclasses): not required to be declared — e.g. NullPointerException, ArrayIndexOutOfBoundsException, NumberFormatException, ArithmeticException',
+      'Error: serious JVM-level problem (OutOfMemoryError, StackOverflowError) — not meant to be caught',
+      'Exception hierarchy: Throwable → Error | Exception → RuntimeException (and checked exceptions)',
+      'catch block: runs only if matching exception is thrown; finally: runs always regardless',
+      'e.getMessage(): returns description string; e.printStackTrace(): prints full call stack'
+    ],
+    tips: [
+      'NumberFormatException: thrown by Integer.parseInt("xyz") — always wrap user input parsing in try-catch',
+      'ArithmeticException: int division by zero (not double — double gives Infinity instead)',
+      'ArrayIndexOutOfBoundsException: valid indices are 0 to array.length−1',
+      'NullPointerException: any method call on a null reference — check for null before using',
+      'Never use an empty catch block — always at minimum print or log the error'
+    ],
+    bestPractices: [
+      'Catch most specific exception FIRST; general Exception always goes last in multi-catch',
+      'Use finally or try-with-resources to always close Scanner/file resources',
+      'Provide meaningful message: throw new IllegalArgumentException("Age must be 0–150");',
+      'For ICSE board: know the 3 most tested exceptions — NullPointerException, ArrayIndexOutOfBoundsException, NumberFormatException'
+    ]
+  },
+  {
+    chapter: 'Wrapper Classes & Scanner',
+    formulae: [
+      'Parsing: Integer.parseInt(String s) → int; Double.parseDouble(s) → double; Float.parseFloat(s) → float',
+      'To String: String.valueOf(42) = "42"; Integer.toString(42) = "42"',
+      'Integer bounds: Integer.MAX_VALUE = 2147483647; Integer.MIN_VALUE = −2147483648',
+      'Character: Character.isDigit(ch); Character.isLetter(ch); Character.isUpperCase(ch); Character.toUpperCase(ch); Character.toLowerCase(ch)',
+      'Math: Math.abs(x); Math.sqrt(x); Math.pow(base,exp); Math.max(a,b); Math.min(a,b); Math.ceil(x); Math.floor(x); Math.round(x)',
+      'Math.PI ≈ 3.14159; Math.E ≈ 2.71828; Math.random() → double in [0.0, 1.0)',
+      'Scanner: Scanner sc = new Scanner(System.in); sc.nextInt(); sc.nextDouble(); sc.next(); sc.nextLine()'
+    ],
+    logic: [
+      'Wrapper classes (Integer, Double, Character, Boolean, etc.): wrap primitives as objects — needed for generics (ArrayList<Integer>)',
+      'Autoboxing: int → Integer happens automatically when object is required; Unboxing: Integer → int happens automatically',
+      'next() reads one token (stops at whitespace); nextLine() reads entire line including spaces',
+      'nextInt() leaves newline in buffer — add sc.nextLine() after it if next call is nextLine()',
+      'Integer.toBinaryString(n), Integer.toOctalString(n), Integer.toHexString(n): base conversion methods',
+      'Math.round(x): for float argument → returns int; for double argument → returns long'
+    ],
+    tips: [
+      'Character ASCII values: \'A\' = 65; \'a\' = 97; \'0\' = 48',
+      '\'7\' - \'0\' = 7 — easiest way to get integer digit value from a character',
+      'Integer.compare(a, b): safe comparison (avoids int overflow in a−b subtraction)',
+      'Math.random() to generate 1–6: (int)(Math.random() * 6) + 1',
+      'Always close Scanner: sc.close() — releases the underlying input stream'
+    ],
+    bestPractices: [
+      'Wrap Integer.parseInt() in try-catch for NumberFormatException when parsing user input',
+      'Use Math.abs() not manual negation — Math.abs(Integer.MIN_VALUE) still fails, but is safer generally',
+      'For ICSE MCQs: know the return type of each Math method (sqrt/pow return double; round returns long for double, int for float)',
+      'String is NOT a wrapper class — it is a reference type; char is the primitive, Character is the wrapper'
+    ]
+  },
+  {
+    chapter: 'Abstract Classes & Interfaces',
+    formulae: [
+      'Abstract class: abstract class Shape { abstract double area(); double perimeter() { return 0; } }',
+      'Concrete subclass: class Circle extends Shape { double area() { return Math.PI*r*r; } }',
+      'Interface (all methods public abstract pre-Java 8): interface Drawable { void draw(); }',
+      'Implementing interface: class Box implements Drawable, Printable { public void draw() { ... } }',
+      'A class can extend ONE class but implement MULTIPLE interfaces'
+    ],
+    logic: [
+      'Abstract class: cannot be instantiated; may contain abstract methods (no body) AND concrete methods (with body)',
+      'If a class has any abstract method, the class MUST be declared abstract',
+      'Concrete subclass must implement ALL abstract methods — or itself be declared abstract',
+      'Interface (pre-Java 8): all methods implicitly public abstract; all fields implicitly public static final',
+      'Java 8+ interfaces: can add default methods (concrete, with body) and static methods',
+      'Polymorphism via abstract class/interface: Shape s = new Circle(); — s.area() calls Circle\'s method',
+      'final class: cannot be extended (opposite of abstract); final method: cannot be overridden'
+    ],
+    tips: [
+      'Use abstract class when: sharing state (fields) + some common implementation among related classes',
+      'Use interface when: defining a capability that unrelated classes can implement (Flyable, Serializable)',
+      'Marker interface: empty interface used as a tag (e.g. Serializable, Cloneable — no methods)',
+      'Java 8 default methods allow adding new interface methods without breaking all existing implementations'
+    ],
+    bestPractices: [
+      'Design interfaces around behaviours (Flyable, Printable) not entities (Animal, Vehicle)',
+      'Program to interface, not implementation: Drawable d = new Circle(); not Circle d = new Circle();',
+      'Override all abstract methods in the first concrete subclass — or get a compile error',
+      'Use @Override on interface method implementations to catch mistakes just like class overrides'
     ]
   }
 ];
