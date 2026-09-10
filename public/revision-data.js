@@ -888,6 +888,28 @@ window.REVISION = {
             ['1992', '73rd Amendment — Constitutional status to Panchayati Raj (rural local bodies)'],
             ['1992', '74th Amendment — Constitutional status to Urban Local Bodies (Municipalities)'],
             ['2005', 'Right to Information (RTI) Act passed — transparency in government'],
+            // Rise of Nationalism in Europe
+            ['1789', 'French Revolution began — ideals of Liberty, Equality, Fraternity; inspired European nationalism'],
+            ['1804', 'Napoleon Bonaparte crowned Emperor; introduced Napoleonic Code — uniform laws, abolished feudalism'],
+            ['1815', 'Congress of Vienna — conservative powers (Austria, Prussia, Russia, Britain) restored old order after Napoleon\'s defeat'],
+            ['1830', 'Greece won independence from Ottoman Empire (recognised by Treaty of Constantinople); first nationalist revolt succeeds'],
+            ['1848', '"Springtime of Nations" — revolutions across Europe; Frankfurt Parliament tried to unite Germany (failed)'],
+            ['1861', 'Kingdom of Italy proclaimed — unification complete; key figures: Cavour (diplomacy), Garibaldi (military), Mazzini (ideology)'],
+            ['18 Jan 1871', 'German Empire proclaimed at Versailles — Bismarck unified German states; "Blood and Iron" policy'],
+            // Making of a Global World
+            ['1840s', 'Great Hunger (potato famine) in Ireland → over 1 million died; 1 million emigrated (mainly to USA)'],
+            ['1885', 'Berlin Conference — European powers divided Africa among themselves without African consent'],
+            ['1890s', 'Indentured labour system: Indians sent to Caribbean, Fiji, Mauritius, South Africa under 5-year contracts'],
+            ['Oct 1929', 'Wall Street Crash (New York) — Great Depression began; world trade fell by 66% by 1933'],
+            ['1944', 'Bretton Woods Conference (USA) — established IMF and World Bank to stabilise post-war economy'],
+            ['1948', 'GATT (General Agreement on Tariffs and Trade) signed — predecessor to WTO; promoted free trade'],
+            // Age of Industrialisation
+            ['1764', 'Spinning Jenny invented by James Hargreaves — revolutionised cotton spinning; one worker could spin 8 threads'],
+            ['1769', 'James Watt improved steam engine (patented) — made it efficient; powered factories, railways, ships'],
+            ['1780s', 'First cotton mills established in Manchester/Lancashire — beginning of factory system in Britain'],
+            ['1813', 'Charter Act — ended East India Company\'s monopoly on trade with India; British goods flooded Indian markets'],
+            ['1850s', 'Railway expansion in Britain and India — connected raw materials to ports; coal and iron output surged'],
+            ['1900', 'Indian cotton mills well established in Bombay; Indian weavers competed with British machine-made cloth'],
           ];
           return `<div class="imp-dates-wrap">
             <h4 class="imp-dates-title">&#128197; Important Dates — Indian History &amp; Civics (CBSE Grade 10)</h4>
