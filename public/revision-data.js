@@ -856,6 +856,48 @@ window.REVISION = {
     ],
     'Social Science': [
       {
+        chapter: 'Important Dates — Social Science',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1853', 'First railway in India — Bombay to Thane (34 km); introduced by British'],
+            ['1857', 'First War of Indian Independence (Sepoy Mutiny); ended formal East India Company rule'],
+            ['1885', 'Indian National Congress (INC) founded by A.O. Hume in Bombay'],
+            ['1905', 'Partition of Bengal by Lord Curzon → Swadeshi Movement launched'],
+            ['1906', 'All India Muslim League founded in Dacca'],
+            ['1915', 'Mahatma Gandhi returned to India from South Africa'],
+            ['1919', 'Rowlatt Act passed; Jallianwala Bagh massacre (13 April); Khilafat Movement began'],
+            ['1920', 'Non-Cooperation Movement launched by Gandhi (Aug); first mass movement'],
+            ['4 Feb 1922', 'Chauri Chaura incident — violent mob burnt police station → Gandhi called off NCM'],
+            ['1927', 'Simon Commission appointed (all-British) → Indian boycott'],
+            ['31 Dec 1929', 'Lahore Congress session — Purna Swaraj (complete independence) resolution passed'],
+            ['12 Mar 1930', 'Dandi March begun by Gandhi; Civil Disobedience Movement (Salt Satyagraha)'],
+            ['5 Mar 1931', 'Gandhi-Irwin Pact — CDM temporarily suspended'],
+            ['8 Aug 1942', 'Quit India Movement launched; Gandhi\'s "Do or Die" call'],
+            ['9 Dec 1946', 'Constituent Assembly first meeting; Dr Rajendra Prasad elected President'],
+            ['15 Aug 1947', 'India gained independence from British rule; Partition into India and Pakistan'],
+            ['26 Nov 1949', 'Constitution of India adopted by Constituent Assembly'],
+            ['26 Jan 1950', 'Constitution of India came into force — Republic Day; Dr Rajendra Prasad = 1st President'],
+            ['1952', 'First General Elections in independent India; INC won with Jawaharlal Nehru as PM'],
+            ['1 Nov 1956', 'States Reorganisation Act — states reorganised on linguistic basis'],
+            ['1974', 'Operation Pokhran I — India\'s first nuclear test (Smiling Buddha), Rajasthan'],
+            ['1976', '42nd Amendment — added "Socialist" & "Secular" to Preamble; added Fundamental Duties'],
+            ['1984', 'Operation Blue Star (June); Bhopal Gas Tragedy (2–3 Dec) — Union Carbide leak'],
+            ['1985', '52nd Amendment — Anti-defection law added to Constitution'],
+            ['1991', 'Economic Liberalisation, Privatisation and Globalisation (LPG) policy under Manmohan Singh'],
+            ['1992', '73rd Amendment — Constitutional status to Panchayati Raj (rural local bodies)'],
+            ['1992', '74th Amendment — Constitutional status to Urban Local Bodies (Municipalities)'],
+            ['2005', 'Right to Information (RTI) Act passed — transparency in government'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Indian History &amp; Civics (CBSE Grade 10)</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Event &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Nationalism in India',
         formulae: [],
         logic: [
@@ -1267,6 +1309,54 @@ window.REVISION = {
       }
     ],
     'ICSE History': [
+      {
+        chapter: 'Important Dates — History & Civics',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['28 Jun 1914', 'Assassination of Archduke Franz Ferdinand at Sarajevo → trigger for WWI'],
+            ['28 Jul 1914', 'Austria-Hungary declared war on Serbia → WWI began officially'],
+            ['4 Aug 1914', 'Britain entered WWI after Germany invaded neutral Belgium (Schlieffen Plan)'],
+            ['6 Apr 1917', 'USA entered WWI (unrestricted German submarine warfare + Zimmermann Telegram)'],
+            ['11 Nov 1918', 'WWI Armistice signed at Compiègne; war ended at 11 am'],
+            ['28 Jun 1919', 'Treaty of Versailles signed — War Guilt Clause, £6.6 bn reparations, German disarmament'],
+            ['Oct 1929', 'Wall Street Crash — Great Depression began; spread worldwide'],
+            ['Oct 1922', 'Mussolini\'s March on Rome — Fascist takeover of Italy; PM 1922–1943'],
+            ['30 Jan 1933', 'Hitler became Chancellor of Germany (NSDAP/Nazi Party)'],
+            ['23 Mar 1933', 'Enabling Act — gave Hitler absolute power; end of Weimar Republic'],
+            ['27 Feb 1933', 'Reichstag Fire — used by Hitler to suspend civil liberties'],
+            ['9–10 Nov 1938', 'Kristallnacht — Nazi pogrom against Jews; 7,500 businesses destroyed'],
+            ['Sep 1938', 'Munich Agreement — Britain/France gave Hitler Sudetenland (appeasement policy)'],
+            ['1 Sep 1939', 'Germany invaded Poland → WWII began'],
+            ['3 Sep 1939', 'Britain and France declared war on Germany'],
+            ['May–Jun 1940', 'Dunkirk evacuation — ~338,000 Allied troops rescued from beaches'],
+            ['Jun 1940', 'Fall of France; German occupation of Paris'],
+            ['Jul–Sep 1940', 'Battle of Britain — RAF defeated Luftwaffe; Hitler cancelled invasion plans'],
+            ['22 Jun 1941', 'Operation Barbarossa — Germany invaded USSR (broke Nazi-Soviet Pact)'],
+            ['7 Dec 1941', 'Japan attacked Pearl Harbour, Hawaii → USA entered WWII'],
+            ['Aug 1942–Feb 1943', 'Battle of Stalingrad — decisive Allied/Soviet victory; turning point of WWII'],
+            ['6 Jun 1944', 'D-Day — Allied landings in Normandy; largest seaborne invasion in history'],
+            ['8 May 1945', 'VE Day — Germany surrendered; war in Europe ended'],
+            ['6 Aug 1945', 'Atomic bomb dropped on Hiroshima (by USA — B-29 Enola Gay)'],
+            ['9 Aug 1945', 'Atomic bomb dropped on Nagasaki'],
+            ['15 Aug 1945', 'VJ Day — Japan surrendered; WWII ended'],
+            ['24 Oct 1945', 'United Nations founded; UN Charter came into force'],
+            ['9 Dec 1946', 'Constituent Assembly of India first met; Ambedkar chaired Drafting Committee'],
+            ['26 Nov 1949', 'Constitution of India adopted by Constituent Assembly'],
+            ['26 Jan 1950', 'Constitution of India enforced — Republic Day; India became a republic'],
+            ['1976', '42nd Amendment — "Socialist" & "Secular" added to Preamble; Fundamental Duties added'],
+            ['1985', '52nd Amendment — Anti-defection law (Tenth Schedule)'],
+            ['1992', '73rd Amendment — Constitutional status to Panchayati Raj Institutions'],
+            ['1992', '74th Amendment — Constitutional status to Urban Local Bodies (Municipalities)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — History &amp; Civics (ICSE Grade 10)</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Event &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'The First World War (1914–1918)',
         formulae: [],

@@ -591,6 +591,14 @@ kbd {
   margin: 0 0 16px; font-size: var(--fs-sec);
   padding-bottom: 12px; border-bottom: 2px solid var(--border);
 }
+.imp-dates-wrap { margin-bottom: 20px; }
+.imp-dates-title { font-size: var(--fs-body); font-weight: 700; margin: 0 0 10px; color: var(--accent); }
+.imp-dates-table { width: 100%; border-collapse: collapse; font-size: var(--fs-body); }
+.imp-dates-table thead th { text-align: left; padding: 6px 10px; background: var(--bg); color: var(--text-light); font-size: var(--fs-sm); font-weight: 600; border-bottom: 2px solid var(--border); }
+.imp-dates-table tbody tr:nth-child(even) { background: var(--bg); }
+.imp-dates-table tbody tr:hover { background: var(--card-hover, var(--bg)); }
+.imp-dates-table td { padding: 7px 10px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+.imp-date-cell { white-space: nowrap; font-weight: 600; color: var(--accent); min-width: 110px; }
 .rev-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .rev-item {
   display: flex; align-items: flex-start; gap: 10px;
