@@ -60,6 +60,11 @@ function consolidatedChapters(subjectId) {
         else merged.push({ ...ch, _boards: [board], _theoremKey: theoremKey });
       });
   });
+  merged.sort((a, b) => {
+    const ai = a.chapter.startsWith('Important Dates');
+    const bi = b.chapter.startsWith('Important Dates');
+    return ai && !bi ? -1 : !ai && bi ? 1 : 0;
+  });
   return (_consolidatedCache[subjectId] = merged);
 }
 

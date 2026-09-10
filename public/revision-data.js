@@ -2,6 +2,35 @@
 window.REVISION = {
   Mathematics: [
       {
+        chapter: 'Important Dates — Mathematics',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['~1900 BC', 'Babylonian clay tablets record Pythagorean triples — earliest known use of what becomes Pythagoras\' theorem'],
+            ['~600 BC', 'Pythagoras of Samos formalised the right-angle theorem: a² + b² = c² (known earlier in Babylon and India)'],
+            ['~300 BC', 'Euclid — "Elements" (13 books) — proof-based geometry; still the foundation of school geometry today'],
+            ['~250 BC', 'Archimedes approximated π between 3.1408 and 3.1428; derived area of circle = πr² and volume of sphere = 4/3 πr³'],
+            ['~500 AD', 'Aryabhata (Indian) — value of π ≈ 3.1416; place-value system; sine table; algebra'],
+            ['~628 AD', 'Brahmagupta (Indian) — rules for arithmetic with zero and negative numbers; quadratic formula'],
+            ['~820 AD', 'Al-Khwarizmi — "Kitab al-Jabr" (Arabic) — founded algebra; word "algorithm" derived from his name'],
+            ['1202', 'Fibonacci — Liber Abaci; introduced Hindu-Arabic numerals to Europe; Fibonacci sequence (1,1,2,3,5,8…)'],
+            ['1637', 'René Descartes — Cartesian coordinate system (x-y axes); unified algebra and geometry (analytical geometry)'],
+            ['1654', 'Pascal and Fermat founded probability theory through letters on gambling problems'],
+            ['1736', 'Leonhard Euler solved Königsberg bridge problem (graph theory); introduced e, π, i, f(x), Σ notation'],
+            ['1799', 'Carl Gauss (age 22) proved the Fundamental Theorem of Algebra (every polynomial has a complex root)'],
+            ['1854', 'George Boole — Boolean algebra; foundation of digital logic in computers'],
+            ['1858', 'Arthur Cayley published first systematic study of matrix algebra'],
+            ['1994', 'Andrew Wiles proved Fermat\'s Last Theorem — conjectured by Fermat in 1637; unsolved for 357 years'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Mathematics</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Mathematician &amp; Contribution</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Foundations — Arithmetic',
         formulae: [
           'BODMAS / PEMDAS order: Brackets → Orders (powers/roots) → Division → Multiplication → Addition → Subtraction',
@@ -2471,6 +2500,34 @@ window.REVISION = {
     ],
   'ICSE Mathematics': [
       {
+        chapter: 'Important Dates — Mathematics',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['~1900 BC', 'Babylonian clay tablets record Pythagorean triples — earliest known use of what becomes Pythagoras\' theorem'],
+            ['~600 BC', 'Pythagoras of Samos formalised the right-angle theorem: a² + b² = c² (known earlier in Babylon and India)'],
+            ['~300 BC', 'Euclid — "Elements" (13 books) — proof-based geometry; still the foundation of school geometry today'],
+            ['~250 BC', 'Archimedes approximated π between 3.1408 and 3.1428; derived area of circle = πr² and volume of sphere = 4/3 πr³'],
+            ['~500 AD', 'Aryabhata (Indian) — value of π ≈ 3.1416; place-value system; sine table; algebra'],
+            ['~628 AD', 'Brahmagupta (Indian) — rules for arithmetic with zero and negative numbers; quadratic formula'],
+            ['~820 AD', 'Al-Khwarizmi — "Kitab al-Jabr" (Arabic) — founded algebra; word "algorithm" derived from his name'],
+            ['1202', 'Fibonacci — Liber Abaci; introduced Hindu-Arabic numerals to Europe; Fibonacci sequence (1,1,2,3,5,8…)'],
+            ['1637', 'René Descartes — Cartesian coordinate system (x-y axes); unified algebra and geometry (analytical geometry)'],
+            ['1654', 'Pascal and Fermat founded probability theory through letters on gambling problems'],
+            ['1736', 'Leonhard Euler solved Königsberg bridge problem (graph theory); introduced e, π, i, f(x), Σ notation'],
+            ['1799', 'Carl Gauss (age 22) proved the Fundamental Theorem of Algebra (every polynomial has a complex root)'],
+            ['1858', 'Arthur Cayley published first systematic study of matrix algebra'],
+            ['1994', 'Andrew Wiles proved Fermat\'s Last Theorem — conjectured by Fermat in 1637; unsolved for 357 years'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Mathematics</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Mathematician &amp; Contribution</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Mensuration',
         formulae: [
           'Cylinder: V = πr²h,  CSA = 2πrh,  TSA = 2πr(r+h)',
@@ -3033,6 +3090,32 @@ window.REVISION = {
     ],
   English: [
       {
+        chapter: 'Important Dates — English Language',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['~450 AD', 'Old English (Anglo-Saxon) brought to Britain by Germanic tribes — ancestor of modern English'],
+            ['1066', 'Norman Conquest — William the Conqueror; French vocabulary flooded English (about, beef, village); English transformed'],
+            ['~1387', 'Geoffrey Chaucer wrote Canterbury Tales — masterpiece of Middle English; 17,000 lines of verse'],
+            ['1476', 'William Caxton set up first printing press in England — standardised English spelling; enabled mass literacy'],
+            ['1590s–1613', 'William Shakespeare wrote 37 plays and 154 sonnets — added ~1,700 words to English (bedroom, lonely, generous…)'],
+            ['1611', 'King James Bible published — shaped English prose style; phrases like "eye for an eye", "salt of the earth" entered common use'],
+            ['1755', 'Samuel Johnson published "A Dictionary of the English Language" — first comprehensive English dictionary; 40,000 words'],
+            ['1828', 'Noah Webster published "An American Dictionary" — standardised American English; colour→color, honour→honor'],
+            ['1884', 'Oxford English Dictionary project begun (completed 1928) — 400,000 words, 2 million quotations'],
+            ['1906', 'Roget\'s Thesaurus published in modern expanded form — essential reference for synonyms'],
+            ['1949', 'George Orwell published "1984" — added "doublethink", "Big Brother", "Newspeak" to common vocabulary'],
+            ['2003', 'Oxford English Dictionary went fully online — now updated quarterly; tracks real-time language change'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — English Language &amp; Literature</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Milestone &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Tenses — Present, Past & Future',
         formulae: [
           'Simple Present: Subject + V1 (+s/es for he/she/it) — "She writes a letter." Negative/question use do/does. [Gr 8]',
@@ -3360,6 +3443,34 @@ window.REVISION = {
       }
     ],
   Hindi: [
+      {
+        chapter: 'Important Dates — Hindi',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['~1000 AD', 'Apabhramsha — transitional language between Sanskrit/Prakrits and modern Hindi; early dohas of Gorakhnath'],
+            ['~1325 AD', 'Amir Khusrau — first major poet in Khari Boli (basis of modern Hindi); composed riddles, dohas, ghazals'],
+            ['~1440 AD', 'Kabir Das — Bhakti saint-poet; wrote in simple Hindi; Dohe and Sakhis; stressed devotion over ritual; "Nirgun" tradition'],
+            ['1498', 'Mirabai — Bhakti poetess; devotional padas to Krishna; wrote in Braj Bhasha'],
+            ['1532', 'Tulsidas born — wrote Ramcharitmanas (1574) in Awadhi; most influential Hindi literary work; also Vinay Patrika'],
+            ['1623', 'Bihari Lal — "Bihari Satsai" (700 couplets); Riti Kaal (ornate style) of Hindi poetry'],
+            ['1850', 'Bharatendu Harishchandra born — "Father of Modern Hindi literature"; introduced prose writing and social themes'],
+            ['1880s', 'Khari Boli became established as standard Hindi literary language; Devanagari script adopted'],
+            ['1916', 'Premchand — pivotal Hindi fiction writer; "Godan" (1936), "Nirmala" — realistic social themes'],
+            ['1936', 'Progressive Writers\' Movement (Pragativadi Andolan) — socially conscious Hindi literature era began'],
+            ['14 Sep 1949', 'Hindi declared official language of the Union of India (Article 343 of Constitution)'],
+            ['26 Jan 1950', 'Constitution of India came into force — Hindi in Devanagari script as official language; English as associate official'],
+            ['14 Sep', 'Hindi Diwas (Hindi Day) celebrated every year — marks 1949 adoption of Hindi as official language'],
+            ['1954', 'Sahitya Akademi established — national academy for Indian letters; gives annual awards in 24 languages including Hindi'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Hindi Language &amp; Literature</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Event &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'वर्ण-विचार (स्वर, व्यंजन एवं उच्चारण)',
         formulae: [
