@@ -9,35 +9,99 @@
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; max-width: 680px; margin: 0 auto; padding: 32px 20px 80px; line-height: 1.6; color: #1e293b; }
         h1 { color: #2563eb; }
         h2 { margin-top: 2em; font-size: 1.15rem; }
+        h3 { margin-top: 1.4em; font-size: 1rem; }
         a { color: #2563eb; }
         .updated { color: #64748b; font-size: 0.9rem; }
+        table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.92rem; }
+        th, td { text-align: left; padding: 8px 10px; border: 1px solid #e2e8f0; }
+        th { background: #f8fafc; font-weight: 600; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy — Rise</h1>
     <p class="updated">Last updated: September 2026</p>
 
-    <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students. This policy explains what happens to your data when you use it.</p>
+    <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students, operated by Strat101. This policy explains what data is collected, how it is used, and your choices.</p>
 
-    <h2>No account, no personal data collection</h2>
-    <p>Rise does not require sign-up or login, and does not ask for your name, email, or any other personal information.</p>
+    <h2>1. Summary</h2>
+    <p>Rise works fully without an account. When you choose to sign in, some data is stored in the cloud so your progress is available across devices. Multiplayer features (Challenge codes and Live Rooms) store only the minimum data needed for those features to work. We do not sell your data and we do not show you ads.</p>
 
-    <h2>Everything stays on your device</h2>
-    <p>Your progress, test attempts, bookmarks, streaks, and settings are stored only in your browser's or app's local storage, directly on your device. This data is never transmitted to, or stored on, any server we operate. Uninstalling the app or clearing site data permanently deletes it, since no copy exists anywhere else.</p>
+    <h2>2. Data we collect and why</h2>
 
-    <h2>Question content</h2>
-    <p>The app downloads question-bank content (practice questions, answers, explanations) from our servers so it can display them. These are static content files — no information about you or your device is attached to these requests beyond what any standard web request includes (e.g. IP address, handled transiently by our hosting provider for serving the files and not linked to any profile).</p>
+    <h3>2a. Without an account (guest use)</h3>
+    <p>Your progress, test attempts, bookmarks, streaks, Short Answer drafts, and settings are stored only in your browser's local storage, on your device. None of this is sent to our servers. Clearing site data or uninstalling the app permanently deletes it.</p>
 
-    <h2>No advertising, no analytics trackers, no third-party sharing</h2>
-    <p>Rise does not embed advertising SDKs, analytics/tracking scripts, or any mechanism that shares your activity with third parties.</p>
+    <h3>2b. With an account (optional sign-in)</h3>
+    <p>You may sign in with Google or an email/password via Firebase Authentication (Google LLC). When you do:</p>
+    <table>
+        <thead><tr><th>Data</th><th>Where stored</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td>Email address, display name, profile photo URL</td><td>Firebase Auth</td><td>Identify you when you sign in</td></tr>
+            <tr><td>Screen name, country, city (optional, user-entered)</td><td>Firestore</td><td>Display name in multiplayer leaderboards</td></tr>
+            <tr><td>Study progress (Leitner box records per question)</td><td>Firestore</td><td>Sync spaced-repetition state across devices</td></tr>
+            <tr><td>Bookmarked questions</td><td>Firestore</td><td>Access bookmarks on any device</td></tr>
+            <tr><td>Streak and daily-goal data</td><td>Firestore</td><td>Sync study streak across devices</td></tr>
+            <tr><td>Short Answer self-marks and typed drafts</td><td>Firestore</td><td>Continue writing across devices</td></tr>
+            <tr><td>Solved-exercise reveal state</td><td>Firestore</td><td>Remember which solutions you have seen</td></tr>
+        </tbody>
+    </table>
+    <p>All cloud data is stored under your user ID and protected by Firestore security rules — no other user can read or write your data.</p>
 
-    <h2>Children's privacy</h2>
-    <p>Rise is designed for use by school students. Since no personal data is collected or transmitted, no personal data about children is gathered by this app.</p>
+    <h3>2c. Challenge codes (async multiplayer)</h3>
+    <p>When you finish a Free Run and generate a challenge code, the following is stored in Firestore under a random 6-letter code for up to 7 days:</p>
+    <ul>
+        <li>Your screen name (or "Anonymous" if not logged in)</li>
+        <li>The list of question IDs served in your run</li>
+        <li>Your score, stage reached, and combo</li>
+        <li>Scores submitted by friends who play the same code</li>
+    </ul>
+    <p>Challenge documents are publicly readable by anyone who knows the code, and expire automatically after 7 days.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>If this policy changes (for example, if an optional account/sync feature is introduced in the future), this page will be updated and the "Last updated" date above will change accordingly.</p>
+    <h3>2d. Live Rooms (real-time multiplayer)</h3>
+    <p>When you create or join a Live Room, the following is stored in Firestore under a random 6-letter room code for up to 4 hours:</p>
+    <ul>
+        <li>Your screen name (or "Guest" if not logged in)</li>
+        <li>Your answers to each question (index only, not the text)</li>
+        <li>Your score</li>
+        <li>The room's question list and game state (current question, timer)</li>
+    </ul>
+    <p>Room documents are publicly readable by anyone who knows the code. They are not cleaned up automatically but contain no identifying information beyond the name you choose to display.</p>
 
-    <h2>Contact</h2>
+    <h2>3. Third-party services</h2>
+    <table>
+        <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th></tr></thead>
+        <tbody>
+            <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Sign-in (email/password and Google)</td></tr>
+            <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Cloud sync, challenge codes, live rooms</td></tr>
+            <tr><td>Cloudflare Pages</td><td>Cloudflare, Inc.</td><td>Hosting; logs standard web access data (IP, browser) transiently for security and performance</td></tr>
+            <tr><td>Google Fonts</td><td>Google LLC</td><td>Montserrat and Noto Sans Devanagari typefaces</td></tr>
+        </tbody>
+    </table>
+    <p>Each provider has its own privacy policy. Firebase and Firestore are governed by the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Privacy Policy</a>.</p>
+
+    <h2>4. No advertising or behavioural tracking</h2>
+    <p>Rise does not embed advertising SDKs, analytics/tracking scripts, or any mechanism that profiles your behaviour for advertising. We do not share your data with any third party for marketing purposes.</p>
+
+    <h2>5. Children's privacy</h2>
+    <p>Rise is designed for school students. Guest use collects no personal data. If a child creates an account, the data stored is limited to what is described in section 2b above. Parents or guardians may request deletion of a child's account and associated data by emailing us at <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+
+    <h2>6. Your rights and choices</h2>
+    <ul>
+        <li><strong>Use without an account:</strong> All core study features work without signing in.</li>
+        <li><strong>Edit your profile:</strong> Screen name, country, and city can be updated at any time from the profile modal (avatar → profile).</li>
+        <li><strong>Delete your account:</strong> Email <a href="mailto:rise@strat101.com">rise@strat101.com</a> to request deletion of your account and all associated Firestore data.</li>
+        <li><strong>Local data:</strong> Clear your browser's site data for rise.strat101.com to erase local storage at any time.</li>
+    </ul>
+
+    <h2>7. Data retention</h2>
+    <p>Account and sync data is retained until you request deletion. Challenge codes are stored for 7 days. Live Room data persists until manually cleaned up (typically within days). Local storage data remains on your device until you clear it.</p>
+
+    <h2>8. Changes to this policy</h2>
+    <p>If this policy changes materially, this page will be updated and the "Last updated" date above will change. We encourage you to review it periodically.</p>
+
+    <h2>9. Contact</h2>
     <p>Questions about this policy can be sent to <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+
+    <p><a href="/">&larr; Back to Rise</a></p>
 </body>
 </html>
