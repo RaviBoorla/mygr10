@@ -1730,6 +1730,45 @@ window.REVISION = {
     ],
   Physics: [
       {
+        chapter: 'Important Dates — Physics',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1621', 'Willebrord Snell formulated Snell\'s Law of Refraction (published posthumously 1703)'],
+            ['1676', 'Ole Rømer first measured speed of light using Jupiter\'s moons'],
+            ['1687', 'Isaac Newton published Principia Mathematica — Laws of Motion and Universal Gravitation'],
+            ['1752', 'Benjamin Franklin proved lightning is electricity (kite experiment); invented lightning rod'],
+            ['1800', 'Alessandro Volta invented electric battery (Voltaic pile) — first steady electric current source'],
+            ['1820', 'Hans Christian Ørsted discovered electromagnetism — electric current creates a magnetic field'],
+            ['1821', 'Michael Faraday built first electric motor'],
+            ['1827', 'Georg Ohm formulated Ohm\'s Law: V = IR'],
+            ['1831', 'Michael Faraday discovered electromagnetic induction — moving magnet generates current'],
+            ['1842', 'Julius Mayer and James Joule stated Law of Conservation of Energy independently'],
+            ['1864', 'James Clerk Maxwell predicted electromagnetic waves (light is an EM wave)'],
+            ['1879', 'Thomas Edison invented incandescent light bulb; Joseph Swan independently in UK'],
+            ['1888', 'Heinrich Hertz demonstrated radio waves — confirmed Maxwell\'s electromagnetic theory'],
+            ['1895', 'Wilhelm Röntgen discovered X-rays (Nobel Prize 1901)'],
+            ['1896', 'Henri Becquerel discovered radioactivity in uranium salts'],
+            ['1897', 'J.J. Thomson discovered the electron using cathode ray tube experiments'],
+            ['1898', 'Marie and Pierre Curie discovered Polonium and Radium; coined term "radioactivity"'],
+            ['1900', 'Max Planck proposed quantum theory — energy emitted in discrete packets (quanta)'],
+            ['1905', 'Einstein explained photoelectric effect (Nobel Prize 1921); proposed E = mc²'],
+            ['1911', 'Ernest Rutherford — nuclear model of atom (gold foil experiment); discovered proton'],
+            ['1913', 'Niels Bohr proposed atomic model with fixed electron energy levels'],
+            ['1932', 'James Chadwick discovered the neutron (Nobel Prize 1935)'],
+            ['1938', 'Otto Hahn and Fritz Strassmann achieved first nuclear fission of uranium'],
+            ['2 Dec 1942', 'Enrico Fermi — first self-sustaining nuclear chain reaction (Chicago Pile-1)'],
+            ['16 Jul 1945', 'First atomic bomb test — Trinity, New Mexico (Manhattan Project)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Physics</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Force & Pressure',
         formulae: [
           "Newton's 2nd Law: F = ma",
@@ -1976,6 +2015,38 @@ window.REVISION = {
       }
     ],
     Chemistry: [
+      {
+        chapter: 'Important Dates — Chemistry',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1661', 'Robert Boyle — "The Sceptical Chymist" — first scientific definition of a chemical element'],
+            ['1774', 'Joseph Priestley discovered oxygen (called "dephlogisticated air")'],
+            ['1789', 'Antoine Lavoisier — Law of Conservation of Mass; named hydrogen and oxygen; overthrew phlogiston theory'],
+            ['1808', 'John Dalton published Atomic Theory — atoms of each element have a fixed characteristic weight'],
+            ['1811', 'Amedeo Avogadro — equal volumes of gases (same T, P) contain equal numbers of molecules'],
+            ['1834', 'Michael Faraday formulated laws of electrolysis; coined: electrode, electrolyte, anode, cathode, ion'],
+            ['8 Mar 1869', 'Dmitri Mendeleev published the Periodic Table; left gaps for undiscovered elements (8 March = Periodic Table Day)'],
+            ['1874', 'Van\'t Hoff and Le Bel proposed tetrahedral carbon structure — basis of organic stereochemistry'],
+            ['1894', 'William Ramsay and Lord Rayleigh discovered Argon; Ramsay later found He, Ne, Kr, Xe'],
+            ['1898', 'Marie and Pierre Curie discovered Polonium and Radium; isolated pure radium 1902'],
+            ['1909', 'Fritz Haber developed Haber-Bosch process for ammonia synthesis — vital for fertilisers'],
+            ['1910', 'Leo Baekeland invented Bakelite — first synthetic thermosetting plastic'],
+            ['1911', 'Ernest Rutherford discovered atomic nucleus'],
+            ['1913', 'Henry Moseley — atomic number (not mass) is the true basis of the periodic table'],
+            ['1916', 'Gilbert Lewis proposed covalent bond — sharing of electron pairs between atoms'],
+            ['1932', 'James Chadwick discovered neutron — completed understanding of atomic structure'],
+            ['1935', 'Wallace Carothers invented Nylon at DuPont — first synthetic polymer fibre'],
+            ['2016', 'IUPAC officially named elements 113 (Nihonium), 115 (Moscovium), 117 (Tennessine), 118 (Oganesson)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Chemistry</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'Periodic Table',
         html: function() {
@@ -2704,6 +2775,44 @@ window.REVISION = {
       }
     ],
     Biology: [
+      {
+        chapter: 'Important Dates — Biology',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1665', 'Robert Hooke discovered cells examining cork under microscope; coined the term "cell"'],
+            ['1674', 'Antonie van Leeuwenhoek first observed living microorganisms (protozoa, bacteria)'],
+            ['1753', 'Carl Linnaeus published "Species Plantarum" — foundation of binomial nomenclature'],
+            ['1796', 'Edward Jenner developed first vaccine (smallpox) — founded immunology'],
+            ['1831', 'Robert Brown discovered the cell nucleus in plant cells'],
+            ['1838', 'Matthias Schleiden — all plants are made of cells (Cell Theory, part 1)'],
+            ['1839', 'Theodor Schwann — all animals made of cells; cell is the basic unit of life (Cell Theory complete)'],
+            ['1858', 'Rudolf Virchow — "Omnis cellula e cellula" (every cell comes from a pre-existing cell)'],
+            ['1859', 'Charles Darwin published "On the Origin of Species" — Natural Selection theory of evolution'],
+            ['1865', 'Gregor Mendel published laws of heredity (pea plant experiments); rediscovered 1900'],
+            ['1870', 'Louis Pasteur and Robert Koch established Germ Theory of Disease'],
+            ['1879', 'Walther Flemming discovered chromosomes and described mitosis'],
+            ['1900', 'Mendel\'s laws rediscovered by de Vries, Correns, and Tschermak independently'],
+            ['1902', 'Walter Sutton and Theodor Boveri — Chromosomal Theory of Heredity (genes on chromosomes)'],
+            ['1910', 'Thomas Hunt Morgan proved genes are on chromosomes (Drosophila fruit fly experiments)'],
+            ['1928', 'Alexander Fleming discovered penicillin; commercial production 1943'],
+            ['1944', 'Oswald Avery, MacLeod, McCarty proved DNA (not protein) is the genetic material'],
+            ['25 Apr 1953', 'Watson and Crick published DNA double helix structure (Rosalind Franklin\'s X-ray crucial)'],
+            ['1961', 'Marshall Nirenberg cracked the genetic code — triplet codons code for amino acids'],
+            ['1978', 'First IVF baby — Louise Brown born in UK (Dr Robert Edwards, Nobel Prize 2010)'],
+            ['1980', 'WHO declared smallpox eradicated — first human disease eliminated by vaccination'],
+            ['1983', 'Kary Mullis invented PCR (Polymerase Chain Reaction) — Nobel Prize 1993'],
+            ['1990', 'Human Genome Project launched (completed 2003 — all ~3 billion base pairs mapped)'],
+            ['1996', 'Dolly the sheep — first cloned mammal from an adult somatic cell (announced Feb 1997)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Biology</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'Cell Biology',
         formulae: [],
