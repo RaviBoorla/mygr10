@@ -47,8 +47,13 @@ for f in sorted(glob.glob('public/questions/*.json')):
 
 ## IB Diploma
 
-No question banks exist yet for any subject (Mathematics, Biology, Individuals & Societies,
-Language & Literature) — every card shows "coming soon".
+**IB is currently hidden from the UI** (board picker, meta description, privacy policy).
+The `SUBJECTS.IB` entry in `config.js` and the IB entry in `BOARDS` are commented out,
+not deleted — re-enable by uncommenting when question banks are ready.
+No question banks exist yet for any IB subject (Mathematics, Biology, Individuals &
+Societies, Language & Literature). IB past papers are not publicly available (sold only to
+registered IB World Schools via the IB store), so banks would need to be curriculum-authored
+from IB subject guides or sourced from school-purchased paper packs.
 
 ## Short Answers banks (separate from the MCQ banks above)
 

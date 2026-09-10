@@ -242,7 +242,7 @@ const app = {
         <div class="legal-top-bar"><button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button></div>
         <h1 class="legal-title">Privacy Policy</h1>
         <p class="legal-updated">Last updated: September 2026</p>
-        <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students. This policy explains what happens to your data when you use it.</p>
+        <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE and ICSE board-exam students. This policy explains what happens to your data when you use it.</p>
         <h2>No account, no personal data collection</h2>
         <p>Rise does not require sign-up or login, and does not ask for your name, email, or any other personal information.</p>
         <h2>Everything stays on your device</h2>

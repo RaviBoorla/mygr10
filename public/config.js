@@ -2,7 +2,7 @@
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
   ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
-  IB:   ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']
+  // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
 };
 
 const BANKS = {
@@ -58,7 +58,8 @@ function bankSlug(subject, board, grade) {
 const BOARDS = [
   { id: 'CBSE', name: 'CBSE',       short: 'CBSE', desc: 'Central Board of Secondary Education' },
   { id: 'ICSE', name: 'ICSE',       short: 'ICSE', desc: 'Indian Certificate of Secondary Education' },
-  { id: 'IB',   name: 'IB Diploma', short: 'IB',   desc: 'International Baccalaureate (MYP-5)' }
+  // IB hidden until question banks are ready — code retained, not deleted
+  // { id: 'IB',   name: 'IB Diploma', short: 'IB',   desc: 'International Baccalaureate (MYP-5)' }
 ];
 
 const GRADES = [
