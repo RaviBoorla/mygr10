@@ -1214,7 +1214,7 @@ function drawNode(n,g){
       x:x+9, y:y+nh*0.68,
       'dominant-baseline':'central',
       fill:ink, opacity:op*0.85,
-      'font-family':RISE_MONO,'font-size':ss
+      'font-family':RISE_FONT,'font-size':ss
     });
     sub.style.pointerEvents='none';
     const subText=n.sublabel.length>24?n.sublabel.slice(0,23)+'…':n.sublabel;
@@ -1228,7 +1228,7 @@ function drawNode(n,g){
       x:x+NW-14, y:y+nh/2,
       'dominant-baseline':'central','text-anchor':'middle',
       fill:color,opacity:op,
-      'font-size':18,'font-weight':'700','font-family':'system-ui,sans-serif',
+      'font-size':18,'font-weight':'700','font-family':RISE_FONT,
       cursor:'pointer'
     });
     chev.textContent=n._exp?'▸':'▾';
