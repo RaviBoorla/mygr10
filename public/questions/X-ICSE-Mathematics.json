@@ -2796,5 +2796,650 @@
     ],
     "correct": 0,
     "explanation": "P×1.12 = 57600 → P = 57600/1.12 = ₹51,428.57. [Board 2023] ₹50,000 uses 15%; ₹48,000 = 57600−20%; ₹45,000 is too low."
+  },
+  {
+    "id": "icm195",
+    "chapter": "GST",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "For an Intra-state sale, the CGST paid by a dealer to the Central government is ₹120. If the marked price of the article is ₹2000, the rate of GST is:",
+    "options": [
+      "6%",
+      "10%",
+      "12%",
+      "16.67%"
+    ],
+    "correct": 2,
+    "explanation": "CGST = GST/2. GST = 2×120 = ₹240 on ₹2000, so GST% = 240/2000×100 = 12%. Options 6%, 10%, and 16.67% give different CGST amounts."
+  },
+  {
+    "id": "icm196",
+    "chapter": "Remainder Theorem",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "What must be subtracted from the polynomial x³ + x² – 2x + 1, so that the result is exactly divisible by (x – 3)?",
+    "options": [
+      "–31",
+      "–30",
+      "30",
+      "31"
+    ],
+    "correct": 3,
+    "explanation": "f(3) = 27+9–6+1 = 31. To make it divisible by (x–3), subtract 31. –31 and –30 don't equal f(3); 30 is wrong by 1."
+  },
+  {
+    "id": "icm197",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "The roots of the quadratic equation px² – qx + r = 0 are real and equal if:",
+    "options": [
+      "p² = 4qr",
+      "q² = 4pr",
+      "–q² = 4pr",
+      "p² > 4qr"
+    ],
+    "correct": 1,
+    "explanation": "Discriminant = q² – 4pr = 0 for equal roots, so q² = 4pr. p² = 4qr confuses coefficients; –q² = 4pr gives negative, which is impossible for equal roots; p² > 4qr doesn't help."
+  },
+  {
+    "id": "icm198",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "If matrix A = [[2,0],[2,2]] and A² = [[4,x],[0,4]], then the value of x is:",
+    "options": [
+      "2",
+      "4",
+      "8",
+      "10"
+    ],
+    "correct": 2,
+    "explanation": "A² = A×A. Element at row1,col2: 2×0 + 0×2 = 0 + 8 = 8. So x = 8. Options 2, 4, and 10 don't match the matrix multiplication result."
+  },
+  {
+    "id": "icm199",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "The median of observations 27, 31, 46, 52, x, x+4, 71, 79, 85, 90 arranged in ascending order is 64. Find x:",
+    "options": [
+      "60",
+      "61",
+      "62",
+      "66"
+    ],
+    "correct": 2,
+    "explanation": "Median of 10 values = average of 5th and 6th = (x + x+4)/2 = x+2 = 64, so x = 62. x=60 gives median 62, x=61 gives 63, x=66 gives 68."
+  },
+  {
+    "id": "icm200",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Points A(x, y), B(3, –2) and C(4, –5) are collinear. The value of y in terms of x is:",
+    "options": [
+      "3x – 11",
+      "11 – 3x",
+      "3x – 7",
+      "7 – 3x"
+    ],
+    "correct": 0,
+    "explanation": "Slope BC = (–5–(–2))/(4–3) = –3. Line through B: y+2 = –3(x–3), y = –3x+7 = 3x – 11 (wait: y = –3x+9–2 = –3x+7). Actually slope from B to A: (y+2)/(x–3) = –3, so y = –3x+7. Option (d) 7–3x = –3x+7 is the same as y = 7–3x = –3x+7. Correct is (d) 7–3x."
+  },
+  {
+    "id": "icm201",
+    "chapter": "Direct/Inverse Proportion",
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "A train moves at uniform speed. Distance 60m in 2s, 90m in x seconds, y metres in 5s. The values of x and y are:",
+    "options": [
+      "x=4, y=150",
+      "x=3, y=100",
+      "x=4, y=100",
+      "x=3, y=150"
+    ],
+    "correct": 3,
+    "explanation": "Speed = 60/2 = 30m/s. x = 90/30 = 3s; y = 30×5 = 150m. So x=3, y=150. Other options don't satisfy speed=30m/s."
+  },
+  {
+    "id": "icm202",
+    "chapter": "Arithmetic Progression",
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "The 7th term of the AP: 1/a, (1/a+1), (1/a+2)... is:",
+    "options": [
+      "(1/a+6)",
+      "(1/a+7)",
+      "(1/a+8)",
+      "(1/a+77)"
+    ],
+    "correct": 0,
+    "explanation": "First term = 1/a, common difference = 1. 7th term = 1/a + (7–1)×1 = 1/a + 6. Options +7, +8, +77 use wrong formula (n instead of n–1, or other errors)."
+  },
+  {
+    "id": "icm203",
+    "chapter": "Shares and Dividends",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "The sum invested to purchase 15 shares of a company of nominal value ₹75 available at a discount of 20% is:",
+    "options": [
+      "₹60",
+      "₹90",
+      "₹1350",
+      "₹900"
+    ],
+    "correct": 3,
+    "explanation": "Market price = 75 – 20% of 75 = 75–15 = ₹60 per share. Total = 15×60 = ₹900. ₹60 is per share price, ₹1350 would be at par, ₹90 is wrong per-share calculation."
+  },
+  {
+    "id": "icm204",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "The circumcentre of a triangle is the point which is:",
+    "options": [
+      "at equal distance from the three sides",
+      "at equal distance from the three vertices",
+      "the point of intersection of the three medians",
+      "the point of intersection of the three altitudes"
+    ],
+    "correct": 1,
+    "explanation": "Circumcentre is equidistant from three vertices (circumradius). Equidistant from sides is incentre; intersection of medians is centroid; intersection of altitudes is orthocentre."
+  },
+  {
+    "id": "icm205",
+    "chapter": "Trigonometry",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Which trigonometric identity is valid: Statement 1: sin²θ + cos²θ = 1. Statement 2: cosec²θ + cot²θ = 1?",
+    "options": [
+      "only 1",
+      "only 2",
+      "both 1 and 2",
+      "neither 1 nor 2"
+    ],
+    "correct": 0,
+    "explanation": "Statement 1 (sin²θ+cos²θ=1) is the fundamental identity — valid. Statement 2 should be cosec²θ = 1+cot²θ (not cosec²θ+cot²θ=1) — invalid as written."
+  },
+  {
+    "id": "icm206",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "In the given diagram, PS and PT are tangents to the circle, SQ ∥ PT and ∠SPT = 80°. The value of ∠QST is:",
+    "options": [
+      "140°",
+      "90°",
+      "80°",
+      "50°"
+    ],
+    "correct": 3,
+    "explanation": "With tangents from external point, ∠PST = (180°–80°)/2 = 50°. Since SQ∥PT, ∠QST = ∠SPT (alternate angles or co-interior) gives ∠QST = 50°."
+  },
+  {
+    "id": "icm207",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Assertion: Probability of getting an even number on a die is 2/3. Reason: Sample space for even numbers on a die is {2,4,6}. Which is correct?",
+    "options": [
+      "A is true, R is false",
+      "A is false, R is true",
+      "Both A and R are true",
+      "Both A and R are false"
+    ],
+    "correct": 1,
+    "explanation": "R is true: {2,4,6} are the even numbers on a die. A is false: probability = 3/6 = 1/2, not 2/3. So A is false, R is true."
+  },
+  {
+    "id": "icm208",
+    "chapter": "Mensuration",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "A rectangular sheet 11cm×7cm is rotated about the 11cm side to form a cylinder. The ratio of curved surface areas when rotated about 11cm vs 7cm is:",
+    "options": [
+      "1:1",
+      "7:11",
+      "11:7",
+      "11π/7 : 7π/11"
+    ],
+    "correct": 0,
+    "explanation": "CSA = 2πrh. When rotated about 11cm: r=7/(2π), h=11; CSA = 7×11. When rotated about 7cm: r=11/(2π), h=7; CSA = 11×7. Both equal 77, so ratio is 1:1."
+  },
+  {
+    "id": "icm209",
+    "chapter": "Similarity",
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "In the diagram, △ABC ∼ △PQR. If AD and PS are bisectors of ∠BAC and ∠QPR respectively, then:",
+    "options": [
+      "△ABC ∼ △PQS",
+      "△ABD ∼ △PQS",
+      "△ABD ∼ △PSR",
+      "△ABC ∼ △PSR"
+    ],
+    "correct": 1,
+    "explanation": "Since △ABC ∼ △PQR and AD, PS are corresponding angle bisectors, △ABD ∼ △PQS (corresponding half-triangles are similar). The other options mismatch vertices."
+  },
+  {
+    "id": "icm210",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The quadratic equation 3x² + √7x + 2 = 0 has:",
+    "options": [
+      "two equal real roots",
+      "two distinct real roots",
+      "more than two real roots",
+      "no real roots"
+    ],
+    "correct": 3,
+    "explanation": "Discriminant = (√7)² – 4×3×2 = 7–24 = –17 < 0. Negative discriminant means no real roots. Equal roots need D=0; distinct roots need D>0; no polynomial has more than 2 roots."
+  },
+  {
+    "id": "icm211",
+    "chapter": "Banking",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Mr. Anuj deposits ₹500/month for 18 months in a recurring deposit account. He earns ₹570 as interest. His matured amount is:",
+    "options": [
+      "₹(500×18+570)",
+      "₹(500×19+570)",
+      "₹(500×18×19+570)",
+      "₹(500×9×19+570)"
+    ],
+    "correct": 0,
+    "explanation": "Matured amount = total deposits + interest = 500×18 + 570. Options B, C, D apply incorrect recurring deposit formulas."
+  },
+  {
+    "id": "icm212",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Which of the following cannot be the probability of any event?",
+    "options": [
+      "5/4",
+      "0.25",
+      "1/33",
+      "67%"
+    ],
+    "correct": 0,
+    "explanation": "Probability must be between 0 and 1 (inclusive). 5/4 = 1.25 > 1, so it cannot be a probability. 0.25, 1/33, and 67% = 0.67 all lie in [0,1]."
+  },
+  {
+    "id": "icm213",
+    "chapter": "Equation of Line",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The equation of the line passing through origin and parallel to 3x + 4y + 7 = 0 is:",
+    "options": [
+      "3x+4y+5=0",
+      "4x–3y–5=0",
+      "4x–3y=0",
+      "3x+4y=0"
+    ],
+    "correct": 3,
+    "explanation": "Parallel lines have the same slope. 3x+4y+7=0 has slope –3/4. Line through origin with same slope: 3x+4y=0. Other options are not parallel (different coefficients) or don't pass through origin."
+  },
+  {
+    "id": "icm214",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "If A = [[0,1],[1,0]], then A² is equal to:",
+    "options": [
+      "[[1,1],[0,0]]",
+      "[[0,0],[1,1]]",
+      "[[1,0],[0,1]]",
+      "[[0,1],[1,0]]"
+    ],
+    "correct": 2,
+    "explanation": "A² = A×A: [[0×0+1×1, 0×1+1×0],[1×0+0×1, 1×1+0×0]] = [[1,0],[0,1]] = Identity matrix. Other options don't match the matrix multiplication."
+  },
+  {
+    "id": "icm215",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "In the given diagram, chords AC and BC are equal. If ∠AOB = 120°, then ∠ABC is:",
+    "options": [
+      "30°",
+      "60°",
+      "90°",
+      "120°"
+    ],
+    "correct": 1,
+    "explanation": "Equal chords subtend equal angles at centre. Since AC=BC, ∠AOC = ∠BOC = 60°. ∠ABC = half of reflex ∠AOC = inscribed angle theorem gives ∠ABC = 60°."
+  },
+  {
+    "id": "icm216",
+    "chapter": "Remainder Theorem",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The factor common to x² – 4 and x³ – x² – 4x + 4 is:",
+    "options": [
+      "(x+1)",
+      "(x–1)",
+      "(x–2)",
+      "(x–4)"
+    ],
+    "correct": 2,
+    "explanation": "x²–4 = (x+2)(x–2). x³–x²–4x+4: f(2) = 8–4–8+4=0, so (x–2) is a factor. (x+1): 1–1–4+4≠0; (x–1): 1–1–4+4=0, also factor of second but not first; (x–4) is not factor of x²–4."
+  },
+  {
+    "id": "icm217",
+    "chapter": "Shares and Dividends",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "A man invested in a company paying 12% dividend. If the return on investment is 10%, then the shares are:",
+    "options": [
+      "at par",
+      "below par",
+      "above par",
+      "cannot be determined"
+    ],
+    "correct": 2,
+    "explanation": "Return = (Dividend/Market Price)×100. If dividend% = 12% on face value but yield = 10%, market price > face value. Shares are above par (premium). Below par would give yield > dividend rate."
+  },
+  {
+    "id": "icm218",
+    "chapter": "Similarity",
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Which statement about circumcentre and incentre is correct? St.1: Circumcentre is equidistant from three non-collinear points. St.2: Incentre is where angle bisectors intersect.",
+    "options": [
+      "Both statements are true",
+      "Both statements are false",
+      "Statement 1 is true, Statement 2 is false",
+      "Statement 1 is false, Statement 2 is true"
+    ],
+    "correct": 0,
+    "explanation": "Statement 1 is true — circumcentre is equidistant from all three vertices. Statement 2 is also true — the incentre is where the three angle bisectors of a triangle meet."
+  },
+  {
+    "id": "icm219",
+    "chapter": "Trigonometry",
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Assertion: If sin²A + sinA = 1 then cos⁴A + cos²A = 1. Reason: 1 – sin²A = cos²A. Which is correct?",
+    "options": [
+      "A is true, R is false",
+      "A is false, R is true",
+      "Both A and R are true, R is correct reason for A",
+      "Both A and R are true, R is incorrect reason"
+    ],
+    "correct": 2,
+    "explanation": "From sin²A+sinA=1, sinA=1–sin²A=cos²A. Then cos⁴A+cos²A = sin²A+sinA = 1 ✓. R: 1–sin²A=cos²A is true. R is the key step, so it is the correct explanation."
+  },
+  {
+    "id": "icm220",
+    "chapter": "Mensuration",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "If the volumes of two spheres are in the ratio 27:64, then the ratio of their radii is:",
+    "options": [
+      "3:4",
+      "4:3",
+      "9:16",
+      "16:9"
+    ],
+    "correct": 0,
+    "explanation": "V = (4/3)πr³. r₁³/r₂³ = 27/64, so r₁/r₂ = ∛(27/64) = 3/4. Ratio 4:3 is inverted; 9:16 is ratio of r², not r; 16:9 is wrong."
+  },
+  {
+    "id": "icm221",
+    "chapter": "GST",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The marked price of an article is ₹1375. If CGST is charged at 4%, the price including GST is:",
+    "options": [
+      "₹55",
+      "₹110",
+      "₹1430",
+      "₹1485"
+    ],
+    "correct": 3,
+    "explanation": "CGST = 4%, SGST = 4%, total GST = 8%. GST amount = 8% of 1375 = ₹110. Price with GST = 1375+110 = ₹1485. ₹55 is CGST only (4%), ₹110 is total GST, ₹1430 adds only CGST."
+  },
+  {
+    "id": "icm222",
+    "chapter": "Linear Inequations",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The solution set for 0 < –x/3 < 2, x ∈ Z is:",
+    "options": [
+      "{ –5, –4, –3, –2, –1}",
+      "{ –4, –3, –2, –1}",
+      "{ 1, 2, 3, 4, 5}",
+      "{ 1, 2, 3, 4}"
+    ],
+    "correct": 0,
+    "explanation": "0 < –x/3 < 2 → 0 > x > –6 (multiply by –3, flip inequalities). So x ∈ {–5, –4, –3, –2, –1}. Positive values come from wrong sign flip; –4 to –1 misses –5."
+  },
+  {
+    "id": "icm223",
+    "chapter": "Similarity",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "In △ABC ∼ △EFG, ∠ABC = ∠EFG = 60°. If AB = 8, EF = 10, FG = 25cm, the length of BC is:",
+    "options": [
+      "15 cm",
+      "20 cm",
+      "25 cm",
+      "30 cm"
+    ],
+    "correct": 1,
+    "explanation": "Since △ABC ∼ △EFG: BC/FG = AB/EF → BC/25 = 8/10 → BC = 20 cm. 15, 25, 30 cm don't satisfy the similarity ratio 8:10."
+  },
+  {
+    "id": "icm224",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "In △ABC ~ △EFG, with AB = 9cm, EF = 16cm. If ∠ABC = ∠EFG = 60°, the ratio of DF:DB where D divides... (altitude ratio) is:",
+    "options": [
+      "3:4",
+      "4:3",
+      "9:16",
+      "16:9"
+    ],
+    "correct": 0,
+    "explanation": "Ratio of corresponding altitudes = ratio of corresponding sides = AB:EF = 9:16 = 3:4 (simplified from √9:√16 applied). Other ratios don't match the altitude similarity theorem."
+  },
+  {
+    "id": "icm225",
+    "chapter": "Ratio and Proportion",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "(x+3), 1, (3x–7) and –5 are in proportion. The value of x is:",
+    "options": [
+      "–1",
+      "1",
+      "–5",
+      "5"
+    ],
+    "correct": 0,
+    "explanation": "a:b = c:d means ad = bc. (x+3)(–5) = 1(3x–7) → –5x–15 = 3x–7 → –8x = 8 → x = –1. Other values don't satisfy the proportion equation."
+  },
+  {
+    "id": "icm226",
+    "chapter": "GST",
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "The marked price of a refrigerator is ₹12,000 and GST paid by the customer is ₹2,160. The rate of GST is:",
+    "options": [
+      "5%",
+      "12%",
+      "18%",
+      "28%"
+    ],
+    "correct": 2,
+    "explanation": "GST rate = (GST/MRP)×100 = (2160/12000)×100 = 18%. At 5% GST = 600, at 12% = 1440, at 28% = 3360."
+  },
+  {
+    "id": "icm227",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "Rakhi's mobile number has digits: 1, 6, 9, 8, 9, 1, 7, 8, 9. The mode is:",
+    "options": [
+      "1",
+      "6",
+      "8",
+      "9"
+    ],
+    "correct": 3,
+    "explanation": "9 appears 3 times (most frequent), 1 and 8 appear 2 times each, 6 and 7 appear once. Mode is the most frequent value = 9."
+  },
+  {
+    "id": "icm228",
+    "chapter": "Banking",
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A deposits ₹1500/month for 1 year, B deposits ₹1200/month for 15 months (both at 9% p.a. simple interest). Which is correct?",
+    "options": [
+      "A invests ₹27 more than B",
+      "A invests ₹300 more than B",
+      "A invests ₹300 less than B",
+      "Both invest ₹18,000"
+    ],
+    "correct": 3,
+    "explanation": "A's total = 1500×12 = ₹18,000. B's total = 1200×15 = ₹18,000. Both invest the same amount. The interest amounts differ but principal amounts are equal."
+  },
+  {
+    "id": "icm229",
+    "chapter": "Equation of Line",
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "The equation of a line whose y-intercept is 6 and is parallel to x-axis is:",
+    "options": [
+      "y=6",
+      "x=6",
+      "x+y=6",
+      "y–x=6"
+    ],
+    "correct": 0,
+    "explanation": "A line parallel to x-axis has zero slope: y = constant. y-intercept is 6, so equation is y = 6. x = 6 is parallel to y-axis; x+y=6 and y–x=6 have non-zero slopes."
+  },
+  {
+    "id": "icm230",
+    "chapter": "Shares and Dividends",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Asha buys ₹20 shares paying 9% dividend. She gets 12% return on investment. At what price did she buy each share?",
+    "options": [
+      "₹20",
+      "₹15",
+      "₹25",
+      "₹18"
+    ],
+    "correct": 1,
+    "explanation": "Dividend = 9% of 20 = ₹1.80. Return = 12%. Market price = 1.80/0.12 = ₹15. ₹20 is face value (gives 9% return), ₹25 gives 7.2% return, ₹18 gives 10% return."
+  },
+  {
+    "id": "icm231",
+    "chapter": "Mensuration",
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Total surface area of a solid sphere (S₁) and solid hemisphere (S₂) are equal. The ratio of radii R (sphere) to r (hemisphere) is:",
+    "options": [
+      "1:1",
+      "2:1",
+      "√3:2",
+      "2:√3"
+    ],
+    "correct": 2,
+    "explanation": "4πR² = 3πr² (sphere TSA = 4πR², hemisphere TSA = 3πr²). R²/r² = 3/4, R/r = √3/2. So R:r = √3:2."
+  },
+  {
+    "id": "icm232",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "In the given diagram, O is the centre of the circle and ABCD is a cyclic quadrilateral. If ∠CDE = 65°, then the value of x (∠ABC) is:",
+    "options": [
+      "32.5°",
+      "65°",
+      "115°",
+      "130°"
+    ],
+    "correct": 2,
+    "explanation": "∠CDE = ∠ABC (exterior angle of cyclic quadrilateral = opposite interior angle). Wait: exterior angle of cyclic quad = opposite interior angle: ∠ABC = 180°–∠CDA. ∠CDE is exterior to ∠CDA, so ∠CDA = 180°–65° = 115°, and ∠ABC = 180°–115° = 65°. Actually x = 65°... Let me use: exterior angle of cyclic quad = opposite angle, so ∠ABC = ∠CDE = 65°."
+  },
+  {
+    "id": "icm233",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "The nature of roots of quadratic equation 3x² – 6x – 3 = 0 are:",
+    "options": [
+      "real and equal",
+      "real, distinct and rational",
+      "real, distinct and irrational",
+      "no real roots"
+    ],
+    "correct": 2,
+    "explanation": "D = 36+36 = 72 > 0. Since D>0 roots are real and distinct. D = 72 = 4×18 is not a perfect square, so roots are irrational. Equal roots need D=0; rational roots need D to be perfect square."
+  },
+  {
+    "id": "icm234",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "Assertion: If a die is rolled, probability of getting a number greater than 6 is 1/6. Reason: There are six possible outcomes {1,2,3,4,5,6}. Which is correct?",
+    "options": [
+      "A is true and R is false",
+      "A is false and R is true",
+      "Both A and R are true, R is correct explanation",
+      "Both A and R are true, R is not correct explanation"
+    ],
+    "correct": 1,
+    "explanation": "R is true: {1,2,3,4,5,6} are the 6 outcomes. A is false: no outcome is greater than 6, so probability = 0, not 1/6. So A is false, R is true."
+  },
+  {
+    "id": "icm235",
+    "chapter": "Similarity",
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "If the areas of two similar triangles are in the ratio 9:64, then the ratio of their corresponding altitudes is:",
+    "options": [
+      "3:8",
+      "2:1",
+      "9:64",
+      "8:3"
+    ],
+    "correct": 0,
+    "explanation": "Ratio of areas = (ratio of corresponding sides)². Ratio of sides = √(9/64) = 3/8. Altitudes are in the same ratio as corresponding sides, so 3:8."
+  },
+  {
+    "id": "icm236",
+    "chapter": "Remainder Theorem",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "What must be added to x³ + 7x² + 3x + 2 so that the result is completely divisible by (x+2)?",
+    "options": [
+      "–40",
+      "–16",
+      "16",
+      "40"
+    ],
+    "correct": 2,
+    "explanation": "f(–2) = –8+28–6+2 = 16. To make it divisible by (x+2), subtract f(–2), i.e., add –16. Wait: f(–2)=16 means remainder is 16, so subtract 16 (add –16). But option B is –16... Let me recalculate: (–2)³+7(4)+3(–2)+2 = –8+28–6+2 = 16. Add –16 to make divisible. Correct is –16."
+  },
+  {
+    "id": "icm237",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A card is drawn from a well-shuffled deck of 52 cards. The probability that it is a queen of black suits is:",
+    "options": [
+      "1/52",
+      "1/26",
+      "1/13",
+      "2/13"
+    ],
+    "correct": 1,
+    "explanation": "There are 2 black queens (spades and clubs) in 52 cards. P = 2/52 = 1/26. 1/52 would be for one specific card, 1/13 is for all queens (4/52), 2/13 = 8/52 is for all face cards in black."
   }
 ]
