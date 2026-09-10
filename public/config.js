@@ -22,10 +22,16 @@ const BANKS = {
 };
 
 const SA_BANKS = {
-  'X CBSE Mathematics':     'X-CBSE-Mathematics-ShortAnswers',
-  'X CBSE Social Science':  'X-CBSE-Social-Science-ShortAnswers',
-  'X CBSE Science':         'X-CBSE-Science-ShortAnswers',
-  'X CBSE English':         'X-CBSE-English-ShortAnswers'
+  'X CBSE Mathematics':            'X-CBSE-Mathematics-ShortAnswers',
+  'X CBSE Social Science':         'X-CBSE-Social-Science-ShortAnswers',
+  'X CBSE Science':                'X-CBSE-Science-ShortAnswers',
+  'X CBSE English':                'X-CBSE-English-ShortAnswers',
+  'X ICSE Mathematics':            'X-ICSE-Mathematics-ShortAnswers',
+  'X ICSE Physics':                'X-ICSE-Physics-ShortAnswers',
+  'X ICSE Chemistry':              'X-ICSE-Chemistry-ShortAnswers',
+  'X ICSE Biology':                'X-ICSE-Biology-ShortAnswers',
+  'X ICSE History & Civics':       'X-ICSE-History-Civics-ShortAnswers',
+  'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
