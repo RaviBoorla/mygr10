@@ -24,7 +24,7 @@ Object.assign(app, {
             : `No ${difficulty} questions available${chapter ? ' in this chapter' : ''}. Try a different difficulty.`);
         }
         const picked = mode === 'mock'
-          ? shuffle(pool.filter(q => q.priority)).concat(shuffle(pool.filter(q => !q.priority))).slice(0, cfg.count)
+          ? shuffle(pool.filter(q => q.priority || isBoardQuestion(q))).concat(shuffle(pool.filter(q => !q.priority && !isBoardQuestion(q)))).slice(0, cfg.count)
           : shuffle(pool).slice(0, cfg.count);
         this.session.questions = picked.map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
         this.session.loading = false;

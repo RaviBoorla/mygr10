@@ -404,7 +404,9 @@ function pickStageQuestions(subjects, difficulty, stageNum) {
     });
   }
 
-  const combined = shuffle(allDue).concat(shuffle(allNotDue));
+  // Board questions come first within each tier (due, then not-due)
+  const boardFirst = arr => shuffle(arr.filter(q => isBoardQuestion(q))).concat(shuffle(arr.filter(q => !isBoardQuestion(q))));
+  const combined = boardFirst(allDue).concat(boardFirst(allNotDue));
   let picked = combined.slice(0, nTotal);
 
   // Fallback: pull from any unserved question if pool was too small

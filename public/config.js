@@ -120,9 +120,17 @@ function loadSolvedBank(subject) {
 }
 
 function realBoardYear(q) {
+  // Check source field first (ICSE style: "Board 2017")
+  if (q.source) {
+    const sm = q.source.match(/Board\s*(20\d\d)/);
+    if (sm) return sm[1];
+  }
   const blob = `${q.text || ''} ${q.chapter || ''} ${q.id || ''}`;
   return (blob.match(/(20\d\d)[ -]?Board/) || blob.match(/hindi-(\d{4})-/) || [])[1] || null;
 }
+
+// Returns true if the question is from a real board paper (any board/year)
+function isBoardQuestion(q) { return !!realBoardYear(q); }
 
 function chaptersOf(list) {
   const seen = new Map();
