@@ -1539,6 +1539,43 @@ window.REVISION = {
     ],
     'ICSE Geography': [
       {
+        chapter: 'Important Dates — Geography',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['16 Apr 1853', 'First railway in India — Mumbai (Bori Bunder) to Thane (34 km); inaugurated under Lord Dalhousie'],
+            ['1854', 'India Post established — now world\'s largest postal network (1.5 lakh+ post offices)'],
+            ['1869', 'Suez Canal opened — reduced Europe-to-India sea route by ~7,000 km; boosted Indian trade'],
+            ['1911', 'Capital of British India shifted from Calcutta to Delhi (New Delhi inaugurated 1931)'],
+            ['1947', 'Independence and Partition — India and Pakistan created; large-scale population displacement'],
+            ['1948', 'Damodar Valley Corporation (DVC) — India\'s first multipurpose river project (modelled on Tennessee Valley Authority)'],
+            ['1948', 'Hirakud Dam construction begun on Mahanadi, Odisha (completed 1957) — longest earthen dam (4.8 km)'],
+            ['1953', 'Bhakra-Nangal Dam construction begun on Sutlej, HP (completed 1963) — India\'s tallest gravity dam (226 m)'],
+            ['1956', 'States Reorganisation Act — Indian states reorganised on linguistic basis; created modern state map'],
+            ['1960', 'Indus Waters Treaty — India and Pakistan divided river waters of Indus basin (World Bank brokered)'],
+            ['1965', 'Kandla (Gujarat) declared India\'s first Special Economic Zone (Free Trade Zone)'],
+            ['1973', 'Project Tiger launched (1 April) by PM Indira Gandhi — 9 tiger reserves; now 53 reserves (2023)'],
+            ['1974', 'Chipko Movement (Uttarakhand) — villagers hugged trees to prevent commercial logging; started conservation movement'],
+            ['1975', 'Aryabhata — India\'s first satellite launched (by Soviet rocket, 19 April); named after mathematician'],
+            ['1980', 'Forest Conservation Act — no forest land can be diverted to non-forest use without central government approval'],
+            ['1988', 'National Forest Policy — target: 33% of India\'s land under forest/tree cover'],
+            ['1988', 'Konkan Railway Corporation formed; Konkan Railway (760 km, Roha–Mangalore) completed 1998'],
+            ['3–4 Jun 1992', 'Earth Summit, Rio de Janeiro — Agenda 21 adopted for sustainable development; India a signatory'],
+            ['1999', 'National Highways Authority of India (NHAI) given powers to build Golden Quadrilateral (GQ)'],
+            ['2001', 'Golden Quadrilateral highway (Delhi–Mumbai–Chennai–Kolkata, 5,846 km) construction begun; completed 2012'],
+            ['2005', 'National Rural Employment Guarantee Act (MNREGA) — guaranteed 100 days work in rural areas'],
+            ['15 Nov 2000', 'Jharkhand carved out of Bihar — India\'s mineral-richest state created'],
+            ['2015', 'Paris Agreement (COP21) — 196 countries committed to limit global warming to 1.5–2°C; India pledged net-zero by 2070'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Geography (India &amp; Environment)</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Event &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
+      {
         chapter: 'Soils of India',
         formulae: [],
         logic: [
@@ -1692,6 +1729,46 @@ window.REVISION = {
       }
     ],
   Physics: [
+      {
+        chapter: 'Important Dates — Physics',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1621', 'Willebrord Snell formulated Snell\'s Law of Refraction (published posthumously 1703)'],
+            ['1676', 'Ole Rømer first measured speed of light using Jupiter\'s moons'],
+            ['1687', 'Isaac Newton published Principia Mathematica — Laws of Motion and Universal Gravitation'],
+            ['1752', 'Benjamin Franklin proved lightning is electricity (kite experiment); invented lightning rod'],
+            ['1800', 'Alessandro Volta invented electric battery (Voltaic pile) — first source of steady electric current'],
+            ['1820', 'Hans Christian Ørsted discovered electromagnetism — electric current creates magnetic field'],
+            ['1821', 'Michael Faraday built first electric motor (using Ørsted\'s discovery)'],
+            ['1827', 'Georg Ohm formulated Ohm\'s Law: V = IR'],
+            ['1831', 'Michael Faraday discovered electromagnetic induction — moving magnet generates current'],
+            ['1842', 'Julius Mayer and James Joule stated Law of Conservation of Energy independently'],
+            ['1864', 'James Clerk Maxwell predicted electromagnetic waves (light is an EM wave)'],
+            ['1879', 'Thomas Edison invented incandescent light bulb; Joseph Swan independently in UK'],
+            ['1888', 'Heinrich Hertz demonstrated radio waves — confirmed Maxwell\'s electromagnetic theory'],
+            ['1895', 'Wilhelm Röntgen discovered X-rays (Nobel Prize 1901); first medical X-ray taken'],
+            ['1896', 'Henri Becquerel discovered radioactivity in uranium salts'],
+            ['1897', 'J.J. Thomson discovered the electron using cathode ray tube experiments'],
+            ['1898', 'Marie and Pierre Curie discovered Polonium and Radium; coined term "radioactivity"'],
+            ['1900', 'Max Planck proposed quantum theory — energy emitted in discrete packets (quanta)'],
+            ['1905', 'Einstein explained photoelectric effect (Nobel Prize 1921); proposed E = mc²'],
+            ['1908', 'Hans Geiger and Ernest Rutherford invented Geiger counter to detect radiation'],
+            ['1911', 'Ernest Rutherford — nuclear model of atom (gold foil experiment); discovered proton'],
+            ['1913', 'Niels Bohr proposed atomic model with fixed electron energy levels'],
+            ['1932', 'James Chadwick discovered the neutron (Nobel Prize 1935)'],
+            ['1938', 'Otto Hahn and Fritz Strassmann achieved first nuclear fission of uranium'],
+            ['2 Dec 1942', 'Enrico Fermi achieved first self-sustaining nuclear chain reaction (Chicago Pile-1)'],
+            ['16 Jul 1945', 'First atomic bomb test — Trinity, New Mexico (Manhattan Project)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Physics</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'Force & Pressure',
         formulae: [
@@ -1939,6 +2016,39 @@ window.REVISION = {
       }
     ],
     Chemistry: [
+      {
+        chapter: 'Important Dates — Chemistry',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1661', 'Robert Boyle — "The Sceptical Chymist" — first scientific definition of a chemical element'],
+            ['1774', 'Joseph Priestley discovered oxygen (called "dephlogisticated air")'],
+            ['1789', 'Antoine Lavoisier — Law of Conservation of Mass; named hydrogen and oxygen; overthrew phlogiston theory'],
+            ['1808', 'John Dalton published Atomic Theory — atoms of each element have a fixed, characteristic weight'],
+            ['1811', 'Amedeo Avogadro proposed that equal volumes of gases (same T, P) contain equal numbers of molecules'],
+            ['8 Mar 1869', 'Dmitri Mendeleev published the Periodic Table; left gaps for undiscovered elements (8 March = Periodic Table Day)'],
+            ['1874', 'Jacobus van\'t Hoff and Joseph Le Bel proposed tetrahedral structure of carbon — basis of organic stereochemistry'],
+            ['1894', 'William Ramsay and Lord Rayleigh discovered Argon; Ramsay later discovered He, Ne, Kr, Xe'],
+            ['1897', 'J.J. Thomson discovered electron → revised idea of atom'],
+            ['1898', 'Marie and Pierre Curie discovered Polonium and Radium; isolated pure radium 1902'],
+            ['1909', 'Fritz Haber developed Haber-Bosch process for ammonia synthesis — vital for fertilisers'],
+            ['1910', 'Leo Baekeland invented Bakelite — first synthetic thermosetting plastic'],
+            ['1911', 'Ernest Rutherford discovered atomic nucleus; revised atomic model'],
+            ['1913', 'Henry Moseley established atomic number as basis of periodic table (corrected Mendeleev\'s mass-based order)'],
+            ['1916', 'Gilbert Lewis proposed covalent bond — sharing of electron pairs between atoms'],
+            ['1932', 'James Chadwick discovered neutron — completed understanding of atomic structure'],
+            ['1834', 'Michael Faraday formulated laws of electrolysis; coined: electrode, electrolyte, anode, cathode, ion'],
+            ['1940', 'Nylon 6,6 commercial production began (invented 1935 by Wallace Carothers at DuPont)'],
+            ['2016', 'IUPAC officially named elements 113 (Nihonium), 115 (Moscovium), 117 (Tennessine), 118 (Oganesson)'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Chemistry</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'Periodic Table',
         html: function() {
@@ -2667,6 +2777,46 @@ window.REVISION = {
       }
     ],
     Biology: [
+      {
+        chapter: 'Important Dates — Biology',
+        formulae: [], logic: [], tips: [], bestPractices: [],
+        html() {
+          const rows = [
+            ['1665', 'Robert Hooke discovered cells examining cork under microscope; coined the term "cell"'],
+            ['1674', 'Antonie van Leeuwenhoek first observed living microorganisms (protozoa, bacteria) with his microscope'],
+            ['1753', 'Carl Linnaeus published "Species Plantarum" — foundation of binomial nomenclature'],
+            ['1796', 'Edward Jenner developed first vaccine (smallpox) — founded immunology'],
+            ['1831', 'Robert Brown discovered the cell nucleus in plant cells'],
+            ['1838', 'Matthias Schleiden — all plants are made of cells (Cell Theory, part 1)'],
+            ['1839', 'Theodor Schwann — all animals made of cells; cells are the basic unit of life (Cell Theory complete)'],
+            ['1858', 'Rudolf Virchow — "Omnis cellula e cellula" (every cell from a pre-existing cell)'],
+            ['1859', 'Charles Darwin published "On the Origin of Species" — Natural Selection theory of evolution'],
+            ['1865', 'Gregor Mendel published laws of heredity (pea plant experiments); rediscovered 1900'],
+            ['1870', 'Louis Pasteur and Robert Koch established Germ Theory of Disease'],
+            ['1879', 'Walther Flemming discovered chromosomes and described cell division (mitosis)'],
+            ['1900', 'Mendel\'s laws rediscovered independently by Hugo de Vries, Carl Correns, Erich von Tschermak'],
+            ['1902', 'Walter Sutton and Theodor Boveri — Chromosomal Theory of Heredity (genes on chromosomes)'],
+            ['1910', 'Thomas Hunt Morgan proved genes are located on chromosomes (Drosophila fruit fly experiments)'],
+            ['1928', 'Alexander Fleming discovered penicillin (antibiotic); commercial production 1943'],
+            ['1944', 'Oswald Avery, MacLeod, McCarty proved DNA (not protein) is the genetic material'],
+            ['25 Apr 1953', 'James Watson and Francis Crick published DNA double helix structure (Rosalind Franklin\'s X-ray crucial)'],
+            ['1961', 'Marshall Nirenberg cracked the genetic code — each codon (3 bases) codes for one amino acid'],
+            ['1970', 'Discovery of restriction enzymes — "molecular scissors"; foundation of genetic engineering'],
+            ['1973', 'Stanley Cohen and Herbert Boyer created first recombinant DNA organism — birth of genetic engineering'],
+            ['1978', 'First IVF baby — Louise Brown born in UK (Dr Robert Edwards, Nobel 2010)'],
+            ['1983', 'Kary Mullis invented PCR (Polymerase Chain Reaction) — Nobel Prize 1993'],
+            ['1990', 'Human Genome Project launched (completed 2003 — mapped all ~3 billion base pairs)'],
+            ['1996', 'Dolly the sheep — first cloned mammal from adult somatic cell (announced Feb 1997)'],
+            ['1980', 'WHO declared smallpox eradicated — first human disease eliminated by vaccination'],
+          ];
+          return `<div class="imp-dates-wrap">
+            <h4 class="imp-dates-title">&#128197; Important Dates — Biology</h4>
+            <table class="imp-dates-table">
+              <thead><tr><th>Date / Year</th><th>Discovery &amp; Significance</th></tr></thead>
+              <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+            </table></div>`;
+        }
+      },
       {
         chapter: 'Cell Biology',
         formulae: [],
@@ -3541,6 +3691,52 @@ window.REVISION = {
 
 // ─── Computer Science (ICSE Computer Applications) ───────────────────────────
 REVISION['Computer Science'] = [
+  {
+    chapter: 'Important Dates — Computer Science',
+    formulae: [], logic: [], tips: [], bestPractices: [],
+    html() {
+      const rows = [
+        ['1822', 'Charles Babbage designed Difference Engine — first mechanical computing device concept'],
+        ['1843', 'Ada Lovelace wrote first algorithm for Babbage\'s Analytical Engine — widely considered the first computer programmer'],
+        ['1936', 'Alan Turing published "On Computable Numbers" — theoretical basis for modern computers; defined the Turing Machine'],
+        ['1943', 'ENIAC (Electronic Numerical Integrator and Computer) development begun; completed 1945 — first general-purpose electronic computer'],
+        ['1947', 'Transistor invented at Bell Labs by Bardeen, Brattain, Shockley — replaced vacuum tubes; Nobel Prize 1956'],
+        ['1953', 'IBM 701 — IBM\'s first commercial scientific computer; 19 units sold to US government and research labs'],
+        ['1957', 'FORTRAN released by IBM — first high-level programming language for scientific computing'],
+        ['1958', 'Integrated Circuit (IC) invented by Jack Kilby (Texas Instruments); independently by Robert Noyce — Nobel Prize 2000'],
+        ['1964', 'BASIC programming language created by John Kemeny and Thomas Kurtz at Dartmouth College'],
+        ['1969', 'ARPANET established (US Department of Defense) — first network; predecessor to the internet'],
+        ['1970', 'Unix operating system developed by Ken Thompson and Dennis Ritchie at Bell Labs'],
+        ['1971', 'First email sent by Ray Tomlinson (to himself on ARPANET); invented @ symbol for email addressing'],
+        ['1972', 'C programming language created by Dennis Ritchie at Bell Labs — still widely used today'],
+        ['1975', 'Microsoft founded by Bill Gates and Paul Allen (4 April, Albuquerque, New Mexico)'],
+        ['1976', 'Apple Computer founded by Steve Jobs, Steve Wozniak, and Ronald Wayne (1 April)'],
+        ['1981', 'IBM PC (Personal Computer) introduced with MS-DOS — standardised personal computing'],
+        ['1983', 'TCP/IP protocols standardised — foundation of modern internet; internet became truly global'],
+        ['1984', 'Apple Macintosh introduced — first commercially successful PC with Graphical User Interface (GUI)'],
+        ['1989', 'Tim Berners-Lee proposed the World Wide Web at CERN (published proposal 12 March 1989)'],
+        ['6 Aug 1991', 'World Wide Web made publicly available by Tim Berners-Lee — first website went live'],
+        ['1991', 'Linux kernel released by Linus Torvalds — open-source OS; now powers most servers and Android phones'],
+        ['1993', 'Mosaic — first popular graphical web browser (NCSA); made internet accessible to general public'],
+        ['1995', 'Java programming language released by Sun Microsystems (James Gosling) — "Write Once, Run Anywhere"'],
+        ['1995', 'PHP, JavaScript, and Apache web server released — enabled dynamic websites'],
+        ['1998', 'Google founded by Larry Page and Sergey Brin (4 September, Menlo Park, California)'],
+        ['2004', 'Facebook launched by Mark Zuckerberg (4 February, Harvard University)'],
+        ['2005', 'YouTube founded; Apache Hadoop released — big data processing framework'],
+        ['2007', 'Apple iPhone launched (9 January) — revolutionised smartphones; touchscreen computing'],
+        ['2008', 'Android OS launched (Google); Google Chrome browser released'],
+        ['2009', 'Bitcoin created by Satoshi Nakamoto — first cryptocurrency and blockchain'],
+        ['2011', 'IBM Watson won Jeopardy! — demonstrated AI natural language processing capabilities'],
+        ['2023', 'ChatGPT (OpenAI) — large language models went mainstream; generative AI era began'],
+      ];
+      return `<div class="imp-dates-wrap">
+        <h4 class="imp-dates-title">&#128197; Important Dates — Computer Science &amp; Technology</h4>
+        <table class="imp-dates-table">
+          <thead><tr><th>Date / Year</th><th>Milestone &amp; Significance</th></tr></thead>
+          <tbody>${rows.map(([d,e]) => `<tr><td class="imp-date-cell">${d}</td><td>${e}</td></tr>`).join('')}</tbody>
+        </table></div>`;
+    }
+  },
   {
     chapter: 'Values and Datatypes',
     formulae: [
