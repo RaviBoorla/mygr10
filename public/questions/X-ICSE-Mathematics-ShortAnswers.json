@@ -373,5 +373,155 @@
       "CI = \u20b91664; SI = \u20b91600",
       "Extra interest = CI \u2212 SI = \u20b964"
     ]
+  },
+  {
+    "id": "sa-mat-026",
+    "chapter": "Quadratic Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2017",
+    "text": "Using the quadratic formula, solve: 2x\u00b2 \u2212 5x \u2212 3 = 0.",
+    "modelAnswer": "a=2, b=\u22125, c=\u22123. Discriminant D = b\u00b2\u22124ac = 25+24 = 49. x = (5 \u00b1 \u221a49)/(2\u00d72) = (5 \u00b1 7)/4. x\u2081 = (5+7)/4 = 12/4 = 3. x\u2082 = (5\u22127)/4 = \u22122/4 = \u2212\u00bd. Roots: x = 3 or x = \u2212\u00bd.",
+    "keyPoints": [
+      "D = (\u22125)\u00b2\u22124(2)(\u22123) = 25+24 = 49",
+      "x = (\u2212b \u00b1 \u221aD)/(2a) = (5\u00b17)/4",
+      "Roots: x = 3 or x = \u22121/2"
+    ]
+  },
+  {
+    "id": "sa-mat-027",
+    "chapter": "Circle",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2017",
+    "text": "In the given figure, O is the centre of a circle. Chord AB subtends an angle of 80\u00b0 at the centre. Find the angle subtended by the chord at any point on the major arc.",
+    "modelAnswer": "The angle subtended at the centre = 80\u00b0. The angle subtended at any point on the major arc = half the reflex angle at the centre. Reflex angle = 360\u00b0 \u2212 80\u00b0 = 280\u00b0. Angle on major arc = 280\u00b0/2 = 140\u00b0. (Alternatively: angle at centre = 2 \u00d7 angle at circumference on same arc; angle on minor arc = 80\u00b0/2 = 40\u00b0; angle on major arc = 180\u00b0\u221240\u00b0 = 140\u00b0.)",
+    "keyPoints": [
+      "Central angle = 80\u00b0; reflex angle = 360\u00b0\u221280\u00b0 = 280\u00b0",
+      "Angle on major arc = 280\u00b0/2 = 140\u00b0",
+      "Angle at centre = 2 \u00d7 angle at circumference on same side"
+    ]
+  },
+  {
+    "id": "sa-mat-028",
+    "chapter": "Mensuration",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2018",
+    "text": "A cone of radius 6 cm and height 8 cm is melted and recast into a sphere. Find the radius of the sphere. [\u03c0 = 22/7]",
+    "modelAnswer": "Volume of cone = (1/3)\u03c0r\u00b2h = (1/3)(22/7)(36)(8) = (1/3)(22/7)(288) = (22\u00d7288)/(21) = 6336/21 = 301.7 cm\u00b3. Volume of sphere = (4/3)\u03c0R\u00b3 = 301.7. R\u00b3 = 301.7 \u00d7 3/(4\u00d722/7) = 301.7 \u00d7 21/88 = 72. R = \u221b72 \u2248 4.16 cm. (Check: slant height l = \u221a(6\u00b2+8\u00b2)=10; volume = (1/3)(22/7)(36)(8) = 301.7 cm\u00b3; R\u00b3 = 301.7\u00d73\u00d77/(4\u00d722) = 72.0; R \u2248 4.16 cm.)",
+    "keyPoints": [
+      "Volume cone = (1/3)\u03c0r\u00b2h = (1/3)(22/7)(36)(8) \u2248 301.7 cm\u00b3",
+      "Set equal to sphere: (4/3)\u03c0R\u00b3 = 301.7 \u2192 R\u00b3 = 72",
+      "R = \u221b72 \u2248 4.16 cm"
+    ]
+  },
+  {
+    "id": "sa-mat-029",
+    "chapter": "Similarity",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "State the AA criterion for similarity of triangles. In triangles ABC and DEF, \u2220A = \u2220D = 50\u00b0 and \u2220B = \u2220E = 70\u00b0. Are the triangles similar? If yes, write the correspondence of vertices.",
+    "modelAnswer": "AA Criterion: If two angles of one triangle are equal to two corresponding angles of another triangle, then the triangles are similar. Here, \u2220A = \u2220D = 50\u00b0 and \u2220B = \u2220E = 70\u00b0 \u2192 by AA criterion, \u25b3ABC ~ \u25b3DEF. Also \u2220C = \u2220F = 180\u00b0\u221250\u00b0\u221270\u00b0 = 60\u00b0. Correspondence: A\u2194D, B\u2194E, C\u2194F. So \u25b3ABC ~ \u25b3DEF.",
+    "keyPoints": [
+      "AA: two equal angles \u2192 triangles similar",
+      "\u2220A=\u2220D=50\u00b0, \u2220B=\u2220E=70\u00b0 \u2192 \u2220C=\u2220F=60\u00b0",
+      "\u25b3ABC ~ \u25b3DEF; correspondence A\u2194D, B\u2194E, C\u2194F"
+    ]
+  },
+  {
+    "id": "sa-mat-030",
+    "chapter": "Arithmetic Progression",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "Find the sum of all natural numbers between 100 and 300 which are exactly divisible by 7.",
+    "modelAnswer": "First term a = 105 (first multiple of 7 after 100). Last term l = 294 (last multiple of 7 before 300). Common difference d = 7. Number of terms n: l = a + (n\u22121)d \u2192 294 = 105 + (n\u22121)7 \u2192 189 = 7(n\u22121) \u2192 n\u22121 = 27 \u2192 n = 28. Sum = n/2 \u00d7 (a+l) = 28/2 \u00d7 (105+294) = 14 \u00d7 399 = 5586.",
+    "keyPoints": [
+      "First term: 105 (first multiple of 7 after 100)",
+      "Last term: 294; n = 28 terms",
+      "Sum = (n/2)(a+l) = 14 \u00d7 399 = 5586"
+    ]
+  },
+  {
+    "id": "sa-mat-031",
+    "chapter": "Trigonometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2019",
+    "text": "If sin A = 3/5, find cos A and tan A (where A is acute). Also verify: sin\u00b2A + cos\u00b2A = 1.",
+    "modelAnswer": "sin A = 3/5. Using Pythagoras: if opposite = 3, hypotenuse = 5, then adjacent = \u221a(25\u22129) = \u221a16 = 4. cos A = 4/5. tan A = 3/4. Verification: sin\u00b2A + cos\u00b2A = (3/5)\u00b2 + (4/5)\u00b2 = 9/25 + 16/25 = 25/25 = 1 \u2713.",
+    "keyPoints": [
+      "sin A = 3/5 \u2192 opposite=3, hyp=5 \u2192 adjacent=4 (3-4-5 triangle)",
+      "cos A = 4/5; tan A = 3/4",
+      "sin\u00b2A + cos\u00b2A = 9/25 + 16/25 = 1 \u2713"
+    ]
+  },
+  {
+    "id": "sa-mat-032",
+    "chapter": "Coordinate Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "Find the coordinates of the point that divides the line segment joining A(2, 3) and B(8, 9) in the ratio 1:2 internally.",
+    "modelAnswer": "Section formula (internal division): P = ((m\u00d7x\u2082 + n\u00d7x\u2081)/(m+n), (m\u00d7y\u2082 + n\u00d7y\u2081)/(m+n)). m=1, n=2, A(2,3), B(8,9). x = (1\u00d78 + 2\u00d72)/(1+2) = (8+4)/3 = 12/3 = 4. y = (1\u00d79 + 2\u00d73)/3 = (9+6)/3 = 15/3 = 5. Point P = (4, 5).",
+    "keyPoints": [
+      "Section formula: P = (mx\u2082+nx\u2081)/(m+n), (my\u2082+ny\u2081)/(m+n)",
+      "x = (8+4)/3 = 4; y = (9+6)/3 = 5",
+      "Point P = (4, 5)"
+    ]
+  },
+  {
+    "id": "sa-mat-033",
+    "chapter": "Polynomial",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2020",
+    "text": "Divide p(x) = x\u00b3 + 3x\u00b2 \u2212 2x \u2212 5 by (x+1). Hence find the quotient and remainder. Also verify using the Remainder Theorem.",
+    "modelAnswer": "Long division of x\u00b3+3x\u00b2\u22122x\u22125 by (x+1): x\u00b3+3x\u00b2\u22122x\u22125 = (x+1)(x\u00b2+2x\u22124) \u2212 1. Quotient = x\u00b2+2x\u22124; Remainder = \u22121. Remainder Theorem: p(\u22121) = (\u22121)\u00b3+3(\u22121)\u00b2\u22122(\u22121)\u22125 = \u22121+3+2\u22125 = \u22121. \u2713 (Remainder = p(\u22121) = \u22121).",
+    "keyPoints": [
+      "Long division: x\u00b3+3x\u00b2\u22122x\u22125 \u00f7 (x+1)",
+      "Quotient: x\u00b2+2x\u22124; Remainder: \u22121",
+      "Remainder Theorem: p(\u22121) = \u22121+3+2\u22125 = \u22121 \u2713"
+    ]
+  },
+  {
+    "id": "sa-mat-034",
+    "chapter": "Statistics",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "The marks of 7 students are: 45, 52, 38, 67, 71, 29, 55. Find the median and range.",
+    "modelAnswer": "Arrange in ascending order: 29, 38, 45, 52, 55, 67, 71. n = 7 (odd). Median = ((n+1)/2)th term = 4th term = 52. Range = Maximum \u2212 Minimum = 71 \u2212 29 = 42.",
+    "keyPoints": [
+      "Sort: 29, 38, 45, 52, 55, 67, 71",
+      "Median = 4th term (n=7 odd) = 52",
+      "Range = 71 \u2212 29 = 42"
+    ]
+  },
+  {
+    "id": "sa-mat-035",
+    "chapter": "Shares and Dividends",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Rahul buys 250 shares of face value \u20b910 at a premium of 40%. The company pays a dividend of 20% annually. (a) How much does he invest? (b) What is his annual income from dividends? (c) Calculate his yield percentage.",
+    "modelAnswer": "(a) Market price = 10 + 40% of 10 = 10 + 4 = \u20b914. Investment = 250 \u00d7 14 = \u20b93500. (b) Dividend per share = 20% of face value = 20% of 10 = \u20b92. Annual income = 250 \u00d7 2 = \u20b9500. (c) Yield = (Annual income / Investment) \u00d7 100 = (500/3500) \u00d7 100 = 14.28%.",
+    "keyPoints": [
+      "Market price = \u20b914; Investment = 250\u00d714 = \u20b93500",
+      "Dividend = 20% of face value = \u20b92/share; Income = \u20b9500",
+      "Yield = (500/3500)\u00d7100 = 14.28%"
+    ]
   }
 ]

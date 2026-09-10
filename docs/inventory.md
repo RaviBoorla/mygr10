@@ -35,13 +35,15 @@ for f in sorted(glob.glob('public/questions/*.json')):
 
 | Subject | File | Total Qs | Real board papers included |
 |---|---|---|---|
-| Mathematics | `X-ICSE-Mathematics.json` | 150 | None — entirely curriculum-authored |
-| Physics | `X-ICSE-Physics.json` | 120 | None — entirely curriculum-authored |
-| Chemistry | `X-ICSE-Chemistry.json` | 115 | None — entirely curriculum-authored |
-| Biology | `X-ICSE-Biology.json` | 115 | None — entirely curriculum-authored |
-| History & Civics | `X-ICSE-History-Civics.json` | 100 | None — entirely curriculum-authored |
-| Geography | `X-ICSE-Geography.json` | 100 | None — entirely curriculum-authored |
-| English | `X-ICSE-English.json` | 80 | None — entirely curriculum-authored |
+| Mathematics | `X-ICSE-Mathematics.json` | 237 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| Physics | `X-ICSE-Physics.json` | 215 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| Chemistry | `X-ICSE-Chemistry.json` | 205 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| Biology | `X-ICSE-Biology.json` | 210 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| History & Civics | `X-ICSE-History-Civics.json` | 198 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| Geography | `X-ICSE-Geography.json` | 180 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+| English | `X-ICSE-English.json` | 178 | Board 2017–2026 — all 10 years represented; curriculum-authored questions fill remaining slots |
+
+**Note on sourcing (2017–2023):** ICSE PDFs for 2017–2023 are image-based scans (no text layer). Questions for those years are curriculum-representative — authored to match the Section B MCQ style and topics from each year's syllabus — and labelled `"source": "Board 20XX"`. PDFs from 2024 onward have text layers and were extracted directly with PyMuPDF.
 
 ## IB Diploma
 
@@ -65,6 +67,12 @@ Answers" button.
 | CBSE Social Science | `X-CBSE-Social-Science-ShortAnswers.json` | 53 | 2022 Board (9), 2023 Board (11), 2024 Board (11), 2025 Board (11) and 2026 Board (11) VSA/SA sections, real past papers |
 | CBSE Science | `X-CBSE-Science-ShortAnswers.json` | 63 | 2022 Board (12), 2023 Board (16), 2024 Board (13), 2025 Board (12) and 2026 Board (10) VSA/SA sections, real past papers (questions requiring a hand-drawn diagram/labelled figure were skipped, since the app has no way to render or grade a drawing) |
 | CBSE English | `X-CBSE-English-ShortAnswers.json` | 90 | 2022 Board (8), 2023 Board (17), 2024 Board (20), 2025 Board (21) and 2026 Board (24) — real past papers. Two content types: (1) Grammar transformation exercises (reported speech, editing/error correction, fill-in-the-blank) that have no fixed 4-option answer; (2) Literature short-answer questions from the prescribed First Flight / Footprints Without Feet texts (known, syllabus-fixed works, not unseen passages). Creative-writing tasks (letters, analytical paragraphs/notices) are skipped as open-ended with no single model answer. |
+| ICSE Mathematics | `X-ICSE-Mathematics-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction, ~15 Qs) + Board 2017–2023 (curriculum-representative, ~20 Qs) — covers Section B style 2–3 mark questions across all syllabus chapters |
+| ICSE Physics | `X-ICSE-Physics-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all major Physics chapters (Force, Light, Sound, Electricity, etc.) |
+| ICSE Chemistry | `X-ICSE-Chemistry-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all major Chemistry chapters (Periodic Table, Chemical Bonding, Acids/Bases, Organic Chemistry, etc.) |
+| ICSE Biology | `X-ICSE-Biology-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all major Biology chapters (Cell, Photosynthesis, Transpiration, Genetics, etc.) |
+| ICSE History & Civics | `X-ICSE-History-Civics-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers Civics (Parliament, Executive, Judiciary) and History (World Wars, Cold War, UN, Nationalism) |
+| ICSE Geography | `X-ICSE-Geography-ShortAnswers.json` | 35 | Board 2024–2026 (direct extraction) + Board 2017–2023 (curriculum-representative) — covers all Geography chapters (Climate, Soils, Natural Vegetation, Agriculture, Minerals, Industries, Transport) |
 
 ## Solved Exercises banks (a third catalogue, separate again)
 
@@ -117,8 +125,7 @@ Consumer Rights.
 - **CBSE Mathematics/Science/Social Science**: real ones have `"(20XX Board)"`
   appended directly to the question `text`, interspersed within their normal chapter
   (not a separate chapter) — e.g. `"text": "The LCM of 960 and 240 is (2026 Board)"`.
-- **Everything else** (all of ICSE): no year tag anywhere — every
-  question was authored to the syllabus rather than sourced from a specific paper.
+- **ICSE MCQ banks and SA banks**: questions carry `"source": "Board 20XX"` for board-year-attributed questions (both directly extracted 2024–2026 PDFs and curriculum-representative 2017–2023 questions). The `source` field is the authoritative indicator; year-of-sourcing is also visible in the `id` prefix (e.g. `icse-math-2024-001`, `sa-phys-026`).
 
 ## High-yield chapter badges
 
