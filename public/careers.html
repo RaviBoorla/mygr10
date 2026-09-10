@@ -1128,9 +1128,8 @@ function matchF(n,fs){
   return false;
 }
 function nodeOp(n){
-  const qOk = !S.q || (_matchSet ? _matchSet.has(n.id) : true);
   const fOk = !S.filters.size || matchF(n,S.filters);
-  return (qOk && fOk) ? 1 : 0.07;
+  return fOk ? 1 : 0.07;
 }
 
 // ── LAYOUT ────────────────────────────────────────────────────────────────────
@@ -1141,22 +1140,29 @@ const ROW   = 40;   // slot height for leaf node
 const PAD_X = 24;
 const PAD_Y = 42;
 
+function inSearch(n){ return !_matchSet || _matchSet.has(n.id); }
+function visibleChildren(n){ return (n.children||[]).filter(inSearch); }
+
 function slotH(n){
-  if(!n.children?.length||!n._exp) return ROW;
-  return n.children.reduce((s,c)=>s+slotH(c),0);
+  if(!inSearch(n)) return 0;
+  const vc=visibleChildren(n);
+  if(!vc.length||!n._exp) return ROW;
+  return vc.reduce((s,c)=>s+slotH(c),0);
 }
 function doLayout(n,x,topY,d){
+  if(!inSearch(n)) return;
   n._d=d; n._x=x;
   const h=slotH(n);
   n._y=topY+h/2;
-  if(n.children?.length&&n._exp){
+  if(n._exp){
     let cy=topY;
-    n.children.forEach(c=>{ doLayout(c,x+STEP,cy,d+1); cy+=slotH(c); });
+    visibleChildren(n).forEach(c=>{ doLayout(c,x+STEP,cy,d+1); cy+=slotH(c); });
   }
 }
 function maxX(n,cur=0){
+  if(!inSearch(n)) return cur;
   const x=n._x+NW; let m=Math.max(cur,x);
-  if(n.children?.length&&n._exp) n.children.forEach(c=>{ m=maxX(c,m); });
+  if(n._exp) visibleChildren(n).forEach(c=>{ m=maxX(c,m); });
   return m;
 }
 
@@ -1185,8 +1191,9 @@ function renderAll(){
   const ng=el('g'); tsvg.appendChild(ng);
 
   function visit(n){
-    if(n.children?.length&&n._exp){
-      n.children.forEach(c=>{ drawLink(n,c,lg); visit(c); });
+    if(!inSearch(n)) return;
+    if(n._exp){
+      visibleChildren(n).forEach(c=>{ drawLink(n,c,lg); visit(c); });
     }
     drawNode(n,ng);
   }
