@@ -340,7 +340,7 @@ const T = {
          ]},
         {id:'aero',label:'Aerospace Engineering',kind:'spec',tags:['high-salary'],meta:{salary:'₹5–30 LPA',note:'Aircraft and spacecraft design, propulsion, avionics. Different from being a pilot — this is engineering the machine, not flying it.'},
          children:[
-          {id:'isro',label:'ISRO Scientist',kind:'career',tags:['govt'],keywords:'space scientist, rocket scientist, ISRO, astronaut, gaganyatri, Gaganyaan, astrophysicist'},
+          {id:'isro',label:'ISRO Scientist',kind:'career',tags:['govt'],keywords:'space scientist, rocket scientist, ISRO, astronaut, gaganyatri, Gaganyaan, astrophysicist, astronomer'},
           {id:'astronaut',label:'Astronaut / Gaganyatri',kind:'career',tags:['govt','abroad'],keywords:'astronaut, space traveller, gaganyatri, Gaganyaan, NASA, ISRO astronaut, cosmonaut'},
           {id:'hal',label:'HAL / Defence R&D',kind:'career',tags:['govt'],keywords:'HAL engineer, defence aerospace, DRDO aeronautics'},
           {id:'airbus',label:'Aircraft Design Engineer',kind:'career',tags:['high-salary','abroad'],keywords:'Airbus, Boeing, aircraft design, aeronautical engineer, avionics engineer'},
@@ -374,7 +374,7 @@ const T = {
          ]},
         {id:'bsc-phy',label:'Physics',kind:'spec',
          children:[
-          {id:'astrophys',label:'Astrophysicist',kind:'career',tags:['abroad']},
+          {id:'astrophys',label:'Astrophysicist / Astronomer',kind:'career',tags:['abroad'],keywords:'astrophysicist, astronomer, cosmologist, observational astronomer, radio astronomer, telescope, space science'},
           {id:'phd-phys',label:'Research / PhD (IISc / TIFR)',kind:'career',tags:['abroad']},
           {id:'nuclear',label:'Nuclear Scientist (BARC)',kind:'career',tags:['govt']},
          ]},
@@ -1391,7 +1391,7 @@ const _clearEl  = document.getElementById('search-clear');
 function _applySearch(val){
   const prev=S.q; S.q=val;
   _clearEl.hidden = !val;
-  if(prev && !S.q){ _matchSet=null; _expSaved=null; collapseToDefault(); return; }
+  if(prev && !S.q){ _matchSet=null; _expSaved=null; collapseToDefault(); renderAll(); return; }
   else if(S.q !== prev) _expSaved=null;
   renderAll();
 }
