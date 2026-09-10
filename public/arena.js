@@ -623,6 +623,7 @@ function renderArenaSetup() {
         <span class="arena-how-modal-title">How to play</span>
         <button class="arena-how-close" onclick="document.getElementById('arena-how-modal').hidden=true;document.getElementById('arena-how-backdrop').hidden=true">✕</button>
       </div>
+      <p class="arena-how-section-title">Free Run</p>
       <ul class="arena-how-list">
         <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your chosen subjects.</span></li>
         <li><span class="arena-how-icon">⏱️</span><span>A <strong>timer</strong> counts down per question — answer fast for bonus points.</span></li>
@@ -631,6 +632,19 @@ function renderArenaSetup() {
         <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
         <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
         <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
+      </ul>
+      <p class="arena-how-section-title">Challenge a Friend</p>
+      <ul class="arena-how-list">
+        <li><span class="arena-how-icon">🏁</span><span>Finish a <strong>Free Run</strong> and tap <em>Challenge Friends</em> on the results screen to get a 6-letter code.</span></li>
+        <li><span class="arena-how-icon">📤</span><span>Share the code with friends. They enter it under <strong>Join a Challenge</strong> and play the exact same question set at their own pace.</span></li>
+        <li><span class="arena-how-icon">🏆</span><span>A <strong>leaderboard</strong> shows everyone's score once they finish. Code expires in 7 days.</span></li>
+      </ul>
+      <p class="arena-how-section-title">Live Room</p>
+      <ul class="arena-how-list">
+        <li><span class="arena-how-icon">🎮</span><span>Tap <strong>Create Room</strong>, pick subjects + question count + timer speed, and share the 6-letter room code with friends.</span></li>
+        <li><span class="arena-how-icon">👥</span><span>Friends enter the code under <strong>Join a Live Room</strong>. Everyone lands in the lobby and sees the player list live.</span></li>
+        <li><span class="arena-how-icon">⏩</span><span>The host presses <em>Start Game</em>. All players see each question at the same moment with a shared countdown.</span></li>
+        <li><span class="arena-how-icon">🥇</span><span>Tap your answer before time runs out — faster correct answers score more points. Final leaderboard shows 🥇🥈🥉.</span></li>
       </ul>
     </div>
 
