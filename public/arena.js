@@ -608,7 +608,7 @@ function renderArenaSetup() {
       <h1 class="arena-title">⚡ Arena</h1>
       <p class="arena-sub">Coming soon for ${esc(state.board)}!</p>
       <p>Question banks for Arena are not yet available for your board.</p>
-      <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+      <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
     </div>`;
   }
   const opts = available.map((s, i) => `
@@ -658,7 +658,7 @@ function renderArenaSetup() {
         </div>
         <div class="arena-setup-header-btns">
           <button class="btn ghost arena-how-btn" onclick="document.getElementById('arena-how-modal').hidden=false;document.getElementById('arena-how-backdrop').hidden=false">How to play</button>
-          <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+          <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
       </div>
 
@@ -920,7 +920,7 @@ function renderArenaGameOver() {
               ? `<button class="btn primary" onclick="arenaDailyBegin()">Play Again</button>`
               : `<button class="btn primary" onclick="app.go(['arena'])">Play Again</button>`}
             <button class="btn ghost" onclick="app.go(['arena'])">Arena</button>
-            <button class="btn ghost" onclick="app.go(['home'])">Home</button>
+            <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
             <button class="btn ghost" onclick="app.go(['collection'])">🎒 Collection</button>
             ${!ar.isDaily ? `<button class="btn ghost arena-challenge-btn" id="arena-challenge-btn" onclick="arenaCreateChallenge()">⚡ Challenge Friends</button>` : ''}
           </div>
