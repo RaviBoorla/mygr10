@@ -1061,13 +1061,61 @@ function searchText(n){
   return [n.label,n.sublabel,n.keywords,n.meta?.note,n.meta?.exams,n.meta?.salary,n.meta?.duration,(n.tags||[]).join(' ')]
     .filter(Boolean).join(' ').toLowerCase();
 }
-function matchQ(n,q){
-  if(!q) return true;
-  const tokens=q.toLowerCase().split(/\s+/).filter(Boolean);
-  const txt=searchText(n);
-  if(tokens.every(t=>txt.includes(t))) return true;
-  return n.children?.some(c=>matchQ(c,q))||false;
+
+// Returns true if this node's own text directly matches all tokens
+function directMatch(n, tokens){
+  const txt = searchText(n);
+  return tokens.every(t => txt.includes(t));
 }
+
+// Build a set of IDs to highlight: direct matches + all ancestors + all descendants
+let _matchSet = null;
+function buildMatchSet(q){
+  if(!q){ _matchSet=null; return; }
+  const tokens = q.toLowerCase().split(/\s+/).filter(Boolean);
+  const hit = new Set();
+
+  // Walk tree: collect direct matches
+  function collectDirect(n){
+    if(directMatch(n, tokens)) hit.add(n.id);
+    n.children?.forEach(collectDirect);
+  }
+  collectDirect(T);
+
+  // For each hit, add all ancestors and all descendants
+  function addAncestors(n){
+    let cur = n._parent;
+    while(cur){ hit.add(cur.id); cur=cur._parent; }
+  }
+  function addDescendants(n){
+    n.children?.forEach(c=>{ hit.add(c.id); addDescendants(c); });
+  }
+  const hitArr = [...hit].map(id=>nodeOf.get(id)).filter(Boolean);
+  hitArr.forEach(n=>{ addAncestors(n); addDescendants(n); });
+
+  _matchSet = hit;
+}
+
+// Temporarily force-expand nodes on the search path so they appear in layout.
+// Saves original _exp in _expSaved so we can restore on clear.
+let _expSaved = null;
+function applySearchExpansion(){
+  if(!_matchSet){ restoreExpansion(); return; }
+  if(!_expSaved){
+    _expSaved = new Map();
+    nodeOf.forEach((n,id)=>_expSaved.set(id, n._exp));
+  }
+  // Expand any node that has a child in the match set
+  nodeOf.forEach((n)=>{
+    if(_matchSet.has(n.id) && n.children?.length) n._exp=true;
+  });
+}
+function restoreExpansion(){
+  if(!_expSaved) return;
+  _expSaved.forEach((v,id)=>{ const n=nodeOf.get(id); if(n) n._exp=v; });
+  _expSaved=null;
+}
+
 function matchF(n,fs){
   if(!fs.size) return true;
   for(const f of fs){
@@ -1077,7 +1125,7 @@ function matchF(n,fs){
   return false;
 }
 function nodeOp(n){
-  const qOk = !S.q || matchQ(n,S.q);
+  const qOk = !S.q || (_matchSet ? _matchSet.has(n.id) : true);
   const fOk = !S.filters.size || matchF(n,S.filters);
   return (qOk && fOk) ? 1 : 0.07;
 }
@@ -1121,6 +1169,8 @@ const tsvg = document.getElementById('tsvg');
 const inner = document.getElementById('inner');
 
 function renderAll(){
+  buildMatchSet(S.q);
+  applySearchExpansion();
   doLayout(T,PAD_X,PAD_Y,0);
   const tw = maxX(T)+PAD_X+10;
   const th = slotH(T)+PAD_Y*2+10;
@@ -1283,7 +1333,14 @@ document.getElementById('btn-expand').addEventListener('click',()=>{ setAll(T,tr
 document.getElementById('btn-collapse').addEventListener('click',()=>{ collapseToDefault(); renderAll(); });
 
 // Search
-document.getElementById('search').addEventListener('input',e=>{ S.q=e.target.value; renderAll(); });
+document.getElementById('search').addEventListener('input',e=>{
+  const prev=S.q; S.q=e.target.value;
+  // When search is cleared, restore saved expand state
+  if(prev && !S.q) restoreExpansion();
+  // When query changes, discard saved state so we re-snapshot current _exp
+  else if(S.q !== prev) _expSaved=null;
+  renderAll();
+});
 
 // Filters
 document.querySelectorAll('.chip').forEach(btn=>{
