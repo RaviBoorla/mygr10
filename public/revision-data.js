@@ -1,5 +1,5 @@
 // ─── Revision content (board-agnostic — all boards share one set) ─────────────
-const REVISION = {
+window.REVISION = {
   Mathematics: [
       {
         chapter: 'Foundations — Arithmetic',
@@ -2630,7 +2630,7 @@ REVISION.Mathematics = REVISION.Mathematics
   .concat(REVISION['IB Mathematics'] || []);
 
 // ─── Theorems by chapter ─────────────────────────────────────────────────────
-const THEOREMS = {
+window.THEOREMS = {
   Mathematics: {
       'Real Numbers': [
         "Fundamental Theorem of Arithmetic: Every composite number can be expressed as a product of primes, and this factorisation is unique (up to order of factors). [Gr 10]",
