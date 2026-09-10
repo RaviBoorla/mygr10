@@ -124,6 +124,18 @@ const app = {
     const r = parseHash();
     let name = r.name || 'home';
 
+    // Lazy-load arena.js on first arena navigation
+    const arenaRoutes = ['arena', 'arena-run', 'arena-inter', 'arena-over', 'collection'];
+    if (arenaRoutes.includes(name) && !window._arenaLoaded) {
+      window._arenaLoaded = true;
+      const s = document.createElement('script');
+      s.src = 'arena.js?v=5';
+      s.onload = () => this.render();
+      document.head.appendChild(s);
+      document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading Arena…</div></main>';
+      return;
+    }
+
     if (!state.board && !['privacy','terms'].includes(name)) name = 'board';
     else if (name === 'test' && !this.session)    name = 'home';
     else if (name === 'results' && !this.reviewData) name = 'home';
