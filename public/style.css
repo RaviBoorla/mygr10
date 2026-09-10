@@ -722,7 +722,7 @@ kbd {
 .arena-subj-hint { font-size: var(--fs-note); color: var(--text-light); margin-bottom: 10px; }
 /* Arena setup — single column */
 .arena-setup-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
-.arena-setup-header-btns { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; flex-shrink: 0; }
+.arena-setup-header-btns { display: flex; flex-direction: row; gap: 8px; align-items: center; flex-shrink: 0; }
 .arena-how-btn { flex-shrink: 0; font-size: var(--fs-sm); }
 .arena-pick-label { font-size: var(--fs-btn); font-weight: 700; margin: 0 0 8px; }
 .arena-setup-actions { display: flex; gap: 10px; margin-top: 10px; }
