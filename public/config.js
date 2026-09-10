@@ -82,8 +82,9 @@ const NOTES_CATALOG = [
   { id: 'Physics',     label: 'Physics' },
   { id: 'Chemistry',   label: 'Chemistry' },
   { id: 'Biology',     label: 'Biology' },
-  { id: 'English',     label: 'English' },
-  { id: 'Hindi',       label: 'Hindi' }
+  { id: 'English',          label: 'English' },
+  { id: 'Hindi',            label: 'Hindi' },
+  { id: 'Computer Science', label: 'Comp Sci' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

@@ -2622,6 +2622,310 @@ window.REVISION = {
     ]
 };
 
+// ─── Computer Science (ICSE Computer Applications) ───────────────────────────
+REVISION['Computer Science'] = [
+  {
+    chapter: 'Values and Datatypes',
+    formulae: [
+      'Primitive types: byte (8-bit), short (16-bit), int (32-bit), long (64-bit), float (32-bit), double (64-bit), char (16-bit Unicode), boolean (1-bit)',
+      'Default values: int/short/byte/long → 0; float/double → 0.0; char → \'\\u0000\'; boolean → false; reference types → null',
+      'Widening (implicit): byte → short → int → long → float → double; char → int',
+      'Narrowing (explicit): requires cast operator e.g. int x = (int) 3.99; → x = 3 (truncated)',
+      'Integer range: int is −2,147,483,648 to 2,147,483,647; long up to ~9.2 × 10¹⁸',
+      'char arithmetic: \'A\' = 65, \'a\' = 97, \'0\' = 48 (ASCII/Unicode values)'
+    ],
+    logic: [
+      'int/int gives int result: 7/2 = 3 (integer division, truncated toward zero)',
+      'int%int gives remainder: 7%2 = 1; use to check even/odd (n%2 == 0)',
+      'double/int or int/double promotes to double: 7.0/2 = 3.5',
+      'Overflow: int max + 1 wraps to min (−2147483648) — no compile/runtime error',
+      'String + anything = String concatenation: "Age: " + 5 → "Age: 5"',
+      'Operator precedence (high→low): ++/--, unary; *, /, %; +, -; <,<=,>,>=; ==,!=; &&; ||; =',
+      'Left-to-right for same-precedence binary ops: 3*6%5*4 = (((3*6)%5)*4) = ((18%5)*4) = (3*4) = 12'
+    ],
+    tips: [
+      'When in doubt about int/double division, add .0 to one literal: 1.0/n',
+      'char to int is widening (automatic); int to char needs explicit cast: (char)65 → \'A\'',
+      'String.valueOf(n) converts any primitive to String without concatenation tricks'
+    ],
+    bestPractices: [
+      'Declare variables with the smallest adequate type (prefer int over long unless range demands it)',
+      'Never compare floating-point values with == — use Math.abs(a-b) < 1e-9',
+      'Initialise all variables before use — Java enforces this for local variables at compile time'
+    ]
+  },
+  {
+    chapter: 'Operators and Expressions',
+    formulae: [
+      'Arithmetic: + − * / % (modulo)',
+      'Relational: == != < > <= >=  (result is boolean)',
+      'Logical: && (short-circuit AND), || (short-circuit OR), ! (NOT)',
+      'Assignment: = += -= *= /= %=',
+      'Unary: ++x (pre-increment), x++ (post-increment), --x, x--',
+      'Ternary: condition ? expr_if_true : expr_if_false',
+      'Bitwise (rare in ICSE): & | ^ ~ << >>'
+    ],
+    logic: [
+      'Pre-increment (++x): increment first, then use the new value in the expression',
+      'Post-increment (x++): use current value in the expression, then increment',
+      'Short-circuit AND: if left operand is false, right is NOT evaluated',
+      'Short-circuit OR: if left operand is true, right is NOT evaluated',
+      '== compares primitive values; for String objects use .equals() to compare content',
+      'String.equals() is case-sensitive; equalsIgnoreCase() ignores case'
+    ],
+    tips: [
+      'x++ vs ++x only matters when the expression result is used — inside a println, ++x prints new value, x++ prints old',
+      'Ternary is concise but avoid nesting more than one level deep for readability'
+    ],
+    bestPractices: [
+      'Use parentheses to make complex expressions unambiguous — never rely on readers memorising precedence',
+      'Avoid side effects in conditions: if (x++ > 0) is confusing; separate the increment'
+    ]
+  },
+  {
+    chapter: 'Control Flow — Conditionals',
+    formulae: [
+      'if (condition) { ... } else if (condition) { ... } else { ... }',
+      'switch (expr) { case v: ...; break; default: ...; }  — expr must be int/char/String/enum',
+      'Ternary: result = (a > b) ? a : b;'
+    ],
+    logic: [
+      'Missing break in switch causes fall-through — execution continues into the next case',
+      'switch with String compares using .equals() internally (Java 7+)',
+      'if-else chain: only the first true branch executes; subsequent branches are skipped',
+      'Nested if: the else binds to the nearest unmatched if (dangling-else rule)'
+    ],
+    tips: [
+      'Always add a default case in switch even if currently unreachable — future-proofs the code',
+      'For range checks (e.g. grade bands), if-else if is cleaner than switch'
+    ],
+    bestPractices: [
+      'Always use braces { } even for single-statement if/else — prevents bugs when adding statements later',
+      'Prefer positive conditions: if (isValid) over if (!isInvalid) for clarity'
+    ]
+  },
+  {
+    chapter: 'Iterative Constructs',
+    formulae: [
+      'for (init; condition; update) { body }',
+      'while (condition) { body }  — entry-controlled (condition checked before first iteration)',
+      'do { body } while (condition);  — exit-controlled (body runs at least once)',
+      'break: exits the innermost loop/switch immediately',
+      'continue: skips the rest of the current iteration, goes to next'
+    ],
+    logic: [
+      'for loop equivalent: init; while(condition) { body; update; }',
+      'Infinite loop: for(;;) or while(true) — needs a break to exit',
+      'Loop variable scope: int i declared in for(int i=...) is only accessible inside the loop',
+      'Nested loops: outer loop runs once for each full cycle of the inner loop',
+      'for-each (enhanced for): for (int x : arr) — read-only; cannot modify array elements through x'
+    ],
+    tips: [
+      'To convert for → do-while: initialise before the block, move update to end of body, condition becomes while condition',
+      'Count iterations before coding: for(i=1;i<=n;i++) runs n times; for(i=0;i<n;i++) also runs n times'
+    ],
+    bestPractices: [
+      'Prefer for when the number of iterations is known; while/do-while when it depends on user/external input',
+      'Declare loop variable inside the for statement to limit its scope and prevent accidental reuse'
+    ]
+  },
+  {
+    chapter: 'User Defined Methods',
+    formulae: [
+      'Prototype: accessSpecifier returnType methodName(paramType param, ...) — e.g. public int add(int a, int b)',
+      'void return type: method does not return a value',
+      'return statement: exits method and optionally returns a value; type must match return type',
+      'Method call: type result = methodName(actualArgs);  or just  methodName(args); for void',
+      'Overloading: same method name, different parameter list (number or types of params differ)'
+    ],
+    logic: [
+      'Formal parameters (in definition) receive values of actual parameters (in call) — passed by value',
+      'Primitive arguments: changes inside the method do NOT affect the original variable (pass by value)',
+      'Method signature = method name + parameter types (not return type, not access modifier)',
+      'Two methods with same signature in one class = compile error (not valid overloading)',
+      'Recursion: method calls itself; must have a base case to terminate'
+    ],
+    tips: [
+      'Constructor vs method: constructor has same name as class and no return type (not even void)',
+      'To return multiple values, return an array or use instance variables'
+    ],
+    bestPractices: [
+      'Keep each method focused on one task (Single Responsibility)',
+      'Name methods with verbs: calculateArea(), findMax(), printReport()',
+      'Avoid very long parameter lists — if a method needs > 4 params, consider refactoring'
+    ]
+  },
+  {
+    chapter: 'Constructors',
+    formulae: [
+      'Constructor syntax: ClassName(params) { ... }  — no return type, same name as class',
+      'Default constructor: provided by Java only if NO constructor is defined at all',
+      'Parameterised constructor: ClassName(type param) { this.field = param; }',
+      'this keyword: refers to the current object; this.x = x disambiguates field from parameter',
+      'Constructor overloading: multiple constructors with different parameter lists'
+    ],
+    logic: [
+      'If you define any constructor, Java no longer provides the default no-arg constructor',
+      'Constructors cannot be called explicitly like methods — invoked automatically on new',
+      'Constructors can call each other using this(args) — must be the first statement',
+      'Constructors are not inherited; a subclass must define its own (or use super(args))'
+    ],
+    tips: [
+      'Use constructors to set up an object\'s initial state — don\'t leave fields uninitialised',
+      'Remember: a method with the same name as the class but with a return type is NOT a constructor — it\'s a regular method'
+    ],
+    bestPractices: [
+      'Always validate parameters inside the constructor (e.g. reject negative marks)',
+      'Initialise all instance variables in the constructor, even if to default values, for clarity'
+    ]
+  },
+  {
+    chapter: 'Library Classes',
+    formulae: [
+      'Math.abs(x) — absolute value; Math.pow(a,b) — aᵇ (returns double); Math.sqrt(x) — √x',
+      'Math.cbrt(x) — cube root; Math.ceil(x) — round up; Math.floor(x) — round down; Math.round(x) — nearest int',
+      'Math.max(a,b); Math.min(a,b); Math.random() — [0.0, 1.0)',
+      'Character.isLetter(ch); Character.isDigit(ch); Character.isLetterOrDigit(ch)',
+      'Character.isUpperCase(ch); Character.isLowerCase(ch); Character.isWhitespace(ch)',
+      'Character.toUpperCase(ch); Character.toLowerCase(ch)',
+      'Integer.parseInt(str) — String → int; Double.parseDouble(str) — String → double',
+      'String.valueOf(x) — any primitive → String; Integer.toString(n) — int → String'
+    ],
+    logic: [
+      'Wrapper classes: Integer, Double, Float, Long, Character, Boolean — wrap primitives as objects',
+      'Autoboxing: automatic primitive → wrapper (int x = 5; Integer obj = x;)',
+      'Unboxing: automatic wrapper → primitive (Integer obj = 5; int x = obj;)',
+      'Math.random() * n gives [0.0, n); cast to int for random integer 0 to n−1',
+      'Random int in range [low, high]: (int)(Math.random() * (high - low + 1)) + low'
+    ],
+    tips: [
+      'Math.round(x) returns long for double argument, int for float — assign to long/int accordingly',
+      'Character methods take a char argument, not a String — use charAt(i) to get a char from a String'
+    ],
+    bestPractices: [
+      'Use Integer.parseInt() only when you are sure the String is a valid integer — wrap in try-catch in real code',
+      'Prefer Math.pow(x, 2.0) over x*x for consistency with other power expressions; use x*x only for simple squaring'
+    ]
+  },
+  {
+    chapter: 'String Handling',
+    formulae: [
+      'length() — number of characters; charAt(i) — char at index i (0-based)',
+      'substring(start) — from start to end; substring(start, end) — [start, end)',
+      'indexOf(str/ch) — first occurrence (−1 if not found); lastIndexOf(str/ch) — last occurrence',
+      'indexOf(str, fromIndex) — search starting at fromIndex',
+      'toUpperCase(); toLowerCase(); trim() — remove leading/trailing whitespace',
+      'replace(old, new) — replace all occurrences (char or String); replaceAll(regex, new)',
+      'equals(str) — content equality; equalsIgnoreCase(str); compareTo(str) — lexicographic',
+      'compareTo returns: negative if this < other, 0 if equal, positive if this > other',
+      'startsWith(prefix); endsWith(suffix); contains(seq) — boolean checks',
+      'String.valueOf(x) — convert primitive to String; concat(str) — append',
+      'isEmpty() — true if length() == 0; isBlank() — true if empty or only whitespace (Java 11+)'
+    ],
+    logic: [
+      'Strings are immutable — every modification returns a NEW String object',
+      's1 == s2 compares references (memory addresses), NOT content — use s1.equals(s2)',
+      'String literals are interned: "hello" == "hello" may be true, but new String("hello") == "hello" is false',
+      'substring(start, end) includes index start but EXCLUDES index end',
+      'compareTo: compares char by char; returns difference of first mismatch, or length difference',
+      'String + int = String concatenation (not addition): "score" + 5 = "score5"',
+      'StringBuilder (mutable): use for building strings in a loop to avoid creating many objects'
+    ],
+    tips: [
+      'length() is a method (with parentheses) for String; length (without parentheses) is a field for arrays',
+      'To count occurrences of a char: loop with charAt(i) or use replace and compare lengths',
+      'Reverse a String: loop from length()-1 to 0, appending charAt(i)'
+    ],
+    bestPractices: [
+      'Always check for null before calling String methods to avoid NullPointerException',
+      'Use isEmpty() or length() == 0 instead of equals("") for clarity'
+    ]
+  },
+  {
+    chapter: 'Arrays',
+    formulae: [
+      '1D declaration: dataType[] arrName = new dataType[size];  e.g. int[] a = new int[10];',
+      'Initialisation: int[] a = {1, 2, 3};  or  int[] a = new int[]{1, 2, 3};',
+      'Accessing: a[i]  — valid indices are 0 to a.length−1',
+      'Length: a.length  (field, no parentheses)',
+      '2D declaration: int[][] mat = new int[rows][cols];',
+      '2D access: mat[r][c];  row count: mat.length;  column count: mat[0].length',
+      'Enhanced for: for (int x : a) { ... }  — read-only iteration'
+    ],
+    logic: [
+      'Arrays are zero-indexed: first element at index 0, last at length−1',
+      'Accessing a[a.length] throws ArrayIndexOutOfBoundsException (runtime error)',
+      '2D array is an array of 1D arrays (jagged arrays allowed in Java)',
+      'Array elements are initialised to default values: 0 for int, null for objects, false for boolean',
+      'Arrays are objects — passed by reference; changes inside a method affect the original array',
+      'Array copy: System.arraycopy() or Arrays.copyOf() — assignment copies the reference, NOT the content'
+    ],
+    tips: [
+      'Memory: int[n] uses n×4 bytes; double[n] uses n×8 bytes; char[n] uses n×2 bytes',
+      'For 2D: int[r][c] uses r×c×4 bytes (for int)',
+      'To find max/min: initialise max = a[0], then loop from index 1'
+    ],
+    bestPractices: [
+      'Always validate array index before access in production code',
+      'Use for-each when you only need to read; use index-based for when you need the position or need to write'
+    ]
+  },
+  {
+    chapter: 'Sorting and Searching',
+    formulae: [
+      'Bubble Sort: compare adjacent pairs; swap if out of order; repeat for n−1 passes',
+      'Number of passes: n−1 (outer loop); comparisons per pass: n−1−i (inner loop, i = current pass)',
+      'Selection Sort: find minimum in unsorted part; swap with first unsorted element',
+      'Binary Search: works on SORTED arrays only; compare with mid = (low+high)/2; halve search space each step',
+      'Linear Search: scan element by element; O(n) worst case; works on unsorted arrays'
+    ],
+    logic: [
+      'Bubble Sort: after each pass, the largest unsorted element "bubbles" to its correct position',
+      'Bubble Sort optimisation: if no swap occurred in a full pass, array is already sorted — break early',
+      'Selection Sort: always does n−1 swaps regardless of initial order (unlike bubble sort)',
+      'Binary Search: O(log₂n) comparisons; Linear Search: O(n) comparisons on average',
+      'Binary Search prerequisite: array MUST be sorted (ascending or descending)',
+      'Binary Search mid index: mid = (low + high) / 2  (integer division in Java)'
+    ],
+    tips: [
+      'Trace bubble sort by writing the array state after each comparison — boards often ask for intermediate states',
+      'For ICSE: know how to show ONE full pass of bubble sort step-by-step',
+      'Binary search on descending array: swap the comparison directions (arr[mid] < target → go left)'
+    ],
+    bestPractices: [
+      'Dry-run any sorting algorithm on a small array (4–5 elements) before writing code in exam',
+      'Show the array after each swap when asked to "show the working" — each step earns marks'
+    ]
+  },
+  {
+    chapter: 'OOP Concepts',
+    formulae: [
+      'Class: blueprint/template defining fields (data) and methods (behaviour)',
+      'Object: instance of a class; created with new ClassName(args)',
+      'Encapsulation: bundle data + methods; hide internal state with private; expose via getters/setters',
+      'Inheritance: class Child extends Parent — child acquires parent\'s non-private members',
+      'Polymorphism: same method name, different behaviour — via overloading (compile-time) or overriding (runtime)',
+      'Abstraction: expose only necessary details; hide implementation complexity'
+    ],
+    logic: [
+      'Access modifiers: private (class only) < default/package < protected (+ subclasses) < public (everywhere)',
+      'Method overloading: same name, different parameter signature (number/type/order of params)',
+      'An overloaded method is selected at COMPILE time based on argument types',
+      'this refers to the current object; super refers to the parent class',
+      'A class can have at most one direct parent (single inheritance in Java)',
+      'Interface allows a class to promise certain behaviour without specifying implementation'
+    ],
+    tips: [
+      'Inheritance IS-A relationship: Dog IS-A Animal. Composition HAS-A relationship: Car HAS-A Engine',
+      'Remember: overloading = same class; overriding = subclass replaces parent method'
+    ],
+    bestPractices: [
+      'Keep fields private; provide public getters/setters — this is proper encapsulation',
+      'Name classes with nouns (BankAccount), methods with verbs (calculateInterest), constants in ALL_CAPS'
+    ]
+  }
+];
+
 // merge IB and ICSE Mathematics chapters into the main Mathematics array
 // (kept alongside the per-board keys below — the consolidated notes page reads those directly)
 REVISION['CBSE Mathematics'] = REVISION.Mathematics;

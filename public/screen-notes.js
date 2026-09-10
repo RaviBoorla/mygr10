@@ -31,6 +31,9 @@ const NOTES_SOURCES = {
   ],
   Hindi: [
     ['CBSE', 'Hindi', 'Hindi']
+  ],
+  'Computer Science': [
+    ['ICSE', 'Computer Science', 'Computer Science']
   ]
 };
 
@@ -51,16 +54,32 @@ function consolidatedChapters(subjectId) {
   return (_consolidatedCache[subjectId] = merged);
 }
 
-let _revisionLoading = false;
+let _revisionCallbacks = null; // null = not yet started; [] = loading; undefined = failed
 
 function _ensureRevisionData(cb) {
   if (window.REVISION) { cb(); return; }
-  if (_revisionLoading) { return; }
-  _revisionLoading = true;
+  if (_revisionCallbacks === undefined) {
+    // Previous load failed — show error state, don't retry endlessly
+    cb(); return;
+  }
+  if (Array.isArray(_revisionCallbacks)) {
+    // Already loading — queue the callback
+    _revisionCallbacks.push(cb);
+    return;
+  }
+  // First call — start loading
+  _revisionCallbacks = [cb];
   const s = document.createElement('script');
-  s.src = 'revision-data.js?v=1';
-  s.onload = () => { _revisionLoading = false; cb(); };
-  s.onerror = () => { _revisionLoading = false; };
+  s.src = 'revision-data.js?v=2';
+  s.onload = () => {
+    const pending = _revisionCallbacks || [];
+    _revisionCallbacks = null; // reset so future calls go straight to cb()
+    pending.forEach(fn => fn());
+  };
+  s.onerror = () => {
+    _revisionCallbacks = undefined; // mark failed
+    app.render(); // re-render to show error message
+  };
   document.head.appendChild(s);
 }
 
@@ -70,11 +89,13 @@ Object.assign(app, {
     const id = NOTES_CATALOG.some(s => s.id === subjectId) ? subjectId : NOTES_CATALOG[0].id;
 
     if (!window.REVISION) {
-      _ensureRevisionData(() => {
-        // Clear the cache so next consolidatedChapters call reads fresh data.
-        Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
-        app.render();
-      });
+      const failed = _revisionCallbacks === undefined;
+      if (!failed) {
+        _ensureRevisionData(() => {
+          Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
+          app.render();
+        });
+      }
       return `
         <div class="screen rev-screen">
           <div class="rev-heading-row">
@@ -84,7 +105,9 @@ Object.assign(app, {
               <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
             </div>
           </div>
-          <div class="card empty-state">Loading notes…</div>
+          <div class="card empty-state">${failed
+            ? 'Could not load notes. Check your connection and <button class="btn ghost" onclick="location.reload()">reload the page</button>.'
+            : 'Loading notes…'}</div>
         </div>`;
     }
 
