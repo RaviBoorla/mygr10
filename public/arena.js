@@ -323,7 +323,7 @@ function renderArenaCollection() {
       <div class="arena-col-header">
         <h1 class="arena-col-title">🎒 Collection</h1>
         <span class="arena-col-total">${totalUnlocked} / ${COLLECTIBLES.length} unlocked</span>
-        <button class="btn ghost arena-col-back" onclick="app.go(['arena'])">← Arena</button>
+        <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
       </div>
       <p class="arena-col-sub">Scientific instruments and historical curiosities — each item carries one line of real history.</p>
       ${section('Instruments')}
@@ -785,7 +785,7 @@ function renderArenaQuestion() {
           <p class="arena-pause-title">⏸ Paused</p>
           <p class="arena-pause-sub">Stage ${ar.stage} · ${ar.score.toLocaleString()} pts · ${ar.lives.toFixed(1)}♥</p>
           <button class="btn primary arena-pause-resume" onclick="arenaResume()">▶ Resume</button>
-          <button class="btn ghost" onclick="arenaQuit()">↩ Back to Arena</button>
+          <button class="btn ghost home-btn" onclick="arenaQuit();app.go(['home'])">&#8962; Home</button>
         </div>
       </div>
 

@@ -129,7 +129,7 @@ const app = {
     if (arenaRoutes.includes(name) && !window._arenaLoaded) {
       window._arenaLoaded = true;
       const s = document.createElement('script');
-      s.src = 'arena.js?v=5';
+      s.src = 'arena.js?v=6';
       s.onload = () => this.render();
       document.head.appendChild(s);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading Arena…</div></main>';
