@@ -82,6 +82,9 @@ const NOTES_CATALOG = [
   { id: 'Physics',     label: 'Physics' },
   { id: 'Chemistry',   label: 'Chemistry' },
   { id: 'Biology',     label: 'Biology' },
+  { id: 'Social Science',   label: 'Soc Sci' },
+  { id: 'History',          label: 'History' },
+  { id: 'Geography',        label: 'Geography' },
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
   { id: 'Computer Science', label: 'Comp Sci' }

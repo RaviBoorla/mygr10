@@ -34,6 +34,15 @@ const NOTES_SOURCES = {
   ],
   'Computer Science': [
     ['ICSE', 'Computer Science', 'Computer Science']
+  ],
+  'Social Science': [
+    ['CBSE', 'Social Science', 'Social Science']
+  ],
+  'History': [
+    ['ICSE', 'ICSE History', 'ICSE History']
+  ],
+  'Geography': [
+    ['ICSE', 'ICSE Geography', 'ICSE Geography']
   ]
 };
 

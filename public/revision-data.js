@@ -1156,6 +1156,427 @@ window.REVISION = {
           'Rank transport modes by cost (cheapest: waterways → railways → roads → airways) for heavy/bulky cargo',
           'Know which port handles what type of cargo — map questions appear in CBSE'
         ]
+      },
+      {
+        chapter: 'Power Sharing',
+        formulae: [],
+        logic: [
+          'Power sharing is the basic principle of democracy — avoids concentration of power',
+          'Belgium model: equal representation of French- and Dutch-speaking communities in cabinet',
+          'Sri Lanka model: Sinhala-only policy (1956) → alienated Tamil minority → prolonged civil war',
+          'Horizontal sharing: among organs of government (legislature, executive, judiciary)',
+          'Vertical sharing: among different levels of government (central, state, local)',
+          'Among social groups: reserved constituencies, separate electorates',
+          'Among pressure groups, political parties, media — fourth tier of power'
+        ],
+        tips: [
+          'Belgium adopted power sharing to prevent ethnic conflict between Dutch (Flemish) and French speakers',
+          'Sri Lanka failed to share power → Tamil Tigers (LTTE) insurgency from 1970s to 2009',
+          'Prudential reason for power sharing: reduces risk of conflict',
+          'Moral reason: democracy itself is power sharing — people share power with elected govt'
+        ],
+        bestPractices: [
+          'Always give both Belgium and Sri Lanka examples to contrast success vs failure',
+          'Know the four forms of power sharing — MCQs often test one specific form'
+        ]
+      },
+      {
+        chapter: 'Federalism',
+        formulae: [],
+        logic: [
+          'Federalism: two or more levels of government; each has its own jurisdiction',
+          'Union List (97 subjects): defence, foreign affairs, banking, railways — Centre only',
+          'State List (66 subjects): police, trade, agriculture, irrigation — State only',
+          'Concurrent List (47 subjects): education, forests, marriage, adoption — both levels',
+          'Residuary subjects (not in any list): Centre decides',
+          'India is a "holding together" federation (unlike USA\'s "coming together" federation)',
+          'Panchayati Raj Act (73rd Amendment, 1992): three-tier local government — gram panchayat, panchayat samiti, zila parishad',
+          'Municipalities: Nagar Panchayat, Municipal Council, Municipal Corporation (74th Amendment, 1992)'
+        ],
+        tips: [
+          '73rd & 74th Constitutional Amendments (1992): gave constitutional status to local self-government',
+          'Belgium shifted from unitary to federal in 1993',
+          'India has a federal structure but with a strong Centre (unitary bias) — called "quasi-federal"',
+          'Decentralisation: power to the lowest level; India took this step in 1992'
+        ],
+        bestPractices: [
+          'Distinguish Union List / State List / Concurrent List with examples — examiners frequently test this',
+          'Know 73rd Amendment = rural local bodies; 74th Amendment = urban local bodies'
+        ]
+      },
+      {
+        chapter: 'Democracy and Diversity',
+        formulae: [],
+        logic: [
+          'Social differences + politics: can lead to social division or social integration',
+          'Three factors: overlapping vs cross-cutting differences; political accommodation; attitude of political leaders',
+          'USA 1968 Olympics: Tommie Smith & John Carlos raised Black Power salute → expelled from US team',
+          'Northern Ireland conflict: Catholics (Irish, nationalist) vs Protestants (British, unionist)',
+          'Yugoslavia breakup: political competition along ethnic lines → disintegration'
+        ],
+        tips: [
+          'Cross-cutting identities → less intense conflict (a person can be poor AND belong to majority religion)',
+          'Overlapping identities → more intense conflict (poor AND minority religion AND lower caste)',
+          'Democracy ACCOMMODATES diversity → strengthens unity; suppressing it → division'
+        ],
+        bestPractices: [
+          'Give examples from three countries: USA (race), Northern Ireland (religion), Yugoslavia (ethnicity)',
+          'Know difference between social division and social diversity'
+        ]
+      },
+      {
+        chapter: 'Political Parties',
+        formulae: [],
+        logic: [
+          'Functions: contest elections, frame policies, make laws, form govt, provide opposition, shape public opinion',
+          'National parties (recognised by ECI): must win 6% votes + seats in Lok Sabha/State assemblies in 4+ states',
+          'State parties: recognised in at least 4 states',
+          'Challenges: dynastic succession, money and muscle power, lack of internal democracy',
+          'Anti-defection law (52nd Amendment 1985): if MP/MLA votes against party whip → loses seat'
+        ],
+        tips: [
+          'India has a multi-party system; Two-party: USA (Democrats, Republicans), UK (Labour, Conservative)',
+          'India: 6 national parties (as of 2024): BJP, INC, BSP, CPI(M), NCP, AITC',
+          'ECI can deregister parties that violate model code or commit election offences'
+        ],
+        bestPractices: [
+          'Know the 3 types of party systems: one-party (China), two-party (USA), multi-party (India)',
+          'Learn specific reforms with amendment numbers: anti-defection = 52nd (1985); affidavit disclosure = 2003 SC order'
+        ]
+      },
+      {
+        chapter: 'Outcomes of Democracy',
+        formulae: [],
+        logic: [
+          'Democracy is accountable, responsive, legitimate government',
+          'Economic outcomes: democracy does not guarantee fast growth; some autocracies show higher GDP growth',
+          'Social outcome: democracy reduces inequality slowly but protects minority rights',
+          'Political outcome: regular, free, fair elections; peaceful transfer of power; transparency',
+          'Dignity and freedom: equal dignity to all citizens; women have legal equality',
+          'Democracy is better than alternatives — not perfect, but best available system'
+        ],
+        tips: [
+          'India: ~60% of people satisfied with functioning of democracy (CSDS-Lokniti survey data)',
+          'Democracies rarely fight each other — "democratic peace theory"',
+          'Transparency: citizens have right to know; RTI Act 2005 in India'
+        ],
+        bestPractices: [
+          'Compare democracy with dictatorship on 4 dimensions: economic growth, social equality, political freedom, dignity',
+          'Answer "is democracy successful?" by giving both strengths and limitations'
+        ]
+      }
+    ],
+    'ICSE History': [
+      {
+        chapter: 'The First World War (1914–1918)',
+        formulae: [],
+        logic: [
+          'Causes (MAIN): Militarism, Alliance system, Imperialism, Nationalism; triggered by assassination of Archduke Franz Ferdinand (28 June 1914)',
+          'Alliance blocs: Triple Alliance (Germany, Austria-Hungary, Italy) vs Triple Entente (France, Russia, Britain)',
+          'Germany invaded Belgium (Schlieffen Plan) → Britain entered the war (4 August 1914)',
+          'USA entered: 6 April 1917 (unrestricted submarine warfare + Zimmermann Telegram)',
+          'Armistice: 11 November 1918 at 11 am; signed at Compiègne',
+          'Treaty of Versailles (28 June 1919): War Guilt Clause (Article 231), £6.6 billion reparations, Alsace-Lorraine to France, demilitarised Rhineland, German colonies taken away, League of Nations formed'
+        ],
+        tips: [
+          'Key dates: 28 June 1914 (assassination) → 28 July 1914 (Austria declares war) → 11 Nov 1918 (armistice) → 28 June 1919 (Treaty)',
+          'Battle of Somme (1916): ~1 million casualties; first use of tanks (by Britain)',
+          'Gallipoli Campaign (1915–16): Allied failure against Ottoman Empire; significant for ANZAC',
+          'Russia left war after Bolshevik Revolution (Nov 1917); Tsar abdicated March 1917'
+        ],
+        bestPractices: [
+          'Know causes in order: immediate (assassination) → short-term (alliances) → long-term (militarism, imperialism, nationalism)',
+          'Treaty of Versailles: 5 key terms — war guilt, reparations, disarmament, territorial losses, League of Nations'
+        ]
+      },
+      {
+        chapter: 'Rise of Dictatorships',
+        formulae: [],
+        logic: [
+          'Fascism (Italy): Benito Mussolini; March on Rome (October 1922); PM 1922–1943',
+          'Nazism (Germany): Adolf Hitler; Nazi Party (NSDAP); Mein Kampf (1925); Chancellor 30 Jan 1933, Führer Aug 1934',
+          'Stalin\'s USSR: Five-Year Plans; forced collectivisation; Great Purge (1936–38)',
+          'Causes: economic ruin post-WWI, war reparations, political instability, Great Depression (1929), fear of communism',
+          'Japan: militarist expansion; invaded Manchuria (Sept 1931); Sino-Japanese War (1937)'
+        ],
+        tips: [
+          'Enabling Act (23 March 1933): gave Hitler absolute legislative power; end of Weimar Republic',
+          'Reichstag Fire (27 Feb 1933): used to suspend civil liberties via Emergency Decree',
+          'Kristallnacht (9–10 Nov 1938): Nazi pogrom against Jews — 7,500 businesses destroyed, 30,000 arrested',
+          'Anti-Comintern Pact (1936): Germany + Japan; Italy joined 1937 → Rome-Berlin-Tokyo Axis'
+        ],
+        bestPractices: [
+          'Compare Fascism and Nazism: both totalitarian, anti-communist, nationalist; Nazism adds racial ideology',
+          'Link economic conditions (Great Depression 1929) to political outcomes (rise of dictators)'
+        ]
+      },
+      {
+        chapter: 'The Second World War (1939–1945)',
+        formulae: [],
+        logic: [
+          'Trigger: Germany invaded Poland (1 Sept 1939) → Britain & France declared war (3 Sept 1939)',
+          'Appeasement failure: Munich Agreement (Sept 1938) — Chamberlain gave Hitler Sudetenland',
+          'Fall of France: June 1940; Dunkirk evacuation (May–June 1940): ~338,000 Allied troops rescued',
+          'Battle of Britain (1940): RAF defeated Luftwaffe — Hitler cancelled Operation Sea Lion',
+          'Operation Barbarossa (22 June 1941): Germany invaded USSR; turning point = Battle of Stalingrad (Aug 1942–Feb 1943)',
+          'Pearl Harbour (7 Dec 1941): Japan attacked US naval base in Hawaii → USA entered war',
+          'D-Day (6 June 1944): Allied invasion of Normandy — largest seaborne invasion in history',
+          'VE Day: 8 May 1945 (Germany surrendered); Hiroshima (6 Aug) & Nagasaki (9 Aug 1945) → VJ Day 15 Aug 1945'
+        ],
+        tips: [
+          'Holocaust: 6 million Jews systematically killed in Nazi concentration camps (Auschwitz, Treblinka)',
+          'Atlantic Charter (Aug 1941): Roosevelt + Churchill — self-determination, free trade, no territorial changes by force',
+          'Big Three: Roosevelt (USA), Churchill (UK), Stalin (USSR); met at Tehran (1943), Yalta (Feb 1945), Potsdam (July 1945)'
+        ],
+        bestPractices: [
+          'Timeline: 1939 (Poland) → 1940 (France, Battle of Britain) → 1941 (USSR, USA) → 1943 (Stalingrad) → 1944 (D-Day) → 1945 (end)',
+          'Know each key battle: date, theatre, outcome, and its significance to the overall war'
+        ]
+      },
+      {
+        chapter: 'The United Nations',
+        formulae: [],
+        logic: [
+          'Founded: 24 October 1945; San Francisco Conference (April–June 1945) drafted the Charter',
+          'Original members: 51; current membership: 193',
+          'Six principal organs: General Assembly, Security Council, Secretariat, ICJ, ECOSOC, Trusteeship Council',
+          'Security Council: 5 permanent (USA, UK, France, Russia, China) with VETO; 10 non-permanent (2-year term)',
+          'General Assembly: one nation one vote; meets annually in September; HQ New York',
+          'Specialised agencies: UNESCO (Paris), WHO (Geneva), FAO (Rome), ILO (Geneva), UNICEF (New York), IMF (Washington DC), IAEA (Vienna)'
+        ],
+        tips: [
+          'UN Secretary-General: António Guterres (Portugal, since 2017); 9th Secretary-General',
+          'ICJ (International Court of Justice): HQ The Hague; 15 judges; 9-year terms',
+          'WHO eradicated smallpox in 1980 — most significant achievement',
+          'UN Day: 24 October; UN flag: blue background with world map and olive branches'
+        ],
+        bestPractices: [
+          'Know all 6 principal organs and their roles — ICSE tests each individually',
+          'Learn 6 specialised agencies with HQ cities: UNESCO (Paris), WHO (Geneva), ILO (Geneva), FAO (Rome), UNICEF (New York), IMF (Washington DC)'
+        ]
+      },
+      {
+        chapter: 'The Indian Constitution & Civics',
+        formulae: [],
+        logic: [
+          'Constituent Assembly: first meeting 9 Dec 1946; Dr B.R. Ambedkar chaired Drafting Committee',
+          'Constitution adopted: 26 November 1949; enforced: 26 January 1950 (Republic Day)',
+          'Preamble: Sovereign, Socialist, Secular, Democratic, Republic — Justice, Liberty, Equality, Fraternity',
+          '"Socialist" and "Secular" added by 42nd Amendment 1976',
+          'Fundamental Rights (Part III): Equality (14–18), Freedom (19–22), Against Exploitation (23–24), Religion (25–28), Cultural/Educational (29–30), Constitutional Remedies (32)',
+          'Article 32: "Heart and Soul of the Constitution" (Ambedkar) — right to move Supreme Court',
+          'Fundamental Duties: 10 added by 42nd Amendment (1976); 11th added by 86th Amendment (2002)',
+          'Directive Principles (Part IV): non-justiciable; guide state policy; from Irish Constitution'
+        ],
+        tips: [
+          'Article 21: Right to Life and Personal Liberty — broadest interpretation; includes privacy (K.S. Puttaswamy 2017)',
+          'Schedule 7: Union/State/Concurrent lists; Schedule 8: 22 official languages',
+          'Emergency provisions: Art 352 (national), Art 356 (state/President\'s Rule), Art 360 (financial)',
+          'Article 44: Uniform Civil Code — Directive Principle, not yet implemented'
+        ],
+        bestPractices: [
+          'Learn Preamble word by word — very often tested in ICSE',
+          'Know article numbers for key rights: 14 (equality before law), 19 (6 freedoms), 21 (life/liberty), 32 (constitutional remedies)'
+        ]
+      },
+      {
+        chapter: 'The Union Parliament',
+        formulae: [],
+        logic: [
+          'Parliament = President + Lok Sabha + Rajya Sabha',
+          'Lok Sabha (House of the People): max 552 members; term 5 years; minimum age 25 years',
+          'Rajya Sabha (Council of States): max 250 members (238 elected + 12 nominated); permanent house — 1/3 retire every 2 years; minimum age 30 years',
+          'Money Bills: introduced only in Lok Sabha; Rajya Sabha can suggest amendments, not reject; President must give assent',
+          'No-confidence motion: only in Lok Sabha; if passed, Cabinet must resign',
+          'Joint sitting: if deadlock between Houses; convened by President; presided by Speaker of Lok Sabha',
+          'Speaker: elected by Lok Sabha members; casting vote in tie; impartial; cannot vote otherwise'
+        ],
+        tips: [
+          'Quorum: 1/10 of total membership in each House to transact business',
+          'Budget Session: Feb–May; Monsoon Session: Jul–Aug; Winter Session: Nov–Dec',
+          'Prorogation vs Dissolution: prorogation ends a session; dissolution ends the Lok Sabha itself',
+          'Finance Bill (Budget): must be passed by Lok Sabha by 31 March; if not, President can declare vote-on-account'
+        ],
+        bestPractices: [
+          'Distinguish Lok Sabha vs Rajya Sabha powers — especially for money bills and no-confidence motion',
+          'Know types of bills: ordinary, money, financial, constitutional amendment — procedures differ for each'
+        ]
+      },
+      {
+        chapter: 'Local Self-Government',
+        formulae: [],
+        logic: [
+          '73rd Constitutional Amendment (1992): constitutional status to Panchayati Raj; Part IX and 11th Schedule (29 subjects)',
+          '74th Constitutional Amendment (1992): municipal bodies; Part IX-A and 12th Schedule (18 subjects)',
+          'Three-tier rural structure: Gram Panchayat (village) → Panchayat Samiti/Block (block) → Zila Parishad (district)',
+          'Gram Sabha: all registered voters of a village; meets at least twice a year',
+          'State Election Commission (SEC): independent body; conducts Panchayat and Municipal elections',
+          'Reservation: 1/3 seats for women; SC/ST reservation proportional to population'
+        ],
+        tips: [
+          'Balwant Rai Mehta Committee (1957): first recommended three-tier Panchayati Raj',
+          'L.M. Singhvi Committee (1986): recommended constitutional status → led to 73rd Amendment',
+          'Panchayati Raj Day: 24 April (day 73rd Amendment enforced, 1993)',
+          'State Finance Commission: reviews finances of Panchayats and Municipalities every 5 years'
+        ],
+        bestPractices: [
+          'Remember: 73rd Amendment = rural bodies; 74th Amendment = urban bodies',
+          'Know Gram Sabha (all voters) vs Gram Panchayat (elected body) — common exam confusion'
+        ]
+      }
+    ],
+    'ICSE Geography': [
+      {
+        chapter: 'Soils of India',
+        formulae: [],
+        logic: [
+          'Alluvial soil: most widespread (~40% of land); Indo-Gangetic plain, coastal deltas; Khadar (new, sandy, more fertile) vs Bhangar (old, clayey, less fertile)',
+          'Black (Regur) soil: Deccan Plateau (Maharashtra, MP, Gujarat); retains moisture; self-ploughing (cracks in summer); ideal for cotton',
+          'Red and Yellow soil: Eastern/Southern India (Tamil Nadu, Odisha, Karnataka); iron oxide gives red colour; less fertile',
+          'Laterite soil: high rainfall — Western Ghats, NE India, Odisha; leached by rain; acidic; cashew, rubber, tea',
+          'Mountain/Forest soil: Himalayan slopes; humus-rich; tea (Assam, Darjeeling), temperate fruits',
+          'Arid/Desert soil: Rajasthan; sandy; low humus; needs irrigation'
+        ],
+        tips: [
+          'Alluvial soil: covers 40% of India\'s land — largest soil type by area',
+          'Black soil = self-ploughing; also called "Regur"; found in Maharashtra cotton belt',
+          'Laterite = from Latin "later" (brick); used as building material in Kerala/Karnataka',
+          'Soil erosion: sheet (rain), rill (small channels), gully (Chambal ravines — badland topography)'
+        ],
+        bestPractices: [
+          'Link each soil type to region + crop: Black→cotton (Maharashtra), Alluvial→wheat/rice (Punjab/UP), Laterite→tea (Kerala)',
+          'Know 6 major soil types with one distinguishing feature each — ICSE map questions test this'
+        ]
+      },
+      {
+        chapter: 'Natural Vegetation of India',
+        formulae: [],
+        logic: [
+          'Tropical Evergreen: >200 cm rainfall; Western Ghats, NE India, Andaman; no leaf-shedding season; ebony, mahogany, rosewood',
+          'Tropical Deciduous (Monsoon): 70–200 cm; most widespread; shed leaves in dry season; teak, sal, bamboo',
+          'Dry Deciduous: 50–100 cm; scrub; Rajasthan fringe, Deccan; acacia, babul',
+          'Tropical Thorn: <50 cm; Rajasthan, Gujarat; xerophytes (spiny, waxy); khejri (Rajasthan state tree), cactus',
+          'Montane forests: 1000–2000 m (wet temperate), 2000–3000 m (coniferous — pine, deodar, fir), 3000+ m (alpine — birch, rhododendron)',
+          'Mangrove: coastal/tidal; Sundarbans WB (largest mangrove in world; sundri tree); Bhitarkanika Odisha'
+        ],
+        tips: [
+          'India\'s forest cover: ~24% of total land area (target: 33% per National Forest Policy 1988)',
+          'Sundarbans: UNESCO World Heritage Site; home to Royal Bengal Tiger',
+          'Reserved forests (54%), Protected forests (29%), Unclassed forests (17%) — by protection level',
+          'Chipko Movement (1973, Uttarakhand): women hugged trees to prevent commercial logging'
+        ],
+        bestPractices: [
+          'Link forest type to rainfall: >200 cm = evergreen, 70–200 = deciduous, <50 = thorn',
+          'Know altitude zones of Himalayan vegetation — common in ICSE diagram questions'
+        ]
+      },
+      {
+        chapter: 'Water Resources of India',
+        formulae: [],
+        logic: [
+          'India has 4% of world\'s freshwater but supports 16% of global population',
+          'Himalayan rivers (perennial — snow + rain fed): Ganga, Brahmaputra, Indus',
+          'Peninsular rivers (seasonal — rain fed): Godavari, Krishna, Cauvery, Mahanadi',
+          'Multipurpose projects: Bhakra-Nangal (Punjab/HP — Sutlej); Hirakud (Odisha — Mahanadi, 4.8 km — longest dam in India); Nagarjuna Sagar (AP — Krishna); Sardar Sarovar (Gujarat — Narmada)',
+          'Traditional rainwater harvesting: kunds/tanka (Rajasthan), johad (Rajasthan), tank irrigation (Tamil Nadu), bamboo drip (Meghalaya)'
+        ],
+        tips: [
+          'Bhakra-Nangal: tallest gravity dam (226 m) on Sutlej, HP; also called "Bhakra Dam"',
+          'Tehri Dam: tallest dam in India (260.5 m) on Bhagirathi, Uttarakhand',
+          'India receives 75% of annual rainfall in 4 months (June–September)',
+          'Indira Gandhi Canal (649 km): Harike barrage → Rajasthan; largest canal network in world'
+        ],
+        bestPractices: [
+          'Know 4 major multipurpose dams with river, state, and primary purpose',
+          'Distinguish perennial rivers (Himalayan) from seasonal rivers (Peninsular) with reasons'
+        ]
+      },
+      {
+        chapter: 'Agriculture in India',
+        formulae: [],
+        logic: [
+          'Kharif crops: sown June–July (monsoon onset), harvested Sept–Oct; rice, jowar, bajra, maize, cotton, jute, groundnut, soybean',
+          'Rabi crops: sown Oct–Nov, harvested March–April; wheat, barley, mustard, gram (chickpea), peas',
+          'Zaid crops: summer season (March–June); cucumber, muskmelon, watermelon, vegetables',
+          'Green Revolution (1960s–70s): HYV seeds (Norman Borlaug/M.S. Swaminathan), irrigation, fertilisers; mainly Punjab, Haryana, western UP (wheat)',
+          'Crop-state links: Rice → WB, Punjab, Andhra; Wheat → Punjab, Haryana, UP; Cotton → Gujarat, Maharashtra; Jute → WB (60%); Tea → Assam, WB (Darjeeling)'
+        ],
+        tips: [
+          'India: 2nd largest producer of rice, wheat, and fruits (after China)',
+          'Punjab = "Granary of India"; Gujarat = "Cotton Bowl of India"',
+          'Operation Flood (1970): White Revolution (dairy); Dr Verghese Kurien; Amul model (Gujarat)',
+          'India: largest producer and exporter of tea globally; Assam = world\'s largest tea-growing region'
+        ],
+        bestPractices: [
+          'Know kharif vs rabi: sowing/harvesting months + 4 examples each',
+          'Green Revolution successes (food self-sufficiency) and limitations (regional disparity, groundwater depletion, pesticide overuse)'
+        ]
+      },
+      {
+        chapter: 'Minerals of India',
+        formulae: [],
+        logic: [
+          'Iron ore: Jharkhand (Singhbhum), Odisha (Keonjhar), Chhattisgarh (Bailadila), Karnataka (Kudremukh, Bellary)',
+          'Coal: Jharkhand (Jharia — largest coalfield), WB (Raniganj — oldest, 1774), MP, Chhattisgarh; types: anthracite > bituminous > lignite > peat',
+          'Petroleum: Assam (Digboi — Asia\'s oldest refinery 1901), Gujarat (Ankleshwar), Mumbai High (offshore — largest), Rajasthan (Barmer)',
+          'Mica: Jharkhand (Koderma — world\'s largest mica belt), Rajasthan, Andhra; used in electrical insulation',
+          'Bauxite (Al ore): Odisha (largest), Jharkhand, Maharashtra; Gold: Karnataka (Kolar, Hutti)',
+          'Manganese: Odisha, Karnataka, Maharashtra; essential for steel production'
+        ],
+        tips: [
+          'Jharkhand: maximum variety of minerals — coal, iron ore, mica, copper, bauxite',
+          'Chotanagpur Plateau: called "Ruhr of India" for mineral wealth',
+          'India: 4th largest iron ore producer globally; exports mainly to Japan and South Korea',
+          'Gondwana coal fields (Jharia, Raniganj, Bokaro): ~98% of India\'s coal reserves'
+        ],
+        bestPractices: [
+          'Create mineral-state table: mineral → top 2 states → one specific location/coalfield',
+          'Distinguish metallic (iron, copper, gold, bauxite) from non-metallic (mica, limestone, gypsum) minerals'
+        ]
+      },
+      {
+        chapter: 'Industries of India',
+        formulae: [],
+        logic: [
+          'Cotton textile: Mumbai ("Manchester of India"), Ahmedabad ("Manchester of East"), Coimbatore ("Manchester of South")',
+          'Jute textile: India = world\'s largest producer; WB Hooghly belt (Kolkata area); used for sacking, hessian, carpet backing',
+          'Iron & Steel (SAIL plants): Bhilai (CG), Durgapur (WB), Rourkela (Odisha), Bokaro (Jharkhand); Jamshedpur (TATA — oldest private, 1907)',
+          'IT industry: Bengaluru ("Silicon Valley of India"), Hyderabad, Pune, Chennai',
+          'Sugar: UP (largest number of mills), Maharashtra (largest production); petrochemical: Jamnagar (Reliance — world\'s largest refinery)',
+          'Cement: Rajasthan (largest producer); raw material: limestone + silica + gypsum'
+        ],
+        tips: [
+          'TISCO (now Tata Steel): founded 1907 at Jamshedpur (then Sakchi) by Jamsetji Tata; India\'s 1st steel plant',
+          'India: 2nd largest steel producer in the world (after China, 2023)',
+          'India: largest producer of jute goods; Bangladesh = largest raw jute producer',
+          'Special Economic Zones (SEZs): export-oriented; duty-free imports; first in Kandla (1965)'
+        ],
+        bestPractices: [
+          'For each industry: location + reason for location (raw material, market, transport, labour)',
+          'Public sector (SAIL, BHEL, ONGC) vs private sector (Tata, Reliance) distinction is important for ICSE'
+        ]
+      },
+      {
+        chapter: 'Transport & Communication (ICSE)',
+        formulae: [],
+        logic: [
+          'First railway: 16 April 1853 — Mumbai to Thane (34 km); introduced under Lord Dalhousie',
+          'Indian Railways: 4th largest network in the world; 18 zones; HQ New Delhi; broad gauge (1.676 m) standard',
+          'Road network: 2nd largest in world; NHs = ~4% of roads but carry 40% traffic; NHAI manages NHs',
+          'Waterways: cheapest for heavy/bulk goods; NW-1 (Ganga: Allahabad–Haldia, 1620 km); NW-2 (Brahmaputra: Sadiya–Dhubri, 891 km)',
+          'Pipelines: HBJ pipeline (Hazira–Bijaipur–Jagdishpur): natural gas; oil pipelines operated by ONGC/IOC',
+          'India Post: 1.5 lakh+ post offices — largest postal network in world; established 1854'
+        ],
+        tips: [
+          'NH-44: Srinagar to Kanyakumari — longest National Highway (3,745 km)',
+          'Konkan Railway: 760 km; Roha (Maharashtra)–Mangalore; 91 tunnels, 2,000+ bridges',
+          'Golden Quadrilateral: 6-lane highway Delhi–Mumbai–Chennai–Kolkata; 5,846 km; by NHAI',
+          'Kandla (Gujarat): India\'s largest port by cargo volume; free trade zone established 1965'
+        ],
+        bestPractices: [
+          'Know National Waterways 1 and 2: rivers, terminal points, lengths',
+          'Compare transport modes for suitability: perishables → air; bulk/heavy → sea/rail; last-mile delivery → road'
+        ]
       }
     ],
   Physics: [
