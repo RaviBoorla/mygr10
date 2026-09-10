@@ -1222,16 +1222,17 @@ function drawNode(n,g){
     grp.appendChild(sub);
   }
 
-  // Expand chevron
+  // Expand chevron — separate click target, only toggles expand/collapse
   if(hasCh){
     const chev=el('text',{
       x:x+NW-14, y:y+nh/2,
       'dominant-baseline':'central','text-anchor':'middle',
       fill:color,opacity:op,
-      'font-size':18,'font-weight':'700','font-family':'system-ui,sans-serif'
+      'font-size':18,'font-weight':'700','font-family':'system-ui,sans-serif',
+      cursor:'pointer'
     });
-    chev.style.pointerEvents='none';
     chev.textContent=n._exp?'▸':'▾';
+    chev.addEventListener('click',e=>{ e.stopPropagation(); n._exp=!n._exp; renderAll(); });
     grp.appendChild(chev);
   }
 
@@ -1242,7 +1243,6 @@ function drawNode(n,g){
 // ── INTERACTION ───────────────────────────────────────────────────────────────
 function handleClick(n){
   S.sel=n.id;
-  if(n.children?.length) n._exp=!n._exp;
   showDetail(n);
   renderAll();
 }
