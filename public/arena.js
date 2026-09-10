@@ -616,102 +616,98 @@ function renderArenaSetup() {
     </label>`).join('');
 
   return `
-    <div class="screen arena-setup-screen">
-      <div class="arena-setup-layout">
+    <!-- How to play modal -->
+    <div class="arena-how-backdrop" id="arena-how-backdrop" onclick="document.getElementById('arena-how-backdrop').hidden=true" hidden></div>
+    <div class="arena-how-modal" id="arena-how-modal" hidden>
+      <div class="arena-how-modal-header">
+        <span class="arena-how-modal-title">How to play</span>
+        <button class="arena-how-close" onclick="document.getElementById('arena-how-modal').hidden=true;document.getElementById('arena-how-backdrop').hidden=true">✕</button>
+      </div>
+      <ul class="arena-how-list">
+        <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your chosen subjects.</span></li>
+        <li><span class="arena-how-icon">⏱️</span><span>A <strong>timer</strong> counts down per question — answer fast for bonus points.</span></li>
+        <li><span class="arena-how-icon">♥</span><span>You start with <strong>7 hearts</strong>. Every correct answer earns +½ heart (capped at 7).</span></li>
+        <li><span class="arena-how-icon">⚠️</span><span>Stages <strong>drain hearts</strong> if you score &lt;3: 0 right → −3, 1 right → −1.5, 2 right → −1. Score 3+ to break even or gain.</span></li>
+        <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
+        <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
+        <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
+      </ul>
+    </div>
 
-        <!-- Left: explainer -->
-        <div class="arena-explainer">
+    <div class="screen arena-setup-screen">
+      <div class="arena-setup-header">
+        <div>
           <h1 class="arena-title">⚡ Arena</h1>
           <p class="arena-sub">Fast MCQ blitz · ${esc(state.board)} · race the clock</p>
-
-          <div class="arena-how">
-            <p class="arena-how-heading">How to play</p>
-            <ul class="arena-how-list">
-              <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your 3 chosen subjects.</span></li>
-              <li><span class="arena-how-icon">⏱️</span><span>A <strong>timer</strong> counts down per question — answer fast for bonus points.</span></li>
-              <li><span class="arena-how-icon">♥</span><span>You start with <strong>7 hearts</strong>. Every correct answer earns +½ heart (capped at 7).</span></li>
-              <li><span class="arena-how-icon">⚠️</span><span>Stages <strong>drain hearts</strong> if you score &lt;3: 0 right → −3, 1 right → −1.5, 2 right → −1. Score 3+ to break even or gain.</span></li>
-              <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
-              <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
-              <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
-            </ul>
-          </div>
         </div>
-
-        <!-- Divider -->
-        <div class="arena-setup-divider"></div>
-
-        <!-- Right: daily + free run + skins/collectibles -->
-        <div class="arena-picker">
-
-          <!-- Daily challenge card -->
-          ${renderDailyCard()}
-
-          <div class="arena-picker-sep"></div>
-
-          <!-- Free run -->
-          <p class="arena-pick-label">Free Run</p>
-          <div class="arena-subj-grid">${opts}</div>
-          <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
-          <div class="arena-setup-actions">
-            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
-            <button class="btn ghost" onclick="app.go(['home'])">Back</button>
-          </div>
-
-          <div class="arena-picker-sep"></div>
-
-          <!-- Async challenge code entry -->
-          <p class="arena-pick-label">Join a Challenge</p>
-          <div class="arena-challenge-entry">
-            <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
-                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-            <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
-          </div>
-          <p id="arena-code-error" class="arena-code-error" hidden></p>
-
-          <div class="arena-picker-sep"></div>
-
-          <!-- Live Room -->
-          <p class="arena-pick-label">⚡ Live Room <span class="arena-pick-badge">Real-time</span></p>
-          <div class="arena-live-options">
-            <div class="arena-live-row">
-              <label class="arena-live-label">Questions</label>
-              <select id="live-q-count" class="arena-live-select">
-                <option value="5">5</option>
-                <option value="10" selected>10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-              </select>
-              <label class="arena-live-label">Seconds/Q</label>
-              <select id="live-timer-secs" class="arena-live-select">
-                <option value="15">15s</option>
-                <option value="20" selected>20s</option>
-                <option value="30">30s</option>
-                <option value="45">45s</option>
-              </select>
-            </div>
-            <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
-          </div>
-          <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
-          <div class="arena-challenge-entry">
-            <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
-                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-            <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
-          </div>
-          <p id="live-join-error" class="arena-code-error" hidden></p>
-
-          <div class="arena-picker-sep"></div>
-
-          <!-- Skins + collectibles -->
-          ${renderSkinPicker()}
-          <div class="arena-col-row">
-            <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
-            <span class="arena-meta-count">${getCollectibleState().unlocked.length}/${COLLECTIBLES.length} items</span>
-          </div>
-
-        </div>
-
+        <button class="btn ghost arena-how-btn" onclick="document.getElementById('arena-how-modal').hidden=false;document.getElementById('arena-how-backdrop').hidden=false">How to play</button>
       </div>
+
+      <!-- Daily challenge card -->
+      ${renderDailyCard()}
+
+      <div class="arena-picker-sep"></div>
+
+      <!-- Free run -->
+      <p class="arena-pick-label">Free Run</p>
+      <div class="arena-subj-grid">${opts}</div>
+      <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
+      <div class="arena-setup-actions">
+        <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
+        <button class="btn ghost" onclick="app.go(['home'])">Back</button>
+      </div>
+
+      <div class="arena-picker-sep"></div>
+
+      <!-- Async challenge code entry -->
+      <p class="arena-pick-label">Join a Challenge</p>
+      <div class="arena-challenge-entry">
+        <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
+               style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+        <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
+      </div>
+      <p id="arena-code-error" class="arena-code-error" hidden></p>
+
+      <div class="arena-picker-sep"></div>
+
+      <!-- Live Room -->
+      <p class="arena-pick-label">Live Room <span class="arena-pick-badge">Real-time</span></p>
+      <div class="arena-live-options">
+        <div class="arena-live-row">
+          <label class="arena-live-label">Questions</label>
+          <select id="live-q-count" class="arena-live-select">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <label class="arena-live-label">Seconds/Q</label>
+          <select id="live-timer-secs" class="arena-live-select">
+            <option value="15">15s</option>
+            <option value="20" selected>20s</option>
+            <option value="30">30s</option>
+            <option value="45">45s</option>
+          </select>
+        </div>
+        <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
+      </div>
+      <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
+      <div class="arena-challenge-entry">
+        <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
+               style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+        <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
+      </div>
+      <p id="live-join-error" class="arena-code-error" hidden></p>
+
+      <div class="arena-picker-sep"></div>
+
+      <!-- Skins + collectibles -->
+      ${renderSkinPicker()}
+      <div class="arena-col-row">
+        <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
+        <span class="arena-meta-count">${getCollectibleState().unlocked.length}/${COLLECTIBLES.length} items</span>
+      </div>
+
     </div>`;
 }
 
