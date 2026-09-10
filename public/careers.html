@@ -1099,7 +1099,9 @@ function numList(arr){ return arr.map((x,i)=>`${i+1}. ${esc(x)}`).join('<br>'); 
 const S = { zoom:1, q:'', filters:new Set(), sel:null };
 
 function searchText(n){
-  return [n.label,n.sublabel,n.keywords,n.meta?.note,n.meta?.exams,n.meta?.salary,n.meta?.duration,(n.tags||[]).join(' ')]
+  // Only label, sublabel and explicit keywords drive search.
+  // meta.note/exams/salary contain contextual prose that causes false positives.
+  return [n.label,n.sublabel,n.keywords]
     .filter(Boolean).join(' ').toLowerCase();
 }
 
