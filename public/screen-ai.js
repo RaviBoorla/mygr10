@@ -163,9 +163,8 @@ function aiRenderMessages() {
     const retryBtn = isLastUser && !aiState.streaming
       ? `<button class="ai-action-btn ai-retry-btn" title="Retry" onclick="aiPanel.retry()">↺</button>`
       : '';
-    // Copy: small button below AI bubble
     const copyBtn = !isUser && !m.streaming
-      ? `<div class="ai-msg-actions"><button class="ai-action-btn" data-copy-idx="${idx}" title="Copy" onclick="aiCopy(${idx}, this)">⧉ Copy</button></div>`
+      ? `<button class="ai-action-btn ai-copy-btn" data-copy-idx="${idx}" title="Copy" onclick="aiCopy(${idx}, this)">⧉</button>`
       : '';
     return `<div class="ai-msg ${isUser ? 'ai-msg-user' : 'ai-msg-ai'}">
       ${retryBtn}
