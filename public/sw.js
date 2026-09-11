@@ -2,7 +2,7 @@
 // once a page/asset has been visited before. Network-first so content
 // updates (new questions, app.js/style.css version bumps) are picked up
 // immediately whenever the device is online; cache is only a fallback.
-const CACHE = 'rise-shell-v2';
+const CACHE = 'rise-shell-v3';
 
 self.addEventListener('install', (event) => {
   self.skipWaiting();
