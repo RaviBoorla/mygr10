@@ -662,60 +662,64 @@ function renderArenaSetup() {
         </div>
       </div>
 
-      <!-- Daily challenge card -->
-      ${renderDailyCard()}
-
-      <div class="arena-picker-sep"></div>
-
-      <!-- Free run -->
-      <p class="arena-pick-label">Free Run</p>
-      <div class="arena-subj-grid">${opts}</div>
-      <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
-      <div class="arena-setup-actions">
-        <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
-      </div>
-
-      <div class="arena-picker-sep"></div>
-
-      <!-- Async challenge code entry -->
-      <p class="arena-pick-label">Join a Challenge</p>
-      <div class="arena-challenge-entry">
-        <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
-               style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-        <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
-      </div>
-      <p id="arena-code-error" class="arena-code-error" hidden></p>
-
-      <div class="arena-picker-sep"></div>
-
-      <!-- Live Room -->
-      <p class="arena-pick-label">Live Room <span class="arena-pick-badge">Real-time</span></p>
-      <div class="arena-live-options">
-        <div class="arena-live-row">
-          <label class="arena-live-label">Questions</label>
-          <select id="live-q-count" class="arena-live-select">
-            <option value="5">5</option>
-            <option value="10" selected>10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-          </select>
-          <label class="arena-live-label">Seconds/Q</label>
-          <select id="live-timer-secs" class="arena-live-select">
-            <option value="15">15s</option>
-            <option value="20" selected>20s</option>
-            <option value="30">30s</option>
-            <option value="45">45s</option>
-          </select>
+      <!-- Row 1: Daily Challenge + Live Room 50:50 -->
+      <div class="arena-half-row">
+        <div class="arena-half">
+          ${renderDailyCard()}
         </div>
-        <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
+        <div class="arena-half arena-live-half">
+          <p class="arena-pick-label">Live Room <span class="arena-pick-badge">Real-time</span></p>
+          <div class="arena-live-options">
+            <div class="arena-live-row">
+              <label class="arena-live-label">Questions</label>
+              <select id="live-q-count" class="arena-live-select">
+                <option value="5">5</option>
+                <option value="10" selected>10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+              </select>
+              <label class="arena-live-label">Seconds/Q</label>
+              <select id="live-timer-secs" class="arena-live-select">
+                <option value="15">15s</option>
+                <option value="20" selected>20s</option>
+                <option value="30">30s</option>
+                <option value="45">45s</option>
+              </select>
+            </div>
+            <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
+          </div>
+          <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
+          <div class="arena-challenge-entry">
+            <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
+                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
+          </div>
+          <p id="live-join-error" class="arena-code-error" hidden></p>
+        </div>
       </div>
-      <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
-      <div class="arena-challenge-entry">
-        <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
-               style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-        <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
+
+      <div class="arena-picker-sep"></div>
+
+      <!-- Row 2: Free Run + Join Challenge 50:50 -->
+      <div class="arena-half-row">
+        <div class="arena-half">
+          <p class="arena-pick-label">Free Run</p>
+          <div class="arena-subj-grid">${opts}</div>
+          <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
+          <div class="arena-setup-actions">
+            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
+          </div>
+        </div>
+        <div class="arena-half">
+          <p class="arena-pick-label">Join a Challenge</p>
+          <div class="arena-challenge-entry">
+            <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
+                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
+          </div>
+          <p id="arena-code-error" class="arena-code-error" hidden></p>
+        </div>
       </div>
-      <p id="live-join-error" class="arena-code-error" hidden></p>
 
       <div class="arena-picker-sep"></div>
 
