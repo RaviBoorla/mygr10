@@ -141,6 +141,7 @@ function aiInline(text) {
 const aiState = {
   open: false,
   showConfig: false,
+  emojiOpen: false,
   messages: aiLoadHistory(),
   streaming: false,
   abortCtrl: null,
@@ -237,7 +238,7 @@ function aiRenderPanel() {
         </div>
       </div>
       <div class="ai-msgs" id="ai-msgs"></div>
-      <div class="ai-emoji-picker" id="ai-emoji-picker" hidden>
+      <div class="ai-emoji-picker" id="ai-emoji-picker" ${aiState.emojiOpen ? '' : 'hidden'}>
         ${['😄','😂','🤔','💡','🔥','🎉','👍','😮','😅','🤯','📚','✏️','🧠','⚡','🙌','😎','🤓','😬','🥳','❤️'].map(e =>
           `<button class="ai-emoji-btn" onclick="aiInsertEmoji('${e}')">${e}</button>`
         ).join('')}
@@ -261,7 +262,9 @@ function aiInsertEmoji(emoji) {
   const s = ta.selectionStart, e = ta.selectionEnd;
   ta.value = ta.value.slice(0, s) + emoji + ta.value.slice(e);
   ta.selectionStart = ta.selectionEnd = s + emoji.length;
-  ta.focus();
+  aiState.emojiOpen = false;
+  aiPanel._render();
+  document.getElementById('ai-input')?.focus();
 }
 
 function aiCopy(idx, btn) {
@@ -322,8 +325,8 @@ const aiPanel = {
   },
 
   toggleEmoji() {
-    const p = document.getElementById('ai-emoji-picker');
-    if (p) p.hidden = !p.hidden;
+    aiState.emojiOpen = !aiState.emojiOpen;
+    this._render();
   },
   retry() {
     if (aiState.streaming) return;
