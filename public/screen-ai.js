@@ -9,7 +9,7 @@ const AI_ENDPOINT = '/api/chat';
 const AI_DEFAULT_CONFIG = {
   provider: 'cloudflare',
   endpoint: '',
-  model:    '@cf/meta/llama-3.1-8b-instruct',
+  model:    '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
   apiKey:   '',
 };
 
