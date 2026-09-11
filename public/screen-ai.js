@@ -256,9 +256,9 @@ function aiRenderPanel() {
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-emoji-toggle" title="Emoji" onclick="aiPanel.toggleEmoji()">😊</button>
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
-        <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="1"
+        <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="2"
           onkeydown="aiPanel.handleKey(event)"
-          oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
+          oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,240)+'px'"></textarea>
         ${aiState.streaming
           ? `<button class="ai-send-btn ai-stop-btn" onclick="aiPanel.stop()">Stop</button>`
           : `<button class="ai-send-btn" onclick="aiPanel.send()">Send</button>`}

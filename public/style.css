@@ -1040,7 +1040,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   flex: 1; resize: none; padding: 9px 12px; border-radius: 10px;
   border: 1px solid var(--border); background: var(--bg); color: var(--text);
   font-size: var(--fs-body); font-family: inherit; outline: none; line-height: 1.5;
-  max-height: 120px; overflow-y: auto;
+  max-height: 240px; overflow-y: auto;
 }
 .ai-textarea:focus { border-color: var(--primary); }
 .ai-msg-actions { display: flex; gap: 6px; margin-top: 4px; padding-left: 2px; flex-shrink: 0; }
