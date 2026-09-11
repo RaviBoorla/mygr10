@@ -10,12 +10,16 @@ compatibility_date = "2024-09-23"
 pages_build_output_dir = "public"
 
 # Cloudflare AI binding for /api/chat (free Workers AI)
-[[ai]]
+[ai]
 binding = "AI"
 
 # Pages supports only "preview" and "production" named environments.
 [env.preview]
 name = "mygr10-preview"
+[env.preview.ai]
+binding = "AI"
 
 [env.production]
 name = "mygr10-production"
+[env.production.ai]
+binding = "AI"
