@@ -124,6 +124,17 @@ const app = {
     const r = parseHash();
     let name = r.name || 'home';
 
+    // Lazy-load careers.js on first careers navigation
+    if (name === 'careers' && !window._careersLoaded) {
+      window._careersLoaded = true;
+      const sc = document.createElement('script');
+      sc.src = 'careers.js?v=2';
+      sc.onload = () => this.render();
+      document.head.appendChild(sc);
+      document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading…</div></main>';
+      return;
+    }
+
     // Lazy-load arena.js on first arena navigation
     const arenaRoutes = ['arena', 'arena-run', 'arena-inter', 'arena-over', 'collection'];
     if (arenaRoutes.includes(name) && !window._arenaLoaded) {
@@ -141,7 +152,7 @@ const app = {
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
     else if (name === 'solved' && !solvedBankSlug(r.parts[0])) name = 'home';
-    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved', 'privacy', 'terms'].includes(name)) name = 'home';
+    else if (!['home', 'notes', 'test', 'results', 'board', 'progress', 'shortanswers', 'solved', 'privacy', 'terms', 'careers'].includes(name)) name = 'home';
 
     if (name !== (r.name || 'home') && name !== 'board') {
       location.replace(location.pathname + location.search + buildHash([name]));
@@ -179,6 +190,7 @@ const app = {
     else if (state.screen === 'solved')       { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Textbook Solved Exercises'); }
     else if (state.screen === 'privacy')      crumbParts.push('Privacy Policy');
     else if (state.screen === 'terms')        crumbParts.push('Terms & Conditions');
+    else if (state.screen === 'careers')      crumbParts.push('Career Pathing');
     else if (['arena','arena-run','arena-inter','arena-over'].includes(state.screen)) crumbParts.push('Arena');
     else if (state.screen === 'test' && this.session) {
       crumbParts.push(this.session.subject, MODES[this.session.mode]?.label || 'Test');
@@ -207,7 +219,7 @@ const app = {
                 ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
                 ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>
-        <a class="btn small ghost" href="careers.html">Career Pathing</a>
+        <button class="btn small ghost" ${inTest ? 'disabled' : ''} onclick="app.go(['careers'])">Career Pathing</button>
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
     const askAiBtn = authUser && !inTest
@@ -245,6 +257,7 @@ const app = {
       case 'results':  return this._screenResults();
       case 'shortanswers': return this._screenShortAnswers(params[0]);
       case 'solved':   return this._screenSolvedExercises(params[0]);
+      case 'careers':  return this._screenCareers();
       case 'privacy':  return this._screenPrivacy();
       case 'terms':    return this._screenTerms();
       default:         return '';
@@ -388,6 +401,7 @@ const app = {
     if (name === 'results') { this._buildReviewPalette(); this.showReviewQuestion(this.reviewIndex || 0); }
     if (name === 'shortanswers') this._hydrateShortAnswers(params[0]);
     if (name === 'solved') this._hydrateSolvedExercises(params[0]);
+    if (name === 'careers' && window.initCareers) window.initCareers();
   },
 
   onKey(e) {

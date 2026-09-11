@@ -955,6 +955,7 @@ function maxX(n,cur=0){
 }
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
+window.initCareers = function() {
 const NS='http://www.w3.org/2000/svg';
 function el(tag,attrs={}){
   const e=document.createElementNS(NS,tag);
@@ -962,8 +963,8 @@ function el(tag,attrs={}){
   return e;
 }
 
-const tsvg = document.getElementById('tsvg');
-const inner = document.getElementById('inner');
+const tsvg = document.getElementById('careers-tsvg');
+const inner = document.getElementById('careers-inner');
 
 function renderAll(){
   buildMatchSet(S.q);
@@ -1014,7 +1015,7 @@ function drawNode(n,g){
   const isSelected=n.id===S.sel;
 
   const grp=document.createElementNS(NS,'g');
-  grp.classList.add('ngrp');
+  grp.classList.add('cngrp');
   grp.dataset.id=n.id;
 
   // Background
@@ -1024,7 +1025,7 @@ function drawNode(n,g){
 
   const bg=el('rect',{
     x,y,width:NW,height:nh,rx:6,
-    class:'nbg',
+    class:'cnbg',
     fill:bgFill, stroke:bgStroke,
     'stroke-width':bgSW, opacity:op
   });
@@ -1104,9 +1105,9 @@ function applyZoom(){
   inner.style.width=w*S.zoom+'px';
   inner.style.height=h*S.zoom+'px';
 }
-document.getElementById('zi').addEventListener('click',()=>{ S.zoom=Math.min(2,+(S.zoom*1.2).toFixed(2)); applyZoom(); });
-document.getElementById('zo').addEventListener('click',()=>{ S.zoom=Math.max(0.3,+(S.zoom/1.2).toFixed(2)); applyZoom(); });
-document.getElementById('zr').addEventListener('click',resetView);
+document.getElementById('careers-zi').addEventListener('click',()=>{ S.zoom=Math.min(2,+(S.zoom*1.2).toFixed(2)); applyZoom(); });
+document.getElementById('careers-zo').addEventListener('click',()=>{ S.zoom=Math.max(0.3,+(S.zoom/1.2).toFixed(2)); applyZoom(); });
+document.getElementById('careers-zr').addEventListener('click',resetView);
 
 // Expand / Collapse all
 function setAll(node,val){
@@ -1127,12 +1128,12 @@ function resetView(){
   det.classList.remove('open');
   renderAll();
 }
-document.getElementById('btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
-document.getElementById('btn-collapse').addEventListener('click',()=>{ collapseToDefault(); renderAll(); });
+document.getElementById('careers-btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
+document.getElementById('careers-btn-collapse').addEventListener('click',()=>{ collapseToDefault(); renderAll(); });
 
 // Search
-const _searchEl = document.getElementById('search');
-const _clearEl  = document.getElementById('search-clear');
+const _searchEl = document.getElementById('careers-search');
+const _clearEl  = document.getElementById('careers-search-clear');
 function _applySearch(val){
   const prev=S.q; S.q=val;
   _clearEl.hidden = !val;
@@ -1145,7 +1146,7 @@ _searchEl.addEventListener('input', e=>{ clearTimeout(_searchDebounce); _searchD
 _clearEl.addEventListener('click', ()=>{ _searchEl.value=''; _searchEl.focus(); _applySearch(''); });
 
 // Filters
-document.querySelectorAll('.chip').forEach(btn=>{
+document.querySelectorAll('.careers-chip').forEach(btn=>{
   btn.addEventListener('click',()=>{
     const f=btn.dataset.f;
     if(S.filters.has(f)){
@@ -1160,7 +1161,7 @@ document.querySelectorAll('.chip').forEach(btn=>{
 });
 
 // ── DETAIL ────────────────────────────────────────────────────────────────────
-const det=document.getElementById('det');
+const det=document.getElementById('careers-det');
 const TL={'high-salary':'💰 High salary','govt':'🏛 Govt / PSU','abroad':'✈ Global demand','no-math':'∑ No math','exam-free':'🎯 No compet. exam'};
 
 function crumbOf(n){
@@ -1171,7 +1172,7 @@ function crumbOf(n){
 
 function showDetail(n){
   const crumbs=crumbOf(n);
-  const dcrumb=document.getElementById('dcrumb');
+  const dcrumb=document.getElementById('careers-dcrumb');
   dcrumb.textContent=crumbs.slice(0,-1).join(' › ')||'';
   dcrumb.style.color=n._colorText;
 
@@ -1181,38 +1182,38 @@ function showDetail(n){
 
   const collegeInfo = n.kind==='degree' ? COLLEGES[n.id] : null;
   const collegeBlock = collegeInfo ? `
-    <div class="dlbl">Score Needed</div><div class="dval mono">${esc(collegeInfo.examScore)}</div>
-    <div class="dlbl">Top 10 Colleges — India</div><div class="dval">${numList(collegeInfo.india)}</div>
-    <div class="dlbl">Top 10 Universities — Global</div><div class="dval">${numList(collegeInfo.global)}</div>
+    <div class="careers-dlbl">Score Needed</div><div class="careers-dval mono">${esc(collegeInfo.examScore)}</div>
+    <div class="careers-dlbl">Top 10 Colleges — India</div><div class="careers-dval">${numList(collegeInfo.india)}</div>
+    <div class="careers-dlbl">Top 10 Universities — Global</div><div class="careers-dval">${numList(collegeInfo.global)}</div>
   ` : '';
 
   const sector = n.kind==='career' ? sectorOf(n) : null;
   const companyInfo = sector ? COMPANIES[sector] : null;
   const companyBlock = companyInfo ? `
-    <div class="dlbl">Top 10 Hiring Companies — India</div><div class="dval">${numList(companyInfo.india)}</div>
-    <div class="dlbl">Top 10 Hiring Companies — Global</div><div class="dval">${numList(companyInfo.global)}</div>
+    <div class="careers-dlbl">Top 10 Hiring Companies — India</div><div class="careers-dval">${numList(companyInfo.india)}</div>
+    <div class="careers-dlbl">Top 10 Hiring Companies — Global</div><div class="careers-dval">${numList(companyInfo.global)}</div>
   ` : '';
 
-  document.getElementById('dcont').innerHTML=`
+  document.getElementById('careers-dcont').innerHTML=`
     <h2 style="color:${n._colorText}">${esc(n.label)}</h2>
-    ${n.sublabel?`<div class="dsub">${esc(n.sublabel)}</div>`:'<div style="height:10px"></div>'}
-    ${n.meta?.note?`<div class="dlbl">About</div><div class="dval">${esc(n.meta.note)}</div>`:''}
-    ${n.meta?.exams?`<div class="dlbl">Key Exams</div><div class="dval mono">${esc(n.meta.exams)}</div>`:''}
-    ${n.meta?.duration?`<div class="dlbl">Duration</div><div class="dval">${esc(n.meta.duration)}</div>`:''}
-    ${n.meta?.salary?`<div class="dlbl">Salary Range</div><div class="dval mono">${esc(n.meta.salary)}</div>`:''}
+    ${n.sublabel?`<div class="careers-dsub">${esc(n.sublabel)}</div>`:'<div style="height:10px"></div>'}
+    ${n.meta?.note?`<div class="careers-dlbl">About</div><div class="careers-dval">${esc(n.meta.note)}</div>`:''}
+    ${n.meta?.exams?`<div class="careers-dlbl">Key Exams</div><div class="careers-dval mono">${esc(n.meta.exams)}</div>`:''}
+    ${n.meta?.duration?`<div class="careers-dlbl">Duration</div><div class="careers-dval">${esc(n.meta.duration)}</div>`:''}
+    ${n.meta?.salary?`<div class="careers-dlbl">Salary Range</div><div class="careers-dval mono">${esc(n.meta.salary)}</div>`:''}
     ${collegeBlock}
     ${companyBlock}
-    ${n.tags?.length?`<div class="dlbl">Tags</div><div class="dtags">${n.tags.map(t=>`<span class="dtag">${esc(TL[t]||t)}</span>`).join('')}</div>`:''}
-    ${branches.length?`<div class="dlbl">Sub-paths (${branches.length})</div><div class="dkids">${branches.map(c=>esc(c.label)).join(' · ')}</div>`:''}
-    ${leaves.length?`<div class="dlbl">Careers (${leaves.length})</div><div class="dkids">${leaves.map(c=>esc(c.label)).join(' · ')}</div>`:''}
-    ${n.kind==='career'?`<div class="dpath">Stream → ${esc(crumbs[0]||'')}<br>${crumbs[1]?`Path → ${esc(crumbs[1])}<br>`:''} ${crumbs[2]?`Degree → ${esc(crumbs[2])}<br>`:''} ${crumbs[3]?`Specialisation → ${esc(crumbs[3])}`:''}</div>`:''}
+    ${n.tags?.length?`<div class="careers-dlbl">Tags</div><div class="careers-dtags">${n.tags.map(t=>`<span class="careers-dtag">${esc(TL[t]||t)}</span>`).join('')}</div>`:''}
+    ${branches.length?`<div class="careers-dlbl">Sub-paths (${branches.length})</div><div class="careers-dkids">${branches.map(c=>esc(c.label)).join(' · ')}</div>`:''}
+    ${leaves.length?`<div class="careers-dlbl">Careers (${leaves.length})</div><div class="careers-dkids">${leaves.map(c=>esc(c.label)).join(' · ')}</div>`:''}
+    ${n.kind==='career'?`<div class="careers-dpath">Stream → ${esc(crumbs[0]||'')}<br>${crumbs[1]?`Path → ${esc(crumbs[1])}<br>`:''} ${crumbs[2]?`Degree → ${esc(crumbs[2])}<br>`:''} ${crumbs[3]?`Specialisation → ${esc(crumbs[3])}`:''}</div>`:''}
   `;
   det.classList.add('open');
 }
 function hideDetail(){
   S.sel=null; det.classList.remove('open'); renderAll();
 }
-document.getElementById('dclose').addEventListener('click',hideDetail);
+document.getElementById('careers-dclose').addEventListener('click',hideDetail);
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideDetail(); });
 
 // ── CHROME HEIGHT ─── the toolbar wraps onto extra rows at narrow widths, so
@@ -1220,36 +1221,13 @@ document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideDetail(); });
 // guessed constant that would drift out of sync and hide panel content
 // under the toolbar. ─────────────────────────────────────────────────────────
 function syncChromeHeight(){
-  const bottom = document.getElementById('bar').getBoundingClientRect().bottom;
+  const bottom = document.getElementById('careers-bar').getBoundingClientRect().bottom;
   document.documentElement.style.setProperty('--chrome-h', bottom+'px');
 }
-
-// ── HEADER MENU — same board/Progress/Notes items as the main app's hamburger,
-// reading/writing the same localStorage key so switching board here carries
-// over when the user goes back to Rise. ───────────────────────────────────────
-function toggleRiseMenu(){
-  const menu = document.getElementById('rise-menu');
-  const btn = document.getElementById('rise-hamburger');
-  const open = menu.hasAttribute('hidden');
-  if (open) menu.removeAttribute('hidden'); else menu.setAttribute('hidden','');
-  btn.setAttribute('aria-expanded', String(open));
-}
-document.querySelectorAll('.rmi[data-board]').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    localStorage.setItem('rise.board', JSON.stringify(btn.dataset.board));
-    location.href = 'index.html#/home';
-  });
-});
-(function markActiveBoard(){
-  let current = null;
-  try { current = JSON.parse(localStorage.getItem('rise.board')); } catch {}
-  document.querySelectorAll('.rmi[data-board]').forEach(btn=>{
-    btn.classList.toggle('active', btn.dataset.board === current);
-  });
-})();
 
 // ── BOOTSTRAP ─────────────────────────────────────────────────────────────────
 collapseToDefault();
 syncChromeHeight();
 renderAll();
 window.addEventListener('resize',()=>{ syncChromeHeight(); renderAll(); });
+}; // end initCareers
