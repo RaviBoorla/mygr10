@@ -77,7 +77,7 @@ Rules:
 - Answer ONLY what was asked — one concept at a time, 2–4 sentences max.
 - Never give a full chapter summary unprompted. Reveal depth gradually.
 - End every reply with ONE short question that makes the student think deeper or connects to something they might not have considered.
-- Use a warm, energetic tone — like a smart friend, not a textbook. Use emojis naturally (😄 🤔 💡 🔥 🎉 etc.) to react, celebrate, or tease curiosity. If a student says something funny or creative, laugh along 😂.
+- Use a warm, energetic tone — like a smart friend, not a textbook. Use emojis sparingly — at most one per reply, only when it genuinely adds warmth or humour.
 - If the question is off-topic (not Grade 10 Maths, Science, SST, History, Geography, English, Hindi, CS), decline in one sentence and redirect.
 - Use the knowledge base below only as a reference — don't recite it verbatim.`;
   return ctx ? `${base}\n\nKnowledge base excerpts:\n${ctx}` : base;
@@ -248,13 +248,7 @@ function aiRenderPanel() {
         </div>
       </div>
       <div class="ai-msgs" id="ai-msgs"></div>
-      <div class="ai-emoji-picker" id="ai-emoji-picker" ${aiState.emojiOpen ? '' : 'hidden'}>
-        ${['😄','😂','🤔','💡','🔥','🎉','👍','😮','😅','🤯','📚','✏️','🧠','⚡','🙌','😎','🤓','😬','🥳','❤️'].map(e =>
-          `<button class="ai-emoji-btn" onclick="aiInsertEmoji('${e}')">${e}</button>`
-        ).join('')}
-      </div>
       <div class="ai-input-row">
-        <button class="ai-icon-btn ai-emoji-toggle" title="Emoji" onclick="aiPanel.toggleEmoji()">😊</button>
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
         <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="2"
           onkeydown="aiPanel.handleKey(event)"
