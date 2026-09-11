@@ -222,7 +222,8 @@ const app = {
         <button class="btn small ghost" ${inTest ? 'disabled' : ''} onclick="app.go(['careers'])">Career Pathing</button>
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
-    const askAiBtn = authUser && !inTest
+    const noCloe = ['test','arena','arena-run','arena-inter','arena-over','collection','live-lobby'].includes(state.screen);
+    const askAiBtn = authUser && !noCloe
       ? `<button class="btn small ghost hdr-ask-ai" onclick="aiPanel.toggle()" title="Chat with Cloé">✦ Ask Cloé</button>`
       : '';
     const loginBtn = authUser

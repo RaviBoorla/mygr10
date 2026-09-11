@@ -27,58 +27,127 @@ const AI_PROVIDERS = [
 // ── KB retrieval ──────────────────────────────────────────────────────────────
 
 function _aiKbContext(query) {
-  if (!window.REVISION) return '';
   const q = query.toLowerCase();
   const keywords = q.split(/\W+/).filter(w => w.length > 3);
-
-  // Score each chapter against the query
   const scored = [];
-  Object.entries(window.REVISION).forEach(([subjectKey, chapters]) => {
-    if (!Array.isArray(chapters)) return;
-    chapters.forEach(ch => {
-      if (!ch || !ch.chapter) return;
-      const chText = [
-        ch.chapter,
-        ...(ch.formulae || []),
-        ...(ch.theorems || []),
-        ...(ch.logic || []),
-        ...(ch.tips || []),
-        ...(ch.bestPractices || []),
-      ].join(' ').toLowerCase();
 
-      let score = 0;
-      keywords.forEach(kw => { if (chText.includes(kw)) score++; });
-      if (ch.chapter.toLowerCase().includes(q)) score += 5;
-      if (score > 0) scored.push({ score, subjectKey, ch });
+  function scoreText(text) {
+    const t = text.toLowerCase();
+    let s = 0;
+    keywords.forEach(kw => { if (t.includes(kw)) s++; });
+    if (t.includes(q)) s += 3;
+    return s;
+  }
+
+  // 1. Revision notes
+  if (window.REVISION) {
+    Object.entries(window.REVISION).forEach(([subjectKey, chapters]) => {
+      if (!Array.isArray(chapters)) return;
+      chapters.forEach(ch => {
+        if (!ch || !ch.chapter) return;
+        const chText = [ch.chapter, ...(ch.formulae||[]), ...(ch.theorems||[]), ...(ch.logic||[]), ...(ch.tips||[]), ...(ch.bestPractices||[])].join(' ');
+        const s = scoreText(chText);
+        if (s > 0) scored.push({ score: s, type: 'notes', subjectKey, ch });
+      });
+    });
+  }
+
+  // 2. MCQ banks (already in memory from previous visits)
+  Object.entries(window.bankCache || {}).forEach(([bankKey, questions]) => {
+    if (!Array.isArray(questions)) return;
+    questions.forEach(q2 => {
+      const text = [q2.text||'', q2.chapter||'', (q2.options||[]).join(' ')].join(' ');
+      const s = scoreText(text);
+      if (s > 0) scored.push({ score: s + 0.1, type: 'mcq', bankKey, q: q2 });
     });
   });
 
+  // 3. Short-answer banks (already in memory)
+  Object.entries(window.saBankCache || {}).forEach(([bankKey, questions]) => {
+    if (!Array.isArray(questions)) return;
+    questions.forEach(q2 => {
+      const text = [q2.question||q2.text||'', q2.answer||'', q2.chapter||''].join(' ');
+      const s = scoreText(text);
+      if (s > 0) scored.push({ score: s + 0.2, type: 'sa', bankKey, q: q2 });
+    });
+  });
+
+  // 4. Solved exercise banks (already in memory)
+  Object.entries(window.solvedBankCache || {}).forEach(([bankKey, questions]) => {
+    if (!Array.isArray(questions)) return;
+    questions.forEach(q2 => {
+      const text = [q2.question||q2.text||'', q2.solution||q2.answer||'', q2.chapter||''].join(' ');
+      const s = scoreText(text);
+      if (s > 0) scored.push({ score: s + 0.2, type: 'solved', bankKey, q: q2 });
+    });
+  });
+
+  // 5. Career data (if careers.js was loaded)
+  if (window.T) {
+    function walkCareer(node, path) {
+      const text = [node.label||'', node.sublabel||'', node.meta?.note||'', node.meta?.exams||'', (node.keywords||'')].join(' ');
+      const s = scoreText(text);
+      if (s > 0) scored.push({ score: s, type: 'career', node, path: path.join(' › ') });
+      (node.children||[]).forEach(c => walkCareer(c, [...path, node.label]));
+    }
+    walkCareer(window.T, []);
+  }
+
   scored.sort((a, b) => b.score - a.score);
-  const top = scored.slice(0, 3);
+  const seen = new Set();
+  const top = scored.filter(item => {
+    const key = item.type + '|' + (item.subjectKey || item.bankKey || item.node?.id || '');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  }).slice(0, 5);
+
   if (!top.length) return '';
 
-  return top.map(({ subjectKey, ch }) => {
-    const items = [
-      ...(ch.formulae      || []).map(t => `Formula: ${t}`),
-      ...(ch.theorems      || []).map(t => `Theorem: ${t}`),
-      ...(ch.logic         || []).map(t => `Logic: ${t}`),
-      ...(ch.tips          || []).map(t => `Tip: ${t}`),
-      ...(ch.bestPractices || []).map(t => `Best practice: ${t}`),
-    ].slice(0, 20);
-    return `[${subjectKey} — ${ch.chapter}]\n${items.join('\n')}`;
-  }).join('\n\n');
+  return top.map(item => {
+    if (item.type === 'notes') {
+      const { subjectKey, ch } = item;
+      const lines = [
+        ...(ch.formulae||[]).map(t=>`Formula: ${t}`),
+        ...(ch.theorems||[]).map(t=>`Theorem: ${t}`),
+        ...(ch.logic||[]).map(t=>`Logic: ${t}`),
+        ...(ch.tips||[]).map(t=>`Tip: ${t}`),
+        ...(ch.bestPractices||[]).map(t=>`Best practice: ${t}`),
+      ].slice(0,15);
+      return `[Notes: ${subjectKey} — ${ch.chapter}]\n${lines.join('\n')}`;
+    }
+    if (item.type === 'mcq') {
+      const q2 = item.q;
+      return `[MCQ: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.text||''}\nOptions: ${(q2.options||[]).join(' / ')}\nAnswer: option ${q2.answer ?? ''}`;
+    }
+    if (item.type === 'sa') {
+      const q2 = item.q;
+      return `[Short Answer: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nA: ${q2.answer||''}`;
+    }
+    if (item.type === 'solved') {
+      const q2 = item.q;
+      return `[Solved: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nSolution: ${(q2.solution||q2.answer||'').slice(0,300)}`;
+    }
+    if (item.type === 'career') {
+      const n = item.node;
+      return `[Career Path: ${item.path}]\n${n.label}${n.sublabel?' ('+n.sublabel+')':''}: ${n.meta?.note||''} Exams: ${n.meta?.exams||''}`;
+    }
+    return '';
+  }).filter(Boolean).join('\n\n');
 }
 
 function _aiSystemPrompt(query) {
   const ctx = _aiKbContext(query);
   const base = `You are Cloé, a sharp and curious Grade 10 study companion in Rise, an exam-prep app for CBSE and ICSE students. Your name is Cloé — a warm, witty French study friend.
 
+You cover ALL Grade 10 subjects for CBSE and ICSE: Mathematics, Science (Physics, Chemistry, Biology), Social Science, History & Civics, Geography, English, Hindi, Computer Science — plus career pathing, stream selection (Science/Commerce/Humanities/Vocational), and exam guidance (JEE, NEET, CUET, board exams, and more).
+
 Rules:
 - Answer ONLY what was asked — one concept at a time, 2–4 sentences max.
 - Never give a full chapter summary unprompted. Reveal depth gradually.
 - End every reply with ONE short question that makes the student think deeper or connects to something they might not have considered.
 - Use a warm, energetic tone — like a smart friend, not a textbook. Use emojis sparingly — at most one per reply, only when it genuinely adds warmth or humour.
-- If the question is off-topic (not Grade 10 Maths, Science, SST, History, Geography, English, Hindi, CS), decline in one sentence and redirect.
+- If the question is genuinely off-topic (nothing to do with Grade 10 studies or career planning), decline in one sentence and redirect.
 - Use the knowledge base below only as a reference — don't recite it verbatim.`;
   return ctx ? `${base}\n\nKnowledge base excerpts:\n${ctx}` : base;
 }
