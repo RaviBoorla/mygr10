@@ -77,7 +77,7 @@ Rules:
 - Answer ONLY what was asked — one concept at a time, 2–4 sentences max.
 - Never give a full chapter summary unprompted. Reveal depth gradually.
 - End every reply with ONE short question that makes the student think deeper or connects to something they might not have considered.
-- Use a warm, energetic tone — like a smart friend, not a textbook.
+- Use a warm, energetic tone — like a smart friend, not a textbook. Use emojis naturally (😄 🤔 💡 🔥 🎉 etc.) to react, celebrate, or tease curiosity. If a student says something funny or creative, laugh along 😂.
 - If the question is off-topic (not Grade 10 Maths, Science, SST, History, Geography, English, Hindi, CS), decline in one sentence and redirect.
 - Use the knowledge base below only as a reference — don't recite it verbatim.`;
   return ctx ? `${base}\n\nKnowledge base excerpts:\n${ctx}` : base;
@@ -237,7 +237,13 @@ function aiRenderPanel() {
         </div>
       </div>
       <div class="ai-msgs" id="ai-msgs"></div>
+      <div class="ai-emoji-picker" id="ai-emoji-picker" hidden>
+        ${['😄','😂','🤔','💡','🔥','🎉','👍','😮','😅','🤯','📚','✏️','🧠','⚡','🙌','😎','🤓','😬','🥳','❤️'].map(e =>
+          `<button class="ai-emoji-btn" onclick="aiInsertEmoji('${e}')">${e}</button>`
+        ).join('')}
+      </div>
       <div class="ai-input-row">
+        <button class="ai-icon-btn ai-emoji-toggle" title="Emoji" onclick="aiPanel.toggleEmoji()">😊</button>
         <textarea class="ai-textarea" id="ai-input" placeholder="Ask a subject question… (Enter to send)" rows="1"
           onkeydown="aiPanel.handleKey(event)"
           oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
@@ -247,6 +253,15 @@ function aiRenderPanel() {
       </div>
       ${aiState.showConfig ? aiRenderConfigPanel() : ''}
     </div>`;
+}
+
+function aiInsertEmoji(emoji) {
+  const ta = document.getElementById('ai-input');
+  if (!ta) return;
+  const s = ta.selectionStart, e = ta.selectionEnd;
+  ta.value = ta.value.slice(0, s) + emoji + ta.value.slice(e);
+  ta.selectionStart = ta.selectionEnd = s + emoji.length;
+  ta.focus();
 }
 
 function aiCopy(idx, btn) {
@@ -306,6 +321,10 @@ const aiPanel = {
     this._render();
   },
 
+  toggleEmoji() {
+    const p = document.getElementById('ai-emoji-picker');
+    if (p) p.hidden = !p.hidden;
+  },
   retry() {
     if (aiState.streaming) return;
     // Remove last AI message and re-send last user message
