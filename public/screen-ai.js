@@ -371,7 +371,15 @@ const aiPanel = {
       ta.style.height = Math.min(ta.scrollHeight, 120) + 'px';
     };
     rec.onerror = () => { aiState.listening = false; aiState._recognition = null; aiPanel._render(); };
-    rec.onend = () => { aiState.listening = false; aiState._recognition = null; aiPanel._render(); document.getElementById('ai-input')?.focus(); };
+    rec.onend = () => {
+      const saved = document.getElementById('ai-input')?.value || '';
+      aiState.listening = false;
+      aiState._recognition = null;
+      aiPanel._render();
+      const ta = document.getElementById('ai-input');
+      if (ta && saved) { ta.value = saved; ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 120) + 'px'; }
+      ta?.focus();
+    };
     rec.start();
   },
   retry() {
