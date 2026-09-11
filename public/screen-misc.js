@@ -25,6 +25,7 @@ Object.assign(app, {
               <li><span class="wf-icon">🗒️</span><div><strong>Revision notes</strong><span>Key formulae, theorems, logic &amp; tips per chapter</span></div></li>
               <li><span class="wf-icon">🔁</span><div><strong>Spaced repetition</strong><span>Leitner system resurfaces your weak questions automatically</span></div></li>
               <li><span class="wf-icon">🔥</span><div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div></li>
+              <li><span class="wf-icon">✦</span><div><strong>Ask Cloé</strong><span>AI study companion — ask anything about your Grade 10 subjects, get concise answers &amp; curious follow-up questions</span></div></li>
             </ul>
           </div>
           <div class="welcome-right">
