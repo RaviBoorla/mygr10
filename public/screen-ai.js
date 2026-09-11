@@ -271,11 +271,18 @@ function aiInsertEmoji(emoji) {
   const ta = document.getElementById('ai-input');
   if (!ta) return;
   const s = ta.selectionStart, e = ta.selectionEnd;
-  ta.value = ta.value.slice(0, s) + emoji + ta.value.slice(e);
-  ta.selectionStart = ta.selectionEnd = s + emoji.length;
+  const newVal = ta.value.slice(0, s) + emoji + ta.value.slice(e);
+  const newCursor = s + emoji.length;
   aiState.emojiOpen = false;
   aiPanel._render();
-  document.getElementById('ai-input')?.focus();
+  const ta2 = document.getElementById('ai-input');
+  if (ta2) {
+    ta2.value = newVal;
+    ta2.selectionStart = ta2.selectionEnd = newCursor;
+    ta2.style.height = 'auto';
+    ta2.style.height = Math.min(ta2.scrollHeight, 240) + 'px';
+    ta2.focus();
+  }
 }
 
 function aiCopy(idx, btn) {
