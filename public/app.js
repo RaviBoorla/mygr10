@@ -147,7 +147,7 @@ const app = {
       return;
     }
 
-    if (!state.board && !['privacy','terms'].includes(name)) name = 'board';
+    if (!state.board && !['privacy','terms','careers'].includes(name)) name = 'board';
     else if (name === 'test' && !this.session)    name = 'home';
     else if (name === 'results' && !this.reviewData) name = 'home';
     else if (name === 'shortanswers' && !saBankSlug(r.parts[0])) name = 'home';
