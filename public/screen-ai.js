@@ -90,7 +90,11 @@ function aiLoadConfig() {
   catch { return { ...AI_DEFAULT_CONFIG }; }
 }
 function aiSaveConfig(cfg) {
-  try { localStorage.setItem(AI_LS_KEY, JSON.stringify(cfg)); } catch { /* ignore */ }
+  try {
+    localStorage.setItem(AI_LS_KEY, JSON.stringify(cfg));
+    // Push to Firestore so config syncs across devices
+    window.riseSync?.push?.();
+  } catch { /* ignore */ }
 }
 function aiLoadHistory() {
   try { return JSON.parse(localStorage.getItem(AI_CHAT_KEY) || '[]'); } catch { return []; }

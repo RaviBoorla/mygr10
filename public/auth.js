@@ -16,7 +16,8 @@ const SYNC_KEYS = {
   bookmarks:     'rise.bookmarks',
   streak:        'rise.streak',
   saDrafts:      'rise.saDrafts',
-  solvedRevealed:'rise.solvedRevealed'
+  solvedRevealed:'rise.solvedRevealed',
+  aiConfig:      'rise-ai-config'
 };
 
 (function () {
@@ -332,6 +333,10 @@ const SYNC_KEYS = {
       await pushToCloud();
       await loadProfile();
       startLiveListener();
+      // Refresh AI config in memory from synced localStorage
+      if (typeof aiState !== 'undefined' && typeof aiLoadConfig === 'function') {
+        try { aiState.config = aiLoadConfig(); } catch (_) {}
+      }
     } else {
       stopLiveListener();
     }
