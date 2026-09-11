@@ -271,18 +271,15 @@ function aiInsertEmoji(emoji) {
   const ta = document.getElementById('ai-input');
   if (!ta) return;
   const s = ta.selectionStart, e = ta.selectionEnd;
-  const newVal = ta.value.slice(0, s) + emoji + ta.value.slice(e);
-  const newCursor = s + emoji.length;
+  ta.value = ta.value.slice(0, s) + emoji + ta.value.slice(e);
+  ta.selectionStart = ta.selectionEnd = s + emoji.length;
+  ta.style.height = 'auto';
+  ta.style.height = Math.min(ta.scrollHeight, 240) + 'px';
+  // Hide picker directly — no re-render needed
   aiState.emojiOpen = false;
-  aiPanel._render();
-  const ta2 = document.getElementById('ai-input');
-  if (ta2) {
-    ta2.value = newVal;
-    ta2.selectionStart = ta2.selectionEnd = newCursor;
-    ta2.style.height = 'auto';
-    ta2.style.height = Math.min(ta2.scrollHeight, 240) + 'px';
-    ta2.focus();
-  }
+  const picker = document.getElementById('ai-emoji-picker');
+  if (picker) picker.hidden = true;
+  ta.focus();
 }
 
 function aiCopy(idx, btn) {
@@ -344,7 +341,8 @@ const aiPanel = {
 
   toggleEmoji() {
     aiState.emojiOpen = !aiState.emojiOpen;
-    this._render();
+    const picker = document.getElementById('ai-emoji-picker');
+    if (picker) picker.hidden = !aiState.emojiOpen;
   },
 
   toggleVoice() {
