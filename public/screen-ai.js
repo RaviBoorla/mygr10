@@ -89,10 +89,14 @@ function aiLoadConfig() {
   try { return { ...AI_DEFAULT_CONFIG, ...JSON.parse(localStorage.getItem(AI_LS_KEY) || '{}') }; }
   catch { return { ...AI_DEFAULT_CONFIG }; }
 }
+const AI_SYNC_KEY = 'rise-ai-config-sync'; // provider + model only — no key
+
 function aiSaveConfig(cfg) {
   try {
     localStorage.setItem(AI_LS_KEY, JSON.stringify(cfg));
-    // Push to Firestore so config syncs across devices
+    // Sync provider/model/endpoint to Firestore — but NOT the API key
+    const { apiKey: _drop, ...syncable } = cfg;
+    localStorage.setItem(AI_SYNC_KEY, JSON.stringify(syncable));
     window.riseSync?.push?.();
   } catch { /* ignore */ }
 }

@@ -17,7 +17,7 @@ const SYNC_KEYS = {
   streak:        'rise.streak',
   saDrafts:      'rise.saDrafts',
   solvedRevealed:'rise.solvedRevealed',
-  aiConfig:      'rise-ai-config'
+  aiConfig:      'rise-ai-config-sync'   // provider/model/endpoint only — apiKey never leaves device
 };
 
 (function () {
@@ -74,6 +74,13 @@ const SYNC_KEYS = {
           const local = raw ? JSON.parse(raw) : {};
           const merged = Object.assign({}, cloudData, local);
           localStorage.setItem(lsKey, JSON.stringify(merged));
+        } else if (name === 'aiConfig') {
+          // Merge cloud provider/model into local config — but keep local apiKey
+          const localRaw = localStorage.getItem('rise-ai-config');
+          const local = localRaw ? JSON.parse(localRaw) : {};
+          const merged = { ...local, ...cloudData, apiKey: local.apiKey || '' };
+          localStorage.setItem('rise-ai-config', JSON.stringify(merged));
+          localStorage.setItem(lsKey, JSON.stringify(cloudData)); // keep sync copy current
         } else {
           // cloud wins (authoritative cross-device state)
           localStorage.setItem(lsKey, JSON.stringify(cloudData));
