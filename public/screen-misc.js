@@ -56,7 +56,7 @@ Object.assign(app, {
     state.mobileMenuOpen = false;
     LS.set(KEY.board, board);
     const cur = parseHash();
-    if (cur.name === 'results' || cur.name === 'notes' || cur.name === 'progress') {
+    if (['results', 'notes', 'progress', 'careers'].includes(cur.name)) {
       this.go(['home']);
     } else {
       this.render();
