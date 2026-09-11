@@ -133,14 +133,6 @@ Object.assign(app, {
       <!-- TREE -->
       <div id="careers-wrap"><div id="careers-inner"><svg id="careers-tsvg"></svg></div></div>
 
-      <!-- LEGEND -->
-      <div id="careers-leg">
-        <div class="careers-li"><div class="careers-ld" style="background:#0EA5E9"></div>Science</div>
-        <div class="careers-li"><div class="careers-ld" style="background:#059669"></div>Commerce</div>
-        <div class="careers-li"><div class="careers-ld" style="background:#8B5CF6"></div>Humanities</div>
-        <div class="careers-li"><div class="careers-ld" style="background:#EA7C1C"></div>Vocational</div>
-      </div>
-
       <!-- ZOOM -->
       <div id="careers-zc">
         <div class="careers-zb" id="careers-zi">+</div>
