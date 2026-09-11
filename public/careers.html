@@ -213,7 +213,17 @@ body:has(#det.open) #zc{ right:calc(min(330px,100vw) + 16px); }
     <span>Rise</span>
   </a>
   <span id="rise-crumb">Career Pathing · Grade 10 &amp; 12</span>
-  <button id="rise-hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleRiseMenu()">
+  <div id="rise-hdr-right" style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+    <a id="ask-cloe-btn" href="index.html#/cloe" hidden
+       style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;
+              border:1px solid var(--border);background:var(--surf);
+              font-size:12px;font-weight:600;color:var(--primary);text-decoration:none;
+              font-family:var(--font);">✦ Ask Cloé</a>
+    <img id="rise-avatar" hidden src="" alt="Avatar"
+         style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--border);cursor:pointer;"
+         onclick="window.location='index.html'">
+  </div>
+  <button id="rise-hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleRiseMenu()" style="margin-left:0;">
     <span></span><span></span><span></span>
   </button>
   <div id="rise-menu" hidden>
@@ -271,5 +281,18 @@ body:has(#det.open) #zc{ right:calc(min(330px,100vw) + 16px); }
 </div>
 
 <script src="careers.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="config.js?v=2"></script>
+<script>
+  firebase.auth().onAuthStateChanged(function(user) {
+    const btn = document.getElementById('ask-cloe-btn');
+    const av  = document.getElementById('rise-avatar');
+    if (user) {
+      btn.hidden = false;
+      if (user.photoURL) { av.src = user.photoURL; av.hidden = false; }
+    }
+  });
+</script>
 </body>
 </html>
