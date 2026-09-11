@@ -1026,6 +1026,12 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 }
 .ai-emoji-btn:hover { background: var(--bg); }
 .ai-emoji-toggle { font-size: 16px; flex-shrink: 0; }
+.ai-mic-btn { font-size: 16px; flex-shrink: 0; }
+.ai-mic-active { color: #ef4444; animation: ai-mic-pulse 1s ease-in-out infinite; }
+@keyframes ai-mic-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .4; }
+}
 .ai-input-row {
   display: flex; align-items: flex-end; gap: 8px;
   padding: 10px 14px 14px; border-top: 1px solid var(--border); flex-shrink: 0;

@@ -142,6 +142,8 @@ const aiState = {
   open: false,
   showConfig: false,
   emojiOpen: false,
+  listening: false,
+  _recognition: null,
   messages: aiLoadHistory(),
   streaming: false,
   abortCtrl: null,
@@ -245,7 +247,8 @@ function aiRenderPanel() {
       </div>
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-emoji-toggle" title="Emoji" onclick="aiPanel.toggleEmoji()">😊</button>
-        <textarea class="ai-textarea" id="ai-input" placeholder="Ask a subject question… (Enter to send)" rows="1"
+        <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
+        <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="1"
           onkeydown="aiPanel.handleKey(event)"
           oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
         ${aiState.streaming
@@ -327,6 +330,41 @@ const aiPanel = {
   toggleEmoji() {
     aiState.emojiOpen = !aiState.emojiOpen;
     this._render();
+  },
+
+  toggleVoice() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { alert('Voice input is not supported in this browser. Try Chrome or Edge.'); return; }
+
+    if (aiState.listening) {
+      aiState._recognition?.stop();
+      return;
+    }
+
+    const rec = new SR();
+    rec.lang = 'en-IN';
+    rec.interimResults = true;
+    rec.continuous = false;
+    aiState._recognition = rec;
+    aiState.listening = true;
+    this._render();
+
+    let finalText = '';
+    rec.onresult = (e) => {
+      const ta = document.getElementById('ai-input');
+      if (!ta) return;
+      let interim = '';
+      for (let i = e.resultIndex; i < e.results.length; i++) {
+        if (e.results[i].isFinal) finalText += e.results[i][0].transcript;
+        else interim = e.results[i][0].transcript;
+      }
+      ta.value = finalText + interim;
+      ta.style.height = 'auto';
+      ta.style.height = Math.min(ta.scrollHeight, 120) + 'px';
+    };
+    rec.onerror = () => { aiState.listening = false; aiState._recognition = null; aiPanel._render(); };
+    rec.onend = () => { aiState.listening = false; aiState._recognition = null; aiPanel._render(); document.getElementById('ai-input')?.focus(); };
+    rec.start();
   },
   retry() {
     if (aiState.streaming) return;
