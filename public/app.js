@@ -210,6 +210,9 @@ const app = {
         <a class="btn small ghost" href="careers.html">Career Pathing</a>
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
+    const askAiBtn = authUser && !inTest
+      ? `<button class="btn small ghost hdr-ask-ai" onclick="aiPanel.toggle()" title="Ask AI">✦ Ask AI</button>`
+      : '';
     const loginBtn = authUser
       ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
            ${authUser.photoURL
@@ -222,7 +225,7 @@ const app = {
     return `
       <header class="app-header">
         <div class="hdr-left">${logo}${crumb}</div>
-        <div class="hdr-right">${loginBtn}${hamburgerBtn}</div>
+        <div class="hdr-right">${askAiBtn}${loginBtn}${hamburgerBtn}</div>
         ${menu}
       </header>`;
   },

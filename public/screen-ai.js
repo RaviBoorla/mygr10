@@ -1,0 +1,424 @@
+// ─── AI Chat panel ────────────────────────────────────────────────────────────
+// Floating slide-in panel. No React, no bundler — plain JS.
+// Grounded in Rise's revision KB; refuses off-topic questions.
+
+const AI_LS_KEY = 'rise-ai-config';
+const AI_CHAT_KEY = 'rise-ai-history';
+const AI_ENDPOINT = '/api/chat';
+
+const AI_DEFAULT_CONFIG = {
+  provider: 'cloudflare',
+  endpoint: '',
+  model:    '@cf/meta/llama-3.1-8b-instruct',
+  apiKey:   '',
+};
+
+const AI_PROVIDERS = [
+  { id: 'cloudflare', label: 'Cloudflare AI',  needsKey: false, defaultEndpoint: '' },
+  { id: 'anthropic',  label: 'Claude',          needsKey: true,  defaultEndpoint: '' },
+  { id: 'openai',     label: 'OpenAI',          needsKey: true,  defaultEndpoint: 'https://api.openai.com/v1' },
+  { id: 'gemini',     label: 'Gemini',          needsKey: true,  defaultEndpoint: '' },
+  { id: 'grok',       label: 'Grok',            needsKey: true,  defaultEndpoint: 'https://api.x.ai/v1' },
+  { id: 'mistral',    label: 'Mistral',         needsKey: true,  defaultEndpoint: 'https://api.mistral.ai/v1' },
+  { id: 'deepseek',   label: 'DeepSeek',        needsKey: true,  defaultEndpoint: 'https://api.deepseek.com/v1' },
+  { id: 'ollama',     label: 'Ollama (local)',  needsKey: false, defaultEndpoint: 'http://localhost:11434' },
+];
+
+// ── KB retrieval ──────────────────────────────────────────────────────────────
+
+function _aiKbContext(query) {
+  if (!window.REVISION) return '';
+  const q = query.toLowerCase();
+  const keywords = q.split(/\W+/).filter(w => w.length > 3);
+
+  // Score each chapter against the query
+  const scored = [];
+  Object.entries(window.REVISION).forEach(([subjectKey, chapters]) => {
+    if (!Array.isArray(chapters)) return;
+    chapters.forEach(ch => {
+      if (!ch || !ch.chapter) return;
+      const chText = [
+        ch.chapter,
+        ...(ch.formulae || []),
+        ...(ch.theorems || []),
+        ...(ch.logic || []),
+        ...(ch.tips || []),
+        ...(ch.bestPractices || []),
+      ].join(' ').toLowerCase();
+
+      let score = 0;
+      keywords.forEach(kw => { if (chText.includes(kw)) score++; });
+      if (ch.chapter.toLowerCase().includes(q)) score += 5;
+      if (score > 0) scored.push({ score, subjectKey, ch });
+    });
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  const top = scored.slice(0, 3);
+  if (!top.length) return '';
+
+  return top.map(({ subjectKey, ch }) => {
+    const items = [
+      ...(ch.formulae      || []).map(t => `Formula: ${t}`),
+      ...(ch.theorems      || []).map(t => `Theorem: ${t}`),
+      ...(ch.logic         || []).map(t => `Logic: ${t}`),
+      ...(ch.tips          || []).map(t => `Tip: ${t}`),
+      ...(ch.bestPractices || []).map(t => `Best practice: ${t}`),
+    ].slice(0, 20);
+    return `[${subjectKey} — ${ch.chapter}]\n${items.join('\n')}`;
+  }).join('\n\n');
+}
+
+function _aiSystemPrompt(query) {
+  const ctx = _aiKbContext(query);
+  const base = `You are a Grade 10 study assistant for Rise, an exam-prep app for CBSE and ICSE students. Answer ONLY questions about Grade 10 subjects covered in Rise (Mathematics, Science, Social Science, History, Geography, English, Hindi, Computer Science). If a question is unrelated to Grade 10 studies, politely decline and suggest asking a subject question instead. Be concise, clear, and accurate. Use the knowledge base excerpts below when relevant.`;
+  return ctx ? `${base}\n\nKnowledge base excerpts:\n${ctx}` : base;
+}
+
+// ── config helpers ────────────────────────────────────────────────────────────
+
+function aiLoadConfig() {
+  try { return { ...AI_DEFAULT_CONFIG, ...JSON.parse(localStorage.getItem(AI_LS_KEY) || '{}') }; }
+  catch { return { ...AI_DEFAULT_CONFIG }; }
+}
+function aiSaveConfig(cfg) {
+  try { localStorage.setItem(AI_LS_KEY, JSON.stringify(cfg)); } catch { /* ignore */ }
+}
+function aiLoadHistory() {
+  try { return JSON.parse(localStorage.getItem(AI_CHAT_KEY) || '[]'); } catch { return []; }
+}
+function aiSaveHistory(msgs) {
+  try { localStorage.setItem(AI_CHAT_KEY, JSON.stringify(msgs.slice(-40))); } catch { /* ignore */ }
+}
+
+// ── markdown renderer ─────────────────────────────────────────────────────────
+
+function aiRenderMarkdown(text) {
+  const lines = text.split('\n');
+  const out = [];
+  let inCode = false, codeLines = [];
+
+  lines.forEach((line, i) => {
+    if (line.startsWith('```')) {
+      if (!inCode) { inCode = true; codeLines = []; }
+      else {
+        out.push(`<pre class="ai-code"><code>${escHtml(codeLines.join('\n'))}</code></pre>`);
+        inCode = false; codeLines = [];
+      }
+      return;
+    }
+    if (inCode) { codeLines.push(line); return; }
+    if (line.startsWith('### ')) { out.push(`<h4 class="ai-h">${escHtml(line.slice(4))}</h4>`); return; }
+    if (line.startsWith('## '))  { out.push(`<h3 class="ai-h">${escHtml(line.slice(3))}</h3>`); return; }
+    if (line.startsWith('# '))   { out.push(`<h3 class="ai-h">${escHtml(line.slice(2))}</h3>`); return; }
+    if (!line.trim()) { out.push('<div class="ai-gap"></div>'); return; }
+    out.push(`<p class="ai-p">${aiInline(line)}</p>`);
+  });
+  return out.join('');
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function aiInline(text) {
+  return escHtml(text)
+    .replace(/`([^`]+)`/g, '<code class="ai-inline-code">$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+}
+
+// ── panel state ───────────────────────────────────────────────────────────────
+
+const aiState = {
+  open: false,
+  showConfig: false,
+  messages: aiLoadHistory(),
+  streaming: false,
+  abortCtrl: null,
+  config: aiLoadConfig(),
+};
+
+// ── render helpers ────────────────────────────────────────────────────────────
+
+function aiProviderInfo(id) {
+  return AI_PROVIDERS.find(p => p.id === id) || AI_PROVIDERS[0];
+}
+
+function aiRenderMessages() {
+  const box = document.getElementById('ai-msgs');
+  if (!box) return;
+  if (!aiState.messages.length) {
+    box.innerHTML = `<div class="ai-empty">
+      <span class="ai-empty-icon">✦</span>
+      <p>Ask me anything about your Grade 10 subjects</p>
+      <p class="ai-empty-sub">Maths · Science · Social Science · History · Geography · English · Hindi · CS</p>
+    </div>`;
+    return;
+  }
+  box.innerHTML = aiState.messages.map(m => {
+    const isUser = m.role === 'user';
+    return `<div class="ai-msg ${isUser ? 'ai-msg-user' : 'ai-msg-ai'}">
+      <div class="ai-bubble ${isUser ? 'ai-bubble-user' : 'ai-bubble-ai'}">
+        ${isUser ? escHtml(m.content) : aiRenderMarkdown(m.content)}
+        ${m.streaming ? '<span class="ai-dots"><span></span><span></span><span></span></span>' : ''}
+      </div>
+    </div>`;
+  }).join('');
+  box.scrollTop = box.scrollHeight;
+}
+
+function aiRenderConfigPanel() {
+  const cfg = aiState.config;
+  const prov = aiProviderInfo(cfg.provider);
+  return `
+    <div class="ai-config-panel">
+      <div class="ai-config-head">
+        <span>AI Settings</span>
+        <button class="ai-icon-btn" onclick="aiPanel.closeConfig()">✕</button>
+      </div>
+      <div class="ai-config-body">
+        <label class="ai-label">Provider</label>
+        <select class="ai-input" id="ai-cfg-provider" onchange="aiPanel.onProviderChange(this.value)">
+          ${AI_PROVIDERS.map(p => `<option value="${p.id}" ${p.id === cfg.provider ? 'selected' : ''}>${escHtml(p.label)}</option>`).join('')}
+        </select>
+
+        ${prov.defaultEndpoint !== '' ? `
+        <label class="ai-label">Endpoint URL</label>
+        <input class="ai-input" id="ai-cfg-endpoint" value="${escHtml(cfg.endpoint || prov.defaultEndpoint)}" placeholder="${escHtml(prov.defaultEndpoint)}">
+        ` : ''}
+
+        <label class="ai-label">Model</label>
+        <input class="ai-input" id="ai-cfg-model" value="${escHtml(cfg.model)}" placeholder="e.g. llama-3.1-8b / gpt-4o / claude-haiku-4-5-20251001">
+
+        ${prov.needsKey ? `
+        <label class="ai-label">API Key</label>
+        <input class="ai-input" type="password" id="ai-cfg-apikey" value="${escHtml(cfg.apiKey)}" placeholder="sk-…">
+        ` : ''}
+
+        <button class="ai-save-btn" onclick="aiPanel.saveConfig()">Save</button>
+      </div>
+    </div>`;
+}
+
+function aiRenderPanel() {
+  const cfg = aiState.config;
+  const prov = aiProviderInfo(cfg.provider);
+  return `
+    <div class="ai-panel-inner">
+      <div class="ai-header">
+        <div class="ai-header-left">
+          <span class="ai-star">✦</span>
+          <span class="ai-title">Ask AI</span>
+          <span class="ai-badge">${escHtml(prov.label)} · ${escHtml(cfg.model || '—')}</span>
+        </div>
+        <div class="ai-header-right">
+          ${aiState.messages.length ? `<button class="ai-icon-btn" title="Clear chat" onclick="aiPanel.clear()">↺</button>` : ''}
+          <button class="ai-icon-btn" title="Settings" onclick="aiPanel.openConfig()">⚙</button>
+          <button class="ai-icon-btn" title="Close" onclick="aiPanel.close()">✕</button>
+        </div>
+      </div>
+      <div class="ai-msgs" id="ai-msgs"></div>
+      <div class="ai-input-row">
+        <textarea class="ai-textarea" id="ai-input" placeholder="Ask a subject question… (Enter to send)" rows="1"
+          onkeydown="aiPanel.handleKey(event)"
+          oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,120)+'px'"></textarea>
+        ${aiState.streaming
+          ? `<button class="ai-send-btn ai-stop-btn" onclick="aiPanel.stop()">Stop</button>`
+          : `<button class="ai-send-btn" onclick="aiPanel.send()">Send</button>`}
+      </div>
+      ${aiState.showConfig ? aiRenderConfigPanel() : ''}
+    </div>`;
+}
+
+// ── public API (called from HTML onclick) ─────────────────────────────────────
+
+const aiPanel = {
+  open() {
+    if (!window.riseAuth?.user) return;
+    aiState.open = true;
+    this._ensureMount();
+    this._render();
+    requestAnimationFrame(() => {
+      const el = document.getElementById('ai-panel');
+      if (el) el.classList.add('ai-panel-open');
+      document.getElementById('ai-input')?.focus();
+    });
+  },
+
+  close() {
+    const el = document.getElementById('ai-panel');
+    if (el) {
+      el.classList.remove('ai-panel-open');
+      el.addEventListener('transitionend', () => { aiState.open = false; }, { once: true });
+    }
+  },
+
+  toggle() {
+    if (aiState.open) this.close(); else this.open();
+  },
+
+  openConfig()  { aiState.showConfig = true;  this._render(); },
+  closeConfig() { aiState.showConfig = false; this._render(); },
+
+  onProviderChange(id) {
+    const prov = aiProviderInfo(id);
+    // Re-render config panel with updated provider (endpoint/key visibility)
+    aiState.config = { ...aiState.config, provider: id, endpoint: prov.defaultEndpoint };
+    this._renderConfig();
+  },
+
+  saveConfig() {
+    const cfg = { ...aiState.config };
+    cfg.provider = document.getElementById('ai-cfg-provider')?.value || cfg.provider;
+    cfg.model    = document.getElementById('ai-cfg-model')?.value?.trim() || cfg.model;
+    cfg.endpoint = document.getElementById('ai-cfg-endpoint')?.value?.trim() || '';
+    cfg.apiKey   = document.getElementById('ai-cfg-apikey')?.value?.trim() || '';
+    aiState.config = cfg;
+    aiSaveConfig(cfg);
+    aiState.showConfig = false;
+    this._render();
+  },
+
+  clear() {
+    if (aiState.streaming) this.stop();
+    aiState.messages = [];
+    aiSaveHistory([]);
+    this._render();
+  },
+
+  stop() {
+    aiState.abortCtrl?.abort();
+    aiState.streaming = false;
+    aiState.messages = aiState.messages.map((m, i) =>
+      i === aiState.messages.length - 1 && m.streaming
+        ? { ...m, streaming: false, content: m.content + ' *(stopped)*' }
+        : m
+    );
+    aiSaveHistory(aiState.messages);
+    this._render();
+  },
+
+  handleKey(e) {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); this.send(); }
+  },
+
+  async send() {
+    const ta = document.getElementById('ai-input');
+    const text = ta?.value?.trim();
+    if (!text || aiState.streaming) return;
+    ta.value = '';
+    ta.style.height = 'auto';
+
+    const userMsg  = { role: 'user',      content: text,    ts: Date.now() };
+    const asstMsg  = { role: 'assistant', content: '',       streaming: true, ts: Date.now() };
+    aiState.messages = [...aiState.messages, userMsg, asstMsg];
+    aiState.streaming = true;
+    this._render();
+
+    const history = aiState.messages
+      .filter(m => !m.streaming)
+      .map(m => ({ role: m.role, content: m.content }))
+      .concat([{ role: 'user', content: text }]);
+
+    const ctrl = new AbortController();
+    aiState.abortCtrl = ctrl;
+
+    const cfg = aiState.config;
+
+    try {
+      const r = await fetch(AI_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          provider:     cfg.provider,
+          endpoint:     cfg.endpoint,
+          model:        cfg.model,
+          apiKey:       cfg.apiKey,
+          history,
+          systemPrompt: _aiSystemPrompt(text),
+        }),
+        signal: ctrl.signal,
+      });
+
+      const reader = r.body.getReader();
+      const dec = new TextDecoder();
+      let buf = '';
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buf += dec.decode(value, { stream: true });
+        const lines = buf.split('\n');
+        buf = lines.pop();
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          try {
+            const j = JSON.parse(line);
+            if (j.delta) {
+              aiState.messages = aiState.messages.map((m, i) =>
+                i === aiState.messages.length - 1
+                  ? { ...m, content: m.content + j.delta }
+                  : m
+              );
+              aiRenderMessages();
+            }
+            if (j.error) {
+              aiState.messages = aiState.messages.map((m, i) =>
+                i === aiState.messages.length - 1
+                  ? { ...m, content: `Error: ${j.error}`, streaming: false }
+                  : m
+              );
+            }
+          } catch { /* skip */ }
+        }
+      }
+    } catch (e) {
+      if (e.name !== 'AbortError') {
+        aiState.messages = aiState.messages.map((m, i) =>
+          i === aiState.messages.length - 1
+            ? { ...m, content: `Connection error: ${e.message}`, streaming: false }
+            : m
+        );
+      }
+    }
+
+    aiState.messages = aiState.messages.map((m, i) =>
+      i === aiState.messages.length - 1 ? { ...m, streaming: false } : m
+    );
+    aiState.streaming = false;
+    aiSaveHistory(aiState.messages);
+    this._render();
+  },
+
+  // ── private ─────────────────────────────────────────────────────────────────
+
+  _ensureMount() {
+    if (!document.getElementById('ai-panel')) {
+      const el = document.createElement('div');
+      el.id = 'ai-panel';
+      el.className = 'ai-panel';
+      document.body.appendChild(el);
+    }
+  },
+
+  _render() {
+    this._ensureMount();
+    const el = document.getElementById('ai-panel');
+    if (!el) return;
+    el.innerHTML = aiRenderPanel();
+    aiRenderMessages();
+  },
+
+  _renderConfig() {
+    const box = document.querySelector('.ai-config-panel');
+    if (box) box.outerHTML = aiRenderConfigPanel();
+    else this._render();
+  },
+};
+
+// Expose for profile AI config button
+function openAiConfig() {
+  aiPanel.open();
+  setTimeout(() => aiPanel.openConfig(), 50);
+}
