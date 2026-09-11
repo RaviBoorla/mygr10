@@ -158,18 +158,22 @@ function aiRenderMessages() {
   }
   box.innerHTML = aiState.messages.map((m, idx) => {
     const isUser = m.role === 'user';
-    const isLastAi = !isUser && idx === aiState.messages.length - 1;
-    const actions = isUser ? '' : `
-      <div class="ai-msg-actions">
-        <button class="ai-action-btn" data-copy-idx="${idx}" title="Copy" onclick="aiCopy(${idx}, this)">⧉ Copy</button>
-        ${isLastAi && !m.streaming ? `<button class="ai-action-btn" title="Retry" onclick="aiPanel.retry()">↺ Retry</button>` : ''}
-      </div>`;
+    // Retry: beside the user bubble (rendered as a small icon before the bubble)
+    const isLastUser = isUser && idx === aiState.messages.length - 2;
+    const retryBtn = isLastUser && !aiState.streaming
+      ? `<button class="ai-action-btn ai-retry-btn" title="Retry" onclick="aiPanel.retry()">↺</button>`
+      : '';
+    // Copy: small button below AI bubble
+    const copyBtn = !isUser && !m.streaming
+      ? `<div class="ai-msg-actions"><button class="ai-action-btn" data-copy-idx="${idx}" title="Copy" onclick="aiCopy(${idx}, this)">⧉ Copy</button></div>`
+      : '';
     return `<div class="ai-msg ${isUser ? 'ai-msg-user' : 'ai-msg-ai'}">
+      ${retryBtn}
       <div class="ai-bubble ${isUser ? 'ai-bubble-user' : 'ai-bubble-ai'}">
         ${isUser ? escHtml(m.content) : aiRenderMarkdown(m.content)}
         ${m.streaming ? '<span class="ai-dots"><span></span><span></span><span></span></span>' : ''}
       </div>
-      ${actions}
+      ${copyBtn}
     </div>`;
   }).join('');
   box.scrollTop = box.scrollHeight;
