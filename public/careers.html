@@ -1,7 +1,298 @@
 <!DOCTYPE html>
-<html><head><meta charset="UTF-8">
-<meta http-equiv="refresh" content="0;url=index.html#/careers">
-<title>Career Pathing — Rise</title>
-</head><body>
-<script>location.replace('index.html#/careers');</script>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Pathing · Grade 10 &amp; 12 — Rise</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap">
+
+<style>
+:root {
+  --bg:      #FFFFFF;
+  --surf:    #FFFFFF;
+  --surf2:   #F5F7FB;
+  --border:  #e2e8f0;
+  --text1:   #1e293b;
+  --text2:   #64748b;
+  --text3:   #C4CEDD;
+  --primary: #2563eb;
+  --sci:     #0EA5E9;
+  --com:     #059669;
+  --hum:     #8B5CF6;
+  --voc:     #EA7C1C;
+  --bar-bg:  rgba(255,255,255,.94);
+  --pan-bg:  rgba(255,255,255,.98);
+  --font: 'Montserrat', "Noto Sans Devanagari", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;background:var(--bg);color:var(--text1);font-family:var(--font);overflow:hidden}
+
+/* ── RISE HEADER — same brand mark, height and colours as the main app ──── */
+#rise-hdr{
+  position:fixed;top:0;left:0;right:0;z-index:210;height:48px;
+  display:flex;align-items:center;gap:10px;padding:0 16px;
+  background:var(--surf);border-bottom:1px solid var(--border);
+}
+#rise-logo{
+  display:flex;align-items:center;gap:7px;text-decoration:none;
+  font-family:var(--font);font-size:18px;font-weight:800;color:var(--primary);
+  letter-spacing:-.3px;flex-shrink:0;
+}
+#rise-logo svg{flex-shrink:0;border-radius:5px}
+#rise-crumb{
+  font-family:var(--font);font-size:13px;color:var(--text2);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis;min-width:0;flex:0 1 auto;
+  padding-left:8px;border-left:1px solid var(--border);
+}
+
+/* Same hamburger + dropdown pattern as the main app header */
+#rise-hamburger{
+  display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;
+  width:32px;height:32px;padding:0;flex-shrink:0;margin-left:auto;
+  background:transparent;border:1px solid var(--border);border-radius:10px;cursor:pointer;
+}
+#rise-hamburger span{display:block;width:16px;height:2px;background:var(--text1);border-radius:2px}
+#rise-menu{
+  display:flex;flex-direction:column;gap:8px;
+  position:absolute;top:48px;right:16px;z-index:220;
+  width:220px;background:var(--surf);border:1px solid var(--border);border-radius:12px;
+  padding:12px;box-shadow:0 20px 60px rgba(0,0,0,.15);
+}
+#rise-menu[hidden]{display:none}
+.rmi{
+  padding:8px 12px;border-radius:8px;border:1px solid var(--border);background:var(--surf);
+  font-family:var(--font);font-size:13px;font-weight:600;color:var(--text1);
+  text-align:left;text-decoration:none;cursor:pointer;display:block;
+}
+.rmi:hover{border-color:var(--text2)}
+.rmi.active{background:var(--primary);border-color:var(--primary);color:#fff}
+
+/* ── TOOLBAR ─────────────────────────────────────────────── */
+#bar{
+  position:fixed;top:48px;left:0;right:0;z-index:200;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+  padding:8px 16px;
+  background:var(--bar-bg);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+
+#sw{position:relative;flex:1;min-width:130px;max-width:220px}
+#sw svg{position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--text2);pointer-events:none}
+#search-clear{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:none;cursor:pointer;color:var(--text2);font-size:13px;line-height:1;padding:2px 4px;border-radius:4px;}
+#search-clear:hover{color:var(--text1);background:var(--hover);}
+#search{
+  width:100%;padding:6px 24px 6px 28px;
+  background:var(--surf);border:1px solid var(--border);border-radius:7px;
+  font-family:var(--font);font-size:12.5px;color:var(--text1);outline:none;
+}
+#search:focus{border-color:var(--primary)}
+#search::placeholder{color:var(--text2)}
+
+#chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{
+  padding:4px 9px;border-radius:20px;font-size:11px;font-weight:500;
+  font-family:var(--font);border:1px solid var(--border);
+  background:transparent;color:var(--text2);cursor:pointer;transition:all .15s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--text2);color:var(--text1)}
+.chip.on{border-color:transparent;color:#07090F}
+
+#acts{display:flex;gap:5px;margin-left:auto;flex-shrink:0}
+.act{
+  padding:4px 9px;border-radius:7px;font-size:11px;font-family:var(--mono);
+  border:1px solid var(--border);background:var(--surf);color:var(--text2);cursor:pointer;
+  transition:color .12s;white-space:nowrap;
+}
+.act:hover{color:var(--text1)}
+
+/* ── TREE SCROLL AREA ─── full width always; the detail panel overlays
+   it rather than permanently reserving space, so mobile/tablet keep a
+   usable canvas whether or not a node is selected. ─────────────────── */
+#wrap{
+  position:fixed;top:var(--chrome-h,92px);left:0;right:0;bottom:0;
+  overflow-x:auto;overflow-y:auto;
+}
+#inner{
+  display:inline-block;
+  transform-origin:top left;
+  line-height:0;
+}
+#tsvg{display:block}
+
+/* ── ZOOM ────────────────────────────────────────────────── */
+#zc{
+  position:fixed;bottom:18px;right:16px;z-index:190;
+  display:flex;gap:4px;
+  transition:right .22s cubic-bezier(.4,0,.2,1);
+}
+/* Slide the zoom/home controls clear of the detail panel while it's open,
+   instead of stacking under it where they'd be unclickable. */
+body:has(#det.open) #zc{ right:calc(min(330px,100vw) + 16px); }
+.zb{
+  width:30px;height:30px;background:var(--surf);border:1px solid var(--border);
+  border-radius:7px;font-size:16px;line-height:30px;text-align:center;
+  color:var(--text2);cursor:pointer;user-select:none;transition:color .1s;
+}
+.zb:hover{color:var(--text1)}
+
+/* ── LEGEND ──────────────────────────────────────────────── */
+#leg{
+  position:fixed;bottom:18px;left:16px;z-index:190;
+  background:var(--bar-bg);backdrop-filter:blur(12px);
+  border:1px solid var(--border);border-radius:9px;
+  padding:9px 12px;display:flex;flex-direction:column;gap:5px;
+}
+.li{display:flex;align-items:center;gap:7px;font-size:10.5px;font-family:var(--mono);color:var(--text2)}
+.ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
+
+/* ── DETAIL PANEL — overlays the canvas (doesn't reserve permanent
+   space), full-width on phones so career details are actually readable ── */
+#det{
+  position:fixed;top:var(--chrome-h,92px);right:0;bottom:0;width:330px;max-width:100vw;z-index:199;
+  background:var(--pan-bg);backdrop-filter:blur(18px);
+  border-left:1px solid var(--border);
+  box-shadow:-8px 0 24px rgba(15,23,42,.08);
+  padding:16px 14px;overflow-y:auto;
+  transform:translateX(100%);
+  transition:transform .22s cubic-bezier(.4,0,.2,1);
+}
+#det.open{transform:none}
+@media (max-width:560px){
+  #det{width:100%}
+}
+#dclose{
+  float:right;margin-top:-1px;
+  background:var(--surf);border:1px solid var(--border);
+  border-radius:5px;padding:3px 8px;font-size:10px;
+  font-family:var(--mono);color:var(--text2);cursor:pointer;
+}
+#dcrumb{font-size:10px;font-family:var(--mono);color:var(--text2);line-height:1.8;margin-bottom:9px;padding-right:44px}
+#det h2{font-family:var(--font);font-size:16px;font-weight:700;text-wrap:balance;margin-bottom:2px;line-height:1.25}
+.dsub{font-size:11px;font-family:var(--mono);color:var(--text2);margin-bottom:12px}
+.dlbl{font-size:9px;font-family:var(--mono);color:#4E4E50;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;margin-top:11px}
+.dval{font-size:12px;color:var(--text1);line-height:1.55}
+.dval.mono{font-family:var(--mono);font-size:11px}
+.dtags{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
+.dtag{padding:2px 7px;border-radius:10px;font-size:9.5px;font-family:var(--mono);border:1px solid var(--border);color:var(--text2)}
+.dkids{font-size:11px;color:var(--text2);line-height:1.7}
+.dpath{margin-top:14px;padding:9px 10px;background:var(--surf);border:1px solid var(--border);border-radius:7px;font-size:10.5px;font-family:var(--mono);color:var(--text2);line-height:1.8}
+
+/* Node hover */
+.ngrp{cursor:pointer}
+.ngrp:hover .nbg{filter:brightness(1.18)}
+
+/* ── Small screens: let the toolbar's search+chips+actions wrap onto
+   their own rows below the back/title row so nothing gets clipped ──── */
+@media (max-width:640px){
+  #bar{ top:48px; align-items:flex-start; }
+  #sw{ order:1; flex:1 1 100%; max-width:none; }
+  #chips{ order:2; flex:1 1 100%; }
+  #acts{ order:3; margin-left:0; }
+}
+
+@media(prefers-reduced-motion:reduce){#det{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- RISE BRAND HEADER — same mark used across the app, so this never reads as a separate tool -->
+<div id="rise-hdr">
+  <a id="rise-logo" href="index.html" title="Back to Rise">
+    <svg width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
+      <rect width="32" height="32" rx="7" fill="#2563eb"/>
+      <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
+      <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
+      <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>
+      <polygon points="23.5,4 27,9.5 20,9.5" fill="#ffffff"/>
+    </svg>
+    <span>Rise</span>
+  </a>
+  <span id="rise-crumb">Career Pathing · Grade 10 &amp; 12</span>
+  <div id="rise-hdr-right" style="display:flex;align-items:center;gap:8px;margin-left:auto;">
+    <a id="ask-cloe-btn" href="index.html#/cloe" hidden
+       style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:20px;
+              border:1px solid var(--border);background:var(--surf);
+              font-size:12px;font-weight:600;color:var(--primary);text-decoration:none;
+              font-family:var(--font);">✦ Ask Cloé</a>
+    <img id="rise-avatar" hidden src="" alt="Avatar"
+         style="width:28px;height:28px;border-radius:50%;object-fit:cover;border:2px solid var(--border);cursor:pointer;"
+         onclick="window.location='index.html'">
+  </div>
+  <button id="rise-hamburger" aria-label="Menu" aria-expanded="false" onclick="toggleRiseMenu()" style="margin-left:0;">
+    <span></span><span></span><span></span>
+  </button>
+  <div id="rise-menu" hidden>
+    <button class="rmi" data-board="CBSE">CBSE</button>
+    <button class="rmi" data-board="ICSE">ICSE</button>
+    <button class="rmi" data-board="IB">IB Diploma</button>
+    <a class="rmi" href="index.html#/progress">Progress</a>
+    <a class="rmi" href="index.html#/notes">Revision Notes</a>
+  </div>
+</div>
+
+<!-- TOOLBAR -->
+<div id="bar">
+  <div id="sw">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="search" placeholder="Search any career, exam…" autocomplete="off" spellcheck="false">
+    <button id="search-clear" title="Clear search" hidden>✕</button>
+  </div>
+  <div id="chips">
+    <button class="chip" data-f="high-salary" data-c="#34D399">💰 High Salary</button>
+    <button class="chip" data-f="govt"        data-c="#38BDF8">🏛 Govt / PSU</button>
+    <button class="chip" data-f="abroad"      data-c="#B57BF5">✈ Global</button>
+    <button class="chip" data-f="no-math"     data-c="#FB923C">∑ No Math</button>
+    <button class="chip" data-f="exam-free"   data-c="#F472B6">🎯 Exam-free</button>
+  </div>
+  <div id="acts">
+    <button class="act" id="btn-expand">Expand All</button>
+    <button class="act" id="btn-collapse">Collapse</button>
+  </div>
+</div>
+
+<!-- TREE -->
+<div id="wrap"><div id="inner"><svg id="tsvg"></svg></div></div>
+
+<!-- LEGEND -->
+<div id="leg">
+  <div class="li"><div class="ld" style="background:var(--sci)"></div>Science</div>
+  <div class="li"><div class="ld" style="background:var(--com)"></div>Commerce</div>
+  <div class="li"><div class="ld" style="background:var(--hum)"></div>Humanities</div>
+  <div class="li"><div class="ld" style="background:var(--voc)"></div>Vocational</div>
+</div>
+
+<!-- ZOOM -->
+<div id="zc">
+  <div class="zb" id="zi">+</div>
+  <div class="zb" id="zo">−</div>
+  <div class="zb" id="zr" title="Reset zoom">⌂</div>
+</div>
+
+<!-- DETAIL -->
+<div id="det">
+  <button id="dclose">esc</button>
+  <div id="dcrumb"></div>
+  <div id="dcont"></div>
+</div>
+
+<script src="careers.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="config.js?v=2"></script>
+<script>
+  firebase.auth().onAuthStateChanged(function(user) {
+    const btn = document.getElementById('ask-cloe-btn');
+    const av  = document.getElementById('rise-avatar');
+    if (user) {
+      btn.hidden = false;
+      if (user.photoURL) { av.src = user.photoURL; av.hidden = false; }
+    }
+  });
+</script>
+</body>
+</html>
