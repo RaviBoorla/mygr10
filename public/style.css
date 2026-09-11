@@ -43,7 +43,8 @@ body {
   z-index: 10;
 }
 .hdr-left, .hdr-right { display: flex; align-items: center; gap: 10px; }
-.hdr-left { min-width: 0; }
+.hdr-left { min-width: 0; flex: 1 1 0; overflow: hidden; }
+.hdr-right { flex-shrink: 0; }
 
 .hdr-logo {
   display: flex; align-items: center; gap: 7px;
@@ -961,13 +962,14 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 @media (max-width: 520px) {
   .ai-panel {
     top: auto; left: 0; right: 0; bottom: 0;
-    width: 100%; height: 80vh;
+    width: 100%; height: 80dvh;
     border-left: none; border-top: 1px solid var(--border);
     border-radius: 16px 16px 0 0;
     transform: translateY(100%); transition: transform .25s ease;
     box-shadow: 0 -4px 24px rgba(0,0,0,.12);
   }
   .ai-panel-open { transform: translateY(0); }
+  .ai-input-row { padding-bottom: max(14px, env(safe-area-inset-bottom)); }
 }
 
 .ai-panel-inner { display: flex; flex-direction: column; height: 100%; overflow: hidden; }

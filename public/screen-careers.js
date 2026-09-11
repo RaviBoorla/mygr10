@@ -53,7 +53,12 @@ Object.assign(app, {
         display:flex;gap:4px;
         transition:right .22s cubic-bezier(.4,0,.2,1);
       }
-      body:has(#careers-det.open) #careers-zc{ right:calc(min(330px,100vw) + 16px); }
+      @media(min-width:561px){
+        body:has(#careers-det.open) #careers-zc{ right:calc(330px + 16px); }
+      }
+      @media(max-width:560px){
+        body:has(#careers-det.open) #careers-zc{ display:none; }
+      }
       .careers-zb{
         width:30px;height:30px;background:#fff;border:1px solid var(--border);
         border-radius:7px;font-size:16px;line-height:30px;text-align:center;
@@ -105,7 +110,6 @@ Object.assign(app, {
         #careers-bar{align-items:flex-start;}
         #careers-sw{order:1;flex:1 1 100%;max-width:none;}
         #careers-chips{order:2;flex:1 1 100%;}
-        #careers-acts{order:3;margin-left:0;}
       }
       @media(prefers-reduced-motion:reduce){#careers-det{transition:none}}
       </style>
