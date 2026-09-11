@@ -156,13 +156,20 @@ function aiRenderMessages() {
     </div>`;
     return;
   }
-  box.innerHTML = aiState.messages.map(m => {
+  box.innerHTML = aiState.messages.map((m, idx) => {
     const isUser = m.role === 'user';
+    const isLastAi = !isUser && idx === aiState.messages.length - 1;
+    const actions = isUser ? '' : `
+      <div class="ai-msg-actions">
+        <button class="ai-action-btn" data-copy-idx="${idx}" title="Copy" onclick="aiCopy(${idx}, this)">⧉ Copy</button>
+        ${isLastAi && !m.streaming ? `<button class="ai-action-btn" title="Retry" onclick="aiPanel.retry()">↺ Retry</button>` : ''}
+      </div>`;
     return `<div class="ai-msg ${isUser ? 'ai-msg-user' : 'ai-msg-ai'}">
       <div class="ai-bubble ${isUser ? 'ai-bubble-user' : 'ai-bubble-ai'}">
         ${isUser ? escHtml(m.content) : aiRenderMarkdown(m.content)}
         ${m.streaming ? '<span class="ai-dots"><span></span><span></span><span></span></span>' : ''}
       </div>
+      ${actions}
     </div>`;
   }).join('');
   box.scrollTop = box.scrollHeight;
@@ -231,6 +238,14 @@ function aiRenderPanel() {
     </div>`;
 }
 
+function aiCopy(idx, btn) {
+  const m = aiState.messages[idx];
+  if (!m) return;
+  navigator.clipboard.writeText(m.content).then(() => {
+    if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = '⧉ Copy'; }, 1500); }
+  }).catch(() => {});
+}
+
 // ── public API (called from HTML onclick) ─────────────────────────────────────
 
 const aiPanel = {
@@ -280,6 +295,16 @@ const aiPanel = {
     this._render();
   },
 
+  retry() {
+    if (aiState.streaming) return;
+    // Remove last AI message and re-send last user message
+    const msgs = aiState.messages;
+    if (msgs.length >= 2 && msgs[msgs.length - 1].role === 'assistant') {
+      aiState.messages.pop();
+      const lastUser = [...msgs].reverse().find(m => m.role === 'user');
+      if (lastUser) this.send(lastUser.content, true);
+    }
+  },
   clear() {
     if (aiState.streaming) this.stop();
     aiState.messages = [];
@@ -303,16 +328,17 @@ const aiPanel = {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); this.send(); }
   },
 
-  async send() {
+  async send(prefill, skipUserPush) {
     const ta = document.getElementById('ai-input');
-    const text = ta?.value?.trim();
+    const text = prefill || ta?.value?.trim();
     if (!text || aiState.streaming) return;
-    ta.value = '';
-    ta.style.height = 'auto';
+    if (!prefill) { ta.value = ''; ta.style.height = 'auto'; }
 
     const userMsg  = { role: 'user',      content: text,    ts: Date.now() };
     const asstMsg  = { role: 'assistant', content: '',       streaming: true, ts: Date.now() };
-    aiState.messages = [...aiState.messages, userMsg, asstMsg];
+    aiState.messages = skipUserPush
+      ? [...aiState.messages, asstMsg]
+      : [...aiState.messages, userMsg, asstMsg];
     aiState.streaming = true;
     this._render();
 

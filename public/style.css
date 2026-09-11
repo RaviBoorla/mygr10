@@ -1025,6 +1025,16 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   max-height: 120px; overflow-y: auto;
 }
 .ai-textarea:focus { border-color: var(--primary); }
+.ai-msg-actions {
+  display: flex; gap: 6px; margin-top: 4px; padding-left: 2px;
+}
+.ai-action-btn {
+  background: none; border: 1px solid var(--border); border-radius: 6px;
+  color: var(--text-light); font-size: 11px; padding: 2px 8px;
+  cursor: pointer; transition: background .15s, color .15s;
+}
+.ai-action-btn:hover { background: var(--bg); color: var(--text); }
+
 .ai-send-btn {
   padding: 9px 14px; border-radius: 10px; border: none; cursor: pointer;
   background: var(--primary); color: #fff; font-size: var(--fs-body); font-weight: 600;
