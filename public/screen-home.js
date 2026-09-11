@@ -105,7 +105,6 @@ Object.assign(app, {
       <div class="screen home-screen">
         <div class="home-heading-row">
           ${this._gradeTabs()}
-          <p class="subtitle">Maths · Science · Social Science · History &amp; Civics · Geography · English · Hindi · Computer Science — CBSE, ICSE &amp; IB. Pick a subject and start.</p>
         </div>
         ${streakArenaRow}
         ${resume}

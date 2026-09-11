@@ -850,6 +850,8 @@ kbd {
   .progress-topbar { flex-direction: column; align-items: flex-start; }
   .progress-topbar .home-btn { align-self: flex-end; }
   .rev-heading-right { flex-wrap: wrap; }
+  .rev-heading-row { flex-direction: column; align-items: flex-start; }
+  .rev-heading-row .rev-heading-right { order: -1; align-self: stretch; justify-content: flex-end; }
 }
 
 .arena-skin-row { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
