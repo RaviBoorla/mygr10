@@ -13,7 +13,7 @@ Object.assign(app, {
       #careers-tsvg{display:block}
 
       #careers-bar{
-        position:fixed;top:var(--header-h,48px);left:0;right:0;z-index:200;
+        position:fixed;top:var(--header-h,48px);left:0;right:0;z-index:9;
         display:flex;align-items:center;gap:10px;flex-wrap:wrap;
         padding:8px 16px;
         background:rgba(255,255,255,.94);backdrop-filter:blur(14px);
@@ -40,7 +40,7 @@ Object.assign(app, {
       .careers-chip:hover{border-color:var(--text2);color:var(--text1)}
       .careers-chip.on{border-color:transparent;color:#07090F}
 
-      #careers-acts{display:flex;gap:5px;margin-left:auto;flex-shrink:0}
+      #careers-acts{display:flex;gap:5px;flex-shrink:0}
       .careers-act{
         padding:4px 9px;border-radius:7px;font-size:11px;font-family:var(--mono,monospace);
         border:1px solid var(--border);background:#fff;color:var(--text2);cursor:pointer;
@@ -123,10 +123,10 @@ Object.assign(app, {
           <button class="careers-chip" data-f="abroad"      data-c="#B57BF5">✈ Global</button>
           <button class="careers-chip" data-f="no-math"     data-c="#FB923C">∑ No Math</button>
           <button class="careers-chip" data-f="exam-free"   data-c="#F472B6">🎯 Exam-free</button>
-        </div>
-        <div id="careers-acts">
-          <button class="careers-act" id="careers-btn-expand">Expand All</button>
-          <button class="careers-act" id="careers-btn-collapse">Collapse</button>
+          <div id="careers-acts">
+            <button class="careers-act" id="careers-btn-expand">Expand All</button>
+            <button class="careers-act" id="careers-btn-collapse">Collapse</button>
+          </div>
         </div>
       </div>
 
