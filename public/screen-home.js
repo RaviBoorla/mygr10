@@ -101,26 +101,12 @@ Object.assign(app, {
         <div class="streak-arena-half">${arenaCard}</div>
       </div>`;
 
-    const authUser = window.riseAuth?.user;
-    const loginCard = authUser ? '' : `
-      <div class="login-callout card">
-        <div class="login-callout-body">
-          <span class="login-callout-icon">&#128274;</span>
-          <div>
-            <p class="login-callout-title">Sign in <span class="login-optional-tag">optional</span></p>
-            <p class="login-callout-sub">Sync your streak &amp; progress across devices. Your practice data stays on your device — sign-in only adds cloud backup.</p>
-          </div>
-        </div>
-        <button class="btn ghost small login-callout-btn" onclick="riseAuth?.signIn?.()">Sign in with Google</button>
-      </div>`;
-
     return `
       <div class="screen home-screen">
         <div class="home-heading-row">
           ${this._gradeTabs()}
           <p class="subtitle">Maths · Science · Social Science · History &amp; Civics · Geography · English · Hindi · Computer Science — CBSE, ICSE &amp; IB. Pick a subject and start.</p>
         </div>
-        ${loginCard}
         ${streakArenaRow}
         ${resume}
         <section class="home-section">

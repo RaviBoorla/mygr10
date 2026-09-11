@@ -256,7 +256,9 @@ const app = {
         <p class="legal-updated">Last updated: September 2026</p>
         <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE and ICSE board-exam students. This policy explains what happens to your data when you use it.</p>
         <h2>Optional sign-in</h2>
-        <p>Rise does not require sign-up or login. An optional "Sign in with Google" feature is available solely to back up and sync your progress across your own devices. If you choose to sign in, Google provides your name and email address so the app can identify your backup — no other personal data is collected or stored by us. You can use Rise fully without signing in.</p>
+        <p>Rise does not require sign-up or login. An optional "Sign in with Google" feature is available to back up and sync your progress across your own devices. If you choose to sign in, Google provides your name and email address so the app can identify your backup. You can use Rise fully without signing in.</p>
+        <h2>Optional profile information</h2>
+        <p>For Arena multiplayer features (challenge rooms, leaderboards), you may optionally provide a display name, country, and city. This information is used only to identify you in Arena sessions and leaderboards visible to other players. It is never sold or shared with third parties, and you can update or delete it at any time.</p>
         <h2>Everything stays on your device</h2>
         <p>Your progress, test attempts, bookmarks, streaks, and settings are stored in your browser's local storage on your device. If you use optional sign-in, a copy is also synced to cloud storage tied to your account so you can restore it on another device. Signing out or clearing site data removes the local copy; deleting your account removes the cloud copy.</p>
         <h2>Question content</h2>
