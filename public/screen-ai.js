@@ -71,7 +71,7 @@ function _aiKbContext(query) {
 
 function _aiSystemPrompt(query) {
   const ctx = _aiKbContext(query);
-  const base = `You are a sharp, curious Grade 10 study companion in Rise, an exam-prep app for CBSE and ICSE students.
+  const base = `You are Cloé, a sharp and curious Grade 10 study companion in Rise, an exam-prep app for CBSE and ICSE students. Your name is Cloé — a warm, witty French study friend.
 
 Rules:
 - Answer ONLY what was asked — one concept at a time, 2–4 sentences max.
@@ -159,7 +159,7 @@ function aiRenderMessages() {
   if (!aiState.messages.length) {
     box.innerHTML = `<div class="ai-empty">
       <span class="ai-empty-icon">✦</span>
-      <p>Ask me anything about your Grade 10 subjects</p>
+      <p>Bonjour! I'm Cloé 👩‍🏫 — ask me anything about your Grade 10 subjects</p>
       <p class="ai-empty-sub">Maths · Science · Social Science · History · Geography · English · Hindi · CS</p>
     </div>`;
     return;
@@ -227,7 +227,7 @@ function aiRenderPanel() {
       <div class="ai-header">
         <div class="ai-header-left">
           <span class="ai-star">✦</span>
-          <span class="ai-title">Ask AI</span>
+          <span class="ai-title">Cloé</span>
           <span class="ai-badge">${escHtml(prov.label)} · ${escHtml(cfg.model || '—')}</span>
         </div>
         <div class="ai-header-right">

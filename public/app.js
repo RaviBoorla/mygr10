@@ -211,7 +211,7 @@ const app = {
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
       </div>`;
     const askAiBtn = authUser && !inTest
-      ? `<button class="btn small ghost hdr-ask-ai" onclick="aiPanel.toggle()" title="Ask AI">✦ Ask AI</button>`
+      ? `<button class="btn small ghost hdr-ask-ai" onclick="aiPanel.toggle()" title="Chat with Cloé">✦ Cloé</button>`
       : '';
     const loginBtn = authUser
       ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
