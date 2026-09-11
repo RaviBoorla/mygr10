@@ -710,7 +710,7 @@ function renderArenaSetup() {
             <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
           </div>
         </div>
-        <div class="arena-half">
+        <div class="arena-half arena-live-half">
           <p class="arena-pick-label">Join a Challenge</p>
           <div class="arena-challenge-entry">
             <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
