@@ -12,7 +12,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-#app { width: 100%; flex: 1; }
+#app { max-width: 1400px; width: 100%; margin: 0 auto; flex: 1; }
 
 :focus-visible {
   outline: 3px solid var(--primary);
@@ -35,7 +35,7 @@ body {
   align-items: center;
   justify-content: space-between;
   height: var(--header-h);
-  padding: 0 max(16px, calc((100% - 1100px) / 2));
+  padding: 0 16px;
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -83,7 +83,6 @@ body {
 .screen {
   display: flex; flex-direction: column; gap: 16px;
   padding: 24px 16px 40px;
-  max-width: 1100px; margin: 0 auto; width: 100%;
   animation: fadeIn var(--tx-slow) ease;
 }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
@@ -133,9 +132,10 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .welcome-left {
   flex: 3 1 0; min-width: 0;
   background: var(--primary-soft); color: var(--text);
-  padding: 40px max(36px, calc((100% - 560px) / 2)) 60px; display: flex; flex-direction: column; gap: 20px;
-  justify-content: center;
+  padding: 40px 60px 60px; display: flex; flex-direction: column; gap: 20px;
+  justify-content: center; align-items: flex-start;
 }
+.welcome-left-inner { max-width: 560px; width: 100%; }
 .welcome-logo {
   display: flex; align-items: center; gap: 12px;
   font-size: var(--fs-h2); font-weight: 800; color: var(--primary); letter-spacing: -0.5px;
@@ -151,11 +151,12 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .welcome-features li span { font-size: var(--fs-ui); color: var(--text-light); line-height: 1.4; }
 
 .welcome-right {
-  flex: 1 1 320px; max-width: 440px; display: flex; flex-direction: column;
-  justify-content: center; align-items: flex-start;
-  padding: 40px 40px 60px; gap: 16px;
+  flex: 2 1 0; min-width: 300px; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 40px 48px 60px; gap: 16px;
   background: var(--surface);
 }
+.welcome-right > * { width: 100%; max-width: 400px; }
 .welcome-pick-label { font-size: var(--fs-card); font-weight: 700; margin: 0; color: var(--text); }
 .welcome-foot { color: var(--text-light); font-size: var(--fs-note); margin: 0; }
 .board-list   { display: grid; gap: 12px; width: 100%; }
@@ -166,8 +167,10 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 
 @media (max-width: 720px) {
   .welcome-layout { flex-direction: column; min-height: unset; }
-  .welcome-left { padding: 28px 20px; gap: 16px; }
-  .welcome-right { flex: unset; padding: 24px 20px; align-items: stretch; }
+  .welcome-left { padding: 28px 20px; gap: 16px; align-items: stretch; }
+  .welcome-left-inner { max-width: 100%; }
+  .welcome-right { flex: unset; min-width: unset; padding: 24px 20px; align-items: stretch; }
+  .welcome-right > * { max-width: 100%; }
   .welcome-features { gap: 10px; }
 }
 

@@ -6,6 +6,7 @@ Object.assign(app, {
       <div class="screen welcome-screen">
         <div class="welcome-layout">
           <div class="welcome-left">
+            <div class="welcome-left-inner">
             <div class="welcome-logo">
               <svg class="welcome-logo-icon" width="48" height="48" viewBox="0 0 32 32" aria-hidden="true">
                 <rect width="32" height="32" rx="7" fill="#2563eb"/>
@@ -27,6 +28,7 @@ Object.assign(app, {
               <li><span class="wf-icon">🔥</span><div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div></li>
               <li><span class="wf-icon">✦</span><div><strong>Ask Cloé</strong><span>AI study companion — ask anything about your Grade 10 subjects, get concise answers &amp; curious follow-up questions</span></div></li>
             </ul>
+            </div><!-- welcome-left-inner -->
           </div>
           <div class="welcome-right">
             <p class="welcome-pick-label">Choose your board to get started</p>
