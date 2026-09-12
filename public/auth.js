@@ -193,7 +193,10 @@ const SYNC_KEYS = {
             <input id="auth-email-input" type="email" autocomplete="email" required placeholder="you@example.com">
           </label>
           <label class="auth-label">Password
-            <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="8">
+            <div class="auth-pw-wrap">
+              <input id="auth-pw-input" type="password" autocomplete="current-password" required placeholder="Password" minlength="8">
+              <button type="button" class="auth-pw-toggle" title="Show password" onclick="riseAuth._togglePw(this)">👁️</button>
+            </div>
             <span id="auth-pw-hint" class="auth-pw-hint" hidden>Min 8 chars · uppercase · lowercase · number · special character</span>
           </label>
           <button type="submit" id="auth-email-btn" class="btn primary" style="width:100%">Sign in</button>
@@ -254,6 +257,14 @@ const SYNC_KEYS = {
       showError('');
     },
 
+    _togglePw(btn) {
+      const pw = document.getElementById('auth-pw-input');
+      if (!pw) return;
+      const show = pw.type === 'password';
+      pw.type = show ? 'text' : 'password';
+      btn.textContent = show ? '🙈' : '👁️';
+      btn.title = show ? 'Hide password' : 'Show password';
+    },
 
     async _googleSignIn() {
       showError('');

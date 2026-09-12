@@ -1245,6 +1245,15 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 }
 .auth-label input:focus { outline: 2px solid var(--primary); border-color: transparent; }
 
+.auth-pw-wrap { position: relative; display: flex; }
+.auth-pw-wrap input { width: 100%; padding-right: 36px; }
+.auth-pw-toggle {
+  position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer; font-size: 15px;
+  padding: 4px 6px; line-height: 1; opacity: .7;
+}
+.auth-pw-toggle:hover { opacity: 1; }
+
 .auth-pw-hint { font-size: 12px; color: var(--text-light); margin-top: 3px; }
 .auth-reset-link {
   background: none; border: none; font-size: var(--fs-sm); color: var(--text-light);
