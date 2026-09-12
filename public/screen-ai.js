@@ -241,11 +241,7 @@ function aiRenderMessages() {
   if (_bg) { box.style.backgroundImage = `url(${_bg})`; box.style.backgroundSize = 'cover'; box.style.backgroundPosition = 'center'; }
   else { box.style.backgroundImage = ''; }
   if (!aiState.messages.length) {
-    box.innerHTML = `<div class="ai-empty">
-      <span class="ai-empty-icon">✦</span>
-      <p>Bonjour! I'm Cloé 👩‍🏫 — ask me anything about your Grade 10 subjects</p>
-      <p class="ai-empty-sub">Maths · Science · Social Science · History · Geography · English · Hindi · CS</p>
-    </div>`;
+    box.innerHTML = '';
     return;
   }
   box.innerHTML = aiState.messages.map((m, idx) => {
