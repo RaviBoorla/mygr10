@@ -961,11 +961,11 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 /* On mobile: slide up from bottom */
 @media (max-width: 520px) {
   .ai-panel {
-    top: auto; left: 0; right: 0; bottom: 0;
-    width: 100%; height: 80dvh;
+    top: var(--header-h); left: 0; right: 0; bottom: 0;
+    width: 100%; height: auto;
     border-left: none; border-top: 1px solid var(--border);
-    border-radius: 16px 16px 0 0;
-    transform: translateY(100%); transition: transform .25s ease;
+    border-radius: 0;
+    transform: translateY(calc(100% + var(--header-h))); transition: transform .25s ease;
     box-shadow: 0 -4px 24px rgba(0,0,0,.12);
   }
   .ai-panel-open { transform: translateY(0); }
