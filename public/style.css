@@ -1053,9 +1053,9 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   cursor: pointer; transition: background .15s, color .15s;
 }
 .ai-action-btn:hover { background: var(--bg); color: var(--text); }
-.ai-retry-btn { padding: 2px 6px; opacity: .55; }
+.ai-retry-btn { padding: 2px 6px; opacity: .7; background: var(--surface); border-radius: 6px; }
 .ai-retry-btn:hover { opacity: 1; }
-.ai-copy-btn { padding: 3px 6px; opacity: .45; flex-shrink: 0; margin-top: 6px; }
+.ai-copy-btn { padding: 3px 6px; opacity: .7; flex-shrink: 0; margin-top: 6px; background: var(--surface); border-radius: 6px; }
 .ai-copy-btn:hover { opacity: 1; }
 
 .ai-send-btn {
