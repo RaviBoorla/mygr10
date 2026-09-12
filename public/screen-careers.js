@@ -49,7 +49,7 @@ Object.assign(app, {
       .careers-act:hover{color:var(--text1)}
 
       #careers-zc{
-        position:fixed;bottom:18px;right:16px;z-index:190;
+        position:fixed;bottom:58px;right:16px;z-index:190;
         display:flex;gap:4px;
         transition:right .22s cubic-bezier(.4,0,.2,1);
       }
@@ -67,7 +67,7 @@ Object.assign(app, {
       .careers-zb:hover{color:var(--text1)}
 
       #careers-leg{
-        position:fixed;bottom:18px;left:16px;z-index:190;
+        position:fixed;bottom:58px;left:16px;z-index:190;
         background:rgba(255,255,255,.94);backdrop-filter:blur(12px);
         border:1px solid var(--border);border-radius:9px;
         padding:9px 12px;display:flex;flex-direction:column;gap:5px;
