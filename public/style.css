@@ -12,7 +12,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-#app { max-width: 1400px; width: 100%; margin: 0 auto; flex: 1; }
+#app { width: 100%; flex: 1; min-width: 0; }
 
 :focus-visible {
   outline: 3px solid var(--primary);
@@ -42,6 +42,8 @@ body {
   top: 0;
   z-index: 10;
 }
+@media (min-width: 1600px) { .app-header { padding: 0 48px; } }
+@media (min-width: 2000px) { .app-header { padding: 0 96px; } }
 .hdr-left, .hdr-right { display: flex; align-items: center; gap: 10px; }
 .hdr-left { min-width: 0; flex: 1 1 0; overflow: hidden; }
 .hdr-right { flex-shrink: 0; }
@@ -83,8 +85,12 @@ body {
 .screen {
   display: flex; flex-direction: column; gap: 16px;
   padding: 24px 16px 40px;
+  width: 100%; margin: 0 auto;
   animation: fadeIn var(--tx-slow) ease;
 }
+.screen:not(.welcome-screen) { max-width: 1100px; }
+@media (min-width: 1600px) { .screen:not(.welcome-screen) { max-width: 1280px; } }
+@media (min-width: 2000px) { .screen:not(.welcome-screen) { max-width: 1440px; } }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 @keyframes fadeInPlace { from { opacity: 0; } to { opacity: 1; } }
@@ -164,6 +170,13 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .board-btn { display: flex; flex-direction: column; gap: 2px; padding: 16px 20px; }
 .board-btn strong { font-size: var(--fs-card); color: var(--text); }
 .board-btn span   { font-size: var(--fs-ui); color: var(--text-light); font-weight: 400; }
+
+@media (min-width: 1600px) {
+  .welcome-left  { padding: 60px 96px; }
+  .welcome-right { padding: 60px 80px; }
+  .welcome-left-inner { max-width: 640px; }
+  .welcome-right > * { max-width: 440px; }
+}
 
 @media (max-width: 720px) {
   .welcome-layout { flex-direction: column; min-height: unset; }
