@@ -4,6 +4,7 @@
 
 const AI_LS_KEY = 'rise-ai-config';
 const AI_CHAT_KEY = 'rise-ai-history';
+const AI_BG_KEY   = 'rise-ai-bg';
 const AI_ENDPOINT = '/api/chat';
 
 const AI_DEFAULT_CONFIG = {
@@ -236,6 +237,9 @@ function aiProviderInfo(id) {
 function aiRenderMessages() {
   const box = document.getElementById('ai-msgs');
   if (!box) return;
+  const _bg = localStorage.getItem(AI_BG_KEY);
+  if (_bg) { box.style.backgroundImage = `url(${_bg})`; box.style.backgroundSize = 'cover'; box.style.backgroundPosition = 'center'; }
+  else { box.style.backgroundImage = ''; }
   if (!aiState.messages.length) {
     box.innerHTML = `<div class="ai-empty">
       <span class="ai-empty-icon">✦</span>
@@ -312,10 +316,12 @@ function aiRenderPanel() {
         </div>
         <div class="ai-header-right">
           ${aiState.messages.length ? `<button class="ai-icon-btn" title="Clear chat" onclick="aiPanel.clear()">↺</button>` : ''}
+          <button class="ai-icon-btn" title="${localStorage.getItem(AI_BG_KEY) ? 'Remove background' : 'Set chat background'}" onclick="aiPanel.pickBg(event)">🖼️</button>
           <button class="ai-icon-btn" title="Settings" onclick="aiPanel.openConfig()">⚙</button>
           <button class="ai-icon-btn" title="Close" onclick="aiPanel.close()">✕</button>
         </div>
       </div>
+      <input type="file" id="ai-bg-input" accept="image/*" style="display:none" onchange="aiPanel._onBgFile(this)">
       <div class="ai-msgs" id="ai-msgs"></div>
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
@@ -570,6 +576,30 @@ const aiPanel = {
     aiState.streaming = false;
     aiSaveHistory(aiState.messages);
     this._render();
+  },
+
+  pickBg(e) {
+    if (localStorage.getItem(AI_BG_KEY)) {
+      // If bg exists, remove it
+      localStorage.removeItem(AI_BG_KEY);
+      aiRenderMessages();
+      this._render();
+    } else {
+      document.getElementById('ai-bg-input')?.click();
+    }
+  },
+
+  _onBgFile(input) {
+    const file = input.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try { localStorage.setItem(AI_BG_KEY, ev.target.result); } catch { /* quota */ }
+      aiRenderMessages();
+      this._render();
+    };
+    reader.readAsDataURL(file);
+    input.value = '';
   },
 
   // ── private ─────────────────────────────────────────────────────────────────
