@@ -308,6 +308,7 @@ function aiRenderPanel() {
   const prov = aiProviderInfo(cfg.provider);
   return `
     <div class="ai-panel-inner">
+      <div class="ai-resize-handle" onmousedown="aiPanel._startResize(event)" ontouchstart="aiPanel._startResize(event)"></div>
       <div class="ai-header">
         <div class="ai-header-left">
           <span class="ai-star">✦</span>
@@ -618,7 +619,38 @@ const aiPanel = {
     const el = document.getElementById('ai-panel');
     if (!el) return;
     el.innerHTML = aiRenderPanel();
+    const savedW = localStorage.getItem('rise-ai-width');
+    if (savedW && window.innerWidth > 520) el.style.width = savedW + 'px';
     aiRenderMessages();
+  },
+
+  _startResize(e) {
+    if (window.innerWidth <= 520) return;
+    const panel = document.getElementById('ai-panel');
+    if (!panel) return;
+    const startX = e.touches ? e.touches[0].clientX : e.clientX;
+    const startW = panel.offsetWidth;
+    const baseMax = Math.round(startW * 1.5);
+    const minW = 280;
+    const onMove = (ev) => {
+      const x = ev.touches ? ev.touches[0].clientX : ev.clientX;
+      const newW = Math.min(baseMax, Math.max(minW, startW + (startX - x)));
+      panel.style.width = newW + 'px';
+    };
+    const onUp = () => {
+      const w = panel.offsetWidth;
+      try { localStorage.setItem('rise-ai-width', w); } catch {}
+      document.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseup', onUp);
+      document.removeEventListener('touchmove', onMove);
+      document.removeEventListener('touchend', onUp);
+      document.body.style.userSelect = '';
+    };
+    document.body.style.userSelect = 'none';
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onUp);
+    document.addEventListener('touchmove', onMove, { passive: true });
+    document.addEventListener('touchend', onUp);
   },
 
   _renderConfig() {

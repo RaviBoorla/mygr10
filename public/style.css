@@ -973,7 +973,15 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   .ai-badge { max-width: 140px; }
 }
 
-.ai-panel-inner { display: flex; flex-direction: column; height: 100%; overflow: hidden; }
+.ai-panel-inner { display: flex; flex-direction: column; height: 100%; overflow: hidden; position: relative; }
+.ai-resize-handle {
+  position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
+  cursor: ew-resize; z-index: 10;
+  background: transparent;
+  transition: background .15s;
+}
+.ai-resize-handle:hover { background: var(--primary-soft, rgba(37,99,235,.15)); }
+@media (max-width: 520px) { .ai-resize-handle { display: none; } }
 
 .ai-header {
   display: flex; align-items: center; justify-content: space-between;
