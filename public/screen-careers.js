@@ -109,9 +109,9 @@ Object.assign(app, {
 
       @media(max-width:640px){
         #careers-bar{align-items:flex-start;}
-        #careers-sw{order:1;flex:1 1 100%;max-width:none;}
-        #careers-chips{order:2;flex:1 1 100%;}
-        .careers-home-btn{order:3;margin-left:0;}
+        #careers-sw{order:1;flex:1 1 auto;max-width:none;}
+        .careers-home-btn{order:2;margin-left:0;}
+        #careers-chips{order:3;flex:1 1 100%;}
       }
       @media(prefers-reduced-motion:reduce){#careers-det{transition:none}}
       </style>
