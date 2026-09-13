@@ -625,6 +625,7 @@ function renderArenaSetup() {
         <span class="arena-how-modal-title">How to play</span>
         <button class="arena-how-close" onclick="document.getElementById('arena-how-modal').hidden=true;document.getElementById('arena-how-backdrop').hidden=true">✕</button>
       </div>
+      <div class="arena-how-modal-body">
       <p class="arena-how-section-title">Free Run</p>
       <ul class="arena-how-list">
         <li><span class="arena-how-icon">📚</span><span>Each <strong>stage</strong> has 5 MCQs drawn from your chosen subjects.</span></li>
@@ -648,6 +649,7 @@ function renderArenaSetup() {
         <li><span class="arena-how-icon">⏩</span><span>The host presses <em>Start Game</em>. All players see each question at the same moment with a shared countdown.</span></li>
         <li><span class="arena-how-icon">🥇</span><span>Tap your answer before time runs out — faster correct answers score more points. Final leaderboard shows 🥇🥈🥉.</span></li>
       </ul>
+      </div>
     </div>
 
     <div class="screen arena-setup-screen">
