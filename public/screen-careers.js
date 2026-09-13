@@ -47,6 +47,7 @@ Object.assign(app, {
         transition:color .12s;white-space:nowrap;
       }
       .careers-act:hover{color:var(--text1)}
+      .careers-home-btn{margin-left:auto;flex-shrink:0;font-family:var(--font);font-weight:600;}
 
       #careers-zc{
         position:fixed;bottom:58px;right:16px;z-index:190;
@@ -110,6 +111,7 @@ Object.assign(app, {
         #careers-bar{align-items:flex-start;}
         #careers-sw{order:1;flex:1 1 100%;max-width:none;}
         #careers-chips{order:2;flex:1 1 100%;}
+        .careers-home-btn{order:3;margin-left:0;}
       }
       @media(prefers-reduced-motion:reduce){#careers-det{transition:none}}
       </style>
@@ -131,6 +133,8 @@ Object.assign(app, {
             <button class="careers-act" id="careers-btn-expand">Expand All</button>
             <button class="careers-act" id="careers-btn-collapse">Collapse</button>
           </div>
+        </div>
+        <button class="careers-act careers-home-btn" id="careers-btn-home" onclick="app.go(['home'])" title="Home">&#8962; Home</button>
         </div>
       </div>
 
