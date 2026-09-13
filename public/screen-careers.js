@@ -47,7 +47,7 @@ Object.assign(app, {
         transition:color .12s;white-space:nowrap;
       }
       .careers-act:hover{color:var(--text1)}
-      .careers-home-btn{margin-left:auto;flex-shrink:0;font-family:var(--font);font-weight:600;}
+      .careers-home-btn{margin-left:auto;flex-shrink:0;}
 
       #careers-zc{
         position:fixed;bottom:58px;right:16px;z-index:190;
@@ -134,7 +134,7 @@ Object.assign(app, {
             <button class="careers-act" id="careers-btn-collapse">Collapse</button>
           </div>
         </div>
-        <button class="careers-act careers-home-btn" id="careers-btn-home" onclick="app.go(['home'])" title="Home">&#8962; Home</button>
+        <button class="btn ghost home-btn careers-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
       </div>
 

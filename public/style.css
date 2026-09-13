@@ -703,6 +703,7 @@ kbd {
   width: min(588px, 92vw); max-height: 80vh; overflow: hidden;
   display: flex; flex-direction: column;
   box-shadow: 0 8px 40px rgba(0,0,0,.22); }
+.arena-how-modal[hidden] { display: none; }
 .arena-how-modal-header {
   display: flex; align-items: center; justify-content: space-between;
   flex-shrink: 0; padding: 24px 24px 16px; background: var(--surface);
