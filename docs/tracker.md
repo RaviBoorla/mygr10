@@ -4,6 +4,21 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Arena — new subjects available for Free Run / Daily Challenge *(done)*
+
+Added to `ARENA_SUBJECTS` in `arena.js` (shared by Free Run subject picker
+and the Daily Challenge, since both draw from the same config):
+
+- **CBSE:** Computer Applications and Information Technology, each selectable
+  as its own subject (not merged)
+- **ICSE:** Computer Science
+
+All three already carry a `difficulty` field on every question, so they
+slot straight into the existing easy/medium/hard stage system with no
+further changes needed.
+
+---
+
 ## Computer Applications — Scratch & Python chapter added *(done)*
 
 Unit 4 of the Computer Applications textbook (Scratch block-based programming

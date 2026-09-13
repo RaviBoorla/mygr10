@@ -337,8 +337,8 @@ function renderArenaCollection() {
 const SCIENCE_VIRTUAL = new Set(['Physics', 'Chemistry', 'Biology']);
 
 const ARENA_SUBJECTS = {
-  CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'English', 'Hindi'],
-  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English'],
+  CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
+  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
   IB:   [], // no IB MCQ banks yet
 };
 
