@@ -4,6 +4,36 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Arena — How-to-play popover fixes *(done)*
+
+- Widened `.arena-how-modal` by 40% (420px → 588px, still capped at `min(…, 92vw)` so it stays responsive on mobile)
+- Header (title + close button) is now sticky at the top of the popover: content was split into `.arena-how-modal-header` (fixed, bottom border) and a new `.arena-how-modal-body` wrapper that scrolls independently
+- Fixed a regression from the sticky-header change: giving `.arena-how-modal` `display:flex` had overridden the browser's default `[hidden]{display:none}` rule, leaving the popover stuck open on Arena load with a non-functional close button — fixed with an explicit `.arena-how-modal[hidden]{display:none}` override
+
+---
+
+## Career Pathing — Home button *(done)*
+
+- Added a standard `btn ghost home-btn` (⌂ Home — same markup/style used in Arena, legal pages, and the progress screen) to the Career Pathing toolbar, right-aligned via `margin-left:auto` so it lines up under the header's Sign-in button
+- On screens ≤640px it drops to the end of the wrapped toolbar row via flex `order`
+- Toolbar height is already recalculated dynamically on resize (`syncChromeHeight()` in `careers.js`), so the extra button doesn't cause any overlap with the tree canvas below at any breakpoint
+
+---
+
+## CBSE Computer Applications & Information Technology *(done)*
+
+Added as two new CBSE subject cards (one each), fully wired through the existing config-driven architecture — no new screens needed:
+
+- **Computer Applications (165):** 80 MCQs (Networking 30, HTML 35, Cyber ethics 15), 30 Board Short Answers, 25 Textbook Solved Exercises
+- **Information Technology (402):** 135 MCQs across the 5 subject-specific units (Intro to IT-ITeS, Data Entry & Keyboarding, Digital Documentation, Electronic Spreadsheet, Digital Presentation) plus the 5 shared "Employability Skills" units (Communication, Self-Management, ICT, Entrepreneurial, Green Skills) per the IT-402 Part A curriculum; 55 Board Short Answers, 45 Textbook Solved Exercises
+- Mock Test, Chapter Drill, Board Short Answers, and Textbook Solved Exercises all enabled automatically via `BANKS`/`SA_BANKS`/`SOLVED_BANKS` entries in `config.js`
+- Revision Notes: added `REVISION['Computer Applications']` (3 chapters) and `REVISION['Information Technology']` (10 chapters), original content authored from the public CBSE syllabi (not transcribed from any textbook)
+- Renamed the existing "Comp Sci" Revision Notes tab to **"Comp App & IT"**, consolidating it with the two new CBSE subjects via `NOTES_SOURCES`/`NOTES_CATALOG` — the underlying ICSE Computer Science exam subject, its question bank, and its own `REVISION['Computer Science']` entry are untouched
+- All content authored fresh from the public CBSE syllabi and calibrated against real board papers (2022–2026 CA, 2024–2026 IT) for style/difficulty — no content transcribed from copyrighted textbooks or exam papers
+- See `docs/inventory.md` for full per-subject/per-chapter breakdowns
+
+---
+
 ## AI Chat — Cloé *(done)*
 
 Floating AI chat panel powered by Cloudflare Workers AI (free tier).
