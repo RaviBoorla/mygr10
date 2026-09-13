@@ -1,6 +1,6 @@
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
-  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi'],
+  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
   ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
   // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
 };
@@ -18,7 +18,9 @@ const BANKS = {
   'X ICSE English':               'X-ICSE-English',
   'X ICSE Computer Science':      'X-ICSE-Computer-Science',
   'X CBSE Hindi':                  'X-CBSE-Hindi',
-  'X CBSE English':               'X-CBSE-English'
+  'X CBSE English':               'X-CBSE-English',
+  'X CBSE Computer Applications':   'X-CBSE-Computer-Applications',
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology'
 };
 
 const SA_BANKS = {
@@ -32,7 +34,9 @@ const SA_BANKS = {
   'X ICSE Biology':                'X-ICSE-Biology-ShortAnswers',
   'X ICSE History & Civics':       'X-ICSE-History-Civics-ShortAnswers',
   'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers',
-  'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers'
+  'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers',
+  'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-ShortAnswers',
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -43,7 +47,9 @@ function saBankSlug(subject, board, grade) {
 const SOLVED_BANKS = {
   'X CBSE Mathematics':    'X-CBSE-Mathematics-Solved',
   'X CBSE Science':        'X-CBSE-Science-Solved',
-  'X CBSE Social Science': 'X-CBSE-Social-Science-Solved'
+  'X CBSE Social Science': 'X-CBSE-Social-Science-Solved',
+  'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-Solved',
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -87,7 +93,7 @@ const NOTES_CATALOG = [
   { id: 'Geography',        label: 'Geography' },
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
-  { id: 'Computer Science', label: 'Comp Sci' }
+  { id: 'Comp App & IT', label: 'Comp App & IT' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

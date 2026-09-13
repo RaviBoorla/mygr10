@@ -32,8 +32,10 @@ const NOTES_SOURCES = {
   Hindi: [
     ['CBSE', 'Hindi', 'Hindi']
   ],
-  'Computer Science': [
-    ['ICSE', 'Computer Science', 'Computer Science']
+  'Comp App & IT': [
+    ['ICSE', 'Computer Science', 'Computer Science'],
+    ['CBSE', 'Computer Applications', 'Computer Applications'],
+    ['CBSE', 'Information Technology', 'Information Technology']
   ],
   'Social Science': [
     ['CBSE', 'Social Science', 'Social Science']
@@ -84,7 +86,7 @@ function _ensureRevisionData(cb) {
   // First call — start loading
   _revisionCallbacks = [cb];
   const s = document.createElement('script');
-  s.src = 'revision-data.js?v=2';
+  s.src = 'revision-data.js?v=3';
   s.onload = () => {
     const pending = _revisionCallbacks || [];
     _revisionCallbacks = null; // reset so future calls go straight to cb()

@@ -4481,6 +4481,339 @@ REVISION.Mathematics = REVISION.Mathematics
   .concat(REVISION['ICSE Mathematics'] || [])
   .concat(REVISION['IB Mathematics'] || []);
 
+// ─── Computer Applications (CBSE Code 165) ───────────────────────────────────
+REVISION['Computer Applications'] = [
+  {
+    chapter: 'Networking',
+    formulae: [
+      'Internet = a global network of networks connecting computers worldwide using the TCP/IP protocol suite',
+      'TCP/IP: TCP breaks data into packets and reassembles them reliably; IP handles addressing and routing of each packet',
+      'HTTP (port 80): transfers web pages in plain text; HTTPS (port 443) = HTTP + SSL/TLS encryption',
+      'SMTP: sends/relays outgoing e-mail; POP3: downloads incoming mail to a client; IMAP: syncs mail while keeping it on the server',
+      'SSH (secure, encrypted remote login) vs TELNET (remote login, unencrypted — insecure)',
+      'SFTP/SCP (secure, encrypted file transfer over SSH) vs FTP (file transfer, unencrypted)',
+      'Web services on the Internet: e-mail, chat, video conferencing, e-learning, e-banking, e-shopping, e-reservation, e-governance, social networking',
+      'Mobile technologies: SMS (text only), MMS (adds images/audio/video), 3G/4G/5G (progressively higher mobile data speeds)'
+    ],
+    logic: [
+      'A web browser is client-side software that requests and displays pages; a web server is the software/hardware that stores pages and answers those requests',
+      'Downloading = copying data from a remote server to your device; uploading = sending data from your device to a remote server',
+      'SSH-family protocols encrypt everything including login credentials; TELNET and plain FTP send data, including passwords, as plain text',
+      'HTTPS protects data such as passwords and card details in transit — the padlock icon in a browser signals HTTPS is in use',
+      'IMAP keeps mail synced across multiple devices; POP3 typically downloads and removes mail from the server, so it is device-specific'
+    ],
+    tips: [
+      'Remember port numbers loosely by pairing: HTTP=80/HTTPS=443, and that "S" protocols (HTTPS, SFTP, SSH) always mean "encrypted"',
+      'When asked to differentiate two protocols, always mention: full form, one-line purpose, and one point of difference',
+      'Group services into three buckets while revising: communication (e-mail, chat), commerce (e-banking, e-shopping), and information/governance (e-learning, e-governance)'
+    ],
+    bestPractices: [
+      'Always prefer HTTPS/SSH/SFTP over HTTP/TELNET/FTP whenever sensitive data (passwords, payments) is involved',
+      'Keep browser and OS updated to benefit from the latest TLS/SSL security patches',
+      'Verify a website uses HTTPS (padlock symbol) before entering personal or payment information'
+    ]
+  },
+  {
+    chapter: 'HTML',
+    formulae: [
+      'Basic skeleton: <!DOCTYPE html><html><head><title>...</title></head><body>...</body></html>',
+      'Text tags: <h1>–<h6> headings, <p> paragraph, <b>/<strong> bold, <i>/<em> italic, <br> line break, <hr> horizontal rule',
+      'Lists: <ul><li> (unordered/bulleted), <ol><li> (ordered/numbered)',
+      'Link: <a href="url">text</a>; Image: <img src="file" alt="text">',
+      'Table: <table><tr> (row)<th> (header cell)<td> (data cell)</table>',
+      'Form: <form action="url" method="get|post"><input type="text|password|radio|checkbox|submit">...</form>',
+      'CSS can be added inline (style attribute), internally (<style> in <head>), or externally (<link rel="stylesheet" href="file.css">)'
+    ],
+    logic: [
+      'HTML tags usually come in opening/closing pairs, <tag>...</tag>; empty/void elements like <br> and <img> do not need a closing tag',
+      'Attributes go inside the opening tag as name="value" pairs, e.g. <a href="page.html">',
+      'The <head> section holds meta-information (title, CSS links) that is not shown as page content; only <body> content is displayed',
+      'method="get" appends form data visibly to the URL; method="post" sends it in the request body, which is more suitable for sensitive/large data',
+      'CSS selectors target elements by tag, .class, or #id — an id must be unique on a page, a class can repeat'
+    ],
+    tips: [
+      'Always close tags properly and nest them correctly (innermost tag closes first) to avoid rendering issues',
+      'Use semantic, descriptive alt text for every <img> — it helps accessibility and shows if the image fails to load',
+      'For a quick static layout, an internal <style> block is faster to test; for multi-page sites, prefer one external CSS file'
+    ],
+    bestPractices: [
+      'Keep structure (HTML) separate from presentation (CSS) — avoid excessive inline styling',
+      'Give every form <input> a matching <label> for accessibility and clarity',
+      'Use meaningful table headers (<th>) so screen readers and users can understand columns/rows at a glance'
+    ]
+  },
+  {
+    chapter: 'Cyber ethics',
+    formulae: [
+      'Netiquette = network + etiquette — the accepted code of polite, responsible behaviour while communicating online',
+      'Intellectual Property Rights (IPR): legal rights (copyright, patent, trademark) protecting creations of the mind',
+      'Plagiarism = presenting someone else\'s work/ideas as one\'s own without giving credit',
+      'Software licensing types: proprietary (paid, restricted use), freeware (free, closed source), open source (free, source code available/modifiable, e.g. Linux)',
+      'Digital divide = the gap between those who have easy access to computers/Internet and those who do not',
+      'E-commerce security relies on encryption (HTTPS/SSL), secure passwords, and verified payment gateways'
+    ],
+    logic: [
+      'Copying software illegally (software piracy) and copying someone\'s written work without credit (plagiarism) are both violations of IPR, but apply to different types of content',
+      'Open source software allows viewing and modifying source code, unlike proprietary software where the code is hidden',
+      'Following netiquette (no shouting in ALL CAPS, no spamming, respecting others\' views) keeps online spaces safe and respectful',
+      'The digital divide can be based on economic status, geography (urban vs rural), or lack of digital literacy',
+      'Secure e-commerce transactions depend on both technical safeguards (HTTPS) and safe user behaviour (not sharing OTPs/passwords)'
+    ],
+    tips: [
+      'When asked to give netiquette rules, list concrete behaviours: be respectful, avoid ALL CAPS, don\'t spam, cite sources, protect privacy',
+      'Remember three related-but-different terms: plagiarism (content theft), piracy (software/media theft), and hacking (unauthorised system access)',
+      'For e-commerce security questions, mention both technology (HTTPS/encryption) and user practice (strong passwords, verifying seller)'
+    ],
+    bestPractices: [
+      'Always credit sources and avoid copy-pasting text/media without permission or citation',
+      'Prefer licensed or open-source software over pirated copies',
+      'Never share passwords, OTPs, or card details over email/chat, even if the request looks official'
+    ]
+  }
+];
+
+// ─── Information Technology (CBSE IT-402 / Employability Skills) ────────────
+REVISION['Information Technology'] = [
+  {
+    chapter: 'Introduction to IT-ITeS',
+    formulae: [
+      'IT (Information Technology) industry = companies that build software/hardware and IT infrastructure',
+      'ITeS (IT-enabled Services) = services delivered using IT/telecom infrastructure but not software development itself, e.g. call centres, back-office support',
+      'BPO (Business Process Outsourcing) = outsourcing routine, rule-based processes (data entry, payroll, customer support)',
+      'KPO (Knowledge Process Outsourcing) = outsourcing knowledge-intensive tasks (research, analytics, legal/financial analysis)',
+      'Major sub-sectors of Indian IT-ITeS: IT services, BPM (Business Process Management), software products, engineering R&D, hardware'
+    ],
+    logic: [
+      'IT companies mainly build technology; ITeS companies mainly use technology to deliver a service to another business',
+      'BPO focuses on repetitive, process-driven tasks; KPO focuses on tasks needing domain expertise and judgement',
+      'Employability/soft skills (communication, self-management) are as important as technical skills for a career in IT-ITeS',
+      'The industry offers roles across skill levels — from data entry operators to software developers to business analysts'
+    ],
+    tips: [
+      'When asked to differentiate IT and ITeS, give one example of each: IT = software company (e.g. developing an app); ITeS = call centre (using IT to deliver customer support)',
+      'Remember: BPO = doing the process for someone else; KPO = doing the thinking/analysis for someone else'
+    ],
+    bestPractices: [
+      'Keep basic technical skills (typing, spreadsheets, documentation) sharp — they underpin most entry-level IT-ITeS roles',
+      'Stay updated with industry basics (cloud, mobile, digital payments) as the sector evolves quickly'
+    ]
+  },
+  {
+    chapter: 'Data Entry and Keyboarding',
+    formulae: [
+      'Touch typing = typing without looking at the keyboard, using muscle memory for each key\'s position',
+      'Home row keys (QWERTY): A S D F (left hand) and J K L ; (right hand) — fingers rest here between keystrokes',
+      'Typing speed is measured in WPM (Words Per Minute); accuracy is measured as a percentage of correctly typed characters',
+      'Good posture: feet flat on floor, back straight, wrists straight (not bent), screen at eye level, elbows at roughly 90°'
+    ],
+    logic: [
+      'Touch typing increases speed and reduces errors because each finger is trained to a fixed set of keys',
+      'Poor ergonomics (wrong posture, wrong desk/chair height) over time can cause strain injuries such as RSI (Repetitive Strain Injury)',
+      'Speed without accuracy is not useful for data entry — accuracy is usually prioritised over raw speed',
+      'Regular short breaks while typing reduce eye strain and muscular fatigue'
+    ],
+    tips: [
+      'Practice with all fingers returning to the home row after each keystroke rather than hunting for keys',
+      'Focus on accuracy first, then gradually build speed — speed naturally improves with practice'
+    ],
+    bestPractices: [
+      'Maintain correct posture and take regular breaks to avoid strain during long typing sessions',
+      'Use ergonomic accessories (wrist rest, adjustable chair) where possible',
+      'Proofread entered data for errors rather than relying purely on typing speed'
+    ]
+  },
+  {
+    chapter: 'Digital Documentation',
+    formulae: [
+      'Mail Merge = combining a main document (letter template) with a data source (list of names/addresses) to generate personalised copies',
+      'Mail merge needs two files: the main document (with merge fields) and the data source (table/spreadsheet of records)',
+      'Common formatting: font style/size/colour, bold/italic/underline, alignment (left/right/centre/justify), bullets & numbering, headers & footers',
+      'Tables in a word processor: rows × columns of cells, used to organise data, with options to merge/split cells and adjust borders/shading'
+    ],
+    logic: [
+      'Mail merge saves time when the same letter must be sent to many people with only a few personalised fields (name, address) changing',
+      'Paragraph formatting (alignment, spacing, indents) applies to whole paragraphs, while character formatting (bold, font) applies to selected text',
+      'Styles allow consistent formatting (e.g. all headings look the same) and can be updated in one place to apply everywhere',
+      'Tables are preferred over tabs/spaces for aligning data because column widths adjust independently and stay aligned'
+    ],
+    tips: [
+      'When creating a mail merge, first prepare and clean the data source, since errors there appear in every merged copy',
+      'Use Styles instead of manually formatting each heading — makes documents easier to update and keeps them consistent'
+    ],
+    bestPractices: [
+      'Preview a mail merge before completing it, to catch formatting or data errors early',
+      'Use headers/footers for page numbers and document titles rather than typing them manually on each page',
+      'Keep documents well-structured with headings, consistent fonts, and adequate white space for readability'
+    ]
+  },
+  {
+    chapter: 'Electronic Spreadsheet',
+    formulae: [
+      'Relative reference: A1 — changes automatically when a formula is copied to another cell',
+      'Absolute reference: $A$1 — stays fixed (row and column locked) when a formula is copied',
+      'Mixed reference: $A1 or A$1 — locks only the column or only the row respectively',
+      'Common functions: =SUM(range), =AVERAGE(range), =MAX(range), =MIN(range), =COUNT(range)',
+      'Charts commonly used: column/bar chart (compare categories), line chart (trend over time), pie chart (proportion of a whole)'
+    ],
+    logic: [
+      'Use an absolute reference when a formula must always point to the same fixed cell (e.g. a tax rate) even after copying',
+      'Use a relative reference when each copied formula should shift to operate on its own row/column of data',
+      'SUM adds values, AVERAGE finds the mean, MAX/MIN find the highest/lowest value in a chosen range',
+      'A chart should be chosen based on what needs to be shown: trends → line chart; comparison → bar/column chart; proportion → pie chart'
+    ],
+    tips: [
+      'Before copying a formula across a range, decide first which references must stay fixed (use $) and which should change',
+      'Select the exact data range needed before inserting a chart — extra or missing rows/columns will distort the chart'
+    ],
+    bestPractices: [
+      'Label rows/columns clearly and keep raw data separate from calculated/summary cells',
+      'Use cell references in formulas rather than typing raw numbers, so the sheet updates automatically when data changes',
+      'Choose an appropriate, clearly labelled chart type so the data insight is obvious at a glance'
+    ]
+  },
+  {
+    chapter: 'Digital Presentation',
+    formulae: [
+      'Slide Master = a master template that controls default formatting (fonts, colours, placeholders) for every slide in a presentation',
+      'Views: Normal view (edit slides), Slide Sorter view (rearrange slide order), Slide Show view (present full-screen)',
+      'Animation = effect applied to an individual object/text within a slide',
+      'Transition = effect applied when moving from one slide to the next'
+    ],
+    logic: [
+      'Editing the Slide Master changes the look of all slides that use that layout at once, saving repeated manual formatting',
+      'Slide Sorter view is used to reorder, duplicate, or delete slides quickly by seeing thumbnails of the whole deck',
+      'Animations control how elements appear/move within one slide; transitions control how one slide changes into the next',
+      'Overusing multiple animation/transition types can distract the audience rather than support the message'
+    ],
+    tips: [
+      'Use the Slide Master first for consistent branding/fonts before formatting individual slides',
+      'Keep animations minimal and consistent — mixing too many effects looks unprofessional',
+      'Use Slide Sorter view when the presentation needs reordering rather than dragging slides one by one in Normal view'
+    ],
+    bestPractices: [
+      'Keep slide text brief (key points, not full paragraphs) and let the speaker elaborate verbally',
+      'Maintain consistent fonts, colours and layout across slides using the Slide Master',
+      'Preview the presentation in Slide Show view before presenting to catch layout or animation issues'
+    ]
+  },
+  {
+    chapter: 'Communication Skills',
+    formulae: [
+      'Communication cycle: Sender → Message (encoded) → Channel → Receiver → Decoding → Feedback',
+      'Types of communication: verbal (spoken/written words) and non-verbal (body language, facial expressions, gestures, tone)',
+      'Barriers to communication: physical (noise, distance), language, psychological (bias, stress), cultural, and technological barriers'
+    ],
+    logic: [
+      'Communication is only complete when feedback confirms the receiver understood the message as intended',
+      'Non-verbal cues (tone, posture, eye contact) can reinforce or contradict what is being said verbally',
+      'Removing barriers (e.g. simplifying language, reducing noise, staying calm) makes communication more effective',
+      'Active listening — paying full attention and confirming understanding — is as important as clear speaking'
+    ],
+    tips: [
+      'When answering, always mention the communication cycle stages in order: sender, message, channel, receiver, feedback',
+      'Give concrete examples of non-verbal communication: eye contact, facial expressions, posture, hand gestures'
+    ],
+    bestPractices: [
+      'Practice active listening — do not interrupt, and confirm understanding by paraphrasing',
+      'Match tone and body language to the message being conveyed',
+      'Choose the right channel (face-to-face, email, phone) depending on the message\'s urgency and sensitivity'
+    ]
+  },
+  {
+    chapter: 'Self-Management Skills',
+    formulae: [
+      'SMART goals: Specific, Measurable, Achievable, Realistic/Relevant, Time-bound',
+      'Stress management techniques: exercise, adequate sleep, time management, relaxation/breathing techniques, talking to someone',
+      'Time management tools: to-do lists, priority matrix (urgent vs important), calendars/schedules'
+    ],
+    logic: [
+      'A goal that is vague ("do better") is harder to act on than a SMART goal ("finish 2 chapters by Friday")',
+      'Chronic, unmanaged stress affects both physical health and work/study performance, so identifying stress triggers early helps',
+      'Prioritising tasks by urgency and importance (not just doing whatever comes first) leads to more effective time use',
+      'Self-awareness (recognising one\'s own strengths, weaknesses, and emotional state) underlies most self-management skills'
+    ],
+    tips: [
+      'When writing a SMART goal, check it against each letter of the acronym one by one',
+      'For stress-management questions, mention both physical (exercise, sleep) and mental (relaxation, talking to someone) strategies'
+    ],
+    bestPractices: [
+      'Set SMART goals for study/work tasks rather than vague intentions',
+      'Prioritise tasks using urgency vs importance before starting the day',
+      'Build in regular breaks and adequate sleep as part of a sustainable routine, not an afterthought'
+    ]
+  },
+  {
+    chapter: 'ICT Skills',
+    formulae: [
+      'ICT = Information and Communication Technology — computers, networks, and communication devices used together to manage information',
+      'Basic computer operations: starting/shutting down a system, opening/closing applications, using the mouse/keyboard',
+      'File operations: create, open, save, copy, move, rename, delete files and folders',
+      'Basic digital security: strong passwords, antivirus software, regular software updates, avoiding suspicious links/attachments'
+    ],
+    logic: [
+      'Organising files into clearly named folders makes it faster to locate and manage documents later',
+      'A strong password combines length, upper/lower case letters, numbers, and symbols, and should not be reused across accounts',
+      'Antivirus software and OS updates protect against malware by patching known vulnerabilities',
+      'Basic ICT literacy (file handling, safe browsing) is foundational to using any office software effectively'
+    ],
+    tips: [
+      'When listing file operations, give the standard set: create, save, copy, move, rename, delete',
+      'For digital security questions, mention both software (antivirus, updates) and behaviour (strong passwords, caution with links)'
+    ],
+    bestPractices: [
+      'Keep files organised in sensibly named folders and back up important data regularly',
+      'Use strong, unique passwords and enable updates/antivirus protection',
+      'Avoid clicking unknown links or downloading attachments from unverified sources'
+    ]
+  },
+  {
+    chapter: 'Entrepreneurial Skills',
+    formulae: [
+      'Entrepreneur = a person who identifies an opportunity, organises resources, and takes the risk to start and run a business',
+      'Key qualities of an entrepreneur: creativity, risk-taking ability, self-confidence, hard work, decision-making, and perseverance',
+      'Common myths about entrepreneurs: "entrepreneurs are born, not made", "you need a lot of money to start", "entrepreneurship guarantees quick success"'
+    ],
+    logic: [
+      'Entrepreneurship skills (creativity, risk-taking, planning) can be learned and developed, contrary to the myth that they are only innate',
+      'Taking calculated risks (after assessing pros/cons) is different from reckless risk-taking',
+      'Many successful businesses start small with limited capital and grow gradually — money alone does not guarantee success',
+      'Persistence through failure/setbacks is a common trait among successful entrepreneurs'
+    ],
+    tips: [
+      'When listing entrepreneurial qualities, give at least 4-5: creativity, confidence, risk-taking, hard work, decision-making',
+      'For "myths" questions, state the myth and then the fact that corrects it'
+    ],
+    bestPractices: [
+      'Research and plan (market, costs, competition) carefully before starting a venture',
+      'Start small, test ideas, and learn from feedback rather than over-investing at the very start',
+      'Build the habit of identifying everyday problems as potential business opportunities'
+    ]
+  },
+  {
+    chapter: 'Green Skills',
+    formulae: [
+      'Sustainable development = development that meets present needs without compromising the ability of future generations to meet their own needs',
+      'Three pillars of sustainability: Economic, Social (Society), and Environmental',
+      'Green skills = the knowledge and abilities needed to reduce negative environmental impact and support sustainable practices'
+    ],
+    logic: [
+      'Sustainable development balances all three pillars together — focusing on only economic growth while ignoring environment/society is not sustainable',
+      'Green skills apply across jobs/industries, not just environmental science roles — e.g. energy-efficient practices in an office',
+      'Reducing, reusing, and recycling resources supports the environmental pillar of sustainability',
+      'Long-term thinking (impact on future generations) is central to the idea of sustainable development'
+    ],
+    tips: [
+      'When listing the three pillars, remember the mnemonic: People (social), Profit (economic), Planet (environmental)',
+      'Give everyday examples of green practices: saving electricity, reducing paper use, recycling waste'
+    ],
+    bestPractices: [
+      'Adopt small everyday green habits: switching off unused devices, minimising waste, reusing materials',
+      'Consider environmental and social impact, not just cost, when making decisions',
+      'Support and participate in recycling and energy-conservation initiatives at school/workplace'
+    ]
+  }
+];
+
 // ─── Theorems by chapter ─────────────────────────────────────────────────────
 window.THEOREMS = {
   Mathematics: {
