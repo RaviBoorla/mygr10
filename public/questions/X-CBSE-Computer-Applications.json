@@ -1118,5 +1118,285 @@
     ],
     "correct": 1,
     "explanation": "Secure data transmission uses encryption protocols (like SSL/TLS in HTTPS) to protect data, such as payment details, as it travels between the customer's browser and the e-commerce server, preventing interception."
+  },
+  {
+    "id": "ca-081",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "In Scratch, the visual objects that can be programmed to move and interact are called:",
+    "options": [
+      "Backdrops",
+      "Sprites",
+      "Blocks",
+      "Stages"
+    ],
+    "correct": 1,
+    "explanation": "Sprites are the on-screen objects/characters in Scratch that are controlled by stacking blocks of code."
+  },
+  {
+    "id": "ca-082",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "Which category of Scratch blocks would you use to make a sprite say something in a speech bubble?",
+    "options": [
+      "Motion",
+      "Looks",
+      "Sound",
+      "Sensing"
+    ],
+    "correct": 1,
+    "explanation": "The 'Looks' block category contains blocks like 'say' and 'think' that display speech/thought bubbles above a sprite."
+  },
+  {
+    "id": "ca-083",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "Which Scratch block category contains 'move 10 steps' and 'turn 15 degrees'?",
+    "options": [
+      "Motion",
+      "Events",
+      "Control",
+      "Operators"
+    ],
+    "correct": 0,
+    "explanation": "The Motion category controls a sprite's position and direction, including 'move' and 'turn' blocks."
+  },
+  {
+    "id": "ca-084",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "In Scratch, which block is used to start a script when the green flag is clicked?",
+    "options": [
+      "when this sprite clicked",
+      "when green flag clicked",
+      "when key pressed",
+      "forever"
+    ],
+    "correct": 1,
+    "explanation": "'when green flag clicked' is an Events block that triggers a script as soon as the user clicks the green flag to start the project."
+  },
+  {
+    "id": "ca-085",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "Which Scratch block category is used to send a message that other sprites can react to?",
+    "options": [
+      "Broadcast (Events)",
+      "Looks",
+      "Sound",
+      "Variables"
+    ],
+    "correct": 0,
+    "explanation": "'Broadcast' and 'when I receive' blocks (found in Events) allow one sprite to send a message that triggers scripts in other sprites."
+  },
+  {
+    "id": "ca-086",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "Which Scratch construct repeats a set of blocks continuously for as long as the program runs?",
+    "options": [
+      "repeat 10",
+      "forever",
+      "if...then",
+      "wait"
+    ],
+    "correct": 1,
+    "explanation": "The 'forever' loop (Control category) repeats the enclosed blocks endlessly until the program is stopped."
+  },
+  {
+    "id": "ca-087",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "In Scratch, which block category would you use to check 'is the sprite touching the edge?'",
+    "options": [
+      "Sensing",
+      "Operators",
+      "Control",
+      "Variables"
+    ],
+    "correct": 0,
+    "explanation": "Sensing blocks let a sprite detect its environment, such as 'touching edge?', 'touching mouse-pointer?', and 'key pressed?'."
+  },
+  {
+    "id": "ca-088",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "Which Scratch block would you use to store and update a score during a game?",
+    "options": [
+      "A variable",
+      "A backdrop",
+      "A costume",
+      "A sound"
+    ],
+    "correct": 0,
+    "explanation": "Variables store changeable data such as score, lives, or time, and can be shown on the stage and updated with 'change [score] by 1' blocks."
+  },
+  {
+    "id": "ca-089",
+    "chapter": "Scratch & Python",
+    "difficulty": "hard",
+    "text": "In Scratch, what is the key difference between 'repeat 10' and 'repeat until <condition>'?",
+    "options": [
+      "They are identical",
+      "'repeat 10' runs a fixed number of times; 'repeat until' runs until a condition becomes true",
+      "'repeat until' always runs exactly 10 times",
+      "'repeat 10' checks a condition each time"
+    ],
+    "correct": 1,
+    "explanation": "'repeat 10' is a counted loop that always executes 10 times, while 'repeat until <condition>' keeps looping until the given condition evaluates to true — the number of iterations is not fixed in advance."
+  },
+  {
+    "id": "ca-090",
+    "chapter": "Scratch & Python",
+    "difficulty": "hard",
+    "text": "A different appearance/image a sprite can switch between (e.g. to animate walking) is called a:",
+    "options": [
+      "Backdrop",
+      "Costume",
+      "Variable",
+      "Broadcast"
+    ],
+    "correct": 1,
+    "explanation": "A costume is one of the visual appearances a sprite can take; switching costumes rapidly creates the illusion of animation (e.g. walking)."
+  },
+  {
+    "id": "ca-091",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "Which Python function is used to display output on the screen?",
+    "options": [
+      "input()",
+      "print()",
+      "display()",
+      "output()"
+    ],
+    "correct": 1,
+    "explanation": "print() outputs text or values to the console/screen. input() is used to read user input, not display output."
+  },
+  {
+    "id": "ca-092",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid Python variable name?",
+    "options": [
+      "2ndValue",
+      "student-name",
+      "student_name",
+      "class"
+    ],
+    "correct": 2,
+    "explanation": "Python variable names can contain letters, digits, and underscores but cannot start with a digit or contain hyphens; 'class' is a reserved keyword so it cannot be used as a variable name."
+  },
+  {
+    "id": "ca-093",
+    "chapter": "Scratch & Python",
+    "difficulty": "easy",
+    "text": "Which Python data type would you use to store the value True or False?",
+    "options": [
+      "int",
+      "str",
+      "bool",
+      "float"
+    ],
+    "correct": 2,
+    "explanation": "The bool (Boolean) data type stores one of two values: True or False, commonly used in conditional logic."
+  },
+  {
+    "id": "ca-094",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "What will the following Python code print?\nx = 5\ny = 2\nprint(x // y)",
+    "options": [
+      "2.5",
+      "2",
+      "3",
+      "2.0"
+    ],
+    "correct": 1,
+    "explanation": "The // operator performs integer (floor) division in Python, discarding the remainder: 5 // 2 = 2."
+  },
+  {
+    "id": "ca-095",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "Which Python statement is used to take input from the user and store it as a string?",
+    "options": [
+      "name = input(\"Enter your name: \")",
+      "name = print(\"Enter your name: \")",
+      "input(name)",
+      "get(name)"
+    ],
+    "correct": 0,
+    "explanation": "input() displays the prompt, waits for the user to type, and returns the entered text as a string, which is then assigned to the variable."
+  },
+  {
+    "id": "ca-096",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "Which loop in Python is best suited to iterate a fixed number of times using range()?",
+    "options": [
+      "while loop",
+      "for loop",
+      "do-while loop",
+      "repeat loop"
+    ],
+    "correct": 1,
+    "explanation": "Python's for loop combined with range() is the standard way to iterate a known, fixed number of times, e.g. for i in range(5):."
+  },
+  {
+    "id": "ca-097",
+    "chapter": "Scratch & Python",
+    "difficulty": "medium",
+    "text": "What is the correct Python syntax to check if a number stored in 'n' is even?",
+    "options": [
+      "if n % 2 == 0:",
+      "if n / 2 == 0:",
+      "if n * 2 == 0:",
+      "if n == 2:"
+    ],
+    "correct": 0,
+    "explanation": "The modulus operator % gives the remainder of division; if n % 2 equals 0, the number n has no remainder when divided by 2, meaning it is even."
+  },
+  {
+    "id": "ca-098",
+    "chapter": "Scratch & Python",
+    "difficulty": "hard",
+    "text": "What does the following Python code print?\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\nprint(total)",
+    "options": [
+      "3",
+      "6",
+      "10",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "range(1,4) generates 1, 2, 3. The loop adds each to total: 0+1=1, 1+2=3, 3+3=6. Final printed value is 6."
+  },
+  {
+    "id": "ca-099",
+    "chapter": "Scratch & Python",
+    "difficulty": "hard",
+    "text": "In Python, which keyword is used to define a reusable block of code (a function)?",
+    "options": [
+      "func",
+      "define",
+      "def",
+      "function"
+    ],
+    "correct": 2,
+    "explanation": "Python uses the 'def' keyword to define a function, e.g. def greet(): followed by an indented code block."
+  },
+  {
+    "id": "ca-100",
+    "chapter": "Scratch & Python",
+    "difficulty": "hard",
+    "text": "Both Scratch and Python support which fundamental programming concept, used to make decisions based on a condition?",
+    "options": [
+      "Broadcasting",
+      "Selection (if-else)",
+      "Costumes",
+      "Backdrops"
+    ],
+    "correct": 1,
+    "explanation": "Selection (conditional branching using if-else) is a fundamental programming concept present in both Scratch (via 'if...then...else' blocks) and Python (via if-elif-else statements)."
   }
 ]

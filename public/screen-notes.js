@@ -86,7 +86,7 @@ function _ensureRevisionData(cb) {
   // First call — start loading
   _revisionCallbacks = [cb];
   const s = document.createElement('script');
-  s.src = 'revision-data.js?v=3';
+  s.src = 'revision-data.js?v=4';
   s.onload = () => {
     const pending = _revisionCallbacks || [];
     _revisionCallbacks = null; // reset so future calls go straight to cb()

@@ -4569,6 +4569,39 @@ REVISION['Computer Applications'] = [
       'Prefer licensed or open-source software over pirated copies',
       'Never share passwords, OTPs, or card details over email/chat, even if the request looks official'
     ]
+  },
+  {
+    chapter: 'Scratch & Python',
+    formulae: [
+      'Scratch is a block-based visual programming language (MIT) — programs are built by snapping together colour-coded blocks instead of typing text',
+      'Scratch building blocks: Sprite (a programmable on-screen object/character), Costume (an appearance a sprite can switch between, used for animation), Backdrop (the background scene of the Stage), Script (a stack of connected blocks)',
+      'Scratch block categories: Motion (move/turn), Looks (say/costume), Sound, Events (when green flag clicked, broadcast), Control (repeat, forever, if-then-else, wait), Sensing (touching?, key pressed?), Operators (+, −, and, or, <, =, >), Variables',
+      'Python is a high-level, text-based, general-purpose programming language with simple, readable syntax using indentation (no curly braces)',
+      'Python basics: print() displays output; input() reads user input (always returns a string); variables need no declared type (e.g. x = 5)',
+      'Python data types: int (whole numbers), float (decimals), str (text), bool (True/False)',
+      'Python operators: arithmetic (+ − * / // % **), comparison (== != < > <= >=), logical (and, or, not)',
+      'Python control structures: if / elif / else (selection); for loop with range() and while loop (repetition)',
+      'Python function definition: def function_name(parameters): followed by an indented code block'
+    ],
+    logic: [
+      'Scratch and Python teach the SAME core programming concepts (sequence, selection, repetition, variables) — Scratch expresses them visually with blocks, Python expresses them as typed text',
+      '"repeat n" in Scratch runs a fixed number of times (like a Python for loop with range(n)); "repeat until <condition>" / "forever" run based on a condition (like a Python while loop)',
+      'Python indentation is not just style — it defines which lines belong inside a loop, if-block, or function; incorrect indentation causes an error',
+      'input() in Python always returns a string, so numeric input must be explicitly converted, e.g. age = int(input("Age: "))',
+      'A costume change gives the illusion of movement/animation in Scratch, similar to frames in a flipbook'
+    ],
+    tips: [
+      'When comparing Scratch and Python concepts, always name the Scratch block AND the equivalent Python construct, e.g. "if...then...else" block ↔ if-elif-else statement',
+      'Remember: forever = infinite loop (like Python while True:); repeat n = counted loop (like Python for i in range(n):)',
+      'For Python numeric input questions, always check whether int() or float() conversion is needed before using the value in a calculation',
+      'Practice tracing small Python loops by hand (writing out each iteration\'s variable values) before predicting the final output'
+    ],
+    bestPractices: [
+      'Always test a Scratch script by running it (green flag) and watching sprite behaviour, not just reading the blocks',
+      'Write Python code with consistent indentation (spaces, not mixed tabs/spaces) to avoid IndentationError',
+      'When writing a Python program for an exam answer, include an input() step, the processing logic, and a clearly labelled print() output',
+      'Compare a Scratch script and its Python equivalent side-by-side while revising — it reinforces that both languages solve problems the same way, just with different syntax'
+    ]
   }
 ];
 

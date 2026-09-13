@@ -4,6 +4,27 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Computer Applications — Scratch & Python chapter added *(done)*
+
+Unit 4 of the Computer Applications textbook (Scratch block-based programming
++ Python basics) was missing from the initial CA rollout — added across all
+three relevant surfaces:
+
+- **Mock Test / Chapter Drill:** 20 new MCQs (`ca-081`–`ca-100`) covering
+  Scratch (sprites, costumes, backdrops, blocks: motion/looks/events/control/
+  sensing/variables, broadcast) and Python (print/input, data types,
+  operators, if-elif-else, for/while loops, functions) — CA MCQ bank now 100
+  questions total
+- **Textbook Solved Exercises:** 10 new conceptual/code Q&A
+  (`sol-ca-026`–`sol-ca-035`) — CA Solved bank now 35 total
+- **Revision Notes:** new "Scratch & Python" chapter added to
+  `REVISION['Computer Applications']`
+- Note: this unit is not in the official CBSE 165 theory syllabus (which
+  covers only Networking/HTML/Cyber ethics) but is included per the
+  textbook's supplementary "with Scratch & Python" content, per user request
+
+---
+
 ## Arena — How-to-play popover fixes *(done)*
 
 - Widened `.arena-how-modal` by 40% (420px → 588px, still capped at `min(…, 92vw)` so it stays responsive on mobile)
