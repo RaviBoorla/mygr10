@@ -35,11 +35,14 @@ without the parent having to open the child's device or account.
 5. **No nudge on inactivity.** A day with no child activity produces no
    digest email/SMS for that day — silence, not a guilt message.
 6. **Both sides are full Firebase Auth accounts.** No guest/anonymous parent
-   view, no shareable magic link. A parent creates a normal account the same
-   way a student does; role is not a separate account type, it's just which
-   side of a `familyLinks` doc a uid appears on (a single account could in
-   principle appear as a guardian on one link and a child on another —
-   support this rather than special-case it away).
+   view, no shareable magic link.
+7. **A parent is not a student.** Guardian is a distinct, exclusive account
+   role — a parent account never has grade/board practice history, never
+   appears on the student side of a `familyLinks` doc, and never sees the
+   grade/board picker or any subject/mock/drill/arena screen. Role is fixed
+   the first time an account accepts (or is confirmed as) a family link and
+   is not reversible by re-accepting a link the other way; an account is
+   either a child or a guardian for its lifetime, never both.
 
 ## Data model (Firestore)
 
@@ -94,19 +97,35 @@ aggregate collection. The nightly Worker computes on the fly from
 ## Invite flow
 
 1. Either side opens Avatar → Profile → **Family** section, enters the other
-   person's email, taps **Invite**. No role picker at send time — the app
-   doesn't ask "are you inviting a parent or a child," since either
-   direction is symmetric until acceptance.
-2. Writes `familyInvites/{toEmailLower}/items/{autoId}`.
+   person's email, and declares direction explicitly at send time: **"Invite
+   my parent/guardian"** or **"Invite my child."** Since the roles are
+   exclusive (constraint 7), the invite itself carries the intended role for
+   each side — there is no "I'm the parent / I'm the child" choice at
+   accept time; the invite already says who's who.
+2. Writes `familyInvites/{toEmailLower}/items/{autoId}` with a `role` field
+   naming what the *invitee* is being asked to be (`'guardian'` or
+   `'child'`).
 3. On the invitee's next login (or live listener if already signed in),
    client queries its own `familyInvites/{myEmailLower}/items` for
    `status:'pending'` docs and shows a banner: *"Ravi (ravi@x.com) wants to
-   link family accounts — I'm the parent / I'm the child / Ignore."*
-4. Accepting writes a `familyLinks` doc with `childUid`/`guardianUid`
-   assigned per the accepter's choice, deletes the invite doc, and shows an
-   opt-in toggle for email/SMS digests right there (default **off** —
-   accepting the link and opting into messages are two separate consents).
-5. A child can have multiple guardians linked (both parents); a guardian can
+   link you as their parent/guardian — Accept / Ignore"* (or the child-facing
+   equivalent). No role choice is offered to the acceptor — only the
+   accept/ignore decision.
+4. **Role-lock check on accept**: if the invitee's account already has a
+   role that conflicts with the invite (e.g. a guardian account receiving a
+   `role:'guardian'` invite meant for a new parent — fine; but a guardian
+   account receiving a `role:'child'` invite, or an account with existing
+   grade/board practice history receiving a `role:'guardian'` invite) —
+   reject the accept client-side with an explanation, since a parent
+   account can never become a student account or vice versa. A brand-new
+   account with no practice history and no existing family role can accept
+   either kind, and that acceptance is what fixes its role from then on.
+5. Accepting writes a `familyLinks` doc with `childUid`/`guardianUid` fixed
+   by the invite's declared roles (not a choice made at accept time),
+   deletes the invite doc, and shows an opt-in toggle for email/SMS digests
+   right there (default **off** — accepting the link and opting into
+   messages are two separate consents).
+6. A child can have multiple guardians linked (both parents); a guardian can
    have multiple children. Either side can unlink at any time from the
    Family section (sets `status:'unlinked'`, stops all future sends
    immediately — the nightly Worker query filters on `status:'active'`).
@@ -165,18 +184,16 @@ of forking into a separate route:
     linked guardian, with an unlink control
   - an assignment inbox card listing pending/overdue assignments, each
     launching a normal timed test session pre-scoped to that assignment
-- **Guardian viewing their own Progress screen**: if the account has no
-  personal grade/board practice history, replace the per-chapter accuracy
-  view with a **child switcher** (tabs if more than one linked child) →
-  the same strong/weak-by-chapter/subject rendering, sourced from that
-  child's data, read-only (a guardian never edits or retakes the child's
-  attempts) — plus an "Assign practice" button (subject, optional chapter,
-  question count, time limit, due time) and a list of past assignments with
-  results.
-  - If the account *also* has personal practice history (a guardian who is
-    themselves a registered student under a different grade/board), stack
-    both: personal progress first, family/child section below it, rather
-    than replacing one with the other.
+- **Guardian viewing their own Progress screen**: a guardian account never
+  has grade/board practice history (constraint 7) and never shows the
+  per-chapter accuracy view at all — its Progress screen *is* the **child
+  switcher** (tabs if more than one linked child) → the same strong/weak-
+  by-chapter/subject rendering, sourced from that child's data, read-only (a
+  guardian never edits or retakes the child's attempts) — plus an "Assign
+  practice" button (subject, optional chapter, question count, time limit,
+  due time) and a list of past assignments with results. There is no
+  personal-practice case to stack against, since a guardian account can
+  never also be a student account.
 
 Strong/weak-by-chapter computation itself is not new — it's the same
 per-chapter accuracy math the Progress screen already runs for the signed-in
