@@ -365,18 +365,49 @@ Add a section covering:
 - Single fixed timezone (IST) for all cron times — per-guardian timezone
   support is future work if the user base isn't India-only.
 
-## Open items for whoever implements this
+## Firestore security rules (Phase 1, deployed)
+
+```
+match /familyInvites/{emailLower}/items/{itemId} {
+  allow read: if request.auth != null &&
+    (request.auth.token.email.lower() == emailLower ||
+     request.auth.uid == resource.data.fromUid);
+  allow delete: if request.auth != null &&
+    request.auth.token.email.lower() == emailLower;
+  allow create: if request.auth != null &&
+    request.auth.uid == request.resource.data.fromUid;
+  allow update: if false;
+}
+
+match /familyLinks/{linkId} {
+  allow read, update: if request.auth != null &&
+    (request.auth.uid == resource.data.guardianUid ||
+     request.auth.uid == resource.data.childUid);
+  allow create: if request.auth != null &&
+    (request.auth.uid == request.resource.data.guardianUid ||
+     request.auth.uid == request.resource.data.childUid);
+  allow delete: if false;
+}
+```
+
+`familyInvites` read is split from delete: the sender also needs read
+access (not just the invitee) because `family.js`'s `sendInvite()` checks
+for an existing pending invite from itself before creating a new one —
+without this, that dedupe read throws `permission-denied` and the whole
+invite silently fails (hit this during Phase 1 testing; fixed by widening
+the read rule and by wrapping `sendInvite`/`acceptInvite` in try/catch so
+a future rules mismatch surfaces a message instead of doing nothing).
+Delete stays invitee-only, matching that only accept/ignore ever deletes
+an invite doc.
+
+## Open items for whoever implements the rest of this
 
 - Resend API key needs to be added as a Worker secret
   (`wrangler secret put`), not committed.
-- Add `sendEmailVerification()` to the email/password signup path in
-  `public/auth.js`, and an `emailVerified` gate on invite acceptance —
-  needed before any other part of this spec can be built safely.
-- Firestore security rules need new rules for `familyInvites`,
-  `familyLinks`, and `users/{uid}/assignments` (guardian can create an
-  assignment only where an `active` `familyLinks` edge names them as
-  `guardianUid` for that `childUid` — a cross-collection `get()` check,
-  worth watching for rule-evaluation cost) and must explicitly restrict
-  guardian read access to `sync/familySummary` and `sync/streak` only —
-  never `sync/saDrafts` (the child's typed Short-Answer attempts) or
+- Firestore security rules still need `users/{uid}/assignments` (guardian
+  can create an assignment only where an `active` `familyLinks` edge names
+  them as `guardianUid` for that `childUid` — a cross-collection `get()`
+  check, worth watching for rule-evaluation cost) and must explicitly
+  restrict guardian read access to `sync/familySummary` and `sync/streak`
+  only — never `sync/saDrafts` (the child's typed Short-Answer attempts) or
   `sync/aiConfig`.
