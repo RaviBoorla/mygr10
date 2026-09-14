@@ -14,7 +14,7 @@ without the parent having to open the child's device or account.
 
 ## Hard constraints
 
-1. **This needs a real backend for the first time.** Cron-triggered email/SMS
+1. **This needs a real backend for the first time.** Cron-triggered email
    and parent-initiated assignments must run independent of whether either
    party's browser is open. New Cloudflare Worker (`workers/family-cron/`,
    separate from the static `public/` Pages deployment) with a Cron Trigger.
@@ -29,14 +29,17 @@ without the parent having to open the child's device or account.
    not a separate page — the Progress screen today "doesn't do justice" to
    this data, so it gets rebuilt to carry it, rather than forking a
    duplicate view.
-4. **Opt-in is explicit and per-channel.** No guardian receives email or SMS
-   until they have accepted a family link AND separately toggled that
-   channel on. Declining/ignoring an invite sends nothing, ever.
+4. **Opt-in is explicit.** No guardian receives email until they have
+   accepted a family link AND separately toggled the digest on. Declining/
+   ignoring an invite sends nothing, ever.
 5. **No nudge on inactivity.** A day with no child activity produces no
-   digest email/SMS for that day — silence, not a guilt message.
-6. **Both sides are full Firebase Auth accounts.** No guest/anonymous parent
+   digest email for that day — silence, not a guilt message.
+6. **Email only — no SMS.** There is no SMS backend and none is being
+   added; phone numbers are not collected anywhere in this feature. All
+   digest and notification delivery is email via Resend.
+7. **Both sides are full Firebase Auth accounts.** No guest/anonymous parent
    view, no shareable magic link.
-7. **A parent is not a student.** Guardian is a distinct, exclusive account
+8. **A parent is not a student.** Guardian is a distinct, exclusive account
    role — a parent account never has grade/board practice history, never
    appears on the student side of a `familyLinks` doc, and never sees the
    grade/board picker or any subject/mock/drill/arena screen. Role is fixed
@@ -61,12 +64,10 @@ no server function needed just to see your own pending invites.
 familyLinks/{linkId}
   childUid, guardianUid, status: 'active' | 'unlinked'
   createdAt, unlinkedAt?
-  digestOptIn: { email: bool, sms: bool }
-  guardianContact: { email?: string, phone?: string }   -- confirmed contact,
-                                                            not the auth email,
-                                                            in case a parent
-                                                            wants digests at a
-                                                            different address
+  digestOptIn: { email: bool }
+  guardianContact: { email?: string }   -- confirmed contact, not the auth
+                                            email, in case a parent wants
+                                            digests at a different address
 ```
 `childUid`/`guardianUid` are Firebase Auth uids, resolved from the invite's
 `fromUid`/accepting user's uid at accept time — never stored by email only,
@@ -122,7 +123,7 @@ aggregate collection. The nightly Worker computes on the fly from
    either kind, and that acceptance is what fixes its role from then on.
 5. Accepting writes a `familyLinks` doc with `childUid`/`guardianUid` fixed
    by the invite's declared roles (not a choice made at accept time),
-   deletes the invite doc, and shows an opt-in toggle for email/SMS digests
+   deletes the invite doc, and shows an opt-in toggle for the email digest
    right there (default **off** — accepting the link and opting into
    messages are two separate consents).
 6. A child can have multiple guardians linked (both parents); a guardian can
@@ -130,21 +131,17 @@ aggregate collection. The nightly Worker computes on the fly from
    Family section (sets `status:'unlinked'`, stops all future sends
    immediately — the nightly Worker query filters on `status:'active'`).
 
-No SMS/email verification step for the invite itself (it's just an
-in-app-to-in-app link between two accounts that both already control an
-inbox via Firebase Auth); verification matters for the *digest contact*,
-covered next.
+No verification step for the invite itself (it's just an in-app-to-in-app
+link between two accounts that both already control an inbox via Firebase
+Auth); verification matters for the *digest contact*, covered next.
 
-## Digest contact & channels
+## Digest contact & channel
 
-- Email digests go to the guardian's Firebase Auth email by default; a
-  guardian may instead set `guardianContact.email` to a different address
-  (e.g. the other parent's inbox) — that address gets a one-time Resend
-  confirmation link before any digest sends to it.
-- SMS is opt-in separately and requires `guardianContact.phone` with an OTP
-  verification step (Twilio Verify or equivalent) before enabling — a wrong
-  number opted in blind is a real harm (sending a child's exam performance
-  to a stranger).
+Email digests go to the guardian's Firebase Auth email by default; a
+guardian may instead set `guardianContact.email` to a different address
+(e.g. the other parent's inbox) — that address gets a one-time Resend
+confirmation link before any digest sends to it. No SMS channel exists
+(constraint 6) — no phone number is ever collected.
 
 ## Cron jobs (Cloudflare Worker)
 
@@ -152,18 +149,17 @@ Two schedules, one Worker:
 
 - **Nightly, 21:00 IST** (`0 15 * * *` UTC — fixed single timezone for v1,
   no per-guardian timezone support yet): for every `familyLinks` doc with
-  `status:'active'` and `digestOptIn.email` or `.sms` true, pull that
-  child's attempts from *today* (mock/drill/arena/short-answers/solved
-  reveals — whatever already timestamps an attempt). If nothing happened
-  today, skip entirely (constraint 5) — no email, no SMS, no log noise
-  beyond a skip count. Otherwise render a short digest: questions
-  attempted, accuracy, streak status, any assignment completed today with
-  its result. Send via Resend (email) / Twilio (SMS, digest truncated to a
-  couple of lines).
+  `status:'active'` and `digestOptIn.email` true, pull that child's
+  attempts from *today* (mock/drill/arena/short-answers/solved reveals —
+  whatever already timestamps an attempt). If nothing happened today, skip
+  entirely (constraint 5) — no email, no log noise beyond a skip count.
+  Otherwise render a short digest email: questions attempted, accuracy,
+  streak status, any assignment completed today with its result. Send via
+  Resend.
 - **Weekly, Sunday 21:00 IST**: same eligibility filter, aggregates the
   *week's* per-chapter accuracy (same Leitner-derived numbers the Progress
   screen already computes) into a ranked weakest-first list, one section
-  per subject the child has activity in. Email only — no SMS (too long).
+  per subject the child has activity in. Also sent via Resend.
 
 Assignment-completed notifications are **not** on this cron: they fire
 immediately from the client (or a lightweight Firestore-triggered Worker
@@ -180,8 +176,8 @@ of forking into a separate route:
 - **No family links at all**: unchanged today's per-chapter accuracy view,
   plus a new "Family" card at the bottom with the invite input.
 - **Child with active guardian link(s)**: same personal view, plus:
-  - a small "Shared with: mum@x.com (digest: email ✓, sms ✗)" line per
-    linked guardian, with an unlink control
+  - a small "Shared with: mum@x.com (digest: on)" line per linked guardian,
+    with an unlink control
   - an assignment inbox card listing pending/overdue assignments, each
     launching a normal timed test session pre-scoped to that assignment
 - **Guardian viewing their own Progress screen**: a guardian account never
@@ -209,10 +205,10 @@ Add a section covering:
 - That linking requires the child (or guardian) to explicitly invite and the
   other side to explicitly accept — no account is ever linked without both
   sides' action.
-- That digest emails/SMS require a further explicit opt-in beyond accepting
-  the link, are sent via Resend (email) and Twilio (SMS) as processors, and
-  can be turned off (or fully unlinked) at any time from the child's or
-  guardian's Family section.
+- That digest emails require a further explicit opt-in beyond accepting the
+  link, are sent via Resend as a processor, and can be turned off (or fully
+  unlinked) at any time from the child's or guardian's Family section. No
+  phone number is ever collected or used — there is no SMS channel.
 - Retention: digest content is generated on send and not stored separately
   from the underlying progress data already covered elsewhere in the policy.
 
@@ -220,8 +216,8 @@ Add a section covering:
 
 - Single fixed timezone (IST) for v1 cron times — per-guardian timezone
   support is future work if the user base isn't India-only.
-- Resend API key and Twilio (or MSG91) credentials need to be added as
-  Worker secrets (`wrangler secret put`), not committed.
+- Resend API key needs to be added as a Worker secret
+  (`wrangler secret put`), not committed.
 - Firestore security rules need new rules for `familyInvites`,
   `familyLinks`, and `users/{uid}/assignments` (guardian can create under a
   linked child's uid only; child can read/update status of their own).
