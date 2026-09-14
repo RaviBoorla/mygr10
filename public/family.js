@@ -108,31 +108,37 @@
     if (!toEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(toEmail)) return { ok: false, msg: 'Enter a valid email address.' };
     if (toEmail === email()) return { ok: false, msg: "That's your own email." };
 
-    // Dedupe: an existing pending invite from me to this email
-    const existing = await db.collection('familyInvites').doc(toEmail).collection('items')
-      .where('fromUid', '==', uid()).where('status', '==', 'pending').limit(1).get();
-    if (!existing.empty) return { ok: false, msg: 'Already invited — waiting for them to accept.' };
-
     // Dedupe: an existing active link to this email already
     const alreadyLinked = _myLinks.some(l => l.status === 'active' &&
       (l.guardianEmail === toEmail || l.childEmail === toEmail));
     if (alreadyLinked) return { ok: false, msg: 'Already linked with that email.' };
 
-    const payload = {
-      fromUid: uid(),
-      fromEmail: email(),
-      fromDisplayName: window.riseAuth.user.displayName || email(),
-      role,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
-      status: 'pending'
-    };
-    // If I'm the child sending this (inviting my guardian), record which
-    // grade::board it covers so the resulting link is scoped correctly.
-    if (role === 'guardian' && typeof state !== 'undefined') {
-      payload.gradeBoard = `${state.grade}::${state.board}`;
+    try {
+      // Dedupe: an existing pending invite from me to this email. Requires
+      // the security rule to let a sender read items they created (not just
+      // the invitee) — see docs/family.md's rules note.
+      const existing = await db.collection('familyInvites').doc(toEmail).collection('items')
+        .where('fromUid', '==', uid()).where('status', '==', 'pending').limit(1).get();
+      if (!existing.empty) return { ok: false, msg: 'Already invited — waiting for them to accept.' };
+
+      const payload = {
+        fromUid: uid(),
+        fromEmail: email(),
+        fromDisplayName: window.riseAuth.user.displayName || email(),
+        role,
+        createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+        status: 'pending'
+      };
+      // If I'm the child sending this (inviting my guardian), record which
+      // grade::board it covers so the resulting link is scoped correctly.
+      if (role === 'guardian' && typeof state !== 'undefined') {
+        payload.gradeBoard = `${state.grade}::${state.board}`;
+      }
+      await db.collection('familyInvites').doc(toEmail).collection('items').add(payload);
+      return { ok: true, msg: 'Invite sent. They will see it next time they sign in — email notification is not wired up yet (needs the Family Worker, phase 4).' };
+    } catch (e) {
+      return { ok: false, msg: 'Could not send invite: ' + (e.message || e.code || 'unknown error') };
     }
-    await db.collection('familyInvites').doc(toEmail).collection('items').add(payload);
-    return { ok: true, msg: 'Invite sent. They will see it next time they sign in — email notification is not wired up yet (needs the Family Worker, phase 4).' };
   }
 
   // ── Accept / ignore ──────────────────────────────────────────────────────
@@ -168,10 +174,14 @@
       link.guardianUid = invite.fromUid; link.guardianEmail = invite.fromEmail;
     }
 
-    await db.collection('familyLinks').add(link);
-    await lockFamilyRole(wouldBecome);
-    await db.collection('familyInvites').doc(email()).collection('items').doc(invite.id).delete();
-    return { ok: true, msg: 'Linked!' };
+    try {
+      await db.collection('familyLinks').add(link);
+      await lockFamilyRole(wouldBecome);
+      await db.collection('familyInvites').doc(email()).collection('items').doc(invite.id).delete();
+      return { ok: true, msg: 'Linked!' };
+    } catch (e) {
+      return { ok: false, msg: 'Could not complete the link: ' + (e.message || e.code || 'unknown error') };
+    }
   }
 
   async function ignoreInvite(invite) {
