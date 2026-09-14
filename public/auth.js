@@ -166,6 +166,8 @@ const SYNC_KEYS = {
           <button type="submit" class="btn primary" style="width:100%">Save</button>
         </form>
         <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
+        <p id="profile-verify-msg" class="auth-error" hidden></p>
+        <div id="family-section-mount"></div>
       </div>`;
     document.body.appendChild(el);
   }
@@ -288,7 +290,8 @@ const SYNC_KEYS = {
       }
       try {
         if (_emailSignup) {
-          await fbAuth.createUserWithEmailAndPassword(email, pw);
+          const cred = await fbAuth.createUserWithEmailAndPassword(email, pw);
+          try { await cred.user.sendEmailVerification(); } catch (_) {}
         } else {
           await fbAuth.signInWithEmailAndPassword(email, pw);
         }
@@ -316,7 +319,30 @@ const SYNC_KEYS = {
       document.getElementById('profile-city').value     = _profile.city     || '';
       const msg = document.getElementById('profile-msg');
       if (msg) msg.hidden = true;
+      const verifyMsg = document.getElementById('profile-verify-msg');
+      if (verifyMsg) {
+        if (currentUser && !currentUser.emailVerified) {
+          verifyMsg.innerHTML = 'Your email isn\'t verified yet — ' +
+            '<button type="button" class="auth-reset-link" style="display:inline" onclick="riseAuth._resendVerification()">resend verification email</button>. ' +
+            'Verifying is required to link a parent/guardian account.';
+          verifyMsg.hidden = false;
+        } else {
+          verifyMsg.hidden = true;
+        }
+      }
+      const familyMount = document.getElementById('family-section-mount');
+      if (familyMount && window.riseFamily) familyMount.innerHTML = window.riseFamily.renderProfileSection();
       document.getElementById(PROFILE_MODAL_ID).hidden = false;
+    },
+
+    async _resendVerification() {
+      const verifyMsg = document.getElementById('profile-verify-msg');
+      try {
+        await currentUser.sendEmailVerification();
+        if (verifyMsg) verifyMsg.textContent = 'Verification email sent — check your inbox.';
+      } catch (e) {
+        if (verifyMsg) verifyMsg.textContent = _friendlyError(e);
+      }
     },
 
     closeProfile() {
