@@ -45,8 +45,8 @@ Object.assign(app, {
       const dueCount = hasBank ? this._dueCount(subject) : 0;
       const reviewLinks = (bmCount || dueCount) ? `
           <div class="subj-actions">
-            ${bmCount  ? `<button class="btn act-btn ghost small" onclick="app.startBookmarkReview('${esc(subject)}')">&#9733; Bookmarked <small>${bmCount}</small></button>` : ''}
-            ${dueCount ? `<button class="btn act-btn ghost small" onclick="app.startSpacedReview('${esc(subject)}')">&#8635; Due for review <small>${dueCount}</small></button>` : ''}
+            ${bmCount  ? `<button class="btn act-btn ghost half small" onclick="app.startBookmarkReview('${esc(subject)}')">&#9733; Bookmarked <small>${bmCount}</small></button>` : ''}
+            ${dueCount ? `<button class="btn act-btn ghost half small" onclick="app.startSpacedReview('${esc(subject)}')">&#8635; Due for review <small>${dueCount}</small></button>` : ''}
           </div>` : '';
 
       return `
