@@ -1215,6 +1215,8 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   font-size: 14px; font-family: inherit; background: var(--bg); color: var(--text);
 }
 .family-invite-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.family-subheading { font-size: var(--fs-sm); font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .03em; margin: 10px 0 2px; }
 .auth-signout-btn { color: #dc2626 !important; border-color: #dc2626 !important; }
 
 #rise-auth-modal:not([hidden]) { display: block; }

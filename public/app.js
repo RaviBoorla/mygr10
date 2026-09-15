@@ -75,7 +75,9 @@ const state = {
   saChapter: {},
   solvedChapter: {},
   solvedExercise: {},
-  mobileMenuOpen: false
+  mobileMenuOpen: false,
+  progressChildUid: null,     // guardian's selected child tab on Progress screen
+  progressGradeBoard: null    // guardian's selected grade::board tab, within that child
 };
 
 // ─── Routing ──────────────────────────────────────────────────────────────────

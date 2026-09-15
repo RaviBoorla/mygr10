@@ -1,10 +1,21 @@
-// ── Family — parent/guardian linking (Phase 1: linking & roles only) ─────────
-// Spec: docs/family.md. No digests, no assignments yet — this file only
-// handles invite/accept/unlink and the exclusive child/guardian role lock.
+// ── Family — parent/guardian linking + progress sharing ───────────────────────
+// Spec: docs/family.md. Phase 1 (invite/accept/unlink/role-lock) plus Phase 2
+// (familySummary aggregation + data feeding the Progress-screen guardian view).
+// Still no digests, no assignments, no Worker — those are phases 3-4.
 //
 // Firestore collections (see docs/family.md "Data model"):
 //   familyInvites/{toEmailLower}/items/{autoId}
-//   familyLinks/{linkId}
+//   familyLinks/{guardianUid}_{childUid}   -- deterministic id: one link doc
+//                                              per (guardian, child) pair, so
+//                                              a security rule can check
+//                                              exists() on a known path (see
+//                                              "Firestore security rules" in
+//                                              docs/family.md) without needing
+//                                              a query inside the rule.
+//   users/{childUid}/sync/familySummary    -- pre-aggregated chapter accuracy,
+//                                              written by computeAndPushSummary()
+//                                              below, read by the guardian's
+//                                              Progress-screen child-switcher.
 //
 // Depends on `riseAuth` (public/auth.js) having already run and exposed
 // `riseAuth.user`. Degrades to a no-op stub if Firebase isn't available,
@@ -23,8 +34,11 @@
 
   let _pendingInvites = [];   // invites addressed to me, status:'pending'
   let _myLinks = [];          // familyLinks rows where I'm either side
+  let _myRole = null;         // cached familyRole, fetched once per uid change
   let _unsubInvites = null;
   let _unsubLinks = null;
+  const _childSummaries = {}; // childUid -> { byGradeBoard, updatedAt } | 'loading' | null
+  const _summaryUnsubs = {};  // childUid -> unsubscribe fn
 
   function uid()   { return window.riseAuth?.user?.uid || null; }
   function email() { return (window.riseAuth?.user?.email || '').toLowerCase(); }
@@ -71,6 +85,7 @@
   function startListeners() {
     stopListeners();
     if (!uid()) return;
+    getFamilyRole().then(r => { _myRole = r; refresh(); });
     _unsubInvites = db.collection('familyInvites').doc(email()).collection('items')
       .where('status', '==', 'pending')
       .onSnapshot(snap => {
@@ -88,14 +103,36 @@
   function _mergeLinks(side, snap) {
     _linkSets[side] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     _myLinks = [..._linkSets.guardian, ..._linkSets.child];
+    if (side === 'guardian') {
+      // Start/stop a familySummary listener per actively-linked child.
+      const activeChildUids = new Set(_linkSets.guardian.filter(l => l.status === 'active').map(l => l.childUid));
+      Object.keys(_summaryUnsubs).forEach(childUid => {
+        if (!activeChildUids.has(childUid)) { _summaryUnsubs[childUid](); delete _summaryUnsubs[childUid]; delete _childSummaries[childUid]; }
+      });
+      activeChildUids.forEach(childUid => watchChildSummary(childUid));
+    }
+  }
+
+  function watchChildSummary(childUid) {
+    if (_summaryUnsubs[childUid]) return;
+    _childSummaries[childUid] = 'loading';
+    _summaryUnsubs[childUid] = db.collection('users').doc(childUid).collection('sync').doc('familySummary')
+      .onSnapshot(snap => {
+        _childSummaries[childUid] = snap.exists ? snap.data() : { byGradeBoard: {} };
+        refresh();
+      }, () => { _childSummaries[childUid] = { byGradeBoard: {} }; refresh(); });
   }
 
   function stopListeners() {
     if (_unsubInvites) { _unsubInvites(); _unsubInvites = null; }
     if (_unsubLinks)   { _unsubLinks();   _unsubLinks   = null; }
+    Object.values(_summaryUnsubs).forEach(fn => fn());
+    Object.keys(_summaryUnsubs).forEach(k => delete _summaryUnsubs[k]);
+    Object.keys(_childSummaries).forEach(k => delete _childSummaries[k]);
     _pendingInvites = [];
     _linkSets.guardian = []; _linkSets.child = [];
     _myLinks = [];
+    _myRole = null;
   }
 
   // ── Invite ───────────────────────────────────────────────────────────────
@@ -174,8 +211,9 @@
       link.guardianUid = invite.fromUid; link.guardianEmail = invite.fromEmail;
     }
 
+    const linkId = `${link.guardianUid}_${link.childUid}`;
     try {
-      await db.collection('familyLinks').add(link);
+      await db.collection('familyLinks').doc(linkId).set(link);
       await lockFamilyRole(wouldBecome);
       await db.collection('familyInvites').doc(email()).collection('items').doc(invite.id).delete();
       return { ok: true, msg: 'Linked!' };
@@ -258,6 +296,50 @@
       </div>`;
   }
 
+  // ── familySummary: pre-aggregated chapter accuracy ──────────────────────
+  // Computed from the same localStorage progress record the child's own
+  // Progress screen already reads (scopeKey = "grade::board::subject"), so
+  // there's one implementation of the accuracy math, not two. Called from
+  // auth.js's pushToCloud() — the same choke point every graded submit
+  // already goes through — so no extra call sites needed elsewhere.
+  function computeAndPushSummary() {
+    if (!uid()) return;
+    try {
+      const raw = localStorage.getItem('rise.progress');
+      const store = raw ? JSON.parse(raw) : {};
+      const byGradeBoard = {};
+      Object.entries(store).forEach(([key, bySubj]) => {
+        const parts = key.split('::');
+        if (parts.length < 3) return;
+        const gradeBoard = `${parts[0]}::${parts[1]}`;
+        const subject = parts.slice(2).join('::');
+        const chapters = byGradeBoard[gradeBoard] || (byGradeBoard[gradeBoard] = {});
+        Object.values(bySubj).forEach(rec => {
+          const chapter = rec.chapter || 'General';
+          const ckey = subject + '||' + chapter;
+          const c = chapters[ckey] || (chapters[ckey] = { subject, chapter, correct: 0, wrong: 0, lastAttemptAt: 0 });
+          c.correct += rec.correctCount || 0;
+          c.wrong += rec.wrongCount || 0;
+          if (rec.lastAt && rec.lastAt > c.lastAttemptAt) c.lastAttemptAt = rec.lastAt;
+        });
+      });
+      const out = {};
+      Object.entries(byGradeBoard).forEach(([gb, chapters]) => {
+        out[gb] = Object.values(chapters).map(c => ({
+          subject: c.subject,
+          chapter: c.chapter,
+          accuracy: (c.correct + c.wrong) ? Math.round(c.correct / (c.correct + c.wrong) * 100) : 0,
+          attempts: c.correct + c.wrong,
+          lastAttemptAt: c.lastAttemptAt
+        }));
+      });
+      db.collection('users').doc(uid()).collection('sync').doc('familySummary').set({
+        byGradeBoard: out,
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    } catch (_) {}
+  }
+
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   }
@@ -265,7 +347,20 @@
   // ── Public API ───────────────────────────────────────────────────────────
   window.riseFamily = {
     get pendingCount() { return _pendingInvites.length; },
+    // 'guardian' | 'child' | null (not yet linked to anything, ever)
+    get myRole() { return _myRole; },
+    get linksAsGuardian() { return _linkSets.guardian.filter(l => l.status === 'active'); },
+    get linksAsChild() { return _linkSets.child.filter(l => l.status === 'active'); },
     renderProfileSection,
+    updateSummary: computeAndPushSummary,
+
+    // Returns the cached familySummary for a linked child: undefined if not
+    // watched yet (call once to start the listener), 'loading' while the
+    // first snapshot is in flight, or { byGradeBoard } once it arrives.
+    getChildSummary(childUid) {
+      watchChildSummary(childUid);
+      return _childSummaries[childUid];
+    },
 
     async _invite(role) {
       const input = document.getElementById('family-invite-email');

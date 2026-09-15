@@ -86,6 +86,14 @@ Object.assign(app, {
   },
 
   _screenProgress() {
+    // A guardian account never has grade/board practice history (docs/family.md
+    // constraint 8) — its Progress screen is the child switcher, not the
+    // per-chapter accuracy view below.
+    if (window.riseFamily?.myRole === 'guardian') return this._screenProgressGuardian();
+    return this._screenProgressChild();
+  },
+
+  _screenProgressChild() {
     const subjects = (SUBJECTS[state.board] || []).filter(s => bankSlug(s));
     const store = LS.get(KEY.progress, {});
     const now = Date.now();
@@ -135,7 +143,121 @@ Object.assign(app, {
           <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
+        ${this._familySharedWithSection()}
       </div>`;
+  },
+
+  // Shown at the bottom of a child's own Progress screen — who it's shared
+  // with, plus the invite box when nobody's linked yet.
+  _familySharedWithSection() {
+    const links = window.riseFamily?.linksAsChild || [];
+    const rows = links.length ? `
+      <ul class="recent-list">
+        ${links.map(l => `<li class="recent-row card">
+          <span class="recent-desc">
+            <strong>Shared with ${esc(l.guardianEmail)}</strong>
+            <small>Daily digest: ${l.digestOptIn?.email ? 'on' : 'off'} · ${esc(l.gradeBoard || '')}</small>
+          </span>
+          <button class="btn small ghost" onclick="riseAuth.openProfile()">Manage</button>
+        </li>`).join('')}
+      </ul>` : '';
+    return `
+      <section class="home-section">
+        <h2 class="section-title">Family</h2>
+        ${rows || '<p class="subtitle">Not shared with a parent/guardian yet — invite one from Profile → Family.</p>'}
+      </section>`;
+  },
+
+  // ── Guardian's own Progress screen: the child switcher ──────────────────
+  _screenProgressGuardian() {
+    const links = window.riseFamily?.linksAsGuardian || [];
+    const topbar = `
+      <div class="progress-topbar">
+        <p class="subtitle" style="margin:0">Your linked children's strengths and focus areas, by subject and chapter.</p>
+        <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
+      </div>`;
+
+    if (!links.length) {
+      return `<div class="screen">${topbar}
+        <div class="card empty-state">No linked children yet. Ask your child to invite you from their Profile → Family section, or invite them from yours.</div>
+      </div>`;
+    }
+
+    const selectedUid = links.some(l => l.childUid === state.progressChildUid) ? state.progressChildUid : links[0].childUid;
+    const selectedLink = links.find(l => l.childUid === selectedUid);
+    const childTabs = links.length > 1 ? `
+      <div class="filter-bar" role="group" aria-label="Child">
+        ${links.map(l => `<button class="filter-tab ${l.childUid === selectedUid ? 'active' : ''}"
+                    onclick="app.setProgressChild('${l.childUid}')">${esc(l.childEmail)}</button>`).join('')}
+      </div>` : '';
+
+    const summary = window.riseFamily.getChildSummary(selectedUid);
+    let body;
+    if (summary === 'loading' || summary === undefined) {
+      body = `<div class="card empty-state">Loading ${esc(selectedLink.childEmail)}'s progress…</div>`;
+    } else {
+      const byGB = summary.byGradeBoard || {};
+      const gbKeys = Object.keys(byGB);
+      if (!gbKeys.length) {
+        body = `<div class="card empty-state">${esc(selectedLink.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
+      } else {
+        const selectedGB = gbKeys.includes(state.progressGradeBoard) ? state.progressGradeBoard : gbKeys[0];
+        const gbTabs = gbKeys.length > 1 ? `
+          <div class="filter-bar" role="group" aria-label="Grade and board">
+            ${gbKeys.map(gb => `<button class="filter-tab ${gb === selectedGB ? 'active' : ''}"
+                        onclick="app.setProgressGradeBoard('${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
+          </div>` : '';
+        body = gbTabs + this._familyChapterBreakdown(byGB[selectedGB] || []);
+      }
+    }
+
+    return `<div class="screen">${topbar}${childTabs}${body}</div>`;
+  },
+
+  setProgressChild(childUid) {
+    state.progressChildUid = childUid;
+    state.progressGradeBoard = null;
+    this.render();
+  },
+
+  setProgressGradeBoard(gb) {
+    state.progressGradeBoard = gb;
+    this.render();
+  },
+
+  // Strengths first, focus areas second — never the reverse — per
+  // docs/family.md "Tone and framing". Same underlying numbers the child's
+  // own weakest-first Progress view uses, just reordered for this audience.
+  _familyChapterBreakdown(rows) {
+    if (!rows.length) return '<div class="card empty-state">No practice recorded for this board yet.</div>';
+    const STRONG = 70;
+    const bySubject = {};
+    rows.forEach(r => { (bySubject[r.subject] || (bySubject[r.subject] = [])).push(r); });
+
+    return Object.entries(bySubject).map(([subject, chs]) => {
+      const strengths = chs.filter(c => c.accuracy >= STRONG).sort((a, b) => b.accuracy - a.accuracy);
+      const focus = chs.filter(c => c.accuracy < STRONG).sort((a, b) => a.accuracy - b.accuracy);
+      return `
+        <section class="home-section">
+          <h2 class="section-title">${esc(subject)}</h2>
+          ${strengths.length ? `
+            <h3 class="family-subheading">Strengths</h3>
+            <ul class="recent-list">${strengths.map(c => this._familyChapterRow(c)).join('')}</ul>` : ''}
+          ${focus.length ? `
+            <h3 class="family-subheading">Focus areas</h3>
+            <ul class="recent-list">${focus.map(c => this._familyChapterRow(c)).join('')}</ul>` : ''}
+        </section>`;
+    }).join('');
+  },
+
+  _familyChapterRow(c) {
+    return `<li class="recent-row card">
+      <span class="recent-score ${c.accuracy >= 70 ? 'good' : 'weak'}">${c.accuracy}%</span>
+      <span class="recent-desc">
+        <strong>${esc(c.chapter)}</strong>
+        <small>${plural(c.attempts, 'attempt')}</small>
+      </span>
+    </li>`;
   }
 
 });

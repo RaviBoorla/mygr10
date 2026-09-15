@@ -1,7 +1,11 @@
 # Family — parent/guardian linking, digests, assignments
 
-Status: **Spec only, not built.** Written before implementation, per this
-repo's convention (see `arena.md`).
+Status: **Phases 1-2 built** (linking/roles, and the Progress-screen
+child-switcher + `familySummary` sharing below). Phases 3-4 (assignments,
+digest emails, the Cloudflare Worker) are still spec-only. Originally
+written before any implementation, per this repo's convention (see
+`arena.md`); sections below now describe what's actually built where they
+say so, and what's still planned everywhere else.
 
 ## Why
 
@@ -161,20 +165,30 @@ in `state`).
 
 ```
 users/{childUid}/sync/familySummary
-  gradeBoard: string
-  perChapter: [{ subject, chapter, accuracy, attempts, lastAttemptAt }]
+  byGradeBoard: {
+    "X::CBSE": [{ subject, chapter, accuracy, attempts, lastAttemptAt }, ...],
+    "X::ICSE": [...]
+  }
   updatedAt
 ```
-**New doc, not in the original draft of this spec.** `sync/progress` is an
+**Built in Phase 2** (the original draft of this spec sketched a single
+`gradeBoard` + `perChapter` shape, assuming one board per child; the
+implementation instead keys by every `grade::board` combination actually
+present in that child's local progress, matching how `app.js`'s own
+`scopeKey()` fragments data — a child with both X-CBSE and X-ICSE history
+gets both as separate keys in one doc, not two docs). `sync/progress` is an
 opaque Leitner-box blob understood only by `app.js`'s own functions — it
 has no documented schema, and having the Cloudflare Worker re-derive
 chapter/subject accuracy from it would mean maintaining a second
 implementation of the same aggregation logic in a different runtime, which
 will eventually drift from the client's numbers. Instead, the same client
 code path that already updates the Leitner record on a graded submit also
-writes this pre-aggregated, documented summary. Both the guardian's
-Progress-screen view and the nightly/weekly Worker digest read
-`familySummary` — never `sync/progress` directly. One source of truth for
+writes this pre-aggregated, documented summary — concretely,
+`family.js`'s `computeAndPushSummary()` runs inside `auth.js`'s
+`pushToCloud()`, the one choke point every graded submit already calls
+via `riseSync.push()`. Both the guardian's Progress-screen view and the
+nightly/weekly Worker digest (phase 4) read `familySummary` — never
+`sync/progress` directly. One source of truth for
 "what's a strength, what's a focus area."
 
 ```
@@ -303,29 +317,33 @@ they did it" defeats the point of assigning it for "whenever."
 - Multiple guardians assigning independently (e.g. both parents) is not a
   conflict — each assignment is its own doc; no locking or merging needed.
 
-## Embedding into Progress (not a new page)
+## Embedding into Progress (not a new page) — built in Phase 2
 
-The existing `#/progress` screen (`app.js`) gets a viewer-role branch instead
-of forking into a separate route:
+The existing `#/progress` screen (`public/screen-misc.js`) got a viewer-role
+branch instead of forking into a separate route:
 
 - **No family links at all**: unchanged today's per-chapter accuracy view,
-  plus a new "Family" card at the bottom with the invite input.
-- **Child with active guardian link(s)**: same personal view, plus:
-  - a small "Shared with: mum@x.com (digest: on)" line per linked guardian,
-    with an unlink control
-  - an assignment inbox card listing pending/overdue assignments, each
-    launching a normal timed test session pre-scoped to that assignment
+  plus a new "Family" section at the bottom with the invite input (via
+  `_familySharedWithSection()`).
+- **Child with active guardian link(s)**: same personal view, plus a
+  "Shared with: mum@x.com — digest: on/off — gradeBoard" row per linked
+  guardian (currently links to Profile → Family to manage/unlink rather
+  than inlining the unlink control on this screen — a small UX gap, not a
+  functional one). The assignment inbox card described below doesn't exist
+  yet — there are no assignments to list until Phase 3.
 - **Guardian viewing their own Progress screen**: a guardian account never
   has grade/board practice history (constraint 8) and never shows the
   per-chapter accuracy view at all — its Progress screen *is* the **child
-  switcher** (tabs if more than one linked child, and a grade::board
-  sub-switcher if that child has more than one active `familyLinks` edge)
-  → a strengths-first, focus-areas-second rendering (see "Tone and
-  framing"), sourced from that child's `sync/familySummary`, read-only (a
-  guardian never edits or retakes the child's attempts) — plus an "Assign
-  practice" button and a list of past assignments with results. There is no
-  personal-practice case to stack against, since a guardian account can
-  never also be a student account.
+  switcher** (`_screenProgressGuardian()`: tabs if more than one linked
+  child, and a grade::board sub-switcher if that child has activity in more
+  than one) → a strengths-first, focus-areas-second rendering
+  (`_familyChapterBreakdown()`, threshold 70% accuracy — see "Tone and
+  framing"), sourced from that child's `sync/familySummary` via a live
+  listener, read-only (a guardian never edits or retakes the child's
+  attempts). The "Assign practice" button and past-assignments list are
+  **not built yet** — that's Phase 3; today's guardian view is read-only
+  strengths/focus-areas only. There is no personal-practice case to stack
+  against, since a guardian account can never also be a student account.
 
 `familySummary` (see "Data model") is what both this guardian view and the
 child's own Progress screen read for chapter-level numbers — the child's own
@@ -365,7 +383,7 @@ Add a section covering:
 - Single fixed timezone (IST) for all cron times — per-guardian timezone
   support is future work if the user base isn't India-only.
 
-## Firestore security rules (Phase 1, deployed)
+## Firestore security rules (Phases 1-2, deployed)
 
 ```
 match /familyInvites/{emailLower}/items/{itemId} {
@@ -388,6 +406,11 @@ match /familyLinks/{linkId} {
      request.auth.uid == request.resource.data.childUid);
   allow delete: if false;
 }
+
+match /users/{childUid}/sync/familySummary {
+  allow read: if request.auth != null &&
+    exists(/databases/$(database)/documents/familyLinks/$(request.auth.uid)_$(childUid));
+}
 ```
 
 `familyInvites` read is split from delete: the sender also needs read
@@ -400,10 +423,36 @@ a future rules mismatch surfaces a message instead of doing nothing).
 Delete stays invitee-only, matching that only accept/ignore ever deletes
 an invite doc.
 
+**`familyLinks/{linkId}` is now a deterministic id** —
+`${guardianUid}_${childUid}` — set at accept time, one doc per (guardian,
+child) pair, rather than an auto-generated id. This is what makes the
+`familySummary` read rule above possible: it can check `exists()` on a
+known path (does *a* link between this reader and that child exist and,
+implicitly, was it ever created — the rule doesn't check `status`, so an
+unlinked pair still passes `exists()`). That's an intentional looseness for
+now: an unlinked guardian keeps read access to a stale `familySummary`
+snapshot rather than being cut off instantly. Tightening this (checking
+`status == 'active'` too) needs either a Cloud Function to delete the link
+doc on unlink instead of soft-deleting it, or accepting the extra
+`get()` this rule already avoided by using `exists()` — a Phase 3+ cleanup
+item, not blocking now since the UI itself only shows *active* links
+(`riseFamily.linksAsGuardian` filters on `status:'active'`), so a stale
+read access with no UI path to trigger it is a low-severity gap.
+
+This also matters for `familySummary`'s own owner-write rule: the existing
+`match /users/{userId}/{document=**} { allow read, write: if ... uid ==
+userId }` already lets the child write and read their own doc — the new
+`familySummary`-specific match only *adds* guardian read access; Firestore
+rules are OR'd across every matching `match` block for the same path, so
+this doesn't need to duplicate the owner clause.
+
 ## Open items for whoever implements the rest of this
 
 - Resend API key needs to be added as a Worker secret
   (`wrangler secret put`), not committed.
+- Tighten the `familySummary` read rule to check `status == 'active'` on
+  the link (see above) once assignments/digests (which already require
+  active-only reads elsewhere) make that gap worth closing.
 - Firestore security rules still need `users/{uid}/assignments` (guardian
   can create an assignment only where an `active` `familyLinks` edge names
   them as `guardianUid` for that `childUid` — a cross-collection `get()`

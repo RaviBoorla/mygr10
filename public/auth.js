@@ -56,6 +56,9 @@ const SYNC_KEYS = {
       } catch (_) {}
     }
     await batch.commit();
+    // Refresh the pre-aggregated chapter-accuracy doc a linked guardian's
+    // Progress-screen view reads — same choke point as everything else here.
+    window.riseFamily?.updateSummary?.();
   }
 
   // Pull Firestore docs down and merge into localStorage.
