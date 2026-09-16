@@ -1219,6 +1219,24 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .family-subheading { font-size: var(--fs-sm); font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .03em; margin: 10px 0 2px; }
 .auth-signout-btn { color: #dc2626 !important; border-color: #dc2626 !important; }
 
+/* ── Assignments ── */
+.assign-form { padding: 14px 16px; margin-bottom: 10px; }
+.assign-form-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.assign-form-row label { display: flex; flex-direction: column; gap: 4px; font-size: var(--fs-sm); font-weight: 600; color: var(--text-light); flex: 1; min-width: 130px; }
+.assign-form-row input, .assign-form-row select { padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: var(--fs-sm); background: var(--card-bg); color: var(--text); }
+.assign-status-pill { font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 99px; white-space: nowrap; align-self: center; }
+.assign-status-pill.pending   { background: #eff6ff; color: #1d4ed8; }
+.assign-status-pill.completed { background: #f0fdf4; color: #15803d; }
+.assign-status-pill.expired   { background: #fff7ed; color: #c2410c; }
+.assign-status-pill.cancelled { background: #f3f4f6; color: #6b7280; }
+@media (prefers-color-scheme: dark) {
+  .assign-status-pill.pending   { background: #1e3a5f; color: #93c5fd; }
+  .assign-status-pill.completed { background: #14532d; color: #86efac; }
+  .assign-status-pill.expired   { background: #431407; color: #fdba74; }
+  .assign-status-pill.cancelled { background: #374151; color: #d1d5db; }
+  .assign-form-row input, .assign-form-row select { border-color: var(--border); }
+}
+
 #rise-auth-modal:not([hidden]) { display: block; }
 #rise-auth-modal { position: fixed; inset: 0; z-index: 200; }
 

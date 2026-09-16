@@ -1,8 +1,8 @@
 # Family — parent/guardian linking, digests, assignments
 
-Status: **Phases 1-2 built** (linking/roles, and the Progress-screen
-child-switcher + `familySummary` sharing below). Phases 3-4 (assignments,
-digest emails, the Cloudflare Worker) are still spec-only. Originally
+Status: **Phases 1-3 built** (linking/roles; Progress-screen child-switcher
++ `familySummary` sharing; assignments inbox + create + complete + cancel).
+Phase 4 (digest emails, the Cloudflare Worker) is still spec-only. Originally
 written before any implementation, per this repo's convention (see
 `arena.md`); sections below now describe what's actually built where they
 say so, and what's still planned everywhere else.
@@ -411,7 +411,24 @@ match /users/{childUid}/sync/familySummary {
   allow read: if request.auth != null &&
     exists(/databases/$(database)/documents/familyLinks/$(request.auth.uid)_$(childUid));
 }
+
+match /users/{childUid}/assignments/{assignmentId} {
+  // Guardian can create only when an active familyLinks edge names them.
+  allow create: if request.auth != null &&
+    get(/databases/$(database)/documents/familyLinks/$(request.auth.uid)_$(childUid)).data.status == 'active';
+  // Child can read their own; guardian (createdBy) can read too.
+  allow read: if request.auth != null &&
+    (request.auth.uid == childUid ||
+     request.auth.uid == resource.data.createdBy);
+  // Child may update (to write result/complete); guardian may update (to cancel).
+  allow update: if request.auth != null &&
+    (request.auth.uid == childUid ||
+     request.auth.uid == resource.data.createdBy);
+  allow delete: if false;
+}
 ```
+
+**Note**: The `assignments` `allow create` rule uses a cross-collection `get()`, which counts against Firestore rule-evaluation quota. If this becomes a cost concern, replace with a Cloud Function that verifies the link and writes the doc server-side, removing the need for the client-side cross-collection check in the rule.
 
 `familyInvites` read is split from delete: the sender also needs read
 access (not just the invitee) because `family.js`'s `sendInvite()` checks

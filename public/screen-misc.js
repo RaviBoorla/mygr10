@@ -142,6 +142,7 @@ Object.assign(app, {
           <p class="subtitle" style="margin:0">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
           <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
+        ${this._assignmentInbox()}
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
         ${this._familySharedWithSection()}
       </div>`;
@@ -211,7 +212,8 @@ Object.assign(app, {
       }
     }
 
-    return `<div class="screen">${topbar}${childTabs}${body}</div>`;
+    const assignBlock = this._assignmentPanel(selectedUid, selectedLink);
+    return `<div class="screen">${topbar}${childTabs}${body}${assignBlock}</div>`;
   },
 
   setProgressChild(childUid) {
@@ -258,6 +260,95 @@ Object.assign(app, {
         <small>${plural(c.attempts, 'attempt')}</small>
       </span>
     </li>`;
+  },
+
+  // ── Child's assignment inbox ──────────────────────────────────────────────
+  _assignmentInbox() {
+    const assignments = window.riseFamily?.myAssignments || [];
+    if (!assignments.length) return '';
+    const fmtDue = ts => {
+      try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
+    };
+    return `
+      <section class="home-section">
+        <h2 class="section-title">Assignments</h2>
+        <ul class="recent-list">
+          ${assignments.map(a => `
+            <li class="recent-row card">
+              <span class="recent-desc">
+                <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
+                <small>${a.questionCount} questions · ${a.timeLimitMinutes} min · due ${fmtDue(a.dueAt)}</small>
+              </span>
+              <button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>
+            </li>`).join('')}
+        </ul>
+      </section>`;
+  },
+
+  // ── Guardian: "Assign practice" form + past assignments per child ─────────
+  _assignmentPanel(childUid, link) {
+    const assignments = window.riseFamily?.getChildAssignments(childUid) || [];
+    const subjects = (SUBJECTS[state.board] || []).filter(s => bankSlug(s));
+
+    const statusLabel = { pending: 'Pending', completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
+    const fmtDue = ts => {
+      try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
+    };
+
+    // Minimum due datetime: 10 minutes from now, in local datetime-local format
+    const minDue = new Date(Date.now() + 10 * 60000).toISOString().slice(0, 16);
+
+    const form = `
+      <div class="assign-form card">
+        <h3 class="family-subheading" style="margin-top:0">Assign practice to ${esc(link.childEmail)}</h3>
+        <div class="assign-form-row">
+          <label>Subject
+            <select id="assign-subject-${esc(childUid)}">
+              ${subjects.map(s => `<option>${esc(s)}</option>`).join('')}
+            </select>
+          </label>
+          <label>Chapter (optional)
+            <input id="assign-chapter-${esc(childUid)}" type="text" placeholder="e.g. Trigonometry">
+          </label>
+        </div>
+        <div class="assign-form-row">
+          <label>Questions
+            <input id="assign-count-${esc(childUid)}" type="number" min="5" max="50" value="10">
+          </label>
+          <label>Time limit (min)
+            <input id="assign-limit-${esc(childUid)}" type="number" min="5" max="120" value="20">
+          </label>
+          <label>Due by
+            <input id="assign-due-${esc(childUid)}" type="datetime-local" min="${minDue}">
+          </label>
+        </div>
+        <button class="btn small primary" onclick="riseFamily._createAssignment('${esc(childUid)}')">Assign</button>
+        <p id="assign-msg-${esc(childUid)}" class="auth-error" hidden></p>
+      </div>`;
+
+    const historyHtml = assignments.length ? `
+      <ul class="recent-list">
+        ${assignments.map(a => {
+          const st = a.status;
+          const label = statusLabel[st] || st;
+          const result = a.result ? ` — ${a.result.accuracy}% (${a.result.score}/${a.result.total})` : '';
+          return `<li class="recent-row card">
+            <span class="assign-status-pill ${st}">${label}</span>
+            <span class="recent-desc">
+              <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
+              <small>${a.questionCount} q · ${a.timeLimitMinutes} min · due ${fmtDue(a.dueAt)}${result}</small>
+            </span>
+            ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
+          </li>`;
+        }).join('')}
+      </ul>` : '<p class="subtitle">No assignments sent yet.</p>';
+
+    return `
+      <section class="home-section">
+        <h2 class="section-title">Assignments</h2>
+        ${form}
+        ${historyHtml}
+      </section>`;
   }
 
 });

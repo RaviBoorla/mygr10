@@ -53,6 +53,38 @@ Object.assign(app, {
     this._saveDraft();
   },
 
+  startAssignment(assignment) {
+    if (!assignment) return;
+    const { id: assignmentId, subject, chapter = null, questionCount, timeLimitMinutes } = assignment;
+    // childUid: child launching their own assignment → current uid; guardian view stores it explicitly.
+    const assignmentChildUid = assignment.childUid || window.riseAuth?.user?.uid;
+    this.session = {
+      subject, mode: 'assignment', chapter,
+      assignmentId, assignmentChildUid,
+      questions: [], answers: {}, marked: [], index: 0,
+      remaining: timeLimitMinutes ? timeLimitMinutes * 60 : null,
+      loading: true, error: null
+    };
+    LS.del(KEY.draft);
+    this.go(['test']);
+    loadBank(subject)
+      .then(all => {
+        const pool = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
+        if (!pool.length) throw new Error('No questions available for this assignment.');
+        this.session.questions = shuffle(pool).slice(0, questionCount || 25).map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
+        this.session.loading = false;
+        if (state.screen !== 'test') return;
+        this.renderQuestion(); this.renderPalette(); this.renderTestMeta();
+        if (this.session.remaining) this.startTimer();
+        this._saveDraft();
+      })
+      .catch(err => {
+        this.session.loading = false;
+        this.session.error = err.message || 'Could not load questions.';
+        if (state.screen === 'test') this.renderTestMeta();
+      });
+  },
+
   startBookmarkReview(subject) {
     const store = LS.get(KEY.bookmarks, {});
     const ids = Object.keys(store[scopeKey(subject)] || {});
@@ -367,6 +399,13 @@ Object.assign(app, {
 
       this._updateProgress(s.subject, this.reviewData);
       this._recordStreakActivity(correct + wrong);
+
+      if (s.assignmentId) {
+        window.riseFamily?.completeAssignment?.(s.assignmentChildUid, s.assignmentId, {
+          score: correct, total: this.reviewData.length,
+          accuracy: this.reviewData.length ? Math.round(correct / this.reviewData.length * 100) : 0
+        });
+      }
 
       const now = Date.now();
       const past = LS.get(KEY.results, []);

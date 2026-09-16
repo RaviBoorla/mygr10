@@ -40,6 +40,12 @@
   const _childSummaries = {}; // childUid -> { byGradeBoard, updatedAt } | 'loading' | null
   const _summaryUnsubs = {};  // childUid -> unsubscribe fn
 
+  // Assignments
+  const _childAssignments = {}; // childUid -> array of assignment docs (guardian view)
+  const _assignmentUnsubs = {}; // childUid -> unsubscribe fn
+  let _myAssignments = [];      // pending assignments addressed to me (child view)
+  let _unsubMyAssignments = null;
+
   function uid()   { return window.riseAuth?.user?.uid || null; }
   function email() { return (window.riseAuth?.user?.email || '').toLowerCase(); }
 
@@ -97,6 +103,14 @@
       .onSnapshot(snap => { _mergeLinks('guardian', snap); refresh(); }, () => {});
     db.collection('familyLinks').where('childUid', '==', uid())
       .onSnapshot(snap => { _mergeLinks('child', snap); refresh(); }, () => {});
+    // Child's own assignment inbox (pending assignments addressed to this uid)
+    _unsubMyAssignments = db.collection('users').doc(uid()).collection('assignments')
+      .where('status', '==', 'pending')
+      .orderBy('dueAt', 'asc')
+      .onSnapshot(snap => {
+        _myAssignments = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        refresh();
+      }, () => {});
   }
 
   const _linkSets = { guardian: [], child: [] };
@@ -104,12 +118,15 @@
     _linkSets[side] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     _myLinks = [..._linkSets.guardian, ..._linkSets.child];
     if (side === 'guardian') {
-      // Start/stop a familySummary listener per actively-linked child.
+      // Start/stop a familySummary + assignment listener per actively-linked child.
       const activeChildUids = new Set(_linkSets.guardian.filter(l => l.status === 'active').map(l => l.childUid));
       Object.keys(_summaryUnsubs).forEach(childUid => {
         if (!activeChildUids.has(childUid)) { _summaryUnsubs[childUid](); delete _summaryUnsubs[childUid]; delete _childSummaries[childUid]; }
       });
-      activeChildUids.forEach(childUid => watchChildSummary(childUid));
+      Object.keys(_assignmentUnsubs).forEach(childUid => {
+        if (!activeChildUids.has(childUid)) { _assignmentUnsubs[childUid](); delete _assignmentUnsubs[childUid]; delete _childAssignments[childUid]; }
+      });
+      activeChildUids.forEach(childUid => { watchChildSummary(childUid); watchChildAssignments(childUid); });
     }
   }
 
@@ -126,13 +143,18 @@
   function stopListeners() {
     if (_unsubInvites) { _unsubInvites(); _unsubInvites = null; }
     if (_unsubLinks)   { _unsubLinks();   _unsubLinks   = null; }
+    if (_unsubMyAssignments) { _unsubMyAssignments(); _unsubMyAssignments = null; }
     Object.values(_summaryUnsubs).forEach(fn => fn());
     Object.keys(_summaryUnsubs).forEach(k => delete _summaryUnsubs[k]);
     Object.keys(_childSummaries).forEach(k => delete _childSummaries[k]);
+    Object.values(_assignmentUnsubs).forEach(fn => fn());
+    Object.keys(_assignmentUnsubs).forEach(k => delete _assignmentUnsubs[k]);
+    Object.keys(_childAssignments).forEach(k => delete _childAssignments[k]);
     _pendingInvites = [];
     _linkSets.guardian = []; _linkSets.child = [];
     _myLinks = [];
     _myRole = null;
+    _myAssignments = [];
   }
 
   // ── Invite ───────────────────────────────────────────────────────────────
@@ -340,6 +362,59 @@
     } catch (_) {}
   }
 
+  // ── Assignments ──────────────────────────────────────────────────────────
+  function watchChildAssignments(childUid) {
+    if (_assignmentUnsubs[childUid]) return;
+    _childAssignments[childUid] = [];
+    _assignmentUnsubs[childUid] = db.collection('users').doc(childUid).collection('assignments')
+      .orderBy('dueAt', 'desc')
+      .onSnapshot(snap => {
+        _childAssignments[childUid] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        refresh();
+      }, () => { _childAssignments[childUid] = []; refresh(); });
+  }
+
+  async function createAssignment(childUid, { subject, chapter, gradeBoard, questionCount, timeLimitMinutes, dueAt }) {
+    if (!uid()) return { ok: false, msg: 'Sign in first.' };
+    const link = _linkSets.guardian.find(l => l.childUid === childUid && l.status === 'active');
+    if (!link) return { ok: false, msg: 'No active family link for this child.' };
+    try {
+      await db.collection('users').doc(childUid).collection('assignments').add({
+        createdBy: uid(),
+        childUid,
+        subject,
+        chapter: chapter || null,
+        gradeBoard: gradeBoard || link.gradeBoard,
+        questionCount: Number(questionCount) || 10,
+        timeLimitMinutes: Number(timeLimitMinutes) || 20,
+        dueAt: firebase.firestore.Timestamp.fromDate(new Date(dueAt)),
+        status: 'pending',
+        createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+      return { ok: true };
+    } catch (e) {
+      return { ok: false, msg: e.message || 'Could not create assignment.' };
+    }
+  }
+
+  async function cancelAssignment(childUid, assignmentId) {
+    try {
+      await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).update({
+        status: 'cancelled',
+        cancelledAt: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    } catch (_) {}
+  }
+
+  async function completeAssignment(childUid, assignmentId, result) {
+    try {
+      await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).update({
+        status: 'completed',
+        result: { ...result, submittedAt: firebase.firestore.FieldValue.serverTimestamp() }
+      });
+    } catch (_) {}
+  }
+
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
   }
@@ -351,15 +426,44 @@
     get myRole() { return _myRole; },
     get linksAsGuardian() { return _linkSets.guardian.filter(l => l.status === 'active'); },
     get linksAsChild() { return _linkSets.child.filter(l => l.status === 'active'); },
+    get myAssignments() { return _myAssignments; },
     renderProfileSection,
     updateSummary: computeAndPushSummary,
 
-    // Returns the cached familySummary for a linked child: undefined if not
-    // watched yet (call once to start the listener), 'loading' while the
-    // first snapshot is in flight, or { byGradeBoard } once it arrives.
+    // Returns the cached familySummary for a linked child.
     getChildSummary(childUid) {
       watchChildSummary(childUid);
       return _childSummaries[childUid];
+    },
+
+    // Returns cached assignment list for a linked child (guardian view).
+    getChildAssignments(childUid) {
+      return _childAssignments[childUid] || [];
+    },
+
+    completeAssignment,
+
+    async _createAssignment(childUid) {
+      const subjectEl = document.getElementById(`assign-subject-${childUid}`);
+      const chapterEl = document.getElementById(`assign-chapter-${childUid}`);
+      const countEl   = document.getElementById(`assign-count-${childUid}`);
+      const limitEl   = document.getElementById(`assign-limit-${childUid}`);
+      const dueEl     = document.getElementById(`assign-due-${childUid}`);
+      const msgEl     = document.getElementById(`assign-msg-${childUid}`);
+      const res = await createAssignment(childUid, {
+        subject: subjectEl?.value,
+        chapter: chapterEl?.value || null,
+        questionCount: countEl?.value,
+        timeLimitMinutes: limitEl?.value,
+        dueAt: dueEl?.value
+      });
+      if (msgEl) { msgEl.textContent = res.ok ? 'Assignment sent!' : (res.msg || 'Error'); msgEl.hidden = false; msgEl.style.color = res.ok ? 'var(--primary)' : '#dc2626'; }
+      if (res.ok) { if (subjectEl) subjectEl.selectedIndex = 0; if (chapterEl) chapterEl.value = ''; if (dueEl) dueEl.value = ''; }
+    },
+
+    async _cancelAssignment(childUid, assignmentId) {
+      if (!confirm('Cancel this assignment?')) return;
+      await cancelAssignment(childUid, assignmentId);
     },
 
     async _invite(role) {

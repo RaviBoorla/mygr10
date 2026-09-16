@@ -75,10 +75,11 @@ const GRADES = [
 ];
 
 const MODES = {
-  mock:     { label: 'Full Mock Test',    count: 49, seconds: 40 * 60 },
-  drill:    { label: 'Chapter Drill',     count: 25, seconds: null },
-  bookmark: { label: 'Bookmarked Review', count: 50, seconds: null },
-  srs:      { label: 'Spaced Review',     count: 30, seconds: null }
+  mock:       { label: 'Full Mock Test',    count: 49, seconds: 40 * 60 },
+  drill:      { label: 'Chapter Drill',     count: 25, seconds: null },
+  bookmark:   { label: 'Bookmarked Review', count: 50, seconds: null },
+  srs:        { label: 'Spaced Review',     count: 30, seconds: null },
+  assignment: { label: 'Assignment',        count: 25, seconds: null }  // count/seconds overridden per-assignment
 };
 
 const SRS_INTERVALS = [0, 1, 3, 7, 14, 30];
