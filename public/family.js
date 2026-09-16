@@ -35,8 +35,10 @@
   let _pendingInvites = [];   // invites addressed to me, status:'pending'
   let _myLinks = [];          // familyLinks rows where I'm either side
   let _myRole = null;         // cached familyRole, fetched once per uid change
+  let _roleLoaded = false;    // true after getFamilyRole() resolves (even if null)
   let _unsubInvites = null;
   let _unsubLinks = null;
+  let _unsubLinksChild = null; // second familyLinks query (childUid side)
   const _childSummaries = {}; // childUid -> { byGradeBoard, updatedAt } | 'loading' | null
   const _summaryUnsubs = {};  // childUid -> unsubscribe fn
 
@@ -91,7 +93,8 @@
   function startListeners() {
     stopListeners();
     if (!uid()) return;
-    getFamilyRole().then(r => { _myRole = r; refresh(); });
+    _roleLoaded = false;
+    getFamilyRole().then(r => { _myRole = r; _roleLoaded = true; refresh(); });
     _unsubInvites = db.collection('familyInvites').doc(email()).collection('items')
       .where('status', '==', 'pending')
       .onSnapshot(snap => {
@@ -101,7 +104,7 @@
     _unsubLinks = db.collection('familyLinks')
       .where('guardianUid', '==', uid())
       .onSnapshot(snap => { _mergeLinks('guardian', snap); refresh(); }, () => {});
-    db.collection('familyLinks').where('childUid', '==', uid())
+    _unsubLinksChild = db.collection('familyLinks').where('childUid', '==', uid())
       .onSnapshot(snap => { _mergeLinks('child', snap); refresh(); }, () => {});
     // Child's own assignment inbox (pending assignments addressed to this uid)
     _unsubMyAssignments = db.collection('users').doc(uid()).collection('assignments')
@@ -141,8 +144,9 @@
   }
 
   function stopListeners() {
-    if (_unsubInvites) { _unsubInvites(); _unsubInvites = null; }
-    if (_unsubLinks)   { _unsubLinks();   _unsubLinks   = null; }
+    if (_unsubInvites)     { _unsubInvites();     _unsubInvites     = null; }
+    if (_unsubLinks)       { _unsubLinks();       _unsubLinks       = null; }
+    if (_unsubLinksChild)  { _unsubLinksChild();  _unsubLinksChild  = null; }
     if (_unsubMyAssignments) { _unsubMyAssignments(); _unsubMyAssignments = null; }
     Object.values(_summaryUnsubs).forEach(fn => fn());
     Object.keys(_summaryUnsubs).forEach(k => delete _summaryUnsubs[k]);
@@ -154,6 +158,7 @@
     _linkSets.guardian = []; _linkSets.child = [];
     _myLinks = [];
     _myRole = null;
+    _roleLoaded = false;
     _myAssignments = [];
   }
 
@@ -459,6 +464,7 @@
   // ── Public API ───────────────────────────────────────────────────────────
   window.riseFamily = {
     get pendingCount() { return _pendingInvites.length; },
+    get roleLoaded()   { return _roleLoaded; },
     // 'guardian' | 'child' | null (not yet linked to anything, ever)
     get myRole() { return _myRole; },
     get linksAsGuardian() { return _linkSets.guardian.filter(l => l.status === 'active'); },
@@ -506,10 +512,13 @@
     async _invite(role) {
       const input = document.getElementById('family-invite-email');
       const msg = document.getElementById('family-invite-msg');
+      if (msg) { msg.textContent = 'Sending…'; msg.hidden = false; msg.style.color = 'var(--text-light)'; }
       const res = await sendInvite(input?.value, role);
       if (msg) { msg.textContent = res.msg; msg.hidden = false; msg.style.color = res.ok ? 'var(--primary)' : '#dc2626'; }
       if (res.ok && input) input.value = '';
-      refresh();
+      // Don't call refresh() here — it would re-render the mount and wipe the
+      // message + email input before the user reads it. The Firestore listeners
+      // will call refresh() naturally if any shared state changes.
     },
     async _accept(inviteId) {
       const inv = _pendingInvites.find(i => i.id === inviteId);

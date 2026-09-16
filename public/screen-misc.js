@@ -89,11 +89,12 @@ Object.assign(app, {
     // A guardian account never has grade/board practice history (docs/family.md
     // constraint 8) — its Progress screen is the child switcher, not the
     // per-chapter accuracy view below.
-    const role = window.riseFamily?.myRole;
+    const fam = window.riseFamily;
+    const role = fam?.myRole;
     if (role === 'guardian') return this._screenProgressGuardian();
-    // If logged in but role not yet fetched, show a brief loading state rather
-    // than flashing the student view (which would be wrong for a guardian).
-    if (!role && window.riseAuth?.user && window.riseFamily) {
+    // Show a brief spinner only while the role fetch is still in flight.
+    // Once roleLoaded is true, myRole being null means "student" — show child view.
+    if (fam && window.riseAuth?.user && !fam.roleLoaded) {
       return `<div class="screen"><div class="card empty-state" style="margin-top:2rem">Loading…</div></div>`;
     }
     return this._screenProgressChild();

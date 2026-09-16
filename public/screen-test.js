@@ -420,6 +420,7 @@ Object.assign(app, {
       this.session = null;
       LS.del(KEY.draft);
       if (window.riseSync) riseSync.push();
+      window.riseFamily?.updateSummary?.(); // push familySummary for guardian view
       this.go(['results'], true);
     };
 
