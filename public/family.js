@@ -95,6 +95,9 @@
     if (!uid()) return;
     _roleLoaded = false;
     getFamilyRole().then(r => { _myRole = r; _roleLoaded = true; refresh(); });
+    // Push existing localStorage progress to Firestore on login so the guardian
+    // can see data even if the child hasn't submitted a new test since this feature launched.
+    computeAndPushSummary();
     _unsubInvites = db.collection('familyInvites').doc(email()).collection('items')
       .where('status', '==', 'pending')
       .onSnapshot(snap => {
@@ -120,6 +123,22 @@
   function _mergeLinks(side, snap) {
     _linkSets[side] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     _myLinks = [..._linkSets.guardian, ..._linkSets.child];
+
+    // Derive role from active links when no profile-stored role exists.
+    // This handles the case where the GUARDIAN initiated the invite — acceptInvite()
+    // only locks the accepter's role, so the initiating guardian never gets their
+    // familyRole written to their profile doc. Run regardless of _roleLoaded so
+    // the screen updates immediately when links arrive; lockFamilyRole backfills the doc.
+    if (!_myRole) {
+      if (_linkSets.guardian.some(l => l.status === 'active')) {
+        _myRole = 'guardian';
+        lockFamilyRole('guardian'); // backfill the profile doc
+      } else if (_linkSets.child.some(l => l.status === 'active')) {
+        _myRole = 'child';
+        lockFamilyRole('child');
+      }
+    }
+
     if (side === 'guardian') {
       // Start/stop a familySummary + assignment listener per actively-linked child.
       const activeChildUids = new Set(_linkSets.guardian.filter(l => l.status === 'active').map(l => l.childUid));
@@ -385,7 +404,10 @@
   function watchChildAssignments(childUid) {
     if (_assignmentUnsubs[childUid]) return;
     _childAssignments[childUid] = [];
+    // Filter by createdBy so Firestore security rules (which check resource.data.createdBy)
+    // can be evaluated on the query — an unfiltered query returns permission-denied.
     _assignmentUnsubs[childUid] = db.collection('users').doc(childUid).collection('assignments')
+      .where('createdBy', '==', uid())
       .orderBy('dueAt', 'desc')
       .onSnapshot(snap => {
         _childAssignments[childUid] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
