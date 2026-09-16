@@ -1292,6 +1292,18 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 
 .family-subheading { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin: 0 0 12px; }
 
+/* ── Guardian Progress: fixed 50/50 two-column layout, one column per child ── */
+.family-child-columns {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;
+}
+@media (max-width: 760px) { .family-child-columns { grid-template-columns: 1fr; } }
+.family-child-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.family-child-col-empty {
+  display: flex; align-items: center; justify-content: center;
+  border: 2px dashed var(--border); border-radius: var(--radius-lg);
+  min-height: 160px; opacity: .7;
+}
+
 /* ── Assignment form (guardian's Progress screen) ──────────────────────── */
 .assign-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
 .assign-form-row { display: flex; flex-wrap: wrap; gap: 14px; }
@@ -1319,13 +1331,13 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .assign-status-pill.expired   { background: var(--wrong-bg); color: var(--wrong-fg); }
 .assign-status-pill.cancelled { background: var(--bg); color: var(--text-light); }
 
-/* ── Assignment history: 3-up card grid (guardian's Progress screen) ────── */
+/* ── Assignment history: responsive card grid. auto-fill sizes to whatever
+   container it's in (a full-width child Progress screen, or a 50%-wide
+   guardian column) instead of a fixed column count tied to viewport width. */
 .assign-history-grid {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
 }
-@media (max-width: 860px)  { .assign-history-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 560px)  { .assign-history-grid { grid-template-columns: 1fr; } }
 .assign-history-card {
   display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
   padding: 14px 16px;

@@ -177,7 +177,10 @@ Object.assign(app, {
       </section>`;
   },
 
-  // ── Guardian's own Progress screen: the child switcher ──────────────────
+  // ── Guardian's own Progress screen: fixed two-column layout ──────────────
+  // Each linked child gets a 50%-wide column (own summary + assignment panel).
+  // With only one child linked, the second column is an inactive placeholder
+  // that activates (fills with a real column) once a second child links up.
   _screenProgressGuardian() {
     const links = window.riseFamily?.linksAsGuardian || [];
     const topbar = `
@@ -192,37 +195,44 @@ Object.assign(app, {
       </div>`;
     }
 
-    const selectedUid = links.some(l => l.childUid === state.progressChildUid) ? state.progressChildUid : links[0].childUid;
-    const selectedLink = links.find(l => l.childUid === selectedUid);
-    const childTabs = links.length > 1 ? `
-      <div class="filter-bar" role="group" aria-label="Child">
-        ${links.map(l => `<button class="filter-tab ${l.childUid === selectedUid ? 'active' : ''}"
-                    onclick="app.setProgressChild('${l.childUid}')">${esc(l.childEmail)}</button>`).join('')}
+    const columns = links.map(l => this._guardianChildColumn(l)).join('');
+    const placeholder = links.length < 2 ? `
+      <div class="family-child-col family-child-col-empty">
+        <div class="empty-state">Invite another child from Profile → Family to see them here, side by side.</div>
       </div>` : '';
 
-    const summary = window.riseFamily.getChildSummary(selectedUid);
+    setTimeout(() => links.forEach(l => this._populateAssignChapters(l.childUid)), 0);
+    return `<div class="screen">${topbar}<div class="family-child-columns">${columns}${placeholder}</div></div>`;
+  },
+
+  _guardianChildColumn(link) {
+    const childUid = link.childUid;
+    const summary = window.riseFamily.getChildSummary(childUid);
     let body;
     if (summary === 'loading' || summary === undefined) {
-      body = `<div class="card empty-state">Loading ${esc(selectedLink.childEmail)}'s progress…</div>`;
+      body = `<div class="card empty-state">Loading ${esc(link.childEmail)}'s progress…</div>`;
     } else {
       const byGB = summary.byGradeBoard || {};
       const gbKeys = Object.keys(byGB);
       if (!gbKeys.length) {
-        body = `<div class="card empty-state">${esc(selectedLink.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
+        body = `<div class="card empty-state">${esc(link.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
       } else {
-        const selectedGB = gbKeys.includes(state.progressGradeBoard) ? state.progressGradeBoard : gbKeys[0];
+        const selectedGB = gbKeys.includes(state.progressGradeBoardByChild[childUid]) ? state.progressGradeBoardByChild[childUid] : gbKeys[0];
         const gbTabs = gbKeys.length > 1 ? `
           <div class="filter-bar" role="group" aria-label="Grade and board">
             ${gbKeys.map(gb => `<button class="filter-tab ${gb === selectedGB ? 'active' : ''}"
-                        onclick="app.setProgressGradeBoard('${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
+                        onclick="app.setProgressGradeBoard('${childUid}','${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
           </div>` : '';
         body = gbTabs + this._familyChapterBreakdown(byGB[selectedGB] || []);
       }
     }
-
-    const assignBlock = this._assignmentPanel(selectedUid, selectedLink);
-    setTimeout(() => this._populateAssignChapters(selectedUid), 0);
-    return `<div class="screen">${topbar}${childTabs}${body}${assignBlock}</div>`;
+    const assignBlock = this._assignmentPanel(childUid, link);
+    return `
+      <div class="family-child-col">
+        <h2 class="section-title">${esc(link.childEmail)}</h2>
+        ${body}
+        ${assignBlock}
+      </div>`;
   },
 
   // Fills the chapter <select> for the currently-chosen subject in the assign
@@ -248,14 +258,8 @@ Object.assign(app, {
       .catch(() => { chapterEl.innerHTML = '<option value="">All chapters</option>'; });
   },
 
-  setProgressChild(childUid) {
-    state.progressChildUid = childUid;
-    state.progressGradeBoard = null;
-    this.render();
-  },
-
-  setProgressGradeBoard(gb) {
-    state.progressGradeBoard = gb;
+  setProgressGradeBoard(childUid, gb) {
+    state.progressGradeBoardByChild[childUid] = gb;
     this.render();
   },
 

@@ -76,8 +76,7 @@ const state = {
   solvedChapter: {},
   solvedExercise: {},
   mobileMenuOpen: false,
-  progressChildUid: null,
-  progressGradeBoard: null
+  progressGradeBoardByChild: {}
 };
 
 // ─── Routing ──────────────────────────────────────────────────────────────────
