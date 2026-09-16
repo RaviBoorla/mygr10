@@ -186,28 +186,38 @@ Object.assign(app, {
         </select>
       </label>` : `<h2 class="section-title">${esc(selectedLink.childEmail)}</h2>`;
 
-    const summary = window.riseFamily.getChildSummary(selectedUid);
-    let body;
-    if (summary === 'loading' || summary === undefined) {
-      body = `<div class="card empty-state">Loading ${esc(selectedLink.childEmail)}'s progress…</div>`;
-    } else {
-      const byGB = summary.byGradeBoard || {};
-      const gbKeys = Object.keys(byGB);
-      if (!gbKeys.length) {
-        body = `<div class="card empty-state">${esc(selectedLink.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
-      } else {
-        const selectedGB = gbKeys.includes(state.progressGradeBoardByChild[selectedUid]) ? state.progressGradeBoardByChild[selectedUid] : gbKeys[0];
-        const gbTabs = gbKeys.length > 1 ? `
-          <div class="filter-bar" role="group" aria-label="Grade and board">
-            ${gbKeys.map(gb => `<button class="filter-tab ${gb === selectedGB ? 'active' : ''}"
-                        onclick="app.setProgressGradeBoard('${selectedUid}','${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
-          </div>` : '';
-        body = gbTabs + this._familyChapterBreakdown(byGB[selectedGB] || []);
-      }
-    }
     const assignBlock = this._assignmentPanel(selectedUid, selectedLink);
+    const summaryBlock = this._childSummaryBlock(selectedUid, selectedLink);
     setTimeout(() => this._populateAssignChapters(selectedUid), 0);
-    return `<div class="family-assign-tab">${childPicker}${body}${assignBlock}</div>`;
+    return `<div class="family-assign-tab">${childPicker}${assignBlock}${summaryBlock}</div>`;
+  },
+
+  // Strengths/focus-areas summary — shown below the assignment cards, and
+  // only once there's enough practice data to be meaningful (a single lucky
+  // or unlucky attempt shouldn't swing a chapter to 0% or 100%).
+  _MIN_SUMMARY_ATTEMPTS: 5,
+  _childSummaryBlock(childUid, link) {
+    const summary = window.riseFamily.getChildSummary(childUid);
+    if (summary === 'loading' || summary === undefined) {
+      return `<h2 class="section-title">Summary</h2><div class="card empty-state">Loading ${esc(link.childEmail)}'s progress…</div>`;
+    }
+    const byGB = summary.byGradeBoard || {};
+    const gbKeys = Object.keys(byGB);
+    if (!gbKeys.length) {
+      return `<h2 class="section-title">Summary</h2><div class="card empty-state">${esc(link.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
+    }
+    const selectedGB = gbKeys.includes(state.progressGradeBoardByChild[childUid]) ? state.progressGradeBoardByChild[childUid] : gbKeys[0];
+    const rows = byGB[selectedGB] || [];
+    const totalAttempts = rows.reduce((sum, c) => sum + (c.attempts || 0), 0);
+    const gbTabs = gbKeys.length > 1 ? `
+      <div class="filter-bar" role="group" aria-label="Grade and board">
+        ${gbKeys.map(gb => `<button class="filter-tab ${gb === selectedGB ? 'active' : ''}"
+                    onclick="app.setProgressGradeBoard('${childUid}','${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
+      </div>` : '';
+    if (totalAttempts < this._MIN_SUMMARY_ATTEMPTS) {
+      return `<h2 class="section-title">Summary</h2>${gbTabs}<div class="card empty-state">Not enough practice yet for a strengths/focus summary — check back after a few more attempts.</div>`;
+    }
+    return `<h2 class="section-title">Summary</h2>${gbTabs}${this._familyChapterBreakdown(rows)}`;
   },
 
   setProgressAssignChild(childUid) {

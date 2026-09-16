@@ -126,6 +126,12 @@ const SYNC_KEYS = {
     for (const name of Object.keys(SYNC_KEYS)) {
       batch.set(userDoc(name), { _v: Date.now(), data: {} });
     }
+    // familySummary (public/family.js) is a separate doc, not one of SYNC_KEYS —
+    // it's derived FROM progress, so contamination there (a guardian's own
+    // attempts bleeding into a linked child's summary on a shared device)
+    // survives a plain progress reset unless cleared here too.
+    batch.set(db.collection('users').doc(currentUser.uid).collection('sync').doc('familySummary'),
+      { byGradeBoard: {}, updatedAt: firebase.firestore.FieldValue.serverTimestamp() });
     await batch.commit();
     if (typeof app !== 'undefined' && app.render) app.render();
   }
@@ -185,7 +191,7 @@ const SYNC_KEYS = {
         <div id="family-section-mount"></div>
         <div class="profile-danger-zone">
           <button type="button" class="auth-reset-link" onclick="riseAuth.confirmReset()">Reset my synced data</button>
-          <p class="auth-sub" style="margin-top:2px">Clears your progress, bookmarks, and streak — on this device and in the cloud. Use this if a shared device mixed up whose attempts are whose. Cannot be undone.</p>
+          <p class="auth-sub" style="margin-top:2px">Clears your progress, bookmarks, streak, and shared family summary — on this device and in the cloud. Use this if a shared device mixed up whose attempts are whose. Cannot be undone.</p>
         </div>
       </div>`;
     document.body.appendChild(el);
