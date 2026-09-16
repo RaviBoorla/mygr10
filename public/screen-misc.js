@@ -364,17 +364,16 @@ Object.assign(app, {
       </div>`;
 
     const historyHtml = assignments.length ? `
-      <ul class="recent-list">
+      <ul class="assign-history-grid">
         ${assignments.map(a => {
           const st = a.status;
           const label = statusLabel[st] || st;
           const result = a.result ? ` — ${a.result.accuracy}% (${a.result.score}/${a.result.total})` : '';
-          return `<li class="recent-row card">
+          return `<li class="assign-history-card card">
             <span class="assign-status-pill ${st}">${label}</span>
-            <span class="recent-desc">
-              <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-              <small>${a.questionCount} q · ${a.timeLimitMinutes} min · due ${fmtDue(a.dueAt)}${result}</small>
-            </span>
+            <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
+            <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
+            <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
             ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
           </li>`;
         }).join('')}
