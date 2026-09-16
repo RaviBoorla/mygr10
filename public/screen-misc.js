@@ -150,6 +150,7 @@ Object.assign(app, {
           <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
         ${this._assignmentInbox()}
+        ${this._assignmentHistoryChild()}
         ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
         ${this._familySharedWithSection()}
       </div>`;
@@ -312,6 +313,33 @@ Object.assign(app, {
               </span>
               <button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>
             </li>`).join('')}
+        </ul>
+      </section>`;
+  },
+
+  // ── Child's assignment history (completed/cancelled/expired) ──────────────
+  _assignmentHistoryChild() {
+    const statusLabel = { completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
+    const assignments = window.riseFamily?.myAssignmentHistory || [];
+    if (!assignments.length) return '';
+    const fmtDue = ts => {
+      try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
+    };
+    return `
+      <section class="home-section">
+        <h2 class="section-title">Assignment history</h2>
+        <ul class="assign-history-grid">
+          ${assignments.map(a => {
+            const st = a.status;
+            const label = statusLabel[st] || st;
+            const result = a.result ? ` — ${a.result.accuracy}% (${a.result.score}/${a.result.total})` : '';
+            return `<li class="assign-history-card card">
+              <span class="assign-status-pill ${st}">${label}</span>
+              <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
+              <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
+              <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
+            </li>`;
+          }).join('')}
         </ul>
       </section>`;
   },

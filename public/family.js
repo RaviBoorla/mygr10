@@ -45,7 +45,8 @@
   // Assignments
   const _childAssignments = {}; // childUid -> array of assignment docs (guardian view)
   const _assignmentUnsubs = {}; // childUid -> unsubscribe fn
-  let _myAssignments = [];      // pending assignments addressed to me (child view)
+  let _myAssignments = [];        // pending assignments addressed to me (child view)
+  let _myAssignmentHistory = [];  // completed/cancelled/expired assignments addressed to me (child view)
   let _unsubMyAssignments = null;
 
   function uid()   { return window.riseAuth?.user?.uid || null; }
@@ -109,16 +110,19 @@
       .onSnapshot(snap => { _mergeLinks('guardian', snap); refresh(); }, () => {});
     _unsubLinksChild = db.collection('familyLinks').where('childUid', '==', uid())
       .onSnapshot(snap => { _mergeLinks('child', snap); refresh(); }, () => {});
-    // Child's own assignment inbox (pending assignments addressed to this uid).
-    // No .orderBy() here — combining it with .where() on a different field needs
-    // a Firestore composite index; sorting client-side avoids that requirement.
+    // Child's own assignments — unfiltered query (the security rule already
+    // scopes this to "my own docs" via the childUid path segment, so no
+    // .where()/.orderBy() is needed here); split into pending inbox vs.
+    // history (completed/cancelled/expired) client-side.
     _unsubMyAssignments = db.collection('users').doc(uid()).collection('assignments')
-      .where('status', '==', 'pending')
       .onSnapshot(snap => {
-        _myAssignments = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+        const all = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        _myAssignments = all.filter(a => a.status === 'pending')
           .sort((a, b) => (a.dueAt?.toMillis?.() || 0) - (b.dueAt?.toMillis?.() || 0));
+        _myAssignmentHistory = all.filter(a => a.status !== 'pending')
+          .sort((a, b) => (b.dueAt?.toMillis?.() || 0) - (a.dueAt?.toMillis?.() || 0));
         refresh();
-      }, () => {});
+      }, (err) => { console.error('[family] my assignments listener error:', err); });
   }
 
   const _linkSets = { guardian: [], child: [] };
@@ -181,6 +185,7 @@
     _myRole = null;
     _roleLoaded = false;
     _myAssignments = [];
+    _myAssignmentHistory = [];
   }
 
   // ── Invite ───────────────────────────────────────────────────────────────
@@ -496,6 +501,7 @@
     get linksAsGuardian() { return _linkSets.guardian.filter(l => l.status === 'active'); },
     get linksAsChild() { return _linkSets.child.filter(l => l.status === 'active'); },
     get myAssignments() { return _myAssignments; },
+    get myAssignmentHistory() { return _myAssignmentHistory; },
     renderProfileSection,
     updateSummary: computeAndPushSummary,
 
