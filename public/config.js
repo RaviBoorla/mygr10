@@ -3,7 +3,7 @@
 // workers/family/. Set to null to disable transactional emails (invite
 // notifications and assignment-completed alerts) without breaking the rest
 // of the app — the client silently skips the HTTP call when this is null.
-const FAMILY_WORKER_URL = 'https://mygr10-fammily.ravi-boorla.workers.dev';
+const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
