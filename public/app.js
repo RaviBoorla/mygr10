@@ -75,7 +75,9 @@ const state = {
   saChapter: {},
   solvedChapter: {},
   solvedExercise: {},
-  mobileMenuOpen: false
+  mobileMenuOpen: false,
+  progressChildUid: null,
+  progressGradeBoard: null
 };
 
 // ─── Routing ──────────────────────────────────────────────────────────────────
@@ -226,11 +228,13 @@ const app = {
     const askAiBtn = authUser && !noCloe
       ? `<button class="btn small ghost hdr-ask-ai" onclick="aiPanel.toggle()" title="Chat with Cloé">✦ Ask Cloé</button>`
       : '';
+    const familyBadge = window.riseFamily?.pendingCount ? `<span class="hdr-avatar-badge"></span>` : '';
     const loginBtn = authUser
       ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
            ${authUser.photoURL
              ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28">`
              : `<span>${esc((authUser.displayName || authUser.email || '?')[0].toUpperCase())}</span>`}
+           ${familyBadge}
          </button>`
       : `<button class="btn small ghost hdr-signin" ${inTest ? 'disabled' : ''}
                  onclick="riseAuth.openModal()">Sign in</button>`;

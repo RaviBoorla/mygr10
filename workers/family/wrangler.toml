@@ -1,0 +1,41 @@
+# Cloudflare Worker — Rise Family backend
+# Handles: nightly digest, weekly summary, transactional invite & assignment-
+# completed emails (all via Resend). Reads Firestore via REST API using a
+# service account whose credentials are stored as Worker secrets.
+#
+# Deploy:  wrangler deploy --env production
+# Secrets: wrangler secret put FIREBASE_SERVICE_ACCOUNT  (full JSON, one line)
+#           wrangler secret put RESEND_API_KEY
+# Env vars (set in Cloudflare dashboard or wrangler.toml [vars]):
+#   FIREBASE_PROJECT_ID = "rise-511c6"
+#   RESEND_FROM_EMAIL   = "Rise <digest@rise.strat101.com>"
+#   APP_URL             = "https://rise.strat101.com"
+#   CORS_ORIGIN         = "https://rise.strat101.com"
+
+name = "mygr10-family"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+FIREBASE_PROJECT_ID = "rise-511c6"
+RESEND_FROM_EMAIL   = "Rise <digest@rise.strat101.com>"
+APP_URL             = "https://rise.strat101.com"
+CORS_ORIGIN         = "https://rise.strat101.com"
+
+[triggers]
+crons = [
+  "30 15 * * *",   # Nightly  21:00 IST (UTC+5:30)
+  "30 15 * * 0"    # Weekly   Sunday 21:00 IST
+]
+
+[env.preview]
+name = "mygr10-family-preview"
+[env.preview.vars]
+FIREBASE_PROJECT_ID = "rise-511c6"
+RESEND_FROM_EMAIL   = "Rise Preview <digest@rise.strat101.com>"
+APP_URL             = "https://preview.rise.strat101.com"
+CORS_ORIGIN         = "*"
+
+[env.production]
+name = "mygr10-family"

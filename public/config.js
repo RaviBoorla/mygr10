@@ -1,3 +1,10 @@
+// ─── Family Worker URL ────────────────────────────────────────────────────────
+// Set to your deployed Worker URL after running `wrangler deploy` in
+// workers/family/. Set to null to disable transactional emails (invite
+// notifications and assignment-completed alerts) without breaking the rest
+// of the app — the client silently skips the HTTP call when this is null.
+const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
+
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
@@ -75,10 +82,11 @@ const GRADES = [
 ];
 
 const MODES = {
-  mock:     { label: 'Full Mock Test',    count: 49, seconds: 40 * 60 },
-  drill:    { label: 'Chapter Drill',     count: 25, seconds: null },
-  bookmark: { label: 'Bookmarked Review', count: 50, seconds: null },
-  srs:      { label: 'Spaced Review',     count: 30, seconds: null }
+  mock:       { label: 'Full Mock Test',    count: 49, seconds: 40 * 60 },
+  drill:      { label: 'Chapter Drill',     count: 25, seconds: null },
+  bookmark:   { label: 'Bookmarked Review', count: 50, seconds: null },
+  srs:        { label: 'Spaced Review',     count: 30, seconds: null },
+  assignment: { label: 'Assignment',        count: 25, seconds: null }  // count/seconds overridden per-assignment
 };
 
 const SRS_INTERVALS = [0, 1, 3, 7, 14, 30];
