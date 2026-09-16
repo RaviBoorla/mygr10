@@ -85,78 +85,69 @@ Object.assign(app, {
       </div>`;
   },
 
+  // ── Progress page: two tabs (My Attempts / Assignments), same shell for
+  // both roles. The Family section (who I'm shared with, for a child; or
+  // nothing extra for a guardian) sits above the tabs, not inside either one.
   _screenProgress() {
-    // A guardian account never has grade/board practice history (docs/family.md
-    // constraint 8) — its Progress screen is the child switcher, not the
-    // per-chapter accuracy view below.
     const fam = window.riseFamily;
     const role = fam?.myRole;
-    if (role === 'guardian') return this._screenProgressGuardian();
     // Show a brief spinner only while the role fetch is still in flight.
-    // Once roleLoaded is true, myRole being null means "student" — show child view.
+    // Once roleLoaded is true, myRole being null means "student".
     if (fam && window.riseAuth?.user && !fam.roleLoaded) {
       return `<div class="screen"><div class="card empty-state" style="margin-top:2rem">Loading…</div></div>`;
     }
-    return this._screenProgressChild();
-  },
-
-  _screenProgressChild() {
-    const subjects = (SUBJECTS[state.board] || []).filter(s => bankSlug(s));
-    const store = LS.get(KEY.progress, {});
-    const now = Date.now();
-
-    const sections = subjects.map(subject => {
-      const bySubj = store[scopeKey(subject)] || {};
-      const chapters = {};
-      Object.values(bySubj).forEach(r => {
-        const name = r.chapter || 'General';
-        const c = chapters[name] || (chapters[name] = { correct: 0, wrong: 0, due: 0 });
-        c.correct += r.correctCount || 0;
-        c.wrong += r.wrongCount || 0;
-        if (r.due <= now) c.due++;
-      });
-      const rows = Object.entries(chapters).sort((a, b) => {
-        const accA = a[1].correct / (a[1].correct + a[1].wrong || 1);
-        const accB = b[1].correct / (b[1].correct + b[1].wrong || 1);
-        return accA - accB;
-      });
-      if (!rows.length) return '';
-      const dueTotal = this._dueCount(subject);
-      return `
-        <section class="home-section">
-          <h2 class="section-title">${esc(subject)}</h2>
-          ${dueTotal ? `<button class="btn act-btn ghost small" onclick="app.startSpacedReview('${esc(subject)}')">
-                          &#8635; Review ${plural(dueTotal, 'due question')}</button>` : ''}
-          <ul class="recent-list">
-            ${rows.map(([chapter, c]) => {
-              const total = c.correct + c.wrong;
-              const pct = total ? Math.round(c.correct / total * 100) : 0;
-              return `<li class="recent-row card">
-                <span class="recent-score ${pct >= 60 ? 'good' : 'weak'}">${pct}%</span>
-                <span class="recent-desc">
-                  <strong>${esc(chapter)}</strong>
-                  <small>${plural(total, 'attempt')}${c.due ? ` · ${c.due} due for review` : ''}</small>
-                </span>
-              </li>`;
-            }).join('')}
-          </ul>
-        </section>`;
-    }).join('');
+    const isGuardian = role === 'guardian';
+    const tab = state.progressTab || 'attempts';
+    const tabBar = `
+      <div class="filter-bar" role="group" aria-label="Progress view">
+        <button class="filter-tab ${tab === 'attempts' ? 'active' : ''}" onclick="app.setProgressTab('attempts')">My Attempts</button>
+        <button class="filter-tab ${tab === 'assignments' ? 'active' : ''}" onclick="app.setProgressTab('assignments')">Assignments</button>
+      </div>`;
+    const body = tab === 'assignments'
+      ? (isGuardian ? this._screenAssignmentsGuardian() : this._screenAssignmentsChild())
+      : this._screenMyAttempts();
 
     return `
       <div class="screen">
         <div class="progress-topbar">
-          <p class="subtitle" style="margin:0">Accuracy by chapter, weakest first — built from your attempted mocks and drills.</p>
+          <p class="subtitle" style="margin:0">${isGuardian ? 'Your own attempts, and your linked children\'s assignments.' : 'Your attempt history and assignments.'}</p>
           <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
-        ${this._assignmentInbox()}
-        ${this._assignmentHistoryChild()}
-        ${sections || '<div class="card empty-state">Take a mock test or chapter drill to start building your progress history.</div>'}
-        ${this._familySharedWithSection()}
+        ${!isGuardian ? this._familySharedWithSection() : ''}
+        ${tabBar}
+        ${body}
       </div>`;
   },
 
-  // Shown at the bottom of a child's own Progress screen — who it's shared
+  setProgressTab(tab) {
+    state.progressTab = tab;
+    this.render();
+  },
+
+  // ── "My Attempts" tab: full chronological attempt history for the CURRENT
+  // account only (guardian sees their own mock/drill attempts if they
+  // practice; a child sees theirs) — never the other side's.
+  _screenMyAttempts() {
+    const history = LS.get(KEY.results, [])
+      .filter(h => (h.grade || 'X') === state.grade && h.board === state.board);
+    if (!history.length) {
+      return '<div class="card empty-state">Take a mock test or chapter drill to start building your attempt history.</div>';
+    }
+    return `
+      <ul class="recent-list">
+        ${history.map(h => `
+          <li class="recent-row card">
+            <span class="recent-score ${h.correct / h.total >= 0.6 ? 'good' : 'weak'}">${Math.round(h.correct / h.total * 100)}%</span>
+            <span class="recent-desc">
+              <strong>${esc(h.subject)}</strong>
+              <small>${esc(MODES[h.mode]?.label || h.mode)}${h.chapter ? ' · ' + esc(h.chapter) : ''} · ${h.correct}/${h.total} · ${esc(h.when)}</small>
+            </span>
+            <button class="btn small" onclick="app.retryFromHistory(${h.ts})">Retry</button>
+          </li>`).join('')}
+      </ul>`;
+  },
+
+  // Shown above the tabs on a child's own Progress screen — who it's shared
   // with, plus the invite box when nobody's linked yet.
   _familySharedWithSection() {
     const links = window.riseFamily?.linksAsChild || [];
@@ -177,62 +168,51 @@ Object.assign(app, {
       </section>`;
   },
 
-  // ── Guardian's own Progress screen: fixed two-column layout ──────────────
-  // Each linked child gets a 50%-wide column (own summary + assignment panel).
-  // With only one child linked, the second column is an inactive placeholder
-  // that activates (fills with a real column) once a second child links up.
-  _screenProgressGuardian() {
+  // ── Guardian's "Assignments" tab: a child dropdown (hidden if only one
+  // child is linked) driving a single selected child's summary + assign
+  // form + history. Replaces the earlier fixed two-column layout.
+  _screenAssignmentsGuardian() {
     const links = window.riseFamily?.linksAsGuardian || [];
-    const topbar = `
-      <div class="progress-topbar">
-        <p class="subtitle" style="margin:0">Your linked children's strengths and focus areas, by subject and chapter.</p>
-        <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
-      </div>`;
-
     if (!links.length) {
-      return `<div class="screen">${topbar}
-        <div class="card empty-state">No linked children yet. Ask your child to invite you from their Profile → Family section, or invite them from yours.</div>
-      </div>`;
+      return '<div class="card empty-state">No linked children yet. Ask your child to invite you from their Profile → Family section, or invite them from yours.</div>';
     }
+    const selectedUid = links.some(l => l.childUid === state.progressAssignChildUid) ? state.progressAssignChildUid : links[0].childUid;
+    const selectedLink = links.find(l => l.childUid === selectedUid);
 
-    const columns = links.map(l => this._guardianChildColumn(l)).join('');
-    const placeholder = links.length < 2 ? `
-      <div class="family-child-col family-child-col-empty">
-        <div class="empty-state">Invite another child from Profile → Family to see them here, side by side.</div>
-      </div>` : '';
+    const childPicker = links.length > 1 ? `
+      <label class="assign-child-picker">Child
+        <select onchange="app.setProgressAssignChild(this.value)">
+          ${links.map(l => `<option value="${esc(l.childUid)}" ${l.childUid === selectedUid ? 'selected' : ''}>${esc(l.childEmail)}</option>`).join('')}
+        </select>
+      </label>` : `<h2 class="section-title">${esc(selectedLink.childEmail)}</h2>`;
 
-    setTimeout(() => links.forEach(l => this._populateAssignChapters(l.childUid)), 0);
-    return `<div class="screen">${topbar}<div class="family-child-columns">${columns}${placeholder}</div></div>`;
-  },
-
-  _guardianChildColumn(link) {
-    const childUid = link.childUid;
-    const summary = window.riseFamily.getChildSummary(childUid);
+    const summary = window.riseFamily.getChildSummary(selectedUid);
     let body;
     if (summary === 'loading' || summary === undefined) {
-      body = `<div class="card empty-state">Loading ${esc(link.childEmail)}'s progress…</div>`;
+      body = `<div class="card empty-state">Loading ${esc(selectedLink.childEmail)}'s progress…</div>`;
     } else {
       const byGB = summary.byGradeBoard || {};
       const gbKeys = Object.keys(byGB);
       if (!gbKeys.length) {
-        body = `<div class="card empty-state">${esc(link.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
+        body = `<div class="card empty-state">${esc(selectedLink.childEmail)} hasn't practiced yet — check back after their next mock or drill.</div>`;
       } else {
-        const selectedGB = gbKeys.includes(state.progressGradeBoardByChild[childUid]) ? state.progressGradeBoardByChild[childUid] : gbKeys[0];
+        const selectedGB = gbKeys.includes(state.progressGradeBoardByChild[selectedUid]) ? state.progressGradeBoardByChild[selectedUid] : gbKeys[0];
         const gbTabs = gbKeys.length > 1 ? `
           <div class="filter-bar" role="group" aria-label="Grade and board">
             ${gbKeys.map(gb => `<button class="filter-tab ${gb === selectedGB ? 'active' : ''}"
-                        onclick="app.setProgressGradeBoard('${childUid}','${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
+                        onclick="app.setProgressGradeBoard('${selectedUid}','${gb}')">${esc(gb.replace('::', ' · '))}</button>`).join('')}
           </div>` : '';
         body = gbTabs + this._familyChapterBreakdown(byGB[selectedGB] || []);
       }
     }
-    const assignBlock = this._assignmentPanel(childUid, link);
-    return `
-      <div class="family-child-col">
-        <h2 class="section-title">${esc(link.childEmail)}</h2>
-        ${body}
-        ${assignBlock}
-      </div>`;
+    const assignBlock = this._assignmentPanel(selectedUid, selectedLink);
+    setTimeout(() => this._populateAssignChapters(selectedUid), 0);
+    return `<div class="family-assign-tab">${childPicker}${body}${assignBlock}</div>`;
+  },
+
+  setProgressAssignChild(childUid) {
+    state.progressAssignChildUid = childUid;
+    this.render();
   },
 
   // Fills the chapter <select> for the currently-chosen subject in the assign
@@ -298,22 +278,28 @@ Object.assign(app, {
     </li>`;
   },
 
-  // ── Child's assignment inbox ──────────────────────────────────────────────
+  // ── Child's "Assignments" tab: pending inbox + history with Review/Reattempt ──
+  _screenAssignmentsChild() {
+    return `${this._assignmentInbox()}${this._assignmentHistoryChild()}`;
+  },
+
+  _assignFmtDue(ts) {
+    try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
+  },
+
+  // ── Child's assignment inbox (pending) ────────────────────────────────────
   _assignmentInbox() {
     const assignments = window.riseFamily?.myAssignments || [];
-    if (!assignments.length) return '';
-    const fmtDue = ts => {
-      try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
-    };
+    if (!assignments.length) return '<div class="card empty-state">No assignments right now.</div>';
     return `
       <section class="home-section">
-        <h2 class="section-title">Assignments</h2>
+        <h2 class="section-title">Pending</h2>
         <ul class="recent-list">
           ${assignments.map(a => `
             <li class="recent-row card">
               <span class="recent-desc">
                 <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-                <small>${a.questionCount} questions · ${a.timeLimitMinutes} min · due ${fmtDue(a.dueAt)}</small>
+                <small>${a.questionCount} questions · ${a.timeLimitMinutes} min · due ${this._assignFmtDue(a.dueAt)}</small>
               </span>
               <button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>
             </li>`).join('')}
@@ -321,31 +307,55 @@ Object.assign(app, {
       </section>`;
   },
 
-  // ── Child's assignment history (completed/cancelled/expired) ──────────────
+  // ── Child's assignment history (completed/cancelled/expired) — Review shows
+  // the exact past attempt's questions/answers; Reattempt starts a fresh
+  // shuffled set of the same assignment, same as retrying a mock test. ──────
   _assignmentHistoryChild() {
     const statusLabel = { completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
     const assignments = window.riseFamily?.myAssignmentHistory || [];
     if (!assignments.length) return '';
-    const fmtDue = ts => {
-      try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
-    };
     return `
       <section class="home-section">
-        <h2 class="section-title">Assignment history</h2>
+        <h2 class="section-title">History</h2>
         <ul class="assign-history-grid">
           ${assignments.map(a => {
             const st = a.status;
             const label = statusLabel[st] || st;
-            const result = a.result ? ` — ${a.result.accuracy}% (${a.result.score}/${a.result.total})` : '';
+            const attempts = a.attempts || (a.result ? [a.result] : []);
+            const latest = attempts[attempts.length - 1];
+            const result = latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
+            const canRetry = st !== 'cancelled';
             return `<li class="assign-history-card card">
               <span class="assign-status-pill ${st}">${label}</span>
               <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
               <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
-              <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
+              <small class="assign-history-meta">due ${this._assignFmtDue(a.dueAt)}${result}</small>
+              <div class="assign-history-actions">
+                ${latest?.reviewData ? `<button class="btn small ghost" onclick="app.reviewAssignment('${esc(a.id)}')">Review</button>` : ''}
+                ${canRetry ? `<button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}'))">Reattempt</button>` : ''}
+              </div>
             </li>`;
           }).join('')}
         </ul>
       </section>`;
+  },
+
+  // Opens the read-only Results/Review screen for a PAST assignment attempt,
+  // using its stored reviewData — same rendering the live test-results screen
+  // uses, just fed historical data instead of a just-finished session.
+  reviewAssignment(assignmentId) {
+    const a = (window.riseFamily?.myAssignmentHistory || []).find(x => x.id === assignmentId);
+    const attempts = a?.attempts || (a?.result ? [a.result] : []);
+    const latest = attempts[attempts.length - 1];
+    if (!latest?.reviewData) return;
+    this.reviewData = latest.reviewData;
+    const correct = this.reviewData.filter(r => r.isCorrect).length;
+    const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
+    this.summary = { correct, wrong: this.reviewData.length - correct - skipped, skipped, total: this.reviewData.length };
+    this.lastConfig = { subject: a.subject, mode: 'assignment', chapter: a.chapter, assignment: a };
+    this.reviewIndex = 0;
+    this.reviewFilter = 'all';
+    this.go(['results'], true);
   },
 
   // ── Guardian: "Assign practice" form + past assignments per child ─────────
@@ -400,7 +410,9 @@ Object.assign(app, {
         ${assignments.map(a => {
           const st = a.status;
           const label = statusLabel[st] || st;
-          const result = a.result ? ` — ${a.result.accuracy}% (${a.result.score}/${a.result.total})` : '';
+          const attempts = a.attempts || (a.result ? [a.result] : []);
+          const latest = attempts[attempts.length - 1];
+          const result = latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
           return `<li class="assign-history-card card">
             <span class="assign-status-pill ${st}">${label}</span>
             <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>

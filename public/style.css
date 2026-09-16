@@ -1267,6 +1267,8 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   cursor: pointer; text-align: left; padding: 0; text-decoration: underline;
 }
 .auth-error { font-size: var(--fs-sm); color: #dc2626; margin: 0; }
+.profile-danger-zone { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+.profile-danger-zone .auth-reset-link { color: #dc2626; }
 
 /* ── Family section (inside profile modal) ─────────────────────────────── */
 .family-section { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
@@ -1292,16 +1294,16 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 
 .family-subheading { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin: 0 0 12px; }
 
-/* ── Guardian Progress: fixed 50/50 two-column layout, one column per child ── */
-.family-child-columns {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;
+/* ── Guardian's Assignments tab: child picker + single selected child's content ── */
+.family-assign-tab { display: flex; flex-direction: column; gap: 14px; }
+.assign-child-picker {
+  display: flex; flex-direction: column; gap: 5px; max-width: 320px;
+  font-size: var(--fs-sm); font-weight: 600; color: var(--text);
 }
-@media (max-width: 760px) { .family-child-columns { grid-template-columns: 1fr; } }
-.family-child-col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.family-child-col-empty {
-  display: flex; align-items: center; justify-content: center;
-  border: 2px dashed var(--border); border-radius: var(--radius-lg);
-  min-height: 160px; opacity: .7;
+.assign-child-picker select {
+  padding: 9px 12px; font-size: var(--fs-body); font-family: inherit;
+  border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  background: var(--bg); color: var(--text);
 }
 
 /* ── Assignment form (guardian's Progress screen) ──────────────────────── */
@@ -1345,6 +1347,8 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .assign-history-title { font-size: var(--fs-body); color: var(--text); }
 .assign-history-meta  { color: var(--text-light); font-size: var(--fs-note); }
 .assign-history-card .btn { margin-top: 4px; align-self: stretch; }
+.assign-history-actions { display: flex; gap: 8px; width: 100%; margin-top: 4px; }
+.assign-history-actions .btn { flex: 1; margin-top: 0; }
 
 .arena-challenge-entry { display: flex; gap: 8px; align-items: center; }
 .arena-challenge-entry input { flex: 1; font-size: var(--fs-base); padding: 8px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); letter-spacing: .1em; font-weight: 600; text-transform: uppercase; }

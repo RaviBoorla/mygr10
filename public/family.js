@@ -458,11 +458,23 @@
 
   async function completeAssignment(childUid, assignmentId, result) {
     try {
-      // Read the assignment doc first to get guardian email + subject info for the notification.
-      const snap = await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).get();
-      await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).update({
+      // Read the assignment doc first to get guardian email + subject info for the notification,
+      // and any prior attempts (a Reattempt appends rather than overwrites).
+      const ref = db.collection('users').doc(childUid).collection('assignments').doc(assignmentId);
+      const snap = await ref.get();
+      const prevAttempts = snap.exists ? (snap.data().attempts || (snap.data().result ? [snap.data().result] : [])) : [];
+      // Only the LATEST attempt keeps its full reviewData (question text/options/answers) —
+      // older attempts keep just the score, so repeated reattempts don't grow the doc unbounded.
+      const trimmedPrev = prevAttempts.map(({ reviewData, ...rest }) => rest);
+      // FieldValue.serverTimestamp() cannot be used inside an array element — use a client
+      // timestamp for entries in `attempts`; only the top-level doc write may use serverTimestamp.
+      const entry = { ...result, attemptNumber: trimmedPrev.length + 1, submittedAt: Date.now() };
+      const attempts = [...trimmedPrev, entry];
+      await ref.update({
         status: 'completed',
-        result: { ...result, submittedAt: firebase.firestore.FieldValue.serverTimestamp() }
+        attempts,
+        result: entry, // mirrors the latest attempt, for any older readers
+        lastSubmittedAt: firebase.firestore.FieldValue.serverTimestamp()
       });
       // Notify guardian via Worker HTTP route (best-effort).
       if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL && snap.exists) {

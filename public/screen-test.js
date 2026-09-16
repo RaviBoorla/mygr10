@@ -61,6 +61,7 @@ Object.assign(app, {
     this.session = {
       subject, mode: 'assignment', chapter,
       assignmentId, assignmentChildUid,
+      assignmentRef: { id: assignmentId, subject, chapter, questionCount, timeLimitMinutes, childUid: assignmentChildUid },
       questions: [], answers: {}, marked: [], index: 0,
       remaining: timeLimitMinutes ? timeLimitMinutes * 60 : null,
       loading: true, error: null
@@ -392,7 +393,7 @@ Object.assign(app, {
       const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
       const wrong   = this.reviewData.length - correct - skipped;
 
-      this.lastConfig  = { subject: s.subject, mode: s.mode, chapter: s.chapter };
+      this.lastConfig  = { subject: s.subject, mode: s.mode, chapter: s.chapter, assignment: s.assignmentRef || null };
       this.reviewIndex = 0;
       this.reviewFilter = 'all';
       this.summary = { correct, wrong, skipped, total: this.reviewData.length };
@@ -403,7 +404,8 @@ Object.assign(app, {
       if (s.assignmentId) {
         window.riseFamily?.completeAssignment?.(s.assignmentChildUid, s.assignmentId, {
           score: correct, total: this.reviewData.length,
-          accuracy: this.reviewData.length ? Math.round(correct / this.reviewData.length * 100) : 0
+          accuracy: this.reviewData.length ? Math.round(correct / this.reviewData.length * 100) : 0,
+          reviewData: this.reviewData
         });
       }
 

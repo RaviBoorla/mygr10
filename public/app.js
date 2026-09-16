@@ -76,6 +76,8 @@ const state = {
   solvedChapter: {},
   solvedExercise: {},
   mobileMenuOpen: false,
+  progressTab: 'attempts',
+  progressAssignChildUid: null,
   progressGradeBoardByChild: {}
 };
 

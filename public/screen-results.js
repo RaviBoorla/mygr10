@@ -32,7 +32,7 @@ Object.assign(app, {
               </div>
               <div id="rpal-grid" class="omr-grid"></div>
               <div class="results-actions">
-                <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : cfg.mode === 'bookmark' ? 'bookmarked set' : cfg.mode === 'srs' ? 'review' : 'drill'}</button>
+                <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : cfg.mode === 'bookmark' ? 'bookmarked set' : cfg.mode === 'srs' ? 'review' : cfg.mode === 'assignment' ? 'assignment' : 'drill'}</button>
                 <button class="btn" onclick="app.exitReview()">Back to practice</button>
               </div>
             </div>
@@ -128,8 +128,9 @@ Object.assign(app, {
 
   retryLast() {
     const cfg = this.lastConfig;
-    if (cfg.mode === 'bookmark') { this.startBookmarkReview(cfg.subject); return; }
-    if (cfg.mode === 'srs')      { this.startSpacedReview(cfg.subject);  return; }
+    if (cfg.mode === 'bookmark')  { this.startBookmarkReview(cfg.subject); return; }
+    if (cfg.mode === 'srs')       { this.startSpacedReview(cfg.subject);  return; }
+    if (cfg.mode === 'assignment' && cfg.assignment) { this.startAssignment(cfg.assignment); return; }
     this.startTest({ ...cfg });
   },
 

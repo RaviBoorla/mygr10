@@ -115,9 +115,25 @@ const SYNC_KEYS = {
     if (_unsubscribe) { _unsubscribe(); _unsubscribe = null; }
   }
 
+  // Wipes every synced key both locally and in Firestore for the current
+  // account. Recovery path for contamination that predates the shared-device
+  // guard above (clearSyncKeysIfDifferentAccount only stops it going forward —
+  // it can't undo data already pushed to Firestore before that fix existed).
+  async function resetSyncedData() {
+    if (!currentUser) return;
+    Object.values(SYNC_KEYS).forEach(k => localStorage.removeItem(k));
+    const batch = db.batch();
+    for (const name of Object.keys(SYNC_KEYS)) {
+      batch.set(userDoc(name), { _v: Date.now(), data: {} });
+    }
+    await batch.commit();
+    if (typeof app !== 'undefined' && app.render) app.render();
+  }
+
   // ── Public sync API (called by app.js after each graded submit) ──────────────
   window.riseSync = {
-    push: pushToCloud
+    push: pushToCloud,
+    reset: resetSyncedData
   };
 
   // ── Profile (nickname, country, city) ────────────────────────────────────────
@@ -167,6 +183,10 @@ const SYNC_KEYS = {
         </form>
         <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
         <div id="family-section-mount"></div>
+        <div class="profile-danger-zone">
+          <button type="button" class="auth-reset-link" onclick="riseAuth.confirmReset()">Reset my synced data</button>
+          <p class="auth-sub" style="margin-top:2px">Clears your progress, bookmarks, and streak — on this device and in the cloud. Use this if a shared device mixed up whose attempts are whose. Cannot be undone.</p>
+        </div>
       </div>`;
     document.body.appendChild(el);
   }
@@ -320,6 +340,12 @@ const SYNC_KEYS = {
       const mount = document.getElementById('family-section-mount');
       if (mount && window.riseFamily) mount.innerHTML = window.riseFamily.renderProfileSection();
       document.getElementById(PROFILE_MODAL_ID).hidden = false;
+    },
+
+    async confirmReset() {
+      if (!confirm('Reset all your synced progress, bookmarks, and streak? This cannot be undone.')) return;
+      await resetSyncedData();
+      this.closeProfile();
     },
 
     closeProfile() {
