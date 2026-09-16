@@ -188,6 +188,10 @@ const SYNC_KEYS = {
           <button type="submit" class="btn primary" style="width:100%">Save</button>
         </form>
         <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
+        <div id="verify-email-banner" class="verify-email-banner" hidden>
+          <p class="auth-sub" style="margin:0">Your email isn't verified yet — required before you can send or accept a family link.</p>
+          <button type="button" class="btn small ghost" onclick="riseAuth.resendVerification()">Resend verification email</button>
+        </div>
         <div id="family-section-mount"></div>
         <div class="profile-danger-zone">
           <button type="button" class="auth-reset-link" onclick="riseAuth.confirmReset()">Reset my synced data</button>
@@ -315,7 +319,11 @@ const SYNC_KEYS = {
       }
       try {
         if (_emailSignup) {
-          await fbAuth.createUserWithEmailAndPassword(email, pw);
+          const cred = await fbAuth.createUserWithEmailAndPassword(email, pw);
+          // Family linking (public/family.js) gates invite send/accept on
+          // emailVerified — without this call that account could never pass
+          // that check, since Firebase never sends the email on its own.
+          await cred.user.sendEmailVerification().catch(() => {});
         } else {
           await fbAuth.signInWithEmailAndPassword(email, pw);
         }
@@ -323,6 +331,26 @@ const SYNC_KEYS = {
       } catch (err) {
         showError(_friendlyError(err));
       }
+    },
+
+    async resendVerification() {
+      if (!currentUser) return;
+      try {
+        await currentUser.sendEmailVerification();
+        alert('Verification email sent — check your inbox (and spam folder).');
+      } catch (e) {
+        alert('Could not send verification email: ' + (e.message || e.code || 'unknown error'));
+      }
+    },
+
+    // Firebase caches emailVerified on the client — it only updates after the
+    // user clicks the link in their email AND the app re-fetches their user
+    // record. Call this before any emailVerified check that might otherwise
+    // be stale (e.g. right after they say they clicked the link).
+    async refreshEmailVerified() {
+      if (!currentUser) return false;
+      try { await currentUser.reload(); } catch (_) {}
+      return !!currentUser.emailVerified;
     },
 
     async _resetPassword() {
@@ -336,7 +364,7 @@ const SYNC_KEYS = {
       }
     },
 
-    openProfile() {
+    async openProfile() {
       injectProfileModal();
       document.getElementById('profile-nickname').value = _profile.nickname || '';
       document.getElementById('profile-country').value  = _profile.country  || '';
@@ -346,6 +374,12 @@ const SYNC_KEYS = {
       const mount = document.getElementById('family-section-mount');
       if (mount && window.riseFamily) mount.innerHTML = window.riseFamily.renderProfileSection();
       document.getElementById(PROFILE_MODAL_ID).hidden = false;
+      // Re-fetch verified status (it only updates client-side after a reload)
+      // so someone who just clicked the email link sees the banner clear
+      // without having to fully reload the app.
+      const verified = await this.refreshEmailVerified();
+      const banner = document.getElementById('verify-email-banner');
+      if (banner) banner.hidden = verified;
     },
 
     async confirmReset() {

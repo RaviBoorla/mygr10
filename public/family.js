@@ -194,6 +194,9 @@
     const toEmail = emailKey(toEmailRaw);
     const me = window.riseAuth?.user;
     if (!me) return { ok: false, msg: 'Sign in first.' };
+    // emailVerified is cached client-side and only updates after a reload —
+    // refresh it here so verifying in another tab moments ago isn't missed.
+    if (window.riseAuth?.refreshEmailVerified) await window.riseAuth.refreshEmailVerified();
     if (!me.emailVerified) return { ok: false, msg: 'Verify your email first — check your inbox, or resend from Profile.' };
     if (!toEmail || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(toEmail)) return { ok: false, msg: 'Enter a valid email address.' };
     if (toEmail === email()) return { ok: false, msg: "That's your own email." };
@@ -249,7 +252,8 @@
   async function acceptInvite(invite) {
     const me = window.riseAuth?.user;
     if (!me) return { ok: false, msg: 'Sign in first.' };
-    if (!me.emailVerified) return { ok: false, msg: 'Verify your email first before accepting.' };
+    if (window.riseAuth?.refreshEmailVerified) await window.riseAuth.refreshEmailVerified();
+    if (!me.emailVerified) return { ok: false, msg: 'Verify your email first — check your inbox, or resend from Profile.' };
 
     const myExistingRole = await getFamilyRole();
     const wouldBecome = invite.role; // what I'm accepting to be

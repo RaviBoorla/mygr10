@@ -1269,6 +1269,12 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .auth-error { font-size: var(--fs-sm); color: #dc2626; margin: 0; }
 .profile-danger-zone { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 .profile-danger-zone .auth-reset-link { color: #dc2626; }
+.verify-email-banner {
+  display: flex; flex-direction: column; gap: 8px; margin-top: 10px;
+  padding: 10px 12px; background: var(--resume-bg); border: 1px solid var(--resume-border);
+  border-radius: var(--radius-md);
+}
+.verify-email-banner .btn { align-self: flex-start; }
 
 /* ── Family section (inside profile modal) ─────────────────────────────── */
 .family-section { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border); }
