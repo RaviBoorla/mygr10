@@ -1290,6 +1290,35 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .family-invite-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
 .family-invite-buttons .btn { flex: 1; min-width: 130px; }
 
+.family-subheading { font-size: var(--fs-body); font-weight: 700; color: var(--text); margin: 0 0 12px; }
+
+/* ── Assignment form (guardian's Progress screen) ──────────────────────── */
+.assign-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
+.assign-form-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.assign-form-row label {
+  display: flex; flex-direction: column; gap: 5px;
+  font-size: var(--fs-sm); font-weight: 600; color: var(--text);
+  flex: 1; min-width: 160px;
+}
+.assign-form-row select, .assign-form-row input {
+  width: 100%; box-sizing: border-box;
+  padding: 9px 12px; font-size: var(--fs-body); font-family: inherit;
+  border: 1.5px solid var(--border); border-radius: var(--radius-md);
+  background: var(--bg); color: var(--text);
+}
+.assign-form-row select:focus, .assign-form-row input:focus { outline: 2px solid var(--primary); border-color: transparent; }
+.assign-form > .btn { align-self: flex-start; min-width: 120px; }
+
+.assign-status-pill {
+  display: inline-block; padding: 3px 10px; border-radius: 999px;
+  font-size: var(--fs-2xs); font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
+  white-space: nowrap;
+}
+.assign-status-pill.pending   { background: var(--primary-soft); color: var(--primary); }
+.assign-status-pill.completed { background: var(--correct-bg); color: var(--correct-fg); }
+.assign-status-pill.expired   { background: var(--wrong-bg); color: var(--wrong-fg); }
+.assign-status-pill.cancelled { background: var(--bg); color: var(--text-light); }
+
 .arena-challenge-entry { display: flex; gap: 8px; align-items: center; }
 .arena-challenge-entry input { flex: 1; font-size: var(--fs-base); padding: 8px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); letter-spacing: .1em; font-weight: 600; text-transform: uppercase; }
 .arena-code-error { color: #dc2626; font-size: var(--fs-sm); margin: 4px 0 0; }

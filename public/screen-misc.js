@@ -220,7 +220,31 @@ Object.assign(app, {
     }
 
     const assignBlock = this._assignmentPanel(selectedUid, selectedLink);
+    setTimeout(() => this._populateAssignChapters(selectedUid), 0);
     return `<div class="screen">${topbar}${childTabs}${body}${assignBlock}</div>`;
+  },
+
+  // Fills the chapter <select> for the currently-chosen subject in the assign
+  // form, reading the child's actual board/grade off the form's data attrs
+  // (not the guardian's own state.board/grade — see _assignmentPanel note).
+  _populateAssignChapters(childUid) {
+    const subjectEl = document.getElementById(`assign-subject-${childUid}`);
+    const chapterEl = document.getElementById(`assign-chapter-${childUid}`);
+    if (!subjectEl || !chapterEl) return;
+    const formEl = subjectEl.closest('.assign-form');
+    const board = formEl?.dataset.childBoard || state.board;
+    const grade = formEl?.dataset.childGrade || state.grade;
+    const subject = subjectEl.value;
+    const slug = bankSlug(subject, board, grade);
+    if (!slug) { chapterEl.innerHTML = '<option value="">All chapters</option>'; return; }
+    fetch(`questions/${slug}.json`)
+      .then(r => r.json())
+      .then(list => {
+        const chapters = [...new Set(list.map(q => q.chapter || 'General'))].sort();
+        chapterEl.innerHTML = '<option value="">All chapters</option>' +
+          chapters.map(c => `<option>${esc(c)}</option>`).join('');
+      })
+      .catch(() => { chapterEl.innerHTML = '<option value="">All chapters</option>'; });
   },
 
   setProgressChild(childUid) {
@@ -293,9 +317,13 @@ Object.assign(app, {
   },
 
   // ── Guardian: "Assign practice" form + past assignments per child ─────────
+  // Subjects/chapters must come from the CHILD's own gradeBoard (link.gradeBoard),
+  // not the guardian's currently-selected state.board/grade — a guardian could be
+  // browsing a different board than the one their child actually practices.
   _assignmentPanel(childUid, link) {
     const assignments = window.riseFamily?.getChildAssignments(childUid) || [];
-    const subjects = (SUBJECTS[state.board] || []).filter(s => bankSlug(s));
+    const [childGrade, childBoard] = (link.gradeBoard || `${state.grade}::${state.board}`).split('::');
+    const subjects = (SUBJECTS[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade));
 
     const statusLabel = { pending: 'Pending', completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
     const fmtDue = ts => {
@@ -306,16 +334,18 @@ Object.assign(app, {
     const minDue = new Date(Date.now() + 10 * 60000).toISOString().slice(0, 16);
 
     const form = `
-      <div class="assign-form card">
+      <div class="assign-form card" data-child-board="${esc(childBoard)}" data-child-grade="${esc(childGrade)}">
         <h3 class="family-subheading" style="margin-top:0">Assign practice to ${esc(link.childEmail)}</h3>
         <div class="assign-form-row">
           <label>Subject
-            <select id="assign-subject-${esc(childUid)}">
+            <select id="assign-subject-${esc(childUid)}" onchange="app._populateAssignChapters('${esc(childUid)}')">
               ${subjects.map(s => `<option>${esc(s)}</option>`).join('')}
             </select>
           </label>
           <label>Chapter (optional)
-            <input id="assign-chapter-${esc(childUid)}" type="text" placeholder="e.g. Trigonometry">
+            <select id="assign-chapter-${esc(childUid)}">
+              <option value="">All chapters</option>
+            </select>
           </label>
         </div>
         <div class="assign-form-row">

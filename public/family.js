@@ -109,12 +109,14 @@
       .onSnapshot(snap => { _mergeLinks('guardian', snap); refresh(); }, () => {});
     _unsubLinksChild = db.collection('familyLinks').where('childUid', '==', uid())
       .onSnapshot(snap => { _mergeLinks('child', snap); refresh(); }, () => {});
-    // Child's own assignment inbox (pending assignments addressed to this uid)
+    // Child's own assignment inbox (pending assignments addressed to this uid).
+    // No .orderBy() here — combining it with .where() on a different field needs
+    // a Firestore composite index; sorting client-side avoids that requirement.
     _unsubMyAssignments = db.collection('users').doc(uid()).collection('assignments')
       .where('status', '==', 'pending')
-      .orderBy('dueAt', 'asc')
       .onSnapshot(snap => {
-        _myAssignments = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        _myAssignments = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => (a.dueAt?.toMillis?.() || 0) - (b.dueAt?.toMillis?.() || 0));
         refresh();
       }, () => {});
   }
@@ -406,13 +408,15 @@
     _childAssignments[childUid] = [];
     // Filter by createdBy so Firestore security rules (which check resource.data.createdBy)
     // can be evaluated on the query — an unfiltered query returns permission-denied.
+    // No .orderBy() — combined with .where() on a different field it needs a
+    // composite index; sorting client-side avoids that requirement entirely.
     _assignmentUnsubs[childUid] = db.collection('users').doc(childUid).collection('assignments')
       .where('createdBy', '==', uid())
-      .orderBy('dueAt', 'desc')
       .onSnapshot(snap => {
-        _childAssignments[childUid] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+        _childAssignments[childUid] = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => (b.dueAt?.toMillis?.() || 0) - (a.dueAt?.toMillis?.() || 0));
         refresh();
-      }, () => { _childAssignments[childUid] = []; refresh(); });
+      }, (err) => { console.error('[family] watchChildAssignments error:', err); _childAssignments[childUid] = []; refresh(); });
   }
 
   async function createAssignment(childUid, { subject, chapter, gradeBoard, questionCount, timeLimitMinutes, dueAt }) {
