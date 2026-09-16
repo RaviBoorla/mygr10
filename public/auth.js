@@ -201,6 +201,18 @@ const SYNC_KEYS = {
     document.body.appendChild(el);
   }
 
+  // Re-checks emailVerified whenever the tab regains focus while the profile
+  // modal is open — covers "clicked Resend, verified in another tab, switched
+  // back to this same still-open modal" without needing to close and reopen it.
+  document.addEventListener('visibilitychange', async () => {
+    if (document.visibilityState !== 'visible') return;
+    const modal = document.getElementById(PROFILE_MODAL_ID);
+    if (!modal || modal.hidden || !currentUser) return;
+    const verified = await window.riseAuth.refreshEmailVerified();
+    const banner = document.getElementById('verify-email-banner');
+    if (banner) banner.hidden = verified;
+  });
+
   // ── Modal markup ─────────────────────────────────────────────────────────────
   const MODAL_ID = 'rise-auth-modal';
 
