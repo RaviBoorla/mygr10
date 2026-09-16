@@ -190,7 +190,10 @@ const SYNC_KEYS = {
         <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
         <div id="verify-email-banner" class="verify-email-banner" hidden>
           <p class="auth-sub" style="margin:0">Your email isn't verified yet — required before you can send or accept a family link.</p>
-          <button type="button" class="btn small ghost" onclick="riseAuth.resendVerification()">Resend verification email</button>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button type="button" class="btn small ghost" onclick="riseAuth.resendVerification()">Resend verification email</button>
+            <button type="button" class="btn small ghost" onclick="riseAuth.checkVerifiedNow()">I've verified — check again</button>
+          </div>
         </div>
         <div id="family-section-mount"></div>
         <div class="profile-danger-zone">
@@ -355,13 +358,20 @@ const SYNC_KEYS = {
       }
     },
 
+    async checkVerifiedNow() {
+      const verified = await this.refreshEmailVerified();
+      const banner = document.getElementById('verify-email-banner');
+      if (banner) banner.hidden = verified;
+      if (!verified) alert("Still not showing as verified. Make sure you clicked the link in the email (it should show a \"Your email has been verified\" confirmation page), then try this again.");
+    },
+
     // Firebase caches emailVerified on the client — it only updates after the
     // user clicks the link in their email AND the app re-fetches their user
     // record. Call this before any emailVerified check that might otherwise
     // be stale (e.g. right after they say they clicked the link).
     async refreshEmailVerified() {
       if (!currentUser) return false;
-      try { await currentUser.reload(); } catch (_) {}
+      try { await currentUser.reload(); } catch (e) { console.warn('[Rise auth] reload() failed:', e); }
       return !!currentUser.emailVerified;
     },
 
