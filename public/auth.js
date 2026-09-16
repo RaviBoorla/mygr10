@@ -347,9 +347,28 @@ const SYNC_KEYS = {
   };
 
   // ── Auth state listener ──────────────────────────────────────────────────────
+  const LAST_UID_KEY = 'rise.lastUid';
+
+  // Guards against shared-device bleed (e.g. a parent's family/guardian account
+  // used on the same tablet as their child's). pullFromCloud() silently skips a
+  // sync key when that account has no cloud doc for it yet (its very first
+  // sign-in) — without this guard, whatever a DIFFERENT account previously left
+  // in localStorage on this device would be adopted as this account's own data
+  // and then pushed to Firestore under their uid. Clearing first, only on an
+  // actual account switch, still allows a genuine guest's local progress to
+  // carry over into their own first sign-in (the documented, intended behavior).
+  function clearSyncKeysIfDifferentAccount(uid) {
+    const lastUid = localStorage.getItem(LAST_UID_KEY);
+    if (lastUid && lastUid !== uid) {
+      Object.values(SYNC_KEYS).forEach(k => localStorage.removeItem(k));
+    }
+    localStorage.setItem(LAST_UID_KEY, uid);
+  }
+
   fbAuth.onAuthStateChanged(async user => {
     currentUser = user || null;
     if (user) {
+      clearSyncKeysIfDifferentAccount(user.uid);
       await pullFromCloud();
       await pushToCloud();
       await loadProfile();
