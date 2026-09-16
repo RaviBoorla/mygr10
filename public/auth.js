@@ -166,6 +166,7 @@ const SYNC_KEYS = {
           <button type="submit" class="btn primary" style="width:100%">Save</button>
         </form>
         <p id="profile-msg" class="auth-error" style="color:var(--primary)" hidden></p>
+        <div id="family-section-mount"></div>
       </div>`;
     document.body.appendChild(el);
   }
@@ -316,6 +317,8 @@ const SYNC_KEYS = {
       document.getElementById('profile-city').value     = _profile.city     || '';
       const msg = document.getElementById('profile-msg');
       if (msg) msg.hidden = true;
+      const mount = document.getElementById('family-section-mount');
+      if (mount && window.riseFamily) mount.innerHTML = window.riseFamily.renderProfileSection();
       document.getElementById(PROFILE_MODAL_ID).hidden = false;
     },
 
