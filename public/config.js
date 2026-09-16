@@ -1,3 +1,10 @@
+// ─── Family Worker URL ────────────────────────────────────────────────────────
+// Set to your deployed Worker URL after running `wrangler deploy` in
+// workers/family/. Set to null to disable transactional emails (invite
+// notifications and assignment-completed alerts) without breaking the rest
+// of the app — the client silently skips the HTTP call when this is null.
+const FAMILY_WORKER_URL = null; // e.g. 'https://mygr10-family.your-subdomain.workers.dev'
+
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],

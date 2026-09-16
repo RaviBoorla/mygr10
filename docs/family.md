@@ -1,11 +1,70 @@
 # Family — parent/guardian linking, digests, assignments
 
-Status: **Phases 1-3 built** (linking/roles; Progress-screen child-switcher
-+ `familySummary` sharing; assignments inbox + create + complete + cancel).
-Phase 4 (digest emails, the Cloudflare Worker) is still spec-only. Originally
-written before any implementation, per this repo's convention (see
-`arena.md`); sections below now describe what's actually built where they
-say so, and what's still planned everywhere else.
+Status: **Phases 1-4 built** (linking/roles; Progress-screen child-switcher
++ `familySummary` sharing; assignments inbox + create + complete + cancel;
+Cloudflare Worker for email digests and transactional sends). All phases
+complete. Originally written before any implementation, per this repo's
+convention (see `arena.md`).
+
+## Phase 4 — Cloudflare Worker (`workers/family/`)
+
+A standalone Worker separate from the Cloudflare Pages deployment, with:
+
+- **HTTP routes** (called client-side):
+  - `POST /family/notify-invite` — sends a transactional invite email via
+    Resend immediately after `sendInvite()` writes to Firestore. Body:
+    `{ fromName, fromEmail, toEmail, toRole }`. No Firebase ID-token
+    verification needed: the route sends to the address the already-verified
+    client wrote into Firestore — spoofing can only notify the same address.
+  - `POST /family/notify-assignment-complete` — sends an assignment-completed
+    email to the guardian right after a child submits their session. Body:
+    `{ guardianEmail, childName, subject, chapter, score, total, accuracy }`.
+    Called from `family.js`'s `completeAssignment()`.
+
+- **Nightly cron** (`30 15 * * *` UTC = 21:00 IST): for every active link
+  with `digestOptIn.email=true`, reads `sync/familySummary`. Checks if
+  `updatedAt` matches today UTC (proxy for "child practiced today"). If yes,
+  builds and sends a daily digest (strengths first, focus areas second).
+  Skips silently if no activity (constraint 5: no guilt email).
+
+- **Weekly cron** (`30 15 * * 0` UTC = Sunday 21:00 IST): same eligibility
+  query. Sends a full per-chapter breakdown for the linked grade::board,
+  strengths first, each focus area paired with a "Assign practice" CTA link.
+
+- **Client wiring**: `public/config.js` exports `FAMILY_WORKER_URL = null`
+  (a placeholder). Set this to the deployed Worker URL
+  (e.g. `https://mygr10-family.your-subdomain.workers.dev`) — the client
+  makes best-effort `fetch()` calls and silently degrades if this is null.
+
+### Worker secrets and env vars (must be set before deploy)
+
+```
+wrangler secret put FIREBASE_SERVICE_ACCOUNT   # full service account JSON
+wrangler secret put RESEND_API_KEY
+```
+And in `workers/family/wrangler.toml` `[vars]`:
+```
+FIREBASE_PROJECT_ID = "rise-511c6"
+RESEND_FROM_EMAIL   = "Rise <digest@rise.strat101.com>"
+APP_URL             = "https://rise.strat101.com"
+CORS_ORIGIN         = "https://rise.strat101.com"
+```
+
+### File structure
+
+```
+workers/family/
+  wrangler.toml         — cron triggers, env, deploy config
+  package.json          — npm scripts (dev / deploy / test)
+  src/
+    index.js            — HTTP routes + cron dispatch
+    gcp-auth.js         — service account JWT → Google OAuth2 access token
+    firestore.js        — Firestore REST API (getDoc, runQuery, updateDoc)
+    email.js            — Resend wrapper + HTML/text email templates
+  test/
+    smoke.js            — 25 unit tests (email templates, business logic,
+                          Firestore deserialisation, XSS escaping)
+```
 
 ## Why
 

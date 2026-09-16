@@ -148,3 +148,30 @@ with the count and a tooltip naming the years — e.g. "Introduction to
 Trigonometry 36 🔥13" means 13 of its 36 questions are real, from 2025/2026
 board papers. Chapters/subjects with no real-question data (everything in the
 table above marked "None") show no badge at all, rather than a fabricated one.
+
+## Cloudflare Worker: Family (`workers/family/`)
+
+A standalone Cloudflare Worker project deployed separately from the Pages site.
+
+| File | Purpose |
+|---|---|
+| `wrangler.toml` | Worker config: cron triggers (`30 15 * * *` nightly, `30 15 * * 0` weekly Sunday — both 21:00 IST), env vars, deploy targets |
+| `package.json` | npm scripts: `dev`, `deploy`, `test` |
+| `src/index.js` | HTTP route handler (`/family/notify-invite`, `/family/notify-assignment-complete`) + cron dispatcher |
+| `src/gcp-auth.js` | Service account private key → Google OAuth2 access token using Web Crypto API (RS256 JWT, works in Cloudflare V8 runtime) |
+| `src/firestore.js` | Firestore REST API wrapper: `getDoc`, `runQuery` (structured queries with composite filters), `updateDoc`; handles all Firestore value types (integer, boolean, string, timestamp, array, map) |
+| `src/email.js` | Resend API wrapper + six HTML+text email templates: invite notification, assignment-completed notification, nightly digest, weekly summary; all tone-compliant (strengths first, encouraging language) |
+| `test/smoke.js` | 25-test Node.js test suite (no external deps): email template XSS safety, tone constraint (forbidden words), strengths-before-focus ordering, Firestore value deserialisation, business logic |
+
+### Secrets required (set via `wrangler secret put`)
+- `FIREBASE_SERVICE_ACCOUNT` — full service account JSON (one line)
+- `RESEND_API_KEY` — Resend API key
+
+### Env vars (set in `wrangler.toml` or Cloudflare dashboard)
+- `FIREBASE_PROJECT_ID` = `rise-511c6`
+- `RESEND_FROM_EMAIL` = `Rise <digest@rise.strat101.com>` (must be a verified Resend sender domain)
+- `APP_URL` = `https://rise.strat101.com`
+- `CORS_ORIGIN` = `https://rise.strat101.com`
+
+### Client wiring
+`public/config.js` exports `FAMILY_WORKER_URL = null`. Set to the deployed Worker URL to enable email sends. The client makes best-effort `fetch()` calls and degrades silently when null — all non-email functionality works without the Worker deployed.

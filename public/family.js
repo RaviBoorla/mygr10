@@ -194,7 +194,21 @@
         payload.gradeBoard = `${state.grade}::${state.board}`;
       }
       await db.collection('familyInvites').doc(toEmail).collection('items').add(payload);
-      return { ok: true, msg: 'Invite sent. They will see it next time they sign in — email notification is not wired up yet (needs the Family Worker, phase 4).' };
+      // Notify invitee immediately via the Worker HTTP route (Phase 4).
+      // Silently degrades if FAMILY_WORKER_URL is not configured.
+      if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL) {
+        fetch(`${FAMILY_WORKER_URL}/family/notify-invite`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            fromName:  window.riseAuth.user.displayName || email(),
+            fromEmail: email(),
+            toEmail,
+            toRole:    role
+          })
+        }).catch(() => {}); // best-effort, never throw
+      }
+      return { ok: true, msg: 'Invite sent! They will receive an email notification if the app is fully configured.' };
     } catch (e) {
       return { ok: false, msg: 'Could not send invite: ' + (e.message || e.code || 'unknown error') };
     }
@@ -408,10 +422,33 @@
 
   async function completeAssignment(childUid, assignmentId, result) {
     try {
+      // Read the assignment doc first to get guardian email + subject info for the notification.
+      const snap = await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).get();
       await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).update({
         status: 'completed',
         result: { ...result, submittedAt: firebase.firestore.FieldValue.serverTimestamp() }
       });
+      // Notify guardian via Worker HTTP route (best-effort).
+      if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL && snap.exists) {
+        const a = snap.data();
+        // Find guardian email from active links.
+        const link = _linkSets.child.find(l => l.guardianUid === a.createdBy && l.status === 'active');
+        if (link) {
+          fetch(`${FAMILY_WORKER_URL}/family/notify-assignment-complete`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              guardianEmail: link.guardianContact?.email || link.guardianEmail,
+              childName: email().split('@')[0],
+              subject:   a.subject,
+              chapter:   a.chapter || null,
+              score:     result.score,
+              total:     result.total,
+              accuracy:  result.accuracy
+            })
+          }).catch(() => {});
+        }
+      }
     } catch (_) {}
   }
 

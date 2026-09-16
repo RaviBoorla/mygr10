@@ -1,0 +1,13 @@
+{
+  "name": "mygr10-family-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev":    "wrangler dev --env preview",
+    "deploy": "wrangler deploy --env production",
+    "test":   "node test/smoke.js"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
