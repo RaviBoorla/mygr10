@@ -91,6 +91,16 @@ const MODES = {
 
 const SRS_INTERVALS = [0, 1, 3, 7, 14, 30];
 
+// Competency-based question types (CBSE's shift beyond pure recall MCQs —
+// see docs/design.md). Optional `qtype` field on a question; absence means
+// a plain MCQ. Labels shown as a small badge during test-taking/review.
+const QTYPE_LABELS = {
+  'assertion-reason': 'Assertion-Reason',
+  'statement-based':  'Statement-based',
+  'case-study':       'Case Study',
+  'application':      'Application'
+};
+
 const NOTES_CATALOG = [
   { id: 'Mathematics', label: 'Maths' },
   { id: 'Physics',     label: 'Physics' },

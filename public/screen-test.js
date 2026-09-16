@@ -186,7 +186,10 @@ Object.assign(app, {
     if (!numEl || !textEl || !optEl) return;
 
     numEl.textContent  = `Question ${s.index + 1} of ${s.questions.length}`;
-    if (chEl) chEl.textContent = q.chapter || '';
+    if (chEl) {
+      const badge = q.qtype ? ` <span class="qtype-badge">${esc(QTYPE_LABELS[q.qtype] || q.qtype)}</span>` : '';
+      chEl.innerHTML = esc(q.chapter || '') + badge;
+    }
     textEl.textContent = breakParts(q.text);
 
     optEl.innerHTML = q.options.map((opt, i) => {
@@ -387,7 +390,8 @@ Object.assign(app, {
         if (isCorrect) correct++;
         return {
           id: q.id, num: i + 1, text: q.text, options: q.options, correct: q.correct,
-          userAnswer: ua, isCorrect, explanation: q.explanation || '', whyWrong: q.whyWrong || null, chapter: q.chapter || ''
+          userAnswer: ua, isCorrect, explanation: q.explanation || '', whyWrong: q.whyWrong || null, chapter: q.chapter || '',
+          qtype: q.qtype || null
         };
       });
       const skipped = this.reviewData.filter(r => r.userAnswer === undefined).length;
@@ -442,6 +446,7 @@ Object.assign(app, {
       if (r.userAnswer === undefined) return;
       const rec = bySubj[r.id] || { box: 0, correctCount: 0, wrongCount: 0 };
       rec.chapter = r.chapter;
+      if (r.qtype) rec.qtype = r.qtype;
       rec.lastAt = now;
       rec.lastResult = r.isCorrect ? 'correct' : 'wrong';
       if (r.isCorrect) {

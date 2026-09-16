@@ -373,6 +373,11 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 }
 .q-number  { margin: 0; font-size: var(--fs-ui); font-weight: 600; color: var(--text-light); }
 .q-chapter { margin: -10px 0 0; font-size: var(--fs-note); color: var(--primary); font-weight: 600; }
+.qtype-badge {
+  display: inline-block; margin-left: 6px; padding: 1px 8px;
+  font-size: var(--fs-2xs); font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
+  background: var(--primary-soft); color: var(--primary); border-radius: 999px;
+}
 .q-text    { margin: 0; font-size: var(--fs-read); line-height: 1.5; white-space: pre-line; }
 
 .inline-state {

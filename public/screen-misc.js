@@ -134,6 +134,7 @@ Object.assign(app, {
       return '<div class="card empty-state">Take a mock test or chapter drill to start building your attempt history.</div>';
     }
     return `
+      ${this._qtypeBreakdown()}
       <ul class="recent-list">
         ${history.map(h => `
           <li class="recent-row card">
@@ -145,6 +146,47 @@ Object.assign(app, {
             <button class="btn small" onclick="app.retryFromHistory(${h.ts})">Retry</button>
           </li>`).join('')}
       </ul>`;
+  },
+
+  // Accuracy broken down by competency question type (Assertion-Reason,
+  // Statement-based, etc.) instead of just by chapter — this is where a
+  // competency-specific weakness actually shows up (e.g. strong on recall,
+  // weak on Assertion-Reason across every chapter). Only counts questions
+  // answered since qtype backfill (older progress records predate the field
+  // and are silently skipped, not shown as 0%).
+  _qtypeBreakdown() {
+    const store = LS.get(KEY.progress, {});
+    const prefix = `${state.grade}::${state.board}::`;
+    const byType = {};
+    Object.entries(store).forEach(([key, bySubj]) => {
+      if (!key.startsWith(prefix)) return;
+      Object.values(bySubj).forEach(r => {
+        if (!r.qtype) return;
+        const t = byType[r.qtype] || (byType[r.qtype] = { correct: 0, wrong: 0 });
+        t.correct += r.correctCount || 0;
+        t.wrong += r.wrongCount || 0;
+      });
+    });
+    const types = Object.keys(byType);
+    if (!types.length) return '';
+    return `
+      <section class="home-section">
+        <h2 class="section-title">By question type</h2>
+        <ul class="recent-list">
+          ${types.map(t => {
+            const { correct, wrong } = byType[t];
+            const total = correct + wrong;
+            const pct = total ? Math.round(correct / total * 100) : 0;
+            return `<li class="recent-row card">
+              <span class="recent-score ${pct >= 60 ? 'good' : 'weak'}">${pct}%</span>
+              <span class="recent-desc">
+                <strong>${esc(QTYPE_LABELS[t] || t)}</strong>
+                <small>${plural(total, 'attempt')}</small>
+              </span>
+            </li>`;
+          }).join('')}
+        </ul>
+      </section>`;
   },
 
   // Shown above the tabs on a child's own Progress screen — who it's shared

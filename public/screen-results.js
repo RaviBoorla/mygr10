@@ -108,6 +108,7 @@ Object.assign(app, {
       <div class="rev-card-header">
         <span class="rev-q-num">Q${r.num} of ${data.length}</span>${badge}
         <span class="rev-chapter">${esc(r.chapter || '')}</span>
+        ${r.qtype ? `<span class="qtype-badge">${esc(QTYPE_LABELS[r.qtype] || r.qtype)}</span>` : ''}
         <button class="btn small review-btn" id="review-bookmark-btn"
                 onclick="app.toggleBookmark('${esc(this.lastConfig.subject)}','${esc(r.id)}')">&#9734; Bookmark</button>
       </div>
