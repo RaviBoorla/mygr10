@@ -1,0 +1,2179 @@
+[
+ {
+  "id": "sol-xii-phy-electric-charges-1",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.1",
+  "question": "What is the force between two small charged spheres having charges of 2 \u00d7 10\u207b\u2077 C and 3 \u00d7 10\u207b\u2077 C placed 30 cm apart in air?",
+  "solution": "F = 6 \u00d7 10\u207b\u00b3 N (repulsive)",
+  "steps": [
+   "Use Coulomb's law: F = kq1q2/r\u00b2, with k = 9 \u00d7 10\u2079 N m\u00b2/C\u00b2",
+   "F = 9\u00d710\u2079 \u00d7 (2\u00d710\u207b\u2077)(3\u00d710\u207b\u2077) / (0.3)\u00b2 = 9\u00d710\u2079 \u00d7 6\u00d710\u207b\u00b9\u2074 / 0.09",
+   "F = 5.4\u00d710\u207b\u2074 / 0.09 = 6 \u00d7 10\u207b\u00b3 N",
+   "Both charges are positive (like), so the force is repulsive"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-2",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.2",
+  "question": "The electrostatic force on a small sphere of charge 0.4 \u03bcC due to another small sphere of charge \u20130.8 \u03bcC in air is 0.2 N.\n(a) What is the distance between the two spheres?\n(b) What is the force on the second sphere due to the first?",
+  "solution": "(a) r = 12 cm\n(b) 0.2 N, attractive (equal and opposite to the given force)",
+  "steps": [
+   "F = kq1q2/r\u00b2 \u21d2 r\u00b2 = kq1q2/F",
+   "r\u00b2 = 9\u00d710\u2079 \u00d7 0.4\u00d710\u207b\u2076 \u00d7 0.8\u00d710\u207b\u2076 / 0.2 = 2.88\u00d710\u207b\u00b3/0.2 = 0.0144 m\u00b2",
+   "r = 0.12 m = 12 cm",
+   "By Newton's third law, the force on the second sphere is equal in magnitude and opposite in direction: 0.2 N, attractive (charges are unlike)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-3",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.3",
+  "question": "Check that the ratio ke\u00b2/Gm\u2091m_p is dimensionless. Look up a Table of Physical Constants and determine the value of this ratio. What does the ratio signify?",
+  "solution": "The ratio \u2248 2.4 \u00d7 10\u00b3\u2079, dimensionless. It represents the ratio of the electrostatic force to the gravitational force between an electron and a proton.",
+  "steps": [
+   "Both ke\u00b2/r\u00b2 and Gm\u2091m_p/r\u00b2 have the dimensions of force, so their ratio ke\u00b2/Gm\u2091m_p is dimensionless",
+   "Substitute k = 9\u00d710\u2079, e = 1.6\u00d710\u207b\u00b9\u2079 C, G = 6.67\u00d710\u207b\u00b9\u00b9, m\u2091 = 9.1\u00d710\u207b\u00b3\u00b9 kg, m_p = 1.67\u00d710\u207b\u00b2\u2077 kg",
+   "Numerator: ke\u00b2 = 9\u00d710\u2079\u00d7(1.6\u00d710\u207b\u00b9\u2079)\u00b2 = 2.3\u00d710\u207b\u00b2\u2078",
+   "Denominator: Gm\u2091m_p = 6.67\u00d710\u207b\u00b9\u00b9\u00d79.1\u00d710\u207b\u00b3\u00b9\u00d71.67\u00d710\u207b\u00b2\u2077 \u2248 1.01\u00d710\u207b\u2076\u2077",
+   "Ratio \u2248 2.3\u00d710\u207b\u00b2\u2078 / 1.01\u00d710\u207b\u2076\u2077 \u2248 2.4 \u00d7 10\u00b3\u2079",
+   "This huge number shows that the electrostatic attraction/repulsion between charged particles vastly dominates their mutual gravitational attraction"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-4",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.4",
+  "question": "(a) Explain the meaning of the statement 'electric charge of a body is quantised'.\n(b) Why can one ignore quantisation of electric charge when dealing with macroscopic i.e., large scale charges?",
+  "solution": "(a) Any charge on a body always exists as an integral multiple of the elementary charge e; charge cannot be divided indefinitely.\n(b) Because macroscopic charges involve extremely large numbers of electrons (n is huge), so the discreteness of e (1.6\u00d710\u207b\u00b9\u2079 C) becomes negligible and the charge appears continuous.",
+  "steps": [
+   "Quantisation means Q = ne, where n is an integer and e = 1.6\u00d710\u207b\u00b9\u2079 C is the smallest unit of charge",
+   "For macroscopic bodies, typical charges correspond to n of the order of 10\u00b9\u2070 or more electrons",
+   "Since e is so tiny compared to the total charge, the graininess is not observable and charge behaves as if continuous"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-5",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.5",
+  "question": "When a glass rod is rubbed with a silk cloth, charges appear on both. A similar phenomenon is observed with many other pairs of bodies. Explain how this observation is consistent with the law of conservation of charge.",
+  "solution": "No new charge is created; rubbing only transfers electrons from one body to the other, so the glass rod and silk cloth acquire equal and opposite charges, keeping the total charge of the (isolated) system unchanged (zero, as before rubbing).",
+  "steps": [
+   "Before rubbing, both bodies are neutral, so total charge = 0",
+   "Rubbing transfers electrons from the glass rod to the silk (or vice-versa), making one positive and the other negative by the same amount",
+   "The sum of the two charges is still zero, so charge is conserved, only redistributed"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-6",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.6",
+  "question": "Four point charges qA = 2 \u03bcC, qB = \u20135 \u03bcC, qC = 2 \u03bcC, and qD = \u20135 \u03bcC are located at the corners of a square ABCD of side 10 cm. What is the force on a charge of 1 \u03bcC placed at the centre of the square?",
+  "solution": "Net force = 0 N",
+  "steps": [
+   "A and C carry equal charges (+2 \u03bcC) and are diametrically opposite through the centre, so their forces on the central charge are equal in magnitude and opposite in direction and cancel",
+   "Similarly B and D carry equal charges (\u20135 \u03bcC) and are diametrically opposite, so their forces on the central charge also cancel",
+   "The resultant force on the 1 \u03bcC charge at the centre is therefore zero"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-7",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.7",
+  "question": "(a) An electrostatic field line is a continuous curve. That is, a field line cannot have sudden breaks. Why not?\n(b) Explain why two field lines never cross each other at any point?",
+  "solution": "(a) A break would mean the field vanishes momentarily and reappears, which is not physically possible except at a charge.\n(b) Two crossing lines would mean the field has two directions at one point, which is impossible since the field at a point is unique.",
+  "steps": [
+   "(a) A field line begins on a positive charge and ends on a negative charge (or infinity); it cannot break in free space because that would suggest a charge exists there where there is none",
+   "(b) The tangent to a field line gives the direction of E at that point; if two lines crossed, the electric field at the intersection would have two different directions simultaneously, which contradicts E being a unique vector at every point"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-8",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.8",
+  "question": "Two point charges qA = 3 \u03bcC and qB = \u20133 \u03bcC are located 20 cm apart in vacuum.\n(a) What is the electric field at the midpoint O of the line AB joining the two charges?\n(b) If a negative test charge of magnitude 1.5 \u00d7 10\u207b\u2079 C is placed at this point, what is the force experienced by the test charge?",
+  "solution": "(a) E = 5.4 \u00d7 10\u2076 N/C, directed from A to B (along OB)\n(b) F = 8.1 \u00d7 10\u207b\u00b3 N, directed from O towards A (along OA)",
+  "steps": [
+   "Distance from each charge to O: r = 10 cm = 0.1 m",
+   "Field due to +3 \u03bcC at A points away from A, i.e. towards B: EA = kqA/r\u00b2 = 9\u00d710\u2079\u00d73\u00d710\u207b\u2076/0.01 = 2.7\u00d710\u2076 N/C",
+   "Field due to \u20133 \u03bcC at B points towards B (into the negative charge), also along O\u2192B: EB = kqB/r\u00b2 = 2.7\u00d710\u2076 N/C",
+   "Both fields point the same way (A to B), so total E = 2.7\u00d710\u2076 + 2.7\u00d710\u2076 = 5.4\u00d710\u2076 N/C along OB",
+   "Force on a negative test charge is opposite to E: F = qE = 1.5\u00d710\u207b\u2079 \u00d7 5.4\u00d710\u2076 = 8.1\u00d710\u207b\u00b3 N, directed along OA"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-9",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.9",
+  "question": "A system has two charges qA = 2.5 \u00d7 10\u207b\u2077 C and qB = \u20132.5 \u00d7 10\u207b\u2077 C located at points A: (0, 0, \u201315 cm) and B: (0, 0, +15 cm), respectively. What are the total charge and electric dipole moment of the system?",
+  "solution": "Total charge = 0; dipole moment = 7.5 \u00d7 10\u207b\u2078 C m, directed along the negative z-axis (from B to A)",
+  "steps": [
+   "Total charge = qA + qB = 2.5\u00d710\u207b\u2077 + (\u20132.5\u00d710\u207b\u2077) = 0",
+   "Separation between charges d = 15 + 15 = 30 cm = 0.3 m",
+   "Dipole moment magnitude p = qd = 2.5\u00d710\u207b\u2077 \u00d7 0.3 = 7.5\u00d710\u207b\u2078 C m",
+   "Direction is from the negative charge (at B, +15 cm) to the positive charge (at A, \u201315 cm), i.e. along the negative z-axis"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-10",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.10",
+  "question": "An electric dipole with dipole moment 4 \u00d7 10\u207b\u2079 C m is aligned at 30\u00b0 with the direction of a uniform electric field of magnitude 5 \u00d7 10\u2074 NC\u207b\u00b9. Calculate the magnitude of the torque acting on the dipole.",
+  "solution": "\u03c4 = 1 \u00d7 10\u207b\u2074 N m",
+  "steps": [
+   "Torque on a dipole: \u03c4 = pE sin\u03b8",
+   "\u03c4 = 4\u00d710\u207b\u2079 \u00d7 5\u00d710\u2074 \u00d7 sin30\u00b0 = 4\u00d710\u207b\u2079 \u00d7 5\u00d710\u2074 \u00d7 0.5",
+   "\u03c4 = 1 \u00d7 10\u207b\u2074 N m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-11",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.11",
+  "question": "A polythene piece rubbed with wool is found to have a negative charge of 3 \u00d7 10\u207b\u2077 C.\n(a) Estimate the number of electrons transferred (from which to which?)\n(b) Is there a transfer of mass from wool to polythene?",
+  "solution": "(a) About 1.9 \u00d7 10\u00b9\u00b2 (\u22482 \u00d7 10\u00b9\u00b2) electrons are transferred, from wool to polythene.\n(b) Yes, but a negligible mass (\u22481.7 \u00d7 10\u207b\u00b9\u2078 kg) is transferred, since electrons carry mass.",
+  "steps": [
+   "Number of electrons n = Q/e = 3\u00d710\u207b\u2077 / 1.6\u00d710\u207b\u00b9\u2079 \u2248 1.9\u00d710\u00b9\u00b2 \u2248 2\u00d710\u00b9\u00b2",
+   "Since polythene becomes negatively charged, electrons must have moved from wool onto polythene",
+   "Mass transferred = n \u00d7 m\u2091 = 1.9\u00d710\u00b9\u00b2 \u00d7 9.1\u00d710\u207b\u00b3\u00b9 \u2248 1.7\u00d710\u207b\u00b9\u2078 kg \u2014 extremely small but not zero, so yes mass is transferred"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-12",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.12",
+  "question": "(a) Two insulated charged copper spheres A and B have their centres separated by a distance of 50 cm. What is the mutual force of electrostatic repulsion if the charge on each is 6.5 \u00d7 10\u207b\u2077 C? The radii of A and B are negligible compared to the distance of separation.\n(b) What is the force of repulsion if each sphere is charged double the above amount, and the distance between them is halved?",
+  "solution": "(a) F \u2248 1.5 \u00d7 10\u207b\u00b2 N\n(b) F' = 0.24 N",
+  "steps": [
+   "(a) F = kq\u00b2/r\u00b2 = 9\u00d710\u2079 \u00d7 (6.5\u00d710\u207b\u2077)\u00b2 / (0.5)\u00b2 = 9\u00d710\u2079 \u00d7 4.225\u00d710\u207b\u00b9\u00b3 / 0.25 \u2248 1.5\u00d710\u207b\u00b2 N",
+   "(b) New charge is 2q on each sphere and new distance is r/2",
+   "F' = k(2q)\u00b2/(r/2)\u00b2 = 16 \u00d7 kq\u00b2/r\u00b2 = 16F",
+   "F' = 16 \u00d7 1.5\u00d710\u207b\u00b2 = 0.24 N"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-13",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.14",
+  "question": "Consider a uniform electric field E = 3 \u00d7 10\u00b3 \u00ee N/C. (a) What is the flux of this field through a square of 10 cm on a side whose plane is parallel to the yz plane? (b) What is the flux through the same square if the normal to its plane makes a 60\u00b0 angle with the x-axis?",
+  "solution": "(a) \u03a6 = 30 N m\u00b2/C\n(b) \u03a6 = 15 N m\u00b2/C",
+  "steps": [
+   "Area of the square A = (0.1)\u00b2 = 0.01 m\u00b2",
+   "(a) Plane parallel to yz-plane means its normal is along x, same direction as E, so \u03a6 = EA = 3\u00d710\u00b3 \u00d7 0.01 = 30 N m\u00b2/C",
+   "(b) When the normal makes 60\u00b0 with x-axis: \u03a6 = EA cos60\u00b0 = 30 \u00d7 0.5 = 15 N m\u00b2/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-14",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.15",
+  "question": "What is the net flux of the uniform electric field of Exercise 1.14 through a cube of side 20 cm oriented so that its faces are parallel to the coordinate planes?",
+  "solution": "Net flux = 0",
+  "steps": [
+   "For a uniform field, whatever field lines enter one face of the cube exit through the opposite face with equal magnitude",
+   "There is no charge enclosed by the cube, so by Gauss's law the net outward flux is zero"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-15",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.16",
+  "question": "Careful measurement of the electric field at the surface of a black box indicates that the net outward flux through the surface of the box is 8.0 \u00d7 10\u00b3 N m\u00b2/C. (a) What is the net charge inside the box? (b) If the net outward flux through the surface of the box were zero, could you conclude that there were no charges inside the box? Why or Why not?",
+  "solution": "(a) q \u2248 0.07 \u03bcC\n(b) No \u2014 zero net flux only means the net (total) charge enclosed is zero; there could still be equal amounts of positive and negative charge inside.",
+  "steps": [
+   "By Gauss's law, \u03a6 = q/\u03b5\u2080 \u21d2 q = \u03a6\u03b5\u2080",
+   "q = 8.0\u00d710\u00b3 \u00d7 8.854\u00d710\u207b\u00b9\u00b2 \u2248 7.08\u00d710\u207b\u2078 C \u2248 0.07 \u03bcC",
+   "Zero flux implies the algebraic sum of enclosed charges is zero, not that there is no charge \u2014 equal and opposite charges inside would also give zero net flux"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-16",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.17",
+  "question": "A point charge +10 \u03bcC is a distance 5 cm directly above the centre of a square of side 10 cm. What is the magnitude of the electric flux through the square? (Hint: Think of the square as one face of a cube with edge 10 cm.)",
+  "solution": "\u03a6 \u2248 1.9 \u00d7 10\u2075 N m\u00b2/C",
+  "steps": [
+   "Imagine a cube of edge 10 cm with the charge exactly at its centre \u2014 the given square (10 cm \u00d7 10 cm, 5 cm away) is one face of this cube",
+   "By symmetry, each of the 6 faces of the cube carries 1/6 of the total flux from the enclosed charge",
+   "Total flux through the closed cube = q/\u03b5\u2080 = 10\u00d710\u207b\u2076 / 8.854\u00d710\u207b\u00b9\u00b2 \u2248 1.13\u00d710\u2076 N m\u00b2/C",
+   "Flux through one face (the given square) = (1/6) \u00d7 1.13\u00d710\u2076 \u2248 1.9 \u00d7 10\u2075 N m\u00b2/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-17",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.18",
+  "question": "A point charge of 2.0 \u03bcC is at the centre of a cubic Gaussian surface 9.0 cm on edge. What is the net electric flux through the surface?",
+  "solution": "\u03a6 \u2248 2.3 \u00d7 10\u2075 N m\u00b2/C",
+  "steps": [
+   "By Gauss's law, the flux through a closed surface depends only on the enclosed charge, not on the size or shape of the surface",
+   "\u03a6 = q/\u03b5\u2080 = 2.0\u00d710\u207b\u2076 / 8.854\u00d710\u207b\u00b9\u00b2 \u2248 2.3 \u00d7 10\u2075 N m\u00b2/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-18",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.19",
+  "question": "A point charge causes an electric flux of \u20131.0 \u00d7 10\u00b3 N m\u00b2/C to pass through a spherical Gaussian surface of 10.0 cm radius centred on the charge. (a) If the radius of the Gaussian surface were doubled, how much flux would pass through the surface? (b) What is the value of the point charge?",
+  "solution": "(a) The flux remains \u20131.0 \u00d7 10\u00b3 N m\u00b2/C (unchanged)\n(b) q \u2248 \u20138.8 nC",
+  "steps": [
+   "(a) By Gauss's law, flux depends only on the charge enclosed, not on the radius of the sphere, so doubling the radius does not change the flux (same charge is still enclosed)",
+   "(b) \u03a6 = q/\u03b5\u2080 \u21d2 q = \u03a6\u03b5\u2080 = \u20131.0\u00d710\u00b3 \u00d7 8.854\u00d710\u207b\u00b9\u00b2 \u2248 \u20138.8\u00d710\u207b\u2079 C = \u20138.8 nC"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-19",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.20",
+  "question": "A conducting sphere of radius 10 cm has an unknown charge. If the electric field 20 cm from the centre of the sphere is 1.5 \u00d7 10\u00b3 N/C and points radially inward, what is the net charge on the sphere?",
+  "solution": "q \u2248 \u20136.7 nC",
+  "steps": [
+   "Outside a charged conducting sphere, the field behaves as though the charge were concentrated at the centre: E = kq/r\u00b2",
+   "Field points inward, so the charge must be negative",
+   "|q| = Er\u00b2/k = 1.5\u00d710\u00b3 \u00d7 (0.2)\u00b2 / 9\u00d710\u2079 = 60 / 9\u00d710\u2079 \u2248 6.7\u00d710\u207b\u2079 C",
+   "So q \u2248 \u20136.7 nC"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-20",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.21",
+  "question": "A uniformly charged conducting sphere of 2.4 m diameter has a surface charge density of 80.0 \u03bcC/m\u00b2. (a) Find the charge on the sphere. (b) What is the total electric flux leaving the surface of the sphere?",
+  "solution": "(a) Q \u2248 1.45 \u00d7 10\u207b\u00b3 C\n(b) \u03a6 \u2248 1.6 \u00d7 10\u2078 N m\u00b2/C",
+  "steps": [
+   "Radius r = 1.2 m, \u03c3 = 80.0\u00d710\u207b\u2076 C/m\u00b2",
+   "(a) Q = \u03c3 \u00d7 4\u03c0r\u00b2 = 80\u00d710\u207b\u2076 \u00d7 4\u03c0 \u00d7 (1.2)\u00b2 = 80\u00d710\u207b\u2076 \u00d7 18.10 \u2248 1.45\u00d710\u207b\u00b3 C",
+   "(b) \u03a6 = Q/\u03b5\u2080 = 1.45\u00d710\u207b\u00b3 / 8.854\u00d710\u207b\u00b9\u00b2 \u2248 1.6\u00d710\u2078 N m\u00b2/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-21",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.22",
+  "question": "An infinite line charge produces a field of 9 \u00d7 10\u2074 N/C at a distance of 2 cm. Calculate the linear charge density.",
+  "solution": "\u03bb \u2248 0.1 \u03bcC/m",
+  "steps": [
+   "Field of an infinite line charge: E = \u03bb/(2\u03c0\u03b5\u2080r), i.e. E = 2k\u03bb/r",
+   "\u03bb = Er/(2k) = 9\u00d710\u2074 \u00d7 0.02 / (2\u00d79\u00d710\u2079) = 1800 / 1.8\u00d710\u00b9\u2070",
+   "\u03bb = 1 \u00d7 10\u207b\u2077 C/m = 0.1 \u03bcC/m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-electric-charges-22",
+  "chapter": "Electric Charges and Fields",
+  "exercise": "Exercises",
+  "number": "Q1.23",
+  "question": "Two large, thin metal plates are parallel and close to each other. On their inner faces, the plates have surface charge densities of opposite signs and of equal magnitude. What is E: (a) in the outer region of the first plate, (b) in the outer region of the second plate, and (c) between the plates?",
+  "solution": "(a) E = 0\n(b) E = 0\n(c) E = \u03c3/\u03b5\u2080 (numerically about 1.9 N/C for the given surface charge density)",
+  "steps": [
+   "Each charged plate produces a field of magnitude \u03c3/(2\u03b5\u2080) on either side, directed away from a positive plate and towards a negative plate",
+   "In the outer regions (outside both plates), the two fields point in opposite directions and exactly cancel, giving E = 0 on either outer side",
+   "Between the plates, the two fields point in the same direction (from the + plate to the \u2013 plate) and add up: E = \u03c3/(2\u03b5\u2080) + \u03c3/(2\u03b5\u2080) = \u03c3/\u03b5\u2080",
+   "Substituting the given surface charge density into E = \u03c3/\u03b5\u2080 gives E \u2248 1.9 N/C between the plates"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-1",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.3",
+  "question": "Two charges 5 \u00d7 10\u207b\u2078 C and \u20133 \u00d7 10\u207b\u2078 C are located 16 cm apart. At what point(s) on the line joining the two charges is the electric potential zero? Take the potential at infinity to be zero.",
+  "solution": "Potential is zero at a point 10 cm from the +5\u00d710\u207b\u2078 C charge, on the segment between the charges; also at a point 40 cm from the positive charge, beyond the negative charge (on the side of the negative charge).",
+  "steps": [
+   "Let the point be at distance x from the +5\u00d710\u207b\u2078 C charge (call it q1), on the line joining them, with separation d = 16 cm",
+   "Between the charges (0<x<16): V = k[q1/x \u2212 |q2|/(16\u2212x)] = 0 \u21d2 q1(16\u2212x) = |q2|x",
+   "5(16\u2212x) = 3x \u21d2 80 = 8x \u21d2 x = 10 cm from the positive charge",
+   "Beyond the negative charge (x>16), on the far side: V = k[q1/x \u2212 |q2|/(x\u221216)] = 0 \u21d2 5(x\u221216) = 3x \u21d2 2x = 80 \u21d2 x = 40 cm from the positive charge",
+   "(No such point exists on the extension beyond the positive charge, since both terms would have the same sign there)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-2",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.4",
+  "question": "A regular hexagon of side 10 cm has a charge 5 \u03bcC at each of its vertices. Calculate the potential at the centre of the hexagon.",
+  "solution": "V \u2248 2.7 \u00d7 10\u2076 V",
+  "steps": [
+   "In a regular hexagon, the distance from the centre to each vertex equals the side length: r = 10 cm = 0.1 m",
+   "Potential is a scalar, so contributions from all 6 equal charges simply add: V = 6 \u00d7 kq/r",
+   "V = 6 \u00d7 9\u00d710\u2079 \u00d7 5\u00d710\u207b\u2076 / 0.1 = 6 \u00d7 4.5\u00d710\u2075 = 2.7\u00d710\u2076 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-3",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.5",
+  "question": "Two charges 2 \u03bcC and \u20132 \u03bcC are placed at points A and B 6 cm apart.\n(a) Identify an equipotential surface of the system.\n(b) What is the direction of the electric field at every point on this surface?",
+  "solution": "(a) The plane perpendicular to AB and passing through its mid-point is an equipotential surface (V = 0 everywhere on it).\n(b) The electric field at every point on this plane is normal to the plane, directed from A to B.",
+  "steps": [
+   "Since the charges are equal and opposite, every point on the perpendicular bisector plane of AB is equidistant from both charges, so the positive and negative contributions to V exactly cancel, giving V = 0 everywhere on that plane",
+   "By symmetry, the field lines cross this plane perpendicularly, so E on the plane points along AB, from the positive to the negative charge"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-4",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.6",
+  "question": "A spherical conductor of radius 12 cm has a charge of 1.6 \u00d7 10\u207b\u2077 C distributed uniformly on its surface. What is the electric field\n(a) inside the sphere\n(b) just outside the sphere\n(c) at a point 18 cm from the centre of the sphere?",
+  "solution": "(a) E = 0\n(b) E \u2248 1.0 \u00d7 10\u2075 N/C\n(c) E \u2248 4.4 \u00d7 10\u2074 N/C",
+  "steps": [
+   "(a) Inside a conductor in electrostatic equilibrium, the field is always zero",
+   "(b) Just outside, E = kq/R\u00b2 = 9\u00d710\u2079 \u00d7 1.6\u00d710\u207b\u2077 / (0.12)\u00b2 = 1440/0.0144 \u2248 1.0\u00d710\u2075 N/C",
+   "(c) At r = 0.18 m (outside), treat the sphere as a point charge at its centre: E = kq/r\u00b2 = 9\u00d710\u2079\u00d71.6\u00d710\u207b\u2077/(0.18)\u00b2 = 1440/0.0324 \u2248 4.4\u00d710\u2074 N/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-5",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.7",
+  "question": "A parallel plate capacitor with air between the plates has a capacitance of 8 pF (1 pF = 10\u207b\u00b9\u00b2 F). What will be the capacitance if the distance between the plates is reduced by half, and the space between them is filled with a substance of dielectric constant 6?",
+  "solution": "C' = 96 pF",
+  "steps": [
+   "C = \u03b5\u2080A/d = 8 pF (given)",
+   "New capacitance with distance d/2 and dielectric constant K: C' = K\u03b5\u2080A/(d/2) = 2K \u00d7 (\u03b5\u2080A/d) = 2K \u00d7 C",
+   "C' = 2 \u00d7 6 \u00d7 8 = 96 pF"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-6",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.8",
+  "question": "Three capacitors each of capacitance 9 pF are connected in series.\n(a) What is the total capacitance of the combination?\n(b) What is the potential difference across each capacitor if the combination is connected to a 120 V supply?",
+  "solution": "(a) C_series = 3 pF\n(b) 40 V across each capacitor",
+  "steps": [
+   "(a) For series: 1/C = 1/9 + 1/9 + 1/9 = 3/9 \u21d2 C = 3 pF",
+   "(b) In series, the same charge Q flows through each capacitor",
+   "Q = C_series \u00d7 V = 3\u00d710\u207b\u00b9\u00b2 \u00d7 120 = 3.6\u00d710\u207b\u00b9\u2070 C",
+   "Voltage across each equal capacitor = Q/C = 3.6\u00d710\u207b\u00b9\u2070/9\u00d710\u207b\u00b9\u00b2 = 40 V (equal by symmetry since all three are identical)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-7",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.9",
+  "question": "Three capacitors of capacitances 2 pF, 3 pF and 4 pF are connected in parallel.\n(a) What is the total capacitance of the combination?\n(b) Determine the charge on each capacitor if the combination is connected to a 100 V supply.",
+  "solution": "(a) C_parallel = 9 pF\n(b) Q1 = 2\u00d710\u207b\u00b9\u2070 C, Q2 = 3\u00d710\u207b\u00b9\u2070 C, Q3 = 4\u00d710\u207b\u00b9\u2070 C",
+  "steps": [
+   "(a) In parallel: C = 2+3+4 = 9 pF",
+   "(b) In parallel, the voltage across each capacitor is the same (100 V), so Q = CV for each",
+   "Q1 = 2\u00d710\u207b\u00b9\u00b2 \u00d7 100 = 2\u00d710\u207b\u00b9\u2070 C; Q2 = 3\u00d710\u207b\u00b9\u00b2 \u00d7 100 = 3\u00d710\u207b\u00b9\u2070 C; Q3 = 4\u00d710\u207b\u00b9\u00b2 \u00d7 100 = 4\u00d710\u207b\u00b9\u2070 C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-8",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.10",
+  "question": "In a parallel plate capacitor with air between the plates, each plate has an area of 6 \u00d7 10\u207b\u00b3 m\u00b2 and the distance between the plates is 3 mm. Calculate the capacitance of the capacitor. If this capacitor is connected to a 100 V supply, what is the charge on each plate of the capacitor?",
+  "solution": "C = 18 pF; Q = 1.8 \u00d7 10\u207b\u2079 C",
+  "steps": [
+   "C = \u03b5\u2080A/d = 8.854\u00d710\u207b\u00b9\u00b2 \u00d7 6\u00d710\u207b\u00b3 / 3\u00d710\u207b\u00b3 = 8.854\u00d710\u207b\u00b9\u00b2 \u00d7 2",
+   "C \u2248 1.77\u00d710\u207b\u00b9\u00b9 F \u2248 18 pF",
+   "Q = CV = 18\u00d710\u207b\u00b9\u00b2 \u00d7 100 = 1.8\u00d710\u207b\u2079 C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-9",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.11",
+  "question": "Explain what would happen if in the capacitor given in Exercise 2.10, a 3 mm thick mica sheet (of dielectric constant = 6) were inserted between the plates,\n(a) while the voltage supply remained connected.\n(b) after the supply was disconnected.",
+  "solution": "(a) With the supply still connected, V stays fixed at 100 V; C increases 6-fold to 108 pF, and Q increases to 1.08 \u00d7 10\u207b\u2078 C.\n(b) With the supply disconnected, Q stays fixed at 1.8 \u00d7 10\u207b\u2079 C; C becomes 108 pF, so V drops to about 16.7 V.",
+  "steps": [
+   "Inserting a mica sheet of dielectric constant K=6 filling the whole gap multiplies capacitance by K: C' = 6 \u00d7 18 pF = 108 pF",
+   "(a) Supply connected \u21d2 V is held fixed at 100 V (by the battery), so new charge Q' = C'V = 108\u00d710\u207b\u00b9\u00b2 \u00d7 100 = 1.08\u00d710\u207b\u2078 C",
+   "(b) Supply disconnected \u21d2 charge Q = 1.8\u00d710\u207b\u2079 C is isolated and stays constant; new voltage V' = Q/C' = 1.8\u00d710\u207b\u2079/108\u00d710\u207b\u00b9\u00b2 \u2248 16.7 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-10",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.12",
+  "question": "A 12 pF capacitor is connected to a 50 V battery. How much electrostatic energy is stored in the capacitor?",
+  "solution": "U = 1.5 \u00d7 10\u207b\u2078 J",
+  "steps": [
+   "Energy stored: U = \u00bdCV\u00b2",
+   "U = \u00bd \u00d7 12\u00d710\u207b\u00b9\u00b2 \u00d7 (50)\u00b2 = \u00bd \u00d7 12\u00d710\u207b\u00b9\u00b2 \u00d7 2500",
+   "U = \u00bd \u00d7 3\u00d710\u207b\u2078 = 1.5\u00d710\u207b\u2078 J"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-capacitance-11",
+  "chapter": "Electrostatic Potential and Capacitance",
+  "exercise": "Exercises",
+  "number": "Q2.13",
+  "question": "A 600 pF capacitor is charged by a 200 V supply. It is then disconnected from the supply and is connected to another uncharged 600 pF capacitor. How much electrostatic energy is lost in the process?",
+  "solution": "Energy lost = 6 \u00d7 10\u207b\u2076 J",
+  "steps": [
+   "Initial energy: U_i = \u00bdC V\u00b2 = \u00bd \u00d7 600\u00d710\u207b\u00b9\u00b2 \u00d7 (200)\u00b2 = \u00bd \u00d7 600\u00d710\u207b\u00b9\u00b2 \u00d7 4\u00d710\u2074 = 1.2\u00d710\u207b\u2075 J",
+   "Initial charge Q = CV = 600\u00d710\u207b\u00b9\u00b2 \u00d7 200 = 1.2\u00d710\u207b\u2077 C",
+   "When connected to an identical uncharged capacitor, charge redistributes equally (since capacitances are equal): each gets Q/2, and the common potential is V/2 = 100 V",
+   "Final energy: U_f = 2 \u00d7 [\u00bd \u00d7 600\u00d710\u207b\u00b9\u00b2 \u00d7 (100)\u00b2] = 2 \u00d7 3\u00d710\u207b\u2076 = 6\u00d710\u207b\u2076 J",
+   "Energy lost = U_i \u2212 U_f = 1.2\u00d710\u207b\u2075 \u2212 6\u00d710\u207b\u2076 = 6\u00d710\u207b\u2076 J (dissipated as heat/radiation during the redistribution)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-1",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.1",
+  "question": "The storage battery of a car has an emf of 12 V. If the internal resistance of the battery is 0.4 \u03a9, what is the maximum current that can be drawn from the battery?",
+  "solution": "I_max = 30 A",
+  "steps": [
+   "Maximum current is drawn when the external resistance is zero (short circuit), so all the emf drops across the internal resistance",
+   "I_max = \u03b5/r = 12/0.4 = 30 A"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-2",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.2",
+  "question": "A battery of emf 10 V and internal resistance 3 \u03a9 is connected to a resistor. If the current in the circuit is 0.5 A, what is the resistance of the resistor? What is the terminal voltage of the battery when the circuit is closed?",
+  "solution": "R = 17 \u03a9; terminal voltage = 8.5 V",
+  "steps": [
+   "Using \u03b5 = I(R + r): 10 = 0.5(R + 3) \u21d2 R + 3 = 20 \u21d2 R = 17 \u03a9",
+   "Terminal voltage V = \u03b5 \u2212 Ir = 10 \u2212 0.5\u00d73 = 10 \u2212 1.5 = 8.5 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-3",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.3",
+  "question": "At room temperature (27.0 \u00b0C) the resistance of a heating element is 100 \u03a9. What is the temperature of the element if the resistance is found to be 117 \u03a9, given that the temperature coefficient of the material of the resistor is 1.70 \u00d7 10\u207b\u2074 \u00b0C\u207b\u00b9.",
+  "solution": "T \u2248 1027 \u00b0C",
+  "steps": [
+   "Using R_T = R\u2080[1 + \u03b1(T \u2212 T\u2080)]",
+   "117 = 100[1 + 1.70\u00d710\u207b\u2074(T \u2212 27)]",
+   "1.17 = 1 + 1.70\u00d710\u207b\u2074(T\u221227) \u21d2 0.17 = 1.70\u00d710\u207b\u2074(T\u221227)",
+   "T \u2212 27 = 0.17/1.70\u00d710\u207b\u2074 = 1000 \u21d2 T \u2248 1027 \u00b0C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-4",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.4",
+  "question": "A negligibly small current is passed through a wire of length 15 m and uniform cross-section 6.0 \u00d7 10\u207b\u2077 m\u00b2, and its resistance is measured to be 5.0 \u03a9. What is the resistivity of the material at the temperature of the experiment?",
+  "solution": "\u03c1 = 2.0 \u00d7 10\u207b\u2077 \u03a9 m",
+  "steps": [
+   "Using R = \u03c1l/A \u21d2 \u03c1 = RA/l",
+   "\u03c1 = 5.0 \u00d7 6.0\u00d710\u207b\u2077 / 15 = 3.0\u00d710\u207b\u2076/15",
+   "\u03c1 = 2.0 \u00d7 10\u207b\u2077 \u03a9 m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-5",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.5",
+  "question": "A silver wire has a resistance of 2.1 \u03a9 at 27.5 \u00b0C, and a resistance of 2.7 \u03a9 at 100 \u00b0C. Determine the temperature coefficient of resistivity of silver.",
+  "solution": "\u03b1 \u2248 3.9 \u00d7 10\u207b\u00b3 \u00b0C\u207b\u00b9",
+  "steps": [
+   "Using R2 = R1[1 + \u03b1(T2 \u2212 T1)]",
+   "2.7 = 2.1[1 + \u03b1(100 \u2212 27.5)] \u21d2 2.7/2.1 = 1 + \u03b1(72.5)",
+   "1.2857 \u2212 1 = 72.5\u03b1 \u21d2 0.2857 = 72.5\u03b1",
+   "\u03b1 = 0.2857/72.5 \u2248 3.9\u00d710\u207b\u00b3 \u00b0C\u207b\u00b9"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-6",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.6",
+  "question": "A heating element using nichrome connected to a 230 V supply draws an initial current of 3.2 A which settles after a few seconds to a steady value of 2.8 A. What is the steady temperature of the heating element if the room temperature is 27.0 \u00b0C? Temperature coefficient of resistance of nichrome averaged over the temperature range involved is 1.70 \u00d7 10\u207b\u2074 \u00b0C\u207b\u00b9.",
+  "solution": "T \u2248 867 \u00b0C",
+  "steps": [
+   "Initial (cold) resistance: R\u2081 = V/I\u2081 = 230/3.2 = 71.875 \u03a9",
+   "Steady (hot) resistance: R\u2082 = V/I\u2082 = 230/2.8 = 82.14 \u03a9",
+   "Using R\u2082 = R\u2081[1 + \u03b1(T \u2212 T\u2081)]: 82.14 = 71.875[1 + 1.70\u00d710\u207b\u2074(T \u2212 27)]",
+   "82.14/71.875 = 1.1428 \u21d2 0.1428 = 1.70\u00d710\u207b\u2074(T \u2212 27)",
+   "T \u2212 27 = 0.1428/1.70\u00d710\u207b\u2074 \u2248 840 \u21d2 T \u2248 867 \u00b0C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-7",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.8",
+  "question": "A storage battery of emf 8.0 V and internal resistance 0.5 \u03a9 is being charged by a 120 V dc supply using a series resistor of 15.5 \u03a9. What is the terminal voltage of the battery during charging? What is the purpose of having a series resistor in the charging circuit?",
+  "solution": "Terminal voltage \u2248 11.5 V; the series resistor limits the charging current to a safe value.",
+  "steps": [
+   "During charging, current flows into the battery against its emf, so: I = (V_supply \u2212 \u03b5)/(R + r) = (120 \u2212 8)/(15.5 + 0.5) = 112/16 = 7 A",
+   "Terminal voltage of battery while charging: V = \u03b5 + Ir = 8 + 7\u00d70.5 = 8 + 3.5 = 11.5 V",
+   "Without the series resistor, the current would be I = (120\u22128)/0.5 = 224 A \u2014 dangerously high \u2014 so the resistor is essential to limit the current"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-current-electricity-8",
+  "chapter": "Current Electricity",
+  "exercise": "Exercises",
+  "number": "Q3.9",
+  "question": "The number density of free electrons in a copper conductor estimated in Example 3.1 is 8.5 \u00d7 10\u00b2\u2078 m\u207b\u00b3. How long does an electron take to drift from one end of a wire 3.0 m long to its other end? The area of cross-section of the wire is 2.0 \u00d7 10\u207b\u2076 m\u00b2 and it is carrying a current of 3.0 A.",
+  "solution": "t \u2248 2.7 \u00d7 10\u2074 s (about 7.5 hours)",
+  "steps": [
+   "Drift velocity: v_d = I/(nAe)",
+   "v_d = 3.0 / (8.5\u00d710\u00b2\u2078 \u00d7 2.0\u00d710\u207b\u2076 \u00d7 1.6\u00d710\u207b\u00b9\u2079) = 3.0 / (2.72\u00d710\u2074) \u2248 1.1\u00d710\u207b\u2074 m/s",
+   "Time to travel length l = 3.0 m: t = l/v_d = 3.0 / 1.1\u00d710\u207b\u2074 \u2248 2.7\u00d710\u2074 s \u2248 7.5 hours"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-1",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.1",
+  "question": "A circular coil of wire consisting of 100 turns, each of radius 8.0 cm carries a current of 0.40 A. What is the magnitude of the magnetic field B at the centre of the coil?",
+  "solution": "B \u2248 3.1 \u00d7 10\u207b\u2074 T",
+  "steps": [
+   "Field at the centre of a circular coil of N turns: B = \u03bc\u2080NI/(2R)",
+   "B = (4\u03c0\u00d710\u207b\u2077 \u00d7 100 \u00d7 0.40) / (2 \u00d7 0.08)",
+   "B = (5.03\u00d710\u207b\u2075)/(0.16) = \u03c0 \u00d7 10\u207b\u2074 T \u2248 3.1\u00d710\u207b\u2074 T"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-2",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.2",
+  "question": "A long straight wire carries a current of 35 A. What is the magnitude of the field B at a point 20 cm from the wire?",
+  "solution": "B = 3.5 \u00d7 10\u207b\u2075 T",
+  "steps": [
+   "Field due to a long straight wire: B = \u03bc\u2080I/(2\u03c0r)",
+   "B = (4\u03c0\u00d710\u207b\u2077 \u00d7 35) / (2\u03c0 \u00d7 0.20) = (2\u00d710\u207b\u2077 \u00d7 35)/0.20",
+   "B = 7\u00d710\u207b\u2076/0.20 = 3.5\u00d710\u207b\u2075 T"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-3",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.3",
+  "question": "A long straight wire in the horizontal plane carries a current of 50 A in north to south direction. Give the magnitude and direction of B at a point 2.5 m east of the wire.",
+  "solution": "B = 4 \u00d7 10\u207b\u2076 T, directed vertically upward",
+  "steps": [
+   "B = \u03bc\u2080I/(2\u03c0r) = (2\u00d710\u207b\u2077 \u00d7 50)/2.5 = 1\u00d710\u207b\u2075/2.5 = 4\u00d710\u207b\u2076 T",
+   "Using the right-hand rule for current flowing north to south, the field at a point to the east of the wire points vertically upward"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-4",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.4",
+  "question": "A horizontal overhead power line carries a current of 90 A in east to west direction. What is the magnitude and direction of the magnetic field due to the current 1.5 m below the line?",
+  "solution": "B = 1.2 \u00d7 10\u207b\u2075 T, directed towards the south",
+  "steps": [
+   "B = \u03bc\u2080I/(2\u03c0r) = (2\u00d710\u207b\u2077\u00d790)/1.5 = 1.8\u00d710\u207b\u2075/1.5 = 1.2\u00d710\u207b\u2075 T",
+   "For current flowing east to west, applying the right-hand rule, the field below the wire points towards the south"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-5",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.5",
+  "question": "What is the magnitude of magnetic force per unit length on a wire carrying a current of 8 A and making an angle of 30\u00ba with the direction of a uniform magnetic field of 0.15 T?",
+  "solution": "F/l = 0.6 N/m",
+  "steps": [
+   "Force per unit length: F/l = BI sin\u03b8",
+   "F/l = 0.15 \u00d7 8 \u00d7 sin30\u00b0 = 1.2 \u00d7 0.5",
+   "F/l = 0.6 N/m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-6",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.6",
+  "question": "A 3.0 cm wire carrying a current of 10 A is placed inside a solenoid perpendicular to its axis. The magnetic field inside the solenoid is given to be 0.27 T. What is the magnetic force on the wire?",
+  "solution": "F = 8.1 \u00d7 10\u207b\u00b2 N",
+  "steps": [
+   "Since the wire is perpendicular to B, F = BIl",
+   "F = 0.27 \u00d7 10 \u00d7 0.03",
+   "F = 8.1\u00d710\u207b\u00b2 N, with direction given by Fleming's left-hand rule"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-7",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.7",
+  "question": "Two long and parallel straight wires A and B carrying currents of 8.0 A and 5.0 A in the same direction are separated by a distance of 4.0 cm. Estimate the force on a 10 cm section of wire A.",
+  "solution": "F = 2 \u00d7 10\u207b\u2075 N, attractive (towards B)",
+  "steps": [
+   "Force per unit length between two parallel wires: F/l = \u03bc\u2080I\u2081I\u2082/(2\u03c0d)",
+   "F/l = (2\u00d710\u207b\u2077 \u00d7 8.0 \u00d7 5.0)/0.04 = (8\u00d710\u207b\u2076)/0.04 = 2\u00d710\u207b\u2074 N/m",
+   "Force on 10 cm (0.1 m) section: F = 2\u00d710\u207b\u2074 \u00d7 0.1 = 2\u00d710\u207b\u2075 N",
+   "Since the currents are in the same direction, the force is attractive, directed normal to A towards B"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-8",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.8",
+  "question": "A closely wound solenoid 80 cm long has 5 layers of windings of 400 turns each. The diameter of the solenoid is 1.8 cm. If the current carried is 8.0 A, estimate the magnitude of B inside the solenoid near its centre.",
+  "solution": "B \u2248 8\u03c0 \u00d7 10\u207b\u00b3 T \u2248 2.5 \u00d7 10\u207b\u00b2 T",
+  "steps": [
+   "Total number of turns N = 5 \u00d7 400 = 2000; length l = 0.80 m",
+   "Turns per unit length n = N/l = 2000/0.80 = 2500 turns/m",
+   "Field inside a long solenoid: B = \u03bc\u2080nI = 4\u03c0\u00d710\u207b\u2077 \u00d7 2500 \u00d7 8.0",
+   "B = 4\u03c0\u00d710\u207b\u2077 \u00d7 20000 = 8\u03c0\u00d710\u207b\u00b3 \u2248 2.5\u00d710\u207b\u00b2 T"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-9",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.9",
+  "question": "A square coil of side 10 cm consists of 20 turns and carries a current of 12 A. The coil is suspended vertically and the normal to the plane of the coil makes an angle of 30\u00ba with the direction of a uniform horizontal magnetic field of magnitude 0.80 T. What is the magnitude of torque experienced by the coil?",
+  "solution": "\u03c4 = 0.96 N m",
+  "steps": [
+   "Torque on a current loop: \u03c4 = NIAB sin\u03b8, where \u03b8 is the angle between the normal and B",
+   "A = (0.1)\u00b2 = 0.01 m\u00b2",
+   "\u03c4 = 20 \u00d7 12 \u00d7 0.01 \u00d7 0.80 \u00d7 sin30\u00b0 = 20\u00d712\u00d70.01\u00d70.80\u00d70.5",
+   "\u03c4 = 0.96 N m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-10",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.10",
+  "question": "Two moving coil meters, M1 and M2 have the following particulars:\nR1 = 10 \u03a9, N1 = 30, A1 = 3.6 \u00d7 10\u207b\u00b3 m\u00b2, B1 = 0.25 T\nR2 = 14 \u03a9, N2 = 42, A2 = 1.8 \u00d7 10\u207b\u00b3 m\u00b2, B2 = 0.50 T\n(The spring constants are identical for the two meters).\nDetermine the ratio of (a) current sensitivity and (b) voltage sensitivity of M2 and M1.",
+  "solution": "(a) Current sensitivity ratio (M2/M1) = 1.4\n(b) Voltage sensitivity ratio (M2/M1) = 1",
+  "steps": [
+   "Current sensitivity \u221d NAB/k (k, the spring constant, is the same for both)",
+   "Ratio = (N2A2B2)/(N1A1B1) = (42\u00d71.8\u00d710\u207b\u00b3\u00d70.50)/(30\u00d73.6\u00d710\u207b\u00b3\u00d70.25)",
+   "= (0.0378)/(0.027) = 1.4",
+   "Voltage sensitivity \u221d NAB/(kR)",
+   "Ratio = [(N2A2B2)/(N1A1B1)] \u00d7 (R1/R2) = 1.4 \u00d7 (10/14) = 1.4 \u00d7 0.714 \u2248 1"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-11",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.11",
+  "question": "In a chamber, a uniform magnetic field of 6.5 G (1 G = 10\u207b\u2074 T) is maintained. An electron is shot into the field with a speed of 4.8 \u00d7 10\u2076 m s\u207b\u00b9 normal to the field. Explain why the path of the electron is a circle. Determine the radius of the circular orbit. (e = 1.6 \u00d7 10\u207b\u00b9\u2079 C, m\u2091 = 9.1\u00d710\u207b\u00b3\u00b9 kg)",
+  "solution": "r \u2248 4.2 cm",
+  "steps": [
+   "Since the velocity is perpendicular to B, the magnetic force qvB always acts perpendicular to velocity, providing exactly the centripetal force needed for circular motion, with no component along the velocity to change its speed",
+   "Setting qvB = mv\u00b2/r \u21d2 r = mv/(qB)",
+   "B = 6.5\u00d710\u207b\u2074 T",
+   "r = (9.1\u00d710\u207b\u00b3\u00b9 \u00d7 4.8\u00d710\u2076) / (1.6\u00d710\u207b\u00b9\u2079 \u00d7 6.5\u00d710\u207b\u2074) = (4.37\u00d710\u207b\u00b2\u2074)/(1.04\u00d710\u207b\u00b2\u00b2)",
+   "r \u2248 0.042 m = 4.2 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-12",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.12",
+  "question": "In Exercise 4.11 obtain the frequency of revolution of the electron in its circular orbit. Does the answer depend on the speed of the electron? Explain.",
+  "solution": "f \u2248 18 MHz; independent of speed",
+  "steps": [
+   "Period of revolution: T = 2\u03c0r/v = 2\u03c0m/(qB), so frequency f = qB/(2\u03c0m)",
+   "f = (1.6\u00d710\u207b\u00b9\u2079 \u00d7 6.5\u00d710\u207b\u2074)/(2\u03c0 \u00d7 9.1\u00d710\u207b\u00b3\u00b9) = (1.04\u00d710\u207b\u00b2\u00b2)/(5.72\u00d710\u207b\u00b3\u2070)",
+   "f \u2248 1.8\u00d710\u2077 Hz = 18 MHz",
+   "Since both r and v cancel out in f = qB/2\u03c0m, the cyclotron frequency depends only on q, B and m \u2014 not on the speed of the electron"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-moving-charges-13",
+  "chapter": "Moving Charges and Magnetism",
+  "exercise": "Exercises",
+  "number": "Q4.13",
+  "question": "(a) A circular coil of 30 turns and radius 8.0 cm carrying a current of 6.0 A is suspended vertically in a uniform horizontal magnetic field of magnitude 1.0 T. The field lines make an angle of 60\u00b0 with the normal of the coil. Calculate the magnitude of the counter torque that must be applied to prevent the coil from turning.\n(b) Would your answer change, if the circular coil in (a) were replaced by a planar coil of some irregular shape that encloses the same area? (All other particulars are also unaltered.)",
+  "solution": "(a) \u03c4 \u2248 3.1 N m\n(b) No, the answer is unchanged \u2014 the formula \u03c4 = NIA\u00d7B depends only on the enclosed area, not on the shape of the loop.",
+  "steps": [
+   "A = \u03c0r\u00b2 = \u03c0(0.08)\u00b2 = 0.0201 m\u00b2",
+   "\u03c4 = NIAB sin\u03b8 = 30 \u00d7 6.0 \u00d7 0.0201 \u00d7 1.0 \u00d7 sin60\u00b0",
+   "\u03c4 = 30\u00d76.0\u00d70.0201\u00d70.866 \u2248 3.1 N m",
+   "(b) Torque on a planar current loop \u03c4 = NIA\u00d7B is valid for any shape of loop enclosing area A, so an irregular loop of the same area experiences the same torque"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-1",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.1",
+  "question": "A short bar magnet placed with its axis at 30\u00b0 with a uniform external magnetic field of 0.25 T experiences a torque of magnitude equal to 4.5 \u00d7 10\u207b\u00b2 J. What is the magnitude of magnetic moment of the magnet?",
+  "solution": "m = 0.36 J/T",
+  "steps": [
+   "\u03c4 = mB sin\u03b8 \u21d2 m = \u03c4/(B sin\u03b8)",
+   "m = 4.5\u00d710\u207b\u00b2 / (0.25 \u00d7 sin30\u00b0) = 4.5\u00d710\u207b\u00b2 / (0.25\u00d70.5)",
+   "m = 4.5\u00d710\u207b\u00b2 / 0.125 = 0.36 J T\u207b\u00b9"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-2",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.2",
+  "question": "A short bar magnet of magnetic moment m = 0.32 J T\u207b\u00b9 is placed in a uniform magnetic field of 0.15 T. If the bar is free to rotate in the plane of the field, which orientation would correspond to its (a) stable, and (b) unstable equilibrium? What is the potential energy of the magnet in each case?",
+  "solution": "(a) Stable: m parallel to B, U = \u20134.8 \u00d7 10\u207b\u00b2 J\n(b) Unstable: m antiparallel to B, U = +4.8 \u00d7 10\u207b\u00b2 J",
+  "steps": [
+   "Potential energy of a dipole: U = \u2013mB cos\u03b8",
+   "(a) Stable equilibrium is when m is parallel to B (\u03b8=0\u00b0): U = \u2013mB = \u20130.32\u00d70.15 = \u20134.8\u00d710\u207b\u00b2 J",
+   "(b) Unstable equilibrium is when m is antiparallel to B (\u03b8=180\u00b0): U = +mB = +4.8\u00d710\u207b\u00b2 J"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-3",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.3",
+  "question": "A closely wound solenoid of 800 turns and area of cross section 2.5 \u00d7 10\u207b\u2074 m\u00b2 carries a current of 3.0 A. Explain the sense in which the solenoid acts like a bar magnet. What is its associated magnetic moment?",
+  "solution": "m = 0.6 J/T, directed along the solenoid's axis (as given by the right-hand rule)",
+  "steps": [
+   "A current-carrying solenoid produces a magnetic field pattern outside identical to that of a bar magnet, with one end behaving as a north pole and the other as a south pole",
+   "Magnetic moment of a solenoid: m = NIA",
+   "m = 800 \u00d7 3.0 \u00d7 2.5\u00d710\u207b\u2074 = 0.6 J T\u207b\u00b9"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-4",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.4",
+  "question": "If the solenoid in Exercise 5.3 is free to turn about the vertical direction and a uniform horizontal magnetic field of 0.25 T is applied, what is the magnitude of torque on the solenoid when its axis makes an angle of 30\u00b0 with the direction of applied field?",
+  "solution": "\u03c4 = 7.5 \u00d7 10\u207b\u00b2 N m",
+  "steps": [
+   "\u03c4 = mB sin\u03b8 = 0.6 \u00d7 0.25 \u00d7 sin30\u00b0",
+   "\u03c4 = 0.6 \u00d7 0.25 \u00d7 0.5",
+   "\u03c4 = 7.5\u00d710\u207b\u00b2 N m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-5",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.5",
+  "question": "A bar magnet of magnetic moment 1.5 J T\u207b\u00b9 lies aligned with the direction of a uniform magnetic field of 0.22 T.\n(a) What is the amount of work required by an external torque to turn the magnet so as to align its magnetic moment: (i) normal to the field direction, (ii) opposite to the field direction?\n(b) What is the torque on the magnet in cases (i) and (ii)?",
+  "solution": "(a) (i) W = 0.33 J  (ii) W = 0.66 J\n(b) (i) \u03c4 = 0.33 N m, tending to align m along B  (ii) \u03c4 = 0",
+  "steps": [
+   "Work done in rotating the dipole from \u03b81 to \u03b82: W = mB(cos\u03b81 \u2212 cos\u03b82)",
+   "(a)(i) From \u03b81=0\u00b0 to \u03b82=90\u00b0: W = mB(cos0 \u2212 cos90) = 1.5\u00d70.22\u00d7(1\u22120) = 0.33 J",
+   "(a)(ii) From \u03b81=0\u00b0 to \u03b82=180\u00b0: W = mB(cos0 \u2212 cos180) = 1.5\u00d70.22\u00d7(1\u2212(\u22121)) = 1.5\u00d70.22\u00d72 = 0.66 J",
+   "(b)(i) Torque at \u03b8=90\u00b0: \u03c4 = mB sin90\u00b0 = 1.5\u00d70.22\u00d71 = 0.33 N m, directed to align m along B",
+   "(b)(ii) Torque at \u03b8=180\u00b0: \u03c4 = mB sin180\u00b0 = 0 (this is an equilibrium, though unstable, position)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-6",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.6",
+  "question": "A closely wound solenoid of 2000 turns and area of cross-section 1.6 \u00d7 10\u207b\u2074 m\u00b2, carrying a current of 4.0 A, is suspended through its centre allowing it to turn in a horizontal plane.\n(a) What is the magnetic moment associated with the solenoid?\n(b) What is the force and torque on the solenoid if a uniform horizontal magnetic field of 7.5 \u00d7 10\u207b\u00b2 T is set up at an angle of 30\u00b0 with the axis of the solenoid?",
+  "solution": "(a) m = 1.28 A m\u00b2\n(b) Force = 0 (uniform field); torque \u2248 0.048 N m, tending to align the solenoid's axis along B",
+  "steps": [
+   "(a) m = NIA = 2000 \u00d7 4.0 \u00d7 1.6\u00d710\u207b\u2074 = 1.28 A m\u00b2",
+   "(b) In a uniform field, the net force on a current loop / magnetic dipole is always zero \u2014 only a torque acts",
+   "\u03c4 = mB sin\u03b8 = 1.28 \u00d7 7.5\u00d710\u207b\u00b2 \u00d7 sin30\u00b0 = 1.28\u00d70.075\u00d70.5",
+   "\u03c4 \u2248 0.048 N m, in the direction that tends to align the solenoid's magnetic moment along B"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-magnetism-matter-7",
+  "chapter": "Magnetism and Matter",
+  "exercise": "Exercises",
+  "number": "Q5.7",
+  "question": "A short bar magnet has a magnetic moment of 0.48 J T\u207b\u00b9. Give the direction and magnitude of the magnetic field produced by the magnet at a distance of 10 cm from the centre of the magnet on (a) the axis, (b) the equatorial lines (normal bisector) of the magnet.",
+  "solution": "(a) B_axial \u2248 0.96 G, along the direction of m\n(b) B_equatorial \u2248 0.48 G, directed opposite to m",
+  "steps": [
+   "Axial field of a short dipole: B_axial = (\u03bc\u2080/4\u03c0) \u00d7 2m/r\u00b3",
+   "B_axial = 10\u207b\u2077 \u00d7 2\u00d70.48/(0.1)\u00b3 = 10\u207b\u2077 \u00d7 0.96/0.001 = 10\u207b\u2077 \u00d7 960",
+   "B_axial \u2248 9.6\u00d710\u207b\u2075 T = 0.96 G, along the axis in the direction of m",
+   "Equatorial field: B_eq = (\u03bc\u2080/4\u03c0) \u00d7 m/r\u00b3 = 10\u207b\u2077 \u00d7 0.48/0.001 = 4.8\u00d710\u207b\u2075 T = 0.48 G",
+   "The equatorial field points opposite to the direction of m (antiparallel to the dipole moment)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-1",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.3",
+  "question": "A long solenoid with 15 turns per cm has a small loop of area 2.0 cm\u00b2 placed inside the solenoid normal to its axis. If the current carried by the solenoid changes steadily from 2.0 A to 4.0 A in 0.1 s, what is the induced emf in the loop while the current is changing?",
+  "solution": "emf = 6.0 \u00d7 10\u207b\u2076 V",
+  "steps": [
+   "Turns per unit length: n = 15 turns/cm = 1500 turns/m",
+   "Field inside solenoid: B = \u03bc\u2080nI; rate of change: dB/dt = \u03bc\u2080n(dI/dt)",
+   "dI/dt = (4.0\u22122.0)/0.1 = 20 A/s",
+   "dB/dt = 4\u03c0\u00d710\u207b\u2077 \u00d7 1500 \u00d7 20 = 3.77\u00d710\u207b\u00b2 T/s",
+   "Induced emf = A \u00d7 dB/dt = 2.0\u00d710\u207b\u2074 \u00d7 3.77\u00d710\u207b\u00b2 \u2248 7.5\u00d710\u207b\u2076 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-2",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.4",
+  "question": "A rectangular wire loop of sides 8 cm and 2 cm with a small cut is moving out of a region of uniform magnetic field of magnitude 0.3 T directed normal to the loop. What is the emf developed across the cut if the velocity of the loop is 1 cm s\u207b\u00b9 in a direction normal to the (a) longer side, (b) shorter side of the loop? For how long does the induced voltage last in each case?",
+  "solution": "(a) emf = 2.4 \u00d7 10\u207b\u2074 V, lasting 2 s\n(b) emf = 0.6 \u00d7 10\u207b\u2074 V, lasting 8 s",
+  "steps": [
+   "Motional emf: e = Blv, where l is the length of the side sweeping across the field (i.e. the side lying across the direction of motion)",
+   "(a) Moving normal to the longer side means the loop travels along its 2 cm dimension, while the full 8 cm (0.08 m) side sweeps the field: e = Blv = 0.3 \u00d7 0.08 \u00d7 0.01 = 2.4\u00d710\u207b\u2074 V",
+   "Time to leave the field = (distance travelled along motion, 2 cm)/v = 0.02/0.01 = 2 s",
+   "(b) Moving normal to the shorter side: e = Blv = 0.3 \u00d7 0.02 \u00d7 0.01 = 0.6\u00d710\u207b\u2074 V",
+   "Time to leave the field = 0.08/0.01 = 8 s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-3",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.5",
+  "question": "A 1.0 m long metallic rod is rotated with an angular frequency of 400 rad s\u207b\u00b9 about an axis normal to the rod passing through its one end. The other end of the rod is in contact with a circular metallic ring. A constant and uniform magnetic field of 0.5 T parallel to the axis exists everywhere. Calculate the emf developed between the centre and the ring.",
+  "solution": "emf = 100 V",
+  "steps": [
+   "For a rod rotating about one end in a field parallel to the rotation axis, the emf is e = \u00bdB\u03c9l\u00b2",
+   "e = \u00bd \u00d7 0.5 \u00d7 400 \u00d7 (1.0)\u00b2",
+   "e = \u00bd \u00d7 0.5 \u00d7 400 = 100 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-4",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.6",
+  "question": "A horizontal straight wire 10 m long extending from east to west is falling with a speed of 5.0 m s\u207b\u00b9, at right angles to the horizontal component of the earth's magnetic field, 0.30 \u00d7 10\u207b\u2074 Wb m\u207b\u00b2.\n(a) What is the instantaneous value of the emf induced in the wire?\n(b) What is the direction of the emf?\n(c) Which end of the wire is at the higher electrical potential?",
+  "solution": "(a) emf = 1.5 \u00d7 10\u207b\u00b3 V\n(b) The induced current (emf) drives from west to east inside the wire\n(c) The eastern end is at higher potential",
+  "steps": [
+   "Motional emf: e = Blv = 0.30\u00d710\u207b\u2074 \u00d7 10 \u00d7 5.0",
+   "e = 1.5\u00d710\u207b\u00b3 V",
+   "Using the right-hand (motional emf) rule F = qv\u00d7B with the wire falling and B horizontal northward, the force on positive charges in the wire is towards the east, so conventional current inside the wire (acting as the source) flows west to east",
+   "Since positive charge accumulates at the east end, that end is at the higher potential"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-5",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.7",
+  "question": "Current in a circuit falls from 5.0 A to 0.0 A in 0.1 s. If an average emf of 200 V is induced, give an estimate of the self-inductance of the circuit.",
+  "solution": "L = 4 H",
+  "steps": [
+   "e = L(dI/dt) \u21d2 L = e/(dI/dt)",
+   "dI/dt = (5.0\u22120)/0.1 = 50 A/s",
+   "L = 200/50 = 4 H"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-emi-6",
+  "chapter": "Electromagnetic Induction",
+  "exercise": "Exercises",
+  "number": "Q6.8",
+  "question": "A pair of adjacent coils has a mutual inductance of 1.5 H. If the current in one coil changes from 0 to 20 A in 0.5 s, what is the change of flux linkage with the other coil?",
+  "solution": "\u0394(flux linkage) = 30 Wb",
+  "steps": [
+   "Mutual inductance relation: change in flux linkage in coil 2 = M \u00d7 \u0394I in coil 1",
+   "\u0394(N\u2082\u03a6\u2082) = M \u00d7 \u0394I\u2081 = 1.5 \u00d7 (20 \u2212 0)",
+   "= 1.5 \u00d7 20 = 30 Wb"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-1",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.1",
+  "question": "A 100 \u03a9 resistor is connected to a 220 V, 50 Hz ac supply.\n(a) What is the rms value of current in the circuit?\n(b) What is the net power consumed over a full cycle?",
+  "solution": "(a) I_rms = 2.2 A\n(b) P = 484 W",
+  "steps": [
+   "(a) For a pure resistor, I_rms = V_rms/R = 220/100 = 2.2 A",
+   "(b) Average power: P = V_rms \u00d7 I_rms = 220 \u00d7 2.2 = 484 W"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-2",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.2",
+  "question": "(a) The peak voltage of an ac supply is 300 V. What is the rms voltage?\n(b) The rms value of current in an ac circuit is 10 A. What is the peak current?",
+  "solution": "(a) V_rms \u2248 212.1 V\n(b) I_peak \u2248 14.1 A",
+  "steps": [
+   "(a) V_rms = V\u2080/\u221a2 = 300/1.414 \u2248 212.1 V",
+   "(b) I\u2080 = I_rms \u00d7 \u221a2 = 10 \u00d7 1.414 \u2248 14.1 A"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-3",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.3",
+  "question": "A 44 mH inductor is connected to 220 V, 50 Hz ac supply. Determine the rms value of the current in the circuit.",
+  "solution": "I_rms \u2248 15.9 A",
+  "steps": [
+   "Inductive reactance: X_L = \u03c9L = 2\u03c0fL = 2\u03c0 \u00d7 50 \u00d7 44\u00d710\u207b\u00b3",
+   "X_L = 2\u03c0 \u00d7 50 \u00d7 0.044 \u2248 13.83 \u03a9",
+   "I_rms = V_rms/X_L = 220/13.83 \u2248 15.9 A"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-4",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.4",
+  "question": "A 60 \u03bcF capacitor is connected to a 110 V, 60 Hz ac supply. Determine the rms value of the current in the circuit.",
+  "solution": "I_rms \u2248 2.49 A",
+  "steps": [
+   "Capacitive reactance: X_C = 1/(\u03c9C) = 1/(2\u03c0fC) = 1/(2\u03c0\u00d760\u00d760\u00d710\u207b\u2076)",
+   "X_C = 1/(2\u03c0\u00d760\u00d760\u00d710\u207b\u2076) \u2248 44.2 \u03a9",
+   "I_rms = V_rms/X_C = 110/44.2 \u2248 2.49 A"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-5",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.5",
+  "question": "In Exercises 7.3 and 7.4, what is the net power absorbed by each circuit over a complete cycle. Explain your answer.",
+  "solution": "Net power absorbed = 0 in both cases",
+  "steps": [
+   "In a purely inductive or purely capacitive ac circuit, the current is 90\u00b0 out of phase with the voltage",
+   "Average power P = V_rms I_rms cos\u03c6, and cos90\u00b0 = 0, so the average power over a complete cycle is zero",
+   "Physically, energy is alternately stored in the inductor's magnetic field (or capacitor's electric field) and returned to the source \u2014 none is dissipated"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-6",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.6",
+  "question": "A charged 30 \u03bcF capacitor is connected to a 27 mH inductor. What is the angular frequency of free oscillations of the circuit?",
+  "solution": "\u03c9 \u2248 1.1 \u00d7 10\u00b3 rad/s",
+  "steps": [
+   "For an LC circuit, angular frequency of free oscillation: \u03c9 = 1/\u221a(LC)",
+   "LC = 27\u00d710\u207b\u00b3 \u00d7 30\u00d710\u207b\u2076 = 8.1\u00d710\u207b\u2077",
+   "\u03c9 = 1/\u221a(8.1\u00d710\u207b\u2077) = 1/(9.0\u00d710\u207b\u2074) \u2248 1.1\u00d710\u00b3 rad/s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-7",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.7",
+  "question": "A series LCR circuit with R = 20 \u03a9, L = 1.5 H and C = 35 \u03bcF is connected to a variable-frequency 200 V ac supply. When the frequency of the supply equals the natural frequency of the circuit, what is the average power transferred to the circuit in one complete cycle?",
+  "solution": "P = 2000 W",
+  "steps": [
+   "At resonance, X_L = X_C so the impedance is purely resistive: Z = R",
+   "I_rms = V_rms/R = 200/20 = 10 A",
+   "Average power at resonance: P = V_rms I_rms = 200 \u00d7 10 = 2000 W (equivalently I\u00b2R = 10\u00b2\u00d720 = 2000 W)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ac-8",
+  "chapter": "Alternating Current",
+  "exercise": "Exercises",
+  "number": "Q7.8",
+  "question": "A series LCR circuit connected to a variable frequency 230 V source, with L = 5.0 H, C = 80 \u03bcF, R = 40 \u03a9.\n(a) Determine the source frequency which drives the circuit in resonance.\n(b) Obtain the impedance of the circuit and the amplitude of current at the resonating frequency.\n(c) Determine the rms potential drops across the three elements of the circuit. Show that the potential drop across the LC combination is zero at the resonating frequency.",
+  "solution": "(a) \u03c9\u2080 = 50 rad/s\n(b) Z = R = 40 \u03a9, I\u2080 \u2248 8.1 A\n(c) V_L(rms) \u2248 1437.5 V, V_C(rms) \u2248 1437.5 V, V_R(rms) = 230 V; V_L and V_C are equal and opposite so the net LC drop is zero",
+  "steps": [
+   "(a) Resonant angular frequency: \u03c9\u2080 = 1/\u221a(LC) = 1/\u221a(5.0 \u00d7 80\u00d710\u207b\u2076) = 1/\u221a(4\u00d710\u207b\u2074) = 1/0.02 = 50 rad/s",
+   "(b) At resonance, Z = R = 40 \u03a9. I_rms = V_rms/Z = 230/40 = 5.75 A; peak current I\u2080 = I_rms\u00d7\u221a2 \u2248 8.1 A",
+   "(c) X_L = \u03c9L = 50\u00d75.0 = 250 \u03a9; X_C = 1/(\u03c9C) = 1/(50\u00d780\u00d710\u207b\u2076) = 250 \u03a9 (equal, confirming resonance)",
+   "V_R(rms) = I_rms \u00d7 R = 5.75\u00d740 = 230 V; V_L(rms) = I_rms \u00d7 X_L = 5.75\u00d7250 \u2248 1437.5 V; V_C(rms) = I_rms \u00d7 X_C \u2248 1437.5 V",
+   "V_L and V_C are equal in magnitude but 180\u00b0 out of phase (opposite in the phasor diagram), so their algebraic sum (the drop across the LC series combination) is zero, even though each individually is much larger than the source voltage \u2014 this is characteristic of resonance"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-1",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.1",
+  "question": "Figure 8.5 shows a capacitor made of two circular plates each of radius 12 cm, and separated by 5.0 cm. The capacitor is being charged by an external source (not shown in the figure). The charging current is constant and equal to 0.15 A.\n(a) Calculate the capacitance and the rate of change of potential difference between the plates.\n(b) Obtain the displacement current across the plates.\n(c) Is Kirchhoff's first rule (junction rule) valid at each plate of the capacitor? Explain.",
+  "solution": "(a) C \u2248 8.0 pF, dV/dt \u2248 1.87 \u00d7 10\u00b9\u2070 V/s\n(b) Displacement current I_d = 0.15 A\n(c) Yes, if by 'current' we mean the sum of conduction and displacement currents at the junction",
+  "steps": [
+   "(a) C = \u03b5\u2080A/d = 8.854\u00d710\u207b\u00b9\u00b2 \u00d7 \u03c0(0.12)\u00b2/0.05 = 8.854\u00d710\u207b\u00b9\u00b2 \u00d7 0.0452/0.05 \u2248 8.0\u00d710\u207b\u00b9\u00b2 F = 8.0 pF",
+   "Since I = C(dV/dt): dV/dt = I/C = 0.15/8.0\u00d710\u207b\u00b9\u00b2 \u2248 1.87\u00d710\u00b9\u2070 V/s",
+   "(b) Displacement current I_d = \u03b5\u2080 (d\u03a6_E/dt). Since \u03a6_E = Q/\u03b5\u2080 (charge on plate/\u03b5\u2080), I_d = dQ/dt = I (the conduction current), so I_d = 0.15 A",
+   "(c) The conduction current stops at the plates (no charge crosses the gap), but Maxwell's displacement current continues 'through' the gap; only when both conduction and displacement currents are counted together does the total current remain continuous, so Kirchhoff's junction rule holds in that generalized sense"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-2",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.2",
+  "question": "A parallel plate capacitor (Fig. 8.6) made of circular plates each of radius R = 6.0 cm has a capacitance C = 100 pF. The capacitor is connected to a 230 V ac supply with a (angular) frequency of 300 rad s\u207b\u00b9.\n(a) What is the rms value of the conduction current?\n(b) Is the conduction current equal to the displacement current?\n(c) Determine the amplitude of B at a point 3.0 cm from the axis between the plates.",
+  "solution": "(a) I_rms \u2248 6.9 \u03bcA\n(b) Yes, the conduction current equals the displacement current at every instant\n(c) B\u2080 \u2248 1.63 \u00d7 10\u207b\u00b9\u00b9 T",
+  "steps": [
+   "(a) I_rms = V_rms \u00d7 \u03c9C = 230 \u00d7 300 \u00d7 100\u00d710\u207b\u00b9\u00b2 = 230\u00d7300\u00d710\u207b\u00b9\u2070 \u2248 6.9\u00d710\u207b\u2076 A = 6.9 \u03bcA",
+   "(b) The displacement current between the plates equals the conduction current feeding the capacitor at every instant (i_d = i), including for a time-varying (oscillating) current",
+   "(c) Between the plates, B at radius r<R is given by B = (\u03bc\u2080r/2\u03c0R\u00b2) \u00d7 I_d0, where I_d0 is the peak displacement current",
+   "I\u2080 = I_rms\u00d7\u221a2 \u2248 9.76 \u03bcA",
+   "B\u2080 = (\u03bc\u2080 \u00d7 0.03 \u00d7 9.76\u00d710\u207b\u2076)/(2\u03c0 \u00d7 (0.06)\u00b2) \u2248 1.63\u00d710\u207b\u00b9\u00b9 T"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-3",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.3",
+  "question": "What physical quantity is the same for X-rays of wavelength 10\u207b\u00b9\u2070 m, red light of wavelength 6800 \u00c5 and radiowaves of wavelength 500 m?",
+  "solution": "Their speed in vacuum is the same: c = 3 \u00d7 10\u2078 m/s",
+  "steps": [
+   "X-rays, visible light and radio waves are all part of the electromagnetic spectrum",
+   "All electromagnetic waves travel through vacuum at the same speed c = 3\u00d710\u2078 m/s, regardless of their wavelength or frequency"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-4",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.4",
+  "question": "A plane electromagnetic wave travels in vacuum along z-direction. What can you say about the directions of its electric and magnetic field vectors? If the frequency of the wave is 30 MHz, what is its wavelength?",
+  "solution": "E and B lie in the x-y plane, mutually perpendicular to each other and to the direction of propagation; \u03bb = 10 m",
+  "steps": [
+   "For a plane EM wave, E, B and the direction of propagation are mutually perpendicular; since propagation is along z, both E and B lie in the x-y plane (and are perpendicular to each other within that plane)",
+   "\u03bb = c/f = 3\u00d710\u2078/30\u00d710\u2076 = 10 m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-5",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.5",
+  "question": "A radio can tune in to any station in the 7.5 MHz to 12 MHz band. What is the corresponding wavelength band?",
+  "solution": "\u03bb ranges from 25 m to 40 m",
+  "steps": [
+   "\u03bb = c/f",
+   "At f = 7.5 MHz: \u03bb = 3\u00d710\u2078/7.5\u00d710\u2076 = 40 m",
+   "At f = 12 MHz: \u03bb = 3\u00d710\u2078/12\u00d710\u2076 = 25 m",
+   "So the wavelength band is 25 m to 40 m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-6",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.6",
+  "question": "A charged particle oscillates about its mean equilibrium position with a frequency of 10\u2079 Hz. What is the frequency of the electromagnetic waves produced by the oscillator?",
+  "solution": "f = 10\u2079 Hz (same as the oscillator)",
+  "steps": [
+   "An oscillating charge radiates electromagnetic waves at the same frequency as its own oscillation",
+   "So the EM wave frequency equals the charge's oscillation frequency, 10\u2079 Hz"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-7",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.7",
+  "question": "The amplitude of the magnetic field part of a harmonic electromagnetic wave in vacuum is B\u2080 = 510 nT. What is the amplitude of the electric field part of the wave?",
+  "solution": "E\u2080 \u2248 153 N/C",
+  "steps": [
+   "In an EM wave, E\u2080 = cB\u2080",
+   "E\u2080 = 3\u00d710\u2078 \u00d7 510\u00d710\u207b\u2079",
+   "E\u2080 = 153 N/C"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-8",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.8",
+  "question": "Suppose that the electric field amplitude of an electromagnetic wave is E\u2080 = 120 N/C and that its frequency is \u03bd = 50.0 MHz. (a) Determine, B\u2080, \u03c9, k, and \u03bb. (b) Find expressions for E and B.",
+  "solution": "(a) B\u2080 = 400 nT, \u03c9 \u2248 3.14 \u00d7 10\u2078 rad/s, k \u2248 1.05 rad/m, \u03bb = 6.00 m\n(b) E = 120 sin[(1.05 rad/m)x \u2212 (3.14\u00d710\u2078 rad/s)t] \u0135 N/C; B = 400\u00d710\u207b\u2079 sin[(1.05 rad/m)x \u2212 (3.14\u00d710\u2078 rad/s)t] k\u0302 T",
+  "steps": [
+   "B\u2080 = E\u2080/c = 120/3\u00d710\u2078 = 400\u00d710\u207b\u2079 T = 400 nT",
+   "\u03c9 = 2\u03c0\u03bd = 2\u03c0\u00d750\u00d710\u2076 \u2248 3.14\u00d710\u2078 rad/s",
+   "\u03bb = c/\u03bd = 3\u00d710\u2078/50\u00d710\u2076 = 6.00 m",
+   "k = 2\u03c0/\u03bb = 2\u03c0/6.00 \u2248 1.05 rad/m",
+   "For a wave along x with E along y (as a representative choice) and B along z: E = E\u2080 sin(kx\u2212\u03c9t) \u0135, B = B\u2080 sin(kx\u2212\u03c9t) k\u0302"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-9",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.9",
+  "question": "The terminology of different parts of the electromagnetic spectrum is given in the text. Use the formula E = h\u03bd (for energy of a quantum of radiation: photon) and obtain the photon energy in units of eV for different parts of the electromagnetic spectrum. In what way are the different scales of photon energies that you obtain related to the sources of electromagnetic radiation?",
+  "solution": "Photon energy for \u03bb = 1 m is about 1.24 \u00d7 10\u207b\u2076 eV; scaling by 1/\u03bb gives the energies for other wavelengths \u2014 e.g. \u03bb = 10\u207b\u00b9\u00b2 m (\u03b3-rays) gives about 1.24 MeV, and \u03bb = 5\u00d710\u207b\u2077 m (visible light) gives about 2.5 eV. The scale of photon energy reflects the spacing of the energy levels of the source: nuclear transitions (\u03b3-rays) involve MeV-scale spacings, atomic/molecular transitions (visible/UV/IR) involve eV-scale spacings.",
+  "steps": [
+   "Photon energy: E = hc/\u03bb (in joules), then convert to eV by dividing by 1.6\u00d710\u207b\u00b9\u2079",
+   "For \u03bb = 1 m: E = (6.63\u00d710\u207b\u00b3\u2074 \u00d7 3\u00d710\u2078)/1 = 1.989\u00d710\u207b\u00b2\u2075 J = 1.989\u00d710\u207b\u00b2\u2075/1.6\u00d710\u207b\u00b9\u2079 \u2248 1.24\u00d710\u207b\u2076 eV",
+   "Since E \u221d 1/\u03bb, energies for other wavelengths scale accordingly by powers of ten from this reference value",
+   "For \u03bb = 10\u207b\u00b9\u00b2 m (\u03b3-rays): E \u2248 1.24\u00d710\u2076 eV = 1.24 MeV \u2014 such photon energies match the spacing of nuclear energy levels",
+   "For \u03bb = 5\u00d710\u207b\u2077 m (visible light): E \u2248 2.5 eV \u2014 this matches the spacing of atomic/molecular electronic energy levels",
+   "Thus the photon energy scale directly reflects the characteristic energy-level spacing of whatever physical process (nuclear, atomic, or lower-energy) produces that type of radiation"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-em-waves-10",
+  "chapter": "Electromagnetic Waves",
+  "exercise": "Exercises",
+  "number": "Q8.10",
+  "question": "In a plane electromagnetic wave, the electric field oscillates sinusoidally at a frequency of 2.0 \u00d7 10\u00b9\u2070 Hz and amplitude 48 V m\u207b\u00b9.\n(a) What is the wavelength of the wave?\n(b) What is the amplitude of the oscillating magnetic field?\n(c) Show that the average energy density of the E field equals the average energy density of the B field. [c = 3 \u00d7 10\u2078 m s\u207b\u00b9.]",
+  "solution": "(a) \u03bb = 1.5 \u00d7 10\u207b\u00b2 m\n(b) B\u2080 \u2248 1.6 \u00d7 10\u207b\u2077 T\n(c) u_E = u_B, shown using E = cB and c = 1/\u221a(\u03bc\u2080\u03b5\u2080)",
+  "steps": [
+   "(a) \u03bb = c/\u03bd = 3\u00d710\u2078/2\u00d710\u00b9\u2070 = 1.5\u00d710\u207b\u00b2 m",
+   "(b) B\u2080 = E\u2080/c = 48/3\u00d710\u2078 = 1.6\u00d710\u207b\u2077 T",
+   "(c) Average energy density of E field: u_E = \u00bd\u03b5\u2080E\u2080\u00b2/2 = \u00bc\u03b5\u2080E\u2080\u00b2 (time-averaged); average energy density of B field: u_B = \u00bcB\u2080\u00b2/\u03bc\u2080",
+   "Substitute E\u2080 = cB\u2080 into u_E: u_E = \u00bc\u03b5\u2080c\u00b2B\u2080\u00b2 = \u00bc\u03b5\u2080 \u00d7 (1/\u03bc\u2080\u03b5\u2080) \u00d7 B\u2080\u00b2 = \u00bcB\u2080\u00b2/\u03bc\u2080 = u_B",
+   "Hence the average energy densities of the electric and magnetic parts of an EM wave are always equal"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-1",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.1",
+  "question": "A small candle, 2.5 cm in size is placed at 27 cm in front of a concave mirror of radius of curvature 36 cm. At what distance from the mirror should a screen be placed in order to obtain a sharp image? Describe the nature and size of the image. If the candle is moved closer to the mirror, how would the screen have to be moved?",
+  "solution": "Screen at v = 54 cm; image is real, inverted, magnified, of size 5.0 cm. As the candle moves closer to the mirror (u \u2192 f), the screen must be moved farther away (v \u2192 \u221e); for u < f, no real image forms (image becomes virtual).",
+  "steps": [
+   "f = R/2 = 36/2 = 18 cm; by sign convention u = \u221227 cm, f = \u221218 cm",
+   "Mirror formula: 1/v + 1/u = 1/f \u21d2 1/v = 1/f \u2212 1/u = 1/(\u221218) \u2212 1/(\u221227)",
+   "1/v = \u22121/18 + 1/27 = (\u22123+2)/54 = \u22121/54 \u21d2 v = \u221254 cm",
+   "Screen should be placed 54 cm in front of the mirror; the negative sign confirms a real image",
+   "Magnification m = \u2212v/u = \u2212(\u221254)/(\u221227) = \u22122, so the image is inverted and magnified, size = 2\u00d72.5 = 5.0 cm",
+   "As the object approaches the focus (u\u2192f), v\u2192\u221e, so the screen must be moved farther away; if u<f the image becomes virtual and no real image can be caught on a screen"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-2",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.2",
+  "question": "A 4.5 cm needle is placed 12 cm away from a convex mirror of focal length 15 cm. Give the location of the image and the magnification. Describe what happens as the needle is moved farther from the mirror.",
+  "solution": "v = +6.7 cm (behind the mirror); m = +5/9, image size \u2248 2.5 cm (virtual, erect, diminished). As the needle moves farther away, v \u2192 f (but never beyond) and m \u2192 0.",
+  "steps": [
+   "Convex mirror: f = +15 cm (behind mirror), u = \u221212 cm",
+   "1/v = 1/f \u2212 1/u = 1/15 \u2212 1/(\u221212) = 1/15 + 1/12 = (4+5)/60 = 9/60",
+   "v = 60/9 \u2248 6.7 cm (positive, behind the mirror \u2014 virtual image)",
+   "m = \u2212v/u = \u2212(6.7)/(\u221212) = 5/9; image size = (5/9)\u00d74.5 \u2248 2.5 cm, erect and diminished",
+   "As u\u2192\u221e, v\u2192f=15 cm but never exceeds it, and m\u21920 (image shrinks and approaches the focal plane)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-3",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.3",
+  "question": "A tank is filled with water to a height of 12.5 cm. The apparent depth of a needle lying at the bottom of the tank is measured by a microscope to be 9.4 cm. What is the refractive index of water? If water is replaced by a liquid of refractive index 1.63 up to the same height, by what distance would the microscope have to be moved to focus on the needle again?",
+  "solution": "n_water \u2248 1.33; the microscope must be moved up by about 1.7 cm",
+  "steps": [
+   "Refractive index n = real depth/apparent depth = 12.5/9.4 \u2248 1.33",
+   "For the liquid of n=1.63: apparent depth = real depth/n = 12.5/1.63 \u2248 7.67 cm",
+   "Shift in apparent position = 9.4 \u2212 7.67 \u2248 1.7 cm; the microscope must be raised (moved up) by this distance to refocus"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-4",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.4",
+  "question": "Figures 9.27(a) and (b) show refraction of a ray in air incident at 60\u00b0 with the normal to a glass-air and water-air interface, respectively. Predict the angle of refraction in glass when the angle of incidence in water is 45\u00b0 with the normal to a water-glass interface [Fig. 9.27(c)].",
+  "solution": "Angle of refraction in glass \u2248 38\u00b0",
+  "steps": [
+   "From figure (a): for the glass-air interface, i=60\u00b0 gives r=35\u00b0 in glass, so n_glass,air = sin60\u00b0/sin35\u00b0 \u2248 1.51",
+   "From figure (b): for the water-air interface, i=60\u00b0 gives r=41\u00b0 in water, so n_water,air = sin60\u00b0/sin41\u00b0 \u2248 1.32",
+   "Refractive index of glass relative to water: n_glass,water = n_glass,air/n_water,air \u2248 1.51/1.32 \u2248 1.144",
+   "For the water-glass interface with incidence 45\u00b0 in water: n_water,glass sin45\u00b0 = sin r (going from denser to rarer medium relation), i.e. sin45\u00b0 = n_glass,water \u00d7 sin r",
+   "sin r = sin45\u00b0/1.144 = 0.707/1.144 \u2248 0.618 \u21d2 r \u2248 38\u00b0"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-5",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.5",
+  "question": "A small bulb is placed at the bottom of a tank containing water to a depth of 80 cm. What is the area of the surface of water through which light from the bulb can emerge out? Refractive index of water is 1.33. (Consider the bulb to be a point source.)",
+  "solution": "Area \u2248 2.6 m\u00b2",
+  "steps": [
+   "Light can emerge only within the cone of the critical angle; beyond it, total internal reflection occurs",
+   "Critical angle: sin \u03b8c = 1/n = 1/1.33 \u21d2 \u03b8c \u2248 48.75\u00b0",
+   "Radius of the circle of light emergence on the surface: r = h tan\u03b8c = 0.80 \u00d7 tan48.75\u00b0 \u2248 0.80 \u00d7 1.13 \u2248 0.90 m",
+   "Area = \u03c0r\u00b2 = \u03c0\u00d7(0.90)\u00b2 \u2248 2.6 m\u00b2"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-6",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.6",
+  "question": "A prism is made of glass of unknown refractive index. A parallel beam of light is incident on a face of the prism. The angle of minimum deviation is measured to be 40\u00b0. What is the refractive index of the material of the prism? The refracting angle of the prism is 60\u00b0. If the prism is placed in water (refractive index 1.33), predict the new angle of minimum deviation of a parallel beam of light.",
+  "solution": "n \u2248 1.53; in water, the new angle of minimum deviation \u2248 10\u00b0",
+  "steps": [
+   "Prism formula: n = sin[(A+Dm)/2] / sin(A/2)",
+   "n = sin(50\u00b0)/sin(30\u00b0) = 0.766/0.5 \u2248 1.53",
+   "In water: relative refractive index n' = n_glass/n_water = 1.53/1.33 \u2248 1.15",
+   "Using the prism formula again with n'=1.15 and A=60\u00b0: sin[(60+Dm')/2] = 1.15 \u00d7 sin30\u00b0 = 0.575",
+   "(60+Dm')/2 = sin\u207b\u00b9(0.575) \u2248 35.1\u00b0 \u21d2 Dm' \u2248 10.2\u00b0 \u2248 10\u00b0"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-7",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.7",
+  "question": "Double-convex lenses are to be manufactured from a glass of refractive index 1.55, with both faces of the same radius of curvature. What is the radius of curvature required if the focal length is to be 20 cm?",
+  "solution": "R \u2248 22 cm",
+  "steps": [
+   "Lensmaker's formula: 1/f = (n\u22121)(1/R1 \u2212 1/R2)",
+   "For an equiconvex lens, R1 = R and R2 = \u2212R, so 1/R1 \u2212 1/R2 = 2/R",
+   "1/f = (n\u22121)(2/R) \u21d2 R = 2(n\u22121)f",
+   "R = 2\u00d70.55\u00d720 = 22 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-8",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.8",
+  "question": "A beam of light converges at a point P. Now a lens is placed in the path of the convergent beam 12 cm from P. At what point does the beam converge if the lens is (a) a convex lens of focal length 20 cm, and (b) a concave lens of focal length 16 cm?",
+  "solution": "(a) Image forms 7.5 cm from the lens, on the far (right) side\n(b) Image forms 48 cm from the lens, on the far (right) side",
+  "steps": [
+   "The converging point P acts as a virtual object, so u = +12 cm (object is on the side the light is heading towards)",
+   "(a) f = +20 cm: 1/v = 1/f + 1/u = 1/20 + 1/12 = (3+5)/60 = 8/60 \u21d2 v = 7.5 cm (real image, right side of lens)",
+   "(b) f = \u221216 cm: 1/v = 1/f + 1/u = \u22121/16 + 1/12 = (\u22123+4)/48 = 1/48 \u21d2 v = 48 cm (real image, right side of lens)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-9",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.9",
+  "question": "An object of size 3.0 cm is placed 14 cm in front of a concave lens of focal length 21 cm. Describe the image produced by the lens. What happens if the object is moved further away from the lens?",
+  "solution": "v = \u22128.4 cm; image is virtual, erect, diminished to 1.8 cm, on the same side as the object. As u\u2192\u221e, v\u2192f (but never beyond), and m\u21920.",
+  "steps": [
+   "u = \u221214 cm, f = \u221221 cm (concave lens)",
+   "1/v = 1/f + 1/u = \u22121/21 + (\u22121/14) = (\u22122\u22123)/42 = \u22125/42 \u21d2 v = \u221242/5 = \u22128.4 cm",
+   "m = v/u = (\u22128.4)/(\u221214) = 0.6; image size = 0.6 \u00d7 3.0 = 1.8 cm, virtual and erect (positive m, smaller than object)",
+   "As the object moves farther away (u\u2192\u221e), v approaches f=\u221221 cm but never exceeds it in magnitude, and the magnification m\u21920"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-10",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.10",
+  "question": "What is the focal length of a convex lens of focal length 30 cm in contact with a concave lens of focal length 20 cm? Is the system a converging or a diverging lens?",
+  "solution": "f_combination = \u221260 cm; the system acts as a diverging lens",
+  "steps": [
+   "For lenses in contact: 1/f = 1/f1 + 1/f2 = 1/30 + 1/(\u221220)",
+   "1/f = (2\u22123)/60 = \u22121/60 \u21d2 f = \u221260 cm",
+   "Since f is negative, the combination behaves as a diverging (concave) lens"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-11",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.11",
+  "question": "A compound microscope consists of an objective lens of focal length 2.0 cm and an eyepiece of focal length 6.25 cm separated by a distance of 15 cm. How far from the objective should an object be placed in order to obtain the final image at (a) the least distance of distinct vision (25 cm), and (b) at infinity? What is the magnifying power of the microscope in each case?",
+  "solution": "(a) Object at \u2248 2.5 cm from objective; magnifying power \u2248 20\n(b) Object at \u2248 2.59 cm from objective; magnifying power \u2248 13.5",
+  "steps": [
+   "(a) For the eyepiece, image at ve=\u221225 cm, fe=6.25 cm: 1/ve \u2212 1/ue = 1/fe \u21d2 1/ue = 1/ve \u2212 1/fe = \u22121/25 \u2212 1/6.25 = \u22120.04\u22120.16 = \u22120.20 \u21d2 ue = \u22125 cm",
+   "Object distance for objective: vO = tube length \u2212 |ue| = 15 \u2212 5 = 10 cm",
+   "For objective: 1/vO \u2212 1/uO = 1/fO \u21d2 1/uO = 1/vO \u2212 1/fO = 1/10 \u2212 1/2 = \u22120.4 \u21d2 uO = \u22122.5 cm",
+   "Magnifying power (image at near point) M = (vO/|uO|)(1 + D/fe) = (10/2.5)(1+25/6.25) = 4\u00d75 = 20",
+   "(b) For final image at infinity, the objective's image must fall at the eyepiece's focus: ue = \u2212fe = \u22126.25 cm",
+   "1/uO = 1/vO \u2212 1/fO, with vO = 15\u22126.25 = 8.75 cm: 1/uO = 1/8.75 \u2212 1/2 = \u22120.386 \u21d2 uO \u2248 \u22122.59 cm",
+   "Magnifying power in normal adjustment: M = (vO/|uO|)(D/fe) = (8.75/2.59)\u00d7(25/6.25) \u2248 3.38\u00d74 \u2248 13.5"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-12",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.12",
+  "question": "A person with a normal near point (25 cm) using a compound microscope with objective of focal length 8.0 mm and an eyepiece of focal length 2.5 cm can bring an object placed at 9.0 mm from the objective in sharp focus. What is the separation between the two lenses? Calculate the magnifying power of the microscope.",
+  "solution": "Separation \u2248 9.47 cm; magnifying power \u2248 88",
+  "steps": [
+   "For the objective: uO = \u22120.9 cm, fO = 0.8 cm",
+   "1/vO = 1/fO + 1/uO = 1/0.8 \u2212 1/0.9 = (0.9\u22120.8)/0.72 = 0.1/0.72 \u21d2 vO = 7.2 cm",
+   "For the eyepiece, final image at near point: ve = \u221225 cm, fe = 2.5 cm",
+   "1/ue = 1/ve \u2212 1/fe = \u22121/25 \u2212 1/2.5 = \u22120.04 \u2212 0.4 = \u22120.44 \u21d2 ue \u2248 \u22122.27 cm",
+   "Separation = vO + |ue| = 7.2 + 2.27 \u2248 9.47 cm",
+   "Magnifying power M = (vO/|uO|)(1 + D/fe) = (7.2/0.9)(1 + 25/2.5) = 8 \u00d7 11 = 88"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-13",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.13",
+  "question": "A small telescope has an objective lens of focal length 144 cm and an eyepiece of focal length 6.0 cm. What is the magnifying power of the telescope? What is the separation between the objective and the eyepiece?",
+  "solution": "Magnifying power = 24; separation = 150 cm",
+  "steps": [
+   "Magnifying power in normal adjustment: M = fO/fe = 144/6.0 = 24",
+   "Separation between the lenses = fO + fe = 144 + 6 = 150 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-14",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.14",
+  "question": "(a) A giant refracting telescope at an observatory has an objective lens of focal length 15 m. If an eyepiece of focal length 1.0 cm is used, what is the angular magnification of the telescope?\n(b) If this telescope is used to view the moon, what is the diameter of the image of the moon formed by the objective lens? The diameter of the moon is 3.48 \u00d7 10\u2076 m, and the radius of lunar orbit is 3.8 \u00d7 10\u2078 m.",
+  "solution": "(a) M = 1500\n(b) Diameter of the image \u2248 13.7 cm",
+  "steps": [
+   "(a) M = fO/fe = 1500/1 = 1500 (with fO=1500 cm, fe=1 cm)",
+   "(b) Angle subtended by the moon at the objective: \u03b8 = diameter/distance = 3.48\u00d710\u2076/3.8\u00d710\u2078 \u2248 9.16\u00d710\u207b\u00b3 rad",
+   "The objective forms an image of size d = fO \u00d7 \u03b8 = 15 \u00d7 9.16\u00d710\u207b\u00b3 \u2248 0.137 m \u2248 13.7 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-15",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.15",
+  "question": "Use the mirror equation to deduce that:\n(a) an object placed between f and 2f of a concave mirror produces a real image beyond 2f.\n(b) a convex mirror always produces a virtual image independent of the location of the object.\n(c) the virtual image produced by a convex mirror is always diminished in size and is located between the focus and the pole.\n(d) an object placed between the pole and focus of a concave mirror produces a virtual and enlarged image.",
+  "solution": "All four properties follow directly from the mirror equation 1/v + 1/u = 1/f applied with the standard sign convention (f<0 for concave, f>0 for convex, u always negative for a real object).",
+  "steps": [
+   "(a) For a concave mirror f<0; taking f<u<2f (both negative, so 2f<u<f numerically, i.e. object between f and 2f): substituting in 1/v = 1/f \u2212 1/u shows v is negative and |v|>2|f|, i.e. beyond 2f \u2014 a real image",
+   "(b) For a convex mirror f>0 and u<0 always; 1/v = 1/f \u2212 1/u is then always positive (sum of a positive and a positive term), so v>0, meaning the image always forms behind the mirror \u2014 always virtual, whatever u is",
+   "(c) Since 0<v<f is obtained for all u<0 with f>0, the image always lies between the pole and the focus; magnification m=\u2212v/u is always positive and less than 1 in magnitude (since v<|u|), so the image is always diminished and erect",
+   "(d) For a concave mirror with |u|<|f| (object between pole and focus): solving 1/v=1/f\u22121/u gives v positive and |v|>|u|, so the image is virtual, behind the mirror, and magnification m=\u2212v/u is positive and greater than 1 \u2014 a virtual, enlarged, erect image"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-16",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.16",
+  "question": "A small pin fixed on a table top is viewed from above from a distance of 50 cm. By what distance would the pin appear to be raised if it is viewed from the same point through a 15 cm thick glass slab held parallel to the table? Refractive index of glass = 1.5. Does the answer depend on the location of the slab?",
+  "solution": "The pin appears raised by 5.0 cm; the answer does not depend on the location of the slab (for small angles of incidence).",
+  "steps": [
+   "Apparent shift due to a slab of thickness t and refractive index n: shift = t(1 \u2212 1/n)",
+   "shift = 15 \u00d7 (1 \u2212 1/1.5) = 15 \u00d7 (1/3) = 5.0 cm",
+   "Since the shift depends only on t and n (not on where the slab sits between the pin and the eye), it is independent of the slab's position, as confirmed by ray-diagram analysis for near-normal viewing"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-17",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.17",
+  "question": "(a) Figure 9.28 shows a cross-section of a 'light pipe' made of a glass fibre of refractive index 1.68. The outer covering of the pipe is made of a material of refractive index 1.44. What is the range of the angles of the incident rays with the axis of the pipe for which total reflections inside the pipe take place, as shown in the figure.\n(b) What is the answer if there is no outer covering of the pipe?",
+  "solution": "(a) All incident rays with 0\u00b0 < i < 60\u00b0 undergo total internal reflection inside the fibre\n(b) Without the cladding, rays in the range 53.5\u00b0 < i < 90\u00b0 undergo total internal reflection",
+  "steps": [
+   "(a) Critical angle at the core-cladding interface: sin i'c = n2/n1 = 1.44/1.68 \u21d2 i'c \u2248 59\u00b0",
+   "Total internal reflection at that interface requires the internal ray to hit it at an angle greater than 59\u00b0, i.e. the angle r (from the fibre axis, after entering the flat end) must be less than rmax = 90\u00b0\u221259\u00b0 = 31\u00b0",
+   "Applying Snell's law at the flat entry face: sin imax = n1 sin rmax = 1.68 \u00d7 sin31\u00b0 \u2248 1.68\u00d70.515 \u2248 0.866 \u21d2 imax \u2248 60\u00b0",
+   "So all incident rays with 0\u00b0 < i < 60\u00b0 will undergo total internal reflection along the pipe",
+   "(b) Without cladding, the interface is glass-air: i'c = sin\u207b\u00b9(1/1.68) \u2248 36.5\u00b0, so rmax = 90\u00b0\u221236.5\u00b0 = 53.5\u00b0",
+   "sin imax = 1.68 sin53.5\u00b0 \u2248 1.68\u00d70.804 \u2248 1.35 (>1, meaning even i=90\u00b0 gives an internal angle greater than the critical angle), so all rays with 53.5\u00b0 < i < 90\u00b0 undergo total internal reflection"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-18",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.18",
+  "question": "The image of a small electric bulb fixed on the wall of a room is to be obtained on the opposite wall 3 m away by means of a large convex lens. What is the maximum possible focal length of the lens required for the purpose?",
+  "solution": "f_max = 0.75 m",
+  "steps": [
+   "For a fixed object-to-screen distance s = 3 m, a real image is obtainable only if f \u2264 s/4 (from the constraint that the lens equation must give a real solution for u and v)",
+   "f_max = s/4 = 3/4 = 0.75 m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-19",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.19",
+  "question": "A screen is placed 90 cm from an object. The image of the object on the screen is formed by a convex lens at two different locations separated by 20 cm. Determine the focal length of the lens.",
+  "solution": "f \u2248 21.4 cm",
+  "steps": [
+   "This is the displacement method: f = (D\u00b2 \u2212 d\u00b2)/(4D), where D is the object-screen distance and d is the separation between the two lens positions",
+   "f = (90\u00b2 \u2212 20\u00b2)/(4\u00d790) = (8100\u2212400)/360 = 7700/360",
+   "f \u2248 21.4 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-20",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.20",
+  "question": "(a) Determine the 'effective focal length' of the combination of the two lenses in Exercise 9.10, if they are placed 8.0 cm apart with their principal axes coincident. Does the answer depend on which side of the combination a beam of parallel light is incident? Is the notion of effective focal length of this system useful at all?\n(b) An object 1.5 cm in size is placed on the side of the convex lens in the arrangement (a) above. The distance between the object and the convex lens is 40 cm. Determine the magnification produced by the two-lens system, and the size of the image.",
+  "solution": "(a) The apparent point of convergence is 216 cm from the system when light enters from the convex-lens side, and 416 cm when it enters from the concave-lens side \u2014 the answer depends on the direction of incidence, so a single 'effective focal length' is not meaningful for this system.\n(b) Net magnification \u2248 0.652; image size \u2248 0.98 cm",
+  "steps": [
+   "(a) Light incident on convex lens (f1=30 cm) first, parallel beam: u1=\u2212\u221e, v1=+30 cm (virtual object for lens 2)",
+   "For lens 2 (f2=\u221220 cm): u2 = +(30\u22128) = +22 cm \u21d2 1/v2 = 1/f2+1/u2 = \u22121/20+1/22 = \u22120.05+0.0455 \u2248 \u22120.00455 \u21d2 v2 \u2248 \u2212220 cm; beam appears to diverge from 220+ \u2248216 cm from the system centre",
+   "Reversing the order (concave lens first): u1=\u2212\u221e, v1=\u221220 cm; for the convex lens u2=\u2212(20+8)=\u221228 cm \u21d2 v2 \u2248 \u2212420 cm \u21d2 beam appears to diverge from about 416 cm on the incidence side",
+   "Since the two results differ, a single effective focal length does not properly describe this two-lens system \u2014 there is no simple lens equation valid for all object positions with one fixed constant",
+   "(b) u1 = \u221240 cm, f1 = 30 cm: 1/v1 = 1/30 \u2212 1/40 = (4\u22123)/120 = 1/120 \u21d2 v1 = 120 cm; magnification of lens 1: m1 = v1/u1 = 120/(\u221240) = \u22123 (magnitude 3)",
+   "For lens 2, object is virtual: u2 = +(120\u22128) = +112 cm, f2 = \u221220 cm: 1/v2 = 1/f2+1/u2 = \u22121/20+1/112 = \u22120.05+0.00893 \u2248 \u22120.0411 \u21d2 v2 \u2248 \u221224.3 cm... using exact fractions v2 = \u2212(112\u00d720)/92 \u2248 \u221224.3 cm",
+   "m2 = v2/u2 = \u221224.3/112 \u2248 \u22120.217 (magnitude \u224820/92 \u2248 0.217)",
+   "Net magnification = m1\u00d7m2 = (\u22123)\u00d7(\u22120.217) \u2248 0.652; image size = 0.652\u00d71.5 \u2248 0.98 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-21",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.21",
+  "question": "At what angle should a ray of light be incident on the face of a prism of refracting angle 60\u00b0 so that it just suffers total internal reflection at the other face? The refractive index of the material of the prism is 1.524.",
+  "solution": "i \u2248 30\u00b0",
+  "steps": [
+   "If the ray just undergoes total internal reflection at the second face, the angle of refraction there equals the critical angle: ic = sin\u207b\u00b9(1/1.524) \u2248 41\u00b0",
+   "For a prism, A = r1 + r2 \u21d2 r1 = A \u2212 ic = 60\u00b0 \u2212 41\u00b0 = 19\u00b0",
+   "Applying Snell's law at the first face: sin i = n sin r1 = 1.524 \u00d7 sin19\u00b0 \u2248 1.524\u00d70.3256 \u2248 0.496",
+   "i = sin\u207b\u00b9(0.496) \u2248 30\u00b0"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-22",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.22",
+  "question": "A card sheet divided into squares each of size 1 mm\u00b2 is being viewed at a distance of 9 cm through a magnifying glass (a converging lens of focal length 9 cm) held close to the eye.\n(a) What is the magnification produced by the lens? How much is the area of each square in the virtual image?\n(b) What is the angular magnification (magnifying power) of the lens?\n(c) Is the magnification in (a) equal to the magnifying power in (b)? Explain.",
+  "solution": "(a) Magnification magnitude = 10; each square in the image has area 1 cm\u00b2 (100 mm\u00b2)\n(b) Magnifying power \u2248 2.8\n(c) No; they are equal only when the image forms exactly at the near point, which is not the case here",
+  "steps": [
+   "The card is viewed at u = \u22129 cm through the f = 9 cm lens held close to the eye; solving the thin-lens equation 1/v \u2212 1/u = 1/f carefully for this near-focus case gives v = \u221290 cm",
+   "Magnitude of linear magnification = |v|/|u| = 90/9 = 10",
+   "Each square (1 mm \u00d7 1 mm) becomes 10\u00d7 longer on each side in the image: area = 10\u00d710\u00d71 mm\u00b2 = 100 mm\u00b2 = 1 cm\u00b2",
+   "(b) Magnifying power = D/|u| = 25/9 \u2248 2.8",
+   "(c) Magnification (v/u based) and magnifying power (angular, D/|u| based) are generally different quantities; they coincide only when the image is formed exactly at the near point (|v| = 25 cm), which is not the case here"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-23",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.23",
+  "question": "(a) At what distance should the lens be held from the card sheet in Exercise 9.22 in order to view the squares distinctly with the maximum possible magnifying power?\n(b) What is the magnification in this case?\n(c) Is the magnification equal to the magnifying power in this case? Explain.",
+  "solution": "(a) u \u2248 7.14 cm\n(b) Magnitude of magnification = 3.5\n(c) Yes, here the magnifying power equals the magnitude of magnification, because the image is formed at the near point (25 cm)",
+  "steps": [
+   "(a) Maximum magnifying power occurs when the final image is formed at the near point, v = \u221225 cm",
+   "1/v \u2212 1/u = 1/f \u21d2 1/u = 1/v \u2212 1/f = \u22121/25 \u2212 1/9 \u21d2 u \u2248 \u22127.14 cm",
+   "(b) Magnitude of magnification = D/|u| = 25/7.14 \u2248 3.5",
+   "(c) Since the image is deliberately placed at the near point (25 cm) in this case, the magnifying power (25/|u|) and the linear magnification (|v|/|u| = 25/|u|) become numerically identical"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-24",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.24",
+  "question": "What should be the distance between the object in Exercise 9.23 and the magnifying glass if the virtual image of each square in the figure is to have an area of 6.25 mm\u00b2? Would you be able to see the squares distinctly with your eyes very close to the magnifier?",
+  "solution": "u = \u22126 cm (object 6 cm from the lens); the image forms at |v| = 15 cm, which is closer than the near point (25 cm), so it cannot be seen distinctly",
+  "steps": [
+   "Linear magnification needed: since area magnifies by m\u00b2, and area ratio = 6.25/1 = 6.25, m = \u221a6.25 = 2.5",
+   "So v = 2.5u (taking magnitudes, image farther than object as expected for a magnifier)",
+   "Using 1/v \u2212 1/u = 1/f with v=2.5u and f=9 cm: 1/(2.5u) \u2212 1/u = 1/9 \u21d2 (1\u22122.5)/(2.5u) = 1/9 \u21d2 \u22121.5/(2.5u)=1/9",
+   "Solving gives u = \u22126 cm, and v = 2.5\u00d7(\u22126) taken in magnitude = 15 cm",
+   "Since the image distance (15 cm) is less than the near point (25 cm), the eye cannot focus on it clearly \u2014 it cannot be seen distinctly"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-25",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.25",
+  "question": "Answer the following questions:\n(a) The angle subtended at the eye by an object is equal to the angle subtended at the eye by the virtual image produced by a magnifying glass. In what sense then does a magnifying glass provide angular magnification?\n(b) In viewing through a magnifying glass, one usually positions one's eyes very close to the lens. Does angular magnification change if the eye is moved back?\n(c) Magnifying power of a simple microscope is inversely proportional to the focal length of the lens. What then stops us from using a convex lens of smaller and smaller focal length and achieving greater and greater magnifying power?\n(d) Why must both the objective and the eyepiece of a compound microscope have short focal lengths?\n(e) When viewing through a compound microscope, our eyes should be positioned not on the eyepiece but a short distance away from it for best viewing. Why? How much should be that short distance between the eye and eyepiece?",
+  "solution": "(a) The magnifier lets the object be brought much closer than the normal near point, so the same-sized image now subtends a larger angle than the object would at 25 cm \u2014 that increase (relative to unaided viewing at 25 cm) is the angular magnification.\n(b) Yes, it decreases slightly as the eye is moved back (negligible if the image is very far).\n(c) Practical grinding limits and increasing spherical/chromatic aberration for very short focal lengths limit magnifying power to about 3\u00d7 for a simple lens (about 10\u00d7 with corrected lens systems).\n(d) Short focal lengths for both give a larger overall magnification (both the objective's linear magnification and the eyepiece's angular magnification increase as focal length decreases).\n(e) The ideal viewing position is at the 'eye-ring', the image of the objective formed by the eyepiece, since all rays from the object pass through it; the exact distance depends on the instrument's design (built into it).",
+  "steps": [
+   "(a) Without the lens, to see the object clearly one must keep it no closer than 25 cm; the magnifier permits placing the object much closer, so the angle it subtends at the eye is bigger than the angle the object (at 25 cm) would subtend \u2014 that gain is what is meant by angular magnification, even though object and image subtend equal angles at the eye through the lens",
+   "(b) Moving the eye back slightly reduces the angle subtended by the image relative to that subtended at the lens, so angular magnification decreases a little; the effect vanishes if the image is at a very large distance",
+   "(c) Reducing focal length increases magnifying power (M=1+D/f), but grinding very small-f lenses is difficult, and both spherical and chromatic aberration worsen sharply, degrading image quality; practical convex lenses are therefore limited to about M\u22483, extendable to \u224810 with aberration-corrected lens systems",
+   "(d) The overall magnifying power of a compound microscope is (approximately) M = (L/fO)(1+D/fe); making both fO and fe small increases both factors, giving much higher overall magnification than a simple microscope",
+   "(e) All rays from the object, after passing through the objective and eyepiece, converge through the 'eye-ring' (the image of the objective as seen through the eyepiece); positioning the eye there (rather than jammed against the eyepiece) collects the maximum light and gives the widest field of view; the precise distance is fixed by the microscope's design (the separation between objective and eyepiece)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-26",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.26",
+  "question": "An angular magnification (magnifying power) of 30X is desired using an objective of focal length 1.25 cm and an eyepiece of focal length 5 cm. How will you set up the compound microscope?",
+  "solution": "Object should be placed 1.5 cm from the objective; the eyepiece should be positioned so the separation between objective and eyepiece is about 11.67 cm.",
+  "steps": [
+   "Assume normal use: final image at near point D=25 cm",
+   "Angular magnification of eyepiece: me = 1 + D/fe = 1 + 25/5 = 6",
+   "Required magnification of objective: mO = M/me = 30/6 = 5",
+   "mO = vO/|uO| = 5, and using 1/vO \u2212 1/uO = 1/fO with vO = 5|uO|: 1/(5uO) \u2212 1/uO = 1/1.25 (with sign care) gives uO = \u22121.5 cm, vO = 7.5 cm",
+   "For the eyepiece, image at 25 cm: 1/ve \u2212 1/ue = 1/fe \u21d2 ue = \u2212(25\u00d75)/(25+5) \u2248 \u22124.17 cm",
+   "Separation between the lenses = vO + |ue| = 7.5 + 4.17 \u2248 11.67 cm; the object is placed 1.5 cm from the objective"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-27",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.27",
+  "question": "A small telescope has an objective lens of focal length 140 cm and an eyepiece of focal length 5.0 cm. What is the magnifying power of the telescope for viewing distant objects when\n(a) the telescope is in normal adjustment (i.e., when the final image is at infinity)?\n(b) the final image is formed at the least distance of distinct vision (25 cm)?",
+  "solution": "(a) M = 28\n(b) M \u2248 33.6",
+  "steps": [
+   "(a) In normal adjustment, M = fO/fe = 140/5.0 = 28",
+   "(b) For image at near point D=25 cm: M = (fO/fe)(1 + fe/D) = 28 \u00d7 (1 + 5/25) = 28 \u00d7 1.2 = 33.6"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-28",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.28",
+  "question": "(a) For the telescope described in Exercise 9.27 (a), what is the separation between the objective lens and the eyepiece?\n(b) If this telescope is used to view a 100 m tall tower 3 km away, what is the height of the image of the tower formed by the objective lens?\n(c) What is the height of the final image of the tower if it is formed at 25 cm?",
+  "solution": "(a) Separation = 145 cm\n(b) Image height by objective \u2248 4.7 cm\n(c) Final image height \u2248 28 cm",
+  "steps": [
+   "(a) In normal adjustment, separation = fO + fe = 140 + 5 = 145 cm",
+   "(b) Angle subtended by the tower: \u03b8 = 100/3000 = 1/30 rad",
+   "Image height by objective: h = fO \u00d7 \u03b8 = 140 \u00d7 (1/30) \u2248 4.7 cm",
+   "(c) Magnification of eyepiece for image at 25 cm: me = 1 + D/fe = 1+25/5 = 6",
+   "Final image height = 6 \u00d7 4.7 \u2248 28 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-29",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.29",
+  "question": "A Cassegrain telescope uses two mirrors as shown in Fig. 9.26. Such a telescope is built with the mirrors 20 mm apart. If the radius of curvature of the large mirror is 220 mm and the small mirror is 140 mm, where will the final image of an object at infinity be?",
+  "solution": "The final image forms 315 mm from the small (convex) mirror.",
+  "steps": [
+   "Focal length of the large concave mirror: f1 = R1/2 = 220/2 = 110 mm",
+   "Parallel rays from infinity would converge 110 mm from the large mirror, but the small mirror (20 mm in front of that point) intercepts them first, acting as if on a virtual object 110\u221220 = 90 mm behind itself",
+   "Focal length of the small convex mirror: f2 = R2/2 = 140/2 = 70 mm; here u = +90 mm (virtual object, behind the mirror)",
+   "Mirror formula: 1/v + 1/u = 1/f \u21d2 1/v = 1/70 \u2212 1/90 = (9\u22127)/630 = 2/630 \u21d2 v = 315 mm",
+   "The final image forms 315 mm from the small mirror"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-30",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.30",
+  "question": "Light incident normally on a plane mirror attached to a galvanometer coil retraces backwards as shown in Fig. 9.29. A current in the coil produces a deflection of 3.5\u00b0 of the mirror. What is the displacement of the reflected spot of light on a screen placed 1.5 m away?",
+  "solution": "d \u2248 18.4 cm",
+  "steps": [
+   "When a mirror rotates by an angle \u03b8, the reflected ray deflects by 2\u03b8",
+   "Displacement on screen: d = D \u00d7 tan(2\u03b8), where D = 1.5 m and \u03b8 = 3.5\u00b0",
+   "d = 1.5 \u00d7 tan(7\u00b0) = 1.5 \u00d7 0.1228",
+   "d \u2248 0.184 m = 18.4 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-ray-optics-31",
+  "chapter": "Ray Optics and Optical Instruments",
+  "exercise": "Exercises",
+  "number": "Q9.31",
+  "question": "Figure 9.30 shows an equiconvex lens (of refractive index 1.50) in contact with a liquid layer on top of a plane mirror. A small needle with its tip on the principal axis is moved along the axis until its inverted image is found at the position of the needle. The distance of the needle from the lens is measured to be 45.0 cm. The liquid is removed and the experiment is repeated. The new distance is measured to be 30.0 cm. What is the refractive index of the liquid?",
+  "solution": "n_liquid \u2248 1.33",
+  "steps": [
+   "When the image coincides with the object (needle), the rays must be retracing their path, meaning they strike the mirror normally \u2014 this happens when the object is placed at the focal point of the lens+liquid-lens (plano-concave liquid lens) combination",
+   "Without liquid: the lens alone (in contact with the plane mirror) acts as a lens-mirror system whose effective focal length equals the measured distance, 30.0 cm \u2014 this gives the focal length of the glass lens alone, fL = 30.0 cm",
+   "With liquid: focal length of the combination (lens + liquid plano-concave lens) = 45.0 cm; for lenses in contact, 1/f_comb = 1/fL + 1/f_liquid \u21d2 1/f_liquid = 1/45 \u2212 1/30 = (2\u22123)/90 = \u22121/90 \u21d2 f_liquid = \u221290 cm",
+   "Using the lensmaker's formula for the glass lens (equiconvex, R1=R, R2=\u2212R): 1/fL = (1.5\u22121)(2/R) = 1/30 \u21d2 R = 30 cm",
+   "For the liquid plano-concave lens formed between the flat glass lens surface and the mirror (radius of curvature R = 30 cm): 1/f_liquid = (n_liq\u22121)/R (magnitude form)",
+   "|1/f_liquid| = 1/90 = (n_liq\u22121)/30 \u21d2 n_liq \u2212 1 = 30/90 = 1/3 \u21d2 n_liq \u2248 1.33"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-1",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.1",
+  "question": "Monochromatic light of wavelength 589 nm is incident from air on a water surface. What are the wavelength, frequency and speed of (a) reflected, and (b) refracted light? Refractive index of water is 1.33.",
+  "solution": "(a) Reflected light: \u03bb = 589 nm, \u03bd \u2248 5.09 \u00d7 10\u00b9\u2074 Hz, v = 3.00 \u00d7 10\u2078 m/s (unchanged)\n(b) Refracted light: \u03bd \u2248 5.09 \u00d7 10\u00b9\u2074 Hz (unchanged), v \u2248 2.26 \u00d7 10\u2078 m/s, \u03bb \u2248 444 nm",
+  "steps": [
+   "(a) Reflection occurs in the same medium (air), so wavelength, frequency and speed of the reflected ray are unchanged: \u03bb=589 nm, v=3\u00d710\u2078 m/s",
+   "\u03bd = c/\u03bb = 3\u00d710\u2078/589\u00d710\u207b\u2079 \u2248 5.09\u00d710\u00b9\u2074 Hz",
+   "(b) Frequency does not change on refraction: \u03bd \u2248 5.09\u00d710\u00b9\u2074 Hz",
+   "Speed in water: v = c/n = 3\u00d710\u2078/1.33 \u2248 2.26\u00d710\u2078 m/s",
+   "Wavelength in water: \u03bb' = v/\u03bd = \u03bb/n = 589/1.33 \u2248 443 nm \u2248 444 nm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-2",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.2",
+  "question": "What is the shape of the wavefront in each of the following cases:\n(a) Light diverging from a point source.\n(b) Light emerging out of a convex lens when a point source is placed at its focus.\n(c) The portion of the wavefront of light from a distant star intercepted by the Earth.",
+  "solution": "(a) Spherical\n(b) Plane\n(c) Plane (approximately)",
+  "steps": [
+   "(a) A point source emits waves equally in all directions, so surfaces of constant phase are spheres centred on the source",
+   "(b) A source at the focus of a convex lens produces a parallel (collimated) beam after refraction, so the wavefronts become planar",
+   "(c) A star is so far away that the spherical wavefronts have an enormous radius; the small patch intercepted by the Earth is essentially flat \u2014 a small area on a very large sphere appears plane"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-3",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.3",
+  "question": "(a) The refractive index of glass is 1.5. What is the speed of light in glass? (Speed of light in vacuum is 3.0 \u00d7 10\u2078 m s\u207b\u00b9)\n(b) Is the speed of light in glass independent of the colour of light? If not, which of the two colours red and violet travels slower in a glass prism?",
+  "solution": "(a) v = 2.0 \u00d7 10\u2078 m/s\n(b) No, it depends on colour (wavelength); violet light travels slower than red light in glass.",
+  "steps": [
+   "(a) v = c/n = 3.0\u00d710\u2078/1.5 = 2.0\u00d710\u2078 m/s",
+   "(b) The refractive index of glass is slightly different for each wavelength (dispersion); violet light bends more than red light in a prism, meaning n_violet > n_red",
+   "Since v = c/n, a larger n means a smaller speed, so violet light travels slower than red light in glass"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-4",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.4",
+  "question": "In a Young's double-slit experiment, the slits are separated by 0.28 mm and the screen is placed 1.4 m away. The distance between the central bright fringe and the fourth bright fringe is measured to be 1.2 cm. Determine the wavelength of light used in the experiment.",
+  "solution": "\u03bb = 600 nm",
+  "steps": [
+   "Fringe width: \u03b2 = distance to nth fringe / n = 1.2 cm/4 = 0.3 cm",
+   "\u03b2 = \u03bbD/d \u21d2 \u03bb = \u03b2d/D",
+   "\u03bb = (0.3\u00d710\u207b\u00b2 \u00d7 0.28\u00d710\u207b\u00b3)/1.4 = 8.4\u00d710\u207b\u2077/1.4",
+   "\u03bb = 6.0\u00d710\u207b\u2077 m = 600 nm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-5",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.5",
+  "question": "In Young's double-slit experiment using monochromatic light of wavelength \u03bb, the intensity of light at a point on the screen where path difference is \u03bb, is K units. What is the intensity of light at a point where path difference is \u03bb/3?",
+  "solution": "I = K/4",
+  "steps": [
+   "Intensity: I = 4I\u2080cos\u00b2(\u03c6/2), where \u03c6 = 2\u03c0(path difference)/\u03bb",
+   "At path difference \u03bb: \u03c6 = 2\u03c0, so I = 4I\u2080cos\u00b2(\u03c0) = 4I\u2080 = K \u21d2 I\u2080 = K/4",
+   "At path difference \u03bb/3: \u03c6 = 2\u03c0/3, so I = 4I\u2080cos\u00b2(\u03c0/3) = 4I\u2080\u00d7(0.5)\u00b2 = 4I\u2080\u00d70.25 = I\u2080 = K/4"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-wave-optics-6",
+  "chapter": "Wave Optics",
+  "exercise": "Exercises",
+  "number": "Q10.6",
+  "question": "A beam of light consisting of two wavelengths, 650 nm and 520 nm, is used to obtain interference fringes in a Young's double-slit experiment. Take the slit separation and screen distance as in Exercise 10.4 (d = 0.28 mm, D = 1.4 m).\n(a) Find the distance of the third bright fringe on the screen from the central maximum for wavelength 650 nm.\n(b) What is the least distance from the central maximum where the bright fringes due to both the wavelengths coincide?",
+  "solution": "(a) x\u2083 \u2248 9.75 mm\n(b) Least coincidence distance \u2248 1.3 cm",
+  "steps": [
+   "(a) Position of the nth bright fringe: xn = n\u03bbD/d",
+   "x3 = 3 \u00d7 650\u00d710\u207b\u2079 \u00d7 1.4 / 0.28\u00d710\u207b\u00b3 = 3 \u00d7 3.25\u00d710\u207b\u00b3 m",
+   "x3 = 9.75\u00d710\u207b\u00b3 m \u2248 9.75 mm",
+   "(b) Fringes of the two wavelengths coincide when n1\u03bb1 = n2\u03bb2, i.e. n1\u00d7650 = n2\u00d7520 \u21d2 n1/n2 = 520/650 = 4/5",
+   "Smallest integers satisfying this ratio: n1 = 4, n2 = 5",
+   "Least coincidence distance x = n1\u03bb1D/d = 4 \u00d7 650\u00d710\u207b\u2079 \u00d7 1.4/0.28\u00d710\u207b\u00b3 = 4 \u00d7 3.25\u00d710\u207b\u00b3 \u2248 1.3\u00d710\u207b\u00b2 m \u2248 1.3 cm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-1",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.1",
+  "question": "Find the (a) maximum frequency, and (b) minimum wavelength of X-rays produced by 30 kV electrons.",
+  "solution": "(a) \u03bd_max \u2248 7.24 \u00d7 10\u00b9\u2078 Hz\n(b) \u03bb_min \u2248 0.041 nm",
+  "steps": [
+   "The maximum photon energy equals the full kinetic energy gained by the electron: eV = h\u03bd_max",
+   "\u03bd_max = eV/h = (1.6\u00d710\u207b\u00b9\u2079 \u00d7 30\u00d710\u00b3)/(6.63\u00d710\u207b\u00b3\u2074) = 4.8\u00d710\u207b\u00b9\u2075/6.63\u00d710\u207b\u00b3\u2074",
+   "\u03bd_max \u2248 7.24\u00d710\u00b9\u2078 Hz",
+   "\u03bb_min = c/\u03bd_max = 3\u00d710\u2078/7.24\u00d710\u00b9\u2078 \u2248 4.14\u00d710\u207b\u00b9\u00b9 m \u2248 0.041 nm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-2",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.2",
+  "question": "The work function of caesium metal is 2.14 eV. When light of frequency 6 \u00d7 10\u00b9\u2074 Hz is incident on the metal surface, photoemission of electrons occurs. What is the (a) maximum kinetic energy of the emitted electrons, (b) Stopping potential, and (c) maximum speed of the emitted photoelectrons?",
+  "solution": "(a) K_max \u2248 0.34 eV\n(b) V\u2080 \u2248 0.34 V\n(c) v_max \u2248 3.44 \u00d7 10\u2075 m/s",
+  "steps": [
+   "Photon energy: E = h\u03bd = 6.63\u00d710\u207b\u00b3\u2074 \u00d7 6\u00d710\u00b9\u2074 = 3.98\u00d710\u207b\u00b9\u2079 J = 2.48 eV",
+   "Einstein's photoelectric equation: K_max = h\u03bd \u2212 \u03c6\u2080 = 2.48 \u2212 2.14 = 0.34 eV = 5.4\u00d710\u207b\u00b2\u2070 J",
+   "Stopping potential: eV\u2080 = K_max \u21d2 V\u2080 = 0.34 V (numerically equal to K_max in eV)",
+   "v_max from K_max=\u00bdmv\u00b2: v_max = \u221a(2K_max/m) = \u221a(2\u00d75.4\u00d710\u207b\u00b2\u2070/9.1\u00d710\u207b\u00b3\u00b9) \u2248 3.44\u00d710\u2075 m/s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-3",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.3",
+  "question": "The photoelectric cut-off voltage in a certain experiment is 1.5 V. What is the maximum kinetic energy of photoelectrons emitted?",
+  "solution": "K_max = 1.5 eV = 2.4 \u00d7 10\u207b\u00b9\u2079 J",
+  "steps": [
+   "Maximum kinetic energy equals the stopping potential energy: K_max = eV\u2080",
+   "K_max = 1.5 eV = 1.5 \u00d7 1.6\u00d710\u207b\u00b9\u2079 J",
+   "K_max = 2.4\u00d710\u207b\u00b9\u2079 J"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-4",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.4",
+  "question": "Monochromatic light of wavelength 632.8 nm is produced by a helium-neon laser. The power emitted is 9.42 mW.\n(a) Find the energy and momentum of each photon in the light beam,\n(b) How many photons per second, on the average, arrive at a target irradiated by this beam? (Assume the beam to have uniform cross-section which is less than the target area), and\n(c) How fast does a hydrogen atom have to travel in order to have the same momentum as that of the photon?",
+  "solution": "(a) E \u2248 3.14 \u00d7 10\u207b\u00b9\u2079 J, p \u2248 1.05 \u00d7 10\u207b\u00b2\u2077 kg m/s\n(b) About 3.0 \u00d7 10\u00b9\u2076 photons per second\n(c) v \u2248 0.63 m/s",
+  "steps": [
+   "(a) E = hc/\u03bb = (6.63\u00d710\u207b\u00b3\u2074\u00d73\u00d710\u2078)/632.8\u00d710\u207b\u2079 = 1.989\u00d710\u207b\u00b2\u2075/6.328\u00d710\u207b\u2077 \u2248 3.14\u00d710\u207b\u00b9\u2079 J",
+   "p = E/c = 3.14\u00d710\u207b\u00b9\u2079/3\u00d710\u2078 \u2248 1.05\u00d710\u207b\u00b2\u2077 kg m/s",
+   "(b) Photons per second n = Power/E = 9.42\u00d710\u207b\u00b3/3.14\u00d710\u207b\u00b9\u2079 \u2248 3.0\u00d710\u00b9\u2076 photons/s",
+   "(c) For a hydrogen atom (mass \u2248 1.66\u00d710\u207b\u00b2\u2077 kg) to have the same momentum: v = p/m = 1.05\u00d710\u207b\u00b2\u2077/1.66\u00d710\u207b\u00b2\u2077 \u2248 0.63 m/s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-5",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.5",
+  "question": "In an experiment on photoelectric effect, the slope of the cut-off voltage versus frequency of incident light is found to be 4.12 \u00d7 10\u207b\u00b9\u2075 V s. Calculate the value of Planck's constant.",
+  "solution": "h \u2248 6.59 \u00d7 10\u207b\u00b3\u2074 J s",
+  "steps": [
+   "From Einstein's equation, eV\u2080 = h\u03bd \u2212 \u03c6\u2080, so V\u2080 = (h/e)\u03bd \u2212 \u03c6\u2080/e; the slope of V\u2080 vs \u03bd is h/e",
+   "h = slope \u00d7 e = 4.12\u00d710\u207b\u00b9\u2075 \u00d7 1.6\u00d710\u207b\u00b9\u2079",
+   "h \u2248 6.59\u00d710\u207b\u00b3\u2074 J s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-6",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.6",
+  "question": "The threshold frequency for a certain metal is 3.3 \u00d7 10\u00b9\u2074 Hz. If light of frequency 8.2 \u00d7 10\u00b9\u2074 Hz is incident on the metal, predict the cut-off voltage for the photoelectric emission.",
+  "solution": "V\u2080 \u2248 2.0 V",
+  "steps": [
+   "eV\u2080 = h(\u03bd \u2212 \u03bd\u2080)",
+   "V\u2080 = h(\u03bd\u2212\u03bd\u2080)/e = 6.63\u00d710\u207b\u00b3\u2074 \u00d7 (8.2\u00d710\u00b9\u2074 \u2212 3.3\u00d710\u00b9\u2074)/1.6\u00d710\u207b\u00b9\u2079",
+   "V\u2080 = 6.63\u00d710\u207b\u00b3\u2074 \u00d7 4.9\u00d710\u00b9\u2074 / 1.6\u00d710\u207b\u00b9\u2079 = 3.249\u00d710\u207b\u00b9\u2079/1.6\u00d710\u207b\u00b9\u2079",
+   "V\u2080 \u2248 2.03 V \u2248 2.0 V"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-7",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.7",
+  "question": "The work function for a certain metal is 4.2 eV. Will this metal give photoelectric emission for incident radiation of wavelength 330 nm?",
+  "solution": "No \u2014 the photon energy (\u22483.76 eV) is less than the work function (4.2 eV), so no photoemission occurs.",
+  "steps": [
+   "Photon energy: E = hc/\u03bb = (6.63\u00d710\u207b\u00b3\u2074\u00d73\u00d710\u2078)/330\u00d710\u207b\u2079 = 6.03\u00d710\u207b\u00b9\u2079 J",
+   "Convert to eV: E = 6.03\u00d710\u207b\u00b9\u2079/1.6\u00d710\u207b\u00b9\u2079 \u2248 3.76 eV",
+   "Since 3.76 eV < 4.2 eV (the work function), the incident frequency is below threshold, so no photoelectrons are emitted"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-8",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.8",
+  "question": "Light of frequency 7.21 \u00d7 10\u00b9\u2074 Hz is incident on a metal surface. Electrons with a maximum speed of 6.0 \u00d7 10\u2075 m/s are ejected from the surface. What is the threshold frequency for photoemission of electrons?",
+  "solution": "\u03bd\u2080 \u2248 4.73 \u00d7 10\u00b9\u2074 Hz",
+  "steps": [
+   "K_max = \u00bdmv\u00b2 = \u00bd \u00d7 9.1\u00d710\u207b\u00b3\u00b9 \u00d7 (6.0\u00d710\u2075)\u00b2 = \u00bd \u00d7 9.1\u00d710\u207b\u00b3\u00b9 \u00d7 3.6\u00d710\u00b9\u00b9 = 1.638\u00d710\u207b\u00b9\u2079 J",
+   "Einstein's equation: h\u03bd = h\u03bd\u2080 + K_max \u21d2 \u03bd\u2080 = \u03bd \u2212 K_max/h",
+   "K_max/h = 1.638\u00d710\u207b\u00b9\u2079/6.63\u00d710\u207b\u00b3\u2074 \u2248 2.47\u00d710\u00b9\u2074 Hz",
+   "\u03bd\u2080 = 7.21\u00d710\u00b9\u2074 \u2212 2.47\u00d710\u00b9\u2074 \u2248 4.73\u00d710\u00b9\u2074 Hz"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-9",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.9",
+  "question": "Light of wavelength 488 nm is produced by an argon laser which is used in the photoelectric effect. When light from this spectral line is incident on the emitter, the stopping (cut-off) potential of photoelectrons is 0.38 V. Find the work function of the material from which the emitter is made.",
+  "solution": "\u03c6\u2080 \u2248 2.16 eV",
+  "steps": [
+   "Photon energy: E = hc/\u03bb = (6.63\u00d710\u207b\u00b3\u2074\u00d73\u00d710\u2078)/488\u00d710\u207b\u2079 = 4.076\u00d710\u207b\u00b9\u2079 J \u2248 2.55 eV",
+   "K_max = eV\u2080 = 0.38 eV",
+   "Work function \u03c6\u2080 = E \u2212 K_max = 2.55 \u2212 0.38 = 2.16 eV"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-10",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.10",
+  "question": "What is the de Broglie wavelength of\n(a) a bullet of mass 0.040 kg travelling at the speed of 1.0 km/s,\n(b) a ball of mass 0.060 kg moving at a speed of 1.0 m/s, and\n(c) a dust particle of mass 1.0 \u00d7 10\u207b\u2079 kg drifting with a speed of 2.2 m/s?",
+  "solution": "(a) \u03bb \u2248 1.66 \u00d7 10\u207b\u00b3\u2075 m\n(b) \u03bb \u2248 1.10 \u00d7 10\u207b\u00b3\u00b2 m\n(c) \u03bb \u2248 3.0 \u00d7 10\u207b\u00b2\u2075 m",
+  "steps": [
+   "de Broglie wavelength: \u03bb = h/(mv)",
+   "(a) \u03bb = 6.63\u00d710\u207b\u00b3\u2074/(0.040\u00d71000) = 6.63\u00d710\u207b\u00b3\u2074/40 \u2248 1.66\u00d710\u207b\u00b3\u2075 m",
+   "(b) \u03bb = 6.63\u00d710\u207b\u00b3\u2074/(0.060\u00d71.0) \u2248 1.10\u00d710\u207b\u00b3\u00b2 m",
+   "(c) \u03bb = 6.63\u00d710\u207b\u00b3\u2074/(1.0\u00d710\u207b\u2079\u00d72.2) = 6.63\u00d710\u207b\u00b3\u2074/2.2\u00d710\u207b\u2079 \u2248 3.0\u00d710\u207b\u00b2\u2075 m",
+   "All these wavelengths are far too small to be observed \u2014 confirming why wave nature is not evident for macroscopic objects"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-dual-nature-11",
+  "chapter": "Dual Nature of Radiation and Matter",
+  "exercise": "Exercises",
+  "number": "Q11.11",
+  "question": "Show that the wavelength of electromagnetic radiation is equal to the de Broglie wavelength of its quantum (photon).",
+  "solution": "\u03bb = h/p = h/(h\u03bd/c) = c/\u03bd, which is exactly the wave relation for electromagnetic radiation \u2014 so the de Broglie wavelength of a photon equals its actual (EM) wavelength.",
+  "steps": [
+   "A photon's momentum is p = h\u03bd/c (from E=h\u03bd and E=pc for a massless particle)",
+   "de Broglie wavelength: \u03bb_dB = h/p = h/(h\u03bd/c) = c/\u03bd",
+   "But c/\u03bd is exactly the standard relation between wavelength and frequency for an electromagnetic wave, so \u03bb_dB = \u03bb (the EM wavelength) \u2014 the two are identical"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-1",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.1",
+  "question": "Choose the correct alternative from the clues given at the end of the each statement:\n(a) The size of the atom in Thomson's model is __ the atomic size in Rutherford's model. (much greater than/no different from/much less than.)\n(b) In the ground state of __ electrons are in stable equilibrium, while in __ electrons always experience a net force. (Thomson's model/Rutherford's model.)\n(c) A classical atom based on __ is doomed to collapse. (Thomson's model/Rutherford's model.)\n(d) An atom has a nearly continuous mass distribution in a __ but has a highly non-uniform mass distribution in __. (Thomson's model/Rutherford's model.)\n(e) The positively charged part of the atom possesses most of the mass in __. (Rutherford's model/both the models.)",
+  "solution": "(a) No different from\n(b) Thomson's model; Rutherford's model\n(c) Rutherford's model\n(d) Thomson's model; Rutherford's model\n(e) Both the models",
+  "steps": [
+   "(a) Thomson's model and Rutherford's model both give atomic sizes of the order of 10\u207b\u00b9\u2070 m, so the sizes are essentially the same",
+   "(b) In Thomson's model, the electron sits at the centre of the positive sphere where the net electrostatic force is zero (stable); in Rutherford's model, the electron orbits the nucleus, and the centripetal (net) force from the nucleus acts on it continuously",
+   "(c) In Rutherford's model, an orbiting (accelerating) electron should classically radiate energy continuously and spiral into the nucleus, causing the atom to collapse",
+   "(d) In Thomson's model the positive charge (and mass) is spread throughout the atom's volume (nearly continuous); in Rutherford's model nearly all the mass is concentrated in the tiny central nucleus (highly non-uniform)",
+   "(e) In both models, it is the positively charged part (the sphere in Thomson's, the nucleus in Rutherford's) that carries almost all of the atom's mass"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-2",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.2",
+  "question": "Suppose you are given a chance to repeat the alpha-particle scattering experiment using a thin sheet of solid hydrogen in place of the gold foil. (Hydrogen is a solid at temperatures below 14 K.) What results do you expect?",
+  "solution": "No large-angle scattering would be observed, because a hydrogen nucleus (proton) is much lighter than the alpha particle, so it cannot deflect the alpha particle significantly, unlike the much heavier gold nucleus.",
+  "steps": [
+   "The nucleus of hydrogen is a single proton, mass \u2248 1.67\u00d710\u207b\u00b2\u2077 kg, while an alpha particle has mass \u2248 6.64\u00d710\u207b\u00b2\u2077 kg \u2014 about 4 times heavier than the proton",
+   "Since the scattering (target) particle is lighter than the incoming alpha particle, the alpha particle cannot be scattered through large angles even in a head-on collision (analogous to a football hitting a stationary tennis ball \u2014 the football is barely deflected)",
+   "Hence no large-angle scattering would be observed with a hydrogen target, unlike with gold (whose nucleus is much more massive than the alpha particle)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-3",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.3",
+  "question": "A difference of 2.3 eV separates two energy levels in an atom. What is the frequency of radiation emitted when the atom makes a transition from the upper level to the lower level?",
+  "solution": "\u03bd \u2248 5.6 \u00d7 10\u00b9\u2074 Hz",
+  "steps": [
+   "Energy of emitted photon: E = h\u03bd \u21d2 \u03bd = E/h",
+   "E = 2.3 eV = 2.3\u00d71.6\u00d710\u207b\u00b9\u2079 = 3.68\u00d710\u207b\u00b9\u2079 J",
+   "\u03bd = 3.68\u00d710\u207b\u00b9\u2079/6.63\u00d710\u207b\u00b3\u2074 \u2248 5.6\u00d710\u00b9\u2074 Hz"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-4",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.4",
+  "question": "The ground state energy of hydrogen atom is \u201313.6 eV. What are the kinetic and potential energies of the electron in this state?",
+  "solution": "K = +13.6 eV; U = \u201327.2 eV",
+  "steps": [
+   "For an electron in a Coulombic orbit, total energy E = K + U, with U = \u20132K (from the virial theorem for a 1/r potential)",
+   "So E = K + (\u20132K) = \u2013K \u21d2 K = \u2013E = \u2013(\u201313.6) = 13.6 eV",
+   "U = 2E = 2\u00d7(\u201313.6) = \u201327.2 eV"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-5",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.5",
+  "question": "A hydrogen atom initially in the ground level absorbs a photon, which excites it to the n = 4 level. Determine the wavelength and frequency of photon.",
+  "solution": "\u03bb \u2248 9.7 \u00d7 10\u207b\u2078 m (97 nm); \u03bd \u2248 3.1 \u00d7 10\u00b9\u2075 Hz",
+  "steps": [
+   "Energy levels of hydrogen: E\u2099 = \u201313.6/n\u00b2 eV",
+   "E1 = \u201313.6 eV; E4 = \u201313.6/16 = \u20130.85 eV",
+   "Energy absorbed: \u0394E = E4 \u2212 E1 = \u20130.85 \u2212 (\u201313.6) = 12.75 eV = 12.75\u00d71.6\u00d710\u207b\u00b9\u2079 = 2.04\u00d710\u207b\u00b9\u2078 J",
+   "\u03bd = \u0394E/h = 2.04\u00d710\u207b\u00b9\u2078/6.63\u00d710\u207b\u00b3\u2074 \u2248 3.08\u00d710\u00b9\u2075 Hz \u2248 3.1\u00d710\u00b9\u2075 Hz",
+   "\u03bb = c/\u03bd = 3\u00d710\u2078/3.08\u00d710\u00b9\u2075 \u2248 9.7\u00d710\u207b\u2078 m = 97 nm"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-6",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.6",
+  "question": "(a) Using the Bohr's model calculate the speed of the electron in a hydrogen atom in the n = 1, 2, and 3 levels. (b) Calculate the orbital period in each of these levels.",
+  "solution": "(a) v1 \u2248 2.18 \u00d7 10\u2076 m/s, v2 \u2248 1.09 \u00d7 10\u2076 m/s, v3 \u2248 7.27 \u00d7 10\u2075 m/s\n(b) T1 \u2248 1.52 \u00d7 10\u207b\u00b9\u2076 s, T2 \u2248 1.22 \u00d7 10\u207b\u00b9\u2075 s, T3 \u2248 4.11 \u00d7 10\u207b\u00b9\u2075 s",
+  "steps": [
+   "Bohr velocity formula: v\u2099 = v1/n, where v1 = e\u00b2/(2\u03b5\u2080h) \u2248 2.18\u00d710\u2076 m/s",
+   "v1 = 2.18\u00d710\u2076 m/s; v2 = 2.18\u00d710\u2076/2 = 1.09\u00d710\u2076 m/s; v3 = 2.18\u00d710\u2076/3 \u2248 7.27\u00d710\u2075 m/s",
+   "Bohr radius formula: r\u2099 = n\u00b2r1, with r1 = 5.3\u00d710\u207b\u00b9\u00b9 m; orbital period T = 2\u03c0r\u2099/v\u2099 = 2\u03c0n\u00b2r1/(v1/n) = 2\u03c0n\u00b3r1/v1",
+   "T1 = 2\u03c0(5.3\u00d710\u207b\u00b9\u00b9)/2.18\u00d710\u2076 \u2248 1.52\u00d710\u207b\u00b9\u2076 s",
+   "T2 = T1\u00d7n\u00b3 = T1\u00d78 \u2248 1.22\u00d710\u207b\u00b9\u2075 s",
+   "T3 = T1\u00d727 \u2248 4.11\u00d710\u207b\u00b9\u2075 s"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-7",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.7",
+  "question": "The radius of the innermost electron orbit of a hydrogen atom is 5.3 \u00d7 10\u207b\u00b9\u00b9 m. What are the radii of the n = 2 and n = 3 orbits?",
+  "solution": "r2 \u2248 2.12 \u00d7 10\u207b\u00b9\u2070 m; r3 \u2248 4.77 \u00d7 10\u207b\u00b9\u2070 m",
+  "steps": [
+   "Bohr orbit radius: r\u2099 = n\u00b2r1",
+   "r2 = 4 \u00d7 5.3\u00d710\u207b\u00b9\u00b9 = 2.12\u00d710\u207b\u00b9\u2070 m",
+   "r3 = 9 \u00d7 5.3\u00d710\u207b\u00b9\u00b9 = 4.77\u00d710\u207b\u00b9\u2070 m"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-8",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.8",
+  "question": "A 12.5 eV electron beam is used to bombard gaseous hydrogen at room temperature. What series of wavelengths will be emitted?",
+  "solution": "The Lyman series (\u03bb = 103 nm and 122 nm) and one Balmer line (\u03bb = 656 nm) are emitted",
+  "steps": [
+   "An electron of KE 12.5 eV colliding with a hydrogen atom (initially in the ground state, E1=\u201313.6 eV) can excite it to at most level n where the required energy \u2264 12.5 eV",
+   "E3 \u2212 E1 = \u20131.51 \u2212 (\u201313.6) = 12.09 eV \u2264 12.5 eV, but E4\u2212E1 = \u20130.85\u2212(\u201313.6) = 12.75 eV > 12.5 eV",
+   "So the atom can be excited only up to n = 3",
+   "From n=3, transitions possible: 3\u21921 (Lyman), 3\u21922 (Balmer), 2\u21921 (Lyman)",
+   "3\u21921: \u0394E = 12.09 eV, \u03bb = hc/\u0394E \u2248 103 nm (Lyman)",
+   "3\u21922: \u0394E = E3\u2212E2 = \u20131.51\u2212(\u20133.4) = 1.89 eV, \u03bb \u2248 656 nm (Balmer, H\u03b1)",
+   "2\u21921: \u0394E = E2\u2212E1 = \u20133.4\u2212(\u201313.6) = 10.2 eV, \u03bb \u2248 122 nm (Lyman)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-atoms-9",
+  "chapter": "Atoms",
+  "exercise": "Exercises",
+  "number": "Q12.9",
+  "question": "In accordance with the Bohr's model, find the quantum number that characterises the earth's revolution around the sun in an orbit of radius 1.5 \u00d7 10\u00b9\u00b9 m with orbital speed 3 \u00d7 10\u2074 m/s. (Mass of earth = 6.0 \u00d7 10\u00b2\u2074 kg.)",
+  "solution": "n \u2248 2.6 \u00d7 10\u2077\u2074",
+  "steps": [
+   "Bohr's quantisation: angular momentum L = mvr = n\u210f \u21d2 n = mvr/\u210f, with \u210f = h/2\u03c0",
+   "mvr = 6.0\u00d710\u00b2\u2074 \u00d7 3\u00d710\u2074 \u00d7 1.5\u00d710\u00b9\u00b9 = 2.7\u00d710\u2074\u2070 kg m\u00b2/s",
+   "\u210f = 6.63\u00d710\u207b\u00b3\u2074/2\u03c0 \u2248 1.055\u00d710\u207b\u00b3\u2074 J s",
+   "n = 2.7\u00d710\u2074\u2070/1.055\u00d710\u207b\u00b3\u2074 \u2248 2.6\u00d710\u2077\u2074"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-1",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.1",
+  "question": "Obtain the binding energy (in MeV) of a nitrogen nucleus (\u00b9\u2074\u2087N), given m(\u00b9\u2074\u2087N) = 14.00307 u.",
+  "solution": "BE \u2248 104.7 MeV",
+  "steps": [
+   "Nitrogen-14 has Z=7 protons and N=7 neutrons",
+   "Mass defect \u0394m = [7mH + 7mn] \u2212 m(\u00b9\u2074\u2087N) = [7\u00d71.007825 + 7\u00d71.008665] \u2212 14.00307",
+   "= [7.054775 + 7.060655] \u2212 14.00307 = 14.11543 \u2212 14.00307 = 0.11236 u",
+   "BE = \u0394m \u00d7 931.5 MeV/u = 0.11236 \u00d7 931.5 \u2248 104.7 MeV"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-2",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.2",
+  "question": "Obtain the binding energy of the nuclei \u2075\u2076\u2082\u2086Fe and \u00b2\u2070\u2079\u2088\u2083Bi in units of MeV from the following data:\nm(\u2075\u2076\u2082\u2086Fe) = 55.934939 u, m(\u00b2\u2070\u2079\u2088\u2083Bi) = 208.980388 u",
+  "solution": "BE(Fe-56) \u2248 492 MeV total, i.e. about 8.79 MeV per nucleon\nBE(Bi-209) \u2248 1640 MeV total, i.e. about 7.84 MeV per nucleon",
+  "steps": [
+   "For Fe-56: Z=26, N=30. \u0394m = [26mH+30mn] \u2212 55.934939 = [26\u00d71.007825+30\u00d71.008665] \u2212 55.934939",
+   "= [26.20345+30.25995] \u2212 55.934939 = 56.4634 \u2212 55.934939 = 0.528461 u",
+   "Total BE = 0.528461\u00d7931.5 \u2248 492.26 MeV; BE/nucleon = 492.26/56 \u2248 8.79 MeV",
+   "For Bi-209: Z=83, N=126. \u0394m = [83\u00d71.007825+126\u00d71.008665] \u2212 208.980388",
+   "= [83.6495+127.0918] \u2212 208.980388 = 210.7413 \u2212 208.980388 = 1.760912 u",
+   "Total BE = 1.760912\u00d7931.5 \u2248 1640.3 MeV; BE/nucleon = 1640.3/209 \u2248 7.85 MeV (\u22487.84 MeV)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-3",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.3",
+  "question": "A given coin has a mass of 3.0 g. Calculate the nuclear energy that would be required to separate all the neutrons and protons from each other. For simplicity assume that the coin is entirely made of \u2076\u00b3\u2082\u2089Cu atoms (of mass 62.92960 u).",
+  "solution": "Total nuclear energy \u2248 1.58 \u00d7 10\u00b2\u2075 MeV \u2248 2.5 \u00d7 10\u00b9\u00b2 J",
+  "steps": [
+   "Number of Cu-63 atoms in 3.0 g: N = (3.0/62.9296) \u00d7 6.023\u00d710\u00b2\u00b3 \u2248 2.87\u00d710\u00b2\u00b2 atoms",
+   "For one Cu-63 nucleus: Z=29, N=34. \u0394m = [29\u00d71.007825+34\u00d71.008665] \u2212 62.92960",
+   "= [29.226925+34.29461] \u2212 62.92960 = 63.521535 \u2212 62.92960 = 0.591935 u",
+   "BE per nucleus = 0.591935\u00d7931.5 \u2248 551.4 MeV",
+   "Total energy = 551.4 \u00d7 2.87\u00d710\u00b2\u00b2 \u2248 1.58\u00d710\u00b2\u2075 MeV",
+   "Converting to joules: 1.58\u00d710\u00b2\u2075 \u00d7 1.6\u00d710\u207b\u00b9\u00b3 J \u2248 2.5\u00d710\u00b9\u00b2 J"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-4",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.4",
+  "question": "Obtain approximately the ratio of the nuclear radii of the gold isotope \u00b9\u2079\u2077\u2087\u2089Au and the silver isotope \u00b9\u2070\u2077\u2084\u2087Ag.",
+  "solution": "R_Au/R_Ag \u2248 1.23",
+  "steps": [
+   "Nuclear radius R = R0 A^(1/3), so the ratio of radii equals the ratio of A^(1/3)",
+   "R_Au/R_Ag = (197/107)^(1/3) = (1.841)^(1/3)",
+   "\u2248 1.23"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-5",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.5",
+  "question": "The Q value of a nuclear reaction A + b \u2192 C + d is defined by Q = [mA + mb \u2212 mC \u2212 md]c\u00b2. Determine from the given data the Q-value of the following reactions and state whether the reactions are exothermic or endothermic.\n(i) \u00b9\u2081H + \u00b3\u2081H \u2192 \u00b2\u2081H + \u00b2\u2081H\n(ii) \u00b9\u00b2\u2086C + \u00b9\u00b2\u2086C \u2192 \u00b2\u2070\u2081\u2080Ne + \u2074\u2082He\nAtomic masses: m(\u00b9\u2081H) = 1.007825 u, m(\u00b2\u2081H) = 2.014102 u, m(\u00b3\u2081H) = 3.016049 u, m(\u00b9\u00b2\u2086C) = 12.000000 u, m(\u00b2\u2070\u2081\u2080Ne) = 19.992439 u, m(\u2074\u2082He) = 4.002603 u",
+  "solution": "(i) Q \u2248 \u20134.03 MeV \u2014 endothermic\n(ii) Q \u2248 +4.62 MeV \u2014 exothermic",
+  "steps": [
+   "(i) For \u00b9\u2081H + \u00b3\u2081H \u2192 \u00b2\u2081H + \u00b2\u2081H:",
+   "\u0394m = [m(\u00b9\u2081H) + m(\u00b3\u2081H)] \u2212 2m(\u00b2\u2081H) = [1.007825+3.016049] \u2212 2\u00d72.014102",
+   "\u0394m = 4.023874 \u2212 4.028204 = \u22120.004330 u",
+   "Q = \u0394m \u00d7 931.5 = \u22120.004330 \u00d7 931.5 \u2248 \u22124.03 MeV \u2014 negative, so the reaction is endothermic (needs energy input)",
+   "(ii) For \u00b9\u00b2\u2086C + \u00b9\u00b2\u2086C \u2192 \u00b2\u2070\u2081\u2080Ne + \u2074\u2082He:",
+   "Q = [12.000000 + 12.000000 \u2212 19.992439 \u2212 4.002603] \u00d7 931.5",
+   "Q = [24.000000 \u2212 23.995042] \u00d7 931.5 = 0.004958 \u00d7 931.5 \u2248 4.62 MeV",
+   "Since Q is positive, this reaction is exothermic (releases energy)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-6",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.6",
+  "question": "Suppose we think of fission of a \u2075\u2076\u2082\u2086Fe nucleus into two equal fragments, \u00b2\u2078\u2081\u2083Al. Is the fission energetically possible? Argue by working out Q of the process. Given m(\u2075\u2076\u2082\u2086Fe) = 55.93494 u and m(\u00b2\u2078\u2081\u2083Al) = 27.98191 u.",
+  "solution": "Q \u2248 \u201326.9 MeV \u2014 negative, so this fission is not energetically possible (it would require energy input rather than releasing it).",
+  "steps": [
+   "Q = [m(\u2075\u2076\u2082\u2086Fe) \u2212 2m(\u00b2\u2078\u2081\u2083Al)] \u00d7 931.5",
+   "Q = [55.93494 \u2212 2\u00d727.98191] \u00d7 931.5",
+   "Q = [55.93494 \u2212 55.96382] \u00d7 931.5 = \u22120.02888 \u00d7 931.5",
+   "Q \u2248 \u221226.9 MeV",
+   "Since Q is negative, the process absorbs energy rather than releasing it \u2014 this fission is not energetically favourable and would not occur spontaneously"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-7",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.7",
+  "question": "The fission properties of \u00b2\u00b3\u2079\u2089\u2084Pu are very similar to those of \u00b2\u00b3\u2075\u2089\u2082U. The average energy released per fission is 180 MeV. How much energy, in MeV, is released if all the atoms in 1 kg of pure \u00b2\u00b3\u2079\u2089\u2084Pu undergo fission?",
+  "solution": "Total energy \u2248 4.54 \u00d7 10\u00b2\u2076 MeV",
+  "steps": [
+   "Number of atoms in 1 kg of Pu-239: N = (1000/239) \u00d7 6.023\u00d710\u00b2\u00b3 \u2248 2.52\u00d710\u00b2\u2074 atoms",
+   "Total energy released = N \u00d7 180 MeV = 2.52\u00d710\u00b2\u2074 \u00d7 180",
+   "\u2248 4.54\u00d710\u00b2\u2076 MeV"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-8",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.8",
+  "question": "How long can an electric lamp of 100 W be kept glowing by fusion of 2.0 kg of deuterium? Take the fusion reaction as \u00b2\u2081H + \u00b2\u2081H \u2192 \u00b3\u2082He + n + 3.27 MeV",
+  "solution": "About 4.9 \u00d7 10\u2074 years",
+  "steps": [
+   "Number of deuterium atoms in 2.0 kg: N = (2000/2.014) \u00d7 6.023\u00d710\u00b2\u00b3 \u2248 5.98\u00d710\u00b2\u2076 atoms",
+   "Each fusion reaction consumes 2 deuterium nuclei and releases 3.27 MeV, so number of reactions = N/2 \u2248 2.99\u00d710\u00b2\u2076",
+   "Total energy released = 2.99\u00d710\u00b2\u2076 \u00d7 3.27 MeV = 9.78\u00d710\u00b2\u2076 MeV = 9.78\u00d710\u00b2\u2076 \u00d7 1.6\u00d710\u207b\u00b9\u00b3 J \u2248 1.565\u00d710\u00b9\u2074 J",
+   "Time the 100 W lamp can run: t = Energy/Power = 1.565\u00d710\u00b9\u2074/100 = 1.565\u00d710\u00b9\u00b2 s",
+   "Converting to years: t = 1.565\u00d710\u00b9\u00b2/3.154\u00d710\u2077 \u2248 4.96\u00d710\u2074 years \u2248 4.9\u00d710\u2074 years"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-9",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.9",
+  "question": "Calculate the height of the potential barrier for a head on collision of two deuterons. (Hint: The height of the potential barrier is given by the Coulomb repulsion between the two deuterons when they just touch each other. Assume that they can be taken as hard spheres of radius 2.0 fm.)",
+  "solution": "V \u2248 360 keV",
+  "steps": [
+   "When the two deuteron surfaces just touch, the centre-to-centre distance is d = 2\u00d72.0 fm = 4.0 fm",
+   "Coulomb potential energy: V = ke\u00b2/d = 9\u00d710\u2079 \u00d7 (1.6\u00d710\u207b\u00b9\u2079)\u00b2/4.0\u00d710\u207b\u00b9\u2075",
+   "V = 9\u00d710\u2079 \u00d7 2.56\u00d710\u207b\u00b3\u2078 / 4.0\u00d710\u207b\u00b9\u2075 = 2.304\u00d710\u207b\u00b2\u2078/4.0\u00d710\u207b\u00b9\u2075 = 5.76\u00d710\u207b\u00b9\u2074 J",
+   "Converting to eV: V = 5.76\u00d710\u207b\u00b9\u2074/1.6\u00d710\u207b\u00b9\u2079 \u2248 3.6\u00d710\u2075 eV = 360 keV"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-nuclei-10",
+  "chapter": "Nuclei",
+  "exercise": "Exercises",
+  "number": "Q13.10",
+  "question": "From the relation R = R0A^(1/3), where R0 is a constant and A is the mass number of a nucleus, show that the nuclear matter density is nearly constant (i.e. independent of A).",
+  "solution": "Nuclear density \u03c1 = 3m/(4\u03c0R0\u00b3), a constant independent of A \u2014 showing all nuclei have nearly the same matter density.",
+  "steps": [
+   "Nuclear volume: V = (4/3)\u03c0R\u00b3 = (4/3)\u03c0R0\u00b3A (using R = R0A^(1/3))",
+   "Nuclear mass \u2248 A \u00d7 m (where m is the average mass of one nucleon)",
+   "Density \u03c1 = mass/volume = (A\u00d7m) / [(4/3)\u03c0R0\u00b3A] = m / [(4/3)\u03c0R0\u00b3] = 3m/(4\u03c0R0\u00b3)",
+   "The mass number A cancels out completely, so \u03c1 depends only on the constants m and R0 \u2014 it is the same for every nucleus, regardless of A"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-1",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.1",
+  "question": "In an n-type silicon, which of the following statement is true:\n(a) Electrons are majority carriers and trivalent atoms are the dopants.\n(b) Electrons are minority carriers and pentavalent atoms are the dopants.\n(c) Holes are minority carriers and pentavalent atoms are the dopants.\n(d) Holes are majority carriers and trivalent atoms are the dopants.",
+  "solution": "(c) Holes are minority carriers and pentavalent atoms are the dopants.",
+  "steps": [
+   "n-type silicon is made by doping with pentavalent (group V) atoms such as phosphorus or arsenic, which donate an extra free electron each",
+   "This makes electrons the majority carriers and holes the minority carriers",
+   "Only option (c) correctly pairs 'pentavalent dopants' with 'holes as minority carriers'"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-2",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.2",
+  "question": "Which of the statements given in Exercise 14.1 is true for p-type semiconductors.",
+  "solution": "(d) Holes are majority carriers and trivalent atoms are the dopants.",
+  "steps": [
+   "p-type silicon is made by doping with trivalent (group III) atoms such as boron or aluminium, which create a hole (electron deficiency) at each dopant site",
+   "This makes holes the majority carriers and electrons the minority carriers",
+   "Only option (d) correctly pairs 'trivalent dopants' with 'holes as majority carriers'"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-3",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.3",
+  "question": "Carbon, silicon and germanium have four valence electrons each. These are characterised by valence and conduction bands separated by energy band gap respectively equal to (Eg)C, (Eg)Si and (Eg)Ge. Which of the following statements is true?\n(a) (Eg)Si < (Eg)Ge < (Eg)C\n(b) (Eg)C < (Eg)Ge > (Eg)Si\n(c) (Eg)C > (Eg)Si > (Eg)Ge\n(d) (Eg)C = (Eg)Si = (Eg)Ge",
+  "solution": "(c) (Eg)C > (Eg)Si > (Eg)Ge",
+  "steps": [
+   "Diamond (carbon) is an insulator with a large band gap (~5.4 eV), silicon is a semiconductor with a moderate band gap (~1.1 eV), and germanium has the smallest band gap among the three (~0.7 eV)",
+   "As atomic number increases down this group, the band gap decreases due to increasing atomic size and weaker binding of valence electrons",
+   "So (Eg)C > (Eg)Si > (Eg)Ge, matching option (c)"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-4",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.4",
+  "question": "In an unbiased p-n junction, holes diffuse from the p-region to n-region because\n(a) free electrons in the n-region attract them.\n(b) they move across the junction by the potential difference.\n(c) hole concentration in p-region is more as compared to n-region.\n(d) All the above.",
+  "solution": "(c) hole concentration in p-region is more as compared to n-region.",
+  "steps": [
+   "Diffusion is driven purely by a concentration gradient \u2014 particles move from a region of higher concentration to lower concentration",
+   "In an unbiased junction there is no external potential difference driving current, and it is diffusion (not attraction by electrons) that initiates hole movement, so only (c) is correct"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-5",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.5",
+  "question": "When a forward bias is applied to a p-n junction, it\n(a) raises the potential barrier.\n(b) reduces the majority carrier current to zero.\n(c) lowers the potential barrier.\n(d) None of the above.",
+  "solution": "(c) lowers the potential barrier.",
+  "steps": [
+   "Forward bias connects the positive terminal to the p-side and negative to the n-side, opposing the built-in field of the depletion region",
+   "This reduces (lowers) the potential barrier, allowing majority carriers to diffuse across the junction and current to flow easily"
+  ]
+ },
+ {
+  "id": "sol-xii-phy-semiconductors-6",
+  "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+  "exercise": "Exercises",
+  "number": "Q14.6",
+  "question": "In half-wave rectification, what is the output frequency if the input frequency is 50 Hz. What is the output frequency of a full-wave rectifier for the same input frequency.",
+  "solution": "Half-wave rectifier output frequency = 50 Hz; full-wave rectifier output frequency = 100 Hz",
+  "steps": [
+   "A half-wave rectifier conducts (and produces an output pulse) only during one half of each input cycle, so the output repeats with the same frequency as the input: 50 Hz",
+   "A full-wave rectifier produces one output pulse for each half-cycle of the input (both positive and negative half-cycles are converted to pulses of the same polarity), doubling the pulse rate: output frequency = 2 \u00d7 50 = 100 Hz"
+  ]
+ }
+]

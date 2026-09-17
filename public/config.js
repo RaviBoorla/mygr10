@@ -76,7 +76,8 @@ const SOLVED_BANKS = {
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-Solved',
   'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved',
 
-  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-Solved'
+  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-Solved',
+  'XII CBSE Physics':          'XII-CBSE-Physics-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
