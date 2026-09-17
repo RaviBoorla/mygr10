@@ -12,6 +12,21 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
+/* The sticky-footer pattern (min-height:100vh, footer pinned to the real
+   viewport bottom) reads as a jarring gap on screens whose own content is
+   short and doesn't fill the viewport (Progress with no attempts yet,
+   Revision Notes on a short chapter) — let the footer hug content there
+   instead. Left as the default everywhere else. */
+body[data-screen="progress"], body[data-screen="notes"] { min-height: 0; }
+
+/* Careers uses a position:fixed, viewport-filling canvas (#careers-wrap,
+   bottom:0) independent of document flow — a page footer competing for the
+   same bottom-of-viewport space doesn't belong in that full-screen canvas
+   experience, and un-pinning it here would float it awkwardly mid-canvas
+   instead (main's own flow height collapses to ~0 since the real content
+   is position:fixed). Hide it on this screen instead. */
+body[data-screen="careers"] .site-footer { display: none; }
+
 #app { width: 100%; flex: 1; min-width: 0; }
 
 /* Desktop-only density: at 100% browser zoom the app previously read as

@@ -163,6 +163,7 @@ const app = {
 
     state.screen = name;
     state.params = r.parts;
+    document.body.dataset.screen = name;
 
     document.getElementById('app').innerHTML = this._header() + `<main>${this._screen(name, r.parts)}</main>`;
     window.scrollTo(0, 0);
