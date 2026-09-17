@@ -334,7 +334,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   padding: 0; gap: 0;
   animation: fadeInPlace var(--tx-slow) ease;
   display: flex; flex-direction: column;
-  height: calc(100dvh - var(--header-h));
+  height: calc(100dvh - var(--header-h) - var(--footer-h));
   overflow: hidden;
 }
 
@@ -557,7 +557,7 @@ kbd {
   gap: 12px; padding: 16px 16px 0;
   animation: fadeInPlace var(--tx-slow) ease;
   display: flex; flex-direction: column;
-  height: calc(100dvh - var(--header-h));
+  height: calc(100dvh - var(--header-h) - var(--footer-h));
   overflow: hidden;
 }
 .rev-heading-row {
