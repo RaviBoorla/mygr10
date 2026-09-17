@@ -1129,7 +1129,14 @@ function resetView(){
   renderAll();
 }
 document.getElementById('careers-btn-expand').addEventListener('click',()=>{ setAll(T,true); renderAll(); });
-document.getElementById('careers-btn-collapse').addEventListener('click',()=>{ collapseToDefault(); renderAll(); });
+document.getElementById('careers-btn-collapse').addEventListener('click',()=>{
+  // renderAll() re-expands the path to every match on every call as long as a
+  // search term is active (applySearchExpansion) — collapseToDefault() alone
+  // gets silently undone by that on the very next render. Clear the search
+  // too, same as what clearing the search box itself already does correctly.
+  _matchSet=null; _expSaved=null; S.q=''; _searchEl.value=''; _clearEl.hidden=true;
+  collapseToDefault(); renderAll();
+});
 
 // Search
 const _searchEl = document.getElementById('careers-search');

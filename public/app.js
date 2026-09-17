@@ -131,7 +131,7 @@ const app = {
     if (name === 'careers' && !window._careersLoaded) {
       window._careersLoaded = true;
       const sc = document.createElement('script');
-      sc.src = 'careers.js?v=2';
+      sc.src = 'careers.js?v=3';
       sc.onload = () => this.render();
       document.head.appendChild(sc);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading…</div></main>';
