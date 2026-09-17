@@ -1,0 +1,442 @@
+[
+  {
+    "id": "sol-ca-001",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q1",
+    "question": "Differentiate between a web browser and a web server.",
+    "solution": "A web browser is client-side software (e.g. Chrome, Firefox) used to request and display web pages to a user. A web server is software/hardware that stores web pages and responds to browser requests by sending the requested pages over HTTP/HTTPS.",
+    "steps": [
+      "A web browser is client-side software (e.g. Chrome, Firefox) used to request and display web pages to a user.",
+      "A web server is software/hardware that stores web pages and responds to browser requests by sending the requested pages over HTTP/HTTPS."
+    ]
+  },
+  {
+    "id": "sol-ca-002",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q2",
+    "question": "What is TCP/IP? Why is it important for the Internet?",
+    "solution": "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental suite of communication protocols used to connect devices on the Internet. TCP breaks data into packets, ensures they arrive correctly and reassembles them, while IP handles addressing and routing of packets to their destination. It is important because it provides the common standard that allows different networks and devices worldwide to communicate with each other.",
+    "steps": [
+      "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental suite of communication protocols used to connect devices on the Internet.",
+      "TCP breaks data into packets, ensures they arrive correctly and reassembles them, while IP handles addressing and routing of packets to their destination.",
+      "It is important because it provides the common standard that allows different networks and devices worldwide to communicate with each other."
+    ]
+  },
+  {
+    "id": "sol-ca-003",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q3",
+    "question": "List the full forms of SSH, SFTP, FTP, SCP and TELNET.",
+    "solution": "SSH - Secure Shell\nSFTP - SSH File Transfer Protocol\nFTP - File Transfer Protocol\nSCP - Secure Copy Protocol\nTELNET - Terminal Network",
+    "steps": [
+      "SSH - Secure Shell",
+      "FTP - File Transfer Protocol",
+      "TELNET - Terminal Network"
+    ]
+  },
+  {
+    "id": "sol-ca-004",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q4",
+    "question": "Explain why SSH-based protocols (SSH, SFTP, SCP) are considered more secure than TELNET and plain FTP.",
+    "solution": "SSH-based protocols encrypt all data, including login credentials and transferred files, before sending them over the network, protecting them from being intercepted and read by unauthorised parties. TELNET and plain FTP transmit data, including usernames and passwords, in plain, unencrypted text, making them vulnerable to eavesdropping and interception.",
+    "steps": [
+      "SSH-based protocols encrypt all data, including login credentials and transferred files, before sending them over the network, protecting them from being intercepted and read by unauthorised parties.",
+      "TELNET and plain FTP transmit data, including usernames and passwords, in plain, unencrypted text, making them vulnerable to eavesdropping and interception."
+    ]
+  },
+  {
+    "id": "sol-ca-005",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q5",
+    "question": "List any five web services available on the Internet.",
+    "solution": "1. Chat\n2. E-mail\n3. Video conferencing\n4. e-Learning\n5. e-Banking\n(Others include e-Shopping, e-Reservation, e-Governance, e-Groups and social networking.)",
+    "steps": [
+      "Chat E-mail",
+      "Video conferencing e-Learning e-Banking",
+      "(Others include e-Shopping, e-Reservation, e-Governance, e-Groups and social networking.)"
+    ]
+  },
+  {
+    "id": "sol-ca-006",
+    "chapter": "Networking",
+    "exercise": "Ex. 1",
+    "number": "Q6",
+    "question": "What is social networking? Give two examples of activities carried out on social networking sites.",
+    "solution": "Social networking refers to using websites and apps that allow people to build online relationships, communicate and share content with others who have similar interests. Activities include: sharing photos, videos and status updates with friends; and joining groups or communities to discuss shared interests.",
+    "steps": [
+      "Social networking refers to using websites and apps that allow people to build online relationships, communicate and share content with others who have similar interests.",
+      "Activities include: sharing photos, videos and status updates with friends;",
+      "and joining groups or communities to discuss shared interests."
+    ]
+  },
+  {
+    "id": "sol-ca-007",
+    "chapter": "Networking",
+    "exercise": "Ex. 2",
+    "number": "Q1",
+    "question": "Differentiate between SMS and MMS in terms of the content they can carry.",
+    "solution": "SMS (Short Message Service) can carry only plain text messages of limited length. MMS (Multimedia Messaging Service) can carry richer content in addition to text, including images, audio clips and video, making it suitable for sharing multimedia.",
+    "steps": [
+      "SMS (Short Message Service) can carry only plain text messages of limited length.",
+      "MMS (Multimedia Messaging Service) can carry richer content in addition to text, including images, audio clips and video, making it suitable for sharing multimedia."
+    ]
+  },
+  {
+    "id": "sol-ca-008",
+    "chapter": "Networking",
+    "exercise": "Ex. 2",
+    "number": "Q2",
+    "question": "Explain how mobile technology has evolved from 3G to 5G, mentioning one key improvement at each stage.",
+    "solution": "3G: introduced usable mobile internet speeds, enabling web browsing and video calling on phones.\n4G: greatly increased data speeds over 3G, enabling smooth HD video streaming and richer mobile apps.\n5G: offers extremely high speed and very low latency compared to 4G, and can connect a very large number of devices at once, supporting technologies like IoT and smart devices.",
+    "steps": [
+      "3G: introduced usable mobile internet speeds, enabling web browsing and video calling on phones.",
+      "4G: greatly increased data speeds over 3G, enabling smooth HD video streaming and richer mobile apps.",
+      "5G: offers extremely high speed and very low latency compared to 4G, and can connect a very large number of devices at once, supporting technologies like IoT and smart devices."
+    ]
+  },
+  {
+    "id": "sol-ca-009",
+    "chapter": "Networking",
+    "exercise": "Ex. 2",
+    "number": "Q3",
+    "question": "What is e-Reservation? Give one real-life example.",
+    "solution": "e-Reservation is an Internet-based service that allows users to book seats, tickets, or slots for services in advance through a website or app. Example: booking a railway or flight ticket online through IRCTC or an airline's website.",
+    "steps": [
+      "e-Reservation is an Internet-based service that allows users to book seats, tickets, or slots for services in advance through a website or app.",
+      "Example: booking a railway or flight ticket online through IRCTC or an airline's website."
+    ]
+  },
+  {
+    "id": "sol-ca-010",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q1",
+    "question": "List the three basic tags required to structure every HTML document and state the purpose of each.",
+    "solution": "1. <html> - the root tag that encloses the entire HTML document.\n2. <head> - contains information about the document, such as its title, that is not displayed directly on the page.\n3. <body> - contains all the content that is displayed to the user, such as text, images and links.",
+    "steps": [
+      "<html> - the root tag that encloses the entire HTML document.",
+      "<head> - contains information about the document, such as its title, that is not displayed directly on the page.",
+      "<body> - contains all the content that is displayed to the user, such as text, images and links."
+    ]
+  },
+  {
+    "id": "sol-ca-011",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q2",
+    "question": "Differentiate between the <b> tag and the <i> tag.",
+    "solution": "The <b> tag displays enclosed text in bold typeface to make it stand out, while the <i> tag displays enclosed text in italics (slanted style), often used to emphasise a word or indicate a title.",
+    "steps": [
+      "uses <b>/<strong> to bold text",
+      "uses <i>/<em> to italicise text"
+    ]
+  },
+  {
+    "id": "sol-ca-012",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q3",
+    "question": "Differentiate between an ordered list and an unordered list, with an example of when each would be used.",
+    "solution": "An ordered list (<ol>) displays items with sequential numbering or lettering and is used when the order of items matters, such as steps in a procedure. An unordered list (<ul>) displays items with bullet points and is used when the order does not matter, such as a list of ingredients.",
+    "steps": [
+      "An ordered list (<ol>) displays items with sequential numbering or lettering and is used when the order of items matters, such as steps in a procedure.",
+      "An unordered list (<ul>) displays items with bullet points and is used when the order does not matter, such as a list of ingredients."
+    ]
+  },
+  {
+    "id": "sol-ca-013",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q4",
+    "question": "Explain the purpose of a description list in HTML and name its three constituent tags.",
+    "solution": "A description list is used to display a list of terms along with their descriptions or definitions, such as a glossary. Its three tags are: <dl> (defines the list), <dt> (defines a term) and <dd> (defines the description of that term).",
+    "steps": [
+      "A description list is used to display a list of terms along with their descriptions or definitions, such as a glossary.",
+      "Its three tags are: <dl> (defines the list), <dt> (defines a term) and <dd> (defines the description of that term)."
+    ]
+  },
+  {
+    "id": "sol-ca-014",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q5",
+    "question": "List the four attributes of the <img> tag mentioned in the syllabus and state the purpose of each.",
+    "solution": "1. src - specifies the path or URL of the image file to display.\n2. width - sets the display width of the image.\n3. height - sets the display height of the image.\n4. alt - provides alternate text shown if the image cannot load, and used by screen readers.",
+    "steps": [
+      "src - specifies the path or URL of the image file to display.",
+      "height - sets the display height of the image.",
+      "alt - provides alternate text shown if the image cannot load, and used by screen readers."
+    ]
+  },
+  {
+    "id": "sol-ca-015",
+    "chapter": "HTML",
+    "exercise": "Ex. 1",
+    "number": "Q6",
+    "question": "Explain the difference between the <sup> and <sub> tags with one example each.",
+    "solution": "The <sup> tag displays text as superscript, raised above the normal line, e.g. writing an exponent as x<sup>2</sup>. The <sub> tag displays text as subscript, lowered below the normal line, e.g. writing a chemical formula as H<sub>2</sub>O.",
+    "steps": [
+      "The <sup> tag displays text as superscript, raised above the normal line, e.g. writing an exponent as x<sup>2</sup>.",
+      "The <sub> tag displays text as subscript, lowered below the normal line, e.g. writing a chemical formula as H<sub>2</sub>O."
+    ]
+  },
+  {
+    "id": "sol-ca-016",
+    "chapter": "HTML",
+    "exercise": "Ex. 2",
+    "number": "Q1",
+    "question": "List any four types of controls that can be used in an HTML form.",
+    "solution": "1. Textbox - for entering a single line of visible text.\n2. Radio button - for selecting one option from a group.\n3. Checkbox - for selecting one or more independent options.\n4. Password field - for entering text that is masked on screen.\n(A list/combo box using <select> is another example.)",
+    "steps": [
+      "Textbox - for entering a single line of visible text.",
+      "Checkbox - for selecting one or more independent options.",
+      "(A list/combo box using <select> is another example.)"
+    ]
+  },
+  {
+    "id": "sol-ca-017",
+    "chapter": "HTML",
+    "exercise": "Ex. 2",
+    "number": "Q2",
+    "question": "Differentiate between the rowspan and colspan attributes used in HTML tables.",
+    "solution": "The rowspan attribute is used with a <td> or <th> tag to make a cell span across multiple rows vertically. The colspan attribute is used with a <td> or <th> tag to make a cell span across multiple columns horizontally.",
+    "steps": [
+      "The rowspan attribute is used with a <td> or <th> tag to make a cell span across multiple rows vertically.",
+      "The colspan attribute is used with a <td> or <th> tag to make a cell span across multiple columns horizontally."
+    ]
+  },
+  {
+    "id": "sol-ca-018",
+    "chapter": "HTML",
+    "exercise": "Ex. 2",
+    "number": "Q3",
+    "question": "Explain the significance of hyperlinks on the web and name the tag and attribute used to create one.",
+    "solution": "Hyperlinks allow users to navigate from one web page or resource to another simply by clicking, connecting individual pages into a network of linked information which is central to how the World Wide Web functions. A hyperlink is created using the anchor tag <a>, with its href attribute specifying the destination URL, e.g. <a href=\"page2.html\">Next Page</a>.",
+    "steps": [
+      "Hyperlinks allow users to navigate from one web page or resource to another simply by clicking, connecting individual pages into a network of linked information which is central to how the World Wide Web functions.",
+      "A hyperlink is created using the anchor tag <a>, with its href attribute specifying the destination URL, e.g. <a href=\"page2.html\">Next Page</a>."
+    ]
+  },
+  {
+    "id": "sol-ca-019",
+    "chapter": "HTML",
+    "exercise": "Ex. 2",
+    "number": "Q4",
+    "question": "List any five CSS properties mentioned in the syllabus, along with what each one controls.",
+    "solution": "1. color - sets the colour of text.\n2. background-color - sets the background colour of an element.\n3. border-style - sets the style of an element's border (e.g. solid, dashed).\n4. margin - sets the space outside an element's border, separating it from other elements.\n5. width/height - set the horizontal/vertical size of an element.",
+    "steps": [
+      "color - sets the colour of text.",
+      "border-style - sets the style of an element's border (e.g. solid, dashed).",
+      "width/height - set the horizontal/vertical size of an element."
+    ]
+  },
+  {
+    "id": "sol-ca-020",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q1",
+    "question": "List any four rules of good netiquette that should be followed while communicating online.",
+    "solution": "1. Be respectful and avoid using offensive or abusive language.\n2. Do not send spam or unnecessary bulk messages.\n3. Respect others' privacy and do not share their personal information without consent.\n4. Check facts before forwarding information, to avoid spreading rumours or misinformation.",
+    "steps": [
+      "Be respectful and avoid using offensive or abusive language.",
+      "Respect others' privacy and do not share their personal information without consent.",
+      "Check facts before forwarding information, to avoid spreading rumours or misinformation."
+    ]
+  },
+  {
+    "id": "sol-ca-021",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q2",
+    "question": "Explain the open source software movement and state one advantage it offers to users.",
+    "solution": "The open source software movement promotes software whose source code is made freely available for anyone to view, use, modify and redistribute, often through collaborative community development. One advantage is that users and developers can freely inspect, customise and improve the software to suit their needs, often at little or no cost, rather than being dependent on a single vendor.",
+    "steps": [
+      "The open source software movement promotes software whose source code is made freely available for anyone to view, use, modify and redistribute, often through collaborative community development.",
+      "One advantage is that users and developers can freely inspect, customise and improve the software to suit their needs, often at little or no cost, rather than being dependent on a single vendor."
+    ]
+  },
+  {
+    "id": "sol-ca-022",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q3",
+    "question": "Differentiate between intellectual property rights and digital property rights.",
+    "solution": "Intellectual property rights (IPR) are legal rights that protect creations of the mind in general, such as inventions, literary works, designs, trademarks and patents, in both physical and digital form. Digital property rights specifically refer to the ownership and legal protection of property that exists in digital form, such as e-books, digital music, software and online content, covering how such digital assets may be used, copied or shared.",
+    "steps": [
+      "Intellectual property rights (IPR) are legal rights that protect creations of the mind in general, such as inventions, literary works, designs, trademarks and patents, in both physical and digital form.",
+      "Digital property rights specifically refer to the ownership and legal protection of property that exists in digital form, such as e-books, digital music, software and online content, covering how such digital assets…"
+    ]
+  },
+  {
+    "id": "sol-ca-023",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q4",
+    "question": "What is meant by 'freedom of information'? Why is it important in a democracy?",
+    "solution": "Freedom of information is the principle that citizens have the right to access information held by government bodies and public authorities. It is important in a democracy because it promotes transparency and accountability in governance, allows citizens to make informed decisions, and helps prevent corruption and misuse of power.",
+    "steps": [
+      "Freedom of information is the principle that citizens have the right to access information held by government bodies and public authorities.",
+      "It is important in a democracy because it promotes transparency and accountability in governance, allows citizens to make informed decisions, and helps prevent corruption and misuse of power."
+    ]
+  },
+  {
+    "id": "sol-ca-024",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q5",
+    "question": "Explain the concept of the digital divide and mention one social and one economic factor contributing to it.",
+    "solution": "The digital divide is the gap between people who have adequate access to computers, the Internet and digital skills and those who do not. Social factor: lack of digital literacy or education in certain communities, making it harder for them to use technology even if available. Economic factor: inability to afford computers, smartphones or Internet connectivity due to low income, particularly in rural or underprivileged areas.",
+    "steps": [
+      "The digital divide is the gap between people who have adequate access to computers, the Internet and digital skills and those who do not.",
+      "Social factor: lack of digital literacy or education in certain communities, making it harder for them to use technology even if available.",
+      "Economic factor: inability to afford computers, smartphones or Internet connectivity due to low income, particularly in rural or underprivileged areas."
+    ]
+  },
+  {
+    "id": "sol-ca-025",
+    "chapter": "Cyber ethics",
+    "exercise": "Ex. 1",
+    "number": "Q6",
+    "question": "List any three precautions a customer should take to ensure privacy and avoid fraud while shopping on an e-commerce website.",
+    "solution": "1. Shop only on websites that use HTTPS (look for the padlock icon) to ensure secure, encrypted data transmission.\n2. Avoid sharing sensitive details like passwords or OTPs over email or phone, even if the request looks official.\n3. Check the authenticity and reviews of the seller/website before making a purchase, to avoid fraudulent or fake stores.",
+    "steps": [
+      "Shop only on websites that use HTTPS (look for the padlock icon) to ensure secure, encrypted data transmission.",
+      "Avoid sharing sensitive details like passwords or OTPs over email or phone, even if the request looks official.",
+      "Check the authenticity and reviews of the seller/website before making a purchase, to avoid fraudulent or fake stores."
+    ]
+  },
+  {
+    "id": "sol-ca-026",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q1",
+    "question": "What is Scratch? Name two key elements of the Scratch interface.",
+    "solution": "Scratch is a free, block-based visual programming language developed by MIT, designed to teach programming concepts to beginners by letting them snap together colour-coded blocks instead of typing text-based code. Two key elements of its interface are the Stage (where sprites appear and the program runs) and the Sprite List (which shows all the sprites/characters in the project).",
+    "steps": [
+      "Define Scratch as a block-based visual programming language for beginners.",
+      "Name and briefly describe two interface elements: Stage and Sprite List."
+    ]
+  },
+  {
+    "id": "sol-ca-027",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q2",
+    "question": "Differentiate between a sprite and a backdrop in Scratch.",
+    "solution": "A sprite is a movable, programmable object or character in a Scratch project (e.g. a cat, a ball, a player) that can have scripts, costumes, and sounds attached to it. A backdrop is the background image or scene displayed on the Stage; unlike a sprite, a backdrop does not move or interact directly — it simply sets the visual context behind the sprites.",
+    "steps": [
+      "Define a sprite: a programmable, movable object with its own scripts/costumes.",
+      "Define a backdrop: the static background scene of the Stage.",
+      "Contrast: sprites are interactive/movable; backdrops are the static setting."
+    ]
+  },
+  {
+    "id": "sol-ca-028",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q3",
+    "question": "Explain the purpose of the 'forever' and 'repeat' blocks in Scratch, with an example use case each.",
+    "solution": "The 'forever' block repeats the blocks placed inside it endlessly, for as long as the program runs — useful for continuous actions like an animated background loop. The 'repeat n' block repeats the enclosed blocks exactly n times and then stops — useful for a fixed number of actions, such as making a sprite take exactly 4 steps forward.",
+    "steps": [
+      "Explain 'forever': infinite repetition, e.g. continuous animation loop.",
+      "Explain 'repeat n': fixed number of repetitions, e.g. move 4 times.",
+      "Give one example use case for each block."
+    ]
+  },
+  {
+    "id": "sol-ca-029",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q4",
+    "question": "What are events in Scratch? Give two examples of event blocks.",
+    "solution": "Events in Scratch are triggers that start a script running in response to something happening, such as a user action or a message from another sprite. Two example event blocks are 'when green flag clicked' (starts a script when the user clicks the green flag) and 'when [space] key pressed' (starts a script when a specific keyboard key is pressed).",
+    "steps": [
+      "Define an event as a trigger that starts a script.",
+      "Give example 1: 'when green flag clicked'.",
+      "Give example 2: 'when key pressed'."
+    ]
+  },
+  {
+    "id": "sol-ca-030",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q5",
+    "question": "What is Python? List two features that make it suitable for beginners.",
+    "solution": "Python is a high-level, general-purpose, text-based programming language known for its simple, readable syntax. Two features that make it beginner-friendly are: (1) its syntax closely resembles plain English and uses indentation instead of curly braces, making code easy to read; and (2) it has a large standard library and community support, so beginners can find many resources and pre-built functions to use.",
+    "steps": [
+      "Define Python as a high-level, readable programming language.",
+      "Feature 1: simple, English-like readable syntax with indentation.",
+      "Feature 2: large standard library and strong community/documentation support."
+    ]
+  },
+  {
+    "id": "sol-ca-031",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q6",
+    "question": "Write a Python program to input two numbers from the user and print their sum.",
+    "solution": "a = int(input(\"Enter first number: \"))\nb = int(input(\"Enter second number: \"))\nsum = a + b\nprint(\"The sum is:\", sum)",
+    "steps": [
+      "Use input() to read both numbers as strings, wrapping with int() to convert to integers.",
+      "Add the two integer variables.",
+      "Use print() to display the result with a descriptive label."
+    ]
+  },
+  {
+    "id": "sol-ca-032",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q7",
+    "question": "Write a Python program using a for loop to print the numbers from 1 to 5.",
+    "solution": "for i in range(1, 6):\n    print(i)",
+    "steps": [
+      "Use range(1, 6) to generate the sequence 1, 2, 3, 4, 5 (range's upper bound is exclusive).",
+      "Use a for loop to iterate through this sequence.",
+      "print(i) inside the loop displays each number on its own line."
+    ]
+  },
+  {
+    "id": "sol-ca-033",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q8",
+    "question": "Write a Python program that checks whether a number entered by the user is positive, negative, or zero.",
+    "solution": "n = int(input(\"Enter a number: \"))\nif n > 0:\n    print(\"Positive\")\nelif n < 0:\n    print(\"Negative\")\nelse:\n    print(\"Zero\")",
+    "steps": [
+      "Read the number using input() and convert it to an integer.",
+      "Use if to check if the number is greater than 0 (positive).",
+      "Use elif to check if it is less than 0 (negative), and else to catch the remaining case (zero)."
+    ]
+  },
+  {
+    "id": "sol-ca-034",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q9",
+    "question": "Differentiate between a 'for' loop and a 'while' loop in Python.",
+    "solution": "A 'for' loop is used to iterate over a known sequence or a fixed range of values (e.g. for i in range(5):), making it ideal when the number of iterations is known in advance. A 'while' loop repeats a block of code as long as a given condition remains true (e.g. while x < 10:), making it ideal when the number of iterations depends on a condition that may change during execution, rather than being fixed beforehand.",
+    "steps": [
+      "Define 'for' loop: iterates over a known sequence/fixed range.",
+      "Define 'while' loop: repeats while a condition stays true, iteration count not fixed in advance.",
+      "Give one example line of code for each."
+    ]
+  },
+  {
+    "id": "sol-ca-035",
+    "chapter": "Scratch & Python",
+    "exercise": "Ex. 4",
+    "number": "Q10",
+    "question": "List two similarities between programming concepts in Scratch and Python.",
+    "solution": "Both Scratch and Python support: (1) Selection/decision-making — Scratch uses 'if...then...else' blocks while Python uses if-elif-else statements, both allowing the program to choose between different actions based on a condition; and (2) Repetition/looping — Scratch uses 'repeat'/'forever' blocks while Python uses 'for'/'while' loops, both allowing a set of instructions to be executed multiple times.",
+    "steps": [
+      "Similarity 1: both support selection/decision-making (if-else logic), just with different syntax (blocks vs text).",
+      "Similarity 2: both support repetition/looping (repeat/forever vs for/while), just with different syntax."
+    ]
+  }
+]

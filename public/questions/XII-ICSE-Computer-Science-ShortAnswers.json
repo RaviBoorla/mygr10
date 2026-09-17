@@ -1,0 +1,321 @@
+[
+  {
+    "id": "sa-cs-001",
+    "chapter": "Mathematical Library Methods",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "text": "Write the Java statement for: Sum of a raised to b and cube root of c.",
+    "modelAnswer": "Math.pow(a, b) + Math.cbrt(c)",
+    "keyPoints": [
+      "Math.pow(a, b) computes a raised to the power b",
+      "Math.cbrt(c) computes the cube root of c",
+      "Both return double values; the + operator adds them"
+    ]
+  },
+  {
+    "id": "sa-cs-002",
+    "chapter": "User Defined Methods",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "text": "Name the following: (a) Method with the same name as of the class and is invoked every time an object is created. (b) Keyword to access the classes of a package.",
+    "modelAnswer": "(a) Constructor\n(b) import",
+    "keyPoints": [
+      "A constructor has the same name as the class and no return type",
+      "Constructors are automatically called when an object is created using 'new'",
+      "The 'import' keyword brings classes from other packages into scope",
+      "Example: import java.util.Scanner; allows use of Scanner class"
+    ]
+  },
+  {
+    "id": "sa-cs-003",
+    "chapter": "Library Classes",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "text": "Name the following: (a) A Character method that checks whether a character is an alphabet or a number. (b) A Math method that does not have an argument.",
+    "modelAnswer": "(a) Character.isLetterOrDigit(char)\n(b) Math.random()",
+    "keyPoints": [
+      "Character.isLetterOrDigit(ch) returns true if ch is a letter (a-z, A-Z) or digit (0-9)",
+      "Math.random() returns a random double between 0.0 (inclusive) and 1.0 (exclusive)",
+      "Other no-argument Math methods don't exist; Math.PI and Math.E are constants not methods"
+    ]
+  },
+  {
+    "id": "sa-cs-004",
+    "chapter": "String Handling",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Cyber police wanted to investigate a case; they wanted to check a list of phone numbers that had 945 anywhere in the phone number. A method was created to convert the phone number in long data type to a string and check for the existence of the number 945. Fill in the blanks (a) and (b):\nvoid check(long pno) {\n  String s = _____(a)_____;\n  if( _____(b)_____)\n    System.out.println(pno);\n}",
+    "modelAnswer": "(a) String.valueOf(pno)\n(b) s.indexOf(\"945\") >= 0  [or s.contains(\"945\")]",
+    "keyPoints": [
+      "String.valueOf(long) converts a long to its String representation",
+      "indexOf(\"945\") returns the position of \"945\" in the string, or -1 if not found",
+      "Condition s.indexOf(\"945\") >= 0 (or != -1) means \"945\" exists in the phone number",
+      "s.contains(\"945\") is a simpler alternative returning boolean directly"
+    ]
+  },
+  {
+    "id": "sa-cs-005",
+    "chapter": "String Handling",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "A manager wants to check the number of employees with names ending with KUMAR. Fill in the blanks in the given program segment:\nvoid count(String s[]) {\n  int i, l = _________, c = 0;\n  for(i=0; i<l; i++) {\n    if( ________________)\n      c++;\n  }\n  System.out.println(c);\n}",
+    "modelAnswer": "l = s.length\nCondition: s[i].endsWith(\"KUMAR\")",
+    "keyPoints": [
+      "s.length (without parentheses) gives the length of an array",
+      "String.endsWith(String suffix) returns true if the string ends with the given suffix",
+      "The comparison is case-sensitive: \"KUMAR\" must match exactly",
+      "s[i] accesses each String element of the array"
+    ]
+  },
+  {
+    "id": "sa-cs-006",
+    "chapter": "Iterative Constructs",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Give the output of the following program segment when a=6, b=4:\nfor(k=a; k<=a*b; k+=a) {\n  if(k % b == 0)\n    break;\n}\nSystem.out.println(k);",
+    "modelAnswer": "12",
+    "keyPoints": [
+      "Loop starts: k=6, limit=6*4=24, step=6",
+      "k=6: 6%4=2 (not 0, continue); k=12: 12%4=0 (break!)",
+      "After break, k=12 is printed",
+      "The loop exits when k is divisible by b"
+    ]
+  },
+  {
+    "id": "sa-cs-007",
+    "chapter": "Library Classes",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Kamal wants to display only the alphabets stored in a character array. While compiling the code, an error was displayed. Check for the statement with the error and write the correct statement:\nint i;\nfor(i=0; i<arr.length; i++) {\n  if(Character.isLetter(arr))\n    System.out.println(arr);\n}",
+    "modelAnswer": "Statements with error:\n  if(Character.isLetter(arr))\n  System.out.println(arr)\n\nCorrected statements:\n  if(Character.isLetter(arr[i]))\n  System.out.println(arr[i])",
+    "keyPoints": [
+      "Character.isLetter() requires a char argument, not the whole array",
+      "arr[i] accesses the i-th element of the character array",
+      "Both the condition and println must use arr[i] to process individual elements",
+      "Passing the array name 'arr' instead of 'arr[i]' causes a type mismatch error"
+    ]
+  },
+  {
+    "id": "sa-cs-008",
+    "chapter": "Values and Datatypes",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "text": "Name the type of type casting in the given statements:\n(a) double d = 10;\n(b) char ch = (char) 68;",
+    "modelAnswer": "(a) Implicit type casting (widening conversion)\n(b) Explicit type casting (narrowing conversion)",
+    "keyPoints": [
+      "Implicit casting: smaller type to larger type (int→double) happens automatically",
+      "Explicit casting: requires cast operator (int) or (char); used for narrowing conversions",
+      "double d = 10 widens int 10 to double 10.0 automatically",
+      "char ch = (char) 68 explicitly converts int 68 to char 'D' (ASCII 68)"
+    ]
+  },
+  {
+    "id": "sa-cs-009",
+    "chapter": "Mathematical Library Methods",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Write Java statements for the following:\n(a) To assign the cube root of -343 to a variable with the appropriate datatype.\n(b) To assign the position of the last occurrence of @ in the String s with the appropriate datatype.",
+    "modelAnswer": "(a) double c = Math.cbrt(-343);\n(b) int pos = s.lastIndexOf('@');",
+    "keyPoints": [
+      "Math.cbrt() accepts and returns double; it handles negative numbers (unlike Math.pow with fractional exponent)",
+      "Math.cbrt(-343) = -7.0 (cube root of -343 is -7)",
+      "lastIndexOf(char) returns the last position of the character, or -1 if not found",
+      "The return type of lastIndexOf() is int, suitable for array indices"
+    ]
+  },
+  {
+    "id": "sa-cs-010",
+    "chapter": "Operators",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Mention the output of this code snippet:\nint lives = 5;\nSystem.out.println(lives--);\nSystem.out.println(lives);",
+    "modelAnswer": "5\n4",
+    "keyPoints": [
+      "lives-- is post-decrement: the current value (5) is used first, then decremented",
+      "First println prints 5 (the value before decrement)",
+      "After the statement, lives becomes 4",
+      "Second println prints the updated value: 4"
+    ]
+  },
+  {
+    "id": "sa-cs-011",
+    "chapter": "Iterative Constructs",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Convert the following for loop segment to an exit-controlled loop:\nfor(k=10; k>=-1; k--)\n  System.out.println(k*2);\nSystem.out.println(k*4);",
+    "modelAnswer": "k=10;\ndo {\n  System.out.println(k*2);\n  k--;\n} while(k >= -1);\nSystem.out.println(k*4);",
+    "keyPoints": [
+      "Exit-controlled loop (do-while) executes the body at least once before checking the condition",
+      "Initialization (k=10) must be placed before the do-while block",
+      "The update (k--) moves inside the do block",
+      "The while condition matches the for loop's condition: k >= -1",
+      "The statement after the loop (k*4) remains outside"
+    ]
+  },
+  {
+    "id": "sa-cs-012",
+    "chapter": "Arrays",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Give the output of the following program segment:\nint x[] = {2, 45, 7, 67, 12, 3};\nint i, t = 0;\nfor(i=0, t=5; i<3; i++, t--) {\n  System.out.println(x[i] + x[t]);\n}",
+    "modelAnswer": "5\n57\n74",
+    "keyPoints": [
+      "i=0,t=5: x[0]+x[5] = 2+3 = 5",
+      "i=1,t=4: x[1]+x[4] = 45+12 = 57",
+      "i=2,t=3: x[2]+x[3] = 7+67 = 74",
+      "Loop runs while i<3 (i=0,1,2), t decrements from 5 to 3"
+    ]
+  },
+  {
+    "id": "sa-cs-013",
+    "chapter": "Arrays",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CFQ 2024",
+    "text": "Write Java statements for the following:\n(a) Initialise the array with the three favourite subjects.\n(b) Declare an array to store the marks in 3 subjects of 40 students.",
+    "modelAnswer": "(a) String subjects[] = {\"Mathematics\", \"Physics\", \"Chemistry\"};\n(b) int marks[][] = new int[40][3];",
+    "keyPoints": [
+      "Array initialisation with values uses curly braces: { }",
+      "String array stores text values — each subject in quotes",
+      "2D array for 40 students × 3 subjects: new int[40][3]",
+      "First dimension is typically rows (students), second is columns (subjects)"
+    ]
+  },
+  {
+    "id": "sa-cs-014",
+    "chapter": "Mathematical Library Methods",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "A student executes the given program segment and it results in 1.0, irrespective of the value of n. State the type of the error and write the correct statement:\nvoid solve(int n) {\n  double power = Math.pow(n, 2/3);\n  System.out.println(power);\n}",
+    "modelAnswer": "Type of error: Logical error\nCorrect statement: double power = Math.pow(n, 2.0/3);",
+    "keyPoints": [
+      "2/3 in Java performs integer division: both 2 and 3 are int, so result is 0",
+      "Math.pow(n, 0) = 1.0 for any n — that's why output is always 1.0",
+      "Using 2.0/3 performs floating-point division giving 0.6666...",
+      "Logical errors compile and run without exception but produce wrong results"
+    ]
+  },
+  {
+    "id": "sa-cs-015",
+    "chapter": "Encapsulation",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Consider the following program segment and answer the questions:\nfor(int k=1; k<=5; k++)\n  System.out.println(k);\nSystem.out.println(k);\n(a) Will the program segment get executed successfully?\n(b) If not, state the type of error.\n(c) How do you correct the program if it has any error?",
+    "modelAnswer": "(a) No\n(b) Syntax error (k cannot be resolved to a variable — k is out of scope after the loop)\n(c) Declare k outside the loop:\nint k;\nfor(k=1; k<=5; k++)\n  System.out.println(k);\nSystem.out.println(k);",
+    "keyPoints": [
+      "Variables declared inside a for loop (int k=1) have scope limited to that loop",
+      "Accessing k after the loop causes 'cannot find symbol' — a compile-time/syntax error",
+      "Fix: declare k before the for loop so it is accessible after it",
+      "After the loop completes normally, k will be 6 (the value that failed the condition)"
+    ]
+  },
+  {
+    "id": "sa-cs-016",
+    "chapter": "Arrays",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Consider the array: int a[] = {12, 35, 40, 22, 56, 9, 70};\n(a) In the above given array, using linear search, how many iterations are required to check for the existence of the value 56?\n(b) If the array is arranged in descending order, how many iterations are required to check for the existence of 56 using linear search?",
+    "modelAnswer": "(a) 5 iterations (56 is at index 4, checking indices 0,1,2,3,4)\n(b) 2 iterations (in descending order {70,56,...}, 56 is at index 1, checking indices 0,1)",
+    "keyPoints": [
+      "Linear search checks elements sequentially from index 0",
+      "Original array: {12,35,40,22,56,...} — 56 found at position 5 (5 comparisons)",
+      "Descending: {70,56,40,35,22,12,9} — 56 found at position 2 (2 comparisons)",
+      "Linear search order doesn't affect worst-case but does affect average case for specific values"
+    ]
+  },
+  {
+    "id": "sa-cs-017",
+    "chapter": "Evaluation of Expressions",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Evaluate the expression: 3*6%5*4/2*7%5",
+    "modelAnswer": "2\n\nStep by step:\n3*6 = 18\n18%5 = 3\n3*4 = 12\n12/2 = 6\n6*7 = 42\n42%5 = 2",
+    "keyPoints": [
+      "All operators (*, /, %) have same precedence and are left-associative",
+      "Evaluate strictly left to right: 3*6=18, 18%5=3, 3*4=12, 12/2=6, 6*7=42, 42%5=2",
+      "Integer division: 12/2=6 (exact), no truncation needed",
+      "Modulo % gives remainder: 18%5=3 (18=3×5+3), 42%5=2 (42=8×5+2)"
+    ]
+  },
+  {
+    "id": "sa-cs-018",
+    "chapter": "Nested for Loops",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Give the output of the following program segment:\nfor(r=1; r<=3; r++) {\n  for(c=1; c<r; c++) {\n    System.out.println(r);\n  }\n}",
+    "modelAnswer": "2\n3\n3",
+    "keyPoints": [
+      "r=1: inner loop c<1 → no iterations (no output)",
+      "r=2: inner loop c=1, c<2 → one iteration → prints 2",
+      "r=3: inner loop c=1,2, c<3 → two iterations → prints 3 twice",
+      "Inner loop runs (r-1) times for each value of r"
+    ]
+  },
+  {
+    "id": "sa-cs-019",
+    "chapter": "Arrays",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Name the method of search and state its prerequisite condition. Also name the sorting algorithm that is performed as a prerequisite.\n(a) For which the array must be sorted before searching.\n(b) What sorting algorithm can be used to sort the array as a prerequisite?",
+    "modelAnswer": "(a) Binary Search requires the array to be sorted.\n(b) Selection Sort (or any comparison-based sort such as Bubble Sort) can be used.",
+    "keyPoints": [
+      "Binary Search divides the search space in half each iteration — requires sorted array",
+      "Binary Search has O(log n) complexity vs Linear Search's O(n)",
+      "Selection Sort finds the minimum element and places it in correct position each pass",
+      "Bubble Sort is another valid prerequisite sorting algorithm"
+    ]
+  },
+  {
+    "id": "sa-cs-020",
+    "chapter": "Iterative Constructs",
+    "subject": "Computer Applications",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CFQ 2024",
+    "text": "Give the output and number of times the loop is executed:\nint k=10;\nwhile(k <= 22) {\n  System.out.println(k);\n  k += 4;\n}",
+    "modelAnswer": "Output:\n10\n14\n18\n22\n\nLoop is executed 4 times",
+    "keyPoints": [
+      "k starts at 10, increments by 4 each iteration",
+      "k=10 (≤22): print 10; k=14 (≤22): print 14; k=18 (≤22): print 18; k=22 (≤22): print 22",
+      "k=26 > 22: loop exits",
+      "Total: 4 iterations"
+    ]
+  }
+]

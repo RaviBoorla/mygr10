@@ -76,12 +76,9 @@ Object.assign(app, {
   _gradeTabs() {
     return `
       <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
-        ${GRADES.map(g => {
-          const noData = g.id === 'XII';
-          return `
+        ${GRADES.map(g => `
           <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
-                  aria-pressed="${g.id === state.grade}" ${noData ? 'disabled title="Coming soon — no question banks yet"' : `onclick="app.setGrade('${g.id}')"`}>${esc(g.label)}</button>`;
-        }).join('')}
+                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
       </div>`;
   },
 
