@@ -6,7 +6,7 @@ Object.assign(app, {
       <style>
       /* ── careers: scoped overrides on top of app chrome ── */
       #careers-wrap{
-        position:fixed;top:var(--chrome-h,92px);left:0;right:0;bottom:var(--footer-h,32px);
+        position:fixed;top:var(--chrome-h,92px);left:0;right:0;bottom:0;
         overflow-x:auto;overflow-y:auto;
       }
       #careers-inner{display:inline-block;transform-origin:top left;line-height:0}
@@ -77,7 +77,7 @@ Object.assign(app, {
       .careers-ld{width:8px;height:8px;border-radius:2px;flex-shrink:0}
 
       #careers-det{
-        position:fixed;top:var(--chrome-h,92px);right:0;bottom:var(--footer-h,32px);width:330px;max-width:100vw;z-index:199;
+        position:fixed;top:var(--chrome-h,92px);right:0;bottom:0;width:330px;max-width:100vw;z-index:199;
         background:rgba(255,255,255,.98);backdrop-filter:blur(18px);
         border-left:1px solid var(--border);
         box-shadow:-8px 0 24px rgba(15,23,42,.08);

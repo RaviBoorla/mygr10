@@ -106,26 +106,22 @@
   --radius-logo:  5px;    /* header logo icon */
   --radius-rev:   7px;    /* review option rows */
 
-  /* ── Typography scale ──
-     Bumped +1px across the board (2026-09) so text stays readable at the
-     0.8 desktop zoom (style.css) — paddings on tight badge/pill/kbd
-     components were nudged alongside wherever the old padding was thin
-     enough for the extra px to touch a border. */
-  --fs-2xs:   11.5px;   /* chip counts, kbd */
-  --fs-xs:    12px;     /* palette legend, badge labels */
-  --fs-sm:    12.5px;   /* kbd hint, note source */
-  --fs-note:  13px;     /* meta labels, hints */
-  --fs-chip:  13.5px;   /* chapter chips */
-  --fs-ui:    14px;     /* topbar text, board buttons, UI labels */
-  --fs-body:  15px;     /* body content, options, list rows */
-  --fs-btn:   16px;     /* default button text */
-  --fs-read:  17px;     /* question text, inputs */
-  --fs-card:  18px;     /* card headings, modal title */
-  --fs-sec:   19px;     /* section titles, logo, large scores */
-  --fs-tim:   20px;     /* timer digits */
-  --fs-num:   21px;     /* score tile value */
-  --fs-h2:    23px;     /* page headings */
-  --fs-hero:  43px;     /* welcome screen logo */
+  /* ── Typography scale ── */
+  --fs-2xs:   10.5px;   /* chip counts, kbd */
+  --fs-xs:    11px;     /* palette legend, badge labels */
+  --fs-sm:    11.5px;   /* kbd hint, note source */
+  --fs-note:  12px;     /* meta labels, hints */
+  --fs-chip:  12.5px;   /* chapter chips */
+  --fs-ui:    13px;     /* topbar text, board buttons, UI labels */
+  --fs-body:  14px;     /* body content, options, list rows */
+  --fs-btn:   15px;     /* default button text */
+  --fs-read:  16px;     /* question text, inputs */
+  --fs-card:  17px;     /* card headings, modal title */
+  --fs-sec:   18px;     /* section titles, logo, large scores */
+  --fs-tim:   19px;     /* timer digits */
+  --fs-num:   20px;     /* score tile value */
+  --fs-h2:    22px;     /* page headings */
+  --fs-hero:  42px;     /* welcome screen logo */
 
   /* ── Transitions ── */
   --tx-fast:  .1s;
@@ -138,7 +134,6 @@
 
   /* ── Layout geometry ── */
   --header-h:    48px;
-  --footer-h:    32px;   /* site-footer min-height — kept thin, a secondary bar */
   --exam-gutter: 12px;   /* space around and between exam panels */
   --exam-bottom: max(5vh, 44px); /* breathing room under action rows */
 }
