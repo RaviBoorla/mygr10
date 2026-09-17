@@ -414,7 +414,7 @@ Object.assign(app, {
   _assignmentPanel(childUid, link) {
     const assignments = window.riseFamily?.getChildAssignments(childUid) || [];
     const [childGrade, childBoard] = (link.gradeBoard || `${state.grade}::${state.board}`).split('::');
-    const subjects = (SUBJECTS[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade));
+    const subjects = (SUBJECTS[childGrade]?.[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade));
 
     const statusLabel = { pending: 'Pending', completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
     const fmtDue = ts => {

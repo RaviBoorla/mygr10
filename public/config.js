@@ -7,9 +7,16 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
-  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
-  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
-  // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
+  X: {
+    CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
+    // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
+  },
+  XII: {
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science'],
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
+    // more subjects to follow
+  }
 };
 
 const BANKS = {
@@ -29,21 +36,16 @@ const BANKS = {
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications',
   'X CBSE Information Technology':  'X-CBSE-Information-Technology',
 
-  'XII CBSE Mathematics':           'XII-CBSE-Mathematics',
-  'XII CBSE Science':               'XII-CBSE-Science',
-  'XII CBSE Social Science':        'XII-CBSE-Social-Science',
-  'XII ICSE Mathematics':           'XII-ICSE-Mathematics',
-  'XII ICSE Physics':               'XII-ICSE-Physics',
-  'XII ICSE Chemistry':             'XII-ICSE-Chemistry',
-  'XII ICSE Biology':               'XII-ICSE-Biology',
-  'XII ICSE History & Civics':      'XII-ICSE-History-Civics',
-  'XII ICSE Geography':             'XII-ICSE-Geography',
-  'XII ICSE English':               'XII-ICSE-English',
-  'XII ICSE Computer Science':      'XII-ICSE-Computer-Science',
-  'XII CBSE Hindi':                  'XII-CBSE-Hindi',
-  'XII CBSE English':               'XII-CBSE-English',
-  'XII CBSE Computer Applications':   'XII-CBSE-Computer-Applications',
-  'XII CBSE Information Technology':  'XII-CBSE-Information-Technology'
+  'XII CBSE Mathematics':        'XII-CBSE-Mathematics',
+  'XII CBSE Physics':            'XII-CBSE-Physics',
+  'XII CBSE Chemistry':          'XII-CBSE-Chemistry',
+  'XII CBSE Biology':            'XII-CBSE-Biology',
+  'XII CBSE Computer Science':   'XII-CBSE-Computer-Science',
+  'XII ICSE Mathematics':        'XII-ICSE-Mathematics',
+  'XII ICSE Physics':            'XII-ICSE-Physics',
+  'XII ICSE Chemistry':          'XII-ICSE-Chemistry',
+  'XII ICSE Biology':            'XII-ICSE-Biology',
+  'XII ICSE Computer Science':   'XII-ICSE-Computer-Science'
 };
 
 const SA_BANKS = {
@@ -59,21 +61,7 @@ const SA_BANKS = {
   'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers',
   'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-ShortAnswers',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers',
-
-  'XII CBSE Mathematics':            'XII-CBSE-Mathematics-ShortAnswers',
-  'XII CBSE Social Science':         'XII-CBSE-Social-Science-ShortAnswers',
-  'XII CBSE Science':                'XII-CBSE-Science-ShortAnswers',
-  'XII CBSE English':                'XII-CBSE-English-ShortAnswers',
-  'XII ICSE Mathematics':            'XII-ICSE-Mathematics-ShortAnswers',
-  'XII ICSE Physics':                'XII-ICSE-Physics-ShortAnswers',
-  'XII ICSE Chemistry':              'XII-ICSE-Chemistry-ShortAnswers',
-  'XII ICSE Biology':                'XII-ICSE-Biology-ShortAnswers',
-  'XII ICSE History & Civics':       'XII-ICSE-History-Civics-ShortAnswers',
-  'XII ICSE Geography':              'XII-ICSE-Geography-ShortAnswers',
-  'XII ICSE Computer Science':       'XII-ICSE-Computer-Science-ShortAnswers',
-  'XII CBSE Computer Applications':   'XII-CBSE-Computer-Applications-ShortAnswers',
-  'XII CBSE Information Technology':  'XII-CBSE-Information-Technology-ShortAnswers'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -86,13 +74,7 @@ const SOLVED_BANKS = {
   'X CBSE Science':        'X-CBSE-Science-Solved',
   'X CBSE Social Science': 'X-CBSE-Social-Science-Solved',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-Solved',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved',
-
-  'XII CBSE Mathematics':    'XII-CBSE-Mathematics-Solved',
-  'XII CBSE Science':        'XII-CBSE-Science-Solved',
-  'XII CBSE Social Science': 'XII-CBSE-Social-Science-Solved',
-  'XII CBSE Computer Applications':   'XII-CBSE-Computer-Applications-Solved',
-  'XII CBSE Information Technology':  'XII-CBSE-Information-Technology-Solved'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
