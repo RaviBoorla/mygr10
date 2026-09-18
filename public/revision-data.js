@@ -6797,3 +6797,356 @@ REVISION['XII Computer Science'] = [
     ]
   }
 ];
+
+REVISION['XII Economics'] = [
+  {
+    chapter: 'Introduction',
+    formulae: [
+      'PPF (Production Possibility Frontier): curve showing all maximum output combinations of two goods given resources',
+      'Opportunity cost: value of the next-best alternative forgone'
+    ],
+    logic: [
+      'Central problems of every economy: What to produce, How to produce, For whom to produce',
+      'Scarcity: resources are limited relative to unlimited wants — the fundamental economic problem',
+      'PPF slopes downward (negative slope): producing more of one good requires giving up some of another',
+      'Microeconomics: studies individual consumers and producers, single commodity price and quantity determination',
+      'Macroeconomics: studies economy as a whole — total output, employment, aggregate price level',
+      'Market economy: prices determined by demand and supply; minimal government role',
+      'Centrally planned economy: government decides all resource allocation',
+      'Mixed economy: elements of both market and central planning'
+    ],
+    tips: [
+      'Positive economics: describes what IS (factual); Normative economics: prescribes what OUGHT to be (value judgement)',
+      'Points inside PPF = inefficient (resources underused); on PPF = efficient; outside PPF = unattainable currently',
+      'Opportunity cost increases along PPF — explains why PPF is concave (bowed outward)'
+    ],
+    bestPractices: [
+      'Define scarcity, opportunity cost and PPF precisely — these appear as 1-mark definitions in board exams',
+      'Distinguish micro vs. macro with one example each',
+      'Board question: "What is a production possibility frontier?" — always mention resources, technology, efficient use'
+    ]
+  },
+  {
+    chapter: 'Theory of Consumer Behaviour',
+    formulae: [
+      'Budget line: P₁x₁ + P₂x₂ = M  (M = income, P₁, P₂ = prices)',
+      'MRS (Marginal Rate of Substitution) = ΔX₂/ΔX₁  (along indifference curve)',
+      'Consumer equilibrium: MRS = P₁/P₂  (tangency of budget line and indifference curve)',
+      'Price elasticity of demand (Ed) = % change in quantity demanded / % change in price',
+      'Unitary elastic: |Ed| = 1; Elastic: |Ed| > 1; Inelastic: |Ed| < 1'
+    ],
+    logic: [
+      'Budget set: all bundles affordable at given prices and income; budget line = boundary of budget set',
+      'Budget line shifts: income increase → parallel outward shift; price rise of one good → pivot inward on that axis',
+      'Indifference curve: locus of bundles giving equal satisfaction; downward sloping; convex to origin',
+      'Monotonic preferences: more of any good is preferred → indifference curves cannot slope upward',
+      'Consumer optimum: highest affordable indifference curve = tangency point with budget line',
+      'Demand curve: derived from consumer optimum — shows quantity chosen at each price (ceteris paribus)',
+      'Normal good: demand increases with income; Inferior good: demand decreases with income',
+      'Substitute goods: rise in price of one → demand for other rises; Complement goods: opposite'
+    ],
+    tips: [
+      'Indifference curves never intersect — would imply contradiction in preferences',
+      'MRS diminishes along an IC (convexity): willing to give up less Y for each extra unit of X',
+      'Giffen good: inferior good with such strong income effect that demand rises when price rises (rare exception)',
+      'Total expenditure method to determine elasticity: if expenditure falls as price rises → elastic; rises → inelastic'
+    ],
+    bestPractices: [
+      'Always draw and label budget line with intercepts (M/P₁ on X-axis, M/P₂ on Y-axis)',
+      'Show consumer equilibrium diagram: IC tangent to budget line with optimum bundle marked',
+      'State reason for downward slope of demand curve: substitution effect + income effect'
+    ]
+  },
+  {
+    chapter: 'Production and Costs',
+    formulae: [
+      'TP = f(L, K)  (Total Product as function of Labour and Capital)',
+      'MP = ΔTP/ΔL  (Marginal Product)',
+      'AP = TP/L  (Average Product)',
+      'TC = TFC + TVC',
+      'AC = AFC + AVC  (also AC = TC/Q)',
+      'MC = ΔTC/ΔQ  (also = ΔTVC/ΔQ since TFC is constant)'
+    ],
+    logic: [
+      'Short run: at least one input fixed (usually capital); Long run: all inputs variable',
+      'Law of diminishing marginal product: as more variable input is added (fixed capital), MP eventually falls',
+      'TP, MP relationship: MP > 0 → TP rising; MP = 0 → TP maximum; MP < 0 → TP falling',
+      'MP curve cuts AP at AP maximum (from above)',
+      'AFC = TFC/Q — continuously falls as output increases (fixed cost spread over more units)',
+      'AVC, SAC, SMC are all U-shaped in short run',
+      'SMC cuts AVC at minimum AVC; SMC cuts SAC at minimum SAC',
+      'LRAC and LRMC are also U-shaped; LRMC cuts LRAC at minimum LRAC',
+      'Economies of scale: LRAC falls as output rises; Diseconomies of scale: LRAC rises'
+    ],
+    tips: [
+      'TVC = area under MC curve up to that output level',
+      'Returns to scale (long run): Increasing, Constant, Decreasing returns to scale',
+      'Law of variable proportions = short-run version; Returns to scale = long-run concept',
+      'AFC never reaches zero (fixed cost always exists regardless of output level)'
+    ],
+    bestPractices: [
+      'Draw U-shaped AVC, SAC, MC curves with MC passing through minimum points of both',
+      'Distinguish clearly between short run and long run; state which inputs are fixed/variable',
+      'Numericals: calculate TP from MP (sum), MP from TP (difference), all cost curves from TC table'
+    ]
+  },
+  {
+    chapter: 'The Theory of the Firm under Perfect Competition',
+    formulae: [
+      'TR = P × Q  (Total Revenue)',
+      'AR = TR/Q = P  (for price-taker)',
+      'MR = ΔTR/ΔQ = P  (for price-taker in perfect competition)',
+      'Profit (π) = TR − TC',
+      'Profit maximisation: P = SMC AND SMC is non-decreasing AND P ≥ AVC (short run)',
+      'Price elasticity of supply (Es) = % change in quantity supplied / % change in price'
+    ],
+    logic: [
+      'Perfect competition features: large buyers/sellers, homogeneous product, free entry/exit, perfect information',
+      'Price-taker: individual firm cannot influence market price; faces perfectly elastic (horizontal) demand curve',
+      'Profit maximisation rule: produce where MR = MC (P = SMC for PC firm)',
+      'Shut-down condition: if P < min AVC, firm produces zero (variable costs not covered)',
+      'Short-run supply curve of firm: rising part of SMC at or above minimum AVC',
+      'Long-run supply: rising part of LRMC at or above minimum LRAC',
+      'Market supply: horizontal summation of all individual firm supply curves',
+      'Unit tax shifts supply curve leftward (increases cost)'
+    ],
+    tips: [
+      'AR = MR = P in perfect competition (demand curve is horizontal)',
+      'Firm earns normal profit (zero economic profit) in long-run equilibrium (P = min LRAC)',
+      'Positive economic profit attracts new entry → price falls → profits eliminated',
+      'Supply curve shifts right: technological progress, fall in input prices, decrease in unit tax'
+    ],
+    bestPractices: [
+      'Draw firm demand as horizontal line at market price; show TR, TC and profit/loss clearly',
+      'Show profit maximisation at P = SMC with non-decreasing SMC condition',
+      'Distinguish between short-run and long-run equilibrium conditions'
+    ]
+  },
+  {
+    chapter: 'Market Equilibrium',
+    formulae: [
+      'Equilibrium: Qd = Qs  (market clears)',
+      'Excess demand: Qd > Qs → price rises; Excess supply: Qd < Qs → price falls',
+      'Marginal Revenue Product (MRP) of labour = MR × MP',
+      'Labour demand: firm hires labour until MRP = wage rate (W)'
+    ],
+    logic: [
+      'Equilibrium price and quantity at intersection of market demand and supply curves',
+      'Demand shift right (supply unchanged): equilibrium P and Q both increase',
+      'Supply shift right (demand unchanged): equilibrium Q increases, P decreases',
+      'Both shift same direction: effect on Q unambiguous; effect on P depends on magnitude',
+      'Both shift opposite directions: effect on P unambiguous; effect on Q depends on magnitude',
+      'Free entry and exit (long run): equilibrium price always equals minimum AC of firms',
+      'With free entry/exit: demand shift increases Q and number of firms, P unchanged (equals min AC)',
+      'Price ceiling below equilibrium → excess demand (shortage); government rationing needed',
+      'Price floor above equilibrium → excess supply (surplus); e.g., minimum wage, MSP'
+    ],
+    tips: [
+      'MSP (Minimum Support Price) = price floor for agricultural goods in India',
+      'Rent control = price ceiling → housing shortage (classic example)',
+      'With free entry/exit market is more responsive to demand shifts (larger Q increase)',
+      'Board question: explain effect of (a) rise in income on normal good, (b) improvement in technology'
+    ],
+    bestPractices: [
+      'Always draw demand-supply diagram showing shift and new equilibrium',
+      'State direction of change in both P and Q after any shift',
+      'Distinguish fixed-number-of-firms vs. free-entry-and-exit scenarios — different long-run outcomes'
+    ]
+  }
+];
+
+REVISION['XII Psychology'] = [
+  {
+    chapter: 'Variations in Psychological Attributes',
+    formulae: [
+      'IQ = (Mental Age / Chronological Age) × 100',
+      'Normal distribution of IQ: mean = 100, SD ≈ 15; 68% fall between 85–115'
+    ],
+    logic: [
+      'Individual differences: distinctiveness and variations among people\'s characteristics and behaviour patterns',
+      'Intelligence: ability to understand complex ideas, adapt to environment, learn from experience, reason, overcome obstacles',
+      'Binet\'s IQ test: first standardised intelligence test; concept of Mental Age',
+      'Gardner\'s Multiple Intelligences (8): Linguistic, Logical-Mathematical, Spatial, Musical, Bodily-Kinaesthetic, Interpersonal, Intrapersonal, Naturalist',
+      'Sternberg\'s Triarchic Theory: Componential (analytical), Experiential (creative), Contextual (practical) intelligence',
+      'PASS model (Das): Planning, Attention-Arousal, Simultaneous processing, Successive processing — four neurological systems',
+      'Emotional Intelligence (EI): perceive/manage own and others\' emotions, motivate oneself, handle relationships',
+      'Aptitude: potential to acquire skills with training; different from achievement (actual performance)',
+      'Creativity: ability to produce novel, appropriate and useful ideas; requires some intelligence but high IQ ≠ high creativity'
+    ],
+    tips: [
+      'IQ 90–109 = Average; 110–119 = High average; 120–129 = Superior; 130+ = Very Superior; below 70 = Intellectual disability',
+      'Individual intelligence tests: Binet-Simon, WAIS; Group tests: Army Alpha (verbal), Army Beta (non-verbal)',
+      'Fluid intelligence (Gf): solving novel problems; Crystallised intelligence (Gc): accumulated knowledge',
+      'Cultural differences: Indian notion of intelligence includes social competence and emotional balance'
+    ],
+    bestPractices: [
+      'Name the theory and its author together (e.g., "Gardner\'s theory of multiple intelligences")',
+      'Distinguish aptitude (potential) from intelligence (current ability) and achievement (past performance)',
+      'Board question: list Gardner\'s 8 intelligences with one-line examples'
+    ]
+  },
+  {
+    chapter: 'Self and Personality',
+    formulae: [],
+    logic: [
+      'Self: the awareness of one\'s own identity; includes self-concept, self-esteem, self-efficacy',
+      'Indian notion of self: emphasis on collectivism, interconnectedness; Western notion: individualistic, independent',
+      'Personality: characteristic ways of thinking, feeling and behaving that make a person unique',
+      'Type theories: classify people into distinct categories (e.g., introvert/extrovert — Jung)',
+      'Trait theories: personality = set of stable traits; Big Five (OCEAN): Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism',
+      'Freud\'s psychoanalytic theory: personality = Id (pleasure principle), Ego (reality principle), Superego (moral principle); unconscious drives behaviour',
+      'Freud\'s defence mechanisms: repression, projection, rationalisation, displacement, sublimation',
+      'Horney & Adler: Neo-Freudian; emphasised social factors over biological drives',
+      'Humanistic approach: Rogers — Real self vs. Ideal self; congruence = psychological health; Maslow — hierarchy of needs, self-actualisation',
+      'Cultural approach: personality shaped by cultural demands and economic maintenance systems',
+      'Personality assessment: Self-report (questionnaires — MMPI, 16PF), Projective (Rorschach Inkblot, TAT), Behavioural analysis (observation, interview)'
+    ],
+    tips: [
+      'Rorschach Inkblot Test: 10 inkblot cards; person describes what they see — projects unconscious',
+      'TAT (Thematic Apperception Test): person creates story around ambiguous pictures',
+      'Self-report measures are objective but subject to social desirability bias',
+      'Rogers: unconditional positive regard from others helps develop healthy self-concept'
+    ],
+    bestPractices: [
+      'Compare type vs. trait approach: type places people in categories; trait describes degree of each dimension',
+      'Freud\'s structure: Id (unconscious, biological), Ego (conscious, mediating), Superego (moral conscience)',
+      'Board question: distinguish projective and self-report measures with examples'
+    ]
+  },
+  {
+    chapter: 'Meeting Life Challenges',
+    formulae: [],
+    logic: [
+      'Stress: a transactional process between person and environment; neither purely stimulus nor response',
+      'Types of stress: Physical/environmental (noise, heat), Psychological (conflict, frustration), Social (relationships)',
+      'Sources of stress: Life events (major changes), Daily hassles (minor irritants), Traumatic events (disasters)',
+      'GAS (General Adaptation Syndrome — Selye): Alarm reaction → Resistance → Exhaustion',
+      'Stress responses: Emotional (anxiety, anger), Physiological (fight-or-flight — cortisol, adrenaline), Cognitive (difficulty concentrating), Behavioural (withdrawal)',
+      'Coping types: Task-oriented (address problem), Emotion-oriented (manage emotional response), Avoidance-oriented (escape)',
+      'Problem-focused coping: changes the stressor; Emotion-focused coping: changes emotional reaction to stressor',
+      'Life skills for coping: assertiveness, time management, rational thinking, improving relationships, self-care'
+    ],
+    tips: [
+      'Eustress = positive stress (motivating); Distress = negative stress (harmful)',
+      'Burnout: chronic stress leading to emotional exhaustion, depersonalisation, reduced sense of achievement',
+      'Social support: emotional, informational, tangible — all buffer stress',
+      'Healthy lifestyle: balanced diet, exercise, positive thinking, social support protect against stress'
+    ],
+    bestPractices: [
+      'Explain GAS with three stages and physiological changes at each stage',
+      'Distinguish problem-focused and emotion-focused coping with examples',
+      'Board question: "What is stress? Describe the sources and effects of stress"'
+    ]
+  },
+  {
+    chapter: 'Psychological Disorders',
+    formulae: [],
+    logic: [
+      'Abnormal behaviour: 4Ds — Deviance, Distress, Dysfunction, Danger',
+      'DSM-5 (Diagnostic and Statistical Manual): standard classification system for psychological disorders',
+      'Anxiety disorders: Phobias (intense irrational fear), GAD (generalised anxiety disorder), Panic disorder',
+      'OCD (Obsessive-Compulsive Disorder): obsessions (intrusive thoughts) + compulsions (repetitive behaviours)',
+      'PTSD (Post-Traumatic Stress Disorder): flashbacks, nightmares, hyperarousal after traumatic event',
+      'Depressive disorders: persistent sadness, loss of interest, fatigue, worthlessness, suicidal ideation',
+      'Bipolar disorder: alternating episodes of mania (elevated mood, grandiosity) and depression',
+      'Schizophrenia: positive symptoms (hallucinations, delusions, disorganised speech) + negative symptoms (flat affect, withdrawal)',
+      'Dissociative disorders: disruption of identity, memory or consciousness (DID — multiple personalities)',
+      'Eating disorders: Anorexia nervosa (self-starvation, distorted body image), Bulimia nervosa (binge-purge cycles)',
+      'ADHD: inattention, hyperactivity, impulsivity — neurodevelopmental disorder',
+      'Substance-related disorders: dependence (tolerance + withdrawal) and abuse'
+    ],
+    tips: [
+      'Hallucination: perception without stimulus (hearing voices); Delusion: false fixed belief (persecution)',
+      'Positive symptoms of schizophrenia = excess/distorted functions; Negative = reduction of normal functions',
+      'Phobias: specific phobia (object), social phobia (scrutiny), agoraphobia (open/public places)',
+      'Conduct disorder in childhood → can develop into antisocial personality disorder in adults'
+    ],
+    bestPractices: [
+      'Use DSM criteria framework: describe key symptoms, duration, functional impairment',
+      'Distinguish anxiety disorder from OCD: anxiety = fear of external threat; OCD = fear driven by intrusive thoughts',
+      'Board question: "Distinguish between obsessions and compulsions with examples"'
+    ]
+  },
+  {
+    chapter: 'Therapeutic Approaches',
+    formulae: [],
+    logic: [
+      'Psychotherapy: voluntary relationship between therapist and client to resolve psychological problems',
+      'Therapeutic alliance: trust (client) + empathy (therapist) = foundation of effective therapy',
+      'Psychoanalytic therapy (Freud): free association, dream analysis, interpretation — makes unconscious conscious',
+      'Behaviour therapy: based on learning principles; techniques — systematic desensitisation (for phobias), token economy, aversion therapy',
+      'Cognitive therapy (Beck, Ellis): identifies and challenges cognitive distortions (irrational thoughts); ABC model (Ellis): Activating event → Belief → Consequence',
+      'CBT (Cognitive Behaviour Therapy): combines cognitive and behavioural techniques — most widely used',
+      'Humanistic therapy (Rogers): client-centred therapy; unconditional positive regard, empathy, genuineness',
+      'Existential therapy: focuses on meaning, freedom, responsibility',
+      'Biomedical therapy: drugs (antidepressants, antipsychotics, anxiolytics), ECT (electroconvulsive therapy)',
+      'Alternative therapies: yoga, meditation, mindfulness — effective for stress, anxiety, mild depression',
+      'Rehabilitation: social skills training, vocational training — for chronic mental illness patients'
+    ],
+    tips: [
+      'Systematic desensitisation: relaxation + gradual exposure hierarchy to feared stimulus (classical conditioning)',
+      'Token economy: reward desired behaviour with tokens (operant conditioning)',
+      'Cognitive distortions: overgeneralisation, all-or-nothing thinking, catastrophising, personalisation',
+      'Psychotherapy ≠ advice-giving; requires professional training and structured therapeutic relationship'
+    ],
+    bestPractices: [
+      'Link therapy type to underlying theoretical approach (e.g., behaviour therapy ← behaviourism)',
+      'Board question: "Explain the techniques used in behaviour therapy" — name at least 3 with definitions',
+      'Distinguish individual therapy, group therapy and family therapy by unit of treatment'
+    ]
+  },
+  {
+    chapter: 'Attitude and Social Cognition',
+    formulae: [],
+    logic: [
+      'Attitude: evaluative thoughts + emotional component + behavioural tendency toward an attitude object',
+      'Components of attitude (ABC): Affective (feeling), Behavioural (tendency to act), Cognitive (belief/thought)',
+      'Attitude dimensions: valence (positive/negative), extremeness, simplicity/complexity, centrality',
+      'Attitude formation: learning (classical + operant conditioning), family and school influences, reference groups, media',
+      'Attitude change: Balance theory (Heider), Cognitive dissonance (Festinger — inconsistency between attitudes/behaviour creates discomfort → change)',
+      'Two-step concept: attitude change involves source → opinion leader → audience',
+      'Factors in persuasion: Source characteristics (credibility, attractiveness), Message characteristics (one-sided vs two-sided), Target characteristics',
+      'Prejudice: negative attitude toward a group; Discrimination: behaviour based on prejudice',
+      'Causes of prejudice: social learning, scapegoating, kernel of truth, self-fulfilling prophecy, ingroup bias',
+      'Reducing prejudice: education, intergroup contact, emphasising individual identity, superordinate goals'
+    ],
+    tips: [
+      'Prejudice = attitude (cognitive + affective); Discrimination = behaviour',
+      'Stereotype = oversimplified generalisation about a group; basis of prejudice',
+      'Festinger: cognitive dissonance → reduce inconsistency by changing attitude, behaviour or adding cognition',
+      'Attribution: explain others\' behaviour by internal (dispositional) or external (situational) causes'
+    ],
+    bestPractices: [
+      'Board question: "Define attitude. Discuss its components" — use ABC model with examples',
+      'Distinguish prejudice and discrimination clearly — prejudice can exist without discrimination (LaPiere experiment)',
+      'Strategies to reduce prejudice: at least 3 points with brief explanation'
+    ]
+  },
+  {
+    chapter: 'Social Influence and Group Processes',
+    formulae: [],
+    logic: [
+      'Group: organised system of 2+ individuals with mutual interdependence, roles, norms, and common goals',
+      'Group types: Primary (close, face-to-face: family) vs. Secondary (impersonal: professional); Formal vs. Informal; Ingroup vs. Outgroup',
+      'Reasons for joining groups: security, status, self-esteem, affiliation, goal achievement, knowledge',
+      'Group formation factors: proximity, similarity, common motives and goals',
+      'Tuckman\'s stages of group formation: Forming → Storming → Norming → Performing → Adjourning',
+      'Social facilitation: presence of others improves performance on well-learned tasks but impairs performance on novel/complex tasks',
+      'Social loafing: reduced individual effort when working in a group (diffusion of responsibility)',
+      'Groupthink: in highly cohesive groups, pressure for conformity overrides realistic appraisal of alternatives — leads to poor decisions',
+      'Group polarisation: group discussion intensifies initial individual tendencies (risky shift or cautious shift)',
+      'Conformity (Asch): individuals conform to group norms even when group is clearly wrong'
+    ],
+    tips: [
+      'Reduce social loafing: individual accountability, smaller groups, meaningful tasks, monitoring performance',
+      'Groupthink prevention: encourage dissent, bring in outside experts, use devil\'s advocate',
+      'Ingroup bias: tend to favour members of own group; outgroup homogeneity: "they are all the same"',
+      'Social influence types: conformity (peer pressure), compliance (direct request), obedience (authority)'
+    ],
+    bestPractices: [
+      'Name Tuckman\'s 5 stages in order — board exams commonly ask for this',
+      'Board question: "Distinguish between social facilitation and social loafing with examples"',
+      'Explain groupthink with a real/hypothetical scenario and symptoms (illusion of invulnerability, self-censorship, etc.)'
+    ]
+  }
+];
