@@ -4,6 +4,35 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII — CBSE Textbook Solved Exercises (Maths, Physics, Chemistry, Biology, Computer Science) *(done)*
+
+Built on the `g12` branch: Grade XII CBSE now has a real "Textbook Solved
+Exercises" bank for five subjects, extracted from the actual NCERT
+textbook PDFs and worked with full solution steps (not just final answers),
+same schema/process as the Grade X Solved banks:
+
+- **Mathematics** — 943 questions, all 13 chapters (`XII-CBSE-Mathematics-Solved.json`)
+- **Physics** — 158 questions, all 14 chapters (`XII-CBSE-Physics-Solved.json`)
+- **Chemistry** — 268 questions, all 10 chapters (`XII-CBSE-Chemistry-Solved.json`)
+- **Biology** — 135 questions, 11 chapters supplied (`XII-CBSE-Biology-Solved.json`)
+- **Computer Science** — 122 questions, 12 of 13 chapters (`XII-CBSE-Computer-Science-Solved.json`)
+
+All five registered in `SOLVED_BANKS` in `config.js`. See `docs/inventory.md`
+→ "Grade XII" for full per-chapter breakdowns and skip notes.
+
+Also as part of this branch: `SUBJECTS` restructured from `{board: [...]}`
+to `{grade: {board: [...]}}` so Grade X and Grade XII can show different
+subject lists per board (Grade XII CBSE/ICSE both currently list
+Mathematics, Physics, Chemistry, Biology, Computer Science — more subjects
+to follow); the "XII Board" grade tab, previously disabled with a "Coming
+soon" tooltip, is now selectable.
+
+Not yet done: Grade XII MCQ banks (Mock Test/Chapter Drill), Short Answers
+banks, and any ICSE Grade XII content — every Grade XII subject card other
+than the five CBSE Solved banks above still shows "coming soon".
+
+---
+
 ## Arena — new subjects available for Free Run / Daily Challenge *(done)*
 
 Added to `ARENA_SUBJECTS` in `arena.js` (shared by Free Run subject picker

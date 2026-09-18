@@ -2,8 +2,11 @@
 
 What's actually in each `public/questions/*.json` bank: total question count,
 and — where real board past-paper questions were sourced and labelled — which
-exam years are represented and how many questions come from each. Grade X
-only; Grade XII has no banks yet (every subject shows "coming soon").
+exam years are represented and how many questions come from each. Grade X is
+fully covered below; Grade XII currently has Solved Exercises banks only for
+CBSE Mathematics/Physics/Chemistry/Biology/Computer Science (see "Grade XII"
+section) — no MCQ, Short Answers, or ICSE banks yet, so those subject cards
+still show "coming soon".
 
 Regenerate the year/count breakdown with:
 ```
@@ -103,6 +106,25 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 | CBSE Social Science | `X-CBSE-Social-Science-Solved.json` | 58 | Only the Geography book "Contemporary India – II" so far (all 7 of its chapters) — History, Political Science ("Democratic Politics") and Economics books not yet supplied. This NCERT book has no in-text questions at all (unlike Science); the only gradable content is each chapter's end-of-chapter "EXERCISES" section, grouped into `"Multiple Choice Questions"`, `"Short Answer (30 words)"` and `"Long Answer (120 words)"`. "PROJECT/ACTIVITY" sections, word-search puzzles, and outline-map marking tasks are skipped (no fixed text answer / need an actual map). Per-chapter counts: Resources and Development 8, Forest and Wildlife Resources 6, Water Resources 8, Agriculture 8, Minerals and Energy Resources 10, Manufacturing Industries 6, Lifelines of National Economy 12. |
 | CBSE Computer Applications | `X-CBSE-Computer-Applications-Solved.json` | 35 | Curriculum-authored, textbook-exercise style conceptual Q&A (definitions, "differentiate between X and Y", write-code tasks) across Networking, HTML, Cyber ethics, and Scratch & Python |
 | CBSE Information Technology | `X-CBSE-Information-Technology-Solved.json` | 45 | Curriculum-authored, textbook-exercise style conceptual Q&A across the 5 subject-specific units plus the 5 Employability Skills units |
+
+## Grade XII
+
+CBSE only so far, Solved Exercises banks only — no MCQ, Short Answers, or
+ICSE Grade XII banks exist yet (`SUBJECTS.XII.CBSE`/`SUBJECTS.XII.ICSE` in
+`config.js` list Mathematics, Physics, Chemistry, Biology, Computer Science
+for both boards; only the five CBSE Solved banks below are populated, so
+every other Grade XII subject card shows "coming soon"). Same schema as the
+Grade X Solved Exercises banks above: `{id, chapter, exercise, number,
+question, solution, steps[]}`, extracted from the current NCERT Class XII
+textbooks and worked with full solution steps (not just final answers).
+
+| Subject | File | Total Qs | Source |
+|---|---|---|---|
+| CBSE Mathematics | `XII-CBSE-Mathematics-Solved.json` | 943 | All 13 NCERT Class XII Mathematics chapters. Per-chapter counts: Relations and Functions 35, Inverse Trigonometric Functions 43, Matrices 56, Determinants 61, Continuity and Differentiability 131, Application of Derivatives 82, Integrals 259, Application of Integrals 9, Differential Equations 98, Vector Algebra 72, Three Dimensional Geometry 25, Linear Programming 10, Probability 62. A small number of figure-dependent questions (e.g. Vector Algebra Ex 10.1 Q4, a couple of Integrals Miscellaneous-Exercise questions with irreparably garbled source text) are skipped. |
+| CBSE Physics | `XII-CBSE-Physics-Solved.json` | 158 | All 14 NCERT Class XII Physics chapters (2025–26 rationalized edition). Per-chapter counts: Electric Charges and Fields 22, Electrostatic Potential and Capacitance 11, Current Electricity 8, Moving Charges and Magnetism 13, Magnetism and Matter 7, Electromagnetic Induction 6, Alternating Current 8, Electromagnetic Waves 10, Ray Optics and Optical Instruments 31, Wave Optics 6, Dual Nature of Radiation and Matter 11, Atoms 9, Nuclei 10, Semiconductor Electronics 6. A handful of figure-dependent questions (particle-track diagrams, resistor-network topology, induction-loop deformation diagrams) are skipped. |
+| CBSE Chemistry | `XII-CBSE-Chemistry-Solved.json` | 268 | All 10 NCERT Class XII Chemistry chapters. Per-chapter counts: Solutions 41, Electrochemistry 18, Chemical Kinetics 30, The d- and f-Block Elements 38, Coordination Compounds 31, Haloalkanes and Haloarenes 22, Alcohols/Phenols and Ethers 30, Aldehydes/Ketones and Carboxylic Acids 19, Amines 14, Biomolecules 25. 4 questions across two chapters (structure-diagram naming/synthesis questions) are skipped. |
+| CBSE Biology | `XII-CBSE-Biology-Solved.json` | 135 | 11 NCERT Class XII Biology chapters (book's own numbering 3–13 — the supplied source material didn't include chapters 1–2). Per-chapter counts: Reproductive Health 12, Principles of Inheritance and Variation 16, Molecular Basis of Inheritance 14, Evolution 9, Human Health and Disease 16, Microbes in Human Welfare 12, Biotechnology: Principles and Processes 12, Biotechnology and Its Applications 13, Organisms and Populations 10, Ecosystem 11, Biodiversity and Conservation 10. Pure drawing-exercise questions are skipped; diagram-describable questions are answered with a full textual description instead. |
+| CBSE Computer Science | `XII-CBSE-Computer-Science-Solved.json` | 122 | 12 of 13 NCERT Class XII Computer Science chapters (Chapter 13, "Project Based Learning", has no exercise section and is omitted). Per-chapter counts: Exception Handling in Python 9, File Handling in Python 10, Stack 7, Queue 8, Sorting 6, Searching 6, Understanding Data 9, Database Concepts 13, Structured Query Language (SQL) 8, Computer Networks 16, Data Communication 13, Security Aspects 17. |
 
 ## Chapter → subject-area mapping (Science and Social Science)
 
