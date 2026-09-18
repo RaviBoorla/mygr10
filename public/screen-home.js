@@ -2,7 +2,7 @@
 Object.assign(app, {
 
   _screenHome() {
-    const subjects = SUBJECTS[state.board] || [];
+    const subjects = SUBJECTS[state.grade]?.[state.board] || [];
     const draft    = this._draft();
 
     const resume = draft ? `
@@ -116,7 +116,7 @@ Object.assign(app, {
   },
 
   _hydrateHome() {
-    (SUBJECTS[state.board] || []).filter(s => bankSlug(s)).forEach(subject => {
+    (SUBJECTS[state.grade]?.[state.board] || []).filter(s => bankSlug(s)).forEach(subject => {
       loadBank(subject).then(list => {
         const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
         if (meta) meta.textContent = `${list.length} questions · ${chaptersOf(list).length} chapters`;

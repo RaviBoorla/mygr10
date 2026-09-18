@@ -1,0 +1,458 @@
+[
+  {
+    "id": "xii-cs-2026-q1",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "State True or False: In Python, data type of 74 is same as the data type of 74.0. (2026 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "74 is an int and 74.0 is a float; Python treats whole numbers without a decimal point as int and numbers with a decimal point as float, so their data types differ.",
+    "whyWrong": [
+      "Incorrect: type(74) is int while type(74.0) is float, so they are not the same type.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q2",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Identify the output of the following code snippet:\ns = \"the Truth\"\nprint(s.capitalize()) (2026 Board)",
+    "options": [
+      "The truth",
+      "THE TRUTH",
+      "The Truth",
+      "the Truth"
+    ],
+    "correct": 0,
+    "explanation": "str.capitalize() makes the first character of the string uppercase and forces every other character to lowercase, so \"the Truth\" becomes \"The truth\".",
+    "whyWrong": [
+      "",
+      "capitalize() does not uppercase the whole string; only the first character is made uppercase.",
+      "capitalize() lowercases the rest of the string, so the 'T' in 'Truth' also becomes lowercase.",
+      "capitalize() does change the string; it uppercases the first letter, so this is not the same as the original."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q3",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which of the following expressions in Python evaluates to True? (2026 Board)",
+    "options": [
+      "2>3 and 2<3",
+      "3>1 and 2",
+      "3>1 and 3>2",
+      "3>1 and 3<2"
+    ],
+    "correct": 2,
+    "explanation": "3>1 is True and 3>2 is True, so 'and' of two True values is True. Option (A) has 2>3 False, so the whole expression is False. Option (B) evaluates 'and 2' to the truthy value 2 not to the boolean True in the pure boolean sense, but as a chained MCQ we pick the clean boolean-True case (C). Option (D) has 3<2 False.",
+    "whyWrong": [
+      "2>3 is False, so the 'and' expression evaluates to False overall.",
+      "This evaluates to the value 2 (truthy), not to a clean 'True' boolean comparison intended by the question; option C is the direct answer expected.",
+      "",
+      "3<2 is False, so the 'and' expression evaluates to False overall."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q4",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What is the output of the following code snippet?\ns='War and Peace by Leo Tolstoy'\nprint(s.partition(\"by\")) (2026 Board)",
+    "options": [
+      "('War and Peace ', 'by', ' Leo Tolstoy')",
+      "['War and Peace ', 'by', ' Leo Tolstoy']",
+      "('War and Peace ', ' Leo Tolstoy')",
+      "['War and Peace ', ' Leo Tolstoy']"
+    ],
+    "correct": 0,
+    "explanation": "str.partition(sep) splits the string into a 3-element tuple: (text before sep, sep itself, text after sep). Here it returns ('War and Peace ', 'by', ' Leo Tolstoy').",
+    "whyWrong": [
+      "",
+      "partition() returns a tuple, not a list, so square brackets are wrong.",
+      "This drops the separator 'by' from the result, but partition() always keeps the separator as the middle element.",
+      "This is a list instead of a tuple, and it also drops the separator element."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q5",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What will be the output of the following statement?\nprint(\"PythonProgram\"[-1:2:-2]) (2026 Board)",
+    "options": [
+      "mroPo",
+      "mrgr",
+      "ormo",
+      "marrn"
+    ],
+    "correct": 0,
+    "explanation": "Slicing starts at index -1 ('m', the last character) and steps by -2 (moving backwards two characters at a time), stopping before index 2. Walking backwards from the last character in steps of 2 gives 'mroPo'.",
+    "whyWrong": [
+      "",
+      "A common mistake is stepping by -1 instead of -2, or miscounting the stop boundary, giving this wrong sequence of characters.",
+      "This results from starting the walk one character off (an off-by-one on the start index) instead of from the true last character.",
+      "This comes from stepping backwards in the wrong stride/direction bookkeeping, picking alternate characters incorrectly."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q6",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What will be the output of the following code snippet?\nt = tuple('tuple')\nt2 = t[2],\nt += t2\nprint(t) (2026 Board)",
+    "options": [
+      "('tuple')",
+      "('tuple','p')",
+      "('t', 'u', 'p', 'l', 'e', 'p')",
+      "('t', 'u', 'p', 'l', 'e')"
+    ],
+    "correct": 2,
+    "explanation": "tuple('tuple') splits the string into ('t','u','p','l','e'). t[2] is 'p', so t2 = ('p',) (the trailing comma makes it a 1-tuple). t += t2 concatenates, giving ('t','u','p','l','e','p').",
+    "whyWrong": [
+      "This is just the string 'tuple' in parentheses, not a tuple of its characters, and is not valid Python for this code's output.",
+      "This wrongly assumes tuple('tuple') keeps the whole word as one element instead of splitting it into individual characters.",
+      "",
+      "This omits the extra 'p' appended by t += t2 and shows only the original 5-character tuple."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q7",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which of the following statements is true about dictionaries in Python? (2026 Board)",
+    "options": [
+      "A dictionary is an example of sequence datatype.",
+      "A dictionary cannot have two elements with same key.",
+      "A dictionary cannot have two elements with same value.",
+      "The key and value of an element cannot be the same."
+    ],
+    "correct": 1,
+    "explanation": "Python dictionaries are mapping types (not sequence types), keys must be unique within a dictionary, but values can repeat and a key can legally equal its own value.",
+    "whyWrong": [
+      "Dictionaries are mapping types, not sequence types like lists/tuples/strings.",
+      "",
+      "Dictionary values are allowed to repeat across different keys.",
+      "There is no restriction that prevents a key and its value from being equal, e.g. {'x': 'x'} is valid."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q8",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "If L is a list with 6 elements, then which of the following statements will raise an exception? (2026 Board)",
+    "options": [
+      "L.pop(1)",
+      "L.pop(6)",
+      "L.insert(1,6)",
+      "L.insert(6,1)"
+    ],
+    "correct": 1,
+    "explanation": "A 6-element list has valid indices 0-5. L.pop(6) tries to pop index 6, which is out of range and raises IndexError. insert() never raises for an out-of-range index; it just inserts at the nearest valid boundary.",
+    "whyWrong": [
+      "Index 1 is valid in a 6-element list, so this works fine.",
+      "",
+      "insert() does not raise for out-of-range positions; it simply inserts at index 1, shifting later elements.",
+      "insert() clamps an out-of-range index to the end of the list rather than raising an error."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q9",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What will be the output of the following code?\ndef f1(a,b=1):\n    print(a+b,end='-')\nc=f1(1,2)\nprint(c,sep='*') (2026 Board)",
+    "options": [
+      "3-2",
+      "3-2*",
+      "3-None",
+      "3*None-"
+    ],
+    "correct": 2,
+    "explanation": "f1(1,2) prints 1+2=3 followed by '-' (from end='-') because a=1, b=2. f1() does not return anything, so c is None. print(c,sep='*') then prints 'None' (sep has no effect with only one argument), giving the visible output '3-None'.",
+    "whyWrong": [
+      "This is missing 'None': f1 has no return statement, so c is None, and print(c) still displays it.",
+      "The second print adds no visible '*' since sep only affects the separator between multiple arguments, and here there is only one argument (c).",
+      "",
+      "This reverses the order in which the two print statements execute."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q10",
+    "chapter": "File Handling in Python",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Consider the statement given below:\nf1 = open(\"pqr.dat\",\"________\")\nWhich of the following is the correct file mode to open the file in read only mode? (2026 Board)",
+    "options": [
+      "a",
+      "rb",
+      "r+",
+      "rb+"
+    ],
+    "correct": 1,
+    "explanation": "'rb' opens a file for reading only, in binary mode. 'a' is append mode (write), 'r+' and 'rb+' allow both reading and writing, so they are not read-only.",
+    "whyWrong": [
+      "'a' is append mode, used for writing (adding) data, not read-only access.",
+      "",
+      "'r+' opens the file for both reading and writing, so it is not read-only.",
+      "'rb+' opens the file for both reading and writing in binary mode, so it is not read-only."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q11",
+    "chapter": "Exception Handling in Python",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "State whether the following statement is True or False: In Python, Logical errors can be handled using try...except...finally statement. (2026 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "try...except...finally only catches runtime exceptions (things Python detects and raises, like ZeroDivisionError). A logical error produces a wrong but syntactically valid result without raising any exception, so it cannot be caught or handled by exception handling.",
+    "whyWrong": [
+      "",
+      "Logical errors do not raise exceptions at all -- the program runs and produces an incorrect result silently, so try...except...finally has nothing to catch."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q12",
+    "chapter": "Database Concepts",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "A table has two candidate keys, one of which is chosen as the primary key. How many alternate keys does this table have? (2026 Board)",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "Alternate keys are the candidate keys that were NOT chosen as the primary key. With 2 candidate keys and 1 chosen as primary key, exactly 1 remains as an alternate key.",
+    "whyWrong": [
+      "This would mean every candidate key became the primary key, which is impossible since only one key can be primary.",
+      "",
+      "There are only 2 candidate keys total, so at most 1 can remain after removing the primary key.",
+      "There are only 2 candidate keys total, so 3 alternate keys is not possible."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q13",
+    "chapter": "Structured Query Language (SQL)",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which of the following SQL command can change the degree of the existing relation? (2026 Board)",
+    "options": [
+      "DROP TABLE",
+      "ALTER TABLE",
+      "UPDATE...SET",
+      "DELETE"
+    ],
+    "correct": 1,
+    "explanation": "Degree = number of columns (attributes) in a relation. ALTER TABLE is used to add or remove columns, which changes the degree. DROP TABLE removes the whole table; UPDATE and DELETE affect rows/data, not the column structure.",
+    "whyWrong": [
+      "DROP TABLE removes the entire table; it does not modify the structure of an existing table.",
+      "",
+      "UPDATE...SET changes column values in existing rows; it does not add or remove columns.",
+      "DELETE removes rows (cardinality), not columns, so it does not change the degree."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q14",
+    "chapter": "Structured Query Language (SQL)",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What will be the output of the query?\nSELECT MACHINE_ID, MACHINE_NAME FROM INVENTORY WHERE QUANTITY <= 100; (2026 Board)",
+    "options": [
+      "All columns of INVENTORY table with quantity greater than 100",
+      "ID and name of machines with quantity less than 100 from INVENTORY table",
+      "All columns of INVENTORY table with quantity greater than or equal to 100",
+      "ID and name of machines with quantity less than or equal to 100 from INVENTORY table"
+    ],
+    "correct": 3,
+    "explanation": "The SELECT list names only MACHINE_ID and MACHINE_NAME, and the WHERE clause QUANTITY <= 100 keeps rows whose quantity is less than or equal to 100.",
+    "whyWrong": [
+      "The query selects only two named columns, not all columns, and the comparison is <= (less than or equal), not greater than.",
+      "The condition is <= 100, which includes rows equal to 100, not strictly less than 100 -- and the query selects only two columns, not describing them fully here either way.",
+      "The query selects only two named columns, not all columns of the table.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q15",
+    "chapter": "Database Concepts",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "A relation in MySQL database consists of 2 tuples and 3 attributes. If 2 attributes are deleted and 4 tuples are added, what will be the cardinality of the relation? (2026 Board)",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "correct": 2,
+    "explanation": "Cardinality is the number of rows (tuples). Starting with 2 tuples, adding 4 more gives 2 + 4 = 6 tuples. Deleting attributes changes the degree (columns), not the cardinality.",
+    "whyWrong": [
+      "This ignores the 2 original tuples that remain after only attributes (not rows) are deleted.",
+      "This is off by one from the correct total of 6 tuples.",
+      "",
+      "This wrongly assumes an extra tuple beyond the 2 original + 4 added = 6."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q16",
+    "chapter": "Structured Query Language (SQL)",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which aggregate function in SQL returns the smallest value from a column in a table? (2026 Board)",
+    "options": [
+      "MIN()",
+      "MAX()",
+      "SMALL()",
+      "LOWER()"
+    ],
+    "correct": 0,
+    "explanation": "MIN() is the SQL aggregate function that returns the smallest (minimum) value in a column. MAX() returns the largest value; SMALL() is not a valid SQL aggregate function; LOWER() converts text to lowercase, it does not find a minimum.",
+    "whyWrong": [
+      "",
+      "MAX() returns the largest value in a column, the opposite of what is asked.",
+      "SMALL() is not a valid built-in SQL aggregate function.",
+      "LOWER() is a string function that converts text to lowercase; it has nothing to do with finding a minimum value."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q17",
+    "chapter": "Computer Networks",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "With respect to computer networks, which of the following is the correct expanded form of RJ 45? (2026 Board)",
+    "options": [
+      "Radio Jockey 45",
+      "Registered Jockey 45",
+      "Radio Jack 45",
+      "Registered Jack 45"
+    ],
+    "correct": 3,
+    "explanation": "RJ 45 stands for 'Registered Jack 45', a standardized physical connector commonly used for Ethernet networking cables.",
+    "whyWrong": [
+      "RJ 45 has nothing to do with radio broadcasting jockeys.",
+      "'Jockey' is a mishearing of 'Jack'; there is no such official term.",
+      "It is 'Registered Jack', not 'Radio Jack'.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q18",
+    "chapter": "Computer Networks",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which network device serves as the entry and exit point of a network, as all data coming in or going out of a network must first pass through it in order to use routing paths? (2026 Board)",
+    "options": [
+      "Modem",
+      "Gateway",
+      "Switch",
+      "Repeater"
+    ],
+    "correct": 1,
+    "explanation": "A Gateway acts as the entry/exit point of a network, connecting it to other networks and routing all incoming/outgoing traffic through it.",
+    "whyWrong": [
+      "A Modem converts digital signals to analog and back for transmission over telephone lines; it is not primarily the network's entry/exit routing point.",
+      "",
+      "A Switch connects devices within the same local network and forwards data based on MAC addresses; it is not the network's boundary entry/exit point.",
+      "A Repeater simply regenerates/boosts a signal over distance; it does not act as a network's entry/exit gateway."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q19",
+    "chapter": "Computer Networks",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Expand the term XML. (2026 Board)",
+    "options": [
+      "eXtensible Markup Language",
+      "eXtended Markup Language",
+      "eXtensible Machine Language",
+      "eXternal Markup Language"
+    ],
+    "correct": 0,
+    "explanation": "XML stands for eXtensible Markup Language, a markup language designed to store and transport structured data in a format that is both human- and machine-readable.",
+    "whyWrong": [
+      "",
+      "'Extended' is a common confusion with the correct word 'Extensible', which refers to XML's ability to let users define their own tags.",
+      "XML is a markup language for data, not a programming/machine language.",
+      "'External' is not part of the correct expansion; the correct first word is 'eXtensible'."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q20",
+    "chapter": "Understanding Data",
+    "qtype": "assertion-reason",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): [1,2,3]+'123' is an invalid expression in Python.\nReason (R): In Python, a list cannot be concatenated with a string.\nMark the correct choice: (A) Both A and R are true and R is the correct explanation of A. (B) Both A and R are true and R is not the correct explanation of A. (C) A is true, but R is false. (D) A is false, but R is true. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 0,
+    "explanation": "[1,2,3]+'123' does raise a TypeError because Python's '+' operator for lists requires another list (a string is not a list), which is exactly the reason given, so both A and R are true and R correctly explains A.",
+    "whyWrong": [
+      "",
+      "R does in fact directly and correctly explain why A is true, so this option undercounts the relationship.",
+      "A is actually true: the expression genuinely raises a TypeError in Python.",
+      "A is true, not false: the expression does raise an error."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-cs-2026-q21",
+    "chapter": "Structured Query Language (SQL)",
+    "qtype": "assertion-reason",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): The PRIMARY KEY constraint in SQL ensures that each value in the column(s) is unique and cannot be NULL.\nReason (R): Candidate keys are not eligible to become a primary key.\nMark the correct choice: (A) Both A and R are true and R is the correct explanation of A. (B) Both A and R are true and R is not the correct explanation of A. (C) A is true, but R is false. (D) A is false, but R is true. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 2,
+    "explanation": "A is true: PRIMARY KEY enforces uniqueness and NOT NULL. R is false: candidate keys are exactly the keys eligible to become the primary key -- one of them is chosen as the primary key.",
+    "whyWrong": [
+      "R is false, so this option (which requires both true) does not fit.",
+      "R is false, not true, so this option is incorrect.",
+      "",
+      "A is true, not false: the PRIMARY KEY constraint really does enforce uniqueness and NOT NULL."
+    ],
+    "priority": true
+  }
+]

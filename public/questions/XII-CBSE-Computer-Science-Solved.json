@@ -1,0 +1,1558 @@
+[
+  {
+    "id": "sol-xii-cs-exceptions-1",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "“Every syntax error is an exception but every exception cannot be a syntax error.” Justify the statement.",
+    "solution": "The statement is false as worded in the textbook sense but is usually asked to test understanding: a SyntaxError is one specific, named exception class in Python (raised when code does not conform to the grammar of the language and cannot even be parsed), so a syntax error is indeed a kind of exception. However, not every exception is a syntax error - most exceptions (ZeroDivisionError, NameError, TypeError, IOError, etc.) occur while a syntactically correct program is running, due to a runtime condition, not because of any grammar mistake. So syntax errors form a subset of exceptions, while the reverse is not true.",
+    "steps": [
+      "A syntax error occurs when the interpreter cannot parse the code because it violates Python's grammar rules; Python reports this as a SyntaxError, which is itself an exception class.",
+      "Runtime exceptions (ZeroDivisionError, NameError, IOError, etc.) occur in code that is syntactically correct but fails during execution due to an unexpected condition.",
+      "Hence every syntax error is an exception (a SyntaxError object), but exceptions in general are much broader than just syntax errors, so not every exception is a syntax error."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-2",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "When are the following built-in exceptions raised? Give examples to support your answers.\na) ImportError\nb) IOError\nc) NameError\nd) ZeroDivisionError",
+    "solution": "a) ImportError is raised when an import statement fails to find the module or a name to be imported.\nExample: import xyzmodule  # raises ImportError if xyzmodule does not exist\n\nb) IOError is raised when an input/output operation (such as opening or reading a file) fails, e.g. because the file does not exist.\nExample: open('nofile.txt', 'r')  # raises IOError/FileNotFoundError\n\nc) NameError is raised when a local or global name (variable/function) is not found.\nExample: print(x)  # raises NameError if x was never defined\n\nd) ZeroDivisionError is raised when the second operand of a division or modulo operation is zero.\nExample: 10 / 0  # raises ZeroDivisionError",
+    "steps": [
+      "ImportError - occurs when Python cannot locate or load the module/name being imported.",
+      "IOError - occurs when an I/O operation like opening/reading/writing a file fails.",
+      "NameError - occurs when a variable or function name used in the code has not been defined.",
+      "ZeroDivisionError - occurs when a number is divided (or mod'ed) by zero."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-3",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What is the use of a raise statement? Write a code to accept two numbers and display the quotient. Appropriate exception should be raised if the user enters the second number (denominator) as zero (0).",
+    "solution": "The raise statement is used to explicitly/deliberately trigger (throw) an exception from within a program, either a built-in exception or a user-defined one, so that the calling code can handle an error condition using try/except.\n\nnum1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\ntry:\n    if num2 == 0:\n        raise ZeroDivisionError(\"Denominator cannot be zero\")\n    quotient = num1 / num2\n    print(\"Quotient =\", quotient)\nexcept ZeroDivisionError as e:\n    print(\"Error:\", e)",
+    "steps": [
+      "raise lets the programmer manually signal that an exceptional/error condition has occurred.",
+      "Read both numbers using input()/int().",
+      "Explicitly raise ZeroDivisionError if the denominator entered is 0, instead of letting Python's own division fail silently on unexpected input.",
+      "Catch the raised exception in an except block and print an informative message; otherwise compute and print the quotient."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-4",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Use assert statement in Question No. 3 to test the division expression in the program.",
+    "solution": "num1 = int(input(\"Enter the first number: \"))\nnum2 = int(input(\"Enter the second number: \"))\nassert num2 != 0, \"Denominator cannot be zero\"\nquotient = num1 / num2\nprint(\"Quotient =\", quotient)",
+    "steps": [
+      "The assert statement checks that a condition is True; if the condition is False it raises an AssertionError with the given message.",
+      "Here assert num2 != 0 checks the denominator before performing division.",
+      "If num2 is 0, the program stops with 'AssertionError: Denominator cannot be zero'; otherwise the division proceeds normally."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-5",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Define the following:\na) Exception Handling\nb) Throwing an exception\nc) Catching an exception",
+    "solution": "a) Exception Handling is the process of responding to runtime errors (exceptions) in a program in a controlled manner, using constructs like try/except, so that the program does not crash abruptly.\nb) Throwing an exception means generating/raising an exception object when an error condition occurs, either automatically by Python or explicitly using the raise statement.\nc) Catching an exception means intercepting a thrown exception using an except block that matches its type, so that appropriate recovery code can run instead of the program terminating.",
+    "steps": [
+      "Exception handling: the mechanism (try/except/else/finally) used to detect and respond to runtime errors gracefully.",
+      "Throwing: the act of signalling that an exceptional condition has occurred, done automatically by Python or manually via raise.",
+      "Catching: the act of intercepting a thrown exception with a matching except clause and executing recovery/handling code."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-6",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Explain catching exceptions using try and except block.",
+    "solution": "A block of code that might raise an exception is placed inside a try block. If an exception occurs while executing the try block, Python stops executing the remaining statements in that block and looks for a matching except clause. If a matching except clause is found, its block of code (the exception handler) is executed, and the program continues after the try-except construct instead of crashing. If no matching except clause exists, the exception propagates up and, if unhandled anywhere, terminates the program with a traceback.\n\ntry:\n    num = int(input(\"Enter a number: \"))\n    print(100 / num)\nexcept ZeroDivisionError:\n    print(\"Cannot divide by zero\")\nexcept ValueError:\n    print(\"Please enter a valid integer\")",
+    "steps": [
+      "Risky code that may raise an exception is written inside the try block.",
+      "One or more except blocks, each naming a specific exception type, follow the try block.",
+      "If the try block raises an exception matching an except clause, that except block executes and the program continues normally afterwards; otherwise the exception is unhandled."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-7",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Consider the code given below and fill in the blanks.\n\nprint(\"Learning Exceptions...\")\ntry:\n    num1 = int(input(\"Enter the first number\"))\n    num2 = int(input(\"Enter the second number\"))\n    quotient = (num1/num2)\n    print(\"Both the numbers entered were correct\")\nexcept _____________:  # to enter only integers\n    print(\"Please enter only numbers\")\nexcept ____________:  # Denominator should not be zero\n    print(\"Number 2 should not be zero\")\nelse:\n    print(\"Great .. you are a good programmer\")\n___________:  # to be executed at the end\n    print(\"JOB OVER... GO GET SOME REST\")",
+    "solution": "First blank: ValueError (raised when int() is given text that is not a valid integer).\nSecond blank: ZeroDivisionError (raised when num2 is 0).\nThird blank: finally (the finally clause always executes at the end, whether or not an exception occurred).\n\nprint(\"Learning Exceptions...\")\ntry:\n    num1 = int(input(\"Enter the first number\"))\n    num2 = int(input(\"Enter the second number\"))\n    quotient = (num1/num2)\n    print(\"Both the numbers entered were correct\")\nexcept ValueError:\n    print(\"Please enter only numbers\")\nexcept ZeroDivisionError:\n    print(\"Number 2 should not be zero\")\nelse:\n    print(\"Great .. you are a good programmer\")\nfinally:\n    print(\"JOB OVER... GO GET SOME REST\")",
+    "steps": [
+      "int(input(...)) raises ValueError if the entered text cannot be converted to an integer, so the first except should catch ValueError.",
+      "num1/num2 raises ZeroDivisionError if num2 is 0, so the second except should catch ZeroDivisionError.",
+      "The final blank runs regardless of whether an exception occurred, which is exactly the role of the finally clause."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-8",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "You have learnt how to use math module in Class XI. Write a code where you use the wrong number of arguments for a method (say sqrt() or pow()). Use the exception handling process to catch the ValueError exception.",
+    "solution": "import math\ntry:\n    # deliberately passing a negative number to sqrt() to trigger ValueError\n    result = math.sqrt(-25)\n    print(\"Square root:\", result)\nexcept ValueError:\n    print(\"ValueError: math domain error - sqrt() needs a non-negative number\")\nexcept TypeError:\n    print(\"TypeError: wrong number/type of arguments passed to the function\")",
+    "steps": [
+      "math.sqrt() raises a ValueError ('math domain error') when given a negative number, since the square root of a negative number is not real.",
+      "Passing the wrong number of arguments to a function like pow() instead raises a TypeError, so both are shown here for completeness.",
+      "The try/except structure catches whichever error occurs and prints an appropriate message instead of the program crashing."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-exceptions-9",
+    "chapter": "Exception Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "What is the use of finally clause? Use finally clause in the problem given in Question No. 7.",
+    "solution": "The finally clause defines a block of code that is always executed after the try block finishes, regardless of whether an exception was raised or handled, or whether the try block executed successfully. It is typically used for cleanup actions such as closing files or releasing resources, which must happen whether or not an error occurred.\n\nprint(\"Learning Exceptions...\")\ntry:\n    num1 = int(input(\"Enter the first number\"))\n    num2 = int(input(\"Enter the second number\"))\n    quotient = (num1/num2)\n    print(\"Both the numbers entered were correct\")\nexcept ValueError:\n    print(\"Please enter only numbers\")\nexcept ZeroDivisionError:\n    print(\"Number 2 should not be zero\")\nelse:\n    print(\"Great .. you are a good programmer\")\nfinally:\n    print(\"JOB OVER... GO GET SOME REST\")",
+    "steps": [
+      "finally guarantees that its block runs no matter what happens in try/except/else - useful for cleanup code like closing a file or a network connection.",
+      "In the given program, 'JOB OVER... GO GET SOME REST' is printed at the end in every case: correct input, ValueError, or ZeroDivisionError."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-1",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Differentiate between:\na) text file and binary file\nb) readline() and readlines()\nc) write() and writelines()",
+    "solution": "a) A text file stores data as a sequence of human-readable characters (with automatic newline/encoding translation), typically opened with mode 't' (default), e.g. 'r', 'w'. A binary file stores data as raw bytes exactly as they exist in memory (no encoding translation), opened with a 'b' suffix such as 'rb', 'wb', and is used for images, executables or pickled objects.\nb) readline() reads and returns a single line (up to the next newline) from the file as a string. readlines() reads the entire file and returns a list containing all the lines of the file as separate string elements.\nc) write() writes a single string to the file. writelines() writes a list (or any iterable) of strings to the file, writing each element one after another without inserting newlines automatically.",
+    "steps": [
+      "Text files hold readable character data with newline translation; binary files hold raw byte data used for non-text content like images or pickled objects.",
+      "readline() gets one line at a time; readlines() gets all lines at once as a list.",
+      "write() writes a single string; writelines() writes a sequence of strings."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-2",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Write the use and syntax for the following methods:\na) open()\nb) read()\nc) seek()\nd) dump()",
+    "solution": "a) open(filename, mode) - opens a file in the specified mode ('r','w','a','r+', with optional 'b' for binary) and returns a file object.\n   Syntax: f = open(\"data.txt\", \"r\")\nb) read(size) - reads and returns up to 'size' characters/bytes from the file; if size is omitted, reads the entire file.\n   Syntax: content = f.read()\nc) seek(offset, whence) - moves the file's current position (cursor) to the given offset, relative to whence (0=start, 1=current, 2=end); used to reposition before the next read/write.\n   Syntax: f.seek(0)\nd) dump(object, file) - part of the pickle module; serializes (pickles) a Python object and writes it to an already-opened binary file.\n   Syntax: import pickle; pickle.dump(obj, f)",
+    "steps": [
+      "open() creates a file object bound to a given file in a given mode.",
+      "read() retrieves the contents of the file as a string (or bytes for binary mode).",
+      "seek() repositions the file pointer so subsequent read/write happens from that position.",
+      "pickle.dump() serialises a Python object into a binary file."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-3",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Write the file mode that will be used for opening the following files. Also, write the Python statements to open the following files:\na) a text file \"example.txt\" in both read and write mode\nb) a binary file \"bfile.dat\" in write mode\nc) a text file \"try.txt\" in append and read mode\nd) a binary file \"btry.dat\" in read only mode.",
+    "solution": "a) Mode 'r+' -> f = open(\"example.txt\", \"r+\")\nb) Mode 'wb' -> f = open(\"bfile.dat\", \"wb\")\nc) Mode 'a+' -> f = open(\"try.txt\", \"a+\")\nd) Mode 'rb' -> f = open(\"btry.dat\", \"rb\")",
+    "steps": [
+      "'r+' opens a text file for both reading and writing without truncating it.",
+      "'wb' opens a binary file for writing (creates/truncates it).",
+      "'a+' opens a text file for appending and reading.",
+      "'rb' opens a binary file for reading only."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-4",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Why is it advised to close a file after we are done with the read and write operations? What will happen if we do not close it? Will some error message be flashed?",
+    "solution": "Closing a file with close() flushes any buffered data to disk and releases the operating-system resources (file handle) associated with the file, ensuring the written data is actually saved and the file is not left locked. If a file is not closed explicitly, data that is still sitting in the internal buffer may not get written to disk (it may be lost, especially if the program crashes), and the OS may run out of available file handles if many files are left open. Usually Python's garbage collector or program termination will eventually close the file and no explicit error message is shown for a simple script, but relying on this is unsafe practice and can cause data loss or resource-leak problems in larger programs.",
+    "steps": [
+      "close() flushes the buffer, guaranteeing that all written data is actually saved to disk.",
+      "Not closing a file risks unsaved/lost data and can exhaust the OS's limit on open file handles.",
+      "No fatal error is usually shown immediately, but it is unsafe and considered bad practice; using 'with' avoids the problem automatically."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-5",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What is the difference between the following set of statements (a) and (b):\na) P = open(\"practice.txt\",\"r\")\n   P.read(10)\nb) with open(\"practice.txt\", \"r\") as P:\n     x = P.read()",
+    "solution": "In (a), the file is opened manually and only the first 10 characters are read using read(10); the file is never explicitly closed, so it stays open until the program ends or it is closed manually - risking a resource leak.\nIn (b), the 'with' statement is used, which automatically closes the file as soon as the indented block ends, even if an exception occurs inside the block; here the entire file content is read into x using read() with no argument.",
+    "steps": [
+      "(a) reads only the first 10 characters and does not close the file automatically.",
+      "(b) reads the whole file and, being a context manager ('with'), automatically and safely closes the file when the block ends."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-6",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Write a command(s) to write the following lines to the text file named hello.txt. Assume that the file is opened in append mode.\n\n\"Welcome my class\"\n\"It is a fun place\"\n\"You will learn and play\"",
+    "solution": "f = open(\"hello.txt\", \"a\")\nf.write(\"Welcome my class\\n\")\nf.write(\"It is a fun place\\n\")\nf.write(\"You will learn and play\\n\")\nf.close()\n\n# Alternatively using writelines():\n# f = open(\"hello.txt\", \"a\")\n# f.writelines([\"Welcome my class\\n\", \"It is a fun place\\n\", \"You will learn and play\\n\"])\n# f.close()",
+    "steps": [
+      "Open the file in append ('a') mode so new content is added after existing content.",
+      "Use write() (or writelines() with a list) to add each line, including '\\n' so each sentence starts on a new line.",
+      "Close the file to flush the buffer to disk."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-7",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Write a Python program to open the file hello.txt used in question no 6 in read mode to display its contents. What will be the difference if the file was opened in write mode instead of append mode?",
+    "solution": "f = open(\"hello.txt\", \"r\")\nprint(f.read())\nf.close()\n\nDifference: opening hello.txt in write ('w') mode instead of append ('a') mode would first truncate (erase) all existing content of the file before any new writing happens, so the three previously written sentences would be lost; append mode instead preserves existing content and adds new lines after it.",
+    "steps": [
+      "Open in 'r' mode and use read() to display the whole content.",
+      "'w' mode truncates the file to zero length as soon as it is opened, destroying previous content; 'a' mode keeps existing content and writes after it."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-8",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Write a program to accept string/sentences from the user till the user enters “END” to. Save the data in a text file and then display only those sentences which begin with an uppercase alphabet.",
+    "solution": "f = open(\"sentences.txt\", \"w\")\nwhile True:\n    line = input(\"Enter a sentence (END to stop): \")\n    if line == \"END\":\n        break\n    f.write(line + \"\\n\")\nf.close()\n\nf = open(\"sentences.txt\", \"r\")\nfor line in f:\n    line = line.strip()\n    if line and line[0].isupper():\n        print(line)\nf.close()",
+    "steps": [
+      "Repeatedly accept a sentence from the user and write it to a text file until the sentinel value \"END\" is entered.",
+      "Reopen the file for reading and iterate over each line.",
+      "Check line[0].isupper() to test whether the sentence starts with an uppercase letter, and print only those that do."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-9",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Define pickling in Python. Explain serialization and deserialization of Python object.",
+    "solution": "Pickling in Python is the process, provided by the pickle module, of converting a Python object (list, dict, class instance, etc.) into a byte stream so it can be written to a binary file or transmitted, and later reconstructed back into an equivalent object. Serialization (pickling) is this conversion of an in-memory object into a byte stream using pickle.dump(). Deserialization (unpickling) is the reverse process of reading that byte stream back from a file and reconstructing the original Python object using pickle.load().",
+    "steps": [
+      "Pickling converts a Python object into a byte stream that can be saved to a binary file.",
+      "Serialization = pickle.dump(obj, file) writes the object's byte representation to a file.",
+      "Deserialization = pickle.load(file) reads the byte stream back and restores the original Python object in memory."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-files-10",
+    "chapter": "File Handling in Python",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Write a program to enter the following records in a binary file:\nItem No (integer), Item_Name (string), Qty (integer), Price (float)\nNumber of records to be entered should be accepted from the user. Read the file to display the records in the following format:\nItem No:, Item Name:, Quantity:, Price per item:, Amount: (to be calculated as Price * Qty)",
+    "solution": "import pickle\n\nf = open(\"items.dat\", \"wb\")\nn = int(input(\"How many records? \"))\nfor i in range(n):\n    item_no = int(input(\"Item No: \"))\n    item_name = input(\"Item Name: \")\n    qty = int(input(\"Qty: \"))\n    price = float(input(\"Price: \"))\n    record = [item_no, item_name, qty, price]\n    pickle.dump(record, f)\nf.close()\n\nf = open(\"items.dat\", \"rb\")\ntry:\n    while True:\n        rec = pickle.load(f)\n        print(\"Item No:\", rec[0])\n        print(\"Item Name:\", rec[1])\n        print(\"Quantity:\", rec[2])\n        print(\"Price per item:\", rec[3])\n        print(\"Amount:\", rec[2] * rec[3])\n        print(\"-\" * 20)\nexcept EOFError:\n    pass\nf.close()",
+    "steps": [
+      "Open the file in 'wb' mode and use pickle.dump() to write each record (as a list) for the number of records the user asks for.",
+      "Reopen the file in 'rb' mode and repeatedly pickle.load() records until an EOFError signals the end of the file.",
+      "For each record, print the required fields and compute Amount as Price * Qty."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-1",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "State TRUE or FALSE for the following cases:\na) Stack is a linear data structure\nb) Stack does not follow LIFO rule\nc) PUSH operation may result into underflow condition\nd) In POSTFIX notation for expression, operators are placed after operands",
+    "solution": "a) TRUE - Stack is a linear data structure where elements are arranged in sequence.\nb) FALSE - Stack does follow the LIFO (Last In First Out) rule.\nc) FALSE - PUSH may cause OVERFLOW (when the stack is full), not underflow; underflow happens on POP from an empty stack.\nd) TRUE - In postfix (Reverse Polish) notation, operators are written after their operands, e.g. AB+ means A+B.",
+    "steps": [
+      "Stack is linear -> TRUE.",
+      "Stack follows LIFO, so 'does not follow LIFO' is FALSE.",
+      "PUSH can cause overflow (stack full), not underflow, so statement is FALSE.",
+      "Postfix places operators after operands by definition -> TRUE."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-2",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Find the output of the following code:\na) result=0\n   numberList=[10,20,30]\n   numberList.append(40)\n   result=result+numberList.pop()\n   result=result+numberList.pop()\n   print(\"Result=\",result)\n\nb) answer=[]; output=''\n   answer.append('T')\n   answer.append('A')\n   answer.append('M')\n   ch=answer.pop()\n   output=output+ch\n   ch=answer.pop()\n   output=output+ch\n   ch=answer.pop()\n   output=output+ch\n   print(\"Result=\",output)",
+    "solution": "a) Result= 70\nb) Result= MAT",
+    "steps": [
+      "a) numberList becomes [10,20,30,40] after append(40). pop() removes and returns 40 (result=40), then pop() removes and returns 30 (result=40+30=70). Output: Result= 70",
+      "b) answer becomes ['T','A','M']. pop() removes 'M' first (LIFO), then 'A', then 'T', so output is built as 'M'+'A'+'T' = 'MAT'. Output: Result= MAT"
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-3",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Write a program to reverse a string using stack.",
+    "solution": "def reverse_string(s):\n    stack = list(s)   # push all characters onto the stack\n    reversed_str = \"\"\n    while stack:\n        reversed_str += stack.pop()   # pop from the top (end of list)\n    return reversed_str\n\ntext = input(\"Enter a string: \")\nprint(\"Reversed string:\", reverse_string(text))",
+    "steps": [
+      "Push every character of the string onto a stack (implemented as a Python list).",
+      "Repeatedly pop characters off the stack - since pop() removes from the end (LIFO), characters come out in reverse order.",
+      "Concatenate the popped characters to build the reversed string."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-4",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "For the following arithmetic expression: ((2+3)*(4/2))+2 - Show step-by-step process for matching parentheses using stack data structure.",
+    "solution": "Scan the expression left to right; push every '(' onto the stack, and on encountering ')' pop the stack (this pop represents the matching opening bracket for that closing bracket). If the stack becomes empty exactly when the scan finishes and every ')' found a '(' to pop, the parentheses are balanced/matched.\n\nExpression: ( ( 2 + 3 ) * ( 4 / 2 ) ) + 2\nStep 1: '(' at position 1 -> push -> Stack: (\nStep 2: '(' at position 2 -> push -> Stack: ( (\nStep 3: '2+3' - no brackets, ignore\nStep 4: ')' -> pop -> Stack: (   [matches the 2nd '(']\nStep 5: '*' - ignore\nStep 6: '(' -> push -> Stack: ( (\nStep 7: '4/2' - ignore\nStep 8: ')' -> pop -> Stack: (   [matches the 3rd '(']\nStep 9: ')' -> pop -> Stack: (empty)   [matches the 1st '(']\nStep 10: '+2' - ignore\nFinal: Stack is empty -> all parentheses are correctly matched.",
+    "steps": [
+      "Scan the expression character by character, pushing every '(' encountered onto the stack.",
+      "Whenever a ')' is encountered, pop the stack - this represents a successful match with the most recent unmatched '('.",
+      "After scanning the entire expression, if the stack is empty, all parentheses are correctly balanced/matched."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-5",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Evaluate following postfix expressions while showing status of stack after each operation given A=3, B=5, C=1, D=4\na) A B + C *\nb) A B * C / D *",
+    "solution": "a) A B + C *  with A=3,B=5,C=1:\nPush A(3) -> Stack:[3]\nPush B(5) -> Stack:[3,5]\n'+' -> pop 5, pop 3, push 3+5=8 -> Stack:[8]\nPush C(1) -> Stack:[8,1]\n'*' -> pop 1, pop 8, push 8*1=8 -> Stack:[8]\nResult = 8\n\nb) A B * C / D *  with A=3,B=5,C=1,D=4:\nPush A(3) -> Stack:[3]\nPush B(5) -> Stack:[3,5]\n'*' -> pop 5, pop 3, push 3*5=15 -> Stack:[15]\nPush C(1) -> Stack:[15,1]\n'/' -> pop 1, pop 15, push 15/1=15.0 -> Stack:[15.0]\nPush D(4) -> Stack:[15.0,4]\n'*' -> pop 4, pop 15.0, push 15.0*4=60.0 -> Stack:[60.0]\nResult = 60.0",
+    "steps": [
+      "Scan tokens left to right; push operands onto the stack.",
+      "On encountering an operator, pop the required number of operands (2 for binary operators), apply the operator, and push the result back.",
+      "The value remaining on the stack after the entire expression is scanned is the final result."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-6",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Convert the following infix notations to postfix notations, showing stack and string contents at each step.\na) A + B - C * D\nb) A * ((C + D)/E)",
+    "solution": "a) A + B - C * D  ->  Postfix: A B + C D * -\nSteps: A -> output:A; + -> push, stack:[+]; B -> output:A B; '-' has same precedence as '+' so pop '+' (output:A B +), push '-', stack:[-]; C -> output:A B + C; '*' higher precedence than '-' so push, stack:[-,*]; D -> output:A B + C D; end of expression -> pop '*' (output:A B + C D *), pop '-' (output:A B + C D * -).\n\nb) A * ((C + D)/E)  ->  Postfix: A C D + E / *\nSteps: A -> output:A; '*' -> push, stack:[*]; '(' -> push, stack:[*,(]; '(' -> push, stack:[*,(,(]; C -> output:A C; '+' -> push, stack:[*,(,(,+]; D -> output:A C D; ')' -> pop until '(' : pop '+' (output:A C D +), pop '(' , stack:[*,(]; '/' -> push, stack:[*,(,/]; E -> output:A C D + E; ')' -> pop until '(': pop '/' (output:A C D + E /), pop '(', stack:[*]; end -> pop '*' (output:A C D + E / *).",
+    "steps": [
+      "Use the standard infix-to-postfix stack algorithm: operands go directly to output; operators are pushed after popping any higher/equal-precedence operators already on the stack; '(' is always pushed; ')' pops operators until the matching '(' is found and discarded.",
+      "At the end of the expression, pop all remaining operators from the stack to the output.",
+      "Applying this gives A B + C D * - for (a) and A C D + E / * for (b)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-stack-7",
+    "chapter": "Stack",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Write a program to create a Stack for storing only odd numbers out of all the numbers entered by the user. Display the content of the Stack along with the largest odd number in the Stack. (Hint: Keep popping out the elements from stack and maintain the largest element retrieved so far in a variable. Repeat till Stack is empty)",
+    "solution": "stack = []\nn = int(input(\"How many numbers? \"))\nfor i in range(n):\n    num = int(input(\"Enter a number: \"))\n    if num % 2 != 0:\n        stack.append(num)\n\nprint(\"Stack contents:\", stack)\n\nlargest = None\ntemp = stack.copy()\nwhile temp:\n    val = temp.pop()\n    if largest is None or val > largest:\n        largest = val\nif largest is not None:\n    print(\"Largest odd number in stack:\", largest)\nelse:\n    print(\"No odd numbers were entered\")",
+    "steps": [
+      "Read numbers from the user one at a time, and push (append) only the odd ones onto the stack.",
+      "Display the full stack contents.",
+      "To find the largest, pop elements from a copy of the stack one at a time (keeping the original stack intact) and track the maximum value seen until the stack is empty."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-1",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Fill in the blank\na) ____ is a linear list of elements in which insertion and deletion takes place from different ends.\nb) Operations on a queue are performed in ______ order.\nc) Insertion operation in a queue is called ______ and deletion operation in a queue is called ______.\nd) Deletion of elements is performed from ______ end of the queue.\ne) Elements 'A','S','D' and 'F' are present in the queue, and they are deleted one at a time, ______ is the sequence of element received.\nf) ______ is a data structure where elements can be added or removed at either end, but not in the middle.\ng) A deque contains 'z','x','c','v' and 'b'. Elements received after deletion are 'z','b','v','x' and 'c'. ______ is the sequence of deletion operation performed on deque.",
+    "solution": "a) Queue\nb) FIFO (First In First Out)\nc) Insertion is called ENQUEUE; deletion is called DEQUEUE\nd) front (Front) end\ne) A, S, D, F (same order as inserted, since queue is FIFO)\nf) Deque (Double Ended Queue)\ng) Front, Rear, Rear, Front, Rear (deletions alternate: front('z'), rear('b'), rear('v'), front('x'), rear('c') matching the given output sequence)",
+    "steps": [
+      "A queue allows insertion at one end (rear) and deletion at the other end (front).",
+      "Queue operations follow FIFO order.",
+      "Insertion = ENQUEUE, deletion = DEQUEUE, and deletion always happens from the front.",
+      "Since queue is FIFO, elements come out in the same order 'A','S','D','F' they went in.",
+      "A deque supports insertion/deletion at both ends, and tracing the given output sequence against the initial deque contents gives the front/rear pattern of deletions."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-2",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Compare and contrast queue with stack.",
+    "solution": "A stack follows LIFO (Last In First Out) - insertion and deletion both happen at the same end, called the top. A queue follows FIFO (First In First Out) - insertion happens at one end (rear) and deletion happens at the other end (front). Both are linear data structures used to store a collection of items and both restrict direct/random access to elements other than at their defined access points (top for stack; front/rear for queue).",
+    "steps": [
+      "Stack: LIFO order, single access point (top) for both push and pop.",
+      "Queue: FIFO order, two access points - rear for insertion (enqueue), front for deletion (dequeue).",
+      "Both are linear data structures with restricted access compared to a list/array."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-3",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "How does FIFO describe queue?",
+    "solution": "FIFO stands for First In First Out. It describes a queue because the element that is inserted first (added earliest at the rear) is also the element that gets deleted first (removed earliest from the front) - just like a line/queue of people, where the first person to join the line is the first one to be served and leave.",
+    "steps": [
+      "FIFO means the first element added is the first element removed.",
+      "In a queue, insertion happens at the rear and deletion happens at the front, so the earliest-inserted element is always at the front and is removed first, matching real-world queues/lines."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-4",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Write a menu driven python program using queue, to implement movement of shuttlecock in it's box.",
+    "solution": "queue = []\n\ndef enqueue():\n    queue.append(input(\"Enter shuttlecock ID to add: \"))\n    print(\"Shuttlecock added to the box.\")\n\ndef dequeue():\n    if not queue:\n        print(\"Box is empty. Underflow!\")\n    else:\n        print(\"Removed shuttlecock:\", queue.pop(0))\n\ndef display():\n    print(\"Shuttlecocks in box (front to rear):\", queue)\n\nwhile True:\n    print(\"\\n1. Add shuttlecock (enqueue)\\n2. Remove shuttlecock (dequeue)\\n3. Display\\n4. Exit\")\n    choice = int(input(\"Enter choice: \"))\n    if choice == 1:\n        enqueue()\n    elif choice == 2:\n        dequeue()\n    elif choice == 3:\n        display()\n    elif choice == 4:\n        break\n    else:\n        print(\"Invalid choice\")",
+    "steps": [
+      "Model the shuttlecock box as a queue (Python list): new shuttlecocks are enqueued (appended) at the rear.",
+      "Removing a shuttlecock for use is a dequeue operation from the front (pop(0)), since the one placed first should be used/replaced first.",
+      "Provide a menu loop letting the user add, remove, display, or exit."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-5",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "How is queue data type different from deque data type?",
+    "solution": "A (simple) queue allows insertion only at the rear end and deletion only at the front end - it strictly follows FIFO. A deque (double-ended queue) is more flexible: it allows insertion and deletion at BOTH ends (front and rear), so it can be used to implement the behaviour of both a stack and a queue, unlike a simple queue which is restricted to one insertion point and one deletion point.",
+    "steps": [
+      "Simple queue: insertion only at rear, deletion only at front (strict FIFO).",
+      "Deque: insertion and deletion allowed at both front and rear ends, making it more general-purpose than a simple queue."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-6",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Show the status of queue after each operation\nenqueue(34)\nenqueue(54)\ndequeue()\nenqueue(12)\ndequeue()\nenqueue(61)\npeek()\ndequeue()\ndequeue()\ndequeue()\ndequeue()\nenqueue(1)",
+    "solution": "enqueue(34) -> Queue: [34]\nenqueue(54) -> Queue: [34, 54]\ndequeue() -> removes 34 -> Queue: [54]\nenqueue(12) -> Queue: [54, 12]\ndequeue() -> removes 54 -> Queue: [12]\nenqueue(61) -> Queue: [12, 61]\npeek() -> returns front element 12, Queue unchanged: [12, 61]\ndequeue() -> removes 12 -> Queue: [61]\ndequeue() -> removes 61 -> Queue: []\ndequeue() -> Queue is empty -> Underflow (invalid operation)\ndequeue() -> Underflow again (still empty)\nenqueue(1) -> Queue: [1]",
+    "steps": [
+      "Each enqueue() adds the value at the rear of the queue.",
+      "Each dequeue() removes the value from the front, following FIFO order.",
+      "peek() only reads the front value without removing it.",
+      "Once the queue is empty, further dequeue() calls result in underflow until a new enqueue() adds an element."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-7",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Show the status of deque after each operation\npeek()\ninsertFront(12)\ninsertRear(67)\ndeletionFront()\ninsertRear(43)\ndeletionRear()\ndeletionFront()\ndeletionRear()",
+    "solution": "Initial deque: [] (empty)\npeek() -> deque is empty, nothing to peek (underflow)\ninsertFront(12) -> Deque: [12]\ninsertRear(67) -> Deque: [12, 67]\ndeletionFront() -> removes 12 (front) -> Deque: [67]\ninsertRear(43) -> Deque: [67, 43]\ndeletionRear() -> removes 43 (rear) -> Deque: [67]\ndeletionFront() -> removes 67 (front) -> Deque: []\ndeletionRear() -> deque is empty -> underflow (invalid operation)",
+    "steps": [
+      "insertFront()/insertRear() add an element at the front/rear of the deque respectively.",
+      "deletionFront()/deletionRear() remove an element from the front/rear respectively.",
+      "peek() and deletion operations on an empty deque result in an underflow condition."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-queue-8",
+    "chapter": "Queue",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Write a python program to check whether the given string is palindrome or not, using deque. (Hint: refer to algorithm 4.1)",
+    "solution": "from collections import deque\n\ndef is_palindrome(s):\n    dq = deque(s)\n    while len(dq) > 1:\n        front = dq.popleft()\n        rear = dq.pop()\n        if front != rear:\n            return False\n    return True\n\ntext = input(\"Enter a string: \")\nif is_palindrome(text):\n    print(text, \"is a palindrome\")\nelse:\n    print(text, \"is not a palindrome\")",
+    "steps": [
+      "Load every character of the string into a deque.",
+      "Repeatedly compare and remove the character at the front with the character at the rear (popleft() and pop()).",
+      "If any such pair does not match, the string is not a palindrome; if all pairs match until 1 or 0 characters remain, it is a palindrome."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-1",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Consider a list of 10 elements: numList=[7,11,3,10,17,23,1,4,21,5]. Display the partially sorted list after three complete passes of Bubble sort.",
+    "solution": "Start: [7,11,3,10,17,23,1,4,21,5]\nAfter Pass 1 (largest, 23, bubbles to the end): [7,3,10,11,17,1,4,21,5,23]\nAfter Pass 2 (next largest, 21, bubbles into place): [3,7,10,11,1,4,17,5,21,23]\nAfter Pass 3 (next largest, 17, bubbles into place): [3,7,10,1,4,11,5,17,21,23]",
+    "steps": [
+      "In bubble sort, each pass compares adjacent elements and swaps them if out of order, causing the largest unsorted element to 'bubble' to its correct position at the end.",
+      "Simulating pass 1 on [7,11,3,10,17,23,1,4,21,5] moves 23 to the last unsorted position.",
+      "Repeating this process for pass 2 and pass 3 places 21 and then 17 in their correct final positions, giving the list shown after three passes."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-2",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Identify the number of swaps required for sorting the following list using selection sort and bubble sort and identify which is the better sorting technique with respect to the number of comparisons.\nList 1: 63 42 21 9",
+    "solution": "List: [63, 42, 21, 9] (needs to be reversed to [9,21,42,63])\n\nSelection sort: finds the minimum in the unsorted part and swaps it into position each pass.\nPass1: min is 9 at index3, swap with index0 -> [9,42,21,63] (1 swap)\nPass2: min of remaining[42,21,63] is 21 at index2, swap with index1 -> [9,21,42,63] (1 swap)\nPass3: remaining[42,63] already in order, no swap needed.\nTotal swaps in selection sort = 2. Comparisons = 3+2+1 = 6.\n\nBubble sort:\nPass1: 63>42 swap->[42,63,21,9]; 63>21 swap->[42,21,63,9]; 63>9 swap->[42,21,9,63] (3 swaps)\nPass2: 42>21 swap->[21,42,9,63]; 42>9 swap->[21,9,42,63] (2 swaps)\nPass3: 21>9 swap->[9,21,42,63] (1 swap)\nTotal swaps in bubble sort = 6. Comparisons = 3+2+1 = 6.\n\nBoth make the same number of comparisons (6) for a 4-element list, but selection sort needs far fewer swaps (2) than bubble sort (6), so selection sort is the better technique here with respect to the number of swaps/data movement, although the number of comparisons is identical for both on this size of list.",
+    "steps": [
+      "Selection sort repeatedly picks the minimum of the unsorted portion and swaps it into place - only one swap per pass (or none if already correct).",
+      "Bubble sort swaps every adjacent out-of-order pair, which usually leads to many more swaps for a mostly unsorted list.",
+      "For this 4-element list both use 6 comparisons total, but selection sort needs only 2 swaps versus bubble sort's 6, making selection sort more efficient in terms of data movement here."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-3",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Consider the following lists: List 1: 2 3 5 7 11 (ascending), List 2: 11 7 5 3 2 (descending). If the lists are sorted using Insertion sort then which of the lists List1 or List 2 will make the minimum number of comparisons? Justify using diagrammatic representation.",
+    "solution": "List 1 [2,3,5,7,11] is already sorted in ascending order, which is exactly the order insertion sort produces, so it will require the minimum number of comparisons - only ONE comparison per pass (each new element is compared just once with its immediate left neighbour and found to be already in place, so no shifting is needed). List 2 [11,7,5,3,2] is sorted in the exact opposite (descending) order, which is the worst case for insertion sort - every new element must be compared with and shifted past ALL previously sorted elements, requiring the maximum number of comparisons.\n\nList 1 trace (best case): [2] | compare 3 vs 2 (1 comp, no shift) [2,3] | compare 5 vs 3 (1 comp,no shift) [2,3,5] | compare 7 vs5(1 comp) [2,3,5,7] | compare 11 vs7(1 comp) [2,3,5,7,11]. Total comparisons = 4.\n\nList 2 trace (worst case): [11] | compare 7 vs11(shift),done: 1 comp+1shift ->[7,11] | compare 5 vs11(shift),vs7(shift): 2 comps ->[5,7,11] | compare 3 vs11,7,5(shift each):3 comps->[3,5,7,11] | compare 2 vs11,7,5,3(shift each):4 comps->[2,3,5,7,11]. Total comparisons = 1+2+3+4 = 10.",
+    "steps": [
+      "Insertion sort performs best (fewest comparisons) when the input is already sorted in ascending order, since each new element only needs one comparison to confirm it is already positioned correctly.",
+      "It performs worst (most comparisons) when the input is sorted in descending order, since every new element must be compared against and shifted past all already-placed elements.",
+      "List 1 (ascending) needs only 4 comparisons; List 2 (descending) needs 10 comparisons, so List 1 makes the minimum number of comparisons."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-4",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Write a program using user defined functions that accepts a List of numbers as an argument and finds its median. (Hint: Use bubble sort to sort the accepted list. If there are odd number of terms, the median is the center term. If there are even number of terms, add the two middle terms and divide by 2 to get median)",
+    "solution": "def bubble_sort(lst):\n    n = len(lst)\n    for i in range(n - 1):\n        for j in range(n - 1 - i):\n            if lst[j] > lst[j + 1]:\n                lst[j], lst[j + 1] = lst[j + 1], lst[j]\n    return lst\n\ndef find_median(lst):\n    lst = bubble_sort(lst)\n    n = len(lst)\n    mid = n // 2\n    if n % 2 == 1:\n        return lst[mid]\n    else:\n        return (lst[mid - 1] + lst[mid]) / 2\n\nnumbers = list(map(int, input(\"Enter numbers separated by space: \").split()))\nprint(\"Median:\", find_median(numbers))",
+    "steps": [
+      "First sort the list using bubble sort (repeated adjacent comparisons and swaps).",
+      "If the sorted list has an odd number of elements, the median is the single middle element at index n//2.",
+      "If it has an even number of elements, the median is the average of the two middle elements at indices n//2-1 and n//2."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-5",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "All the branches of XYZ school conducted an aptitude test for all the students in the age group 14-16. There were a total of n students. The marks of n students are stored in a list. Write a program using a user defined function that accepts a list of marks as an argument and calculates the 'xth' percentile.",
+    "solution": "import math\n\ndef selection_sort(lst):\n    n = len(lst)\n    for i in range(n - 1):\n        min_idx = i\n        for j in range(i + 1, n):\n            if lst[j] < lst[min_idx]:\n                min_idx = j\n        lst[i], lst[min_idx] = lst[min_idx], lst[i]\n    return lst\n\ndef percentile(marks, x):\n    marks = selection_sort(marks)\n    n = len(marks)\n    index = round((x / 100) * n)\n    index = min(index, n - 1)\n    return marks[index]\n\nmarks_list = list(map(int, input(\"Enter marks separated by space: \").split()))\nx = float(input(\"Enter percentile to find (0-100): \"))\nprint(f\"The {x}th percentile value is:\", percentile(marks_list, x))",
+    "steps": [
+      "Order all the marks from smallest to largest using selection sort.",
+      "Compute index = round((x/100) * n), where n is the total number of students, using math.round()/Python's round().",
+      "The value at that index position in the sorted list is the xth percentile."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sorting-6",
+    "chapter": "Sorting",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "During admission in a course, the names of the students are inserted in ascending order. Thus, performing the sorting operation at the time of inserting elements in a list. Identify the type of sorting technique being used and write a program using a user defined function that is invoked every time a name is input and stores the name in ascending order of names in the list.",
+    "solution": "This is Insertion Sort, since each new name is inserted directly into its correct sorted position among the already-sorted names as it arrives, rather than sorting the whole list at once at the end.\n\ndef insert_name(names, new_name):\n    i = len(names) - 1\n    names.append(new_name)  # make room for the new name\n    while i >= 0 and names[i] > new_name:\n        names[i + 1] = names[i]\n        i -= 1\n    names[i + 1] = new_name\n    return names\n\nnames = []\nn = int(input(\"How many names to admit? \"))\nfor _ in range(n):\n    nm = input(\"Enter name: \")\n    insert_name(names, nm)\n    print(\"Current sorted list:\", names)",
+    "steps": [
+      "This scenario matches Insertion Sort, where each incoming element is placed directly into its correct position relative to the already-sorted elements.",
+      "The insert_name() function shifts names greater than the new name one position to the right, then places the new name in the gap created.",
+      "Calling this function every time a new name is entered keeps the list sorted in ascending order at all times."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-1",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Using linear search determine the position of 8, 1, 99 and 44 in the list: [1, -2, 32, 8, 17, 19, 42, 13, 0, 44]. Draw a detailed table showing the values of the variables and the decisions taken in each pass of linear search.",
+    "solution": "List (index 0-9): [1,-2,32,8,17,19,42,13,0,44]\n\nSearching 8: compare index0(1)no, index1(-2)no, index2(32)no, index3(8)YES -> found at index 3.\nSearching 1: compare index0(1)YES -> found at index 0.\nSearching 99: compare all indices 0-9, none equal 99 -> not found (position = -1 / not present in list).\nSearching 44: compare index0..8 all no, index9(44)YES -> found at index 9.\n\nSummary table:\nKey | Position (0-based index)\n8   | 3\n1   | 0\n99  | Not found\n44  | 9",
+    "steps": [
+      "Linear search compares the key with each element starting from index 0 until a match is found or the list ends.",
+      "8 matches at index 3; 1 matches immediately at index 0; 44 matches at the last index 9.",
+      "99 does not occur anywhere in the list, so linear search reports it as not found after examining every element."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-2",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Use the linear search program to search the key with value 8 in the list having duplicate values such as [42,-2,32,8,17,19,42,13,8,44]. What is the position returned? What does this mean?",
+    "solution": "A standard linear search scans from index 0 and stops as soon as it finds a match, so it returns index 3 (the first occurrence of 8), even though 8 also occurs again at index 8. This means linear search only reports the position of the FIRST occurrence of the key; if the list has duplicate values, later occurrences are not reported unless the search is explicitly modified to continue scanning and collect all matching positions.",
+    "steps": [
+      "Linear search stops at the first match it encounters while scanning left to right.",
+      "8 first occurs at index 3, so that is the position returned, even though another 8 exists at index 8.",
+      "This shows that plain linear search only finds the first occurrence in the presence of duplicates."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-3",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Write a program that takes as input a list having a mix of 10 negative and positive numbers and a key value. Apply linear search to find whether the key is present in the list or not. If the key is present it should display the position of the key in the list otherwise it should print an appropriate message. Run the program for at least 3 different keys and note the result.",
+    "solution": "def linear_search(lst, key):\n    for i in range(len(lst)):\n        if lst[i] == key:\n            return i\n    return -1\n\nnumbers = list(map(int, input(\"Enter 10 numbers (mix of positive/negative): \").split()))\nkey = int(input(\"Enter the key to search: \"))\npos = linear_search(numbers, key)\nif pos != -1:\n    print(f\"{key} found at position {pos}\")\nelse:\n    print(f\"{key} not found in the list\")",
+    "steps": [
+      "Define a linear_search() function that scans the list from the start, comparing each element with the key.",
+      "Return the index as soon as a match is found; return -1 if the loop completes without a match.",
+      "Run this with several different key values (present and absent) to observe both found and not-found outcomes."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-4",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Write a program that takes as input a list of 10 integers and a key value and applies binary search to find whether the key is present in the list or not. If the key is present it should display the position of the key in the list otherwise it should print an appropriate message. Run the program for at least 3 different key values and note the results.",
+    "solution": "def binary_search(lst, key):\n    low, high = 0, len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == key:\n            return mid\n        elif lst[mid] < key:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1\n\nnumbers = list(map(int, input(\"Enter 10 integers in ascending order: \").split()))\nkey = int(input(\"Enter the key to search: \"))\npos = binary_search(numbers, key)\nif pos != -1:\n    print(f\"{key} found at position {pos}\")\nelse:\n    print(f\"{key} not found in the list\")",
+    "steps": [
+      "Binary search requires the list to be sorted; it repeatedly compares the key to the middle element.",
+      "If the middle element equals the key, its index is returned; if the key is larger, search continues in the right half; if smaller, in the left half.",
+      "This halves the search space every step, and returns -1 if low exceeds high without a match."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-5",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Following is a list of unsorted/unordered numbers: [50, 31, 21, 28, 72, 41, 73, 93, 68, 43, 45, 78, 5, 17, 97, 71, 69, 61, 88, 75, 99, 44, 55, 9]. Use linear search to determine the position of 1, 5, 55 and 99. Note comparisons. Sort ascending. Use linear search again and note comparisons. Use binary search on sorted list and record iterations.",
+    "solution": "Unsorted list linear search (0-based index), comparing left to right until match or end (24 elements):\n1  -> not found; comparisons = 24 (whole list scanned)\n5  -> found at index 12; comparisons = 13\n55 -> found at index 22; comparisons = 23\n99 -> found at index 20; comparisons = 21\n\nSorted ascending list: [5,9,17,21,28,31,41,43,44,45,50,55,61,68,69,71,72,73,75,78,88,93,97,99]\n\nLinear search on sorted list:\n1  -> not found; comparisons = 24\n5  -> found at index 0; comparisons = 1\n55 -> found at index 11; comparisons = 12\n99 -> found at index 23; comparisons = 24\n\nBinary search on sorted list (24 elements, indices 0-23):\n1  -> not found after O(log2 24) ~ 5 iterations (search space exhausted)\n5  -> found at index 0 in 5 iterations (mid narrows down to the first element)\n55 -> found at index 11 in about 1-2 iterations (first mid ~ index 11/12 is very close to target)\n99 -> found at index 23 in about 4-5 iterations\n(exact iteration counts depend on the precise mid calculation, but binary search needs at most ceil(log2 24) = 5 comparisons for any key, far fewer than linear search's up to 24 comparisons.)",
+    "steps": [
+      "For linear search, count how many elements are compared before the key is found or the whole list is scanned (for absent keys like 1).",
+      "Sorting the list first does not change the number of comparisons linear search needs (still proportional to the key's position), but enables binary search.",
+      "Binary search on the sorted 24-element list needs at most about 5 comparisons (log2 24 rounded up) per key, which is far more efficient than linear search's worst case of 24 comparisons."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-searching-6",
+    "chapter": "Searching",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Write a program that takes as input the following unsorted list of English words: [Perfect, Stupendous, Wondrous, Gorgeous, Awesome, Splendid, Fabulous, Mirthful, Incredible, Outstanding, Propitious, Remarkable, Stellar, Unbelievable, Super, Amazing]. Use linear search to find Amazing, Perfect, Great and Wondrous; note comparisons. Sort the list. Use linear search again; note comparisons. Use binary search on sorted list; record iterations.",
+    "solution": "words = [\"Perfect\",\"Stupendous\",\"Wondrous\",\"Gorgeous\",\"Awesome\",\"Splendid\",\"Fabulous\",\"Mirthful\",\"Incredible\",\"Outstanding\",\"Propitious\",\"Remarkable\",\"Stellar\",\"Unbelievable\",\"Super\",\"Amazing\"]\n\ndef linear_search(lst, key):\n    comparisons = 0\n    for i in range(len(lst)):\n        comparisons += 1\n        if lst[i] == key:\n            return i, comparisons\n    return -1, comparisons\n\ndef binary_search(lst, key):\n    low, high, iterations = 0, len(lst) - 1, 0\n    while low <= high:\n        iterations += 1\n        mid = (low + high) // 2\n        if lst[mid] == key:\n            return mid, iterations\n        elif lst[mid] < key:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1, iterations\n\nkeys = [\"Amazing\", \"Perfect\", \"Great\", \"Wondrous\"]\nfor k in keys:\n    pos, comps = linear_search(words, k)\n    print(k, \"-> linear search on unsorted list: position\", pos, \"comparisons\", comps)\n\nwords.sort()\nfor k in keys:\n    pos, comps = linear_search(words, k)\n    print(k, \"-> linear search on sorted list: position\", pos, \"comparisons\", comps)\n\nfor k in keys:\n    pos, iters = binary_search(words, k)\n    print(k, \"-> binary search: position\", pos, \"iterations\", iters)",
+    "steps": [
+      "Run linear search for each key on the original unsorted list, counting comparisons until found or the list is exhausted (Great is not present, so it takes the maximum comparisons).",
+      "Sort the list of words alphabetically using sort(), then repeat linear search; the number of comparisons for a given word now depends on its alphabetical position.",
+      "Finally run binary search on the sorted list, which needs at most about ceil(log2 16) = 4 iterations per key, much fewer than linear search on average."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-1",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Identify data required to be maintained to perform the following services:\na) Declare exam results and print e-certificates\nb) Register participants in an exhibition and issue biometric ID cards\nc) To search for an image by a search engine\nd) To book an OPD appointment with a hospital in a specific department",
+    "solution": "a) Student name, roll number/registration number, subject-wise marks/grades, total marks, result status (pass/fail), certificate template details.\nb) Participant name, contact details, exhibition/event ID, category of participation, biometric data (fingerprint/photo), unique ID card number.\nc) Image metadata (filename, tags/keywords, file format, size, resolution), the visual/pixel content itself (used for image-based search), source webpage URL, upload date.\nd) Patient name, age, contact number, hospital/department name, doctor's name, preferred date/time slot, patient's medical history/reason for visit.",
+    "steps": [
+      "For each service, think about what facts must be captured before and during the service, and what output/document must be produced.",
+      "Results/certificates need identity + marks data; ID cards need identity + biometric data; image search needs metadata and visual features; OPD booking needs patient, department and slot data."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-2",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "A school having 500 students wants to identify beneficiaries of the merit-cum means scholarship, achieving more than 75% for two consecutive years and having family income less than 5 lakh per annum. Briefly describe data processing steps to be taken by the school to prepare the list of beneficiaries.",
+    "solution": "1. Collect data: gather each student's marks/percentage for the last two academic years and their family annual income.\n2. Validate/clean data: check for missing or inconsistent records (e.g. missing income proof, incomplete marks).\n3. Filter/select: apply the two conditions - percentage > 75% in BOTH consecutive years AND family income < 5 lakh per annum - to shortlist eligible students.\n4. Sort/organise: arrange the shortlisted students (e.g. by percentage, descending, or alphabetically) for easy review.\n5. Generate output: prepare and print/display the final beneficiary list along with relevant details (name, class, percentage, income) for scholarship processing.",
+    "steps": [
+      "Collect the two required attributes (percentage for two years, family income) for all 500 students.",
+      "Filter records that satisfy both conditions simultaneously (percentage > 75% for two consecutive years AND income < 5 lakh).",
+      "Sort and present the final list of qualifying students as the output of this data processing."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-3",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "A bank 'xyz' wants to know about its popularity among the residents of a city 'ABC' on the basis of number of bank accounts each family has and the average monthly account balance of each person. Briefly describe the steps to be taken for collecting data and what results can be checked through processing of the collected data.",
+    "solution": "Data collection steps: conduct a survey/questionnaire across households in city ABC asking (a) how many bank accounts each family holds with bank xyz vs other banks, and (b) the average monthly balance maintained by each family member; collect this data in a structured format (spreadsheet/database) with fields for household ID, number of accounts, and balances.\n\nProcessing/results that can be derived: total and average number of bank-xyz accounts per family across the city (indicating market penetration/popularity), the overall average monthly balance maintained by customers (indicating financial engagement), comparison of these figures with other banks to gauge relative popularity, and identification of localities/segments where the bank is more or less popular.",
+    "steps": [
+      "Collect raw data via a survey of households recording number of accounts held with the bank and monthly balances.",
+      "Process this data by aggregating counts and averages to measure popularity (more accounts/higher balances typically indicate greater trust/popularity).",
+      "Compare results across families/localities or against competitor banks to draw conclusions about the bank's popularity."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-4",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Identify type of data being collected/generated in the following scenarios:\na) Recording a video\nb) Marking attendance by teacher\nc) Writing tweets\nd) Filling an application form online",
+    "solution": "a) Recording a video generates unstructured data (raw multimedia/video data with no predefined fields).\nb) Marking attendance generates structured data (fixed fields like student ID, date, present/absent, stored in a table/database).\nc) Writing tweets generates unstructured/semi-structured data (free-form text, though it carries some metadata like timestamp and hashtags).\nd) Filling an application form online generates structured data (fixed fields such as name, address, date of birth entered into a predefined form).",
+    "steps": [
+      "Structured data fits into a predefined, tabular schema (rows/columns) - e.g. attendance records and form fields.",
+      "Unstructured data has no fixed format - e.g. video content and free-flowing tweet text (tweets are often called semi-structured due to accompanying metadata like hashtags/timestamps)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-5",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Consider the temperature (in Celsius) of 7 days of a week as 34, 34, 27, 28, 27, 34, 34. Identify the appropriate statistical technique to be used to calculate the following:\na) Find the average temperature.\nb) Find the temperature Range of that week.\nc) Find the standard deviation temperature.",
+    "solution": "a) Use Mean (average) = sum of all 7 values / 7 = (34+34+27+28+27+34+34)/7 = 218/7 = 31.14 degrees C.\nb) Use Range = Maximum value - Minimum value = 34 - 27 = 7 degrees C.\nc) Use Standard Deviation, which measures how much the daily temperatures deviate from the mean; it is calculated as the square root of the average of squared deviations from the mean (sqrt(sum((x-mean)^2)/n)).",
+    "steps": [
+      "Average temperature is found using the Mean/Arithmetic Average technique.",
+      "Range (spread) is found by subtracting the minimum from the maximum recorded value.",
+      "Standard Deviation is the appropriate technique to measure the variability/dispersion of the temperature values around the mean."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-6",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "A school teacher wants to analyse results. Identify the appropriate statistical technique to be used along with its justification for the following cases:\na) Teacher wants to compare performance in terms of division secured by students in Class XII A and Class XII B where each class strength is same.\nb) Teacher has conducted five unit tests for that class in months July to November and wants to compare the class performance in these five months.",
+    "solution": "a) Use a Bar Graph/Bar Chart (or a comparative frequency/percentage count of divisions) - since class strengths are equal, the count of students securing each division (I, II, III) can be directly compared side by side between Class XII A and XII B using bars, making differences easy to visualise.\nb) Use a Line Graph (trend analysis of average marks/performance over time) - since the results are spread across five successive months (July to November), a line graph best shows the trend (rise/fall) in the class's average performance over that time period.",
+    "steps": [
+      "Comparing two groups (Class A vs Class B) of equal size on a categorical measure (division) is best shown with a bar chart comparing counts/percentages.",
+      "Comparing performance across a time sequence (successive months) is best shown with a line graph, which highlights trends over time."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-7",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Suppose annual day of your school is to be celebrated. The school has decided to felicitate those parents of the students studying in classes XI and XII, who are the alumni of the same school. In this context, answer:\na) Which statistical technique should be used to find out the number of students whose both parents are alumni of this school?\nb) How varied are the age of parents of the students of that school?",
+    "solution": "a) Use frequency count/tabulation (a simple count/tally of records) - filter and count records where both the father's and mother's 'alumnus of this school' field are marked Yes, giving the number of students whose both parents are alumni.\nb) Use Standard Deviation (or Range) of the parents' ages - this measures how spread out/varied the ages of parents are around the average age.",
+    "steps": [
+      "Finding a count meeting a specific condition (both parents alumni) is done via frequency counting/tabulation of the qualifying records.",
+      "Measuring variation/spread in a numeric attribute like age is done using standard deviation (or range as a simpler measure)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-8",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "For the annual day celebrations, the teacher is looking for an anchor in a class of 42 students. The teacher would make selection of an anchor on the basis of singing skill, writing skill, as well as monitoring skill.\na) Which mode of data collection should be used?\nb) How would you represent the skill of students as data?",
+    "solution": "a) Direct observation/practical assessment or a rating-based survey/questionnaire should be used as the mode of data collection - the teacher can conduct auditions/tests for singing, writing and speaking(monitoring), and record scores, or circulate a rating form for peer/self assessment.\nb) Each skill can be represented as numeric/ordinal data - e.g. a rating scale (1 to 5 or 1 to 10) for singing skill, writing skill and monitoring skill for every student, stored in a table with columns: Student Name, Singing Score, Writing Score, Monitoring Score, so that scores can be compared/aggregated to select the best anchor.",
+    "steps": [
+      "Skills like singing, writing and monitoring are best assessed by direct observation/auditions, recorded as ratings - a practical data-collection method.",
+      "Representing each skill as a numeric rating (ordinal scale) for every student allows objective, structured comparison to select the anchor."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-data-9",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Differentiate between structured and unstructured data giving one example. Also, the principal of a school wants to compare the purchase and sale price of fruit juice and biscuits, compare sales of fruit juice, biscuits and samosa, and study variation in sale price of fruit juices of different companies for same quantity. Create an appropriate dataset for these items by listing their purchase price and sale price, and apply basic statistical techniques to make comparisons.",
+    "solution": "Structured vs unstructured data: Structured data is organised in a fixed, predefined format such as rows and columns of a table/database, e.g. a student marksheet with columns for name and marks. Unstructured data has no fixed format or schema, e.g. a video recording or a block of free-flowing text.\n\nSample canteen dataset:\nItem       | Purchase Price (Rs) | Sale Price (Rs) | Qty Sold (per day)\nFruit Juice| 15                   | 20               | 60\nBiscuits   | 8                    | 10               | 100\nSamosa     | 6                    | 10               | 80\n\na) Comparing purchase vs sale price: profit per unit = Sale Price - Purchase Price -> Fruit Juice: Rs 5, Biscuits: Rs 2, Samosa: Rs 4. Fruit juice has the highest per-unit profit margin.\nb) Comparing sales (using Qty Sold as a bar chart): Biscuits sell the most (100/day), followed by Samosa (80/day), then Fruit Juice (60/day).\nc) Variation in sale price of fruit juices of different companies for the same quantity can be studied using Range/Standard Deviation of their prices, e.g. Company A: Rs18, Company B: Rs20, Company C: Rs22 for 200ml -> Range = 22-18 = Rs4, showing moderate price variation across brands.",
+    "steps": [
+      "Structured data fits a fixed schema (e.g. a table of records); unstructured data has no fixed schema (e.g. video, free text).",
+      "Build a simple table of purchase price, sale price and quantity sold for fruit juice, biscuits and samosa.",
+      "Use subtraction to compare profit margins, use quantity counts/bar charts to compare sales volumes, and use range/standard deviation to study price variation across brands for the same quantity."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-1",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Give the terms for each of the following:\na) Collection of logically related records.\nb) DBMS creates a file that contains description about the data stored in the database.\nc) Attribute that can uniquely identify the tuples in a relation.\nd) Special value that is stored when actual data value is unknown for an attribute.\ne) An attribute which can uniquely identify tuples of the table but is not defined as primary key of the table.\nf) Software that is used to create, manipulate and maintain a relational database.",
+    "solution": "a) Database (or Relation/Table)\nb) Data Dictionary (metadata)\nc) Candidate Key (or Primary Key)\nd) NULL value\ne) Alternate Key (or Candidate key not chosen as primary key)\nf) RDBMS (Relational Database Management System)",
+    "steps": [
+      "A database/relation is a logically related collection of records.",
+      "The data dictionary stores metadata - descriptions of the data and its structure.",
+      "A candidate key uniquely identifies each tuple; the one chosen to formally identify records is the primary key, and any other candidate key not chosen is an alternate key.",
+      "NULL represents an unknown/missing value.",
+      "An RDBMS (e.g. MySQL, Oracle) is software used to create and manage relational databases."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-2",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Why foreign keys are allowed to have NULL values? Explain with an example.",
+    "solution": "A foreign key is allowed to have a NULL value because the relationship it represents may sometimes be optional - i.e., a row in the referencing table may legitimately not be associated with any row in the referenced table at that time. For example, in an EMPLOYEE table with a foreign key DeptID referencing a DEPARTMENT table, a newly hired employee who has not yet been assigned to any department can have DeptID = NULL, indicating 'no department assigned yet', without violating referential integrity.",
+    "steps": [
+      "A foreign key models a relationship between two tables, and not every row must necessarily participate in that relationship.",
+      "Allowing NULL lets a record exist without (yet) being linked to a matching record in the referenced table.",
+      "Example: an employee not yet assigned to any department can have a NULL DeptID."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-3",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Differentiate between:\na) Database state and database schema\nb) Primary key and foreign key\nc) Degree and cardinality of a relation",
+    "solution": "a) Database schema is the overall logical design/structure of the database (table names, attributes, data types, constraints) - it rarely changes. Database state (or instance) is the actual data/values present in the database at a specific point in time - it changes frequently as records are inserted, updated or deleted.\nb) A primary key is an attribute (or set of attributes) that uniquely identifies each tuple within its OWN relation and cannot be NULL. A foreign key is an attribute in one relation that references (matches) the primary key of another (or the same) relation, used to establish a relationship between tables, and it can be NULL.\nc) Degree of a relation is the number of attributes (columns) in the relation. Cardinality of a relation is the number of tuples (rows) currently present in the relation.",
+    "steps": [
+      "Schema = the fixed structure/blueprint of the database; State = the actual current data content, which changes over time.",
+      "Primary key uniquely identifies rows within its own table; foreign key links to the primary key of another table to establish relationships.",
+      "Degree counts columns/attributes; cardinality counts rows/tuples."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-4",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Compared to a file system, how does a database management system avoid redundancy in data through a database?",
+    "solution": "A DBMS centralises all data storage into a single, unified database, structured through normalization into tables where each fact is stored only once and related tables are connected through keys (primary/foreign keys) rather than each application maintaining its own separate copy of the data. Since all applications/users access this shared central database, the same piece of information does not need to be duplicated across multiple files, unlike a traditional file system where each application typically keeps its own independent files, often storing the same data (e.g. a customer's address) in multiple places redundantly.",
+    "steps": [
+      "A file-based system typically has separate files per application, each often storing the same data independently, causing redundancy.",
+      "A DBMS keeps data centrally, organised through normalized tables and relationships (keys), so each fact is stored only once and shared across applications.",
+      "This shared, key-linked structure is what allows a DBMS to minimise data redundancy compared to plain file systems."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-5",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What are the limitations of file system that can be overcome by a relational DBMS?",
+    "solution": "Limitations of a file system: (1) Data redundancy and inconsistency, since the same data may be duplicated across multiple files. (2) Difficulty in accessing data - retrieving specific/combined information often needs custom programs. (3) Lack of data isolation/integration - data scattered in separate files is hard to relate. (4) Integrity problems - hard to enforce constraints (e.g. valid ranges) uniformly. (5) Atomicity/concurrency problems - simultaneous access by multiple users/programs can corrupt data, and partial updates can leave data inconsistent. (6) Security problems - difficult to enforce access control uniformly across many separate files.\n\nA relational DBMS overcomes all of these by centralising data, supporting SQL-based flexible querying, enforcing integrity constraints (primary/foreign keys, NOT NULL, CHECK), providing transaction management for atomicity and concurrency control, and offering fine-grained access control/security.",
+    "steps": [
+      "File systems suffer from redundancy, poor querying flexibility, weak integrity enforcement, concurrency issues, and weak security.",
+      "A relational DBMS addresses each of these through centralized storage, SQL querying, constraints, transactions and access-control mechanisms."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-6",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "A school has a rule that each student must participate in a sports activity, giving only one preference. Table: Sports Preferences with Roll_no and Preference columns (including a duplicate roll_no 17 with two entries, a NULL preference for roll 24, and a row with NULL roll_no and preference Kabaddi). Answer:\na) Roll no 24 may not be interested in sports. Can a NULL value be assigned to that student's preference field?\nb) Roll no 17 has given two preferences in sports. Which property of relational DBMS is violated here? Can we use any constraint or key in the relational DBMS to check against such violation, if any?\nc) Kabaddi was not chosen by any student. Is it possible to have this tuple in the Sports Preferences relation?",
+    "solution": "a) Yes, a NULL value CAN be assigned to roll 24's preference field, since Preference is not the primary key of this table (Roll_no is), and non-key attributes are allowed to hold NULL to represent 'not applicable/unknown' data.\nb) Having two rows for roll no 17 violates the rule that Roll_no should uniquely identify one preference per student, i.e. it violates the entity integrity / uniqueness property expected of a key attribute. This can be prevented by defining Roll_no as the PRIMARY KEY of the Sports Preferences relation, which enforces uniqueness and disallows duplicate roll numbers.\nc) No, it is NOT possible to have a tuple with Roll_no = NULL in this relation, because Roll_no is intended to be the primary key, and primary key attributes cannot contain NULL values (this is the entity integrity constraint) - every student's preference must be linked to a valid, known roll number.",
+    "steps": [
+      "Non-key attributes such as Preference can validly be NULL, so roll 24 can have a NULL preference.",
+      "Duplicate roll numbers violate key uniqueness; declaring Roll_no as PRIMARY KEY enforces uniqueness and prevents this.",
+      "Primary key attributes cannot be NULL (entity integrity), so a row with NULL Roll_no cannot exist in this relation."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-7",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Two sections of a class prepared separate Sports Preferences tables with the same data but arranged in different row order and different column order. Are the states of both the relations equivalent? Justify.",
+    "solution": "Yes, the states of both relations are equivalent. In the relational model, a relation is defined as a SET of tuples, and both the order of rows (tuples) and the order of columns (attributes) are logically irrelevant to the relation's identity - what matters is which values are associated with which attributes for each tuple. Since both tables contain the exact same set of (Roll_no, Sports) pairs, just displayed/arranged differently, they represent the same underlying relation state.",
+    "steps": [
+      "A relation in the relational model is a set of tuples; sets have no inherent ordering.",
+      "Reordering rows or columns does not change which (Roll_no, Sports) associations exist in the data.",
+      "Since both tables contain the identical set of associations, their states are equivalent despite different display order."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-8",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "The school canteen wants to maintain records of items and generate bills. Design a database:\na) To store each item name along with its price - which relation, attribute names/types, restriction?\nb) To generate a bill, need quantity purchased - new relation or part of previous? Decide attributes, primary key, foreign key so that the same bill cannot be generated for different orders, and bill can be generated only for available items.\nc) Where should 'calories' attribute be stored?",
+    "solution": "a) A relation named ITEM should be used, with attributes: ItemCode (Integer), ItemName (Varchar/Text), Price (Decimal/Float). Restriction: ItemCode should be defined as PRIMARY KEY (with a UNIQUE/NOT NULL constraint) so each item and its price is stored only once.\nb) A new relation named BILL_DETAILS (or ORDER) should be created, since quantity purchased relates to a specific transaction, not the item itself - it is a many-to-many kind of link (many items per bill, an item ordered on many bills). Attributes: BillNo (Integer), ItemCode (Integer), Quantity (Integer). Primary key = BillNo (or composite BillNo+ItemCode if multiple items per bill share the same BillNo) so that the same bill number cannot be duplicated for different orders. ItemCode should be a FOREIGN KEY referencing ItemCode in the ITEM relation, ensuring a bill can only be generated for items that already exist in the ITEM relation (referential integrity).\nc) The 'calories' attribute should be stored in the ITEM relation, since calorie content is a property of the item itself, not of a particular bill/order.",
+    "steps": [
+      "Item name and price are properties of the item itself, so they belong in an ITEM relation with ItemCode as primary key.",
+      "Quantity purchased belongs to a transaction, so a separate BILL_DETAILS relation is needed, with BillNo as (part of) its primary key to prevent duplicate bills, and ItemCode as a foreign key referencing ITEM to ensure only existing items can be billed.",
+      "Calories is a fixed attribute of an item, so it is stored in the ITEM relation."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-9",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "An organisation wants to create a database EMP-DEPENDENT with EMPLOYEE(AadharNumber, Name, Address, Department, EmployeeID) and DEPENDENT(EmployeeID, DependentName, Relationship).\na) Name the attributes of EMPLOYEE, which can be used as candidate keys.\nb) The company wants to retrieve details of dependent of a particular employee. Name the tables and the key which are required to retrieve this detail.\nc) What is the degree of EMPLOYEE and DEPENDENT relation?",
+    "solution": "a) AadharNumber and EmployeeID can both be used as candidate keys, since both uniquely identify an employee (Aadhar number is unique to each person, and EmployeeID is typically assigned uniquely by the organisation).\nb) Both tables EMPLOYEE and DEPENDENT are required, joined using the common attribute EmployeeID (which is the primary key in EMPLOYEE and acts as a foreign key linking to it in DEPENDENT).\nc) Degree of EMPLOYEE = 5 (AadharNumber, Name, Address, Department, EmployeeID). Degree of DEPENDENT = 3 (EmployeeID, DependentName, Relationship).",
+    "steps": [
+      "Any attribute that can uniquely identify an EMPLOYEE tuple is a candidate key - here AadharNumber and EmployeeID both qualify.",
+      "EmployeeID is the common linking attribute between EMPLOYEE and DEPENDENT, so it is used to fetch a given employee's dependents.",
+      "Degree simply counts the attributes listed in each relation's schema: 5 for EMPLOYEE, 3 for DEPENDENT."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-10",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "School uniform database SCHOOL_UNIFORM has UNIFORM(UCode primary key, UName, UColor not null) and COST(UCode, Size, Price>0, composite primary key UCode+Size). Given sample data for UNIFORM (codes 1-6: Shirt/White, Pant/Grey, Skirt/Grey, Tie/Blue, Socks/Blue, Belt/Blue) and COST for various sizes/prices.\na) Can they insert the following tuples to the UNIFORM Relation? i) (7, Handkerchief, NULL) ii) (4, Ribbon, Red) iii) (8, NULL, White)\nb) Can they insert the following tuples to the COST Relation? i) (7, S, 0) ii) (9, XL, 100)",
+    "solution": "a)\ni) (7, Handkerchief, NULL) - NOT allowed, because UColor is declared NOT NULL, and this row has NULL for UColor.\nii) (4, Ribbon, Red) - NOT allowed, because UCode 4 already exists in the UNIFORM table (as 'Tie') and UCode is the PRIMARY KEY, so it must be unique; inserting another row with the same UCode 4 would violate the primary key (uniqueness) constraint.\niii) (8, NULL, White) - NOT allowed, because UName is part of the row identity data expected to be known and, more importantly, UCode is fine (new/unique = 8) but a NULL UName, while not explicitly barred unless declared NOT NULL, is generally disallowed for a description field required for every uniform item; based on the schema given, only the PRIMARY KEY (UCode) and UColor (NOT NULL) are explicitly constrained, and UCode=8 is new/unique here, so strictly by the stated constraints this insertion would be ALLOWED unless UName is also declared NOT NULL - the recommended answer is: not allowed if UName is expected to be NOT NULL (a uniform item should always have a name), which is standard practice.\n\nb)\ni) (7, S, 0) - NOT allowed, because Price must be > 0, and this row has Price = 0, violating the CHECK constraint on Price.\nii) (9, XL, 100) - NOT allowed, because UCode 9 does not exist in the UNIFORM table; since UCode in COST is a foreign key referencing UNIFORM(UCode), referential integrity requires that any UCode inserted in COST must already exist in UNIFORM.",
+    "steps": [
+      "Check each new UNIFORM row against the NOT NULL constraint on UColor and the uniqueness (primary key) constraint on UCode.",
+      "(7,Handkerchief,NULL) fails NOT NULL on UColor; (4,Ribbon,Red) fails uniqueness since UCode 4 already exists.",
+      "For COST, check the Price>0 constraint and the implied foreign key from COST.UCode to UNIFORM.UCode.",
+      "(7,S,0) fails the Price>0 check; (9,XL,100) fails referential integrity since UCode 9 is not present in UNIFORM."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-11",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "In a multiplex, movies are screened in different auditoriums. One movie can be shown in more than one auditorium. Relations: MOVIE(Movie_ID, MovieName, ReleaseDate) and AUDI(AudiNo, Movie_ID, Seats, ScreenType, TicketPrice).\na) Is it correct to assign Movie_ID as the primary key in the MOVIE relation? If no, suggest an appropriate primary key.\nb) Is it correct to assign AudiNo as the primary key in the AUDI relation? If no, suggest appropriate primary key.\nc) Is there any foreign key in any of these relations?",
+    "solution": "a) Yes, it is correct to assign Movie_ID as the primary key of the MOVIE relation, because each movie has exactly one unique Movie_ID and the MOVIE table stores one row per movie (the fact that one movie can be shown in many auditoriums is captured in the AUDI table, not by repeating rows in MOVIE).\nb) No, it is NOT correct to assign AudiNo alone as the primary key of the AUDI relation, because since one movie can be shown in multiple auditoriums and presumably the same auditorium could show different movies at different times (or at least one AudiNo may need to be paired with a Movie_ID to be meaningful), AudiNo alone would not uniquely identify a row if an auditorium's entry needs to vary with Movie_ID. The appropriate primary key should be a composite key of (AudiNo, Movie_ID), which uniquely identifies which movie is playing in which auditorium.\nc) Yes, Movie_ID in the AUDI relation is a FOREIGN KEY referencing Movie_ID (the primary key) in the MOVIE relation, establishing the relationship between a movie and the auditoriums where it is screened.",
+    "steps": [
+      "MOVIE stores one unique row per movie, so Movie_ID alone is a valid, sufficient primary key there.",
+      "AUDI potentially needs a composite key (AudiNo, Movie_ID) since a single auditorium can be associated with different movies over time.",
+      "Movie_ID in AUDI is a foreign key referencing MOVIE, linking the two tables."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-12",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Given STUDENT(RollNo, Name, Class, Section, Registration_ID), PROJECT(ProjectNo, PName, SubmissionDate), and PROJECT_ASSIGNED(Registration_ID, ProjectNo) with sample data.\na) Name primary key of each table.\nb) Find foreign key(s) in table PROJECT-ASSIGNED.\nc) Is there any alternate key in table STUDENT? Give justification.\nd) Can a user assign duplicate value to the field RollNo of STUDENT table? Justify.",
+    "solution": "a) Primary key of STUDENT = Registration_ID (it is unique per student, e.g. 'IP-101-15'). Primary key of PROJECT = ProjectNo. Primary key of PROJECT_ASSIGNED = Registration_ID (or the composite (Registration_ID, ProjectNo), since each row here maps one registration to one project).\nb) In PROJECT_ASSIGNED, both Registration_ID (referencing STUDENT.Registration_ID) and ProjectNo (referencing PROJECT.ProjectNo) are foreign keys.\nc) Yes, RollNo is an alternate key in STUDENT - because RollNo is also unique per student (a candidate key), but since Registration_ID was chosen as the primary key, RollNo becomes the alternate (unused candidate) key.\nd) No, a user should NOT be allowed to assign a duplicate value to RollNo, because RollNo is a candidate key (alternate key) and, like all candidate keys, is expected to hold unique values for every student even though it is not the chosen primary key; a UNIQUE constraint should be applied on RollNo to enforce this.",
+    "steps": [
+      "Identify each table's unique identifying attribute: Registration_ID for STUDENT, ProjectNo for PROJECT, and the pair in PROJECT_ASSIGNED.",
+      "Foreign keys in PROJECT_ASSIGNED reference the primary keys of both STUDENT and PROJECT.",
+      "RollNo, being unique per student but not chosen as primary key, is the alternate key; duplicates should be disallowed via a UNIQUE constraint."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-dbms-13",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "For the STUDENT-PROJECT database above, can we perform the following operations?\na) Insert a student record with missing roll number value.\nb) Insert a student record with missing registration number value.\nc) Insert a project detail without submission-date.\nd) Insert a record with registration ID IP-101-19 and ProjectNo 206 in table PROJECT-ASSIGNED.",
+    "solution": "a) Yes, generally allowed - since RollNo (alternate key) is not the primary key, it CAN be left NULL/missing unless a NOT NULL constraint is explicitly applied on it (though as a candidate key, it is good practice to enforce NOT NULL too).\nb) No, not allowed - Registration_ID is the PRIMARY KEY of STUDENT, and primary key values cannot be NULL/missing (entity integrity constraint).\nc) Yes, allowed - SubmissionDate is not the primary key of PROJECT (ProjectNo is), so it can be left missing/NULL unless a NOT NULL constraint has been specifically defined on it.\nd) No, not allowed - Registration_ID 'IP-101-19' does not exist in the STUDENT table, and ProjectNo 206 does not exist in the PROJECT table; since both are foreign keys in PROJECT_ASSIGNED, inserting values not present in the referenced tables violates referential integrity.",
+    "steps": [
+      "Primary key attributes (Registration_ID in STUDENT, ProjectNo in PROJECT) cannot be NULL, so (b) is disallowed.",
+      "Non-primary-key attributes like RollNo and SubmissionDate can normally be left NULL unless separately constrained NOT NULL, so (a) and (c) are allowed.",
+      "Foreign key values must exist in the referenced table (referential integrity); since neither IP-101-19 nor 206 exists in STUDENT/PROJECT, (d) is disallowed."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-1",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Answer the following questions:\na) Define RDBMS. Name any two RDBMS software.\nb) What is the purpose of the following clauses in a select statement? i) ORDER BY ii) GROUP BY\nc) Site any two differences between Single Row Functions and Aggregate Functions.\nd) What do you understand by Cartesian Product?\ne) Differentiate between: i) ALTER and UPDATE ii) DELETE and DROP\nf) Write the name of the functions to perform: i) display the day like Monday from a date ii) display specified number of characters from a position of a string iii) display the month name of your birth date iv) display your name in capital letters",
+    "solution": "a) RDBMS (Relational Database Management System) is software that manages data organised as relations (tables) following the relational model, enforcing keys and constraints. Examples: MySQL, Oracle (also: PostgreSQL, SQL Server).\n\nb) i) ORDER BY sorts the result set of a query by one or more columns, in ascending (default/ASC) or descending (DESC) order.\n    ii) GROUP BY groups rows that share the same values in specified columns into summary rows, typically used with aggregate functions like SUM, COUNT.\n\nc) Single row functions (e.g. UPPER, ROUND, LENGTH) operate on and return one value for EACH row individually. Aggregate functions (e.g. SUM, AVG, COUNT) operate on a group/set of rows and return a SINGLE summary value for the whole group. Also, single row functions can be used without GROUP BY, whereas aggregate functions are often paired with GROUP BY when computing per-group summaries.\n\nd) A Cartesian Product (cross join) is the result of combining every row of one table with every row of another table, producing a result with rows = (rows in table1) x (rows in table2), without any join condition relating them.\n\ne) i) ALTER is a DDL command used to change the STRUCTURE of a table (add/drop/modify columns); UPDATE is a DML command used to change the DATA/values within existing rows of a table.\n    ii) DELETE is a DML command that removes specific rows of data from a table (structure remains, can be rolled back, WHERE clause allowed); DROP is a DDL command that removes the entire table structure along with its data permanently from the database.\n\nf) i) DAYNAME(date)\n    ii) MID(string, position, number_of_characters) or SUBSTR()\n    iii) MONTHNAME(date)\n    iv) UCASE(name) or UPPER(name)",
+    "steps": [
+      "RDBMS = software managing relational (table-based) databases; MySQL and Oracle are common examples.",
+      "ORDER BY sorts results; GROUP BY groups rows for aggregate summaries.",
+      "Single row functions return one output per input row; aggregate functions summarise many rows into one value.",
+      "Cartesian product joins every row of one table with every row of another with no condition.",
+      "ALTER changes table structure (DDL); UPDATE changes row data (DML). DELETE removes rows (data only); DROP removes the whole table (structure+data).",
+      "DAYNAME(), MID()/SUBSTR(), MONTHNAME(), and UCASE()/UPPER() are the relevant SQL functions."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-2",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Write the output produced by the following SQL statements:\na) SELECT POW(2,3);\nb) SELECT ROUND(342.9234,-1);\nc) SELECT LENGTH(\"Informatics Practices\");\nd) SELECT MONTH(“1979/11/26”), YEAR(“1979/11/26”), DAY(“1979/11/26”), MONTHNAME(“1979/11/26”);\ne) SELECT LEFT(\"INDIA\",3), RIGHT(\"Computer Science\",4), MID(\"Informatics\",3,4), SUBSTR(\"Practices\",3);",
+    "solution": "a) POW(2,3) = 8\nb) ROUND(342.9234,-1) = 340 (rounds to the nearest 10, since the negative argument rounds to the left of the decimal point)\nc) LENGTH(\"Informatics Practices\") = 21 (counting all characters including the space)\nd) MONTH(\"1979/11/26\")=11, YEAR(\"1979/11/26\")=1979, DAY(\"1979/11/26\")=26, MONTHNAME(\"1979/11/26\")=\"November\"\ne) LEFT(\"INDIA\",3)=\"IND\", RIGHT(\"Computer Science\",4)=\"ence\", MID(\"Informatics\",3,4)=\"form\", SUBSTR(\"Practices\",3)=\"actices\"",
+    "steps": [
+      "POW(x,y) computes x raised to the power y.",
+      "ROUND(x,-1) rounds x to the nearest multiple of 10.",
+      "LENGTH() counts the total number of characters in the string, including spaces.",
+      "MONTH/YEAR/DAY extract respective date parts; MONTHNAME() gives the textual month name.",
+      "LEFT(s,n)/RIGHT(s,n) return the first/last n characters; MID(s,pos,n) or SUBSTR(s,pos,n) return n (or remaining) characters starting at position pos (1-indexed)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-3",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Consider the MOVIE table (MovieID, MovieName, Category, ReleaseDate, ProductionCost, BusinessCost) and write SQL queries:\na) Display all the information from the Movie table.\nb) List business done by the movies showing MovieID, MovieName and Total_Earning (sum of ProductionCost and BusinessCost).\nc) List the different categories of movies.\nd) Find the net profit of each movie showing MovieID, MovieName and NetProfit (difference between BusinessCost and ProductionCost).\ne) List MovieID, MovieName and Cost for all movies with ProductionCost greater than 10,000 and less than 1,00,000.\nf) List details of all movies which fall in the category of comedy or action.\ng) List details of all movies which have not been released yet.",
+    "solution": "a) SELECT * FROM MOVIE;\n\nb) SELECT MovieID, MovieName, (ProductionCost + BusinessCost) AS Total_Earning FROM MOVIE;\n\nc) SELECT DISTINCT Category FROM MOVIE;\n\nd) SELECT MovieID, MovieName, (BusinessCost - ProductionCost) AS NetProfit FROM MOVIE;\n\ne) SELECT MovieID, MovieName, ProductionCost AS Cost FROM MOVIE WHERE ProductionCost > 10000 AND ProductionCost < 100000;\n\nf) SELECT * FROM MOVIE WHERE Category = 'Comedy' OR Category = 'Action';\n\ng) SELECT * FROM MOVIE WHERE ReleaseDate IS NULL;",
+    "steps": [
+      "SELECT * retrieves all columns and rows.",
+      "Arithmetic expressions with AS aliases compute derived columns like Total_Earning and NetProfit.",
+      "DISTINCT eliminates duplicate category values.",
+      "WHERE with AND/OR filters rows on ProductionCost range or Category membership.",
+      "Unreleased movies are identified where ReleaseDate is NULL (shown as '-' in the table)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-4",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Help your sports teacher: a) Create a database 'Sports'. b) Create table TEAM with TeamID (integer 1-9) and TeamName (string, length >=10 chars). c) Make TeamID the primary key using table level constraint. d) Show structure of TEAM. e) Insert the four given rows. f) Show contents of TEAM using a DML statement. g) Create MATCH_DETAILS table and insert given data with appropriate data types/constraints.",
+    "solution": "a) CREATE DATABASE Sports;\n\nb) CREATE TABLE TEAM (\n    TeamID INT,\n    TeamName VARCHAR(20)\n);\n\nc) CREATE TABLE TEAM (\n    TeamID INT,\n    TeamName VARCHAR(20),\n    PRIMARY KEY (TeamID)\n);\n\nd) DESC TEAM;\n\ne) INSERT INTO TEAM VALUES (1, 'Team Titan');\nINSERT INTO TEAM VALUES (2, 'Team Rockers');\nINSERT INTO TEAM VALUES (3, 'Team Magnet');\nINSERT INTO TEAM VALUES (4, 'Team Hurricane');\n\nf) SELECT * FROM TEAM;\n\ng) CREATE TABLE MATCH_DETAILS (\n    MatchID VARCHAR(5) PRIMARY KEY,\n    MatchDate DATE,\n    FirstTeamID INT,\n    SecondTeamID INT,\n    FirstTeamScore INT,\n    SecondTeamScore INT,\n    FOREIGN KEY (FirstTeamID) REFERENCES TEAM(TeamID),\n    FOREIGN KEY (SecondTeamID) REFERENCES TEAM(TeamID)\n);\n\nINSERT INTO MATCH_DETAILS VALUES ('M1','2018-07-17',1,2,90,86);\nINSERT INTO MATCH_DETAILS VALUES ('M2','2018-07-18',3,4,45,48);\nINSERT INTO MATCH_DETAILS VALUES ('M3','2018-07-19',1,3,78,56);\nINSERT INTO MATCH_DETAILS VALUES ('M4','2018-07-19',2,4,56,67);\nINSERT INTO MATCH_DETAILS VALUES ('M5','2018-07-18',1,4,32,87);\nINSERT INTO MATCH_DETAILS VALUES ('M6','2018-07-17',2,3,67,51);",
+    "steps": [
+      "CREATE DATABASE creates a new database; CREATE TABLE defines TEAM with an integer TeamID and a VARCHAR TeamName.",
+      "A table-level PRIMARY KEY(TeamID) constraint enforces uniqueness of team identifiers.",
+      "DESC shows a table's structure; INSERT INTO adds the given rows; SELECT * displays them.",
+      "MATCH_DETAILS uses FOREIGN KEY constraints on FirstTeamID/SecondTeamID referencing TEAM(TeamID) to maintain referential integrity."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-5",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Using the sports database (TEAM, MATCH_DETAILS), write queries for:\na) Display the MatchID of all matches where both teams scored more than 70.\nb) Display the MatchID of matches where FirstTeam scored less than 70 but SecondTeam scored more than 70.\nc) Display the MatchID and date of matches played by Team 1 and won by it.\nd) Display the MatchID of matches played by Team 2 and not won by it.\ne) Change the name of the relation TEAM to T_DATA; also rename TeamID and TeamName to T_ID and T_NAME.",
+    "solution": "a) SELECT MatchID FROM MATCH_DETAILS WHERE FirstTeamScore > 70 AND SecondTeamScore > 70;\n\nb) SELECT MatchID FROM MATCH_DETAILS WHERE FirstTeamScore < 70 AND SecondTeamScore > 70;\n\nc) SELECT MatchID, MatchDate FROM MATCH_DETAILS WHERE FirstTeamID = 1 AND FirstTeamScore > SecondTeamScore\nUNION\nSELECT MatchID, MatchDate FROM MATCH_DETAILS WHERE SecondTeamID = 1 AND SecondTeamScore > FirstTeamScore;\n\nd) SELECT MatchID FROM MATCH_DETAILS WHERE (FirstTeamID = 2 AND FirstTeamScore <= SecondTeamScore)\nOR (SecondTeamID = 2 AND SecondTeamScore <= FirstTeamScore);\n\ne) ALTER TABLE TEAM RENAME TO T_DATA;\nALTER TABLE T_DATA RENAME COLUMN TeamID TO T_ID;\nALTER TABLE T_DATA RENAME COLUMN TeamName TO T_NAME;",
+    "steps": [
+      "Simple WHERE conditions with AND/comparison operators filter matches on both/either team's scores.",
+      "For 'played and won by Team 1', check both possibilities - Team 1 as FirstTeam with a higher score, or as SecondTeam with a higher score - combined via UNION.",
+      "Similarly, 'not won' by Team 2 covers Team 2 losing or drawing, whether it was First or Second team.",
+      "RENAME TO changes the table name; RENAME COLUMN changes individual column names."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-6",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Wonderful Garments maintains SCHOOLUNIFORM with UNIFORM (UniformCode primary key) and COST (UniformCode+Size composite key). Write SQL queries to:\na) Add a handkerchief (red, medium size, Rs 100) to the database.\nb) Ensure COST data can only be entered if the item already exists in UNIFORM (prevent the anomaly of inserting COST without a matching UNIFORM row).\nc) Allow assigning a new UCode only if it has a valid UName (add appropriate constraint).\nd) Add a constraint so price is always greater than zero.",
+    "solution": "a) INSERT INTO UNIFORM (UCode, UName, UColor) VALUES (7, 'Handkerchief', 'Red');\nINSERT INTO COST (UCode, Size, Price) VALUES (7, 'M', 100);\n\nb) ALTER TABLE COST ADD FOREIGN KEY (UCode) REFERENCES UNIFORM(UCode);\n(This foreign key constraint ensures a UCode can only be inserted into COST if it already exists in UNIFORM.)\n\nc) ALTER TABLE UNIFORM MODIFY UName VARCHAR(20) NOT NULL;\n(Making UName NOT NULL ensures every UCode entered must have a valid, non-null name.)\n\nd) ALTER TABLE COST ADD CONSTRAINT chk_price CHECK (Price > 0);",
+    "steps": [
+      "First insert the item into the parent table UNIFORM, then insert its price details into COST.",
+      "A FOREIGN KEY constraint on COST.UCode referencing UNIFORM.UCode enforces that COST rows must correspond to an existing UNIFORM item.",
+      "A NOT NULL constraint on UName ensures every uniform item has a valid name before it can be added.",
+      "A CHECK constraint (Price > 0) prevents zero or negative prices."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-7",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Consider table Product(PCode, PName, UPrice, Manufacturer) with sample rows (Washing Powder/Surf/120, Toothpaste/Colgate/54, Soap/Lux/25, Toothpaste/Pepsodent/65, Soap/Dove/38, Shampoo/Dove/245). Write SQL queries for:\na) Create the table Product with appropriate data types and constraints.\nb) Identify the primary key in Product.\nc) List Product Code, Product name and price in descending order of product name; if PName same, ascending order of price.\nd) Add a new column Discount.\ne) Calculate discount as 10% of UPrice where UPrice > 100, else 0.\nf) Increase price by 12% for products manufactured by Dove.\ng) Display total number of products manufactured by each manufacturer.\nWrite the output(s) for: h) SELECT PName, avg(UPrice) FROM Product GROUP BY Pname; i) SELECT DISTINCT Manufacturer FROM Product; j) SELECT COUNT(DISTINCT PName) FROM Product; k) SELECT PName, MAX(UPrice), MIN(UPrice) FROM Product GROUP BY PName;",
+    "solution": "a) CREATE TABLE Product (\n    PCode VARCHAR(5) PRIMARY KEY,\n    PName VARCHAR(20) NOT NULL,\n    UPrice DECIMAL(8,2) CHECK (UPrice > 0),\n    Manufacturer VARCHAR(20)\n);\n\nb) The primary key of Product is PCode.\n\nc) SELECT PCode, PName, UPrice FROM Product ORDER BY PName DESC, UPrice ASC;\n\nd) ALTER TABLE Product ADD Discount DECIMAL(8,2);\n\ne) UPDATE Product SET Discount = UPrice * 0.10 WHERE UPrice > 100;\nUPDATE Product SET Discount = 0 WHERE UPrice <= 100;\n\nf) UPDATE Product SET UPrice = UPrice * 1.12 WHERE Manufacturer = 'Dove';\n\ng) SELECT Manufacturer, COUNT(*) FROM Product GROUP BY Manufacturer;\n\nh) Output: each distinct PName with the average UPrice of all rows sharing that name, e.g.\nToothpaste | 59.5   (average of 54 and 65)\nSoap       | 31.5   (average of 25 and 38)\nWashing Powder | 120\nShampoo    | 245\n\ni) Output: distinct manufacturer names - Surf, Colgate, Lux, Pepsodent, Dove (each listed once).\n\nj) Output: COUNT(DISTINCT PName) = 4 (Washing Powder, Toothpaste, Soap, Shampoo).\n\nk) Output: for each distinct PName, its maximum and minimum UPrice, e.g.\nToothpaste | MAX=65 | MIN=54\nSoap       | MAX=38 | MIN=25\nWashing Powder | MAX=120 | MIN=120\nShampoo    | MAX=245 | MIN=245",
+    "steps": [
+      "CREATE TABLE defines PCode as primary key with appropriate NOT NULL/CHECK constraints on other columns.",
+      "ORDER BY PName DESC, UPrice ASC gives the requested multi-level sort.",
+      "ALTER TABLE ADD adds the Discount column; two UPDATE statements set it conditionally based on UPrice.",
+      "UPDATE with WHERE Manufacturer='Dove' raises price by 12% only for Dove products.",
+      "GROUP BY Manufacturer with COUNT(*) gives per-manufacturer product counts.",
+      "For the output questions, GROUP BY PName aggregates rows sharing the same product name to compute AVG/MAX/MIN, DISTINCT removes duplicate manufacturer names, and COUNT(DISTINCT PName) counts unique product names."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-sql-8",
+    "chapter": "Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Using the CARSHOWROOM database given in the chapter, write SQL queries for:\na) Add a new column Discount in the INVENTORY table.\nb) Set discount values: no discount on LXI model, 10% on VXI model, 12% on other models.\nc) Display the name of the costliest car with fuel type 'Petrol'.\nd) Calculate the average discount and total discount available on Baleno cars.\ne) List the total number of cars having no discount.",
+    "solution": "a) ALTER TABLE INVENTORY ADD Discount DECIMAL(8,2);\n\nb) UPDATE INVENTORY SET Discount = 0 WHERE Model = 'LXI';\nUPDATE INVENTORY SET Discount = Price * 0.10 WHERE Model = 'VXI';\nUPDATE INVENTORY SET Discount = Price * 0.12 WHERE Model NOT IN ('LXI', 'VXI');\n\nc) SELECT CarName FROM INVENTORY WHERE FuelType = 'Petrol' AND Price = (SELECT MAX(Price) FROM INVENTORY WHERE FuelType = 'Petrol');\n\nd) SELECT AVG(Discount), SUM(Discount) FROM INVENTORY WHERE CarName = 'Baleno';\n\ne) SELECT COUNT(*) FROM INVENTORY WHERE Discount = 0;",
+    "steps": [
+      "ALTER TABLE ADD introduces the new Discount column.",
+      "Three UPDATE statements set the discount conditionally based on Model, using percentages of Price.",
+      "A subquery with MAX(Price) filtered on FuelType='Petrol' identifies the costliest petrol car's name.",
+      "AVG()/SUM() with a WHERE filter on CarName gives the average/total discount for Baleno cars.",
+      "COUNT(*) with WHERE Discount=0 counts cars with no discount."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-1",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Expand the following:\na) ARPANET\nb) MAC\nc) ISP\nd) URI",
+    "solution": "a) ARPANET - Advanced Research Projects Agency Network\nb) MAC - Media Access Control\nc) ISP - Internet Service Provider\nd) URI - Uniform Resource Identifier",
+    "steps": [
+      "ARPANET was the precursor to the modern Internet.",
+      "MAC address uniquely identifies a network interface card.",
+      "ISP provides Internet access to users.",
+      "URI identifies a resource on the Internet."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-2",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What do you understand by the term network?",
+    "solution": "A (computer) network is an interconnected collection of two or more computers/devices linked together using communication media (wired or wireless) to share data, resources (like printers, files) and information with each other.",
+    "steps": [
+      "A network connects multiple devices through some communication medium.",
+      "Its purpose is to enable sharing of data and resources between the connected devices."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-3",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Mention any two main advantages of using a network of computing devices.",
+    "solution": "1. Resource sharing - hardware (printers, scanners), software and data can be shared among multiple users, reducing cost and duplication.\n2. Communication - users can exchange information quickly via email, messaging, file transfer, improving collaboration.",
+    "steps": [
+      "Networking allows shared access to expensive resources like printers.",
+      "Networking enables fast communication and collaboration between users."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-4",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Differentiate between LAN and WAN.",
+    "solution": "A LAN (Local Area Network) connects devices within a small geographical area, such as a single building, office or campus, and typically offers high data transfer speed and low cost. A WAN (Wide Area Network) connects devices across large geographical areas, even countries or continents (e.g. the Internet), typically has lower speed compared to LAN and higher cost, and often uses leased telecommunication lines or satellite links.",
+    "steps": [
+      "LAN covers a small area (building/campus) with high speed and low cost.",
+      "WAN covers large areas (cities/countries) typically at lower speed and higher cost, often using leased lines."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-5",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Write down the names of few commonly used networking devices.",
+    "solution": "Modem, Repeater, Hub, Switch, Router, Gateway, Network Interface Card (NIC), Access Point.",
+    "steps": [
+      "These are the standard hardware devices used to build and connect networks, each serving a different function (signal boosting, addressing, routing, etc.)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-6",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Two universities in different States want to transfer information. Which type of network they need to use for this?",
+    "solution": "They need to use a WAN (Wide Area Network), since the universities are located in different States (a large geographical area), and WAN is designed to connect devices/networks across such large distances, typically over the Internet or leased communication lines.",
+    "steps": [
+      "Different States implies a large geographical distance, ruling out LAN/MAN.",
+      "WAN is specifically designed for long-distance, cross-region/country connectivity."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-7",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Define the term topology. What are the popular network topologies?",
+    "solution": "Network topology refers to the arrangement/layout - the physical or logical pattern in which computers and other devices are connected to each other in a network. Popular network topologies include: Bus topology, Star topology, Tree topology, and Mesh topology.",
+    "steps": [
+      "Topology describes how nodes and links are arranged in a network.",
+      "Common topologies are Bus, Star, Tree and Mesh."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-8",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "How is tree topology different from bus topology?",
+    "solution": "In bus topology, all devices are connected to a single common central cable (the 'bus'), and data travels along this single shared cable to all nodes. In tree topology, devices are arranged in a hierarchical, branching structure resembling a tree, where groups of star-configured devices are connected to a linear bus backbone - it is essentially a combination of star and bus topologies, allowing easier expansion and better fault isolation between branches compared to a single flat bus.",
+    "steps": [
+      "Bus topology uses one single shared cable connecting all nodes in a line.",
+      "Tree topology arranges nodes hierarchically (a bus backbone connecting multiple star-configured segments), combining features of star and bus topology."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-9",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Identify the type of topology from the following:\na) Each node is connected with the help of a single cable.\nb) Each node is connected with central switching through independent cables.",
+    "solution": "a) Bus topology - all nodes share and connect via one single common cable.\nb) Star topology - each node has its own independent cable connecting it to a central device (hub/switch).",
+    "steps": [
+      "A single shared cable connecting all nodes describes Bus topology.",
+      "Independent cables from each node to a central switching point describes Star topology."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-10",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "What do you mean by a modem? Why is it used?",
+    "solution": "A modem (MOdulator-DEModulator) is a hardware device that converts digital data from a computer into analog signals for transmission over telephone/cable lines (modulation), and converts incoming analog signals back into digital data (demodulation) that the computer can understand. It is used because many transmission media (like traditional telephone lines) carry analog signals, so a modem is needed to let digital computers communicate over such analog channels, typically to connect to the Internet.",
+    "steps": [
+      "A modem converts digital signals to analog for transmission (modulation) and analog back to digital on reception (demodulation).",
+      "It is used to enable computers to connect to the Internet over analog transmission lines such as telephone lines."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-11",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "Explain the following devices:\na) Switch\nb) Repeater\nc) Router\nd) Gateway\ne) NIC",
+    "solution": "a) Switch - a networking device that connects multiple devices within a LAN and forwards data only to the specific device it is intended for, based on MAC addresses, improving efficiency over a hub.\nb) Repeater - a device that receives a weakened network signal and regenerates/amplifies it so it can travel further without degradation, used to extend the range of a network.\nc) Router - a device that connects two or more different networks and forwards data packets between them, determining the best path for data to travel based on IP addresses.\nd) Gateway - a device (or node) that acts as an entry/exit point between two networks using different protocols, translating data formats so networks that 'speak' differently can communicate.\ne) NIC (Network Interface Card) - a hardware component installed in a computer that allows it to physically connect to a network and has a unique MAC address for identification.",
+    "steps": [
+      "Switch forwards data efficiently to the correct destination device within a LAN using MAC addresses.",
+      "Repeater regenerates and boosts a weakening signal over long distances.",
+      "Router connects different networks and routes packets between them using IP addresses.",
+      "Gateway connects networks running different protocols, translating between them.",
+      "NIC is the hardware that physically connects a computer to a network."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-12",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Draw a network layout of star topology and bus topology connecting five computers.",
+    "solution": "Star topology (5 computers, C1-C5, all connected to a central hub/switch H):\nC1---\\\nC2----\\\nC3-----H (central hub/switch)\nC4----/\nC5---/\n(Each computer has its own independent cable running directly to the central hub H; if one cable fails, only that computer is affected.)\n\nBus topology (5 computers connected to one single shared backbone cable):\nC1---C2---C3---C4---C5\n(All five computers, C1 through C5, tap into one single common cable/bus that runs along; a terminator is placed at each end of the cable to prevent signal reflection.)",
+    "steps": [
+      "Star topology: draw a central hub/switch with five separate lines radiating out to each of the five computers.",
+      "Bus topology: draw a single horizontal cable with all five computers tapped onto it in a line, terminated at both ends."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-13",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "What is the significance of MAC address?",
+    "solution": "A MAC (Media Access Control) address is a unique 48-bit hardware identifier assigned to every network interface card (NIC) by its manufacturer. Its significance is that it uniquely identifies a specific network device at the data-link layer, enabling devices on the same local network (e.g. connected via a switch) to correctly address and deliver data frames to the intended device, and it also helps in network security/access control (e.g. MAC filtering).",
+    "steps": [
+      "A MAC address is a globally unique, hardware-assigned identifier for a network device's NIC.",
+      "It is used at the data-link layer to correctly deliver frames to the intended device within a local network, and can be used for access-control filtering."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-14",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "How is IP address different from MAC address? Discuss briefly.",
+    "solution": "A MAC address is a fixed, hardware-based, physical address permanently assigned to a network interface card by its manufacturer; it does not change even if the device moves to a different network, and operates at the data-link layer. An IP address is a logical, software-assigned address given to a device by the network (e.g. via DHCP or manual configuration) that identifies its location on a network; it can change depending on the network the device connects to, and operates at the network layer, used for routing data across different networks (including the Internet).",
+    "steps": [
+      "MAC address is a permanent, hardware/manufacturer-assigned physical address, used within a local network segment.",
+      "IP address is a logical, network-assigned address that can change based on the network, used for routing across networks including the Internet."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-15",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q15",
+    "question": "What is DNS? What is a DNS server?",
+    "solution": "DNS (Domain Name System) is a hierarchical naming system/service that translates human-readable domain names (like www.example.com) into machine-readable numeric IP addresses that computers use to locate each other on a network. A DNS server is a server that stores and provides this mapping between domain names and their corresponding IP addresses, responding to lookup requests from client devices/browsers so they can locate the correct web server.",
+    "steps": [
+      "DNS translates domain names into IP addresses, since computers communicate using IP addresses while humans prefer names.",
+      "A DNS server is the system that performs this name-to-address lookup/resolution service."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-networks-16",
+    "chapter": "Computer Networks",
+    "exercise": "Exercises",
+    "number": "Q16",
+    "question": "Sahil, a class X student, is confused between the terms “World Wide Web” and “Internet”. Help him understand both terms with suitable examples.",
+    "solution": "The Internet is the vast, global physical/technical infrastructure - a network of interconnected networks (computers, routers, cables, satellites) that allows data to be transmitted worldwide using protocols like TCP/IP. The World Wide Web (WWW) is a service that runs ON TOP of the Internet - it is a collection of interlinked hypertext documents (webpages) accessed via browsers using the HTTP/HTTPS protocol. In short, the Internet is the underlying network/infrastructure (like the roads), while the Web is just one of the many services that use this infrastructure (like websites we browse), alongside other Internet-based services such as email, file transfer (FTP) and video calling.\nExample: Sending an email or making a video call uses the Internet but NOT the Web; browsing a website like www.wikipedia.org uses the World Wide Web, which itself works over the Internet.",
+    "steps": [
+      "The Internet is the global infrastructure/network connecting computers worldwide.",
+      "The World Wide Web is a service (of interlinked hyperlinked documents/webpages) that runs over the Internet.",
+      "Other services like email and FTP also run over the Internet but are not part of the Web, showing the Web is a subset of what the Internet offers."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-1",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "What is data communication? What are the main components of data communication?",
+    "solution": "Data communication is the process of exchanging data/information between two devices via some form of transmission medium such as a wire or wireless link. The main components of data communication are: 1) Sender (Source) - the device that sends the data; 2) Receiver (Destination) - the device that receives the data; 3) Message - the data/information being communicated; 4) Transmission Medium - the physical path (wired/wireless) through which the data travels; 5) Protocol - the set of rules that govern the communication between sender and receiver.",
+    "steps": [
+      "Data communication is the exchange of data between devices over a transmission medium.",
+      "Its five components are Sender, Receiver, Message, Transmission Medium, and Protocol."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-2",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Which communication mode allows communication in both directions simultaneously?",
+    "solution": "Full-duplex mode allows communication in both directions simultaneously - both the sender and receiver can transmit and receive data at the same time (e.g. a telephone conversation).",
+    "steps": [
+      "Full-duplex mode allows simultaneous two-way data transfer, unlike half-duplex (one direction at a time) or simplex (one direction only)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-3",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Among LAN, MAN, and WAN, which has the highest speed and which one can cover the largest area?",
+    "solution": "LAN (Local Area Network) generally has the highest data transfer speed, since it covers a small area with dedicated high-speed cabling. WAN (Wide Area Network) covers the largest geographical area, spanning cities, countries, or even continents (like the Internet), though typically at comparatively lower speeds than LAN.",
+    "steps": [
+      "LAN, being confined to a small area, can use dedicated high-bandwidth media, giving it the highest speed.",
+      "WAN spans the largest geographical distances, connecting networks across countries/continents."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-4",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "What are three categories of wired media? Explain them.",
+    "solution": "1. Twisted Pair Cable - consists of pairs of insulated copper wires twisted together to reduce electromagnetic interference; commonly used for telephone lines and LAN (Ethernet) connections; relatively inexpensive but limited in distance/speed.\n2. Coaxial Cable - consists of a central copper conductor surrounded by insulation, a metallic shield and an outer insulating layer; offers better shielding against interference and higher bandwidth than twisted pair; used for cable TV and older LANs.\n3. Optical Fiber Cable - consists of thin strands of glass/plastic that transmit data as pulses of light; offers very high bandwidth, very high speed and long-distance transmission with minimal signal loss and no electromagnetic interference, but is more expensive and fragile.",
+    "steps": [
+      "Twisted pair: twisted copper wire pairs, low cost, used in telephone/LAN wiring.",
+      "Coaxial: shielded copper cable with higher bandwidth, used for cable TV/older networks.",
+      "Optical fiber: glass/plastic strands carrying light signals, offering the highest speed and longest range with no electrical interference."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-5",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Compare wired and wireless media.",
+    "solution": "Wired media (twisted pair, coaxial, optical fiber) use a physical cable/conductor to carry the signal; they generally offer higher and more reliable/secure data transmission speeds and are less prone to interference, but require physical installation and are less flexible/mobile. Wireless media (radio waves, microwaves, infrared, Bluetooth, Wi-Fi) transmit signals through air/free space without physical cables; they offer greater mobility and easier installation/scalability but are typically more susceptible to interference, security risks, and can have lower/variable data rates depending on distance and obstacles.",
+    "steps": [
+      "Wired media use physical cables, offering higher reliability/security and steadier speeds but less mobility.",
+      "Wireless media use radio/electromagnetic waves through free space, offering mobility and easy installation but more susceptibility to interference and security concerns."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-6",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Which transmission media carries signals in the form of light?",
+    "solution": "Optical Fiber Cable carries signals in the form of light (light pulses transmitted through thin glass or plastic strands).",
+    "steps": [
+      "Optical fiber uses light pulses (generated by LEDs or lasers) to carry data through the glass/plastic core of the cable."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-7",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "List out the advantages and disadvantages of optical fiber cable.",
+    "solution": "Advantages: very high bandwidth/data transfer speed; signals can travel very long distances with minimal loss/attenuation; immune to electromagnetic interference; more secure (difficult to tap without detection); thinner and lighter than copper cables.\nDisadvantages: more expensive to purchase and install than copper cables; fragile and can break if bent sharply; requires specialised equipment and skilled technicians for installation and splicing; connecting/splicing fiber cables is more complex and costly.",
+    "steps": [
+      "Advantages centre on speed, distance, immunity to interference and security.",
+      "Disadvantages centre on cost, fragility, and the need for specialised installation expertise."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-8",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "What is the range of frequency for radio waves?",
+    "solution": "Radio waves generally range in frequency from about 3 kHz (kilohertz) to 3 GHz (gigahertz) (some references cite up to around 300 GHz for the broader radio-frequency spectrum, but the commonly cited textbook range for radio waves is roughly 3 kHz to 3 GHz).",
+    "steps": [
+      "Radio waves occupy the lower end of the electromagnetic spectrum used for wireless communication, roughly from a few kHz up to a few GHz."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-9",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "18 Gbps is equal to how many Bits per second?",
+    "solution": "18 Gbps = 18 x 10^9 bits per second = 18,000,000,000 bits per second (18 billion bits per second).",
+    "steps": [
+      "1 Gbps (Gigabit per second) = 10^9 bits per second.",
+      "So 18 Gbps = 18 x 1,000,000,000 = 18,000,000,000 bps."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-10",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "HTTP stands for?",
+    "solution": "HTTP stands for HyperText Transfer Protocol - the protocol used for transferring/accessing web pages (hypertext documents) over the World Wide Web.",
+    "steps": [
+      "HTTP is the application-layer protocol governing communication between web browsers (clients) and web servers."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-11",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "Write short note on the following:\na) HTTP\nb) Bandwidth\nc) Bluetooth\nd) DNS\ne) Data transfer rate",
+    "solution": "a) HTTP (HyperText Transfer Protocol) - the standard protocol used by web browsers and web servers to request and deliver web pages/resources over the Internet.\nb) Bandwidth - the maximum rate/capacity at which data can be transmitted over a communication channel in a given time, usually measured in bits per second (bps).\nc) Bluetooth - a short-range wireless communication technology that allows devices (phones, headsets, keyboards) to exchange data over short distances (typically up to about 10 metres) using radio waves, without needing cables.\nd) DNS (Domain Name System) - a system that translates human-readable domain names into numeric IP addresses so computers can locate each other on a network.\ne) Data transfer rate - the speed at which data is actually transmitted between devices over a communication link, usually measured in bits per second (bps), kbps, Mbps or Gbps.",
+    "steps": [
+      "Each term is a core data-communication concept: HTTP (web protocol), Bandwidth (channel capacity), Bluetooth (short-range wireless tech), DNS (name resolution), Data transfer rate (actual transmission speed)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-12",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "What is protocol in data communication? Explain with an example.",
+    "solution": "A protocol is a set of rules and conventions that governs how data is formatted, transmitted, and received between devices in a network, ensuring that communicating devices understand each other correctly (covering aspects like data format, timing, sequencing and error handling). Example: HTTP (HyperText Transfer Protocol) is a protocol that defines how a web browser (client) should request a web page from a web server, and how the server should format and send its response back, so that any standard browser can correctly communicate with any standard web server.",
+    "steps": [
+      "A protocol defines the rules both communicating parties must follow for successful data exchange.",
+      "HTTP is a concrete example, standardising how browsers and web servers request/deliver web content."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-datacomm-13",
+    "chapter": "Data Communication",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "A composite signal contains frequencies between 500 MHz and 1GHz. What is the bandwidth of a signal?",
+    "solution": "Bandwidth = Highest frequency - Lowest frequency = 1 GHz - 500 MHz = 1000 MHz - 500 MHz = 500 MHz.",
+    "steps": [
+      "Bandwidth of a signal is defined as the difference between its highest and lowest frequency components.",
+      "Converting 1 GHz to 1000 MHz and subtracting 500 MHz gives a bandwidth of 500 MHz."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-1",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Why is a computer considered to be safe if it is not connected to a network or Internet?",
+    "solution": "A computer not connected to any network or the Internet is considered relatively safe because most malware, hacking attempts and remote attacks (viruses spreading via email/downloads, hackers exploiting network vulnerabilities, remote unauthorized access, DoS attacks, etc.) rely on some network connection to reach and infect/compromise the system. Without connectivity, there is no direct external channel for such threats to reach the computer (though it could still be infected via physical media like a USB drive).",
+    "steps": [
+      "Most cyber threats (viruses, hacking, remote exploits) travel over network connections.",
+      "An isolated (offline) computer removes this attack surface, so it is far less exposed to such network-borne threats, though offline threats like infected USB drives can still pose a risk."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-2",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What is a computer virus? Name some computer viruses that were popular in recent years.",
+    "solution": "A computer virus is a malicious program/code that attaches itself to a legitimate program or file, and is designed to spread from one computer to another (often when the infected file/program is executed or shared), causing damage such as corrupting data, deleting files, or degrading system performance. Some well-known viruses/malware in recent years include: ILOVEYOU, WannaCry (ransomware), Petya/NotPetya, Melissa, and Conficker.",
+    "steps": [
+      "A virus is self-replicating malicious code that attaches to files/programs and spreads when they are run or shared.",
+      "Notable examples: ILOVEYOU, WannaCry, Petya/NotPetya, Melissa, Conficker."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-3",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "How is a computer worm different from a virus?",
+    "solution": "A virus needs to attach itself to a host file or program and requires user action (like running the infected file) to spread. A worm, in contrast, is a standalone malicious program that can self-replicate and spread automatically across networks WITHOUT needing to attach to any host file and WITHOUT requiring any user action, typically exploiting network/software vulnerabilities to move from one system to another.",
+    "steps": [
+      "A virus requires a host file and typically needs user action to spread.",
+      "A worm is self-contained and self-propagating, spreading automatically across networks without needing a host file or user intervention."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-4",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "How is Ransomware used to extract money from users?",
+    "solution": "Ransomware is a type of malware that, once it infects a computer, encrypts the victim's files/data (or locks them out of their system entirely), making the data inaccessible. It then displays a message demanding a ransom payment (often in cryptocurrency, to remain untraceable) in exchange for the decryption key or restored access; if the victim does not pay within a stated time, the attacker may threaten to delete the data permanently or leak it publicly.",
+    "steps": [
+      "Ransomware encrypts or locks a victim's files/system, making them unusable.",
+      "The attacker then demands payment (ransom) in exchange for restoring access, exploiting the victim's need for their data."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-5",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "How did a Trojan get its name?",
+    "solution": "A Trojan (Trojan Horse) gets its name from the ancient Greek story of the Trojan Horse, where Greek soldiers hid inside a large wooden horse offered as a 'gift' to the city of Troy; once inside the city walls, the soldiers emerged and attacked. Similarly, a Trojan malware disguises itself as a legitimate, harmless, or useful program/file to trick the user into installing/running it, but once activated, it performs malicious actions (like stealing data or granting attacker access) hidden inside what appeared to be a trustworthy program.",
+    "steps": [
+      "The name references the Greek myth of soldiers hiding inside a horse to infiltrate Troy.",
+      "A Trojan malware similarly disguises itself as something legitimate/useful to trick users into running it, then performs hidden malicious actions."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-6",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "How does an adware generate revenue for its creator?",
+    "solution": "Adware is software that automatically displays or downloads unwanted advertisements (pop-ups, banners) on a user's computer, often bundled with free software. It generates revenue for its creator through the advertising model it uses - such as pay-per-click (earning money each time a user clicks a displayed ad), pay-per-view/impression (earning money based on how many times ads are shown), or by collecting and selling the user's browsing data/habits to advertisers for targeted marketing.",
+    "steps": [
+      "Adware displays unwanted ads to the user, often installed alongside free software.",
+      "Its creator earns money via click-based or impression-based advertising revenue, or by selling collected user browsing data to advertisers."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-7",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Briefly explain two threats that may arise due to a keylogger installed on a computer.",
+    "solution": "1. Theft of confidential/sensitive information - a keylogger records every keystroke typed by the user, including usernames, passwords, credit card numbers and personal messages, which can then be captured and misused by an attacker for identity theft or financial fraud.\n2. Unauthorized account access - since login credentials (username/password) for email, banking or social media accounts are captured, the attacker can gain unauthorized access to these accounts, potentially locking out the real user, stealing money, or misusing the account for further malicious activity.",
+    "steps": [
+      "A keylogger records every keystroke, so it can capture and leak passwords and personal/financial information typed by the user.",
+      "This captured information can then be used by attackers to gain unauthorized access to the victim's online accounts."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-8",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "How is a Virtual Keyboard safer than On Screen Keyboard?",
+    "solution": "An On Screen Keyboard simply displays a keyboard image on the screen that the user clicks with a mouse, but the actual key presses/clicks may still be intercepted and logged by certain advanced keyloggers or screen-capture malware that record mouse-click coordinates or screen activity. A Virtual Keyboard, used typically for secure logins (e.g. online banking), is designed specifically to defeat keyloggers by randomising key positions each time it is displayed and using techniques that make it much harder for malware to correlate mouse clicks with the characters being typed, making it a more secure choice than a plain on-screen keyboard for entering sensitive data.",
+    "steps": [
+      "On-screen keyboards can still be vulnerable to malware that logs mouse clicks/screen activity.",
+      "Virtual keyboards, often with randomised key layouts, are specifically designed to defeat such logging, making them safer for entering sensitive credentials."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-9",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "List and briefly explain different modes of malware distribution.",
+    "solution": "1. Email attachments/links - malware is attached to or linked from spam/phishing emails, infecting the system when opened.\n2. Infected removable media - USB drives, CDs, external hard disks carrying malware that auto-runs when connected.\n3. Malicious/compromised websites - drive-by downloads that install malware just by visiting an infected website.\n4. Bundled with free/pirated software - malware hidden inside software downloaded from untrusted sources.\n5. Network/file sharing - malware spreading through shared network drives or peer-to-peer file sharing.\n6. Software vulnerabilities - malware exploiting unpatched security holes in operating systems or applications to install itself without user action.",
+    "steps": [
+      "Malware commonly spreads through email attachments, infected USB/removable media, malicious websites (drive-by downloads), and software bundled with pirated/free downloads.",
+      "It can also spread via shared network drives/file sharing and by exploiting unpatched software vulnerabilities."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-10",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "List some common signs of malware infection.",
+    "solution": "Slower than usual system performance; frequent crashes or freezing; unexpected pop-up ads/windows; unfamiliar programs/icons appearing on the desktop or in the browser (toolbars); programs opening/closing automatically; unusually high network/data usage; disabled antivirus or security software; frequent browser redirects to unknown websites; missing or renamed files; increased spam being sent from the user's email account.",
+    "steps": [
+      "Performance issues (slowdowns, crashes), unusual pop-ups, unfamiliar programs/toolbars, and disabled security software are all common infection indicators.",
+      "Unexpected network activity, browser redirects and unexplained file changes are further common signs."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-11",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "List some preventive measures against malware infection.",
+    "solution": "Install and regularly update reputable antivirus/anti-malware software; keep the operating system and all applications updated with the latest security patches; avoid opening email attachments or clicking links from unknown/suspicious senders; download software only from official/trusted sources; use a firewall; avoid using pirated software; be cautious with USB drives/removable media from unknown sources; use strong, unique passwords; regularly back up important data; avoid visiting suspicious/untrusted websites.",
+    "steps": [
+      "Preventive measures span software (updated antivirus, OS patches, firewall), behaviour (avoiding suspicious links/attachments/downloads), and good hygiene (strong passwords, regular backups)."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-12",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Write a short note on different methods of malware identification used by antivirus software.",
+    "solution": "1. Signature-based detection - the antivirus compares files against a database of known malware 'signatures' (unique code patterns); effective against known threats but not new/unknown ones.\n2. Heuristic-based detection - the antivirus analyses the behaviour/structure of a program to detect suspicious characteristics typical of malware, even if it does not exactly match a known signature, helping catch new/modified threats.\n3. Behaviour-based detection - the antivirus monitors programs as they run, watching for malicious actions (like attempting to modify system files or encrypt data) in real time, and blocks them if suspicious behaviour is detected.\n4. Sandboxing - the antivirus runs a suspicious file in an isolated, safe virtual environment to observe its behaviour before allowing it to run on the actual system.",
+    "steps": [
+      "Signature-based detection matches files against a database of known malware patterns.",
+      "Heuristic and behaviour-based detection look for suspicious code structure or run-time actions to catch new/unknown malware.",
+      "Sandboxing tests suspicious files safely in an isolated environment before allowing them onto the real system."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-13",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "What are the risks associated with HTTP? How can we resolve these risks by using HTTPS?",
+    "solution": "HTTP (HyperText Transfer Protocol) transmits data between the browser and server in plain, unencrypted text, meaning any data sent (including passwords, personal or payment information) can be intercepted, read, or tampered with by an attacker performing eavesdropping or a man-in-the-middle attack. HTTPS (HTTP Secure) resolves this by adding an encryption layer (using SSL/TLS) on top of HTTP, encrypting all data exchanged between the browser and server, so that even if the data is intercepted, it cannot be read or altered by an unauthorized party; HTTPS also verifies the server's identity via digital certificates, protecting against impersonation.",
+    "steps": [
+      "HTTP sends data as unencrypted plain text, making it vulnerable to interception/eavesdropping and tampering.",
+      "HTTPS encrypts the data using SSL/TLS and verifies server identity via certificates, protecting confidentiality and integrity of the communication."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-14",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "List one advantage and disadvantage of using Cookies.",
+    "solution": "Advantage: Cookies allow websites to remember user preferences, login sessions and shopping cart contents across visits, making browsing more convenient and personalised (the user does not need to log in or re-select preferences every time).\nDisadvantage: Cookies can be used to track a user's browsing behaviour across websites without their explicit awareness, raising privacy concerns, and if stolen (e.g. via session hijacking), they can allow an attacker to impersonate the user's session.",
+    "steps": [
+      "Advantage: cookies enable personalised, convenient browsing by remembering user state/preferences.",
+      "Disadvantage: cookies can be exploited for tracking user behaviour or, if stolen, for session hijacking, raising privacy/security concerns."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-15",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q15",
+    "question": "Write a short note on White, Black, and Grey Hat Hackers.",
+    "solution": "White Hat Hackers (ethical hackers) use their hacking skills legally and with permission to find and fix security vulnerabilities in systems, helping organisations improve their security. Black Hat Hackers use their skills illegally and maliciously, breaking into systems without authorisation to steal data, cause damage, or for personal/financial gain. Grey Hat Hackers fall in between - they may probe or break into systems without explicit authorisation (technically illegal), but typically do not have malicious intent, often reporting the vulnerabilities they find to the organisation (sometimes requesting a fee), rather than exploiting them for harm.",
+    "steps": [
+      "White hats hack ethically and with permission to improve security.",
+      "Black hats hack illegally with malicious intent for personal gain or damage.",
+      "Grey hats hack without authorisation but generally without malicious intent, often disclosing vulnerabilities they find."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-16",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q16",
+    "question": "Differentiate between DoS and DDoS attack.",
+    "solution": "A DoS (Denial of Service) attack is launched from a SINGLE computer/source, flooding a target server/network with excessive requests/traffic to overwhelm it and make its services unavailable to legitimate users. A DDoS (Distributed Denial of Service) attack is launched from MULTIPLE compromised computers/devices (often a large botnet) simultaneously, all targeting the same victim, making it much harder to block (since traffic comes from many different sources/IP addresses) and typically far more powerful/damaging than a simple DoS attack.",
+    "steps": [
+      "DoS originates from a single source/machine flooding the target with traffic.",
+      "DDoS originates from many distributed sources (a botnet) simultaneously, making it harder to block and generally more severe than a DoS attack."
+    ]
+  },
+  {
+    "id": "sol-xii-cs-security-17",
+    "chapter": "Security Aspects",
+    "exercise": "Exercises",
+    "number": "Q17",
+    "question": "How is Snooping different from Eavesdropping?",
+    "solution": "Snooping refers to unauthorized access to another person's or organisation's data, such as browsing through files, emails or personal information stored on a system, without permission (it can be active, e.g. accessing stored files/data). Eavesdropping refers to secretly intercepting and listening in on a private communication (such as a phone call, network data transmission, or messages) AS it is happening in real time, without the knowledge of the communicating parties, to gather information being exchanged.",
+    "steps": [
+      "Snooping is unauthorized access to stored data/files/information on a system.",
+      "Eavesdropping is secretly intercepting a live/ongoing communication (such as network traffic or a conversation) as it happens, without the parties' knowledge."
+    ]
+  }
+]

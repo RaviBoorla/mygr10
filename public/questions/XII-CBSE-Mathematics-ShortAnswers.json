@@ -1,0 +1,1788 @@
+[
+  {
+    "id": "xiimath-sa-2026-001",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If 3(x² + y²) = 4xy, find dy/dx at (1/2, 3/2).",
+    "modelAnswer": "Differentiating implicitly: 3(2x + 2y·dy/dx) = 4(y + x·dy/dx) ⇒ 6x + 6y·y′ = 4y + 4x·y′ ⇒ y′(6y−4x) = 4y−6x ⇒ y′ = (2y−3x)/(3y−2x). At (1/2, 3/2): 2y−3x = 3−1.5 = 1.5, 3y−2x = 4.5−1 = 3.5, so dy/dx = 1.5/3.5 = 3/7.",
+    "keyPoints": [
+      "Differentiate both sides implicitly w.r.t. x",
+      "Collect all dy/dx terms on one side",
+      "dy/dx = (2y−3x)/(3y−2x) = 3/7 at the given point"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-002",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A room freshener bottle in the shape of an inverted cone sprays perfume at a steady rate of 1 mm³/min (volume decreasing). Find the rate at which the level of perfume is dropping when the level is 10 mm, given the semi-vertical angle of the cone is π/6.",
+    "modelAnswer": "For a cone with semi-vertical angle θ, r = h tanθ. Here tan(π/6) = 1/√3, so r = h/√3. V = (1/3)πr²h = (1/3)π(h²/3)h = πh³/9. dV/dt = (πh²/3)·dh/dt. Given dV/dt = −1 mm³/min and h = 10: −1 = (π×100/3)·dh/dt ⇒ dh/dt = −3/(100π). So the level is dropping at 3/(100π) mm/min.",
+    "keyPoints": [
+      "r = h tanθ = h/√3",
+      "V = πh³/9",
+      "Differentiate w.r.t. t and substitute dV/dt = −1, h = 10",
+      "dh/dt = −3/(100π) mm/min"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-003",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the vector of magnitude 14 in the direction of vector QP, where P and Q are the points (1, 3, 2) and (−1, 0, 8) respectively.",
+    "modelAnswer": "QP = P − Q = (1−(−1), 3−0, 2−8) = (2, 3, −6). |QP| = √(4+9+36) = √49 = 7. Unit vector = (2/7, 3/7, −6/7). Required vector = 14 × unit vector = (4, 6, −12), i.e. 4i + 6j − 12k.",
+    "keyPoints": [
+      "QP = P − Q = 2i+3j−6k",
+      "|QP| = 7",
+      "Scale the unit vector by 14: 4i+6j−12k"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-004",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Vectors a = 3i − 2j + 2k and b = i + 2k represent two adjacent sides of a parallelogram. Find the vectors representing its diagonals and hence their lengths.",
+    "modelAnswer": "Diagonals: a+b = 4i−2j+4k and a−b = 2i−2j+0k. |a+b| = √(16+4+16) = √36 = 6. |a−b| = √(4+4) = √8 = 2√2.",
+    "keyPoints": [
+      "Diagonal 1 = a+b = 4i−2j+4k, length 6",
+      "Diagonal 2 = a−b = 2i−2j, length 2√2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-005",
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Simplify: tan⁻¹[(cos2x − sin2x)/(cos2x + sin2x)], for 0 < x < π/4.",
+    "modelAnswer": "Dividing numerator and denominator by cos2x: (1−tan2x)/(1+tan2x) = tan(π/4 − 2x). So the expression equals tan⁻¹[tan(π/4−2x)] = π/4 − 2x, which is valid since 0<x<π/4 keeps π/4−2x within the principal range.",
+    "keyPoints": [
+      "Divide num/den by cos2x to get tan form",
+      "(1−tan2x)/(1+tan2x) = tan(π/4−2x)",
+      "Answer: π/4 − 2x"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-006",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate ∫₀¹ x tan⁻¹x dx.",
+    "modelAnswer": "Using integration by parts with u=tan⁻¹x, dv=x dx (so v=x²/2): ∫₀¹ x tan⁻¹x dx = [x²/2·tan⁻¹x]₀¹ − ½∫₀¹ x²/(1+x²) dx = π/8 − ½∫₀¹[1 − 1/(1+x²)]dx = π/8 − ½[x − tan⁻¹x]₀¹ = π/8 − ½(1−π/4) = π/4 − ½.",
+    "keyPoints": [
+      "Integration by parts: u=tan⁻¹x, dv=x dx",
+      "Simplify x²/(1+x²) = 1 − 1/(1+x²)",
+      "Result = π/4 − 1/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-007",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫√[(x+2)/(x−2)] dx.",
+    "modelAnswer": "Multiply inside the root by √(x+2)/√(x+2): the integral becomes ∫(x+2)/√(x²−4) dx = ∫x/√(x²−4) dx + 2∫dx/√(x²−4) = √(x²−4) + 2 ln|x+√(x²−4)| + C.",
+    "keyPoints": [
+      "Rationalize to get (x+2)/√(x²−4)",
+      "Split into ∫x/√(x²−4)dx + 2∫dx/√(x²−4)",
+      "Result: √(x²−4) + 2 ln|x+√(x²−4)| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-008",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If I₁ = ∫₋π/4^(π/4) dx/(1+cos2x) and I₂ = ∫₋₁/2^(1/2) |x| dx, show that I₁ − 4I₂ = 0.",
+    "modelAnswer": "1+cos2x = 2cos²x, so I₁ = ½∫₋π/4^(π/4) sec²x dx = ½[tan x]₋π/4^(π/4) = ½(1−(−1)) = 1. I₂ = 2∫₀^(1/2) x dx = 2×(1/2)(1/4) = 1/4, so 4I₂ = 1. Hence I₁ − 4I₂ = 1 − 1 = 0.",
+    "keyPoints": [
+      "1+cos2x = 2cos²x reduces I₁ to ½∫sec²x dx = 1",
+      "|x| is even, so I₂ = 2∫₀^(1/2)x dx = 1/4",
+      "I₁ − 4I₂ = 1 − 1 = 0"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-009",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the general solution of the differential equation x²(dy/dx) = x² + xy + y².",
+    "modelAnswer": "This is homogeneous. Put y = vx, dy/dx = v + x(dv/dx). Then x²(v + x dv/dx) = x² + x²v + x²v² ⇒ v + x dv/dx = 1 + v + v² ⇒ x dv/dx = 1+v² ⇒ dv/(1+v²) = dx/x. Integrating: tan⁻¹v = ln|x| + C, i.e. tan⁻¹(y/x) = ln|x| + C.",
+    "keyPoints": [
+      "Substitute y=vx (homogeneous equation)",
+      "Separate variables: dv/(1+v²) = dx/x",
+      "General solution: tan⁻¹(y/x) = ln|x| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-010",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the following LPP graphically: Minimize Z = 13x − 15y subject to x + y ≤ 7, 2x − 3y + 6 ≥ 0, x ≥ 0, y ≥ 0.",
+    "modelAnswer": "The feasible region has corner points (0,0), (7,0), (3,4) [intersection of x+y=7 and 2x−3y+6=0], and (0,2) [intersection of x=0 and 2x−3y+6=0]. Evaluating Z=13x−15y: at (0,0), Z=0; at (7,0), Z=91; at (3,4), Z=39−60=−21; at (0,2), Z=−30. The minimum value of Z is −30, attained at (0,2).",
+    "keyPoints": [
+      "Corner points: (0,0), (7,0), (3,4), (0,2)",
+      "Evaluate Z at each corner",
+      "Minimum Z = −30 at (0,2)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-011",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Out of two bags, bag I contains 3 red and 4 white balls and bag II contains 8 red and 6 white balls. A die is thrown; if it shows a number less than 3, a ball is drawn from bag I, otherwise from bag II. Find the probability that the ball drawn is red.",
+    "modelAnswer": "P(bag I) = P(number<3) = 2/6 = 1/3, P(bag II) = 4/6 = 2/3. P(red|I) = 3/7, P(red|II) = 8/14 = 4/7. By total probability: P(red) = (1/3)(3/7) + (2/3)(4/7) = 1/7 + 8/21 = 3/21 + 8/21 = 11/21.",
+    "keyPoints": [
+      "P(bag I)=1/3, P(bag II)=2/3",
+      "P(red|I)=3/7, P(red|II)=4/7",
+      "Total probability: P(red) = 11/21"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-012",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A relation R is defined on Z, the set of integers, as R = {(x, y) : |x−y| is divisible by a prime number p, x, y ∈ Z}. Check whether R is an equivalence relation or not.",
+    "modelAnswer": "Reflexive: |x−x| = 0, and 0 is divisible by p, so (x,x) ∈ R for all x — R is reflexive. Symmetric: if p divides |x−y|, then since |x−y|=|y−x|, p also divides |y−x|, so (y,x) ∈ R — R is symmetric. Transitive: if p | (x−y) and p | (y−z), then p | [(x−y)+(y−z)] = (x−z), so p | |x−z|, giving (x,z) ∈ R — R is transitive. Since R is reflexive, symmetric and transitive, R is an equivalence relation.",
+    "keyPoints": [
+      "Reflexive: |x-x|=0 divisible by any prime",
+      "Symmetric: |x-y|=|y-x|",
+      "Transitive: sum of two multiples of p is a multiple of p",
+      "Conclusion: R is an equivalence relation"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-013",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If x = cos t, y = cos mt, prove that (1−x²)(d²y/dx²) − x(dy/dx) + m²y = 0.",
+    "modelAnswer": "dx/dt = −sin t, dy/dt = −m sin mt, so dy/dx = m sin mt/sin t. Differentiate again w.r.t. t and divide by dx/dt to get d²y/dx² = [m² cos mt sin t − m sin mt cos t]/sin³t (after simplification using the quotient/chain rule). Substituting x=cos t (so sin²t = 1−x²) and simplifying (1−x²)y′′ − x y′ + m²y reduces every term to sin/cos mt combinations that cancel exactly to 0, confirming the identity. (Standard result: y=cos(m cos⁻¹x) satisfies this Chebyshev-type differential equation.)",
+    "keyPoints": [
+      "dy/dx = m sin mt / sin t via chain rule",
+      "Differentiate again and use sin²t = 1 − x²",
+      "Substitute into (1−x²)y′′ − xy′ + m²y and simplify to 0"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-014",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Check whether the lines given by (x−1)/2 = (y−2)/3 = (z−3)/4 and (x−4)/5 = (y−1)/2 = z/1 are parallel or not. If parallel, find the distance between them; otherwise find their point of intersection.",
+    "modelAnswer": "Direction ratios (2,3,4) and (5,2,1) are not proportional, so the lines are not parallel. Testing intersection with points (1,2,3)+t(2,3,4) and (4,1,0)+s(5,2,1): solving 1+2t=4+5s and 2+3t=1+2s gives t=−1, s=−1, which also satisfies the z-equation 3+4t = s (3−4=−1=s ✓). So the lines intersect, at the point (1−2, 2−3, 3−4) = (−1, −1, −1).",
+    "keyPoints": [
+      "Direction ratios not proportional ⇒ lines not parallel",
+      "Solve simultaneous parametric equations: t=−1, s=−1",
+      "Point of intersection: (−1, −1, −1)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-015",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "An online delivery company has 5000 subscribers and collects an annual fee of ₹300 per subscriber. For every increase of ₹1 in the fee, 10 subscribers discontinue. Let the fee be increased by ₹x. (i) How many subscribers discontinue after an increase of ₹x? (ii) Express total revenue R(x) as a function of x. (iii) Find the value of x for which R(x) is maximum.",
+    "modelAnswer": "(i) 10x subscribers discontinue. (ii) Remaining subscribers = 5000−10x, so R(x) = (5000−10x)(300+x) = 1500000 + 2000x − 10x². (iii) R′(x) = 2000−20x = 0 ⇒ x = 100. R″(x) = −20 < 0, confirming a maximum at x = 100 (maximum revenue = 1500000+200000−10(10000) = ₹1,600,000).",
+    "keyPoints": [
+      "Subscribers lost = 10x",
+      "R(x) = (5000−10x)(300+x) = 1500000+2000x−10x²",
+      "R′(x)=0 at x=100; R″(x)<0 confirms maximum"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-016",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "In an online jackpot, there is one first prize of ₹3,00,000, two second prizes of ₹2,00,000 each, and three third prizes of ₹50,000 each. A total of 1,00,000 tickets, each costing ₹100, were sold. Rohan bought one ticket. (i) What are the possible amounts he can win? (ii) What is the probability that he wins at least ₹2,00,000? (iii) In a second, independent jackpot with a prize of ₹5,00,000 and winning chance 1 in 1,00,000, find the probability that he wins the jackpot on exactly one of his two tickets.",
+    "modelAnswer": "(i) Possible winnings: ₹0 (no prize), ₹50,000, ₹2,00,000, ₹3,00,000. (ii) Tickets winning ≥₹2,00,000 = 1 (first prize) + 2 (second prizes) = 3, so P = 3/1,00,000. (iii) Let p = 1/1,00,000 for each independent jackpot. P(exactly one win) = p(1−p) + (1−p)p = 2p(1−p) = 2(1/100000)(99999/100000) = 199998/10,000,000,000 ≈ 0.00002.",
+    "keyPoints": [
+      "Possible amounts: 0, 50000, 200000, 300000",
+      "P(≥200000) = 3/100000",
+      "P(exactly one of two independent jackpots) = 2p(1−p)"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-017",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A roundabout is bounded by C₁: x²+y²=64, with a circular pond in the middle given by C₂: x²+y²=4. (i) Express y as a function of x, y=f(x), for both C₁ and C₂. (ii) Using integration, find the area of the region covered by the roundabout (the region enclosed between C₁ and C₂).",
+    "modelAnswer": "(i) For C₁: y=±√(64−x²); for C₂: y=±√(4−x²). (ii) Area of full disc bounded by C₁ = π(8)² = 64π. Area of pond bounded by C₂ = π(2)² = 4π. Area of the roundabout region (annulus) = 64π − 4π = 60π.",
+    "keyPoints": [
+      "y=±√(64−x²) for C₁, y=±√(4−x²) for C₂",
+      "Area of C₁ disc = 64π, area of C₂ disc = 4π",
+      "Roundabout area = 64π − 4π = 60π"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-018",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If the lines (x−3)/1=(1−y)/1=(z+2)/p and (2−x)/3=(y+1)/5=(z+56)/2p are perpendicular to each other, find the value(s) of p.",
+    "modelAnswer": "Direction ratios: line 1 is (1,−1,p); line 2 is (−3,5,2p). Perpendicularity gives d1·d2=0: (1)(−3)+(−1)(5)+(p)(2p)=0 ⇒ −8+2p²=0 ⇒ p²=4 ⇒ p=±2.",
+    "keyPoints": [
+      "Write both lines in symmetric form to extract direction ratios",
+      "Apply d1·d2=0 for perpendicular lines",
+      "p = ±2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-019",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the vector equation of a line passing through the origin and perpendicular to both the lines r=(2î−ĵ+2k̂)+λ(3î+4ĵ+2k̂) and r=(î−ĵ+k̂)+μ(î−ĵ+k̂).",
+    "modelAnswer": "The required direction is the cross product of (3,4,2) and (1,−1,1): (3,4,2)×(1,−1,1)=(4·1−2·(−1), 2·1−3·1, 3·(−1)−4·1)=(6,−1,−7). So r=λ(6î−ĵ−7k̂).",
+    "keyPoints": [
+      "Perpendicular to both lines ⇒ direction = cross product of their direction vectors",
+      "Line passes through origin, so position vector part is zero",
+      "r = λ(6î − ĵ − 7k̂)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-020",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If x=e^(sin⁻¹t) and y=e^(cos⁻¹t), find dy/dx at t=1/2.",
+    "modelAnswer": "dx/dt=e^(sin⁻¹t)/√(1−t²), dy/dt=−e^(cos⁻¹t)/√(1−t²), so dy/dx=−e^(cos⁻¹t−sin⁻¹t). Using cos⁻¹t=π/2−sin⁻¹t, at t=1/2 (sin⁻¹(1/2)=π/6): cos⁻¹t−sin⁻¹t=π/2−π/3=π/6. So dy/dx=−e^(π/6).",
+    "keyPoints": [
+      "Differentiate both x and y w.r.t. t using chain rule",
+      "Use sin⁻¹t+cos⁻¹t=π/2 to simplify the exponent",
+      "dy/dx = −e^(π/6) at t=1/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-021",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the sub-interval of (0,∞) in which f(x)=x log x is increasing.",
+    "modelAnswer": "f'(x)=log x+1. For f to be increasing, f'(x)>0 ⇒ log x>−1 ⇒ x>1/e. So f is increasing on (1/e,∞).",
+    "keyPoints": [
+      "Differentiate: f'(x)=logx+1",
+      "Solve f'(x)>0",
+      "Increasing on (1/e, ∞)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-022",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If the position vectors of three points A, B and C are 3î+ĵ, 5î+6ĵ−3k̂ and 4ĵ respectively, show that they form an isosceles triangle.",
+    "modelAnswer": "AB=(2,5,−3), |AB|=√38. AC=(−3,3,0), |AC|=√18=3√2. BC=(−5,−2,3), |BC|=√38. Since AB=BC=√38≠AC, the triangle is isosceles.",
+    "keyPoints": [
+      "Compute AB, AC, BC as vector differences",
+      "Find their magnitudes",
+      "AB = BC = √38, so triangle is isosceles"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-023",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If two unit vectors a and b are such that |a+2b|=|2a−b|, find the angle between a and b.",
+    "modelAnswer": "Squaring: |a+2b|²=1+4a·b+4=5+4cosθ; |2a−b|²=4−4a·b+1=5−4cosθ. Setting equal: 5+4cosθ=5−4cosθ ⇒ cosθ=0 ⇒ θ=π/2.",
+    "keyPoints": [
+      "Square both magnitudes using |a|=|b|=1",
+      "Equate the two expressions",
+      "θ = π/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-024",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A survey found that robotic knee-replacement surgery has a 90% success rate. On a particular day, three independent robotic surgeries were performed on patients A, B and C. Find the probability that (i) exactly one surgery is successful, (ii) at most two surgeries are successful.",
+    "modelAnswer": "p=0.9 per surgery, n=3, independent. (i) P(exactly one success)=C(3,1)(0.9)(0.1)²=3(0.9)(0.01)=0.027. (ii) P(at most two successful)=1−P(all three succeed)=1−0.9³=1−0.729=0.271.",
+    "keyPoints": [
+      "Binomial-type reasoning with p=0.9 per independent surgery",
+      "(i) Exactly one success: C(3,1)p(1−p)² = 0.027",
+      "(ii) At most two: 1 − p³ = 0.271"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-025",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫ dx/(√x + ∛x).",
+    "modelAnswer": "Let x=t⁶, dx=6t⁵dt. Then √x=t³, ∛x=t². Integral becomes ∫6t⁵/(t³+t²)dt=∫6t³/(t+1)dt. Dividing: 6t³/(t+1)=6t²−6t+6−6/(t+1). Integrating: 2t³−3t²+6t−6ln|t+1|+C, with t=x^(1/6).",
+    "keyPoints": [
+      "Substitute x=t⁶ to clear both fractional powers",
+      "Perform polynomial long division on 6t³/(t+1)",
+      "Result: 2x^(1/2) − 3x^(1/3) + 6x^(1/6) − 6ln|x^(1/6)+1| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-026",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫ tan⁻¹[(1−x)/(1+x)] dx.",
+    "modelAnswer": "tan⁻¹[(1−x)/(1+x)] = π/4 − tan⁻¹x. So the integral = (π/4)x − ∫tan⁻¹x dx = (π/4)x − [x tan⁻¹x − (1/2)ln(1+x²)] + C.",
+    "keyPoints": [
+      "Use the identity tan⁻¹[(1−x)/(1+x)] = π/4 − tan⁻¹x",
+      "Integrate tan⁻¹x by parts",
+      "Result: (π/4)x − x tan⁻¹x + (1/2)ln(1+x²) + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-027",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate ∫₀^(π/2) sin²x/(1+sin2x) dx.",
+    "modelAnswer": "Using I→I with x→π/2−x and adding, 2I=∫₀^(π/2) dx/(1+sin2x)=∫₀^(π/2) dx/(sinx+cosx)². Writing sinx+cosx=√2cos(x−π/4) and substituting u=x−π/4: 2I=(1/2)∫₋π/4^(π/4)sec²u du=(1/2)[tanu]=(1/2)(2)=1. So I=1/2.",
+    "keyPoints": [
+      "Apply the King's rule x→π/2−x property of definite integrals",
+      "Add the two forms to get numerator sin²x+cos²x=1",
+      "I = 1/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-028",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫ cos x /[(2+sin x)(4+sin x)] dx.",
+    "modelAnswer": "Let u=sinx. ∫du/[(2+u)(4+u)] = (1/2)∫[1/(2+u)−1/(4+u)]du = (1/2)ln|(2+u)/(4+u)|+C = (1/2)ln|(2+sinx)/(4+sinx)|+C.",
+    "keyPoints": [
+      "Substitute u=sinx",
+      "Use partial fractions 1/[(2+u)(4+u)]",
+      "Result: (1/2)ln|(2+sinx)/(4+sinx)| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-029",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫ (x²+4x+5)/(x+3) dx.",
+    "modelAnswer": "Divide: x²+4x+5 = (x+3)(x+1)+2. So the integrand = (x+1)+2/(x+3). Integrating: x²/2+x+2ln|x+3|+C.",
+    "keyPoints": [
+      "Perform polynomial long division",
+      "Split into a polynomial part plus a proper fraction",
+      "Result: x²/2 + x + 2ln|x+3| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-030",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the general solution of the differential equation (x²−y²)dx + 2xy dy = 0.",
+    "modelAnswer": "This is homogeneous. With y=vx: v+x(dv/dx)=(v²−1)/(2v) ⇒ x(dv/dx)=(−v²−1)/(2v) ⇒ 2v/(v²+1)dv=−dx/x. Integrating: ln(v²+1)=−ln|x|+C ⇒ x(v²+1)=C' ⇒ x²+y²=Cx.",
+    "keyPoints": [
+      "Recognize the equation as homogeneous and substitute y=vx",
+      "Separate variables in v and x",
+      "General solution: x² + y² = Cx"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-031",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the differential equation sin x cos y dx + cos x sin y dy = 0, given that y=π/4 when x=0.",
+    "modelAnswer": "Rearranging: tanx dx = −tany dy. Integrating: −ln|cosx| = ln|cosy| + C₁ ⇒ ln|cosx cosy| = C. At x=0, y=π/4: ln(1·(√2/2)) = C ⇒ C = −(1/2)ln2. So the particular solution is cos x cos y = 1/√2.",
+    "keyPoints": [
+      "Separate variables: tanx dx = −tany dy",
+      "Integrate both sides to get ln|cosx cosy| = C",
+      "Particular solution: cos x cos y = 1/√2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-032",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If (sin x)^y = y^(cos x), find dy/dx.",
+    "modelAnswer": "Taking logs: y ln(sinx) = cosx ln y. Differentiating implicitly: (dy/dx)ln(sinx)+y cotx = −sinx ln y + (cosx/y)(dy/dx). Solving: dy/dx = y[sinx ln y + y cotx] / [cosx − y ln(sinx)].",
+    "keyPoints": [
+      "Take logarithm of both sides first",
+      "Differentiate implicitly, collecting dy/dx terms",
+      "dy/dx = y(sinx·lny + y·cotx) / (cosx − y·ln(sinx))"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-033",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Represent the equations of lines l1: (x+3)/(−3)=(y−1)/1=(z−5)/5 and l2: (x+1)/(−1)=(2−y)/(−2)=(z−5)/5 in vector form and check whether they intersect.",
+    "modelAnswer": "l1: r=(−3î+ĵ+5k̂)+λ(−3î+ĵ+5k̂); l2: r=(−î+2ĵ+5k̂)+μ(−î+2ĵ+5k̂). Equating components: −3−3λ=−1−μ, 1+λ=2+2μ, 5+5λ=5+5μ (⇒λ=μ). Solving gives λ=μ=−1, consistent in all three equations, and the common point is (0,0,0) — the lines intersect at the origin.",
+    "keyPoints": [
+      "Write both lines in vector form",
+      "Equate parameters component-wise and check consistency",
+      "Lines intersect at the origin, with λ=μ=−1"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-034",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Show that the function f:R⁺→A⊆N defined by f(x)=4x²+12x+15 is one-one. Find set A so that f is onto. Also determine if there exists a∈R⁺ such that f(a)=7.",
+    "modelAnswer": "f'(x)=8x+24>0 for x≥0, so f is strictly increasing, hence one-one. f(x)=(2x+3)²+6; for x≥0, (2x+3)≥3 so f(x)≥15, and f is continuous increasing to ∞, so range=[15,∞). Taking A={y∈N: y≥15} makes f onto A. For f(a)=7: 4a²+12a+8=0 ⇒ a²+3a+2=0 ⇒ (a+1)(a+2)=0 ⇒ a=−1 or −2, neither in R⁺, so no such a exists.",
+    "keyPoints": [
+      "Show f'(x)>0 for one-one",
+      "Complete the square f(x)=(2x+3)²+6 to find the range",
+      "A={y∈N: y≥15}; no a∈R⁺ satisfies f(a)=7"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-035",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve graphically: Maximize Z=8x+8y subject to x−20≤0, 2x+3y≤120, 2x+y≤60, x,y≥0.",
+    "modelAnswer": "Corner points: (0,0) Z=0; (20,0) Z=160; intersection of 2x+3y=120 & 2x+y=60 is (15,30) Z=360; intersection of x=20 & 2x+y=60 is (20,20) Z=320; (0,40) Z=320. Maximum Z=360 at (15,30).",
+    "keyPoints": [
+      "Plot the constraint lines and identify feasible corner points",
+      "Evaluate Z=8x+8y at each corner",
+      "Maximum Z = 360 at (x,y) = (15,30)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-036",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "On the opening day of a new showroom, ₹1,000 and ₹500 vouchers were given to lucky-draw winners. A total of 60 vouchers were given. The number of ₹1,000 vouchers added to 3 times the number of ₹500 vouchers gives 100. Express this as a linear system and solve by the matrix method.",
+    "modelAnswer": "Let x=number of ₹1000 vouchers, y=number of ₹500 vouchers. x+y=60, x+3y=100. Matrix form [[1,1],[1,3]][x,y]=[60,100]. Solving: subtracting gives 2y=40 ⇒ y=20, x=40.",
+    "keyPoints": [
+      "Set up x+y=60 and x+3y=100",
+      "Solve by matrix/elimination method",
+      "x = 40 (₹1000 vouchers), y = 20 (₹500 vouchers)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-037",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Given P=[[2,−1],[3,4]], Q=[[5,2],[7,4]] and R=[[2,5],[3,8]], find a matrix S such that PQ−RS is a null matrix.",
+    "modelAnswer": "PQ=[[3,0],[43,22]]. R⁻¹ exists since |R|=16−15=1, and R⁻¹=[[8,−5],[−3,2]]. S=R⁻¹(PQ)=[[8,−5],[−3,2]]·[[3,0],[43,22]] = [[−191,−110],[77,44]].",
+    "keyPoints": [
+      "Compute PQ first",
+      "Find R⁻¹ (|R|=1)",
+      "S = R⁻¹(PQ) = [[−191,−110],[77,44]]"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-038",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A triangular park has vertices A(0,4), B(−2,0), C(3,0), divided into regions OAC (cricket/football allowed) and AOB (no running games). (i) Find equation of line AB. (ii) Find equation of line AC. (iii)(a) Using integration, find the area of region OAC.",
+    "modelAnswer": "(i) Line AB through (0,4),(−2,0): slope 2, so y=2x+4. (ii) Line AC through (0,4),(3,0): slope −4/3, so y=−(4/3)x+4. (iii)(a) Area OAC = ∫₀³ [−(4/3)x+4] dx = [−(2/3)x²+4x]₀³ = −6+12 = 6 sq. units.",
+    "keyPoints": [
+      "Line AB: y = 2x + 4",
+      "Line AC: y = −(4/3)x + 4",
+      "Area OAC (by integration) = 6 sq. units; (OR) Area AOB = ∫₋₂⁰(2x+4)dx = 4 sq. units"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-039",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Two vertical poles of height 22 m and 16 m stand on opposite sides of a 20 m wide road. From a point R at distance x m from the smaller pole, two ladders l1, l2 reach the pole tops. (iii)(a) Find x for which l1²+l2² is minimum.",
+    "modelAnswer": "l1²=x²+16², l2²=(20−x)²+22². Let S=l1²+l2²=x²+256+(20−x)²+484. dS/dx=2x−2(20−x)=4x−40=0 ⇒ x=10. This is the minimizing distance.",
+    "keyPoints": [
+      "l1² = x² + 16², l2² = (20−x)² + 22²",
+      "Differentiate the sum of squares and set to zero",
+      "x = 10 m minimizes l1² + l2²"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-040",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A survey found 40% of students appearing for an entrance exam were 'dropouts' (took a gap year) and the rest were regular Class XII students. 5% of dropouts and 10% of regular students qualified. (i) Find P(regular student). (ii) Find P(not qualify | dropout). (iii)(a) A randomly selected student qualified; find P(not a dropout | qualified).",
+    "modelAnswer": "(i) P(regular)=0.6. (ii) P(not qualify|dropout)=1−0.05=0.95. (iii) P(qualify)=0.4(0.05)+0.6(0.10)=0.08. P(regular∩qualify)=0.06. By Bayes' theorem, P(not dropout|qualify)=0.06/0.08=0.75.",
+    "keyPoints": [
+      "P(regular)=0.6, P(not qualify|dropout)=0.95",
+      "Use total probability: P(qualify)=0.4×0.05+0.6×0.10=0.08",
+      "P(not dropout | qualify) = 0.06/0.08 = 0.75 (Bayes' theorem)"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-041",
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate sin[tan⁻¹(tan(3π/4))].",
+    "modelAnswer": "tan(3π/4)=−1, so tan⁻¹(tan(3π/4))=tan⁻¹(−1)=−π/4 (principal value). sin(−π/4)=−√2/2.",
+    "keyPoints": [
+      "Reduce tan(3π/4) to a value in the principal branch of tan⁻¹",
+      "tan⁻¹(−1) = −π/4",
+      "sin(−π/4) = −√2/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-042",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Differentiate xˣ with respect to x log x.",
+    "modelAnswer": "Let u=xˣ, v=x log x. du/dx=xˣ(1+ln x) and dv/dx=log x+1. So du/dv = xˣ(1+ln x)/(1+log x) = xˣ.",
+    "keyPoints": [
+      "Find du/dx for u=xˣ using logarithmic differentiation",
+      "Find dv/dx for v=x log x",
+      "du/dv = xˣ"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-043",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If y=P cos(ux)+Q sin(ux), show that d²y/dx² + u²y = 0.",
+    "modelAnswer": "y'=−Pu sin(ux)+Qu cos(ux). y''=−Pu²cos(ux)−Qu²sin(ux)=−u²[P cos(ux)+Q sin(ux)]=−u²y. Hence y''+u²y=0.",
+    "keyPoints": [
+      "Differentiate twice with respect to x",
+      "Recognize y'' = −u²y after simplification",
+      "Hence y'' + u²y = 0 (verified)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-044",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Three honey bees fly along vectors a=2î−3ĵ+k̂, b=4ĵ−2k̂, c=3î+2k̂. Find λ such that the path a+λb is perpendicular to c.",
+    "modelAnswer": "a+λb=(2, −3+4λ, 1−2λ). Dot with c=(3,0,2): 6+2(1−2λ)=8−4λ=0 ⇒ λ=2.",
+    "keyPoints": [
+      "Form a+λb component-wise",
+      "Set (a+λb)·c = 0",
+      "λ = 2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-045",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If A, B, C are three non-collinear points such that AB=î+2ĵ−k̂ and AC=2î−3ĵ, find the area of ΔABC.",
+    "modelAnswer": "AB×AC = (−3,−2,−7) (computed via determinant). |AB×AC|=√62. Area = (1/2)√62.",
+    "keyPoints": [
+      "Compute AB × AC",
+      "Find its magnitude",
+      "Area = √62/2 sq. units"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-046",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the angle between the lines (x−2)/3=(y+5)/2=(1−z)/(−6) and (x−7)/1=y/2=(6−z)/(−2).",
+    "modelAnswer": "Direction ratios: d1=(3,2,6), d2=(1,2,2). cosθ=(d1·d2)/(|d1||d2|)=(3+4+12)/(7×3)=19/21. So θ=cos⁻¹(19/21).",
+    "keyPoints": [
+      "Extract direction ratios from symmetric form of both lines",
+      "cosθ = (d1·d2)/(|d1||d2|)",
+      "θ = cos⁻¹(19/21)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-047",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A spherical balloon loses volume due to escaping air such that the decrease in volume at any instant is proportional to its surface area. Show that its radius decreases at a constant rate.",
+    "modelAnswer": "V=(4/3)πr³, dV/dt=4πr²(dr/dt). Given dV/dt=−k·S=−4πkr² (k>0). So 4πr²(dr/dt)=−4πkr² ⇒ dr/dt=−k, a constant.",
+    "keyPoints": [
+      "Differentiate V=(4/3)πr³ w.r.t. t",
+      "Use given condition dV/dt ∝ surface area",
+      "dr/dt = −k, a constant"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-048",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫ (x−sin x)/(1−cos x) dx.",
+    "modelAnswer": "Split into ∫x/(1−cosx)dx − ∫sinx/(1−cosx)dx. Using 1−cosx=2sin²(x/2) and integration by parts on the first term, the sinx-terms cancel, giving the result −x cot(x/2) + C.",
+    "keyPoints": [
+      "Use 1−cosx = 2sin²(x/2)",
+      "Integrate x·cosec²(x/2) by parts",
+      "Result: −x cot(x/2) + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-049",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate ∫₀² dx/(x²+2x+3).",
+    "modelAnswer": "x²+2x+3=(x+1)²+2. ∫dx/[(x+1)²+2] = (1/√2)tan⁻¹[(x+1)/√2]+C. Evaluating from 0 to 2: (1/√2)[tan⁻¹(3/√2)−tan⁻¹(1/√2)].",
+    "keyPoints": [
+      "Complete the square: (x+1)²+2",
+      "Use the standard form ∫dx/(u²+a²)",
+      "Result: (1/√2)[tan⁻¹(3/√2) − tan⁻¹(1/√2)]"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-050",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the differential equation (x+2y³)dy=y dx.",
+    "modelAnswer": "Rewrite as dx/dy − x/y = 2y². Linear in x with IF=1/y. x/y=∫2y dy=y²+C, so x=y³+Cy.",
+    "keyPoints": [
+      "Rearrange into linear form dx/dy − x/y = 2y²",
+      "Find IF = 1/y",
+      "General solution: x = y³ + Cy"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-051",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Maximize Z=(2x/5)+(3y/10) subject to 2x+y≤1000, x+y≤800, x,y≥0.",
+    "modelAnswer": "Corner points: (0,0) Z=0; (500,0) Z=200; (0,800) Z=240; intersection (200,600) Z=80+180=260. Maximum Z=260 at (200,600).",
+    "keyPoints": [
+      "Find corner points of feasible region",
+      "Evaluate Z at each corner",
+      "Maximum Z = 260 at (200,600)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-052",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Three toys A, B, C lie on a straight line with position vectors 55î−2ĵ, 5î+8ĵ and aî−52ĵ respectively. Find the value of a.",
+    "modelAnswer": "AB=(−50,10), AC=(a−55,−50). Collinearity requires AB and AC proportional: −50/(a−55)=10/(−50) ⇒ 2500=10(a−55) ⇒ a=305.",
+    "keyPoints": [
+      "Form AB and AC as vector differences",
+      "Set components proportional (collinearity condition)",
+      "a = 305"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-053",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If a, b, c are unit vectors, prove that |a−b|²+|b−c|²+|c−a|² ≤ 9.",
+    "modelAnswer": "Each |x−y|²=2−2x·y. Sum=6−2(a·b+b·c+c·a). Since |a+b+c|²≥0, a·b+b·c+c·a≥−3/2. So the sum ≤ 6+3=9.",
+    "keyPoints": [
+      "Expand each squared term using |x|=|y|=1",
+      "Use |a+b+c|²≥0 to bound the dot-product sum",
+      "Sum ≤ 9, proven"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-054",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A die is rolled. Consider events A={1,2,5}, B={3,5}, C={2,3,4,5}. Find (i) P(A|C) and P(C|A), (ii) P(A∪B|C) and P(A∩B|C).",
+    "modelAnswer": "P(A)=1/2, P(C)=2/3, P(A∩C)=P{2,5}=1/3. P(A|C)=(1/3)/(2/3)=1/2. P(C|A)=(1/3)/(1/2)=2/3. P(A∪B)={1,2,3,5}=2/3, P((A∪B)∩C)={2,3,5}=1/2, so P(A∪B|C)=3/4. P(A∩B)={5}=1/6, P((A∩B)∩C)={5}=1/6, so P(A∩B|C)=1/4.",
+    "keyPoints": [
+      "Compute the relevant intersections of A, B, C",
+      "Apply conditional probability formula P(X|C)=P(X∩C)/P(C)",
+      "P(A|C)=1/2, P(C|A)=2/3, P(A∪B|C)=3/4, P(A∩B|C)=1/4"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-055",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A box contains 6 cards numbered 1 to 6. Two cards are drawn one by one with replacement. A = sum of numbers is 10; B = number other than 4 on the first card. Find P(A∩B) and determine if A and B are independent.",
+    "modelAnswer": "A={(4,6),(6,4),(5,5)}, P(A)=3/36=1/12. P(B)=5/6. A∩B excludes (4,6): {(6,4),(5,5)}, P(A∩B)=2/36=1/18. P(A)P(B)=5/72≠1/18=4/72, so A and B are not independent.",
+    "keyPoints": [
+      "List outcomes for event A (sum=10)",
+      "Find A∩B by excluding the (4,6) outcome",
+      "P(A∩B)=1/18 ≠ P(A)P(B)=5/72, so not independent"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-056",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A man buys 4 apples, 3 oranges, 2 bananas for ₹60; 2 apples, 4 oranges, 6 bananas for ₹90; 6 apples, 2 oranges, 3 bananas for ₹70. Using the matrix method, find the cost of one fruit of each kind.",
+    "modelAnswer": "Solving the system 4a+3o+2b=60, 2a+4o+6b=90, 6a+2o+3b=70 gives a=5, o=8, b=8 (₹ per unit).",
+    "keyPoints": [
+      "Set up the 3×3 linear system",
+      "Solve by elimination/matrix inverse method",
+      "Apple = ₹5, Orange = ₹8, Banana = ₹8"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-057",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If y√(x²+1) = log(√(x²+1) − x), show that (x²+1)(dy/dx) + xy + 1 = 0.",
+    "modelAnswer": "Let u=√(x²+1). Then yu=ln(u−x). Differentiating implicitly and simplifying using u'=x/u leads to (x²+1)y'+xy+1=0, the required identity.",
+    "keyPoints": [
+      "Differentiate both sides implicitly, using u=√(x²+1)",
+      "Simplify using u'=x/u",
+      "Result verifies (x²+1)y′ + xy + 1 = 0"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-058",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Sketch the curve {(x,y): 100x²+25y²=2500} and find the area enclosed, using integration.",
+    "modelAnswer": "The curve is the ellipse x²/25+y²/100=1 with semi-axes a=5, b=10. Area of an ellipse = πab = π(5)(10) = 50π sq. units.",
+    "keyPoints": [
+      "Rewrite in standard ellipse form x²/25+y²/100=1",
+      "Identify semi-axes a=5, b=10",
+      "Area = πab = 50π sq. units"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-059",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the foot of the perpendicular from (0,2,3) on the line (x−3)/5=(y−1)/2=(z+4)/3, and find the length of the perpendicular.",
+    "modelAnswer": "General point on line: (3+5t,1+2t,−4+3t). Perpendicularity to direction (5,2,3) from (0,2,3) gives t=4/19. Foot=(77/19, 27/19, −64/19). Length of perpendicular = 33/√19 units.",
+    "keyPoints": [
+      "Parametrize a general point on the line",
+      "Set the vector from (0,2,3) to this point perpendicular to the line's direction",
+      "Foot=(77/19,27/19,−64/19); length = 33/√19 units"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-060",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the value of p if the shortest distance between the lines r=(î+2ĵ+k̂)+λ(î−ĵ+k̂) and r=(pî−ĵ−k̂)+μ(2î+ĵ+2k̂) is 3/√2.",
+    "modelAnswer": "d1×d2=(−3,0,3), |d1×d2|=3√2. (a2−a1)·(d1×d2)=−3p−3. Distance=|p+1|/√2=3/√2 ⇒ |p+1|=3 ⇒ p=2 or p=−4.",
+    "keyPoints": [
+      "Compute d1×d2 for the two line directions",
+      "Use the shortest-distance formula between skew lines",
+      "p = 2 or p = −4"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-061",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "7 students from an essay competition are split into Set A={G1,G2,G3,G4} (girls) and Set B={B1,B2,B3} (boys). (i) How many relations are possible from A to B? (ii) Is R={(G1,B1),(G2,B2),(G3,B2),(G4,B3),(G1,B2)} an injective function?",
+    "modelAnswer": "(i) Number of relations from A to B = 2^(|A|×|B|) = 2^12 = 4096. (ii) R is not injective since G2 and G3 both map to B2 (and G1 relates to two different images, so it is not even a well-defined function in the strict sense).",
+    "keyPoints": [
+      "Number of relations from A to B = 2^(|A||B|) = 4096",
+      "Check for repeated images to test injectivity",
+      "R is not injective — G2 and G3 both map to B2"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-062",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Three vaccines A1, A2, A3 are given to 25%, 35% and 40% of the population, protecting against infection with probability 60%, 55%, 50% respectively. (i) Find P(infected | took A2). (ii) Find P(protected). (iii)(a) Find P(took A1 | infected).",
+    "modelAnswer": "(i) P(infected|A2)=1−0.55=0.45. (ii) P(protected)=0.25(0.6)+0.35(0.55)+0.40(0.5)=0.15+0.1925+0.20=0.5425. (iii) P(infected)=1−0.5425=0.4575, P(A1∩infected)=0.25(0.4)=0.10, so P(A1|infected)=0.10/0.4575≈0.2186 (=40/183).",
+    "keyPoints": [
+      "P(infected|A2) = 1−0.55 = 0.45",
+      "Total probability: P(protected)=0.5425",
+      "P(A1 | infected) = 40/183 ≈ 0.219 (Bayes' theorem)"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-063",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A company makes open-top cylindrical tumblers with fixed surface area S. (i) Differentiate the volume V with respect to base radius r, given S is constant. (ii) Find the relation between height h and radius r that maximizes volume.",
+    "modelAnswer": "S=πr²+2πrh ⇒ h=(S−πr²)/(2πr). V=πr²h=(Sr−πr³)/2, so dV/dr=(S−3πr²)/2. Setting dV/dr=0 gives S=3πr²; combined with S=πr²+2πrh, this yields h=r.",
+    "keyPoints": [
+      "Express h in terms of r using the fixed surface area S",
+      "V = (Sr − πr³)/2, differentiate w.r.t. r",
+      "Maximum volume occurs when height = radius (h = r)"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-064",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A thin metallic wire in the shape of a circular ring has its enclosed area increasing at a uniform rate when heated. Show that the rate of change of its circumference varies inversely as its radius.",
+    "modelAnswer": "A=πr², dA/dt=2πr(dr/dt)=k (constant) ⇒ dr/dt=k/(2πr). C=2πr, dC/dt=2π(dr/dt)=k/r, so dC/dt ∝ 1/r.",
+    "keyPoints": [
+      "Differentiate A=πr² to relate dr/dt to the constant rate",
+      "Differentiate C=2πr similarly",
+      "dC/dt = k/r, inversely proportional to radius"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-065",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the differential equation y dx + (x−y³) dy=0.",
+    "modelAnswer": "Rewrite: dx/dy + x/y = y². Linear in x, IF=y. xy=∫y·y² dy=∫y³dy=y⁴/4+C, so x=y³/4+C/y.",
+    "keyPoints": [
+      "Rearrange into linear form dx/dy + x/y = y²",
+      "IF = y",
+      "General solution: xy = y⁴/4 + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-066",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "The volume of a cubical wooden block increases at a constant rate when it absorbs moisture in the rainy season. Show that the rate of change of its surface area varies inversely as the length of its edge.",
+    "modelAnswer": "V=a³, dV/dt=3a²(da/dt)=k ⇒ da/dt=k/(3a²). S=6a², dS/dt=12a(da/dt)=4k/a, so dS/dt ∝ 1/a.",
+    "keyPoints": [
+      "Differentiate V=a³ using the given constant rate",
+      "Differentiate S=6a² similarly",
+      "dS/dt = 4k/a, inversely proportional to edge length"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-067",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the differential equation (x − sin y) dy + tan y dx = 0.",
+    "modelAnswer": "Rewrite: dx/dy + x cot y = cos y. Linear in x, IF=e^∫cot y dy=sin y. x sin y=∫cos y·sin y dy=sin²y/2+C.",
+    "keyPoints": [
+      "Rearrange into linear form dx/dy + x cot y = cos y",
+      "IF = sin y",
+      "General solution: x sin y = sin²y/2 + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-068",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Three students A, B, C buy art, story and puzzle books. A pays ₹21 for one of each. B pays ₹60 for 4 art, 3 story, 2 puzzle books. C pays ₹10 more than B for 6 art, 2 story, 3 puzzle books. Use the matrix method to find the cost of each type of book.",
+    "modelAnswer": "Solving a+s+p=21, 4a+3s+2p=60, 6a+2s+3p=70 gives a=5, s=8, p=8.",
+    "keyPoints": [
+      "Set up the 3×3 linear system from the given purchases",
+      "Solve by elimination/matrix inverse",
+      "Art book=₹5, Story book=₹8, Puzzle book=₹8"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-069",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Sketch the curve {(x,y): x²+y²=25} and find the area of the minor segment cut off by the line x=5/2, using integration.",
+    "modelAnswer": "This is a circle of radius 5. The segment area (accounting both halves in y) = 2∫_{5/2}^{5}√(25−x²)dx. Using the standard integral formula, this evaluates to 25π/3 − (25√3)/4 sq. units.",
+    "keyPoints": [
+      "Recognize x²+y²=25 as a circle of radius 5",
+      "Set up 2∫_{5/2}^{5}√(25−x²)dx for the minor segment",
+      "Area = 25π/3 − 25√3/4 sq. units"
+    ]
+  },
+  {
+    "chapter": "Mathematics",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Find the co-ordinates of the point on line x =  whose y co-\n 2\n ordinate is 3 times the x co-ordinate.\n x-2",
+    "modelAnswer": "[Solution: See NCERT Mathematics]",
+    "keyPoints": [
+      "Mathematics application"
+    ],
+    "id": "xiimath-sa-2026-070"
+  },
+  {
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Check whether f : R - {3}  R defined as f(x) = is onto or not.\n x 3\n\n OR\n\n (b) Check whether f : Z  Z  Z  Z (where Z is the set of integers)\n defined as f(x, y) = (2y, 3x) is injective or not.\n -1 t -1 t",
+    "modelAnswer": "[Solution: See NCERT Relations and Functions]",
+    "keyPoints": [
+      "Relations and Functions application"
+    ],
+    "id": "xiimath-sa-2026-071"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If x = esin , y = ecos ,\n dy\n find at t =\n dx",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-072"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find the absolute maximum value of f(x) = cos x + sin2 x, x  [0, ]\n OR\n\n (b) If the volume of a solid hemisphere increases at a uniform rate,\n prove that its surface area varies inversely as its radius.\n - ^ ^ - ^ ^ ^",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-073"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If AB = j + k and AC = 3 i - j + 4 k represent the two vectors along\n - -\n - AB  AC\n the sides AB and AC of ABC, prove that the median AD  ,\n where D is midpoint of BC.\n\n Hence, find the length of median AD.\n\f  - \n    -         3   ",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-074"
+  },
+  {
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) The probability of hitting the target by a trained sniper is three\n times the probability of not hitting the target on a stormy day due to\n high wind speed.\n The sniper fired two shots on the target on a stormy day when wind\n speed was very high. Find the probability that\n (i) target is hit\n (ii) atleast one shot misses the target.\n OR\n (b) Mother, Father and Son line up at random for a family picture. Let\n events E : Son on one end and F : Father in the middle. Find P(E/F).\n 3x -",
+    "modelAnswer": "[Solution: See NCERT Probability]",
+    "keyPoints": [
+      "Probability application"
+    ],
+    "id": "xiimath-sa-2026-075"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Find :  dx\n x - 4x\n\n 5\n dx",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-076"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Evaluate :  1  cot x\n OR\n \n (b) Evaluate :  (sin |x| + cos |x|) dx\n\f d 1",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-077"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If (F(x)) = x , then find F(x) given that F(0) = log .\n dx e 1",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-078"
+  },
+  {
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Solve the following differential equation :\n dy y \n x = y - x sin2   , given that y(1) =\n dx x\n OR\n dx\n (b) Find the general solution of the differential equation : y log y +x= .\n dy y",
+    "modelAnswer": "[Solution: See NCERT Differential Equations]",
+    "keyPoints": [
+      "Differential Equations application"
+    ],
+    "id": "xiimath-sa-2026-079"
+  },
+  {
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Solve the following linear programming problem graphically :\n Maximize Z = 4500x + 5000y\n Subject to constraints\n x + y \n 25x + 40y \n x  0, y ",
+    "modelAnswer": "[Solution: See NCERT Linear Programming]",
+    "keyPoints": [
+      "Linear Programming application"
+    ],
+    "id": "xiimath-sa-2026-080"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find the sub-interval of  0,  in which f(x) = log (sin x + cos x) is\n  2\n increasing and decreasing.\n OR\n (b) A rectangle of perimeter 30 cm is revolved along one of its sides to\n sweep out a cylinder of maximum volume. Find the dimensions of the\n rectangle.",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-081"
+  },
+  {
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Find the domain of q(x) = cos-1 (4x2 - 3). Hence, find the value of x for\n which q(x) = 0. Also, write the range of 3q(x) - .",
+    "modelAnswer": "[Solution: See NCERT Inverse Trigonometric Functions]",
+    "keyPoints": [
+      "Inverse Trigonometric Functions application"
+    ],
+    "id": "xiimath-sa-2026-082"
+  },
+  {
+    "chapter": "Mathematics",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "A line passing through the points A(1, 2, 3) and B(5, 8, 11) intersects the\n  ^ ^ ^ ^ ^\n line r = 4 i + j + (5 i + 2 j + k ). Find the co-ordinates of the point of\n intersection. Hence, write the equation of a line passing through the point\n of intersection and perpendicular to both the lines.\n 1 -1 0  2 2 - 4",
+    "modelAnswer": "[Solution: See NCERT Mathematics]",
+    "keyPoints": [
+      "Mathematics application"
+    ],
+    "id": "xiimath-sa-2026-083"
+  },
+  {
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) If P = 2 3 4  and Q =  -\n  2 - 4  , find (QP) and hence\n 0 1 2  2 -1 5 \n solve the following system of equations using matrices :\n\n x - y = 3, 2x + 3y + 4z = 17, y + 2z = 7\n OR\n\n 1x 1\n (b) Obtain the value of  = 1 1y 1 in terms of x, y and z.\n 1 1 1z\n\n Further, if  = 0 and x, y, z are non-zero real numbers, prove that\n x-1 + y-1 + z-1 = -1.",
+    "modelAnswer": "[Solution: See NCERT Matrices]",
+    "keyPoints": [
+      "Matrices application"
+    ],
+    "id": "xiimath-sa-2026-084"
+  },
+  {
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Evaluate :\n  1  -1  1  -1     -1  2 \n tan-1  -  + cot   + tan  sin  - 2   + tan  tan \n  3  3     3 \n\n  cos x \n  , x\n \n - x +",
+    "modelAnswer": "[Solution: See NCERT Inverse Trigonometric Functions]",
+    "keyPoints": [
+      "Inverse Trigonometric Functions application"
+    ],
+    "id": "xiimath-sa-2026-085"
+  },
+  {
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Show that the function f(x) = \n  \n  1, x=\n \n \n is continuous at x = .\n OR\n  x - 1, x \n (b) Find whether the function f(x) =  at x = 2 is\n 2x - 3, x \n differentiable or not.",
+    "modelAnswer": "[Solution: See NCERT Continuity and Differentiability]",
+    "keyPoints": [
+      "Continuity and Differentiability application"
+    ],
+    "id": "xiimath-sa-2026-086"
+  },
+  {
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Find the values of x for which f(x) = xx, x > 0 is increasing.\n\n ^ ^",
+    "modelAnswer": "[Solution: See NCERT Relations and Functions]",
+    "keyPoints": [
+      "Relations and Functions application"
+    ],
+    "id": "xiimath-sa-2026-087"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If the position vectors of three points A, B and C are 3 i + j ,\n ^ ^ ^ ^\n 5 i + 6 j - 3 k and 4 j respectively, then show that they form an isosceles\n triangle.",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-088"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Let two rods placed on the ground be represented by vectors\n ^ ^ ^ ^ ^ ^\n 4 i - j + 3 k and - 2 i + j - 2 k . Find a vector representing a\n flag-post of height 5 m that has to be erected perpendicular to both\n the rods.\n OR\n   \n (b) A unit vector a is such that it makes an angle with x-axis,\n 4\n with y-axis and an acute angle  with z-axis. Find  and the\n \n components of a .\n खण्ड ग\nइस िण्ड में िघु-उत्तरीय (SA) प्रकार के 6 प्रश्ि हैं, नििमें प्रत्येक के 3 अक\n ं हैं ।",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-089"
+  },
+  {
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Let A = ℝ - {3} and B = ℝ - {1}. A function f : A  B is defined by\n x - 2\n f(x) =   . Find whether f is one-one and onto.\n x - 3\n OR\n\n (b) Let n be a fixed positive integer. A relation R is defined in set Z\n such that R = {(x, y) : (x - y) is divisible by n, x, y  Z}. Determine\n if R is an equivalence relation.\n\n 3 2 0 ",
+    "modelAnswer": "[Solution: See NCERT Relations and Functions]",
+    "keyPoints": [
+      "Relations and Functions application"
+    ],
+    "id": "xiimath-sa-2026-090"
+  },
+  {
+    "chapter": "Mathematics",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If A = 1 4 0  , then compute A2 - 7A + 10 I.\n 0 0 5 \n\n dy",
+    "modelAnswer": "[Solution: See NCERT Mathematics]",
+    "keyPoints": [
+      "Mathematics application"
+    ],
+    "id": "xiimath-sa-2026-091"
+  },
+  {
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) If xy = ex - y, then find .\n dx\n OR\n\n  1 + x2 - 1 - x2 \n (b) Differentiate tan-1   with respect to cos-1 x2.\n  1 + x2 + 1 - x2 \n  ",
+    "modelAnswer": "[Solution: See NCERT Inverse Trigonometric Functions]",
+    "keyPoints": [
+      "Inverse Trigonometric Functions application"
+    ],
+    "id": "xiimath-sa-2026-092"
+  },
+  {
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Solve the following Linear Programming Problem graphically :\n Maximise Z = 200x + 120y\n subject to the constraints\n x + y \n 3x + y \n x - y  -100\n x, y \n\fb",
+    "modelAnswer": "[Solution: See NCERT Linear Programming]",
+    "keyPoints": [
+      "Linear Programming application"
+    ],
+    "id": "xiimath-sa-2026-093"
+  },
+  {
+    "chapter": "Mathematics",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find a point on the line = = at a distance of\n 3 2\n 2 units from the point (1, 2, 3).\n OR\n (b) Find the shortest distance between the lines\n\n → ^ ^ ^\n r = (4 + ) i + (2 - 1) j - 3 k\n\n → ^ ^ ^\n r = (1 + 2) i + (2 - 5) k + (4 - 1) j .",
+    "modelAnswer": "[Solution: See NCERT Mathematics]",
+    "keyPoints": [
+      "Mathematics application"
+    ],
+    "id": "xiimath-sa-2026-094"
+  },
+  {
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "In a school, the probability of holding a debate competition is and that\n of a quiz competition is . In the two participating teams, A has 4 girls\n and 6 boys and B has 7 girls and 3 boys. If a debate competition is held,\n\n the students are selected from team A and for the quiz competition they\n\n are selected from team B. If only two students are to be chosen from the\n\n teams, then find the probability that one will be a girl and the other a\n\n boy.",
+    "modelAnswer": "[Solution: See NCERT Probability]",
+    "keyPoints": [
+      "Probability application"
+    ],
+    "id": "xiimath-sa-2026-095"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find :\n\n  (x - 1)(x + 4) dx\n x\n OR\n (b) Evaluate :\n x tan -1 x\n  (1 + x )\n 2 3/\n dx\n\n\fb",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-096"
+  },
+  {
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Using integration, find the area of the region enclosed by the curve\n y = |x - 6|, the x-axis, and between x = 4 and x = 8.",
+    "modelAnswer": "[Solution: See NCERT Application of Integrals]",
+    "keyPoints": [
+      "Application of Integrals application"
+    ],
+    "id": "xiimath-sa-2026-097"
+  },
+  {
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Solve the differential equation y ey dx = (y3 + 2x ey) dy, when y(0) = 1.\n OR\n (b) Find the general solution of the differential equation\n (x3 - 3xy2) dx = (y3 - 3x2y) dy.",
+    "modelAnswer": "[Solution: See NCERT Differential Equations]",
+    "keyPoints": [
+      "Differential Equations application"
+    ],
+    "id": "xiimath-sa-2026-098"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Find the equation of a line (in vector and cartesian form) that passes\n x-1 y-2 z-3\n through the point of intersection of lines = = and\n 2 3\n x-4 y -1 ^ ^ ^\n = = z and is parallel to the vector 3 i + 2 j - 8 k .\n 5",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-099"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Evaluate sin  tan -1 tan    .\n   4 ",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-100"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Differentiate xx with respect to x log x.\n\n OR\n d2y\n (b) If y = P cos ux + Q sin ux, show that\n + u2y = 0.\n dx\n\n x-3",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-101"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Determine the values of x for which f(x) = , x  - 1 is an increasing\n x +1\n function.",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-102"
+  },
+  {
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Three honey bees were found flying along the vectors\n → ^ ^ ^ → ^ ^ → ^ ^\n a = 2 i - 3 j + k , b = 4 j - 2 k and c = 3 i + 2 k respectively.\n → →\n Find the value of  such that the path for a +  b is perpendicular to\n →\n c .\n OR\n\n (b) If A, B\n and C be three non-collinear points such that\n → ^ ^ ^ → ^ ^\n AB = i + 2 j - k and AC = 2 i - 3 j , then find the area of  ABC.",
+    "modelAnswer": "[Solution: See NCERT Application of Integrals]",
+    "keyPoints": [
+      "Application of Integrals application"
+    ],
+    "id": "xiimath-sa-2026-103"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A spherical balloon loses its volume due to escape of air from it in such a\n way that decrease of volume at any instant is proportional to its surface\n area. Show that the radius is decreasing at a constant rate.",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-104"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find :\n\n \n x - sin x\n dx\n 1 - cos x\n\n OR\n (b) Evaluate :\n  x + 2x + 3 dx",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-105"
+  },
+  {
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Solve the differential equation (x + 2y3) dy = y dx.",
+    "modelAnswer": "[Solution: See NCERT Differential Equations]",
+    "keyPoints": [
+      "Differential Equations application"
+    ],
+    "id": "xiimath-sa-2026-106"
+  },
+  {
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Solve the following Linear Programming Problem graphically :\n 2x 3y\n Maximize Z = +\n 5\n subject to constraints\n 2x + y \n x + y \n x, y  0.",
+    "modelAnswer": "[Solution: See NCERT Linear Programming]",
+    "keyPoints": [
+      "Linear Programming application"
+    ],
+    "id": "xiimath-sa-2026-107"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Let three toys A, B and C be placed in the same straight line. If\n ^ ^ ^ ^\n the position vectors of A, B and C are 55 i - 2 j , 5 i + 8 j and\n ^ ^\n a i - 52 j respectively, find the value of ‘a’.\n\n OR\n → → →\n (b) If a , b and c are unit vectors, then prove that\n → → → → → →\n | a - b |2 + | b - c |2 + | c - a |2  9.\n\n\fb",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-108"
+  },
+  {
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) A die is rolled. Consider events :\n A = {1, 2, 5}, B = {3, 5}, C = {2, 3, 4, 5}\n\n and hence find :\n\n (i) P(A|C) and P(C|A)\n\n (ii) P(A  B|C) and P(A  B|C)\n OR\n\n (b) A box contains 6 cards numbered 1 to 6. A student is asked to pick\n up two cards, one by one after replacement and note down the\n numbers on the cards. Let A be the event of getting sum of the\n numbers on two cards as 10, and B, the event of a number other\n than 4 on the first card selected.\n Find P(A and B) and find whether the events A and B are\n independent events or not.",
+    "modelAnswer": "[Solution: See NCERT Probability]",
+    "keyPoints": [
+      "Probability application"
+    ],
+    "id": "xiimath-sa-2026-109"
+  },
+  {
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "A man goes to buy fruits from the market. The shopkeeper informs him\n that 4 apples, 3 oranges and 2 bananas cost ₹ 60; 2 apples, 4 oranges and\n 6 bananas cost ₹ 90; whereas 6 apples, 2 oranges and 3 bananas cost ₹ 70.\n Using matrix method, find the cost of one fruit of each kind.",
+    "modelAnswer": "[Solution: See NCERT Matrices]",
+    "keyPoints": [
+      "Matrices application"
+    ],
+    "id": "xiimath-sa-2026-110"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) If y x 2 +1 = log  x + 1 - x, show that\n dy\n (x2 + 1) + xy + 1 = 0.\n dx\n\n OR\n 2x 2 -\n (b) Find the differential of xcot x + with respect to x.\n 2x 2 - x +\n\fb",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-111"
+  },
+  {
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Sketch the curve {(x, y) : 100x + 25y = 2500} and find the area of the\n\n region enclosed by it, using integration.",
+    "modelAnswer": "[Solution: See NCERT Application of Integrals]",
+    "keyPoints": [
+      "Application of Integrals application"
+    ],
+    "id": "xiimath-sa-2026-112"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find the foot of the perpendicular from the point (0, 2, 3) on the\n - x-3 1- y 3z +\n line = = and hence find the length of the\n -5 -2\n perpendicular.\n\n OR\n (b) Find the value of p if the shortest distance between the lines\n → ^ ^ ^ ^ ^ ^\n r = ( i + 2 j + k ) +  ( i - j + k ) and\n → ^ ^ ^ ^ ^ ^\n r = (p i - j - k ) +  (2 i + j + 2 k )\n is units.",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-113"
+  },
+  {
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) For the matrix A =   , find the numbers a and b so\n 2 1\n that A2 + aA + bI = O.\n OR\n (b) Find the equation of line joining the points (- 1, - 1) and\n (1, 3), using determinants.",
+    "modelAnswer": "[Solution: See NCERT Matrices]",
+    "keyPoints": [
+      "Matrices application"
+    ],
+    "id": "xiimath-sa-2026-114"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) The volume of a spherical balloon is increasing at the rate\n of 20 cm3/s. Find the rate of change of its surface area\n when its radius is 4 cm.\n OR\n (b) Find the intervals on which the function f(x) = x3 + 2x2 -\n is strictly increasing.",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-115"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Find :\n (x - 4) ex\n  (x - 2)3\n dx\n\n ⎯→",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-116"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Find a unit vector perpendicular to both of the vectors AB and\n ⎯→\n BC , where A, B and C are (3, - 1, 2), (1, - 1, - 3) and (4, - 3, 1),\n respectively.",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-117"
+  },
+  {
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find the value of\n\n  2   5   13 \n sin-1  sin  + tan-1  tan  + cos-1  cos .\n  3  6   6 \n\n OR\n (b) Prove that the function f : N → N, f(n) = (n2 + n + 1) is\n one-one but not onto.",
+    "modelAnswer": "[Solution: See NCERT Inverse Trigonometric Functions]",
+    "keyPoints": [
+      "Inverse Trigonometric Functions application"
+    ],
+    "id": "xiimath-sa-2026-118"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Find :\n\n \n x\n dx\n 7 - 6x - x2\n OR\n (b) Find :\n\n \n dx\n (1 - x) (1 + x 2 )",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-119"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Solve the differential equation :\n dy y\n x = y - x tan\n dx x\n OR\n (b) Solve the differential equation :\n dy\n = ex + y + ex - y\n dx\n65(B) * 17 P.T.O.\n\fb",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-120"
+  },
+  {
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Evaluate :\n \n\n \n x dx\n 1 + sin x\n → → →",
+    "modelAnswer": "[Solution: See NCERT Integrals]",
+    "keyPoints": [
+      "Integrals application"
+    ],
+    "id": "xiimath-sa-2026-121"
+  },
+  {
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "If a , b and c are mutually perpendicular vectors of equal\n → → →\n magnitudes, show that the vector a + b + c is equally\n → → →\n inclined to a , b and c .",
+    "modelAnswer": "[Solution: See NCERT Vector Algebra]",
+    "keyPoints": [
+      "Vector Algebra application"
+    ],
+    "id": "xiimath-sa-2026-122"
+  },
+  {
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "The corner points of the feasible region determined by the\n system of linear constraints in an LPP are (0, 10), (5, 5), (15, 15)\n and (0, 20). Let Z = px + qy, p, q > 0, be the objective function,\n then find the relation between p and q so that the maximum of\n Z occurs at both the points (15, 15) and (0, 20).",
+    "modelAnswer": "[Solution: See NCERT Linear Programming]",
+    "keyPoints": [
+      "Linear Programming application"
+    ],
+    "id": "xiimath-sa-2026-123"
+  },
+  {
+    "chapter": "Mathematics",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) If A = 2 1 - 3 , find A-1. Using A-1 solve the system\n  \n 1 1 1\n of equations :\n x-y+z=4\n 2x + y - 3z =\n x+y+z=2\n\n OR\n65(B) * 19 P.T.O.\n 3 2 6 7  -1 -1 -1\n (ख) यषद A =  , B =   है, तो दशाषइए षक (AB) = B A .\n 7 5  8 9 ",
+    "modelAnswer": "[Solution: See NCERT Mathematics]",
+    "keyPoints": [
+      "Mathematics application"
+    ],
+    "id": "xiimath-sa-2026-124"
+  },
+  {
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "(a) Of all the closed right circular cylindrical cans of given\n volume 200 cm3, find the dimensions of the can which has\n the minimum surface area.\n\n OR\n\n (b) Show that the height of the right circular cone of\n maximum volume that can be inscribed in a sphere of\n 4r\n radius r is .",
+    "modelAnswer": "[Solution: See NCERT Application of Derivatives]",
+    "keyPoints": [
+      "Application of Derivatives application"
+    ],
+    "id": "xiimath-sa-2026-125"
+  },
+  {
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Find the area of the region bounded by the line y = 3x + 2, the\n x-axis and the ordinates x = - 1 and x = 1.",
+    "modelAnswer": "[Solution: See NCERT Application of Integrals]",
+    "keyPoints": [
+      "Application of Integrals application"
+    ],
+    "id": "xiimath-sa-2026-126"
+  }
+]

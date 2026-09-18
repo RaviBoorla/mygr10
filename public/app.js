@@ -65,7 +65,7 @@ function addDaysStr(dateStr, delta) {
 // ─── State ────────────────────────────────────────────────────────────────────
 const state = {
   board:   LS.get(KEY.board, null),
-  grade:   (g => g === 'XII' ? 'X' : g)(LS.get(KEY.grade, 'X')),
+  grade:   LS.get(KEY.grade, 'X'),
   screen:  'board',
   params:  [],
   notesQuery: '',
