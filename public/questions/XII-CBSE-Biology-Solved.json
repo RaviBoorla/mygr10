@@ -388,5 +388,320 @@
       "Homozygous (HbSHbS) individuals are affected; heterozygous (HbAHbS) carriers are largely normal",
       "Phenylketonuria: autosomal recessive; deficient enzyme fails to convert phenylalanine to tyrosine -> accumulation of phenylalanine -> mental retardation if untreated"
     ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-1",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Group the following as nitrogenous bases and nucleosides:\nAdenine, Cytidine, Thymine, Guanosine, Uracil and Cytosine.",
+    "solution": "Nitrogenous bases: Adenine, Thymine, Uracil, Cytosine.\nNucleosides: Cytidine, Guanosine (a nucleoside is a base + sugar, without phosphate; here Cytidine = cytosine + ribose, Guanosine = guanine + ribose).",
+    "steps": [
+      "Nitrogenous bases are the free ring compounds themselves: Adenine, Thymine, Uracil, Cytosine",
+      "Nucleosides = base + sugar (no phosphate): Cytidine and Guanosine are nucleosides",
+      "Adding phosphate to a nucleoside would make it a nucleotide"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-2",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "If a double stranded DNA has 20 per cent of cytosine, calculate the per cent of adenine in the DNA.",
+    "solution": "By Chargaff's rule, %C = %G, so %G = 20%. Therefore %C + %G = 40%, leaving %A + %T = 60%. Since %A = %T, %A = 30%.",
+    "steps": [
+      "In double-stranded DNA, %A=%T and %G=%C (Chargaff's rule)",
+      "%C = 20%, so %G = 20%, giving %G+%C = 40%",
+      "Remaining %A+%T = 100-40 = 60%",
+      "Since %A=%T, %A = 30%"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-3",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "If the sequence of one strand of DNA is written as follows:\n5' -ATGCATGCATGCATGCATGCATGCATGC-3'\nWrite down the sequence of complementary strand in 5' →3' direction.",
+    "solution": "Complementary strand (5'→3'): 5'-GCATGCATGCATGCATGCATGCATGCAT-3'.",
+    "steps": [
+      "Base pairing rule: A-T and G-C, strands are antiparallel",
+      "Complement (3'->5') of given strand: TACGTACGTACGTACGTACGTACGTACG",
+      "Reading this complementary strand in 5'->3' direction gives: GCATGCATGCATGCATGCATGCATGCAT"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-4",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "If the sequence of the coding strand in a transcription unit is written as follows:\n5' -ATGCATGCATGCATGCATGCATGCATGC-3'\nWrite down the sequence of mRNA.",
+    "solution": "mRNA sequence (5'→3'): 5'-AUGCAUGCAUGCAUGCAUGCAUGCAUGC-3' (same sequence as the coding strand, with U replacing T).",
+    "steps": [
+      "The coding strand has the same sequence as the mRNA except T is replaced by U",
+      "mRNA is synthesised complementary to the template strand, making it identical to the coding strand (with U instead of T)",
+      "So mRNA = AUGCAUGCAUGCAUGCAUGCAUGCAUGC"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-5",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Which property of DNA double helix led Watson and Crick to hypothesise semi-conservative mode of DNA replication? Explain.",
+    "solution": "The complementary base-pairing between the two antiparallel strands of the DNA double helix (A pairs only with T, and G only with C) led Watson and Crick to hypothesise semi-conservative replication. Because the sequence of one strand strictly determines the sequence of the other (complementary) strand, each strand can act as a template to synthesise a new complementary strand. Thus during replication, the two parental strands separate, and each acts as a template for synthesis of a new complementary strand, resulting in two daughter DNA molecules, each retaining one parental (old) strand and one newly synthesised strand — this is the semi-conservative mode of replication.",
+    "steps": [
+      "Complementary base pairing (A-T, G-C) means each strand's sequence dictates the other's",
+      "This implies each strand can serve as a template for making a new complementary strand",
+      "Replication would therefore produce two duplexes, each with one old and one new strand — semi-conservative replication",
+      "This was later experimentally confirmed by Meselson and Stahl using E. coli"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-6",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Depending upon the chemical nature of the template (DNA or RNA) and the nature of nucleic acids synthesised from it (DNA or RNA), list the types of nucleic acid polymerases.",
+    "solution": "Based on template and product, nucleic acid polymerases are of four types: (i) DNA-dependent DNA polymerase — uses DNA as template to synthesise DNA (used in DNA replication); (ii) DNA-dependent RNA polymerase — uses DNA as template to synthesise RNA (used in transcription); (iii) RNA-dependent DNA polymerase (reverse transcriptase) — uses RNA as template to synthesise DNA (found in retroviruses like HIV); and (iv) RNA-dependent RNA polymerase (RNA replicase) — uses RNA as template to synthesise RNA (found in RNA viruses).",
+    "steps": [
+      "DNA-dependent DNA polymerase: DNA template -> DNA product (replication)",
+      "DNA-dependent RNA polymerase: DNA template -> RNA product (transcription)",
+      "RNA-dependent DNA polymerase (reverse transcriptase): RNA template -> DNA product (retroviruses)",
+      "RNA-dependent RNA polymerase: RNA template -> RNA product (RNA viruses)"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-7",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "How did Hershey and Chase differentiate between DNA and protein in their experiment while proving that DNA is the genetic material?",
+    "solution": "Hershey and Chase (1952) used bacteriophages that infect E. coli, and radioactively labelled two separate batches: in one batch the phage protein coat was labelled with 35S (since protein contains sulphur but not phosphorus), and in the other batch the phage DNA was labelled with 32P (since DNA contains phosphorus but not sulphur). They allowed each batch to infect separate E. coli cultures. After infection, the culture was agitated in a blender to separate the phage coats attached to the bacterial surface from the bacterial cells, and then centrifuged, so the heavier bacterial cells settled at the bottom (pellet) while the lighter phage particles/coats remained in the supernatant. They found that the bacterial cells infected with 32P-labelled phages (DNA-labelled) were radioactive, showing that DNA entered the bacterial cell, while the cells infected with 35S-labelled phages (protein-labelled) showed no radioactivity in the pellet, showing that the protein coat remained outside. Since DNA (not protein) entered the bacterial cells and directed the production of new progeny phages, this proved that DNA is the genetic material.",
+    "steps": [
+      "Labelled phage protein with 35S and phage DNA with 32P in separate batches",
+      "Infected bacteria, agitated in a blender to detach the phage coats from the bacteria, then centrifuged",
+      "32P (DNA) was found inside the bacterial pellet; 35S (protein) remained outside in the supernatant",
+      "Since DNA entered the cell and directed synthesis of progeny phages, DNA (not protein) is the genetic material"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-8",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Differentiate between the followings:\n(a) Repetitive DNA and Satellite DNA\n(b) mRNA and tRNA\n(c) Template strand and Coding strand",
+    "solution": "(a) Repetitive DNA and Satellite DNA: Repetitive DNA refers to DNA sequences that are repeated many times in the genome. Satellite DNA is a specific category of repetitive DNA consisting of highly repetitive sequences that form a small peak distinct from the bulk (main-band) DNA when genomic DNA is separated by density gradient centrifugation; satellite DNA is largely concentrated at centromeric and telomeric regions and does not code for proteins, being used in techniques like DNA fingerprinting.\n(b) mRNA and tRNA: Messenger RNA (mRNA) carries the genetic information (codons) copied from DNA in the form of a series of triplet codons that specify the amino acid sequence of a polypeptide; it serves as the template for translation. Transfer RNA (tRNA) is a small, clover-leaf-shaped adapter molecule that reads the genetic code on mRNA and carries specific amino acids to the ribosome for polypeptide synthesis; it has an anticodon complementary to the mRNA codon.\n(c) Template strand and Coding strand: The template strand is the DNA strand that is actually used by RNA polymerase as a template to synthesise a complementary RNA transcript (it runs 3'->5' relative to the direction of transcription). The coding strand (sense strand) is the other DNA strand, which is not copied but has the same sequence as the RNA transcript (except T is replaced by U); it runs 5'->3', the same as the mRNA.",
+    "steps": [
+      "Repetitive DNA is any repeated sequence; satellite DNA is a distinct, highly-repetitive fraction separable by density gradient centrifugation, mostly non-coding and used in fingerprinting",
+      "mRNA carries codons specifying protein sequence; tRNA is the adapter that brings amino acids matching mRNA codons via its anticodon",
+      "Template strand is copied (3'->5') to make RNA; coding strand is not copied but matches the RNA sequence (with T instead of U)"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-9",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "List two essential roles of ribosome during translation.",
+    "solution": "Two essential roles of the ribosome during translation are: (i) it acts as the site of protein synthesis, providing binding sites (A-site, P-site and E-site) for mRNA, tRNAs and associated factors, and moving along the mRNA codon by codon; and (ii) the large subunit of the ribosome (specifically its rRNA) acts as a ribozyme, catalysing the formation of the peptide bond between adjacent amino acids during elongation of the polypeptide chain.",
+    "steps": [
+      "Ribosome provides the physical site/machinery (A, P, E sites) for mRNA-tRNA interaction and moves along mRNA to decode codons",
+      "Ribosomal RNA of the large subunit catalyses peptide bond formation (peptidyl transferase activity), acting as a ribozyme"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-10",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "In the medium where E. coli was growing, lactose was added, which induced the lac operon. Then, why does lac operon shut down some time after addition of lactose in the medium?",
+    "solution": "The lac operon is induced by lactose (through its isomer allolactose, which binds to and inactivates the repressor protein, allowing transcription of the structural genes lacZ, lacY and lacA). As transcription and translation of these genes proceed, the enzyme beta-galactosidase (product of lacZ) progressively breaks down all the available lactose in the medium into glucose and galactose. As the lactose (inducer) gets depleted, allolactose levels also fall, so the repressor protein is no longer inactivated — it becomes free to bind the operator region again and blocks transcription of the operon. Thus, once the inducer (lactose) is metabolised/exhausted, the lac operon automatically shuts down as it is no longer needed.",
+    "steps": [
+      "Lactose (via allolactose) inactivates the lac repressor, switching the operon ON",
+      "The enzymes produced (beta-galactosidase) break down and deplete the lactose in the medium over time",
+      "As inducer (allolactose) level falls, the repressor becomes active again and binds the operator",
+      "Operon is switched OFF once its substrate/inducer is exhausted — an example of a feedback/self-regulating control loop"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-11",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "Explain (in one or two lines) the function of the followings:\n(a) Promoter\n(b) tRNA\n(c) Exons",
+    "solution": "(a) Promoter: A specific DNA sequence located near the start of a gene where RNA polymerase binds to initiate transcription; it determines the direction and site of transcription start.\n(b) tRNA: An adapter molecule that reads the codon on mRNA (via its anticodon) and carries the corresponding specific amino acid to the ribosome for polypeptide synthesis during translation.\n(c) Exons: The coding (expressed) sequences of a split (eukaryotic) gene that are retained in the mature mRNA after processing (splicing) and are translated into protein.",
+    "steps": [
+      "Promoter = DNA sequence for RNA polymerase binding, sets transcription start site",
+      "tRNA = adapter carrying amino acids to ribosome according to mRNA codons",
+      "Exons = coding sequences retained in mature mRNA after splicing (as opposed to introns, which are removed)"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-12",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Why is the Human Genome project called a mega project?",
+    "solution": "The Human Genome Project (HGP) is called a mega project because of its enormous scale and ambitious goals: the human genome contains about 3 x 10^9 (3 billion) base pairs, and since the cost of sequencing was about US $3 per base pair at the time, the estimated cost of the complete project alone would run into billions of dollars. To sequence such a huge amount of DNA and store, analyse and retrieve the data required at that time the development and use of high-speed computational devices for data analysis. The project therefore required massive funding, an international collaborative effort spanning many countries and institutions over about 13 years, and the coordinated involvement of specialists from many scientific disciplines (biology, computer science, engineering), justifying the term 'mega project'.",
+    "steps": [
+      "Human genome has ~3 billion base pairs, making sequencing extremely large in scale",
+      "Sequencing cost (roughly $3 per base pair at the time) implied a total cost in billions of dollars",
+      "Required powerful computers and bioinformatics tools to store/analyse enormous data",
+      "Involved international collaboration among many countries/institutions over about 13 years"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-13",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "What is DNA fingerprinting? Mention its application.",
+    "solution": "DNA fingerprinting is a technique that detects variation (polymorphism) in the specific, highly variable repetitive DNA sequences (VNTRs/satellite DNA) present in the genome of every individual, producing a unique pattern of DNA fragments (like a 'fingerprint') for each person (except identical twins). It typically involves isolating DNA, cutting it with restriction enzymes, separating the fragments by gel electrophoresis, and probing for the polymorphic (repetitive) regions using techniques such as Southern hybridisation with a radioactive/labelled probe. Applications include: forensic science, for identifying criminals/suspects from biological samples (blood, semen, hair, saliva) found at a crime scene; paternity/maternity and other relationship testing; identification of dead bodies in mass disasters/accidents; and study of population and evolutionary biology (genetic diversity studies).",
+    "steps": [
+      "DNA fingerprinting detects individual-specific variation/polymorphism in repetitive DNA sequences",
+      "Involves restriction digestion, gel electrophoresis and hybridisation with a probe for repetitive regions",
+      "Produces a unique banding pattern for each individual, useful for identification",
+      "Applications: forensic investigation, paternity testing, disaster victim identification, evolutionary/population studies"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-molecular-inheritance-14",
+    "chapter": "Molecular Basis of Inheritance",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "Briefly describe the following:\n(a) Transcription\n(b) Polymorphism\n(c) Translation\n(d) Bioinformatics",
+    "solution": "(a) Transcription: The process of copying genetic information from one strand (template) of DNA into a complementary sequence of RNA, carried out by RNA polymerase; it produces mRNA (as well as tRNA and rRNA).\n(b) Polymorphism: The occurrence of variation (differences in DNA sequence) among individuals of a population at a given genetic locus, arising due to mutations, which forms the basis for techniques such as DNA fingerprinting and contributes to evolution.\n(c) Translation: The process of polymerisation of amino acids to form a polypeptide, in which the sequence and order of amino acids is defined by the sequence of codons on the mRNA, carried out on ribosomes with the help of tRNA adaptors.\n(d) Bioinformatics: An interdisciplinary field that uses computational tools and databases to store, manage, analyse and interpret large amounts of biological data (such as DNA and protein sequences), aiding in gene identification, drug design and understanding molecular evolution.",
+    "steps": [
+      "Transcription: DNA-template-directed synthesis of RNA by RNA polymerase",
+      "Polymorphism: sequence variation among individuals at a locus, basis of fingerprinting and evolution",
+      "Translation: ribosome-mediated synthesis of polypeptide using mRNA codons and tRNA adaptors",
+      "Bioinformatics: computational management/analysis of biological (sequence) data"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-1",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Explain antibiotic resistance observed in bacteria in light of Darwinian selection theory.",
+    "solution": "In a large bacterial population, random mutations naturally occur, and a small number of bacteria may possess a mutation that confers resistance to a particular antibiotic even before the population is ever exposed to that antibiotic. When the antibiotic is applied, it kills the antibiotic-sensitive bacteria, but the rare resistant mutants survive because they possess a selective advantage under this new environmental (antibiotic) pressure. These resistant bacteria then multiply rapidly (since competitors are eliminated and resources are freed up), so their proportion in the population increases over successive generations. This is a direct example of Darwin's theory of natural selection — the environment (antibiotic) selects for individuals already possessing a heritable variation (resistance) that gives them a survival and reproductive advantage, leading to an increase in frequency of the resistant trait in the population over time.",
+    "steps": [
+      "Random mutations pre-exist in the bacterial population before antibiotic exposure (mutation is not induced by the antibiotic)",
+      "Antibiotic application acts as a selection pressure, killing sensitive bacteria",
+      "Resistant bacteria (already carrying the mutation) survive and reproduce, since competition is reduced",
+      "Frequency of resistance genes rises across generations — natural selection acting on pre-existing variation"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-2",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Find out from newspapers and popular science articles any new fossil discoveries or controversies about evolution.",
+    "solution": "This is an open-ended research/current-affairs task meant to be explored using newspapers, magazines or the internet under a teacher's guidance, and cannot be answered definitively from the textbook alone. As illustration, students could look up well-known fossil finds and debates such as: the discovery of new hominin fossils (e.g., Homo naledi, Homo floresiensis) which have sparked debate about the human evolutionary tree; discoveries of transitional fossils such as Tiktaalik (a fish-tetrapod intermediate) that shed light on the water-to-land transition; and ongoing scientific debates on the exact placement of species like Australopithecus in the hominin lineage. Students should research current, dated examples from recent newspapers/journals for an up-to-date answer.",
+    "steps": [
+      "This is a project-type, current-affairs question requiring newspaper/internet research",
+      "Illustrative examples: Homo naledi, Homo floresiensis, Tiktaalik as a fish-tetrapod transitional fossil",
+      "Ongoing debates often concern classification and placement of hominin fossils in the human lineage",
+      "Students should look for the latest reported discoveries for a current answer"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-3",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Attempt giving a clear definition of the term species.",
+    "solution": "A species may be defined as a group of actually or potentially interbreeding natural populations, which are reproductively isolated from other such groups and share a common gene pool. Members of a species can interbreed among themselves to produce fertile offspring under natural conditions, but are unable to successfully interbreed with members of other species (reproductive isolation), a concept known as the biological species concept.",
+    "steps": [
+      "Species = group of interbreeding natural populations sharing a common gene pool",
+      "Members can produce fertile offspring among themselves",
+      "They are reproductively isolated from other such groups (cannot interbreed successfully with other species)",
+      "This is known as the biological species concept"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-4",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Try to trace the various components of human evolution (hint: brain size and function, skeletal structure, dietary preference, etc.)",
+    "solution": "Human evolution shows a gradual trend across several interconnected features over about 15 million years, from ape-like ancestors (e.g., Dryopithecus, Ramapithecus) through australopithecines (~3-4 million years ago, walked upright, small brain ~400 cc, ate fruit) to Homo habilis (~2 million years ago, first tool-user, brain capacity ~650-800 cc), Homo erectus (~1.5 million years ago, brain ~900 cc, used stone/fire, ate meat), Homo neanderthalensis (~1,00,000-40,000 years ago, brain ~1400 cc, lived in cold climates, buried the dead), and finally Homo sapiens (~75,000-10,000 years back for modern humans, brain capacity ~1400 cc). The key trends include: progressive increase in cranial capacity/brain size and complexity; a gradual change in skeletal structure enabling fully upright bipedal walking and freeing the hands for tool use; changes in jaw and teeth structure and dietary preference from largely herbivorous/fruit-eating to omnivorous, meat-including diets after the discovery of hunting and fire; and cultural evolution including use of tools, language, art and social organisation.",
+    "steps": [
+      "Progressive increase in brain/cranial capacity from ~400cc (Australopithecus) to ~1400cc (Homo sapiens)",
+      "Skeletal changes enabling upright bipedal posture and freed hands for tool use",
+      "Dietary shift from largely plant-based/fruit diet to omnivorous diet including meat, aided by hunting and use of fire",
+      "Cultural evolution: tool-making, use of fire, language, art and social living developed progressively"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-5",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Find out through internet and popular science articles whether animals other than man has self-consciousness.",
+    "solution": "Yes, several studies suggest that some animals besides humans show signs of self-awareness/self-consciousness. The most common test used is the 'mirror test' (mirror self-recognition test), in which a mark is placed on an animal's body where it can only be seen in a mirror; if the animal touches or investigates the mark on its own body (rather than reacting to the mirror image as another individual), it is considered evidence of self-recognition. Animals that have shown positive results in such tests include great apes (chimpanzees, orangutans, bonobos, gorillas in some studies), dolphins, elephants and, notably, the magpie (a bird). This indicates that self-awareness is not unique to humans, though the degree and nature of self-consciousness likely varies across species.",
+    "steps": [
+      "Self-awareness in animals is commonly tested using the mirror self-recognition test",
+      "Animal touches/investigates a mark on its own body only visible via mirror, indicating self-recognition",
+      "Great apes, dolphins, elephants and magpies have shown positive results in such tests",
+      "Suggests self-consciousness is present, in varying degrees, in some non-human animals too"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-6",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "List 10 modern-day animals and using the internet resources link it to a corresponding ancient fossil. Name both.",
+    "solution": "This is an open research/project exercise best done using internet resources, but representative examples of modern animals and their ancient fossil relatives/ancestors include: 1. Modern horse (Equus) — ancestor Eohippus (Hyracotherium); 2. Modern elephant (Elephas/Loxodonta) — ancestor Moeritherium/Mammoth (Mammuthus); 3. Modern human (Homo sapiens) — ancestor Australopithecus/Homo erectus; 4. Modern whale — ancestor Pakicetus (a land mammal ancestor of whales); 5. Modern camel — ancestor Protylopus; 6. Modern rhinoceros — ancestor Hyracodon; 7. Modern birds — ancestor Archaeopteryx (a feathered dinosaur-bird transitional fossil); 8. Modern crocodile — ancestor Protosuchus; 9. Modern turtle — ancestor Proganochelys; 10. Modern giraffe — ancestor Palaeotragus.",
+    "steps": [
+      "Task requires linking present-day animals to their fossil ancestors, e.g. via internet research",
+      "Classic examples: horse lineage (Eohippus to Equus), elephant lineage (Moeritherium to modern elephants)",
+      "Human lineage: Australopithecus/Homo erectus to Homo sapiens",
+      "Other examples: whale from Pakicetus, birds from Archaeopteryx"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-7",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Describe one example of adaptive radiation.",
+    "solution": "A classic example of adaptive radiation is that of Darwin's finches on the Galapagos Islands. Darwin found several species of finches on these isolated islands, all believed to have evolved from a single ancestral seed-eating finch species that migrated from the mainland. In the absence of competitors, this ancestral species radiated (diversified) into a variety of new species, each occupying a different ecological niche and adapted to a particular food source — some evolved into insectivorous forms, others into different types of seed-eaters with beaks specialised for different-sized seeds, based on the differing habitats of the islands. This process, in which a single ancestral species evolves and diversifies into many new species, each adapted to utilise a different resource or habitat within the same geographical area, is termed adaptive radiation.",
+    "steps": [
+      "Darwin's finches (Galapagos Islands) is a classic textbook example",
+      "All finch species descended from a single ancestral seed-eating finch species",
+      "In the absence of competitors, they diversified to exploit different food sources/niches on different islands",
+      "Adaptive radiation = diversification of an ancestral species into many species adapted to different niches within the same area"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-8",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Can we call human evolution as adaptive radiation?",
+    "solution": "No, strictly speaking, human evolution is not typically classified as adaptive radiation. Adaptive radiation refers to the evolution of many different species from a single ancestral species, all radiating out to occupy different ecological niches within the same geographical area (as in Darwin's finches or Australian marsupials). Human evolution, in contrast, represents a largely linear (though branching in parts) sequence of evolutionary change within a single lineage over time, leading to modern Homo sapiens, generally occurring across different geographical areas as populations migrated, rather than multiple contemporaneous species radiating from a single ancestor within one habitat to fill diverse niches. Hence it is better described as a case of continued/progressive evolution rather than adaptive radiation, although the broader process of evolution of primates as a group (from which humans descended) does show elements of adaptive radiation.",
+    "steps": [
+      "Adaptive radiation = one ancestral species giving rise to MANY species filling different niches in one area",
+      "Human evolution is largely a single lineage progressively evolving over time (not multiple contemporaneous species from one ancestor in one place)",
+      "So human evolution is better termed as linear/progressive evolution, not adaptive radiation, in the strict sense",
+      "The broader primate radiation, however, does show adaptive radiation-like features"
+    ]
+  },
+  {
+    "id": "sol-xii-bio-evolution-9",
+    "chapter": "Evolution",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Using various resources such as your school Library or the internet and discussions with your teacher, trace the evolutionary stages of any one animal, say horse.",
+    "solution": "The evolution of the modern horse (Equus) from its ancestor Eohippus (also called Hyracotherium) over about 60 million years is a well-documented example of evolution, showing a general trend of: increase in body size (from a small, fox-sized animal to the large modern horse); reduction in the number of toes from four functional toes on the forelimb and three on the hind limb in Eohippus to a single functional toe (hoof) in modern Equus; lengthening of the face and legs; increase in size and complexity of the brain; and change in tooth structure/premolars from suited for browsing on soft leaves to those suited for grazing on hard, siliceous grasses. The generally accepted sequence of horse evolution is: Eohippus → Mesohippus → Merychippus → Pliohippus → Equus (modern horse), reflecting adaptation to a changing environment from forested habitats to open grasslands.",
+    "steps": [
+      "Horse evolution sequence: Eohippus -> Mesohippus -> Merychippus -> Pliohippus -> Equus",
+      "Trend of increasing body size and leg/face length over ~60 million years",
+      "Reduction of toes from four (forelimb)/three (hindlimb) to a single hoofed toe",
+      "Change in teeth (browsing to grazing type) and brain size reflecting adaptation from forest to grassland habitat"
+    ]
   }
 ]
