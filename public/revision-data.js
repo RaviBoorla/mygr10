@@ -6491,3 +6491,309 @@ REVISION['XII Biology'] = [
     ]
   }
 ];
+
+REVISION['XII Computer Science'] = [
+  {
+    chapter: 'Exception Handling in Python',
+    formulae: [],
+    logic: [
+      'try-except block: try encloses risky code; except catches specific exception types',
+      'except ExceptionType as e: catches named exception and binds it to variable e',
+      'else clause runs only if no exception was raised in try block',
+      'finally clause always runs regardless of whether an exception occurred',
+      'raise ExceptionName("message") manually triggers an exception',
+      'Exception hierarchy: BaseException → Exception → ArithmeticError, ValueError, etc.'
+    ],
+    tips: [
+      'Catching broad Exception hides bugs; prefer specific exception types (ValueError, ZeroDivisionError)',
+      'finally is used for cleanup: closing files, releasing resources',
+      'Custom exceptions: define a class inheriting from Exception',
+      'SyntaxError cannot be caught at runtime — it prevents the program from starting'
+    ],
+    bestPractices: [
+      'Always pair file.open() with a finally: file.close() or use with statement',
+      'Print or log the exception message (str(e)) to aid debugging',
+      'Distinguish between compile-time errors (SyntaxError) and runtime exceptions'
+    ]
+  },
+  {
+    chapter: 'File Handling in Python',
+    formulae: [],
+    logic: [
+      'open(filename, mode): modes — r (read), w (write, truncates), a (append), r+ (read-write), b suffix for binary',
+      'read() reads entire file; readline() reads one line; readlines() returns list of lines',
+      'write(str) writes a string; writelines(list) writes list of strings (no auto newline)',
+      'seek(offset, from): moves file pointer; tell() returns current pointer position',
+      'Text files store data as characters; binary files store data as bytes (images, audio)',
+      'CSV: comma-separated values; use csv.reader() and csv.writer() from csv module'
+    ],
+    tips: [
+      'Always close files after use or use: with open(...) as f — auto-closes on exit',
+      'Writing mode "w" deletes existing content; use "a" to preserve and append',
+      'readlines() includes newline characters \\n; strip() to remove them',
+      'Binary mode required for non-text files (images, .exe) to prevent encoding errors'
+    ],
+    bestPractices: [
+      'Prefer with open(...) as f: over manual open/close',
+      'Handle FileNotFoundError when opening files for reading',
+      'Specify encoding="utf-8" explicitly for cross-platform text file compatibility'
+    ]
+  },
+  {
+    chapter: 'Stack',
+    formulae: [
+      'LIFO — Last In First Out',
+      'Push: append element at TOP; Pop: remove element from TOP',
+      'Peek/Top: view top element without removing'
+    ],
+    logic: [
+      'Implementation using list: push → list.append(x); pop → list.pop(); peek → list[-1]',
+      'isEmpty(): return len(stack) == 0',
+      'Stack overflow: push on full stack (static array); underflow: pop on empty stack',
+      'Applications: function call stack, expression evaluation, undo operations, backtracking',
+      'Infix → Postfix conversion uses operator precedence (PEMDAS) and a stack'
+    ],
+    tips: [
+      'Python list naturally behaves as stack (append/pop from end)',
+      'Always check isEmpty() before pop to avoid IndexError',
+      'Balanced parentheses check: push opening, pop and match on closing bracket',
+      'Stack is used internally by Python for recursion (call stack)'
+    ],
+    bestPractices: [
+      'Define push(), pop(), peek(), isEmpty(), display() as functions for modularity',
+      'Return None or raise exception on underflow — do not crash silently',
+      'Trace stack state step-by-step in exam answers for infix-to-postfix questions'
+    ]
+  },
+  {
+    chapter: 'Queue',
+    formulae: [
+      'FIFO — First In First Out',
+      'Enqueue: insert at REAR; Dequeue: remove from FRONT',
+      'Circular Queue: (rear + 1) % MAX_SIZE'
+    ],
+    logic: [
+      'Linear queue using list: enqueue → append(x); dequeue → pop(0)',
+      'Deque (double-ended queue): insert/delete at both ends; Python collections.deque',
+      'Circular queue avoids "false overflow" by wrapping rear/front pointers',
+      'Priority queue: elements dequeued by priority, not arrival order',
+      'Applications: CPU scheduling, print spooling, BFS graph traversal, ticket booking'
+    ],
+    tips: [
+      'list.pop(0) is O(n); collections.deque.popleft() is O(1) — preferred for real queues',
+      'Linear queue wastes space after dequeue — use circular queue to reuse vacated slots',
+      'Deque supports appendleft() and popleft() in addition to append() and pop()',
+      'Queue is empty when front > rear (linear) or front == rear == -1 (circular)'
+    ],
+    bestPractices: [
+      'Always check for overflow/underflow conditions before enqueue/dequeue',
+      'Use isempty() and isfull() helper functions',
+      'Trace queue state (front, rear, elements) step-by-step in exam answers'
+    ]
+  },
+  {
+    chapter: 'Sorting',
+    formulae: [
+      'Bubble sort passes: n-1 passes for n elements',
+      'Selection sort comparisons: n(n-1)/2',
+      'Insertion sort: O(n²) worst case, O(n) best case (already sorted)'
+    ],
+    logic: [
+      'Bubble sort: repeatedly swap adjacent elements if out of order; largest bubbles to end each pass',
+      'Selection sort: find minimum in unsorted portion, swap with first unsorted element',
+      'Insertion sort: take one element at a time, insert it at correct position in sorted portion',
+      'All three are O(n²) time complexity in average and worst case',
+      'Stable sort: equal elements maintain original relative order (Insertion and Bubble are stable)'
+    ],
+    tips: [
+      'Bubble sort can be optimized: stop early if no swaps in a pass (already sorted)',
+      'Selection sort always does exactly n-1 swaps regardless of input order',
+      'Insertion sort is efficient for nearly-sorted data',
+      'In exam: show each pass/step clearly with array state after each iteration'
+    ],
+    bestPractices: [
+      'Always mention time complexity (O(n²)) and whether stable/unstable',
+      'Trace all passes step by step — partial traces lose marks in board exams',
+      'Selection sort: identify minimum index, then swap at end of pass (not during)'
+    ]
+  },
+  {
+    chapter: 'Searching',
+    formulae: [
+      'Linear search: O(n) — checks every element',
+      'Binary search: O(log n) — requires sorted list',
+      'mid = (low + high) // 2'
+    ],
+    logic: [
+      'Linear search: traverse list element by element; return index if match found, -1 otherwise',
+      'Binary search: compare target with mid element; search left half if target < mid, right half if target > mid',
+      'Binary search precondition: list MUST be sorted',
+      'Hash search: compute hash of key, look up bucket — O(1) average',
+      'Collision in hash: two keys map to same bucket; resolved by chaining or open addressing'
+    ],
+    tips: [
+      'Binary search on unsorted data gives WRONG results — always sort first',
+      'Binary search is much faster for large datasets (log₂(1000) ≈ 10 comparisons vs 1000)',
+      'For small or unsorted lists, linear search is simpler and acceptable',
+      'In exam: show each iteration of binary search — low, high, mid values'
+    ],
+    bestPractices: [
+      'State precondition (sorted) before applying binary search',
+      'Trace all iterations clearly showing low, high, mid and comparison result',
+      'Hash functions should distribute keys uniformly to minimise collisions'
+    ]
+  },
+  {
+    chapter: 'Understanding Data',
+    formulae: [
+      'Mean = Σx / n',
+      'Median: middle value of sorted data; average of two middle values if n is even',
+      'Mode: most frequently occurring value',
+      'Range = Max − Min',
+      'Standard Deviation (σ) = √(Σ(x − mean)² / n)'
+    ],
+    logic: [
+      'Measures of central tendency: mean, median, mode — describe centre of data',
+      'Measures of dispersion: range, variance, standard deviation — describe spread',
+      'Outliers: extreme values that distort mean; median is robust to outliers',
+      'Python statistics module: mean(), median(), mode(), stdev()',
+      'Data visualisation: bar chart (categories), histogram (frequency distribution), pie chart (proportions), line chart (trends)'
+    ],
+    tips: [
+      'Use median instead of mean when data has outliers (e.g., salaries, house prices)',
+      'Standard deviation = 0 means all values are identical',
+      'Mode can have multiple values (multimodal) or none (all values unique)',
+      'matplotlib.pyplot functions: bar(), hist(), pie(), plot()'
+    ],
+    bestPractices: [
+      'Import statistics module for Python-based statistical calculations',
+      'Label axes and add title to all matplotlib charts',
+      'Choose appropriate chart type: histogram for continuous data, bar for discrete/categorical'
+    ]
+  },
+  {
+    chapter: 'Database Concepts',
+    formulae: [],
+    logic: [
+      'DBMS: software to create, manage, and query databases (MySQL, Oracle, SQLite)',
+      'Relational model: data stored in tables (relations) with rows (tuples) and columns (attributes)',
+      'Primary key: uniquely identifies each row; must be NOT NULL and unique',
+      'Foreign key: attribute in one table referencing primary key of another table',
+      'Candidate key: minimal set of attributes that can uniquely identify a row',
+      'Data integrity: entity integrity (no null PKs), referential integrity (FK must reference existing PK)',
+      'DDL (Data Definition Language): CREATE, ALTER, DROP; DML: INSERT, UPDATE, DELETE, SELECT'
+    ],
+    tips: [
+      'Primary key cannot be NULL; foreign key can be NULL (optional relationship)',
+      'One table can have only ONE primary key but multiple candidate keys',
+      'Referential integrity: cannot insert FK value that does not exist in parent table',
+      'RDBMS stores data in normalised form to reduce redundancy'
+    ],
+    bestPractices: [
+      'Always identify primary key, foreign key, and candidate keys when designing a schema',
+      'Distinguish between DDL (structure) and DML (data manipulation) commands',
+      'Understand that NULL means "unknown/missing" not zero or empty string'
+    ]
+  },
+  {
+    chapter: 'Structured Query Language',
+    formulae: [],
+    logic: [
+      'DDL: CREATE TABLE, ALTER TABLE (ADD/MODIFY/DROP column), DROP TABLE, TRUNCATE',
+      'DML: INSERT INTO, SELECT ... FROM ... WHERE, UPDATE ... SET ... WHERE, DELETE FROM ... WHERE',
+      'Aggregate functions: COUNT(), SUM(), AVG(), MAX(), MIN() — operate on column values',
+      'GROUP BY: groups rows with same value in specified column for aggregate calculation',
+      'HAVING: filters groups (used with GROUP BY); WHERE filters rows before grouping',
+      'ORDER BY col [ASC|DESC]: sorts result set',
+      'JOIN: INNER JOIN (matching rows only), LEFT JOIN (all from left + matching from right)',
+      'LIKE: pattern matching — % matches any sequence, _ matches single character'
+    ],
+    tips: [
+      'WHERE filters individual rows; HAVING filters aggregated groups',
+      'SELECT DISTINCT removes duplicate rows from result',
+      'NULL comparisons: use IS NULL / IS NOT NULL, not = NULL',
+      'ORDER BY default is ASC; use DESC for descending order'
+    ],
+    bestPractices: [
+      'Always use WHERE in UPDATE/DELETE to avoid affecting all rows',
+      'Quote string literals with single quotes in SQL: WHERE name = \'Rahul\'',
+      'Aliases (AS): SELECT AVG(marks) AS average FROM student makes output readable'
+    ]
+  },
+  {
+    chapter: 'Computer Networks',
+    formulae: [],
+    logic: [
+      'Network types: LAN (same building/campus), MAN (city-wide), WAN (country/global) — classified by geographic area',
+      'Topology: Bus (single backbone cable), Star (hub/switch at centre), Ring (circular), Mesh (every node connected)',
+      'Devices: Modem (digital↔analog), NIC (network interface, has MAC address), Repeater (signal boost), Switch (connects LAN devices), Router (connects different networks)',
+      'MAC address: 48-bit hardware address unique to each NIC',
+      'IP address: logical address assigned to device; IPv4 (32-bit), IPv6 (128-bit)',
+      'DNS: translates domain names (www.google.com) to IP addresses',
+      'Protocol: set of rules governing data communication (TCP/IP, HTTP, FTP, SMTP)'
+    ],
+    tips: [
+      'Switch operates at data link layer; Router operates at network layer',
+      'Internet is the largest WAN connecting billions of devices',
+      'Ethernet is the standard wired LAN technology (set of rules for LAN connection)',
+      'Repeater regenerates signals to extend network distance; does not route/switch'
+    ],
+    bestPractices: [
+      'Match network type (LAN/MAN/WAN) to given scenario and justify',
+      'Know device functions clearly: modem converts, NIC connects, switch forwards within LAN, router connects LANs',
+      'IPv4: dotted decimal notation (e.g., 192.168.1.1); 4 octets of 8 bits each'
+    ]
+  },
+  {
+    chapter: 'Data Communication',
+    formulae: [
+      'Bandwidth: measured in Hertz (Hz) — capacity of channel',
+      'Data transfer rate: bits per second (bps, Kbps, Mbps, Gbps)'
+    ],
+    logic: [
+      'Components: Sender, Receiver, Message, Channel (transmission medium), Protocol',
+      'Guided media (wired): Twisted pair cable, Coaxial cable, Fibre optic cable',
+      'Unguided media (wireless): Radio waves, Microwaves, Infrared, Visible light',
+      'Communication modes: Simplex (one-way), Half-duplex (both ways, not simultaneously), Full-duplex (both ways simultaneously)',
+      'Switching: Circuit switching (dedicated path), Packet switching (data in packets, different routes)',
+      'TCP/IP: TCP breaks data into packets, ensures delivery; IP addresses and routes packets',
+      'Wireless generations: 1G (analog voice), 2G (digital voice+SMS), 3G (mobile internet), 4G (LTE broadband), 5G (ultra-fast low-latency)'
+    ],
+    tips: [
+      'Fibre optic is fastest and most secure guided medium (light pulses, no EM interference)',
+      'Packet switching is more efficient than circuit switching for internet data',
+      'Bluetooth: short-range wireless (personal area network, ~10m)',
+      'Wi-Fi uses radio waves; operates on 2.4 GHz or 5 GHz frequency bands'
+    ],
+    bestPractices: [
+      'Classify transmission media as guided/unguided with example for each',
+      'Distinguish simplex/half-duplex/full-duplex with real-world examples (TV remote, walkie-talkie, phone)',
+      'Explain TCP/IP: TCP handles reliability and ordering; IP handles addressing and routing'
+    ]
+  },
+  {
+    chapter: 'Security Aspects',
+    formulae: [],
+    logic: [
+      'Malware types: Virus (self-replicating, attaches to files), Worm (standalone, spreads via network), Trojan (disguised as legitimate software), Ransomware (encrypts data, demands ransom), Spyware (collects info secretly), Adware (unwanted ads), Keylogger (records keystrokes)',
+      'Malware detection methods: Signature-based (known patterns), Heuristic (behavior analysis), Sandbox (run in isolated environment)',
+      'Spam: unsolicited bulk messages (email, SMS)',
+      'Firewall: blocks unauthorized access; types — Network firewall (hardware/software), Host-based firewall',
+      'HTTPS: HTTP + SSL/TLS encryption; padlock icon in browser — encrypts data in transit',
+      'Cookie: small file stored by browser containing session/preference data',
+      'Eavesdropping: intercepting real-time communication; Snooping: copying stored data/communications'
+    ],
+    tips: [
+      'Antivirus detects/removes malware using signature, heuristic, and sandbox methods',
+      'Strong passwords: mix uppercase, lowercase, digits, special characters; no dictionary words',
+      'Two-factor authentication (2FA) adds security layer beyond password',
+      'Phishing: fraudulent emails/sites that mimic legitimate ones to steal credentials'
+    ],
+    bestPractices: [
+      'Distinguish between different malware types with one defining characteristic each',
+      'Firewall is preventive; antivirus is detective and corrective',
+      'HTTPS ensures confidentiality (encryption) and integrity; HTTP is unencrypted and insecure',
+      'Keep software updated to patch security vulnerabilities (buffer overflow, SQL injection exploits)'
+    ]
+  }
+];
