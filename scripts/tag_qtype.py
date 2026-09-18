@@ -21,6 +21,7 @@ FILES = [
     "X-CBSE-Mathematics.json",
     "X-CBSE-Science.json",
     "X-CBSE-Social-Science.json",
+    "XII-CBSE-Computer-Science.json",
 ]
 
 
