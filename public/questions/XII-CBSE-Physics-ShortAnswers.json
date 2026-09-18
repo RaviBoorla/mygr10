@@ -1,0 +1,1049 @@
+[
+  {
+    "id": "xii-phy-sa001",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Using Gauss's law, derive the expression for the electric field due to an infinitely long straight uniformly charged wire at a perpendicular distance r from the wire.",
+    "modelAnswer": "Draw a cylindrical Gaussian surface of radius r and length l coaxial with the wire. By symmetry E is radial. Flux = E × 2πrl. Charge enclosed = λl. By Gauss's law E × 2πrl = λl/ε₀, giving E = λ/(2πε₀r), directed radially outward (for positive λ).",
+    "keyPoints": [
+      "Cylindrical Gaussian surface",
+      "E = λ/(2πε₀r)",
+      "Direction radially outward"
+    ]
+  },
+  {
+    "id": "xii-phy-sa002",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "An electric dipole of dipole moment p is placed in a uniform external electric field E. Obtain the expression for the torque acting on the dipole and state the condition for stable and unstable equilibrium.",
+    "modelAnswer": "Torque τ = pE sinθ (in vector form τ = p × E). Stable equilibrium: θ = 0 (dipole parallel to E, minimum PE). Unstable equilibrium: θ = 180° (dipole antiparallel to E, maximum PE).",
+    "keyPoints": [
+      "τ = pE sinθ",
+      "Stable equilibrium at θ = 0°",
+      "Unstable equilibrium at θ = 180°"
+    ]
+  },
+  {
+    "id": "xii-phy-sa003",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Three point charges, q each, are placed at the three vertices of an equilateral triangle of side 'a'. Obtain an expression for the net force on one charge due to the other two charges.",
+    "modelAnswer": "Force on charge at A due to charge at B: F₁ = kq²/a² along AB produced. Force due to charge at C: F₂ = kq²/a² along AC produced. Angle between F₁ and F₂ = 60°. Net force = √(F₁² + F₂² + 2F₁F₂cos60°) = √3 kq²/a², directed along the bisector (away from triangle).",
+    "keyPoints": [
+      "F = kq²/a² from each charge",
+      "Angle between forces = 60°",
+      "Net F = √3 kq²/a²"
+    ]
+  },
+  {
+    "id": "xii-phy-sa004",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Derive an expression for the energy stored in a parallel plate capacitor with air between its plates. How does the energy change when a dielectric of constant K is inserted to completely fill the space between the plates (capacitor remains connected to battery)?",
+    "modelAnswer": "Energy stored U = Q²/(2C) = CV²/2 = QV/2. With battery connected, V is constant. C increases to KC, so new energy U' = K·CV²/2 = KU. Energy increases by factor K (extra energy supplied by battery).",
+    "keyPoints": [
+      "U = CV²/2 = Q²/2C",
+      "Battery connected: V constant",
+      "U' = KU (increases K times)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa005",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A parallel plate capacitor is connected to a battery. A dielectric slab is then withdrawn from between the plates. How do (a) the charge on the capacitor, (b) the electric flux linked with the capacitor, and (c) the electric field between the plates change?",
+    "modelAnswer": "(a) Charge decreases: Q = CV; C = ε₀A/d decreases when K removed, so Q decreases. (b) Electric flux φ = Q/ε₀ also decreases. (c) Electric field E = V/d remains unchanged (V fixed by battery, d unchanged).",
+    "keyPoints": [
+      "Charge decreases",
+      "Flux decreases",
+      "Electric field unchanged (V/d constant)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa006",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Two parallel plate capacitors X and Y are connected in series to a 6 V battery. They have the same plate area and plate separation but capacitor X has air between its plates while capacitor Y contains a material of dielectric constant 4. If the equivalent capacitance of the combination is 4 μF, calculate (a) capacitances of X and Y, and (b) potential difference across X and Y.",
+    "modelAnswer": "(a) Let C_X = C. Then C_Y = 4C (dielectric). Series: 1/4 = 1/C + 1/4C = 5/4C → C = 5 μF, C_Y = 20 μF. (b) Charge Q = 4×10⁻⁶ × 6 = 24 μC. V_X = Q/C_X = 24/5 = 4.8 V. V_Y = Q/C_Y = 24/20 = 1.2 V.",
+    "keyPoints": [
+      "C_X = 5 μF, C_Y = 20 μF",
+      "V_X = 4.8 V",
+      "V_Y = 1.2 V"
+    ]
+  },
+  {
+    "id": "xii-phy-sa007",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A battery of emf 6 V and internal resistance 1 Ω is connected to a resistor. The current in the circuit is 0.5 A. Calculate (i) the resistance of the resistor, and (ii) the terminal voltage of the battery.",
+    "modelAnswer": "(i) EMF = I(R + r) → 6 = 0.5(R + 1) → R = 11 Ω. (ii) Terminal voltage V = EMF − Ir = 6 − 0.5×1 = 5.5 V.",
+    "keyPoints": [
+      "R = EMF/I − r = 11 Ω",
+      "Terminal voltage = EMF − Ir = 5.5 V"
+    ]
+  },
+  {
+    "id": "xii-phy-sa008",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "An electric iron rated 2.2 kW, 220 V is operated at 110 V supply. Find (i) its resistance, and (ii) heat produced by it in 10 minutes.",
+    "modelAnswer": "(i) R = V²/P = (220)²/2200 = 22 Ω. (ii) At 110 V: P' = V'²/R = (110)²/22 = 550 W. Heat = P' × t = 550 × 600 = 3.3 × 10⁵ J.",
+    "keyPoints": [
+      "R = V²/P = 22 Ω",
+      "P at 110V = 550 W",
+      "Heat = 3.3 × 10⁵ J in 10 min"
+    ]
+  },
+  {
+    "id": "xii-phy-sa009",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A current of 4.0 A flows through a wire of length 1 m and cross-sectional area 1.0 mm² when a potential difference of 2 V is applied across its ends. Calculate the resistivity of the material of the wire.",
+    "modelAnswer": "Resistance R = V/I = 2/4 = 0.5 Ω. Resistivity ρ = RA/l = 0.5 × 1×10⁻⁶/1 = 5 × 10⁻⁷ Ω·m.",
+    "keyPoints": [
+      "R = V/I = 0.5 Ω",
+      "ρ = RA/l = 5 × 10⁻⁷ Ω·m"
+    ]
+  },
+  {
+    "id": "xii-phy-sa010",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "State Kirchhoff's rules for an electrical circuit. Using these rules, find the current in the 3 Ω branch of a Wheatstone bridge circuit (given appropriate circuit diagram with sources and resistors).",
+    "modelAnswer": "Kirchhoff's Junction Rule: Sum of currents at a junction = 0 (charge conservation). Loop Rule: Sum of EMFs and IR drops around any closed loop = 0 (energy conservation). Apply these to set up simultaneous equations for the bridge circuit and solve for current in the 3 Ω branch.",
+    "keyPoints": [
+      "Junction rule: ΣI = 0",
+      "Loop rule: ΣV = 0",
+      "Set up equations and solve"
+    ]
+  },
+  {
+    "id": "xii-phy-sa011",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Consider a cylindrical conductor of length l and area of cross-section A. Current I is maintained and electrons drift with velocity v_d (|v_d| = e|E|/mτ). Show that the conductivity σ of the material is given by σ = ne²τ/m.",
+    "modelAnswer": "Drift velocity v_d = eEτ/m. Current density j = nev_d = ne²Eτ/m. By definition j = σE, so σ = ne²τ/m. Also ρ = 1/σ = m/(ne²τ). This is the microscopic model of resistivity.",
+    "keyPoints": [
+      "v_d = eEτ/m",
+      "j = nev_d = ne²Eτ/m",
+      "σ = ne²τ/m"
+    ]
+  },
+  {
+    "id": "xii-phy-sa012",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Derive the condition for a balanced Wheatstone bridge. A metal wire has resistance 1.05 Ω at 20°C and 1.38 Ω at 100°C. Determine the temperature coefficient of resistivity of this metal.",
+    "modelAnswer": "Wheatstone balance: No current through galvanometer. By Kirchhoff's rules: P/Q = R/S. Temperature coefficient: α = (R₂ − R₁)/[R₁(T₂ − T₁)] = (1.38 − 1.05)/[1.05 × (100 − 20)] = 0.33/84 ≈ 3.93 × 10⁻³ °C⁻¹.",
+    "keyPoints": [
+      "Balance condition: P/Q = R/S",
+      "α = ΔR/(R₁ΔT)",
+      "α ≈ 3.93 × 10⁻³ °C⁻¹"
+    ]
+  },
+  {
+    "id": "xii-phy-sa013",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Write the expression for the magnetic field due to a current element in vector form (Biot-Savart law). Consider a 1 cm segment of wire centered at the origin carrying 10 A in the positive x-direction. Calculate the magnetic field B at point (1 m, 1 m, 0).",
+    "modelAnswer": "dB = (μ₀/4π) I dl × r̂ / r². Here dl = 0.01 x̂ m, r = (1,1,0) m, r = √2 m. dl × r̂ = (0.01 x̂) × (1/√2)(x̂+ŷ) = 0.01/√2 (x̂×ŷ) = 0.01/√2 ẑ. B = (10⁻⁷ × 10 × 0.01/√2)/(2) ẑ = 3.54 × 10⁻¹⁰ T in +z direction.",
+    "keyPoints": [
+      "dB = (μ₀/4π) I(dl × r̂)/r²",
+      "dl × r gives ẑ component",
+      "B = 3.54 × 10⁻¹⁰ T (ẑ)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa014",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A straight vertical wire carries a current of 3 A upward along the +z axis. Calculate the magnitude and direction of the magnetic field at a point 15 cm away from the wire on the +x-axis. Name the rule used to find the direction.",
+    "modelAnswer": "B = μ₀I/(2πr) = (4π×10⁻⁷ × 3)/(2π × 0.15) = 4 × 10⁻⁶ T = 4 μT. Direction: by right-hand rule (or Maxwell's corkscrew rule), at a point on +x-axis, B is in +y direction.",
+    "keyPoints": [
+      "B = μ₀I/(2πr)",
+      "B = 4 μT",
+      "Direction: +y (right-hand rule)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa015",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A flexible loop of irregular shape carrying current is placed in an external magnetic field. What shape does it acquire and why?",
+    "modelAnswer": "The loop acquires a circular shape. For a given perimeter (fixed wire length), a circle encloses the maximum area. The magnetic force on a current-carrying conductor in B tends to expand the loop. The loop reaches equilibrium when it encloses maximum area (circle), minimizing the tendency of further expansion.",
+    "keyPoints": [
+      "Acquires circular shape",
+      "Circle has maximum area for given perimeter",
+      "Magnetic torque/force on each element expands loop to max area"
+    ]
+  },
+  {
+    "id": "xii-phy-sa016",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "A rectangular loop of sides a and b carrying current I is placed in a magnetic field B such that its area vector A makes angle θ with B. With a suitable diagram, show that the torque on the loop is τ = m × B, where m = IA is the magnetic dipole moment. A circular coil of 100 turns, radius (10/π) cm, carrying 5.0 A is suspended in a uniform horizontal field of 2.0 T with the field making 30° with the normal to coil. Calculate (I) magnetic dipole moment, and (II) counter torque needed to prevent turning.",
+    "modelAnswer": "(I) m = NIA = 100 × 5 × π × (0.1/π)² = 100 × 5 × 0.01/π × π = 5 A·m². (II) τ = mB sinθ = 5 × 2.0 × sin30° = 5 N·m. Counter torque = 5 N·m.",
+    "keyPoints": [
+      "τ = m × B derived from force on each side",
+      "m = NIA = 5 A·m²",
+      "τ = mB sinθ = 5 N·m"
+    ]
+  },
+  {
+    "id": "xii-phy-sa017",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Show that the ratio of de Broglie wavelengths of an alpha particle to a proton, when both are accelerated through the same potential difference, is 1/√8.",
+    "modelAnswer": "λ = h/√(2mqV). For α: m = 4u, q = 2e; for p: m = u, q = e. λ_α/λ_p = √(m_p q_p)/(√(m_α q_α)) = √(1×1)/√(4×2) = 1/√8.",
+    "keyPoints": [
+      "λ = h/√(2mqV)",
+      "λ_α/λ_p = √(m_p q_p / m_α q_α)",
+      "Ratio = 1/√8"
+    ]
+  },
+  {
+    "id": "xii-phy-sa018",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Compare the torques on a square coil and a circular coil, both having equal areas and equal number of turns, carrying the same current and placed in the same uniform magnetic field.",
+    "modelAnswer": "Torque τ = NIAB sinθ. Since N, I, A, B, θ are the same for both coils, the torques are equal. The torque depends on area (not shape), so τ_square = τ_circular.",
+    "keyPoints": [
+      "τ = NIAB sinθ",
+      "Torque depends on area not shape",
+      "Torques are equal"
+    ]
+  },
+  {
+    "id": "xii-phy-sa019",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A square loop of side 10 cm, free to rotate about a vertical axis coinciding with one arm, is initially held perpendicular to a uniform horizontal magnetic field of 0.2 T. If rotated at 60 rpm, find the emf induced in the loop.",
+    "modelAnswer": "ω = 2πn = 2π rad/s (n = 1 rps). Peak emf = NBAω = 1 × 0.2 × 0.01 × 2π = 4π × 10⁻³ ≈ 0.01257 V ≈ 12.6 mV.",
+    "keyPoints": [
+      "ω = 2πn = 2π rad/s",
+      "ε₀ = NBAω",
+      "ε₀ ≈ 12.6 mV"
+    ]
+  },
+  {
+    "id": "xii-phy-sa020",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "State and explain Lenz's law. How is Lenz's law consistent with the law of conservation of energy?",
+    "modelAnswer": "Lenz's law: The direction of induced EMF is such that it opposes the change in flux that causes it. Consistency with energy conservation: Work must be done against the opposing force to change the flux. This mechanical work converts to electrical energy. If induced current aided the change, flux would increase indefinitely violating energy conservation.",
+    "keyPoints": [
+      "Induced EMF opposes cause (change in flux)",
+      "Mechanical work → electrical energy",
+      "Opposing force ensures energy conservation"
+    ]
+  },
+  {
+    "id": "xii-phy-sa021",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Derive an expression for the self-inductance of a solenoid of length l, cross-sectional area A, and number of turns N. Also derive an expression for mutual inductance between a solenoid (N₁ turns, length l, area A) and a coil of N₂ turns wound closely over it.",
+    "modelAnswer": "Self-inductance: Flux per turn = μ₀(N/l)IA. Total flux = NΦ = μ₀N²A I/l. L = μ₀N²A/l. Mutual inductance: Flux through coil from solenoid = μ₀(N₁/l)I₁A. Total linkage in N₂ coil = N₂ × μ₀N₁AI₁/l. M = μ₀N₁N₂A/l.",
+    "keyPoints": [
+      "L = μ₀N²A/l",
+      "M = μ₀N₁N₂A/l",
+      "Both depend on geometry"
+    ]
+  },
+  {
+    "id": "xii-phy-sa022",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Prove that the energy stored per unit volume (magnetic energy density) in a magnetic field B inside a solenoid is B²/(2μ₀).",
+    "modelAnswer": "Energy stored in solenoid: U = ½LI². With L = μ₀N²A/l and B = μ₀NI/l → I = Bl/(μ₀N). U = ½ × (μ₀N²A/l) × B²l²/(μ₀N)² = B²Al/(2μ₀). Volume = Al. Energy density u = U/Vol = B²/(2μ₀).",
+    "keyPoints": [
+      "U = ½LI²",
+      "Substituting L and I in terms of B",
+      "u = B²/(2μ₀)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa023",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A square conducting loop is being pulled out of a uniform magnetic field at constant velocity. How do the charge on, the electric flux through, and the magnetic field associated with the loop change during this process?",
+    "modelAnswer": "As the loop is pulled out, flux decreases → induced EMF is generated → induced current flows. (a) Charge: q = CV, V = induced EMF, so charge appears (from zero, increases then back to zero). (b) Electric flux: Flux is zero (no charge enclosed by Gaussian surface enclosing the conductor). (c) Magnetic flux decreases as area in field decreases.",
+    "keyPoints": [
+      "Induced EMF as flux changes",
+      "Electric flux through loop ≈ 0 (conductor)",
+      "Magnetic flux decreases as loop exits"
+    ]
+  },
+  {
+    "id": "xii-phy-sa024",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Differentiate between inductive reactance, capacitive reactance, and impedance of an AC circuit. An ideal inductor and ideal capacitor are connected in series with an AC voltage. Plot a graph showing variation of net reactance with frequency of the applied AC voltage.",
+    "modelAnswer": "Inductive reactance X_L = ωL (increases with frequency). Capacitive reactance X_C = 1/(ωC) (decreases with frequency). Impedance Z = √[R² + (X_L − X_C)²]. For L-C series: net reactance X = X_L − X_C = ωL − 1/(ωC). Graph: hyperbola-like curve; X < 0 at low f (capacitive), X = 0 at resonance (f₀ = 1/(2π√LC)), X > 0 at high f (inductive).",
+    "keyPoints": [
+      "X_L = ωL, X_C = 1/ωC",
+      "Z = √(R² + (X_L−X_C)²)",
+      "Net reactance = 0 at resonance f₀ = 1/(2π√LC)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa025",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Prove that in an AC circuit containing only a pure inductor, the voltage leads the current in phase by π/2 radian. Hence define inductive reactance. The instantaneous voltage is given by E = 140 sin 314t (V). Find (i) the rms value of the applied voltage and (ii) the frequency of AC supply.",
+    "modelAnswer": "For pure inductor: E = E₀ sinωt. By Faraday's law: E = L dI/dt → I = −(E₀/ωL)cosωt = (E₀/ωL)sin(ωt − π/2). Voltage leads current by π/2. Inductive reactance X_L = ωL. (i) E_rms = E₀/√2 = 140/√2 ≈ 98.99 V ≈ 99 V. (ii) ω = 314 rad/s → f = ω/(2π) = 314/(2π) ≈ 50 Hz.",
+    "keyPoints": [
+      "Voltage leads current by π/2 in pure inductor",
+      "X_L = ωL",
+      "E_rms = 140/√2 ≈ 99 V; f = 50 Hz"
+    ]
+  },
+  {
+    "id": "xii-phy-sa026",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A step-up transformer has 500 turns in primary and 5000 turns in secondary. Primary is connected to a 220 V, 50 Hz supply. Calculate: (a) the voltage across the secondary, (b) secondary current if primary current is 10 A (assuming ideal transformer).",
+    "modelAnswer": "(a) V_s/V_p = N_s/N_p → V_s = 220 × 5000/500 = 2200 V. (b) For ideal transformer: I_p V_p = I_s V_s → I_s = (10 × 220)/2200 = 1 A.",
+    "keyPoints": [
+      "V_s = N_s V_p/N_p = 2200 V",
+      "I_s = I_p V_p/V_s = 1 A",
+      "Power input = Power output (ideal)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa027",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Answer the following about transformers: (a) Can a transformer step up or step down a DC power supply? (b) Can a step-up transformer work as a step-down transformer? (c) Does a step-up transformer contradict the principle of conservation of energy? Justify.",
+    "modelAnswer": "(a) No. Transformer works on mutual induction which requires changing flux (AC). DC gives constant flux → no induced EMF. (b) Yes. By interchanging primary and secondary connections, a step-up becomes step-down. (c) No. Although voltage steps up, current steps down proportionally. Power (VI) remains the same (for ideal), so energy is conserved.",
+    "keyPoints": [
+      "Transformer needs AC (changing flux)",
+      "Step-up can become step-down by swapping terminals",
+      "Power constant: V↑ means I↓, energy conserved"
+    ]
+  },
+  {
+    "id": "xii-phy-sa028",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "What is displacement current? A capacitor is being charged by a battery. Show that the Ampere-Maxwell law justifies continuity and constancy of the current flowing in the circuit.",
+    "modelAnswer": "Displacement current I_d = ε₀ dΦ_E/dt. During charging, electric field E between plates changes → dΦ_E/dt ≠ 0 → I_d = ε₀ dΦ_E/dt. This equals the conduction current I_c in the connecting wire, ensuring continuity of total current (I_c + I_d) in the circuit.",
+    "keyPoints": [
+      "I_d = ε₀ dΦ_E/dt",
+      "I_d = I_c during capacitor charging",
+      "Ensures current continuity (Ampere-Maxwell)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa029",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Differentiate between conduction current and displacement current. A capacitor is connected across a source providing time-dependent current. Explain how the total current at an instant is the sum of conduction current and displacement current in the circuit.",
+    "modelAnswer": "Conduction current: due to actual flow of charges; exists in conductors. Displacement current: due to changing electric flux; exists in regions with changing E field (e.g., between capacitor plates). Modified Ampere's law: ∮B·dl = μ₀(I_c + I_d). Total current I = I_c + I_d. In the wire: I_c ≠ 0, I_d = 0. Between plates: I_c = 0, I_d = ε₀ dΦ_E/dt. Both equal at any instant.",
+    "keyPoints": [
+      "Conduction current: flow of charges",
+      "Displacement current: due to dΦ_E/dt",
+      "Total I = I_c + I_d (same at any cross-section)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa030",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A sinusoidal electromagnetic wave of frequency 40 MHz travels in free space in the x-direction. Calculate the wavelength and time period of the wave. At some point and instant, the electric field has its maximum value of 750 N/C along the y-axis. Calculate the magnitude and direction of the magnetic field at this position and time.",
+    "modelAnswer": "λ = c/f = 3×10⁸/(40×10⁶) = 7.5 m. T = 1/f = 1/(40×10⁶) = 25 ns. B₀ = E₀/c = 750/(3×10⁸) = 2.5 × 10⁻⁶ T. Direction: E in ŷ, wave in x̂, so B = E × k̂/c is in ẑ direction (ŷ × x̂ = −ẑ, but using right-hand rule for EM wave E × B = direction of propagation, so B is in +ẑ for wave in +x̂ when E in +ŷ, i.e., B is along −ẑ)... B in ẑ direction with magnitude 2.5 μT.",
+    "keyPoints": [
+      "λ = c/f = 7.5 m",
+      "T = 25 ns",
+      "B₀ = E₀/c = 2.5 μT, perpendicular to both E and wave direction"
+    ]
+  },
+  {
+    "id": "xii-phy-sa031",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2026 Board",
+    "text": "Name the electromagnetic waves which are produced by oscillating electric circuits and are used in RADAR. Give one application of infrared waves.",
+    "modelAnswer": "Microwaves are produced by oscillating circuits and used in RADAR. Infrared waves application: used in remote controls (TV remotes), heating (food warmers), medical therapy (physiotherapy), night-vision devices.",
+    "keyPoints": [
+      "Microwaves: produced by oscillating circuits, used in RADAR",
+      "Infrared: remote controls / physiotherapy / night vision"
+    ]
+  },
+  {
+    "id": "xii-phy-sa032",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2026 Board",
+    "text": "Name the electromagnetic waves produced by high energy electrons hitting a metal target. Write any two properties of X-rays.",
+    "modelAnswer": "X-rays are produced when high-energy electrons hit a metal target. Properties: (1) They can penetrate matter (bones, metals). (2) They have very short wavelengths (0.01–10 nm) and high frequency. (3) They affect photographic plates and ionize gases.",
+    "keyPoints": [
+      "X-rays from electron bombardment of metal target",
+      "High penetrating power",
+      "Short wavelength (0.01–10 nm)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa033",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A point source in air is placed 6 cm in front of a convex spherical surface (n = 1.5, radius of curvature = 24 cm). Find the position and nature of the image formed.",
+    "modelAnswer": "Using refraction formula: n₂/v − n₁/u = (n₂−n₁)/R. n₁=1, n₂=1.5, u=−6 cm, R=+24 cm. 1.5/v − 1/(−6) = (1.5−1)/24 = 0.5/24. 1.5/v + 1/6 = 1/48. 1.5/v = 1/48 − 8/48 = −7/48. v = −1.5 × 48/7 ≈ −10.3 cm. Image is virtual, on same side as object.",
+    "keyPoints": [
+      "n₂/v − n₁/u = (n₂−n₁)/R",
+      "v ≈ −10.3 cm (virtual image)",
+      "Image on same side as object"
+    ]
+  },
+  {
+    "id": "xii-phy-sa034",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A small object in air is placed 50 cm in front of a convex glass surface (n = 1.5, radius of curvature 20 cm). Find the position and nature of the image.",
+    "modelAnswer": "n₁=1, n₂=1.5, u=−50 cm, R=+20 cm. n₂/v − n₁/u = (n₂−n₁)/R → 1.5/v + 1/50 = 0.5/20 = 1/40. 1.5/v = 1/40 − 1/50 = (5−4)/200 = 1/200. v = 300 cm. Image is real, on the other side of the surface at 300 cm.",
+    "keyPoints": [
+      "Using n₂/v − n₁/u = (n₂−n₁)/R",
+      "v = 300 cm",
+      "Real image on transmission side"
+    ]
+  },
+  {
+    "id": "xii-phy-sa035",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A convex lens of glass (n = 1.5) has focal length f in air. What will be its new focal length when it is immersed in a liquid of refractive index 1.25? Explain whether it acts as converging or diverging.",
+    "modelAnswer": "Using Lensmaker's equation: 1/f ∝ (n_glass/n_medium − 1). In air: 1/f_air = (1.5−1)(1/R₁−1/R₂) = 0.5(1/R₁−1/R₂). In liquid: 1/f_liq = (1.5/1.25−1)(1/R₁−1/R₂) = 0.2(1/R₁−1/R₂). f_liq/f_air = 0.5/0.2 = 2.5. f_liq = 2.5f. Still converging but with longer focal length.",
+    "keyPoints": [
+      "1/f ∝ (n_rel − 1)",
+      "f_liquid = 2.5 × f_air",
+      "Still converging lens"
+    ]
+  },
+  {
+    "id": "xii-phy-sa036",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "State the conditions necessary for total internal reflection to occur. Write the formula relating the critical angle (C) and the refractive index (n) of the medium.",
+    "modelAnswer": "Conditions: (1) Light must travel from denser to rarer medium. (2) Angle of incidence must be greater than or equal to the critical angle. Formula: n = 1/sin C, where n is the refractive index of the denser medium relative to the rarer medium.",
+    "keyPoints": [
+      "Denser to rarer medium",
+      "Angle of incidence ≥ critical angle C",
+      "n = 1/sinC"
+    ]
+  },
+  {
+    "id": "xii-phy-sa037",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A ray of light MN is incident normally on face AB of a prism with an isosceles right-angled triangular base ABC. Trace the path of the ray as it passes through the prism when the refractive index of the prism material is (i) √2, and (ii) √3.",
+    "modelAnswer": "(i) n = √2: Critical angle C = sin⁻¹(1/√2) = 45°. The ray hits face AC at 45° = C, so it just undergoes TIR, emerging parallel to BC. (ii) n = √3: C = sin⁻¹(1/√3) ≈ 35.3°. The ray hits face AC at 45° > C, so it undergoes TIR, then hits face BC at 45° > C, undergoes TIR again, emerging back through face AB.",
+    "keyPoints": [
+      "Critical angle = sin⁻¹(1/n)",
+      "For n=√2: TIR at AC, exits from BC",
+      "For n=√3: TIR at both AC and BC"
+    ]
+  },
+  {
+    "id": "xii-phy-sa038",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Briefly explain the working of a reflecting telescope. Write its two advantages over a refracting telescope. A telescope consists of two lenses of focal lengths 125 cm and 5 cm. Find its magnifying power when the final image is at (i) infinity, and (ii) 25 cm from the eye.",
+    "modelAnswer": "Reflecting telescope uses a large concave mirror to collect light and a small eyepiece lens to magnify. Advantages: (1) No chromatic aberration (mirror works for all wavelengths). (2) Large aperture mirrors easier to make than large lenses. (i) m = f_o/f_e = 125/5 = 25. (ii) m = (f_o/f_e)(1 + f_e/D) = 25(1 + 5/25) = 25 × 1.2 = 30.",
+    "keyPoints": [
+      "Concave mirror + eyepiece",
+      "No chromatic aberration; easier large aperture",
+      "m = 25 (at ∞); m = 30 (at 25 cm)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa039",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "When monochromatic light is incident on a surface separating two media, the refracted and reflected light both have the same frequency as the incident light, but the wavelength of refracted light is different. Explain why.",
+    "modelAnswer": "Frequency is a property of the source and remains unchanged at any interface. At the boundary, the wave pattern must be continuous — same number of wave crests arrive and refract per unit time, so frequency is conserved. Wavelength changes because λ = v/f and the speed of light changes from v₁ to v₂ in the second medium while f remains the same.",
+    "keyPoints": [
+      "Frequency set by source, conserved at boundary",
+      "Speed changes in second medium",
+      "λ = v/f, so λ changes with v"
+    ]
+  },
+  {
+    "id": "xii-phy-sa040",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "In a Young's double-slit experiment, two waves each of intensity I superpose to produce an interference pattern. Prove that the resultant intensities at maxima and minima are 4I and zero respectively.",
+    "modelAnswer": "E_net = E₁ + E₂ = a sinωt + a sin(ωt + φ). At maxima φ = 0, 2π...: I_max = (a+a)² = 4a² = 4I. At minima φ = π, 3π...: I_min = (a−a)² = 0. This confirms energy conservation: average intensity = 2I = (4I + 0)/2.",
+    "keyPoints": [
+      "I_max = (A₁+A₂)² = 4I when amplitudes equal",
+      "I_min = (A₁−A₂)² = 0",
+      "Energy is redistributed, not lost"
+    ]
+  },
+  {
+    "id": "xii-phy-sa041",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "What are coherent sources of light? Why are coherent sources required to produce a sustained interference pattern? Give an example of interference in daily life.",
+    "modelAnswer": "Coherent sources emit light with a constant phase difference (not necessarily zero). They maintain a fixed phase relationship over time. For sustained interference: intensity at each point must remain constant. If phase difference keeps changing randomly, the bright and dark bands shift rapidly → no visible pattern. Example: Colours in soap bubbles or oil films on water (thin-film interference).",
+    "keyPoints": [
+      "Coherent: constant phase difference",
+      "Non-coherent sources give fluctuating pattern",
+      "Example: oil film, soap bubbles"
+    ]
+  },
+  {
+    "id": "xii-phy-sa042",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "A parallel beam of monochromatic light falls normally on a single slit of width 'a' and a diffraction pattern is observed on a screen at distance D. Explain: (I) formation of maxima and minima in the pattern, and (II) why maxima become weaker with increasing order n. Write any two differences between double-slit interference pattern and single-slit diffraction pattern.",
+    "modelAnswer": "Minima at a sinθ = nλ (n = ±1, ±2...). Secondary maxima at a sinθ = (2n+1)λ/2. (II) Each successive maximum corresponds to λ/2 more path difference, covering fewer Huygens wavelets → less amplitude → weaker. Differences: (1) Interference fringes are equally bright; diffraction central max is widest and brightest. (2) Interference fringe width is uniform; diffraction secondary max are progressively narrower.",
+    "keyPoints": [
+      "Minima: a sinθ = nλ",
+      "Secondary max: (2n+1)λ/2",
+      "Central diffraction max twice as wide; equal fringes in double-slit"
+    ]
+  },
+  {
+    "id": "xii-phy-sa043",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Use Huygens' principle to explain refraction of a plane wavefront at a plane interface between two media. Derive Snell's law.",
+    "modelAnswer": "A plane wavefront AB in medium 1 hits surface PQ. While ray from A travels to B' in medium 1 (speed v₁), a spherical Huygens wavelet from A' (where first ray hit PQ) travels to C in medium 2 (speed v₂). Time t = AB'/v₁ = A'C/v₂. sinθᵢ = AB'/A'B', sinθᵣ = A'C/A'B'. So sinθᵢ/sinθᵣ = v₁/v₂ = n₂/n₁, giving Snell's law: n₁sinθᵢ = n₂sinθᵣ.",
+    "keyPoints": [
+      "Spherical Huygens wavelets from each point",
+      "Construct new wavefront tangent to all wavelets",
+      "sinθᵢ/sinθᵣ = v₁/v₂ → n₁sinθᵢ = n₂sinθᵣ"
+    ]
+  },
+  {
+    "id": "xii-phy-sa044",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "In a single slit diffraction pattern, how is the angular width of the central maximum affected when (i) slit width is increased, (ii) the distance between slit and screen is increased, (iii) light of smaller wavelength is used? Justify. A slit of width d is illuminated by 700 nm light. Find d for which the first minimum falls at 30°.",
+    "modelAnswer": "(i) Increases slit width a → angular width 2λ/a decreases (narrower central max). (ii) Screen distance D doesn't affect angular width (only linear width). (iii) Smaller λ → smaller angular width 2λ/a. First minimum: a sinθ = λ → d × sin30° = 700×10⁻⁹ → d × 0.5 = 700×10⁻⁹ → d = 1400 nm = 1.4 μm.",
+    "keyPoints": [
+      "Angular width = 2λ/a (smaller with bigger a or smaller λ)",
+      "D doesn't affect angular width",
+      "d = λ/sin30° = 1.4 μm"
+    ]
+  },
+  {
+    "id": "xii-phy-sa045",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Photoemission of electrons occurs from a metal (φ₀ = 1.96 eV) when light of frequency 6.4 × 10¹⁴ Hz is incident on it. Calculate: (a) energy of a photon in the incident light, (b) maximum kinetic energy of emitted electrons, and (c) the stopping potential.",
+    "modelAnswer": "(a) E = hf = 6.63×10⁻³⁴ × 6.4×10¹⁴ = 4.24×10⁻¹⁹ J = 2.65 eV. (b) KE_max = E − φ₀ = 2.65 − 1.96 = 0.69 eV = 1.1×10⁻¹⁹ J. (c) Stopping potential V₀ = KE_max/e = 0.69 V.",
+    "keyPoints": [
+      "E = hf = 2.65 eV",
+      "KE_max = hf − φ₀ = 0.69 eV",
+      "Stopping potential = 0.69 V"
+    ]
+  },
+  {
+    "id": "xii-phy-sa046",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "What is threshold frequency (ν₀) for photoelectric emission? Does it depend on the intensity of light? How does photoelectric current vary with intensity of radiation of frequency ν > ν₀?",
+    "modelAnswer": "Threshold frequency ν₀ is the minimum frequency below which photoelectric emission does not occur, regardless of intensity. It depends only on the work function of the metal: hν₀ = φ₀. It does NOT depend on intensity. For ν > ν₀, photoelectric current is directly proportional to intensity (more photons → more electrons emitted per second).",
+    "keyPoints": [
+      "ν₀ = φ₀/h (depends on work function, not intensity)",
+      "No emission below ν₀ regardless of intensity",
+      "Current ∝ intensity for ν > ν₀"
+    ]
+  },
+  {
+    "id": "xii-phy-sa047",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "What are de Broglie waves? Show that the wavelength of electromagnetic radiation is equal to the de Broglie wavelength of its quantum (photon).",
+    "modelAnswer": "De Broglie waves: matter waves associated with moving particles, wavelength λ = h/p. For a photon: E = hf = hc/λ and E = pc (relativistic). So p = h/λ. de Broglie wavelength = h/p = h/(h/λ) = λ. Thus the de Broglie wavelength of a photon equals the wavelength of the corresponding EM radiation.",
+    "keyPoints": [
+      "de Broglie: λ = h/p for matter waves",
+      "Photon: E = pc → p = h/λ",
+      "λ_deBroglie = h/p = λ_radiation ✓"
+    ]
+  },
+  {
+    "id": "xii-phy-sa048",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A neutron has kinetic energy of 150 eV. Calculate its de Broglie wavelength. (Mass of neutron = 1.67 × 10⁻²⁷ kg, h = 6.63 × 10⁻³⁴ J·s)",
+    "modelAnswer": "KE = 150 eV = 150 × 1.6×10⁻¹⁹ = 2.4×10⁻¹⁷ J. p = √(2mKE) = √(2 × 1.67×10⁻²⁷ × 2.4×10⁻¹⁷) = √(8.016×10⁻⁴⁴) = 2.83×10⁻²² kg·m/s. λ = h/p = 6.63×10⁻³⁴/2.83×10⁻²² = 2.34×10⁻¹² m ≈ 2.34 pm.",
+    "keyPoints": [
+      "KE = 2.4×10⁻¹⁷ J",
+      "p = √(2mKE)",
+      "λ = h/p ≈ 2.34 pm"
+    ]
+  },
+  {
+    "id": "xii-phy-sa049",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Describe the Geiger-Marsden alpha particle scattering experiment. Draw the number of scattered particles vs scattering angle graph. Write two important conclusions drawn from the experiment.",
+    "modelAnswer": "High-energy alpha particles from Ra/Po were directed at a thin gold foil; scattered particles detected by scintillation screen. Graph: Large number of particles pass undeflected (small angles); very few scattered at large angles; rarely, backscattered at ~180°. Conclusions: (1) Most of the atom is empty space (most α particles undeflected). (2) A small, dense, positively charged nucleus exists at the center of the atom.",
+    "keyPoints": [
+      "Most α particles undeflected → atom is mostly empty",
+      "Few at large angles, very few backscattered",
+      "Dense, positive, small nucleus at center"
+    ]
+  },
+  {
+    "id": "xii-phy-sa050",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "The total energy of an electron in an orbit in the Bohr model of hydrogen atom is −3.4 eV. Calculate: (i) the angular momentum of the electron in this orbit, and (ii) the potential energy of the electron in this orbit.",
+    "modelAnswer": "(i) E_n = −13.6/n² eV → −3.4 = −13.6/n² → n = 2. L = nh/(2π) = 2 × 1.055×10⁻³⁴ = 2.11×10⁻³⁴ J·s. (ii) PE = 2 × Total energy = 2 × (−3.4) = −6.8 eV (since KE = −E_total for Bohr orbit).",
+    "keyPoints": [
+      "E = −13.6/n² gives n = 2",
+      "L = nh/2π = 2.11×10⁻³⁴ J·s",
+      "PE = 2E_total = −6.8 eV"
+    ]
+  },
+  {
+    "id": "xii-phy-sa051",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "In Bohr's quantization postulate, angular momentum L = nh/2π. If this is a basic law of nature, it should also apply to planetary motion. Why do we never speak of quantization of planetary orbits? Explain.",
+    "modelAnswer": "Bohr quantization applies in principle to all systems. However, for planets: mass m ~ 10²⁴ kg, v ~ 10⁴ m/s, r ~ 10¹¹ m → L ~ 10³⁹ J·s. Since h = 6.63×10⁻³⁴ J·s, quantum number n = L/(h/2π) ~ 10⁷³. Successive orbits differ by Δr/r = 1/n ~ 10⁻⁷³, which is immeasurably small. Quantum effects are negligible for macroscopic objects.",
+    "keyPoints": [
+      "Quantization applies but n is astronomically large (~10⁷³)",
+      "Energy/orbit differences undetectably small",
+      "Quantum effects negligible at macroscopic scale"
+    ]
+  },
+  {
+    "id": "xii-phy-sa052",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Write any two features of nuclear forces. If both the number of protons and neutrons are conserved in each nuclear reaction, in what way is mass converted into energy in a nuclear reaction? Explain.",
+    "modelAnswer": "Features: (1) Short-range forces (~10⁻¹⁵ m), negligible beyond nucleus. (2) Charge-independent (same between p-p, n-n, p-n). (3) Strongest known force. Mass-energy conversion: Conservation of proton and neutron numbers does not mean mass is conserved. Binding energy per nucleon differs between reactants and products. The total mass of products is less than total mass of reactants; the mass defect Δm is converted to energy E = Δmc² (Einstein's relation).",
+    "keyPoints": [
+      "Short-range (~10⁻¹⁵ m)",
+      "Charge-independent",
+      "Mass defect → E = Δmc² (binding energy difference)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa053",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Distinguish between nuclear fission and nuclear fusion. Why is binding energy per nucleon important in determining whether energy is released?",
+    "modelAnswer": "Fission: heavy nucleus (e.g., U-235) splits into two medium-sized nuclei + energy. Fusion: two light nuclei (e.g., H isotopes) combine to form heavier nucleus + energy. Energy is released when products have higher binding energy per nucleon than reactants. In fission: BE/A of products > BE/A of U-235 (near peak vs. on slope). In fusion: BE/A of He > BE/A of H isotopes.",
+    "keyPoints": [
+      "Fission: heavy splits, fusion: light nuclei combine",
+      "Energy released when BE/A of products > BE/A of reactants",
+      "Both processes move nuclei toward Fe-56 (most stable)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa054",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Define mass defect and binding energy. A nucleus with mass number A has mass M. If the masses of proton and neutron are m_p and m_n respectively, write the expressions for (a) mass defect and (b) binding energy.",
+    "modelAnswer": "(a) Mass defect: Δm = Z·m_p + (A−Z)·m_n − M, where Z is the atomic number. (b) Binding energy: BE = Δm·c² = [Z·m_p + (A−Z)·m_n − M]c². This is the energy needed to completely separate all nucleons in the nucleus.",
+    "keyPoints": [
+      "Δm = Zm_p + (A−Z)m_n − M",
+      "BE = Δmc²",
+      "BE/A = binding energy per nucleon (stability measure)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa055",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Distinguish between isotopes and isobars with one example each.",
+    "modelAnswer": "Isotopes: nuclei with the same atomic number (Z) but different mass numbers (A) — same element, different neutrons. Example: ¹H and ²H (deuterium), both Z=1. Isobars: nuclei with the same mass number (A) but different atomic numbers (Z). Example: ¹⁴C (Z=6) and ¹⁴N (Z=7).",
+    "keyPoints": [
+      "Isotopes: same Z, different A (same element)",
+      "Isobars: same A, different Z (different elements)",
+      "Example isotopes: ¹²C, ¹³C; isobars: ¹⁴C, ¹⁴N"
+    ]
+  },
+  {
+    "id": "xii-phy-sa056",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Draw a plot showing the potential energy of a pair of nucleons as a function of their separation. Mark the regions showing attraction, repulsion, and the range of nuclear force.",
+    "modelAnswer": "The potential energy vs separation (r) plot: (1) For r < ~0.8 fm: strong repulsion (potential energy sharply rises to positive values). (2) Minimum (most negative, ~−40 MeV) at r ≈ 1 fm: maximum binding/attraction. (3) For r > ~1 fm: potential rises towards zero. (4) Beyond ~3 fm: essentially zero (nuclear force is short-range). There is no long-range attraction.",
+    "keyPoints": [
+      "Strongly repulsive for r < 0.8 fm",
+      "Minimum ~−40 MeV near r ≈ 1 fm (attractive)",
+      "Zero beyond ~3 fm (short-range)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa057",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Suppose a pure Si crystal has 5 × 10²⁸ atoms per m³. It is doped with 5 × 10²² atoms per m³ of Arsenic. Calculate the majority and minority carrier concentration in the doped silicon. (Given: nᵢ = 1.5 × 10¹⁶ m⁻³)",
+    "modelAnswer": "Arsenic (pentavalent) is n-type dopant. Majority carriers: electrons. n_e ≈ N_D = 5 × 10²² m⁻³. Using mass action law: n_e × n_h = nᵢ² → n_h = nᵢ²/n_e = (1.5×10¹⁶)²/(5×10²²) = 2.25×10³²/5×10²² = 4.5 × 10⁹ m⁻³.",
+    "keyPoints": [
+      "n-type: majority carriers are electrons",
+      "n_e ≈ N_D = 5 × 10²² m⁻³",
+      "n_h = nᵢ²/n_e = 4.5 × 10⁹ m⁻³ (minority)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa058",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Differentiate between n-type and p-type semiconductors.",
+    "modelAnswer": "n-type: doped with pentavalent impurity (e.g., As, P); majority carriers are electrons; minority carriers are holes; Fermi level closer to conduction band. p-type: doped with trivalent impurity (e.g., B, In); majority carriers are holes; minority carriers are electrons; Fermi level closer to valence band.",
+    "keyPoints": [
+      "n-type: pentavalent dopant, majority electrons",
+      "p-type: trivalent dopant, majority holes",
+      "Different Fermi level positions"
+    ]
+  },
+  {
+    "id": "xii-phy-sa059",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Explain the formation of a p-n junction. Describe the processes of diffusion and drift that lead to the formation of the depletion layer and the built-in electric field.",
+    "modelAnswer": "When p-type and n-type semiconductors are joined: (1) Diffusion: holes diffuse from p to n; electrons from n to p (due to concentration gradient). (2) Near junction, diffused charges leave behind fixed ions: negative ions on p-side, positive on n-side. (3) This creates a built-in electric field pointing n→p. (4) Drift: field drives minority carriers (electrons to p, holes to n). (5) Equilibrium when drift balances diffusion — depletion layer formed.",
+    "keyPoints": [
+      "Diffusion: majority carriers cross junction",
+      "Fixed ions create built-in field (n→p direction)",
+      "Depletion layer: equilibrium between drift and diffusion"
+    ]
+  },
+  {
+    "id": "xii-phy-sa060",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Draw a circuit diagram of a full-wave rectifier using p-n junction diodes. Explain its working and show the input and output waveforms.",
+    "modelAnswer": "Circuit: Two diodes D₁ and D₂ with center-tap transformer. During positive half-cycle: D₁ conducts, D₂ reverse-biased; current through load. During negative half-cycle: D₂ conducts, D₁ reverse-biased; current through load in same direction. Output: Both half-cycles of AC appear as unidirectional (pulsating DC) across the load. Frequency of output = 2 × input frequency.",
+    "keyPoints": [
+      "Two diodes with center-tap transformer",
+      "Both half-cycles rectified",
+      "Output frequency = 2 × input frequency"
+    ]
+  },
+  {
+    "id": "xii-phy-sa061",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Explain the working of a junction diode as a half-wave rectifier. The efficiency of a half-wave rectifier is 40%. What happens to the remaining 60% power?",
+    "modelAnswer": "In forward bias (positive half-cycle): diode conducts, current through load. In reverse bias (negative half-cycle): diode blocks, no current. So only positive half of AC is passed. The remaining 60% power is dissipated: mostly as heat in the diode and transformer internal resistance, and also as AC component (ripple) in the output which doesn't contribute to useful DC output.",
+    "keyPoints": [
+      "Only one half-cycle passed (forward bias)",
+      "Other half blocked (reverse bias)",
+      "60% lost as heat in diode resistance and as AC ripple"
+    ]
+  },
+  {
+    "id": "xii-phy-sa062",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Deduce the relation between the electric field E at a point due to charge Q and (i) the force F on a charge q placed at that point, and (ii) the potential at that point due to charge Q. OR: Derive an expression for energy stored in a parallel plate capacitor. A parallel plate capacitor of plate area A and plate separation d is filled with two dielectric slabs of constants K₁ and K₂, each of area A/2. Find the effective capacitance.",
+    "modelAnswer": "(i) E = F/q (test charge definition). (ii) V = kQ/r; E = −dV/dr → E = kQ/r². For two side-by-side dielectrics: C₁ = K₁ε₀(A/2)/d, C₂ = K₂ε₀(A/2)/d. They are in parallel: C = C₁+C₂ = ε₀A(K₁+K₂)/(2d).",
+    "keyPoints": [
+      "E = F/q; E = −dV/dr",
+      "Two dielectrics side-by-side = parallel combination",
+      "C = ε₀A(K₁+K₂)/(2d)"
+    ]
+  },
+  {
+    "id": "xii-phy-sa063",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Define mutual inductance. Give its units. State two factors on which mutual inductance between two coils depends. A 1.0 m long solenoid of radius 2 cm having 2000 turns has a secondary coil of 1000 turns wound closely near its mid-point. Find the mutual inductance between the two coils.",
+    "modelAnswer": "Mutual inductance M: M = N₂Φ₂₁/I₁ (flux in coil 2 due to current in coil 1 per unit current). Unit: Henry (H). Factors: (1) Number of turns in each coil. (2) Geometry (area, length) and relative position. (3) Presence of ferromagnetic core. M = μ₀N₁N₂A/l = 4π×10⁻⁷ × 2000 × 1000 × π(0.02)²/1.0 = 4π×10⁻⁷ × 2×10⁶ × π×4×10⁻⁴ = 4π² × 8×10⁻⁵ ≈ 3.16×10⁻³ H ≈ 3.16 mH.",
+    "keyPoints": [
+      "M = μ₀N₁N₂A/l",
+      "Unit: Henry (H)",
+      "M ≈ 3.16 mH"
+    ]
+  },
+  {
+    "id": "xii-phy-sa064",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "Derive an expression for the force on a conductor of length L, cross-section A, carrying current I in a magnetic field B. A part of a wire carrying 2.0 A current and bent at 90° at two points is placed in uniform magnetic field B = −(0.50 T)k̂. Calculate the magnitude of net force on the wire (given a figure with L-shaped conductor of specific dimensions).",
+    "modelAnswer": "F = IL × B. For current element: dF = I dl × B. For straight conductor: F = BIL sinθ. For an L-shaped conductor in field B = −0.5k̂ with segments along x and y axes (length Lx and Ly): F_x = I Lx ĵ × (−0.5k̂) = force along x segment; F_y = I Ly î × (−0.5k̂) along y. The forces on straight segments are computed separately and combined vectorially. The resultant net force depends on geometry.",
+    "keyPoints": [
+      "F = IL × B for each segment",
+      "L-shaped wire treated segment by segment",
+      "Net force = vector sum of forces on each segment"
+    ]
+  },
+  {
+    "id": "xii-phy-sa065",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2026 Board",
+    "text": "With the help of a ray diagram, describe the construction and working of a compound microscope. An object is placed between f and 2f from a convex lens. Its real image is seen on a screen. If the screen is removed, does the image still exist? Explain. Can plane and convex mirrors produce real images? Explain.",
+    "modelAnswer": "Compound microscope: objective (short f_o) forms real, magnified, inverted image I₁ of object. Eyepiece (short f_e) acts as magnifier and forms final virtual image I₂. If screen removed: yes, real image still exists at the same location. The rays converge at that point; the screen only makes it visible. Plane/convex mirrors: yes, if the incoming light is already converging (e.g., from another optical element), plane or convex mirror can reflect it to a real focus.",
+    "keyPoints": [
+      "Objective: real magnified image; eyepiece: virtual final image",
+      "Real image exists without screen (rays still converge)",
+      "Plane/convex can form real image with converging incident rays"
+    ]
+  },
+  {
+    "id": "xii-phy-sa066",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "A ray of light traveling along the principal axis is incident on a spherical mirror and reflected back along the same path. Explain why.",
+    "modelAnswer": "A ray traveling along the principal axis and passing through (or heading toward) the center of curvature C hits the mirror normal to its surface (radius is normal to the surface). Since the angle of incidence is 0°, the ray reflects back along the same path. Similarly, a ray heading toward the pole at normal incidence also retraces its path.",
+    "keyPoints": [
+      "Ray along principal axis hits mirror at normal incidence",
+      "Angle of incidence = 0°",
+      "Reflects back along same path by law of reflection"
+    ]
+  },
+  {
+    "id": "xii-phy-sa067",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Two deuterium nuclei (²₁H) fuse to give ³₂He + n + Q. Given the masses: m(²H) = 2.014102 u, m(³He) = 3.016029 u, m(n) = 1.008665 u. Calculate Q.",
+    "modelAnswer": "Mass of reactants: 2 × 2.014102 = 4.028204 u. Mass of products: 3.016029 + 1.008665 = 4.024694 u. Mass defect Δm = 4.028204 − 4.024694 = 0.003510 u. Q = 0.003510 × 931.5 MeV = 3.268 MeV ≈ 3.27 MeV.",
+    "keyPoints": [
+      "Δm = mass reactants − mass products",
+      "Δm = 0.003510 u",
+      "Q = Δm × 931.5 = 3.27 MeV"
+    ]
+  },
+  {
+    "id": "xii-phy-sa068",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "An electric conductor has length l and area of cross-section A with field E maintained inside. Show that electrons drift with average velocity v_d = eEτ/m. Why do electrons, despite being accelerated by the field, acquire only a steady average drift speed?",
+    "modelAnswer": "Between collisions, electron acceleration = eE/m. Average time between collisions = τ (relaxation time). Drift velocity acquired: v_d = (eE/m)τ. Steady state: Although E accelerates electrons, frequent collisions with lattice ions (average every τ seconds) randomize motion. After each collision, electron starts fresh. The average drift velocity is therefore constant = eEτ/m, not continuously increasing.",
+    "keyPoints": [
+      "v_d = eEτ/m (relaxation time τ)",
+      "Collisions with lattice randomize velocity",
+      "Average drift is constant despite acceleration"
+    ]
+  },
+  {
+    "id": "xii-phy-sa069",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Two point charges q₁ = 2.5 × 10⁻⁷ C and q₂ = −2.5 × 10⁻⁷ C are located at points (0, 0, −15 cm) and (0, 0, +15 cm) respectively. Find: (a) the electric dipole moment of the system, and (b) the magnitude and direction of the electric field at the origin (0, 0, 0).",
+    "modelAnswer": "(a) p = q × 2l = 2.5×10⁻⁷ × 0.30 = 7.5×10⁻⁸ C·m, directed from −q to +q, i.e., from (0,0,−15) to (0,0,+15) → in +z direction. (b) At origin (midpoint of dipole, equatorial point): E = 0 (equal and opposite contributions from the two charges cancel). Wait — origin is midpoint: E from +q at (0,0,15): E₊ = k×q/r² in −z direction. E from −q at (0,0,−15): E₋ = k×q/r² in −z direction. Both in −z. E = 2kq/r² = 2×9×10⁹×2.5×10⁻⁷/(0.15)² = 2×10⁵ N/C in −z direction.",
+    "keyPoints": [
+      "p = 7.5×10⁻⁸ C·m in +z direction",
+      "At midpoint: both charges give E in same direction",
+      "E = 2kq/r² = 2×10⁵ N/C in −z direction"
+    ]
+  },
+  {
+    "id": "xii-phy-sa070",
+    "chapter": "Magnetism and Matter",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2026 Board",
+    "text": "Calculate the work done in rotating an electric dipole from its stable equilibrium position (θ = 0°) to its unstable equilibrium position (θ = 180°) in a uniform electric field E.",
+    "modelAnswer": "Work done W = ΔPE = U₂ − U₁. U = −pE cosθ. U₁ = −pE cos0° = −pE. U₂ = −pE cos180° = +pE. W = pE − (−pE) = 2pE.",
+    "keyPoints": [
+      "U = −pE cosθ",
+      "W = U(180°) − U(0°)",
+      "W = 2pE"
+    ]
+  }
+]
