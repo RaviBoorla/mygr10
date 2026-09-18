@@ -61,7 +61,9 @@ const SA_BANKS = {
   'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers',
   'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-ShortAnswers',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers',
+
+  'XII ICSE Chemistry': 'XII-ICSE-Chemistry-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
