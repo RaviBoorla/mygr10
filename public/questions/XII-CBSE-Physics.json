@@ -1,1 +1,1564 @@
-[]
+[
+  {
+    "id": "xii-phy-b001",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "In a region, the electric potential varies as V = 10 − 50x, where V is in volts and x in metres. The electric field in the region is (2026 Board)",
+    "options": [
+      "10 N/C along +x",
+      "10 N/C along −x",
+      "50 N/C along +x",
+      "50 N/C along −x"
+    ],
+    "correct": 2,
+    "explanation": "E = −dV/dx = −50 ×(−50)... actually dV/dx = −50, so E = −(dV/dx) = 50 N/C, directed along +x (since V decreases as x increases).",
+    "whyWrong": [
+      "Magnitude is 50 N/C not 10 N/C; dV/dx = −50, not −10.",
+      "Magnitude is wrong and direction is also wrong.",
+      "Correct: E = −dV/dx = 50 N/C along +x.",
+      "Direction is wrong; since V decreases with increasing x, E points along +x, not −x."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b002",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A conducting wire connects two charged metallic spheres A and B of radii r1 and r2 respectively (distance between them very large compared to radii). The ratio of electric fields (E_A/E_B) at the surfaces of the spheres will be (2026 Board)",
+    "options": [
+      "r1/r2",
+      "r2/r1",
+      "r1²/r2²",
+      "r2²/r1²"
+    ],
+    "correct": 1,
+    "explanation": "Connected spheres reach the same potential V. Since V = kQ/r, surface field E = V/r. So E_A/E_B = (V/r1)/(V/r2) = r2/r1.",
+    "whyWrong": [
+      "This is the inverse ratio.",
+      "Correct: E_A/E_B = r2/r1 since surface field is V/r at common potential V.",
+      "This uses a squared dependence that doesn't apply to E = V/r.",
+      "This is the inverse of the squared ratio; also the wrong power."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b003",
+    "chapter": "Moving Charges and Magnetism",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A long straight wire of circular cross-section (radius a) carries a steady current I, uniformly distributed across the cross-section. The magnitude of the magnetic field at a point at distance a/2 from the axis of the wire is (2026 Board)",
+    "options": [
+      "Zero",
+      "μ₀I/(2πa)",
+      "μ₀I/(4πa)",
+      "μ₀I/(6πa)"
+    ],
+    "correct": 2,
+    "explanation": "Inside a uniformly current-carrying wire, B = μ₀Ir/(2πa²). At r = a/2, B = μ₀I(a/2)/(2πa²) = μ₀I/(4πa).",
+    "whyWrong": [
+      "Field is not zero inside a current-carrying wire away from the axis.",
+      "This is the field value at the surface (r = a), not at r = a/2.",
+      "Correct: substituting r = a/2 into B = μ₀Ir/(2πa²) gives μ₀I/(4πa).",
+      "This does not match the inside-wire formula evaluated at r = a/2."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b004",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "The shape of the interference fringes in Young's double-slit experiment, when the distance between the slit and the screen is very large compared to the slit separation, is nearly (2026 Board)",
+    "options": [
+      "straight",
+      "parabolic",
+      "circular",
+      "hyperbolic"
+    ],
+    "correct": 0,
+    "explanation": "When D >> d, the hyperbolic fringes (loci of constant path difference) become nearly straight lines parallel to the slits.",
+    "whyWrong": [
+      "Correct: for D >> d the hyperbolas flatten into nearly straight lines.",
+      "Fringes are not parabolic in this geometry.",
+      "Fringes are circular only very close to the slits, not far away.",
+      "The fringes are hyperbolic exactly, but approximate to straight lines for D >> d, not remain markedly hyperbolic."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b005",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "An electromagnetic wave passes from vacuum into a dielectric medium with relative electrical permittivity 3/2 and relative magnetic permeability 8/3. Then, its (2026 Board)",
+    "options": [
+      "wavelength is doubled and frequency remains unchanged.",
+      "wavelength is doubled and frequency is halved.",
+      "wavelength is halved and frequency remains unchanged.",
+      "wavelength and frequency both remain unchanged."
+    ],
+    "correct": 2,
+    "explanation": "Refractive index n = √(εrμr) = √(3/2 × 8/3) = √4 = 2. Frequency is set by the source and doesn't change; speed becomes v = c/n = c/2, so wavelength λ = v/f is halved.",
+    "whyWrong": [
+      "Wavelength decreases, it does not double.",
+      "Wavelength decreases (not doubles) and frequency never changes at a boundary.",
+      "Correct: n = 2, so speed and hence wavelength halve while frequency (set by source) is unchanged.",
+      "Wavelength does change since the medium's refractive index is 2, not 1."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b006",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "In a series LCR circuit, the voltage across the resistor, capacitor and inductor is 10 V each. If the capacitor is short-circuited, the voltage across the inductor will be (2026 Board)",
+    "options": [
+      "10 V",
+      "5√2 V",
+      "5/√2 V",
+      "10√2 V"
+    ],
+    "correct": 3,
+    "explanation": "Originally VL = VC so the circuit is at resonance and source voltage = VR = 10 V, with XL = XC = VL/I = R. Shorting C leaves R and L in series with the same source (10 V). New impedance Z' = √(R²+XL²) = R√2 (since XL=R), so new current I' = I/√2, and new VL' = I'XL = (I/√2)·R = 10/√2 = 5√2/... recomputing: VL' = I'·XL = (10/(R√2)) · R = 10/√2 = 5√2 V.",
+    "whyWrong": [
+      "This ignores the change in circuit impedance after removing C.",
+      "This ignores the factor of √2 in the new impedance.",
+      "Correct: VL' = 10/√2 = 5√2 V after the capacitor is shorted.",
+      "This is too large; the new inductor voltage decreases relative to 10√2, not increases."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b007",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Electromagnetic waves used as a diagnostic tool in medicine (X-rays) have a wavelength range (2026 Board)",
+    "options": [
+      "1 nm to 10⁻³ nm",
+      "400 nm to 1 nm",
+      "1 mm to 700 nm",
+      "0.1 m to 1 mm"
+    ],
+    "correct": 0,
+    "explanation": "X-rays, used in medical imaging, have wavelengths roughly from about 1 nm down to 10⁻³ nm (or even shorter), much shorter than visible or infrared light.",
+    "whyWrong": [
+      "Correct: this is the X-ray wavelength range used in diagnostic imaging.",
+      "This range (400 nm–1 nm) spans visible/UV, not the X-ray diagnostic range.",
+      "This range corresponds to infrared/microwave, not X-rays.",
+      "This range corresponds to microwaves, not X-rays."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b008",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "The 'distance of closest approach' of an alpha particle is 'd' when it moves with velocity v head-on towards the target nucleus. If the velocity of the alpha particle is halved, the new distance of closest approach will be (2026 Board)",
+    "options": [
+      "d/2",
+      "2d",
+      "4d",
+      "d/4"
+    ],
+    "correct": 2,
+    "explanation": "At closest approach, all KE converts to electrostatic PE: (1/2)mv² = kZe(2e)/d, so d ∝ 1/v². Halving v makes d increase by a factor of 4.",
+    "whyWrong": [
+      "This suggests d decreases, but d must increase as v decreases.",
+      "This is only a factor of 2, but d ∝ 1/v² gives a factor of 4.",
+      "Correct: since d ∝ 1/v², halving v quadruples d.",
+      "d increases, it does not decrease."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b009",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A concave lens of focal length 10 cm is cut into two identical plano-concave lenses. The focal length of each lens will be (2026 Board)",
+    "options": [
+      "20 cm",
+      "30 cm",
+      "40 cm",
+      "5 cm"
+    ],
+    "correct": 0,
+    "explanation": "Cutting a symmetric biconcave lens along its axis into two plano-concave halves keeps each curved-surface radius the same but removes one curved surface, halving the lens power (1/f ∝ sum of curvatures), so each half has double the focal length: 2 × 10 cm = 20 cm.",
+    "whyWrong": [
+      "Correct: each half has double the original focal length.",
+      "This is triple the focal length, not double.",
+      "This is quadruple, not double, the original focal length.",
+      "This would mean the power increased, but cutting a lens this way reduces power, increasing focal length."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b010",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Four independent waves are y1=A1 sinωt, y2=A2 sin2ωt, y3=A3 cosωt, y4=A4 sin(ωt+π/3). Interference between two of these waves is possible in (2026 Board)",
+    "options": [
+      "(i) and (iii) only",
+      "(iii) and (iv) only",
+      "(i), (iii) and (iv) only",
+      "All of them"
+    ],
+    "correct": 2,
+    "explanation": "Sustained interference requires the same frequency (and a constant phase difference). y1, y3 and y4 all have angular frequency ω; y2 has frequency 2ω and cannot sustain interference with the others.",
+    "whyWrong": [
+      "This excludes y4, which also has frequency ω and can interfere with y1 and y3.",
+      "This excludes y1, which also shares frequency ω.",
+      "Correct: y1, y3, y4 share frequency ω and can mutually interfere; y2 has a different frequency.",
+      "y2 has frequency 2ω, different from the others, so it cannot show sustained interference with them."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b012",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "In an unbiased p-n junction, at equilibrium, which of the following statements is true? (2026 Board)",
+    "options": [
+      "Diffusion current is zero but drift current exists.",
+      "Diffusion current exists but drift current is zero.",
+      "Diffusion and drift currents are equal and opposite.",
+      "Both diffusion and drift currents exist but are unequal."
+    ],
+    "correct": 2,
+    "explanation": "At equilibrium (no external bias), the diffusion current (majority carriers moving across the junction) is exactly balanced by the drift current (minority carriers swept by the built-in field), giving zero net current.",
+    "whyWrong": [
+      "Both currents exist at equilibrium, not just drift.",
+      "Both currents exist at equilibrium, not just diffusion.",
+      "Correct: at equilibrium the two currents are equal and opposite, giving zero net current.",
+      "They are equal (not unequal); that's precisely why net current is zero at equilibrium."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b013",
+    "chapter": "Magnetism and Matter",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): All atoms have a net magnetic moment. Reason (R): A current loop does not always behave as a magnetic dipole. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 3,
+    "explanation": "A is false: atoms with fully filled subshells (e.g. noble gases) have zero net magnetic moment due to paired electron spins/orbital motions cancelling. R is also false: a current loop always behaves as a magnetic dipole, with moment m = IA.",
+    "whyWrong": [
+      "A is false (not all atoms have a net moment), so this cannot be correct regardless of R.",
+      "Neither statement is true.",
+      "R is also false, not merely a poor explanation-mismatch case.",
+      "Correct: neither statement is true – many atoms have zero net moment, and a current loop always behaves as a magnetic dipole."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b014",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): If accelerated electrons are passed through a narrow slit, a diffraction pattern is observed. Reason (R): Electrons behave as both particles and waves. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "Electrons indeed produce diffraction patterns (as in the Davisson-Germer experiment), confirming their wave nature. This is precisely because electrons exhibit wave-particle duality, which is the correct explanation.",
+    "whyWrong": [
+      "This under-credits R, which is exactly why diffraction is observed.",
+      "R does directly explain A, not merely accompany it.",
+      "R is true, not false – wave-particle duality is well established for electrons.",
+      "Correct: diffraction of electrons is direct evidence of their wave nature, correctly explained by wave-particle duality."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b015",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): The mass of a nucleus is less than the sum of the masses of the constituent nucleons. Reason (R): Energy is absorbed when the nucleons are bound together to form a nucleus. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 2,
+    "explanation": "A is true: this mass difference is the mass defect, converted to binding energy. But R is false: energy is released (not absorbed) when nucleons bind together, which is why the bound nucleus has less mass (E=Δmc² is released).",
+    "whyWrong": [
+      "R is false; energy is released, not absorbed, during nucleon binding.",
+      "R is false outright, not merely a non-explanation.",
+      "Correct: mass defect (A) is true, but binding releases energy rather than absorbing it, so R is false.",
+      "A is definitely true – nuclear mass is always less than the sum of nucleon masses."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b016",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): In Bohr model of hydrogen atom, the energy levels are discrete and quantised. Reason (R): In a hydrogen atom, the electrostatic force on the electron provides the necessary centripetal force to it to revolve around the nucleus. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 1,
+    "explanation": "Both statements are true: energy levels are indeed quantised, and Coulomb attraction does supply centripetal force. But R alone (classical circular motion) doesn't explain quantisation – that requires Bohr's separate postulate on angular momentum quantisation (L = nh/2π).",
+    "whyWrong": [
+      "R by itself does not explain why energy levels are discrete; that requires the separate angular-momentum quantisation postulate.",
+      "Correct: both are true, but the centripetal-force condition alone doesn't explain quantisation of energy levels.",
+      "R is true, not false – Coulomb force does provide the centripetal force in the Bohr model.",
+      "Both statements are true, not false."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b017",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Three point charges 2q, −2q and q are kept at the vertices of an equilateral triangle of side l. The potential energy of the system is (2026 Board)",
+    "options": [
+      "zero",
+      "−2q²/(πε₀l)",
+      "q²/(2πε₀l)",
+      "−q²/(πε₀l)"
+    ],
+    "correct": 3,
+    "explanation": "U = k[(2q)(−2q) + (2q)(q) + (−2q)(q)]/l = k(−4q²+2q²−2q²)/l = −4kq²/l = −q²/(πε₀l) using k=1/(4πε₀).",
+    "whyWrong": [
+      "The pairwise energies don't cancel to zero; the net sum is −4kq²/l.",
+      "This has the wrong coefficient.",
+      "This has the wrong sign and coefficient.",
+      "Correct: summing the three pairwise potential energies gives −q²/(πε₀l)."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b018",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Two metal spheres of radii r1 and r2 (>r1) having charges q1 and q2 respectively kept in air, are brought in contact. Which statement is NOT correct? (2026 Board)",
+    "options": [
+      "The total charge of the two spheres is conserved.",
+      "Both spheres attain the same potential.",
+      "The final potential equals (1/4πε₀)(q1+q2)/(r1+r2).",
+      "The final potential equals (1/4πε₀)(q1+q2)(r1+r2)/(r1r2)."
+    ],
+    "correct": 3,
+    "explanation": "When in contact, charge redistributes until both reach the same potential V = kQtotal/(r1+r2), matching statement (C). Statement (D) states a dimensionally different and incorrect formula.",
+    "whyWrong": [
+      "Charge conservation is indeed correct for an isolated system.",
+      "They do reach a common potential; this statement is correct.",
+      "This is the correct formula for the common final potential.",
+      "Correct: this formula is wrong – the true final potential is (1/4πε₀)(q1+q2)/(r1+r2), not with an extra (r1+r2)/(r1r2) factor."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b019",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "The maximum kinetic energy of electrons emitted from a photosensitive surface depends on (2026 Board)",
+    "options": [
+      "work function of the surface ϕ₀ only.",
+      "frequency of the incident radiation ν only.",
+      "intensity of the incident radiation I only.",
+      "both ϕ₀ and ν."
+    ],
+    "correct": 3,
+    "explanation": "By Einstein's photoelectric equation, KEmax = hν − ϕ₀, so it depends on both the frequency of light and the work function; intensity affects the number of photoelectrons, not their maximum KE.",
+    "whyWrong": [
+      "Work function alone is not enough – frequency also matters.",
+      "Frequency alone is not enough – the work function also matters.",
+      "Intensity affects photocurrent, not KEmax.",
+      "Correct: KEmax = hν − ϕ₀ depends on both quantities."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b020",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "In Bohr model of hydrogen atom, for large values of n, the distance between consecutive orbits is proportional to (2026 Board)",
+    "options": [
+      "√n",
+      "n",
+      "n²",
+      "n³"
+    ],
+    "correct": 1,
+    "explanation": "r_n ∝ n², so Δr = r_{n+1} − r_n ≈ dr/dn = (const)×2n ∝ n for large n.",
+    "whyWrong": [
+      "This underestimates the growth rate; the difference grows linearly in n, not as √n.",
+      "Correct: since r_n ∝ n², the spacing between consecutive orbits grows approximately linearly with n for large n.",
+      "This is the dependence of r_n itself, not of the spacing between consecutive orbits.",
+      "This overestimates the growth rate of the orbit spacing."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b021",
+    "chapter": "Magnetism and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Which of the following materials has a positive and small value of magnetic susceptibility? (2026 Board)",
+    "options": [
+      "Cu",
+      "Al",
+      "Bi",
+      "Ni"
+    ],
+    "correct": 1,
+    "explanation": "Aluminium is paramagnetic, with a small positive susceptibility. Copper and bismuth are diamagnetic (small negative susceptibility), while nickel is ferromagnetic (large positive susceptibility).",
+    "whyWrong": [
+      "Copper is diamagnetic, giving a small negative susceptibility.",
+      "Correct: aluminium is paramagnetic with small positive susceptibility.",
+      "Bismuth is strongly diamagnetic, giving a negative susceptibility.",
+      "Nickel is ferromagnetic, giving a large (not small) positive susceptibility."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b022",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A galvanometer of resistance 27 Ω is converted into an ammeter of range (0–10 mA) using a shunt resistance of 3 Ω. The galvanometer will show full-scale deflection for a current of about (2026 Board)",
+    "options": [
+      "10 mA",
+      "100 mA",
+      "1 mA",
+      "3 mA"
+    ],
+    "correct": 2,
+    "explanation": "For a shunt, Ig×G = (I−Ig)×S. With G=27, S=3, I=10 mA: Ig×27 = (10−Ig)×3 → 27Ig = 30−3Ig → 30Ig=30 → Ig=1 mA.",
+    "whyWrong": [
+      "10 mA is the full ammeter range, not the galvanometer's own full-scale current.",
+      "This is far too large for the galvanometer's small share of current.",
+      "Correct: solving the shunt equation gives Ig = 1 mA.",
+      "This does not satisfy the shunt current-division equation."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b023",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The magnetic flux ϕ (in Wb) linked with a coil is related to time t (in s) as ϕ = 5At² + Bt − 2C. The SI units of A and B are respectively (2026 Board)",
+    "options": [
+      "Wb s², Wb s",
+      "Wb s⁻¹, Wb",
+      "Wb s⁻², Wb s⁻¹",
+      "Wb s⁻¹, Wb s⁻²"
+    ],
+    "correct": 2,
+    "explanation": "Each term must have units of Wb. For At² to give Wb, A must be in Wb s⁻². For Bt to give Wb, B must be in Wb s⁻¹.",
+    "whyWrong": [
+      "These have the units inverted (s² and s instead of s⁻² and s⁻¹).",
+      "These units would make the terms grow instead of matching Wb; wrong powers.",
+      "Correct: A must carry s⁻² and B must carry s⁻¹ so that At² and Bt each yield Wb.",
+      "This swaps the required units of A and B."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b024",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "A magnet held vertically, with its north pole down, is dropped along the axis of a closed solenoid placed vertically on a table. Looking down from the top, (2026 Board)",
+    "options": [
+      "the induced current will flow anticlockwise.",
+      "the induced current will flow clockwise.",
+      "no induced current will flow in the solenoid.",
+      "the magnet will fall with a constant velocity."
+    ],
+    "correct": 0,
+    "explanation": "As the N-pole approaches from above, flux into the top of the solenoid increases; by Lenz's law the induced current opposes this by creating a N-pole facing upward at the top, which (by the right-hand rule, viewed from above) requires anticlockwise current.",
+    "whyWrong": [
+      "Correct: to oppose the increasing downward-into-the-solenoid flux, the top face must become a north pole, requiring anticlockwise current viewed from above.",
+      "This direction would create a south pole facing the approaching magnet, which would attract rather than oppose it – violating Lenz's law.",
+      "A changing flux is definitely induced as the magnet falls through, so current does flow.",
+      "The magnet accelerates under gravity (opposed partly by the induced eddy effect), it does not fall at constant velocity in a simple closed solenoid loop."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b025",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "An electromagnetic wave is propagating along the x-axis. At any instant, the phase difference between the electric field E and magnetic field B associated with the wave is (2026 Board)",
+    "options": [
+      "zero",
+      "π/4",
+      "π/2",
+      "π"
+    ],
+    "correct": 0,
+    "explanation": "In an EM wave, E and B oscillate in phase with each other (though perpendicular in direction), so the phase difference between them is zero.",
+    "whyWrong": [
+      "Correct: E and B oscillate in phase (zero phase difference) even though their directions are perpendicular.",
+      "There is no phase lag between E and B in an EM wave.",
+      "E and B are perpendicular in direction, but this does not mean a π/2 phase difference in time.",
+      "E and B are not out of phase; they rise and fall together."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b026",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "In Bohr model of hydrogen atom, the electron makes a transition from n=5 to n=1, emitting a photon of wavelength λ. The wavelength of the photon emitted for a transition from n=5 to n=2 will be (2026 Board)",
+    "options": [
+      "8λ/7",
+      "24λ/7",
+      "16λ/7",
+      "32λ/7"
+    ],
+    "correct": 3,
+    "explanation": "ΔE ∝ (1/n1² − 1/n2²). ΔE(5→1) ∝ (1−1/25)=24/25. ΔE(5→2) ∝ (1/4−1/25)=21/100. Since λ ∝ 1/ΔE, λ'/λ = ΔE(5→1)/ΔE(5→2) = (24/25)/(21/100) = 32/7.",
+    "whyWrong": [
+      "This undercounts the ratio between the two energy differences.",
+      "This is not the correct ratio of the two transition energies.",
+      "This is not the correct ratio either.",
+      "Correct: computing the energy differences for both transitions gives λ' = 32λ/7."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b027",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): On increasing the intensity of incident light of frequency ν(>ν0) on a photosensitive surface, the photocurrent increases. Reason (R): The stopping potential for a photosensitive surface increases with increase of frequency ν(>ν0) of incident radiation. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 1,
+    "explanation": "A is true (more intensity means more photons per second, more photocurrent). R is also a true fact (stopping potential increases with frequency), but it explains the dependence of stopping potential on frequency, not why photocurrent rises with intensity – so it's not the correct explanation of A.",
+    "whyWrong": [
+      "R does not actually explain A; they describe two different, unrelated dependences (frequency vs stopping potential, and intensity vs photocurrent).",
+      "Correct: both statements are individually true, but R (about frequency and stopping potential) doesn't explain A (about intensity and photocurrent).",
+      "R is a true statement, not false.",
+      "Both statements are true individually."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b028",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): On forward biasing a p-n junction diode, the height of the barrier potential increases. Reason (R): In forward biasing of a p-n junction diode, the direction of the applied voltage is in the same direction as the built-in potential. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 3,
+    "explanation": "Both are false: forward bias decreases (not increases) the barrier height, and the applied voltage in forward bias opposes (not aids) the built-in potential.",
+    "whyWrong": [
+      "Neither statement is true.",
+      "Neither statement is true.",
+      "A is also false: forward bias reduces, not increases, the barrier height.",
+      "Correct: forward bias lowers the barrier potential, and the applied voltage opposes (not reinforces) the built-in field."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b029",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "Assertion (A): Light added to light can produce darkness. Reason (R): When two coherent light waves interfere, there is darkness at the position of destructive interference. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "Both statements are true and R directly explains A: at points of destructive interference between coherent waves, the resultant intensity is zero (darkness), even though light is being added there.",
+    "whyWrong": [
+      "This under-credits R, which is precisely the mechanism explaining A.",
+      "R does directly explain A, not merely coexist with it.",
+      "R is true – destructive interference of coherent waves genuinely produces darkness.",
+      "Correct: destructive interference explains how adding light waves can result in darkness."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b030",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): Two electric heaters of power P1 and P2 (>P1) are joined in series across a dc source of voltage V. The power consumed by the combination will be less than that consumed by P1 alone connected to the same source. Reason (R): The power consumed by an electric device connected to a dc source of voltage V is proportional to its resistance. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 2,
+    "explanation": "A is true: series combination increases total resistance, so combined power V²/(R1+R2) is less than V²/R1 (power of heater 1 alone). But R is false: for fixed V, power P=V²/R is inversely proportional to resistance, not directly proportional.",
+    "whyWrong": [
+      "R states the wrong proportionality (power is inversely, not directly, proportional to R for fixed voltage), so it can't be the correct explanation.",
+      "R is false outright.",
+      "Correct: combined series power is indeed less than P1 alone, but the reason given (direct proportionality to R) is false – power at fixed V is inversely proportional to R.",
+      "A is true – series resistance increases, reducing total power below that of the smaller heater alone."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b031",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A particle of mass m and charge q starts from rest and moves in an electric field E = E0î. After travelling a distance x along the x-axis, the kinetic energy of the particle will be (2026 Board)",
+    "options": [
+      "qE0x²",
+      "qE0x",
+      "q²E0x",
+      "q²E0²x"
+    ],
+    "correct": 1,
+    "explanation": "Work-energy theorem: KE = Work done by the field = force × distance = (qE0)×x = qE0x.",
+    "whyWrong": [
+      "This has an extra, incorrect power of x.",
+      "Correct: KE = work done = qE0 × x, by the work-energy theorem.",
+      "Charge should appear to the first power, not squared.",
+      "This has both charge and field to incorrect powers."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b032",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A plane electromagnetic wave travels through a medium with magnetic field B = 5×10⁻⁸ sin(3×10¹⁰t − 150x) T (x in m, t in s). The velocity of the wave is (2026 Board)",
+    "options": [
+      "2.0×10⁸ ms⁻¹",
+      "4.5×10⁷ ms⁻¹",
+      "3.5×10⁷ ms⁻¹",
+      "2.5×10⁸ ms⁻¹"
+    ],
+    "correct": 0,
+    "explanation": "Wave speed v = ω/k = (3×10¹⁰)/150 = 2.0×10⁸ m/s.",
+    "whyWrong": [
+      "Correct: v = ω/k = 3×10¹⁰/150 = 2.0×10⁸ m/s.",
+      "This does not match ω/k for the given values.",
+      "This does not match ω/k for the given values.",
+      "This does not match ω/k for the given values."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b033",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "A thin plano-convex lens and a thin equi-concave lens (both surfaces of radius R) are kept coaxially in contact, both made of glass of refractive index μ. The focal length of the combination is (2026 Board)",
+    "options": [
+      "R/(μ−1)",
+      "−R/(μ−1)",
+      "2R/(μ−1)",
+      "−2R/(μ−1)"
+    ],
+    "correct": 1,
+    "explanation": "1/f_planoconvex = (μ−1)/R. 1/f_equiconcave = (μ−1)(−1/R−1/R) = −2(μ−1)/R. Combined: 1/f = (μ−1)/R − 2(μ−1)/R = −(μ−1)/R, so f = −R/(μ−1).",
+    "whyWrong": [
+      "This has the correct magnitude but wrong sign; the combination is net diverging.",
+      "Correct: the equi-concave lens's power dominates, giving a net negative (diverging) focal length −R/(μ−1).",
+      "This is off by a factor of 2 and the wrong sign.",
+      "This is off by a factor of 2 in magnitude."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b034",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The phase difference between two superimposing waves that give rise to a bright spot in Young's double-slit experiment is (n is an integer) (2026 Board)",
+    "options": [
+      "2nπ",
+      "2nπ + π/4",
+      "2nπ + π/2",
+      "2nπ + π"
+    ],
+    "correct": 0,
+    "explanation": "Constructive interference (bright fringe) requires the path difference to be an integral multiple of λ, i.e. phase difference of 2nπ.",
+    "whyWrong": [
+      "Correct: bright fringes occur when the phase difference is an integer multiple of 2π.",
+      "This partial phase offset would not give maximum constructive interference.",
+      "This phase difference (π/2 offset) does not correspond to a bright fringe.",
+      "A phase difference of π (plus 2nπ) corresponds to a dark fringe (destructive interference), not bright."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b035",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "A telescope has an objective lens of focal length 144 cm and eyepiece of focal length 6.0 cm. The magnifying power and length of the telescope tube are respectively (2026 Board)",
+    "options": [
+      "24, 150 cm",
+      "42, 138 cm",
+      "24, 138 cm",
+      "42, 150 cm"
+    ],
+    "correct": 0,
+    "explanation": "Magnifying power (normal adjustment) M = fo/fe = 144/6 = 24. Tube length L = fo+fe = 144+6 = 150 cm.",
+    "whyWrong": [
+      "Correct: M = fo/fe = 24 and L = fo+fe = 150 cm.",
+      "Neither the magnification nor the length match the given focal lengths.",
+      "The magnification (24) is correct, but the length should be fo+fe = 150 cm, not 138 cm.",
+      "The length (150 cm) is correct, but the magnification should be 24, not 42."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b036",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "In which of the following does total internal reflection NOT occur? (2026 Board)",
+    "options": [
+      "Twinkling of stars",
+      "Brilliance of diamonds",
+      "Optical fibre",
+      "Reflecting prism"
+    ],
+    "correct": 0,
+    "explanation": "Twinkling of stars is caused by atmospheric refraction due to varying air density/temperature, not total internal reflection. Diamonds, optical fibres and reflecting prisms all rely explicitly on TIR.",
+    "whyWrong": [
+      "Correct: twinkling arises from continuous atmospheric refraction, not total internal reflection.",
+      "Diamond brilliance does rely on TIR at its many cut facets.",
+      "Optical fibres rely on TIR to guide light along the core.",
+      "Reflecting prisms are specifically designed to use TIR to redirect light."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b037",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Radiation of wavelength 200 nm is incident on a photosensitive surface of work function 4.2 eV. The kinetic energy of the fastest photoelectrons emitted will be close to (2026 Board)",
+    "options": [
+      "3.5 eV",
+      "3.0 eV",
+      "2.5 eV",
+      "2.0 eV"
+    ],
+    "correct": 3,
+    "explanation": "Photon energy E = 1240/λ(nm) eV = 1240/200 = 6.2 eV. KEmax = E − ϕ₀ = 6.2 − 4.2 = 2.0 eV.",
+    "whyWrong": [
+      "This does not match E−ϕ₀ for the given values.",
+      "This does not match E−ϕ₀ for the given values.",
+      "This does not match E−ϕ₀ for the given values.",
+      "Correct: photon energy 6.2 eV minus work function 4.2 eV gives KEmax = 2.0 eV."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b038",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "A proton and an alpha particle have equal momentum. The ratio of their kinetic energies (Ep/Eα) and de Broglie wavelengths (λp/λα) respectively are (2026 Board)",
+    "options": [
+      "2, 1",
+      "1, 2",
+      "4, 1",
+      "1, 4"
+    ],
+    "correct": 2,
+    "explanation": "KE = p²/2m, so with equal p, Ep/Eα = mα/mp = 4 (alpha is ~4× proton mass). Since λ = h/p and p is equal for both, λp/λα = 1.",
+    "whyWrong": [
+      "Neither ratio matches: energy ratio should be 4 (not 2), wavelength ratio should be 1 (not equal to KE ratio being swapped).",
+      "This has both ratios wrong.",
+      "Correct: equal momentum gives equal de Broglie wavelengths (ratio 1), and KE ratio = mα/mp = 4.",
+      "This has both ratios inverted from the correct values."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b039",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "If r1 and r2 are the radii of atomic nuclei of mass numbers 64 and 27 respectively, the value of r1/r2 is (2026 Board)",
+    "options": [
+      "1",
+      "4/3",
+      "3/4",
+      "27/64"
+    ],
+    "correct": 1,
+    "explanation": "Nuclear radius R = R0A^(1/3). r1/r2 = (64/27)^(1/3) = 4/3 (since 4³=64 and 3³=27).",
+    "whyWrong": [
+      "This would only be true if the mass numbers were equal.",
+      "Correct: (64/27)^(1/3) = 4/3.",
+      "This is the inverse of the correct ratio.",
+      "This is the ratio of mass numbers, not radii, and is also inverted."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b040",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "When the forward bias voltage in a semiconductor diode is changed from 0.8 V to 1.0 V, the forward current changes by 2.0 mA. The forward bias resistance of the diode will be (2026 Board)",
+    "options": [
+      "200 Ω",
+      "175 Ω",
+      "100 Ω",
+      "125 Ω"
+    ],
+    "correct": 2,
+    "explanation": "Dynamic resistance = ΔV/ΔI = (1.0−0.8)/(2.0×10⁻³) = 0.2/0.002 = 100 Ω.",
+    "whyWrong": [
+      "This does not match ΔV/ΔI for the given values.",
+      "This does not match ΔV/ΔI for the given values.",
+      "Correct: ΔV/ΔI = 0.2 V / 2.0 mA = 100 Ω.",
+      "This does not match ΔV/ΔI for the given values."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b041",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The process named 'minority carrier injection' in a p-n junction diode occurs during (2026 Board)",
+    "options": [
+      "forward biasing",
+      "reverse biasing",
+      "no biasing at low temperature",
+      "no biasing at high temperature"
+    ],
+    "correct": 0,
+    "explanation": "In forward bias, majority carriers are pushed across the junction and become minority carriers in the other region, i.e. they are 'injected' as minority carriers – this is minority carrier injection.",
+    "whyWrong": [
+      "Correct: forward biasing pushes majority carriers across the junction where they become minority carriers.",
+      "Reverse biasing widens the depletion region and suppresses carrier flow, not injects minority carriers.",
+      "At equilibrium with no bias, diffusion and drift currents balance; there's no net injection.",
+      "Temperature alone without bias does not describe minority carrier injection."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b042",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): In a Wheatstone bridge circuit, if we interchange the positions of the cell and the galvanometer, the balance condition P/Q = R/S remains unchanged. Reason (R): P/Q = S/R = Q/P (reciprocity of the bridge), so the balance condition remains the same. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "This is the reciprocity theorem of the Wheatstone bridge: interchanging the cell and galvanometer does not affect the balance condition, and the reasoning based on the bridge relations correctly explains why.",
+    "whyWrong": [
+      "This under-credits the reason, which is the standard justification via bridge reciprocity.",
+      "The reason directly explains why interchange preserves balance.",
+      "The reciprocity relation stated in R is indeed valid for a balanced bridge.",
+      "Both statements are true – interchange symmetry is a well-known property of the balanced Wheatstone bridge."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b043",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): The cylindrical soft iron core in a moving coil galvanometer only makes the magnetic field radial and does not affect the strength of the magnetic field. Reason (R): In a moving coil galvanometer, the plane of the coil is always perpendicular to the magnetic field. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 1,
+    "explanation": "A is true – the soft iron core's role is to make the field radial (not to strengthen it). R is also a true consequence of the radial field, but it does not explain why the core leaves the field strength unaffected; it describes a separate effect of the radial geometry.",
+    "whyWrong": [
+      "R does not actually explain why the field strength is unaffected by the core; it just states a resulting geometric fact.",
+      "Correct: both facts about the moving coil galvanometer are true, but R does not explain A.",
+      "R is a true and standard feature of a radial field design in a galvanometer.",
+      "A is true – the core's purpose is specifically to make the field radial, not to boost its magnitude."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b044",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): Photoelectric current depends upon the intensity of the incident radiation. Reason (R): Stopping potential is independent of the intensity of the incident radiation. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 1,
+    "explanation": "Both statements are experimentally true, but R (about stopping potential's independence from intensity) does not explain A (about photocurrent's dependence on intensity) – they describe different aspects of the photoelectric effect.",
+    "whyWrong": [
+      "R does not logically connect to explaining why photocurrent depends on intensity; that follows from more photons producing more photoelectrons.",
+      "Correct: both are established facts of the photoelectric effect, but R does not explain A.",
+      "R is indeed a true, well-known feature of the photoelectric effect.",
+      "Both statements are true independently."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b045",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): Nuclear forces are always attractive. Reason (R): The nuclear force between protons and neutrons in a nucleus is a weak force. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 3,
+    "explanation": "Both statements are false: nuclear forces are attractive at typical internucleon distances but become strongly repulsive at very short range (<~0.5 fm); and the nuclear force is a manifestation of the strong nuclear force, not the weak force.",
+    "whyWrong": [
+      "Neither statement is correct.",
+      "Neither statement is correct.",
+      "A is also false – nuclear forces are not always attractive; they turn repulsive at very short range.",
+      "Correct: nuclear forces are not always attractive (they're repulsive at short range), and they arise from the strong force, not the weak force."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b046",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Two wires of the same length and same area of cross-section but made of different materials of resistivities ρ1 and ρ2 are connected in series. The equivalent resistivity of the combination is (2026 Board)",
+    "options": [
+      "(1/2)(ρ1+ρ2)",
+      "ρ1+ρ2",
+      "ρ1ρ2/(ρ1+ρ2)",
+      "2(ρ1+ρ2)"
+    ],
+    "correct": 0,
+    "explanation": "Total resistance R = ρ1L/A + ρ2L/A = (ρ1+ρ2)L/A. As one combined wire of length 2L and area A, R = ρeq(2L)/A, so ρeq = (ρ1+ρ2)/2.",
+    "whyWrong": [
+      "Correct: equating total resistance to that of a single wire of length 2L gives ρeq = (ρ1+ρ2)/2.",
+      "This misses the factor of 1/2 from the doubled total length.",
+      "This is the formula for equivalent resistivity of a parallel combination, not applicable here.",
+      "This is off by a factor of 4 from the correct value."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b047",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "An electron moves around the nucleus in a circular orbit of radius r and makes n revolutions per second. The value of the equivalent current in the orbit is (2026 Board)",
+    "options": [
+      "e/n",
+      "ne",
+      "ne/r",
+      "e/(nr)"
+    ],
+    "correct": 1,
+    "explanation": "Current is charge passing per unit time. In one second, the electron passes a given point n times, each time carrying charge e, so I = ne.",
+    "whyWrong": [
+      "This has the dependence on n inverted.",
+      "Correct: I = charge × frequency = ne.",
+      "This introduces an incorrect r dependence; current doesn't depend on orbit radius directly.",
+      "This is dimensionally and physically incorrect for equivalent current."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b048",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The dimensions of the rate of change of magnetic flux are (2026 Board)",
+    "options": [
+      "[M L T⁻³ A]",
+      "[M L² T⁻³ A⁻¹]",
+      "[M L² T⁻² A⁻¹]",
+      "[M L² T⁻³ A⁻²]"
+    ],
+    "correct": 1,
+    "explanation": "Rate of change of flux equals induced EMF, whose dimension is [ML²T⁻³A⁻¹] (same as potential difference, since EMF = work/charge = ML²T⁻²/(AT) = ML²T⁻³A⁻¹).",
+    "whyWrong": [
+      "This has an incorrect power of length and A is not raised to a negative power correctly here.",
+      "Correct: dΦ/dt has the same dimension as EMF, [ML²T⁻³A⁻¹].",
+      "This has an incorrect power of time.",
+      "This has an incorrect power of A (should be A⁻¹, not A⁻²)."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b049",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "An ac voltage is given as v = 14 sin(314t) V. The average and effective (rms) values of the voltage (in V) over a cycle are respectively (2026 Board)",
+    "options": [
+      "14 and 7",
+      "10 and 14",
+      "0 and 10",
+      "10 and 0"
+    ],
+    "correct": 2,
+    "explanation": "Average value of a full sinusoidal cycle is zero (equal positive and negative halves cancel). RMS value = V0/√2 = 14/1.414 ≈ 10 V.",
+    "whyWrong": [
+      "The average over a full cycle is zero, not 14; and rms is about 10, not 7.",
+      "Both values here are inverted and incorrect.",
+      "Correct: average over a full cycle is 0, and rms = V0/√2 ≈ 10 V.",
+      "This swaps average and rms – average is 0, rms is about 10, not the other way round."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b050",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "The ratio of amplitude of the electric field to the amplitude of the magnetic field associated with an electromagnetic wave propagating in glass (n=1.5) is (2026 Board)",
+    "options": [
+      "3×10⁸ ms⁻¹",
+      "2×10⁸ ms⁻¹",
+      "3.3×10⁻⁹ ms⁻¹",
+      "5×10⁻⁹ ms⁻¹"
+    ],
+    "correct": 1,
+    "explanation": "For an EM wave, E0/B0 equals the wave's speed in that medium, v = c/n = (3×10⁸)/1.5 = 2×10⁸ m/s.",
+    "whyWrong": [
+      "This is the speed of light in vacuum, but the wave travels through glass, so it should be divided by n.",
+      "Correct: E0/B0 = v = c/n = 2×10⁸ m/s.",
+      "This is not a valid wave speed in a dielectric medium such as glass.",
+      "This is far too small and does not match c/n for glass."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b051",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "While studying photoelectric emission from a given surface, the wavelength of incident radiation is changed from 600 nm to 400 nm, keeping intensity the same. Then (2026 Board)",
+    "options": [
+      "cut-off potential will decrease.",
+      "cut-off potential will increase.",
+      "saturation current will decrease.",
+      "saturation current will increase."
+    ],
+    "correct": 1,
+    "explanation": "Decreasing wavelength increases photon energy (frequency), increasing KEmax = hν−ϕ₀ and hence the stopping (cut-off) potential. Saturation current depends on intensity (number of photons/sec), which is unchanged.",
+    "whyWrong": [
+      "Cut-off potential increases (shorter wavelength = higher energy photons), not decreases.",
+      "Correct: shorter wavelength means higher photon energy, raising KEmax and thus the cut-off (stopping) potential.",
+      "Saturation current depends on intensity, which is kept constant, so it should not change.",
+      "Saturation current depends on intensity (unchanged here), not wavelength."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b052",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The kinetic energy of a charged particle is increased to four times its initial value. The de Broglie wavelength associated with the particle will (2026 Board)",
+    "options": [
+      "increase by 100% of its initial value.",
+      "increase by 50% of its initial value.",
+      "decrease by 25% of its initial value.",
+      "decrease by 50% of its initial value."
+    ],
+    "correct": 3,
+    "explanation": "λ = h/√(2mKE), so λ ∝ 1/√KE. If KE quadruples, λ becomes λ/2, i.e. it decreases to half, a 50% decrease.",
+    "whyWrong": [
+      "The wavelength decreases, it does not increase.",
+      "The wavelength decreases, it does not increase.",
+      "The decrease is 50%, not 25%.",
+      "Correct: λ ∝ 1/√KE, so quadrupling KE halves λ, a 50% decrease."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b053",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "The Paschen series in the spectrum of the hydrogen atom lies in the (2026 Board)",
+    "options": [
+      "infrared region",
+      "ultraviolet region",
+      "visible region",
+      "partly ultraviolet and partly visible region"
+    ],
+    "correct": 0,
+    "explanation": "The Paschen series (transitions to n=3) has photon energies low enough that all its lines fall in the infrared region of the spectrum.",
+    "whyWrong": [
+      "Correct: all Paschen series lines lie in the infrared region.",
+      "Ultraviolet corresponds to the Lyman series (transitions to n=1), not Paschen.",
+      "Visible light corresponds to the Balmer series (transitions to n=2), not Paschen.",
+      "This mixed description matches neither the Paschen series nor any single known series."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b054",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "In a reverse-biased p-n junction diode, the applied voltage mostly drops across (2026 Board)",
+    "options": [
+      "p-region only",
+      "n-region only",
+      "depletion region",
+      "the diode as a uniform drop"
+    ],
+    "correct": 2,
+    "explanation": "The depletion region has very few free charge carriers and hence very high resistance compared to the bulk p and n regions, so almost all the applied reverse voltage appears across it.",
+    "whyWrong": [
+      "The p-region (bulk, doped) has low resistance and negligible voltage drop compared to the depletion region.",
+      "The n-region similarly has low resistance and negligible voltage drop.",
+      "Correct: the high-resistance depletion region takes almost the entire applied reverse voltage.",
+      "The drop is concentrated in the depletion region, not spread uniformly across the whole diode."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b055",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): The work done in taking a unit charge around a closed loop of an electric circuit involving cells and resistors is zero. Reason (R): The potential at a point depends on the location of the point in the loop. After completing one round, the charge comes back to the point of start. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "Both statements are true: potential is a single-valued function of position, so returning to the starting point (same potential) after a complete loop means net work done is zero – this is precisely the correct explanation.",
+    "whyWrong": [
+      "This under-credits R, which correctly explains why net work over a closed loop is zero.",
+      "R does directly and correctly explain A.",
+      "R correctly describes why the total work is zero for a closed loop.",
+      "Correct: since potential depends only on position, returning to the same point after a full loop gives zero net work – which correctly explains A."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b056",
+    "chapter": "Magnetism and Matter",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): When a ferromagnetic substance is heated to high temperature, it becomes paramagnetic in nature. Reason (R): The disappearance of magnetisation of a ferromagnet is abrupt and not gradual. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 2,
+    "explanation": "A is true: above the Curie temperature, thermal agitation destroys the ferromagnetic domain alignment and the material becomes paramagnetic. R is false: the loss of magnetisation with temperature is gradual, becoming zero exactly at the Curie point, not an abrupt jump.",
+    "whyWrong": [
+      "R is false – magnetisation decreases gradually with temperature, vanishing at the Curie point.",
+      "R is false outright, not merely a poor explanation.",
+      "Correct: ferromagnetic-to-paramagnetic transition at the Curie point does occur, but the loss of magnetisation is gradual, not abrupt.",
+      "A is true; ferromagnets do become paramagnetic above the Curie temperature."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b057",
+    "chapter": "Ray Optics and Optical Instruments",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): When a convex lens made of glass is immersed in water, its converging power increases. Reason (R): The focal length of a lens depends only on the radii of curvature of its two faces. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 3,
+    "explanation": "Both statements are false: immersing a convex glass lens in water actually decreases its converging power (since the relative refractive index of glass w.r.t. water is smaller than w.r.t. air). Also, focal length depends on the refractive index of the lens material relative to the surrounding medium too, not just on the radii of curvature.",
+    "whyWrong": [
+      "Neither statement is correct.",
+      "Neither statement is correct.",
+      "A is also false; power decreases (not increases) in water.",
+      "Correct: power decreases in water (not increases), and focal length also depends on the relative refractive index, not just on the radii of curvature."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b058",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): The conductivity of an n-type semiconductor is higher than that of a p-type semiconductor at a given temperature. Reason (R): The electrons in the conduction band in an n-type semiconductor are more mobile than the holes in the valence band in a p-type semiconductor. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "Both statements are true: electron mobility is generally higher than hole mobility, so for similar doping levels, n-type conductivity (σ = neμe) tends to exceed p-type conductivity (σ = peμh), and this mobility difference is precisely the correct explanation.",
+    "whyWrong": [
+      "This under-credits R, which is precisely the standard explanation for this difference.",
+      "R does correctly and directly explain A via the mobility difference.",
+      "R is a well-established physical fact (electrons are generally more mobile than holes).",
+      "Correct: higher electron mobility compared to hole mobility explains why n-type conductivity typically exceeds p-type at similar doping."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b059",
+    "chapter": "Electric Charges and Fields",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Two small identical metallic balls having charges q and −2q are kept far at a separation r. They are brought in contact and then separated to a distance r/2. Compared to the initial force F, they will now (2026 Board)",
+    "options": [
+      "attract with a force F/2",
+      "repel with a force F/2",
+      "repel with a force F",
+      "attract with a force F"
+    ],
+    "correct": 1,
+    "explanation": "Original F = kq(2q)/r² = 2kq²/r² (attractive). On contact, total charge (q−2q)=−q is shared equally: each ball gets −q/2 (same sign, so now repulsive). New force = k(q/2)²/(r/2)² = k(q²/4)/(r²/4) = kq²/r² = F/2 (using F=2kq²/r²).",
+    "whyWrong": [
+      "After contact both balls carry the same sign of charge (−q/2 each), so they repel, not attract.",
+      "Correct: after contact each ball carries −q/2, giving a repulsive force of magnitude F/2 at the halved separation.",
+      "This is twice the correct new force magnitude.",
+      "After contact the charges are of the same sign, so the force becomes repulsive, and its magnitude is F/2, not F."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b060",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "The magnetic flux through a loop placed in a magnetic field can be changed by changing (2026 Board)",
+    "options": [
+      "area of the loop only",
+      "the value of magnetic field only",
+      "orientation of the loop in the field only",
+      "any one or more of area, field, or orientation"
+    ],
+    "correct": 3,
+    "explanation": "Flux ϕ = BA cosθ, so changing any of B, A, or the angle θ between the loop's normal and the field – individually or together – changes the flux.",
+    "whyWrong": [
+      "Field strength and orientation can also change flux; it isn't limited to area.",
+      "Area and orientation can also change flux; it isn't limited to field strength.",
+      "Area and field strength can also change flux; it isn't limited to orientation.",
+      "Correct: since ϕ = BAcosθ, changing B, A, or θ (singly or together) changes the flux."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b061",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Which of the following statements is NOT true for electric energy in ac form compared to dc form? (2026 Board)",
+    "options": [
+      "Production of ac is economical.",
+      "ac voltage can be easily and efficiently converted from one level to another.",
+      "ac can be transmitted economically over long distances.",
+      "ac is less dangerous."
+    ],
+    "correct": 3,
+    "explanation": "AC is generally considered comparatively more hazardous than DC of equivalent magnitude for shocks (it can cause sustained muscle contraction at certain frequencies), so 'ac is less dangerous' is the false statement among these standard textbook advantages of ac.",
+    "whyWrong": [
+      "This is a genuine, textbook-cited advantage of ac generation.",
+      "Transformers make voltage step-up/step-down for ac easy and efficient, a genuine advantage.",
+      "Ac transmission at high voltage with transformers is indeed more economical over long distance.",
+      "Correct: ac is not considered less dangerous than dc; this is the false statement among the listed comparisons."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b062",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "The magnetic field in a plane EM wave travelling in glass (n=1.5) is By = (2×10⁻⁷ T) sin(αx + 1.5×10¹¹t), x in m, t in s. The value of α is (2026 Board)",
+    "options": [
+      "0.5×10³ m⁻¹",
+      "6.0×10² m⁻¹",
+      "7.5×10² m⁻¹",
+      "1.5×10³ m⁻¹"
+    ],
+    "correct": 2,
+    "explanation": "Speed in glass v = c/n = 3×10⁸/1.5 = 2×10⁸ m/s. α = ω/v = (1.5×10¹¹)/(2×10⁸) = 7.5×10² m⁻¹.",
+    "whyWrong": [
+      "This does not match ω/v for the given values.",
+      "This does not match ω/v for the given values.",
+      "Correct: α = ω/v = 1.5×10¹¹/2×10⁸ = 7.5×10² m⁻¹.",
+      "This does not match ω/v for the given values."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b063",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "Light of which of the following colours has the maximum energy per photon? (2026 Board)",
+    "options": [
+      "Red light",
+      "Yellow light",
+      "Green light",
+      "Blue light"
+    ],
+    "correct": 3,
+    "explanation": "Photon energy E=hc/λ is inversely proportional to wavelength. Among red, yellow, green and blue, blue has the shortest wavelength, hence the highest photon energy.",
+    "whyWrong": [
+      "Red has the longest wavelength among these, giving the lowest photon energy, not the highest.",
+      "Yellow has a longer wavelength than blue, giving lower photon energy.",
+      "Green has a longer wavelength than blue, giving lower photon energy.",
+      "Correct: blue light has the shortest wavelength among these choices, hence the highest photon energy."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b064",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "Nuclides with the same number of neutrons are called (2026 Board)",
+    "options": [
+      "Isobars",
+      "Isotones",
+      "Isotopes",
+      "Isomers"
+    ],
+    "correct": 1,
+    "explanation": "Isotones have the same neutron number (N = A−Z) but different atomic (proton) number and mass number.",
+    "whyWrong": [
+      "Isobars have the same mass number A, not the same neutron number.",
+      "Correct: isotones share the same neutron count.",
+      "Isotopes have the same atomic number (proton count), not the same neutron count.",
+      "Isomers have the same A and Z but different nuclear energy states, unrelated to neutron count specifically."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b065",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The radius of a nucleus of mass number 125 is (2026 Board)",
+    "options": [
+      "6.0 fm",
+      "30 fm",
+      "72 fm",
+      "150 fm"
+    ],
+    "correct": 0,
+    "explanation": "R = R0A^(1/3), with R0≈1.2 fm. For A=125, A^(1/3)=5, so R = 1.2×5 = 6.0 fm.",
+    "whyWrong": [
+      "Correct: R0A^(1/3) = 1.2×5 = 6.0 fm.",
+      "This does not follow the R0A^(1/3) scaling for A=125.",
+      "This does not follow the R0A^(1/3) scaling for A=125.",
+      "This does not follow the R0A^(1/3) scaling for A=125."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b066",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "The energy of an electron in an orbit of the hydrogen atom is −3.4 eV. Its angular momentum in that orbit will be (2026 Board)",
+    "options": [
+      "3h/2π",
+      "2h/π",
+      "h/π",
+      "h/2π"
+    ],
+    "correct": 2,
+    "explanation": "E_n = −13.6/n² eV. Setting −13.6/n²=−3.4 gives n²=4, n=2. Angular momentum L = nh/2π = 2h/2π = h/π.",
+    "whyWrong": [
+      "This does not correspond to n=2 in L=nh/2π.",
+      "This overstates L; it corresponds to n=4, not n=2.",
+      "Correct: E=−3.4 eV gives n=2, so L = 2h/2π = h/π.",
+      "This corresponds to n=1, not n=2."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b067",
+    "chapter": "Semiconductor Electronics: Materials, Devices and Simple Circuits",
+    "subject": "Physics",
+    "difficulty": "easy",
+    "text": "A good diode checked by a multimeter should indicate (2026 Board)",
+    "options": [
+      "high resistance in reverse bias and low resistance in forward bias",
+      "high resistance in both forward and reverse bias",
+      "low resistance in both forward and reverse bias",
+      "high resistance in forward bias and low resistance in reverse bias"
+    ],
+    "correct": 0,
+    "explanation": "A healthy diode conducts easily (low resistance) when forward biased and blocks current (high resistance) when reverse biased.",
+    "whyWrong": [
+      "Correct: forward bias should show low resistance (conducting), reverse bias should show high resistance (blocking).",
+      "A good diode conducts well in forward bias (low resistance), not high resistance in both directions.",
+      "A good diode should block current in reverse bias (high resistance), not conduct in both directions.",
+      "This is the reverse of correct diode behaviour – forward bias should be low resistance, not high."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b068",
+    "chapter": "Alternating Current",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "The rms and the average value of an ac voltage V = V0 sinωt over a full cycle respectively are (2026 Board)",
+    "options": [
+      "V0/√2, V0/√2",
+      "V0/√2, V0/2",
+      "V0/√2, 0",
+      "V0, 0"
+    ],
+    "correct": 2,
+    "explanation": "RMS value of a sinusoid is V0/√2. The average value over one complete cycle is zero, since positive and negative half-cycles cancel exactly.",
+    "whyWrong": [
+      "The average over a full cycle is zero, not equal to the rms value.",
+      "The average over a full cycle is zero, not V0/2.",
+      "Correct: rms = V0/√2, and the average over a full cycle is 0.",
+      "The rms value is V0/√2, not V0 itself."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b069",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): Induced emf produced in a coil will be more when the magnetic flux linked with the coil is more. Reason (R): The induced emf produced is directly proportional to the magnetic flux. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 3,
+    "explanation": "Both statements are false: by Faraday's law, induced emf depends on the rate of change of flux (dϕ/dt), not on the magnitude of the flux itself. A steady, large flux linked with a coil produces zero emf if it isn't changing.",
+    "whyWrong": [
+      "Neither statement is correct as worded.",
+      "Neither statement is correct as worded.",
+      "A is also false – emf depends on the rate of change of flux, not the flux magnitude.",
+      "Correct: emf depends on dϕ/dt (rate of change), not on the flux magnitude itself, so both statements as worded are false."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b070",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "difficulty": "medium",
+    "text": "Assertion (A): In Young's double-slit experiment, the fringe width for dark and bright fringes is the same. Reason (R): Fringe width is given by β = λD/d, where symbols have their usual meanings. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 0,
+    "explanation": "Both statements are true: successive bright fringes and successive dark fringes are each spaced by the same β=λD/d, which is why the assertion (equal fringe width for dark and bright) correctly follows from this formula.",
+    "whyWrong": [
+      "This under-credits the reason, which is the standard formula that indeed produces equal spacing.",
+      "R does directly explain A via the fringe-spacing formula.",
+      "The fringe-width formula given is the standard, correct one.",
+      "Correct: since consecutive maxima and minima are equally spaced by β=λD/d, the assertion is correctly explained by the reason."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b071",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): Energy is released when heavy nuclei undergo fission or light nuclei undergo fusion. Reason (R): For heavy nuclei, binding energy per nucleon increases with atomic number Z, while for light nuclei it decreases with increasing Z. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 2,
+    "explanation": "A is true – both fission of heavy nuclei and fusion of light nuclei move products toward the peak of the binding-energy-per-nucleon curve (around A≈56), releasing energy. R is false/imprecise: binding energy per nucleon actually decreases (not increases) with increasing Z for heavy nuclei beyond the peak, and generally increases with A for light nuclei up to the peak, not the reverse trend as stated.",
+    "whyWrong": [
+      "R misstates the actual trend of binding energy per nucleon with mass/atomic number.",
+      "R is false, not merely a poor match.",
+      "Correct: A is true, but the trend described in R is essentially backwards / incorrect.",
+      "A is true – both fission of heavy nuclei and fusion of light nuclei release energy by moving toward the binding-energy peak."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-phy-b072",
+    "chapter": "Dual Nature of Radiation and Matter",
+    "subject": "Physics",
+    "difficulty": "hard",
+    "text": "Assertion (A): Photoelectric effect is a spontaneous (instantaneous) phenomenon. Reason (R): According to the wave picture of radiation, an electron would take hours/days to absorb sufficient energy to overcome the work function and be ejected from a metal surface. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "Both A and R are false."
+    ],
+    "correct": 1,
+    "explanation": "Both statements are individually true (emission is observed to be essentially instantaneous, and classical wave theory does predict an absurdly long absorption time). However, R describes a failure of the classical wave picture rather than directly explaining why emission actually is instantaneous (which instead follows from the photon/quantum picture) – so R is not the correct explanation of A.",
+    "whyWrong": [
+      "R does not itself explain the instantaneous nature of the effect; it only highlights a contradiction with the (incorrect) classical wave prediction.",
+      "Correct: both are true statements, but R explains why the classical wave theory fails, not why the photoelectric effect is actually instantaneous (which needs the photon picture).",
+      "R is indeed the standard, correct classical wave-theory calculation used to highlight this discrepancy.",
+      "Both A and R as stated are true facts."
+    ],
+    "priority": true
+  }
+]

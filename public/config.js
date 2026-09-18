@@ -13,9 +13,8 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XII: {
-    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science'],
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
-    // more subjects to follow
   }
 };
 
@@ -45,7 +44,12 @@ const BANKS = {
   'XII ICSE Physics':            'XII-ICSE-Physics',
   'XII ICSE Chemistry':          'XII-ICSE-Chemistry',
   'XII ICSE Biology':            'XII-ICSE-Biology',
-  'XII ICSE Computer Science':   'XII-ICSE-Computer-Science'
+  'XII ICSE Computer Science':   'XII-ICSE-Computer-Science',
+
+  'XII CBSE Economics':          'XII-CBSE-Economics',
+  'XII CBSE Political Science':  'XII-CBSE-Political-Science',
+  'XII CBSE Psychology':         'XII-CBSE-Psychology',
+  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology'
 };
 
 const SA_BANKS = {
@@ -68,7 +72,16 @@ const SA_BANKS = {
   'XII ICSE Mathematics':      'XII-ICSE-Mathematics-ShortAnswers',
   'XII ICSE Computer Science': 'XII-ICSE-Computer-Science-ShortAnswers',
   'XII ICSE Biology':          'XII-ICSE-Biology-ShortAnswers',
-  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-ShortAnswers'
+  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-ShortAnswers',
+  'XII CBSE Mathematics':      'XII-CBSE-Mathematics-ShortAnswers',
+  'XII CBSE Physics':          'XII-CBSE-Physics-ShortAnswers',
+  'XII CBSE Chemistry':        'XII-CBSE-Chemistry-ShortAnswers',
+  'XII CBSE Biology':          'XII-CBSE-Biology-ShortAnswers',
+
+  'XII CBSE Economics':          'XII-CBSE-Economics-ShortAnswers',
+  'XII CBSE Political Science':  'XII-CBSE-Political-Science-ShortAnswers',
+  'XII CBSE Psychology':         'XII-CBSE-Psychology-ShortAnswers',
+  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
