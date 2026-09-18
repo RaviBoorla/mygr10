@@ -1,0 +1,261 @@
+[
+  {
+    "id": "xiimath-sa-2026-001",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If 3(x² + y²) = 4xy, find dy/dx at (1/2, 3/2).",
+    "modelAnswer": "Differentiating implicitly: 3(2x + 2y·dy/dx) = 4(y + x·dy/dx) ⇒ 6x + 6y·y′ = 4y + 4x·y′ ⇒ y′(6y−4x) = 4y−6x ⇒ y′ = (2y−3x)/(3y−2x). At (1/2, 3/2): 2y−3x = 3−1.5 = 1.5, 3y−2x = 4.5−1 = 3.5, so dy/dx = 1.5/3.5 = 3/7.",
+    "keyPoints": [
+      "Differentiate both sides implicitly w.r.t. x",
+      "Collect all dy/dx terms on one side",
+      "dy/dx = (2y−3x)/(3y−2x) = 3/7 at the given point"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-002",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A room freshener bottle in the shape of an inverted cone sprays perfume at a steady rate of 1 mm³/min (volume decreasing). Find the rate at which the level of perfume is dropping when the level is 10 mm, given the semi-vertical angle of the cone is π/6.",
+    "modelAnswer": "For a cone with semi-vertical angle θ, r = h tanθ. Here tan(π/6) = 1/√3, so r = h/√3. V = (1/3)πr²h = (1/3)π(h²/3)h = πh³/9. dV/dt = (πh²/3)·dh/dt. Given dV/dt = −1 mm³/min and h = 10: −1 = (π×100/3)·dh/dt ⇒ dh/dt = −3/(100π). So the level is dropping at 3/(100π) mm/min.",
+    "keyPoints": [
+      "r = h tanθ = h/√3",
+      "V = πh³/9",
+      "Differentiate w.r.t. t and substitute dV/dt = −1, h = 10",
+      "dh/dt = −3/(100π) mm/min"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-003",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the vector of magnitude 14 in the direction of vector QP, where P and Q are the points (1, 3, 2) and (−1, 0, 8) respectively.",
+    "modelAnswer": "QP = P − Q = (1−(−1), 3−0, 2−8) = (2, 3, −6). |QP| = √(4+9+36) = √49 = 7. Unit vector = (2/7, 3/7, −6/7). Required vector = 14 × unit vector = (4, 6, −12), i.e. 4i + 6j − 12k.",
+    "keyPoints": [
+      "QP = P − Q = 2i+3j−6k",
+      "|QP| = 7",
+      "Scale the unit vector by 14: 4i+6j−12k"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-004",
+    "chapter": "Vector Algebra",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Vectors a = 3i − 2j + 2k and b = i + 2k represent two adjacent sides of a parallelogram. Find the vectors representing its diagonals and hence their lengths.",
+    "modelAnswer": "Diagonals: a+b = 4i−2j+4k and a−b = 2i−2j+0k. |a+b| = √(16+4+16) = √36 = 6. |a−b| = √(4+4) = √8 = 2√2.",
+    "keyPoints": [
+      "Diagonal 1 = a+b = 4i−2j+4k, length 6",
+      "Diagonal 2 = a−b = 2i−2j, length 2√2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-005",
+    "chapter": "Inverse Trigonometric Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Simplify: tan⁻¹[(cos2x − sin2x)/(cos2x + sin2x)], for 0 < x < π/4.",
+    "modelAnswer": "Dividing numerator and denominator by cos2x: (1−tan2x)/(1+tan2x) = tan(π/4 − 2x). So the expression equals tan⁻¹[tan(π/4−2x)] = π/4 − 2x, which is valid since 0<x<π/4 keeps π/4−2x within the principal range.",
+    "keyPoints": [
+      "Divide num/den by cos2x to get tan form",
+      "(1−tan2x)/(1+tan2x) = tan(π/4−2x)",
+      "Answer: π/4 − 2x"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-006",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate ∫₀¹ x tan⁻¹x dx.",
+    "modelAnswer": "Using integration by parts with u=tan⁻¹x, dv=x dx (so v=x²/2): ∫₀¹ x tan⁻¹x dx = [x²/2·tan⁻¹x]₀¹ − ½∫₀¹ x²/(1+x²) dx = π/8 − ½∫₀¹[1 − 1/(1+x²)]dx = π/8 − ½[x − tan⁻¹x]₀¹ = π/8 − ½(1−π/4) = π/4 − ½.",
+    "keyPoints": [
+      "Integration by parts: u=tan⁻¹x, dv=x dx",
+      "Simplify x²/(1+x²) = 1 − 1/(1+x²)",
+      "Result = π/4 − 1/2"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-007",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find ∫√[(x+2)/(x−2)] dx.",
+    "modelAnswer": "Multiply inside the root by √(x+2)/√(x+2): the integral becomes ∫(x+2)/√(x²−4) dx = ∫x/√(x²−4) dx + 2∫dx/√(x²−4) = √(x²−4) + 2 ln|x+√(x²−4)| + C.",
+    "keyPoints": [
+      "Rationalize to get (x+2)/√(x²−4)",
+      "Split into ∫x/√(x²−4)dx + 2∫dx/√(x²−4)",
+      "Result: √(x²−4) + 2 ln|x+√(x²−4)| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-008",
+    "chapter": "Integrals",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If I₁ = ∫₋π/4^(π/4) dx/(1+cos2x) and I₂ = ∫₋₁/2^(1/2) |x| dx, show that I₁ − 4I₂ = 0.",
+    "modelAnswer": "1+cos2x = 2cos²x, so I₁ = ½∫₋π/4^(π/4) sec²x dx = ½[tan x]₋π/4^(π/4) = ½(1−(−1)) = 1. I₂ = 2∫₀^(1/2) x dx = 2×(1/2)(1/4) = 1/4, so 4I₂ = 1. Hence I₁ − 4I₂ = 1 − 1 = 0.",
+    "keyPoints": [
+      "1+cos2x = 2cos²x reduces I₁ to ½∫sec²x dx = 1",
+      "|x| is even, so I₂ = 2∫₀^(1/2)x dx = 1/4",
+      "I₁ − 4I₂ = 1 − 1 = 0"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-009",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the general solution of the differential equation x²(dy/dx) = x² + xy + y².",
+    "modelAnswer": "This is homogeneous. Put y = vx, dy/dx = v + x(dv/dx). Then x²(v + x dv/dx) = x² + x²v + x²v² ⇒ v + x dv/dx = 1 + v + v² ⇒ x dv/dx = 1+v² ⇒ dv/(1+v²) = dx/x. Integrating: tan⁻¹v = ln|x| + C, i.e. tan⁻¹(y/x) = ln|x| + C.",
+    "keyPoints": [
+      "Substitute y=vx (homogeneous equation)",
+      "Separate variables: dv/(1+v²) = dx/x",
+      "General solution: tan⁻¹(y/x) = ln|x| + C"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-010",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Solve the following LPP graphically: Minimize Z = 13x − 15y subject to x + y ≤ 7, 2x − 3y + 6 ≥ 0, x ≥ 0, y ≥ 0.",
+    "modelAnswer": "The feasible region has corner points (0,0), (7,0), (3,4) [intersection of x+y=7 and 2x−3y+6=0], and (0,2) [intersection of x=0 and 2x−3y+6=0]. Evaluating Z=13x−15y: at (0,0), Z=0; at (7,0), Z=91; at (3,4), Z=39−60=−21; at (0,2), Z=−30. The minimum value of Z is −30, attained at (0,2).",
+    "keyPoints": [
+      "Corner points: (0,0), (7,0), (3,4), (0,2)",
+      "Evaluate Z at each corner",
+      "Minimum Z = −30 at (0,2)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-011",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Out of two bags, bag I contains 3 red and 4 white balls and bag II contains 8 red and 6 white balls. A die is thrown; if it shows a number less than 3, a ball is drawn from bag I, otherwise from bag II. Find the probability that the ball drawn is red.",
+    "modelAnswer": "P(bag I) = P(number<3) = 2/6 = 1/3, P(bag II) = 4/6 = 2/3. P(red|I) = 3/7, P(red|II) = 8/14 = 4/7. By total probability: P(red) = (1/3)(3/7) + (2/3)(4/7) = 1/7 + 8/21 = 3/21 + 8/21 = 11/21.",
+    "keyPoints": [
+      "P(bag I)=1/3, P(bag II)=2/3",
+      "P(red|I)=3/7, P(red|II)=4/7",
+      "Total probability: P(red) = 11/21"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-012",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A relation R is defined on Z, the set of integers, as R = {(x, y) : |x−y| is divisible by a prime number p, x, y ∈ Z}. Check whether R is an equivalence relation or not.",
+    "modelAnswer": "Reflexive: |x−x| = 0, and 0 is divisible by p, so (x,x) ∈ R for all x — R is reflexive. Symmetric: if p divides |x−y|, then since |x−y|=|y−x|, p also divides |y−x|, so (y,x) ∈ R — R is symmetric. Transitive: if p | (x−y) and p | (y−z), then p | [(x−y)+(y−z)] = (x−z), so p | |x−z|, giving (x,z) ∈ R — R is transitive. Since R is reflexive, symmetric and transitive, R is an equivalence relation.",
+    "keyPoints": [
+      "Reflexive: |x-x|=0 divisible by any prime",
+      "Symmetric: |x-y|=|y-x|",
+      "Transitive: sum of two multiples of p is a multiple of p",
+      "Conclusion: R is an equivalence relation"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-013",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "If x = cos t, y = cos mt, prove that (1−x²)(d²y/dx²) − x(dy/dx) + m²y = 0.",
+    "modelAnswer": "dx/dt = −sin t, dy/dt = −m sin mt, so dy/dx = m sin mt/sin t. Differentiate again w.r.t. t and divide by dx/dt to get d²y/dx² = [m² cos mt sin t − m sin mt cos t]/sin³t (after simplification using the quotient/chain rule). Substituting x=cos t (so sin²t = 1−x²) and simplifying (1−x²)y′′ − x y′ + m²y reduces every term to sin/cos mt combinations that cancel exactly to 0, confirming the identity. (Standard result: y=cos(m cos⁻¹x) satisfies this Chebyshev-type differential equation.)",
+    "keyPoints": [
+      "dy/dx = m sin mt / sin t via chain rule",
+      "Differentiate again and use sin²t = 1 − x²",
+      "Substitute into (1−x²)y′′ − xy′ + m²y and simplify to 0"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-014",
+    "chapter": "Three Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Check whether the lines given by (x−1)/2 = (y−2)/3 = (z−3)/4 and (x−4)/5 = (y−1)/2 = z/1 are parallel or not. If parallel, find the distance between them; otherwise find their point of intersection.",
+    "modelAnswer": "Direction ratios (2,3,4) and (5,2,1) are not proportional, so the lines are not parallel. Testing intersection with points (1,2,3)+t(2,3,4) and (4,1,0)+s(5,2,1): solving 1+2t=4+5s and 2+3t=1+2s gives t=−1, s=−1, which also satisfies the z-equation 3+4t = s (3−4=−1=s ✓). So the lines intersect, at the point (1−2, 2−3, 3−4) = (−1, −1, −1).",
+    "keyPoints": [
+      "Direction ratios not proportional ⇒ lines not parallel",
+      "Solve simultaneous parametric equations: t=−1, s=−1",
+      "Point of intersection: (−1, −1, −1)"
+    ]
+  },
+  {
+    "id": "xiimath-sa-2026-015",
+    "chapter": "Application of Derivatives",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "An online delivery company has 5000 subscribers and collects an annual fee of ₹300 per subscriber. For every increase of ₹1 in the fee, 10 subscribers discontinue. Let the fee be increased by ₹x. (i) How many subscribers discontinue after an increase of ₹x? (ii) Express total revenue R(x) as a function of x. (iii) Find the value of x for which R(x) is maximum.",
+    "modelAnswer": "(i) 10x subscribers discontinue. (ii) Remaining subscribers = 5000−10x, so R(x) = (5000−10x)(300+x) = 1500000 + 2000x − 10x². (iii) R′(x) = 2000−20x = 0 ⇒ x = 100. R″(x) = −20 < 0, confirming a maximum at x = 100 (maximum revenue = 1500000+200000−10(10000) = ₹1,600,000).",
+    "keyPoints": [
+      "Subscribers lost = 10x",
+      "R(x) = (5000−10x)(300+x) = 1500000+2000x−10x²",
+      "R′(x)=0 at x=100; R″(x)<0 confirms maximum"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-016",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "In an online jackpot, there is one first prize of ₹3,00,000, two second prizes of ₹2,00,000 each, and three third prizes of ₹50,000 each. A total of 1,00,000 tickets, each costing ₹100, were sold. Rohan bought one ticket. (i) What are the possible amounts he can win? (ii) What is the probability that he wins at least ₹2,00,000? (iii) In a second, independent jackpot with a prize of ₹5,00,000 and winning chance 1 in 1,00,000, find the probability that he wins the jackpot on exactly one of his two tickets.",
+    "modelAnswer": "(i) Possible winnings: ₹0 (no prize), ₹50,000, ₹2,00,000, ₹3,00,000. (ii) Tickets winning ≥₹2,00,000 = 1 (first prize) + 2 (second prizes) = 3, so P = 3/1,00,000. (iii) Let p = 1/1,00,000 for each independent jackpot. P(exactly one win) = p(1−p) + (1−p)p = 2p(1−p) = 2(1/100000)(99999/100000) = 199998/10,000,000,000 ≈ 0.00002.",
+    "keyPoints": [
+      "Possible amounts: 0, 50000, 200000, 300000",
+      "P(≥200000) = 3/100000",
+      "P(exactly one of two independent jackpots) = 2p(1−p)"
+    ],
+    "qtype": "case-study"
+  },
+  {
+    "id": "xiimath-sa-2026-017",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A roundabout is bounded by C₁: x²+y²=64, with a circular pond in the middle given by C₂: x²+y²=4. (i) Express y as a function of x, y=f(x), for both C₁ and C₂. (ii) Using integration, find the area of the region covered by the roundabout (the region enclosed between C₁ and C₂).",
+    "modelAnswer": "(i) For C₁: y=±√(64−x²); for C₂: y=±√(4−x²). (ii) Area of full disc bounded by C₁ = π(8)² = 64π. Area of pond bounded by C₂ = π(2)² = 4π. Area of the roundabout region (annulus) = 64π − 4π = 60π.",
+    "keyPoints": [
+      "y=±√(64−x²) for C₁, y=±√(4−x²) for C₂",
+      "Area of C₁ disc = 64π, area of C₂ disc = 4π",
+      "Roundabout area = 64π − 4π = 60π"
+    ],
+    "qtype": "case-study"
+  }
+]

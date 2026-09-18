@@ -1,1 +1,359 @@
-[]
+[
+  {
+    "id": "xiimath-2026-001",
+    "chapter": "Inverse Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "If 2 cos⁻¹x = y, then (2026 Board)",
+    "options": [
+      "0 ≤ y ≤ π",
+      "−π ≤ y ≤ π",
+      "0 ≤ y ≤ 2π",
+      "−π ≤ y ≤ 0"
+    ],
+    "correct": 2,
+    "explanation": "cos⁻¹x has range [0, π], so y = 2cos⁻¹x lies in [0, 2π].",
+    "whyWrong": [
+      "This is the range of cos⁻¹x itself, not 2cos⁻¹x.",
+      "This is the range of sin⁻¹x-type expressions, not applicable here.",
+      "",
+      "cos⁻¹x is never negative, so y cannot be negative."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-002",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "Which of the following cannot be the order of a row matrix? (2026 Board)",
+    "options": [
+      "2 × 1",
+      "1 × 2",
+      "1 × 1",
+      "1 × n"
+    ],
+    "correct": 0,
+    "explanation": "A row matrix has exactly 1 row and any number of columns, i.e. order 1 × n. 2 × 1 has 2 rows, so it is a column matrix, not a row matrix.",
+    "whyWrong": [
+      "",
+      "This is a valid row matrix order (1 row, 2 columns).",
+      "This is a valid (trivial) row matrix order.",
+      "This is the general valid row matrix order."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-003",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "Which of the following properties is/are true for two matrices A, B of suitable order? (i) (A+B)′ = A′+B′ (ii) (A−B)′ = B′−A′ (iii) (AB)′ = A′B′ (iv) (kAB)′ = kBA, k a scalar (2026 Board)",
+    "options": [
+      "(i) only",
+      "(i), (ii) and (iii)",
+      "(i) and (ii)",
+      "(i) and (iv)"
+    ],
+    "correct": 0,
+    "explanation": "(i) is the standard transpose-of-sum property and is true. (ii) is false since (A−B)′ = A′−B′, not B′−A′. (iii) is false since (AB)′ = B′A′, not A′B′. (iv) is false since (kAB)′ = kB′A′, not kBA. Only (i) holds.",
+    "whyWrong": [
+      "",
+      "(ii), (iii) are false as shown, so this set is wrong.",
+      "(ii) is false, so this pair is wrong.",
+      "(iv) is false, so this pair is wrong."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-004",
+    "chapter": "Determinants",
+    "difficulty": "medium",
+    "text": "If Δ₁ = det([[1,0,0],[0,2,0],[0,0,3]]) and Δ₂ = det([[0,2,0],[1,0,0],[0,0,6]]), then (2026 Board)",
+    "options": [
+      "Δ₁ = 2Δ₂",
+      "Δ₂ = −2Δ₁",
+      "Δ₁ = Δ₂",
+      "Δ₂ = −Δ₁"
+    ],
+    "correct": 1,
+    "explanation": "Δ₁ = 1×2×3 = 6 (diagonal matrix). Δ₂, expanding along the first row: −2×(1×6−0×0) = −12. So Δ₂ = −12 = −2(6) = −2Δ₁.",
+    "whyWrong": [
+      "6 ≠ 2(−12).",
+      "",
+      "6 ≠ −12.",
+      "−12 ≠ −6."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-005",
+    "chapter": "Application of Derivatives",
+    "difficulty": "medium",
+    "text": "The least value of f(x) = x³ − 12x on [0, 3] is (2026 Board)",
+    "options": [
+      "−16",
+      "−9",
+      "0",
+      "16"
+    ],
+    "correct": 0,
+    "explanation": "f′(x) = 3x²−12 = 0 ⇒ x = 2 (in [0,3]). f(0)=0, f(2)=8−24=−16, f(3)=27−36=−9. The least value among these is −16.",
+    "whyWrong": [
+      "",
+      "f(3) = −9 is a value but not the least.",
+      "f(0) = 0 is a value but not the least.",
+      "16 does not occur as a value of f on this interval."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-006",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "If A and B are skew-symmetric matrices of the same order, then which of the following matrices is also skew-symmetric? (2026 Board)",
+    "options": [
+      "AB",
+      "AB + BA",
+      "(A + B)²",
+      "A − B"
+    ],
+    "correct": 3,
+    "explanation": "(A−B)′ = A′−B′ = −A−(−B) = −(A−B), so A−B is skew-symmetric. (AB)′=B′A′=BA ≠ −AB in general; (AB+BA)′=BA+AB, which is symmetric; (A+B)² is also symmetric since (A+B) is skew-symmetric.",
+    "whyWrong": [
+      "(AB)′ = BA, not −AB in general, so AB need not be skew-symmetric.",
+      "This expression is symmetric, not skew-symmetric.",
+      "This expression is symmetric, not skew-symmetric.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-007",
+    "chapter": "Integrals",
+    "difficulty": "medium",
+    "text": "The value of ∫₋₁¹ x³/(x²+2|x|+1) dx is (2026 Board)",
+    "options": [
+      "0",
+      "log 2",
+      "2 log 2",
+      "½ log 2"
+    ],
+    "correct": 0,
+    "explanation": "The denominator x²+2|x|+1 = (|x|+1)² is an even function, and the numerator x³ is odd, so the whole integrand is odd. The integral of an odd function over the symmetric interval [−1,1] is 0.",
+    "whyWrong": [
+      "",
+      "This would apply to a different, non-odd integrand.",
+      "This would apply to a different, non-odd integrand.",
+      "This would apply to a different, non-odd integrand."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-008",
+    "chapter": "Application of Integrals",
+    "difficulty": "medium",
+    "text": "The area bounded by the curve y = x|x|, the x-axis and the ordinates x = −1 and x = 1 is (2026 Board)",
+    "options": [
+      "0",
+      "1/3",
+      "2/3",
+      "4/3"
+    ],
+    "correct": 2,
+    "explanation": "For x∈[0,1], y=x² so ∫₀¹x²dx=1/3. For x∈[−1,0], y=−x² (below axis), and its area magnitude is also ∫₋₁⁰x²dx=1/3. Total area = 1/3+1/3 = 2/3.",
+    "whyWrong": [
+      "Treating the two branches as cancelling instead of adding their areas gives this wrong value.",
+      "This is only one half of the total area.",
+      "",
+      "This double-counts one of the halves."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-009",
+    "chapter": "Differential Equations",
+    "difficulty": "medium",
+    "text": "The integrating factor of the differential equation R(dx/dy) + Px = Q, where P, Q, R are functions of y, is (2026 Board)",
+    "options": [
+      "e^(∫(P/R) dy)",
+      "e^(∫P dy)",
+      "e^(∫(P/R) dx)",
+      "e^(∫P dx)"
+    ],
+    "correct": 0,
+    "explanation": "Dividing throughout by R gives dx/dy + (P/R)x = Q/R, the standard linear form in x, whose integrating factor is e^(∫(P/R) dy).",
+    "whyWrong": [
+      "",
+      "This omits dividing by R.",
+      "The equation is linear in x as a function of y, so the integrating factor must be a function of y, not x.",
+      "This omits dividing by R and uses the wrong variable."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-010",
+    "chapter": "Differential Equations",
+    "difficulty": "medium",
+    "text": "The order and degree of the differential equation d/dx(e^y) = 0 are respectively (2026 Board)",
+    "options": [
+      "0, 1",
+      "1, 1",
+      "2, 1",
+      "1, not defined"
+    ],
+    "correct": 1,
+    "explanation": "d/dx(e^y) = e^y (dy/dx) = 0. The highest derivative present is the first derivative dy/dx, so the order is 1, and since the equation is a polynomial (degree 1) in dy/dx, the degree is 1.",
+    "whyWrong": [
+      "The equation does involve a first derivative, so order is not 0.",
+      "",
+      "No second derivative appears, so order is not 2.",
+      "The equation is a polynomial of degree 1 in dy/dx, so degree is well defined."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-011",
+    "chapter": "Vector Algebra",
+    "difficulty": "medium",
+    "text": "The value of p for which the vectors i + 2j + 3k and 2i − pj + k are perpendicular to each other is (2026 Board)",
+    "options": [
+      "0",
+      "1",
+      "5/2",
+      "−5/2"
+    ],
+    "correct": 2,
+    "explanation": "Perpendicular vectors have zero dot product: (1)(2) + (2)(−p) + (3)(1) = 5 − 2p = 0 ⇒ p = 5/2.",
+    "whyWrong": [
+      "Dot product is not zero when p = 0.",
+      "Dot product is not zero when p = 1.",
+      "",
+      "This has the wrong sign."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-012",
+    "chapter": "Vector Algebra",
+    "difficulty": "medium",
+    "text": "The value of m for which the points with position vectors −i − j + 2k, 2i + mj + 5k and 3i + 11j + 6k are collinear, is (2026 Board)",
+    "options": [
+      "8",
+      "−8",
+      "5/2",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "AB = (3, m+1, 3) and AC = (4, 12, 4). For collinearity AB = k·AC: 3 = 4k ⇒ k = 3/4, so m+1 = 12k = 9 ⇒ m = 8 (consistent with 3rd component 3 = 4(3/4)).",
+    "whyWrong": [
+      "",
+      "This has the wrong sign.",
+      "This does not satisfy the ratio condition.",
+      "This does not satisfy the ratio condition."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-013",
+    "chapter": "Vector Algebra",
+    "difficulty": "medium",
+    "text": "If |a| = 8, |b| = 3 and |a × b| = 12, then the value of |a · b| is (2026 Board)",
+    "options": [
+      "6√3",
+      "8√3",
+      "12√3",
+      "3√12"
+    ],
+    "correct": 2,
+    "explanation": "|a×b| = |a||b|sinθ = 24 sinθ = 12 ⇒ sinθ = 1/2 ⇒ cosθ = ±√3/2. |a·b| = |a||b||cosθ| = 24×(√3/2) = 12√3.",
+    "whyWrong": [
+      "This uses an incorrect value of cosθ.",
+      "This uses an incorrect value of cosθ.",
+      "",
+      "This has the coefficient and radicand swapped incorrectly."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-014",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The length of the perpendicular drawn from the point (2, 5, 7) to the line x/1 = y/0 = z/0 (the x-axis) is (2026 Board)",
+    "options": [
+      "2",
+      "5",
+      "√74",
+      "√78"
+    ],
+    "correct": 2,
+    "explanation": "The line x/1=y/0=z/0 is the x-axis. The foot of the perpendicular from (2,5,7) to the x-axis is (2,0,0). Distance = √(5²+7²) = √(25+49) = √74.",
+    "whyWrong": [
+      "This is just the x-coordinate, not the perpendicular distance.",
+      "This is just one coordinate, not the perpendicular distance.",
+      "",
+      "This uses an incorrect sum under the root."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-015",
+    "chapter": "Linear Programming",
+    "difficulty": "medium",
+    "text": "The degree of an objective function of a linear programming problem is (2026 Board)",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "Any natural number"
+    ],
+    "correct": 1,
+    "explanation": "By definition, the objective function of a linear programming problem is a linear (first-degree) function of the decision variables.",
+    "whyWrong": [
+      "A constant function has degree 0, which is not the case for an LPP objective.",
+      "",
+      "A degree-2 function would not be linear, violating the definition of an LPP.",
+      "Only degree 1 (linear) functions qualify as LPP objective functions."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-016",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Assertion (A): In an experiment of throwing an unbiased die, the probability of getting a prime number given that the number appearing on the die is odd, is 2/3. Reason (R): For any two events A and B, P(A|B) = P(A∩B)/P(B). (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true but R is not the correct explanation of A.",
+      "A is true but R is false.",
+      "A is false but R is true."
+    ],
+    "correct": 0,
+    "explanation": "Odd numbers on a die: {1,3,5}, so P(odd)=3/6. Primes among these: {3,5}, so P(prime∩odd)=2/6. P(prime|odd) = (2/6)/(3/6) = 2/3, confirming A. R is the standard, correct definition of conditional probability and directly explains A.",
+    "whyWrong": [
+      "",
+      "R is in fact the correct explanation of A, since applying the formula directly gives 2/3.",
+      "A is true, as shown by direct computation.",
+      "A is true, not false."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xiimath-2026-017",
+    "chapter": "Three Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "Assertion (A): Lines x = py + q, z = ry + s and x = p′y + q′, z = r′y + s′ are perpendicular to each other when pp′ + rr′ = 1. Reason (R): Two lines r = a₁ + λb₁ and r = a₂ + μb₂ are perpendicular to each other if b₁·b₂ = 0. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true but R is not the correct explanation of A.",
+      "A is true but R is false.",
+      "A is false but R is true."
+    ],
+    "correct": 3,
+    "explanation": "The direction vectors of the two lines are (p,1,r) and (p′,1,r′). Perpendicularity requires their dot product to be zero: pp′ + 1 + rr′ = 0, i.e. pp′ + rr′ = −1, not 1. So A is false. R states the correct general perpendicularity condition (dot product of direction vectors = 0), which is true.",
+    "whyWrong": [
+      "A is false, and R is not being used to justify a true A.",
+      "A is false.",
+      "A is false, as the correct condition is pp′+rr′ = −1, not 1.",
+      ""
+    ],
+    "priority": true
+  }
+]
