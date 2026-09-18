@@ -129,7 +129,8 @@ function _ensureRevisionData(cb) {
 Object.assign(app, {
 
   _screenNotes(subjectId, chapterIdx) {
-    const id = NOTES_CATALOG.some(s => s.id === subjectId) ? subjectId : NOTES_CATALOG[0].id;
+    const gradeCatalog = this._notesGradeCatalog();
+    const id = gradeCatalog.some(s => s.id === subjectId) ? subjectId : gradeCatalog[0].id;
 
     if (!window.REVISION) {
       const failed = _revisionCallbacks === undefined;
@@ -184,8 +185,15 @@ Object.assign(app, {
       </div>`;
   },
 
+  _notesGradeCatalog() {
+    const XII_ONLY = new Set(['Economics','Political Science','Psychology']);
+    const X_ONLY   = new Set(['Social Science','History','Geography','English','Hindi']);
+    if (state.grade === 'XII') return NOTES_CATALOG.filter(s => !X_ONLY.has(s.id));
+    return NOTES_CATALOG.filter(s => !XII_ONLY.has(s.id));
+  },
+
   _subjectTabs(activeId) {
-    return NOTES_CATALOG.map(s => `<button class="filter-tab ${s.id === activeId ? 'active' : ''}"
+    return this._notesGradeCatalog().map(s => `<button class="filter-tab ${s.id === activeId ? 'active' : ''}"
              onclick="app.go(['notes','${s.id}','0'])">${esc(s.label)}</button>`).join('');
   },
 
@@ -271,7 +279,8 @@ Object.assign(app, {
   },
 
   _repaintNotes() {
-    const id = NOTES_CATALOG.some(s => s.id === state.params[0]) ? state.params[0] : NOTES_CATALOG[0].id;
+    const gc2 = app._notesGradeCatalog();
+    const id = gc2.some(s => s.id === state.params[0]) ? state.params[0] : gc2[0].id;
     const chapters = state.grade === 'XII' ? consolidatedChaptersXII(id) : consolidatedChapters(id);
     if (!chapters.length) return;
     const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));

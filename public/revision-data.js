@@ -5088,3 +5088,183 @@ REVISION['XII Mathematics'] = [
     ]
   }
 ];
+
+REVISION['XII Mathematics'].push(
+  {
+    chapter: 'Ch 2 — Inverse Trigonometric Functions',
+    formulae: [
+      'sin⁻¹: domain [−1,1], range [−π/2, π/2]  (principal value branch)',
+      'cos⁻¹: domain [−1,1], range [0, π]',
+      'tan⁻¹: domain ℝ, range (−π/2, π/2)',
+      'cosec⁻¹: domain ℝ−(−1,1), range [−π/2, π/2]−{0}',
+      'sec⁻¹: domain ℝ−(−1,1), range [0, π]−{π/2}',
+      'cot⁻¹: domain ℝ, range (0, π)',
+      'sin⁻¹(sin x) = x  for x ∈ [−π/2, π/2];  sin(sin⁻¹ x) = x  for x ∈ [−1,1]',
+      'sin⁻¹(−x) = −sin⁻¹(x);  cos⁻¹(−x) = π − cos⁻¹(x);  tan⁻¹(−x) = −tan⁻¹(x)',
+      'sin⁻¹ x + cos⁻¹ x = π/2  for x ∈ [−1,1]',
+      'tan⁻¹ x + cot⁻¹ x = π/2  for x ∈ ℝ',
+      'sec⁻¹ x + cosec⁻¹ x = π/2  for |x| ≥ 1',
+      'tan⁻¹x + tan⁻¹y = tan⁻¹((x+y)/(1−xy))  when xy < 1',
+      'tan⁻¹x − tan⁻¹y = tan⁻¹((x−y)/(1+xy))  when xy > −1',
+      '2tan⁻¹x = sin⁻¹(2x/(1+x²)) = cos⁻¹((1−x²)/(1+x²)) = tan⁻¹(2x/(1−x²))'
+    ],
+    logic: [
+      'Principal value = the unique value in the principal value branch satisfying the equation',
+      'sin⁻¹ x ≠ 1/sin x — they are completely different; ⁻¹ here means inverse function, not reciprocal',
+      'Always check whether the argument lies in the domain before evaluating',
+      'For sin⁻¹(sin θ): if θ ∉ [−π/2,π/2], reduce θ to equivalent angle in range first',
+      'Identity sin⁻¹x + cos⁻¹x = π/2 is very frequently used in board problems',
+      'tan⁻¹x + tan⁻¹y formula changes sign depending on whether xy < 1, = 1, or > 1'
+    ],
+    tips: [
+      'Memorise the range table — principal value range is tested directly in MCQs',
+      'To find principal value: let f⁻¹(k) = y → f(y) = k, find y in the principal branch',
+      'Complement identity: sin⁻¹x = π/2 − cos⁻¹x is useful to convert between forms',
+      '2026 Board: simplification of expressions using properties is common in 3-mark questions'
+    ],
+    bestPractices: [
+      'State the principal branch clearly when answering "find principal value" questions',
+      'Write intermediate steps when applying addition formulae — sign errors are common',
+      'Verify the xy < 1 condition before applying the tan⁻¹ addition formula'
+    ]
+  },
+  {
+    chapter: 'Ch 3 — Matrices',
+    formulae: [
+      'Matrix order: m × n means m rows, n columns; element aᵢⱼ is in row i, column j',
+      'Types: Row (1×n), Column (m×1), Square (m=n), Diagonal (aᵢⱼ=0 for i≠j), Scalar, Identity (I)',
+      'Zero matrix: all elements 0; denoted O',
+      'Equality: A = B iff same order and aᵢⱼ = bᵢⱼ for all i, j',
+      'Addition/Scalar: (A+B)ᵢⱼ = aᵢⱼ+bᵢⱼ;  (kA)ᵢⱼ = k·aᵢⱼ  (same order required)',
+      'Multiplication AB: defined when cols(A) = rows(B); (AB)ᵢₖ = Σⱼ aᵢⱼbⱼₖ; order m×p if A is m×n, B is n×p',
+      'Transpose: A′ or Aᵀ — rows become columns; (AB)′ = B′A′',
+      'Symmetric: A′ = A;  Skew-symmetric: A′ = −A',
+      'Every square matrix A = ½(A+A′) + ½(A−A′) — symmetric + skew-symmetric',
+      'Inverse: A⁻¹ exists iff AB = BA = I; A⁻¹ is unique if it exists'
+    ],
+    logic: [
+      'Matrix multiplication is NOT commutative: AB ≠ BA in general',
+      'AB = O does NOT imply A = O or B = O (unlike numbers)',
+      'AC = BC does NOT imply A = B (no cancellation law)',
+      'Associativity holds: (AB)C = A(BC)',
+      'Distributivity holds: A(B+C) = AB + AC',
+      'For symmetric A: aᵢⱼ = aⱼᵢ; for skew-symmetric: aᵢⱼ = −aⱼᵢ, so diagonal elements = 0',
+      'If A is symmetric, kA, A+B, A², ABA are also symmetric (where B symmetric)'
+    ],
+    tips: [
+      'Order of AB: (m×n)(n×p) = m×p — "inner dimensions cancel"',
+      'Board exam: finding x,y,z from matrix equation — equate corresponding elements',
+      'Transpose shortcut: (A+B)′ = A′+B′;  (kA)′ = kA′',
+      'Skew-symmetric diagonal = 0 always — useful check'
+    ],
+    bestPractices: [
+      'Always state matrix order when defining a matrix in answers',
+      'Show each element calculation when multiplying 2×2 or 3×3 matrices',
+      'To find inverse using elementary row operations: write [A|I] and reduce to [I|A⁻¹]'
+    ]
+  },
+  {
+    chapter: 'Ch 4 — Determinants',
+    formulae: [
+      '|A| for 1×1: |[a]| = a',
+      '|A| for 2×2: |[a b; c d]| = ad − bc',
+      '|A| for 3×3 (expansion along R₁): a₁(b₂c₃−b₃c₂) − b₁(a₂c₃−a₃c₂) + c₁(a₂b₃−a₃b₂)',
+      'Minors Mᵢⱼ: determinant after deleting row i and column j',
+      'Cofactors Aᵢⱼ = (−1)^(i+j) Mᵢⱼ',
+      '|A| = a₁₁A₁₁ + a₁₂A₁₂ + a₁₃A₁₃  (expansion along any row or column)',
+      'Area of triangle: ½|[x₁ y₁ 1; x₂ y₂ 1; x₃ y₃ 1]| — take ± so area is positive',
+      'adj(A): transpose of cofactor matrix; A·adj(A) = adj(A)·A = |A|·I',
+      'A⁻¹ = (1/|A|)·adj(A)  (only when |A| ≠ 0)',
+      'Singular matrix: |A| = 0 (no inverse);  Non-singular: |A| ≠ 0',
+      'Cramer\'s Rule: x = D₁/D, y = D₂/D, z = D₃/D  where D = |A|, D₁,D₂,D₃ replace columns with constants'
+    ],
+    logic: [
+      'If any row (or column) is all zeros, determinant = 0',
+      'If two rows (or columns) are identical, determinant = 0',
+      'Swapping two rows changes sign of determinant; multiplying a row by k multiplies |A| by k',
+      'For n×n matrix: |kA| = kⁿ|A|  (not k|A|)',
+      '|AB| = |A||B|;  |A′| = |A|;  |A⁻¹| = 1/|A|',
+      'Consistent system: D ≠ 0 → unique solution; D = 0 → check D₁,D₂,D₃ for no/infinite solutions'
+    ],
+    tips: [
+      'Expand along the row/column with most zeros to minimise calculation',
+      'For 3×3: use row operations to create zeros before expanding — saves time',
+      '|A| = 0 check: used to find k in problems like "find k such that matrix is singular"',
+      'Cofactor sign pattern: + − +  / − + −  / + − +  (checkerboard)'
+    ],
+    bestPractices: [
+      'Clearly write out the cofactor expansion step-by-step in 5-mark questions',
+      'For area of triangle: always write ½|...|; mention "taking positive value" if needed',
+      'State "Since |A| ≠ 0, A is non-singular and A⁻¹ exists" before computing inverse'
+    ]
+  },
+  {
+    chapter: 'Ch 5 — Continuity and Differentiability',
+    formulae: [
+      'Continuity at x = c: lim(x→c) f(x) = f(c)  [LHL = RHL = f(c)]',
+      'Differentiability at x = c: f′(c) = lim(h→0) [f(c+h)−f(c)]/h exists',
+      'Differentiable ⟹ Continuous; Continuous ⟹ NOT necessarily differentiable',
+      'Chain rule: d/dx[f(g(x))] = f′(g(x))·g′(x)',
+      'd/dx[sin⁻¹x] = 1/√(1−x²);  d/dx[cos⁻¹x] = −1/√(1−x²)',
+      'd/dx[tan⁻¹x] = 1/(1+x²);  d/dx[cot⁻¹x] = −1/(1+x²)',
+      'd/dx[sec⁻¹x] = 1/(x√(x²−1));  d/dx[cosec⁻¹x] = −1/(x√(x²−1))',
+      'd/dx[eˣ] = eˣ;  d/dx[aˣ] = aˣ·ln a;  d/dx[ln x] = 1/x',
+      'Logarithmic differentiation: for y = [u(x)]^v(x), take ln both sides then differentiate',
+      'Parametric differentiation: dy/dx = (dy/dt)/(dx/dt) when x=f(t), y=g(t)',
+      'Second derivative: d²y/dx² = d/dx(dy/dx);  notation y″ or f″(x)',
+      'Rolle\'s Theorem: f continuous on [a,b], differentiable on (a,b), f(a)=f(b) ⟹ ∃ c∈(a,b): f′(c)=0',
+      'Mean Value Theorem (Lagrange): f continuous on [a,b], differentiable on (a,b) ⟹ ∃ c: f′(c)=[f(b)−f(a)]/(b−a)'
+    ],
+    logic: [
+      '|x| is continuous everywhere but not differentiable at x = 0',
+      'For piecewise functions: check LHL = RHL = f(c) at break points for continuity',
+      'For differentiability at break point: check LHD = RHD',
+      'Product rule: (fg)′ = f′g + fg′;  Quotient rule: (f/g)′ = (f′g−fg′)/g²',
+      'Implicit differentiation: differentiate both sides w.r.t. x, treating y as function of x; collect dy/dx terms'
+    ],
+    tips: [
+      'Logarithmic differentiation is the only clean method for xˣ, x^(sin x), etc.',
+      'For parametric: dy/dx = (dy/dt)÷(dx/dt) — do NOT differentiate y directly w.r.t. x',
+      'Second-order: for questions "find d²y/dx² if y = sin x + cos x" — just differentiate twice',
+      'MVT board question: verify conditions, find c, state conclusion clearly'
+    ],
+    bestPractices: [
+      'For continuity questions: explicitly evaluate LHL, RHL, f(c) as three separate steps',
+      'State chain rule step explicitly: "let u = inner function, then d/dx = (d/du)(du/dx)"',
+      'For implicit: after differentiating, isolate dy/dx algebraically before substituting values'
+    ]
+  },
+  {
+    chapter: 'Ch 6 — Application of Derivatives',
+    formulae: [
+      'Rate of change: dy/dx = rate of change of y w.r.t. x; dy/dx|ₓ₌ₓ₀ = rate at x₀',
+      'Increasing on (a,b): f′(x) > 0 for all x ∈ (a,b)',
+      'Decreasing on (a,b): f′(x) < 0 for all x ∈ (a,b)',
+      'Critical point: f′(c) = 0 or f′(c) does not exist',
+      'First Derivative Test: f′ changes +→− at c ⟹ local max; −→+ ⟹ local min; no change ⟹ inflexion',
+      'Second Derivative Test: f′(c)=0 and f″(c)<0 ⟹ local max; f″(c)>0 ⟹ local min; f″(c)=0 ⟹ test fails',
+      'Absolute max/min on [a,b]: evaluate f at critical points AND endpoints; largest/smallest is abs max/min',
+      'Tangent slope at (x₀,y₀): m = f′(x₀);  equation: y−y₀ = m(x−x₀)',
+      'Normal slope: −1/f′(x₀) (perpendicular to tangent)',
+      'Approximation: Δy ≈ f′(x)·Δx;  f(x+Δx) ≈ f(x) + f′(x)·Δx'
+    ],
+    logic: [
+      'For related rates: express both quantities in terms of a common variable (usually time), then differentiate',
+      'For max/min word problems: set up objective function, find domain, find critical points, test',
+      'At point of inflexion: f″(c) = 0 but function does NOT have a local max or min there',
+      'If f″(c) = 0, First Derivative Test is more reliable than Second Derivative Test',
+      'Absolute max ≠ local max; must also check endpoints of closed interval'
+    ],
+    tips: [
+      'Draw a sign chart for f′(x) to determine intervals of increase/decrease',
+      'Related rates: differentiate with respect to time, not x',
+      '"Find the dimensions of a rectangle of maximum area with given perimeter" — classic 5-mark board type',
+      'Tangent parallel to x-axis ⟹ slope = 0 ⟹ f′(x) = 0'
+    ],
+    bestPractices: [
+      'Clearly define variables and constraints in optimization problems',
+      'Write the conclusion: "Since f″(c) < 0, x = c gives a local maximum"',
+      'For approximation problems: compute f(x) exact value + f′(x)·Δx — do not skip intermediate steps'
+    ]
+  }
+);
