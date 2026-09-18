@@ -55,8 +55,8 @@ const NOTES_SOURCES_XII = {
   Chemistry:           [['CBSE', 'XII Chemistry']],
   Biology:             [['CBSE', 'XII Biology']],
   'Comp App & IT':     [['CBSE', 'XII Computer Science']],
-  Economics:           [['CBSE', 'XII Economics']],
-  'Political Science': [['CBSE', 'XII Political Science']],
+  Economics:           [['CBSE', 'XII Economics'], ['CBSE', 'XII Economics Macro']],
+  'Political Science': [['CBSE', 'XII Political Science CWP'], ['CBSE', 'XII Political Science PISI']],
   Psychology:          [['CBSE', 'XII Psychology']],
 };
 

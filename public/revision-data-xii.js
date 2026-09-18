@@ -2116,3 +2116,554 @@ REVISION['XII Psychology'] = [
     ]
   }
 ];
+
+// ─── Economics Book 2: Introductory Macroeconomics ───────────────────────────
+REVISION['XII Economics Macro'] = [
+  {
+    chapter: 'Introduction to Macroeconomics',
+    formulae: [],
+    logic: [
+      'Macroeconomics: studies aggregate economic variables — total output, employment, aggregate price level, growth',
+      'Distinguished from microeconomics: macro examines interlinkages across entire economy; micro examines individual sectors ceteris paribus',
+      'Emerged as separate discipline in 1930s due to Keynes; motivated by the Great Depression',
+      'Four sectors of an economy: Households (supply factors, demand goods), Firms (produce goods, demand factors), Government (provides public goods, taxes), External sector (exports/imports)',
+      'Capitalist economy: means of production privately owned; workers are wage labourers; firms maximise profits',
+      'Four factors of production: Land (rent), Labour (wages), Capital (interest), Entrepreneurship (profit)'
+    ],
+    tips: [
+      'Keynesian macroeconomics focuses on short-run fluctuations in income and employment',
+      'Great Depression (1930s): widespread unemployment, falling output — justified government intervention',
+      'NCERT textbook deals mostly with a capitalist economy — may not fully capture developing economy dynamics'
+    ],
+    bestPractices: [
+      'Distinguish micro vs. macro: micro = individual firm/consumer; macro = entire economy',
+      'Board question: "What is macroeconomics? How does it differ from microeconomics?"'
+    ]
+  },
+  {
+    chapter: 'National Income Accounting',
+    formulae: [
+      'GDP (at MP) = C + I + G + (X − M)  (expenditure method)',
+      'GDP (at FC) = GDP (at MP) − Net Indirect Taxes  (NIT = Indirect taxes − Subsidies)',
+      'GNP = GDP + Net Factor Income from Abroad (NFIA)',
+      'NNP = GNP − Depreciation  (= National Income at MP)',
+      'National Income (NI) = NNP at FC = NNP (MP) − NIT',
+      'Value Added = Value of Output − Intermediate Consumption',
+      'GDP Deflator = (Nominal GDP / Real GDP) × 100',
+      'CPI (Consumer Price Index): price change for a basket of goods consumed by households',
+      'WPI (Wholesale Price Index): price change at wholesale level'
+    ],
+    logic: [
+      'Three methods give same result: Product Method (sum of value added), Income Method (sum of factor incomes), Expenditure Method (sum of final expenditures)',
+      'Double counting: avoided by using value added method or counting only final goods',
+      'Final goods: used for final consumption or investment; Intermediate goods: used as input in further production',
+      'Stock vs. Flow: GDP is a flow (measured per period); Wealth is a stock (at a point in time)',
+      'Circular flow: households supply factors → firms pay factor incomes → households spend on goods → firms receive revenue → cycle repeats',
+      'GDP vs. GNP: GDP = production within territory; GNP = production by residents (add NFIA)',
+      'GDP as welfare indicator: flawed — ignores distribution, externalities (pollution), non-market activities, quality of life'
+    ],
+    tips: [
+      'NFIA = Factor income received from abroad − Factor income paid to abroad',
+      'Depreciation (Capital consumption allowance): wear and tear of fixed capital',
+      'Gross = before depreciation; Net = after subtracting depreciation',
+      'Market Price = Factor Cost + Net Indirect Taxes',
+      'Personal Disposable Income (PDI) = PI − Personal Taxes; Personal Income (PI) = NI − Undistributed profits − Corporate tax + Transfer payments'
+    ],
+    bestPractices: [
+      'Numericals: identify method (expenditure/income/product), apply correct formula step by step',
+      'State whether "at MP" or "at FC" and "Gross" or "Net" in every answer',
+      'Board question: "Explain why GDP may not be a good index of welfare of a country"'
+    ]
+  },
+  {
+    chapter: 'Money and Banking',
+    formulae: [
+      'Money Multiplier (Credit Multiplier) = 1 / CRR',
+      'Total deposit creation = Initial deposit × Money Multiplier',
+      'High Powered Money (H) = Currency + Banker deposits with RBI',
+      'Money Supply (M1) = Currency with public + Demand deposits',
+      'M3 = M1 + Time deposits with banks (broad money)'
+    ],
+    logic: [
+      'Barter exchange limitations: requires double coincidence of wants; no common measure of value; no store of value',
+      'Functions of money: Medium of exchange, Unit of account, Store of value, Standard of deferred payment',
+      'Demand for money: Transaction motive (buy goods/services), Speculative motive (hold bonds vs. cash based on interest rate expectations)',
+      'Liquidity trap: at very low interest rates, people prefer holding money to bonds — monetary policy ineffective',
+      'Commercial banks: accept deposits (liabilities), give loans (assets); keep CRR + SLR as reserves',
+      'Multiple credit creation: each deposit → bank lends (1-CRR) fraction → re-deposited → lends again → chain process',
+      'RBI instruments: CRR (Cash Reserve Ratio), SLR (Statutory Liquidity Ratio), Repo Rate, Reverse Repo Rate, Open Market Operations (OMO), Bank Rate',
+      'Sterilisation: RBI offsets money supply changes from foreign exchange interventions using OMO'
+    ],
+    tips: [
+      'Repo Rate: rate at which RBI lends to commercial banks (raise → credit costly → money supply falls)',
+      'Reverse Repo Rate: rate at which RBI borrows from banks; always below Repo Rate',
+      'CRR ↑ → banks lend less → money multiplier ↓ → money supply ↓',
+      'Open Market Operations: RBI sells securities → money supply ↓; buys securities → money supply ↑'
+    ],
+    bestPractices: [
+      'Numerical: total credit creation = initial deposit / CRR (NOT × CRR)',
+      'Distinguish M1 (narrow money) and M3 (broad money) with components',
+      'Board question: "Explain the process of money creation by commercial banks with numerical example"'
+    ]
+  },
+  {
+    chapter: 'Determination of Income and Employment',
+    formulae: [
+      'AD = C + I  (two-sector); AD = C + I + G  (three-sector)',
+      'Consumption function: C = c̄ + cY  (c̄ = autonomous consumption, c = MPC)',
+      'MPC (b) = ΔC/ΔY  (Marginal Propensity to Consume)',
+      'MPS = 1 − MPC  (Marginal Propensity to Save)',
+      'Equilibrium: Y = AD → Y = c̄ + cY + Ī → Y* = (c̄ + Ī) / (1 − c)',
+      'Investment Multiplier (k) = 1 / (1 − MPC) = 1 / MPS',
+      'ΔY = k × ΔI  (change in income = multiplier × change in autonomous investment)'
+    ],
+    logic: [
+      'Effective demand principle: in short run, output is determined solely by aggregate demand (AS is perfectly elastic)',
+      'Ex ante vs. Ex post: ex ante = planned/desired; ex post = actual realised; equilibrium when ex ante AD = AS',
+      'Unintended inventory changes: if AD > AS → inventories fall → firms produce more → output rises to equilibrium',
+      'Multiplier process: ΔI → ΔY₁ → ΔC₁ → ΔY₂ → ΔC₂ → ... (each round adds c fraction of previous)',
+      'Paradox of thrift: if all save more → AD falls → income falls → total savings may not increase',
+      'Full employment equilibrium: AD = AS at full employment income (no involuntary unemployment)',
+      'Deflationary gap: AD < full employment AS → actual output < potential → involuntary unemployment',
+      'Inflationary gap: AD > full employment AS → excess demand → price rise'
+    ],
+    tips: [
+      'Multiplier is always > 1 (since 0 < MPC < 1)',
+      'Higher MPC → larger multiplier → greater impact of government spending',
+      'Autonomous investment (Ī): not affected by income; Induced investment: increases with income',
+      'Keynesian Cross: Y* at intersection of 45° line (Y=Y) and AD line'
+    ],
+    bestPractices: [
+      'Numericals: always find Y* first, then use multiplier formula for changes',
+      'Draw Keynesian cross diagram: label 45° line, AD line, equilibrium E, deflationary/inflationary gap',
+      'Board question: "What is the investment multiplier? Explain with the help of a numerical example"'
+    ]
+  },
+  {
+    chapter: 'Government Budget and the Economy',
+    formulae: [
+      'Budget Deficit = Total Expenditure − Total Revenue',
+      'Revenue Deficit = Revenue Expenditure − Revenue Receipts',
+      'Fiscal Deficit = Total Expenditure − (Revenue Receipts + Capital Receipts excluding borrowings)',
+      'Primary Deficit = Fiscal Deficit − Interest Payments',
+      'Government Expenditure Multiplier = 1 / (1 − MPC)',
+      'Tax Multiplier = −MPC / (1 − MPC)  (negative: tax ↑ → income ↓)'
+    ],
+    logic: [
+      'Government functions: Allocation (public goods), Redistribution (reduce inequality via taxes/transfers), Stabilisation (reduce unemployment/inflation)',
+      'Public goods: Non-rival (one person\'s use doesn\'t reduce availability) + Non-excludable (cannot exclude non-payers) → private market fails → government must provide',
+      'Revenue budget: current receipts (taxes, fees) and current expenditure; Capital budget: borrowings, asset creation',
+      'Revenue deficit: revenue expenditure > revenue receipts → borrowing for consumption → bad quality spending',
+      'Fiscal deficit = government\'s total borrowing requirement; shows extent of government reliance on debt',
+      'Primary deficit = fiscal deficit − interest payments; measures current fiscal stress excluding past debt burden',
+      'Automatic stabilisers: tax revenues and transfer payments that automatically reduce fluctuations without discretionary action',
+      'FRBMA (Fiscal Responsibility and Budget Management Act, 2003): binds government to reduce fiscal deficit'
+    ],
+    tips: [
+      'Fiscal deficit = Primary deficit + Interest payments',
+      'Revenue deficit growth as % of fiscal deficit → deterioration of expenditure quality',
+      'Tax multiplier is smaller in absolute value than government expenditure multiplier: government spending has direct AD effect; tax works indirectly through consumption',
+      'GST (Goods and Services Tax): comprehensive indirect tax replacing multiple taxes; increases GDP by ~2%'
+    ],
+    bestPractices: [
+      'Numericals: calculate deficits step-by-step from given budget data',
+      'Distinguish Revenue Deficit, Fiscal Deficit, Primary Deficit with formula',
+      'Board question: "The fiscal deficit gives the borrowing requirement of the government" — Elucidate'
+    ]
+  },
+  {
+    chapter: 'Open Economy Macroeconomics',
+    formulae: [
+      'Y = C + I + G + NX  (NX = Exports − Imports)',
+      'Balance of Payments (BoP) = Current Account + Capital Account + Official Reserve Transactions',
+      'Open Economy Multiplier = 1 / (1 − c + m)  (m = marginal propensity to import)',
+      'Closed economy multiplier = 1 / (1 − c); Open < Closed (m > 0)',
+      'Exchange Rate: price of one currency in terms of another',
+      'Purchasing Power Parity (PPP): exchange rate equalises price level across countries'
+    ],
+    logic: [
+      'Balance of Payments: systematic record of all transactions between residents and rest of world',
+      'Current Account: goods (visible trade), services (invisible), unilateral transfers; surplus = exports > imports',
+      'Capital Account: FDI, portfolio investment, external borrowings, official reserve changes',
+      'BoP always balances: current account deficit financed by capital account surplus or drawing on reserves',
+      'Nominal exchange rate: price of foreign currency; Real exchange rate: relative price of foreign goods in domestic goods',
+      'Depreciation (flexible rate): domestic currency loses value vs. foreign → exports cheaper → imports costlier → trade balance improves',
+      'Devaluation (fixed rate): government deliberately reduces value of domestic currency',
+      'Managed floating: RBI intervenes to manage exchange rate within a band (India\'s current system)',
+      'Open economy multiplier smaller: some spending leaks to imports; higher m → smaller multiplier'
+    ],
+    tips: [
+      'Trade surplus → demand for domestic currency rises → currency appreciates',
+      'CAD (Current Account Deficit): India typically runs a CAD funded by capital inflows',
+      'Official Reserve Transactions: changes in foreign exchange reserves — accommodating (fills BoP gap)',
+      'BoP crisis: inability to finance CAD; requires IMF support, devaluation'
+    ],
+    bestPractices: [
+      'Distinguish current account and capital account items clearly with examples',
+      'Draw BoP structure: current (goods + services + transfers) + capital (FDI + portfolio + borrowings)',
+      'Board question: "Differentiate between fixed and flexible exchange rate systems"'
+    ]
+  }
+];
+
+// ─── Political Science Book 1: Contemporary World Politics ───────────────────
+REVISION['XII Political Science CWP'] = [
+  {
+    chapter: 'The End of Bipolarity',
+    formulae: [],
+    logic: [
+      'Cold War: ideological and political rivalry between USA (capitalism) and USSR (socialism) — never direct military conflict',
+      'Soviet system: state ownership of means of production, planned economy, one-party rule (Communist Party), no economic freedom for individuals',
+      'Glasnost (openness) and Perestroika (restructuring): Gorbachev\'s reforms to modernise Soviet system — unintended consequences',
+      'Fall of Berlin Wall: November 9, 1989 — symbol of end of Cold War and German reunification',
+      'Disintegration of USSR: December 1991 — 15 new independent republics; Russia emerged as successor state',
+      'CIS (Commonwealth of Independent States): formed by former Soviet republics (except Baltic states)',
+      'Causes of USSR collapse: economic stagnation, political authoritarianism, nationalism of republics, failed reforms, arms race burden',
+      'Shock Therapy: sudden transition to market economy in Russia/Eastern Europe — led to economic hardship, collapse of welfare state',
+      'India-Russia relations: historical friendship, defence cooperation (arms supplier), energy partnership, space cooperation (cryogenic engine)'
+    ],
+    tips: [
+      'Soviet Union (USSR) had 15 republics; major ones: Russia, Ukraine, Kazakhstan, Belarus, Georgia',
+      'Warsaw Pact: Soviet military alliance (counterpart of NATO); dissolved 1991',
+      'End of Cold War: US emerged as sole superpower (unipolar world)',
+      'Baltic states (Estonia, Latvia, Lithuania): first to declare independence from USSR'
+    ],
+    bestPractices: [
+      'Distinguish between collapse of Soviet system (economic/political failure) and shock therapy (post-collapse policy)',
+      'Board question: "What were the consequences of the disintegration of the Soviet Union for the world?"',
+      'India-Russia: name specific areas of cooperation (defence, space, energy)'
+    ]
+  },
+  {
+    chapter: 'Contemporary Centres of Power',
+    formulae: [],
+    logic: [
+      'European Union (EU): integration from coal and steel (ECSC 1951) → EEC (1957 Treaty of Rome) → EC → EU (1992 Maastricht Treaty)',
+      'EU features: single market, single currency (Euro), free movement of people, common foreign policy',
+      'EU as power: world\'s largest trading bloc, second largest economy, significant diplomatic influence',
+      'ASEAN (Association of South-East Asian Nations): founded 1967 — Indonesia, Malaysia, Philippines, Singapore, Thailand (original 5)',
+      'ASEAN Way: informal, non-confrontational, consensus-based cooperation; respects sovereignty',
+      'ASEAN Free Trade Area (AFTA) and ASEAN Regional Forum (ARF): economic and security cooperation',
+      'China\'s rise: economic reforms since 1978 (Deng Xiaoping), open door policy, SEZs, WTO member 2001',
+      'China\'s GDP growth: became world\'s 2nd largest economy; largest trading partner for many countries',
+      'India-China relations: border conflict 1962 (Aksai Chin, Arunachal Pradesh), Five Principles of Peaceful Coexistence (Panchsheel), improving economic ties, China\'s strategic partnership with Pakistan as irritant'
+    ],
+    tips: [
+      'EU motto: "United in Diversity"; headquarters: Brussels',
+      'Euro: common currency; not all EU members use it (UK, Sweden, Denmark opted out)',
+      'Brexit: UK voted to leave EU in 2016 referendum — exit completed 2020',
+      'Miracle on the Han River: South Korea\'s rapid economic development (1960s-80s)'
+    ],
+    bestPractices: [
+      'EU evolution: ECSC → EEC → EC → EU — know the year of each treaty',
+      'Board question: "Explain the ASEAN Way. What are its significance?"',
+      'Compare EU and ASEAN as regional organisations: integration depth, decision-making style'
+    ]
+  },
+  {
+    chapter: 'Contemporary South Asia',
+    formulae: [],
+    logic: [
+      'South Asia: India, Pakistan, Bangladesh, Sri Lanka, Nepal, Bhutan, Maldives, Afghanistan',
+      'SAARC (South Asian Association for Regional Cooperation): founded 1985; headquarters Kathmandu',
+      'Major conflicts: India-Pakistan (Kashmir, 3 wars — 1947, 1965, 1971; Kargil 1999); Sri Lanka civil war (Sinhalese-Tamil); Nepal (monarchy vs. democracy vs. Maoists)',
+      'Bangladesh: separated from Pakistan 1971 (with Indian support); military coups followed by democracy',
+      'Democratisation challenges: Pakistan (military interventions), Myanmar (military dominance), Maldives (political instability)',
+      'Nuclear dimension: India and Pakistan both nuclear states since 1998 (Pokhran II / Chagai tests) — raises regional security stakes',
+      'India and South Asia: India is central due to size, geography, economic weight; seen as regional hegemon by smaller neighbors',
+      'External powers: USA and China remain key players in South Asia; China-Pakistan strategic partnership'
+    ],
+    tips: [
+      'SAFTA: South Asian Free Trade Area — aim to boost intra-regional trade (very low currently)',
+      'Sri Lanka conflict: Liberation Tigers of Tamil Eelam (LTTE) — ended 2009 with military defeat of LTTE',
+      'Nepal: became federal democratic republic 2008 after abolishing monarchy',
+      'Bhutan: constitutional monarchy; close relationship with India'
+    ],
+    bestPractices: [
+      'For each country: state type of government (democracy/monarchy/military) and key issue',
+      'Board question: "What are the main sources of conflict and cooperation in South Asia?"',
+      'India\'s dual role: conflict with Pakistan AND leadership of SAARC'
+    ]
+  },
+  {
+    chapter: 'International Organisations',
+    formulae: [],
+    logic: [
+      'United Nations: founded 1945, 193 member states, HQ New York; primary goal: maintain international peace and security',
+      'UN principal organs: General Assembly, Security Council, Secretariat, ICJ, ECOSOC, Trusteeship Council',
+      'Security Council: 5 permanent members (P5: USA, UK, France, Russia, China) with veto power; 10 non-permanent (2-year terms)',
+      'UN reform debate: need to expand Security Council to include India, Brazil, Germany, Japan (G4); reform veto; democratise structure',
+      'India\'s case for UNSC seat: world\'s largest democracy, 5th largest economy, major contributor to UN peacekeeping',
+      'World Bank: funds development projects in developing countries (IBRD + IDA)',
+      'IMF: maintains global financial stability, provides emergency loans (with conditions)',
+      'WTO: successor to GATT; governs international trade rules; settles trade disputes',
+      'IAEA: ensures nuclear technology used peacefully; safeguards nuclear facilities'
+    ],
+    tips: [
+      'UN Secretary-General: António Guterres (since 2017); appointed by UNGA on UNSC recommendation',
+      'ICJ: settles disputes between states; only states (not individuals) can be parties',
+      'UN Peacekeeping: India is one of largest contributors to UN peacekeeping forces',
+      'UNHCR: protects refugees; Nobel Peace Prize 1954, 1981'
+    ],
+    bestPractices: [
+      'Know all P5 members and what veto means (can block any substantive resolution)',
+      'Board question: "What reforms are needed in the UN to make it more democratic and effective?"',
+      'India\'s push for UNSC seat: economic size, democracy, peacekeeping contribution, South Asian representation'
+    ]
+  },
+  {
+    chapter: 'Security in the Contemporary World',
+    formulae: [],
+    logic: [
+      'Traditional security: military threats to state — war, arms race, nuclear deterrence, alliances, balance of power',
+      'Non-traditional security: threats beyond military — terrorism, human trafficking, climate change, pandemics, poverty, organised crime',
+      'Balance of Power: states seek to prevent any one state from dominating — through alliances or military build-up',
+      'Deterrence: discourage attack by ensuring unacceptable cost to attacker (nuclear deterrence)',
+      'Arms Control: agreements limiting types, numbers or deployment of weapons (SALT, START, NPT, CTBT)',
+      'Disarmament: giving up certain categories of weapons entirely',
+      'CBMs (Confidence Building Measures): regular exchange of information between potentially rival states',
+      'Human Security: security of individuals — freedom from want and freedom from fear',
+      'Cooperative security: multilateral approach — all states cooperate to address common security threats'
+    ],
+    tips: [
+      'NPT (Non-Proliferation Treaty): India has not signed — argues it is discriminatory (permits existing nuclear states, prohibits new ones)',
+      'CTBT (Comprehensive Test Ban Treaty): India has not ratified',
+      'Al-Qaeda, ISIS: non-state actors posing traditional-type security threats',
+      'Global commons: high seas, atmosphere, outer space, Antarctica — shared security challenges'
+    ],
+    bestPractices: [
+      'Clearly distinguish traditional vs. non-traditional security with 2 examples each',
+      'Board question: "What is the difference between arms control and disarmament?"',
+      'India\'s security concerns: Pakistan (terrorism, Kashmir), China (border, nuclear), internal (Naxalism, NE insurgency)'
+    ]
+  },
+  {
+    chapter: 'Environment and Natural Resources',
+    formulae: [],
+    logic: [
+      'Global commons: areas beyond any state\'s jurisdiction — atmosphere, Antarctica, ocean floor, outer space',
+      'Tragedy of the Commons: shared resources get over-exploited because no one has incentive to conserve them',
+      'Rio Earth Summit 1992: 170 countries + NGOs; key outcome: Agenda 21 (sustainable development framework), CBD, UNFCCC',
+      'Kyoto Protocol 1997: legally binding emission reduction targets for developed countries (Annex I); India and China exempted as developing nations',
+      'North-South divide on environment: Developed nations want all countries to cut emissions; developing nations argue right to development and historical responsibility of developed world',
+      'India\'s position: common but differentiated responsibilities; development right; criticises unjust burden on poor nations',
+      'Biodiversity: threatened by deforestation, habitat destruction; Convention on Biological Diversity (CBD)',
+      'Indigenous peoples\' rights: often displaced by development projects; international recognition through UN Declaration on Rights of Indigenous Peoples (2007)'
+    ],
+    tips: [
+      'UNFCCC (UN Framework Convention on Climate Change): parent treaty for climate negotiations',
+      'Paris Agreement 2015: all countries submit NDCs (Nationally Determined Contributions); limit warming to 1.5°C',
+      'Agenda 21: global action plan for sustainable development — local, national, global levels',
+      'Antarctica Treaty: international cooperation; no military use; India has research stations (Dakshin Gangotri, Maitri, Bharati)'
+    ],
+    bestPractices: [
+      'Explain "common but differentiated responsibilities" with India\'s position',
+      'Board question: "What were the outcomes of the Rio Earth Summit 1992?"',
+      'Distinguish Kyoto Protocol and Paris Agreement: binding vs. voluntary commitments'
+    ]
+  }
+];
+
+// ─── Political Science Book 2: Politics in India Since Independence ───────────
+REVISION['XII Political Science PISI'] = [
+  {
+    chapter: 'Challenges of Nation Building',
+    formulae: [],
+    logic: [
+      'Three main challenges at Independence: National unity (diversity), Democratic institutions (newly adopted), Economic development (poverty)',
+      'Partition: British India divided into India and Pakistan (August 1947); massive violence, migration (~10-15 million displaced)',
+      'Integration of princely states: 565 princely states — Sardar Patel used diplomacy and force; Hyderabad (police action 1948), Junagadh, Kashmir (accession + conflict with Pakistan)',
+      'Reorganisation of states: States Reorganisation Act 1956 — linguistic basis; created Andhra Pradesh (first linguistic state 1953)',
+      'Nehru\'s vision: secular, democratic, socialist India; parliamentary democracy; non-alignment',
+      'Constitutional framework: adopted Jan 26, 1950; B.R. Ambedkar (chairman, drafting committee); universal adult franchise',
+      'New capital: Chandigarh (Le Corbusier) — Punjab\'s capital moved after Lahore went to Pakistan'
+    ],
+    tips: [
+      'First general elections: 1951-52; Congress won majority; Nehru became first elected PM',
+      'Kashmir accession: Maharaja Hari Singh signed Instrument of Accession Oct 1947 after Pakistani tribal invasion',
+      'Sardar Patel: "Iron Man of India" — integrated princely states; also first Home Minister',
+      'States Reorganisation Commission (1953): recommended linguistic basis for state formation'
+    ],
+    bestPractices: [
+      'Three challenges framework: national unity + democracy + development — structure answer around these',
+      'Board question: "What were the major challenges India faced immediately after independence?"',
+      'Partition consequences: communal violence, refugee crisis, divided resources, border tensions'
+    ]
+  },
+  {
+    chapter: 'Era of One-Party Dominance',
+    formulae: [],
+    logic: [
+      'Congress dominance 1952-1967: Congress won all three general elections with large majorities; dominated all state assemblies',
+      'Why Congress dominated: nationalist movement legacy, organisational strength, Nehru\'s charisma, broad social coalition, no strong opposition',
+      'Congress as "umbrella" party: accommodated diverse ideologies (socialists, conservatives, liberals) under one tent',
+      'Socialist Party, Communist Party of India (CPI), Bharatiya Jan Sangh (BJS), Swatantra Party: main opposition parties',
+      'Congress System (Rajni Kothari): Congress at centre, other parties forming pressure groups; one-party dominance with multi-party competition',
+      'Social coalition: Congress support from multiple castes, communities, classes — prevented opposition consolidation',
+      'Challenge from 1960s: Congress began to fracture; regional parties emerged; 1967 elections saw Congress losses in several states'
+    ],
+    tips: [
+      'Defections (Aaya Ram Gaya Ram): floor-crossing by MLAs undermined state governments; led to Anti-Defection Law',
+      'First non-Congress government: PSP-led Kerala government 1957 (E.M.S. Namboodiripad) — dismissed 1959',
+      'Coalition governments at state level began in 1967 after Congress losses',
+      '1952 and 1957 elections: Congress won ~75% of seats despite getting ~45% of votes (FPTP advantage)'
+    ],
+    bestPractices: [
+      'Explain why Congress could dominate while getting less than majority votes (FPTP system)',
+      'Board question: "What is meant by \'Congress System\'? Explain how it worked"',
+      'Distinguish one-party dominance from one-party system: opposition existed but couldn\'t win'
+    ]
+  },
+  {
+    chapter: 'Politics of Planned Development',
+    formulae: [],
+    logic: [
+      'Nehru\'s economic vision: planned development, public sector (commanding heights), mixed economy (private + public)',
+      'Planning Commission: established 1950; Five Year Plans; Jawaharlal Nehru as chairman',
+      'First Five Year Plan (1951-56): agriculture, irrigation, community development; modest goals',
+      'Second Plan (1956-61): Mahalanobis model — heavy industries, public sector, import substitution (steel plants: Bhilai, Durgapur, Rourkela)',
+      'Green Revolution (mid-1960s): high-yielding variety (HYV) seeds, fertilizers, irrigation — Punjab, Haryana, western UP; ended food crisis',
+      'Tension between capitalists (favour private sector) and socialists (favour public sector, redistribution)',
+      'License Raj: industrial licensing system — controlled private sector growth, led to inefficiency',
+      'Kerala model vs. Bihar model: Kerala achieved high social indicators with moderate growth; contrasting approaches to development'
+    ],
+    tips: [
+      'NITI Aayog replaced Planning Commission in 2015',
+      'Import substitution: produce domestically what was earlier imported; protectionist policy',
+      'Cooperative farming vs. land reform: debate between centralized planning and individual farmer rights',
+      'Nehru\'s "temples of modern India": large public sector dams and steel plants'
+    ],
+    bestPractices: [
+      'Mahalanobis model: heavy industry focus to build capital goods sector for long-run growth',
+      'Board question: "What were the main features of the economic policy adopted by India after independence?"',
+      'Green Revolution: benefits (food security) and limitations (regional inequality, environmental cost)'
+    ]
+  },
+  {
+    chapter: 'India\'s External Relations',
+    formulae: [],
+    logic: [
+      'Non-Alignment: India\'s foreign policy framework — refuse to join US or Soviet military blocs; independent foreign policy',
+      'NAM (Non-Aligned Movement): founded 1961, Nehru + Nasser (Egypt) + Tito (Yugoslavia) + Sukarno (Indonesia) + Nkrumah (Ghana)',
+      'Panchsheel: Five Principles of Peaceful Coexistence — India-China 1954 (non-aggression, non-interference, peaceful coexistence, mutual benefit, equality)',
+      'India-China War 1962: China captured Aksai Chin; exposed India\'s military unpreparedness; damaged Nehru\'s image',
+      'India-Pakistan Wars: 1947-48 (Kashmir), 1965 (Lahore thrust), 1971 (Bangladesh liberation — India decisive winner)',
+      'Tashkent Agreement 1966: Lal Bahadur Shastri (died), Kosygin mediated India-Pakistan post-1965 war',
+      'Simla Agreement 1972: Indira Gandhi — India-Pakistan normalisation after 1971; converted ceasefire line to Line of Control (LoC) in Kashmir',
+      'India\'s nuclear programme: Pokhran I (1974, Indira Gandhi — "Peaceful Nuclear Explosion"); Pokhran II 1998 (Vajpayee)'
+    ],
+    tips: [
+      'Non-alignment ≠ neutrality: India had opinions and took positions (supported decolonisation)',
+      'Hindi-Chini bhai-bhai: India-China friendship slogan before 1962 war',
+      'Indira Doctrine: India would not allow external intervention in neighbourhood',
+      'Bangladesh liberation: India supported Mukti Bahini; 90,000 Pakistani POWs — decisive military victory'
+    ],
+    bestPractices: [
+      'Explain NAM\'s relevance: post-Cold War critics say it\'s irrelevant; defenders say it preserves strategic autonomy',
+      'Board question: "Explain India\'s policy of Non-Alignment. Was it a success or failure?"',
+      'India-China 1962: causes, outcome, lessons (defence preparedness, border management)'
+    ]
+  },
+  {
+    chapter: 'Challenges to and Restoration of the Congress System',
+    formulae: [],
+    logic: [
+      '1967 elections: Congress suffered major losses — lost several states (UP, Bihar, MP, Rajasthan, West Bengal, Tamil Nadu); hung assemblies',
+      'Defections: "Aaya Ram Gaya Ram" phenomenon — widespread floor-crossing; coalition instability',
+      'Congress split 1969: Indira Gandhi vs. Syndicate (party bosses); Indira expelled — formed Congress (R) = Requisitionists',
+      'Presidential election 1969: V.V. Giri (Indira\'s candidate) won over official Congress candidate — Indira won the power struggle',
+      'Privy Purses abolition 1971: Indira Gandhi abolished constitutional allowances to former princes',
+      'Bank Nationalisation 1969: Indira Gandhi nationalised 14 major banks — populist measure, Congress (R) gained popular support',
+      '"Garibi Hatao" (Remove Poverty): Indira\'s 1971 election slogan against opposition\'s "Indira Hatao"',
+      '1971 elections: Congress (R) won massive mandate (352/545 seats) — Congress restoration',
+      'Green Revolution politics: Punjab/Haryana dominated; rich farmer lobby became politically powerful'
+    ],
+    tips: [
+      'Syndicate: party bosses (K. Kamaraj, Nijalingappa) who controlled Congress organisation — lost to Indira',
+      '1967-71: period of political instability, defections, President\'s Rule in many states',
+      'Indira\'s populism: bank nationalisation, green revolution, pro-poor rhetoric — undermined party organisation',
+      '4th General Elections 1967: Congress won but with reduced majority; 5th 1971: Congress (R) swept'
+    ],
+    bestPractices: [
+      'Explain Congress split: ideological conflict (socialist vs. conservative) AND power struggle',
+      'Board question: "What were the main political developments between 1967-1971?"',
+      'Distinguish Congress (O) — Organisation (old guard) and Congress (R) — Requisitionists (Indira)'
+    ]
+  },
+  {
+    chapter: 'The Crisis of Democratic Order',
+    formulae: [],
+    logic: [
+      'Background to Emergency: 1973-75 crises — JP Movement (Jayaprakash Narayan), Gujarat Navnirman Andolan, rising food prices, Allahabad HC verdict',
+      'Allahabad High Court verdict June 1975: declared Indira Gandhi\'s 1971 election void for electoral malpractices',
+      'Emergency (June 25, 1975 — March 1977): Article 352 invoked; civil liberties suspended, press censored, opposition leaders arrested, right to move courts suspended',
+      'MISA (Maintenance of Internal Security Act): used to detain opposition leaders without trial',
+      '20-Point Programme: economic reforms during Emergency (land reforms, bonded labour abolition, slum clearance)',
+      'JP Movement: Jayaprakash Narayan called for "Total Revolution" — social, political, economic; Bihar and Gujarat students',
+      'Why Emergency ended: Indira Gandhi called elections in 1977 believing she would win; miscalculation',
+      '1977 elections: Janata Party swept to power — first non-Congress government at centre; Morarji Desai became PM',
+      'Shah Commission 1977: investigated Emergency excesses — documented abuses'
+    ],
+    tips: [
+      'Article 352: National Emergency — threat to security of India; also used 1962, 1971',
+      'Sanjay Gandhi: Indira\'s son; unofficial power centre during Emergency; forced sterilisation programme',
+      'Janata Party: coalition of opposition parties (BJS + socialists + Congress (O) + others)',
+      'Janata government collapsed 1979 due to internal conflicts; Indira returned to power in 1980'
+    ],
+    bestPractices: [
+      'Emergency: causes (political), proclamation, measures taken, impact on democracy, end',
+      'Board question: "What were the causes and consequences of the Emergency declared in 1975?"',
+      'Debate: did Emergency reveal weakness of democracy or its resilience (rejected in 1977 elections)?'
+    ]
+  },
+  {
+    chapter: 'Rise of Popular Movements',
+    formulae: [],
+    logic: [
+      'Post-Emergency: changed political landscape — weakened Congress organisation; rise of regional parties; coalition era began',
+      'Chipko Movement (1970s): Uttarakhand women hugged trees to prevent felling; led by Sunderlal Bahuguna; environmental movement',
+      'Dalit Panthers (1972, Maharashtra): inspired by Black Panther Party; fought caste discrimination; militant Dalit assertion',
+      'Farmers\' movements: KRRS (Karnataka), BKU (Bharat Kisan Union, UP) — demands: remunerative prices, waiver of loans, lower input costs',
+      'Anti-arrack movement (1992, Andhra Pradesh): women in Nellore district campaigned against liquor — linked to domestic violence and poverty',
+      'Fishworkers\' movement: opposed commercial trawlers threatening artisanal fishermen\'s livelihoods',
+      'New social movements vs. old: old (class-based, labour) vs. new (identity-based, environmental, gender, tribal, consumer)',
+      'Narmada Bachao Andolan (NBA): Medha Patkar; opposed Sardar Sarovar Dam — questioned large dam projects, displacement of tribals'
+    ],
+    tips: [
+      'Rise of OBC politics: Mandal Commission 1980 (OBC reservations); implemented 1990 by V.P. Singh — triggered massive protests',
+      'Mandal-Kamandal politics: OBC reservation (Mandal) + Ayodhya/Hindutva (Kamandal) — shaped 1990s politics',
+      'RTI (Right to Information): emerged from grassroots movements (MKSS, Rajasthan); enacted 2005',
+      'Women\'s movement: demanded reservation in Parliament and assemblies; 33% reservation bill (73rd/74th Amendment for local bodies)'
+    ],
+    bestPractices: [
+      'New social movements: key features — non-party, issue-based, grassroots, identity-based',
+      'Board question: "What is the significance of popular movements in a democracy?"',
+      'Chipko, Narmada, anti-arrack: explain movement, cause, method, outcome'
+    ]
+  },
+  {
+    chapter: 'Recent Developments in Indian Politics',
+    formulae: [],
+    logic: [
+      'End of Congress dominance: 1989 onwards — coalition era; no single party wins majority for 25 years',
+      'Mandal politics (1990): V.P. Singh implemented Mandal Commission recommendations; 27% OBC reservations → massive anti-reservation protests → BJP-Hindutva mobilisation',
+      'Ayodhya movement: BJP, VHP, RSS campaigned for Ram temple at disputed Babri Masjid site; Babri Masjid demolition Dec 6, 1992 → communal riots',
+      'Rise of BJP: Advani\'s Rath Yatra (1990); 1984 (2 seats) → 1989 (85) → 1996 (161) → 1998 (182) — became single largest party; NDA coalition',
+      'Coalition era: United Front governments (1996-98); NDA under Vajpayee (1999-2004); UPA under Manmohan Singh (2004-14); NDA under Modi (2014-present)',
+      'Liberalisation: 1991 — economic crisis → IMF bailout → LPG reforms (Liberalisation, Privatisation, Globalisation) under Narasimha Rao + Manmohan Singh',
+      'Regional parties: grew in importance — BSP, SP, TMC, AIADMK, BJD — coalition partners; federalism strengthened',
+      'Rise of identity politics: caste, religion, region — central to electoral mobilisation'
+    ],
+    tips: [
+      'India Shining (2004): BJP campaign; lost to Congress-led UPA — showed disconnect between growth and mass welfare',
+      'RTI Act 2005: transparency; NREGA 2005: employment guarantee — UPA\'s flagship welfare schemes',
+      'Anna Hazare movement (2011): anti-corruption; led to Lokpal discussions; indirect parent of AAP (Arvind Kejriwal)',
+      '2014 election: BJP won absolute majority on its own (282/543) — ended coalition era temporarily'
+    ],
+    bestPractices: [
+      'Coalition era features: unstable governments, regional parties as kingmakers, issue-based coordination',
+      'Board question: "Describe the main features of the political developments in India since 1989"',
+      'Mandal-Kamandal: understand how social justice politics and Hindutva politics emerged simultaneously'
+    ]
+  }
+];
