@@ -13,7 +13,7 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XII: {
-    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Information Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Information Practices', 'Economics', 'Political Science', 'Psychology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
   }
 };
@@ -46,10 +46,10 @@ const BANKS = {
   'XII ICSE Biology':            'XII-ICSE-Biology',
   'XII ICSE Computer Science':   'XII-ICSE-Computer-Science',
 
-  'XII CBSE Economics':          'XII-CBSE-Economics',
-  'XII CBSE Political Science':  'XII-CBSE-Political-Science',
-  'XII CBSE Psychology':         'XII-CBSE-Psychology',
-  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology'
+  'XII CBSE Economics':             'XII-CBSE-Economics',
+  'XII CBSE Political Science':     'XII-CBSE-Political-Science',
+  'XII CBSE Psychology':            'XII-CBSE-Psychology',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices'
 };
 
 const SA_BANKS = {
@@ -78,10 +78,10 @@ const SA_BANKS = {
   'XII CBSE Chemistry':        'XII-CBSE-Chemistry-ShortAnswers',
   'XII CBSE Biology':          'XII-CBSE-Biology-ShortAnswers',
 
-  'XII CBSE Economics':          'XII-CBSE-Economics-ShortAnswers',
-  'XII CBSE Political Science':  'XII-CBSE-Political-Science-ShortAnswers',
-  'XII CBSE Psychology':         'XII-CBSE-Psychology-ShortAnswers',
-  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology-ShortAnswers'
+  'XII CBSE Economics':             'XII-CBSE-Economics-ShortAnswers',
+  'XII CBSE Political Science':     'XII-CBSE-Political-Science-ShortAnswers',
+  'XII CBSE Psychology':            'XII-CBSE-Psychology-ShortAnswers',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -96,11 +96,12 @@ const SOLVED_BANKS = {
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-Solved',
   'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved',
 
-  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-Solved',
-  'XII CBSE Physics':          'XII-CBSE-Physics-Solved',
-  'XII CBSE Chemistry':        'XII-CBSE-Chemistry-Solved',
-  'XII CBSE Biology':          'XII-CBSE-Biology-Solved',
-  'XII CBSE Mathematics':      'XII-CBSE-Mathematics-Solved'
+  'XII CBSE Computer Science':      'XII-CBSE-Computer-Science-Solved',
+  'XII CBSE Physics':               'XII-CBSE-Physics-Solved',
+  'XII CBSE Chemistry':             'XII-CBSE-Chemistry-Solved',
+  'XII CBSE Biology':               'XII-CBSE-Biology-Solved',
+  'XII CBSE Mathematics':           'XII-CBSE-Mathematics-Solved',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;

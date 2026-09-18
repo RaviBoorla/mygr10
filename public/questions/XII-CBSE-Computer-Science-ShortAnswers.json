@@ -254,5 +254,262 @@
       "Wired media examples: Ethernet/twisted-pair cable, coaxial cable, optical fibre cable.",
       "FM radio uses Radio Waves (option A); VoIP handles internet audio-visual communication; a repeater goes on a long link (e.g. ADMIN-HOSTEL) to regenerate a weakening signal."
     ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q22",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(a) Differentiate between local variable and global variable in Python with an example.\nOR\n(b) Differentiate between mutable and immutable data types in Python, giving one example of each.",
+    "modelAnswer": "(a) A local variable is defined inside a function and is accessible only within that function. A global variable is defined outside all functions and is accessible throughout the program.\n\nExample:\nx = 10  # global variable\ndef demo():\n    y = 5  # local variable\n    print(x, y)  # both accessible here\ndemo()\nprint(x)   # accessible\n# print(y)  # would raise NameError \u2014 y is local to demo()\n\nOR\n\n(b) Mutable data types can be changed after creation; immutable data types cannot.\nMutable example: List \u2014 L = [1,2,3]; L[0] = 99  # modifies in place\nImmutable example: Tuple \u2014 T = (1,2,3); T[0] = 99  # raises TypeError",
+    "keyPoints": [
+      "Local variable: defined inside a function, accessible only within that function.",
+      "Global variable: defined outside functions, accessible throughout the program.",
+      "Mutable types can be modified after creation (e.g., list, dict, set).",
+      "Immutable types cannot be changed after creation (e.g., int, str, tuple)."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q23",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Write a Python function header for a function named calc_power that takes base as a required parameter and exponent as an optional parameter with a default value of 2.",
+    "modelAnswer": "def calc_power(base, exponent=2):\n\nExplanation: 'base' is a positional (required) parameter that the caller must always supply. 'exponent=2' is a default parameter \u2014 if the caller does not pass it, the function uses the value 2. Default parameters must always appear after positional parameters in the function header.",
+    "keyPoints": [
+      "Syntax: def function_name(required_param, optional_param=default_value):",
+      "Default (optional) parameters must come after all positional parameters.",
+      "Example: def calc_power(base, exponent=2):"
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q24",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Find the output of the following Python code:\ndef func(a, b=5, c=10):\n    print(a, b, c)\nfunc(3, c=20)\nfunc(25, 30, 35)",
+    "modelAnswer": "Output:\n3 5 20\n25 30 35\n\nExplanation:\nCall 1 \u2014 func(3, c=20): a=3 (positional), b uses default=5, c=20 (keyword). Prints: 3 5 20\nCall 2 \u2014 func(25, 30, 35): a=25, b=30, c=35 (all positional). Prints: 25 30 35",
+    "keyPoints": [
+      "Default parameters use their default value when not provided in the call.",
+      "Keyword arguments can be passed by name in any order.",
+      "func(3, c=20) \u2192 a=3, b=5 (default), c=20 \u2192 prints: 3 5 20",
+      "func(25, 30, 35) \u2192 a=25, b=30, c=35 \u2192 prints: 25 30 35"
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q25",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(a) What is a text file? Write a Python statement to open a text file 'data.txt' in read mode.\nOR\n(b) Explain the difference between the write() and writelines() methods used with text files in Python.",
+    "modelAnswer": "(a) A text file stores data as human-readable characters, with lines separated by newline characters ('\\n'). Data is encoded in a character encoding (e.g. UTF-8).\n\nf = open('data.txt', 'r')  # opens in read mode\n# or equivalently:\nf = open('data.txt')       # default mode is 'r'\n\nOR\n\n(b) write(string): writes a single string to the file. It does NOT add a newline automatically.\nExample: f.write('Hello World')\n\nwritelines(list): writes a list (or any iterable) of strings to the file at once. It also does NOT add newlines between elements.\nExample: f.writelines(['line1\\n', 'line2\\n'])\n\nKey difference: write() takes one string; writelines() takes an iterable of strings.",
+    "keyPoints": [
+      "Text file: stores human-readable characters, lines delimited by '\\n'.",
+      "open('data.txt', 'r') or open('data.txt') opens for reading.",
+      "write(s): writes a single string \u2014 no automatic newline.",
+      "writelines(lst): writes an iterable of strings \u2014 no automatic newlines between elements."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q26",
+    "chapter": "Database Concepts",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Write SQL queries for the following based on table EMPLOYEE(EmpID, Name, Department, Salary, City):\n(i) Display the names of all employees whose salary is more than 50000.\n(ii) Display the total number of distinct departments in the EMPLOYEE table.",
+    "modelAnswer": "(i) SELECT Name FROM EMPLOYEE WHERE Salary > 50000;\n\n(ii) SELECT COUNT(DISTINCT Department) FROM EMPLOYEE;",
+    "keyPoints": [
+      "WHERE Salary > 50000 filters rows by condition.",
+      "COUNT(DISTINCT column) counts unique non-null values.",
+      "SELECT Name is sufficient \u2014 no need to select all columns."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q27",
+    "chapter": "Computer Networks",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "(a) Define: (i) Bandwidth (ii) Data Transfer Rate\nOR\n(b) Differentiate between LAN and WAN giving one example of each.",
+    "modelAnswer": "(a)(i) Bandwidth: The maximum amount of data that can be transmitted over a network connection in a given amount of time. It is measured in bits per second (bps), Kbps, Mbps, or Gbps.\n\n(ii) Data Transfer Rate: The actual amount of data successfully transferred from one point to another in a given time period. It is the real-world speed of transfer, which may be less than the theoretical bandwidth.\n\nOR\n\n(b) LAN (Local Area Network): A network confined to a small geographic area such as a building or campus. Example: office or school network.\n\nWAN (Wide Area Network): A network spanning a large geographic area, often a country or globally, connecting multiple LANs. Example: The Internet.",
+    "keyPoints": [
+      "Bandwidth: maximum theoretical capacity of a network link.",
+      "Data Transfer Rate: actual throughput achieved during transmission.",
+      "LAN: small area (building/campus); WAN: large area (city/country/globe).",
+      "Internet is the largest example of a WAN."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q28",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(a) Write a Python program to create a dictionary with keys as the first 5 natural numbers and their squares as values, and display it.\nOR\n(b) Write the output of the following Python code:\nD1 = {1: 'a', 2: 'b', 3: 'c'}\nD2 = {3: 'C', 4: 'D'}\nD1.update(D2)\nprint(D1)",
+    "modelAnswer": "(a)\nD = {}\nfor i in range(1, 6):\n    D[i] = i**2\nprint(D)\n# Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}\n\nOR using dict comprehension:\nD = {i: i**2 for i in range(1, 6)}\nprint(D)\n\nOR\n\n(b) D1.update(D2) merges D2 into D1. Key 3 already exists in D1 so its value is updated from 'c' to 'C'. Key 4 is new so it is added.\nOutput: {1: 'a', 2: 'b', 3: 'C', 4: 'D'}",
+    "keyPoints": [
+      "Dict comprehension: {i: i**2 for i in range(1,6)} is concise.",
+      "D.update(other) adds/overwrites D's keys with keys from other.",
+      "Existing key 3: value updated from 'c' to 'C'; new key 4 added.",
+      "Output: {1: 'a', 2: 'b', 3: 'C', 4: 'D'}"
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q29",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Write a Python program that inputs a list of 5 numbers and displays:\n(i) Sum of all numbers\n(ii) Count of even numbers\n(iii) Maximum number in the list",
+    "modelAnswer": "numbers = []\nfor i in range(5):\n    n = int(input('Enter number: '))\n    numbers.append(n)\n\nprint('Sum:', sum(numbers))\n\neven_count = sum(1 for x in numbers if x % 2 == 0)\nprint('Count of even numbers:', even_count)\n\nprint('Maximum:', max(numbers))",
+    "keyPoints": [
+      "Use sum() built-in for total.",
+      "Count evens: iterate and check x % 2 == 0.",
+      "Use max() built-in for maximum.",
+      "List can be built with append() inside a for loop."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q30",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Write a Python function Change(X) where X is a dictionary. The function should:\n(i) Display all keys\n(ii) Display all values\n(iii) Display all key-value pairs\nOR\n(b) Write the output of the following Python code:\nD = {'a':1, 'b':2, 'c':3}\nfor k, v in D.items():\n    if v % 2 != 0:\n        D[k] = v * 10\nprint(D)",
+    "modelAnswer": "(a)\ndef Change(X):\n    print('Keys:', list(X.keys()))\n    print('Values:', list(X.values()))\n    print('Key-Value pairs:', list(X.items()))\n\nOR\n\n(b) Iterating over D.items() and modifying values for odd-valued keys:\n- 'a':1 \u2192 1%2!=0 \u2192 D['a'] = 10\n- 'b':2 \u2192 2%2==0 \u2192 unchanged\n- 'c':3 \u2192 3%2!=0 \u2192 D['c'] = 30\n\nOutput: {'a': 10, 'b': 2, 'c': 30}",
+    "keyPoints": [
+      "dict.keys() returns all keys; dict.values() returns all values; dict.items() returns key-value pairs.",
+      "Modifying dict values while iterating over .items() is allowed (modifying the value at an existing key).",
+      "Odd values: 1\u219210, 3\u219230; even value: 2 unchanged.",
+      "Output: {'a': 10, 'b': 2, 'c': 30}"
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q31",
+    "chapter": "Understanding Data",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Write a Python function ExamOn(S) that takes a string S and returns the count of vowels, consonants, and digits in the string.\nOR\n(b) Write the output:\ndef Change(D):\n    for k in list(D.keys()):\n        if D[k] > 50:\n            del D[k]\nmarks = {'Math':85, 'Science':45, 'English':70, 'Hindi':30}\nChange(marks)\nprint(marks)",
+    "modelAnswer": "(a)\ndef ExamOn(S):\n    vowels = consonants = digits = 0\n    for ch in S:\n        if ch.isalpha():\n            if ch.lower() in 'aeiou':\n                vowels += 1\n            else:\n                consonants += 1\n        elif ch.isdigit():\n            digits += 1\n    return vowels, consonants, digits\n\nOR\n\n(b) Change() deletes keys whose value > 50:\n- 'Math':85 > 50 \u2192 deleted\n- 'Science':45 \u2264 50 \u2192 kept\n- 'English':70 > 50 \u2192 deleted\n- 'Hindi':30 \u2264 50 \u2192 kept\n\nOutput: {'Science': 45, 'Hindi': 30}",
+    "keyPoints": [
+      "ch.isalpha() checks if alphabetic; ch.lower() in 'aeiou' checks vowel.",
+      "ch.isdigit() checks for digit characters.",
+      "Iterate over list(D.keys()) to allow deletion during iteration.",
+      "Delete key if value > 50; output: {'Science': 45, 'Hindi': 30}"
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q32",
+    "chapter": "Database Concepts",
+    "subject": "Computer Science",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Consider the table WORKER(WID, WNAME, DESIGNATION, SITEID, WAGES):\n(i) Display names and wages of workers earning between 800 and 1500 (inclusive).\n(ii) Display worker details where SITEID is NULL.\n(iii) Display count of workers for each designation categorized as 'Skilled' or 'Semiskilled'.\n(iv) Increase wages by 500 for all Semiskilled workers.",
+    "modelAnswer": "(i) SELECT WNAME, WAGES FROM WORKER WHERE WAGES BETWEEN 800 AND 1500;\n\n(ii) SELECT * FROM WORKER WHERE SITEID IS NULL;\n\n(iii) SELECT DESIGNATION, COUNT(*) AS Worker_Count FROM WORKER WHERE DESIGNATION IN ('Skilled','Semiskilled') GROUP BY DESIGNATION;\n\n(iv) UPDATE WORKER SET WAGES = WAGES + 500 WHERE DESIGNATION = 'Semiskilled';",
+    "keyPoints": [
+      "BETWEEN 800 AND 1500 is inclusive of both endpoints.",
+      "NULL check requires IS NULL, not = NULL.",
+      "GROUP BY DESIGNATION with COUNT(*) counts per group.",
+      "UPDATE ... SET ... WHERE modifies specific rows."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q33",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A CSV file 'P_record.csv' stores patient records with fields: PatientID, Name, Disease, Age. Write Python functions:\n(i) read_data() \u2014 reads and displays all records of Cancer patients.\n(ii) count_rec() \u2014 displays the total count of records in the file.",
+    "modelAnswer": "import csv\n\ndef read_data():\n    with open('P_record.csv', 'r') as f:\n        reader = csv.reader(f)\n        for row in reader:\n            if row[2] == 'Cancer':  # Disease is index 2\n                print(row)\n\ndef count_rec():\n    with open('P_record.csv', 'r') as f:\n        reader = csv.reader(f)\n        count = sum(1 for row in reader)\n    print('Total records:', count)",
+    "keyPoints": [
+      "import csv; use csv.reader() for CSV files.",
+      "row[2] accesses Disease field (0-indexed: PatientID=0, Name=1, Disease=2, Age=3).",
+      "Filter with if row[2] == 'Cancer' to display cancer patients.",
+      "sum(1 for row in reader) counts all rows efficiently."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q34",
+    "chapter": "Database Concepts",
+    "subject": "Computer Science",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Consider tables ARTICLES(ArtID, Title, ArtistID, Price, Year) and ARTISTS(ArtistID, AName, Country):\n(i) Display all article titles priced in descending order.\n(ii) Display titles of articles created in year 2020.\n(iii) Write the SQL command to see the structure of the ARTISTS table.\n(iv) Display article titles and artist names for all articles \u2014 using (a) Equi-Join OR (b) Natural Join.",
+    "modelAnswer": "(i) SELECT Title FROM ARTICLES ORDER BY Price DESC;\n\n(ii) SELECT Title FROM ARTICLES WHERE Year = 2020;\n\n(iii) DESCRIBE ARTISTS;\n   OR: DESC ARTISTS;\n\n(iv)(a) Equi-Join:\nSELECT ARTICLES.Title, ARTISTS.AName FROM ARTICLES, ARTISTS\nWHERE ARTICLES.ArtistID = ARTISTS.ArtistID;\n\n(iv)(b) Natural Join:\nSELECT Title, AName FROM ARTICLES NATURAL JOIN ARTISTS;",
+    "keyPoints": [
+      "ORDER BY Price DESC sorts highest price first.",
+      "WHERE Year = 2020 filters by year.",
+      "DESCRIBE tablename shows column structure, data types, and constraints.",
+      "Equi-Join: explicit WHERE condition on matching columns; Natural Join: auto-matches same-named columns."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q35",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A database named CINEMA has a table THEATRE(TID, TNAME, CAPACITY, CITY). Write a Python function Delete_Theatre(tid) that connects to this database and deletes the theatre record with the given TID, then displays 'Record Deleted' on success.",
+    "modelAnswer": "import mysql.connector\n\ndef Delete_Theatre(tid):\n    con = mysql.connector.connect(\n        host='localhost',\n        user='root',\n        password='',\n        database='CINEMA'\n    )\n    cursor = con.cursor()\n    query = 'DELETE FROM THEATRE WHERE TID = %s'\n    cursor.execute(query, (tid,))\n    con.commit()\n    if cursor.rowcount > 0:\n        print('Record Deleted')\n    else:\n        print('No record found with given TID')\n    cursor.close()\n    con.close()",
+    "keyPoints": [
+      "mysql.connector.connect() with host, user, password, database parameters.",
+      "Use parameterized query (%s) to prevent SQL injection.",
+      "con.commit() is required after DML operations.",
+      "cursor.rowcount gives the number of rows affected.",
+      "Always close cursor and connection."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q36",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A binary file 'PASSENGERS.DAT' stores passenger records as dictionaries with keys: PID, PName, Destination, Fare. Write Python functions:\n(i) Create() \u2014 allows user to input records and write to the binary file.\n(ii) SearchDestn(D) \u2014 searches and displays all passengers with the given Destination D.\n(iii) UpdateFare() \u2014 increases Fare by 200 for all passengers and rewrites the file.",
+    "modelAnswer": "import pickle\n\ndef Create():\n    records = []\n    while True:\n        pid = input('PID: ')\n        pname = input('PName: ')\n        dest = input('Destination: ')\n        fare = int(input('Fare: '))\n        records.append({'PID': pid, 'PName': pname, 'Destination': dest, 'Fare': fare})\n        if input('Add more? (y/n): ').lower() != 'y':\n            break\n    with open('PASSENGERS.DAT', 'wb') as f:\n        pickle.dump(records, f)\n\ndef SearchDestn(D):\n    with open('PASSENGERS.DAT', 'rb') as f:\n        records = pickle.load(f)\n    found = False\n    for rec in records:\n        if rec['Destination'] == D:\n            print(rec)\n            found = True\n    if not found:\n        print('No passengers found for destination', D)\n\ndef UpdateFare():\n    with open('PASSENGERS.DAT', 'rb') as f:\n        records = pickle.load(f)\n    for rec in records:\n        rec['Fare'] += 200\n    with open('PASSENGERS.DAT', 'wb') as f:\n        pickle.dump(records, f)\n    print('Fares updated successfully')",
+    "keyPoints": [
+      "pickle.dump() writes (serializes) to 'wb' mode; pickle.load() reads from 'rb' mode.",
+      "Create(): collect records in a list, dump entire list at once.",
+      "SearchDestn(D): load all records, filter by Destination field.",
+      "UpdateFare(): load, modify each record's Fare, dump updated list back.",
+      "File is rewritten in 'wb' mode after updating fares."
+    ]
+  },
+  {
+    "id": "xii-cs-2025-sa-q37",
+    "chapter": "Computer Networks",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "NGO 'Swabhaav' is setting up a network in a new building with four departments: HR (10 computers), Finance (25 computers), Operations (50 computers), Support (15 computers). Distances: HR\u2013Finance 30m, HR\u2013Operations 120m, HR\u2013Support 60m, Finance\u2013Operations 80m, Finance\u2013Support 40m, Operations\u2013Support 90m. A head office in another city is 500 km away.\n(i) Which department should house the server? Justify.\n(ii) Suggest cabling layout (where to place switches).\n(iii) Which department's switch should connect all others? Why?\n(iv) Suggest a network protocol to access files securely on the head office server.\n(v) Which type of network connects the head office? Name the topology recommended for each department's internal computers.",
+    "modelAnswer": "(i) The server should be placed in the Operations department, as it has the most computers (50) \u2014 placing the server closest to the largest number of users minimizes access time and network traffic.\n\n(ii) A switch should be placed in each department (HR, Finance, Operations, Support). All departmental switches are connected back to the central switch in Operations (the largest department) to form a Star topology campus backbone.\n\n(iii) The Operations department's switch should act as the central/backbone switch because it has the largest number of computers (50) and is therefore the heaviest traffic node \u2014 centralizing connectivity here minimizes hops and latency for most users.\n\n(iv) SSH (Secure Shell) or SFTP (Secure File Transfer Protocol) should be used for secure remote file access to the head office server. These protocols encrypt data in transit, unlike plain FTP.\n\n(v) The head office connection uses a WAN (Wide Area Network) since it spans 500 km. The recommended internal topology for each department is Star topology \u2014 a central switch connects all computers, making fault isolation easy and management simple.",
+    "keyPoints": [
+      "Server location: highest-computer-count department (Operations, 50 computers).",
+      "Star topology within each department with a central switch per department.",
+      "Operations switch acts as backbone switch \u2014 most computers, heaviest traffic.",
+      "SSH/SFTP for secure remote file access (encrypted); plain FTP is insecure.",
+      "Head office link = WAN; internal cabling = Star topology."
+    ]
   }
 ]
