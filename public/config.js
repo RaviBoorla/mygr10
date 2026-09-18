@@ -79,7 +79,8 @@ const SOLVED_BANKS = {
   'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-Solved',
   'XII CBSE Physics':          'XII-CBSE-Physics-Solved',
   'XII CBSE Chemistry':        'XII-CBSE-Chemistry-Solved',
-  'XII CBSE Biology':          'XII-CBSE-Biology-Solved'
+  'XII CBSE Biology':          'XII-CBSE-Biology-Solved',
+  'XII CBSE Mathematics':      'XII-CBSE-Mathematics-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
