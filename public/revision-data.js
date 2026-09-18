@@ -6209,3 +6209,285 @@ REVISION['XII Chemistry'] = [
     ]
   }
 ];
+
+REVISION['XII Biology'] = [
+  {
+    chapter: 'Reproductive Health',
+    formulae: [],
+    logic: [
+      'Contraceptive methods: Natural (calendar, coitus interruptus), Barrier (condoms, diaphragm), IUDs (copper-T), Oral pills (combined hormonal), Injectables, Implants, Surgical (vasectomy, tubectomy)',
+      'MTP (Medical Termination of Pregnancy): legal in India; used for unwanted/health-risk pregnancies — NOT recommended as contraceptive',
+      'STIs (Sexually Transmitted Infections): gonorrhoea, syphilis, genital herpes, chlamydiasis, hepatitis-B, HIV/AIDS — many preventable with barrier methods',
+      'Infertility: inability to conceive after 2 years of unprotected sex; assisted: IVF, GIFT, ZIFT, AI',
+      'ART (Assisted Reproductive Technology): IVF (in vitro fertilisation) + ET → "test tube baby"; GIFT (Gamete Intrafallopian Transfer); ICSI (intracytoplasmic sperm injection)'
+    ],
+    tips: [
+      'India: first country to initiate national-level population control programmes',
+      'Amniocentesis: pre-natal sex determination is legally banned in India (used for genetic disorder detection only)',
+      'Board question: list advantages and disadvantages of different contraceptive methods',
+      'RCH (Reproductive and Child Health Care) programmes: key national initiative'
+    ],
+    bestPractices: [
+      'Distinguish between contraception (prevents pregnancy) and MTP (terminates pregnancy)',
+      'For IVF: sequence is hormonal stimulation → oocyte retrieval → fertilisation in lab → ET at 8-cell stage',
+      'STI prevention: use barrier methods + avoid multiple sexual partners'
+    ]
+  },
+  {
+    chapter: 'Principles of Inheritance and Variation',
+    formulae: [
+      'Monohybrid ratio (F2): 3 : 1  (dominant : recessive)',
+      'Dihybrid ratio (F2): 9 : 3 : 3 : 1',
+      'Test cross: dominant phenotype × homozygous recessive → reveals genotype',
+      'Incomplete dominance: F2 = 1:2:1 (phenotypic ratio same as genotypic)',
+      'Co-dominance: both alleles expressed (e.g., AB blood group)',
+      'ABO blood groups: IA, IB (codominant), i (recessive);  6 genotypes, 4 phenotypes'
+    ],
+    logic: [
+      'Law of Segregation (Purity of Gametes): alleles separate during gamete formation',
+      'Law of Independent Assortment: genes on different chromosomes assort independently',
+      'Linked genes: on same chromosome; do NOT follow independent assortment',
+      'Crossing over: recombination between linked genes; frequency ∝ distance between genes → basis of genetic maps',
+      'Sex-linked inheritance: genes on X chromosome; males (XY) are hemizygous — show recessive traits more often'
+    ],
+    tips: [
+      'Punnett square: rows = one parent\'s gametes; columns = other\'s; fill cells with genotypes',
+      'Haemophilia: X-linked recessive; carrier female × normal male → 50% sons haemophilic',
+      'Down syndrome: trisomy 21 (2n+1 = 47);  Turner syndrome: XO (45);  Klinefelter: XXY (47)',
+      'Sickle-cell anaemia: point mutation in β-globin gene (GAG → GTG); autosomal recessive'
+    ],
+    bestPractices: [
+      'Always write parent genotypes and gametes before drawing Punnett square',
+      'State the law being demonstrated when solving genetics problems',
+      'For sex-linked problems: show X chromosome notation (e.g., X^H X^h for carrier female)'
+    ]
+  },
+  {
+    chapter: 'Molecular Basis of Inheritance',
+    formulae: [
+      'DNA structure: antiparallel double helix; deoxyribose sugar + phosphate + base',
+      'Base pairing: A=T (2 H-bonds); G≡C (3 H-bonds)  (Chargaff\'s rule: [A]=[T], [G]=[C])',
+      'Semiconservative replication: each daughter DNA has one parental + one new strand (Meselson & Stahl)',
+      'Central dogma: DNA → (transcription) → mRNA → (translation) → Protein',
+      'Genetic code: triplet codons; 64 codons (61 coding + 3 stop: UAA, UAG, UGA); AUG = start (Met)',
+      'Human genome: ~3×10⁹ bp; ~20,000–25,000 genes; only ~1.5% codes for protein'
+    ],
+    logic: [
+      'Transcription in eukaryotes: hnRNA → splicing (remove introns) → mRNA → exported',
+      'Translation: mRNA + ribosomes → polypeptide; tRNA is adaptor molecule (anticodon matches codon)',
+      'Lac operon (prokaryote gene regulation): structural genes (lacZ, lacY, lacA) + operator + promoter + regulator gene',
+      'Lac operon: repressor protein binds operator → no transcription; allolactose (inducer) removes repressor → transcription',
+      'DNA fingerprinting: uses VNTR (variable number tandem repeats) — unique to each individual'
+    ],
+    tips: [
+      'Exons: expressed (coding) sequences;  Introns: intervening (non-coding) sequences — removed by splicing',
+      'Codon degeneracy: multiple codons may code for same amino acid — "wobble" at 3rd position',
+      'Board question: explain semiconservative replication with Meselson-Stahl experiment',
+      'PCR (Polymerase Chain Reaction): amplifies specific DNA segments; uses primers + DNA polymerase + repeated denaturation/annealing/extension cycles'
+    ],
+    bestPractices: [
+      'Distinguish between replication (DNA→DNA), transcription (DNA→RNA), and translation (RNA→protein)',
+      'For lac operon: state the regulatory role of repressor, operator, and inducer separately',
+      'Quote Watson and Crick for double helix; Meselson and Stahl for semiconservative replication'
+    ]
+  },
+  {
+    chapter: 'Evolution',
+    formulae: [
+      'Hardy–Weinberg principle: allele frequencies constant in a large random-mating population with no selection/mutation/migration',
+      'Hardy–Weinberg equilibrium: p² + 2pq + q² = 1  (p = freq of dominant allele; q = recessive)',
+      'Hardy–Weinberg factors that disturb equilibrium: gene migration, gene drift, mutation, genetic recombination, natural selection'
+    ],
+    logic: [
+      'Chemical evolution (Miller–Urey): primitive Earth conditions → amino acids from CH₄, NH₃, H₂, H₂O',
+      'First forms of life: RNA world → protocells; RNA both genetic material and catalyst (ribozymes)',
+      'Natural selection: variations → differential survival → evolution (Darwinism)',
+      'Adaptive radiation: divergent evolution from a common ancestor (e.g., Darwin\'s finches)',
+      'Genetic drift: random change in allele frequencies in small populations; can lead to speciation'
+    ],
+    tips: [
+      'Homologous organs: same origin, different function (e.g., forelimbs of whale, bat, man) → divergent evolution',
+      'Analogous organs: different origin, same function (e.g., wings of bat and butterfly) → convergent evolution',
+      'Vestigial organs (e.g., nictitating membrane) → evidence for evolution',
+      'Modern evolutionary synthesis combines Darwin\'s natural selection + Mendelian genetics'
+    ],
+    bestPractices: [
+      'Distinguish between Lamarckism (acquired characters inherited — now rejected) and Darwinism (natural selection)',
+      'For Hardy–Weinberg: state all five conditions for equilibrium before applying the formula',
+      'Quote fossil evidence, comparative anatomy, and molecular biology as three types of evidence for evolution'
+    ]
+  },
+  {
+    chapter: 'Human Health and Disease',
+    formulae: [],
+    logic: [
+      'Innate immunity (non-specific): skin, mucus, tears, phagocytes, inflammation, NK cells — first line of defence',
+      'Acquired immunity (specific): humoral (B-cells → antibodies) + cell-mediated (T-cells)',
+      'Memory cells: rapid secondary immune response → basis of vaccination',
+      'Active immunity: body produces antibodies (after infection or vaccine)',
+      'Passive immunity: ready-made antibodies given (e.g., anti-snake venom, colostrum)',
+      'HIV: retrovirus; attacks T-helper (CD4⁺) cells → reduces T-cell count → AIDS (AIDS defined when count < 200/μL)'
+    ],
+    tips: [
+      'Malaria: Plasmodium falciparum most fatal; transmitted by female Anopheles mosquito; sporozoites → liver → merozoites → RBCs',
+      'Cancer: proto-oncogene → oncogene (mutation); tumour suppressor gene loss; metastasis = spread via blood/lymph',
+      'Carcinogens: chemical (tobacco), physical (radiation), biological (viruses like HPV)',
+      'Drug addiction: opioids (morphine, heroin) → bind brain receptors; affects CNS; naloxone is antidote',
+      'Board question: differentiate between active and passive immunity with examples'
+    ],
+    bestPractices: [
+      'For allergy: mast cells release histamine → symptoms; antihistamines counter it',
+      'Widal test: detects antibodies against Salmonella typhi (typhoid)',
+      'Name the causative organism AND the vector for vector-borne diseases (malaria, dengue, filariasis)'
+    ]
+  },
+  {
+    chapter: 'Microbes in Human Welfare',
+    formulae: [],
+    logic: [
+      'Lactic acid bacteria (LAB): Lactobacillus → converts milk to curd; also increases B₁₂',
+      'Saccharomyces cerevisiae: baker\'s and brewer\'s yeast; ferments glucose → ethanol + CO₂',
+      'Penicillin: first antibiotic discovered by Alexander Fleming from Penicillium notatum',
+      'Sewage treatment: primary (physical settling) → secondary (activated sludge, BOD reduction) → tertiary (chemical)',
+      'BOD (Biological Oxygen Demand): measure of organic pollution; high BOD = more polluted',
+      'Biogas (methane): produced by methanogens (e.g., Methanobacterium) in anaerobic conditions'
+    ],
+    tips: [
+      'Biofertilisers: Rhizobium (legume root nodules, N₂ fixation); Azospirillum (free-living, grass); Anabaena (BGA, paddy fields)',
+      'Biocontrol: Bacillus thuringiensis (Bt) produces crystal proteins toxic to insects; Trichoderma (fungal biocontrol)',
+      'Industrial products: citric acid (Aspergillus niger); gluconic acid; acetic acid (Acetobacter)',
+      'Board question: describe the role of microbes in sewage treatment'
+    ],
+    bestPractices: [
+      'Distinguish between primary and secondary sewage treatment in terms of process and what\'s removed',
+      'For biogas: state that it is produced in biogas plants from animal dung by methanogenic bacteria',
+      'Name both the organism and product in questions about microbial industrial products'
+    ]
+  },
+  {
+    chapter: 'Biotechnology: Principles and Processes',
+    formulae: [],
+    logic: [
+      'Recombinant DNA technology: restriction enzymes cut DNA at palindromic sequences → ligase joins insert + vector → transformation into host',
+      'Restriction enzymes (endonucleases): cut at specific palindromic sequences; produce sticky or blunt ends',
+      'Cloning vectors: plasmids (ori, selectable marker, MCS); bacteriophages; cosmids',
+      'Selectable markers: antibiotic resistance genes (ampR, tetR) → allow selection of transformed cells',
+      'PCR: denaturation (94°C) → annealing of primers (50–65°C) → extension by Taq polymerase (72°C) → 2ⁿ copies after n cycles'
+    ],
+    tips: [
+      'EcoRI cuts at G↓AATTC (produces sticky ends);  SmaI cuts at CCC↓GGG (blunt ends)',
+      'Agrobacterium tumefaciens: Ti plasmid used as vector to introduce genes into plants',
+      'Gel electrophoresis: separates DNA fragments by size; smaller fragments migrate farther',
+      'Southern blotting: DNA; Northern blotting: RNA; Western blotting: protein',
+      'Board question: explain the steps of recombinant DNA technology'
+    ],
+    bestPractices: [
+      'Use correct terminology: insert DNA (foreign gene), vector (carries insert), host (receives recombinant)',
+      'Show the palindromic sequence and cut sites when explaining restriction enzymes',
+      'PCR vs cloning: PCR amplifies in vitro; cloning amplifies in vivo (in host organism)'
+    ]
+  },
+  {
+    chapter: 'Biotechnology and Its Applications',
+    formulae: [],
+    logic: [
+      'GM (Genetically Modified) crops: Bt cotton (Cry genes from B. thuringiensis → insect resistance); Bt brinjal; Golden Rice (β-carotene)',
+      'Gene therapy: correcting a defective gene; SCID (Severe Combined Immune Deficiency) — first gene therapy success (ADA gene)',
+      'Recombinant therapeutics: insulin (from E. coli — proinsulin route); hGH; interferon; hepatitis-B vaccine',
+      'Molecular diagnosis: PCR-based detection of pathogens; ELISA (antibody-based detection)',
+      'Transgenic animals: used as disease models, for protein production (α-1-antitrypsin in sheep milk)'
+    ],
+    tips: [
+      'Cry proteins: produced as protoxin crystals; activated in alkaline insect gut → toxic to larvae',
+      'RNAi (RNA interference): double-stranded RNA silences specific gene — used to create pest-resistant plants',
+      'Biopiracy: exploitation of biological resources without proper authorisation or benefit-sharing',
+      'Board question: explain why Bt cotton is an example of transgenic crop; how it controls pests'
+    ],
+    bestPractices: [
+      'For GM crop questions: name the gene, its source organism, and the trait it confers',
+      'Distinguish between transgenic organisms (carry foreign gene) and GM organisms (broadly modified)',
+      'State ethical concerns (biopiracy, biosafety, patenting) alongside applications'
+    ]
+  },
+  {
+    chapter: 'Organisms and Populations',
+    formulae: [
+      'Exponential growth: dN/dt = rN;  N_t = N₀e^(rt)  (unlimited resources)',
+      'Logistic growth: dN/dt = rN[(K−N)/K];  sigmoid curve;  K = carrying capacity',
+      'r = b − d  (intrinsic rate of natural increase; b = birth rate, d = death rate)',
+      'Population density: N = number/unit area or biomass or % cover'
+    ],
+    logic: [
+      'Exponential (J-shaped) growth: when resources are unlimited — theoretical',
+      'Logistic (S-shaped) growth: when resources limit growth — more realistic; population stabilises at K',
+      'Species interactions: mutualism (+/+); commensalism (+/0); parasitism (+/−); predation (+/−); competition (−/−); amensalism (0/−)',
+      'Competitive Exclusion Principle (Gause): two species competing for identical resources cannot coexist indefinitely',
+      'Niches: Fundamental niche (potential); Realised niche (actual, after competition)'
+    ],
+    tips: [
+      'r-strategists: small body, short life, high r, many offspring (e.g., insects); K-strategists: large, long life, low r (e.g., elephants)',
+      'Carrying capacity K: maximum population an environment can sustain indefinitely',
+      'Camouflage, mimicry: adaptations against predation; toxin/chemical defence (e.g., monarch butterfly)',
+      'Board question: draw and explain J-shaped vs S-shaped population growth curves'
+    ],
+    bestPractices: [
+      'Label both axes (N vs t) and mark K on logistic growth curves',
+      'Classify each species interaction with the correct ± notation and give one example',
+      'For growth rate questions: state which type of growth model is being applied'
+    ]
+  },
+  {
+    chapter: 'Ecosystem',
+    formulae: [
+      'Gross Primary Productivity (GPP): total rate of photosynthesis',
+      'Net Primary Productivity (NPP) = GPP − Respiration',
+      'Secondary productivity: rate of energy assimilation by consumers',
+      '10% law (Lindemann): ~10% energy transferred from one trophic level to next',
+      'Ecological pyramids: numbers, biomass, energy;  energy pyramid always upright'
+    ],
+    logic: [
+      'Energy flow is unidirectional (producers → consumers → decomposers); cannot be recycled',
+      'Nutrient cycling IS circular: gaseous (C, N — atmosphere as reservoir) vs sedimentary (P, S — earth\'s crust)',
+      'Detritivores: earthworms, millipedes fragment detritus; bacteria/fungi mineralise (catabolism)',
+      'Food web: interconnected food chains; more complex = more stable ecosystem',
+      'Carbon cycle: photosynthesis (CO₂ fixation) + respiration + decomposition + combustion'
+    ],
+    tips: [
+      'Pyramid of energy is always upright (10% law) — unlike biomass which can be inverted (aquatic)',
+      'Producers = autotrophs (plants, algae, cyanobacteria); occupy trophic level 1',
+      'Decomposers break down dead matter → release inorganic nutrients → available again for producers (recycling)',
+      'Board question: explain carbon cycle with diagram; calculate NPP given GPP and respiration rate'
+    ],
+    bestPractices: [
+      'Clearly distinguish between food chain (linear) and food web (network)',
+      'For nutrient cycles: identify the reservoir, the biotic component, and the return pathway',
+      'State the 10% law when answering questions about energy pyramids'
+    ]
+  },
+  {
+    chapter: 'Biodiversity and Conservation',
+    formulae: [
+      'Species richness: number of different species in a region',
+      'Species-area relationship: log S = log C + Z log A  (Z ≈ 0.1–0.2 islands; 0.6–1.2 continents)',
+      'India: 12 mega-diversity countries; ~8% of global biodiversity; ~45,000 plant spp. and ~90,000 animal spp.'
+    ],
+    logic: [
+      'Levels of biodiversity: genetic (within species), species (between species), ecosystem diversity',
+      'Threats (HIPPO): Habitat loss, Invasive species, Pollution, Population growth (human), Over-exploitation',
+      'Biodiversity hotspots: high endemism + high habitat loss;  34 hotspots worldwide;  India: 3 (Western Ghats, Himalaya, Indo-Burma)',
+      'In situ conservation: in natural habitat — national parks, wildlife sanctuaries, biosphere reserves, sacred groves',
+      'Ex situ conservation: outside natural habitat — zoos, botanical gardens, seed banks, cryopreservation'
+    ],
+    tips: [
+      'India: 14 biosphere reserves, 90+ national parks, 500+ wildlife sanctuaries',
+      'IUCN Red List: Extinct, Critically Endangered, Endangered, Vulnerable, Near Threatened, Least Concern',
+      'Co-extinction: extinction of one species drives extinction of obligate symbiont/pollinator',
+      'Board question: distinguish between in situ and ex situ conservation with examples'
+    ],
+    bestPractices: [
+      'Give specific examples of hotspots in India (Western Ghats-Sri Lanka, Himalaya, Indo-Burma)',
+      'Name both the national park and the keystone/flagship species in conservation examples',
+      'Justify biodiversity\'s value: narrowly utilitarian (direct use), broadly utilitarian (ecosystem services), ethical (intrinsic value)'
+    ]
+  }
+];
