@@ -110,15 +110,38 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 
 ## Grade XII
 
-`SUBJECTS.XII.CBSE`/`SUBJECTS.XII.ICSE` in `config.js` both list Mathematics,
-Physics, Chemistry, Biology, Computer Science. So far: CBSE has Solved
-Exercises banks for all five (below); ICSE has Board Short Answers banks for
-all five instead (further below) — ISC (the ICSE board's Class XII exam)
-papers are entirely descriptive/long-answer with no MCQ section at all, so
-there's no real content to source a Mock Test/Chapter Drill bank from for
-ICSE Grade XII. No Grade XII MCQ banks, no CBSE Short Answers banks, and no
-ICSE Solved Exercises banks exist yet — every other Grade XII subject card
-shows "coming soon".
+`SUBJECTS.XII.CBSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science,
+Information Practices, Economics, Political Science, Psychology, Information Technology.
+`SUBJECTS.XII.ICSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science.
+
+CBSE has Solved Exercises banks for five subjects (below); ICSE has Board Short Answers
+banks for five subjects (further below). ISC papers are entirely descriptive/long-answer
+with no MCQ section, so no Mock Test/Chapter Drill banks exist for ICSE Grade XII.
+
+❌ = not yet built · ✅ = done
+
+### Grade XII — content coverage by surface
+
+| Subject | Board | Revision Notes | MCQ Bank | Short Answers | Solved Exercises |
+|---|---|---|---|---|---|
+| Mathematics | CBSE | ✅ 13 ch | ❌ | ❌ | ✅ 943 Qs |
+| Mathematics | ICSE | ❌ | ❌ | ✅ 140 Qs | ❌ |
+| Physics | CBSE | ✅ 14 ch | ❌ | ❌ | ✅ 158 Qs |
+| Physics | ICSE | ❌ | ❌ | ✅ 156 Qs | ❌ |
+| Chemistry | CBSE | ✅ 10 ch | ❌ | ❌ | ✅ 268 Qs |
+| Chemistry | ICSE | ❌ | ❌ | ✅ 150 Qs | ❌ |
+| Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing — PDFs not yet uploaded) | ❌ | ❌ | ⚠️ 135 Qs (Ch 1–2 missing) |
+| Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ |
+| Computer Science | CBSE | ✅ 12 ch | ❌ | ❌ | ✅ 122 Qs |
+| Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ |
+| Information Practices | CBSE | ✅ 6 ch | ❌ | ❌ | ❌ |
+| Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ❌ | ❌ | ❌ |
+| Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ❌ | ❌ | ❌ |
+| Psychology | CBSE | ✅ 7 ch | ❌ | ❌ | ❌ |
+| Information Technology | CBSE | ❌ (no PDF uploaded) | ❌ | ❌ | ❌ |
+
+**Board papers 2022–2024 (CBSE):** ❌ Feature not yet built — no screen, no data files.
+**ICSE Grade XII revision notes:** ❌ PDFs hard to source per user; deferred.
 
 CBSE Solved Exercises use the same schema as the Grade X Solved Exercises
 banks above: `{id, chapter, exercise, number, question, solution, steps[]}`,

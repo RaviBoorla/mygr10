@@ -4,6 +4,35 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII — Revision Notes (all subjects) *(done)*
+
+Lazy-loaded `revision-data-xii.js` (separate from the Grade X `revision-data.js`) covering 10 CBSE Grade XII subjects — 98 chapters total:
+
+| Subject | Chapters | Notes |
+|---|---|---|
+| Mathematics | 13 | Relations & Functions through Probability |
+| Physics | 14 | Electric Charges through Semiconductor Electronics |
+| Chemistry | 10 | Current reduced syllabus (Solutions through Biomolecules) |
+| Biology | 11 | Chapters 3–13; ❌ Ch 2 (Sexual Reproduction in Flowering Plants) and Ch 3 wait — **Ch 1 & 2 PDFs not yet uploaded** |
+| Computer Science | 12 | Python-based CBSE syllabus, all chapters |
+| Information Practices | 6 | SQL Functions, Pandas I & II, Matplotlib, Internet & Web, Societal Impacts — from NCERT IP textbook |
+| Economics (Micro) | 5 | Introduction through Government Budget |
+| Economics (Macro) | 6 | National Income through Balance of Payments |
+| Political Science | 14 (6+8) | CWP book + PISI book merged |
+| Psychology | 7 | Variations in Psychological Attributes through Psychological Disorders |
+
+Each chapter carries `formulae`, `logic`, `tips`, and `bestPractices` arrays — same schema as Grade X.
+
+**Architecture:** `_ensureRevisionDataXII()` loads the base Grade X file first (for `window.REVISION`), then appends XII keys from the second file. Each key is prefixed `'XII '` so they cannot collide with Grade X keys.
+
+**Bug fixed on ship:** `consolidatedChaptersXII()` was not adding `_boards` to merged chapters, causing `_chLabel()` to crash (`ch._boards.join is not a function`) and silently preventing any XII notes from rendering. Fixed by mirroring the `_boards` tracking logic from `consolidatedChapters()`.
+
+**Tab rename:** "Comp App & IT" label in `NOTES_CATALOG` changed to "Computer Science" (`id` unchanged — NOTES_SOURCES still keys on `'Comp App & IT'` internally).
+
+**Grade X revision notes (confirmed present):** Mathematics 19 ch (CBSE), 9 ch (ICSE), 4 ch (IB) · Science 13 ch · Social Science 20 ch · ICSE History 8 ch · ICSE Geography 8 ch · Physics 10 ch (ICSE) · Chemistry 10 ch (ICSE) · Biology 9 ch (ICSE) · English 14 ch · Hindi 51 ch · Computer Science/Applications/IT all present.
+
+---
+
 ## Grade XII — ICSE Board Short Answers (Maths, Physics, Chemistry, Biology, Computer Science) *(done)*
 
 Built from real ISC (the ICSE board's Class XII exam) past papers,
