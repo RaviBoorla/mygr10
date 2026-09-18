@@ -4,6 +4,27 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII — ICSE Board Short Answers (Maths, Physics, Chemistry, Biology, Computer Science) *(done)*
+
+Built from real ISC (the ICSE board's Class XII exam) past papers,
+2017–2023, on the `g12` branch. ISC papers are entirely descriptive/
+long-answer — no MCQ section at all, unlike CBSE or the ICSE Class X exam —
+so this is a **Short Answers bank only**; Mock Test/Chapter Drill for these
+subjects stay "coming soon" since there's no real MCQ content to source
+them from (a curriculum-authored MCQ bank was considered and explicitly
+declined in favour of staying board-paper-sourced).
+
+- **Mathematics** — 140 questions, all 5 supplied years (`XII-ICSE-Mathematics-ShortAnswers.json`)
+- **Physics** — 156 questions, 4 years, 2017 not in the supplied set (`XII-ICSE-Physics-ShortAnswers.json`)
+- **Chemistry** — 150 questions, 4 years, 2017 not in the supplied set (`XII-ICSE-Chemistry-ShortAnswers.json`)
+- **Biology** — 122 questions, 3 years — 2017 not supplied, 2023's file was a scanned PDF with no extractable Biology content (`XII-ICSE-Biology-ShortAnswers.json`)
+- **Computer Science** — 153 questions, all 5 supplied years, Java-based ISC syllabus (`XII-ICSE-Computer-Science-ShortAnswers.json`)
+
+All five registered in `SA_BANKS` in `config.js`. See `docs/inventory.md` →
+"Grade XII" for full per-year/topic breakdowns and skip notes.
+
+---
+
 ## Grade XII — CBSE Textbook Solved Exercises (Maths, Physics, Chemistry, Biology, Computer Science) *(done)*
 
 Built on the `g12` branch: Grade XII CBSE now has a real "Textbook Solved
@@ -27,9 +48,10 @@ Mathematics, Physics, Chemistry, Biology, Computer Science — more subjects
 to follow); the "XII Board" grade tab, previously disabled with a "Coming
 soon" tooltip, is now selectable.
 
-Not yet done: Grade XII MCQ banks (Mock Test/Chapter Drill), Short Answers
-banks, and any ICSE Grade XII content — every Grade XII subject card other
-than the five CBSE Solved banks above still shows "coming soon".
+Not yet done at the time: Grade XII MCQ banks, Short Answers banks, and any
+ICSE Grade XII content — since superseded by the ICSE Board Short Answers
+entry above. Still outstanding: Grade XII MCQ banks (Mock Test/Chapter
+Drill) for any subject/board, and CBSE Grade XII Short Answers banks.
 
 ---
 
