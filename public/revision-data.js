@@ -5266,5 +5266,226 @@ REVISION['XII Mathematics'].push(
       'Write the conclusion: "Since f″(c) < 0, x = c gives a local maximum"',
       'For approximation problems: compute f(x) exact value + f′(x)·Δx — do not skip intermediate steps'
     ]
+  },
+  {
+    chapter: 'Integrals',
+    formulae: [
+      '∫xⁿ dx = xⁿ⁺¹/(n+1) + C  (n ≠ −1)',
+      '∫1/x dx = ln|x| + C',
+      '∫eˣ dx = eˣ + C;  ∫aˣ dx = aˣ/ln a + C',
+      '∫sin x dx = −cos x + C;  ∫cos x dx = sin x + C',
+      '∫sec²x dx = tan x + C;  ∫cosec²x dx = −cot x + C',
+      '∫sec x tan x dx = sec x + C;  ∫cosec x cot x dx = −cosec x + C',
+      '∫tan x dx = ln|sec x| + C;  ∫cot x dx = ln|sin x| + C',
+      '∫sec x dx = ln|sec x + tan x| + C;  ∫cosec x dx = ln|cosec x − cot x| + C',
+      '∫1/√(1−x²) dx = sin⁻¹x + C;  ∫1/(1+x²) dx = tan⁻¹x + C;  ∫1/(x√(x²−1)) dx = sec⁻¹x + C',
+      '∫1/(x²−a²) dx = (1/2a) ln|(x−a)/(x+a)| + C;  ∫1/(a²−x²) dx = (1/2a) ln|(a+x)/(a−x)| + C',
+      '∫1/√(x²±a²) dx = ln|x + √(x²±a²)| + C;  ∫1/√(a²−x²) dx = sin⁻¹(x/a) + C',
+      '∫√(a²−x²) dx = (x/2)√(a²−x²) + (a²/2)sin⁻¹(x/a) + C',
+      'Integration by parts: ∫u·v dx = u·∫v dx − ∫(du/dx · ∫v dx) dx  (ILATE order)',
+      '∫eˣ[f(x)+f′(x)] dx = eˣf(x) + C',
+      'Definite integral: ∫ₐᵇ f(x) dx = F(b) − F(a)  (Newton–Leibniz)',
+      'Property: ∫ₐᵇ f(x) dx = ∫ₐᵇ f(a+b−x) dx',
+      'Property: ∫₀ᵃ f(x) dx = ∫₀ᵃ f(a−x) dx',
+      '∫₋ₐᵃ f(x) dx = 2∫₀ᵃ f(x) dx if f even; = 0 if f odd'
+    ],
+    logic: [
+      'Substitution: let u = g(x), du = g′(x) dx — choose u so the integrand simplifies',
+      'For ∫(px+q)/(ax²+bx+c) dx: express px+q = A·d/dx(ax²+bx+c) + B, then split',
+      'Partial fractions: use for rational functions where degree(numerator) < degree(denominator)',
+      'ILATE for integration by parts: Inverse trig, Logarithm, Algebraic, Trigonometric, Exponential',
+      'Definite integral gives NET signed area; absolute area requires splitting at x-intercepts'
+    ],
+    tips: [
+      'Add +C for every indefinite integral — even in multi-step solutions',
+      '∫₀^(π/2) sinⁿx dx = ∫₀^(π/2) cosⁿx dx — useful shortcut',
+      'Check answer by differentiating: d/dx[F(x)] should equal the integrand',
+      'For definite integrals use symmetry properties before computing — saves time in board exams'
+    ],
+    bestPractices: [
+      'Write limits clearly; substitute upper then lower limit with a minus sign',
+      'Check degree before partial fractions — if degree(num) ≥ degree(den), do long division first',
+      'State the method (substitution / parts / partial fractions) before starting'
+    ]
+  },
+  {
+    chapter: 'Application of Integrals',
+    formulae: [
+      'Area under y=f(x) from x=a to x=b: A = ∫ₐᵇ f(x) dx  (f ≥ 0)',
+      'Area between two curves: A = ∫ₐᵇ [f(x) − g(x)] dx  where f(x) ≥ g(x)',
+      'Area w.r.t. y-axis: A = ∫_c^d x dy = ∫_c^d g(y) dy',
+      'Area of circle x²+y²=r²: πr²  (verify using ∫₋ᵣʳ √(r²−x²) dx)',
+      'Area of ellipse x²/a²+y²/b²=1: πab'
+    ],
+    logic: [
+      'Always sketch the region first — identify which curve is on top/right',
+      'Find intersection points of curves to determine limits of integration',
+      'If region is symmetric, compute one half and double it',
+      'Use horizontal strips (integrate w.r.t. y) when the region is bounded by curves expressed as x = f(y)'
+    ],
+    tips: [
+      'For a region bounded by a parabola and a line: find intersections, set up ∫[upper−lower] dx',
+      'Standard board question: area enclosed by y²=4ax and x²=4ay is 16a²/3',
+      'Sketch first — wrong sketch leads to wrong sign and wrong answer',
+      'Area is always positive; use absolute value if the integral comes out negative'
+    ],
+    bestPractices: [
+      'Show the sketch of the bounded region for full marks',
+      'Label intersection points on the sketch',
+      'Write the integral setup explicitly before evaluating'
+    ]
+  },
+  {
+    chapter: 'Differential Equations',
+    formulae: [
+      'Order: highest derivative present;  Degree: power of highest derivative (after clearing fractions)',
+      'Variable separable: dy/dx = f(x)g(y) ⟹ dy/g(y) = f(x) dx, then integrate both sides',
+      'Homogeneous equation: dy/dx = F(y/x) — substitute y = vx, dy/dx = v + x·dv/dx',
+      'Linear first-order: dy/dx + P(x)y = Q(x);  IF = e^(∫P dx);  solution: y·IF = ∫Q·IF dx + C',
+      'Linear first-order in x: dx/dy + P(y)x = Q(y);  IF = e^(∫P dy)',
+      'General solution contains arbitrary constants equal to order of the DE'
+    ],
+    logic: [
+      'Identify type before solving: separable → separate; homogeneous → substitute y=vx; linear → find IF',
+      'After back-substitution (v = y/x), express answer in terms of x and y',
+      'A particular solution satisfies an initial condition — substitute to find C',
+      'Degree is defined only when DE is a polynomial in derivatives; otherwise, say "not defined"'
+    ],
+    tips: [
+      'For linear DE: write in standard form dy/dx + Py = Q first, then compute IF = e^(∫P dx)',
+      'IF is always e^(something) — never simplify it incorrectly',
+      'Common board question: show that a given function is a solution by substituting and verifying',
+      '"Family of curves" problems: differentiate given equation, eliminate the arbitrary constant'
+    ],
+    bestPractices: [
+      'State the type of DE before applying the method',
+      'Show ∫P dx step explicitly when computing the integrating factor',
+      'Write the general solution before applying initial conditions'
+    ]
+  },
+  {
+    chapter: 'Vector Algebra',
+    formulae: [
+      'Position vector of P(x,y,z): r⃗ = xî + yĵ + zk̂',
+      '|a⃗| = √(a₁²+a₂²+a₃²);  unit vector: â = a⃗/|a⃗|',
+      'Section formula (internal): r⃗ = (m·b⃗ + n·a⃗)/(m+n);  mid-point: (a⃗+b⃗)/2',
+      'Scalar (dot) product: a⃗·b⃗ = |a⃗||b⃗|cos θ = a₁b₁+a₂b₂+a₃b₃',
+      'cos θ = (a⃗·b⃗)/(|a⃗||b⃗|);  a⃗⊥b⃗ ⟺ a⃗·b⃗ = 0',
+      'Projection of a⃗ on b⃗: (a⃗·b⃗)/|b⃗|;  vector projection: [(a⃗·b⃗)/|b⃗|²]b⃗',
+      'Cross product: a⃗×b⃗ = |a⃗||b⃗|sin θ n̂;  |a⃗×b⃗| = area of parallelogram',
+      'a⃗×b⃗ = det[î ĵ k̂; a₁ a₂ a₃; b₁ b₂ b₃]',
+      'a⃗∥b⃗ ⟺ a⃗×b⃗ = 0⃗;  î×ĵ = k̂, ĵ×k̂ = î, k̂×î = ĵ',
+      'Scalar triple product: [a⃗ b⃗ c⃗] = a⃗·(b⃗×c⃗) = det[a₁ a₂ a₃; b₁ b₂ b₃; c₁ c₂ c₃]',
+      'Volume of parallelepiped = |[a⃗ b⃗ c⃗]|;  coplanar ⟺ [a⃗ b⃗ c⃗] = 0'
+    ],
+    logic: [
+      'Dot product is commutative: a⃗·b⃗ = b⃗·a⃗;  cross product is anti-commutative: a⃗×b⃗ = −b⃗×a⃗',
+      'Cross product is NOT commutative — order matters',
+      'To find angle between two vectors: use dot product formula and solve for θ',
+      'Area of triangle with sides a⃗ and b⃗: ½|a⃗×b⃗|'
+    ],
+    tips: [
+      'î·î = ĵ·ĵ = k̂·k̂ = 1;  î·ĵ = ĵ·k̂ = k̂·î = 0',
+      'î×î = ĵ×ĵ = k̂×k̂ = 0⃗',
+      'For "show vectors are coplanar": compute scalar triple product — must be zero',
+      'Board often asks: find a unit vector perpendicular to both a⃗ and b⃗ → compute a⃗×b⃗, then divide by its magnitude'
+    ],
+    bestPractices: [
+      'Always write vectors with arrow notation (a⃗) to distinguish from scalars',
+      'Check sign of angle: θ ∈ [0°, 180°] for vectors',
+      'For area problems: state the formula (½|a⃗×b⃗|) before substituting'
+    ]
+  },
+  {
+    chapter: 'Three Dimensional Geometry',
+    formulae: [
+      'Direction cosines (l,m,n): cos α, cos β, cos γ with x,y,z axes;  l²+m²+n² = 1',
+      'Direction ratios (a,b,c): proportional to l,m,n;  l = a/√(a²+b²+c²) etc.',
+      'Line through (x₁,y₁,z₁) with DR (a,b,c): (x−x₁)/a = (y−y₁)/b = (z−z₁)/c',
+      'Vector form of line: r⃗ = a⃗ + λb⃗',
+      'Angle between two lines: cos θ = |l₁l₂+m₁m₂+n₁n₂|',
+      'Lines parallel ⟺ a₁/a₂ = b₁/b₂ = c₁/c₂;  perpendicular ⟺ a₁a₂+b₁b₂+c₁c₂ = 0',
+      'Shortest distance between skew lines r⃗=a⃗₁+λb⃗₁ and r⃗=a⃗₂+μb⃗₂: d = |(a⃗₂−a⃗₁)·(b⃗₁×b⃗₂)| / |b⃗₁×b⃗₂|',
+      'Distance between parallel lines r⃗=a⃗₁+λb⃗ and r⃗=a⃗₂+μb⃗: d = |(a⃗₂−a⃗₁)×b⃗| / |b⃗|',
+      'Plane: ax+by+cz = d;  normal vector is (a,b,c)',
+      'Angle between planes: cos θ = |a₁a₂+b₁b₂+c₁c₂| / (√(a₁²+b₁²+c₁²)·√(a₂²+b₂²+c₂²))',
+      'Distance from point (x₁,y₁,z₁) to plane ax+by+cz+d=0: |ax₁+by₁+cz₁+d| / √(a²+b²+c²)',
+      'Intercept form of plane: x/a + y/b + z/c = 1'
+    ],
+    logic: [
+      'Direction ratios are not unique; direction cosines are unique (up to sign)',
+      'Skew lines: neither intersecting nor parallel — exist only in 3D',
+      'To find foot of perpendicular from point to line: parametrize point on line, use perpendicularity condition',
+      'Equation of plane through three points: use the fact that the normal is perpendicular to two vectors in the plane'
+    ],
+    tips: [
+      'Always verify l²+m²+n² = 1 after computing direction cosines',
+      'For SD between skew lines, b⃗₁×b⃗₂ = 0⃗ means the lines are parallel, not skew',
+      'Board commonly asks for equation of plane passing through a point and perpendicular to a given line',
+      'Angle between line and plane: sin θ = |a·l+b·m+c·n| / (√(a²+b²+c²)·√(l²+m²+n²))'
+    ],
+    bestPractices: [
+      'Label all vectors and points clearly in 3D geometry problems',
+      'Write the Cartesian and vector forms of the line/plane explicitly',
+      'Check units: distance formula always gives a non-negative scalar'
+    ]
+  },
+  {
+    chapter: 'Linear Programming',
+    formulae: [
+      'Objective function Z = ax + by (to be maximised or minimised)',
+      'Constraints: linear inequalities in x and y; non-negativity: x ≥ 0, y ≥ 0',
+      'Feasible region: set of all points satisfying ALL constraints simultaneously',
+      'Corner Point Theorem: optimal value of Z occurs at a corner (vertex) of the feasible region',
+      'If feasible region is unbounded, check if optimal value exists by comparing with open half-plane'
+    ],
+    logic: [
+      'Graph each constraint as a line; shade the feasible side (check with a test point)',
+      'Feasible region is the intersection of all shaded half-planes',
+      'Evaluate Z at every corner point; the largest/smallest is the optimal value',
+      'If feasible region is empty, the LPP has no solution (infeasible)',
+      'If feasible region is unbounded and Z has no maximum, state "no maximum exists"'
+    ],
+    tips: [
+      'For bounded feasible region: optimal solution always exists',
+      'For unbounded region with a maximisation: draw Z = optimal value line; if the open half-plane Z > optimal value has NO point in common with feasible region, then it IS the maximum',
+      'Label corner points clearly on the graph',
+      'Standard board question: manufacturing/diet/transport problem — set up constraints from word problem'
+    ],
+    bestPractices: [
+      'Draw the feasible region with a clean graph; shade it clearly',
+      'List all corner points and compute Z at each',
+      'State the conclusion: "Maximum value of Z is ___ at (___, ___)"'
+    ]
+  },
+  {
+    chapter: 'Probability',
+    formulae: [
+      'Conditional probability: P(A|B) = P(A∩B)/P(B),  P(B) > 0',
+      'Multiplication theorem: P(A∩B) = P(A)·P(B|A) = P(B)·P(A|B)',
+      'Independent events: P(A∩B) = P(A)·P(B);  P(A|B) = P(A)',
+      'Total Probability Theorem: P(A) = Σ P(Bᵢ)·P(A|Bᵢ)  (B₁,…,Bₙ partition)',
+      'Bayes\' Theorem: P(Bᵢ|A) = P(Bᵢ)·P(A|Bᵢ) / Σ P(Bⱼ)·P(A|Bⱼ)',
+      'Binomial distribution: P(X=r) = C(n,r)·pʳ·qⁿ⁻ʳ,  q=1−p',
+      'Mean of binomial: μ = np;  Variance: σ² = npq',
+      'Random variable X: E(X) = Σ xᵢ·P(xᵢ);  Var(X) = E(X²) − [E(X)]²'
+    ],
+    logic: [
+      'Mutually exclusive ≠ independent: ME means P(A∩B)=0; independent means P(A∩B)=P(A)P(B)',
+      'Bayes\' theorem: denominator = total probability of event A (law of total probability)',
+      'For Bayes\': define partition B₁,B₂,… (hypotheses) first, then apply',
+      'Binomial conditions: fixed n trials, two outcomes, constant p, independent trials'
+    ],
+    tips: [
+      'P(A∪B) = P(A)+P(B)−P(A∩B);  for ME events: P(A∪B) = P(A)+P(B)',
+      'P(Aᶜ) = 1−P(A);  complement rule is often the fastest path',
+      'For "at least one" problems: P(at least one) = 1 − P(none)',
+      'Bayes\' theorem: draw a tree diagram — it keeps the conditional probabilities organised'
+    ],
+    bestPractices: [
+      'State which theorem or formula you are using before applying it',
+      'In binomial problems: identify n, p, q, r clearly before substituting',
+      'For Bayes\': show the partition, the prior probabilities, and the likelihoods in a table or tree'
+    ]
   }
 );
