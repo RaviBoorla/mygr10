@@ -67,10 +67,12 @@ const _consolidatedCacheXII = {};
 function consolidatedChaptersXII(subjectId) {
   if (_consolidatedCacheXII[subjectId]) return _consolidatedCacheXII[subjectId];
   const merged = [];
-  (NOTES_SOURCES_XII[subjectId] || []).forEach(([, key]) => {
+  (NOTES_SOURCES_XII[subjectId] || []).forEach(([board, key]) => {
     (REVISION[key] || []).forEach(ch => {
       const name = ch.chapter.trim().toLowerCase();
-      if (!merged.find(m => m.chapter.trim().toLowerCase() === name)) merged.push(ch);
+      const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
+      if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
+      else merged.push({ ...ch, _boards: [board] });
     });
   });
   _consolidatedCacheXII[subjectId] = merged;
@@ -220,7 +222,10 @@ Object.assign(app, {
              onclick="app.go(['notes','${s.id}','0'])">${esc(s.label)}</button>`).join('');
   },
 
-  _chLabel(ch) { return `${ch.chapter} (${ch._boards.join(', ')})`; },
+  _chLabel(ch) {
+    if (!ch._boards?.length || (ch._boards.length === 1 && ch._boards[0] === 'CBSE' && state.grade === 'XII')) return ch.chapter;
+    return `${ch.chapter} (${ch._boards.join(', ')})`;
+  },
 
   _FILTERS: [
     { id: 'all',           label: 'All' },
