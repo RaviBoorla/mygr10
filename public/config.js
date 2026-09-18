@@ -155,7 +155,10 @@ const NOTES_CATALOG = [
   { id: 'Geography',        label: 'Geography' },
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
-  { id: 'Comp App & IT', label: 'Comp App & IT' }
+  { id: 'Comp App & IT',     label: 'Comp App & IT' },
+  { id: 'Economics',         label: 'Economics' },
+  { id: 'Political Science', label: 'Pol Science' },
+  { id: 'Psychology',        label: 'Psychology' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

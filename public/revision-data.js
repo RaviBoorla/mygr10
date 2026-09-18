@@ -5032,3 +5032,59 @@ Object.assign(THEOREMS.Mathematics, THEOREMS['IB Mathematics'] || {});
 delete THEOREMS['ICSE Mathematics'];
 delete THEOREMS['IB Mathematics'];
 
+
+// ─── Grade XII Revision Notes ─────────────────────────────────────────────────
+// Separate keys per subject so Grade X content is untouched.
+// screen-notes.js reads REVISION['XII Mathematics'] etc. when state.grade==='XII'.
+
+REVISION['XII Mathematics'] = [
+  {
+    chapter: 'Ch 1 — Relations and Functions',
+    formulae: [
+      'Empty relation: R = φ ⊂ A × A (no element is related to any element)',
+      'Universal relation: R = A × A (every element is related to every element)',
+      'Reflexive: (a, a) ∈ R for all a ∈ A',
+      'Symmetric: (a, b) ∈ R ⟹ (b, a) ∈ R for all a, b ∈ A',
+      'Transitive: (a, b) ∈ R and (b, c) ∈ R ⟹ (a, c) ∈ R for all a, b, c ∈ A',
+      'Equivalence relation: reflexive + symmetric + transitive',
+      'Equivalence class [a] = {b ∈ A : (a, b) ∈ R} — all elements equivalent to a',
+      'One-one (injective): f(x₁) = f(x₂) ⟹ x₁ = x₂',
+      'Onto (surjective): for every y ∈ Y, ∃ x ∈ X such that f(x) = y  (Range = Codomain)',
+      'Bijective: both one-one and onto',
+      'Composition: (g∘f)(x) = g(f(x)); domain of g∘f is A when f: A→B, g: B→C',
+      'Inverse function: f⁻¹ exists iff f is bijective; f⁻¹∘f = Iₐ, f∘f⁻¹ = I_B',
+      'Binary operation * on A: * : A × A → A (closure required)',
+      'Commutative: a * b = b * a for all a, b ∈ A',
+      'Associative: (a * b) * c = a * (b * c) for all a, b, c ∈ A',
+      'Identity element e: a * e = e * a = a for all a ∈ A',
+      'Inverse of a: element b such that a * b = b * a = e'
+    ],
+    logic: [
+      'A relation R on finite set A can be checked by its matrix: reflexive ↔ all diagonal entries 1; symmetric ↔ matrix = its transpose',
+      'Equivalence classes partition the set A — they are disjoint and their union is A',
+      'For f: X→X where X is finite: one-one ↔ onto (not true for infinite sets)',
+      'f: R→R, f(x) = x² is neither one-one (f(−1)=f(1)) nor onto (negative reals have no preimage)',
+      'Composition is NOT commutative in general: g∘f ≠ f∘g',
+      'Composition IS associative: (h∘g)∘f = h∘(g∘f)',
+      'f is invertible ⟺ f is bijective',
+      'If f and g are both one-one (or both onto), then g∘f is also one-one (or onto)',
+      'Identity function Iₐ: A→A, Iₐ(a) = a — always bijective',
+      'Addition on ℕ is commutative and associative; has no identity in ℕ (0 ∉ ℕ)',
+      'Subtraction on ℤ: not commutative, not associative, has identity 0 but inverses exist only in ℤ'
+    ],
+    tips: [
+      'To prove one-one: assume f(x₁) = f(x₂) and show x₁ = x₂ — do NOT assume x₁ ≠ x₂',
+      'To prove onto: start with arbitrary y ∈ codomain, find x in domain with f(x) = y',
+      'To disprove one-one: give a counterexample — two different inputs giving same output',
+      'Equivalence class question: find all elements related to the given element under R',
+      'Binary operation table (Cayley table): check closure (all entries ∈ A), commutativity (table symmetric about diagonal)',
+      'Board exam: "Verify equivalence" — check all three properties explicitly with proofs'
+    ],
+    bestPractices: [
+      'Clearly state domain and codomain when defining a function',
+      'For equivalence relation proofs, address reflexive, symmetric, transitive in order — three separate paragraphs',
+      'When finding f⁻¹: let f(x) = y, solve for x in terms of y, then replace y with x',
+      'Check that an operation is "well-defined" on the set (result stays in the set) before verifying other properties'
+    ]
+  }
+];

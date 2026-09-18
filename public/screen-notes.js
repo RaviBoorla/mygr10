@@ -48,7 +48,34 @@ const NOTES_SOURCES = {
   ]
 };
 
+// Grade XII revision sources — keys match REVISION['XII <subject>'] entries
+const NOTES_SOURCES_XII = {
+  Mathematics:         [['CBSE', 'XII Mathematics']],
+  Physics:             [['CBSE', 'XII Physics']],
+  Chemistry:           [['CBSE', 'XII Chemistry']],
+  Biology:             [['CBSE', 'XII Biology']],
+  'Comp App & IT':     [['CBSE', 'XII Computer Science']],
+  Economics:           [['CBSE', 'XII Economics']],
+  'Political Science': [['CBSE', 'XII Political Science']],
+  Psychology:          [['CBSE', 'XII Psychology']],
+};
+
 const _consolidatedCache = {};
+const _consolidatedCacheXII = {};
+
+function consolidatedChaptersXII(subjectId) {
+  if (_consolidatedCacheXII[subjectId]) return _consolidatedCacheXII[subjectId];
+  const merged = [];
+  (NOTES_SOURCES_XII[subjectId] || []).forEach(([, key]) => {
+    (REVISION[key] || []).forEach(ch => {
+      const name = ch.chapter.trim().toLowerCase();
+      if (!merged.find(m => m.chapter.trim().toLowerCase() === name)) merged.push(ch);
+    });
+  });
+  _consolidatedCacheXII[subjectId] = merged;
+  return merged;
+}
+
 function consolidatedChapters(subjectId) {
   if (_consolidatedCache[subjectId]) return _consolidatedCache[subjectId];
   const merged = [];
@@ -127,7 +154,7 @@ Object.assign(app, {
         </div>`;
     }
 
-    const chapters = state.grade === 'XII' ? [] : consolidatedChapters(id);
+    const chapters = state.grade === 'XII' ? consolidatedChaptersXII(id) : consolidatedChapters(id);
     const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
@@ -245,7 +272,7 @@ Object.assign(app, {
 
   _repaintNotes() {
     const id = NOTES_CATALOG.some(s => s.id === state.params[0]) ? state.params[0] : NOTES_CATALOG[0].id;
-    const chapters = state.grade === 'XII' ? [] : consolidatedChapters(id);
+    const chapters = state.grade === 'XII' ? consolidatedChaptersXII(id) : consolidatedChapters(id);
     if (!chapters.length) return;
     const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));
     const nav  = document.getElementById('notes-nav');
