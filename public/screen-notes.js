@@ -97,33 +97,50 @@ function consolidatedChapters(subjectId) {
   return (_consolidatedCache[subjectId] = merged);
 }
 
-let _revisionCallbacks = null; // null = not yet started; [] = loading; undefined = failed
+let _revisionCallbacks = null;    // null = not started; [] = loading; undefined = failed
+let _revisionXIICallbacks = null; // same states, for XII file
+
+function _loadScript(src, onload, onerror) {
+  const s = document.createElement('script');
+  s.src = src;
+  s.onload = onload;
+  s.onerror = onerror;
+  document.head.appendChild(s);
+}
 
 function _ensureRevisionData(cb) {
   if (window.REVISION) { cb(); return; }
-  if (_revisionCallbacks === undefined) {
-    // Previous load failed — show error state, don't retry endlessly
-    cb(); return;
-  }
-  if (Array.isArray(_revisionCallbacks)) {
-    // Already loading — queue the callback
-    _revisionCallbacks.push(cb);
-    return;
-  }
-  // First call — start loading
+  if (_revisionCallbacks === undefined) { cb(); return; }
+  if (Array.isArray(_revisionCallbacks)) { _revisionCallbacks.push(cb); return; }
   _revisionCallbacks = [cb];
-  const s = document.createElement('script');
-  s.src = 'revision-data.js?v=4';
-  s.onload = () => {
+  _loadScript('revision-data.js?v=5', () => {
     const pending = _revisionCallbacks || [];
-    _revisionCallbacks = null; // reset so future calls go straight to cb()
+    _revisionCallbacks = null;
     pending.forEach(fn => fn());
-  };
-  s.onerror = () => {
-    _revisionCallbacks = undefined; // mark failed
-    app.render(); // re-render to show error message
-  };
-  document.head.appendChild(s);
+  }, () => {
+    _revisionCallbacks = undefined;
+    app.render();
+  });
+}
+
+function _ensureRevisionDataXII(cb) {
+  // XII data depends on the base REVISION object existing first
+  if (window.REVISION && window.REVISION['XII Mathematics']) { cb(); return; }
+  if (_revisionXIICallbacks === undefined) { cb(); return; }
+  if (Array.isArray(_revisionXIICallbacks)) { _revisionXIICallbacks.push(cb); return; }
+  _revisionXIICallbacks = [cb];
+  // Ensure base file loaded first, then load XII
+  _ensureRevisionData(() => {
+    _loadScript('revision-data-xii.js?v=1', () => {
+      const pending = _revisionXIICallbacks || [];
+      _revisionXIICallbacks = null;
+      Object.keys(_consolidatedCacheXII).forEach(k => delete _consolidatedCacheXII[k]);
+      pending.forEach(fn => fn());
+    }, () => {
+      _revisionXIICallbacks = undefined;
+      app.render();
+    });
+  });
 }
 
 Object.assign(app, {
@@ -132,11 +149,16 @@ Object.assign(app, {
     const gradeCatalog = this._notesGradeCatalog();
     const id = gradeCatalog.some(s => s.id === subjectId) ? subjectId : gradeCatalog[0].id;
 
-    if (!window.REVISION) {
-      const failed = _revisionCallbacks === undefined;
+    const isXII = state.grade === 'XII';
+    const xiiReady = window.REVISION && window.REVISION['XII Mathematics'];
+    const needsLoad = isXII ? !xiiReady : !window.REVISION;
+
+    if (needsLoad) {
+      const failed = isXII ? _revisionXIICallbacks === undefined : _revisionCallbacks === undefined;
       if (!failed) {
-        _ensureRevisionData(() => {
-          Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
+        const loader = isXII ? _ensureRevisionDataXII : _ensureRevisionData;
+        loader(() => {
+          if (!isXII) Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
           app.render();
         });
       }
