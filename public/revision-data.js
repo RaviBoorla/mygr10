@@ -5908,3 +5908,304 @@ REVISION['XII Physics'] = [
     ]
   }
 ];
+
+REVISION['XII Chemistry'] = [
+  {
+    chapter: 'Solutions',
+    formulae: [
+      'Molarity M = moles of solute / volume of solution (L)',
+      'Molality m = moles of solute / mass of solvent (kg)',
+      'Mole fraction: χ_A = n_A / (n_A + n_B)',
+      'Henry\'s law: p = K_H · χ (solubility of gas ∝ partial pressure)',
+      'Raoult\'s law (non-volatile solute): p = p° · χ_solvent;  Δp/p° = χ_solute',
+      'Raoult\'s law (volatile binary): p_total = p°₁χ₁ + p°₂χ₂',
+      'Elevation of boiling point: ΔT_b = K_b · m  (K_b = ebullioscopic constant)',
+      'Depression of freezing point: ΔT_f = K_f · m  (K_f = cryoscopic constant)',
+      'Osmotic pressure: π = iMRT  (M = molarity, i = van\'t Hoff factor)',
+      'van\'t Hoff factor: i = observed colligative property / calculated (if no dissoc./assoc.)',
+      'i > 1: solute dissociates;  i < 1: solute associates'
+    ],
+    logic: [
+      'Ideal solution: obeys Raoult\'s law over entire concentration range; ΔH_mix = 0, ΔV_mix = 0',
+      'Positive deviation: A–B interactions weaker than A–A or B–B (e.g., alcohol + cyclohexane)',
+      'Negative deviation: A–B interactions stronger (e.g., acetone + chloroform)',
+      'Reverse osmosis: apply pressure > π to pure water from solution; used in water purification',
+      'Colligative properties depend only on number of solute particles, not their identity'
+    ],
+    tips: [
+      'K_f(water) = 1.86 K kg mol⁻¹;  K_b(water) = 0.52 K kg mol⁻¹',
+      'For ΔT_b/ΔT_f numericals: use moles, not mass — convert to molality first',
+      'Board question: derive expression for osmotic pressure (van\'t Hoff equation)'
+    ],
+    bestPractices: [
+      'State whether the solute dissociates or associates before applying van\'t Hoff factor',
+      'Osmosis vs osmotic pressure: osmosis is the process; osmotic pressure is the minimum pressure to stop it',
+      'Use M (molarity) for osmotic pressure and m (molality) for ΔT_b, ΔT_f'
+    ]
+  },
+  {
+    chapter: 'Electrochemistry',
+    formulae: [
+      'Cell potential: E°_cell = E°_cathode − E°_anode',
+      'Gibbs energy: ΔrG° = −nFE°_cell  (F = 96485 C mol⁻¹ ≈ 96500)',
+      'Nernst equation: E_cell = E°_cell − (RT/nF)ln Q = E°_cell − (0.0592/n)log Q  (at 298 K)',
+      'Equilibrium: ΔrG° = −RT ln K  →  log K = nE°/0.0592',
+      'Conductivity κ = 1/ρ;  molar conductivity Λ_m = κ/c  (c in mol m⁻³)',
+      'Kohlrausch\'s law: Λ°_m = Σν₊λ°₊ + Σν₋λ°₋  (infinite dilution)',
+      'Degree of dissociation: α = Λ_m / Λ°_m  (for weak electrolytes)',
+      'Faraday\'s first law: m = (M/nF)·Q  (mass deposited = ZIt)',
+      'Faraday\'s second law: m₁/m₂ = E₁/E₂  (E = equivalent weight)'
+    ],
+    logic: [
+      'Galvanic cell: spontaneous redox → electrical energy;  Electrolytic cell: electrical energy → non-spontaneous redox',
+      'Positive E°_cell → spontaneous → ΔrG° < 0 → K > 1',
+      'Conductivity decreases with dilution for both strong and weak electrolytes',
+      'Molar conductivity increases with dilution; strong electrolytes: limited increase; weak: steep increase',
+      'Cathode: reduction (gains electrons);  Anode: oxidation (loses electrons) — in both galvanic and electrolytic cells'
+    ],
+    tips: [
+      'SHE (standard hydrogen electrode): E° = 0 V by convention',
+      'Higher E°_red (more positive) → stronger oxidising agent',
+      'Corrosion: electrochemical process; iron (anode) is oxidised; water/O₂ is reduced (cathode)',
+      'Board question: write cell notation; calculate E°_cell; find ΔrG° and K'
+    ],
+    bestPractices: [
+      'Write electrode reactions separately (oxidation at anode, reduction at cathode) before calculating E°_cell',
+      'Use Nernst equation only at non-standard conditions; state temperature if not 298 K',
+      'For Faraday\'s law numericals: identify n (electrons per formula unit deposited)'
+    ]
+  },
+  {
+    chapter: 'Chemical Kinetics',
+    formulae: [
+      'Rate = −d[R]/dt = +d[P]/dt  (adjust for stoichiometry)',
+      'Rate law: rate = k[A]ᵐ[B]ⁿ  (m, n = order w.r.t. A, B; determined experimentally)',
+      'Zero order: [A] = [A]₀ − kt;  t₁/₂ = [A]₀/(2k)',
+      'First order: [A] = [A]₀ e⁻ᵏᵗ;  ln([A]₀/[A]) = kt;  t₁/₂ = 0.693/k',
+      'Second order: 1/[A] − 1/[A]₀ = kt',
+      'Arrhenius equation: k = Ae⁻ᴱᵃ/ᴿᵀ;  ln k = ln A − Eₐ/(RT)',
+      'Temperature effect: ln(k₂/k₁) = (Eₐ/R)(1/T₁ − 1/T₂)',
+      'Activation energy from plot: Eₐ = −slope × R  (plot ln k vs 1/T)'
+    ],
+    logic: [
+      'Order is experimental; molecularity is theoretical (for elementary steps only)',
+      'For zero-order: rate is independent of concentration; for first-order: t₁/₂ is constant',
+      'Catalyst lowers Eₐ — provides alternate pathway; does NOT change ΔH of reaction',
+      'Molecularity: 1 = unimolecular; 2 = bimolecular; 3 = termolecular (max); cannot be zero or fractional'
+    ],
+    tips: [
+      'First-order reaction: plot ln[A] vs t → straight line with slope = −k',
+      'Second-order: plot 1/[A] vs t → straight line with slope = k',
+      '"Rule of thumb": rate doubles for every 10°C rise (approximate)',
+      'Board question: derive integrated rate equation for first-order reaction'
+    ],
+    bestPractices: [
+      'State the order and rate constant units explicitly: zero order [M s⁻¹]; first order [s⁻¹]; second order [M⁻¹ s⁻¹]',
+      'For Arrhenius numericals: convert T to Kelvin and R = 8.314 J mol⁻¹ K⁻¹',
+      'Do not confuse rate of reaction with rate constant — they are different quantities'
+    ]
+  },
+  {
+    chapter: 'd and f Block Elements',
+    formulae: [
+      'General electronic config: transition metals: (n−1)d¹⁻¹⁰ ns¹⁻²',
+      'Lanthanoids: [Xe] 4f¹⁻¹⁴ 5d⁰⁻¹ 6s²;  Actinoids: [Rn] 5f¹⁻¹⁴ 6d⁰⁻¹ 7s²',
+      'Lanthanoid contraction: gradual decrease in atomic/ionic radii from La→Lu due to poor shielding by 4f electrons',
+      'Potassium dichromate: K₂Cr₂O₇  (oxidation state of Cr = +6)',
+      'Potassium permanganate: KMnO₄  (oxidation state of Mn = +7)'
+    ],
+    logic: [
+      'Variable oxidation states: loss of (n−1)d and ns electrons at comparable energies',
+      'Paramagnetic behaviour: unpaired d electrons create magnetic moment',
+      'Coloured ions: d-d transitions absorb visible light; white compounds have d⁰ or d¹⁰ config',
+      'Catalytic properties: variable oxidation states allow reversible formation of intermediates',
+      'f-block placed separately: 4f/5f orbitals are deeply buried — chemical behavior dominated by outer electrons'
+    ],
+    tips: [
+      'Cr and Cu have exceptional configs: Cr = [Ar]3d⁵4s¹; Cu = [Ar]3d¹⁰4s¹ (stability of half-filled/full d)',
+      'KMnO₄ reactions: acidic medium → Mn²⁺; neutral/faintly alkaline → MnO₂; strongly alkaline → MnO₄²⁻',
+      'K₂Cr₂O₇ is orange in neutral/acidic; changes to yellow CrO₄²⁻ in alkaline (reversible)',
+      'Lanthanoid contraction causes Zr and Hf (elements below Y) to have nearly equal atomic radii'
+    ],
+    bestPractices: [
+      'Write electronic configs of ions (remove ns electrons first, then (n−1)d)',
+      'For colour questions: relate to number of unpaired d-electrons and d-d transitions',
+      'State oxidation state clearly when discussing compounds of transition metals'
+    ]
+  },
+  {
+    chapter: 'Coordination Compounds',
+    formulae: [
+      'Coordination entity: central metal + ligands; e.g. [Co(NH₃)₆]³⁺',
+      'Coordination number = number of ligand donor atoms directly bonded to metal',
+      'IUPAC: ligands in alphabetical order (ignoring prefixes), then metal name with oxidation state in Roman numerals',
+      'Naming cation before anion; complex cation name ends with metal; complex anion ends "-ate"',
+      'Crystal Field Splitting: Δ_o (octahedral); strong ligands (large Δ) → low spin; weak ligands → high spin',
+      'Spectrochemical series: I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < H₂O < NH₃ < en < CN⁻ < CO'
+    ],
+    logic: [
+      'Werner\'s theory: primary valence (ionisable) = oxidation state; secondary valence (non-ionisable) = coordination number',
+      'Isomerism types: structural (ionisation, linkage, solvate) and stereo (geometrical, optical)',
+      'Square planar (d⁸) complexes: Pt²⁺, Pd²⁺, Ni²⁺, Rh⁺;  geometrical isomers possible',
+      'Optical isomers (chirality): complexes with no plane of symmetry (e.g., [Co(en)₃]³⁺)',
+      'EAN rule: 18-electron rule for stable metal carbonyls (like Ni(CO)₄, Fe(CO)₅)'
+    ],
+    tips: [
+      'en = ethylenediamine = bidentate chelating ligand (forms 5-membered ring)',
+      'EDTA⁴⁻ = hexadentate chelating agent; chelate effect: chelate complexes are more stable',
+      'Board question: determine type of isomerism for given complexes',
+      'Haemoglobin: Fe²⁺ in porphyrin ring; chlorophyll: Mg²⁺ in porphyrin ring'
+    ],
+    bestPractices: [
+      'Write IUPAC name systematically: anionic ligands first (with -o suffix), then neutral, then metal',
+      'State hybridisation and geometry: sp³ (tetrahedral); dsp² (square planar); d²sp³ (octahedral)',
+      'For magnetic properties: count unpaired electrons using crystal field theory'
+    ]
+  },
+  {
+    chapter: 'Haloalkanes and Haloarenes',
+    formulae: [
+      'C−X bond polarity: δ+ on C, δ− on X → susceptible to nucleophilic attack',
+      'SN2: rate = k[RX][Nu];  inversion of configuration (Walden inversion);  favoured by 1° alkyl halides',
+      'SN1: rate = k[RX];  racemisation;  favoured by 3° alkyl halides (stable carbocation)',
+      'E2 (elimination): anti-periplanar requirement; Zaitsev product (more substituted alkene)',
+      'Reactivity order of halides: RI > RBr > RCl > RF  (for SN reactions, polar aprotic solvents)'
+    ],
+    logic: [
+      'SN2 vs SN1: depends on substrate (1°→SN2; 3°→SN1), nucleophile strength, and solvent',
+      'Aryl halides: less reactive in nucleophilic substitution (C−X has partial double bond character)',
+      'Grignard reagent (RMgX): C is nucleophilic (acts as carbanion) — do NOT use in protic solvents',
+      'Polarity order of C−X bond: C−F most polar, but C−I most reactive (weak C−I bond)'
+    ],
+    tips: [
+      'Common polyhalogen: CH₂Cl₂ (DCM, solvent); CHCl₃ (chloroform); CCl₄ (firefighting, now banned); DDT (insecticide, banned)',
+      'Freons (CFCs): stable, non-toxic but cause ozone layer depletion',
+      'Iodoform test (CHI₃ yellow ppt): identifies CH₃CO− group or CH₃CHOH−',
+      'Board question: explain SN1 mechanism with stereochemical outcome'
+    ],
+    bestPractices: [
+      'Show arrow-pushing mechanism for SN1 and SN2 — include transition state',
+      'For SN2: show Walden inversion with 3D diagram',
+      'Always specify substrate type (primary/secondary/tertiary) when predicting SN1/SN2'
+    ]
+  },
+  {
+    chapter: 'Alcohols, Phenols and Ethers',
+    formulae: [
+      'Lucas test: ZnCl₂/conc. HCl — 3° alcohol: immediate turbidity; 2°: slow; 1°: no reaction (at room temp)',
+      'Victor Meyer test: 1° → red; 2° → blue; 3° → colourless',
+      'Esterification: RCOOH + R′OH → RCOOR′ + H₂O  (acid catalyst)',
+      'Oxidation: 1° alcohol → aldehyde (mild) → carboxylic acid (strong); 2° → ketone; 3° → resistant',
+      'Reimer–Tiemann reaction: phenol + CHCl₃ + NaOH → salicylaldehyde',
+      'Kolbe\'s reaction: phenol + CO₂/NaOH → sodium salicylate → salicylic acid',
+      'Williamson synthesis: R-O-Na + R′X → R-O-R′ (unsymmetric ether)'
+    ],
+    logic: [
+      'Higher boiling point of alcohols: due to intermolecular H-bonding',
+      'Phenol is more acidic than alcohol: phenoxide ion stabilised by resonance with ring',
+      'EWG on ring increases phenol\'s acidity; EDG decreases it',
+      'Ether C−O bond cleaved by HI: stronger nucleophile and better leaving group'
+    ],
+    tips: [
+      'For distinguishing alcohols: use Lucas test (ZnCl₂/HCl) or oxidation products',
+      'Phenol gives purple-violet colour with neutral FeCl₃ solution',
+      'Glycerol = 1,2,3-propanetriol;  ethylene glycol = 1,2-ethanediol (antifreeze)',
+      'Board question: draw mechanism for acid-catalysed dehydration of primary alcohol to alkene'
+    ],
+    bestPractices: [
+      'Draw resonance structures of phenoxide ion to explain its stability',
+      'For ether synthesis: choose Williamson synthesis when product is unsymmetrical',
+      'State the reagent and condition for each oxidation step (e.g., PCC for 1°→aldehyde, KMnO₄ for acid)'
+    ]
+  },
+  {
+    chapter: 'Aldehydes, Ketones and Carboxylic Acids',
+    formulae: [
+      'Nucleophilic addition to C=O: HCN, NaHSO₃, Grignard (RMgX), alcohols (→acetal), NH₂OH (→oxime)',
+      'Aldol condensation: 2CH₃CHO → CH₃CH(OH)CH₂CHO (base-catalysed, requires α-H)',
+      'Cannizzaro reaction (no α-H aldehyde): disproportionation — e.g., HCHO → HCOOH + CH₃OH',
+      'Clemmensen reduction: C=O → CH₂  (Zn-Hg/HCl)',
+      'Wolff–Kishner reduction: C=O → CH₂  (NH₂NH₂, KOH, ethylene glycol)',
+      'Tollens\' test (silver mirror): RCHO + [Ag(NH₃)₂]⁺ → RCOO⁻ + Ag↓ (aldehydes only)',
+      'Fehling\'s test: RCHO + Cu²⁺ → RCOO⁻ + Cu₂O↓ (brick-red) (aldehydes, not ketones)',
+      'Acidity of carboxylic acids: RCOOH pKa ≈ 4–5; inductive effect: electron-withdrawing groups increase acidity',
+      'Hell–Volhard–Zelinsky (HVZ): RCOOH + X₂/P → RCH(X)COOH  (α-halogenation)'
+    ],
+    logic: [
+      'Aldehydes are more reactive than ketones in nucleophilic addition: less steric hindrance + more +I effect from H',
+      'Carboxylic acids are more acidic than phenols (pKa ~5 vs ~10) due to resonance stabilisation of carboxylate ion',
+      'Aldol product: one molecule acts as nucleophile (via enolate α-carbon), other as electrophile (C=O)',
+      'Ketones resist Tollens\' and Fehling\'s tests (not easily oxidised); used to distinguish from aldehydes'
+    ],
+    tips: [
+      'Formaldehyde (methanal) undergoes Cannizzaro, not aldol (no α-H)',
+      'Benzaldehyde (no α-H) → Cannizzaro reaction with conc. NaOH',
+      'Acetone (propanone) is the simplest ketone — undergoes aldol with base',
+      'Board question: convert aldehyde to carboxylic acid; explain mechanism of Aldol condensation'
+    ],
+    bestPractices: [
+      'Clearly state reagent and conditions (catalyst, temperature) for each conversion',
+      'For tests: write equation showing positive result (precipitate or colour change)',
+      'Distinguish Clemmensen vs Wolff–Kishner: former for acid-sensitive substrates is unsuitable; latter for base-sensitive'
+    ]
+  },
+  {
+    chapter: 'Amines',
+    formulae: [
+      'Basicity order: aliphatic amines > NH₃ > aniline  (aromatic amine weakened by delocalisation)',
+      'Aliphatic amines in water: R₃N < R₂NH < RNH₂ (due to steric and solvation effects; 2° > 1° > 3° in aqueous)',
+      'Carbylamine reaction: 1° amine + CHCl₃ + KOH → isocyanide (RNC) — bad smell; test for 1° amine',
+      'Diazotisation: ArNH₂ + NaNO₂ + HCl (0–5°C) → ArN₂⁺Cl⁻',
+      'Sandmeyer: ArN₂⁺ + CuX → ArX  (X = Cl, Br, CN)',
+      'Balz–Schiemann: ArN₂⁺ + HBF₄ → ArF  (dry heat)',
+      'Coupling reaction: ArN₂⁺ + PhOH (alkaline) → azo dye (−N=N−)'
+    ],
+    logic: [
+      'Lone pair on N → Lewis base; proton acceptor; forms H-bonds',
+      'Aniline: lone pair on N delocalised into benzene ring → less available for protonation → weaker base',
+      'EWG on aniline ring: further reduces basicity; EDG increases it',
+      'Hofmann bromamide degradation: RCONH₂ + Br₂ + NaOH → RNH₂  (one-carbon shorter amine)'
+    ],
+    tips: [
+      'Gabriel phthalimide synthesis gives pure 1° amine (no 2° or 3° contamination)',
+      'Diazonium salts: stable only in cold (0–5°C); warm → phenol (hydrolysis)',
+      'Acylation (R-CO-Cl or (RCO)₂O) reduces basicity and ring-activating effect — used to protect −NH₂ in synthesis',
+      'Board question: explain why aniline is weaker base than methylamine using resonance'
+    ],
+    bestPractices: [
+      'When comparing basicity: factor in both electronic (inductive/resonance) AND steric effects AND solvation',
+      'For diazonium reactions: state temperature condition (cold = coupling/Sandmeyer; warm = hydrolysis)',
+      'Draw resonance structures showing delocalisation of lone pair in aniline'
+    ]
+  },
+  {
+    chapter: 'Biomolecules',
+    formulae: [
+      'Monosaccharides: C_n(H₂O)_n — e.g., glucose C₆H₁₂O₆;  linked by glycosidic bonds → disaccharides/polysaccharides',
+      'Sucrose = glucose + fructose (non-reducing); Maltose = glucose + glucose (reducing); Lactose = galactose + glucose (reducing)',
+      'Starch: amylose (α-1,4) + amylopectin (α-1,4 and α-1,6);  Cellulose: β-1,4 glycosidic bonds',
+      'Amino acids: H₂N−CHR−COOH;  peptide bond: −CO−NH−  (amide bond)',
+      'Protein levels: 1° (sequence), 2° (α-helix/β-sheet, H-bonds), 3° (3D shape), 4° (subunit assembly)',
+      'DNA: 2-deoxyribose + bases + phosphate;  RNA: ribose + bases + phosphate',
+      'Base pairing: A=T (2 H-bonds) in DNA;  A=U in RNA;  G≡C (3 H-bonds)'
+    ],
+    logic: [
+      'Reducing sugars: have free aldehyde/ketone group (or potential); give positive Tollens\'/Fehling\'s test',
+      'Sucrose is non-reducing: anomeric carbon of both monosaccharides involved in glycosidic bond',
+      'Denaturation: secondary/tertiary structure disrupted by pH or heat — loses function but primary structure intact',
+      'DNA double helix stabilised by H-bonds between complementary bases + stacking interactions',
+      'Enzymes are protein catalysts: active site has specific shape; lock-and-key / induced-fit model'
+    ],
+    tips: [
+      'Vitamins A, D, E, K: fat-soluble;  Vitamins B-complex and C: water-soluble',
+      'Deficiency: Vit A → night blindness; Vit C → scurvy; Vit D → rickets; Vit B₁ → beri-beri',
+      'mRNA carries genetic code from DNA to ribosome; tRNA brings amino acids; rRNA forms ribosome',
+      'Board question: distinguish between DNA and RNA; draw peptide bond formation'
+    ],
+    bestPractices: [
+      'Use terms "reducing" and "non-reducing" sugars precisely; justify with structure',
+      'For protein structure questions: describe each level with the type of bond/interaction',
+      'For nucleic acids: specify the sugar (deoxyribose vs ribose) and the unique base (thymine vs uracil)'
+    ]
+  }
+];
