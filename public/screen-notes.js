@@ -223,7 +223,7 @@ Object.assign(app, {
   },
 
   _chLabel(ch) {
-    if (!ch._boards?.length || (ch._boards.length === 1 && ch._boards[0] === 'CBSE' && state.grade === 'XII')) return ch.chapter;
+    if (!ch._boards?.length) return ch.chapter;
     return `${ch.chapter} (${ch._boards.join(', ')})`;
   },
 
