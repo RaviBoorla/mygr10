@@ -2667,3 +2667,252 @@ REVISION['XII Political Science PISI'] = [
     ]
   }
 ];
+
+REVISION['XII Information Practices'] = [
+  {
+    chapter: 'Querying and SQL Functions',
+    formulae: [
+      'COUNT(*) — counts all rows including NULLs; COUNT(col) — counts non-NULL values',
+      'SUM(col), AVG(col), MAX(col), MIN(col) — aggregate functions ignoring NULLs',
+      'GROUP BY col — groups rows with the same value; used with aggregate functions',
+      'HAVING condition — filters groups (like WHERE but after GROUP BY)',
+      'ORDER BY col [ASC|DESC] — sorts result; default is ASC',
+      'ORDER BY col1 ASC, col2 DESC — multi-level sort',
+      'LIKE pattern — % matches any sequence of chars, _ matches exactly one char',
+      'BETWEEN a AND b — inclusive range filter',
+      'IN (val1, val2, ...) — matches any value in list',
+      'IS NULL / IS NOT NULL — checks for missing values',
+      'ALTER TABLE tbl ADD col datatype — adds a new column',
+      'ALTER TABLE tbl MODIFY col datatype — changes column definition',
+      'ALTER TABLE tbl DROP col — removes a column',
+      'UPDATE tbl SET col=expr WHERE condition — modifies existing rows',
+      'Cartesian product (cross join): degree = sum of columns; cardinality = product of rows',
+      'EQUI JOIN: SELECT * FROM T1, T2 WHERE T1.key = T2.key'
+    ],
+    logic: [
+      'WHERE filters individual rows; HAVING filters groups after GROUP BY',
+      'Sequence of SQL clauses: SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY',
+      'Aggregate functions cannot be used in WHERE clause; use HAVING instead',
+      'NULL in any arithmetic expression gives NULL; use IS NULL to test',
+      'DISTINCT keyword removes duplicate values from result',
+      'Foreign key in one table references primary key in another — enables joins',
+      'UNION combines results of two SELECT queries (removes duplicates); UNION ALL keeps duplicates'
+    ],
+    tips: [
+      'Write GROUP BY before HAVING in query; HAVING before ORDER BY',
+      'AVG ignores NULLs — count of rows used for average is count of non-NULL values',
+      'Use table alias (T1.col) when same column name exists in multiple joined tables',
+      'LIKE is case-insensitive in MySQL by default',
+      '"List names starting with A" → LIKE "A%"; "ending with a" → LIKE "%a"',
+      'To find second-highest: ORDER BY col DESC LIMIT 1,1 (skip 1, take 1)'
+    ],
+    bestPractices: [
+      'Always specify column list in SELECT for clarity; avoid SELECT * in production',
+      'Use meaningful aliases: SELECT AVG(Salary) AS AvgSal FROM Employee',
+      'Test aggregate queries without GROUP BY first to check overall result',
+      'When joining tables, specify join condition to avoid accidental Cartesian product'
+    ]
+  },
+  {
+    chapter: 'Data Handling Using Pandas - I',
+    formulae: [
+      'import pandas as pd  — standard import alias',
+      'pd.Series(data, index=[...]) — creates 1-D labelled array',
+      'pd.DataFrame(data, index=[...], columns=[...]) — creates 2-D labelled table',
+      'df.shape — (rows, cols); df.size — total elements; df.ndim — dimensions',
+      'df.dtypes — data type of each column; df.values — numpy array of values',
+      'df.index — row labels; df.columns — column labels',
+      'df.head(n) — first n rows (default 5); df.tail(n) — last n rows',
+      'df.empty — True if DataFrame has no items',
+      's.iloc[pos] — position-based; s.loc[label] — label-based indexing',
+      'df[col] or df.col — select column; df[[c1,c2]] — select multiple columns',
+      'df.loc[r1:r2, c1:c2] — slice by labels (inclusive both ends)',
+      'df.iloc[r1:r2, c1:c2] — slice by position (exclusive end)',
+      'df.rename(index={old:new}) or df.rename(columns={old:new}) — rename labels',
+      'pd.read_csv("file.csv") — load CSV into DataFrame',
+      'df.to_csv("file.csv", index=False) — save without row index'
+    ],
+    logic: [
+      'Series = 1-D; DataFrame = 2-D; both are labelled data structures',
+      'DataFrame column is a Series; DataFrame is a collection of Series sharing same index',
+      'Arithmetic on two Series aligns by index — unmatched indices give NaN',
+      'NumPy array: homogeneous type; Pandas DataFrame: mixed types allowed',
+      'loc includes both endpoints; iloc excludes the right endpoint (like Python slicing)',
+      'When creating DataFrame from dict, keys become column names',
+      'When creating DataFrame from list of dicts, keys become columns and each dict is a row'
+    ],
+    tips: [
+      'Check df.empty before processing to avoid errors on empty DataFrames',
+      'df.index.name and df.columns.name — set axis names for clarity',
+      'Use df[df[col] > value] for boolean filtering (similar to SQL WHERE)',
+      'Series created from dict: keys → index, values → data',
+      'Transpose a DataFrame: df.T swaps rows and columns'
+    ],
+    bestPractices: [
+      'Always specify dtype when creating Series/DataFrame to avoid implicit type casting',
+      'Use read_csv with header=None if file has no header row',
+      'Prefer loc/iloc over chained indexing (df[col][row]) to avoid SettingWithCopyWarning',
+      'Reset index after filtering: df.reset_index(drop=True)'
+    ]
+  },
+  {
+    chapter: 'Data Handling using Pandas - II',
+    formulae: [
+      'df.describe() — summary stats (count, mean, std, min, quartiles, max) for numeric cols',
+      'df[col].mean(), .median(), .mode(), .std(), .var() — column-level statistics',
+      'df.groupby(col)[agg_col].func() — group and aggregate',
+      'df.pivot_table(values, index, columns, aggfunc) — cross-tabulation',
+      'df.sort_values(by=col, ascending=True) — sort by column',
+      'df.sort_index() — sort by index label',
+      'df[new_col] = expr — add new column; del df[col] — delete column',
+      'df.drop(col, axis=1) — drop column; df.drop(row, axis=0) — drop row',
+      'df.isnull() — boolean mask of NaN; df.isnull().sum() — count NaNs per col',
+      'df.dropna() — remove rows with any NaN; df.fillna(val) — fill NaN with val',
+      'import mysql.connector; conn = mysql.connector.connect(host, user, password, database)',
+      'cursor = conn.cursor(); cursor.execute(sql); rows = cursor.fetchall()',
+      'pd.read_sql(sql, conn) — read SQL query result directly into DataFrame'
+    ],
+    logic: [
+      'groupby() splits data into groups, apply() runs function on each group, combine collects results (Split-Apply-Combine)',
+      'pivot_table is a generalised groupby that produces a 2-D summary with rows and columns',
+      'NaN propagates in arithmetic; dropna removes records with any missing value',
+      'fillna replaces NaN with a constant or method (forward-fill ffill, backward-fill bfill)',
+      'mysql.connector bridges Pandas and MySQL — fetch SQL results into DataFrame for analysis'
+    ],
+    tips: [
+      'df.corr() — pairwise correlation matrix; values near ±1 indicate strong relationship',
+      'Use df.groupby(col).agg({"c1":"sum","c2":"mean"}) for different aggregations per column',
+      'Always close cursor and connection after use: cursor.close(); conn.close()',
+      'df[col].value_counts() — frequency count of unique values',
+      'df.duplicated() and df.drop_duplicates() — find/remove duplicate rows'
+    ],
+    bestPractices: [
+      'Check for NaN before statistical operations; decide to drop or impute based on context',
+      'Use parameterised SQL queries with cursor.execute(sql, params) to prevent SQL injection',
+      'Verify mysql.connector is installed: pip install mysql-connector-python',
+      'Store credentials in variables, never hardcode in shared scripts'
+    ]
+  },
+  {
+    chapter: 'Plotting Data using Matplotlib',
+    formulae: [
+      'import matplotlib.pyplot as plt  — standard alias',
+      'plt.plot(x, y, color, linestyle, marker, label) — line chart',
+      'plt.bar(x, height, width, color, label) — vertical bar chart',
+      'plt.barh(y, width) — horizontal bar chart',
+      'plt.hist(x, bins, color, edgecolor) — histogram',
+      'plt.scatter(x, y, s, c, marker) — scatter plot',
+      'plt.boxplot(data) — box-and-whisker plot',
+      'plt.pie(x, labels, autopct, startangle, explode, shadow) — pie chart',
+      'plt.title("text") — chart title; plt.xlabel("x") — x-axis label; plt.ylabel("y") — y-axis label',
+      'plt.legend() — display legend; plt.grid(True) — show grid',
+      'plt.savefig("file.png") — save to file; plt.show() — display',
+      'plt.figure(figsize=(w,h)) — set figure dimensions in inches',
+      'plt.subplot(nrows, ncols, index) — create multiple plots in one figure'
+    ],
+    logic: [
+      'Line chart: for trends over continuous data (time series)',
+      'Bar chart: for comparing discrete categories',
+      'Histogram: for distribution of continuous data (frequency over intervals/bins)',
+      'Scatter plot: for showing relationship/correlation between two variables',
+      'Box plot: for distribution showing median, quartiles, and outliers',
+      'Pie chart: for showing proportions (parts of a whole); percentages sum to 100'
+    ],
+    tips: [
+      'autopct="%1.1f%%" in pie chart shows one decimal percentage on each slice',
+      'explode parameter in pie chart: list of offsets to pull slices out',
+      'bins parameter in histogram controls number of intervals; more bins = finer detail',
+      'Use plt.tight_layout() to prevent label overlap when using subplots',
+      'Stacked bar: use bottom parameter — plt.bar(x, data2, bottom=data1)',
+      'Multiple lines on same chart: call plt.plot() multiple times before plt.show()'
+    ],
+    bestPractices: [
+      'Always label axes and add title for clarity',
+      'Use plt.legend() whenever multiple data series are plotted',
+      'Save figure before plt.show() — show() resets the figure state',
+      'Choose chart type based on data type: categorical → bar; continuous distribution → histogram; relationship → scatter'
+    ]
+  },
+  {
+    chapter: 'Internet and Web',
+    formulae: [
+      'LAN (Local Area Network) — small geographic area (room, building); high speed',
+      'MAN (Metropolitan Area Network) — city-wide; e.g., cable TV network',
+      'WAN (Wide Area Network) — large geographic area (country, world); e.g., Internet',
+      'PAN (Personal Area Network) — very short range (Bluetooth, ~10m)',
+      'URL format: protocol://domain:port/path?query#fragment',
+      'IP address: 32-bit (IPv4) dotted decimal e.g. 192.168.1.1; IPv6: 128-bit hexadecimal',
+      'DNS (Domain Name System) — translates human-readable domain names to IP addresses',
+      'HTTP (HyperText Transfer Protocol) — stateless protocol for web; port 80',
+      'HTTPS — HTTP over TLS/SSL; encrypted; port 443',
+      'FTP (File Transfer Protocol) — file upload/download; port 21',
+      'SMTP — sending email (port 25); POP3 — receiving email (port 110); IMAP — port 143',
+      'TCP/IP — 4-layer model: Application, Transport, Internet, Network Access'
+    ],
+    logic: [
+      'Web server stores web pages; web browser (client) requests and renders them',
+      'HTTP is stateless — each request is independent; cookies/sessions add state',
+      'DNS resolution: browser → local cache → ISP DNS → root → TLD → authoritative server',
+      'Packets: data broken into small units for transmission; reassembled at destination',
+      'Router forwards packets between different networks; switch connects devices within a LAN',
+      'HTML structures content; CSS styles it; JavaScript adds interactivity',
+      'Static web pages: fixed content served as-is; Dynamic: generated on server per request'
+    ],
+    tips: [
+      'URL = Uniform Resource Locator — complete address of a resource on the web',
+      'URI = Uniform Resource Identifier — broader concept; URL is a type of URI',
+      'Domain extensions: .com (commercial), .edu (education), .gov (government), .in (India)',
+      'Modem converts digital signals ↔ analogue signals for transmission over telephone lines',
+      'Hub broadcasts to all; Switch sends only to destination; Router routes between networks',
+      'W3C (World Wide Web Consortium) — sets web standards (HTML, CSS, etc.)',
+      'Tim Berners-Lee invented the World Wide Web in 1989'
+    ],
+    bestPractices: [
+      'Always use HTTPS for secure data transmission on websites',
+      'Understand that IP address identifies device; MAC address identifies hardware',
+      'Distinguish between Internet (global network) and Web (HTTP-based service on Internet)',
+      'Know that email, FTP and web browsing are different services running over the Internet'
+    ]
+  },
+  {
+    chapter: 'Societal Impacts',
+    formulae: [
+      'Digital footprint — trail of data left online (active: posts; passive: browsing history)',
+      'Cybercrime — illegal activity using computers or networks as tool or target',
+      'IT Act 2000 — India\'s law governing e-commerce and cybercrime; amended in 2008',
+      'Section 43 — unauthorised computer access; penalty (compensation)',
+      'Section 66 — hacking (dishonestly/fraudulently accessing computer); imprisonment up to 3 years',
+      'Section 66C — identity theft (using another person\'s password/digital signature)',
+      'Section 66D — cheating by impersonation using computer',
+      'Section 66E — violation of privacy (capturing/publishing private images)',
+      'Section 67 — publishing obscene material electronically',
+      'Copyright — legal right of creator over original work; protects expression, not ideas',
+      'Creative Commons — flexible licensing allowing sharing with conditions',
+      'Open Source Software — source code freely available; can be modified and shared'
+    ],
+    logic: [
+      'Phishing: fake websites/emails trick users into revealing credentials',
+      'Ransomware: malware encrypts victim\'s files; demands ransom for decryption key',
+      'Malware types: virus (attaches to file), worm (self-replicating), Trojan (disguised), spyware',
+      'Cyberbullying: using digital media to bully, threaten or harass individuals',
+      'Net neutrality: ISPs must treat all internet traffic equally — no throttling or preferential treatment',
+      'Plagiarism: presenting someone else\'s work as one\'s own without attribution',
+      'E-waste: discarded electronics; contains hazardous materials; requires proper disposal'
+    ],
+    tips: [
+      'Digital footprint cannot be fully erased — think before you post',
+      'Strong password: 8+ characters mixing upper, lower, digits, special chars; unique per site',
+      'Two-factor authentication (2FA) adds extra security layer beyond password',
+      'Free/open-source software (FOSS): free to use, modify, distribute (e.g., Linux, Python)',
+      'Proprietary software: owned by company; cannot modify source code (e.g., Microsoft Office)',
+      'Freeware: free to use but source code not available; shareware: try before buy',
+      'Trolling: posting inflammatory content online to provoke emotional responses'
+    ],
+    bestPractices: [
+      'Never share passwords or OTPs; report phishing emails to your organisation',
+      'Cite all sources to avoid plagiarism; use quotes for direct text',
+      'Dispose of e-waste at authorised collection centres — never in regular trash',
+      'Know that cybercrime jurisdiction: where offence committed OR where effect felt'
+    ]
+  }
+];

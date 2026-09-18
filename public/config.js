@@ -13,7 +13,7 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XII: {
-    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Information Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
   }
 };
@@ -158,7 +158,8 @@ const NOTES_CATALOG = [
   { id: 'Comp App & IT',     label: 'Comp App & IT' },
   { id: 'Economics',         label: 'Economics' },
   { id: 'Political Science', label: 'Pol Science' },
-  { id: 'Psychology',        label: 'Psychology' }
+  { id: 'Psychology',        label: 'Psychology' },
+  { id: 'Information Practices', label: 'Inf Practices' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

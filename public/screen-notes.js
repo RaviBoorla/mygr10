@@ -58,6 +58,7 @@ const NOTES_SOURCES_XII = {
   Economics:           [['CBSE', 'XII Economics'], ['CBSE', 'XII Economics Macro']],
   'Political Science': [['CBSE', 'XII Political Science CWP'], ['CBSE', 'XII Political Science PISI']],
   Psychology:          [['CBSE', 'XII Psychology']],
+  'Information Practices': [['CBSE', 'XII Information Practices']],
 };
 
 const _consolidatedCache = {};
@@ -208,7 +209,7 @@ Object.assign(app, {
   },
 
   _notesGradeCatalog() {
-    const XII_ONLY = new Set(['Economics','Political Science','Psychology']);
+    const XII_ONLY = new Set(['Economics','Political Science','Psychology','Information Practices']);
     const X_ONLY   = new Set(['Social Science','History','Geography','English','Hindi']);
     if (state.grade === 'XII') return NOTES_CATALOG.filter(s => !X_ONLY.has(s.id));
     return NOTES_CATALOG.filter(s => !XII_ONLY.has(s.id));
