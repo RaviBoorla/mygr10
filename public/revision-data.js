@@ -5489,3 +5489,422 @@ REVISION['XII Mathematics'].push(
     ]
   }
 );
+
+// screen-notes.js reads REVISION['XII Physics'] when state.grade==='XII'.
+REVISION['XII Physics'] = [
+  {
+    chapter: 'Electric Charges and Fields',
+    formulae: [
+      'Coulomb\'s law: F = kq₁q₂/r²,  k = 1/4πε₀ = 9×10⁹ N m² C⁻²,  ε₀ = 8.854×10⁻¹² C² N⁻¹ m⁻²',
+      'Electric field: E = F/q₀ = kq/r²  (point charge);  direction radially outward for +q',
+      'Electric dipole moment: p = q×2a  (direction: −q to +q)',
+      'Field on dipole axis (r >> a): E = 2p / (4πε₀r³);  on equatorial plane: E = −p / (4πε₀r³)',
+      'Torque on dipole in uniform field: τ = p × E;  potential energy U = −p·E',
+      'Gauss\'s law: ΦE = q_enc / ε₀  (flux through any closed surface)',
+      'Field due to infinite line charge: E = λ / (2πε₀r)',
+      'Field due to infinite plane sheet: E = σ / (2ε₀)',
+      'Field inside/outside spherical shell: E = 0 (r<R);  E = q/(4πε₀r²) (r≥R)',
+      'Charge quantisation: q = ne,  e = 1.6×10⁻¹⁹ C'
+    ],
+    logic: [
+      'Superposition principle: net force/field is the vector sum of individual contributions',
+      'Field lines start on +q, end on −q; never cross; density ∝ field strength',
+      'Gauss\'s law is most useful for symmetric charge distributions (spherical, cylindrical, planar)',
+      'Electric force vs gravity: k e²/(G mₑ mₚ) ≈ 2.4×10³⁹ — electrostatic force dominates at atomic scale'
+    ],
+    tips: [
+      'Continuous field lines → no breaks; closed loops are NOT possible for electrostatic fields',
+      'For dipole in non-uniform field: both force AND torque act',
+      'Common board question: find E at a point using Gauss\'s law for a uniformly charged sphere'
+    ],
+    bestPractices: [
+      'State Coulomb\'s law in vector form when direction matters',
+      'For Gauss\'s law problems: choose a Gaussian surface that matches the symmetry',
+      'Always verify units: force in N, charge in C, field in N/C or V/m'
+    ]
+  },
+  {
+    chapter: 'Electrostatic Potential and Capacitance',
+    formulae: [
+      'Electric potential: V = W/q₀ = kq/r  (point charge, V→0 at ∞)',
+      'Potential due to dipole: V = p·r̂/(4πε₀r²)',
+      'Work done: W = q(V_P − V_R)',
+      'Potential energy of two charges: U = kq₁q₂/r₁₂',
+      'Potential energy of dipole: U = −p·E',
+      'E and V relation: E = −dV/dr  (E in direction of decreasing V)',
+      'Capacitance: C = Q/V;  parallel plate: C = ε₀A/d',
+      'With dielectric: C = KC₀,  K = dielectric constant',
+      'Series combination: 1/C = 1/C₁ + 1/C₂ + …',
+      'Parallel combination: C = C₁ + C₂ + …',
+      'Energy stored: U = ½QV = ½CV² = Q²/(2C)',
+      'Energy density: u = ½ε₀E²'
+    ],
+    logic: [
+      'Equipotential surface: E is always perpendicular to it; no work done moving charge along it',
+      'Inside a conductor: E = 0, V = constant, charge resides only on surface',
+      'Dielectric reduces E inside capacitor → increases C',
+      'If capacitor is isolated (disconnected), Q is fixed; if connected to battery, V is fixed'
+    ],
+    tips: [
+      'Conductor surface: E = σ/ε₀ (just outside), directed outward',
+      'Board question: derive C for parallel plate capacitor with dielectric slab',
+      'Energy stored in a combination: sum U = ½C₁V² + ½C₂V² etc. for parallel; same Q for series'
+    ],
+    bestPractices: [
+      'Specify reference (V=0 at ∞) when computing potential',
+      'For combination problems: draw equivalent circuit before applying formulae',
+      'State whether capacitor is connected/disconnected from battery — it changes which quantity is fixed'
+    ]
+  },
+  {
+    chapter: 'Current Electricity',
+    formulae: [
+      'Ohm\'s law: V = IR;  resistance R = ρl/A',
+      'Resistivity: ρ = m/(ne²τ);  temperature coefficient α = Δρ/(ρ₀ΔT)',
+      'Drift velocity: v_d = eEτ/m;  current density j = nev_d',
+      'EMF and terminal voltage: V_ext = ε − Ir  (r = internal resistance)',
+      'Kirchhoff\'s Junction Rule: ΣI_in = ΣI_out',
+      'Kirchhoff\'s Loop Rule: Σ(ΔV) = 0 around any closed loop',
+      'Series resistors: R = R₁+R₂+…;  Parallel: 1/R = 1/R₁+1/R₂+…',
+      'Wheatstone bridge balance: R₁/R₂ = R₃/R₄',
+      'Power: P = VI = I²R = V²/R;  energy = Pt'
+    ],
+    logic: [
+      'Resistivity of metals increases with temperature; semiconductors decrease',
+      'Internal resistance causes terminal voltage to drop under load',
+      'Kirchhoff\'s laws are based on charge conservation (junction) and energy conservation (loop)',
+      'Metre bridge and potentiometer are practical implementations of Wheatstone bridge principle'
+    ],
+    tips: [
+      'For complex circuits: assign unknown currents, apply KCL at junctions, KVL to loops',
+      'Cells in series: ε_total = Σεᵢ, r_total = Σrᵢ;  in parallel (identical): ε same, r/n',
+      'Potentiometer: no current drawn from unknown EMF — measures EMF accurately'
+    ],
+    bestPractices: [
+      'Draw circuit diagram and label all known/unknown quantities before applying Kirchhoff\'s laws',
+      'Sign convention in KVL: gain in potential (+); drop (−)',
+      'Check balance condition for Wheatstone bridge before computing unknown resistance'
+    ]
+  },
+  {
+    chapter: 'Moving Charges and Magnetism',
+    formulae: [
+      'Lorentz force: F = q(v × B + E)',
+      'Magnetic force on current: F = Il × B',
+      'Cyclotron frequency: ν_c = qB/(2πm)  (independent of speed)',
+      'Biot–Savart law: dB = (μ₀/4π)(I dl × r̂)/r²',
+      'Field at centre of circular loop: B = μ₀I/(2R)',
+      'Ampere\'s law: ∮B·dl = μ₀I_enc',
+      'Field of long straight wire: B = μ₀I/(2πR)',
+      'Field inside solenoid: B = μ₀nI  (n = turns per unit length)',
+      'Magnetic moment of loop: m = NIA;  torque τ = m × B',
+      'Galvanometer to ammeter: shunt rₛ in parallel;  to voltmeter: large R in series',
+      'μ₀ = 4π×10⁻⁷ T m A⁻¹'
+    ],
+    logic: [
+      'Magnetic force is always perpendicular to velocity → does no work → changes direction not speed',
+      'Parallel currents attract; anti-parallel currents repel',
+      'Right-hand thumb rule: thumb in current direction, curled fingers give B direction',
+      'Cyclotron principle: frequency independent of radius allows repeated acceleration'
+    ],
+    tips: [
+      'For a charged particle in magnetic field: speed constant, kinetic energy constant, radius r = mv/(qB)',
+      'Solenoid vs toroid: solenoid has field only inside; toroid has circular field, zero outside',
+      'Board question: derive expression for B at centre of circular coil using Biot–Savart'
+    ],
+    bestPractices: [
+      'Use vector cross product form of Lorentz force; state direction using right-hand rule',
+      'For Ampere\'s law: choose Amperian loop that matches the symmetry of B',
+      'State formula, substitute, and simplify — do not skip intermediate steps in board answers'
+    ]
+  },
+  {
+    chapter: 'Magnetism and Matter',
+    formulae: [
+      'Bar magnet (far field): B = μ₀m/(2πr³) along axis;  B = −μ₀m/(4πr³) along equator',
+      'Torque on bar magnet in field: τ = m × B;  U = −m·B',
+      'Gauss\'s law for magnetism: ∮B·dA = 0  (no magnetic monopoles)',
+      'Magnetic intensity: H = B₀/μ₀;  magnetisation M = dipole moment/volume',
+      'B = μ₀(H + M);  for linear material M = χH  →  B = μ₀μᵣH,  μᵣ = 1 + χ',
+      'Curie\'s law (paramagnetics): χ = C/T'
+    ],
+    logic: [
+      'Diamagnetic: χ < 0, weakly repelled by field (e.g., Bi, Cu)',
+      'Paramagnetic: χ > 0 (small), weakly attracted (e.g., Al, O₂)',
+      'Ferromagnetic: χ >> 1, strongly attracted, retains magnetism (e.g., Fe, Ni, Co)',
+      'Magnetic monopoles do not exist — unlike electric charges'
+    ],
+    tips: [
+      'Permanent magnets are ferromagnetic materials with high retentivity and coercivity',
+      'Compass needle aligns with Earth\'s magnetic field — geographic north ≠ magnetic north',
+      'Hysteresis loop: area = energy lost per cycle as heat'
+    ],
+    bestPractices: [
+      'Distinguish between B (magnetic field), H (magnetic intensity), and M (magnetisation)',
+      'For classification questions: state χ value, direction of force in external field',
+      'Quote Curie temperature when discussing ferromagnetics losing their property'
+    ]
+  },
+  {
+    chapter: 'Electromagnetic Induction',
+    formulae: [
+      'Magnetic flux: Φ_B = B·A = BA cosθ',
+      'Faraday\'s law: ε = −N dΦ_B/dt',
+      'Motional EMF: ε = Blv  (rod of length l moving at velocity v in field B)',
+      'Self-inductance: ε = −L dI/dt;  L = NΦ/I',
+      'Self-inductance of solenoid: L = μᵣμ₀n²Al',
+      'Mutual inductance: ε₁ = −M₁₂ dI₂/dt;  M₁₂ = M₂₁ = M',
+      'AC generator: ε = NBAω sin(ωt)  (ω = 2πn, n = rev/s)',
+      'Energy stored in inductor: U = ½LI²'
+    ],
+    logic: [
+      'Lenz\'s law: induced current opposes the change in flux — embodies energy conservation',
+      'The negative sign in Faraday\'s law indicates Lenz\'s law',
+      'Eddy currents: induced in bulk conductors — cause energy loss (used in brakes, induction heating)',
+      'Self-inductance is analogous to inertia — opposes change in current'
+    ],
+    tips: [
+      'For motional EMF: F = qvB on charges in rod → EMF = work per unit charge = Blv',
+      'Board question: a coil rotates in a uniform field — derive expression for induced EMF',
+      'Transformer works on mutual induction; requires AC (DC gives no changing flux)'
+    ],
+    bestPractices: [
+      'State Faraday\'s law first, then substitute; include the negative sign',
+      'For Lenz\'s law questions: determine direction of induced current by opposing the change',
+      'Show the geometry clearly when computing flux (angle between B and area normal)'
+    ]
+  },
+  {
+    chapter: 'Alternating Current',
+    formulae: [
+      'AC voltage/current: v = v_m sin(ωt);  i = i_m sin(ωt + φ)',
+      'RMS values: V = v_m/√2 ≈ 0.707v_m;  I = i_m/√2',
+      'Inductive reactance: X_L = ωL;  current lags voltage by π/2',
+      'Capacitive reactance: X_C = 1/(ωC);  current leads voltage by π/2',
+      'RLC series impedance: Z = √(R² + (X_C − X_L)²)',
+      'Phase angle: φ = tan⁻¹((X_C − X_L)/R)',
+      'Resonance: ω₀ = 1/√(LC);  at resonance Z = R (minimum)',
+      'Average power: P = VI cosφ  (cosφ = power factor)',
+      'Quality factor: Q = ω₀L/R = 1/(ω₀CR)',
+      'Transformer: V_s/V_p = N_s/N_p;  I_s/I_p = N_p/N_s  (ideal)'
+    ],
+    logic: [
+      'Pure inductor/capacitor: cosφ = 0 → no power dissipated (wattless current)',
+      'Resonance: X_L = X_C, impedance minimum, current maximum',
+      'Step-up transformer: V_s > V_p → N_s > N_p → I_s < I_p  (energy conservation)',
+      'Power is dissipated only in resistance, not in L or C'
+    ],
+    tips: [
+      'Phasor diagram: resistor voltage in phase with I; inductor leads I by π/2; capacitor lags I by π/2',
+      'Board question: derive resonant frequency expression for series LCR circuit',
+      'Power factor = 1 for pure resistor; = 0 for pure L or C'
+    ],
+    bestPractices: [
+      'Draw phasor diagram for RLC circuits — it clarifies phase relationships',
+      'State whether circuit is inductive or capacitive from the sign of (X_L − X_C)',
+      'For transformer problems: verify power input ≈ power output for ideal transformer'
+    ]
+  },
+  {
+    chapter: 'Electromagnetic Waves',
+    formulae: [
+      'Displacement current: i_d = ε₀ dΦ_E/dt',
+      'Speed of EM waves in vacuum: c = 1/√(μ₀ε₀) = 3×10⁸ m/s',
+      'Speed in medium: v = 1/√(με)',
+      'E and B relation: E₀/B₀ = c',
+      'EM wave: E = E₀ sin(kz − ωt);  B = B₀ sin(kz − ωt)',
+      'Energy density: u = ½ε₀E² + B²/(2μ₀) = ε₀E²  (averaged)'
+    ],
+    logic: [
+      'E and B are perpendicular to each other AND to the direction of propagation',
+      'Displacement current resolves the inconsistency in Ampere\'s law for charging capacitors',
+      'EM spectrum (increasing wavelength): γ-rays, X-rays, UV, visible, IR, microwave, radio',
+      'All EM waves travel at c in vacuum regardless of frequency'
+    ],
+    tips: [
+      'Visible light: 400–700 nm;  γ-rays: 10⁻¹² m;  radio waves: up to 10⁶ m',
+      'Board question: state Maxwell\'s equations in words and explain displacement current',
+      'Microwave: used in radar and cooking;  X-rays: medical imaging;  UV: sterilisation'
+    ],
+    bestPractices: [
+      'Quote both E₀/B₀ = c and c = 1/√(μ₀ε₀) when discussing EM wave properties',
+      'List EM spectrum in order — board often asks for applications of different regions',
+      'Mention the discoverer (Hertz verified Maxwell\'s prediction) for 3-mark history questions'
+    ]
+  },
+  {
+    chapter: 'Ray Optics and Optical Instruments',
+    formulae: [
+      'Mirror equation: 1/v + 1/u = 1/f = 2/R  (sign convention: distances from pole)',
+      'Magnification: m = −v/u  (mirror)',
+      'Snell\'s law: n₁ sin i = n₂ sin r;  n = c/v',
+      'Critical angle: sin i_c = n₂/n₁  (denser to rarer)',
+      'Lens formula: 1/v − 1/u = 1/f',
+      'Lens maker\'s equation: 1/f = (n₂/n₁ − 1)(1/R₁ − 1/R₂)',
+      'Power of lens: P = 1/f  (in dioptres, f in metres)',
+      'Thin lenses in contact: 1/f = 1/f₁ + 1/f₂;  P = P₁ + P₂',
+      'Prism: n₂₁ = sin((A+D_m)/2) / sin(A/2)',
+      'Simple microscope: m = 1 + D/f  (image at near point);  m = D/f  (image at ∞)',
+      'Compound microscope: m ≈ (L/f_o)(D/f_e)',
+      'Astronomical telescope: m = f_o/f_e  (normal adjustment)'
+    ],
+    logic: [
+      'Total internal reflection: requires denser-to-rarer medium AND i > i_c; used in optical fibres',
+      'Concave mirror/convex lens: converging;  convex mirror/concave lens: diverging',
+      'Real image: formed by actual intersection of rays (can be projected); virtual: apparent intersection',
+      'Dispersion: different wavelengths refract differently → violet bends most, red least'
+    ],
+    tips: [
+      'Cartesian convention: all distances from pole/optical centre; incident light travels left-to-right',
+      'For concave mirror: f < 0;  for convex mirror: f > 0 (in standard convention)',
+      'Board question: draw ray diagrams for image formation by concave mirror (all positions)'
+    ],
+    bestPractices: [
+      'State sign convention before solving numericals',
+      'Draw accurate ray diagrams with labels for full marks on 3/5-mark questions',
+      'For optical instruments: quote final magnification formula and identify each symbol'
+    ]
+  },
+  {
+    chapter: 'Wave Optics',
+    formulae: [
+      'Young\'s double slit: fringe width β = λD/d  (D = screen distance, d = slit separation)',
+      'Condition for bright fringe: path difference = nλ;  dark fringe: (2n−1)λ/2',
+      'Single slit diffraction: first dark fringe at θ where a sinθ = λ  (a = slit width)',
+      'Malus\'s law: I = I₀ cos²θ  (polarised light through analyser)',
+      'Brewster\'s law: tan i_B = n  (reflected light is completely polarised)'
+    ],
+    logic: [
+      'Coherent sources required for sustained interference; same frequency and constant phase difference',
+      'Constructive interference: path difference = nλ;  destructive: (n+½)λ',
+      'Diffraction: bending of waves around obstacles — single slit gives central max flanked by weaker maxima',
+      'Polarisation proves transverse nature of light; longitudinal waves cannot be polarised'
+    ],
+    tips: [
+      'Increasing d (slit separation): fringe width β decreases — fringes become closer',
+      'Increasing λ: β increases — fringes spread out',
+      'Board question: derive fringe width expression for Young\'s double slit experiment',
+      'Natural light is unpolarised; polaroid transmits one component only'
+    ],
+    bestPractices: [
+      'Clearly identify D, d, λ in YDSE diagrams',
+      'For Malus\'s law: ensure angle θ is between transmission axis of polaroid and plane of polarisation',
+      'Quote Huygens\' principle before deriving laws of reflection/refraction from it'
+    ]
+  },
+  {
+    chapter: 'Dual Nature of Radiation and Matter',
+    formulae: [
+      'Photon energy: E = hν = hc/λ;  h = 6.626×10⁻³⁴ J s',
+      'Photon momentum: p = h/λ = E/c',
+      'Einstein\'s photoelectric equation: ½mv²_max = hν − φ₀ = h(ν − ν₀)',
+      'Stopping potential: eV₀ = K_max = hν − φ₀',
+      'Threshold frequency: ν₀ = φ₀/h',
+      'de Broglie wavelength: λ = h/p = h/(mv)',
+      'de Broglie wavelength of electron accelerated through V volts: λ = h/√(2meV)'
+    ],
+    logic: [
+      'Wave nature cannot explain photoelectric effect: intensity should determine K_max — it does not',
+      'Photon picture explains: K_max depends on ν not intensity; instantaneous emission; existence of ν₀',
+      'de Broglie: matter and radiation both have wave-particle duality',
+      'Larger momentum → shorter wavelength; macroscopic objects have immeasurably small λ'
+    ],
+    tips: [
+      'Below threshold frequency: no emission regardless of intensity',
+      'Increasing intensity: more photons → more electrons emitted (higher current), K_max unchanged',
+      'Board question: plot stopping potential vs frequency — slope = h/e'
+    ],
+    bestPractices: [
+      'Quote Einstein\'s photoelectric equation with all symbols defined',
+      'For de Broglie problems: state p = mv if non-relativistic; use p = √(2mK) if KE is given',
+      'Work function often given in eV — convert to joules (1 eV = 1.6×10⁻¹⁹ J) before using SI formulae'
+    ]
+  },
+  {
+    chapter: 'Atoms',
+    formulae: [
+      'Bohr radius: r_n = n²a₀,  a₀ = 0.529 Å  (ground state n=1)',
+      'Energy levels (hydrogen): E_n = −13.6/n² eV',
+      'Angular momentum quantisation: L = nh/(2π) = nħ',
+      'Photon frequency: hν = E_i − E_f',
+      'Rydberg formula: 1/λ = R_H(1/n₁² − 1/n₂²),  R_H = 1.097×10⁷ m⁻¹',
+      'Lyman series: n₁=1;  Balmer: n₁=2;  Paschen: n₁=3'
+    ],
+    logic: [
+      'Thomson model failed: could not explain line spectra',
+      'Rutherford model: concentrated nucleus — but accelerating electron should spiral and emit — contradicts stability',
+      'Bohr\'s postulates resolve both: stationary orbits + quantum jumps + angular momentum quantisation',
+      'Bohr\'s model applicable only to hydrogenic (single-electron) species: H, He⁺, Li²⁺'
+    ],
+    tips: [
+      'Ground state of H: n=1, E = −13.6 eV, r = 0.529 Å',
+      'Ionisation energy = 13.6 eV (energy to remove electron from n=1 to n=∞)',
+      'Board question: calculate wavelength of photon emitted for given transition using Rydberg formula',
+      'Lyman series: UV;  Balmer: visible;  Paschen/Brackett/Pfund: IR'
+    ],
+    bestPractices: [
+      'State Bohr\'s three postulates explicitly when asked to "explain Bohr\'s model"',
+      'Show the energy level diagram for hydrogen when solving spectral series questions',
+      'Quote limitations of Bohr\'s model: fails for multi-electron atoms, no explanation of fine structure'
+    ]
+  },
+  {
+    chapter: 'Nuclei',
+    formulae: [
+      'Nuclear radius: R = R₀A^(1/3),  R₀ = 1.2 fm  →  nuclear density ≈ 2.3×10¹⁷ kg/m³ (constant)',
+      'Mass defect: ΔM = (Zmₚ + Nmₙ) − M_nucleus',
+      'Binding energy: BE = ΔM·c²  (in MeV: ΔM in u × 931.5 MeV/u)',
+      'Radioactive decay law: N = N₀e^(−λt)',
+      'Half-life: T₁/₂ = 0.693/λ;  mean life: τ = 1/λ',
+      'Activity: A = λN = A₀e^(−λt)  (unit: Bq = 1 decay/s; 1 Ci = 3.7×10¹⁰ Bq)',
+      'Q-value: Q = (Σm_initial − Σm_final)c²',
+      'Nuclear fission: ²³⁵U + n → ¹³³Sb + ⁹⁹Nb + 4n  (example)',
+      '1 u = 931.5 MeV/c²;  mₚ = 1.00728 u;  mₙ = 1.00867 u'
+    ],
+    logic: [
+      'Binding energy per nucleon peaks near A ≈ 56 (Fe) — most stable; decreases for very heavy and very light nuclei',
+      'Fission releases energy because heavy nuclei → medium nuclei (higher BE/nucleon)',
+      'Fusion releases energy because light nuclei → slightly heavier (higher BE/nucleon)',
+      'Nuclear force: short-range, charge-independent, stronger than electrostatic at < 1 fm'
+    ],
+    tips: [
+      'Isotopes: same Z, different N;  Isobars: same A;  Isotones: same N',
+      'Board question: calculate BE/nucleon for a given nucleus and compare stability',
+      'Radioactive series: α decay reduces A by 4, Z by 2; β⁻ decay increases Z by 1, A unchanged'
+    ],
+    bestPractices: [
+      'Always convert mass in u to MeV using 1 u = 931.5 MeV/c²',
+      'For half-life problems: use N = N₀(½)^(t/T₁/₂) to avoid exponential calculation errors',
+      'State whether fission or fusion — and WHY energy is released (binding energy argument)'
+    ]
+  },
+  {
+    chapter: 'Semiconductor Electronics',
+    formulae: [
+      'Intrinsic semiconductors: nₑ = nₕ = nᵢ;  nₑnₕ = nᵢ²  (mass action law)',
+      'Forward bias: barrier height decreases → large current (mA range)',
+      'Reverse bias: barrier height increases → very small current (μA range)',
+      'Half-wave rectifier: output frequency = input frequency',
+      'Full-wave rectifier: output frequency = 2 × input frequency',
+      'Transistor: I_E = I_B + I_C;  β = I_C/I_B  (current gain, common emitter)',
+      'Voltage gain (CE amplifier): A_v = −β(R_C/R_in)',
+      'Logic gates: AND, OR, NOT, NAND, NOR;  NAND and NOR are universal gates'
+    ],
+    logic: [
+      'n-type: donor (pentavalent) doping → electrons are majority carriers',
+      'p-type: acceptor (trivalent) doping → holes are majority carriers',
+      'Depletion layer forms at p-n junction due to diffusion; creates barrier potential (~0.7 V for Si)',
+      'Energy gap: insulators E_g > 3 eV; semiconductors 0.2–3 eV; metals ≈ 0'
+    ],
+    tips: [
+      'Diode in forward bias: acts like closed switch;  in reverse bias: open switch',
+      'NAND gate = NOT(AND);  NOR = NOT(OR);  both are universal (can construct any gate from them)',
+      'Board question: draw I-V characteristics of p-n junction diode; identify forward and reverse bias regions'
+    ],
+    bestPractices: [
+      'Draw energy band diagrams when explaining conductors, semiconductors, insulators',
+      'For transistor circuits: state configuration (CE/CB/CC) and identify input/output terminals',
+      'Truth tables: fill all 2ⁿ rows for n inputs — no shortcuts in board answers'
+    ]
+  }
+];
