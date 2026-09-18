@@ -7,9 +7,15 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
-  CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
-  ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
-  // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
+  X: {
+    CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
+    // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
+  },
+  XII: {
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Information Practices', 'Economics', 'Political Science', 'Psychology'],
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
+  }
 };
 
 const BANKS = {
@@ -27,7 +33,23 @@ const BANKS = {
   'X CBSE Hindi':                  'X-CBSE-Hindi',
   'X CBSE English':               'X-CBSE-English',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology',
+
+  'XII CBSE Mathematics':        'XII-CBSE-Mathematics',
+  'XII CBSE Physics':            'XII-CBSE-Physics',
+  'XII CBSE Chemistry':          'XII-CBSE-Chemistry',
+  'XII CBSE Biology':            'XII-CBSE-Biology',
+  'XII CBSE Computer Science':   'XII-CBSE-Computer-Science',
+  'XII ICSE Mathematics':        'XII-ICSE-Mathematics',
+  'XII ICSE Physics':            'XII-ICSE-Physics',
+  'XII ICSE Chemistry':          'XII-ICSE-Chemistry',
+  'XII ICSE Biology':            'XII-ICSE-Biology',
+  'XII ICSE Computer Science':   'XII-ICSE-Computer-Science',
+
+  'XII CBSE Economics':             'XII-CBSE-Economics',
+  'XII CBSE Political Science':     'XII-CBSE-Political-Science',
+  'XII CBSE Psychology':            'XII-CBSE-Psychology',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices'
 };
 
 const SA_BANKS = {
@@ -43,7 +65,23 @@ const SA_BANKS = {
   'X ICSE Geography':              'X-ICSE-Geography-ShortAnswers',
   'X ICSE Computer Science':       'X-ICSE-Computer-Science-ShortAnswers',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-ShortAnswers',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-ShortAnswers',
+
+  'XII ICSE Chemistry': 'XII-ICSE-Chemistry-ShortAnswers',
+  'XII ICSE Physics':     'XII-ICSE-Physics-ShortAnswers',
+  'XII ICSE Mathematics':      'XII-ICSE-Mathematics-ShortAnswers',
+  'XII ICSE Computer Science': 'XII-ICSE-Computer-Science-ShortAnswers',
+  'XII ICSE Biology':          'XII-ICSE-Biology-ShortAnswers',
+  'XII CBSE Computer Science': 'XII-CBSE-Computer-Science-ShortAnswers',
+  'XII CBSE Mathematics':      'XII-CBSE-Mathematics-ShortAnswers',
+  'XII CBSE Physics':          'XII-CBSE-Physics-ShortAnswers',
+  'XII CBSE Chemistry':        'XII-CBSE-Chemistry-ShortAnswers',
+  'XII CBSE Biology':          'XII-CBSE-Biology-ShortAnswers',
+
+  'XII CBSE Economics':             'XII-CBSE-Economics-ShortAnswers',
+  'XII CBSE Political Science':     'XII-CBSE-Political-Science-ShortAnswers',
+  'XII CBSE Psychology':            'XII-CBSE-Psychology-ShortAnswers',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -56,7 +94,14 @@ const SOLVED_BANKS = {
   'X CBSE Science':        'X-CBSE-Science-Solved',
   'X CBSE Social Science': 'X-CBSE-Social-Science-Solved',
   'X CBSE Computer Applications':   'X-CBSE-Computer-Applications-Solved',
-  'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved'
+  'X CBSE Information Technology':  'X-CBSE-Information-Technology-Solved',
+
+  'XII CBSE Computer Science':      'XII-CBSE-Computer-Science-Solved',
+  'XII CBSE Physics':               'XII-CBSE-Physics-Solved',
+  'XII CBSE Chemistry':             'XII-CBSE-Chemistry-Solved',
+  'XII CBSE Biology':               'XII-CBSE-Biology-Solved',
+  'XII CBSE Mathematics':           'XII-CBSE-Mathematics-Solved',
+  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -111,7 +156,11 @@ const NOTES_CATALOG = [
   { id: 'Geography',        label: 'Geography' },
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
-  { id: 'Comp App & IT', label: 'Comp App & IT' }
+  { id: 'Comp App & IT',     label: 'Computer Science' },
+  { id: 'Economics',         label: 'Economics' },
+  { id: 'Political Science', label: 'Pol Science' },
+  { id: 'Psychology',        label: 'Psychology' },
+  { id: 'Information Practices', label: 'Inf Practices' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

@@ -1,0 +1,312 @@
+[
+  {
+    "id": "sol-ip-ch1-01",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 1",
+    "number": "1a",
+    "question": "Define RDBMS. Name any two RDBMS software.",
+    "solution": "RDBMS (Relational Database Management System) is a database management system that stores data in the form of related tables (relations). Each table has rows (tuples) and columns (attributes). Data can be accessed and manipulated using SQL (Structured Query Language).\n\nTwo RDBMS software:\n1. MySQL\n2. Oracle (others: Microsoft SQL Server, PostgreSQL, MariaDB)",
+    "steps": [
+      "RDBMS = stores data in tables (relations) with rows and columns.",
+      "Tables can be related through primary/foreign keys.",
+      "SQL is the standard language for querying an RDBMS.",
+      "Examples: MySQL, Oracle, PostgreSQL, MS SQL Server."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-02",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 1",
+    "number": "1b",
+    "question": "What is the purpose of the ORDER BY and HAVING clauses in a SELECT statement?",
+    "solution": "ORDER BY: Sorts the result set in ascending (ASC, default) or descending (DESC) order based on one or more columns.\nExample: SELECT * FROM Students ORDER BY Marks DESC;\n\nHAVING: Filters groups created by GROUP BY based on an aggregate condition. It is similar to WHERE but operates on groups, not individual rows.\nExample: SELECT Department, COUNT(*) FROM Employee GROUP BY Department HAVING COUNT(*) > 5;",
+    "steps": [
+      "ORDER BY: used after SELECT to sort results by column(s); default is ASC.",
+      "HAVING: used after GROUP BY to filter groups based on aggregate conditions.",
+      "WHERE filters individual rows BEFORE grouping; HAVING filters groups AFTER grouping."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-03",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 1",
+    "number": "1c",
+    "question": "State any two differences between Single-row functions and Aggregate functions.",
+    "solution": "Single-row (scalar) functions vs Aggregate functions:\n\n| Aspect | Single-row | Aggregate |\n|---|---|---|\n| Operates on | One row at a time | Group of rows |\n| Returns | One result per input row | One result per group |\n| Example | UPPER(), LENGTH(), ROUND() | SUM(), COUNT(), AVG() |\n| Used in | SELECT, WHERE, ORDER BY | SELECT, HAVING (with GROUP BY) |",
+    "steps": [
+      "Single-row functions process each row independently and return one value per row.",
+      "Aggregate functions process a set of rows and return one summary value per group.",
+      "Single-row examples: UPPER(), LOWER(), ROUND(), LENGTH(), LEFT(), RIGHT().",
+      "Aggregate examples: SUM(), COUNT(), AVG(), MAX(), MIN()."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-04",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 1",
+    "number": "1d",
+    "question": "What do you understand by Cartesian Product?",
+    "solution": "Cartesian Product (Cross Join) is the result of combining every row from Table A with every row from Table B. If Table A has m rows and n columns, and Table B has p rows and q columns, then:\n- Cartesian Product has m\u00d7p rows and n+q columns.\n\nExample: Table A (3 rows, 2 cols) \u00d7 Table B (4 rows, 3 cols) \u2192 12 rows, 5 columns.\n\nSQL: SELECT * FROM TableA, TableB; (without a WHERE join condition)",
+    "steps": [
+      "Cartesian Product pairs every row of one table with every row of another.",
+      "Rows in result = rows_A \u00d7 rows_B.",
+      "Columns in result = cols_A + cols_B.",
+      "SQL syntax: SELECT * FROM A, B; (no WHERE join condition).",
+      "Useful for understanding joins; in practice, always add a WHERE condition."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-05",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 2",
+    "number": "2",
+    "question": "Write the output produced by the following SQL commands:\na) SELECT POW(2,3);\nb) SELECT ROUND(123.2345, 2), ROUND(342.9234,-1);\nc) SELECT LENGTH('Informatics Practices');\nd) SELECT YEAR('1979/11/26'), MONTH('1979/11/26'), DAY('1979/11/26'), MONTHNAME('1979/11/26');\ne) SELECT LEFT('INDIA',3), RIGHT('Computer Science',4);\nf) SELECT MID('Informatics',3,4), SUBSTR('Practices',3);",
+    "solution": "a) POW(2,3) = 2\u00b3 = 8\n\nb) ROUND(123.2345, 2) = 123.23 (2 decimal places, 4th decimal 4 < 5 \u2192 round down)\n   ROUND(342.9234, -1) = 340 (round to nearest 10: 342.9 \u2192 340)\n\nc) LENGTH('Informatics Practices') = 21 (including the space: I,n,f,o,r,m,a,t,i,c,s,' ',P,r,a,c,t,i,c,e,s = 21)\n\nd) YEAR('1979/11/26') = 1979\n   MONTH('1979/11/26') = 11\n   DAY('1979/11/26') = 26\n   MONTHNAME('1979/11/26') = November\n\ne) LEFT('INDIA',3) = IND\n   RIGHT('Computer Science',4) = ence\n\nf) MID('Informatics',3,4) = form (start pos 3, length 4: f,o,r,m)\n   SUBSTR('Practices',3) = actices (from pos 3 to end)",
+    "steps": [
+      "POW(base, exp): computes base^exp.",
+      "ROUND(num, 2): rounds to 2 decimals; ROUND(num,-1): rounds to nearest 10.",
+      "LENGTH(str): counts all characters including spaces.",
+      "YEAR/MONTH/DAY extract respective parts; MONTHNAME returns the month's name.",
+      "LEFT(str,n): first n chars; RIGHT(str,n): last n chars.",
+      "MID/SUBSTR(str, pos, len): substring from position (1-based)."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-06",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 3",
+    "number": "3a",
+    "question": "Consider table Product(PCode, PName, UPrice, Manufacturer). Write SQL queries:\ni. Create the Product table with appropriate data types.\nii. Identify the primary key.\niii. List PCode, PName and price in descending order of PName; if same PName then ascending order of price.\niv. Add a Discount column.\nv. Set Discount = 10% of UPrice where UPrice > 100, else 0.\nvi. Increase price by 12% for Dove products.\nvii. Count products per manufacturer.",
+    "solution": "i. CREATE TABLE Product (\n   PCode VARCHAR(5) PRIMARY KEY,\n   PName VARCHAR(50) NOT NULL,\n   UPrice DECIMAL(10,2),\n   Manufacturer VARCHAR(50)\n);\n\nii. Primary Key: PCode (each product has a unique code)\n\niii. SELECT PCode, PName, UPrice FROM Product ORDER BY PName DESC, UPrice ASC;\n\niv. ALTER TABLE Product ADD Discount DECIMAL(10,2);\n\nv. UPDATE Product SET Discount = CASE WHEN UPrice > 100 THEN UPrice * 0.10 ELSE 0 END;\n\nvi. UPDATE Product SET UPrice = UPrice * 1.12 WHERE Manufacturer = 'Dove';\n\nvii. SELECT Manufacturer, COUNT(*) AS ProductCount FROM Product GROUP BY Manufacturer;",
+    "steps": [
+      "CREATE TABLE with VARCHAR for codes/names, DECIMAL for prices.",
+      "PRIMARY KEY on PCode guarantees uniqueness.",
+      "ORDER BY PName DESC, UPrice ASC: secondary sort on UPrice when PName is same.",
+      "ALTER TABLE ADD: adds a new column to existing table.",
+      "UPDATE with CASE WHEN: conditional value assignment.",
+      "UPDATE with WHERE Manufacturer='Dove': restricts to Dove products.",
+      "GROUP BY Manufacturer with COUNT(*): totals per group."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-07",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 3b",
+    "number": "3b",
+    "question": "Write the output for queries on Product table (PCode, PName, UPrice, Manufacturer):\ni. SELECT PName, Average(UPrice) FROM Product GROUP BY PName;\nii. SELECT DISTINCT Manufacturer FROM Product;\niii. SELECT COUNT(DISTINCT PName) FROM Product;\niv. SELECT PName, MAX(UPrice), MIN(UPrice) FROM Product GROUP BY PName;",
+    "solution": "Data: Washing Powder/120/Surf, Tooth Paste/54/Colgate, Soap/25/Lux, Tooth Paste/65/Pepsodant, Soap/38/Dove, Shampoo/245/Dove\n\ni. GROUP BY PName \u2014 average price per product name:\n   PName           Average(UPrice)\n   Washing Powder  120.00\n   Tooth Paste     59.50  (54+65)/2\n   Soap            31.50  (25+38)/2\n   Shampoo         245.00\n\nii. DISTINCT Manufacturer:\n   Surf\n   Colgate\n   Lux\n   Pepsodant\n   Dove\n\niii. COUNT(DISTINCT PName):\n   4  (Washing Powder, Tooth Paste, Soap, Shampoo)\n\niv. PName, MAX, MIN grouped:\n   Washing Powder  120  120\n   Tooth Paste     65   54\n   Soap            38   25\n   Shampoo         245  245",
+    "steps": [
+      "AVG(UPrice) per PName group calculates average for each product type.",
+      "DISTINCT removes duplicate manufacturers.",
+      "COUNT(DISTINCT PName) counts unique product names only.",
+      "MAX and MIN per PName group show price range for each product type."
+    ]
+  },
+  {
+    "id": "sol-ip-ch1-08",
+    "chapter": "Querying and SQL Functions",
+    "exercise": "Exercise 5",
+    "number": "5",
+    "question": "Student table (AdmNo, Name, StCode) with Stream table (StCode, Stream). Write SQL:\na) Create database Streams_Of_Students.\nb) Create Student table.\nc) Identify primary keys and foreign key.\nd) Update Jay's stream to Humanities.\ne) Display names ending with 'a' in alphabetical order.\nf) Students in Science and Humanities, ordered by name then AdmNo.\ng) Count students per stream having more than 1 student.\nh) Students in descending AdmNo order.",
+    "solution": "a) CREATE DATABASE Streams_Of_Students;\n\nb) CREATE TABLE Student (\n   AdmNo INT PRIMARY KEY,\n   Name VARCHAR(50) NOT NULL,\n   StCode VARCHAR(5),\n   FOREIGN KEY (StCode) REFERENCES Stream(StCode)\n);\n\nc) Primary key of Student: AdmNo\n   Primary key of Stream: StCode\n   Foreign key in Student: StCode references Stream(StCode)\n\nd) UPDATE Student SET StCode = 'S03' WHERE Name = 'Jay';\n\ne) SELECT Name FROM Student WHERE Name LIKE '%a' ORDER BY Name ASC;\n\nf) SELECT S.Name FROM Student S, Stream T WHERE S.StCode = T.StCode\n   AND T.Stream IN ('Science', 'Humanities') ORDER BY S.Name ASC, S.AdmNo ASC;\n\ng) SELECT StCode, COUNT(*) AS Cnt FROM Student GROUP BY StCode HAVING COUNT(*) > 1;\n\nh) SELECT S.Name, T.Stream FROM Student S, Stream T WHERE S.StCode = T.StCode\n   ORDER BY S.AdmNo DESC;",
+    "steps": [
+      "CREATE DATABASE creates the database; CREATE TABLE with FOREIGN KEY sets relationship.",
+      "LIKE '%a' matches names ending with 'a'; ORDER BY Name ASC for alphabetical.",
+      "JOIN with IN('Science','Humanities') filters to specific streams.",
+      "HAVING COUNT(*) > 1 keeps only groups with more than one student.",
+      "ORDER BY AdmNo DESC: highest admission number first."
+    ]
+  },
+  {
+    "id": "sol-ip-ch2-01",
+    "chapter": "Data Handling Using Pandas I",
+    "exercise": "Exercise 2",
+    "number": "1-3",
+    "question": "1. What is a Series and how is it different from a 1-D array, a list, and a dictionary?\n2. What is a DataFrame and how is it different from a 2-D array?\n3. How are DataFrames related to Series?",
+    "solution": "1. A Pandas Series is a one-dimensional labeled array. It differs:\n   - vs 1-D array: Series has an explicit index (labels); arrays use only integer positions.\n   - vs list: Series has dtype, supports vectorized operations, has labeled index; lists are generic.\n   - vs dictionary: Series has an ordered sequence of values with labeled index; dicts don't have position/order.\n\n2. A DataFrame is a 2D labeled data structure with rows and columns. It differs from a 2-D array:\n   - DataFrame has labeled rows (index) and labeled columns; 2D arrays only use integer positions.\n   - Each DataFrame column can have its own data type; 2D NumPy arrays are homogeneous.\n   - DataFrame provides many built-in data manipulation methods.\n\n3. A DataFrame is a collection of Series objects. Each column of a DataFrame is a Series sharing the same index. You can extract any single column as a Series.",
+    "steps": [
+      "Series: 1D, labeled index, homogeneous dtype, vectorized operations.",
+      "DataFrame: 2D, labeled rows+columns, each column can differ in dtype.",
+      "DataFrame column extracted with df['col'] returns a Series.",
+      "Series and DataFrame both support label-based indexing with .loc[] and .iloc[]."
+    ]
+  },
+  {
+    "id": "sol-ip-ch2-02",
+    "chapter": "Data Handling Using Pandas I",
+    "exercise": "Exercise 2",
+    "number": "5",
+    "question": "Create the following Series and perform specified operations:\na) EngAlph: 26 elements with alphabets as values and default index.\nb) Vowels: 5 elements with index 'a','e','i','o','u' all set to zero.\nc) Friends: from a dictionary with roll numbers as data and first names as keys.\nd) MTseries: an empty Series.\ne) MonthDays: from a numpy array with days in 12 months, labels 1-12.",
+    "solution": "import pandas as pd\nimport numpy as np\n\n# a) EngAlph\nEngAlph = pd.Series(list('abcdefghijklmnopqrstuvwxyz'))\n\n# b) Vowels\nVowels = pd.Series([0, 0, 0, 0, 0], index=['a','e','i','o','u'])\nprint(Vowels.empty)  # False (has 5 elements, though all zero)\n\n# c) Friends (example data)\nfriends_dict = {'Alice': 101, 'Bob': 102, 'Carol': 103, 'Dave': 104, 'Eve': 105}\nFriends = pd.Series(friends_dict)\n\n# d) MTseries\nMTseries = pd.Series([], dtype=float)\nprint(MTseries.empty)  # True\n\n# e) MonthDays\ndays_array = np.array([31,28,31,30,31,30,31,31,30,31,30,31])\nMonthDays = pd.Series(days_array, index=range(1,13))",
+    "steps": [
+      "list('abc...') creates a list of characters \u2014 pass to pd.Series().",
+      "pd.Series([0]*5, index=['a','e','i','o','u']) sets 5 zeros with vowel labels.",
+      "pd.Series(dict) uses dict keys as index and values as data.",
+      "pd.Series([], dtype=float) creates an empty Series.",
+      "pd.Series(numpy_array, index=range(1,13)) assigns month-number labels."
+    ]
+  },
+  {
+    "id": "sol-ip-ch2-03",
+    "chapter": "Data Handling Using Pandas I",
+    "exercise": "Exercise 2",
+    "number": "9-10",
+    "question": "Create DataFrame Sales with year-wise (2014-2017) sales for 5 salespersons. Then:\na) Display row labels\nb) Display column labels\nc) Display data types\nd) Display dimensions, shape, size, values\ne) Display last two rows\nf) Display first two columns",
+    "solution": "import pandas as pd\n\nSales = pd.DataFrame(\n    {'2014': [100.5,150.8,200.9,30000,40000],\n     '2015': [12000,18000,22000,30000,45000],\n     '2016': [20000,50000,70000,100000,125000],\n     '2017': [50000,60000,70000,80000,90000]},\n    index=['Madhu','Kusum','Kinshuk','Ankit','Shruti']\n)\n\n# a) Row labels\nprint(Sales.index)\n\n# b) Column labels\nprint(Sales.columns)\n\n# c) Data types\nprint(Sales.dtypes)\n\n# d) Dimensions, shape, size, values\nprint(Sales.ndim)   # 2\nprint(Sales.shape)  # (5, 4)\nprint(Sales.size)   # 20\nprint(Sales.values) # numpy array of data\n\n# e) Last two rows\nprint(Sales.tail(2))\n\n# f) First two columns\nprint(Sales.iloc[:, :2])\n# OR: print(Sales[['2014','2015']])",
+    "steps": [
+      "pd.DataFrame(dict, index=row_labels) creates labeled DataFrame.",
+      "df.index: row labels; df.columns: column names.",
+      "df.ndim=2, df.shape=(rows,cols), df.size=rows\u00d7cols, df.values=numpy array.",
+      "df.tail(n): last n rows; df.head(n): first n rows.",
+      "df.iloc[:,0:2] or df[['col1','col2']]: select first two columns."
+    ]
+  },
+  {
+    "id": "sol-ip-ch2-04",
+    "chapter": "Data Handling Using Pandas I",
+    "exercise": "Exercise 2",
+    "number": "11",
+    "question": "Using the Sales DataFrame:\na) Append Sales2 to Sales\nb) Transpose Sales\nc) Display all sales in 2017\nd) Display Madhu and Ankit's sales in 2017 and 2018\ne) Add data for Sumeet\nf) Delete year 2014 column\ng) Delete row for Kinshuk",
+    "solution": "# a) Append (pandas >= 2.0 uses pd.concat)\nSales = pd.concat([Sales, Sales2])\n\n# b) Transpose\nSales = Sales.T\n# (rows become columns and columns become rows)\n\n# c) Sales in 2017 \u2014 after creating Sales with year columns\nprint(Sales['2017'])  # or print(Sales.loc[:,'2017'])\n\n# d) Madhu and Ankit's sales in 2017 and 2018\nprint(Sales.loc[['Madhu','Ankit'], ['2017','2018']])\n\n# e) Add Sumeet\nSales.loc['Sumeet'] = [196.2, 37800, 52000, 78438, 38852]\n\n# f) Delete column 2014\nSales.drop('2014', axis=1, inplace=True)\n\n# g) Delete row Kinshuk\nSales.drop('Kinshuk', axis=0, inplace=True)",
+    "steps": [
+      "pd.concat([df1, df2]): appends rows of df2 to df1 (replaces deprecated append).",
+      "df.T: transpose \u2014 rows become columns.",
+      "df['col']: returns a Series of that column; df.loc[rows, cols]: label-based selection.",
+      "df.loc['new_row'] = [values]: adds a new row.",
+      "df.drop('name', axis=1): drops column; axis=0: drops row."
+    ]
+  },
+  {
+    "id": "sol-ip-ch3-01",
+    "chapter": "Data Handling Using Pandas II",
+    "exercise": "Exercise 3",
+    "number": "5-7",
+    "question": "5. What are missing values? What strategies handle them?\n6. Define Median, Standard Deviation, and Variance.\n7. What is MODE? Name the function to calculate it.",
+    "solution": "5. Missing values are absent data entries represented as NaN (Not a Number) in Pandas.\nStrategies:\n- Drop rows/columns with NaN: df.dropna()\n- Fill with a specific value: df.fillna(0) or df.fillna(df.mean())\n- Forward fill: df.ffill() \u2014 fills with preceding value\n- Backward fill: df.bfill() \u2014 fills with following value\n\n6. Median: The middle value when data is sorted; divides dataset into two equal halves. Function: df.median()\n\nStandard Deviation: Measures how spread out values are from the mean. Function: df.std()\n\nVariance: The average of squared differences from the mean; equals (std deviation)\u00b2. Function: df.var()\n\n7. Mode is the value that appears most frequently in a dataset. Function: df.mode()",
+    "steps": [
+      "NaN: default missing value marker in Pandas/NumPy.",
+      "dropna(): removes rows/cols with NaN; fillna(val): replaces NaN with val.",
+      "Median: middle value; not affected by outliers unlike mean.",
+      "Std dev: spread measure; variance = std\u00b2; both computed per column by default.",
+      "mode(): returns the most frequent value (can have multiple modes)."
+    ]
+  },
+  {
+    "id": "sol-ip-ch3-02",
+    "chapter": "Data Handling Using Pandas II",
+    "exercise": "Exercise 3",
+    "number": "13",
+    "question": "Given Product table (Item, Company, Rupees, USD) with TV/LG/12000/700, TV/VIDEOCON/10000/650, TV/LG/15000/800, AC/SONY/14000/750. Write Python code to:\na) Create the DataFrame\nb) Display maximum price of LG TV\nc) Display sum of all products\nd) Display median of USD for Sony products",
+    "solution": "import pandas as pd\n\n# a) Create DataFrame\ndata = {\n    'Item':    ['TV','TV','TV','AC'],\n    'Company': ['LG','VIDEOCON','LG','SONY'],\n    'Rupees':  [12000, 10000, 15000, 14000],\n    'USD':     [700, 650, 800, 750]\n}\ndf = pd.DataFrame(data)\n\n# b) Maximum price of LG TV\nmax_lg_tv = df[(df['Item']=='TV') & (df['Company']=='LG')]['Rupees'].max()\nprint(max_lg_tv)  # 15000\n\n# c) Sum of all products\nprint(df[['Rupees','USD']].sum())\n# Rupees: 51000, USD: 2900\n\n# d) Median of USD for Sony products\nsony_usd_median = df[df['Company']=='SONY']['USD'].median()\nprint(sony_usd_median)  # 750.0",
+    "steps": [
+      "pd.DataFrame(dict) creates DataFrame from column-wise dictionary.",
+      "Boolean indexing with multiple conditions: (cond1) & (cond2) selects matching rows.",
+      ".max() on filtered column returns maximum value.",
+      "df[cols].sum() sums numeric columns; df.median() computes median.",
+      "df[df['Company']=='SONY']['USD'].median() filters then computes median."
+    ]
+  },
+  {
+    "id": "sol-ip-ch4-01",
+    "chapter": "Plotting Data using Matplotlib",
+    "exercise": "Exercise 4",
+    "number": "1-6",
+    "question": "1. What is the purpose of Matplotlib?\n2. What are major components of any graph/plot?\n3. Name the function to save a plot.\n4. What is the purpose of a legend?\n5. Define Pandas visualisation.\n6. What is open data?",
+    "solution": "1. Matplotlib is a Python plotting library used for creating static, interactive, and animated visualizations. It provides tools to create charts, histograms, scatter plots, bar charts, pie charts, etc.\n\n2. Major components of a graph:\n   - Title: descriptive heading of the plot\n   - Axes (X-axis, Y-axis): scales along which data is plotted\n   - Labels: names for axes (xlabel, ylabel)\n   - Ticks: marks along axes showing scale\n   - Legend: identifies multiple data series\n   - Figure: the overall window/container\n   - Plot area: the region where data is drawn\n\n3. plt.savefig('filename.png') saves the plot to a file.\n\n4. A legend identifies different data series plotted in the same chart. It uses labels assigned to each plot() call and displays them in a box, helping the viewer distinguish between multiple lines or bars.\n\n5. Pandas visualization is the built-in plotting capability in Pandas, accessible via df.plot(). It is a wrapper around Matplotlib that makes it easy to create plots directly from DataFrames and Series.\n\n6. Open data is data that is freely available to everyone to use and republish without restrictions. Examples: data.gov.in, kaggle.com datasets, UCI ML Repository.",
+    "steps": [
+      "Matplotlib is the foundational Python plotting library.",
+      "plt.savefig('file.png') \u2014 call before plt.show() to save.",
+      "Legend: use label='name' in plot call, then plt.legend().",
+      "Pandas visualization: df.plot(kind='bar'), df.plot(kind='line'), etc.",
+      "Open data: freely accessible datasets with no usage restrictions."
+    ]
+  },
+  {
+    "id": "sol-ip-ch4-02",
+    "chapter": "Plotting Data using Matplotlib",
+    "exercise": "Exercise 4",
+    "number": "10",
+    "question": "Plot the following data using a line plot with proper title, xlabel and ylabel:\nHours of study: [1,2,3,4,5,6,7,8]\nTest score: [40,45,55,60,65,70,80,85]",
+    "solution": "import matplotlib.pyplot as plt\n\nhours = [1, 2, 3, 4, 5, 6, 7, 8]\nscores = [40, 45, 55, 60, 65, 70, 80, 85]\n\nplt.plot(hours, scores, marker='o', color='blue', linestyle='-', label='Test Score')\nplt.xlabel('Hours of Study')\nplt.ylabel('Test Score')\nplt.title('Study Hours vs Test Score')\nplt.legend()\nplt.grid(True)\nplt.show()",
+    "steps": [
+      "plt.plot(x, y) draws a line graph; add marker='o' for data points.",
+      "plt.xlabel() and plt.ylabel() label the axes.",
+      "plt.title() adds a descriptive heading.",
+      "plt.legend() shows the label assigned in plot().",
+      "plt.show() renders the plot \u2014 always call last."
+    ]
+  },
+  {
+    "id": "sol-ip-ch4-03",
+    "chapter": "Plotting Data using Matplotlib",
+    "exercise": "Exercise 4",
+    "number": "bar-hist",
+    "question": "Write Python code to:\na) Create a bar chart showing the number of students in 5 classes: A=30, B=25, C=35, D=20, E=28\nb) Create a histogram for the data: [23,25,24,28,30,22,27,26,24,29]",
+    "solution": "import matplotlib.pyplot as plt\n\n# a) Bar chart\nclasses = ['A','B','C','D','E']\nstudents = [30, 25, 35, 20, 28]\nplt.bar(classes, students, color='steelblue')\nplt.xlabel('Class')\nplt.ylabel('Number of Students')\nplt.title('Students per Class')\nplt.show()\n\n# b) Histogram\ndata = [23,25,24,28,30,22,27,26,24,29]\nplt.hist(data, bins=5, color='orange', edgecolor='black')\nplt.xlabel('Value')\nplt.ylabel('Frequency')\nplt.title('Histogram of Data')\nplt.show()",
+    "steps": [
+      "plt.bar(categories, values): creates a vertical bar chart.",
+      "plt.hist(data, bins=n): creates a histogram with n bins.",
+      "edgecolor='black' adds borders to histogram bars for clarity.",
+      "Always label axes and add a title for complete charts."
+    ]
+  },
+  {
+    "id": "sol-ip-ch5-01",
+    "chapter": "Internet and Web",
+    "exercise": "Exercise 5",
+    "number": "1-5",
+    "question": "Key concepts: What is the difference between the Internet and WWW? What is a URL? What is HTTP vs HTTPS? What is a web browser vs web server?",
+    "solution": "Internet vs WWW:\n- Internet: the global physical network of interconnected computers using TCP/IP. It is the infrastructure.\n- WWW (World Wide Web): a service that runs on top of the Internet \u2014 a collection of web pages accessed via HTTP/HTTPS using web browsers.\n\nURL (Uniform Resource Locator): The complete address to access a specific resource on the web.\nFormat: protocol://domain:port/path?query\nExample: https://www.cbse.gov.in/index.html\n\nHTTP vs HTTPS:\n- HTTP (HyperText Transfer Protocol): standard protocol for data transfer but NOT encrypted.\n- HTTPS (HTTP Secure): HTTP + SSL/TLS encryption \u2014 secure version, protects data in transit.\n\nWeb Browser vs Web Server:\n- Web Browser: client-side software (Chrome, Firefox) that sends requests and displays web pages.\n- Web Server: server-side software (Apache, Nginx) that receives requests and sends back web pages.",
+    "steps": [
+      "Internet = network infrastructure; WWW = service on top of it.",
+      "URL structure: protocol://domain/path \u2014 uniquely identifies a resource.",
+      "HTTPS = HTTP + encryption (SSL/TLS) \u2014 look for the padlock icon.",
+      "Browser: client (requests); Web server: sends back responses."
+    ]
+  },
+  {
+    "id": "sol-ip-ch5-02",
+    "chapter": "Internet and Web",
+    "exercise": "Exercise 5",
+    "number": "6-10",
+    "question": "Define: (a) Domain Name (b) DNS (c) HTML (d) Static vs Dynamic web pages (e) Web hosting",
+    "solution": "(a) Domain Name: A human-readable address for a website that maps to an IP address (e.g., google.com). Managed by DNS.\n\n(b) DNS (Domain Name System): A distributed system that translates domain names to IP addresses. Acts as the internet's 'phone book'. Example: www.google.com \u2192 142.250.182.46\n\n(c) HTML (HyperText Markup Language): The standard markup language for creating web pages. It uses tags to structure content: <html>, <head>, <body>, <h1>, <p>, <a>, <img>, etc.\n\n(d) Static web page: Fixed HTML content \u2014 same for all users; only changes when manually edited.\nDynamic web page: Generated on the server using languages like Python, PHP \u2014 content varies per user/request.\n\n(e) Web hosting: The service of providing storage space and infrastructure on a server so that websites are accessible on the internet. Examples: GoDaddy, AWS, Cloudflare Pages.",
+    "steps": [
+      "Domain name: human-friendly name mapped to IP by DNS.",
+      "DNS: distributed lookup system \u2014 domain \u2192 IP translation.",
+      "HTML: markup language with tags defining page structure.",
+      "Static: same for all; Dynamic: personalized/server-generated.",
+      "Web hosting: provides the server infrastructure for websites to be online."
+    ]
+  },
+  {
+    "id": "sol-ip-ch6-01",
+    "chapter": "Societal Impacts",
+    "exercise": "Exercise 6",
+    "number": "1-5",
+    "question": "Key concepts: What is digital footprint? Define cybercrime. What is digital literacy? What is netiquette? Define e-waste.",
+    "solution": "Digital Footprint: The trail of data left behind by a person's online activities \u2014 websites visited, emails sent, social media posts, search queries. Can be active (consciously shared) or passive (collected without awareness).\n\nCybercrime: Illegal activities carried out using computers, networks, or the internet. Examples: hacking, phishing, identity theft, cyberbullying, ransomware, cyberstalking.\n\nDigital Literacy: The ability to effectively, safely, and critically use digital technologies \u2014 including understanding internet safety, evaluating online information, and using digital tools productively.\n\nNetiquette (Network Etiquette): The rules and norms for polite and respectful behaviour in online communications.\nExamples: no spamming, no cyberbullying, respect intellectual property, no ALL CAPS shouting.\n\nE-waste (Electronic Waste): Discarded electrical and electronic equipment \u2014 old computers, mobile phones, TVs, printers. Harmful if disposed of improperly due to toxic materials (lead, mercury).",
+    "steps": [
+      "Digital footprint: trace of online activity \u2014 active (posted) or passive (tracked).",
+      "Cybercrime: uses computers/network as tool or target.",
+      "Digital literacy: skills to navigate technology safely and critically.",
+      "Netiquette: social norms for respectful online interaction.",
+      "E-waste: electronic disposal issue \u2014 contains hazardous materials, needs proper recycling."
+    ]
+  },
+  {
+    "id": "sol-ip-ch6-02",
+    "chapter": "Societal Impacts",
+    "exercise": "Exercise 6",
+    "number": "6-10",
+    "question": "Define: (a) Intellectual Property Rights (b) Copyright (c) Patent (d) Trademark (e) Open Source Software",
+    "solution": "(a) Intellectual Property Rights (IPR): Legal rights that give creators exclusive control over their creations for a period of time. Protects inventions, literary works, artistic works, symbols, names, and designs.\n\n(b) Copyright: Protects original literary, artistic, musical, and dramatic works (books, software, music, films). Gives the creator exclusive rights to reproduce, distribute, adapt, and display the work. Usually automatic upon creation.\n\n(c) Patent: Protects new inventions and technical innovations. Grants exclusive rights to manufacture, use, and sell the invention for 20 years. Must be applied for and approved.\n\n(d) Trademark: Protects brand identifiers \u2014 names, logos, slogans, and symbols that distinguish products/services. Example: Nike's \u2713 logo. Can be renewed indefinitely.\n\n(e) Open Source Software: Software whose source code is freely available for anyone to view, use, modify, and distribute. Examples: Linux, Python, VLC. Often licensed under GPL, MIT, or Apache licenses.",
+    "steps": [
+      "IPR: legal protection for creative/intellectual work.",
+      "Copyright: automatic, protects creative expression.",
+      "Patent: applied for, protects technical inventions (20 years).",
+      "Trademark: brand identity protection (renewable).",
+      "Open source: source code available freely \u2014 community driven development."
+    ]
+  }
+]

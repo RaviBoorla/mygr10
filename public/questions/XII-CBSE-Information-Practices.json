@@ -1,0 +1,906 @@
+[
+  {
+    "id": "xii-ip-2025-q1",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "State True or False: In Python Pandas, a DataFrame is a two-dimensional data structure with labeled axes (rows and columns). (2025 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "A Pandas DataFrame is a 2D labeled data structure \u2014 rows are labeled by an index and columns are labeled by column names. It is analogous to a spreadsheet or SQL table.",
+    "whyWrong": [
+      "",
+      "Incorrect \u2014 a DataFrame is exactly a 2D labeled data structure with row index and column names."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q2",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "Which of the following creates a Pandas Series from a list [10, 20, 30]? (2025 Board)",
+    "options": [
+      "pd.Series([10, 20, 30])",
+      "pd.DataFrame([10, 20, 30])",
+      "pd.Array([10, 20, 30])",
+      "pd.List([10, 20, 30])"
+    ],
+    "correct": 0,
+    "explanation": "pd.Series() is the constructor for a Pandas Series. Passing a list creates a Series with default integer index. pd.DataFrame() creates a 2D structure. pd.Array() and pd.List() are not valid Pandas constructors.",
+    "whyWrong": [
+      "",
+      "pd.DataFrame([10,20,30]) creates a DataFrame with a single column, not a Series.",
+      "pd.Array() is not a Pandas constructor.",
+      "pd.List() does not exist in Pandas."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q3",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is an example of e-waste? (2025 Board)",
+    "options": [
+      "Used paper",
+      "Broken mobile phone",
+      "Plastic bag",
+      "Glass bottle"
+    ],
+    "correct": 1,
+    "explanation": "E-waste (electronic waste) refers to discarded electrical or electronic equipment. A broken mobile phone contains electronic components and is e-waste. Paper, plastic bags, and glass bottles are not electronic.",
+    "whyWrong": [
+      "Paper waste is not e-waste.",
+      "",
+      "Plastic bags are general waste, not e-waste.",
+      "Glass bottles are general waste, not e-waste."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q4",
+    "chapter": "Data Visualization",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "Which type of chart is most suitable for showing the trend of a company's sales over 12 months? (2025 Board)",
+    "options": [
+      "Bar chart",
+      "Pie chart",
+      "Line chart",
+      "Histogram"
+    ],
+    "correct": 2,
+    "explanation": "A line chart is ideal for showing trends over a continuous time period. It connects data points chronologically to reveal patterns such as rising or falling sales. Bar charts compare discrete categories; pie charts show proportions; histograms show frequency distributions.",
+    "whyWrong": [
+      "Bar charts compare discrete values \u2014 not ideal for continuous time trends.",
+      "Pie charts show part-to-whole proportions, not trends.",
+      "",
+      "Histograms show frequency distributions, not time-series trends."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q5",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which network topology connects each device to every other device directly? (2025 Board)",
+    "options": [
+      "Star",
+      "Bus",
+      "Ring",
+      "Mesh"
+    ],
+    "correct": 3,
+    "explanation": "In a Mesh topology, every device has a dedicated point-to-point connection to every other device. This provides high redundancy and reliability but requires the most cabling.",
+    "whyWrong": [
+      "Star topology connects all devices to a central hub/switch.",
+      "Bus topology uses a single shared backbone cable.",
+      "Ring topology connects devices in a closed circular loop.",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q6",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "State True or False: In SQL, the GROUP BY clause is used to group rows that have the same value in specified columns. (2025 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "True \u2014 GROUP BY groups rows with identical values in specified columns into summary rows, often used with aggregate functions like COUNT(), SUM(), AVG().",
+    "whyWrong": [
+      "",
+      "Incorrect \u2014 GROUP BY does exactly group rows with the same values, enabling aggregation per group."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q7",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Riya has written a novel and wants to legally protect her creative work. Which type of Intellectual Property Right (IPR) should she apply for? (2025 Board)",
+    "options": [
+      "Trademark",
+      "Patent",
+      "Copyright",
+      "Trade Secret"
+    ],
+    "correct": 2,
+    "explanation": "Copyright automatically protects original literary, artistic, and creative works such as novels, music, and films. It gives the creator exclusive rights to reproduce, distribute, and adapt the work. Patents protect inventions; Trademarks protect brand identifiers; Trade secrets protect confidential business information.",
+    "whyWrong": [
+      "Trademark protects brand names, logos, and symbols.",
+      "Patents protect new inventions and technical processes.",
+      "",
+      "Trade secrets are confidential business practices \u2014 not applicable to a published novel."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q8",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "For a DataFrame df, which statement correctly accesses the value at row label 'R2' and column label 'Score'? (2025 Board)",
+    "options": [
+      "df.loc['R2', 'Score']",
+      "df.iloc['R2', 'Score']",
+      "df['R2']['Score']",
+      "df.at[0, 'Score']"
+    ],
+    "correct": 0,
+    "explanation": "df.loc[row_label, col_label] accesses data by label. df.iloc[] uses integer positions (not labels). df['R2'] would try to access column 'R2', and df.at[0,'Score'] accesses by integer position.",
+    "whyWrong": [
+      "",
+      "iloc uses integer positions \u2014 'R2' is a label, not a position.",
+      "df['R2'] tries to access a column named 'R2', not a row.",
+      "df.at[0,'Score'] accesses row at integer position 0, not by label 'R2'."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q9",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What is the output of: SELECT UPPER(SUBSTRING('information', 2, 4)); (2025 Board)",
+    "options": [
+      "NFOR",
+      "INFO",
+      "FORM",
+      "INFOR"
+    ],
+    "correct": 0,
+    "explanation": "SUBSTRING('information', 2, 4): In SQL, string positions start at 1. Position 2 is 'n', taking 4 characters: n,f,o,r \u2192 'nfor'. UPPER('nfor') = 'NFOR'.",
+    "whyWrong": [
+      "",
+      "INFO would be positions 1-4: i,n,f,o.",
+      "FORM would start at position 4: r,m... not matching.",
+      "INFOR would be 5 characters from position 1."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q10",
+    "chapter": "Web Technologies",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a web browser? (2025 Board)",
+    "options": [
+      "Google Chrome",
+      "Mozilla Firefox",
+      "Apache",
+      "Microsoft Edge"
+    ],
+    "correct": 2,
+    "explanation": "Apache is a web server software, not a web browser. Google Chrome, Mozilla Firefox, and Microsoft Edge are all web browsers used to access websites.",
+    "whyWrong": [
+      "Google Chrome is a web browser.",
+      "Mozilla Firefox is a web browser.",
+      "",
+      "Microsoft Edge is a web browser."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q11",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which SQL command is used to remove all rows from a table but keep the table structure intact? (2025 Board)",
+    "options": [
+      "DROP TABLE",
+      "DELETE FROM",
+      "TRUNCATE TABLE",
+      "REMOVE FROM"
+    ],
+    "correct": 2,
+    "explanation": "TRUNCATE TABLE removes all rows quickly and resets auto-increment counters, but keeps the table structure. DROP TABLE removes the entire table including structure. DELETE FROM removes rows (with optional WHERE) but keeps structure and is slower. REMOVE FROM is not a SQL command.",
+    "whyWrong": [
+      "DROP TABLE removes the entire table including its structure.",
+      "DELETE FROM removes rows but is slower and logs each row deletion.",
+      "",
+      "REMOVE FROM is not a valid SQL command."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q12",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "In Pandas, which function is used to read a CSV file into a DataFrame? (2025 Board)",
+    "options": [
+      "pd.read_csv()",
+      "pd.load_csv()",
+      "pd.open_csv()",
+      "pd.import_csv()"
+    ],
+    "correct": 0,
+    "explanation": "pd.read_csv('filename.csv') reads a CSV file and returns it as a DataFrame. The other options (load_csv, open_csv, import_csv) do not exist in the Pandas library.",
+    "whyWrong": [
+      "",
+      "pd.load_csv() is not a valid Pandas function.",
+      "pd.open_csv() is not a valid Pandas function.",
+      "pd.import_csv() is not a valid Pandas function."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q13",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following practices promotes good digital citizenship? (2025 Board)",
+    "options": [
+      "Sharing others' passwords online",
+      "Posting someone's personal information without consent",
+      "Respecting others' privacy and intellectual property online",
+      "Sending spam emails to large groups"
+    ],
+    "correct": 2,
+    "explanation": "Good digital citizenship involves respecting privacy, intellectual property, and others online. Sharing passwords, posting personal info without consent, and spamming are all violations of digital etiquette and potentially illegal.",
+    "whyWrong": [
+      "Sharing passwords violates privacy and security.",
+      "Posting personal info without consent violates privacy.",
+      "",
+      "Sending spam is disrespectful and may be illegal."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q14",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What does df.shape return for a DataFrame with 5 rows and 3 columns? (2025 Board)",
+    "options": [
+      "(3, 5)",
+      "(5, 3)",
+      "[5, 3]",
+      "15"
+    ],
+    "correct": 1,
+    "explanation": "df.shape returns a tuple (rows, columns). For a DataFrame with 5 rows and 3 columns, it returns (5, 3). The first element is always the number of rows, the second is the number of columns.",
+    "whyWrong": [
+      "(3,5) reverses rows and columns.",
+      "",
+      "[5,3] \u2014 .shape returns a tuple, not a list.",
+      "15 would be the total number of cells, not shape."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q15",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "For a Pandas Series s = pd.Series([10,20,30,40,50]), what does s[1:3] return? (2025 Board)",
+    "options": [
+      "Series with values [20, 30, 40]",
+      "Series with values [20, 30]",
+      "Series with values [10, 20, 30]",
+      "Series with values [30, 40]"
+    ],
+    "correct": 1,
+    "explanation": "Slicing a Series with integer labels using s[1:3] uses positional slicing (start inclusive, stop exclusive). Positions 1 and 2 \u2192 values 20 and 30. The stop index 3 is excluded.",
+    "whyWrong": [
+      "s[1:3] excludes index 3 \u2014 so value 40 is not included.",
+      "",
+      "s[1:3] starts from position 1 (value 20), not 0 (value 10).",
+      "Positions 2 and 3 would be s[2:4]."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q16",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following refers to the maximum rate at which data can be transmitted over a network connection? (2025 Board)",
+    "options": [
+      "Latency",
+      "Bandwidth",
+      "Throughput",
+      "Jitter"
+    ],
+    "correct": 1,
+    "explanation": "Bandwidth is the maximum rate of data transmission over a network path, measured in bps/Kbps/Mbps/Gbps. Latency is the delay. Throughput is the actual data rate achieved. Jitter is variation in latency.",
+    "whyWrong": [
+      "Latency is the time delay for data to travel from source to destination.",
+      "",
+      "Throughput is the actual achieved data rate, which may be less than bandwidth.",
+      "Jitter is variability in packet arrival time."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q17",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "State True or False: In SQL, the HAVING clause is used to filter groups created by GROUP BY, not individual rows. (2025 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "True \u2014 HAVING filters groups (after GROUP BY), similar to how WHERE filters individual rows (before grouping). HAVING typically contains aggregate conditions like HAVING COUNT(*) > 5.",
+    "whyWrong": [
+      "",
+      "Incorrect \u2014 HAVING filters groups after GROUP BY; WHERE filters individual rows before grouping."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q18",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "Which Pandas method is used to drop a column from a DataFrame? (2025 Board)",
+    "options": [
+      "df.remove('col')",
+      "df.delete('col')",
+      "df.drop('col', axis=1)",
+      "df.pop_col('col')"
+    ],
+    "correct": 2,
+    "explanation": "df.drop('col', axis=1) drops a column (axis=1 means columns; axis=0 means rows). By default it returns a new DataFrame; use inplace=True to modify the original. df.remove(), df.delete(), and df.pop_col() are not valid Pandas methods.",
+    "whyWrong": [
+      "df.remove() is not a valid Pandas DataFrame method.",
+      "df.delete() is not a valid Pandas method.",
+      "",
+      "df.pop_col() is not a valid Pandas method."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q19",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What is the output of: SELECT MOD(17, 5); (2025 Board)",
+    "options": [
+      "3",
+      "2",
+      "3.4",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "MOD(17, 5) returns the remainder of 17 divided by 5. 17 = 5\u00d73 + 2, so the remainder is 2.",
+    "whyWrong": [
+      "MOD(17,5) = 2, not 3. (17 = 3\u00d75 + 2, remainder is 2)",
+      "",
+      "3.4 is the result of 17/5 (division), not MOD.",
+      "0 would mean 17 is divisible by 5, which it is not."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2025-q20",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "hard",
+    "qtype": "assertion-reason",
+    "text": "Assertion (A): In Pandas, a Series can store elements of different data types.\nReason (R): Pandas Series is built on top of NumPy arrays, which are homogeneous.\nMark the correct choice:\n(A) Both A and R are true and R is the correct explanation of A.\n(B) Both A and R are true and R is not the correct explanation of A.\n(C) A is true, but R is false.\n(D) A is false, but R is true. (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 1,
+    "explanation": "A is true: A Pandas Series can hold mixed types by using dtype=object. R is true: NumPy arrays are homogeneous. However R does not explain A \u2014 in fact it seems contradictory; the Series stores mixed types by using Python objects, which is how it overrides NumPy's homogeneity. Both statements are true but R is not the correct explanation of A.",
+    "whyWrong": [
+      "R (NumPy homogeneity) does not explain how Series can store mixed types \u2014 it actually works around that.",
+      "",
+      "R is true \u2014 NumPy arrays are indeed homogeneous by nature.",
+      "A is true \u2014 a Pandas Series with dtype=object can store mixed types."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2025-q21",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "hard",
+    "qtype": "assertion-reason",
+    "text": "Assertion (A): The PRIMARY KEY of a table must have unique values and cannot contain NULL.\nReason (R): A table can have only one PRIMARY KEY.\nMark the correct choice:\n(A) Both A and R are true and R is the correct explanation of A.\n(B) Both A and R are true and R is not the correct explanation of A.\n(C) A is true, but R is false.\n(D) A is false, but R is true. (2025 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 1,
+    "explanation": "A is true: PRIMARY KEY enforces UNIQUE and NOT NULL constraints. R is true: each table can have at most one PRIMARY KEY. However, R (one PK per table) does not explain A (why PK must be unique and non-null) \u2014 these are independent properties. Both facts are true but unrelated as cause and effect.",
+    "whyWrong": [
+      "R does not explain A \u2014 the uniqueness/NOT NULL property is defined separately from the fact that only one PK exists.",
+      "",
+      "R is true \u2014 a table may have only one primary key.",
+      "A is true \u2014 PRIMARY KEY must be unique and non-null."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q1",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "State True or False: The positional index of a Pandas Series can be either a string or an integer. (2026 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "True \u2014 When you create a Series with a custom index, the index labels can be strings, integers, or other hashable types. The default positional index uses integers (0,1,2,...) but you can assign string labels as index.",
+    "whyWrong": [
+      "",
+      "Incorrect \u2014 Pandas Series indexes can be strings (e.g., pd.Series([1,2], index=['a','b'])) or integers."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q2",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "Which of the following statements correctly adds a new row to a DataFrame DF at label 'R4'? (2026 Board)",
+    "options": [
+      "DF.add('R4', data)",
+      "DF.loc['R4'] = data",
+      "DF.loc('R4') = data",
+      "DF.addloc['R4'] = data"
+    ],
+    "correct": 1,
+    "explanation": "DF.loc['R4'] = data adds or replaces a row at label 'R4'. DF.loc[] is a label-based indexer that supports assignment. The other options use invalid syntax or non-existent methods.",
+    "whyWrong": [
+      "DF.add() is for element-wise addition, not adding rows.",
+      "",
+      "DF.loc() with parentheses is invalid syntax \u2014 loc uses square brackets.",
+      "DF.addloc[] is not a valid Pandas method."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q3",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is an example of e-waste? (2026 Board)",
+    "options": [
+      "Plastic Bottle",
+      "Broken Smartphone",
+      "Aluminium Foil",
+      "Banana Peel"
+    ],
+    "correct": 1,
+    "explanation": "E-waste refers to discarded electronic and electrical equipment. A broken smartphone contains electronic components and is classified as e-waste. Plastic bottles, aluminium foil, and banana peels are not electronic.",
+    "whyWrong": [
+      "Plastic bottles are general waste, not e-waste.",
+      "",
+      "Aluminium foil is a household material, not an electronic device.",
+      "Banana peel is organic waste."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q4",
+    "chapter": "Data Visualization",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "In which situation is a bar chart preferred over a line chart? (2026 Board)",
+    "options": [
+      "Displaying monthly temperature trends",
+      "Comparing the number of students enrolled in different classes",
+      "Showing stock price changes over time",
+      "Tracking website traffic over a year"
+    ],
+    "correct": 1,
+    "explanation": "Bar charts are preferred for comparing discrete categories (like student counts across different classes). Line charts are better for continuous time-series data (trends over time like temperature, stock prices, or traffic).",
+    "whyWrong": [
+      "Temperature trends over time \u2192 line chart preferred.",
+      "",
+      "Stock price over time is continuous time-series \u2192 line chart.",
+      "Website traffic over time is continuous \u2192 line chart."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q5",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which network topology uses a central backbone cable to which all devices are connected? (2026 Board)",
+    "options": [
+      "Mesh",
+      "Star",
+      "Tree",
+      "Bus"
+    ],
+    "correct": 3,
+    "explanation": "Bus topology uses a single central backbone cable (the bus). All devices connect to this cable and share it for communication. Star topology uses a central hub/switch. Tree is a hierarchical combination. Mesh connects all devices to each other.",
+    "whyWrong": [
+      "Mesh connects every device directly to every other device.",
+      "Star topology uses a central hub or switch, not a backbone cable.",
+      "Tree is a hierarchical topology branching from a root.",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q6",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "State True or False: A SQL aggregate function always returns multiple values, one for each column in the table. (2026 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "False \u2014 SQL aggregate functions (SUM, COUNT, AVG, MAX, MIN) return a single value per group (or one value for the whole table if no GROUP BY). They summarize multiple rows into a single result, not one value per column.",
+    "whyWrong": [
+      "Incorrect \u2014 aggregate functions return a single summary value per group, not multiple values.",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q7",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "Rohini has invented a new type of water purifier. Which form of Intellectual Property Right (IPR) should she apply for? (2026 Board)",
+    "options": [
+      "Trademark",
+      "Copyright",
+      "Patent",
+      "Both Trademark and Copyright"
+    ],
+    "correct": 2,
+    "explanation": "A Patent protects new inventions and technical innovations. Since Rohini has invented a new water purifier (a technical device), she should apply for a Patent. Trademarks protect brand identifiers; Copyright protects creative/artistic works.",
+    "whyWrong": [
+      "Trademark protects brand names and logos, not inventions.",
+      "Copyright protects creative and literary works, not inventions.",
+      "",
+      "'Both Trademark and Copyright' does not cover inventions \u2014 the correct protection is a Patent."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q8",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What does print(df.loc['S2']) display? (2026 Board)",
+    "options": [
+      "All data in the row with label 'S2'",
+      "All column names of the DataFrame",
+      "The data type of column 'S2'",
+      "All row index numbers"
+    ],
+    "correct": 0,
+    "explanation": "df.loc['S2'] accesses the row with label 'S2' by label-based indexing. print() then displays all column values for that row as a Series.",
+    "whyWrong": [
+      "",
+      "df.columns would display column names, not df.loc['S2'].",
+      "df.dtypes['S2'] would show data type of a column named 'S2'.",
+      "df.index shows all row index labels."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q9",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What is the output of: SELECT LENGTH('Data Base'); (note the space between the two words) (2026 Board)",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "Error"
+    ],
+    "correct": 2,
+    "explanation": "LENGTH() counts all characters including spaces. 'Data Base' = D,a,t,a,' ',B,a,s,e = 9 characters. The space counts as one character.",
+    "whyWrong": [
+      "7 would be 'DataBas' \u2014 wrong.",
+      "8 would exclude the space \u2014 but LENGTH includes spaces.",
+      "",
+      "LENGTH is a valid SQL function; no error occurs."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q10",
+    "chapter": "Web Technologies",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is a key feature of a static web page? (2026 Board)",
+    "options": [
+      "Its content updates automatically and frequently",
+      "Different users see different content based on their input",
+      "It loads slower than dynamic pages",
+      "It displays the same content to all users unless manually updated"
+    ],
+    "correct": 3,
+    "explanation": "A static web page has fixed content \u2014 all users see identical content. The content only changes if a developer manually edits the HTML file. Dynamic pages generate content per user/request using server-side processing.",
+    "whyWrong": [
+      "Static pages do NOT auto-update; that is a feature of dynamic pages.",
+      "Showing different content per user is a dynamic page feature.",
+      "Static pages actually load faster (no server processing required).",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q11",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "What does DML stand for in the context of databases? (2026 Board)",
+    "options": [
+      "Device Management Language",
+      "Device Manipulation Language",
+      "Data Management Language",
+      "Data Manipulation Language"
+    ],
+    "correct": 3,
+    "explanation": "DML stands for Data Manipulation Language. It includes commands like SELECT, INSERT, UPDATE, and DELETE used to manipulate data stored within existing tables.",
+    "whyWrong": [
+      "Incorrect \u2014 DML is not about devices.",
+      "Incorrect \u2014 DML is not about devices.",
+      "Incorrect \u2014 'Management' is wrong; it is 'Manipulation'.",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q12",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "CSV stands for ___ Separated Values. (2026 Board)",
+    "options": [
+      "Colon",
+      "CTRL",
+      "Comma",
+      "Caret"
+    ],
+    "correct": 2,
+    "explanation": "CSV stands for Comma-Separated Values. It is a plain-text format where each record occupies a line and fields are separated by commas.",
+    "whyWrong": [
+      "Colon-separated files exist but are not called CSV.",
+      "CTRL is a keyboard modifier key, not a CSV separator.",
+      "",
+      "Caret (^) separated files are not standard CSV."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q13",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is an example of good net etiquette (netiquette)? (2026 Board)",
+    "options": [
+      "Sending spam messages to a large group",
+      "Ignoring others' opinions in online discussions",
+      "Not using copyrighted material without permission",
+      "Sharing others' private information on social media"
+    ],
+    "correct": 2,
+    "explanation": "Good netiquette includes respecting intellectual property rights by not using copyrighted material without permission. Spamming, ignoring others, and sharing private information without consent are all netiquette violations.",
+    "whyWrong": [
+      "Spamming is a major netiquette violation.",
+      "Ignoring others is disrespectful online behaviour.",
+      "",
+      "Sharing private info without consent violates privacy and netiquette."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q14",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "When creating a Pandas Series from a dictionary, which of the following is correct? (2026 Board)",
+    "options": [
+      "Dictionary values become the index labels",
+      "Dictionary keys become the values",
+      "Dictionary keys become the index labels",
+      "The Series uses default integer index regardless of the dictionary"
+    ],
+    "correct": 2,
+    "explanation": "When pd.Series(dict) is called, dictionary keys become the index labels and dictionary values become the Series values. For example, pd.Series({'a':1,'b':2}) creates a Series with index ['a','b'] and values [1,2].",
+    "whyWrong": [
+      "Dictionary values become the Series data values, not index.",
+      "Dictionary keys become the index labels, not values.",
+      "",
+      "The Series uses dictionary keys as index \u2014 not default integers."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q15",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "For a Series s with integer index [0,1,2,3,4], what does s[start:end] return regarding the end index? (2026 Board)",
+    "options": [
+      "The end index position is included",
+      "The end index position is excluded",
+      "Both start and end positions are excluded",
+      "The start index position is excluded"
+    ],
+    "correct": 1,
+    "explanation": "Python slicing (used by Pandas Series with positional integer index) is always stop-exclusive: s[1:3] returns elements at positions 1 and 2, not 3. This is consistent with Python list slicing.",
+    "whyWrong": [
+      "The end position is excluded (stop-exclusive slicing).",
+      "",
+      "The start position IS included; only the end is excluded.",
+      "The start position is included, not excluded."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q16",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "Which technology allows you to make voice calls over the Internet? (2026 Board)",
+    "options": [
+      "Chat",
+      "VoIP",
+      "Email",
+      "Internet TV"
+    ],
+    "correct": 1,
+    "explanation": "VoIP (Voice over Internet Protocol) enables voice communication over IP networks/internet. Chat is text-based; Email is message-based; Internet TV delivers video content.",
+    "whyWrong": [
+      "Chat is text-based communication, not voice.",
+      "",
+      "Email transmits text and file messages, not real-time voice.",
+      "Internet TV streams video content, not voice calls."
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-ip-2026-q17",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "State True or False: The INSTR(string1, string2) function returns 0 if string2 is not found in string1. (2026 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "True \u2014 In MySQL, INSTR(str, substr) returns the position of the first occurrence of substr in str. If substr is not found, it returns 0 (unlike Python's str.find() which also returns -1... wait, INSTR returns 0 for not found in SQL).",
+    "whyWrong": [
+      "",
+      "Incorrect \u2014 INSTR returns 0 when the substring is not found in the main string."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q18",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "medium",
+    "text": "What value of the 'axis' parameter is used in df.drop() to drop a column? (2026 Board)",
+    "options": [
+      "axis=-1",
+      "axis=0",
+      "axis=1",
+      "axis=2"
+    ],
+    "correct": 2,
+    "explanation": "In df.drop(), axis=1 specifies columns (axis=0 specifies rows, which is the default). So df.drop('ColName', axis=1) removes the column. axis=2 does not exist for 2D DataFrames.",
+    "whyWrong": [
+      "axis=-1 is not standard for DataFrame.drop().",
+      "axis=0 drops rows (the default), not columns.",
+      "",
+      "axis=2 would be for 3D arrays \u2014 DataFrames only have 0 and 1."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q19",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "easy",
+    "text": "What is the output of: SELECT ROUND(15.678, 2); (2026 Board)",
+    "options": [
+      "15.00",
+      "15.67",
+      "15.68",
+      "16.00"
+    ],
+    "correct": 2,
+    "explanation": "ROUND(15.678, 2) rounds 15.678 to 2 decimal places. The third decimal is 8 (\u22655), so the second decimal rounds up: 15.67 \u2192 15.68.",
+    "whyWrong": [
+      "15.00 would be ROUND(15.678, 0) \u2014 rounds to integer.",
+      "15.67 \u2014 the digit after is 8 (\u22655) so it rounds up to 15.68.",
+      "",
+      "16.00 would require rounding to 0 decimal places and a value \u2265 15.5, but here we round to 2 places."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q20",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "difficulty": "hard",
+    "qtype": "assertion-reason",
+    "text": "Assertion (A): A DataFrame can store multiple data types in its different columns.\nReason (R): DataFrames use 2D arrays that allow only numeric data types.\nMark the correct choice:\n(A) Both A and R are true and R is the correct explanation of A.\n(B) Both A and R are true and R is not the correct explanation of A.\n(C) A is true, but R is false.\n(D) A is false, but R is true. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 2,
+    "explanation": "A is true: A DataFrame can have different data types (int, str, float, bool) in different columns. R is false: DataFrames do NOT restrict to only numeric types \u2014 each column can have its own dtype including object (for strings), datetime, bool, etc.",
+    "whyWrong": [
+      "R is false \u2014 DataFrames are not limited to numeric types.",
+      "R is false, so both cannot be true.",
+      "",
+      "A is true \u2014 DataFrames support multiple data types across different columns."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-ip-2026-q21",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "difficulty": "hard",
+    "qtype": "assertion-reason",
+    "text": "Assertion (A): COUNT(column_name) and COUNT(*) give different results when the column contains NULL values.\nReason (R): COUNT(column_name) counts only non-NULL values, while COUNT(*) counts all rows including those with NULLs.\nMark the correct choice:\n(A) Both A and R are true and R is the correct explanation of A.\n(B) Both A and R are true and R is not the correct explanation of A.\n(C) A is true, but R is false.\n(D) A is false, but R is true. (2026 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true and R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 0,
+    "explanation": "A is true: when NULLs exist in a column, COUNT(column) < COUNT(*) \u2014 they give different results. R is true and correctly explains A: COUNT(col) ignores NULLs while COUNT(*) counts all rows regardless of NULLs.",
+    "whyWrong": [
+      "",
+      "R does correctly explain A \u2014 the NULL handling difference is the exact reason they give different results.",
+      "R is true \u2014 COUNT(col) skips NULLs; COUNT(*) includes all rows.",
+      "A is true \u2014 the counts differ when NULLs are present."
+    ],
+    "priority": true
+  }
+]

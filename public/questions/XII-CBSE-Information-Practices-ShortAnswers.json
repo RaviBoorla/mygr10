@@ -1,0 +1,516 @@
+[
+  {
+    "id": "xii-ip-2025-sa-q22",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(a) What is Boolean Indexing in Pandas? Give an example of how it is used with a DataFrame.\nOR\n(b) What are the two main data structures in Pandas? Briefly describe each.",
+    "modelAnswer": "(a) Boolean Indexing is a method of selecting data from a Pandas Series or DataFrame by passing a boolean array/condition as the index. Rows where the condition is True are selected; rows where it is False are excluded.\n\nExample:\nimport pandas as pd\ndf = pd.DataFrame({'Name':['Riya','Aman','Priya'], 'Score':[85,45,90]})\nresult = df[df['Score'] > 60]  # Boolean indexing\nprint(result)\n# Displays rows where Score > 60\n\nOR\n\n(b) The two main data structures in Pandas are:\n1. Series: A one-dimensional labeled array that can hold any data type. It has a single column with an associated index.\n2. DataFrame: A two-dimensional labeled data structure (like a table/spreadsheet) with rows and columns, where each column can hold a different data type.",
+    "keyPoints": [
+      "Boolean Indexing: filter data using a True/False condition array.",
+      "df[df['col'] > value] is the standard syntax.",
+      "Series: 1D labeled array with an index.",
+      "DataFrame: 2D labeled table \u2014 rows indexed, columns named."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q23",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Anjana has published a book. She later discovers that her content has been copied verbatim by another website without her permission.\n(i) What type of IPR violation has occurred?\n(ii) Name any two types of licenses that allow sharing/reuse of content legally.",
+    "modelAnswer": "(i) The violation is Copyright Infringement \u2014 Anjana's book is protected by copyright, and copying its content without permission violates her exclusive reproduction rights.\n\n(ii) Two licenses that allow legal sharing/reuse:\n1. Creative Commons License \u2014 allows creators to specify permissions (attribution, non-commercial, share-alike, etc.) for reuse.\n2. MIT License (or GNU GPL / Apache License) \u2014 an open-source license permitting use, modification, and redistribution with minimal restrictions.",
+    "keyPoints": [
+      "Copyright Infringement: copying protected creative work without permission.",
+      "Creative Commons licenses: flexible permissions for sharing creative content.",
+      "MIT/GNU GPL/Apache: open-source licenses allowing redistribution and modification.",
+      "Both require attribution to the original creator."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q24",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Define the following terms as used in relational databases:\n(i) Domain\n(ii) Tuple",
+    "modelAnswer": "(i) Domain: The set of all valid/permissible values that a particular attribute (column) can hold. For example, the domain of an 'Age' column might be integers from 1 to 120.\n\n(ii) Tuple: A single row (record) in a relational table. It is an ordered set of attribute values that represents one entity in the relation. For example, one complete student record (roll number, name, marks) is a tuple.",
+    "keyPoints": [
+      "Domain: set of all allowed values for an attribute/column.",
+      "Tuple: a single row/record in a relational table.",
+      "A table with n attributes has tuples with exactly n values.",
+      "Degree = number of attributes; Cardinality = number of tuples."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q25",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "(a) Define: (i) Modem (ii) Gateway\nOR\n(b) Differentiate between Add-ons and Plug-ins for web browsers.",
+    "modelAnswer": "(a)(i) Modem (Modulator-Demodulator): A device that converts digital data from a computer into analog signals for transmission over phone lines, and converts incoming analog signals back to digital. It enables internet access via telephone lines.\n\n(ii) Gateway: A network device that connects two networks using different protocols or architectures. It acts as a protocol converter, enabling communication between incompatible networks (e.g., connecting a LAN to the internet).\n\nOR\n\n(b) Add-ons: Extra features added to a web browser to extend its functionality, such as download managers, ad blockers, or password managers. They are generally downloaded and installed separately.\n\nPlug-ins: Software components that extend the browser's ability to process specific content types, such as playing Flash animations, PDFs, or multimedia. They work within the browser to handle content the browser cannot natively display.",
+    "keyPoints": [
+      "Modem: converts digital\u2194analog signals for ISP communication.",
+      "Gateway: connects networks of different protocols \u2014 acts as a protocol translator.",
+      "Add-ons: enhance browser features (UI/UX tools, utilities).",
+      "Plug-ins: handle specific media/content types within the browser."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q26",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Find the output of the following SQL statements:\n(I) SELECT MONTH('2026-01-01');\n(II) SELECT YEAR('2026-01-01');",
+    "modelAnswer": "(I) SELECT MONTH('2026-01-01');\nOutput: 1\n(MONTH() extracts the month number from a date; January = 1)\n\n(II) SELECT YEAR('2026-01-01');\nOutput: 2026\n(YEAR() extracts the 4-digit year from a date)",
+    "keyPoints": [
+      "MONTH(date) returns the month as a number (1=January, 12=December).",
+      "YEAR(date) returns the 4-digit year.",
+      "Both accept DATE or DATETIME strings in 'YYYY-MM-DD' format."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q27",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "(a) What is Data Protection? State any two measures to protect personal data.\nOR\n(b) What is cyber crime? Give two examples.",
+    "modelAnswer": "(a) Data Protection: The practice of safeguarding important digital information from corruption, compromise, and loss \u2014 ensuring data is secure, private, and available only to authorized users.\n\nTwo precautionary measures:\n1. Use strong, unique passwords and enable two-factor authentication (2FA).\n2. Encrypt sensitive data and use secure protocols (HTTPS, SSL/TLS) for transmission.\n\nOR\n\n(b) Cybercrime: Any illegal or criminal activity involving a computer or network. It can target individuals, businesses, or governments.\n\nTwo examples:\n1. Phishing \u2014 fraudulent emails/messages tricking users into revealing passwords or financial information.\n2. Hacking \u2014 unauthorized access to computer systems or networks to steal, modify, or destroy data.",
+    "keyPoints": [
+      "Data protection: securing data from unauthorized access, corruption, and loss.",
+      "Measures: strong passwords, 2FA, encryption, firewalls, regular backups.",
+      "Cybercrime: criminal activity involving computers/networks.",
+      "Examples: phishing, hacking, identity theft, ransomware, cyberbullying."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q28",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(a) Complete the following Python code to create a Pandas Series from a NumPy array with custom index labels ['first','second','third']:\nimport numpy as np\nimport pandas as pd\narr = np.array(['a', 'b', 'c'])\ns = _______________\nprint(s)\n\nOR\n(b) Given two Series s1 = pd.Series([1,2,3], index=['a','b','c']) and s2 = pd.Series([10,20,30], index=['b','c','d']), what is the output of print(s1 + s2)?",
+    "modelAnswer": "(a) s = pd.Series(arr, index=['first', 'second', 'third'])\n\nExplanation: pd.Series(data, index=labels) creates a Series using the NumPy array as data and the list as index labels.\n\nOutput:\nfirst     a\nsecond    b\nthird     c\ndtype: object\n\nOR\n\n(b) Pandas aligns by index before adding. s1 and s2 share indices 'b' and 'c' only.\n- 'a': only in s1 \u2192 NaN\n- 'b': 2 + 10 = 12\n- 'c': 3 + 20 = 23\n- 'd': only in s2 \u2192 NaN\n\nOutput:\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64",
+    "keyPoints": [
+      "pd.Series(array, index=[labels]) assigns custom index labels.",
+      "Series addition aligns on index \u2014 non-matching indices produce NaN.",
+      "Result dtype becomes float64 when NaN is introduced.",
+      "'b':2+10=12, 'c':3+20=23; 'a' and 'd' are unmatched \u2192 NaN."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q29",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Vikram received an email claiming to be from his bank, asking him to click a link and enter his account details to 'verify his account'. He clicked the link and entered his credentials. His account was later debited without his knowledge.\n(i) What type of cyber attack did Vikram fall victim to?\n(ii) State two ways such attacks are commonly carried out.\n(iii) Under which Act can this crime be reported in India?",
+    "modelAnswer": "(i) Vikram fell victim to Phishing \u2014 a social engineering attack where fraudulent emails/messages impersonate legitimate organizations to steal sensitive information like passwords and banking credentials.\n\n(ii) Two common methods:\n1. Email phishing: Fraudulent emails with urgent messages and links to fake websites that mimic real bank/institution sites.\n2. SMS phishing (Smishing): Fake text messages with links or callback numbers requesting personal details.\n\n(iii) This can be reported under the Information Technology (IT) Act, 2000, specifically under Section 66C (Identity Theft) and Section 66D (Cheating by personation using computer resources).",
+    "keyPoints": [
+      "Phishing: impersonating a trusted entity to steal credentials.",
+      "Common methods: email phishing, SMS smishing, fake social media pages.",
+      "IT Act 2000 \u2014 Section 66C (identity theft), Section 66D (cheating by personation).",
+      "Always verify sender email addresses and never click unsolicited links."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q30",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Write a Python program to create a Pandas Series named 'MonthlyDays' with month names (July, August, September, October) as index and number of days (31, 31, 30, 31) as values. Display the series.\nOR\n(b) Write Python code to:\n(i) Import a CSV file 'customer.csv' into a DataFrame DF.\n(ii) Display the last 2 rows of DF.",
+    "modelAnswer": "(a)\nimport pandas as pd\nMonthlyDays = pd.Series(\n    [31, 31, 30, 31],\n    index=['July', 'August', 'September', 'October']\n)\nprint(MonthlyDays)\n\nOutput:\nJuly         31\nAugust       31\nSeptember    30\nOctober      31\ndtype: int64\n\nOR\n\n(b)\nimport pandas as pd\n\n# (i) Import CSV file into DataFrame\nDF = pd.read_csv('customer.csv')\n\n# (ii) Display last 2 rows\nprint(DF.tail(2))",
+    "keyPoints": [
+      "pd.Series(data_list, index=index_list) assigns named index labels.",
+      "pd.read_csv('filename.csv') imports a CSV file into a DataFrame.",
+      "df.tail(n) returns the last n rows (default 5).",
+      "df.head(n) returns first n rows; df.tail(n) returns last n rows."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q31",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Consider the table CUSTOMER(CID, CName, LName, City, PurchaseAmount). Write SQL queries:\n(i) Display all customer names sorted by LName in descending order.\n(ii) Write the SQL query to create a table CUSTOMER with CID as PRIMARY KEY, CName VARCHAR(30), City VARCHAR(20), and PurchaseAmount DECIMAL(10,2).",
+    "modelAnswer": "(i) SELECT CName FROM CUSTOMER ORDER BY LName DESC;\n\n(ii) CREATE TABLE CUSTOMER (\n    CID INT PRIMARY KEY,\n    CName VARCHAR(30),\n    City VARCHAR(20),\n    PurchaseAmount DECIMAL(10,2)\n);",
+    "keyPoints": [
+      "ORDER BY col DESC sorts in descending (Z\u2192A, 9\u21920) order.",
+      "CREATE TABLE defines columns with data types and constraints.",
+      "PRIMARY KEY ensures uniqueness and NOT NULL on CID.",
+      "DECIMAL(10,2): up to 10 total digits, 2 after the decimal point."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q32a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Consider tables STUDENTS(SID, SName, City, Age, Grade) and GRADES(GID, Grade, MinScore, MaxScore). Write SQL queries:\n(I) Count the number of students in each city.\n(II) Display the average age of students.\n(III) Display student names and their corresponding grade descriptions by joining the two tables.\nOR\n(b) Consider tables PRODUCTS(PID, PName, Category, Price) and SALES(SaleID, PID, Quantity, SaleDate). Write SQL queries:\n(I) Delete products with Price less than 80.\n(II) Display products where Category is NULL.\n(III) Display product names along with their total quantity sold (join both tables).",
+    "modelAnswer": "(a)\n(I) SELECT City, COUNT(*) AS StudentCount FROM STUDENTS GROUP BY City;\n\n(II) SELECT AVG(Age) AS AverageAge FROM STUDENTS;\n\n(III) SELECT S.SName, G.Grade FROM STUDENTS S, GRADES G WHERE S.Grade = G.Grade;\n   OR using JOIN: SELECT S.SName, G.Grade FROM STUDENTS S JOIN GRADES G ON S.Grade = G.Grade;\n\nOR\n\n(b)\n(I) DELETE FROM PRODUCTS WHERE Price < 80;\n\n(II) SELECT * FROM PRODUCTS WHERE Category IS NULL;\n\n(III) SELECT P.PName, SUM(S.Quantity) AS TotalSold FROM PRODUCTS P, SALES S WHERE P.PID = S.PID GROUP BY P.PName;",
+    "keyPoints": [
+      "COUNT(*) with GROUP BY counts rows per group.",
+      "AVG(col) computes mean; NULL check uses IS NULL (not = NULL).",
+      "JOIN/equi-join links tables on matching columns.",
+      "DELETE FROM with WHERE removes specific rows; SUM+GROUP BY aggregates per product."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q33",
+    "chapter": "Data Visualization",
+    "subject": "Information Practices",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Complete the following Python code to plot a line graph showing temperature data over 5 days.\nBlank 1: plt._____(days, temp)\nBlank 2: plt._____(_____, 'Days')\nBlank 3: plt.title('Temperature Over 5 Days')\nBlank 4: plt.show()\n\nimport matplotlib.pyplot as plt\ndays = [1, 2, 3, 4, 5]\ntemp = [22, 25, 23, 27, 26]\nplt._____(days, temp)          # Blank 1\nplt._____(_____, 'Days')       # Blank 2\nplt.ylabel('Temperature (\u00b0C)')\nplt.title('Temperature Over 5 Days')\nplt.show()",
+    "modelAnswer": "import matplotlib.pyplot as plt\ndays = [1, 2, 3, 4, 5]\ntemp = [22, 25, 23, 27, 26]\nplt.plot(days, temp)               # Blank 1: plot() draws a line graph\nplt.xlabel('xlabel', 'Days')       # Blank 2: xlabel() labels the x-axis\nplt.ylabel('Temperature (\u00b0C)')\nplt.title('Temperature Over 5 Days')\nplt.show()\n\nBlanks filled:\nBlank 1: plot\nBlank 2: xlabel, 'Days'",
+    "keyPoints": [
+      "plt.plot(x, y) draws a line graph.",
+      "plt.xlabel('label') sets the x-axis label.",
+      "plt.ylabel('label') sets the y-axis label.",
+      "plt.title('title') sets the chart title; plt.show() renders the plot."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q34a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Table COURSE(CID, CName, Duration, Instructor). Write SQL queries:\n(I) Insert a new course: CID=C005, CName='Data Science', Duration=60, Instructor='Dr. Roy'.\n(II) Display the maximum duration among all courses.\n(III) Display the count of courses taught by each instructor.\n(IV) Display CName in lowercase for all courses.\nOR\n(b) Table EMPLOYEE(EmpID, EName, Department, HireDate, Salary). Write the output for:\n(I) SELECT SUBSTRING(EName, 1, 4) FROM EMPLOYEE; (assuming EName = 'Rajesh')\n(II) SELECT EName FROM EMPLOYEE WHERE MONTH(HireDate) = 3; (assuming HireDate = '2022-03-15' for one employee)\n(III) SELECT EName FROM EMPLOYEE WHERE Salary > 60000;\n(IV) SELECT Department, COUNT(*) FROM EMPLOYEE GROUP BY Department;",
+    "modelAnswer": "(a)\n(I) INSERT INTO COURSE VALUES ('C005', 'Data Science', 60, 'Dr. Roy');\n\n(II) SELECT MAX(Duration) FROM COURSE;\n\n(III) SELECT Instructor, COUNT(*) AS CourseCount FROM COURSE GROUP BY Instructor;\n\n(IV) SELECT LOWER(CName) FROM COURSE;\n\nOR\n\n(b)\n(I) SUBSTRING('Rajesh', 1, 4) = 'Raje' (positions 1-4)\n\n(II) Displays employee names hired in March (month = 3).\n\n(III) Displays names of employees with Salary > 60000.\n\n(IV) Displays each department with count of employees in it.",
+    "keyPoints": [
+      "INSERT INTO table VALUES (...) adds a new row.",
+      "MAX(col) returns the highest value; GROUP BY with COUNT aggregates per group.",
+      "LOWER(col) converts string to lowercase.",
+      "SUBSTRING(str, start, len): SQL positions are 1-based; MONTH(date) extracts month number."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q35",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "XYZ Technologies is setting up a network in a new building with four departments: Management (15 computers), Development (60 computers), Testing (30 computers), Support (20 computers). Distances: Management\u2013Development 50m, Management\u2013Testing 100m, Management\u2013Support 40m, Development\u2013Testing 60m, Development\u2013Support 80m, Testing\u2013Support 70m. Head office is 300 km away.\n(i) Which department should house the main server? Justify.\n(ii) Suggest where switches should be placed.\n(iii) Suggest a wired medium for connecting computers within a department.\n(iv) Name a protocol to securely transfer files to/from the head office server.\n(v) What type of network connects the building's departments internally?",
+    "modelAnswer": "(i) The Development department (60 computers) should house the main server. It has the largest number of computers, so placing the server there minimizes network traffic and provides faster access for the majority of users.\n\n(ii) A switch should be placed in each of the four departments. Each departmental switch connects all computers within that department. These switches are then interconnected, with the Development department's switch acting as the backbone switch.\n\n(iii) Twisted Pair Cable (Cat5e/Cat6 Ethernet cable) or Optical Fibre Cable for connecting computers within a department. Twisted pair is cost-effective for shorter distances.\n\n(iv) SFTP (Secure File Transfer Protocol) or SSH (Secure Shell) should be used for secure file transfer to the head office, as they encrypt data during transmission.\n\n(v) The building's internal network is a LAN (Local Area Network), as all departments are within the same building/campus.",
+    "keyPoints": [
+      "Server in the department with most computers (Development, 60) for optimal access.",
+      "One switch per department; Development switch acts as backbone.",
+      "Twisted Pair/Ethernet cable is standard for intra-department wiring.",
+      "SFTP/SSH for secure remote file transfer to head office.",
+      "Internal network = LAN; 300km head office connection = WAN."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q36",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A DataFrame 'Doctor' has columns: DName, Specialization, Experience, Fees. Write Python/Pandas statements for:\n(I) Display the last 3 rows of the DataFrame.\n(II) Display only the 'Name' column of the DataFrame.\n(III) Add a new column 'Discount' with value 10 for all rows.\n(IV) Display rows at index labels 2 and 3 (inclusive) using loc.\n(V) Drop the 'Fees' column from the DataFrame.",
+    "modelAnswer": "import pandas as pd\n# Assuming df is the Doctor DataFrame\n\n# (I) Display last 3 rows\nprint(df.tail(3))\n\n# (II) Display only the 'Name' column\nprint(df['Name'])\n# OR: print(df[['Name']])  -- double brackets for DataFrame output\n\n# (III) Add new column 'Discount' with value 10\ndf['Discount'] = 10\n\n# (IV) Display rows at index labels 2 and 3 (inclusive)\nprint(df.loc[2:3])\n# Note: loc with slice is label-inclusive on both ends\n\n# (V) Drop the 'Fees' column\ndf.drop('Fees', axis=1, inplace=True)\n# OR: df = df.drop('Fees', axis=1)",
+    "keyPoints": [
+      "tail(3): last 3 rows; head(n): first n rows.",
+      "df['col']: single-bracket returns Series; df[['col']]: double-bracket returns DataFrame.",
+      "df['new_col'] = value: adds a new column with constant value.",
+      "df.loc[start:end]: label-based slice \u2014 BOTH start and end are INCLUSIVE.",
+      "df.drop('col', axis=1): removes a column (axis=1); use inplace=True to modify in place."
+    ]
+  },
+  {
+    "id": "xii-ip-2025-sa-q37a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(a) Write SQL queries for the following:\n(I) Display the sum of all values in the 'Score' column of STUDENTS table.\n(II) Display the first 5 characters of student names from STUDENTS table.\n(III) Display student names after removing trailing spaces from the Name column.\n(IV) Display the minimum Score from the STUDENTS table.\n(V) Increase the Fee of all students by 100.\nOR\n(b) Write the output of the following SQL functions:\n(I) SELECT POWER(17, 2);\n(II) SELECT DAY('2025-08-15');\n(III) SELECT MAX(Bill_Amount) FROM Sales; (assuming values: 500, 1200, 800, 350)\n(IV) SELECT TRIM('  Hello World  ');\n(V) SELECT SUM(tot_sal) FROM Employee; (assuming values: 25000, 30000, 15000)",
+    "modelAnswer": "(a)\n(I) SELECT SUM(Score) FROM STUDENTS;\n\n(II) SELECT LEFT(Name, 5) FROM STUDENTS;\n   OR: SELECT SUBSTRING(Name, 1, 5) FROM STUDENTS;\n\n(III) SELECT RTRIM(Name) FROM STUDENTS;\n\n(IV) SELECT MIN(Score) FROM STUDENTS;\n\n(V) UPDATE STUDENTS SET Fee = Fee + 100;\n\nOR\n\n(b)\n(I) POWER(17, 2) = 17\u00b2 = 289\n\n(II) DAY('2025-08-15') = 15\n\n(III) MAX(Bill_Amount) from {500, 1200, 800, 350} = 1200\n\n(IV) TRIM('  Hello World  ') = 'Hello World' (removes leading and trailing spaces)\n\n(V) SUM(tot_sal) = 25000 + 30000 + 15000 = 70000",
+    "keyPoints": [
+      "SUM(col)/MIN(col)/MAX(col): aggregate functions.",
+      "LEFT(col, n) or SUBSTRING(col,1,n): first n characters.",
+      "RTRIM(col): removes trailing spaces; LTRIM: leading; TRIM: both.",
+      "POWER(x,y): x raised to power y; DAY(date): day component.",
+      "UPDATE SET col = col + value: increments all matching rows."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q22",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "(a) State any two characteristics of the Pandas library in Python.\nOR\n(b) What is Boolean Indexing in Pandas? Give a suitable example.",
+    "modelAnswer": "(a) Two characteristics of the Pandas library:\n1. Pandas provides two primary data structures \u2014 Series (1D) and DataFrame (2D) \u2014 that make data manipulation and analysis easy.\n2. Pandas handles missing data gracefully using NaN (Not a Number) and provides methods like fillna(), dropna() to deal with missing values.\n\nOR\n\n(b) Boolean Indexing is filtering data from a Pandas object (Series/DataFrame) based on a boolean condition \u2014 rows where the condition is True are selected; where False are excluded.\n\nExample:\nimport pandas as pd\ndf = pd.DataFrame({'Student':['Avi','Bea','Cara'], 'Marks':[72, 88, 65]})\nprint(df[df['Marks'] >= 75])  # Boolean Indexing\n# Displays only rows where Marks \u2265 75",
+    "keyPoints": [
+      "Pandas characteristics: 1D/2D data structures, NaN handling, label-based indexing, fast I/O.",
+      "Boolean Indexing: filter with True/False condition array.",
+      "df[df['col'] condition] syntax selects matching rows.",
+      "Result is a new DataFrame containing only matching rows."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q23",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Anjana has designed a website and published content. She discovers another website copied her content without permission.\n(i) What type of IPR violation has occurred?\n(ii) Name two types of licenses that permit legal content sharing/reuse.",
+    "modelAnswer": "(i) Copyright Infringement \u2014 Anjana's website content is protected by copyright. Copying it verbatim without permission violates her exclusive rights as the creator.\n\n(ii) Two licenses for legal sharing/reuse:\n1. Creative Commons (CC) License \u2014 allows creators to permit others to use content under specific conditions (e.g., with attribution, non-commercial use only).\n2. MIT License / GNU General Public License (GPL) \u2014 open-source licenses that allow free use, modification, and redistribution of software/content.",
+    "keyPoints": [
+      "Copyright infringement: using copyrighted creative work without permission.",
+      "Creative Commons: flexible, open licensing for creative works.",
+      "MIT/GPL: open-source licenses permitting reuse with minimal restrictions.",
+      "Always credit the original creator even under open licenses."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q24",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "Define the following database terms:\n(i) Domain\n(ii) Tuple",
+    "modelAnswer": "(i) Domain: The set of all valid/permissible values for a particular attribute (column) in a table. For example, the domain of a 'Gender' column could be {'M', 'F', 'Other'}.\n\n(ii) Tuple: A single row in a relational database table representing one complete record (entity). For example, one employee's complete data (EmpID, Name, Department, Salary) is one tuple.",
+    "keyPoints": [
+      "Domain: pool of valid values an attribute can take.",
+      "Tuple: one complete row/record in a relation.",
+      "Cardinality = number of tuples; Degree = number of attributes.",
+      "Every tuple in a valid relation has a value from the domain for each attribute."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q25",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "(a) Define: (i) Modem (ii) Gateway\nOR\n(b) Differentiate between Add-ons and Plug-ins in the context of web browsers.",
+    "modelAnswer": "(a)(i) Modem: A device that converts digital data to analog signals (modulation) for transmission over phone lines, and converts incoming analog signals back to digital (demodulation). It enables broadband/dial-up internet access.\n\n(ii) Gateway: A network node that connects two networks using different communication protocols. It translates between protocols, allowing otherwise incompatible networks to communicate (e.g., a router connecting a home LAN to the internet).\n\nOR\n\n(b) Add-ons: Extensions that add new features or functionality to a web browser beyond its built-in capabilities (e.g., ad blockers, password managers, download accelerators). They enhance the browser's user interface and features.\n\nPlug-ins: Software components installed in a browser to handle specific content types that the browser cannot natively process (e.g., Adobe Flash, PDF viewer). They extend the browser's ability to render or play specific media.",
+    "keyPoints": [
+      "Modem: modulates digital\u2192analog and demodulates analog\u2192digital.",
+      "Gateway: protocol translator connecting two different networks.",
+      "Add-ons: extend browser features/UI.",
+      "Plug-ins: enable browsers to handle specific media/content types."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q26",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the output of the following SQL statements:\n(I) SELECT MONTH('2026-01-01');\n(II) SELECT YEAR('2026-01-01');",
+    "modelAnswer": "(I) Output: 1\nMONTH('2026-01-01') extracts the month number; January = 1.\n\n(II) Output: 2026\nYEAR('2026-01-01') extracts the 4-digit year.",
+    "keyPoints": [
+      "MONTH(date) returns 1\u201312 for January\u2013December.",
+      "YEAR(date) returns the 4-digit year.",
+      "Both functions accept 'YYYY-MM-DD' formatted strings."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q27",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "(a) What is Data Protection? State any two precautionary measures to protect personal data.\nOR\n(b) What is cybercrime? Give two examples of cyber crimes.",
+    "modelAnswer": "(a) Data Protection is the process of safeguarding personal, sensitive, or organizational digital data from unauthorized access, corruption, theft, and loss.\n\nTwo precautionary measures:\n1. Use strong passwords combined with two-factor authentication (2FA).\n2. Keep software and antivirus up to date; use firewalls to block unauthorized access.\n\nOR\n\n(b) Cybercrime: Any illegal activity that involves a computer, network, or the internet as the tool, target, or place of the crime.\n\nTwo examples:\n1. Phishing \u2014 sending fraudulent emails to trick users into revealing passwords or financial details.\n2. Ransomware \u2014 malicious software that encrypts a victim's data and demands payment for the decryption key.",
+    "keyPoints": [
+      "Data protection: safeguarding digital data from unauthorized access and loss.",
+      "Measures: strong passwords + 2FA, encryption, firewalls, backups.",
+      "Cybercrime: illegal activity using/targeting computers or networks.",
+      "Examples: phishing, hacking, ransomware, identity theft, cyberbullying."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q28",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "(a) Complete the Python code to create a Pandas Series from a NumPy array with custom index labels:\nimport numpy as np\nimport pandas as pd\narr = np.array(['a', 'b', 'c'])\ns = pd.Series(arr, index=['first', 'second', 'third'])\nprint(s)\n\nOR\n(b) Given s1 = pd.Series([1,2,3], index=['a','b','c']) and s2 = pd.Series([10,20,30], index=['b','c','d']), write the output of print(s1 + s2).",
+    "modelAnswer": "(a) The completed code:\nimport numpy as np\nimport pandas as pd\narr = np.array(['a', 'b', 'c'])\ns = pd.Series(arr, index=['first', 'second', 'third'])\nprint(s)\n\nOutput:\nfirst     a\nsecond    b\nthird     c\ndtype: object\n\nOR\n\n(b) Pandas aligns Series on index before arithmetic:\n- Index 'a': only in s1 (value 1) \u2192 NaN\n- Index 'b': 2 + 10 = 12.0\n- Index 'c': 3 + 20 = 23.0\n- Index 'd': only in s2 (value 30) \u2192 NaN\n\nOutput:\na     NaN\nb    12.0\nc    23.0\nd     NaN\ndtype: float64",
+    "keyPoints": [
+      "pd.Series(array, index=labels) assigns named index labels to a NumPy array.",
+      "Series addition aligns by index \u2014 non-overlapping indices produce NaN.",
+      "When NaN is introduced, integer dtype upgrades to float64.",
+      "Only indices 'b' and 'c' appear in both series \u2014 only those sum."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q29",
+    "chapter": "Societal Impacts of IT",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Mandeep received a suspicious SMS asking him to click a link to claim a prize. He clicked the link and entered his bank details. His account was later debited.\n(i) What type of cyber attack did Mandeep fall victim to?\n(ii) Mention two other ways such attacks are commonly carried out.\n(iii) Under which Indian law can this be reported?",
+    "modelAnswer": "(i) Mandeep fell victim to Phishing (specifically SMS Phishing / Smishing) \u2014 a social engineering attack where fraudulent messages impersonate legitimate organizations to trick users into revealing sensitive information.\n\n(ii) Two other methods:\n1. Email Phishing \u2014 fraudulent emails with malicious links or attachments posing as banks, government agencies, or trusted companies.\n2. Fake Social Media Pages \u2014 attackers create counterfeit pages mimicking real organizations to harvest login credentials.\n\n(iii) This can be reported under the Information Technology (IT) Act, 2000 \u2014 specifically Section 66C (Identity Theft) and Section 66D (Cheating by personation using computer resources).",
+    "keyPoints": [
+      "Phishing/Smishing: social engineering via SMS/email to steal credentials.",
+      "Other methods: email phishing, fake websites, vishing (voice phishing).",
+      "IT Act 2000 \u2014 Section 66C (identity theft), Section 66D (cheating by impersonation).",
+      "Never click unsolicited links or share banking details online."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q30a",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "(a) Write a Python program to create a Pandas Series with months (July=31, August=31, September=30, October=31) and display it.\nOR\n(b) Write Python code to import 'customer.csv' into a DataFrame DF and display the last 2 rows.",
+    "modelAnswer": "(a)\nimport pandas as pd\ns = pd.Series(\n    [31, 31, 30, 31],\n    index=['July', 'August', 'September', 'October']\n)\nprint(s)\n\nOutput:\nJuly         31\nAugust       31\nSeptember    30\nOctober      31\ndtype: int64\n\nOR\n\n(b)\nimport pandas as pd\nDF = pd.read_csv('customer.csv')\nprint(DF.tail(2))",
+    "keyPoints": [
+      "pd.Series([values], index=[labels]) creates a named Series.",
+      "pd.read_csv('file.csv') imports CSV into DataFrame.",
+      "df.tail(2) displays the last 2 rows of the DataFrame."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q31",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Write SQL queries:\n(i) Create a table PRODUCTS with columns: PID Integer PRIMARY KEY, PName Varchar(30), PCat Char(15), Price Decimal.\n(ii) Update the Price of all products in 'Grocery' category by increasing it by 100.",
+    "modelAnswer": "(i) CREATE TABLE PRODUCTS (\n    PID INTEGER PRIMARY KEY,\n    PName VARCHAR(30),\n    PCat CHAR(15),\n    Price DECIMAL\n);\n\n(ii) UPDATE PRODUCTS SET Price = Price + 100 WHERE PCat = 'Grocery';",
+    "keyPoints": [
+      "CREATE TABLE with column definitions and PRIMARY KEY constraint.",
+      "INTEGER, VARCHAR(n), CHAR(n), DECIMAL are standard SQL data types.",
+      "UPDATE ... SET col = col + value WHERE condition updates matching rows.",
+      "Always use WHERE to limit UPDATE scope; omitting WHERE updates ALL rows."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q32a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "(a) Tables TEACHER(TID, TName, Subject, Experience, City) and SUBJECT(SID, SubName, TID). Write SQL queries:\n(I) Delete the record from SUBJECT table where TID = 4.\n(II) Display TName from TEACHER where Experience > 5 and City = 'Nagpur'.\n(III) Display SubName and TName by joining SUBJECT and TEACHER tables.\nOR\n(b) Table LIBRARY(BookID, Title, Author, Year, Category). Answer:\n(I) Name two candidate keys.\n(II) Insert a new record: 'B006', 'Python Programming', 'Gupta', 2024, 'Technology'.\n(III) Add a new column 'Publisher' of type VARCHAR(50) to the LIBRARY table.",
+    "modelAnswer": "(a)\n(I) DELETE FROM SUBJECT WHERE TID = 4;\n\n(II) SELECT TName FROM TEACHER WHERE Experience > 5 AND City = 'Nagpur';\n\n(III) SELECT S.SubName, T.TName FROM SUBJECT S, TEACHER T WHERE S.TID = T.TID;\n   OR: SELECT SubName, TName FROM SUBJECT JOIN TEACHER USING(TID);\n\nOR\n\n(b)\n(I) Candidate keys: BookID (each book has a unique ID), or (Title, Author) if we assume no two books share both title and author.\n\n(II) INSERT INTO LIBRARY VALUES ('B006', 'Python Programming', 'Gupta', 2024, 'Technology');\n\n(III) ALTER TABLE LIBRARY ADD Publisher VARCHAR(50);",
+    "keyPoints": [
+      "DELETE FROM table WHERE condition removes specific rows.",
+      "SELECT with WHERE AND: combine multiple conditions.",
+      "Equi-Join: list both tables with WHERE on matching column.",
+      "ALTER TABLE ADD column_name datatype: adds a new column to existing table."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q33",
+    "chapter": "Data Visualization",
+    "subject": "Information Practices",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Complete the following Python code to plot a histogram of ages:\nAges = [22,25,24,28,30,24,29,27,21,23]\nbinsize = [20,22,24,26,28,30]\nStatement-1: plt._____(Ages, bins=binsize, color='blue', label='Age Distribution')\nStatement-2: plt._____(xlabel, 'Age Groups')\nStatement-3: plt._____()\nStatement-4: plt._____()\nimport matplotlib.pyplot as plt\n(Note: plt has already been imported as alias)",
+    "modelAnswer": "import matplotlib.pyplot as plt\nAges = [22,25,24,28,30,24,29,27,21,23]\nbinsize = [20,22,24,26,28,30]\n\nplt.hist(Ages, bins=binsize, color='blue', label='Age Distribution')  # Statement-1\nplt.xlabel('Age Groups')   # Statement-2 (xlabel is a function, not a variable)\nplt.legend()               # Statement-3\nplt.show()                 # Statement-4\n\nFilled blanks:\nStatement-1: hist\nStatement-2: xlabel (the function), 'Age Groups'\nStatement-3: legend\nStatement-4: show",
+    "keyPoints": [
+      "plt.hist(data, bins=bin_edges) creates a histogram.",
+      "plt.xlabel('label') sets the x-axis label.",
+      "plt.legend() displays the legend (shows label text).",
+      "plt.show() renders and displays the final plot."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q34a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "(a) Table GUEST(GuestID, GuestName, CheckInDate, CheckOutDate, Charges). Write SQL queries:\n(I) Display UPPER of last 3 characters of GuestName for all guests.\n(II) Display GuestName and the day name of CheckInDate.\n(III) Display the remainder when Charges is divided by 1000.\n(IV) Display 3 characters of GuestName starting from position 2.\nOR\n(b) Table ORDERS(OrderID, CustName, OrderDate, Amount, Status). Find outputs for given queries.",
+    "modelAnswer": "(a)\n(I) SELECT UPPER(RIGHT(GuestName, 3)) FROM GUEST;\n   RIGHT(name, 3) extracts last 3 characters; UPPER() converts to uppercase.\n\n(II) SELECT GuestName, DAYNAME(CheckInDate) FROM GUEST;\n   DAYNAME() returns the full weekday name (e.g., 'Monday').\n\n(III) SELECT MOD(Charges, 1000) FROM GUEST;\n   MOD(x, y) returns the remainder of x \u00f7 y.\n\n(IV) SELECT SUBSTR(GuestName, 2, 3) FROM GUEST;\n   SUBSTR(str, start, length): start from position 2, extract 3 characters.",
+    "keyPoints": [
+      "RIGHT(str, n): last n characters; LEFT(str, n): first n characters.",
+      "UPPER(str): converts to uppercase; LOWER(str): to lowercase.",
+      "DAYNAME(date): returns day name (Monday, Tuesday, etc.).",
+      "MOD(x,y): remainder; SUBSTR(str,pos,len): substring from position."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q35",
+    "chapter": "Computer Networks",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "My Solutions Pvt. Ltd. is setting up offices in Mysuru (HR=30, Research=80, Design=50, TechSupport=20 computers) and Chennai (35 computers). Distances in Mysuru: HR\u2013Research 80m, HR\u2013Design 60m, HR\u2013TechSupport 100m, Research\u2013Design 40m, Research\u2013TechSupport 120m, Design\u2013TechSupport 50m.\n(i) Suggest the most suitable department to place the server in Mysuru. Justify.\n(ii) Suggest the cable layout for each department using Star topology.\n(iii) Which department's switch should be used as the backbone in Mysuru?\n(iv) What kind of network connects the Mysuru and Chennai offices? Name the device used.\n(v) Name a device suitable to boost signal on long HR\u2013TechSupport link.",
+    "modelAnswer": "(i) The server should be placed in the Research department (80 computers \u2014 the highest count). Placing it there minimizes total cabling/traffic and provides fastest access for the largest group of users.\n\n(ii) Star topology cable layout: Each department has its own switch (central node). All computers within a department connect directly to that department's switch with individual cable runs \u2014 this forms a star pattern per department.\n\n(iii) The Research department's switch should serve as the backbone switch for the Mysuru campus, since it has the most computers (80). All other departmental switches (HR, Design, TechSupport) connect to the Research switch.\n\n(iv) The Mysuru\u2013Chennai connection is a WAN (Wide Area Network) since the two offices are in different cities. A Router is the device used to connect the two offices over the WAN.\n\n(v) A Repeater should be installed on the HR\u2013TechSupport link (100m is relatively long within the campus). The repeater regenerates and amplifies the signal to prevent degradation over the long cable run.",
+    "keyPoints": [
+      "Server: Research dept (80 computers \u2014 maximum).",
+      "Star topology: each computer connects directly to a central switch per department.",
+      "Backbone switch: Research (highest usage); other switches connect to it.",
+      "WAN connects Mysuru\u2013Chennai; Router enables inter-city communication.",
+      "Repeater: regenerates/amplifies signal on long cable runs."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q36",
+    "chapter": "Data Handling with Pandas",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A Scholarship DataFrame has 5 rows. Write Python/Pandas statements for:\n(I) Create the DataFrame using a dictionary-of-Series method.\n(II) Rename row indexes to ['a','b','c','d','e'].\n(III) Drop the last row from the DataFrame.",
+    "modelAnswer": "import pandas as pd\n\n# (I) Create using dictionary of Series\ndf = pd.DataFrame({\n    'Name':    pd.Series(['Avi','Bea','Cara','Dev','Eva']),\n    'Score':   pd.Series([85, 72, 90, 68, 95]),\n    'Amount':  pd.Series([5000, 3000, 8000, 2000, 10000])\n})\n\n# (II) Rename row indexes to ['a','b','c','d','e']\ndf.index = ['a', 'b', 'c', 'd', 'e']\n\n# (III) Drop the last row\ndf.drop(df.index[-1], inplace=True)\n# OR:\n# df = df.iloc[:-1]",
+    "keyPoints": [
+      "pd.DataFrame({'col': pd.Series([...])}) creates from dict of Series.",
+      "df.index = [labels] reassigns all row index labels.",
+      "df.drop(df.index[-1]) drops the last row by label; df.index[-1] is the last label.",
+      "df.iloc[:-1] is an alternative \u2014 selects all rows except the last."
+    ]
+  },
+  {
+    "id": "xii-ip-2026-sa-q37a",
+    "chapter": "Database Concepts (SQL)",
+    "subject": "Information Practices",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "(a) Write SQL queries:\n(I) Display only the date part from '2026-01-01 10:10:10'.\n(II) Display all customer names in lowercase from Customer table.\n(III) Display first 4 characters of City_Name from Location table.\n(IV) Remove leading spaces from CITY column in EVENT table.\n(V) Display the average Salary from Employees table.\nOR\n(b) Find the output of:\n(I) SELECT POWER(17,2);\n(II) SELECT DAY(HireDate); (HireDate = '2025-08-15')\n(III) SELECT MAX(Bill_Amount) FROM Sales; (values: 500, 1200, 800, 350)\n(IV) SELECT TRIM(Location) FROM EVENT; (Location = '  Bengaluru  ')\n(V) SELECT SUM(tot_sal) FROM Employee; (values: 25000, 30000, 15000)",
+    "modelAnswer": "(a)\n(I) SELECT DATE('2026-01-01 10:10:10');\nOutput: 2026-01-01\n\n(II) SELECT LOWER(Cust_Name) FROM Customer;\n\n(III) SELECT LEFT(City_Name, 4) FROM Location;\n\n(IV) SELECT LTRIM(CITY) FROM EVENT;\n\n(V) SELECT AVG(Salary) FROM Employees;\n\nOR\n\n(b)\n(I) POWER(17,2) = 17\u00b2 = 289\n\n(II) DAY('2025-08-15') = 15\n\n(III) MAX(500, 1200, 800, 350) = 1200\n\n(IV) TRIM('  Bengaluru  ') = 'Bengaluru' (removes both leading and trailing spaces)\n\n(V) SUM(25000+30000+15000) = 70000",
+    "keyPoints": [
+      "DATE(datetime) extracts just the date part from a datetime value.",
+      "LOWER(col): lowercase; LEFT(col,n): first n chars; LTRIM(col): remove leading spaces.",
+      "TRIM(col): removes both leading and trailing spaces.",
+      "AVG(col): average; POWER(x,y): x^y; DAY(date): day component.",
+      "MAX(col): highest value; SUM(col): total."
+    ]
+  }
+]
