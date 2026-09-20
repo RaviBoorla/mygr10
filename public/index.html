@@ -68,6 +68,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Firebase origins — preconnect reduces DNS/TLS overhead for auth + SDK -->
+    <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://rise-511c6.firebaseapp.com" crossorigin>
+    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+Math&display=swap">
     <link rel="stylesheet" href="design-config.css?v=4">
     <link rel="stylesheet" href="style.css?v=96">
@@ -85,7 +89,7 @@
     </footer>
     <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
-    <script defer src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+    <!-- firebase-firestore-compat loaded lazily in auth.js when a user signs in -->
     <script defer src="config.js?v=5"></script>
     <script defer src="app.js?v=65"></script>
     <script defer src="screen-misc.js?v=13"></script>
@@ -98,7 +102,7 @@
     <script defer src="screen-careers.js?v=8"></script>
     <script defer src="screen-ai.js?v=23"></script>
     <!-- arena.js lazy-loaded on first Arena visit (see app.js render()) -->
-    <script defer src="auth.js?v=12"></script>
+    <script defer src="auth.js?v=13"></script>
     <script defer src="family.js?v=8"></script>
     <script defer src="challenge.js?v=1"></script>
     <script defer src="live-room.js?v=1"></script>

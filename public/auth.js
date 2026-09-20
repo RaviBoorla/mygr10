@@ -28,11 +28,26 @@ const SYNC_KEYS = {
   try {
     firebase.initializeApp(FIREBASE_CONFIG);
     fbAuth = firebase.auth();
-    db     = firebase.firestore();
+    // Firestore loaded lazily on first sign-in (see _ensureFirestore)
   } catch (e) {
     console.warn('[Rise auth] Firebase init failed — login disabled.', e);
     window.riseAuth = { user: null, openModal() {}, signOut() {} };
     return;
+  }
+
+  // Load firebase-firestore-compat.js on demand and init db once
+  function _ensureFirestore() {
+    return new Promise((resolve, reject) => {
+      if (db) return resolve();
+      if (window.firebase && typeof firebase.firestore === 'function') {
+        db = firebase.firestore(); return resolve();
+      }
+      const s = document.createElement('script');
+      s.src = 'https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js';
+      s.onload = () => { db = firebase.firestore(); resolve(); };
+      s.onerror = reject;
+      document.head.appendChild(s);
+    });
   }
 
   // ── State ───────────────────────────────────────────────────────────────────
@@ -457,6 +472,7 @@ const SYNC_KEYS = {
     currentUser = user || null;
     if (user) {
       clearSyncKeysIfDifferentAccount(user.uid);
+      await _ensureFirestore();
       await pullFromCloud();
       await pushToCloud();
       await loadProfile();
