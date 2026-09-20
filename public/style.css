@@ -229,16 +229,14 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .subj-head h3 { margin: 0; font-size: var(--fs-card); }
 .subj-meta { font-size: var(--fs-note); color: var(--text-light); text-align: right; }
 
-.subj-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-.act-btn { flex: 1 1 140px; text-align: center; padding: 10px 12px; font-size: var(--fs-body); }
+.subj-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.act-btn { text-align: center; padding: 8px 10px; font-size: var(--fs-ui); }
 .act-btn small { display: block; font-size: var(--fs-xs); font-weight: 400; opacity: .8; margin-top: 2px; }
-.act-btn.ghost { flex-basis: 100%; }
-
-.act-btn.ghost.half { flex-basis: 140px; }
 
 .soon-tag {
   font-size: var(--fs-ui); color: var(--text-light);
-  background: var(--bg); padding: 8px 12px; border-radius: var(--radius-md); width: 100%;
+  background: var(--bg); padding: 8px 12px; border-radius: var(--radius-md);
+  grid-column: 1 / -1;
 }
 
 .chapter-picker { border-top: 1px dashed var(--border); padding-top: 12px; }
