@@ -597,7 +597,7 @@ function renderDailyCard() {
 function renderArenaSetup() {
   // Which subjects for this board have a bank?
   const ARENA_EXCLUDE = new Set(['Hindi', 'English']);
-  const boardSubjects = (ARENA_SUBJECTS[state.board] || []).filter(s => !ARENA_EXCLUDE.has(s));
+  const boardSubjects = (SUBJECTS[state.grade]?.[state.board] || []).filter(s => !ARENA_EXCLUDE.has(s));
   const available = boardSubjects.filter(s => {
     if (bankSlug(s, state.board, state.grade)) return true;  // has own bank
     if (SCIENCE_VIRTUAL.has(s)) return !!bankSlug('Science', state.board, state.grade); // virtual via Science
