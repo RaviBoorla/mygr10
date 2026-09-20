@@ -376,5 +376,89 @@
       "RBI lends at bank rate (penal rate) to solvent but illiquid banks.",
       "This prevents bank runs and maintains financial stability and public confidence."
     ]
+  },
+  {
+    "id": "sol-macro-ch4-q1",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "What is marginal propensity to consume? How is it related to marginal propensity to save?",
+    "solution": "Marginal Propensity to Consume (MPC) is the ratio of change in consumption (ΔC) to change in income (ΔY). MPC = ΔC/ΔY. It measures the fraction of additional income that is spent on consumption. MPC lies between 0 and 1. Marginal Propensity to Save (MPS) is the ratio of change in saving (ΔS) to change in income (ΔY). MPS = ΔS/ΔY. Relationship: Since income is either consumed or saved, ΔY = ΔC + ΔS. Dividing throughout by ΔY: 1 = MPC + MPS, therefore MPS = 1 − MPC. If MPC = 0.8, then MPS = 0.2. They are complementary — as one increases, the other decreases by the same amount.",
+    "steps": [
+      "MPC = ΔC/ΔY — fraction of additional income spent on consumption.",
+      "MPS = ΔS/ΔY — fraction of additional income saved.",
+      "ΔY = ΔC + ΔS → divide by ΔY → MPC + MPS = 1.",
+      "Therefore MPS = 1 − MPC; they are complementary and sum to 1."
+    ]
+  },
+  {
+    "id": "sol-macro-ch4-q2",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What is the difference between ex ante investment and ex post investment?",
+    "solution": "Ex ante investment (planned investment) is the investment that firms plan or intend to make during a period. It is a forward-looking concept and is determined by expected profit, interest rate, and business confidence. Ex post investment (actual/realised investment) is the investment that actually takes place during the period. It includes both planned investment and unintended changes in inventories. Difference: Ex ante ≠ Ex post when the economy is not in equilibrium. If actual output > planned aggregate demand, unsold goods accumulate as unintended inventory investment — ex post investment > ex ante investment. Equilibrium is reached when ex ante investment equals ex ante saving (planned S = planned I), at which point ex ante = ex post.",
+    "steps": [
+      "Ex ante investment = planned/intended investment by firms (forward-looking).",
+      "Ex post investment = actual investment realised, includes unintended inventory changes.",
+      "Out of equilibrium: unsold stocks add to ex post investment → ex post > ex ante.",
+      "Equilibrium condition: ex ante I = ex ante S → ex ante = ex post."
+    ]
+  },
+  {
+    "id": "sol-macro-ch4-q3",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What do you understand by 'parametric shift of a line'? How does a line shift when its (i) slope decreases, and (ii) its intercept increases?",
+    "solution": "A parametric shift of a line refers to a change in the position or slope of a line caused by a change in a parameter (a constant/exogenous variable) in the equation of the line. Consider the consumption function: C = C̄ + cY, where C̄ is the intercept and c (MPC) is the slope. (i) When slope decreases (MPC falls): The line becomes flatter — it rotates downward around the intercept. At every level of income, a smaller fraction is consumed, so the line swings down. (ii) When intercept increases (C̄ rises): The line shifts upward in parallel — the slope remains the same but consumption is higher at every income level. Graphically, a slope change rotates the line; an intercept change shifts it parallel.",
+    "steps": [
+      "Parametric shift = change in line's position or slope due to change in an exogenous parameter.",
+      "(i) Slope decreases → line rotates downward (becomes flatter); lower consumption at each income.",
+      "(ii) Intercept increases → line shifts upward parallel; same slope but higher consumption at every income.",
+      "Slope change = rotation; intercept change = parallel shift."
+    ]
+  },
+  {
+    "id": "sol-macro-ch4-q4",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "What is 'effective demand'? How will you derive the autonomous expenditure multiplier when price of final goods and the rate of interest are given?",
+    "solution": "Effective demand is the level of aggregate demand (AD) at which the economy is in equilibrium — i.e., where planned aggregate expenditure equals aggregate output (Y = AD). It is the level of demand that actually determines the equilibrium level of income and output. Derivation of autonomous expenditure multiplier: With given price level and interest rate, the AD function is AD = Ā + cY, where Ā is autonomous expenditure (C̄ + I̅) and c = MPC. At equilibrium: Y = AD → Y = Ā + cY → Y − cY = Ā → Y(1−c) = Ā → Y = Ā × 1/(1−c). The autonomous expenditure multiplier = 1/(1−c) = 1/MPS. A Rs 1 increase in autonomous spending raises equilibrium income by Rs 1/(1−c). Since MPS = 1−c, multiplier = 1/MPS.",
+    "steps": [
+      "Effective demand = equilibrium level of AD where planned spending = output (Y = AD).",
+      "AD = Ā + cY; at equilibrium Y = Ā + cY.",
+      "Solve: Y − cY = Ā → Y(1−c) = Ā → Y = Ā/(1−c).",
+      "Autonomous expenditure multiplier = 1/(1−c) = 1/MPS."
+    ]
+  },
+  {
+    "id": "sol-macro-ch4-q5",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Measure the level of ex-ante aggregate demand when autonomous investment and consumption expenditure (A) is Rs 50 crores, and MPS is 0.2 and level of income (Y) is Rs 4000 crores. State whether the economy is in equilibrium or not (cite reasons).",
+    "solution": "Given: Autonomous expenditure Ā = Rs 50 crores, MPS = 0.2 → MPC (c) = 1 − 0.2 = 0.8, Y = Rs 4,000 crores. Ex-ante AD = Ā + cY = 50 + 0.8 × 4,000 = 50 + 3,200 = Rs 3,250 crores. The economy is NOT in equilibrium because ex-ante AD (Rs 3,250 crores) ≠ Y (Rs 4,000 crores). Since AD < Y, there is excess supply of Rs 750 crores. Unsold goods accumulate as unintended inventory build-up. Firms will reduce production and income will fall until equilibrium is restored. Equilibrium Y = Ā/(1−c) = 50/0.2 = Rs 250 crores (if no other spending). Note: with only autonomous spending of 50, equilibrium Y = 250; the given Y = 4,000 is far above equilibrium, confirming excess supply.",
+    "steps": [
+      "MPC = 1 − MPS = 1 − 0.2 = 0.8.",
+      "Ex-ante AD = Ā + cY = 50 + 0.8 × 4,000 = Rs 3,250 crores.",
+      "AD (3,250) < Y (4,000) → excess supply of Rs 750 crores → NOT in equilibrium.",
+      "Firms reduce output; income falls towards equilibrium (Y* = Ā/MPS = 50/0.2 = Rs 250 crores)."
+    ]
+  },
+  {
+    "id": "sol-macro-ch4-q6",
+    "chapter": "Determination of Income and Employment",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Explain 'Paradox of Thrift'.",
+    "solution": "The Paradox of Thrift states that if all individuals in an economy simultaneously try to save more (increase their marginal propensity to save / decrease MPC), the total saving in the economy does not increase — it may remain the same or even decrease. Explanation: If everyone becomes more thrifty, MPC falls (say from 0.8 to 0.5). This reduces aggregate demand (AD). The fall in AD leads to a fall in equilibrium output and income through the multiplier effect. As income falls, people's ability to save also falls. In the new equilibrium, total saving = total investment (which has not changed), so total saving is unchanged. The paradox: individually prudent behaviour (saving more) leads to a collectively harmful outcome (lower income and no more saving). This is the paradox — what is good for an individual is bad for the economy as a whole.",
+    "steps": [
+      "Paradox of Thrift: all trying to save more → AD falls → income falls (multiplier in reverse).",
+      "Falling income reduces actual saving ability — total saving stays the same as before.",
+      "New equilibrium: S = I (unchanged I) → total saving unchanged despite higher saving intent.",
+      "Individually rational (save more) → collectively irrational (lower income, same saving) — the paradox."
+    ]
   }
 ]
