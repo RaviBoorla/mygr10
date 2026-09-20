@@ -1,0 +1,47 @@
+# Rise — Board Exam Practice
+
+> A free, client-only progressive web app (PWA) for CBSE and ICSE Grade 10
+> board-exam preparation. No login required for core practice features.
+
+## What Rise does
+
+Rise helps Grade 10 students prepare for CBSE and ICSE board exams through:
+
+- **Mock tests** — timed, full-length MCQ tests per subject (Mathematics,
+  Physics, Chemistry, Biology, Computer Science, English, Social Science,
+  Economics, and more)
+- **Short-answer practice** — board-style short and long answer questions with
+  model answers
+- **Textbook solved exercises** — step-by-step worked solutions to NCERT and
+  other textbook exercises
+- **Revision notes** — concise subject-wise notes organised by chapter
+- **Leitner spaced-repetition** — questions surface again based on how well
+  a student answered them
+- **Daily streaks and goals** — habit-tracking to encourage consistent study
+- **Arena mode** — competitive timed challenges
+- **AI tutor** — in-app AI explanations for questions
+
+## Supported boards and grades
+
+- CBSE Grade 10
+- ICSE Grade 10
+- CBSE Grade 12 (partial — Mathematics, Physics, Chemistry, Biology,
+  Computer Science, Economics, Political Science, Psychology)
+
+## Technology
+
+Static PWA served from Cloudflare Pages. No server-side code. All progress
+stored in the browser (localStorage). Firebase Authentication (optional sign-in
+for cross-device sync) and Firestore (family/group challenge features).
+
+## Key URLs
+
+- App: https://rise.strat101.com/
+- Privacy: https://rise.strat101.com/privacy.html
+- Terms: https://rise.strat101.com/terms.html
+- Contact: rise@strat101.com
+
+## Content licensing
+
+Question banks are original content created for Rise. Not for reproduction
+without permission. Model answers are based on NCERT/board marking schemes.

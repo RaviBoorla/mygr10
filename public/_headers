@@ -2,17 +2,21 @@
 # blocks Firebase from detecting popup closure, causing auth/modal glitches.
 /*
   Cross-Origin-Opener-Policy: same-origin-allow-popups
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 # HTML — always revalidate so updated app files are picked up immediately
 /*.html
   Cache-Control: no-cache, must-revalidate
 
-# App scripts and styles — revalidate on every request
+# App scripts and styles — versioned via query string so safe to cache 1 day
 /*.js
-  Cache-Control: no-cache, must-revalidate
+  Cache-Control: public, max-age=86400
 
 /*.css
-  Cache-Control: no-cache, must-revalidate
+  Cache-Control: public, max-age=86400
 
 # Question bank JSON — revalidate (content changes when banks are updated)
 /questions/*.json
@@ -25,5 +29,17 @@
 /*.ico
   Cache-Control: public, max-age=604800
 
+/*.svg
+  Cache-Control: public, max-age=604800
+
 /manifest.json
+  Cache-Control: public, max-age=86400
+
+/sitemap.xml
+  Cache-Control: public, max-age=86400
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/llms.txt
   Cache-Control: public, max-age=86400
