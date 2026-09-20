@@ -154,16 +154,16 @@ const NOTES_CATALOG = [
   { id: 'Physics',     label: 'Physics' },
   { id: 'Chemistry',   label: 'Chemistry' },
   { id: 'Biology',     label: 'Biology' },
-  { id: 'Social Science',   label: 'Soc Sci' },
-  { id: 'History',          label: 'History' },
+  { id: 'Social Science',   label: 'Social Science' },
+  { id: 'History',          label: 'History & Civics' },
   { id: 'Geography',        label: 'Geography' },
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
   { id: 'Comp App & IT',     label: 'Computer Science' },
   { id: 'Economics',         label: 'Economics' },
-  { id: 'Political Science', label: 'Pol Science' },
+  { id: 'Political Science', label: 'Political Science' },
   { id: 'Psychology',        label: 'Psychology' },
-  { id: 'Information Practices', label: 'Inf Practices' }
+  { id: 'Information Practices', label: 'Information Practices' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────
