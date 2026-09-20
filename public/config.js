@@ -103,7 +103,8 @@ const SOLVED_BANKS = {
   'XII CBSE Mathematics':           'XII-CBSE-Mathematics-Solved',
   'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-Solved',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science-Solved',
-  'XII CBSE Psychology':            'XII-CBSE-Psychology-Solved'
+  'XII CBSE Psychology':            'XII-CBSE-Psychology-Solved',
+  'XII CBSE Economics':             'XII-CBSE-Economics-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
