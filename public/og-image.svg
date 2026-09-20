@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#2563eb"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Logo mark — rising bar chart (left side) -->
+  <g transform="translate(90, 175)">
+    <rect x="0"   y="165" width="52" height="55"  rx="10" fill="rgba(255,255,255,0.40)"/>
+    <rect x="76"  y="110" width="52" height="110" rx="10" fill="rgba(255,255,255,0.65)"/>
+    <rect x="152" y="50"  width="52" height="170" rx="10" fill="#ffffff"/>
+    <!-- Arrow -->
+    <polygon points="178,0 210,46 146,46" fill="#ffffff"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="340" y="305" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="148" font-weight="800" fill="#ffffff" letter-spacing="-4">Rise</text>
+
+  <!-- Divider -->
+  <rect x="90" y="430" width="1020" height="3" rx="2" fill="rgba(255,255,255,0.25)"/>
+
+  <!-- Tagline line 1 -->
+  <text x="90" y="505" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="36" font-weight="500" fill="rgba(255,255,255,0.92)" letter-spacing="0.3">
+    Class X &amp; XII · CBSE / ICSE · Board Prep
+  </text>
+
+  <!-- Tagline line 2 -->
+  <text x="90" y="565" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="400" fill="rgba(255,255,255,0.65)" letter-spacing="0.2">
+    MCQs · Short Answers · Solved Exercises · Revision Notes · Career Pathing
+  </text>
+</svg>
