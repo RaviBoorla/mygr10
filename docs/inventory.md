@@ -3,11 +3,11 @@
 What's actually in each `public/questions/*.json` bank: total question count,
 and — where real board past-paper questions were sourced and labelled — which
 exam years are represented and how many questions come from each. Grade X is
-fully covered below; Grade XII currently has CBSE Solved Exercises banks and
-ICSE Board Short Answers banks, both for Mathematics/Physics/Chemistry/
-Biology/Computer Science (see "Grade XII" section) — no Grade XII MCQ banks
-yet for either board, and no CBSE Short Answers or ICSE Solved Exercises
-banks yet, so those subject cards still show "coming soon".
+fully covered below; Grade XII now has MCQ banks, Short Answers banks, and
+Solved Exercises banks for CBSE across all listed subjects, plus ICSE Board
+Short Answers banks for Mathematics/Physics/Chemistry/Biology/Computer Science
+(see "Grade XII" section). ICSE MCQ banks are empty stubs (ISC papers are
+entirely descriptive/long-answer with no MCQ section).
 
 Regenerate the year/count breakdown with:
 ```
@@ -114,34 +114,76 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 Information Practices, Economics, Political Science, Psychology, Information Technology.
 `SUBJECTS.XII.ICSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science.
 
-CBSE has Solved Exercises banks for five subjects (below); ICSE has Board Short Answers
-banks for five subjects (further below). ISC papers are entirely descriptive/long-answer
-with no MCQ section, so no Mock Test/Chapter Drill banks exist for ICSE Grade XII.
+CBSE now has MCQ banks, Short Answers banks, and Solved Exercises banks across all subjects
+(see tables below). ICSE has Board Short Answers banks for five subjects; ISC papers are
+entirely descriptive/long-answer with no MCQ section, so ICSE MCQ bank files are empty stubs.
 
-❌ = not yet built · ✅ = done
+❌ = not yet built · ✅ = done · ⚠️ = partial
 
 ### Grade XII — content coverage by surface
 
-| Subject | Board | Revision Notes | MCQ Bank | Short Answers | Solved Exercises |
-|---|---|---|---|---|---|
-| Mathematics | CBSE | ✅ 13 ch | ❌ | ❌ | ✅ 943 Qs |
-| Mathematics | ICSE | ❌ | ❌ | ✅ 140 Qs | ❌ |
-| Physics | CBSE | ✅ 14 ch | ❌ | ❌ | ✅ 158 Qs |
-| Physics | ICSE | ❌ | ❌ | ✅ 156 Qs | ❌ |
-| Chemistry | CBSE | ✅ 10 ch | ❌ | ❌ | ✅ 268 Qs |
-| Chemistry | ICSE | ❌ | ❌ | ✅ 150 Qs | ❌ |
-| Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing — PDFs not yet uploaded) | ❌ | ❌ | ⚠️ 135 Qs (Ch 1–2 missing) |
-| Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ |
-| Computer Science | CBSE | ✅ 12 ch | ❌ | ❌ | ✅ 122 Qs |
-| Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ |
-| Information Practices | CBSE | ✅ 6 ch | ❌ | ❌ | ❌ |
-| Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ❌ | ❌ | ✅ 183 Qs |
-| Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ❌ | ❌ | ❌ |
-| Psychology | CBSE | ✅ 7 ch | ❌ | ❌ | ❌ |
-| Information Technology | CBSE | ❌ (no PDF uploaded) | ❌ | ❌ | ❌ |
+| Subject | Board | Revision Notes | MCQ Bank | Short Answers | Solved Exercises | Board Paper Years |
+|---|---|---|---|---|---|---|
+| Mathematics | CBSE | ✅ 13 ch | ✅ 154 Qs | ✅ 126 Qs | ✅ 943 Qs | MCQ: 2026; SA: 2026 |
+| Mathematics | ICSE | ❌ | ❌ | ✅ 140 Qs | ❌ | SA: 2017–2020, 2023 |
+| Physics | CBSE | ✅ 14 ch | ✅ 158 Qs | ✅ 70 Qs | ✅ 158 Qs | MCQ: 2026; SA: 2026 |
+| Physics | ICSE | ❌ | ❌ | ✅ 156 Qs | ❌ | SA: 2018–2020, 2023 |
+| Chemistry | CBSE | ✅ 10 ch | ✅ 115 Qs | ✅ 77 Qs | ✅ 268 Qs | MCQ: 2026; SA: 2026 |
+| Chemistry | ICSE | ❌ | ❌ | ✅ 150 Qs | ❌ | SA: 2018–2020, 2023 |
+| Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing) | ✅ 196 Qs | ✅ 100 Qs | ⚠️ 135 Qs (Ch 1–2 missing) | MCQ: 2026; SA: 2026 |
+| Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ | SA: 2018–2020 |
+| Computer Science | CBSE | ✅ 12 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 122 Qs | MCQ: 2025–2026; SA: 2025–2026 |
+| Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ | SA: 2017–2020, 2023 |
+| Information Practices | CBSE | ✅ 6 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 21 Qs | MCQ: 2025–2026; SA: 2025–2026 |
+| Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ✅ 100 Qs | ✅ 20 Qs | ✅ 183 Qs | MCQ: 2026; SA: 2026 |
+| Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ✅ 78 Qs | ✅ 78 Qs | ✅ 137 Qs | MCQ: 2026; SA: 2026 |
+| Psychology | CBSE | ✅ 7 ch | ✅ 14 Qs | ✅ 23 Qs | ✅ 67 Qs | MCQ: 2026; SA: 2026 |
+| Information Technology | CBSE | ❌ | ✅ 27 Qs | ✅ 18 Qs | ❌ | MCQ: 2026; SA: 2026 |
 
-**Board papers 2022–2024 (CBSE):** ❌ Feature not yet built — no screen, no data files.
-**ICSE Grade XII revision notes:** ❌ PDFs hard to source per user; deferred.
+**ICSE Grade XII revision notes:** ❌ PDFs hard to source; deferred.
+
+### Grade XII CBSE MCQ Banks
+
+All CBSE MCQ banks follow the standard schema: `{id, chapter, text, options[], correct, difficulty, explanation}`.
+Questions are from real CBSE board papers (years noted per bank below). A question's year is
+embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
+
+| Subject | File | Total Qs | Board Paper Years |
+|---|---|---|---|
+| Mathematics | `XII-CBSE-Mathematics.json` | 154 | 2026 Board — 154 Qs |
+| Physics | `XII-CBSE-Physics.json` | 158 | 2026 Board — 158 Qs |
+| Chemistry | `XII-CBSE-Chemistry.json` | 115 | 2026 Board — 115 Qs |
+| Biology | `XII-CBSE-Biology.json` | 196 | 2026 Board — 196 Qs |
+| Computer Science | `XII-CBSE-Computer-Science.json` | 42 | 2025 Board (21), 2026 Board (21) |
+| Information Practices | `XII-CBSE-Information-Practices.json` | 42 | 2025 Board (21), 2026 Board (21) |
+| Economics | `XII-CBSE-Economics.json` | 100 | 2026 Board — 100 Qs |
+| Political Science | `XII-CBSE-Political-Science.json` | 78 | 2026 Board — 78 Qs |
+| Psychology | `XII-CBSE-Psychology.json` | 14 | 2026 Board — 14 Qs |
+| Information Technology | `XII-CBSE-Information-Technology.json` | 27 | 2026 Board — 27 Qs |
+
+ICSE MCQ bank files (`XII-ICSE-*.json`) are present as empty stubs — ISC papers are
+entirely descriptive/long-answer with no MCQ section, so no questions will be added.
+
+### Grade XII CBSE Short Answers Banks
+
+CBSE Grade XII Short Answers follow the same schema as Grade X: `{id, chapter, marks,
+difficulty, source, text, modelAnswer, keyPoints[]}`. All questions from the CBSE 2026
+Board paper (and 2025 for CS/IP) — real past-paper VSA/SA sections.
+
+| Subject | File | Total Qs | Board Paper Years |
+|---|---|---|---|
+| Mathematics | `XII-CBSE-Mathematics-ShortAnswers.json` | 126 | 2026 Board — 126 Qs |
+| Physics | `XII-CBSE-Physics-ShortAnswers.json` | 70 | 2026 Board — 70 Qs |
+| Chemistry | `XII-CBSE-Chemistry-ShortAnswers.json` | 77 | 2026 Board — 77 Qs |
+| Biology | `XII-CBSE-Biology-ShortAnswers.json` | 100 | 2026 Board — 100 Qs |
+| Computer Science | `XII-CBSE-Computer-Science-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
+| Information Practices | `XII-CBSE-Information-Practices-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
+| Economics | `XII-CBSE-Economics-ShortAnswers.json` | 20 | 2026 Board — 20 Qs |
+| Political Science | `XII-CBSE-Political-Science-ShortAnswers.json` | 78 | 2026 Board — 78 Qs |
+| Psychology | `XII-CBSE-Psychology-ShortAnswers.json` | 23 | 2026 Board — 23 Qs |
+| Information Technology | `XII-CBSE-Information-Technology-ShortAnswers.json` | 18 | 2026 Board — 18 Qs |
+
+### Grade XII CBSE Solved Exercises Banks
 
 CBSE Solved Exercises use the same schema as the Grade X Solved Exercises
 banks above: `{id, chapter, exercise, number, question, solution, steps[]}`,
@@ -150,12 +192,15 @@ solution steps (not just final answers).
 
 | Subject | File | Total Qs | Source |
 |---|---|---|---|
-| CBSE Mathematics | `XII-CBSE-Mathematics-Solved.json` | 943 | All 13 NCERT Class XII Mathematics chapters. Per-chapter counts: Relations and Functions 35, Inverse Trigonometric Functions 43, Matrices 56, Determinants 61, Continuity and Differentiability 131, Application of Derivatives 82, Integrals 259, Application of Integrals 9, Differential Equations 98, Vector Algebra 72, Three Dimensional Geometry 25, Linear Programming 10, Probability 62. A small number of figure-dependent questions (e.g. Vector Algebra Ex 10.1 Q4, a couple of Integrals Miscellaneous-Exercise questions with irreparably garbled source text) are skipped. |
-| CBSE Physics | `XII-CBSE-Physics-Solved.json` | 158 | All 14 NCERT Class XII Physics chapters (2025–26 rationalized edition). Per-chapter counts: Electric Charges and Fields 22, Electrostatic Potential and Capacitance 11, Current Electricity 8, Moving Charges and Magnetism 13, Magnetism and Matter 7, Electromagnetic Induction 6, Alternating Current 8, Electromagnetic Waves 10, Ray Optics and Optical Instruments 31, Wave Optics 6, Dual Nature of Radiation and Matter 11, Atoms 9, Nuclei 10, Semiconductor Electronics 6. A handful of figure-dependent questions (particle-track diagrams, resistor-network topology, induction-loop deformation diagrams) are skipped. |
-| CBSE Chemistry | `XII-CBSE-Chemistry-Solved.json` | 268 | All 10 NCERT Class XII Chemistry chapters. Per-chapter counts: Solutions 41, Electrochemistry 18, Chemical Kinetics 30, The d- and f-Block Elements 38, Coordination Compounds 31, Haloalkanes and Haloarenes 22, Alcohols/Phenols and Ethers 30, Aldehydes/Ketones and Carboxylic Acids 19, Amines 14, Biomolecules 25. 4 questions across two chapters (structure-diagram naming/synthesis questions) are skipped. |
-| CBSE Biology | `XII-CBSE-Biology-Solved.json` | 135 | 11 NCERT Class XII Biology chapters (book's own numbering 3–13 — the supplied source material didn't include chapters 1–2). Per-chapter counts: Reproductive Health 12, Principles of Inheritance and Variation 16, Molecular Basis of Inheritance 14, Evolution 9, Human Health and Disease 16, Microbes in Human Welfare 12, Biotechnology: Principles and Processes 12, Biotechnology and Its Applications 13, Organisms and Populations 10, Ecosystem 11, Biodiversity and Conservation 10. Pure drawing-exercise questions are skipped; diagram-describable questions are answered with a full textual description instead. |
-| CBSE Computer Science | `XII-CBSE-Computer-Science-Solved.json` | 122 | 12 of 13 NCERT Class XII Computer Science chapters (Chapter 13, "Project Based Learning", has no exercise section and is omitted). Per-chapter counts: Exception Handling in Python 9, File Handling in Python 10, Stack 7, Queue 8, Sorting 6, Searching 6, Understanding Data 9, Database Concepts 13, Structured Query Language (SQL) 8, Computer Networks 16, Data Communication 13, Security Aspects 17. |
-| CBSE Economics | `XII-CBSE-Economics-Solved.json` | 183 | All 11 NCERT Class XII Economics chapters — both books: Macroeconomics (6 chapters, leec1xx) and Microeconomics (5 chapters, leec2xx). Per-chapter counts — Macro: Introduction 4, National Income Accounting 12, Money and Banking 11, Determination of Income and Employment 6, Government Budget and the Economy 15, Open Economy Macroeconomics 19. Micro: Introduction 8, Theory of Consumer Behaviour 26, Production and Costs 30, Theory of the Firm under Perfect Competition 27, Market Equilibrium 25. |
+| Mathematics | `XII-CBSE-Mathematics-Solved.json` | 943 | All 13 NCERT Class XII Mathematics chapters. Per-chapter counts: Relations and Functions 35, Inverse Trigonometric Functions 43, Matrices 56, Determinants 61, Continuity and Differentiability 131, Application of Derivatives 82, Integrals 259, Application of Integrals 9, Differential Equations 98, Vector Algebra 72, Three Dimensional Geometry 25, Linear Programming 10, Probability 62. A small number of figure-dependent questions (e.g. Vector Algebra Ex 10.1 Q4, a couple of Integrals Miscellaneous-Exercise questions with irreparably garbled source text) are skipped. |
+| Physics | `XII-CBSE-Physics-Solved.json` | 158 | All 14 NCERT Class XII Physics chapters (2025–26 rationalized edition). Per-chapter counts: Electric Charges and Fields 22, Electrostatic Potential and Capacitance 11, Current Electricity 8, Moving Charges and Magnetism 13, Magnetism and Matter 7, Electromagnetic Induction 6, Alternating Current 8, Electromagnetic Waves 10, Ray Optics and Optical Instruments 31, Wave Optics 6, Dual Nature of Radiation and Matter 11, Atoms 9, Nuclei 10, Semiconductor Electronics 6. A handful of figure-dependent questions (particle-track diagrams, resistor-network topology, induction-loop deformation diagrams) are skipped. |
+| Chemistry | `XII-CBSE-Chemistry-Solved.json` | 268 | All 10 NCERT Class XII Chemistry chapters. Per-chapter counts: Solutions 41, Electrochemistry 18, Chemical Kinetics 30, The d- and f-Block Elements 38, Coordination Compounds 31, Haloalkanes and Haloarenes 22, Alcohols/Phenols and Ethers 30, Aldehydes/Ketones and Carboxylic Acids 19, Amines 14, Biomolecules 25. 4 questions across two chapters (structure-diagram naming/synthesis questions) are skipped. |
+| Biology | `XII-CBSE-Biology-Solved.json` | 135 | 11 NCERT Class XII Biology chapters (book's own numbering 3–13 — the supplied source material didn't include chapters 1–2). Per-chapter counts: Reproductive Health 12, Principles of Inheritance and Variation 16, Molecular Basis of Inheritance 14, Evolution 9, Human Health and Disease 16, Microbes in Human Welfare 12, Biotechnology: Principles and Processes 12, Biotechnology and Its Applications 13, Organisms and Populations 10, Ecosystem 11, Biodiversity and Conservation 10. Pure drawing-exercise questions are skipped; diagram-describable questions are answered with a full textual description instead. |
+| Computer Science | `XII-CBSE-Computer-Science-Solved.json` | 122 | 12 of 13 NCERT Class XII Computer Science chapters (Chapter 13, "Project Based Learning", has no exercise section and is omitted). Per-chapter counts: Exception Handling in Python 9, File Handling in Python 10, Stack 7, Queue 8, Sorting 6, Searching 6, Understanding Data 9, Database Concepts 13, Structured Query Language (SQL) 8, Computer Networks 16, Data Communication 13, Security Aspects 17. |
+| Economics | `XII-CBSE-Economics-Solved.json` | 183 | All 11 NCERT Class XII Economics chapters — both books: Macroeconomics (6 chapters, leec1xx) and Microeconomics (5 chapters, leec2xx). Per-chapter counts — Macro: Introduction 4, National Income Accounting 12, Money and Banking 11, Determination of Income and Employment 6, Government Budget and the Economy 15, Open Economy Macroeconomics 19. Micro: Introduction 8, Theory of Consumer Behaviour 26, Production and Costs 30, Theory of the Firm under Perfect Competition 27, Market Equilibrium 25. |
+| Political Science | `XII-CBSE-Political-Science-Solved.json` | 137 | NCERT Class XII Political Science — both books: Contemporary World Politics (6 chapters) and Politics in India since Independence (8 chapters). |
+| Psychology | `XII-CBSE-Psychology-Solved.json` | 67 | NCERT Class XII Psychology — 7 chapters. |
+| Information Practices | `XII-CBSE-Information-Practices-Solved.json` | 21 | NCERT Class XII Information Practices — 6 chapters. |
 
 ICSE Grade XII Board Short Answers use the same schema as the Grade X Short
 Answers banks above: `{id, chapter, subject, marks, difficulty, source, text,
