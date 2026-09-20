@@ -13,7 +13,7 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XII: {
-    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Information Practices', 'Economics', 'Political Science', 'Psychology'],
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
   }
 };
@@ -49,7 +49,7 @@ const BANKS = {
   'XII CBSE Economics':             'XII-CBSE-Economics',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science',
   'XII CBSE Psychology':            'XII-CBSE-Psychology',
-  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices'
+  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices'
 };
 
 const SA_BANKS = {
@@ -81,7 +81,7 @@ const SA_BANKS = {
   'XII CBSE Economics':             'XII-CBSE-Economics-ShortAnswers',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science-ShortAnswers',
   'XII CBSE Psychology':            'XII-CBSE-Psychology-ShortAnswers',
-  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-ShortAnswers'
+  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -101,7 +101,7 @@ const SOLVED_BANKS = {
   'XII CBSE Chemistry':             'XII-CBSE-Chemistry-Solved',
   'XII CBSE Biology':               'XII-CBSE-Biology-Solved',
   'XII CBSE Mathematics':           'XII-CBSE-Mathematics-Solved',
-  'XII CBSE Information Practices': 'XII-CBSE-Information-Practices-Solved',
+  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-Solved',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science-Solved',
   'XII CBSE Psychology':            'XII-CBSE-Psychology-Solved',
   'XII CBSE Economics':             'XII-CBSE-Economics-Solved'
@@ -163,7 +163,7 @@ const NOTES_CATALOG = [
   { id: 'Economics',         label: 'Economics' },
   { id: 'Political Science', label: 'Political Science' },
   { id: 'Psychology',        label: 'Psychology' },
-  { id: 'Information Practices', label: 'Information Practices' }
+  { id: 'Informatics Practices', label: 'Informatics Practices' }
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────

@@ -111,7 +111,7 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 ## Grade XII
 
 `SUBJECTS.XII.CBSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science,
-Information Practices, Economics, Political Science, Psychology, Information Technology.
+Informatics Practices, Economics, Political Science, Psychology, Information Technology.
 `SUBJECTS.XII.ICSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science.
 
 CBSE now has MCQ banks, Short Answers banks, and Solved Exercises banks across all subjects
@@ -134,7 +134,7 @@ entirely descriptive/long-answer with no MCQ section, so ICSE MCQ bank files are
 | Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ | SA: 2018–2020 |
 | Computer Science | CBSE | ✅ 12 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 122 Qs | MCQ: 2025–2026; SA: 2025–2026 |
 | Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ | SA: 2017–2020, 2023 |
-| Information Practices | CBSE | ✅ 6 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 21 Qs | MCQ: 2025–2026; SA: 2025–2026 |
+| Informatics Practices | CBSE | ✅ 6 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 21 Qs | MCQ: 2025–2026; SA: 2025–2026 |
 | Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ✅ 100 Qs | ✅ 20 Qs | ✅ 183 Qs | MCQ: 2026; SA: 2026 |
 | Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ✅ 78 Qs | ✅ 78 Qs | ✅ 137 Qs | MCQ: 2026; SA: 2026 |
 | Psychology | CBSE | ✅ 7 ch | ✅ 14 Qs | ✅ 23 Qs | ✅ 67 Qs | MCQ: 2026; SA: 2026 |
@@ -155,7 +155,7 @@ embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
 | Chemistry | `XII-CBSE-Chemistry.json` | 115 | 2026 Board — 115 Qs |
 | Biology | `XII-CBSE-Biology.json` | 196 | 2026 Board — 196 Qs |
 | Computer Science | `XII-CBSE-Computer-Science.json` | 42 | 2025 Board (21), 2026 Board (21) |
-| Information Practices | `XII-CBSE-Information-Practices.json` | 42 | 2025 Board (21), 2026 Board (21) |
+| Informatics Practices | `XII-CBSE-Information-Practices.json` | 42 | 2025 Board (21), 2026 Board (21) |
 | Economics | `XII-CBSE-Economics.json` | 100 | 2026 Board — 100 Qs |
 | Political Science | `XII-CBSE-Political-Science.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology.json` | 14 | 2026 Board — 14 Qs |
@@ -177,7 +177,7 @@ Board paper (and 2025 for CS/IP) — real past-paper VSA/SA sections.
 | Chemistry | `XII-CBSE-Chemistry-ShortAnswers.json` | 77 | 2026 Board — 77 Qs |
 | Biology | `XII-CBSE-Biology-ShortAnswers.json` | 100 | 2026 Board — 100 Qs |
 | Computer Science | `XII-CBSE-Computer-Science-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
-| Information Practices | `XII-CBSE-Information-Practices-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
+| Informatics Practices | `XII-CBSE-Information-Practices-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
 | Economics | `XII-CBSE-Economics-ShortAnswers.json` | 20 | 2026 Board — 20 Qs |
 | Political Science | `XII-CBSE-Political-Science-ShortAnswers.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology-ShortAnswers.json` | 23 | 2026 Board — 23 Qs |
@@ -200,7 +200,7 @@ solution steps (not just final answers).
 | Economics | `XII-CBSE-Economics-Solved.json` | 183 | All 11 NCERT Class XII Economics chapters — both books: Macroeconomics (6 chapters, leec1xx) and Microeconomics (5 chapters, leec2xx). Per-chapter counts — Macro: Introduction 4, National Income Accounting 12, Money and Banking 11, Determination of Income and Employment 6, Government Budget and the Economy 15, Open Economy Macroeconomics 19. Micro: Introduction 8, Theory of Consumer Behaviour 26, Production and Costs 30, Theory of the Firm under Perfect Competition 27, Market Equilibrium 25. |
 | Political Science | `XII-CBSE-Political-Science-Solved.json` | 137 | NCERT Class XII Political Science — both books: Contemporary World Politics (6 chapters) and Politics in India since Independence (8 chapters). |
 | Psychology | `XII-CBSE-Psychology-Solved.json` | 67 | NCERT Class XII Psychology — 7 chapters. |
-| Information Practices | `XII-CBSE-Information-Practices-Solved.json` | 21 | NCERT Class XII Information Practices — 6 chapters. |
+| Informatics Practices | `XII-CBSE-Information-Practices-Solved.json` | 21 | NCERT Class XII Informatics Practices — 6 chapters. |
 
 ICSE Grade XII Board Short Answers use the same schema as the Grade X Short
 Answers banks above: `{id, chapter, subject, marks, difficulty, source, text,

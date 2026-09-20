@@ -2668,7 +2668,7 @@ REVISION['XII Political Science PISI'] = [
   }
 ];
 
-REVISION['XII Information Practices'] = [
+REVISION['XII Informatics Practices'] = [
   {
     chapter: 'Querying and SQL Functions',
     formulae: [

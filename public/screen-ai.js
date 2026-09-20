@@ -143,7 +143,7 @@ function _aiSystemPrompt(query) {
 
 You cover ALL subjects across both grades:
 Grade X (CBSE & ICSE): Mathematics, Science (Physics, Chemistry, Biology), Social Science, History & Civics, Geography, English, Hindi, Computer Science / Computer Applications, Information Technology.
-Grade XII CBSE: Mathematics, Physics, Chemistry, Biology, Computer Science, Economics (Microeconomics & Macroeconomics), Political Science, Psychology, Information Practices.
+Grade XII CBSE: Mathematics, Physics, Chemistry, Biology, Computer Science, Economics (Microeconomics & Macroeconomics), Political Science, Psychology, Informatics Practices.
 Grade XII ICSE: Mathematics, Physics, Chemistry, Biology, Computer Science.
 Also: career pathing, stream selection (Science / Commerce / Humanities / Vocational), and exam guidance (JEE, NEET, CUET, board exams, and more).
 

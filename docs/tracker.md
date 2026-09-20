@@ -28,7 +28,7 @@ Lazy-loaded `revision-data-xii.js` (separate from the Grade X `revision-data.js`
 | Chemistry | 10 | Current reduced syllabus (Solutions through Biomolecules) |
 | Biology | 11 | Chapters 3–13; ❌ Ch 2 (Sexual Reproduction in Flowering Plants) and Ch 3 wait — **Ch 1 & 2 PDFs not yet uploaded** |
 | Computer Science | 12 | Python-based CBSE syllabus, all chapters |
-| Information Practices | 6 | SQL Functions, Pandas I & II, Matplotlib, Internet & Web, Societal Impacts — from NCERT IP textbook |
+| Informatics Practices | 6 | SQL Functions, Pandas I & II, Matplotlib, Internet & Web, Societal Impacts — from NCERT IP textbook |
 | Economics (Micro) | 5 | Introduction through Government Budget |
 | Economics (Macro) | 6 | National Income through Balance of Payments |
 | Political Science | 14 (6+8) | CWP book + PISI book merged |
