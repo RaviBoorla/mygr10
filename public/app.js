@@ -186,7 +186,9 @@ const app = {
     </button>`;
 
     const params = state.params || [];
-    const crumbParts = [BOARDS.find(b => b.id === state.board)?.name || ''].filter(Boolean);
+    const boardName = BOARDS.find(b => b.id === state.board)?.name || '';
+    const gradeLabel = GRADES.find(g => g.id === state.grade)?.label || '';
+    const crumbParts = [boardName, gradeLabel].filter(Boolean);
     if (state.screen === 'notes') crumbParts.push('Revision Notes');
     else if (state.screen === 'progress') crumbParts.push('Progress');
     else if (state.screen === 'shortanswers') { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Board Short Answers'); }
