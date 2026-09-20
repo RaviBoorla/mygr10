@@ -53,7 +53,7 @@ Object.assign(app, {
         <article class="subj-card card">
           <header class="subj-head">
             <h3>${esc(subject)}</h3>
-            <span class="subj-meta" data-meta="${esc(subject)}">${hasBank ? '&nbsp;' : ''}</span>
+            <span class="subj-meta" data-meta="${esc(subject)}"></span>
           </header>
           ${hasBank ? this._difficultyBar(subject) : ''}
           <div class="subj-actions">${actions}${saLink}${solvedLink}</div>
@@ -119,11 +119,8 @@ Object.assign(app, {
     (SUBJECTS[state.grade]?.[state.board] || []).filter(s => bankSlug(s)).forEach(subject => {
       loadBank(subject).then(list => {
         const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
-        if (meta) meta.textContent = `${list.length} questions · ${chaptersOf(list).length} chapters`;
         if (state.openPicker === subject) this._renderChips(subject, list);
       }).catch(() => {
-        const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
-        if (meta) meta.textContent = 'Questions unavailable';
       });
     });
     if (state.openPicker) {
