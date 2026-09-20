@@ -21,7 +21,7 @@
     <h1>Privacy Policy — Rise</h1>
     <p class="updated">Last updated: September 2026</p>
 
-    <p>Rise ("the app") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students, operated by Strat101. This policy explains what data is collected, how it is used, and your choices.</p>
+    <p>Rise ("the app") is a self-study practice tool for Class X and XII CBSE and ICSE board-exam students, operated by Strat101. This policy explains what data is collected, how it is used, and your choices.</p>
 
     <h2>1. Summary</h2>
     <p>Rise works fully without an account. When you choose to sign in, some data is stored in the cloud so your progress is available across devices. Multiplayer features (Challenge codes and Live Rooms) store only the minimum data needed for those features to work. We do not sell your data and we do not show you ads.</p>
@@ -43,9 +43,13 @@
             <tr><td>Streak and daily-goal data</td><td>Firestore</td><td>Sync study streak across devices</td></tr>
             <tr><td>Short Answer self-marks and typed drafts</td><td>Firestore</td><td>Continue writing across devices</td></tr>
             <tr><td>Solved-exercise reveal state</td><td>Firestore</td><td>Remember which solutions you have seen</td></tr>
+            <tr><td>Guardian-child links and assignments (if set up)</td><td>Firestore</td><td>Allow a parent or guardian to monitor a linked student's progress and assign practice tests</td></tr>
         </tbody>
     </table>
     <p>All cloud data is stored under your user ID and protected by Firestore security rules — no other user can read or write your data.</p>
+
+    <h3>2e. Ask Cloé (AI study companion)</h3>
+    <p>Cloé is powered by Cloudflare Workers AI by default (requires sign-in). When you send a message to Cloé, your question and relevant chapter context are sent to Cloudflare's AI inference API. Messages are not stored by Rise — they are processed in real time and discarded. If you configure an alternative AI provider (e.g. Anthropic, OpenAI, Gemini) using your own API key, your messages go directly to that provider; Rise does not store or transmit your API key — it remains in your browser's local storage only.</p>
 
     <h3>2c. Challenge codes (async multiplayer)</h3>
     <p>When you finish a Free Run and generate a challenge code, the following is stored in Firestore under a random 6-letter code for up to 7 days:</p>
@@ -74,6 +78,7 @@
             <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Sign-in (email/password and Google)</td></tr>
             <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Cloud sync, challenge codes, live rooms</td></tr>
             <tr><td>Cloudflare Pages</td><td>Cloudflare, Inc.</td><td>Hosting; logs standard web access data (IP, browser) transiently for security and performance</td></tr>
+            <tr><td>Cloudflare Workers AI</td><td>Cloudflare, Inc.</td><td>Powers Cloé AI chat (default provider); your question text and chapter context are sent to Cloudflare's AI inference API in real time and not stored by Rise</td></tr>
             <tr><td>Google Fonts</td><td>Google LLC</td><td>Montserrat and Noto Sans Devanagari typefaces</td></tr>
         </tbody>
     </table>
@@ -84,6 +89,7 @@
 
     <h2>5. Children's privacy</h2>
     <p>Rise is designed for school students. Guest use collects no personal data. If a child creates an account, the data stored is limited to what is described in section 2b above. Parents or guardians may request deletion of a child's account and associated data by emailing us at <a href="mailto:rise@strat101.com">rise@strat101.com</a>.</p>
+    <p>The Family &amp; Assignments feature allows a signed-in parent or guardian to link to a student's account and view that student's attempt history and assign practice tests. Both parties must actively consent to linking. A student can unlink a guardian at any time from their profile. Guardian-visible data is limited to what the student has already recorded in their own account (attempts, scores, assignment status).</p>
 
     <h2>6. Your rights and choices</h2>
     <ul>

@@ -17,16 +17,18 @@ Object.assign(app, {
               </svg>
               <span>Rise</span>
             </div>
-            <p class="welcome-tagline">Grade X &amp; XII board exam practice — free. Sign-in optional.</p>
+            <p class="welcome-tagline">Class X &amp; XII · CBSE / ICSE board prep. No subscription needed.</p>
             <ul class="welcome-features">
-              <li><span class="wf-icon">📝</span><div><strong>Mock tests</strong><span>Timed chapter &amp; full-paper MCQ mocks with instant scoring</span></div></li>
-              <li><span class="wf-icon">⚡</span><div><strong>Arena</strong><span>Solo blitz &amp; live challenge rooms — beat the clock, build combos, race friends</span></div></li>
-              <li><span class="wf-icon">✏️</span><div><strong>Short answers</strong><span>Board-style VSA &amp; SA questions with model answers</span></div></li>
-              <li><span class="wf-icon">📖</span><div><strong>Solved exercises</strong><span>Textbook questions worked step-by-step</span></div></li>
-              <li><span class="wf-icon">🗒️</span><div><strong>Revision notes</strong><span>Key formulae, theorems, logic &amp; tips per chapter</span></div></li>
-              <li><span class="wf-icon">🔁</span><div><strong>Spaced repetition</strong><span>Leitner system resurfaces your weak questions automatically</span></div></li>
-              <li><span class="wf-icon">🔥</span><div><strong>Streaks &amp; goals</strong><span>Daily practice goal with streak tracking to keep you consistent</span></div></li>
-              <li><span class="wf-icon">✦</span><div><strong>Ask Cloé</strong><span>AI study companion — ask anything about your Grade 10 subjects, get concise answers &amp; curious follow-up questions</span></div></li>
+              <li><span class="wf-icon">📝</span><div><strong>Mock tests</strong><span>Timed MCQs, instant scoring</span></div></li>
+              <li><span class="wf-icon">⚡</span><div><strong>Arena</strong><span>Blitz &amp; live challenge rooms</span></div></li>
+              <li><span class="wf-icon">✏️</span><div><strong>Short answers</strong><span>Board Q&amp;A with model answers</span></div></li>
+              <li><span class="wf-icon">📖</span><div><strong>Solved exercises</strong><span>Textbook steps worked out</span></div></li>
+              <li><span class="wf-icon">🗒️</span><div><strong>Revision notes</strong><span>Formulae, logic &amp; tips per chapter</span></div></li>
+              <li><span class="wf-icon">🔁</span><div><strong>Spaced repetition</strong><span>Leitner resurfaces weak spots</span></div></li>
+              <li><span class="wf-icon">🔥</span><div><strong>Streaks &amp; goals</strong><span>Daily practice habit tracker</span></div></li>
+              <li><span class="wf-icon">✦</span><div><strong>Ask Cloé</strong><span>AI study companion, X &amp; XII</span></div></li>
+              <li><span class="wf-icon">🎯</span><div><strong>Career Pathing</strong><span>Streams, careers &amp; colleges</span></div></li>
+              <li><span class="wf-icon">👨‍👩‍👧</span><div><strong>Family &amp; assignments</strong><span>Parents track &amp; assign practice</span></div></li>
             </ul>
             </div><!-- welcome-left-inner -->
           </div>
@@ -39,7 +41,7 @@ Object.assign(app, {
                   <span>${esc(b.desc)}</span>
                 </button>`).join('')}
             </div>
-            <p class="welcome-foot">You can switch boards any time from the ☰ menu.</p>
+            <p class="welcome-foot">Grade X &amp; XII · Switch board or grade any time from the ☰ menu.</p>
           </div>
         </div>
       </div>`;
