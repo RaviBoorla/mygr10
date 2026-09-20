@@ -38,7 +38,7 @@ Object.assign(app, {
 
       const solvedSlug = solvedBankSlug(subject);
       const solvedLink = solvedSlug
-        ? `<button class="btn act-btn ghost half" onclick="app.go(['solved','${esc(subject)}'])">Textbook Solved Exercises</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['solved','${esc(subject)}'])">Textbook Solved</button>`
         : '';
 
       const bmCount  = hasBank ? this._bookmarkCount(subject) : 0;
