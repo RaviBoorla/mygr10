@@ -561,7 +561,12 @@ kbd {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
 }
 .rev-heading-row .grade-tabs { margin: 0; flex-shrink: 0; }
-.rev-heading-row .notes-subj-tabs { margin: 0; }
+.notes-subj-select {
+  padding: 8px 12px; font-size: var(--fs-body); font-family: inherit;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--surface); color: var(--text); cursor: pointer;
+  min-width: 160px;
+}
 
 .home-heading-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;

@@ -168,7 +168,7 @@ Object.assign(app, {
       return `
         <div class="screen rev-screen">
           <div class="rev-heading-row">
-            <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
+            ${this._subjectSelect(id)}
             <div class="rev-heading-right">
               ${this._gradeTabs()}
               <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
@@ -185,7 +185,7 @@ Object.assign(app, {
     return `
       <div class="screen rev-screen">
         <div class="rev-heading-row">
-          <div class="filter-bar notes-subj-tabs">${this._subjectTabs(id)}</div>
+          ${this._subjectSelect(id)}
           <div class="rev-heading-right">
             ${this._gradeTabs()}
             <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
@@ -217,9 +217,10 @@ Object.assign(app, {
     return NOTES_CATALOG.filter(s => !XII_ONLY.has(s.id));
   },
 
-  _subjectTabs(activeId) {
-    return this._notesGradeCatalog().map(s => `<button class="filter-tab ${s.id === activeId ? 'active' : ''}"
-             onclick="app.go(['notes','${s.id}','0'])">${esc(s.label)}</button>`).join('');
+  _subjectSelect(activeId) {
+    const opts = this._notesGradeCatalog().map(s =>
+      `<option value="${esc(s.id)}" ${s.id === activeId ? 'selected' : ''}>${esc(s.label)}</option>`).join('');
+    return `<select class="notes-subj-select" onchange="app.go(['notes',this.value,'0'])">${opts}</select>`;
   },
 
   _chLabel(ch) {
