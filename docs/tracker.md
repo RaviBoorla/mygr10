@@ -4,6 +4,19 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII — CBSE Economics Textbook Solved Exercises *(done)*
+
+183 questions across both NCERT Economics books, extracted from the supplied PDF textbooks and worked with full solution steps:
+
+- **Macroeconomics** (book 2, leec1xx): 67 questions across 6 chapters
+  - Introduction 4, National Income Accounting 12, Money and Banking 11, Determination of Income and Employment 6, Government Budget and the Economy 15, Open Economy Macroeconomics 19
+- **Microeconomics** (book 1, leec2xx): 116 questions across 5 chapters
+  - Introduction 8, Theory of Consumer Behaviour 26, Production and Costs 30, Theory of the Firm under Perfect Competition 27, Market Equilibrium 25
+
+Registered in `SOLVED_BANKS` in `config.js` (`'XII CBSE Economics': 'XII-CBSE-Economics-Solved'`). See `docs/inventory.md` → "Grade XII" for full per-chapter breakdown.
+
+---
+
 ## Grade XII — Revision Notes (all subjects) *(done)*
 
 Lazy-loaded `revision-data-xii.js` (separate from the Grade X `revision-data.js`) covering 10 CBSE Grade XII subjects — 98 chapters total:

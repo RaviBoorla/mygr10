@@ -135,7 +135,7 @@ with no MCQ section, so no Mock Test/Chapter Drill banks exist for ICSE Grade XI
 | Computer Science | CBSE | ✅ 12 ch | ❌ | ❌ | ✅ 122 Qs |
 | Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ |
 | Information Practices | CBSE | ✅ 6 ch | ❌ | ❌ | ❌ |
-| Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ❌ | ❌ | ❌ |
+| Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ❌ | ❌ | ✅ 183 Qs |
 | Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ❌ | ❌ | ❌ |
 | Psychology | CBSE | ✅ 7 ch | ❌ | ❌ | ❌ |
 | Information Technology | CBSE | ❌ (no PDF uploaded) | ❌ | ❌ | ❌ |
@@ -155,6 +155,7 @@ solution steps (not just final answers).
 | CBSE Chemistry | `XII-CBSE-Chemistry-Solved.json` | 268 | All 10 NCERT Class XII Chemistry chapters. Per-chapter counts: Solutions 41, Electrochemistry 18, Chemical Kinetics 30, The d- and f-Block Elements 38, Coordination Compounds 31, Haloalkanes and Haloarenes 22, Alcohols/Phenols and Ethers 30, Aldehydes/Ketones and Carboxylic Acids 19, Amines 14, Biomolecules 25. 4 questions across two chapters (structure-diagram naming/synthesis questions) are skipped. |
 | CBSE Biology | `XII-CBSE-Biology-Solved.json` | 135 | 11 NCERT Class XII Biology chapters (book's own numbering 3–13 — the supplied source material didn't include chapters 1–2). Per-chapter counts: Reproductive Health 12, Principles of Inheritance and Variation 16, Molecular Basis of Inheritance 14, Evolution 9, Human Health and Disease 16, Microbes in Human Welfare 12, Biotechnology: Principles and Processes 12, Biotechnology and Its Applications 13, Organisms and Populations 10, Ecosystem 11, Biodiversity and Conservation 10. Pure drawing-exercise questions are skipped; diagram-describable questions are answered with a full textual description instead. |
 | CBSE Computer Science | `XII-CBSE-Computer-Science-Solved.json` | 122 | 12 of 13 NCERT Class XII Computer Science chapters (Chapter 13, "Project Based Learning", has no exercise section and is omitted). Per-chapter counts: Exception Handling in Python 9, File Handling in Python 10, Stack 7, Queue 8, Sorting 6, Searching 6, Understanding Data 9, Database Concepts 13, Structured Query Language (SQL) 8, Computer Networks 16, Data Communication 13, Security Aspects 17. |
+| CBSE Economics | `XII-CBSE-Economics-Solved.json` | 183 | All 11 NCERT Class XII Economics chapters — both books: Macroeconomics (6 chapters, leec1xx) and Microeconomics (5 chapters, leec2xx). Per-chapter counts — Macro: Introduction 4, National Income Accounting 12, Money and Banking 11, Determination of Income and Employment 6, Government Budget and the Economy 15, Open Economy Macroeconomics 19. Micro: Introduction 8, Theory of Consumer Behaviour 26, Production and Costs 30, Theory of the Firm under Perfect Competition 27, Market Equilibrium 25. |
 
 ICSE Grade XII Board Short Answers use the same schema as the Grade X Short
 Answers banks above: `{id, chapter, subject, marks, difficulty, source, text,
