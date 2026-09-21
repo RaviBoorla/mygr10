@@ -1113,6 +1113,25 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .ai-send-btn:hover { opacity: .85; }
 .ai-stop-btn { background: var(--bg); color: var(--text); border: 1px solid var(--border); }
 
+/* Math symbol picker */
+.ai-math-picker {
+  display: flex; flex-wrap: wrap; gap: 4px;
+  padding: 8px; background: var(--surface);
+  border-top: 1px solid var(--border);
+  max-height: 160px; overflow-y: auto;
+}
+.ai-math-sym {
+  font-size: 16px; line-height: 1; width: 32px; height: 32px;
+  border: 1px solid var(--border); border-radius: 4px;
+  background: var(--bg); color: var(--text);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ai-math-sym:hover { background: var(--surface-alt, var(--surface)); border-color: var(--accent, #6366f1); }
+.ai-math-btn-active { background: var(--accent, #6366f1) !important; color: #fff !important; }
+.ai-math-block { display: block; text-align: center; margin: 6px 0; overflow-x: auto; }
+.ai-math-fb { font-family: monospace; opacity: .8; }
+
 /* Config overlay */
 .ai-config-panel {
   position: absolute; inset: 0; background: var(--surface);

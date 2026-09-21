@@ -153,7 +153,8 @@ Rules:
 - End with ONE short follow-up question to push thinking deeper.
 - Warm, energetic tone — smart friend, not textbook. One emoji max per reply, only if it genuinely adds warmth.
 - If off-topic (not Grade 10 studies or career), decline in one line and redirect.
-- Use the knowledge base below as reference only — don't recite verbatim.`;
+- Use the knowledge base below as reference only — don't recite verbatim.
+- For ALL mathematical expressions use LaTeX notation: inline math in $...$ and display/block equations in $$...$$. Examples: $\\sin^2\\theta + \\cos^2\\theta = 1$, $$E = mc^2$$. Never write math as plain text when LaTeX applies.`;
   return ctx ? `${base}\n\nKnowledge base excerpts:\n${ctx}` : base;
 }
 
@@ -183,12 +184,47 @@ function aiSaveHistory(msgs) {
 
 // ── markdown renderer ─────────────────────────────────────────────────────────
 
+function _katexRender(src, display) {
+  try {
+    if (window.katex) return katex.renderToString(src, { displayMode: display, throwOnError: false });
+  } catch { /* fall through */ }
+  return display ? `<span class="ai-math-fb">$$${escHtml(src)}$$</span>` : `<span class="ai-math-fb">$${escHtml(src)}$</span>`;
+}
+
+// Split text on $$...$$ (block) and $...$ (inline) math tokens, return array of {type, val}
+function _splitMath(text) {
+  const tokens = [];
+  // First pass: extract $$...$$ blocks
+  const blockRe = /\$\$([\s\S]+?)\$\$/g;
+  let last = 0, m;
+  while ((m = blockRe.exec(text)) !== null) {
+    if (m.index > last) tokens.push({ type: 'text', val: text.slice(last, m.index) });
+    tokens.push({ type: 'block', val: m[1] });
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) tokens.push({ type: 'text', val: text.slice(last) });
+  // Second pass: inline $...$ within text tokens
+  const result = [];
+  for (const tok of tokens) {
+    if (tok.type !== 'text') { result.push(tok); continue; }
+    const inlineRe = /\$([^$\n]+?)\$/g;
+    let j = 0, n;
+    while ((n = inlineRe.exec(tok.val)) !== null) {
+      if (n.index > j) result.push({ type: 'text', val: tok.val.slice(j, n.index) });
+      result.push({ type: 'inline', val: n[1] });
+      j = n.index + n[0].length;
+    }
+    if (j < tok.val.length) result.push({ type: 'text', val: tok.val.slice(j) });
+  }
+  return result;
+}
+
 function aiRenderMarkdown(text) {
   const lines = text.split('\n');
   const out = [];
   let inCode = false, codeLines = [];
 
-  lines.forEach((line, i) => {
+  lines.forEach((line) => {
     if (line.startsWith('```')) {
       if (!inCode) { inCode = true; codeLines = []; }
       else {
@@ -198,6 +234,9 @@ function aiRenderMarkdown(text) {
       return;
     }
     if (inCode) { codeLines.push(line); return; }
+    // Block math on its own line: $$...$$
+    const bm = line.trim().match(/^\$\$([\s\S]+?)\$\$$/);
+    if (bm) { out.push(`<div class="ai-math-block">${_katexRender(bm[1], true)}</div>`); return; }
     if (line.startsWith('### ')) { out.push(`<h4 class="ai-h">${escHtml(line.slice(4))}</h4>`); return; }
     if (line.startsWith('## '))  { out.push(`<h3 class="ai-h">${escHtml(line.slice(3))}</h3>`); return; }
     if (line.startsWith('# '))   { out.push(`<h3 class="ai-h">${escHtml(line.slice(2))}</h3>`); return; }
@@ -212,10 +251,17 @@ function escHtml(s) {
 }
 
 function aiInline(text) {
-  return escHtml(text)
-    .replace(/`([^`]+)`/g, '<code class="ai-inline-code">$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  // Extract math tokens first, render the rest as markdown
+  const tokens = _splitMath(text);
+  return tokens.map(tok => {
+    if (tok.type === 'block')  return `<span class="ai-math-block">${_katexRender(tok.val, true)}</span>`;
+    if (tok.type === 'inline') return _katexRender(tok.val, false);
+    // plain text: apply markdown formatting
+    return escHtml(tok.val)
+      .replace(/`([^`]+)`/g, '<code class="ai-inline-code">$1</code>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*([^*]+)\*/g, '<em>$1</em>');
+  }).join('');
 }
 
 // ── panel state ───────────────────────────────────────────────────────────────
@@ -224,6 +270,7 @@ const aiState = {
   open: false,
   showConfig: false,
   emojiOpen: false,
+  mathOpen: false,
   listening: false,
   _recognition: null,
   messages: aiLoadHistory(),
@@ -324,8 +371,22 @@ function aiRenderPanel() {
       </div>
       <input type="file" id="ai-bg-input" accept="image/*" style="display:none" onchange="aiPanel._onBgFile(this)">
       <div class="ai-msgs" id="ai-msgs"></div>
+      <div id="ai-math-picker" class="ai-math-picker" hidden>
+        ${[
+          ['²','²'],['³','³'],['⁴','⁴'],['⁰','⁰'],['ⁿ','ⁿ'],
+          ['₁','₁'],['₂','₂'],['₃','₃'],['ₙ','ₙ'],
+          ['√','√'],['∛','∛'],['π','π'],['∞','∞'],['°','°'],
+          ['×','×'],['÷','÷'],['±','±'],['≈','≈'],['≠','≠'],['≤','≤'],['≥','≥'],
+          ['∫','∫'],['∑','∑'],['∏','∏'],['∂','∂'],['Δ','Δ'],
+          ['α','α'],['β','β'],['γ','γ'],['δ','δ'],['θ','θ'],
+          ['λ','λ'],['μ','μ'],['σ','σ'],['φ','φ'],['ω','ω'],
+          ['½','½'],['¼','¼'],['¾','¾'],['⅓','⅓'],['⅔','⅔'],
+          ['→','→'],['⇒','⇒'],['⇔','⇔'],['∴','∴'],['∵','∵'],
+        ].map(([sym, label]) => `<button class="ai-math-sym" onclick="aiPanel.insertSym('${sym}')" title="${label}">${sym}</button>`).join('')}
+      </div>
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
+        <button class="ai-icon-btn ${aiState.mathOpen ? 'ai-math-btn-active' : ''}" title="Math symbols" onclick="aiPanel.toggleMath()">∑</button>
         <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="2"
           onkeydown="aiPanel.handleKey(event)"
           oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,240)+'px'"></textarea>
@@ -459,6 +520,23 @@ const aiPanel = {
       ta?.focus();
     };
     rec.start();
+  },
+  toggleMath() {
+    aiState.mathOpen = !aiState.mathOpen;
+    const picker = document.getElementById('ai-math-picker');
+    if (picker) picker.hidden = !aiState.mathOpen;
+    const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
+    if (btn) btn.classList.toggle('ai-math-btn-active', aiState.mathOpen);
+  },
+  insertSym(sym) {
+    const ta = document.getElementById('ai-input');
+    if (!ta) return;
+    const s = ta.selectionStart, e = ta.selectionEnd;
+    ta.value = ta.value.slice(0, s) + sym + ta.value.slice(e);
+    ta.selectionStart = ta.selectionEnd = s + sym.length;
+    ta.style.height = 'auto';
+    ta.style.height = Math.min(ta.scrollHeight, 240) + 'px';
+    ta.focus();
   },
   retry() {
     if (aiState.streaming) return;
