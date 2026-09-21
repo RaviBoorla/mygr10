@@ -1265,10 +1265,16 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   border: 1px solid var(--border); box-shadow: var(--shadow-lg);
   padding: 28px 24px 24px; display: flex; flex-direction: column; gap: 14px;
 }
+.auth-dialog-header {
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 1;
+  background: var(--surface);
+  padding-bottom: 4px;
+  margin-bottom: 2px;
+}
 .auth-close {
-  position: absolute; top: 12px; right: 14px;
   background: none; border: none; font-size: 22px; line-height: 1;
-  color: var(--text-light); cursor: pointer;
+  color: var(--text-light); cursor: pointer; flex-shrink: 0;
 }
 .auth-title { font-size: var(--fs-h2); font-weight: 800; margin: 0; }
 .auth-sub { font-size: var(--fs-sm); color: var(--text-light); margin: 0; }

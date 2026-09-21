@@ -196,9 +196,11 @@ const SYNC_KEYS = {
     el.setAttribute('hidden', '');
     el.innerHTML = `
       <div class="auth-backdrop" onclick="riseAuth.closeProfile()"></div>
-      <div class="auth-dialog" role="dialog" aria-modal="true" aria-label="Your profile">
-        <button class="auth-close" onclick="riseAuth.closeProfile()" aria-label="Close">&times;</button>
-        <h2 class="auth-title">Your Profile</h2>
+      <div class="auth-dialog" role="dialog" aria-modal="true" aria-label="My profile">
+        <div class="auth-dialog-header">
+          <h2 class="auth-title">My Profile</h2>
+          <button class="auth-close" onclick="riseAuth.closeProfile()" aria-label="Close">&times;</button>
+        </div>
         <p class="auth-sub">Used in Arena group mode to identify you to other players.</p>
         <form onsubmit="riseAuth._saveProfile(event)" class="auth-form">
           <label class="auth-label">Screen Name
