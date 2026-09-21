@@ -179,7 +179,10 @@ function aiLoadHistory() {
   try { return JSON.parse(localStorage.getItem(AI_CHAT_KEY) || '[]'); } catch { return []; }
 }
 function aiSaveHistory(msgs) {
-  try { localStorage.setItem(AI_CHAT_KEY, JSON.stringify(msgs.slice(-40))); } catch { /* ignore */ }
+  try {
+    localStorage.setItem(AI_CHAT_KEY, JSON.stringify(msgs.slice(-40)));
+    window.riseSync?.push?.();
+  } catch { /* ignore */ }
 }
 
 // ── markdown renderer ─────────────────────────────────────────────────────────

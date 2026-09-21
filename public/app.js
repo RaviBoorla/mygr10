@@ -277,7 +277,7 @@ const app = {
     const loginBtn = authUser
       ? `<button class="hdr-avatar" title="Edit profile" onclick="riseAuth.openProfile()" aria-label="Edit profile">
            ${authUser.photoURL
-             ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28">`
+             ? `<img src="${esc(authUser.photoURL)}" alt="" width="28" height="28" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'${esc((authUser.displayName||authUser.email||'?')[0].toUpperCase())}'}))">`
              : `<span>${esc((authUser.displayName || authUser.email || '?')[0].toUpperCase())}</span>`}
            ${familyBadge}
          </button>`

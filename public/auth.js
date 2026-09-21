@@ -17,7 +17,8 @@ const SYNC_KEYS = {
   streak:        'rise.streak',
   saDrafts:      'rise.saDrafts',
   solvedRevealed:'rise.solvedRevealed',
-  aiConfig:      'rise-ai-config-sync'   // provider/model/endpoint only — apiKey never leaves device
+  aiConfig:      'rise-ai-config-sync',  // provider/model/endpoint only — apiKey never leaves device
+  aiHistory:     'rise-ai-history'       // Cloé chat history — synced across devices
 };
 
 (function () {
@@ -96,6 +97,15 @@ const SYNC_KEYS = {
           const merged = { ...local, ...cloudData, apiKey: local.apiKey || '' };
           localStorage.setItem('rise-ai-config', JSON.stringify(merged));
           localStorage.setItem(lsKey, JSON.stringify(cloudData)); // keep sync copy current
+        } else if (name === 'aiHistory') {
+          // Cloud wins; pick whichever array is longer (more history)
+          const localRaw = localStorage.getItem(lsKey);
+          const local = localRaw ? JSON.parse(localRaw) : [];
+          const cloud = Array.isArray(cloudData) ? cloudData : [];
+          const winner = cloud.length >= local.length ? cloud : local;
+          localStorage.setItem(lsKey, JSON.stringify(winner));
+          // Reload in-memory history if AI panel is initialised
+          if (typeof aiState !== 'undefined') aiState.messages = winner;
         } else {
           // cloud wins (authoritative cross-device state)
           localStorage.setItem(lsKey, JSON.stringify(cloudData));
