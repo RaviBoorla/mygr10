@@ -466,7 +466,7 @@
       "False"
     ],
     "correct": 1,
-    "explanation": "Python lists are heterogeneous \u2014 they can hold elements of mixed data types in the same list. For example, [1, 'hello', 3.14, True] is a perfectly valid Python list.",
+    "explanation": "Python lists are heterogeneous — they can hold elements of mixed data types in the same list. For example, [1, 'hello', 3.14, True] is a perfectly valid Python list.",
     "whyWrong": [
       "Incorrect. Unlike arrays in many other languages, Python lists support mixed data types.",
       ""
@@ -486,12 +486,12 @@
       "256"
     ],
     "correct": 2,
-    "explanation": "Operator precedence: ** first \u2192 3**2=9; then % and * left-to-right \u2192 14%9=5; 5*4=20.",
+    "explanation": "Operator precedence: ** first → 3**2=9; then % and * left-to-right → 14%9=5; 5*4=20.",
     "whyWrong": [
-      "Incorrect precedence \u2014 ** has highest priority: 3**2=9, 14%9=5, 5*4=20.",
-      "Incorrect \u2014 not 14%3=2, 2**2=4, 4*4=16 path either.",
+      "Incorrect precedence — ** has highest priority: 3**2=9, 14%9=5, 5*4=20.",
+      "Incorrect — not 14%3=2, 2**2=4, 4*4=16 path either.",
       "",
-      "Incorrect \u2014 exponentiation does not distribute over all operands."
+      "Incorrect — exponentiation does not distribute over all operands."
     ],
     "priority": true
   },
@@ -530,7 +530,7 @@
       "with"
     ],
     "correct": 1,
-    "explanation": "'Break' (capital B) is a valid identifier because Python keywords are case-sensitive. 'break' is a keyword, but 'Break' is not \u2014 identifiers are case-sensitive. 'global', 'def', and 'with' are all Python keywords and cannot be used as identifiers.",
+    "explanation": "'Break' (capital B) is a valid identifier because Python keywords are case-sensitive. 'break' is a keyword, but 'Break' is not — identifiers are case-sensitive. 'global', 'def', and 'with' are all Python keywords and cannot be used as identifiers.",
     "whyWrong": [
       "'global' is a Python reserved keyword and cannot be used as an identifier.",
       "",
@@ -554,10 +554,10 @@
     "correct": 1,
     "explanation": "In Python, keyword arguments must always come after positional arguments. In option B, 'sep=\"*\"' is a keyword argument placed before positional argument '10', which causes a SyntaxError.",
     "whyWrong": [
-      "Valid \u2014 keyword argument 'end' comes after positional arguments.",
+      "Valid — keyword argument 'end' comes after positional arguments.",
       "",
-      "Valid \u2014 keyword argument 'sep' comes after positional arguments.",
-      "Valid \u2014 'A' repeated 10 times."
+      "Valid — keyword argument 'sep' comes after positional arguments.",
+      "Valid — 'A' repeated 10 times."
     ],
     "priority": true
   },
@@ -577,7 +577,7 @@
     "explanation": "L[::-1] reverses the list (not the strings). So ['TIC','TAC'] reversed is ['TAC','TIC']. The individual string contents are unchanged.",
     "whyWrong": [
       "[::-1] reverses the list order, not the characters inside each string.",
-      "This is the original list \u2014 no reversal applied.",
+      "This is the original list — no reversal applied.",
       "This would require both reversing the list AND reversing each string.",
       ""
     ],
@@ -596,7 +596,7 @@
       "or"
     ],
     "correct": 0,
-    "explanation": "The 'is' operator tests object identity \u2014 it returns True if both operands point to the exact same object in memory (same id()). It is different from '==' which tests value equality.",
+    "explanation": "The 'is' operator tests object identity — it returns True if both operands point to the exact same object in memory (same id()). It is different from '==' which tests value equality.",
     "whyWrong": [
       "",
       "'is not' returns True when the two objects are NOT the same object in memory.",
@@ -618,12 +618,12 @@
       "S01#95#S02#96#"
     ],
     "correct": 0,
-    "explanation": "Iterating over a dictionary with 'for key in dict' yields the keys only \u2014 not values. So I takes values 'S01' then 'S02', each printed followed by '#'.",
+    "explanation": "Iterating over a dictionary with 'for key in dict' yields the keys only — not values. So I takes values 'S01' then 'S02', each printed followed by '#'.",
     "whyWrong": [
       "",
       "This would require iterating over D.values(), not D directly.",
       "This would require iterating over D.items() and unpacking key-value pairs.",
-      "This would also require D.items() \u2014 direct iteration yields keys only."
+      "This would also require D.items() — direct iteration yields keys only."
     ],
     "priority": true
   },
@@ -643,9 +643,9 @@
     "explanation": "The UNIQUE constraint on a column (or set of columns) ensures no two rows have the same value. DISTINCT is a SELECT clause keyword (not a constraint), NOT NULL prevents null values, and HAVING filters grouped results.",
     "whyWrong": [
       "",
-      "DISTINCT is a SELECT keyword to remove duplicate rows from query results \u2014 it is not a table constraint.",
+      "DISTINCT is a SELECT keyword to remove duplicate rows from query results — it is not a table constraint.",
       "NOT NULL prevents empty/null values but does not prevent duplicate non-null values.",
-      "HAVING is a clause used to filter groups in GROUP BY queries \u2014 not a column constraint."
+      "HAVING is a clause used to filter groups in GROUP BY queries — not a column constraint."
     ],
     "priority": false
   },
@@ -665,8 +665,8 @@
     "explanation": "Python integers are immutable. N=15 is passed to Change(). Inside Change(), the local N becomes 25 and prints '25$$'. The global N is unaffected and prints '15' after the call. Output: 25$$15.",
     "whyWrong": [
       "",
-      "The function prints first (25$$), then the global N (15) is printed \u2014 order is 25$$15 not 15$$25.",
-      "The global N is not modified by the function \u2014 it stays 15, not 25.",
+      "The function prints first (25$$), then the global N (15) is printed — order is 25$$15 not 15$$25.",
+      "The global N is not modified by the function — it stays 15, not 25.",
       "The end='$$' is only in the function's print; the outer print uses default end='\\n'."
     ],
     "priority": true
@@ -686,10 +686,10 @@
     "correct": 1,
     "explanation": "'WORD' + '5' is valid string concatenation (N is already a string '5'), so 'WORD5' is printed with end='#'. No exception occurs, so the except block is skipped. The finally block always runs, printing 'OVER'. Output: WORD5#OVER.",
     "whyWrong": [
-      "No exception occurs \u2014 'WORD'+'5' is valid \u2014 so the except block does not run.",
+      "No exception occurs — 'WORD'+'5' is valid — so the except block does not run.",
       "",
-      "The finally block always executes regardless of exception \u2014 'OVER' must also appear.",
-      "No exception occurs \u2014 'WORD5#' is printed by try, then 'OVER' by finally."
+      "The finally block always executes regardless of exception — 'OVER' must also appear.",
+      "No exception occurs — 'WORD5#' is printed by try, then 'OVER' by finally."
     ],
     "priority": true
   },
@@ -792,10 +792,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "The Cartesian product combines every row of A with every row of B: rows = 6\u00d75 = 30. Columns are concatenated: cols = 3+2 = 5. So 30 rows and 5 columns \u2014 True.",
+    "explanation": "The Cartesian product combines every row of A with every row of B: rows = 6×5 = 30. Columns are concatenated: cols = 3+2 = 5. So 30 rows and 5 columns — True.",
     "whyWrong": [
       "",
-      "Incorrect \u2014 rows multiply (6\u00d75=30) and columns add (3+2=5), giving exactly 30 rows and 5 columns."
+      "Incorrect — rows multiply (6×5=30) and columns add (3+2=5), giving exactly 30 rows and 5 columns."
     ],
     "priority": false
   },
@@ -812,7 +812,7 @@
       "Modem"
     ],
     "correct": 2,
-    "explanation": "A repeater amplifies/regenerates an incoming signal and retransmits it, allowing data to travel further without degradation. Hubs broadcast to all ports. An Ethernet card (NIC) connects a device to the network. A modem converts digital\u2194analog signals for ISP communication.",
+    "explanation": "A repeater amplifies/regenerates an incoming signal and retransmits it, allowing data to travel further without degradation. Hubs broadcast to all ports. An Ethernet card (NIC) connects a device to the network. A modem converts digital↔analog signals for ISP communication.",
     "whyWrong": [
       "A hub connects multiple devices on a network but does not regenerate signals.",
       "An Ethernet card (NIC) is a device interface, not a signal repeating device.",
@@ -858,9 +858,9 @@
     "correct": 1,
     "explanation": "ARPANET stands for Advanced Research Projects Agency Network, developed by the US Department of Defense's ARPA in the late 1960s. It was the precursor to the modern internet.",
     "whyWrong": [
-      "'American' is incorrect \u2014 it is 'Advanced'.",
+      "'American' is incorrect — it is 'Advanced'.",
       "",
-      "'Programs' is incorrect \u2014 it is 'Projects'.",
+      "'Programs' is incorrect — it is 'Projects'.",
       "Both 'American' and 'Programs' are incorrect."
     ],
     "priority": false
@@ -881,10 +881,10 @@
     "correct": 2,
     "explanation": "A is true: A file opened in 'rb' (read binary) mode is read-only. Calling pickle.dump() on it will raise an error because dump() requires a writable file. R is false: pickle.dump() is used to WRITE (serialize) data to a binary file. pickle.load() is used to READ (deserialize) data.",
     "whyWrong": [
-      "R is false \u2014 pickle.dump() writes, not reads \u2014 so both cannot be true.",
-      "R is false \u2014 pickle.dump() writes data, not reads \u2014 so both cannot be true.",
+      "R is false — pickle.dump() writes, not reads — so both cannot be true.",
+      "R is false — pickle.dump() writes data, not reads — so both cannot be true.",
       "",
-      "A is true (not false) \u2014 'rb' mode is read-only, so pickle.dump() will indeed error."
+      "A is true (not false) — 'rb' mode is read-only, so pickle.dump() will indeed error."
     ],
     "priority": true
   },
@@ -905,10 +905,380 @@
     "explanation": "A is true: SQL JOIN operations allow data retrieval from multiple tables in one query. R is true: a foreign key links a column in one table to the primary key of another, establishing a relational link that enables JOINs. R correctly explains why multi-table retrieval is possible.",
     "whyWrong": [
       "",
-      "R does correctly explain A \u2014 the foreign key relationship is exactly what enables meaningful multi-table queries.",
-      "R is true \u2014 foreign keys do establish relationships between tables.",
-      "A is true \u2014 SQL JOIN enables multi-table retrieval."
+      "R does correctly explain A — the foreign key relationship is exactly what enables meaningful multi-table queries.",
+      "R is true — foreign keys do establish relationships between tables.",
+      "A is true — SQL JOIN enables multi-table retrieval."
     ],
     "priority": true
+  },
+  {
+    "id": "xii-cs-2024-q1",
+    "chapter": "Functions",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "State True or False:\nWhile defining a function in Python, the positional parameters in the function header must always be written after the default parameters. (2024 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "FALSE. Positional (non-default) parameters must come BEFORE default parameters in a function header. Placing them after default parameters causes a SyntaxError.",
+    "whyWrong": [
+      "True is incorrect — Python enforces that positional params precede default params."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q2",
+    "chapter": "Database Management System (SQL)",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "The SELECT statement when combined with __________ clause, returns records without repetition. (2024 Board)",
+    "options": [
+      "DISTINCT",
+      "DESCRIBE",
+      "UNIQUE",
+      "NULL"
+    ],
+    "correct": 0,
+    "explanation": "DISTINCT eliminates duplicate rows from the result set of a SELECT query.",
+    "whyWrong": [
+      "DESCRIBE shows the structure of a table, not used in SELECT for deduplication.",
+      "UNIQUE is a constraint, not a SELECT clause.",
+      "NULL is not a clause; it represents missing data."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q3",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "What will be the output of the following statement?\nprint(16*5/4*2/5-8) (2024 Board)",
+    "options": [
+      "-3.33",
+      "6.0",
+      "0.0",
+      "-13.33"
+    ],
+    "correct": 2,
+    "explanation": "Evaluated left to right (equal precedence for * and /): 16*5=80, 80/4=20.0, 20.0*2=40.0, 40.0/5=8.0, 8.0-8=0.0.",
+    "whyWrong": [
+      "-3.33 is incorrect.",
+      "6.0 is incorrect.",
+      "−13.33 would result from a different grouping."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q4",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "hard",
+    "text": "What possible output from the given options is expected to be displayed when the following Python code is executed?\nimport random\nSignal = ['RED', 'YELLOW', 'GREEN']\nfor K in range(2, 0, -1):\n    R = random.randrange(K)\n    print(Signal[R], end='#') (2024 Board)",
+    "options": [
+      "YELLOW#RED#",
+      "RED#GREEN#",
+      "GREEN#RED#",
+      "YELLOW#GREEN#"
+    ],
+    "correct": 0,
+    "explanation": "range(2,0,-1) gives K=2 then K=1. For K=2, randrange(2) gives 0 or 1 → 'RED' or 'YELLOW'. For K=1, randrange(1) gives only 0 → 'RED'. Only option (a) 'YELLOW#RED#' is a possible output — the others require accessing index 2 ('GREEN') which is unreachable.",
+    "whyWrong": [
+      "RED#GREEN# needs R=2 for K=1, but randrange(1) only gives 0.",
+      "GREEN#RED# needs R=2, which is out of range for randrange(2).",
+      "YELLOW#GREEN# needs R=2, which is impossible."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q5",
+    "chapter": "Database Management System (SQL)",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "In SQL, the aggregate function which will display the cardinality of the table is __________. (2024 Board)",
+    "options": [
+      "sum()",
+      "count(*)",
+      "avg()",
+      "sum(*)"
+    ],
+    "correct": 1,
+    "explanation": "Cardinality is the total number of rows in a table. COUNT(*) counts all rows, including those with NULL values, making it the correct function to display table cardinality.",
+    "whyWrong": [
+      "sum() adds numerical values in a column, not row count.",
+      "avg() computes the arithmetic mean, not row count.",
+      "sum(*) is invalid SQL syntax."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q6",
+    "chapter": "Computer Networks",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Which protocol out of the following is used to send and receive emails over a computer network? (2024 Board)",
+    "options": [
+      "PPP",
+      "HTTP",
+      "FTP",
+      "SMTP"
+    ],
+    "correct": 3,
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol for sending and receiving email messages over a network.",
+    "whyWrong": [
+      "PPP (Point-to-Point Protocol) is used for direct connections between two nodes.",
+      "HTTP is the protocol for transferring web pages.",
+      "FTP is used for transferring files, not emails."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q7",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Identify the invalid Python statement from the following: (2024 Board)",
+    "options": [
+      "d = dict()",
+      "e = {}",
+      "f = []",
+      "g = dict{}"
+    ],
+    "correct": 3,
+    "explanation": "g = dict{} is invalid. dict() must be called with parentheses, not curly braces. The correct forms are dict() or using {} directly.",
+    "whyWrong": [
+      "d = dict() is valid — creates an empty dictionary using the dict constructor.",
+      "e = {} is valid — creates an empty dictionary using literal syntax.",
+      "f = [] is valid — creates an empty list."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q8",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Consider the statements given below and then choose the correct output from the given options:\nmyStr=\"MISSISSIPPI\"\nprint(myStr[:4]+\"#\"+myStr[-5:]) (2024 Board)",
+    "options": [
+      "MISSI#SIPPI",
+      "MISS#SIPPI",
+      "MISS#IPPIS",
+      "MISSI#IPPIS"
+    ],
+    "correct": 1,
+    "explanation": "myStr[:4] = 'MISS' (first 4 chars). myStr[-5:] = last 5 chars of 'MISSISSIPPI' = 'SIPPI'. Result = 'MISS#SIPPI'.",
+    "whyWrong": [
+      "MISSI#SIPPI uses [:5] not [:4].",
+      "MISS#IPPIS reverses the last 5 chars.",
+      "MISSI#IPPIS uses wrong slice on both ends."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q9",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Identify the statement from the following which will raise an error: (2024 Board)",
+    "options": [
+      "print(\"A\"*3)",
+      "print(5*3)",
+      "print(\"15\"+3)",
+      "print(\"15\"+\"13\")"
+    ],
+    "correct": 2,
+    "explanation": "print(\"15\"+3) raises a TypeError because you cannot concatenate a string and an integer in Python.",
+    "whyWrong": [
+      "print(\"A\"*3) → 'AAA' — string repetition is valid.",
+      "print(5*3) → 15 — integer multiplication is valid.",
+      "print(\"15\"+\"13\") → '1513' — string concatenation is valid."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q10",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Select the correct output of the following code:\nevent=\"G20 Presidency@2023\"\nL=event.split(' ')\nprint(L[::-2]) (2024 Board)",
+    "options": [
+      "'G20'",
+      "['Presidency@2023']",
+      "['G20']",
+      "'Presidency@2023'"
+    ],
+    "correct": 1,
+    "explanation": "L = ['G20', 'Presidency@2023']. L[::-2] slices from the end with step -2: starts at index 1 ('Presidency@2023'), next step would go to index -1 (out of bounds). Result is ['Presidency@2023'].",
+    "whyWrong": [
+      "'G20' would need indexing, not slicing, and is at index 0.",
+      "['G20'] would need L[::2] from the start.",
+      "'Presidency@2023' without a list would need direct indexing."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q11",
+    "chapter": "Computer Networks",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Which of the following options is the correct unit of measurement for network bandwidth? (2024 Board)",
+    "options": [
+      "KB",
+      "Bit",
+      "Hz",
+      "Km"
+    ],
+    "correct": 1,
+    "explanation": "Network bandwidth is measured in bits per second (bps, Kbps, Mbps, Gbps). The basic unit is the Bit.",
+    "whyWrong": [
+      "KB (Kilobytes) is a unit of data storage, not bandwidth.",
+      "Hz (Hertz) measures frequency, not bandwidth in data networks.",
+      "Km (Kilometre) is a unit of distance."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q12",
+    "chapter": "Functions",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Observe the given Python code carefully:\na=20\ndef convert(a):\n    b=20\n    a=a+b\nconvert(10)\nprint(a)\nSelect the correct output from the given options: (2024 Board)",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "Error"
+    ],
+    "correct": 1,
+    "explanation": "The variable 'a' inside convert() is local (it's a parameter). Changes to 'a' inside the function do not affect the global variable 'a=20'. So print(a) prints the global value: 20.",
+    "whyWrong": [
+      "10 would be the local parameter value, not accessible outside.",
+      "30 would be the local result (10+20) but it stays local.",
+      "No error occurs; the function simply doesn't return or modify global 'a'."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q13",
+    "chapter": "Exception Handling",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "State whether the following statement is True or False:\nWhile handling exceptions in Python, name of the exception has to be compulsorily added with except clause. (2024 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "FALSE. Python allows a bare 'except:' clause without naming a specific exception type. It will catch all exceptions. Naming the exception is optional (though recommended for good practice).",
+    "whyWrong": [
+      "True is incorrect — 'except:' alone without an exception name is valid syntax."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q14",
+    "chapter": "Database Management System (SQL)",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Which of the following is not a DDL command in SQL? (2024 Board)",
+    "options": [
+      "DROP",
+      "CREATE",
+      "UPDATE",
+      "ALTER"
+    ],
+    "correct": 2,
+    "explanation": "UPDATE is a DML (Data Manipulation Language) command that modifies existing records. DDL commands (CREATE, ALTER, DROP, TRUNCATE) modify the structure/schema of database objects.",
+    "whyWrong": [
+      "DROP is DDL — it removes a database object.",
+      "CREATE is DDL — it creates a database object.",
+      "ALTER is DDL — it modifies the structure of an existing object."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q15",
+    "chapter": "Computer Networks",
+    "subject": "XII Computer Science",
+    "difficulty": "easy",
+    "text": "Fill in the blank:\n__________ is a set of rules that needs to be followed by the communicating parties in order to have a successful and reliable data communication over a network. (2024 Board)",
+    "options": [
+      "Firewall",
+      "Protocol",
+      "IP Address",
+      "Bandwidth"
+    ],
+    "correct": 1,
+    "explanation": "A Protocol is a set of rules governing data communication between devices on a network. Examples include TCP/IP, HTTP, FTP, SMTP.",
+    "whyWrong": [
+      "Firewall is a security system, not a communication ruleset.",
+      "IP Address identifies a device on a network but is not a set of rules.",
+      "Bandwidth is the data transfer capacity, not a ruleset."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q16",
+    "chapter": "File Handling",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Consider the following Python statement:\nF=open('CONTENT.TXT')\nWhich of the following is an invalid statement in Python? (2024 Board)",
+    "options": [
+      "F.seek(1,0)",
+      "F.seek(0,1)",
+      "F.seek(0,-1)",
+      "F.seek(0,2)"
+    ],
+    "correct": 2,
+    "explanation": "F.seek(0,-1) is invalid. The second argument (whence) must be 0 (from beginning), 1 (from current position), or 2 (from end). -1 is not a valid value for whence.",
+    "whyWrong": [
+      "F.seek(1,0) is valid — moves to position 1 from beginning.",
+      "F.seek(0,1) is valid — moves 0 bytes from current position.",
+      "F.seek(0,2) is valid — moves to position 0 from end (end of file)."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q17",
+    "chapter": "File Handling",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): CSV file is a human readable text file where each line has a number of fields, separated by comma or some other delimiter.\nReason (R): writerow() method is used to write a single row in a CSV file.\nChoose the correct option. (2024 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation for (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 1,
+    "explanation": "Both statements are true. CSV files are human-readable text files (A is TRUE). writerow() does write a single row to a CSV file (R is TRUE). However, R does not explain WHY CSV is human-readable — they are independent facts.",
+    "whyWrong": [
+      "(a) is wrong because R doesn't explain A's property of being human-readable.",
+      "(c) is wrong because R is true.",
+      "(d) is wrong because A is true."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2024-q18",
+    "chapter": "Programming in Python",
+    "subject": "XII Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): The expression \"HELLO\".sort() in Python will give an error.\nReason (R): sort() does not exist as a method/function for strings in Python.\nChoose the correct option. (2024 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation for (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 0,
+    "explanation": "Both are TRUE. 'HELLO'.sort() raises an AttributeError (A is TRUE) because strings in Python do not have a sort() method (R is TRUE). R directly explains why A produces an error.",
+    "whyWrong": [
+      "(b) is wrong because R DOES correctly explain A.",
+      "(c) is wrong because R is true.",
+      "(d) is wrong because A is true."
+    ],
+    "priority": 2
   }
 ]
