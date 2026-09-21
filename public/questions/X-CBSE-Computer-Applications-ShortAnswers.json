@@ -583,5 +583,110 @@
       "Superscript tag: <sup>...</sup>",
       "E = MC² → E = MC<sup>2</sup>"
     ]
+  },
+  {
+    "id": "sa-ca-045",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "What is a Digital Property? Write any two examples of digital property.",
+    "modelAnswer": "Digital Property refers to any digital asset or content that belongs to an individual or organisation — content created, owned, or controlled in digital form. Examples: (1) Software programs and applications (e.g., a licensed copy of Microsoft Office). (2) Digital images, music files, e-books, videos. (3) Domain names and websites. (4) Online accounts and social media profiles. (5) Cryptocurrency and digital financial assets.",
+    "keyPoints": [
+      "Digital property: digital assets owned by an individual/organisation",
+      "Examples: software/apps, digital media (images, music, videos)",
+      "Also: domain names, websites, online accounts, e-books",
+      "Digital property has economic value and legal ownership rights"
+    ]
+  },
+  {
+    "id": "sa-ca-046",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "What is e-Shopping? Write names of any two commonly used e-Shopping portals. OR What is a Social Network? Write names of any two popular social networking sites on the Internet.",
+    "modelAnswer": "e-Shopping (Electronic Shopping): The process of buying products and services over the Internet through an online store or portal, without physically visiting a shop. Portals: Amazon.in, Flipkart.com, Meesho, Myntra.\n\nOR\n\nSocial Network: An online platform/website that allows users to create profiles, connect with others, share information, photos, and updates, and communicate. Popular sites: Facebook, Instagram, Twitter/X, LinkedIn, YouTube.",
+    "keyPoints": [
+      "e-Shopping: buying goods/services online without visiting a physical store",
+      "Portals: Amazon, Flipkart, Myntra, Meesho",
+      "Social Network: platform for connecting, communicating, and sharing online",
+      "Sites: Facebook, Instagram, Twitter/X, LinkedIn"
+    ]
+  },
+  {
+    "id": "sa-ca-047",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "State whether the following statements are True or False:\n(i) <h1> is the highest level of heading and <h4> is the lowest level of heading in HTML.\n(ii) A visited link is purple coloured by default in HTML.\n(iii) The character '#' is used to start a comment text in HTML.\n(iv) <b> is an empty tag in HTML as it does not need to be closed.",
+    "modelAnswer": "(i) FALSE — <h1> is the highest level, but <h6> (not <h4>) is the lowest level of heading in HTML.\n(ii) TRUE — The default color of a visited link (vlink) in HTML is purple.\n(iii) FALSE — Comments in HTML start with <!-- and end with -->, not with the '#' character.\n(iv) FALSE — <b> is a container tag (it has both opening <b> and closing </b> tags). Empty tags are those with no closing tag, like <br>, <hr>, <img>.",
+    "keyPoints": [
+      "(i) FALSE: Lowest heading is <h6>, not <h4>",
+      "(ii) TRUE: Visited links are purple by default",
+      "(iii) FALSE: HTML comments start with <!--, not '#'",
+      "(iv) FALSE: <b> is a container tag with </b> closing tag"
+    ]
+  },
+  {
+    "id": "sa-ca-048",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Write the HTML code to create a link to the web page www.festivals.com/india/diwali.html opening in a new window/tab on clicking text 'FESTIVALS'. OR (i) Write HTML code to display 'Happiness is not by chance, but by choice.' in bold and italics. (ii) Write the HTML code to set the background color of the web page as blue.",
+    "modelAnswer": "Link in new tab:\n<a href=\"www.festivals.com/india/diwali.html\" target=\"_blank\">FESTIVALS</a>\n\nOR\n\n(i) Bold and italics:\n<b><i>Happiness is not by chance, but by choice.</i></b>\n\n(ii) Blue background:\n<body bgcolor=\"blue\">",
+    "keyPoints": [
+      "New tab link: <a href=\"URL\" target=\"_blank\">text</a>",
+      "target=\"_blank\" opens link in a new window/tab",
+      "Bold and italics: <b><i>text</i></b>",
+      "Blue background: <body bgcolor=\"blue\">"
+    ]
+  },
+  {
+    "id": "sa-ca-049",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Write the purpose of the following HTML tags: (i) <BR>  (ii) <DL>",
+    "modelAnswer": "(i) <BR> (Line Break tag): Inserts a single line break in a web page. It is an empty/void tag (no closing tag) that moves content to the next line without creating a new paragraph.\nExample: Hello<BR>World\n\n(ii) <DL> (Description List tag): Defines a description/definition list in HTML. It is used with <DT> (description term) and <DD> (description definition) tags to create a list of terms and their corresponding descriptions.",
+    "keyPoints": [
+      "<BR>: inserts a line break; empty tag; no closing tag",
+      "<DL>: defines a description list (term-definition pairs)",
+      "<DL> used with <DT> (term) and <DD> (definition)",
+      "<BR> is inline; <DL> creates a block-level list"
+    ]
+  },
+  {
+    "id": "sa-ca-050",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "An incomplete CSS code within <head>...</head> is given. Complete the code: body{___ : ___; } P { ___: ___; ___: ___; } ___ { Color: Blue; } where (i) Line 1: body background Yellow (ii) Line 2: paragraph text color Red (iii) Line 3: paragraph font-family Arial (iv) Line 4: second biggest heading in Blue color. OR Complete HTML ordered list code with yellow background body and Helvetica font paragraph.",
+    "modelAnswer": "CSS completion:\n<head>\n<style>\nbody { background-color: yellow; }\nP {\n  color: red;\n  font-family: Arial;\n}\nh2 {\n  Color: Blue;\n}\n</style>\n</head>\n\nOR\n\nOrdered list HTML:\n<html>\n<body bgcolor=\"yellow\">\n<p><font face=\"Helvetica\">FESTIVALS OF INDIA</font></p>\n<ol>\n  <li>HOLI</li>\n  <li>DIWALI</li>\n</ol>\n</body>\n</html>",
+    "keyPoints": [
+      "background-color: yellow for body",
+      "color: red; font-family: Arial for paragraph",
+      "h2 selector for second biggest heading",
+      "Ordered list: <ol> with <li> items"
+    ]
+  },
+  {
+    "id": "sa-ca-051",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Write any two differences between Web Server and Web Client.",
+    "modelAnswer": "1. Web Server stores and serves web pages/content to clients. Web Client (browser) requests and receives web pages from servers.\n2. Web Server is a powerful computer/software (e.g., Apache, Nginx) that runs 24×7 to serve requests. Web Client is the user's device/browser (e.g., Chrome, Firefox) that initiates requests.\n3. Web Server sends data (responds). Web Client receives data (requests).",
+    "keyPoints": [
+      "Web Server: stores and serves content; Web Client: requests and displays content",
+      "Web Server is always-on infrastructure software; Web Client is user browser",
+      "Server responds to requests; Client initiates requests",
+      "Server examples: Apache, Nginx; Client examples: Chrome, Firefox"
+    ]
   }
 ]
