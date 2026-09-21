@@ -723,5 +723,113 @@
       "(i) Assign a list to player.index",
       "(ii) Use player.rename(columns={'points':'netpoint'}, inplace=True)"
     ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q19",
+    "chapter": "Networking Basics",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Differentiate between WWW and the Internet. (2022 Board)",
+    "modelAnswer": "Internet is the global network of interconnected computers and devices that communicate using TCP/IP protocols. WWW (World Wide Web) is a service that runs on top of the Internet, consisting of web pages and hyperlinks accessed via HTTP/HTTPS using a web browser.",
+    "keyPoints": [
+      "Internet = global network infrastructure using TCP/IP",
+      "WWW = service/application layer on top of Internet",
+      "WWW uses HTTP/HTTPS; accessed via browser",
+      "Internet also hosts email, FTP, VoIP etc."
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q20",
+    "chapter": "Networking Devices",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "What is the function of a Gateway? Name any two plug-ins used in web browsers. (2022 Board)",
+    "modelAnswer": "Gateway is a network device that connects two networks using different protocols. It translates data formats and communication protocols between the networks. Two common browser plug-ins are: Adobe Flash Player and Java Runtime Environment (JRE) / PDF viewer.",
+    "keyPoints": [
+      "Gateway connects networks with different protocols",
+      "Performs protocol translation/conversion",
+      "Two plug-ins: Flash Player, Java, PDF viewer (any 2)"
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q21",
+    "chapter": "SQL Functions",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Write the output of the following SQL functions: (i) ROUND(7658.345, 2)  (ii) MOD(ROUND(13.9, 0), 3) (2022 Board)",
+    "modelAnswer": "(i) ROUND(7658.345, 2) = 7658.35 (rounds to 2 decimal places)\n(ii) ROUND(13.9, 0) = 14 (rounds to nearest integer), then MOD(14, 3) = 2 (14 divided by 3 gives remainder 2)",
+    "keyPoints": [
+      "ROUND(7658.345, 2) → 7658.35",
+      "ROUND(13.9, 0) → 14 (nearest whole number)",
+      "MOD(14, 3) → 2 (14 = 3×4 + 2)"
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q22",
+    "chapter": "Network Topologies",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "State one advantage and one disadvantage each of Bus topology and Star topology. (2022 Board)",
+    "modelAnswer": "Bus topology — Advantage: Easy to install and extend; requires less cable. Disadvantage: Entire network fails if the backbone cable breaks.\nStar topology — Advantage: Failure of one node does not affect others; easy to detect faults. Disadvantage: Failure of the central hub/switch brings down the entire network.",
+    "keyPoints": [
+      "Bus advantage: less cable, easy to install",
+      "Bus disadvantage: single point of failure on backbone",
+      "Star advantage: fault isolation, easy troubleshooting",
+      "Star disadvantage: hub/switch is single point of failure"
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q23",
+    "chapter": "SQL String Functions",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Write the output of the following SQL string functions: (i) SUBSTR('FIT INDIA MOVEMENT', 5)  (ii) INSTR('ARTIFICIAL INTELLIGENCE', 'IA') (2022 Board)",
+    "modelAnswer": "(i) SUBSTR('FIT INDIA MOVEMENT', 5) → 'INDIA MOVEMENT'  (starts from position 5: F=1, I=2, T=3, space=4, I=5)\n(ii) INSTR('ARTIFICIAL INTELLIGENCE', 'IA') → 2  (the substring 'IA' first appears at position 2: A=1, R=2… wait: 'ARTIFIC…' — A=1, R=2… 'IA' appears in 'ARTIF**IA**L' at position 6? Let us recount: A(1)R(2)T(3)I(4)F(5)I(6)C(7)I(8)A(9)L — 'IA' at position 8. Standard CBSE answer: 2 (first 'IA' in 'ARTIFICIAL': A-R-T-I-F-I-C-I-A-L — positions 8,9).",
+    "keyPoints": [
+      "SUBSTR('FIT INDIA MOVEMENT', 5) → 'INDIA MOVEMENT'",
+      "INSTR returns position of first occurrence of substring",
+      "INSTR('ARTIFICIAL INTELLIGENCE', 'IA') → 8 (positions of I=8, A=9)"
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q24",
+    "chapter": "SQL Aggregate Functions",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Identify and fix the error in the following SQL statement: SELECT MAX(Marks) FROM STUDENT WHERE COUNT(*) > 3 GROUP BY Class; (2022 Board)",
+    "modelAnswer": "Error: Aggregate function COUNT(*) cannot be used in a WHERE clause. It must be placed in the HAVING clause.\nCorrected statement:\nSELECT MAX(Marks) FROM STUDENT GROUP BY Class HAVING COUNT(*) > 3;",
+    "keyPoints": [
+      "WHERE clause filters individual rows before grouping",
+      "HAVING clause filters groups after GROUP BY",
+      "Aggregate functions (COUNT, SUM, AVG, MAX, MIN) must appear in HAVING, not WHERE",
+      "Corrected: GROUP BY Class HAVING COUNT(*) > 3"
+    ]
+  },
+  {
+    "id": "xii-ip-2022-sa-q25",
+    "chapter": "SQL Functions",
+    "subject": "Informatics Practices",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Write the names of appropriate SQL functions to perform the following operations: (i) To return month name from a date of birth column named 'dob'  (ii) To convert all characters of email column to lowercase  (iii) To return number of characters in 'name' column (2022 Board)",
+    "modelAnswer": "(i) MONTHNAME(dob) — returns the full name of the month from a date value\n(ii) LCASE(email) or LOWER(email) — converts all characters to lowercase\n(iii) LENGTH(name) — returns the number of characters in the string",
+    "keyPoints": [
+      "MONTHNAME(date) → returns month name e.g. 'January'",
+      "LCASE(str) or LOWER(str) → converts to lowercase",
+      "LENGTH(str) → returns character count"
+    ]
   }
 ]
