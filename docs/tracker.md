@@ -4,6 +4,25 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII CBSE board papers 2023 (IP, CS, Chemistry, Biology) *(done)*
+
+Real board past-paper MCQs and SAs added for four subjects, one subject per commit:
+
+| Subject | MCQs added | SAs added | Notes |
+|---|---|---|---|
+| Informatics Practices | 18 (xii-ip-2023-q1–q18) | 7 (xii-ip-2023-sa-q19–q25) | Chapters: Networks, Cyber Ethics, MySQL, Pandas |
+| Computer Science | 18 (xii-cs-2023-q1–q18) | 7 (xii-cs-2023-sa-q19–q25) | Chapters: Python, Strings, DS, File Handling, SQL, Networking |
+| Chemistry | 18 (xii-chem-2023-q1–q18) | 7 (xii-chem-2023-sa-q19–q25) | Chapters: Solutions, Electrochemistry, Kinetics, d-f Block, Coordination, Haloalkanes, Alcohols, Amines, Biomolecules |
+| Biology | 16 (xii-bio-2023-q1–q16) | 5 (xii-bio-2023-sa-q17–q21) | Biology paper has 16 MCQs (not 18); SAs are VSA (2-mark) from Section B |
+
+Bank totals after:
+- IP: MCQ 60→78, SA 39→46
+- CS: MCQ 60→78, SA 39→46
+- Chemistry: MCQ 131→149, SA 87→94
+- Biology: MCQ 196→212, SA 100→105
+
+---
+
 ## Mobile responsive fixes — Cloé panel & auth dialog *(done)*
 
 Surgical CSS-only changes to fix layout issues on phones:

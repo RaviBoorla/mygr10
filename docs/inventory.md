@@ -128,13 +128,13 @@ entirely descriptive/long-answer with no MCQ section, so ICSE MCQ bank files are
 | Mathematics | ICSE | ❌ | ❌ | ✅ 140 Qs | ❌ | SA: 2017–2020, 2023 |
 | Physics | CBSE | ✅ 14 ch | ✅ 158 Qs | ✅ 70 Qs | ✅ 158 Qs | MCQ: 2026; SA: 2026 |
 | Physics | ICSE | ❌ | ❌ | ✅ 156 Qs | ❌ | SA: 2018–2020, 2023 |
-| Chemistry | CBSE | ✅ 10 ch | ✅ 115 Qs | ✅ 77 Qs | ✅ 268 Qs | MCQ: 2026; SA: 2026 |
+| Chemistry | CBSE | ✅ 10 ch | ✅ 149 Qs | ✅ 94 Qs | ✅ 268 Qs | MCQ: 2023–2024, 2026; SA: 2023–2024, 2026 |
 | Chemistry | ICSE | ❌ | ❌ | ✅ 150 Qs | ❌ | SA: 2018–2020, 2023 |
-| Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing) | ✅ 196 Qs | ✅ 100 Qs | ⚠️ 135 Qs (Ch 1–2 missing) | MCQ: 2026; SA: 2026 |
+| Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing) | ✅ 212 Qs | ✅ 105 Qs | ⚠️ 135 Qs (Ch 1–2 missing) | MCQ: 2023, 2026; SA: 2023, 2026 |
 | Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ | SA: 2018–2020 |
-| Computer Science | CBSE | ✅ 12 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 122 Qs | MCQ: 2025–2026; SA: 2025–2026 |
+| Computer Science | CBSE | ✅ 12 ch | ✅ 78 Qs | ✅ 46 Qs | ✅ 122 Qs | MCQ: 2023–2026; SA: 2023–2026 |
 | Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ | SA: 2017–2020, 2023 |
-| Informatics Practices | CBSE | ✅ 6 ch | ✅ 42 Qs | ✅ 32 Qs | ✅ 21 Qs | MCQ: 2025–2026; SA: 2025–2026 |
+| Informatics Practices | CBSE | ✅ 6 ch | ✅ 78 Qs | ✅ 46 Qs | ✅ 21 Qs | MCQ: 2023–2026; SA: 2023–2026 |
 | Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ✅ 100 Qs | ✅ 20 Qs | ✅ 183 Qs | MCQ: 2026; SA: 2026 |
 | Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ✅ 78 Qs | ✅ 78 Qs | ✅ 137 Qs | MCQ: 2026; SA: 2026 |
 | Psychology | CBSE | ✅ 7 ch | ✅ 14 Qs | ✅ 23 Qs | ✅ 67 Qs | MCQ: 2026; SA: 2026 |
@@ -152,10 +152,10 @@ embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
 |---|---|---|---|
 | Mathematics | `XII-CBSE-Mathematics.json` | 154 | 2026 Board — 154 Qs |
 | Physics | `XII-CBSE-Physics.json` | 158 | 2026 Board — 158 Qs |
-| Chemistry | `XII-CBSE-Chemistry.json` | 115 | 2026 Board — 115 Qs |
-| Biology | `XII-CBSE-Biology.json` | 196 | 2026 Board — 196 Qs |
-| Computer Science | `XII-CBSE-Computer-Science.json` | 42 | 2025 Board (21), 2026 Board (21) |
-| Informatics Practices | `XII-CBSE-Information-Practices.json` | 42 | 2025 Board (21), 2026 Board (21) |
+| Chemistry | `XII-CBSE-Chemistry.json` | 149 | 2023 Board (18), 2024 Board (16), 2026 Board (115) |
+| Biology | `XII-CBSE-Biology.json` | 212 | 2023 Board (16), 2026 Board (196) |
+| Computer Science | `XII-CBSE-Computer-Science.json` | 78 | 2023 Board (18), 2024 Board (18), 2025 Board (21), 2026 Board (21) |
+| Informatics Practices | `XII-CBSE-Information-Practices.json` | 78 | 2023 Board (18), 2024 Board (18), 2025 Board (21), 2026 Board (21) |
 | Economics | `XII-CBSE-Economics.json` | 100 | 2026 Board — 100 Qs |
 | Political Science | `XII-CBSE-Political-Science.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology.json` | 14 | 2026 Board — 14 Qs |
@@ -174,10 +174,10 @@ Board paper (and 2025 for CS/IP) — real past-paper VSA/SA sections.
 |---|---|---|---|
 | Mathematics | `XII-CBSE-Mathematics-ShortAnswers.json` | 126 | 2026 Board — 126 Qs |
 | Physics | `XII-CBSE-Physics-ShortAnswers.json` | 70 | 2026 Board — 70 Qs |
-| Chemistry | `XII-CBSE-Chemistry-ShortAnswers.json` | 77 | 2026 Board — 77 Qs |
-| Biology | `XII-CBSE-Biology-ShortAnswers.json` | 100 | 2026 Board — 100 Qs |
-| Computer Science | `XII-CBSE-Computer-Science-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
-| Informatics Practices | `XII-CBSE-Information-Practices-ShortAnswers.json` | 32 | 2025 Board (16), 2026 Board (16) |
+| Chemistry | `XII-CBSE-Chemistry-ShortAnswers.json` | 94 | 2023 Board (7), 2024 Board (10), 2026 Board (52); remaining 25 curriculum-authored |
+| Biology | `XII-CBSE-Biology-ShortAnswers.json` | 105 | 2023 Board (5), 2026 Board (100) |
+| Computer Science | `XII-CBSE-Computer-Science-ShortAnswers.json` | 46 | 2023 Board (7), 2024 Board (7), 2025 Board (16), 2026 Board (16) |
+| Informatics Practices | `XII-CBSE-Information-Practices-ShortAnswers.json` | 46 | 2023 Board (7), 2024 Board (7), 2025 Board (16), 2026 Board (16) |
 | Economics | `XII-CBSE-Economics-ShortAnswers.json` | 20 | 2026 Board — 20 Qs |
 | Political Science | `XII-CBSE-Political-Science-ShortAnswers.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology-ShortAnswers.json` | 23 | 2026 Board — 23 Qs |
