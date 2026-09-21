@@ -1398,5 +1398,245 @@
     ],
     "correct": 1,
     "explanation": "Selection (conditional branching using if-else) is a fundamental programming concept present in both Scratch (via 'if...then...else' blocks) and Python (via if-elif-else statements)."
+  },
+  {
+    "id": "ca-101",
+    "chapter": "Cyber Ethics",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Suhani asks her colleague for her project work and then copies the entire work and submits it to her team leader claiming it to be her own work. The act performed by Suhani is known as ___.",
+    "options": {
+      "a": "Phishing",
+      "b": "Plagiarism",
+      "c": "Spamming",
+      "d": "Virus"
+    },
+    "correct": "b",
+    "explanation": "Plagiarism is the act of taking someone else's work or ideas and presenting them as your own without giving proper credit. Suhani copied her colleague's project and submitted it as her own — that is plagiarism.",
+    "whyOthersWrong": {
+      "a": "Phishing is a fraudulent attempt to obtain sensitive information (passwords, credit card numbers) by disguising as a trustworthy entity. Suhani did not deceive anyone to obtain credentials.",
+      "c": "Spamming is sending unsolicited bulk messages. Suhani is copying intellectual work, not sending bulk messages.",
+      "d": "A virus is a malicious program that replicates and damages systems. Suhani's act involves copying work, not creating/spreading malware."
+    }
+  },
+  {
+    "id": "ca-102",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is the correct expansion of SMS?",
+    "options": {
+      "a": "Small Message Service",
+      "b": "Small Multimedia Service",
+      "c": "Short Multimedia Service",
+      "d": "Short Message Service"
+    },
+    "correct": "d",
+    "explanation": "SMS stands for Short Message Service — it is the standard protocol for sending short text messages (up to 160 characters) over cellular networks.",
+    "whyOthersWrong": {
+      "a": "The S in SMS stands for 'Short', not 'Small'. Messages are 'short' in length, not 'small'.",
+      "b": "Both words are wrong: it is 'Short' not 'Small', and 'Message' not 'Multimedia'. Multimedia messaging uses MMS (Multimedia Messaging Service).",
+      "c": "The second word is wrong: SMS is 'Message' Service, not 'Multimedia' Service. Multimedia messaging is MMS."
+    }
+  },
+  {
+    "id": "ca-103",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is an e-Shopping portal?",
+    "options": {
+      "a": "Diksha",
+      "b": "Swayam",
+      "c": "Flipkart",
+      "d": "NPTEL"
+    },
+    "correct": "c",
+    "explanation": "Flipkart is an Indian e-commerce platform where users can browse and purchase products online — it is an e-Shopping portal.",
+    "whyOthersWrong": {
+      "a": "Diksha (DIKSHA) is a national digital platform for school education launched by NCERT. It is an e-Learning portal, not e-Shopping.",
+      "b": "Swayam is a MOOC (Massive Open Online Course) platform by the Government of India for higher education. It is an e-Learning portal.",
+      "d": "NPTEL (National Programme on Technology Enhanced Learning) is an online education portal by IITs and IISc. It is an e-Learning portal."
+    }
+  },
+  {
+    "id": "ca-104",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is NOT an e-Governance portal?",
+    "options": {
+      "a": "e-Aadhaar",
+      "b": "DigiLocker",
+      "c": "Sarathi",
+      "d": "Zomato"
+    },
+    "correct": "d",
+    "explanation": "Zomato is a food delivery and restaurant discovery application — it is a commercial service, not an e-Governance portal. All the others are government digital service portals.",
+    "whyOthersWrong": {
+      "a": "e-Aadhaar is the official online portal to download the digital copy of the Aadhaar card — it is an e-Governance service.",
+      "b": "DigiLocker is a Government of India initiative to provide a digital document wallet for citizens to store official documents — it is an e-Governance service.",
+      "c": "Sarathi (Parivahan Sarathi) is a government portal for driving licence-related services — it is an e-Governance service."
+    }
+  },
+  {
+    "id": "ca-105",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "The protocol that is used to send e-mails is ___.",
+    "options": {
+      "a": "HTTP",
+      "b": "POP",
+      "c": "SMTP",
+      "d": "FTP"
+    },
+    "correct": "c",
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol used for sending e-mails from a client to a mail server and between mail servers.",
+    "whyOthersWrong": {
+      "a": "HTTP (HyperText Transfer Protocol) is used for transferring web pages on the World Wide Web, not for sending e-mails.",
+      "b": "POP (Post Office Protocol) is used for receiving/downloading e-mails from a mail server to a client. It is for receiving, not sending.",
+      "d": "FTP (File Transfer Protocol) is used for transferring files between a client and a server over a network. It is not used for e-mail."
+    }
+  },
+  {
+    "id": "ca-106",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "SFTP is used for:",
+    "options": {
+      "a": "Sending Files over the Internet in a secure manner",
+      "b": "Sending Mail over the Internet in a secure manner",
+      "c": "Video Conferencing",
+      "d": "Secure Chat Services"
+    },
+    "correct": "a",
+    "explanation": "SFTP (Secure File Transfer Protocol) is a secure version of FTP that uses SSH encryption to transfer files over the Internet safely, protecting data from interception.",
+    "whyOthersWrong": {
+      "b": "Sending e-mail securely uses SMTPS or STARTTLS extensions. SFTP stands for Secure File Transfer Protocol and deals with files, not mail.",
+      "c": "Video conferencing uses protocols like H.323, SIP, or WebRTC — not SFTP. SFTP is purely for file transfers.",
+      "d": "Secure chat services use protocols such as XMPP with TLS or Signal Protocol. SFTP is not related to chat communication."
+    }
+  },
+  {
+    "id": "ca-107",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is NOT an attribute of <img> tag in HTML?",
+    "options": {
+      "a": "source",
+      "b": "width",
+      "c": "alt",
+      "d": "color"
+    },
+    "correct": "d",
+    "explanation": "The <img> tag does not have a 'color' attribute. Color styling is applied via CSS (color property applies to text, not images). Valid <img> attributes include src, width, height, alt, align, border, etc.",
+    "whyOthersWrong": {
+      "a": "'source' is a valid attribute of <img> (though the standard spelling is 'src', 'source' refers to the same concept and is listed as an option here — the question asks specifically about 'color' being invalid).",
+      "b": "'width' is a valid attribute of the <img> tag used to specify the width of the image in pixels or percentage.",
+      "c": "'alt' is a valid and important attribute of the <img> tag used to provide alternative text for the image when it cannot be displayed."
+    }
+  },
+  {
+    "id": "ca-108",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "HTML provides us with ___ levels of headings that can be inserted in a web page.",
+    "options": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "correct": "b",
+    "explanation": "HTML provides 6 levels of headings: <h1> (largest/most important) through <h6> (smallest/least important). There is no <h7> or beyond in standard HTML.",
+    "whyOthersWrong": {
+      "a": "HTML has 6 heading levels (<h1> to <h6>), not 5. Choosing 5 would exclude <h6>.",
+      "c": "HTML does not have a <h7> tag. The standard stops at <h6>. There are exactly 6 heading levels.",
+      "d": "HTML does not have <h7> or <h8> tags. The standard defines exactly 6 heading levels (<h1> to <h6>)."
+    }
+  },
+  {
+    "id": "ca-109",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Which of the following options is an INVALID attribute of <font> tag in HTML?",
+    "options": {
+      "a": "face",
+      "b": "width",
+      "c": "size",
+      "d": "color"
+    },
+    "correct": "b",
+    "explanation": "The <font> tag in HTML has three valid attributes: face (font family/typeface), size (font size 1–7), and color (text color). 'width' is not an attribute of the <font> tag; it is used for elements like tables, images, etc.",
+    "whyOthersWrong": {
+      "a": "'face' is a valid attribute of the <font> tag that specifies the font family/typeface (e.g., <font face=\"Arial\">).",
+      "c": "'size' is a valid attribute of the <font> tag that specifies the font size on a scale of 1 to 7 (e.g., <font size=\"4\">).",
+      "d": "'color' is a valid attribute of the <font> tag that specifies the text color (e.g., <font color=\"red\">)."
+    }
+  },
+  {
+    "id": "ca-110",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "The default starting value for an ordered list in HTML is ___.",
+    "options": {
+      "a": "i",
+      "b": "1",
+      "c": "a",
+      "d": "."
+    },
+    "correct": "b",
+    "explanation": "By default, an HTML ordered list (<ol>) starts numbering from 1 (Arabic numerals). You can change the starting value using the 'start' attribute (e.g., <ol start=\"5\">).",
+    "whyOthersWrong": {
+      "a": "'i' is used for lowercase Roman numerals in ordered lists (type=\"i\"), but it is not the default. The default type is Arabic numerals starting at 1.",
+      "c": "'a' is used for lowercase alphabetical ordered lists (type=\"a\"), but it is not the default. The default is Arabic numerals.",
+      "d": "A period (.) is not a valid starting value for an ordered list in HTML. Starting values must be numbers for the default Arabic numeral type."
+    }
+  },
+  {
+    "id": "ca-111",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Assertion (A): MOOC helps in providing education to dispersed students.\nReason (R): MOOC is a free web-based distance learning programme for large-scale interactive participation.",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "correct": "b",
+    "explanation": "Both statements are true: MOOCs (Massive Open Online Courses) do help dispersed students (A is true), and MOOCs are indeed web-based distance learning programs with large-scale participation (R is true). However, R does not explain WHY A is true — the reason MOOCs help dispersed students is because they are online and accessible anywhere, which is the nature of MOOC, not specifically that R explains A.",
+    "whyOthersWrong": {
+      "a": "While both A and R are true, R (describing MOOC as free web-based distance learning) does not serve as the direct/correct explanation for A (MOOC helping dispersed students). They are independent facts.",
+      "c": "R is not false — MOOCs are indeed web-based distance learning programmes designed for large-scale interactive participation.",
+      "d": "A is not false — MOOCs do indeed help in providing education to dispersed students who cannot attend traditional classrooms."
+    }
+  },
+  {
+    "id": "ca-112",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Assertion (A): <br> is a container tag.\nReason (R): HTML elements that have both an opening and a closing tag are known as container tags.",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: <br> is an empty/void tag (it has only an opening tag, no closing tag). R is true: HTML elements with both opening and closing tags ARE called container tags (e.g., <p>...</p>, <b>...</b>). Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — <br> is NOT a container tag. It is an empty/void tag with no closing tag. So this option cannot be correct.",
+      "b": "A is false — <br> does not have both opening and closing tags. It is a self-closing empty tag, so it cannot be a container tag.",
+      "c": "A is false (not true), so this option is incorrect. <br> is an empty tag, not a container tag."
+    }
   }
 ]

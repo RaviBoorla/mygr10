@@ -374,5 +374,110 @@
       "Using HTTPS (SSL/TLS encryption) so that sensitive data like card numbers and passwords are encrypted while travelling over the Internet, preventing interception. 2.",
       "Verifying the authenticity of a website (e.g., checking for a valid security certificate and padlock icon) before entering payment details, to avoid fake/phishing sites."
     ]
+  },
+  {
+    "id": "sa-ca-031",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Differentiate between Chat service and e-Mail service. (any two points)",
+    "modelAnswer": "Chat service is a real-time, synchronous communication where both users must be online simultaneously. e-Mail service is asynchronous — messages are stored on a server and can be read at any time. Chat messages are typically short and informal; e-Mails can be long and formal. Chat is instant while e-Mail may have a delay.",
+    "keyPoints": [
+      "Chat is real-time/synchronous; e-Mail is asynchronous",
+      "Chat requires both parties online simultaneously; e-Mail does not",
+      "Chat messages are typically short; e-Mails can be long with attachments",
+      "Chat is informal and instant; e-Mail is formal and can be delayed"
+    ]
+  },
+  {
+    "id": "sa-ca-032",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "What is e-Governance? Name any two e-Governance services. OR What is Internet? How can we retrieve information from the Internet? (any two ways)",
+    "modelAnswer": "e-Governance: The use of Information and Communication Technology (ICT) by the government to deliver services, share information, and transact with citizens efficiently. Examples: DigiLocker, e-Aadhaar, Parivahan Sarathi, e-Hospital.\n\nOR\n\nInternet: A global network of interconnected computers that communicate using the TCP/IP protocol suite, allowing sharing of information worldwide. Ways to retrieve information: (1) Using a search engine (e.g., Google, Bing) by entering keywords. (2) Directly typing a URL/web address in a browser. (3) Using online databases or educational portals. (4) Accessing news websites or e-libraries.",
+    "keyPoints": [
+      "e-Governance: use of ICT by government to deliver services to citizens",
+      "Examples: DigiLocker, e-Aadhaar, Sarathi, e-Hospital",
+      "Internet: global network of computers using TCP/IP",
+      "Retrieve info via search engines (Google), direct URL, online databases"
+    ]
+  },
+  {
+    "id": "sa-ca-033",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "How can we embed audio in a web page using HTML? Give example.",
+    "modelAnswer": "We can embed audio in an HTML web page using the <audio> tag. The src attribute specifies the audio file path and the controls attribute adds play/pause controls.\n\nExample:\n<audio src=\"music.mp3\" controls>\nYour browser does not support the audio element.\n</audio>\n\nAlternatively, <embed> tag can also be used: <embed src=\"audio.mp3\" width=\"300\" height=\"50\">",
+    "keyPoints": [
+      "Use <audio> tag with src attribute for the audio file path",
+      "controls attribute displays play/pause/volume controls",
+      "Fallback text between <audio> and </audio> for unsupported browsers",
+      "Alternative: <embed src=\"audio.mp3\"> tag"
+    ]
+  },
+  {
+    "id": "sa-ca-034",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Define Licensed Software. Give two examples. OR How can we reduce Digital Divide? (any two ways)",
+    "modelAnswer": "Licensed Software: Software distributed with a licence that defines the legal terms of use, copying, modification, and distribution. The user must agree to the End User Licence Agreement (EULA) before use. Examples: Microsoft Office, Adobe Photoshop, Windows OS, AutoCAD.\n\nOR\n\nReducing Digital Divide: (1) Providing affordable/free internet access in rural and underserved areas. (2) Setting up computer literacy programmes and digital education in schools. (3) Providing low-cost devices (computers, tablets) to underprivileged communities. (4) Government initiatives like Common Service Centres (CSC).",
+    "keyPoints": [
+      "Licensed software: requires licence/EULA, defines terms of use",
+      "Examples: Microsoft Office, Adobe Photoshop, Windows OS",
+      "Digital divide: gap between those with and without digital access",
+      "Ways to reduce: affordable internet, digital literacy programmes, low-cost devices, government CSC"
+    ]
+  },
+  {
+    "id": "sa-ca-035",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "How is CSS beneficial for web development? (any two points)",
+    "modelAnswer": "CSS (Cascading Style Sheets) is beneficial for web development because: (1) Separation of content and presentation — HTML handles structure while CSS handles styling, making code cleaner and easier to maintain. (2) Consistent styling — one CSS file can style multiple web pages, ensuring uniformity across a website. (3) Faster page loading — by reusing styles, less code needs to be loaded. (4) Easier maintenance — changing one CSS file updates the appearance of the entire website.",
+    "keyPoints": [
+      "Separation of content (HTML) and presentation (CSS)",
+      "Consistent styling across multiple pages from a single CSS file",
+      "Faster page loading due to reusable styles",
+      "Easy maintenance: one change in CSS updates the whole site"
+    ]
+  },
+  {
+    "id": "sa-ca-036",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Write the HTML code to create a radio button with the label 'Male' and 'Female' in a form. OR Differentiate between ordered list and unordered list in HTML with examples.",
+    "modelAnswer": "Radio buttons example:\n<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male<br>\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>\n\nOR\n\nOrdered list (<ol>) displays items in a numbered/lettered sequence:\n<ol>\n  <li>First item</li>\n  <li>Second item</li>\n</ol>\n\nUnordered list (<ul>) displays items with bullet points:\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "keyPoints": [
+      "Radio button: <input type=\"radio\" name=\"gender\" value=\"male\"> Male",
+      "All radio buttons in same group share same 'name' attribute",
+      "Ordered list <ol>: numbered items using <li>",
+      "Unordered list <ul>: bulleted items using <li>"
+    ]
+  },
+  {
+    "id": "sa-ca-037",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Differentiate between <br> tag and <p> tag in HTML with examples.",
+    "modelAnswer": "<br> (Line Break tag) inserts a single line break and is an empty/void tag (no closing tag). It moves to the next line within the same paragraph.\nExample: Hello<br>World\n\n<p> (Paragraph tag) is a container tag with opening and closing tags. It creates a new paragraph with some space/margin before and after it.\nExample: <p>This is paragraph one.</p><p>This is paragraph two.</p>\n\nKey difference: <br> just breaks the line; <p> creates a complete paragraph with spacing.",
+    "keyPoints": [
+      "<br> is an empty/void tag (no closing tag); <p> is a container tag with </p>",
+      "<br> creates a line break within content; <p> creates a new paragraph with spacing",
+      "<br> example: Hello<br>World",
+      "<p> example: <p>First paragraph.</p><p>Second paragraph.</p>"
+    ]
   }
 ]
