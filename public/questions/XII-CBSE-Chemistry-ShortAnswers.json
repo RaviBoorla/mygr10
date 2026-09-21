@@ -1437,5 +1437,114 @@
       "(a) Open chain shown by: reaction with NH₂OH (forms oxime), HCN (addition), or peracetylation",
       "(b) Peptide bond (amide linkage, –CO–NH–) links amino acids in proteins"
     ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q19",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Define rate of reaction. State any two factors that affect the rate of a reaction. (2022 Board)",
+    "modelAnswer": "Rate of reaction is defined as the change in concentration of a reactant or product per unit time. Rate = -Δ[Reactant]/Δt = +Δ[Product]/Δt. Units: mol L⁻¹ s⁻¹.\nTwo factors affecting rate: (1) Concentration of reactants — increasing concentration increases collision frequency, increasing rate. (2) Temperature — increasing temperature increases kinetic energy and fraction of molecules with energy ≥ activation energy, increasing rate. (Other valid factors: catalyst, surface area for heterogeneous reactions, light for photochemical reactions.)",
+    "keyPoints": [
+      "Rate = change in concentration per unit time; mol L⁻¹ s⁻¹",
+      "Factor 1: Concentration — higher concentration → higher rate",
+      "Factor 2: Temperature — higher temperature → higher rate",
+      "Also valid: catalyst, surface area, light"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q20",
+    "chapter": "Electrochemistry",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Write the Nernst equation for the cell reaction: Zn(s) + Cu²⁺(aq) → Zn²⁺(aq) + Cu(s). Predict how the cell potential changes when (i) concentration of Cu²⁺ is increased (ii) concentration of Zn²⁺ is increased. (2022 Board)",
+    "modelAnswer": "Nernst equation: Ecell = E°cell - (RT/nF) ln([Zn²⁺]/[Cu²⁺]) or Ecell = E°cell - (0.0592/n) log([Zn²⁺]/[Cu²⁺]) at 298 K, n = 2.\n(i) Increasing [Cu²⁺]: denominator increases → log ratio decreases → Ecell increases.\n(ii) Increasing [Zn²⁺]: numerator increases → log ratio increases → Ecell decreases.",
+    "keyPoints": [
+      "Nernst: Ecell = E°cell - (0.0592/2) log([Zn²⁺]/[Cu²⁺])",
+      "Increase [Cu²⁺] → Ecell increases",
+      "Increase [Zn²⁺] → Ecell decreases"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q21",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "A first order reaction has a half-life of 40 minutes. Calculate the time required for 90% of the reaction to complete. (2022 Board)",
+    "modelAnswer": "For first order: k = 0.693/t½ = 0.693/40 = 0.01733 min⁻¹\nFor 90% completion: [A]₀ = 100, [A] = 10 (remaining 10%)\nt = (2.303/k) × log([A]₀/[A])\nt = (2.303/0.01733) × log(100/10)\nt = (2.303/0.01733) × log(10)\nt = (2.303/0.01733) × 1\nt = 132.9 ≈ 133 minutes",
+    "keyPoints": [
+      "k = 0.693/t½ = 0.693/40 = 0.01733 min⁻¹",
+      "90% complete → [A]₀/[A] = 100/10 = 10",
+      "t = (2.303/k) × log(10) = 2.303/0.01733 ≈ 133 minutes"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q22",
+    "chapter": "Aldehydes Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "An organic compound X has molecular formula C₅H₁₀O. It gives a positive 2,4-DNP test, a negative Tollens' reagent test, and a positive iodoform test. Identify X and explain the reasoning. (2022 Board)",
+    "modelAnswer": "Positive 2,4-DNP test → X contains a carbonyl group (aldehyde or ketone).\nNegative Tollens' reagent test → X is NOT an aldehyde (Tollens' oxidises aldehydes only) → X is a ketone.\nPositive iodoform test → X is a methyl ketone (CH₃CO– group).\nMolecular formula C₅H₁₀O with methyl ketone group: CH₃–CO–CH₂–CH₂–CH₃ (pentan-2-one).\nX = Pentan-2-one (CH₃COCH₂CH₂CH₃; methyl propyl ketone).",
+    "keyPoints": [
+      "2,4-DNP positive → carbonyl compound (aldehyde or ketone)",
+      "Tollens' negative → not an aldehyde → ketone",
+      "Iodoform positive → methyl ketone (CH₃CO– group)",
+      "C₅H₁₀O + methyl ketone = pentan-2-one (CH₃COCH₂CH₂CH₃)"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q23",
+    "chapter": "Electrochemistry",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "The standard Gibbs energy (ΔrG°) for the reaction Zn(s) + 2Ag⁺(aq) → Zn²⁺(aq) + 2Ag(s) is −300 kJ mol⁻¹. Calculate E°cell for this reaction. (Given: 1 F = 96500 C mol⁻¹) (2022 Board)",
+    "modelAnswer": "ΔrG° = −nFE°cell\n−300 × 10³ = −2 × 96500 × E°cell\nE°cell = 300000 / (2 × 96500)\nE°cell = 300000 / 193000\nE°cell = 1.554 V ≈ 1.55 V",
+    "keyPoints": [
+      "ΔrG° = −nFE°cell",
+      "n = 2 (Zn → Zn²⁺ loses 2e⁻; each Ag⁺ gains 1e⁻, 2 Ag⁺ total)",
+      "E°cell = 300000 / (2 × 96500) = 1.554 V"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q24",
+    "chapter": "d and f Block Elements",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Answer the following about transition elements:\n(i) Which 3d transition metal ion is most stable in aqueous solution and why?\n(ii) Which 3d transition metal ion in its highest oxidation state acts as the strongest oxidising agent?\n(iii) Which 3d transition metal ion is colourless and why? (2022 Board)",
+    "modelAnswer": "(i) V³⁺ (Vanadium in +3 state) — has a half-filled t₂g³ configuration, which is extra stable due to symmetrical electron distribution.\n(ii) Ti⁴⁺ (Titanium in +4 state) — has an empty d⁰ configuration; very strong tendency to gain electrons and revert to lower oxidation state, hence strongest oxidiser.\n(iii) Ti⁴⁺ (d⁰ configuration) and Sc³⁺ (d⁰) are colourless — colour arises from d-d electronic transitions, which are not possible in d⁰ (empty d) or d¹⁰ (full d) configurations.",
+    "keyPoints": [
+      "(i) V³⁺: half-filled t₂g³ is extra stable in aqueous solution",
+      "(ii) Ti⁴⁺ (d⁰): strongest oxidising agent in highest oxidation state",
+      "(iii) Ti⁴⁺ or Sc³⁺ (d⁰): no d-d transitions possible → colourless"
+    ]
+  },
+  {
+    "id": "xii-chem-2022-sa-q25",
+    "chapter": "Aldehydes Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "CBSE 2022 Board",
+    "text": "Read the passage and answer the questions: Aldehydes, ketones and carboxylic acids contain carbonyl groups and are highly polar. Aldehydes undergo nucleophilic addition reactions. Carboxylic acids do NOT undergo nucleophilic addition.\n(a) Arrange in increasing order of reactivity towards nucleophilic addition: CH₃COCH₃, CH₃CHO, HCHO, C₆H₅COCH₃\n(b) Give a simple chemical test to distinguish between Ethanal and Propanone.\n(c) Why does carboxylic acid NOT give nucleophilic addition reactions like aldehydes and ketones?\n(d)(i) Why are α-hydrogens of aldehydes and ketones acidic?\n(d)(ii) Write the product: 2 C₆H₅CHO → (conc. NaOH) → ? (2022 Board)",
+    "modelAnswer": "(a) Increasing reactivity towards nucleophilic addition (less hindered/more electrophilic carbonyl = more reactive): C₆H₅COCH₃ < CH₃COCH₃ < CH₃CHO < HCHO\n(b) Tollens' reagent (ammonical AgNO₃): Ethanal (aldehyde) gives silver mirror; Propanone (ketone) does not. OR: Fehling's solution: Ethanal gives brick-red precipitate; Propanone gives no change.\n(c) In carboxylic acids, the lone pair of the –OH oxygen is donated to the carbonyl carbon by resonance, increasing electron density on carbonyl carbon. This reduces the electrophilicity of the carbonyl carbon, so nucleophiles do not attack it.\n(d)(i) The carbonyl group (C=O) has electron-withdrawing effect (−I effect) that stabilises the carbanion/negative charge formed when α-hydrogen is removed, making it acidic.\n(d)(ii) Cannizzaro reaction: 2 C₆H₅CHO → (conc. NaOH) → C₆H₅CH₂OH + C₆H₅COO⁻Na⁺ (benzyl alcohol + sodium benzoate)",
+    "keyPoints": [
+      "(a) Reactivity order: C₆H₅COCH₃ < CH₃COCH₃ < CH₃CHO < HCHO",
+      "(b) Tollens' test: ethanal gives silver mirror; propanone does not",
+      "(c) Resonance in –COOH reduces carbonyl electrophilicity; no nucleophilic addition",
+      "(d)(i) C=O withdraws electrons, stabilising α-carbanion → acidic α-H",
+      "(d)(ii) Cannizzaro: 2 C₆H₅CHO → C₆H₅CH₂OH + C₆H₅COONa"
+    ]
   }
 ]
