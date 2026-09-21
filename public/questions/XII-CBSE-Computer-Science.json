@@ -1280,5 +1280,371 @@
       "(d) is wrong because A is true."
     ],
     "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q1",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "State True or False: \"Identifiers are names used to identify a variable, function in a program\". (2023 Board)",
+    "options": [
+      "True",
+      "False"
+    ],
+    "correct": 0,
+    "explanation": "Identifiers are indeed user-defined names for variables, functions, classes, modules, etc. in Python.",
+    "whyWrong": [
+      "False is incorrect — this is a standard definition of identifiers."
+    ],
+    "priority": 1
+  },
+  {
+    "id": "xii-cs-2023-q2",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid keyword in Python? (2023 Board)",
+    "options": [
+      "false",
+      "return",
+      "non_local",
+      "none"
+    ],
+    "correct": 1,
+    "explanation": "'return' is a valid Python keyword. Python keywords are case-sensitive: 'False', 'None', 'nonlocal' (without underscore) are keywords but 'false', 'none', 'non_local' are not.",
+    "whyWrong": [
+      "'false' → Python uses 'False' (capital F).",
+      "'non_local' → Python uses 'nonlocal' (no underscore).",
+      "'none' → Python uses 'None' (capital N)."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q3",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Given: Tup=(10, 20, 30, 50)\nWhich of the following statements will result in an error? (2023 Board)",
+    "options": [
+      "print(Tup[0])",
+      "Tup.insert(2,3)",
+      "print(Tup[1:2])",
+      "print(len(Tup))"
+    ],
+    "correct": 1,
+    "explanation": "Tuples are immutable. They do not have an insert() method — calling Tup.insert(2,3) raises AttributeError.",
+    "whyWrong": [
+      "print(Tup[0]) is valid — prints 10.",
+      "print(Tup[1:2]) is valid — prints (20,).",
+      "print(len(Tup)) is valid — prints 4."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q4",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which of the following will be the correct output if the given expression is evaluated?\n5<10 and 12>7 or not 7>4 (2023 Board)",
+    "options": [
+      "True",
+      "False",
+      "NONE",
+      "NULL"
+    ],
+    "correct": 0,
+    "explanation": "Evaluation: (5<10)=True, (12>7)=True, (7>4)=True; True and True or not True → True and True or False → True or False → True.",
+    "whyWrong": [
+      "False: incorrect — all sub-expressions evaluate to True.",
+      "NONE: not a Python value.",
+      "NULL: not a Python value."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q5",
+    "chapter": "Python Strings",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Select the correct output of the code:\nS = \"Amrit Mahotsav @ 75\"\nA = S.partition(\" \")\nprint(A)\n(2023 Board)",
+    "options": [
+      "('Amrit Mahotsav', '@', '75')",
+      "['Amrit', 'Mahotsav', '@', '75']",
+      "('Amrit', 'Mahotsav @ 75')",
+      "('Amrit', ' ', 'Mahotsav @ 75')"
+    ],
+    "correct": 3,
+    "explanation": "partition(sep) returns a 3-tuple: (part_before, separator, part_after) at the FIRST occurrence of sep. Splitting 'Amrit Mahotsav @ 75' at first space gives ('Amrit', ' ', 'Mahotsav @ 75').",
+    "whyWrong": [
+      "(a) partitions at '@', not space.",
+      "(b) split() returns a list, not partition.",
+      "(c) partition always returns a 3-tuple, never 2 elements."
+    ],
+    "priority": 3
+  },
+  {
+    "id": "xii-cs-2023-q6",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Which of the following mode keeps the file offset position at the end of the file? (2023 Board)",
+    "options": [
+      "r+",
+      "r",
+      "w",
+      "a"
+    ],
+    "correct": 3,
+    "explanation": "In 'a' (append) mode, the file offset is always at the end of the file, so all writes go to the end.",
+    "whyWrong": [
+      "'r+' opens for read/write with offset at the beginning.",
+      "'r' opens for reading with offset at the beginning.",
+      "'w' truncates and opens for writing with offset at the beginning."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q7",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Fill in the blank: _____ function is used to arrange the elements of a list in ascending order. (2023 Board)",
+    "options": [
+      "sort()",
+      "arrange()",
+      "ascending()",
+      "asort()"
+    ],
+    "correct": 0,
+    "explanation": "list.sort() is the built-in method to sort a list in ascending order in-place.",
+    "whyWrong": [
+      "arrange(), ascending(), asort() are not valid Python list methods."
+    ],
+    "priority": 1
+  },
+  {
+    "id": "xii-cs-2023-q8",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Which of the following operators will return either True or False? (2023 Board)",
+    "options": [
+      "+=",
+      "!=",
+      "=",
+      "*="
+    ],
+    "correct": 1,
+    "explanation": "'!=' is a comparison (relational) operator that returns True or False. The others are assignment operators.",
+    "whyWrong": [
+      "+=, =, *= are assignment operators that modify a variable's value, not return a boolean."
+    ],
+    "priority": 1
+  },
+  {
+    "id": "xii-cs-2023-q9",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Which of the following statement(s) would give an error after executing:\nStud={\"Murugan\":100, \"Mithu\":95}\nprint(Stud[95])      # Statement 2\nStud[\"Murugan\"]=99   # Statement 3\nprint(Stud.pop())    # Statement 4\nprint(Stud)          # Statement 5\n(2023 Board)",
+    "options": [
+      "Statement 2",
+      "Statement 3",
+      "Statement 4",
+      "Statements 2 and 4"
+    ],
+    "correct": 3,
+    "explanation": "Statement 2: Stud[95] raises KeyError (95 is a value, not a key). Statement 4: dict.pop() requires a key argument, unlike list.pop(); calling it without an argument raises TypeError.",
+    "whyWrong": [
+      "Statement 3 is valid — updating an existing key's value.",
+      "Statement 5 is valid — prints the dictionary."
+    ],
+    "priority": 3
+  },
+  {
+    "id": "xii-cs-2023-q10",
+    "chapter": "SQL",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Fill in the blank: _____ is a number of tuples in a relation. (2023 Board)",
+    "options": [
+      "Attribute",
+      "Degree",
+      "Domain",
+      "Cardinality"
+    ],
+    "correct": 3,
+    "explanation": "Cardinality of a relation refers to the number of tuples (rows) in a table. Degree refers to the number of attributes (columns).",
+    "whyWrong": [
+      "Attribute is a column/field.",
+      "Degree is the number of columns.",
+      "Domain is the set of valid values for an attribute."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q11",
+    "chapter": "File Handling",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "The syntax of seek() is: file_object.seek(offset[, reference_point])\nWhat is the default value of reference_point? (2023 Board)",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "Default reference_point is 0 (beginning of file). 1 = current position, 2 = end of file.",
+    "whyWrong": [
+      "1 means current file position.",
+      "2 means end of file.",
+      "3 is not a valid reference_point value."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q12",
+    "chapter": "SQL",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Fill in the blank: _____ clause is used with SELECT statement to display data in a sorted form with respect to a specified column. (2023 Board)",
+    "options": [
+      "WHERE",
+      "ORDER BY",
+      "HAVING",
+      "DISTINCT"
+    ],
+    "correct": 1,
+    "explanation": "ORDER BY sorts the result set in ascending or descending order based on one or more columns.",
+    "whyWrong": [
+      "WHERE filters rows before grouping.",
+      "HAVING filters groups after GROUP BY.",
+      "DISTINCT removes duplicate rows but does not sort."
+    ],
+    "priority": 1
+  },
+  {
+    "id": "xii-cs-2023-q13",
+    "chapter": "Networking",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Fill in the blank: _____ is used for point-to-point communication or unicast communication such as radar and satellite. (2023 Board)",
+    "options": [
+      "INFRARED WAVES",
+      "BLUETOOTH",
+      "MICROWAVES",
+      "RADIOWAVES"
+    ],
+    "correct": 2,
+    "explanation": "Microwaves are used for point-to-point (unicast) communication over long distances, including satellite links and radar systems.",
+    "whyWrong": [
+      "Infrared is short-range line-of-sight.",
+      "Bluetooth is short-range personal area networks.",
+      "Radiowaves are used for broadcast (one-to-many) communication."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q14",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "What will the following expression be evaluated to in Python?\nprint(4+3*5/3-5%2)\n(2023 Board)",
+    "options": [
+      "8.5",
+      "8.0",
+      "10.2",
+      "10.0"
+    ],
+    "correct": 1,
+    "explanation": "Using operator precedence (left to right for *, /, %): 3*5=15, 15/3=5.0, 5%2=1; then 4+5.0-1 = 8.0. Result is float due to / operator.",
+    "whyWrong": [
+      "8.5: incorrect arithmetic.",
+      "10.2 and 10.0: incorrect arithmetic."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q15",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "Which function returns the sum of all elements of a list? (2023 Board)",
+    "options": [
+      "count()",
+      "sum()",
+      "total()",
+      "add()"
+    ],
+    "correct": 1,
+    "explanation": "sum(list) is Python's built-in function that returns the sum of all elements in an iterable.",
+    "whyWrong": [
+      "count() counts occurrences of a value.",
+      "total() is not a Python built-in.",
+      "add() is not a Python list function."
+    ],
+    "priority": 1
+  },
+  {
+    "id": "xii-cs-2023-q16",
+    "chapter": "SQL",
+    "subject": "Computer Science",
+    "difficulty": "easy",
+    "text": "fetchall() method fetches all rows in a result set and returns a: (2023 Board)",
+    "options": [
+      "Tuple of lists",
+      "List of tuples",
+      "List of strings",
+      "Tuple of strings"
+    ],
+    "correct": 1,
+    "explanation": "fetchall() returns a list of tuples, where each tuple represents one row from the query result.",
+    "whyWrong": [
+      "Tuple of lists and List/Tuple of strings are not the correct return type of fetchall()."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-cs-2023-q17",
+    "chapter": "Python Fundamentals",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): To use a function from a particular module, we need to import the module.\nReason (R): import statement can be written anywhere in the program, before using a function from that module.\n(2023 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is NOT the correct explanation for (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 1,
+    "explanation": "A is true — modules must be imported before their functions are accessible. R is also true — import can appear anywhere before the function call. However, R merely states WHERE the import goes, not WHY it is needed, so R is not the correct explanation for A.",
+    "whyWrong": [
+      "(a) is wrong because R does not explain WHY we need to import.",
+      "(c) is wrong because R is actually true.",
+      "(d) is wrong because A is true."
+    ],
+    "priority": 3
+  },
+  {
+    "id": "xii-cs-2023-q18",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "difficulty": "medium",
+    "text": "Assertion (A): A stack is a LIFO structure.\nReason (R): Any new element pushed into the stack always gets positioned at the index after the last existing element in the stack.\n(2023 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is NOT the correct explanation for (A)",
+      "(A) is true but (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 0,
+    "explanation": "A is true — stacks follow LIFO (Last In First Out). R is also true — push always adds to the top (index after last). R correctly explains LIFO: because push adds at the top and pop removes from the top, the last element inserted is always the first to be removed.",
+    "whyWrong": [
+      "(b) is incorrect because R does explain LIFO behavior via the top-of-stack mechanism.",
+      "(c) is wrong because R is true.",
+      "(d) is wrong because A is true."
+    ],
+    "priority": 3
   }
 ]

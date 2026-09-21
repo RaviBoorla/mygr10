@@ -619,5 +619,106 @@
       "callon(200) uses default a=10: b=210, a=200 → prints '210 # 200', returns 210 → y=210",
       "print(300,\"@\",210)"
     ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q19",
+    "chapter": "Python Functions",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "Atharva wrote this code to find and return the maximum value from a list. It has syntactical errors. Rewrite correct code and underline corrections:\ndef max_num(L):\n    max=L(0)\n    for a in L:\n        if a > max\n            max=a\n    return max\n(2023 Board)",
+    "modelAnswer": "Two errors:\n1. L(0) → L[0] (indexing uses square brackets, not parentheses)\n2. `if a > max` → `if a > max:` (missing colon at end of if statement)\n\nCorrected code:\ndef max_num(L):\n    max=<u>L[0]</u>\n    for a in L:\n        if a > max<u>:</u>\n            max=a\n    return max",
+    "keyPoints": [
+      "L(0) → L[0] (square brackets for list index)",
+      "if a > max → if a > max: (colon required)"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q20",
+    "chapter": "Networking",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "Differentiate between wired and wireless transmission. (2023 Board)",
+    "modelAnswer": "Wired transmission uses physical cables (coaxial, twisted pair, fiber optic) to transmit data. It is more secure, reliable, and generally faster.\nWireless transmission uses electromagnetic waves (radio, microwave, infrared) without cables. It offers mobility and easier installation but may have interference and security concerns.",
+    "keyPoints": [
+      "Wired: physical medium (cable), more secure, reliable",
+      "Wireless: electromagnetic waves, no cables, mobile but prone to interference"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q21",
+    "chapter": "Python Data Structures",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "(a) Listofnames=[\"Aman\",\"Ankit\",\"Ashish\",\"Rajan\",\"Rajat\"]\nWrite the output of: print(Listofnames[-1:-4:-1])\n(b) tup1=(10,20,30,(10,20,30),40)\nWrite the output of: print(tup1.index(20))\n(2023 Board)",
+    "modelAnswer": "(a) Listofnames[-1:-4:-1] starts at index -1 (Rajat), steps -1, stops before -4 (Ankit):\n-1→Rajat, -2→Rajan, -3→Ashish, stop before -4\nOutput: ['Rajat', 'Rajan', 'Ashish']\n\n(b) tup1.index(20) returns the index of first occurrence of 20 in the tuple.\ntup1 = (10, 20, 30, (10,20,30), 40) — 20 is at index 1.\nOutput: 1",
+    "keyPoints": [
+      "(a) Negative step slice from end: ['Rajat', 'Rajan', 'Ashish']",
+      "(b) index(20) returns 1 (first occurrence of 20 at position 1)"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q22",
+    "chapter": "SQL",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "Explain the concept of \"Alternate Key\" in a Relational Database Management System with an appropriate example. (2023 Board)",
+    "modelAnswer": "An Alternate Key is a candidate key that was NOT chosen as the primary key. When a table has multiple candidate keys (attributes/combinations that could uniquely identify rows), only one is selected as the primary key — the others become alternate keys.\nExample: In a STUDENT table with columns (StudentID, AadharNo, Name, Class): both StudentID and AadharNo can uniquely identify a student. If StudentID is the primary key, then AadharNo is an Alternate Key.",
+    "keyPoints": [
+      "Candidate key not chosen as primary key",
+      "Can still uniquely identify each row",
+      "Example with two unique attributes"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q23",
+    "chapter": "Networking",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "(a) Write the full forms of: (i) HTML (ii) TCP\n(b) What is the need of Protocols? (2023 Board)",
+    "modelAnswer": "(a)(i) HTML — HyperText Markup Language\n(a)(ii) TCP — Transmission Control Protocol\n\n(b) Protocols are standardized sets of rules that govern communication between devices in a network. They are needed to ensure that devices from different manufacturers can communicate reliably by defining the format, order, and error-handling of messages.",
+    "keyPoints": [
+      "HTML: HyperText Markup Language",
+      "TCP: Transmission Control Protocol",
+      "Protocols: standardized rules for network communication between heterogeneous devices"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q24",
+    "chapter": "Python Functions",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "Write the output of the code:\ndef short_sub(lst, n):\n    for i in range(0, n):\n        if len(lst) > 4:\n            lst[i] = lst[i] + lst[i]\n        else:\n            lst[i] = lst[i]\nsubject = ['CS','HINDI','PHYSICS','CHEMISTRY','MATHS']\nshort_sub(subject, 5)\nprint(subject)\n(2023 Board)",
+    "modelAnswer": "len(subject)=5 > 4, so every element is doubled (string concatenation):\n- 'CS'+'CS' = 'CSCS'\n- 'HINDI'+'HINDI' = 'HINDIHINDI'\n- 'PHYSICS'+'PHYSICS' = 'PHYSICSPHYSICS'\n- 'CHEMISTRY'+'CHEMISTRY' = 'CHEMISTRYCHEMISTRY'\n- 'MATHS'+'MATHS' = 'MATHSMATHS'\n\nOutput: ['CSCS', 'HINDIHINDI', 'PHYSICSPHYSICS', 'CHEMISTRYCHEMISTRY', 'MATHSMATHS']",
+    "keyPoints": [
+      "len(subject)=5 > 4 so if-branch executes for all",
+      "lst[i]+lst[i] is string concatenation (doubles the string)",
+      "List is modified in-place; all 5 elements doubled"
+    ]
+  },
+  {
+    "id": "xii-cs-2023-sa-q25",
+    "chapter": "SQL",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "Name any two DDL and any two DML commands. (2023 Board)",
+    "modelAnswer": "DDL (Data Definition Language) commands — used to define/modify database structure:\n1. CREATE — creates a new table/database\n2. ALTER — modifies an existing table structure\n(Also valid: DROP, TRUNCATE)\n\nDML (Data Manipulation Language) commands — used to manipulate data in tables:\n1. INSERT — inserts new rows into a table\n2. UPDATE — modifies existing rows\n(Also valid: DELETE, SELECT)",
+    "keyPoints": [
+      "Two DDL: CREATE, ALTER (or DROP/TRUNCATE)",
+      "Two DML: INSERT, UPDATE (or DELETE/SELECT)"
+    ]
   }
 ]
