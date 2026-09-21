@@ -1237,7 +1237,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 #rise-auth-modal:not([hidden]) { display: block; }
 #rise-auth-modal { position: fixed; inset: 0; z-index: 200; }
 #rise-profile-modal:not([hidden]) { display: block; }
-#rise-profile-modal { position: fixed; inset: 0; z-index: 200; }
+#rise-profile-modal { position: fixed; top: var(--header-h); right: 0; bottom: 0; left: 0; z-index: 200; }
 
 .auth-backdrop {
   position: absolute; inset: 0;
@@ -1246,7 +1246,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .auth-dialog {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
   width: min(420px, calc(100vw - 32px));
-  max-height: calc(100vh - 40px - env(safe-area-inset-bottom, 0px)); overflow-y: auto;
+  max-height: calc(100% - 40px - env(safe-area-inset-bottom, 0px)); overflow-y: auto;
   background: var(--surface); border-radius: var(--radius-lg);
   border: 1px solid var(--border); box-shadow: var(--shadow-lg);
   padding: 28px 24px 24px; display: flex; flex-direction: column; gap: 14px;
