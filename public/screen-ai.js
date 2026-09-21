@@ -334,6 +334,14 @@ function aiRenderMessages() {
     </div>`;
   }).join('');
   box.scrollTop = box.scrollHeight;
+  if (box.querySelector('.ai-math-fb') && !window.katex) {
+    const _s = document.querySelector('script[src*="katex"]');
+    if (_s && !_s._katexRetry) {
+      _s._katexRetry = true;
+      _s.addEventListener('load', () => { _s._katexRetry = false; aiRenderMessages(); });
+      _s.addEventListener('error', () => { _s._katexRetry = false; });
+    }
+  }
 }
 
 function aiRenderConfigPanel() {
@@ -773,12 +781,4 @@ function openAiConfig() {
   setTimeout(() => aiPanel.openConfig(), 50);
 }
 
-// If KaTeX loaded after screen-ai.js (slow CDN), re-render any fallback math spans
-(function () {
-  if (window.katex) return;
-  const s = document.querySelector('script[src*="katex"]');
-  if (!s) return;
-  s.addEventListener('load', () => {
-    if (document.querySelector('.ai-math-fb')) aiRenderMessages();
-  });
-})();
+// KaTeX retry is now handled inside aiRenderMessages() — no top-level IIFE needed.
