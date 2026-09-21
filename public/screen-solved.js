@@ -108,10 +108,10 @@ Object.assign(app, {
     const solutionCol = isRevealed ? `
         <div class="sa-model">
           <strong>Solution</strong>
-          <p>${esc(q.solution).replace(/\n/g, '<br>')}</p>
+          <p>${renderMath(q.solution)}</p>
           ${q.steps && q.steps.length ? `
             <strong>Working, step by step</strong>
-            <ul>${q.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ul>` : ''}
+            <ul>${q.steps.map(s => `<li>${renderMath(s)}</li>`).join('')}</ul>` : ''}
         </div>`
       : `<div class="sa-model sa-model-placeholder">
           <button class="btn act-btn" onclick="app.revealSolved('${esc(subject)}','${esc(q.id)}')">Show solution</button>
@@ -123,7 +123,7 @@ Object.assign(app, {
         </header>
         <div class="sa-body">
           <div class="sa-your-answer">
-            <p class="sa-question">${esc(breakParts(q.question)).replace(/\n/g, '<br>')}</p>
+            <p class="sa-question">${renderMath(breakParts(q.question))}</p>
           </div>
           ${solutionCol}
         </div>

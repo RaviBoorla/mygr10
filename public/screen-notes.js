@@ -304,7 +304,7 @@ Object.assign(app, {
 
   _noteItem(it, showChapter) {
     return `<li class="rev-item"><span class="badge ${it.cls}">${it.label}</span>
-      <span>${esc(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span></li>`;
+      <span>${renderMath(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span></li>`;
   },
 
   _repaintNotes() {

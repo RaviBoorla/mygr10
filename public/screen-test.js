@@ -190,14 +190,14 @@ Object.assign(app, {
       const badge = q.qtype ? ` <span class="qtype-badge">${esc(QTYPE_LABELS[q.qtype] || q.qtype)}</span>` : '';
       chEl.innerHTML = esc(q.chapter || '') + badge;
     }
-    textEl.textContent = breakParts(q.text);
+    textEl.innerHTML = renderMath(breakParts(q.text));
 
     optEl.innerHTML = q.options.map((opt, i) => {
       const selected = s.answers[q.id] === i;
       return `<button class="option-btn ${selected ? 'selected' : ''}"
                       aria-pressed="${selected}" onclick="app.selectOption(${i})">
                 <span class="option-letter">${String.fromCharCode(65 + i)}</span>
-                <span>${esc(opt)}</span>
+                <span>${renderMath(opt)}</span>
               </button>`;
     }).join('');
 

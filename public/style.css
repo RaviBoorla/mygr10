@@ -1135,7 +1135,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .ai-math-sym:hover { background: var(--surface-alt, var(--surface)); border-color: var(--accent, #6366f1); }
 .ai-math-btn-active { background: var(--accent, #6366f1) !important; color: #fff !important; }
 .ai-math-block { display: block; text-align: center; margin: 6px 0; overflow-x: auto; }
-.ai-math-fb { font-family: monospace; opacity: .8; }
+.ai-math-fb, .rise-math-fb { font-family: monospace; opacity: .8; }
 
 /* Config overlay */
 .ai-config-panel {

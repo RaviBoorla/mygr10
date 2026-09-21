@@ -65,10 +65,10 @@ Object.assign(app, {
     const modelCol = revealed ? `
         <div class="sa-model">
           <strong>Model answer</strong>
-          <p>${esc(q.modelAnswer)}</p>
+          <p>${renderMath(q.modelAnswer)}</p>
           ${q.keyPoints && q.keyPoints.length ? `
             <strong>Key points to cover</strong>
-            <ul>${q.keyPoints.map(k => `<li>${esc(k)}</li>`).join('')}</ul>` : ''}
+            <ul>${q.keyPoints.map(k => `<li>${renderMath(k)}</li>`).join('')}</ul>` : ''}
           <div class="sa-markrow">
             <button class="btn small ${status === 'got-it' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','got-it')">&#10003; Got it</button>
             <button class="btn small ${status === 'review' ? 'primary' : ''}" onclick="app.markSA('${esc(subject)}','${esc(q.id)}','review')">&#8635; Review again</button>
@@ -83,7 +83,7 @@ Object.assign(app, {
           <span class="sa-marks">${q.marks} mark${q.marks === 1 ? '' : 's'}</span>
           ${status ? `<span class="sa-status ${status}">${status === 'got-it' ? '&#10003; Got it' : '&#8635; Review again'}</span>` : ''}
         </header>
-        <p class="sa-question">${esc(breakParts(q.text)).replace(/\n/g, '<br>')}</p>
+        <p class="sa-question">${renderMath(breakParts(q.text))}</p>
         <div class="sa-body">
           <div class="sa-your-answer">
             <textarea id="sa-ta-${esc(q.id)}" class="sa-textarea" placeholder="Write your answer here (saved automatically)…"

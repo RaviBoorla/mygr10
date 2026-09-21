@@ -85,7 +85,7 @@ Object.assign(app, {
       const marker = oi === r.correct ? '✓' : (oi === r.userAnswer && !r.isCorrect ? '✗' : '');
       return `<div class="rev-opt ${cls}">
                 <span class="rev-opt-label">${String.fromCharCode(65 + oi)}</span>
-                <span>${esc(opt)}</span>
+                <span>${renderMath(opt)}</span>
                 ${marker ? `<span class="rev-opt-marker">${marker}</span>` : ''}
               </div>`;
     }).join('');
@@ -112,9 +112,9 @@ Object.assign(app, {
         <button class="btn small review-btn" id="review-bookmark-btn"
                 onclick="app.toggleBookmark('${esc(this.lastConfig.subject)}','${esc(r.id)}')">&#9734; Bookmark</button>
       </div>
-      <p class="rev-q-text">${esc(breakParts(r.text)).replace(/\n/g, '<br>')}</p>
+      <p class="rev-q-text">${renderMath(breakParts(r.text))}</p>
       <div class="rev-options">${optHtml}</div>
-      <div class="rev-explanation"><strong>Why:</strong> ${esc(r.explanation || 'Review this topic in your textbook.')}</div>
+      <div class="rev-explanation"><strong>Why:</strong> ${renderMath(r.explanation || 'Review this topic in your textbook.')}</div>
       ${wrongWhyBlock}
       <div class="test-nav">
         <button class="btn nav-btn" ${prevR ? `onclick="app.showReviewQuestion(${data.indexOf(prevR)})"` : 'disabled'}>&#8592; Prev</button>
