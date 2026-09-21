@@ -4,6 +4,67 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Mobile responsive fixes — Cloé panel & auth dialog *(done)*
+
+Surgical CSS-only changes to fix layout issues on phones:
+
+- **Cloé header clear button hidden on mobile** — `.ai-header-left` was missing `min-width: 0`, causing it to overflow into `.ai-header-right` and physically cover the ↺ clear button underneath the badge. Added `min-width: 0` to the left group and `flex-shrink: 0` to the right group — the exact same pattern already used for `.hdr-left`/`.hdr-right` in the main app header.
+- **Badge hidden on mobile** — changed `max-width: 140px` → `display: none` in the ≤520px media block. At full-width the truncated "provider · model" label is unreadable anyway and was stealing ~140px from the action buttons.
+- **Touch targets raised** — `.ai-icon-btn` on ≤520px now has `min-width: 36px; min-height: 36px; padding: 8px` (up from ~23px height) for thumb-friendly tapping.
+- **Auth/profile dialog safe area** — `max-height` now subtracts `env(safe-area-inset-bottom, 0px)` so the dialog bottom is not clipped behind the iPhone home-bar indicator (34px on iPhone 12–16).
+
+---
+
+## Cloé chat history sync + avatar photo fallback *(done)*
+
+- **Cross-device chat sync** — added `aiHistory: 'rise-ai-history'` to `SYNC_KEYS` in `auth.js` so Cloé conversation history is pushed to / pulled from Firestore like progress and bookmarks. On login, `pullFromCloud` keeps whichever copy (cloud or local) has more messages and immediately loads it into `aiState.messages`. `aiSaveHistory()` now calls `riseSync.push()` after every AI reply so history reaches Firestore without waiting for a quiz submit.
+- **Avatar photo fallback** — added `onerror` to the `<img>` in the `hdr-avatar` button: when the Google profile photo URL fails (common on mobile due to referrer/cookie policy differences) it replaces the broken image with the initial-letter `<span>` fallback instead of showing a broken icon.
+
+---
+
+## Cloé bug fixes — streaming LaTeX, symbol picker, profile z-index *(done)*
+
+Three bugs fixed:
+
+- **Streaming LaTeX shows as plain text** — during streaming, a chunk can end mid-expression (e.g. `$x = \frac{-9 \pm \sqrt{` with no closing `$`). `_splitMath` now checks the last text token for a trailing unclosed `$` or `$$` and trims it; the text reads cleanly until the closing delimiter arrives in the next chunk.
+- **Symbol picker clears textarea** — `insertSym()` was reading `selectionStart/selectionEnd` after the button click caused the textarea to lose focus (Chrome resets these to 0 on blur). Fixed by saving cursor position on `mousedown` via `saveCursor()` before focus is lost; also added `type="button"` to all symbol `<button>` elements to prevent accidental form submission.
+- **Profile popover hidden behind app header** — `#rise-profile-modal` had no CSS position/z-index rule, so the sticky app header (`z-index: 10`) painted over it. Added `position: fixed; inset: 0; z-index: 200` — same rules already present for `#rise-auth-modal`.
+- **KaTeX late-load re-render** — if the KaTeX CDN script loads after `screen-ai.js` initialises (slow connection / first visit), an IIFE now attaches a `load` listener on the script element and calls `aiRenderMessages()` once KaTeX is available, replacing any `ai-math-fb` fallback spans with rendered math.
+
+---
+
+## CA & IT board papers 2022–2026 *(done)*
+
+CBSE Grade X Computer Applications and Information Technology — real board past-paper questions added across all years 2022–2026 (one year per subject per commit to avoid context overflow):
+
+### Computer Applications
+
+| Year | MCQs added | SAs added | Notes |
+|---|---|---|---|
+| 2023 | 12 (ca-101–ca-112) | 7 (sa-ca-031–sa-ca-037) | New format, Section A MCQs + Section B SAs |
+| 2024 | 12 (ca-113–ca-124) | 7 (sa-ca-038–sa-ca-044) | |
+| 2025 | 12 (ca-125–ca-136) | 7 (sa-ca-045–sa-ca-051) | |
+| 2026 | 12 (ca-137–ca-148) | 7 (sa-ca-052–sa-ca-058) | |
+| 2022 | — | 7 (sa-ca-059–sa-ca-065) | Old format (1 hour, 25 marks) — no MCQ section |
+
+**CA bank totals after:** 148 MCQs, 65 SAs
+
+### Information Technology
+
+| Year | MCQs added | SAs added | Notes |
+|---|---|---|---|
+| 2023 | 30 (it-136–it-165) | 16 (sa-it-056–sa-it-071) | New format (2 hrs, 50 marks) |
+| 2024 | 30 (it-166–it-195) | 16 (sa-it-072–sa-it-087) | |
+| 2025 | 30 (it-196–it-225) | 16 (sa-it-088–sa-it-103) | |
+| 2026 | 28 (it-226–it-253) | 16 (sa-it-104–sa-it-119) | Q1 had 2 non-MCQ sub-questions (iii = short answer, v = fill-in-blank with no options) — only 28 MCQs instead of 30 |
+| 2022 | — | 21 (sa-it-120–sa-it-140) | Old format (1 hr, 25 marks, 3 sections A/B/C) — no MCQ section |
+
+**IT bank totals after:** 253 MCQs, 140 SAs
+
+All questions tagged with `year`, correct answers, `explanation`, and `whyOthersWrong` (MCQs) or `modelAnswer` + `keyPoints` (SAs). Service worker bumped to `rise-shell-v10`.
+
+---
+
 ## Grade XII — CBSE Economics Textbook Solved Exercises *(done)*
 
 183 questions across both NCERT Economics books, extracted from the supplied PDF textbooks and worked with full solution steps:
