@@ -10,10 +10,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "A Pandas DataFrame is a 2D labeled data structure \u2014 rows are labeled by an index and columns are labeled by column names. It is analogous to a spreadsheet or SQL table.",
+    "explanation": "A Pandas DataFrame is a 2D labeled data structure — rows are labeled by an index and columns are labeled by column names. It is analogous to a spreadsheet or SQL table.",
     "whyWrong": [
       "",
-      "Incorrect \u2014 a DataFrame is exactly a 2D labeled data structure with row index and column names."
+      "Incorrect — a DataFrame is exactly a 2D labeled data structure with row index and column names."
     ],
     "priority": true
   },
@@ -76,7 +76,7 @@
     "correct": 2,
     "explanation": "A line chart is ideal for showing trends over a continuous time period. It connects data points chronologically to reveal patterns such as rising or falling sales. Bar charts compare discrete categories; pie charts show proportions; histograms show frequency distributions.",
     "whyWrong": [
-      "Bar charts compare discrete values \u2014 not ideal for continuous time trends.",
+      "Bar charts compare discrete values — not ideal for continuous time trends.",
       "Pie charts show part-to-whole proportions, not trends.",
       "",
       "Histograms show frequency distributions, not time-series trends."
@@ -116,10 +116,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "True \u2014 GROUP BY groups rows with identical values in specified columns into summary rows, often used with aggregate functions like COUNT(), SUM(), AVG().",
+    "explanation": "True — GROUP BY groups rows with identical values in specified columns into summary rows, often used with aggregate functions like COUNT(), SUM(), AVG().",
     "whyWrong": [
       "",
-      "Incorrect \u2014 GROUP BY does exactly group rows with the same values, enabling aggregation per group."
+      "Incorrect — GROUP BY does exactly group rows with the same values, enabling aggregation per group."
     ],
     "priority": false
   },
@@ -141,7 +141,7 @@
       "Trademark protects brand names, logos, and symbols.",
       "Patents protect new inventions and technical processes.",
       "",
-      "Trade secrets are confidential business practices \u2014 not applicable to a published novel."
+      "Trade secrets are confidential business practices — not applicable to a published novel."
     ],
     "priority": false
   },
@@ -161,7 +161,7 @@
     "explanation": "df.loc[row_label, col_label] accesses data by label. df.iloc[] uses integer positions (not labels). df['R2'] would try to access column 'R2', and df.at[0,'Score'] accesses by integer position.",
     "whyWrong": [
       "",
-      "iloc uses integer positions \u2014 'R2' is a label, not a position.",
+      "iloc uses integer positions — 'R2' is a label, not a position.",
       "df['R2'] tries to access a column named 'R2', not a row.",
       "df.at[0,'Score'] accesses row at integer position 0, not by label 'R2'."
     ],
@@ -180,7 +180,7 @@
       "INFOR"
     ],
     "correct": 0,
-    "explanation": "SUBSTRING('information', 2, 4): In SQL, string positions start at 1. Position 2 is 'n', taking 4 characters: n,f,o,r \u2192 'nfor'. UPPER('nfor') = 'NFOR'.",
+    "explanation": "SUBSTRING('information', 2, 4): In SQL, string positions start at 1. Position 2 is 'n', taking 4 characters: n,f,o,r → 'nfor'. UPPER('nfor') = 'NFOR'.",
     "whyWrong": [
       "",
       "INFO would be positions 1-4: i,n,f,o.",
@@ -294,7 +294,7 @@
     "whyWrong": [
       "(3,5) reverses rows and columns.",
       "",
-      "[5,3] \u2014 .shape returns a tuple, not a list.",
+      "[5,3] — .shape returns a tuple, not a list.",
       "15 would be the total number of cells, not shape."
     ],
     "priority": true
@@ -312,9 +312,9 @@
       "Series with values [30, 40]"
     ],
     "correct": 1,
-    "explanation": "Slicing a Series with integer labels using s[1:3] uses positional slicing (start inclusive, stop exclusive). Positions 1 and 2 \u2192 values 20 and 30. The stop index 3 is excluded.",
+    "explanation": "Slicing a Series with integer labels using s[1:3] uses positional slicing (start inclusive, stop exclusive). Positions 1 and 2 → values 20 and 30. The stop index 3 is excluded.",
     "whyWrong": [
-      "s[1:3] excludes index 3 \u2014 so value 40 is not included.",
+      "s[1:3] excludes index 3 — so value 40 is not included.",
       "",
       "s[1:3] starts from position 1 (value 20), not 0 (value 10).",
       "Positions 2 and 3 would be s[2:4]."
@@ -354,10 +354,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "True \u2014 HAVING filters groups (after GROUP BY), similar to how WHERE filters individual rows (before grouping). HAVING typically contains aggregate conditions like HAVING COUNT(*) > 5.",
+    "explanation": "True — HAVING filters groups (after GROUP BY), similar to how WHERE filters individual rows (before grouping). HAVING typically contains aggregate conditions like HAVING COUNT(*) > 5.",
     "whyWrong": [
       "",
-      "Incorrect \u2014 HAVING filters groups after GROUP BY; WHERE filters individual rows before grouping."
+      "Incorrect — HAVING filters groups after GROUP BY; WHERE filters individual rows before grouping."
     ],
     "priority": false
   },
@@ -396,9 +396,9 @@
       "0"
     ],
     "correct": 1,
-    "explanation": "MOD(17, 5) returns the remainder of 17 divided by 5. 17 = 5\u00d73 + 2, so the remainder is 2.",
+    "explanation": "MOD(17, 5) returns the remainder of 17 divided by 5. 17 = 5×3 + 2, so the remainder is 2.",
     "whyWrong": [
-      "MOD(17,5) = 2, not 3. (17 = 3\u00d75 + 2, remainder is 2)",
+      "MOD(17,5) = 2, not 3. (17 = 3×5 + 2, remainder is 2)",
       "",
       "3.4 is the result of 17/5 (division), not MOD.",
       "0 would mean 17 is divisible by 5, which it is not."
@@ -419,12 +419,12 @@
       "A is false, but R is true."
     ],
     "correct": 1,
-    "explanation": "A is true: A Pandas Series can hold mixed types by using dtype=object. R is true: NumPy arrays are homogeneous. However R does not explain A \u2014 in fact it seems contradictory; the Series stores mixed types by using Python objects, which is how it overrides NumPy's homogeneity. Both statements are true but R is not the correct explanation of A.",
+    "explanation": "A is true: A Pandas Series can hold mixed types by using dtype=object. R is true: NumPy arrays are homogeneous. However R does not explain A — in fact it seems contradictory; the Series stores mixed types by using Python objects, which is how it overrides NumPy's homogeneity. Both statements are true but R is not the correct explanation of A.",
     "whyWrong": [
-      "R (NumPy homogeneity) does not explain how Series can store mixed types \u2014 it actually works around that.",
+      "R (NumPy homogeneity) does not explain how Series can store mixed types — it actually works around that.",
       "",
-      "R is true \u2014 NumPy arrays are indeed homogeneous by nature.",
-      "A is true \u2014 a Pandas Series with dtype=object can store mixed types."
+      "R is true — NumPy arrays are indeed homogeneous by nature.",
+      "A is true — a Pandas Series with dtype=object can store mixed types."
     ],
     "priority": true
   },
@@ -442,12 +442,12 @@
       "A is false, but R is true."
     ],
     "correct": 1,
-    "explanation": "A is true: PRIMARY KEY enforces UNIQUE and NOT NULL constraints. R is true: each table can have at most one PRIMARY KEY. However, R (one PK per table) does not explain A (why PK must be unique and non-null) \u2014 these are independent properties. Both facts are true but unrelated as cause and effect.",
+    "explanation": "A is true: PRIMARY KEY enforces UNIQUE and NOT NULL constraints. R is true: each table can have at most one PRIMARY KEY. However, R (one PK per table) does not explain A (why PK must be unique and non-null) — these are independent properties. Both facts are true but unrelated as cause and effect.",
     "whyWrong": [
-      "R does not explain A \u2014 the uniqueness/NOT NULL property is defined separately from the fact that only one PK exists.",
+      "R does not explain A — the uniqueness/NOT NULL property is defined separately from the fact that only one PK exists.",
       "",
-      "R is true \u2014 a table may have only one primary key.",
-      "A is true \u2014 PRIMARY KEY must be unique and non-null."
+      "R is true — a table may have only one primary key.",
+      "A is true — PRIMARY KEY must be unique and non-null."
     ],
     "priority": true
   },
@@ -462,10 +462,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "True \u2014 When you create a Series with a custom index, the index labels can be strings, integers, or other hashable types. The default positional index uses integers (0,1,2,...) but you can assign string labels as index.",
+    "explanation": "True — When you create a Series with a custom index, the index labels can be strings, integers, or other hashable types. The default positional index uses integers (0,1,2,...) but you can assign string labels as index.",
     "whyWrong": [
       "",
-      "Incorrect \u2014 Pandas Series indexes can be strings (e.g., pd.Series([1,2], index=['a','b'])) or integers."
+      "Incorrect — Pandas Series indexes can be strings (e.g., pd.Series([1,2], index=['a','b'])) or integers."
     ],
     "priority": true
   },
@@ -486,7 +486,7 @@
     "whyWrong": [
       "DF.add() is for element-wise addition, not adding rows.",
       "",
-      "DF.loc() with parentheses is invalid syntax \u2014 loc uses square brackets.",
+      "DF.loc() with parentheses is invalid syntax — loc uses square brackets.",
       "DF.addloc[] is not a valid Pandas method."
     ],
     "priority": true
@@ -528,10 +528,10 @@
     "correct": 1,
     "explanation": "Bar charts are preferred for comparing discrete categories (like student counts across different classes). Line charts are better for continuous time-series data (trends over time like temperature, stock prices, or traffic).",
     "whyWrong": [
-      "Temperature trends over time \u2192 line chart preferred.",
+      "Temperature trends over time → line chart preferred.",
       "",
-      "Stock price over time is continuous time-series \u2192 line chart.",
-      "Website traffic over time is continuous \u2192 line chart."
+      "Stock price over time is continuous time-series → line chart.",
+      "Website traffic over time is continuous → line chart."
     ],
     "priority": true
   },
@@ -568,9 +568,9 @@
       "False"
     ],
     "correct": 1,
-    "explanation": "False \u2014 SQL aggregate functions (SUM, COUNT, AVG, MAX, MIN) return a single value per group (or one value for the whole table if no GROUP BY). They summarize multiple rows into a single result, not one value per column.",
+    "explanation": "False — SQL aggregate functions (SUM, COUNT, AVG, MAX, MIN) return a single value per group (or one value for the whole table if no GROUP BY). They summarize multiple rows into a single result, not one value per column.",
     "whyWrong": [
-      "Incorrect \u2014 aggregate functions return a single summary value per group, not multiple values.",
+      "Incorrect — aggregate functions return a single summary value per group, not multiple values.",
       ""
     ],
     "priority": false
@@ -593,7 +593,7 @@
       "Trademark protects brand names and logos, not inventions.",
       "Copyright protects creative and literary works, not inventions.",
       "",
-      "'Both Trademark and Copyright' does not cover inventions \u2014 the correct protection is a Patent."
+      "'Both Trademark and Copyright' does not cover inventions — the correct protection is a Patent."
     ],
     "priority": false
   },
@@ -634,8 +634,8 @@
     "correct": 2,
     "explanation": "LENGTH() counts all characters including spaces. 'Data Base' = D,a,t,a,' ',B,a,s,e = 9 characters. The space counts as one character.",
     "whyWrong": [
-      "7 would be 'DataBas' \u2014 wrong.",
-      "8 would exclude the space \u2014 but LENGTH includes spaces.",
+      "7 would be 'DataBas' — wrong.",
+      "8 would exclude the space — but LENGTH includes spaces.",
       "",
       "LENGTH is a valid SQL function; no error occurs."
     ],
@@ -654,7 +654,7 @@
       "It displays the same content to all users unless manually updated"
     ],
     "correct": 3,
-    "explanation": "A static web page has fixed content \u2014 all users see identical content. The content only changes if a developer manually edits the HTML file. Dynamic pages generate content per user/request using server-side processing.",
+    "explanation": "A static web page has fixed content — all users see identical content. The content only changes if a developer manually edits the HTML file. Dynamic pages generate content per user/request using server-side processing.",
     "whyWrong": [
       "Static pages do NOT auto-update; that is a feature of dynamic pages.",
       "Showing different content per user is a dynamic page feature.",
@@ -678,9 +678,9 @@
     "correct": 3,
     "explanation": "DML stands for Data Manipulation Language. It includes commands like SELECT, INSERT, UPDATE, and DELETE used to manipulate data stored within existing tables.",
     "whyWrong": [
-      "Incorrect \u2014 DML is not about devices.",
-      "Incorrect \u2014 DML is not about devices.",
-      "Incorrect \u2014 'Management' is wrong; it is 'Manipulation'.",
+      "Incorrect — DML is not about devices.",
+      "Incorrect — DML is not about devices.",
+      "Incorrect — 'Management' is wrong; it is 'Manipulation'.",
       ""
     ],
     "priority": false
@@ -747,7 +747,7 @@
       "Dictionary values become the Series data values, not index.",
       "Dictionary keys become the index labels, not values.",
       "",
-      "The Series uses dictionary keys as index \u2014 not default integers."
+      "The Series uses dictionary keys as index — not default integers."
     ],
     "priority": true
   },
@@ -806,10 +806,10 @@
       "False"
     ],
     "correct": 0,
-    "explanation": "True \u2014 In MySQL, INSTR(str, substr) returns the position of the first occurrence of substr in str. If substr is not found, it returns 0 (unlike Python's str.find() which also returns -1... wait, INSTR returns 0 for not found in SQL).",
+    "explanation": "True — In MySQL, INSTR(str, substr) returns the position of the first occurrence of substr in str. If substr is not found, it returns 0 (unlike Python's str.find() which also returns -1... wait, INSTR returns 0 for not found in SQL).",
     "whyWrong": [
       "",
-      "Incorrect \u2014 INSTR returns 0 when the substring is not found in the main string."
+      "Incorrect — INSTR returns 0 when the substring is not found in the main string."
     ],
     "priority": true
   },
@@ -831,7 +831,7 @@
       "axis=-1 is not standard for DataFrame.drop().",
       "axis=0 drops rows (the default), not columns.",
       "",
-      "axis=2 would be for 3D arrays \u2014 DataFrames only have 0 and 1."
+      "axis=2 would be for 3D arrays — DataFrames only have 0 and 1."
     ],
     "priority": true
   },
@@ -848,12 +848,12 @@
       "16.00"
     ],
     "correct": 2,
-    "explanation": "ROUND(15.678, 2) rounds 15.678 to 2 decimal places. The third decimal is 8 (\u22655), so the second decimal rounds up: 15.67 \u2192 15.68.",
+    "explanation": "ROUND(15.678, 2) rounds 15.678 to 2 decimal places. The third decimal is 8 (≥5), so the second decimal rounds up: 15.67 → 15.68.",
     "whyWrong": [
-      "15.00 would be ROUND(15.678, 0) \u2014 rounds to integer.",
-      "15.67 \u2014 the digit after is 8 (\u22655) so it rounds up to 15.68.",
+      "15.00 would be ROUND(15.678, 0) — rounds to integer.",
+      "15.67 — the digit after is 8 (≥5) so it rounds up to 15.68.",
       "",
-      "16.00 would require rounding to 0 decimal places and a value \u2265 15.5, but here we round to 2 places."
+      "16.00 would require rounding to 0 decimal places and a value ≥ 15.5, but here we round to 2 places."
     ],
     "priority": true
   },
@@ -871,12 +871,12 @@
       "A is false, but R is true."
     ],
     "correct": 2,
-    "explanation": "A is true: A DataFrame can have different data types (int, str, float, bool) in different columns. R is false: DataFrames do NOT restrict to only numeric types \u2014 each column can have its own dtype including object (for strings), datetime, bool, etc.",
+    "explanation": "A is true: A DataFrame can have different data types (int, str, float, bool) in different columns. R is false: DataFrames do NOT restrict to only numeric types — each column can have its own dtype including object (for strings), datetime, bool, etc.",
     "whyWrong": [
-      "R is false \u2014 DataFrames are not limited to numeric types.",
+      "R is false — DataFrames are not limited to numeric types.",
       "R is false, so both cannot be true.",
       "",
-      "A is true \u2014 DataFrames support multiple data types across different columns."
+      "A is true — DataFrames support multiple data types across different columns."
     ],
     "priority": true
   },
@@ -894,13 +894,389 @@
       "A is false, but R is true."
     ],
     "correct": 0,
-    "explanation": "A is true: when NULLs exist in a column, COUNT(column) < COUNT(*) \u2014 they give different results. R is true and correctly explains A: COUNT(col) ignores NULLs while COUNT(*) counts all rows regardless of NULLs.",
+    "explanation": "A is true: when NULLs exist in a column, COUNT(column) < COUNT(*) — they give different results. R is true and correctly explains A: COUNT(col) ignores NULLs while COUNT(*) counts all rows regardless of NULLs.",
     "whyWrong": [
       "",
-      "R does correctly explain A \u2014 the NULL handling difference is the exact reason they give different results.",
-      "R is true \u2014 COUNT(col) skips NULLs; COUNT(*) includes all rows.",
-      "A is true \u2014 the counts differ when NULLs are present."
+      "R does correctly explain A — the NULL handling difference is the exact reason they give different results.",
+      "R is true — COUNT(col) skips NULLs; COUNT(*) includes all rows.",
+      "A is true — the counts differ when NULLs are present."
     ],
     "priority": true
+  },
+  {
+    "id": "xii-ip-2024-q1",
+    "chapter": "Computer Networks",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "In __________ topology, the devices are arranged in the form of multiple branches in hierarchical manner. (2024 Board)",
+    "options": [
+      "Star",
+      "Tree",
+      "Mesh",
+      "Bus"
+    ],
+    "correct": 1,
+    "explanation": "Tree topology arranges devices in a hierarchical structure with multiple branches emanating from a root/central node, resembling a tree.",
+    "whyWrong": [
+      "Star connects all devices to a single central hub without branches.",
+      "Mesh interconnects every device to every other device.",
+      "Bus connects all devices to a single shared backbone cable."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q2",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Ridhima purchased a license for a copy of a software and made additional copies without the permission of the copyright owner. This act of hers is known as __________. (2024 Board)",
+    "options": [
+      "Trademark Infringement",
+      "Identity Theft",
+      "Copyright Infringement",
+      "Patent"
+    ],
+    "correct": 2,
+    "explanation": "Copyright Infringement is the unauthorized reproduction, distribution, or use of copyrighted work without the owner's permission.",
+    "whyWrong": [
+      "Trademark Infringement involves unauthorized use of a brand name or logo.",
+      "Identity Theft is stealing someone's personal information.",
+      "Patent protects inventions, not software copies."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q3",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "What can an individual do to enhance the privacy of data stored digitally? (2024 Board)",
+    "options": [
+      "Share sensitive information on social media platforms",
+      "Use your date of birth as your password",
+      "Regularly update software installed on your device",
+      "Download and install software from unknown sources"
+    ],
+    "correct": 2,
+    "explanation": "Regularly updating software patches security vulnerabilities, protecting digital data privacy. Using strong, unique passwords and keeping software up to date are key privacy practices.",
+    "whyWrong": [
+      "Sharing sensitive info on social media compromises privacy.",
+      "Using date of birth as password is weak and easily guessable.",
+      "Downloading from unknown sources risks malware infection."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q4",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "medium",
+    "text": "What will be the output of the following query?\nSELECT POWER(2, MOD(17,3)); (2024 Board)",
+    "options": [
+      "8",
+      "1",
+      "0",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "MOD(17,3) = 2 (17 divided by 3 gives remainder 2). POWER(2,2) = 4.",
+    "whyWrong": [
+      "8 would be POWER(2,3).",
+      "1 would be POWER(2,0).",
+      "0 is not a power of 2."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q5",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is not an aggregate function in MySQL? (2024 Board)",
+    "options": [
+      "AVG()",
+      "MAX()",
+      "LCASE()",
+      "MIN()"
+    ],
+    "correct": 2,
+    "explanation": "LCASE() is a string function that converts a string to lowercase — it is not an aggregate function. Aggregate functions operate on multiple rows: AVG, MAX, MIN, COUNT, SUM.",
+    "whyWrong": [
+      "AVG() calculates the average of a column — it is an aggregate function.",
+      "MAX() returns the maximum value — it is an aggregate function.",
+      "MIN() returns the minimum value — it is an aggregate function."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q6",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "__________ is the gaining of unauthorized access to data in a computer system. (2024 Board)",
+    "options": [
+      "Phishing",
+      "Plagiarism",
+      "Hacking",
+      "Copyright violation"
+    ],
+    "correct": 2,
+    "explanation": "Hacking is the unauthorized access to or control over a computer system, network, or data without the owner's permission.",
+    "whyWrong": [
+      "Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity.",
+      "Plagiarism is presenting someone else's work as one's own.",
+      "Copyright violation is unauthorized use of copyrighted content."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q7",
+    "chapter": "Data Handling using Pandas",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT true with respect to CSV files? (2024 Board)",
+    "options": [
+      "Values are separated by commas",
+      "to_csv() can be used to save a dataframe to a CSV file",
+      "CSV file is created using a word processor",
+      "CSV file is a type of text file"
+    ],
+    "correct": 2,
+    "explanation": "CSV files are plain text files and can be created/edited with text editors or spreadsheet software, not word processors. Word processors add formatting that is incompatible with the plain CSV structure.",
+    "whyWrong": [
+      "(i) is TRUE — CSV stands for Comma-Separated Values.",
+      "(ii) is TRUE — pandas to_csv() saves a DataFrame as a CSV file.",
+      "(iv) is TRUE — CSV files are plain text files."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q8",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which MySQL command helps to add a primary key constraint to any table that has already been created? (2024 Board)",
+    "options": [
+      "UPDATE",
+      "INSERT INTO",
+      "ALTER TABLE",
+      "ORDER BY"
+    ],
+    "correct": 2,
+    "explanation": "ALTER TABLE is a DDL command used to modify the structure of an existing table, including adding or dropping constraints like PRIMARY KEY.",
+    "whyWrong": [
+      "UPDATE is a DML command that modifies existing row data, not structure.",
+      "INSERT INTO adds new rows; it cannot modify table structure.",
+      "ORDER BY is a SELECT clause for sorting results."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q9",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "medium",
+    "text": "What will be the output of the following query?\nSELECT SUBSTR(\"G20 2023 INDIA\", 5, 4); (2024 Board)",
+    "options": [
+      "G20 2",
+      "2023",
+      "INDI",
+      "023"
+    ],
+    "correct": 1,
+    "explanation": "SUBSTR(str, pos, len) extracts a substring starting at position 5 (1-indexed) with length 4. 'G20 2023 INDIA': G(1)2(2)0(3) (4)2(5)0(6)2(7)3(8) → starting at 5 for 4 chars = '2023'.",
+    "whyWrong": [
+      "'G20 2' starts at position 1.",
+      "'INDI' starts at position 9.",
+      "'023' starts at position 6, length 3."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q10",
+    "chapter": "Data Handling using Pandas",
+    "subject": "XII Informatics Practices",
+    "difficulty": "medium",
+    "text": "What will be the output of the following Python code?\nimport pandas as pd\ndd={'One':1,'Two':2,'Three':3,'Seven':7}\nrr=pd.Series(dd)\nrr['Four']=4\nprint(rr) (2024 Board)",
+    "options": [
+      "One 1\nTwo 2\nThree 3\nSeven 7\ndtype: int64",
+      "One 1\nTwo 2\nThree 3\nFour 4\nSeven 7\ndtype: int64",
+      "Four 4\nOne 1\nTwo 2\nThree 3\nSeven 7\ndtype: int64",
+      "One 1\nTwo 2\nThree 3\nSeven 7\nFour 4\ndtype: int64"
+    ],
+    "correct": 3,
+    "explanation": "When a new key-value pair is assigned to an existing Series (rr['Four']=4), it is appended at the end. The existing order (One, Two, Three, Seven) is preserved and Four is added last.",
+    "whyWrong": [
+      "Option (i) is wrong because it omits Four, which was added.",
+      "Option (ii) shows Four between Three and Seven (sorted), which pandas doesn't do on assignment.",
+      "Option (iii) shows Four first, which is incorrect."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q11",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following clause cannot work with SELECT statement in MySQL? (2024 Board)",
+    "options": [
+      "FROM",
+      "INSERT INTO",
+      "WHERE",
+      "GROUP BY"
+    ],
+    "correct": 1,
+    "explanation": "INSERT INTO is a DML command used to add records to a table; it cannot be used as a clause within a SELECT statement.",
+    "whyWrong": [
+      "FROM is required with SELECT to specify the table.",
+      "WHERE filters rows in a SELECT query.",
+      "GROUP BY groups rows for aggregate functions in SELECT."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q12",
+    "chapter": "Data Handling using Pandas",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following command will not show first five rows from the Pandas series named S1? (2024 Board)",
+    "options": [
+      "S1[0:5]",
+      "S1.head()",
+      "S1.head(5)",
+      "S1.head[0:5]"
+    ],
+    "correct": 3,
+    "explanation": "S1.head[0:5] is invalid syntax — head is a method and must be called with parentheses, not subscripted with []. This will raise a TypeError.",
+    "whyWrong": [
+      "S1[0:5] is valid slicing that returns first 5 elements.",
+      "S1.head() returns first 5 rows by default.",
+      "S1.head(5) explicitly returns first 5 rows."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q13",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Rama was unable to understand how the recruiters were able to know about her digital activity when she has not shared anything with them. The recruiters might have checked __________ of Rama. (2024 Board)",
+    "options": [
+      "Carbon Footprint",
+      "Water Footprint",
+      "Online print",
+      "Digital Footprint"
+    ],
+    "correct": 3,
+    "explanation": "A Digital Footprint is the trail of data left behind by a person's online activities — websites visited, posts, searches — which can be tracked by others without the person explicitly sharing.",
+    "whyWrong": [
+      "Carbon Footprint measures greenhouse gas emissions.",
+      "Water Footprint measures water usage.",
+      "'Online print' is not a standard term."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q14",
+    "chapter": "Database Management System (MySQL)",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which MySQL string function is used to extract a substring from a given string based on a specified starting position and length? (2024 Board)",
+    "options": [
+      "SUBSTRING_INDEX()",
+      "LENGTH()",
+      "MID()",
+      "TRIM()"
+    ],
+    "correct": 2,
+    "explanation": "MID(str, pos, len) — or equivalently SUBSTR()/SUBSTRING() — extracts a substring starting at a specified position for a given length.",
+    "whyWrong": [
+      "SUBSTRING_INDEX() splits a string by a delimiter.",
+      "LENGTH() returns the number of characters in a string.",
+      "TRIM() removes leading/trailing spaces."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q15",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "The software that is free for anyone, and its source code is available for access, modification, correction, and improvement is called __________. (2024 Board)",
+    "options": [
+      "Proprietary software",
+      "Commercial software",
+      "Free and Open source software",
+      "Copyrighted software"
+    ],
+    "correct": 2,
+    "explanation": "Free and Open Source Software (FOSS) is software whose source code is publicly available for anyone to view, modify, and distribute freely.",
+    "whyWrong": [
+      "Proprietary software has restricted source code that cannot be accessed or modified.",
+      "Commercial software is sold for profit; source code is typically closed.",
+      "Copyrighted software grants rights to the copyright holder, not the public."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q16",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "easy",
+    "text": "__________ help in data protection through copyrights, patents and trademarks. (2024 Board)",
+    "options": [
+      "Data Privacy Right",
+      "Right to Innovation",
+      "Intellectual Property Rights (IPR)",
+      "Right to Data Protection"
+    ],
+    "correct": 2,
+    "explanation": "Intellectual Property Rights (IPR) is the legal framework that protects creations of the mind through mechanisms like copyrights, patents, and trademarks.",
+    "whyWrong": [
+      "Data Privacy Right pertains to personal data protection, not creative works.",
+      "Right to Innovation is not a defined legal category.",
+      "Right to Data Protection relates to personal data, not intellectual creations."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q17",
+    "chapter": "Cyber Ethics and Cyber Crime",
+    "subject": "XII Informatics Practices",
+    "difficulty": "medium",
+    "text": "Assertion (A): Cyber Bullying can have serious emotional and psychological effects on victims.\nReason (R): Online Bullying is not a crime while offline bullying is a crime.\nChoose the correct option. (2024 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation for (A)",
+      "(A) is true and (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 2,
+    "explanation": "A is TRUE — cyber bullying does have serious emotional and psychological effects. R is FALSE — online/cyber bullying IS a crime under the Information Technology Act in India.",
+    "whyWrong": [
+      "Options (i) and (ii) require R to be true, but R is false.",
+      "(iv) would require A to be false, but A is true."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2024-q18",
+    "chapter": "Data Handling using Pandas",
+    "subject": "XII Informatics Practices",
+    "difficulty": "medium",
+    "text": "Assertion (A): A Series is a one dimensional array and a DataFrame is a two-dimensional array containing sequence of values of any data type (int, float, list, string, etc.).\nReason (R): Both Series and DataFrames have by default numeric indexes starting from zero.\nChoose the correct option. (2024 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is not the correct explanation for (A)",
+      "(A) is true and (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 1,
+    "explanation": "A is TRUE — Series is 1D and DataFrame is 2D, both can hold multiple data types. R is also TRUE — both have default integer RangeIndex starting at 0. However, R explains the default indexing behaviour, not the dimensionality described in A, so R is not the correct explanation of A.",
+    "whyWrong": [
+      "Option (i) is wrong because the default numeric index does not explain why one is 1D and the other 2D.",
+      "Options (iii) and (iv) incorrectly mark either A or R as false."
+    ],
+    "priority": 2
   }
 ]
