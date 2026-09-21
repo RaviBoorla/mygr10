@@ -720,5 +720,111 @@
       "Two DDL: CREATE, ALTER (or DROP/TRUNCATE)",
       "Two DML: INSERT, UPDATE (or DELETE/SELECT)"
     ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q19",
+    "chapter": "Stack Data Structure",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Which principle does a Stack follow? Which Python list method is used to remove the last element from a list used as a stack? Give an example. (2022 Board)",
+    "modelAnswer": "A Stack follows the LIFO (Last In First Out) principle — the last element added is the first to be removed.\nThe pop() method removes the last element from a Python list. Example: L = [10, 20, 30]; L.pop() removes 30 and returns 30.",
+    "keyPoints": [
+      "Stack follows LIFO (Last In First Out)",
+      "Python list method: pop() removes and returns the last element",
+      "Example: L=[10,20,30]; L.pop() → returns 30, L becomes [10,20]"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q20",
+    "chapter": "Networking Protocols",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Expand: (i) VoIP  (ii) PPP. Which type of network (PAN/LAN/MAN/WAN) uses Bluetooth technology? (2022 Board)",
+    "modelAnswer": "(i) VoIP — Voice over Internet Protocol (transmits voice calls over the internet)\n(ii) PPP — Point-to-Point Protocol (used for direct connection between two nodes)\nBluetooth is used in PAN (Personal Area Network) — covers a very short range (up to ~10 m) around a person.",
+    "keyPoints": [
+      "VoIP = Voice over Internet Protocol",
+      "PPP = Point-to-Point Protocol",
+      "Bluetooth → PAN (Personal Area Network)"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q21",
+    "chapter": "Relational Data Model",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Differentiate between Attribute and Domain in the context of a Relational Data Model. (2022 Board)",
+    "modelAnswer": "Attribute: A named column of a relation (table) that represents a particular property or characteristic of the entity. Example: RollNo, Name, Marks are attributes of a STUDENT table.\nDomain: The set of all valid/permissible values that an attribute can take. Example: the domain of the Marks attribute could be integers from 0 to 100.",
+    "keyPoints": [
+      "Attribute = named column representing a property of an entity",
+      "Domain = set of all permissible values for an attribute",
+      "Example: Attribute=Marks, Domain=integers 0-100"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q22",
+    "chapter": "Python-MySQL Connectivity",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "CBSE 2022 Board",
+    "text": "A MEMBER table has columns M_ID, NAME, ACTIVITY. The following Python code fetches GYM activity members. Predict the output:\nimport mysql.connector\ncon=mysql.connector.connect(host='localhost',user='root',passwd='pass',database='SPORTS')\ncursor=con.cursor()\ncursor.execute('SELECT M_ID, NAME FROM MEMBER WHERE ACTIVITY=\"GYM\"')\nrow=cursor.fetchone()\nfor i in range(2):\n    row=cursor.fetchone()\n    print(row[0],row[1],'#')\nAssume GYM members are: (M1001,Ritesh), (M1002,Pratik), (M1003,Divya), (M1004,Rakesh). (2022 Board)",
+    "modelAnswer": "cursor.fetchone() before the loop fetches and discards the first GYM row (M1001, Ritesh).\nThe loop runs twice, fetching the next two rows:\nIteration 1: row = (M1002, Pratik) → prints: M1002 Pratik #\nIteration 2: row = (M1003, Divya) → prints: M1003 Divya #\nOutput:\nM1002 Pratik #\nM1003 Divya #",
+    "keyPoints": [
+      "fetchone() before loop skips M1001 Ritesh",
+      "Loop i=0: fetches M1002 Pratik → prints 'M1002 Pratik #'",
+      "Loop i=1: fetches M1003 Divya → prints 'M1003 Divya #'"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q23",
+    "chapter": "SQL DDL and DML",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "(i) Write SQL command to remove the DISCOUNT column from the ITEMS table.\n(ii) Classify the following SQL commands as DDL or DML: CREATE, UPDATE, DROP, INSERT (2022 Board)",
+    "modelAnswer": "(i) ALTER TABLE ITEMS DROP COLUMN DISCOUNT;\n(ii) DDL (Data Definition Language): CREATE, DROP\n     DML (Data Manipulation Language): UPDATE, INSERT",
+    "keyPoints": [
+      "DROP column: ALTER TABLE ITEMS DROP COLUMN DISCOUNT;",
+      "DDL commands: CREATE, DROP (modify structure)",
+      "DML commands: UPDATE, INSERT (manipulate data)"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q24",
+    "chapter": "MySQL Commands",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "CBSE 2022 Board",
+    "text": "Write MySQL commands for the following operations:\n(a) Select/switch to a database named LIBRARY\n(b) Display list of all tables in the current database\n(c) Display the structure/schema of a table named BOOKS (2022 Board)",
+    "modelAnswer": "(a) USE LIBRARY;\n(b) SHOW TABLES;\n(c) DESCRIBE BOOKS;  (or DESC BOOKS;)",
+    "keyPoints": [
+      "Switch database: USE LIBRARY;",
+      "List tables: SHOW TABLES;",
+      "Show structure: DESCRIBE BOOKS; (or DESC BOOKS;)"
+    ]
+  },
+  {
+    "id": "xii-cs-2022-sa-q25",
+    "chapter": "Network Case Study",
+    "subject": "Computer Science",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "CBSE 2022 Board",
+    "text": "Galaxy Provider Ltd. is setting up its office network. The Mumbai office has three blocks: Admin (80 computers), Sales (50 computers), Accounts (30 computers). The HQ is in Texas, USA. Answer the following:\n(a) Which device would you suggest to boost signal strength and prevent data loss over long cable runs within a block?\n(b) Which device would you suggest to connect computers within a single block?\n(c) Which technology/service allows employees to have live voice/video interactions between Mumbai and Texas at low cost?\n(d) Suggest the most suitable cable layout (topology) for connecting computers within a block. (2022 Board)",
+    "modelAnswer": "(a) Repeater — amplifies/regenerates signals to prevent data loss over long distances.\n(b) Switch (or Hub) — connects multiple computers within the same block/LAN segment.\n(c) VoIP (Voice over Internet Protocol) — enables low-cost voice and video communication over the Internet between Mumbai and Texas.\n(d) Star topology — each computer is connected to a central switch, making it easy to manage and isolate faults.",
+    "keyPoints": [
+      "(a) Repeater: boosts/regenerates signal over long cable runs",
+      "(b) Switch: connects computers within a block",
+      "(c) VoIP: low-cost live voice/video over Internet",
+      "(d) Star topology: central switch, easy fault isolation"
+    ]
   }
 ]
