@@ -101,8 +101,16 @@ Object.assign(app, {
         <div class="streak-arena-half">${arenaCard}</div>
       </div>`;
 
+    const installBanner = !app._isStandalone() ? `
+      <div class="install-banner" id="install-banner">
+        <span>📲 Add Rise to your home screen for the best experience</span>
+        <button class="btn small primary" onclick="app.promptInstall()">Install</button>
+        <button class="install-banner-close" onclick="document.getElementById('install-banner').remove()" aria-label="Dismiss">✕</button>
+      </div>` : '';
+
     return `
       <div class="screen home-screen">
+        ${installBanner}
         <div class="home-heading-row">
           ${this._gradeTabs()}
         </div>

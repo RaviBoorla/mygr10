@@ -97,6 +97,9 @@ const app = {
   session: null,
   reviewData: null,
 
+  _installPrompt: null,
+  _installDismissed: false,
+
   init() {
     this.autoNext = LS.get(KEY.autoNext, true);
     window.addEventListener('hashchange', () => this.render());
@@ -107,8 +110,46 @@ const app = {
         this.render();
       }
     });
+    window.addEventListener('beforeinstallprompt', e => {
+      e.preventDefault();
+      this._installPrompt = e;
+      this.render();
+    });
+    window.addEventListener('appinstalled', () => {
+      this._installPrompt = null;
+      this.render();
+    });
     if (!location.hash && state.board) this.go(['home'], true);
     this.render();
+  },
+
+  _isStandalone() {
+    return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+  },
+
+  promptInstall() {
+    if (this._installPrompt) {
+      this._installPrompt.prompt();
+      this._installPrompt.userChoice.then(() => { this._installPrompt = null; this.render(); });
+    } else {
+      // Chrome cooldown or unsupported — show manual guide
+      const modal = document.createElement('div');
+      modal.id = 'install-guide-modal';
+      modal.innerHTML = `
+        <div class="install-guide-backdrop" onclick="document.getElementById('install-guide-modal').remove()"></div>
+        <div class="install-guide-box">
+          <button class="install-guide-close" onclick="document.getElementById('install-guide-modal').remove()">✕</button>
+          <h3>Install Rise</h3>
+          <p>To add Rise to your home screen:</p>
+          <ol>
+            <li>Tap the <strong>⋮ menu</strong> (top-right of Chrome)</li>
+            <li>Tap <strong>"Add to Home screen"</strong></li>
+            <li>Tap <strong>"Install"</strong></li>
+          </ol>
+          <p class="install-guide-sub">On Safari: tap <strong>Share ↑</strong> → <strong>"Add to Home Screen"</strong></p>
+        </div>`;
+      document.body.appendChild(modal);
+    }
   },
 
   go(parts, replace = false) {
@@ -226,6 +267,7 @@ const app = {
                 ${inTest ? 'disabled' : ''} onclick="app.go(['notes'])">Revision Notes</button>
         <button class="btn small ghost" ${inTest ? 'disabled' : ''} onclick="app.go(['careers'])">Career Pathing</button>
         ${authUser ? `<button class="btn small ghost auth-signout-btn" onclick="riseAuth.signOut()">Sign out</button>` : ''}
+        ${!this._isStandalone() ? `<button class="btn small ghost hdr-install-btn" onclick="app.promptInstall()">⬇ Install App</button>` : ''}
       </div>`;
     const noCloe = ['test','arena','arena-run','arena-inter','arena-over','collection','live-lobby'].includes(state.screen);
     const askAiBtn = authUser && !noCloe

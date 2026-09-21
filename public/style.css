@@ -1476,3 +1476,33 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   .live-opts-grid, .live-opts-reveal { grid-template-columns: 1fr; }
   .live-code-text { font-size: 1.5rem; }
 }
+
+/* ── PWA Install Banner & Modal ─────────────────────────────────────────── */
+.install-banner {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  background: var(--primary, #2563eb); color: #fff;
+  padding: 10px 14px; border-radius: 10px; margin-bottom: 14px;
+  font-size: var(--fs-sm);
+}
+.install-banner span { flex: 1; min-width: 0; }
+.install-banner .btn { flex-shrink: 0; background: #fff; color: var(--primary, #2563eb); border: none; }
+.install-banner-close {
+  background: none; border: none; color: #fff; font-size: 1rem;
+  cursor: pointer; padding: 2px 4px; flex-shrink: 0; opacity: .8;
+}
+.install-banner-close:hover { opacity: 1; }
+.hdr-install-btn { font-size: var(--fs-sm) !important; }
+#install-guide-modal { position: fixed; inset: 0; z-index: 9000; display: flex; align-items: center; justify-content: center; }
+.install-guide-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+.install-guide-box {
+  position: relative; background: var(--surface); border-radius: 14px;
+  padding: 24px 20px; max-width: 320px; width: 90%; z-index: 1;
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.install-guide-box h3 { margin: 0 0 10px; font-size: 1.1rem; }
+.install-guide-box ol { padding-left: 18px; margin: 10px 0; line-height: 1.8; }
+.install-guide-sub { font-size: var(--fs-sm); color: var(--text-light); margin-top: 10px; }
+.install-guide-close {
+  position: absolute; top: 12px; right: 14px; background: none; border: none;
+  font-size: 1rem; cursor: pointer; color: var(--text-light);
+}
