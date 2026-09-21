@@ -224,7 +224,14 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 @media (max-width: 600px) {
   .subj-grid { grid-template-columns: 1fr; }
 }
-.subj-card { display: flex; flex-direction: column; gap: 12px; padding: 18px; }
+.subj-card {
+  display: flex; flex-direction: column; gap: 12px; padding: 18px;
+  transition: box-shadow var(--tx-base), transform var(--tx-base);
+}
+.subj-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,.10);
+  transform: translateY(-2px);
+}
 .subj-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
 .subj-head h3 { margin: 0; font-size: var(--fs-card); }
 .subj-meta { font-size: var(--fs-note); color: var(--text-light); text-align: right; }

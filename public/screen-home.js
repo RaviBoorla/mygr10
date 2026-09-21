@@ -23,7 +23,7 @@ Object.assign(app, {
       const open     = state.openPicker === subject;
 
       const actions = hasBank
-        ? `<button class="btn primary act-btn" onclick="app.startTest({subject:'${esc(subject)}',mode:'mock'})">
+        ? `<button class="btn act-btn" onclick="app.startTest({subject:'${esc(subject)}',mode:'mock'})">
              Mock test <small>${MODES.mock.count} Q · ${MODES.mock.seconds / 60} min</small>
            </button>
            <button class="btn act-btn" aria-expanded="${open}" onclick="app.togglePicker('${esc(subject)}')">
