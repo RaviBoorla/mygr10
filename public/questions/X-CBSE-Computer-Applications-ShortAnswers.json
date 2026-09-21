@@ -794,5 +794,110 @@
       "e-Shopping: buying goods/products/services online",
       "e-Banking is for financial transactions; e-Shopping is for purchasing goods"
     ]
+  },
+  {
+    "id": "sa-ca-059",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Gulzar wrote HTML code to embed audio (GulzarNote1.mp3, autoplay, controls) and video (GulzarMovie1.mp4, 350×250, controls) on his webpage but got errors. Rewrite the correct statements with all corrections underlined.",
+    "modelAnswer": "Correct audio code:\n<audio controls autoplay>\n  <source src=\"GulzarNote1.mp3\">\n</audio>\n\nCorrect video code:\n<video width=\"350\" height=\"250\" controls>\n  <source src=\"GulzarMovie1.mp4\">\n</video>\n\nErrors in original: </audio controls> should be </audio> (closing tag has no attributes); <video> needs the controls attribute; src in <source> tag must use src= not equal-sign without attribute name.",
+    "keyPoints": [
+      "Audio: <audio controls autoplay><source src=\"GulzarNote1.mp3\"></audio>",
+      "Video: <video width=\"350\" height=\"250\" controls><source src=\"GulzarMovie1.mp4\"></video>",
+      "Closing tags </audio> and </video> should have no attributes",
+      "controls and autoplay are attributes of the opening <audio>/<video> tag"
+    ]
+  },
+  {
+    "id": "sa-ca-060",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2022-Board",
+    "text": "Differentiate between the terms Web Site and Web Page. OR What is a Web Browser? Write the names of any two commonly used Web Browsers.",
+    "modelAnswer": "Web Page vs Website:\nA Web Page is a single HTML document displayed in a browser. A Website is a collection of multiple related web pages grouped under a single domain name.\nExample: www.google.com is a website; www.google.com/search is one webpage in it.\n\nOR\n\nWeb Browser: Software that allows users to access, retrieve, and view content on the World Wide Web (web pages, images, videos). Examples: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.",
+    "keyPoints": [
+      "Web Page: single HTML document/page in a browser",
+      "Website: collection of multiple related web pages under one domain",
+      "Web Browser: software to access and display web pages",
+      "Examples: Google Chrome, Mozilla Firefox, Microsoft Edge"
+    ]
+  },
+  {
+    "id": "sa-ca-061",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Rohan is creating a Web page. He wants to insert a link with text 'Click to Open' which on clicking opens the URL 'http://www.Mywebsite.com' in a new window. Help him to write the HTML code to create the hyperlink.",
+    "modelAnswer": "<a href=\"http://www.Mywebsite.com\" target=\"_blank\">Click to Open</a>",
+    "keyPoints": [
+      "Use <a> anchor tag for hyperlinks",
+      "href attribute specifies the URL",
+      "target=\"_blank\" opens link in a new window/tab",
+      "Link text 'Click to Open' goes between opening and closing <a> tags"
+    ]
+  },
+  {
+    "id": "sa-ca-062",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "hard",
+    "year": "2022-Board",
+    "text": "Write any two differences between the Outline and Border-style properties of CSS.",
+    "modelAnswer": "1. Border is part of the box model and occupies space (affects layout). Outline is drawn outside the border and does NOT occupy space, so it does not affect the layout of surrounding elements.\n2. Border can be applied to individual sides (border-top, border-right, border-bottom, border-left). Outline is always drawn on all four sides at once — individual sides cannot be set separately.\n3. Border can be rounded using border-radius. Outline does not support border-radius.",
+    "keyPoints": [
+      "Border: occupies space, part of box model; Outline: does not occupy space",
+      "Border: can be set for individual sides; Outline: applied to all 4 sides at once",
+      "Border supports border-radius (rounded); Outline does not",
+      "Outline is often used for accessibility/focus indicators without affecting layout"
+    ]
+  },
+  {
+    "id": "sa-ca-063",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Expand the following in the context of Internet Protocols: (a) SMTP (b) POP3. Also write the difference between SMTP and POP3.",
+    "modelAnswer": "(a) SMTP: Simple Mail Transfer Protocol\n(b) POP3: Post Office Protocol (version 3)\n\nDifference:\nSMTP is used to SEND emails from a client to the mail server and between servers. POP3 is used to RECEIVE / download emails from the mail server to the client's local device. SMTP pushes mail; POP3 pulls mail.",
+    "keyPoints": [
+      "SMTP: Simple Mail Transfer Protocol",
+      "POP3: Post Office Protocol version 3",
+      "SMTP: used for sending emails (client→server, server→server)",
+      "POP3: used for receiving/downloading emails (server→client)"
+    ]
+  },
+  {
+    "id": "sa-ca-064",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "What is e-Governance? Explain any two merits of e-Governance.",
+    "modelAnswer": "e-Governance: The use of Information and Communication Technology (ICT) by the government to deliver public services, share information, and communicate with citizens efficiently and transparently.\n\nMerits:\n1. 24×7 Availability — Government services are accessible anytime and from anywhere, without needing to visit a government office in person.\n2. Cost and time saving — Citizens save time and travel costs; government processes become more efficient and paperless.\n3. Transparency — Digital records reduce corruption and increase accountability in government processes.",
+    "keyPoints": [
+      "e-Governance: use of ICT by government to deliver services",
+      "Merit 1: 24×7 availability of services online",
+      "Merit 2: Cost and time saving for citizens and government",
+      "Merit 3: Transparency and reduced corruption"
+    ]
+  },
+  {
+    "id": "sa-ca-065",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Differentiate between a Web Address and an Email Address. Write an example of each. OR Expand the terms SMS and MMS in context of Mobile Technologies. Differentiate between SMS and MMS.",
+    "modelAnswer": "Web Address vs Email Address:\nA Web Address (URL) is the address of a website/web page on the Internet (e.g., https://www.google.com). An Email Address is the unique address used to send and receive electronic mail (e.g., student@school.edu). Web addresses use http/https; email addresses use the '@' symbol to separate username from domain.\n\nOR\n\nSMS: Short Message Service — text-only messages, up to 160 characters.\nMMS: Multimedia Messaging Service — messages with multimedia content (images, audio, video).\nDifference: SMS can send only plain text. MMS can send text along with multimedia content like photos, audio clips, and videos. MMS messages are typically larger in size than SMS.",
+    "keyPoints": [
+      "Web Address (URL): address of a website — e.g., https://www.google.com",
+      "Email Address: address for emails with '@' — e.g., user@domain.com",
+      "SMS: Short Message Service — text only, up to 160 characters",
+      "MMS: Multimedia Messaging Service — text + images/audio/video"
+    ]
   }
 ]
