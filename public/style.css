@@ -1115,11 +1115,12 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 
 /* Math symbol picker */
 .ai-math-picker {
-  display: flex; flex-wrap: wrap; gap: 4px;
+  display: none; flex-wrap: wrap; gap: 4px;
   padding: 8px; background: var(--surface);
   border-top: 1px solid var(--border);
   max-height: 160px; overflow-y: auto;
 }
+.ai-math-picker.is-open { display: flex; }
 .ai-math-sym {
   font-size: 16px; line-height: 1; width: 32px; height: 32px;
   border: 1px solid var(--border); border-radius: 4px;

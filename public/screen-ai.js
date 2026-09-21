@@ -371,7 +371,7 @@ function aiRenderPanel() {
       </div>
       <input type="file" id="ai-bg-input" accept="image/*" style="display:none" onchange="aiPanel._onBgFile(this)">
       <div class="ai-msgs" id="ai-msgs"></div>
-      <div id="ai-math-picker" class="ai-math-picker" hidden>
+      <div id="ai-math-picker" class="ai-math-picker${aiState.mathOpen ? ' is-open' : ''}">
         ${[
           ['²','²'],['³','³'],['⁴','⁴'],['⁰','⁰'],['ⁿ','ⁿ'],
           ['₁','₁'],['₂','₂'],['₃','₃'],['ₙ','ₙ'],
@@ -524,7 +524,7 @@ const aiPanel = {
   toggleMath() {
     aiState.mathOpen = !aiState.mathOpen;
     const picker = document.getElementById('ai-math-picker');
-    if (picker) picker.hidden = !aiState.mathOpen;
+    if (picker) picker.classList.toggle('is-open', aiState.mathOpen);
     const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
     if (btn) btn.classList.toggle('ai-math-btn-active', aiState.mathOpen);
   },
@@ -711,7 +711,7 @@ const aiPanel = {
         const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
         if (picker && !picker.contains(e.target) && btn && !btn.contains(e.target)) {
           aiState.mathOpen = false;
-          picker.hidden = true;
+          picker.classList.remove('is-open');
           btn.classList.remove('ai-math-btn-active');
         }
       };
