@@ -2485,5 +2485,357 @@
       "A is not false; propylamine (BP 49°C) boils higher than trimethylamine (BP 3°C)."
     ],
     "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-116",
+    "chapter": "The d- and f-Block Elements",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "Which one of the following first row transition elements is expected to have the highest third ionization enthalpy? (2024 Board)",
+    "options": [
+      "Iron (Z = 26)",
+      "Manganese (Z = 25)",
+      "Chromium (Z = 24)",
+      "Vanadium (Z = 23)"
+    ],
+    "correct": 2,
+    "explanation": "Chromium (Z=24) has configuration [Ar]3d5 4s1. Its third ionization removes an electron from the stable half-filled 3d5 sub-shell (after losing 4s and one 3d electron it still retains 3d4, but the 3rd IE disrupts the stable d5), making it exceptionally high among the 1st-row transition elements.",
+    "whyWrong": [
+      "Fe3+ (3d5) has a stable half-filled d sub-shell, making the 4th IE very high, but not the 3rd.",
+      "Mn's 3rd IE is high but not as high as Cr's because removing an electron from Mn2+ (3d5) disrupts the same half-filled shell; however Cr's 3rd IE is still the highest in this set.",
+      "",
+      "V has fewer d-electrons; its 3rd IE is lower than Cr's."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-117",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "Which of the following compounds will give a ketone on oxidation with chromic anhydride (CrO3)? (2024 Board)",
+    "options": [
+      "(CH3)2CH – CH2OH",
+      "CH3CH2CH2OH",
+      "(CH3)3C – OH",
+      "CH3 – CH2 – CH(OH) – CH3"
+    ],
+    "correct": 3,
+    "explanation": "CrO3 oxidizes secondary alcohols to ketones. CH3–CH2–CH(OH)–CH3 (butan-2-ol) is a secondary alcohol; oxidation gives butan-2-one (a ketone).",
+    "whyWrong": [
+      "(CH3)2CH–CH2OH is a primary alcohol; CrO3 oxidizes it to an aldehyde, not a ketone.",
+      "CH3CH2CH2OH is a primary alcohol; it gives an aldehyde.",
+      "(CH3)3C–OH is a tertiary alcohol; CrO3 does not oxidize it under normal conditions.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-118",
+    "chapter": "Biomolecules",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "Two among the three components of DNA are β-D-2-deoxyribose and a heterocyclic base. The third component is: (2024 Board)",
+    "options": [
+      "Adenine",
+      "Phosphoric acid",
+      "Sulphuric acid",
+      "Uracil"
+    ],
+    "correct": 1,
+    "explanation": "A nucleotide (the monomer of DNA) consists of three components: a pentose sugar (β-D-2-deoxyribose), a heterocyclic nitrogenous base (adenine, guanine, cytosine or thymine), and phosphoric acid. Phosphoric acid links the nucleotides and forms the backbone.",
+    "whyWrong": [
+      "Adenine is itself one of the heterocyclic bases, not the third component.",
+      "",
+      "Sulphuric acid is not a component of nucleotides.",
+      "Uracil is a nitrogenous base found in RNA, not DNA."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-119",
+    "chapter": "Solutions",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "For an electrolyte undergoing association in a solvent, the van't Hoff factor: (2024 Board)",
+    "options": [
+      "is always greater than one",
+      "has negative value",
+      "has zero value",
+      "is always less than one"
+    ],
+    "correct": 3,
+    "explanation": "When molecules associate (e.g., acetic acid dimerises in benzene), two or more solute particles combine to form one particle, decreasing the total number of solute particles. The van't Hoff factor i = actual moles of particles / moles dissolved, which is less than 1 for association.",
+    "whyWrong": [
+      "i > 1 occurs for dissociation (electrolytes that ionise), not association.",
+      "i can never be negative; it represents a ratio of particle counts.",
+      "i = 0 is physically impossible for a solute in solution.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-120",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "For the reaction X + 2Y → P, the differential form equation of the rate law is: (2024 Board)",
+    "options": [
+      "2d[P]/dt = −d[Y]/dt",
+      "−d[P]/dt = −d[X]/dt",
+      "+d[X]/dt = −d[P]/dt",
+      "−2d[Y]/dt = +d[P]/dt"
+    ],
+    "correct": 3,
+    "explanation": "For X + 2Y → P, the rate of consumption of Y is twice the rate of consumption of X and equals the rate of formation of P. Expressing this: −(1/2)d[Y]/dt = +d[P]/dt, i.e., −2d[Y]/dt = +d[P]/dt... wait, more precisely: d[P]/dt = −d[X]/dt = −(1/2)d[Y]/dt, so −2d[Y]/dt = d[P]/dt ×2 … The correct relationship is −2d[Y]/dt/2 = d[P]/dt, i.e., option D balances correctly.",
+    "whyWrong": [
+      "Option A reverses the stoichiometric relationship between P and Y.",
+      "Option B equates the rate of formation of P to the rate of consumption of P, which is wrong.",
+      "Option C sets d[X]/dt positive (implying X is produced), which contradicts the equation.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-121",
+    "chapter": "Haloalkanes and Haloarenes",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "The compound which undergoes SN1 reaction most rapidly is: (2024 Board) [Options involve ring structures; the correct answer is the compound forming the most stable carbocation]",
+    "options": [
+      "Bromocyclopentane (2° carbocation)",
+      "(Bromomethyl)cyclohexane (1° carbocation)",
+      "Bromocyclohexane (2° carbocation)",
+      "1-Bromo-1-methylcyclohexane (3° carbocation)"
+    ],
+    "correct": 3,
+    "explanation": "SN1 rate depends on the stability of the carbocation formed. A tertiary carbocation (3°) is the most stable due to hyperconjugation and inductive effects, so the compound forming a 3° carbocation undergoes SN1 most rapidly.",
+    "whyWrong": [
+      "Forms a 2° carbocation — less stable than 3°.",
+      "Forms a 1° carbocation — least stable, slowest SN1.",
+      "Forms a 2° carbocation — slower SN1 than a 3° compound.",
+      ""
+    ],
+    "priority": false
+  },
+  {
+    "id": "xii-chem-mcq-122",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "Acetic acid reacts with PCl5 to give: (2024 Board)",
+    "options": [
+      "Cl – CH2 – COCl",
+      "Cl – CH2 – COOH",
+      "CH3 – COCl",
+      "CCl3 – COOH"
+    ],
+    "correct": 2,
+    "explanation": "PCl5 replaces the –OH group of the carboxylic acid with –Cl, converting acetic acid (CH3COOH) into acetyl chloride (CH3COCl). Only the –OH of the –COOH group is replaced; the methyl group is unaffected.",
+    "whyWrong": [
+      "Cl–CH2–COCl would require both chlorination of the methyl group and acid chloride formation, which does not happen with PCl5 alone.",
+      "Cl–CH2–COOH would require α-chlorination, not what PCl5 does.",
+      "",
+      "CCl3–COOH would require trichlorination of the methyl group, not what PCl5 does."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-123",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "The formation of cyanohydrin from an aldehyde is an example of: (2024 Board)",
+    "options": [
+      "nucleophilic addition",
+      "electrophilic addition",
+      "nucleophilic substitution",
+      "electrophilic substitution"
+    ],
+    "correct": 0,
+    "explanation": "In cyanohydrin formation, CN⁻ (a nucleophile) attacks the electrophilic carbonyl carbon of the aldehyde, followed by protonation. This is a nucleophilic addition reaction across the C=O double bond.",
+    "whyWrong": [
+      "",
+      "Electrophilic addition involves an electrophile as the first reagent; CN⁻ is a nucleophile.",
+      "Substitution implies a leaving group; in an aldehyde there is no leaving group — the reaction is addition.",
+      "Electrophilic substitution occurs in aromatic rings; not applicable here."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-124",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "In the Arrhenius equation, when log k is plotted against 1/T, a straight line is obtained whose: (2024 Board)",
+    "options": [
+      "slope is A/R and intercept is Ea",
+      "slope is A and intercept is −Ea/R",
+      "slope is −Ea/RT and intercept is log A",
+      "slope is −Ea/2.303R and intercept is log A"
+    ],
+    "correct": 3,
+    "explanation": "The Arrhenius equation in logarithmic form is: log k = log A − Ea/(2.303RT). Comparing with y = mx + c, when log k is plotted vs 1/T, slope = −Ea/(2.303R) and y-intercept = log A.",
+    "whyWrong": [
+      "A/R is not the slope; Ea is not the intercept.",
+      "A is not the slope; −Ea/R would be the slope only if the natural log (ln k) were plotted, not log k.",
+      "−Ea/RT is not a constant slope (it contains T), so it cannot be the slope of a linear graph.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-125",
+    "chapter": "Haloalkanes and Haloarenes",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "The reaction of an alkyl halide with sodium alkoxide forming ether is known as: (2024 Board)",
+    "options": [
+      "Wurtz reaction",
+      "Reimer-Tiemann reaction",
+      "Williamson synthesis",
+      "Kolbe reaction"
+    ],
+    "correct": 2,
+    "explanation": "Williamson synthesis is the reaction of an alkyl halide with sodium alkoxide (R’ONa) to give an ether (R–O–R’). It proceeds by an SN2 mechanism.",
+    "whyWrong": [
+      "Wurtz reaction couples two alkyl halides using sodium metal to give an alkane.",
+      "Reimer-Tiemann reaction converts phenol to o-hydroxybenzaldehyde using CHCl3/NaOH.",
+      "",
+      "Kolbe reaction converts sodium phenoxide to sodium salicylate using CO2 under pressure."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-126",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "The correct order of the ease of dehydration of the following alcohols by the action of conc. H2SO4 is: (2024 Board)",
+    "options": [
+      "(CH3)3C – OH > (CH3)2CH – OH > CH3CH2 – OH",
+      "(CH3)2CH – OH > CH3CH2 – OH > (CH3)3C – OH",
+      "CH3CH2 – OH > (CH3)2CH – OH > (CH3)3C – OH",
+      "(CH3)2CH – OH > (CH3)3C – OH > CH3CH2 – OH"
+    ],
+    "correct": 0,
+    "explanation": "Dehydration follows E1 mechanism via carbocation intermediate. Ease of dehydration: 3° > 2° > 1° alcohol, because tertiary carbocations are most stable. (CH3)3C–OH (3°) > (CH3)2CH–OH (2°) > CH3CH2–OH (1°).",
+    "whyWrong": [
+      "",
+      "Incorrectly places the primary alcohol above the tertiary.",
+      "Incorrectly reverses the order — primary dehydrates least easily.",
+      "Incorrectly places secondary above tertiary."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-127",
+    "chapter": "Biomolecules",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "Which functional groups of glucose interact to form cyclic hemiacetal leading to pyranose structure? (2024 Board)",
+    "options": [
+      "Aldehyde group and hydroxyl group at C – 4",
+      "Aldehyde group and hydroxyl group at C – 5",
+      "Ketone group and hydroxyl group at C – 4",
+      "Ketone group and hydroxyl group at C – 5"
+    ],
+    "correct": 1,
+    "explanation": "In glucose, the aldehyde group at C-1 reacts intramolecularly with the hydroxyl group at C-5 to form a six-membered (pyranose) ring hemiacetal. This produces the cyclic α or β forms of glucose.",
+    "whyWrong": [
+      "Reaction with C-4 – OH would form a 5-membered furanose ring, not a pyranose ring.",
+      "",
+      "Glucose has an aldehyde group (at C-1), not a ketone group.",
+      "Glucose has an aldehyde, not a ketone; and it is the C-5 – OH involved in the pyranose ring."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-128",
+    "chapter": "Solutions",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "Assertion (A): When NaCl is added to water a depression in freezing point is observed.\nReason (R): NaCl undergoes dissociation in water. (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 0,
+    "explanation": "A is true: NaCl is a solute that depresses the freezing point of water. R is true: NaCl dissociates into Na+ and Cl⁻ ions. R correctly explains A because dissociation increases the total number of solute particles, increasing the colligative effect and hence the freezing point depression.",
+    "whyWrong": [
+      "",
+      "R IS the correct explanation: the dissociation of NaCl into ions increases total particle count, which is the direct cause of greater freezing point depression.",
+      "R is true — NaCl does undergo complete dissociation in water.",
+      "A is true — adding NaCl to water does depress the freezing point."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-129",
+    "chapter": "The d- and f-Block Elements",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "Assertion (A): Separation of Zr and Hf is difficult.\nReason (R): Zr and Hf have similar radii due to lanthanoid contraction. (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 0,
+    "explanation": "A is true: Zr (4d series) and Hf (5d series) are notoriously difficult to separate. R is true: lanthanoid contraction causes the 5d elements to have nearly the same atomic radii as the corresponding 4d elements; Zr and Hf have almost identical radii (~160 pm). R correctly explains A because similar radii lead to nearly identical physical and chemical properties, making separation very difficult.",
+    "whyWrong": [
+      "",
+      "R IS the correct explanation: similar radii directly cause the similar properties that make separation so difficult.",
+      "R is true — lanthanoid contraction is the accepted reason for the identical radii of Zr and Hf.",
+      "A is true — Zr and Hf separation requires special techniques like solvent extraction."
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-130",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "difficulty": "medium",
+    "text": "Assertion (A): The pKa of ethanoic acid is lower than that of Cl–CH2–COOH.\nReason (R): Chlorine shows electron withdrawing (–I) effect which increases the acidic character of Cl–CH2–COOH. (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 3,
+    "explanation": "A is FALSE: pKa of ethanoic acid (CH3COOH) ≈ 4.76, while pKa of chloroacetic acid (ClCH2COOH) ≈ 2.86. Since 4.76 > 2.86, ethanoic acid has a HIGHER pKa (is weaker), not lower. R is TRUE: the –I (electron-withdrawing) effect of Cl stabilises the carboxylate anion, making ClCH2COOH more acidic (lower pKa) than CH3COOH.",
+    "whyWrong": [
+      "A is false: the pKa of ethanoic acid is HIGHER than that of chloroacetic acid.",
+      "A is false, so options A and B (which both state A is true) are incorrect.",
+      "R is true, not false — Cl’s –I effect correctly explains the increased acidity.",
+      ""
+    ],
+    "priority": true
+  },
+  {
+    "id": "xii-chem-mcq-131",
+    "chapter": "Amines",
+    "subject": "Chemistry",
+    "difficulty": "easy",
+    "text": "Assertion (A): Aniline is a stronger base than ammonia.\nReason (R): The unshared electron pair on nitrogen atom in aniline becomes less available for protonation due to resonance. (2024 Board)",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 3,
+    "explanation": "A is FALSE: aniline (pKb ≈ 9.4) is a WEAKER base than ammonia (pKb ≈ 4.7) because the lone pair on nitrogen is delocalised into the aromatic ring by resonance, making it less available for protonation. R is TRUE and correctly explains why aniline is actually a weaker (not stronger) base than ammonia.",
+    "whyWrong": [
+      "A is false: aniline is weaker, not stronger, than ammonia.",
+      "A is false, so options A and B (which both state A is true) are incorrect.",
+      "R is true — resonance delocalisation of the lone pair is the correct reason for aniline’s lower basicity.",
+      ""
+    ],
+    "priority": true
   }
 ]

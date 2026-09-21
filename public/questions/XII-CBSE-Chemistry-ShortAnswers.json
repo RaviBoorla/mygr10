@@ -1183,5 +1183,159 @@
       "Coupling at para position of activated ring",
       "p-Hydroxyazobenzene: C₆H₅-N=N-C₆H₄-OH (orange colour)"
     ]
+  },
+  {
+    "id": "xii-chem-sa-078",
+    "chapter": "Electrochemistry",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Calculate the potential of Iron electrode in which the concentration of Fe2+ ion is 0.01 M. (E°Fe2+/Fe = −0.45 V at 298 K) [Given: log 10 = 1] (2024 Board)",
+    "modelAnswer": "Using the Nernst equation for Fe2+ + 2e⁻ → Fe:\nE = E° − (0.0591/n) log (1/[Fe2+])\nE = −0.45 − (0.0591/2) log (1/0.01)\nE = −0.45 − (0.02955) × log 100\nE = −0.45 − (0.02955) × 2\nE = −0.45 − 0.0591\nE = −0.5091 V ≈ −0.509 V",
+    "keyPoints": [
+      "Apply Nernst equation: E = E° − (0.0591/n) log (1/[Mn+])",
+      "n = 2 for Fe2+/Fe; [Fe2+] = 0.01 M",
+      "log(1/0.01) = log 100 = 2",
+      "E = −0.45 − (0.0591/2)×2 = −0.45 − 0.0591 = −0.509 V"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-079",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "Define molecularity of a reaction. State any one condition in which a bimolecular reaction may be kinetically of first order. (2024 Board)",
+    "modelAnswer": "Molecularity is the number of reacting species (atoms, ions or molecules) that come together simultaneously to bring about a chemical change in an elementary reaction. For example, molecularity of A + B → P is 2 (bimolecular).\n\nA bimolecular reaction appears to be of first order (pseudo-first order) when one of the reactants is present in large excess (e.g., in aqueous solutions where water is a reactant, or when one reactant is in very high concentration compared to the other). Its concentration remains essentially constant throughout the reaction, so the rate depends only on the concentration of the other reactant.",
+    "keyPoints": [
+      "Molecularity = number of species colliding in a single elementary step",
+      "Pseudo-first order: one reactant in large excess keeps its concentration effectively constant",
+      "Example: acid hydrolysis of ester in excess water, rate = k[ester]"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-080",
+    "chapter": "Biomolecules",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "What happens when D-glucose is treated with the following reagents? (a) HI (b) Conc. HNO3 (2024 Board)",
+    "modelAnswer": "(a) D-glucose + HI → n-hexane. HI reduces glucose by replacing all –OH groups (except the terminal –CHO and –CH2OH which are reduced) with –H, ultimately giving n-hexane (a straight-chain 6-carbon alkane). This confirms the carbon skeleton is unbranched.\n(b) D-glucose + conc. HNO3 → glucaric acid (saccharic acid). The terminal aldehyde (–CHO) and the primary alcohol (–CH2OH) are both oxidised to –COOH groups, giving a dicarboxylic acid (glucaric acid). This confirms glucose has a straight chain with a –CHO at one end and –CH2OH at the other.",
+    "keyPoints": [
+      "(a) HI reduces glucose to n-hexane (all hydroxyls removed), confirming unbranched 6-C chain",
+      "(b) Conc. HNO3 oxidises both ends (−CHO and −CH2OH) to −COOH, giving glucaric/saccharic acid",
+      "Both reactions confirm the linear structure of glucose"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-081",
+    "chapter": "Haloalkanes and Haloarenes",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Give reasons for the following: (i) Grignard reagent should be prepared under anhydrous conditions. (ii) Alkyl halides give alcohol with aqueous KOH whereas alkenes are formed in the presence of alcoholic KOH. (2024 Board)",
+    "modelAnswer": "(i) Grignard reagents (RMgX) are extremely reactive towards water. Even traces of moisture cause the Grignard reagent to react with water (hydrolysis: RMgX + H2O → RH + Mg(OH)X), decomposing it before it can be used. Therefore, anhydrous conditions (dry ether solvent, dry apparatus) are essential.\n\n(ii) In aqueous KOH, OH⁻ is a good nucleophile and the reaction proceeds by SN2 substitution: R–X + OH⁻ → R–OH + X⁻. In alcoholic KOH, OH⁻ acts as a strong base (less solvated, more basic character) and removes a β-hydrogen in an E2 elimination reaction: R–CH2–CH2X + OH⁻ → R–CH=CH2 + H2O + X⁻.",
+    "keyPoints": [
+      "(i) Grignard reagent decomposes with water (RMgX + H2O → RH + Mg(OH)X); anhydrous conditions prevent this",
+      "(ii) Aqueous KOH: OH⁻ acts as nucleophile → SN2 substitution → alcohol",
+      "(ii) Alcoholic KOH: OH⁻ acts as base → E2 elimination → alkene"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-082",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Write the chemical equation when: (a) Butan-2-one is treated with Zn(Hg) and conc. HCl. (b) Two molecules of benzaldehyde are treated with conc. NaOH. (2024 Board)",
+    "modelAnswer": "(a) Clemmensen reduction of butan-2-one:\nCH3–CO–CH2–CH3 + Zn(Hg)/conc. HCl → CH3–CH2–CH2–CH3 (butane)\nThe C=O group is reduced to –CH2–.\n\n(b) Cannizzaro reaction of benzaldehyde:\n2C6H5–CHO + NaOH (conc.) → C6H5–COONa + C6H5–CH2OH\n(sodium benzoate + benzyl alcohol)\nOne molecule is oxidised to carboxylate and the other is reduced to alcohol.",
+    "keyPoints": [
+      "(a) Clemmensen reduction: C=O → CH2 using Zn(Hg)/HCl; butan-2-one → butane",
+      "(b) Cannizzaro reaction (aldehydes without α-H): one is oxidised → carboxylate, other reduced → alcohol",
+      "Products: sodium benzoate + benzyl alcohol"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-083",
+    "chapter": "Electrochemistry",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "When a certain conductivity cell was filled with 0.05 M KCl solution, it has a resistance of 100 ohm at 25°C. When the same cell was filled with 0.02 M AgNO3 solution, the resistance was 90 ohm. Calculate the conductivity and molar conductivity of AgNO3 solution. (Given: Conductivity of 0.05 M KCl solution = 1.35 × 10⁻² ohm⁻¹cm⁻¹) (2024 Board)",
+    "modelAnswer": "Step 1: Find cell constant.\nCell constant = conductivity × resistance = 1.35×10⁻² × 100 = 1.35 cm⁻¹\n\nStep 2: Conductivity of AgNO3.\nκ(AgNO3) = cell constant / R(AgNO3) = 1.35 / 90 = 1.5×10⁻² ohm⁻¹cm⁻¹\n\nStep 3: Molar conductivity of AgNO3.\nΛm = κ × 1000 / M = (1.5×10⁻² × 1000) / 0.02\n= 15 / 0.02 = 750 ohm⁻¹cm²mol⁻¹",
+    "keyPoints": [
+      "Cell constant = κ(KCl) × R(KCl) = 1.35×10⁻² × 100 = 1.35 cm⁻¹",
+      "κ(AgNO3) = cell constant / R = 1.35/90 = 1.5×10⁻² S cm⁻¹",
+      "Λm = (κ × 1000) / M = (1.5×10⁻² × 1000) / 0.02 = 750 S cm² mol⁻¹"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-084",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "The following initial rate data were obtained for the reaction 2NO(g) + Br2(g) → 2NOBr(g):\nExpt 1: [NO]=0.05, [Br2]=0.05, Rate=1.0×10⁻³ mol L⁻¹s⁻¹\nExpt 2: [NO]=0.05, [Br2]=0.15, Rate=3.0×10⁻³ mol L⁻¹s⁻¹\nExpt 3: [NO]=0.15, [Br2]=0.05, Rate=9.0×10⁻³ mol L⁻¹s⁻¹\n(a) What is the order with respect to NO and Br2? (b) Calculate the rate constant k. (c) Determine the rate when [NO]=0.4 M and [Br2]=0.2 M. (2024 Board)",
+    "modelAnswer": "(a) Order w.r.t. Br2: Compare Expts 1 and 2 ([NO] constant).\nRate2/Rate1 = (0.15/0.05)^m → 3 = 3^m → m = 1. Order w.r.t Br2 = 1.\n\nOrder w.r.t. NO: Compare Expts 1 and 3 ([Br2] constant).\nRate3/Rate1 = (0.15/0.05)^n → 9 = 3^n → n = 2. Order w.r.t. NO = 2.\n\nRate law: Rate = k[NO]²[Br2]\n\n(b) k = Rate / ([NO]²[Br2]) = (1.0×10⁻³) / (0.05)² × 0.05 = (1.0×10⁻³) / (1.25×10⁻⁴) = 8 mol⁻² L² s⁻¹\n\n(c) Rate = k[NO]²[Br2] = 8 × (0.4)² × 0.2 = 8 × 0.16 × 0.2 = 0.256 mol L⁻¹ s⁻¹",
+    "keyPoints": [
+      "Order w.r.t. Br2 = 1 (rate triples when [Br2] triples, [NO] constant)",
+      "Order w.r.t. NO = 2 (rate becomes 9× when [NO] triples, [Br2] constant)",
+      "k = 8 mol⁻² L² s⁻¹ (from any experiment)",
+      "Rate at [NO]=0.4, [Br2]=0.2 = 8×0.16×0.2 = 0.256 mol L⁻¹s⁻¹"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-085",
+    "chapter": "Coordination Compounds",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "(a) Write the formula for Potassium tetrahydroxidozincate(II). (b) Arrange the following complexes in the increasing order of conductivity of their solution: [Cr(NH3)5Cl]Cl2, [Cr(NH3)3Cl3], [Cr(NH3)6]Cl3. (c) Identify the type of isomerism exhibited by: (i) [Co(NH3)5NO2]2+ (ii) [Co(en)3]Cl3. (2024 Board)",
+    "modelAnswer": "(a) K2[Zn(OH)4]\n\n(b) Conductivity depends on the number of ions produced in solution.\n[Cr(NH3)3Cl3] → no ions (non-electrolyte, 0 ions)\n[Cr(NH3)5Cl]Cl2 → 3 ions (1 complex cation + 2 Cl⁻)\n[Cr(NH3)6]Cl3 → 4 ions (1 complex cation + 3 Cl⁻)\nIncreasing conductivity: [Cr(NH3)3Cl3] < [Cr(NH3)5Cl]Cl2 < [Cr(NH3)6]Cl3\n\n(c) (i) [Co(NH3)5NO2]2+: exhibits linkage isomerism. The NO2⁻ ligand can bind through N (nitro, –NO2) or through O (nitrito, –ONO).\n(ii) [Co(en)3]Cl3: exhibits optical isomerism (enantiomers), since [Co(en)3]3+ is a chiral, non-superimposable complex (Δ and Λ forms).",
+    "keyPoints": [
+      "(a) K2[Zn(OH)4]",
+      "(b) Increasing order: [Cr(NH3)3Cl3] < [Cr(NH3)5Cl]Cl2 < [Cr(NH3)6]Cl3",
+      "(c)(i) Linkage isomerism (NO2⁻ can bind via N or O)",
+      "(c)(ii) Optical isomerism (Δ and Λ enantiomers of [Co(en)3]3+)"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-086",
+    "chapter": "Haloalkanes and Haloarenes",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "(a) Which of the following is an allylic halide? (i) CH3–CH=CH–Br (ii) CH2=CH–CH(Br)–CH3. (b) Out of chlorobenzene and 2,4,6-trinitrochlorobenzene, which is more reactive towards nucleophilic substitution and why? (c) Which isomer of C4H9Cl has the lowest boiling point? (2024 Board)",
+    "modelAnswer": "(a) (ii) CH2=CH–CH(Br)–CH3 is an allylic halide because the Br is attached to a carbon adjacent (allylic position) to the C=C double bond.\n(Note: (i) CH3–CH=CH–Br is a vinylic halide because Br is directly on the sp2 carbon of the double bond.)\n\n(b) 2,4,6-Trinitrochlorobenzene is far more reactive towards nucleophilic substitution. The three electron-withdrawing nitro groups at ortho and para positions strongly decrease the electron density on the ring, particularly on the carbon bearing the Cl. This activates the ring towards nucleophilic attack (SNAr mechanism) by stabilising the Meisenheimer complex (negative intermediate).\n\n(c) Neopentyl chloride (2-chloro-2-methylpropane, i.e., (CH3)3C–CH2Cl) — wait, the correct answer is 2-chloro-2-methylpropane [(CH3)3CCl] (tert-butyl chloride), which has the lowest boiling point among C4H9Cl isomers because it is the most branched, reducing the surface area and hence van der Waals forces.",
+    "keyPoints": [
+      "(a) (ii) is allylic halide; (i) is vinylic halide",
+      "(b) 2,4,6-trinitrochlorobenzene is more reactive: three NO2 groups stabilise the Meisenheimer complex via electron withdrawal",
+      "(c) tert-butyl chloride [(CH3)3CCl] has the lowest boiling point due to highest branching"
+    ]
+  },
+  {
+    "id": "xii-chem-sa-087",
+    "chapter": "Biomolecules",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "Answer any three of the following: (a) What is peptide linkage? (b) What type of bonds hold a DNA double helix together? (c) Which one of the following is a polysaccharide? Sucrose, Glucose, Starch, Fructose. (d) Give one example each for water-soluble vitamins and fat-soluble vitamins. (2024 Board)",
+    "modelAnswer": "(a) A peptide linkage (peptide bond) is an amide bond (–CO–NH–) formed between the –COOH group of one amino acid and the –NH2 group of another, with elimination of water.\n\n(b) Hydrogen bonds hold the two strands of the DNA double helix together. Specifically, complementary base pairs are connected by hydrogen bonds: A–T (2 H-bonds) and G–C (3 H-bonds).\n\n(c) Starch is a polysaccharide. Sucrose is a disaccharide; glucose and fructose are monosaccharides.\n\n(d) Water-soluble: Vitamin C (ascorbic acid) or Vitamin B complex (e.g., B1 thiamine).\nFat-soluble: Vitamin A (retinol) or Vitamin D, E, or K.",
+    "keyPoints": [
+      "Peptide linkage: amide bond (–CO–NH–) between –COOH and –NH2 with loss of water",
+      "DNA double helix held by hydrogen bonds between complementary base pairs (A-T: 2, G-C: 3)",
+      "Polysaccharide: Starch (not sucrose=disaccharide, not glucose/fructose=monosaccharides)",
+      "Water-soluble: Vit C or B-group; Fat-soluble: Vit A, D, E or K"
+    ]
   }
 ]
