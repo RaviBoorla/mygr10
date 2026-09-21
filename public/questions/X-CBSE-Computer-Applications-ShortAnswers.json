@@ -688,5 +688,111 @@
       "Server responds to requests; Client initiates requests",
       "Server examples: Apache, Nginx; Client examples: Chrome, Firefox"
     ]
+  },
+  {
+    "id": "sa-ca-052",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "What is a software license? Also mention its purpose.",
+    "modelAnswer": "A software license is a legal agreement between the software developer/publisher and the user that defines the terms and conditions for using, copying, modifying, and distributing the software. Purpose: It protects the intellectual property rights of the developer, specifies what the user is permitted to do with the software, and prevents unauthorized copying or distribution.",
+    "keyPoints": [
+      "Software licence: legal agreement between developer and user",
+      "Defines terms of use, copying, modification, distribution",
+      "Purpose: protects developer's intellectual property rights",
+      "Prevents unauthorized use, copying, or distribution"
+    ]
+  },
+  {
+    "id": "sa-ca-053",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is a search engine? Name any two popular search engines. OR Write the expanded form of SMTP. How does SMTP differ from POP3?",
+    "modelAnswer": "Search Engine: A software application that searches a database of web pages (index) based on keywords entered by the user and displays a list of relevant results. Examples: Google, Bing, Yahoo, DuckDuckGo.\n\nOR\n\nSMTP: Simple Mail Transfer Protocol. SMTP vs POP3: SMTP is used for SENDING emails (from client to server and between servers). POP3 (Post Office Protocol version 3) is used for RECEIVING/downloading emails from a mail server to the client.",
+    "keyPoints": [
+      "Search engine: tool to find web pages by entering keywords",
+      "Popular search engines: Google, Bing, Yahoo",
+      "SMTP: Simple Mail Transfer Protocol — for sending emails",
+      "POP3: Post Office Protocol version 3 — for receiving/downloading emails"
+    ]
+  },
+  {
+    "id": "sa-ca-054",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Differentiate between a tag and an attribute in HTML with the help of a suitable example.",
+    "modelAnswer": "Tag: An HTML tag is a keyword enclosed in angle brackets (<>) used to define the structure and content of a web page. Tags usually have an opening and closing form.\nExample: <p>This is a paragraph.</p> — <p> is the tag.\n\nAttribute: An attribute is additional information provided inside an HTML tag to modify its behavior or appearance. Attributes are always specified in the opening tag as name-value pairs.\nExample: <img src=\"photo.jpg\" alt=\"My photo\"> — src and alt are attributes of the <img> tag.",
+    "keyPoints": [
+      "Tag: keyword in angle brackets defining HTML structure — e.g., <p>, <img>, <b>",
+      "Attribute: extra information inside a tag modifying its behavior — e.g., src, alt, href",
+      "Tags define WHAT an element is; attributes define HOW it behaves",
+      "Attributes are always in opening tags as name=\"value\" pairs"
+    ]
+  },
+  {
+    "id": "sa-ca-055",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is the purpose of <DT> and <DD> tags in a description list? OR Explain the purpose of the following tags: (i) <P>  (ii) <HR>",
+    "modelAnswer": "<DT> (Description Term): Defines the term/name in a description list (<dl>). It appears as the label/heading for each item.\n<DD> (Description Definition): Provides the description/definition for the preceding <DT> term. It is indented under the term.\n\nOR\n\n(i) <P> (Paragraph tag): Creates a new paragraph in a web page. It adds some space/margin before and after the paragraph text. Example: <p>This is a paragraph.</p>\n(ii) <HR> (Horizontal Rule tag): Inserts a horizontal line/divider across the web page. It is an empty tag used to visually separate sections. Example: <hr>",
+    "keyPoints": [
+      "<DT>: defines the term in a description list",
+      "<DD>: provides the definition/description for the term",
+      "<P>: creates a new paragraph with spacing before and after",
+      "<HR>: inserts a horizontal rule/line to separate sections"
+    ]
+  },
+  {
+    "id": "sa-ca-056",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is CSS and why is it used in web designing?",
+    "modelAnswer": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the visual presentation/appearance of HTML documents. It controls the layout, colors, fonts, spacing, and overall design of web pages. It is used in web designing because: (1) It separates content (HTML) from presentation (CSS), making code cleaner and easier to maintain. (2) One CSS file can style multiple pages, ensuring consistent appearance across a website without repeating styles in each HTML file.",
+    "keyPoints": [
+      "CSS: Cascading Style Sheets — controls visual presentation of web pages",
+      "Controls layout, colors, fonts, spacing, design",
+      "Separates content (HTML) from presentation (CSS)",
+      "One CSS file can style entire website consistently"
+    ]
+  },
+  {
+    "id": "sa-ca-057",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Complete the CSS code: p{ ___: Green; ___: 12px; ___: center; color:yellow; } ___ { width:50% } where: (i) background color of paragraph should be Green, (ii) font size 12, (iii) text alignment center, (iv) horizontal ruler width 50%. OR Complete the HTML: set page title 'About Me', ordered list with uppercase Roman numerals, start from III, first item 'Apple'.",
+    "modelAnswer": "CSS completion:\n<style>\np {\n  background-color: Green;\n  font-size: 12px;\n  text-align: center;\n  color: yellow;\n}\nhr {\n  width: 50%;\n}\n</style>\n\nOR\n\nHTML ordered list completion:\n<html>\n<head><title>About Me</title></head>\n<body>\n<h1>My Favourite Fruits</h1>\n<ol type=\"I\" start=\"3\">\n  <li>Apple</li>\n  <li>Banana</li>\n</ol>\n</body>\n</html>",
+    "keyPoints": [
+      "Line 1: background-color: Green",
+      "Line 2: font-size: 12px",
+      "Line 3: text-align: center",
+      "Line 4: hr { width: 50%; } — hr selector for horizontal rule",
+      "Ordered list: type=\"I\" for uppercase Roman, start=\"3\" to begin at III"
+    ]
+  },
+  {
+    "id": "sa-ca-058",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is e-Banking? Mention one difference between e-Banking and e-Shopping.",
+    "modelAnswer": "e-Banking (Electronic Banking / Online Banking): The use of the Internet and digital technology to access bank accounts, transfer funds, pay bills, check balance, and perform other banking transactions without physically visiting a bank branch.\n\nDifference:\ne-Banking: Used for financial/banking services such as money transfer, bill payment, and account management.\ne-Shopping: Used for buying products and services online through e-commerce portals like Amazon, Flipkart, etc.",
+    "keyPoints": [
+      "e-Banking: accessing and managing bank accounts online",
+      "e-Banking services: fund transfer, bill payment, balance check",
+      "e-Shopping: buying goods/products/services online",
+      "e-Banking is for financial transactions; e-Shopping is for purchasing goods"
+    ]
   }
 ]

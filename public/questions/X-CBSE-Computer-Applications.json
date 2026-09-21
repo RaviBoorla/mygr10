@@ -2118,5 +2118,245 @@
       "b": "A is false — SMS is Short Message Service. So 'both true' is incorrect regardless of the explanation relationship.",
       "c": "A is false (not true) AND R is true (not false). So this option has both parts wrong."
     }
+  },
+  {
+    "id": "ca-137",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is Internet?",
+    "options": {
+      "a": "A type of computer software",
+      "b": "A global network of interconnected computer networks",
+      "c": "A local area network in a school",
+      "d": "A type of computer hardware"
+    },
+    "correct": "b",
+    "explanation": "The Internet is a global network of interconnected computer networks that uses the TCP/IP protocol suite to communicate. It connects millions of private, public, academic, business, and government networks worldwide.",
+    "whyOthersWrong": {
+      "a": "The Internet is not a type of software. Software like browsers and email clients use the Internet, but the Internet itself is a network infrastructure.",
+      "c": "A LAN (Local Area Network) in a school connects computers within a limited area. The Internet is global in scale and connects billions of devices worldwide.",
+      "d": "The Internet is not hardware. It is a network of networks, though it runs on physical hardware like routers, cables, and servers."
+    }
+  },
+  {
+    "id": "ca-138",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "What is the primary purpose of the TCP/IP?",
+    "options": {
+      "a": "To manage web pages",
+      "b": "To store emails on the server",
+      "c": "To define how data is transmitted over the Internet",
+      "d": "To secure websites using encryption"
+    },
+    "correct": "c",
+    "explanation": "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental communication protocol suite of the Internet. Its primary purpose is to define how data is transmitted, packaged, addressed, routed, and received over the Internet.",
+    "whyOthersWrong": {
+      "a": "Managing web pages is the role of HTTP/web servers, not TCP/IP. TCP/IP is a lower-level protocol for data transmission.",
+      "b": "Storing emails is the function of email servers using protocols like IMAP/POP3. TCP/IP handles the underlying data transmission, not email storage.",
+      "d": "Securing websites uses HTTPS (HTTP + SSL/TLS), not TCP/IP. TCP/IP itself does not provide encryption."
+    }
+  },
+  {
+    "id": "ca-139",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "Which heading tag represents the smallest heading size in HTML?",
+    "options": {
+      "a": "<h1>",
+      "b": "<h3>",
+      "c": "<h5>",
+      "d": "<h6>"
+    },
+    "correct": "d",
+    "explanation": "<h6> represents the smallest heading in HTML. HTML provides 6 heading levels: <h1> (largest/most important) down to <h6> (smallest/least important).",
+    "whyOthersWrong": {
+      "a": "<h1> is the LARGEST heading in HTML, used for the most important heading on a page.",
+      "b": "<h3> is a medium-level heading — it is smaller than <h1> and <h2> but larger than <h4>, <h5>, and <h6>.",
+      "c": "<h5> is the second smallest heading, but <h6> is even smaller/lower priority."
+    }
+  },
+  {
+    "id": "ca-140",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "In any email address, the username and the domain name are separated by _________ symbol.",
+    "options": {
+      "a": "$",
+      "b": "@",
+      "c": "#",
+      "d": "%"
+    },
+    "correct": "b",
+    "explanation": "The '@' (at) symbol separates the username from the domain name in an email address. For example, in 'student@school.edu', 'student' is the username and 'school.edu' is the domain name.",
+    "whyOthersWrong": {
+      "a": "'$' (dollar sign) is not used in standard email address syntax for separating username and domain.",
+      "c": "'#' (hash) is used in URLs for fragment identifiers and in programming, but not as a separator in email addresses.",
+      "d": "'%' (percent) is used in URL encoding for special characters, but not as a separator in email addresses."
+    }
+  },
+  {
+    "id": "ca-141",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "Which of the following refers to the rules that enable computers to communicate over a network?",
+    "options": {
+      "a": "Browser",
+      "b": "e-Banking",
+      "c": "Protocol",
+      "d": "Text Editor"
+    },
+    "correct": "c",
+    "explanation": "A Protocol is a set of rules and standards that govern how data is transmitted and received over a network, enabling computers to communicate with each other. Examples: TCP/IP, HTTP, SMTP, FTP.",
+    "whyOthersWrong": {
+      "a": "A Browser (web browser) is software for accessing and displaying websites. It uses protocols to communicate, but it is not itself the set of rules.",
+      "b": "e-Banking is an internet service for conducting banking transactions online. It is not the rules that enable network communication.",
+      "d": "A Text Editor is software for editing plain text. It has no role in defining network communication rules."
+    }
+  },
+  {
+    "id": "ca-142",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "In the POP3 protocol, what does the number '3' signify?",
+    "options": {
+      "a": "It represents three computers involved",
+      "b": "It stands for the year 2003",
+      "c": "It refers to three main servers used in email delivery",
+      "d": "It indicates the third version of the Post Office Protocol"
+    },
+    "correct": "d",
+    "explanation": "POP3 stands for Post Office Protocol version 3. The '3' indicates that it is the third and current version of the POP email retrieval protocol. It is used to download emails from a mail server to a local client.",
+    "whyOthersWrong": {
+      "a": "The '3' does not refer to three computers. POP3 is a version number, not a count of computers.",
+      "b": "The '3' does not stand for the year 2003. It is a version number that has been in use since the 1980s.",
+      "c": "The '3' has nothing to do with three servers. It is simply the version number of the protocol."
+    }
+  },
+  {
+    "id": "ca-143",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Which of the following is NOT a valid type of list in HTML?",
+    "options": {
+      "a": "Description list",
+      "b": "Ordered list",
+      "c": "Detail list",
+      "d": "Unordered list"
+    },
+    "correct": "c",
+    "explanation": "HTML has three standard list types: Ordered List (<ol>), Unordered List (<ul>), and Description List (<dl>). 'Detail list' does not exist as a standard HTML list type.",
+    "whyOthersWrong": {
+      "a": "Description list (<dl>) is a valid HTML list type that pairs terms (<dt>) with their descriptions (<dd>).",
+      "b": "Ordered list (<ol>) is a valid HTML list type that displays items in a numbered/lettered sequence.",
+      "d": "Unordered list (<ul>) is a valid HTML list type that displays items with bullet points."
+    }
+  },
+  {
+    "id": "ca-144",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Ajay, a computer engineer, generally uses his laptop to remotely access customers' computers in order to diagnose problems in their computer. Which protocol is being used for this purpose?",
+    "options": {
+      "a": "FTP",
+      "b": "SMS",
+      "c": "SMTP",
+      "d": "TELNET"
+    },
+    "correct": "d",
+    "explanation": "TELNET (Telecommunication Network) is a protocol that allows a user to remotely log in to and control another computer over a network. Ajay is using TELNET to remotely access customers' computers for diagnosis.",
+    "whyOthersWrong": {
+      "a": "FTP (File Transfer Protocol) is used to transfer files between computers, not for remote login/access and diagnostics.",
+      "b": "SMS (Short Message Service) is for sending text messages over mobile networks, not for remote computer access.",
+      "c": "SMTP (Simple Mail Transfer Protocol) is used for sending emails. It has no functionality for remote computer access."
+    }
+  },
+  {
+    "id": "ca-145",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is World Wide Web?",
+    "options": {
+      "a": "A network hardware",
+      "b": "Software to manage data",
+      "c": "System of interlinked webpages",
+      "d": "Web server"
+    },
+    "correct": "c",
+    "explanation": "The World Wide Web (WWW) is a system of interlinked hypertext documents and multimedia content accessed via the Internet using a web browser. It was invented by Tim Berners-Lee in 1989.",
+    "whyOthersWrong": {
+      "a": "The World Wide Web is not hardware. It is an information system of web pages accessible over the Internet.",
+      "b": "The WWW is not software for managing data. It is a system of documents linked via hyperlinks and accessed through browsers.",
+      "d": "A Web server is a computer/software that stores and serves web pages. The WWW is the system of all those pages, not just one server."
+    }
+  },
+  {
+    "id": "ca-146",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is the purpose of the start attribute in the <ol> tag?",
+    "options": {
+      "a": "To change the type of bullets",
+      "b": "To specify the total number of items in the list",
+      "c": "To create a list within another list",
+      "d": "To set the starting number of the list"
+    },
+    "correct": "d",
+    "explanation": "The 'start' attribute in the <ol> tag sets the starting number for the ordered list. For example, <ol start=\"5\"> will begin numbering from 5 instead of the default 1.",
+    "whyOthersWrong": {
+      "a": "Changing the type of bullets/numbering style is done using the 'type' attribute of <ol>, not 'start'. For example, type=\"a\" for alphabetical.",
+      "b": "The 'start' attribute does not specify the total number of items. Items are simply added as <li> elements; their count is not a property of the list.",
+      "c": "Creating a list within another list (nested list) is done by placing an <ol> or <ul> inside a <li>, not through the 'start' attribute."
+    }
+  },
+  {
+    "id": "ca-147",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Assertion (A): Blogs are an effective way for individuals to share their thoughts, knowledge, and experiences online.\nReason (R): Only professional web developers can create and maintain blogs.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "c",
+    "explanation": "A is true: Blogs are indeed an effective way to share thoughts and experiences online. R is false: Anyone can create and maintain a blog using platforms like Blogger, WordPress, or Medium — no professional coding skills are required.",
+    "whyOthersWrong": {
+      "a": "R is false — blogs are accessible to everyone, not just professional developers. Platforms like WordPress make blogging easy for anyone.",
+      "b": "R is false — it is incorrect that only professionals can create blogs. This option requires R to be true.",
+      "d": "A is true — blogs are genuinely effective for sharing content online. This option requires A to be false."
+    }
+  },
+  {
+    "id": "ca-148",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Assertion (A): The <img> tag will display an image even if the src attribute is not specified.\nReason (R): The src attribute provides the path to the image file, which is essential for the browser to locate and display the image.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: Without the src attribute, the <img> tag cannot display any image — the browser has no path to find the image file. R is true: The src attribute is essential as it provides the file path that the browser uses to locate and render the image. Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — <img> cannot display an image without src. And if R explains A, A must be true, which it is not.",
+      "b": "A is false — <img> without src displays nothing (or a broken image icon). Both A and R cannot both be true.",
+      "c": "A is false (not true) — without src, no image is displayed. R is true, not false."
+    }
   }
 ]
