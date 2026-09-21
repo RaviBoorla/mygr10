@@ -1120,7 +1120,10 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
   border-top: 1px solid var(--border);
   max-height: 160px; overflow-y: auto;
 }
-.ai-math-picker.is-open { display: flex; }
+.ai-math-picker.is-open { display: flex; position: relative; z-index: 2; }
+.ai-math-backdrop {
+  position: fixed; inset: 0; z-index: 1; background: transparent;
+}
 .ai-math-sym {
   font-size: 16px; line-height: 1; width: 32px; height: 32px;
   border: 1px solid var(--border); border-radius: 4px;

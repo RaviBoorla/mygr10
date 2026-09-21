@@ -371,6 +371,7 @@ function aiRenderPanel() {
       </div>
       <input type="file" id="ai-bg-input" accept="image/*" style="display:none" onchange="aiPanel._onBgFile(this)">
       <div class="ai-msgs" id="ai-msgs"></div>
+      ${aiState.mathOpen ? `<div class="ai-math-backdrop" onclick="aiPanel.toggleMath()"></div>` : ''}
       <div id="ai-math-picker" class="ai-math-picker${aiState.mathOpen ? ' is-open' : ''}">
         ${[
           ['²','²'],['³','³'],['⁴','⁴'],['⁰','⁰'],['ⁿ','ⁿ'],
@@ -509,7 +510,10 @@ const aiPanel = {
       ta.style.height = 'auto';
       ta.style.height = Math.min(ta.scrollHeight, 120) + 'px';
     };
-    rec.onerror = () => { aiState.listening = false; aiState._recognition = null; aiPanel._render(); };
+    rec.onerror = (e) => {
+      aiState.listening = false; aiState._recognition = null; aiPanel._render();
+      if (e.error === 'not-allowed') alert('Microphone permission denied. Please allow microphone access in your browser/PWA settings and try again.');
+    };
     rec.onend = () => {
       const saved = document.getElementById('ai-input')?.value || '';
       aiState.listening = false;
@@ -523,10 +527,7 @@ const aiPanel = {
   },
   toggleMath() {
     aiState.mathOpen = !aiState.mathOpen;
-    const picker = document.getElementById('ai-math-picker');
-    if (picker) picker.classList.toggle('is-open', aiState.mathOpen);
-    const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
-    if (btn) btn.classList.toggle('ai-math-btn-active', aiState.mathOpen);
+    this._render();
   },
   insertSym(sym) {
     const ta = document.getElementById('ai-input');
@@ -703,20 +704,6 @@ const aiPanel = {
     const savedW = localStorage.getItem('rise-ai-width');
     if (savedW && window.innerWidth > 520) el.style.width = savedW + 'px';
     aiRenderMessages();
-    // Close math picker on tap/click outside picker+toggle
-    if (!this._mathOutsideHandler) {
-      this._mathOutsideHandler = (e) => {
-        if (!aiState.mathOpen) return;
-        const picker = document.getElementById('ai-math-picker');
-        const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
-        if (picker && !picker.contains(e.target) && btn && !btn.contains(e.target)) {
-          aiState.mathOpen = false;
-          picker.classList.remove('is-open');
-          btn.classList.remove('ai-math-btn-active');
-        }
-      };
-      document.addEventListener('pointerdown', this._mathOutsideHandler, true);
-    }
   },
 
   _startResize(e) {
