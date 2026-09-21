@@ -4,6 +4,25 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Grade XII CBSE board papers 2022 (IP, CS, Chemistry, Biology) *(done)*
+
+CBSE 2022 was Term 2 (April/May 2022) — descriptive only, **no MCQs**. SAs only added.
+
+| Subject | MCQs added | SAs added | Notes |
+|---|---|---|---|
+| Informatics Practices | 0 | 7 (xii-ip-2022-sa-q19–q25) | WWW, Gateway, SQL functions, topology, HAVING fix |
+| Computer Science | 0 | 7 (xii-cs-2022-sa-q19–q25) | Stack, protocols, rDM, Python-MySQL, DDL/DML, MySQL cmds, network case study |
+| Chemistry | 0 | 7 (xii-chem-2022-sa-q19–q25) | Rate, Nernst, kinetics, ketone ID, E°cell, d-block, carbonyl case study |
+| Biology | 0 | 7 (xii-bio-2022-sa-q22–q28) | Pneumonia/cold, malaria, latitudinal gradient, extinctions, vectors, bio-fertilisers, Bt corn |
+
+Bank totals after:
+- IP: SA 46→53
+- CS: SA 46→53
+- Chemistry: SA 94→101
+- Biology: SA 105→112
+
+---
+
 ## Grade XII CBSE board papers 2023 (IP, CS, Chemistry, Biology) *(done)*
 
 Real board past-paper MCQs and SAs added for four subjects, one subject per commit:
