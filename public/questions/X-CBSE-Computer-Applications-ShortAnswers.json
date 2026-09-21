@@ -479,5 +479,109 @@
       "<br> example: Hello<br>World",
       "<p> example: <p>First paragraph.</p><p>Second paragraph.</p>"
     ]
+  },
+  {
+    "id": "sa-ca-038",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Write any two points of comparison between Chat and Email in context of web services.",
+    "modelAnswer": "1. Chat is a real-time (synchronous) communication service where both users must be online simultaneously. Email is asynchronous — the recipient can read the message at any time without both parties being online together.\n2. Chat messages are typically short and informal, exchanged instantly. Emails can be long, formal, and may include attachments; they may have a delivery/reading delay.",
+    "keyPoints": [
+      "Chat: synchronous/real-time; Email: asynchronous",
+      "Chat requires both users online simultaneously; Email does not",
+      "Chat messages are short and informal; Emails can be long with attachments",
+      "Chat is instant; Email may have a delay"
+    ]
+  },
+  {
+    "id": "sa-ca-039",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write in brief about any two advantages of e-Banking. OR Write in brief one advantage and one limitation of e-Reservation.",
+    "modelAnswer": "e-Banking advantages: (1) 24×7 availability — customers can access their bank accounts, transfer funds, pay bills anytime from anywhere without visiting a branch. (2) Time-saving and convenient — banking tasks like balance inquiry, fund transfer, and bill payment can be done in minutes from home.\n\nOR\n\ne-Reservation: Advantage: Tickets/bookings can be made from home at any time without standing in queues, with instant confirmation. Limitation: Requires internet access and digital literacy; people without these cannot use the service.",
+    "keyPoints": [
+      "e-Banking: 24×7 access from anywhere",
+      "e-Banking: Saves time, no need to visit branch",
+      "e-Reservation advantage: Convenient online booking from home, no queues",
+      "e-Reservation limitation: Requires internet access and digital literacy"
+    ]
+  },
+  {
+    "id": "sa-ca-040",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Write any one point of difference between a webpage and a website.",
+    "modelAnswer": "A webpage is a single document (one HTML page) that can be displayed in a web browser. A website is a collection of multiple related web pages grouped under a common domain name. For example, www.google.com is a website, while www.google.com/search is one webpage within that website.",
+    "keyPoints": [
+      "Webpage: single HTML document/page",
+      "Website: collection of multiple related webpages under one domain",
+      "Example: A website contains many webpages"
+    ]
+  },
+  {
+    "id": "sa-ca-041",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Explain in brief about any two factors that are responsible for the Digital Divide. OR What are software licenses? Give one example each of a free software license and a proprietary software.",
+    "modelAnswer": "Factors for Digital Divide: (1) Economic factor — people who cannot afford computers/smartphones and internet connections are excluded from digital access. (2) Geographic factor — rural and remote areas often lack reliable internet infrastructure compared to urban areas.\n\nOR\n\nSoftware licence: A legal agreement that defines the terms under which software may be used, copied, modified, and distributed. Free software licence example: GNU General Public Licence (GPL) — used by Linux. Proprietary software example: Microsoft Windows — source code is not publicly available.",
+    "keyPoints": [
+      "Digital divide factors: economic (cost of devices/internet) and geographic (rural vs urban access)",
+      "Also: literacy, age, infrastructure, language barriers",
+      "Software licence: legal agreement for software use terms",
+      "Free: GNU GPL (Linux); Proprietary: Microsoft Windows/Adobe Photoshop"
+    ]
+  },
+  {
+    "id": "sa-ca-042",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write any two significances of using links in an HTML webpage.",
+    "modelAnswer": "1. Navigation — Hyperlinks allow users to navigate between webpages within the same website or to external websites, making browsing easy and seamless.\n2. Cross-referencing — Links allow a webpage to reference related content on other pages, enabling users to access additional information without cluttering the current page.",
+    "keyPoints": [
+      "Navigation: links connect pages within/across websites",
+      "Cross-referencing: access related information without duplicating content",
+      "Interactivity: clicking links provides a dynamic user experience",
+      "Resource sharing: link to external resources, files, or email addresses"
+    ]
+  },
+  {
+    "id": "sa-ca-043",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Match the tag with their corresponding correct attribute: <table>→border, <input>→type, <ol>→start, <td>→rowspan. OR Differentiate between bgcolor and background attributes of <body> tag. Write one HTML statement explaining the use of each attribute.",
+    "modelAnswer": "Tag-attribute matching: <table>→border, <input>→type, <ol>→start, <td>→rowspan.\n\nOR\n\nbgcolor attribute: Sets the background colour of the webpage using a color name or hex code.\nExample: <body bgcolor=\"yellow\">\n\nbackground attribute: Sets a background image for the webpage using an image file path.\nExample: <body background=\"bg.jpg\">",
+    "keyPoints": [
+      "<table> → border, <input> → type, <ol> → start, <td> → rowspan",
+      "bgcolor: sets background color — <body bgcolor=\"yellow\">",
+      "background: sets background image — <body background=\"image.jpg\">",
+      "bgcolor uses a color name/hex; background uses an image file path"
+    ]
+  },
+  {
+    "id": "sa-ca-044",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write suitable HTML statements to display the following text in appropriate subscript and superscript form: (a) H₂O  (b) E = MC²",
+    "modelAnswer": "(a) H₂O in HTML:\nH<sub>2</sub>O\n\n(b) E = MC² in HTML:\nE = MC<sup>2</sup>",
+    "keyPoints": [
+      "Subscript tag: <sub>...</sub>",
+      "H₂O → H<sub>2</sub>O",
+      "Superscript tag: <sup>...</sup>",
+      "E = MC² → E = MC<sup>2</sup>"
+    ]
   }
 ]

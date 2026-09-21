@@ -1638,5 +1638,245 @@
       "b": "A is false — <br> does not have both opening and closing tags. It is a self-closing empty tag, so it cannot be a container tag.",
       "c": "A is false (not true), so this option is incorrect. <br> is an empty tag, not a container tag."
     }
+  },
+  {
+    "id": "ca-113",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "The letter S in the abbreviation HTTPS in context of Networking protocols, stands for:",
+    "options": {
+      "a": "Single",
+      "b": "Static",
+      "c": "Secure",
+      "d": "Sensitive"
+    },
+    "correct": "c",
+    "explanation": "HTTPS stands for HyperText Transfer Protocol Secure. The 'S' indicates that communication is encrypted using SSL/TLS, making it secure for transmitting sensitive data like passwords and payment information.",
+    "whyOthersWrong": {
+      "a": "'Single' has no relevance to the HTTPS protocol. HTTPS refers to security/encryption, not singularity.",
+      "b": "'Static' is not what HTTPS stands for. HTTPS is about security encryption, not static content.",
+      "d": "'Sensitive' is not the expansion. HTTPS uses 'Secure' to indicate SSL/TLS encryption protects the data being transferred."
+    }
+  },
+  {
+    "id": "ca-114",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT a Web Service?",
+    "options": {
+      "a": "Using Diksha learning portal",
+      "b": "Sending and receiving email",
+      "c": "File transfer over Bluetooth",
+      "d": "Using a banking portal for online transaction"
+    },
+    "correct": "c",
+    "explanation": "File transfer over Bluetooth is a local wireless technology (short-range, ~10m) that does not require the Internet. Web services are services accessed over the Internet/World Wide Web. Bluetooth transfers are not web-based.",
+    "whyOthersWrong": {
+      "a": "Diksha is a government e-learning portal accessed over the Internet — it is a web service (e-Learning).",
+      "b": "Sending and receiving email (via SMTP/POP/IMAP) is done over the Internet — it is a web service.",
+      "d": "Online banking portals are accessed through the Internet via a web browser — they are web services (e-Banking)."
+    }
+  },
+  {
+    "id": "ca-115",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "In 3G and 4G mobile technologies, the character 'G' stands for:",
+    "options": {
+      "a": "Generation",
+      "b": "GPRS",
+      "c": "Grid",
+      "d": "Google"
+    },
+    "correct": "a",
+    "explanation": "In mobile technology, 'G' stands for Generation. 3G = Third Generation, 4G = Fourth Generation, 5G = Fifth Generation. Each generation represents a new standard of wireless mobile communication with improved speed and capacity.",
+    "whyOthersWrong": {
+      "b": "GPRS (General Packet Radio Service) is a technology associated with 2.5G networks — it is not what 'G' stands for in 3G/4G.",
+      "c": "Grid has no relevance to mobile generations. 'Grid computing' is a separate technology concept.",
+      "d": "Google is a company, not a mobile technology standard. 'G' in 3G/4G refers to Generation of wireless networks."
+    }
+  },
+  {
+    "id": "ca-116",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "A website or online platform where individuals or groups regularly publish written content, typically in a reverse chronological order is known as:",
+    "options": {
+      "a": "News Group",
+      "b": "Blog",
+      "c": "Chat Group",
+      "d": "Social Networking"
+    },
+    "correct": "b",
+    "explanation": "A Blog (short for Web Log) is an online platform where individuals or groups regularly publish written entries (posts) displayed in reverse chronological order (newest first). Examples: Blogger, WordPress.",
+    "whyOthersWrong": {
+      "a": "A News Group (Usenet newsgroup) is a discussion forum organised around a topic where users post and reply to messages — it is not primarily about individuals publishing content in reverse chronological order.",
+      "c": "A Chat Group is a real-time messaging space for multiple users. It is synchronous communication, not a publishing platform with reverse chronological posts.",
+      "d": "Social Networking sites (Facebook, Instagram) allow user profiles and social connections. While they include content publishing, the specific definition of 'reverse chronological personal publishing' best describes a Blog."
+    }
+  },
+  {
+    "id": "ca-117",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT an attribute of the <font> tag?",
+    "options": {
+      "a": "face",
+      "b": "height",
+      "c": "size",
+      "d": "color"
+    },
+    "correct": "b",
+    "explanation": "The <font> tag has three valid attributes: face (font typeface), size (1–7), and color (text color). 'height' is not an attribute of the <font> tag; height is used for elements like images, tables, and table rows.",
+    "whyOthersWrong": {
+      "a": "'face' is a valid <font> attribute specifying the font family/typeface (e.g., <font face=\"Arial\">).",
+      "c": "'size' is a valid <font> attribute specifying the text size on a scale of 1–7 (e.g., <font size=\"4\">).",
+      "d": "'color' is a valid <font> attribute specifying the text color (e.g., <font color=\"blue\">)."
+    }
+  },
+  {
+    "id": "ca-118",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "In HTML, we start a comment using:",
+    "options": {
+      "a": "<!--",
+      "b": "!-->",
+      "c": "--!>",
+      "d": "<--!"
+    },
+    "correct": "a",
+    "explanation": "HTML comments begin with <!-- and end with -->. Everything between these markers is ignored by the browser. Example: <!-- This is a comment -->",
+    "whyOthersWrong": {
+      "b": "'!-->' is the closing pattern of an HTML comment (-->), preceded by !, which is not correct for opening a comment.",
+      "c": "'--!>' is not valid HTML syntax for either opening or closing a comment.",
+      "d": "'<--!' reverses the correct syntax. The correct opening is '<!--', not '<--!'."
+    }
+  },
+  {
+    "id": "ca-119",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following elements have both the opening and the closing tags in HTML?",
+    "options": {
+      "a": "<br>",
+      "b": "<h1>",
+      "c": "<hr>",
+      "d": "<img>"
+    },
+    "correct": "b",
+    "explanation": "<h1> is a container tag — it requires both an opening tag <h1> and a closing tag </h1> to define heading text. <br>, <hr>, and <img> are empty/void tags with no closing tags.",
+    "whyOthersWrong": {
+      "a": "<br> (line break) is an empty/void tag with no closing tag. It stands alone as <br> or <br/> in HTML5.",
+      "c": "<hr> (horizontal rule) is an empty/void tag with no closing tag. It creates a horizontal line without content.",
+      "d": "<img> (image) is an empty/void tag with no closing tag. It embeds an image using the src attribute."
+    }
+  },
+  {
+    "id": "ca-120",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "The default color of vlink is ________.",
+    "options": {
+      "a": "Green",
+      "b": "Purple",
+      "c": "Blue",
+      "d": "Yellow"
+    },
+    "correct": "b",
+    "explanation": "In HTML, 'vlink' (visited link) is an attribute of the <body> tag that sets the color of links that have already been visited. The default color of visited links (vlink) is Purple. Unvisited links (link) default to Blue, and active links (alink) default to Red.",
+    "whyOthersWrong": {
+      "a": "Green is not the default color for any of the standard link states (link, vlink, alink).",
+      "c": "Blue is the default color of unvisited links (the 'link' attribute), not visited links (vlink).",
+      "d": "Yellow is not the default color for any standard link state in HTML."
+    }
+  },
+  {
+    "id": "ca-121",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Which of the following tags is NOT used while creating a description list?",
+    "options": {
+      "a": "<dt>",
+      "b": "<dl>",
+      "c": "<td>",
+      "d": "<dd>"
+    },
+    "correct": "c",
+    "explanation": "<td> (Table Data) is a table cell tag used in HTML tables, not in description lists. A description list uses: <dl> (description list container), <dt> (description term), and <dd> (description definition/detail).",
+    "whyOthersWrong": {
+      "a": "<dt> (Description Term) is a required tag in description lists — it defines the term being described.",
+      "b": "<dl> (Description List) is the container tag that wraps the entire description list.",
+      "d": "<dd> (Description Definition) is a required tag in description lists — it provides the definition/description for the term in <dt>."
+    }
+  },
+  {
+    "id": "ca-122",
+    "chapter": "Cyber Ethics",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT an example of an Open Source Software?",
+    "options": {
+      "a": "Linux",
+      "b": "Android",
+      "c": "Photoshop",
+      "d": "OpenOffice"
+    },
+    "correct": "c",
+    "explanation": "Adobe Photoshop is proprietary (closed source) software — its source code is not publicly available and requires a paid licence. Linux, Android (AOSP), and OpenOffice are open source software with publicly available source code.",
+    "whyOthersWrong": {
+      "a": "Linux is a free and open source operating system kernel — its source code is publicly available under the GNU GPL licence.",
+      "b": "Android (AOSP — Android Open Source Project) is open source. The core Android OS code is available publicly, though Google's apps are proprietary.",
+      "d": "OpenOffice (Apache OpenOffice) is a free, open source office productivity suite — its source code is publicly available."
+    }
+  },
+  {
+    "id": "ca-123",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Assertion (A): When you enter a query into a search engine, it retrieves and presents a list of web pages, documents, images, videos, or other types of content that are relevant to your search.\nReason (R): The goal of information retrieval is to effectively and efficiently find and present information that matches the user's search criteria.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "a",
+    "explanation": "Both A and R are true. A correctly describes how a search engine works (retrieves relevant content for a query). R correctly states the goal of information retrieval (finding and presenting matching information). R directly explains WHY A is true — a search engine does this because its purpose is information retrieval as described in R.",
+    "whyOthersWrong": {
+      "b": "R IS the correct explanation of A. The reason a search engine retrieves relevant content (A) is precisely because the goal of information retrieval is to find and present matching information (R). R explains A.",
+      "c": "R is not false — the goal of information retrieval is indeed to effectively find and present information matching the user's search criteria.",
+      "d": "A is not false — search engines do retrieve and present relevant web pages, documents, images, and videos in response to a query."
+    }
+  },
+  {
+    "id": "ca-124",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Assertion (A): It becomes difficult to update and maintain a website's design using CSS.\nReason (R): CSS allows web developers to separate the presentation layer (styles and layout) from the content layer (HTML).",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true but Reason (R) is not the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: CSS actually makes it EASIER to update and maintain a website's design, not harder. One CSS file can style an entire website, so one change updates all pages. R is true: CSS does allow separation of presentation (styles) from content (HTML). Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — CSS makes design maintenance EASIER, not difficult. Centralised styles mean one change updates the whole site.",
+      "b": "A is false — CSS simplifies website design maintenance significantly. It cannot be 'true' that CSS makes it difficult.",
+      "c": "A is false (not true) — CSS is specifically designed to ease design maintenance by separating presentation from content."
+    }
   }
 ]
