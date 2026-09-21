@@ -231,16 +231,18 @@
       // Notify invitee immediately via the Worker HTTP route (Phase 4).
       // Silently degrades if FAMILY_WORKER_URL is not configured.
       if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL) {
-        fetch(`${FAMILY_WORKER_URL}/family/notify-invite`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            fromName:  window.riseAuth.user.displayName || email(),
-            fromEmail: email(),
-            toEmail,
-            toRole:    role
+        firebase.auth().currentUser.getIdToken().then(idToken =>
+          fetch(`${FAMILY_WORKER_URL}/family/notify-invite`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + idToken },
+            body: JSON.stringify({
+              fromName:  window.riseAuth.user.displayName || email(),
+              fromEmail: email(),
+              toEmail,
+              toRole:    role
+            })
           })
-        }).catch(() => {}); // best-effort, never throw
+        ).catch(() => {}); // best-effort, never throw
       }
       return { ok: true, msg: 'Invite sent! They will receive an email notification if the app is fully configured.' };
     } catch (e) {
@@ -486,19 +488,21 @@
         // Find guardian email from active links.
         const link = _linkSets.child.find(l => l.guardianUid === a.createdBy && l.status === 'active');
         if (link) {
-          fetch(`${FAMILY_WORKER_URL}/family/notify-assignment-complete`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              guardianEmail: link.guardianContact?.email || link.guardianEmail,
-              childName: email().split('@')[0],
-              subject:   a.subject,
-              chapter:   a.chapter || null,
-              score:     result.score,
-              total:     result.total,
-              accuracy:  result.accuracy
+          firebase.auth().currentUser.getIdToken().then(idToken =>
+            fetch(`${FAMILY_WORKER_URL}/family/notify-assignment-complete`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + idToken },
+              body: JSON.stringify({
+                guardianEmail: link.guardianContact?.email || link.guardianEmail,
+                childName: email().split('@')[0],
+                subject:   a.subject,
+                chapter:   a.chapter || null,
+                score:     result.score,
+                total:     result.total,
+                accuracy:  result.accuracy
+              })
             })
-          }).catch(() => {});
+          ).catch(() => {});
         }
       }
     } catch (_) {}

@@ -10,6 +10,7 @@
 //   "30 15 * * 0"   Weekly Sunday 21:00 IST — weekly summary
 
 import { getAccessToken } from './gcp-auth.js';
+import { verifyIdToken } from './firebase-auth.js';
 import { getDoc, runQuery } from './firestore.js';
 import {
   sendEmail,
@@ -61,12 +62,11 @@ export default {
 
 // ── HTTP: invite notification ──────────────────────────────────────────────
 // Body: { fromName, fromEmail, toEmail, toRole }
-// The Worker does not verify the Firebase ID token for this route — the email
-// address being notified is already validated by the Firestore rule that let
-// the invite doc be written in the first place, so spoofing this call can only
-// send a notification to an address the real sender already named in Firestore.
 
 async function handleInviteNotify(request, env) {
+  const authErr = await requireAuth(request, env);
+  if (authErr) return authErr;
+
   let body;
   try { body = await request.json(); } catch (_) { return json({ ok: false, msg: 'Invalid JSON' }, 400); }
 
@@ -92,6 +92,9 @@ async function handleInviteNotify(request, env) {
 // Body: { guardianEmail, childName, subject, chapter, score, total, accuracy }
 
 async function handleAssignmentComplete(request, env) {
+  const authErr = await requireAuth(request, env);
+  if (authErr) return authErr;
+
   let body;
   try { body = await request.json(); } catch (_) { return json({ ok: false, msg: 'Invalid JSON' }, 400); }
 
@@ -212,6 +215,20 @@ async function runWeeklySummary(token, env) {
   }
 
   console.log(`[weekly] done — sent ${sent}, skipped ${skipped}`);
+}
+
+// ── Auth helper ────────────────────────────────────────────────────────────
+
+async function requireAuth(request, env) {
+  const authHeader = request.headers.get('Authorization') || '';
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
+  try {
+    await verifyIdToken(token, env.FIREBASE_PROJECT_ID);
+    return null; // OK
+  } catch (err) {
+    console.warn('[family-worker] auth failed:', err.message);
+    return withCors(env, json({ ok: false, msg: 'Unauthorized' }, 401));
+  }
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
