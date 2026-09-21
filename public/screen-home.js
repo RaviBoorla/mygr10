@@ -96,9 +96,9 @@ Object.assign(app, {
       </a>`;
 
     const streakArenaRow = `
-      <div class="streak-arena-row">
-        <div class="streak-arena-half">${streakHtml}</div>
-        <div class="streak-arena-half">${arenaCard}</div>
+      <div class="home-top-cards">
+        ${streakHtml}
+        ${arenaCard}
       </div>`;
 
     const installBanner = !app._isStandalone() ? `
@@ -112,9 +112,9 @@ Object.assign(app, {
       <div class="screen home-screen">
         ${installBanner}
         <div class="home-heading-row">
+          ${streakArenaRow}
           ${this._gradeTabs()}
         </div>
-        ${streakArenaRow}
         ${resume}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>

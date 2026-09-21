@@ -574,11 +574,27 @@ kbd {
 }
 
 .home-heading-row {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-  margin-bottom: 16px;
+  display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 12px;
 }
-.home-heading-row .grade-tabs { margin: 0; }
+.home-heading-row .grade-tabs { margin: 0; flex-shrink: 0; }
 .home-heading-row .subtitle { text-align: right; }
+
+/* Compact streak + arena row inside heading */
+.home-top-cards {
+  display: flex; gap: 8px; align-items: stretch; flex: 1; min-width: 0; overflow: hidden;
+}
+.home-top-cards .streak-banner {
+  flex: 1 1 0; min-width: 0; max-width: 260px;
+  padding: 8px 12px; align-items: center;
+}
+.home-top-cards .streak-sub { display: none; }
+.home-top-cards .streak-goal-bar { margin-top: 4px; height: 4px; }
+.home-top-cards .streak-arena-card {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+}
+.home-top-cards .arena-card-sub { display: none; }
 
 .rev-topbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .rev-topbar h2 { margin: 0; white-space: nowrap; }
@@ -869,6 +885,7 @@ kbd {
 .arena-card-sub { font-size: var(--fs-note); color: var(--text-light); margin: 0; }
 @media (max-width: 520px) {
   .streak-arena-row { flex-direction: column; }
+  .home-top-cards .streak-banner { max-width: none; }
 }
 
 .site-footer {
