@@ -386,10 +386,10 @@ function aiRenderPanel() {
       </div>
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
-        <button class="ai-icon-btn ${aiState.mathOpen ? 'ai-math-btn-active' : ''}" title="Math symbols" onclick="aiPanel.toggleMath()">∑</button>
         <textarea class="ai-textarea" id="ai-input" placeholder="${aiState.listening ? 'Listening…' : 'Ask a subject question… (Enter to send)'}" rows="2"
           onkeydown="aiPanel.handleKey(event)"
           oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,240)+'px'"></textarea>
+        <button class="ai-icon-btn ${aiState.mathOpen ? 'ai-math-btn-active' : ''}" title="Math symbols" onclick="aiPanel.toggleMath()">∑</button>
         ${aiState.streaming
           ? `<button class="ai-send-btn ai-stop-btn" onclick="aiPanel.stop()">Stop</button>`
           : `<button class="ai-send-btn" onclick="aiPanel.send()">Send</button>`}
@@ -703,6 +703,20 @@ const aiPanel = {
     const savedW = localStorage.getItem('rise-ai-width');
     if (savedW && window.innerWidth > 520) el.style.width = savedW + 'px';
     aiRenderMessages();
+    // Close math picker on tap/click outside picker+toggle
+    if (!this._mathOutsideHandler) {
+      this._mathOutsideHandler = (e) => {
+        if (!aiState.mathOpen) return;
+        const picker = document.getElementById('ai-math-picker');
+        const btn = document.querySelector('.ai-icon-btn[title="Math symbols"]');
+        if (picker && !picker.contains(e.target) && btn && !btn.contains(e.target)) {
+          aiState.mathOpen = false;
+          picker.hidden = true;
+          btn.classList.remove('ai-math-btn-active');
+        }
+      };
+      document.addEventListener('pointerdown', this._mathOutsideHandler, true);
+    }
   },
 
   _startResize(e) {
