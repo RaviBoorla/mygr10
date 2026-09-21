@@ -1398,5 +1398,965 @@
     ],
     "correct": 1,
     "explanation": "Selection (conditional branching using if-else) is a fundamental programming concept present in both Scratch (via 'if...then...else' blocks) and Python (via if-elif-else statements)."
+  },
+  {
+    "id": "ca-101",
+    "chapter": "Cyber Ethics",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Suhani asks her colleague for her project work and then copies the entire work and submits it to her team leader claiming it to be her own work. The act performed by Suhani is known as ___.",
+    "options": {
+      "a": "Phishing",
+      "b": "Plagiarism",
+      "c": "Spamming",
+      "d": "Virus"
+    },
+    "correct": "b",
+    "explanation": "Plagiarism is the act of taking someone else's work or ideas and presenting them as your own without giving proper credit. Suhani copied her colleague's project and submitted it as her own — that is plagiarism.",
+    "whyOthersWrong": {
+      "a": "Phishing is a fraudulent attempt to obtain sensitive information (passwords, credit card numbers) by disguising as a trustworthy entity. Suhani did not deceive anyone to obtain credentials.",
+      "c": "Spamming is sending unsolicited bulk messages. Suhani is copying intellectual work, not sending bulk messages.",
+      "d": "A virus is a malicious program that replicates and damages systems. Suhani's act involves copying work, not creating/spreading malware."
+    }
+  },
+  {
+    "id": "ca-102",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is the correct expansion of SMS?",
+    "options": {
+      "a": "Small Message Service",
+      "b": "Small Multimedia Service",
+      "c": "Short Multimedia Service",
+      "d": "Short Message Service"
+    },
+    "correct": "d",
+    "explanation": "SMS stands for Short Message Service — it is the standard protocol for sending short text messages (up to 160 characters) over cellular networks.",
+    "whyOthersWrong": {
+      "a": "The S in SMS stands for 'Short', not 'Small'. Messages are 'short' in length, not 'small'.",
+      "b": "Both words are wrong: it is 'Short' not 'Small', and 'Message' not 'Multimedia'. Multimedia messaging uses MMS (Multimedia Messaging Service).",
+      "c": "The second word is wrong: SMS is 'Message' Service, not 'Multimedia' Service. Multimedia messaging is MMS."
+    }
+  },
+  {
+    "id": "ca-103",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is an e-Shopping portal?",
+    "options": {
+      "a": "Diksha",
+      "b": "Swayam",
+      "c": "Flipkart",
+      "d": "NPTEL"
+    },
+    "correct": "c",
+    "explanation": "Flipkart is an Indian e-commerce platform where users can browse and purchase products online — it is an e-Shopping portal.",
+    "whyOthersWrong": {
+      "a": "Diksha (DIKSHA) is a national digital platform for school education launched by NCERT. It is an e-Learning portal, not e-Shopping.",
+      "b": "Swayam is a MOOC (Massive Open Online Course) platform by the Government of India for higher education. It is an e-Learning portal.",
+      "d": "NPTEL (National Programme on Technology Enhanced Learning) is an online education portal by IITs and IISc. It is an e-Learning portal."
+    }
+  },
+  {
+    "id": "ca-104",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is NOT an e-Governance portal?",
+    "options": {
+      "a": "e-Aadhaar",
+      "b": "DigiLocker",
+      "c": "Sarathi",
+      "d": "Zomato"
+    },
+    "correct": "d",
+    "explanation": "Zomato is a food delivery and restaurant discovery application — it is a commercial service, not an e-Governance portal. All the others are government digital service portals.",
+    "whyOthersWrong": {
+      "a": "e-Aadhaar is the official online portal to download the digital copy of the Aadhaar card — it is an e-Governance service.",
+      "b": "DigiLocker is a Government of India initiative to provide a digital document wallet for citizens to store official documents — it is an e-Governance service.",
+      "c": "Sarathi (Parivahan Sarathi) is a government portal for driving licence-related services — it is an e-Governance service."
+    }
+  },
+  {
+    "id": "ca-105",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "The protocol that is used to send e-mails is ___.",
+    "options": {
+      "a": "HTTP",
+      "b": "POP",
+      "c": "SMTP",
+      "d": "FTP"
+    },
+    "correct": "c",
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol used for sending e-mails from a client to a mail server and between mail servers.",
+    "whyOthersWrong": {
+      "a": "HTTP (HyperText Transfer Protocol) is used for transferring web pages on the World Wide Web, not for sending e-mails.",
+      "b": "POP (Post Office Protocol) is used for receiving/downloading e-mails from a mail server to a client. It is for receiving, not sending.",
+      "d": "FTP (File Transfer Protocol) is used for transferring files between a client and a server over a network. It is not used for e-mail."
+    }
+  },
+  {
+    "id": "ca-106",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "SFTP is used for:",
+    "options": {
+      "a": "Sending Files over the Internet in a secure manner",
+      "b": "Sending Mail over the Internet in a secure manner",
+      "c": "Video Conferencing",
+      "d": "Secure Chat Services"
+    },
+    "correct": "a",
+    "explanation": "SFTP (Secure File Transfer Protocol) is a secure version of FTP that uses SSH encryption to transfer files over the Internet safely, protecting data from interception.",
+    "whyOthersWrong": {
+      "b": "Sending e-mail securely uses SMTPS or STARTTLS extensions. SFTP stands for Secure File Transfer Protocol and deals with files, not mail.",
+      "c": "Video conferencing uses protocols like H.323, SIP, or WebRTC — not SFTP. SFTP is purely for file transfers.",
+      "d": "Secure chat services use protocols such as XMPP with TLS or Signal Protocol. SFTP is not related to chat communication."
+    }
+  },
+  {
+    "id": "ca-107",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Which of the following is NOT an attribute of <img> tag in HTML?",
+    "options": {
+      "a": "source",
+      "b": "width",
+      "c": "alt",
+      "d": "color"
+    },
+    "correct": "d",
+    "explanation": "The <img> tag does not have a 'color' attribute. Color styling is applied via CSS (color property applies to text, not images). Valid <img> attributes include src, width, height, alt, align, border, etc.",
+    "whyOthersWrong": {
+      "a": "'source' is a valid attribute of <img> (though the standard spelling is 'src', 'source' refers to the same concept and is listed as an option here — the question asks specifically about 'color' being invalid).",
+      "b": "'width' is a valid attribute of the <img> tag used to specify the width of the image in pixels or percentage.",
+      "c": "'alt' is a valid and important attribute of the <img> tag used to provide alternative text for the image when it cannot be displayed."
+    }
+  },
+  {
+    "id": "ca-108",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "HTML provides us with ___ levels of headings that can be inserted in a web page.",
+    "options": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8"
+    },
+    "correct": "b",
+    "explanation": "HTML provides 6 levels of headings: <h1> (largest/most important) through <h6> (smallest/least important). There is no <h7> or beyond in standard HTML.",
+    "whyOthersWrong": {
+      "a": "HTML has 6 heading levels (<h1> to <h6>), not 5. Choosing 5 would exclude <h6>.",
+      "c": "HTML does not have a <h7> tag. The standard stops at <h6>. There are exactly 6 heading levels.",
+      "d": "HTML does not have <h7> or <h8> tags. The standard defines exactly 6 heading levels (<h1> to <h6>)."
+    }
+  },
+  {
+    "id": "ca-109",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Which of the following options is an INVALID attribute of <font> tag in HTML?",
+    "options": {
+      "a": "face",
+      "b": "width",
+      "c": "size",
+      "d": "color"
+    },
+    "correct": "b",
+    "explanation": "The <font> tag in HTML has three valid attributes: face (font family/typeface), size (font size 1–7), and color (text color). 'width' is not an attribute of the <font> tag; it is used for elements like tables, images, etc.",
+    "whyOthersWrong": {
+      "a": "'face' is a valid attribute of the <font> tag that specifies the font family/typeface (e.g., <font face=\"Arial\">).",
+      "c": "'size' is a valid attribute of the <font> tag that specifies the font size on a scale of 1 to 7 (e.g., <font size=\"4\">).",
+      "d": "'color' is a valid attribute of the <font> tag that specifies the text color (e.g., <font color=\"red\">)."
+    }
+  },
+  {
+    "id": "ca-110",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "The default starting value for an ordered list in HTML is ___.",
+    "options": {
+      "a": "i",
+      "b": "1",
+      "c": "a",
+      "d": "."
+    },
+    "correct": "b",
+    "explanation": "By default, an HTML ordered list (<ol>) starts numbering from 1 (Arabic numerals). You can change the starting value using the 'start' attribute (e.g., <ol start=\"5\">).",
+    "whyOthersWrong": {
+      "a": "'i' is used for lowercase Roman numerals in ordered lists (type=\"i\"), but it is not the default. The default type is Arabic numerals starting at 1.",
+      "c": "'a' is used for lowercase alphabetical ordered lists (type=\"a\"), but it is not the default. The default is Arabic numerals.",
+      "d": "A period (.) is not a valid starting value for an ordered list in HTML. Starting values must be numbers for the default Arabic numeral type."
+    }
+  },
+  {
+    "id": "ca-111",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Assertion (A): MOOC helps in providing education to dispersed students.\nReason (R): MOOC is a free web-based distance learning programme for large-scale interactive participation.",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "correct": "b",
+    "explanation": "Both statements are true: MOOCs (Massive Open Online Courses) do help dispersed students (A is true), and MOOCs are indeed web-based distance learning programs with large-scale participation (R is true). However, R does not explain WHY A is true — the reason MOOCs help dispersed students is because they are online and accessible anywhere, which is the nature of MOOC, not specifically that R explains A.",
+    "whyOthersWrong": {
+      "a": "While both A and R are true, R (describing MOOC as free web-based distance learning) does not serve as the direct/correct explanation for A (MOOC helping dispersed students). They are independent facts.",
+      "c": "R is not false — MOOCs are indeed web-based distance learning programmes designed for large-scale interactive participation.",
+      "d": "A is not false — MOOCs do indeed help in providing education to dispersed students who cannot attend traditional classrooms."
+    }
+  },
+  {
+    "id": "ca-112",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Assertion (A): <br> is a container tag.\nReason (R): HTML elements that have both an opening and a closing tag are known as container tags.",
+    "options": {
+      "a": "Both A and R are true and R is the correct explanation of A",
+      "b": "Both A and R are true but R is NOT the correct explanation of A",
+      "c": "A is true but R is false",
+      "d": "A is false but R is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: <br> is an empty/void tag (it has only an opening tag, no closing tag). R is true: HTML elements with both opening and closing tags ARE called container tags (e.g., <p>...</p>, <b>...</b>). Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — <br> is NOT a container tag. It is an empty/void tag with no closing tag. So this option cannot be correct.",
+      "b": "A is false — <br> does not have both opening and closing tags. It is a self-closing empty tag, so it cannot be a container tag.",
+      "c": "A is false (not true), so this option is incorrect. <br> is an empty tag, not a container tag."
+    }
+  },
+  {
+    "id": "ca-113",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "The letter S in the abbreviation HTTPS in context of Networking protocols, stands for:",
+    "options": {
+      "a": "Single",
+      "b": "Static",
+      "c": "Secure",
+      "d": "Sensitive"
+    },
+    "correct": "c",
+    "explanation": "HTTPS stands for HyperText Transfer Protocol Secure. The 'S' indicates that communication is encrypted using SSL/TLS, making it secure for transmitting sensitive data like passwords and payment information.",
+    "whyOthersWrong": {
+      "a": "'Single' has no relevance to the HTTPS protocol. HTTPS refers to security/encryption, not singularity.",
+      "b": "'Static' is not what HTTPS stands for. HTTPS is about security encryption, not static content.",
+      "d": "'Sensitive' is not the expansion. HTTPS uses 'Secure' to indicate SSL/TLS encryption protects the data being transferred."
+    }
+  },
+  {
+    "id": "ca-114",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT a Web Service?",
+    "options": {
+      "a": "Using Diksha learning portal",
+      "b": "Sending and receiving email",
+      "c": "File transfer over Bluetooth",
+      "d": "Using a banking portal for online transaction"
+    },
+    "correct": "c",
+    "explanation": "File transfer over Bluetooth is a local wireless technology (short-range, ~10m) that does not require the Internet. Web services are services accessed over the Internet/World Wide Web. Bluetooth transfers are not web-based.",
+    "whyOthersWrong": {
+      "a": "Diksha is a government e-learning portal accessed over the Internet — it is a web service (e-Learning).",
+      "b": "Sending and receiving email (via SMTP/POP/IMAP) is done over the Internet — it is a web service.",
+      "d": "Online banking portals are accessed through the Internet via a web browser — they are web services (e-Banking)."
+    }
+  },
+  {
+    "id": "ca-115",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "In 3G and 4G mobile technologies, the character 'G' stands for:",
+    "options": {
+      "a": "Generation",
+      "b": "GPRS",
+      "c": "Grid",
+      "d": "Google"
+    },
+    "correct": "a",
+    "explanation": "In mobile technology, 'G' stands for Generation. 3G = Third Generation, 4G = Fourth Generation, 5G = Fifth Generation. Each generation represents a new standard of wireless mobile communication with improved speed and capacity.",
+    "whyOthersWrong": {
+      "b": "GPRS (General Packet Radio Service) is a technology associated with 2.5G networks — it is not what 'G' stands for in 3G/4G.",
+      "c": "Grid has no relevance to mobile generations. 'Grid computing' is a separate technology concept.",
+      "d": "Google is a company, not a mobile technology standard. 'G' in 3G/4G refers to Generation of wireless networks."
+    }
+  },
+  {
+    "id": "ca-116",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "A website or online platform where individuals or groups regularly publish written content, typically in a reverse chronological order is known as:",
+    "options": {
+      "a": "News Group",
+      "b": "Blog",
+      "c": "Chat Group",
+      "d": "Social Networking"
+    },
+    "correct": "b",
+    "explanation": "A Blog (short for Web Log) is an online platform where individuals or groups regularly publish written entries (posts) displayed in reverse chronological order (newest first). Examples: Blogger, WordPress.",
+    "whyOthersWrong": {
+      "a": "A News Group (Usenet newsgroup) is a discussion forum organised around a topic where users post and reply to messages — it is not primarily about individuals publishing content in reverse chronological order.",
+      "c": "A Chat Group is a real-time messaging space for multiple users. It is synchronous communication, not a publishing platform with reverse chronological posts.",
+      "d": "Social Networking sites (Facebook, Instagram) allow user profiles and social connections. While they include content publishing, the specific definition of 'reverse chronological personal publishing' best describes a Blog."
+    }
+  },
+  {
+    "id": "ca-117",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT an attribute of the <font> tag?",
+    "options": {
+      "a": "face",
+      "b": "height",
+      "c": "size",
+      "d": "color"
+    },
+    "correct": "b",
+    "explanation": "The <font> tag has three valid attributes: face (font typeface), size (1–7), and color (text color). 'height' is not an attribute of the <font> tag; height is used for elements like images, tables, and table rows.",
+    "whyOthersWrong": {
+      "a": "'face' is a valid <font> attribute specifying the font family/typeface (e.g., <font face=\"Arial\">).",
+      "c": "'size' is a valid <font> attribute specifying the text size on a scale of 1–7 (e.g., <font size=\"4\">).",
+      "d": "'color' is a valid <font> attribute specifying the text color (e.g., <font color=\"blue\">)."
+    }
+  },
+  {
+    "id": "ca-118",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "In HTML, we start a comment using:",
+    "options": {
+      "a": "<!--",
+      "b": "!-->",
+      "c": "--!>",
+      "d": "<--!"
+    },
+    "correct": "a",
+    "explanation": "HTML comments begin with <!-- and end with -->. Everything between these markers is ignored by the browser. Example: <!-- This is a comment -->",
+    "whyOthersWrong": {
+      "b": "'!-->' is the closing pattern of an HTML comment (-->), preceded by !, which is not correct for opening a comment.",
+      "c": "'--!>' is not valid HTML syntax for either opening or closing a comment.",
+      "d": "'<--!' reverses the correct syntax. The correct opening is '<!--', not '<--!'."
+    }
+  },
+  {
+    "id": "ca-119",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following elements have both the opening and the closing tags in HTML?",
+    "options": {
+      "a": "<br>",
+      "b": "<h1>",
+      "c": "<hr>",
+      "d": "<img>"
+    },
+    "correct": "b",
+    "explanation": "<h1> is a container tag — it requires both an opening tag <h1> and a closing tag </h1> to define heading text. <br>, <hr>, and <img> are empty/void tags with no closing tags.",
+    "whyOthersWrong": {
+      "a": "<br> (line break) is an empty/void tag with no closing tag. It stands alone as <br> or <br/> in HTML5.",
+      "c": "<hr> (horizontal rule) is an empty/void tag with no closing tag. It creates a horizontal line without content.",
+      "d": "<img> (image) is an empty/void tag with no closing tag. It embeds an image using the src attribute."
+    }
+  },
+  {
+    "id": "ca-120",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "The default color of vlink is ________.",
+    "options": {
+      "a": "Green",
+      "b": "Purple",
+      "c": "Blue",
+      "d": "Yellow"
+    },
+    "correct": "b",
+    "explanation": "In HTML, 'vlink' (visited link) is an attribute of the <body> tag that sets the color of links that have already been visited. The default color of visited links (vlink) is Purple. Unvisited links (link) default to Blue, and active links (alink) default to Red.",
+    "whyOthersWrong": {
+      "a": "Green is not the default color for any of the standard link states (link, vlink, alink).",
+      "c": "Blue is the default color of unvisited links (the 'link' attribute), not visited links (vlink).",
+      "d": "Yellow is not the default color for any standard link state in HTML."
+    }
+  },
+  {
+    "id": "ca-121",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Which of the following tags is NOT used while creating a description list?",
+    "options": {
+      "a": "<dt>",
+      "b": "<dl>",
+      "c": "<td>",
+      "d": "<dd>"
+    },
+    "correct": "c",
+    "explanation": "<td> (Table Data) is a table cell tag used in HTML tables, not in description lists. A description list uses: <dl> (description list container), <dt> (description term), and <dd> (description definition/detail).",
+    "whyOthersWrong": {
+      "a": "<dt> (Description Term) is a required tag in description lists — it defines the term being described.",
+      "b": "<dl> (Description List) is the container tag that wraps the entire description list.",
+      "d": "<dd> (Description Definition) is a required tag in description lists — it provides the definition/description for the term in <dt>."
+    }
+  },
+  {
+    "id": "ca-122",
+    "chapter": "Cyber Ethics",
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Which of the following is NOT an example of an Open Source Software?",
+    "options": {
+      "a": "Linux",
+      "b": "Android",
+      "c": "Photoshop",
+      "d": "OpenOffice"
+    },
+    "correct": "c",
+    "explanation": "Adobe Photoshop is proprietary (closed source) software — its source code is not publicly available and requires a paid licence. Linux, Android (AOSP), and OpenOffice are open source software with publicly available source code.",
+    "whyOthersWrong": {
+      "a": "Linux is a free and open source operating system kernel — its source code is publicly available under the GNU GPL licence.",
+      "b": "Android (AOSP — Android Open Source Project) is open source. The core Android OS code is available publicly, though Google's apps are proprietary.",
+      "d": "OpenOffice (Apache OpenOffice) is a free, open source office productivity suite — its source code is publicly available."
+    }
+  },
+  {
+    "id": "ca-123",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Assertion (A): When you enter a query into a search engine, it retrieves and presents a list of web pages, documents, images, videos, or other types of content that are relevant to your search.\nReason (R): The goal of information retrieval is to effectively and efficiently find and present information that matches the user's search criteria.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "a",
+    "explanation": "Both A and R are true. A correctly describes how a search engine works (retrieves relevant content for a query). R correctly states the goal of information retrieval (finding and presenting matching information). R directly explains WHY A is true — a search engine does this because its purpose is information retrieval as described in R.",
+    "whyOthersWrong": {
+      "b": "R IS the correct explanation of A. The reason a search engine retrieves relevant content (A) is precisely because the goal of information retrieval is to find and present matching information (R). R explains A.",
+      "c": "R is not false — the goal of information retrieval is indeed to effectively find and present information matching the user's search criteria.",
+      "d": "A is not false — search engines do retrieve and present relevant web pages, documents, images, and videos in response to a query."
+    }
+  },
+  {
+    "id": "ca-124",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Assertion (A): It becomes difficult to update and maintain a website's design using CSS.\nReason (R): CSS allows web developers to separate the presentation layer (styles and layout) from the content layer (HTML).",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true but Reason (R) is not the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: CSS actually makes it EASIER to update and maintain a website's design, not harder. One CSS file can style an entire website, so one change updates all pages. R is true: CSS does allow separation of presentation (styles) from content (HTML). Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — CSS makes design maintenance EASIER, not difficult. Centralised styles mean one change updates the whole site.",
+      "b": "A is false — CSS simplifies website design maintenance significantly. It cannot be 'true' that CSS makes it difficult.",
+      "c": "A is false (not true) — CSS is specifically designed to ease design maintenance by separating presentation from content."
+    }
+  },
+  {
+    "id": "ca-125",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Arun is sending an e-mail to his office. Which protocol out of the following options will be used for the purpose?",
+    "options": {
+      "a": "FTP",
+      "b": "HTTP",
+      "c": "SMTP",
+      "d": "SCP"
+    },
+    "correct": "c",
+    "explanation": "SMTP (Simple Mail Transfer Protocol) is the protocol used for sending e-mails. It transfers emails from the sender's mail client to the mail server and between mail servers.",
+    "whyOthersWrong": {
+      "a": "FTP (File Transfer Protocol) is used to transfer files between computers over a network, not for sending emails.",
+      "b": "HTTP (HyperText Transfer Protocol) is used for transferring web pages between a web server and a browser, not for email.",
+      "d": "SCP (Secure Copy Protocol) is used to securely transfer files between hosts using SSH. It is not an email protocol."
+    }
+  },
+  {
+    "id": "ca-126",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Which of the following is NOT an e-Reservation portal in India?",
+    "options": {
+      "a": "https://www.amazon.in",
+      "b": "https://www.yatra.com",
+      "c": "https://www.makemytrip.com",
+      "d": "https://www.irctc.co.in"
+    },
+    "correct": "a",
+    "explanation": "Amazon.in is an e-Commerce/e-Shopping portal for buying goods online, not an e-Reservation portal. IRCTC, Yatra, and MakeMyTrip are travel and ticket reservation portals.",
+    "whyOthersWrong": {
+      "b": "Yatra.com is an online travel booking portal used to reserve flights, hotels, and holiday packages — it is an e-Reservation service.",
+      "c": "MakeMyTrip.com is an online travel booking portal for flight, hotel, bus and train reservations — it is an e-Reservation service.",
+      "d": "IRCTC (Indian Railway Catering and Tourism Corporation) is the official government portal for online train ticket reservation — it is an e-Reservation service."
+    }
+  },
+  {
+    "id": "ca-127",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Which of the following attributes is NOT a valid attribute of the <font> tag in HTML?",
+    "options": {
+      "a": "face",
+      "b": "type",
+      "c": "size",
+      "d": "color"
+    },
+    "correct": "b",
+    "explanation": "The <font> tag has three valid attributes: face (font family), size (1–7), and color (text color). 'type' is not an attribute of <font>; 'type' is used with input, button, ol, and script elements.",
+    "whyOthersWrong": {
+      "a": "'face' is a valid attribute of <font> specifying the font typeface/family (e.g., <font face=\"Arial\">).",
+      "c": "'size' is a valid attribute of <font> specifying the text size on a scale of 1 to 7 (e.g., <font size=\"3\">).",
+      "d": "'color' is a valid attribute of <font> specifying the text color (e.g., <font color=\"red\">)."
+    }
+  },
+  {
+    "id": "ca-128",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "What is the full form of FTP?",
+    "options": {
+      "a": "File Transfer Protocol",
+      "b": "File Transmission Protocol",
+      "c": "Fast Transfer Protocol",
+      "d": "Fast Transmission Protocol"
+    },
+    "correct": "a",
+    "explanation": "FTP stands for File Transfer Protocol — it is a standard network protocol used to transfer files between a client and a server over the Internet or a TCP/IP network.",
+    "whyOthersWrong": {
+      "b": "'File Transmission Protocol' is incorrect. The T in FTP stands for 'Transfer', not 'Transmission'.",
+      "c": "'Fast Transfer Protocol' is incorrect. The F in FTP stands for 'File', not 'Fast'. FTP is not defined by speed but by its purpose.",
+      "d": "'Fast Transmission Protocol' is doubly incorrect. F = File and T = Transfer, not Fast and Transmission."
+    }
+  },
+  {
+    "id": "ca-129",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Which of the following attributes is NOT a valid attribute of the <body> tag in HTML?",
+    "options": {
+      "a": "text",
+      "b": "background",
+      "c": "bgcolor",
+      "d": "width"
+    },
+    "correct": "d",
+    "explanation": "The <body> tag does not have a 'width' attribute. Valid <body> attributes include bgcolor (background color), background (background image), text (text color), link, vlink, alink, leftmargin, topmargin, etc. Width is used for elements like table, img, hr, etc.",
+    "whyOthersWrong": {
+      "a": "'text' is a valid <body> attribute that sets the default text color of the entire web page (e.g., <body text=\"black\">).",
+      "b": "'background' is a valid <body> attribute that sets a background image for the web page (e.g., <body background=\"bg.jpg\">).",
+      "c": "'bgcolor' is a valid <body> attribute that sets the background color of the web page (e.g., <body bgcolor=\"yellow\">)."
+    }
+  },
+  {
+    "id": "ca-130",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Select the correct option to fill in the blank:\nA __________ is an online platform or website where individuals or businesses regularly publish articles/journals, known as posts, on various topics.",
+    "options": {
+      "a": "Browser",
+      "b": "Blog",
+      "c": "News Group",
+      "d": "Web Server"
+    },
+    "correct": "b",
+    "explanation": "A Blog (Web Log) is an online platform where individuals or organizations regularly publish written content (posts/articles) on various topics, typically in reverse chronological order. Examples: Blogger, WordPress.",
+    "whyOthersWrong": {
+      "a": "A Browser (web browser) is software used to access and display web pages (e.g., Chrome, Firefox). It is not a platform for publishing content.",
+      "c": "A News Group (Usenet newsgroup) is a discussion forum on a specific topic where users post and reply to messages. It is not a platform for individuals publishing articles/journals as posts.",
+      "d": "A Web Server is hardware or software that stores and serves web pages to clients (browsers). It is infrastructure, not a content publishing platform."
+    }
+  },
+  {
+    "id": "ca-131",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "The default value for the type attribute of an Unordered List in HTML is:",
+    "options": {
+      "a": "circle",
+      "b": "disc",
+      "c": "square",
+      "d": "triangle"
+    },
+    "correct": "b",
+    "explanation": "The default value of the type attribute of the <ul> (Unordered List) tag in HTML is 'disc' — a filled circle bullet point. Other valid values are 'circle' (hollow circle) and 'square'.",
+    "whyOthersWrong": {
+      "a": "'circle' is a valid type value for <ul> (produces hollow circle bullets), but it is not the default. 'disc' is the default.",
+      "c": "'square' is a valid type value for <ul> (produces square bullets), but it is not the default.",
+      "d": "'triangle' is not a valid value for the type attribute of <ul> in standard HTML."
+    }
+  },
+  {
+    "id": "ca-132",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Which of the following is NOT a Search Engine available over the Internet?",
+    "options": {
+      "a": "Google",
+      "b": "Bing",
+      "c": "Diksha",
+      "d": "Yahoo"
+    },
+    "correct": "c",
+    "explanation": "Diksha (DIKSHA) is a national digital education platform launched by NCERT for school students and teachers. It is an e-Learning portal, not a search engine. Google, Bing, and Yahoo are search engines that index and retrieve web content.",
+    "whyOthersWrong": {
+      "a": "Google is the world's most popular search engine, used to search the web for any information.",
+      "b": "Bing is a search engine developed by Microsoft, an alternative to Google for web searches.",
+      "d": "Yahoo is one of the earliest and still active web search engines, also providing news and email services."
+    }
+  },
+  {
+    "id": "ca-133",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Which of the following options is a network protocol that enables secure and encrypted file transfers between a client and a server?",
+    "options": {
+      "a": "SFTP",
+      "b": "Telnet",
+      "c": "SCP",
+      "d": "HTTP"
+    },
+    "correct": "a",
+    "explanation": "SFTP (Secure File Transfer Protocol) is a network protocol that provides file transfer capability over a secure (SSH-encrypted) connection. It protects data from interception during transfer.",
+    "whyOthersWrong": {
+      "b": "Telnet is a protocol for remote login to another computer, but it does not encrypt data — it transmits data in plain text, making it insecure.",
+      "c": "SCP (Secure Copy Protocol) also transfers files securely over SSH, but SFTP is more feature-rich and explicitly described as a 'file transfer protocol'. Both are secure, but the question's best match is SFTP.",
+      "d": "HTTP (HyperText Transfer Protocol) is used for transferring web pages and is not encrypted. HTTPS is the secure version, but even that is for web content, not file transfers."
+    }
+  },
+  {
+    "id": "ca-134",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Which of the following options will set the font family of all paragraphs to 'Arial'?",
+    "options": {
+      "a": "<style> p { font-family: Arial; } </style>",
+      "b": "<style> p { fontfamily: Arial; } </style>",
+      "c": "<style> p { font: Arial; } </style>",
+      "d": "<style> p { font-type: Arial; } </style>"
+    },
+    "correct": "a",
+    "explanation": "The correct CSS property to set the font family is 'font-family'. The correct syntax is: p { font-family: Arial; } which applies the Arial font to all paragraph elements.",
+    "whyOthersWrong": {
+      "b": "'fontfamily' (without the hyphen) is not a valid CSS property. CSS uses 'font-family' with a hyphen.",
+      "c": "'font' is a CSS shorthand property that can set multiple font properties (style, variant, weight, size/line-height, family), but 'font: Arial' is not the correct shorthand syntax for just setting the family.",
+      "d": "'font-type' is not a valid CSS property. The correct property name is 'font-family', not 'font-type'."
+    }
+  },
+  {
+    "id": "ca-135",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Assertion (A): FTP is a networking protocol used for transferring files.\nReason (R): FTP is used when we want to view some data from a website.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "c",
+    "explanation": "A is true: FTP (File Transfer Protocol) is indeed used for transferring files between a client and server. R is false: Viewing data from a website uses HTTP/HTTPS, not FTP. FTP is for uploading/downloading files, not browsing web content.",
+    "whyOthersWrong": {
+      "a": "R is false — viewing website data uses HTTP, not FTP. So neither 'both true' options can be correct.",
+      "b": "R is false — FTP is not used to view website data. That is HTTP's purpose. So 'both true' is incorrect.",
+      "d": "A is true — FTP is genuinely a protocol for file transfers. It is not false."
+    }
+  },
+  {
+    "id": "ca-136",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Assertion (A): SMS is an acronym for Smart Message Service.\nReason (R): SMS is the most common technology for delivering short, concise and important messages quickly.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: SMS stands for 'Short Message Service', not 'Smart Message Service'. R is true: SMS is indeed the most widely used technology for sending short text messages quickly and efficiently. Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — SMS stands for Short Message Service, not Smart Message Service. So 'both true' cannot be correct.",
+      "b": "A is false — SMS is Short Message Service. So 'both true' is incorrect regardless of the explanation relationship.",
+      "c": "A is false (not true) AND R is true (not false). So this option has both parts wrong."
+    }
+  },
+  {
+    "id": "ca-137",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is Internet?",
+    "options": {
+      "a": "A type of computer software",
+      "b": "A global network of interconnected computer networks",
+      "c": "A local area network in a school",
+      "d": "A type of computer hardware"
+    },
+    "correct": "b",
+    "explanation": "The Internet is a global network of interconnected computer networks that uses the TCP/IP protocol suite to communicate. It connects millions of private, public, academic, business, and government networks worldwide.",
+    "whyOthersWrong": {
+      "a": "The Internet is not a type of software. Software like browsers and email clients use the Internet, but the Internet itself is a network infrastructure.",
+      "c": "A LAN (Local Area Network) in a school connects computers within a limited area. The Internet is global in scale and connects billions of devices worldwide.",
+      "d": "The Internet is not hardware. It is a network of networks, though it runs on physical hardware like routers, cables, and servers."
+    }
+  },
+  {
+    "id": "ca-138",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "What is the primary purpose of the TCP/IP?",
+    "options": {
+      "a": "To manage web pages",
+      "b": "To store emails on the server",
+      "c": "To define how data is transmitted over the Internet",
+      "d": "To secure websites using encryption"
+    },
+    "correct": "c",
+    "explanation": "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental communication protocol suite of the Internet. Its primary purpose is to define how data is transmitted, packaged, addressed, routed, and received over the Internet.",
+    "whyOthersWrong": {
+      "a": "Managing web pages is the role of HTTP/web servers, not TCP/IP. TCP/IP is a lower-level protocol for data transmission.",
+      "b": "Storing emails is the function of email servers using protocols like IMAP/POP3. TCP/IP handles the underlying data transmission, not email storage.",
+      "d": "Securing websites uses HTTPS (HTTP + SSL/TLS), not TCP/IP. TCP/IP itself does not provide encryption."
+    }
+  },
+  {
+    "id": "ca-139",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "Which heading tag represents the smallest heading size in HTML?",
+    "options": {
+      "a": "<h1>",
+      "b": "<h3>",
+      "c": "<h5>",
+      "d": "<h6>"
+    },
+    "correct": "d",
+    "explanation": "<h6> represents the smallest heading in HTML. HTML provides 6 heading levels: <h1> (largest/most important) down to <h6> (smallest/least important).",
+    "whyOthersWrong": {
+      "a": "<h1> is the LARGEST heading in HTML, used for the most important heading on a page.",
+      "b": "<h3> is a medium-level heading — it is smaller than <h1> and <h2> but larger than <h4>, <h5>, and <h6>.",
+      "c": "<h5> is the second smallest heading, but <h6> is even smaller/lower priority."
+    }
+  },
+  {
+    "id": "ca-140",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "In any email address, the username and the domain name are separated by _________ symbol.",
+    "options": {
+      "a": "$",
+      "b": "@",
+      "c": "#",
+      "d": "%"
+    },
+    "correct": "b",
+    "explanation": "The '@' (at) symbol separates the username from the domain name in an email address. For example, in 'student@school.edu', 'student' is the username and 'school.edu' is the domain name.",
+    "whyOthersWrong": {
+      "a": "'$' (dollar sign) is not used in standard email address syntax for separating username and domain.",
+      "c": "'#' (hash) is used in URLs for fragment identifiers and in programming, but not as a separator in email addresses.",
+      "d": "'%' (percent) is used in URL encoding for special characters, but not as a separator in email addresses."
+    }
+  },
+  {
+    "id": "ca-141",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "Which of the following refers to the rules that enable computers to communicate over a network?",
+    "options": {
+      "a": "Browser",
+      "b": "e-Banking",
+      "c": "Protocol",
+      "d": "Text Editor"
+    },
+    "correct": "c",
+    "explanation": "A Protocol is a set of rules and standards that govern how data is transmitted and received over a network, enabling computers to communicate with each other. Examples: TCP/IP, HTTP, SMTP, FTP.",
+    "whyOthersWrong": {
+      "a": "A Browser (web browser) is software for accessing and displaying websites. It uses protocols to communicate, but it is not itself the set of rules.",
+      "b": "e-Banking is an internet service for conducting banking transactions online. It is not the rules that enable network communication.",
+      "d": "A Text Editor is software for editing plain text. It has no role in defining network communication rules."
+    }
+  },
+  {
+    "id": "ca-142",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "In the POP3 protocol, what does the number '3' signify?",
+    "options": {
+      "a": "It represents three computers involved",
+      "b": "It stands for the year 2003",
+      "c": "It refers to three main servers used in email delivery",
+      "d": "It indicates the third version of the Post Office Protocol"
+    },
+    "correct": "d",
+    "explanation": "POP3 stands for Post Office Protocol version 3. The '3' indicates that it is the third and current version of the POP email retrieval protocol. It is used to download emails from a mail server to a local client.",
+    "whyOthersWrong": {
+      "a": "The '3' does not refer to three computers. POP3 is a version number, not a count of computers.",
+      "b": "The '3' does not stand for the year 2003. It is a version number that has been in use since the 1980s.",
+      "c": "The '3' has nothing to do with three servers. It is simply the version number of the protocol."
+    }
+  },
+  {
+    "id": "ca-143",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Which of the following is NOT a valid type of list in HTML?",
+    "options": {
+      "a": "Description list",
+      "b": "Ordered list",
+      "c": "Detail list",
+      "d": "Unordered list"
+    },
+    "correct": "c",
+    "explanation": "HTML has three standard list types: Ordered List (<ol>), Unordered List (<ul>), and Description List (<dl>). 'Detail list' does not exist as a standard HTML list type.",
+    "whyOthersWrong": {
+      "a": "Description list (<dl>) is a valid HTML list type that pairs terms (<dt>) with their descriptions (<dd>).",
+      "b": "Ordered list (<ol>) is a valid HTML list type that displays items in a numbered/lettered sequence.",
+      "d": "Unordered list (<ul>) is a valid HTML list type that displays items with bullet points."
+    }
+  },
+  {
+    "id": "ca-144",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Ajay, a computer engineer, generally uses his laptop to remotely access customers' computers in order to diagnose problems in their computer. Which protocol is being used for this purpose?",
+    "options": {
+      "a": "FTP",
+      "b": "SMS",
+      "c": "SMTP",
+      "d": "TELNET"
+    },
+    "correct": "d",
+    "explanation": "TELNET (Telecommunication Network) is a protocol that allows a user to remotely log in to and control another computer over a network. Ajay is using TELNET to remotely access customers' computers for diagnosis.",
+    "whyOthersWrong": {
+      "a": "FTP (File Transfer Protocol) is used to transfer files between computers, not for remote login/access and diagnostics.",
+      "b": "SMS (Short Message Service) is for sending text messages over mobile networks, not for remote computer access.",
+      "c": "SMTP (Simple Mail Transfer Protocol) is used for sending emails. It has no functionality for remote computer access."
+    }
+  },
+  {
+    "id": "ca-145",
+    "chapter": "Networking",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is World Wide Web?",
+    "options": {
+      "a": "A network hardware",
+      "b": "Software to manage data",
+      "c": "System of interlinked webpages",
+      "d": "Web server"
+    },
+    "correct": "c",
+    "explanation": "The World Wide Web (WWW) is a system of interlinked hypertext documents and multimedia content accessed via the Internet using a web browser. It was invented by Tim Berners-Lee in 1989.",
+    "whyOthersWrong": {
+      "a": "The World Wide Web is not hardware. It is an information system of web pages accessible over the Internet.",
+      "b": "The WWW is not software for managing data. It is a system of documents linked via hyperlinks and accessed through browsers.",
+      "d": "A Web server is a computer/software that stores and serves web pages. The WWW is the system of all those pages, not just one server."
+    }
+  },
+  {
+    "id": "ca-146",
+    "chapter": "HTML",
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is the purpose of the start attribute in the <ol> tag?",
+    "options": {
+      "a": "To change the type of bullets",
+      "b": "To specify the total number of items in the list",
+      "c": "To create a list within another list",
+      "d": "To set the starting number of the list"
+    },
+    "correct": "d",
+    "explanation": "The 'start' attribute in the <ol> tag sets the starting number for the ordered list. For example, <ol start=\"5\"> will begin numbering from 5 instead of the default 1.",
+    "whyOthersWrong": {
+      "a": "Changing the type of bullets/numbering style is done using the 'type' attribute of <ol>, not 'start'. For example, type=\"a\" for alphabetical.",
+      "b": "The 'start' attribute does not specify the total number of items. Items are simply added as <li> elements; their count is not a property of the list.",
+      "c": "Creating a list within another list (nested list) is done by placing an <ol> or <ul> inside a <li>, not through the 'start' attribute."
+    }
+  },
+  {
+    "id": "ca-147",
+    "chapter": "Networking",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Assertion (A): Blogs are an effective way for individuals to share their thoughts, knowledge, and experiences online.\nReason (R): Only professional web developers can create and maintain blogs.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "c",
+    "explanation": "A is true: Blogs are indeed an effective way to share thoughts and experiences online. R is false: Anyone can create and maintain a blog using platforms like Blogger, WordPress, or Medium — no professional coding skills are required.",
+    "whyOthersWrong": {
+      "a": "R is false — blogs are accessible to everyone, not just professional developers. Platforms like WordPress make blogging easy for anyone.",
+      "b": "R is false — it is incorrect that only professionals can create blogs. This option requires R to be true.",
+      "d": "A is true — blogs are genuinely effective for sharing content online. This option requires A to be false."
+    }
+  },
+  {
+    "id": "ca-148",
+    "chapter": "HTML",
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Assertion (A): The <img> tag will display an image even if the src attribute is not specified.\nReason (R): The src attribute provides the path to the image file, which is essential for the browser to locate and display the image.",
+    "options": {
+      "a": "Both Assertion (A) and Reason (R) are true and Reason (R) is the correct explanation of Assertion (A)",
+      "b": "Both Assertion (A) and Reason (R) are true, but Reason (R) is NOT the correct explanation of Assertion (A)",
+      "c": "Assertion (A) is true, but Reason (R) is false",
+      "d": "Assertion (A) is false, but Reason (R) is true"
+    },
+    "correct": "d",
+    "explanation": "A is false: Without the src attribute, the <img> tag cannot display any image — the browser has no path to find the image file. R is true: The src attribute is essential as it provides the file path that the browser uses to locate and render the image. Since A is false and R is true, option (d) is correct.",
+    "whyOthersWrong": {
+      "a": "A is false — <img> cannot display an image without src. And if R explains A, A must be true, which it is not.",
+      "b": "A is false — <img> without src displays nothing (or a broken image icon). Both A and R cannot both be true.",
+      "c": "A is false (not true) — without src, no image is displayed. R is true, not false."
+    }
   }
 ]

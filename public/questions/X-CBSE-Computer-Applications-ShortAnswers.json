@@ -374,5 +374,530 @@
       "Using HTTPS (SSL/TLS encryption) so that sensitive data like card numbers and passwords are encrypted while travelling over the Internet, preventing interception. 2.",
       "Verifying the authenticity of a website (e.g., checking for a valid security certificate and padlock icon) before entering payment details, to avoid fake/phishing sites."
     ]
+  },
+  {
+    "id": "sa-ca-031",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Differentiate between Chat service and e-Mail service. (any two points)",
+    "modelAnswer": "Chat service is a real-time, synchronous communication where both users must be online simultaneously. e-Mail service is asynchronous — messages are stored on a server and can be read at any time. Chat messages are typically short and informal; e-Mails can be long and formal. Chat is instant while e-Mail may have a delay.",
+    "keyPoints": [
+      "Chat is real-time/synchronous; e-Mail is asynchronous",
+      "Chat requires both parties online simultaneously; e-Mail does not",
+      "Chat messages are typically short; e-Mails can be long with attachments",
+      "Chat is informal and instant; e-Mail is formal and can be delayed"
+    ]
+  },
+  {
+    "id": "sa-ca-032",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "What is e-Governance? Name any two e-Governance services. OR What is Internet? How can we retrieve information from the Internet? (any two ways)",
+    "modelAnswer": "e-Governance: The use of Information and Communication Technology (ICT) by the government to deliver services, share information, and transact with citizens efficiently. Examples: DigiLocker, e-Aadhaar, Parivahan Sarathi, e-Hospital.\n\nOR\n\nInternet: A global network of interconnected computers that communicate using the TCP/IP protocol suite, allowing sharing of information worldwide. Ways to retrieve information: (1) Using a search engine (e.g., Google, Bing) by entering keywords. (2) Directly typing a URL/web address in a browser. (3) Using online databases or educational portals. (4) Accessing news websites or e-libraries.",
+    "keyPoints": [
+      "e-Governance: use of ICT by government to deliver services to citizens",
+      "Examples: DigiLocker, e-Aadhaar, Sarathi, e-Hospital",
+      "Internet: global network of computers using TCP/IP",
+      "Retrieve info via search engines (Google), direct URL, online databases"
+    ]
+  },
+  {
+    "id": "sa-ca-033",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "How can we embed audio in a web page using HTML? Give example.",
+    "modelAnswer": "We can embed audio in an HTML web page using the <audio> tag. The src attribute specifies the audio file path and the controls attribute adds play/pause controls.\n\nExample:\n<audio src=\"music.mp3\" controls>\nYour browser does not support the audio element.\n</audio>\n\nAlternatively, <embed> tag can also be used: <embed src=\"audio.mp3\" width=\"300\" height=\"50\">",
+    "keyPoints": [
+      "Use <audio> tag with src attribute for the audio file path",
+      "controls attribute displays play/pause/volume controls",
+      "Fallback text between <audio> and </audio> for unsupported browsers",
+      "Alternative: <embed src=\"audio.mp3\"> tag"
+    ]
+  },
+  {
+    "id": "sa-ca-034",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Define Licensed Software. Give two examples. OR How can we reduce Digital Divide? (any two ways)",
+    "modelAnswer": "Licensed Software: Software distributed with a licence that defines the legal terms of use, copying, modification, and distribution. The user must agree to the End User Licence Agreement (EULA) before use. Examples: Microsoft Office, Adobe Photoshop, Windows OS, AutoCAD.\n\nOR\n\nReducing Digital Divide: (1) Providing affordable/free internet access in rural and underserved areas. (2) Setting up computer literacy programmes and digital education in schools. (3) Providing low-cost devices (computers, tablets) to underprivileged communities. (4) Government initiatives like Common Service Centres (CSC).",
+    "keyPoints": [
+      "Licensed software: requires licence/EULA, defines terms of use",
+      "Examples: Microsoft Office, Adobe Photoshop, Windows OS",
+      "Digital divide: gap between those with and without digital access",
+      "Ways to reduce: affordable internet, digital literacy programmes, low-cost devices, government CSC"
+    ]
+  },
+  {
+    "id": "sa-ca-035",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "How is CSS beneficial for web development? (any two points)",
+    "modelAnswer": "CSS (Cascading Style Sheets) is beneficial for web development because: (1) Separation of content and presentation — HTML handles structure while CSS handles styling, making code cleaner and easier to maintain. (2) Consistent styling — one CSS file can style multiple web pages, ensuring uniformity across a website. (3) Faster page loading — by reusing styles, less code needs to be loaded. (4) Easier maintenance — changing one CSS file updates the appearance of the entire website.",
+    "keyPoints": [
+      "Separation of content (HTML) and presentation (CSS)",
+      "Consistent styling across multiple pages from a single CSS file",
+      "Faster page loading due to reusable styles",
+      "Easy maintenance: one change in CSS updates the whole site"
+    ]
+  },
+  {
+    "id": "sa-ca-036",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2023-Board",
+    "text": "Write the HTML code to create a radio button with the label 'Male' and 'Female' in a form. OR Differentiate between ordered list and unordered list in HTML with examples.",
+    "modelAnswer": "Radio buttons example:\n<form>\n  <input type=\"radio\" name=\"gender\" value=\"male\"> Male<br>\n  <input type=\"radio\" name=\"gender\" value=\"female\"> Female\n</form>\n\nOR\n\nOrdered list (<ol>) displays items in a numbered/lettered sequence:\n<ol>\n  <li>First item</li>\n  <li>Second item</li>\n</ol>\n\nUnordered list (<ul>) displays items with bullet points:\n<ul>\n  <li>Apple</li>\n  <li>Banana</li>\n</ul>",
+    "keyPoints": [
+      "Radio button: <input type=\"radio\" name=\"gender\" value=\"male\"> Male",
+      "All radio buttons in same group share same 'name' attribute",
+      "Ordered list <ol>: numbered items using <li>",
+      "Unordered list <ul>: bulleted items using <li>"
+    ]
+  },
+  {
+    "id": "sa-ca-037",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2023-Board",
+    "text": "Differentiate between <br> tag and <p> tag in HTML with examples.",
+    "modelAnswer": "<br> (Line Break tag) inserts a single line break and is an empty/void tag (no closing tag). It moves to the next line within the same paragraph.\nExample: Hello<br>World\n\n<p> (Paragraph tag) is a container tag with opening and closing tags. It creates a new paragraph with some space/margin before and after it.\nExample: <p>This is paragraph one.</p><p>This is paragraph two.</p>\n\nKey difference: <br> just breaks the line; <p> creates a complete paragraph with spacing.",
+    "keyPoints": [
+      "<br> is an empty/void tag (no closing tag); <p> is a container tag with </p>",
+      "<br> creates a line break within content; <p> creates a new paragraph with spacing",
+      "<br> example: Hello<br>World",
+      "<p> example: <p>First paragraph.</p><p>Second paragraph.</p>"
+    ]
+  },
+  {
+    "id": "sa-ca-038",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Write any two points of comparison between Chat and Email in context of web services.",
+    "modelAnswer": "1. Chat is a real-time (synchronous) communication service where both users must be online simultaneously. Email is asynchronous — the recipient can read the message at any time without both parties being online together.\n2. Chat messages are typically short and informal, exchanged instantly. Emails can be long, formal, and may include attachments; they may have a delivery/reading delay.",
+    "keyPoints": [
+      "Chat: synchronous/real-time; Email: asynchronous",
+      "Chat requires both users online simultaneously; Email does not",
+      "Chat messages are short and informal; Emails can be long with attachments",
+      "Chat is instant; Email may have a delay"
+    ]
+  },
+  {
+    "id": "sa-ca-039",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write in brief about any two advantages of e-Banking. OR Write in brief one advantage and one limitation of e-Reservation.",
+    "modelAnswer": "e-Banking advantages: (1) 24×7 availability — customers can access their bank accounts, transfer funds, pay bills anytime from anywhere without visiting a branch. (2) Time-saving and convenient — banking tasks like balance inquiry, fund transfer, and bill payment can be done in minutes from home.\n\nOR\n\ne-Reservation: Advantage: Tickets/bookings can be made from home at any time without standing in queues, with instant confirmation. Limitation: Requires internet access and digital literacy; people without these cannot use the service.",
+    "keyPoints": [
+      "e-Banking: 24×7 access from anywhere",
+      "e-Banking: Saves time, no need to visit branch",
+      "e-Reservation advantage: Convenient online booking from home, no queues",
+      "e-Reservation limitation: Requires internet access and digital literacy"
+    ]
+  },
+  {
+    "id": "sa-ca-040",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2024-Board",
+    "text": "Write any one point of difference between a webpage and a website.",
+    "modelAnswer": "A webpage is a single document (one HTML page) that can be displayed in a web browser. A website is a collection of multiple related web pages grouped under a common domain name. For example, www.google.com is a website, while www.google.com/search is one webpage within that website.",
+    "keyPoints": [
+      "Webpage: single HTML document/page",
+      "Website: collection of multiple related webpages under one domain",
+      "Example: A website contains many webpages"
+    ]
+  },
+  {
+    "id": "sa-ca-041",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Explain in brief about any two factors that are responsible for the Digital Divide. OR What are software licenses? Give one example each of a free software license and a proprietary software.",
+    "modelAnswer": "Factors for Digital Divide: (1) Economic factor — people who cannot afford computers/smartphones and internet connections are excluded from digital access. (2) Geographic factor — rural and remote areas often lack reliable internet infrastructure compared to urban areas.\n\nOR\n\nSoftware licence: A legal agreement that defines the terms under which software may be used, copied, modified, and distributed. Free software licence example: GNU General Public Licence (GPL) — used by Linux. Proprietary software example: Microsoft Windows — source code is not publicly available.",
+    "keyPoints": [
+      "Digital divide factors: economic (cost of devices/internet) and geographic (rural vs urban access)",
+      "Also: literacy, age, infrastructure, language barriers",
+      "Software licence: legal agreement for software use terms",
+      "Free: GNU GPL (Linux); Proprietary: Microsoft Windows/Adobe Photoshop"
+    ]
+  },
+  {
+    "id": "sa-ca-042",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write any two significances of using links in an HTML webpage.",
+    "modelAnswer": "1. Navigation — Hyperlinks allow users to navigate between webpages within the same website or to external websites, making browsing easy and seamless.\n2. Cross-referencing — Links allow a webpage to reference related content on other pages, enabling users to access additional information without cluttering the current page.",
+    "keyPoints": [
+      "Navigation: links connect pages within/across websites",
+      "Cross-referencing: access related information without duplicating content",
+      "Interactivity: clicking links provides a dynamic user experience",
+      "Resource sharing: link to external resources, files, or email addresses"
+    ]
+  },
+  {
+    "id": "sa-ca-043",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Match the tag with their corresponding correct attribute: <table>→border, <input>→type, <ol>→start, <td>→rowspan. OR Differentiate between bgcolor and background attributes of <body> tag. Write one HTML statement explaining the use of each attribute.",
+    "modelAnswer": "Tag-attribute matching: <table>→border, <input>→type, <ol>→start, <td>→rowspan.\n\nOR\n\nbgcolor attribute: Sets the background colour of the webpage using a color name or hex code.\nExample: <body bgcolor=\"yellow\">\n\nbackground attribute: Sets a background image for the webpage using an image file path.\nExample: <body background=\"bg.jpg\">",
+    "keyPoints": [
+      "<table> → border, <input> → type, <ol> → start, <td> → rowspan",
+      "bgcolor: sets background color — <body bgcolor=\"yellow\">",
+      "background: sets background image — <body background=\"image.jpg\">",
+      "bgcolor uses a color name/hex; background uses an image file path"
+    ]
+  },
+  {
+    "id": "sa-ca-044",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2024-Board",
+    "text": "Write suitable HTML statements to display the following text in appropriate subscript and superscript form: (a) H₂O  (b) E = MC²",
+    "modelAnswer": "(a) H₂O in HTML:\nH<sub>2</sub>O\n\n(b) E = MC² in HTML:\nE = MC<sup>2</sup>",
+    "keyPoints": [
+      "Subscript tag: <sub>...</sub>",
+      "H₂O → H<sub>2</sub>O",
+      "Superscript tag: <sup>...</sup>",
+      "E = MC² → E = MC<sup>2</sup>"
+    ]
+  },
+  {
+    "id": "sa-ca-045",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "What is a Digital Property? Write any two examples of digital property.",
+    "modelAnswer": "Digital Property refers to any digital asset or content that belongs to an individual or organisation — content created, owned, or controlled in digital form. Examples: (1) Software programs and applications (e.g., a licensed copy of Microsoft Office). (2) Digital images, music files, e-books, videos. (3) Domain names and websites. (4) Online accounts and social media profiles. (5) Cryptocurrency and digital financial assets.",
+    "keyPoints": [
+      "Digital property: digital assets owned by an individual/organisation",
+      "Examples: software/apps, digital media (images, music, videos)",
+      "Also: domain names, websites, online accounts, e-books",
+      "Digital property has economic value and legal ownership rights"
+    ]
+  },
+  {
+    "id": "sa-ca-046",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "What is e-Shopping? Write names of any two commonly used e-Shopping portals. OR What is a Social Network? Write names of any two popular social networking sites on the Internet.",
+    "modelAnswer": "e-Shopping (Electronic Shopping): The process of buying products and services over the Internet through an online store or portal, without physically visiting a shop. Portals: Amazon.in, Flipkart.com, Meesho, Myntra.\n\nOR\n\nSocial Network: An online platform/website that allows users to create profiles, connect with others, share information, photos, and updates, and communicate. Popular sites: Facebook, Instagram, Twitter/X, LinkedIn, YouTube.",
+    "keyPoints": [
+      "e-Shopping: buying goods/services online without visiting a physical store",
+      "Portals: Amazon, Flipkart, Myntra, Meesho",
+      "Social Network: platform for connecting, communicating, and sharing online",
+      "Sites: Facebook, Instagram, Twitter/X, LinkedIn"
+    ]
+  },
+  {
+    "id": "sa-ca-047",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "State whether the following statements are True or False:\n(i) <h1> is the highest level of heading and <h4> is the lowest level of heading in HTML.\n(ii) A visited link is purple coloured by default in HTML.\n(iii) The character '#' is used to start a comment text in HTML.\n(iv) <b> is an empty tag in HTML as it does not need to be closed.",
+    "modelAnswer": "(i) FALSE — <h1> is the highest level, but <h6> (not <h4>) is the lowest level of heading in HTML.\n(ii) TRUE — The default color of a visited link (vlink) in HTML is purple.\n(iii) FALSE — Comments in HTML start with <!-- and end with -->, not with the '#' character.\n(iv) FALSE — <b> is a container tag (it has both opening <b> and closing </b> tags). Empty tags are those with no closing tag, like <br>, <hr>, <img>.",
+    "keyPoints": [
+      "(i) FALSE: Lowest heading is <h6>, not <h4>",
+      "(ii) TRUE: Visited links are purple by default",
+      "(iii) FALSE: HTML comments start with <!--, not '#'",
+      "(iv) FALSE: <b> is a container tag with </b> closing tag"
+    ]
+  },
+  {
+    "id": "sa-ca-048",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Write the HTML code to create a link to the web page www.festivals.com/india/diwali.html opening in a new window/tab on clicking text 'FESTIVALS'. OR (i) Write HTML code to display 'Happiness is not by chance, but by choice.' in bold and italics. (ii) Write the HTML code to set the background color of the web page as blue.",
+    "modelAnswer": "Link in new tab:\n<a href=\"www.festivals.com/india/diwali.html\" target=\"_blank\">FESTIVALS</a>\n\nOR\n\n(i) Bold and italics:\n<b><i>Happiness is not by chance, but by choice.</i></b>\n\n(ii) Blue background:\n<body bgcolor=\"blue\">",
+    "keyPoints": [
+      "New tab link: <a href=\"URL\" target=\"_blank\">text</a>",
+      "target=\"_blank\" opens link in a new window/tab",
+      "Bold and italics: <b><i>text</i></b>",
+      "Blue background: <body bgcolor=\"blue\">"
+    ]
+  },
+  {
+    "id": "sa-ca-049",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2025-Board",
+    "text": "Write the purpose of the following HTML tags: (i) <BR>  (ii) <DL>",
+    "modelAnswer": "(i) <BR> (Line Break tag): Inserts a single line break in a web page. It is an empty/void tag (no closing tag) that moves content to the next line without creating a new paragraph.\nExample: Hello<BR>World\n\n(ii) <DL> (Description List tag): Defines a description/definition list in HTML. It is used with <DT> (description term) and <DD> (description definition) tags to create a list of terms and their corresponding descriptions.",
+    "keyPoints": [
+      "<BR>: inserts a line break; empty tag; no closing tag",
+      "<DL>: defines a description list (term-definition pairs)",
+      "<DL> used with <DT> (term) and <DD> (definition)",
+      "<BR> is inline; <DL> creates a block-level list"
+    ]
+  },
+  {
+    "id": "sa-ca-050",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "An incomplete CSS code within <head>...</head> is given. Complete the code: body{___ : ___; } P { ___: ___; ___: ___; } ___ { Color: Blue; } where (i) Line 1: body background Yellow (ii) Line 2: paragraph text color Red (iii) Line 3: paragraph font-family Arial (iv) Line 4: second biggest heading in Blue color. OR Complete HTML ordered list code with yellow background body and Helvetica font paragraph.",
+    "modelAnswer": "CSS completion:\n<head>\n<style>\nbody { background-color: yellow; }\nP {\n  color: red;\n  font-family: Arial;\n}\nh2 {\n  Color: Blue;\n}\n</style>\n</head>\n\nOR\n\nOrdered list HTML:\n<html>\n<body bgcolor=\"yellow\">\n<p><font face=\"Helvetica\">FESTIVALS OF INDIA</font></p>\n<ol>\n  <li>HOLI</li>\n  <li>DIWALI</li>\n</ol>\n</body>\n</html>",
+    "keyPoints": [
+      "background-color: yellow for body",
+      "color: red; font-family: Arial for paragraph",
+      "h2 selector for second biggest heading",
+      "Ordered list: <ol> with <li> items"
+    ]
+  },
+  {
+    "id": "sa-ca-051",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2025-Board",
+    "text": "Write any two differences between Web Server and Web Client.",
+    "modelAnswer": "1. Web Server stores and serves web pages/content to clients. Web Client (browser) requests and receives web pages from servers.\n2. Web Server is a powerful computer/software (e.g., Apache, Nginx) that runs 24×7 to serve requests. Web Client is the user's device/browser (e.g., Chrome, Firefox) that initiates requests.\n3. Web Server sends data (responds). Web Client receives data (requests).",
+    "keyPoints": [
+      "Web Server: stores and serves content; Web Client: requests and displays content",
+      "Web Server is always-on infrastructure software; Web Client is user browser",
+      "Server responds to requests; Client initiates requests",
+      "Server examples: Apache, Nginx; Client examples: Chrome, Firefox"
+    ]
+  },
+  {
+    "id": "sa-ca-052",
+    "chapter": "Cyber Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "What is a software license? Also mention its purpose.",
+    "modelAnswer": "A software license is a legal agreement between the software developer/publisher and the user that defines the terms and conditions for using, copying, modifying, and distributing the software. Purpose: It protects the intellectual property rights of the developer, specifies what the user is permitted to do with the software, and prevents unauthorized copying or distribution.",
+    "keyPoints": [
+      "Software licence: legal agreement between developer and user",
+      "Defines terms of use, copying, modification, distribution",
+      "Purpose: protects developer's intellectual property rights",
+      "Prevents unauthorized use, copying, or distribution"
+    ]
+  },
+  {
+    "id": "sa-ca-053",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is a search engine? Name any two popular search engines. OR Write the expanded form of SMTP. How does SMTP differ from POP3?",
+    "modelAnswer": "Search Engine: A software application that searches a database of web pages (index) based on keywords entered by the user and displays a list of relevant results. Examples: Google, Bing, Yahoo, DuckDuckGo.\n\nOR\n\nSMTP: Simple Mail Transfer Protocol. SMTP vs POP3: SMTP is used for SENDING emails (from client to server and between servers). POP3 (Post Office Protocol version 3) is used for RECEIVING/downloading emails from a mail server to the client.",
+    "keyPoints": [
+      "Search engine: tool to find web pages by entering keywords",
+      "Popular search engines: Google, Bing, Yahoo",
+      "SMTP: Simple Mail Transfer Protocol — for sending emails",
+      "POP3: Post Office Protocol version 3 — for receiving/downloading emails"
+    ]
+  },
+  {
+    "id": "sa-ca-054",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Differentiate between a tag and an attribute in HTML with the help of a suitable example.",
+    "modelAnswer": "Tag: An HTML tag is a keyword enclosed in angle brackets (<>) used to define the structure and content of a web page. Tags usually have an opening and closing form.\nExample: <p>This is a paragraph.</p> — <p> is the tag.\n\nAttribute: An attribute is additional information provided inside an HTML tag to modify its behavior or appearance. Attributes are always specified in the opening tag as name-value pairs.\nExample: <img src=\"photo.jpg\" alt=\"My photo\"> — src and alt are attributes of the <img> tag.",
+    "keyPoints": [
+      "Tag: keyword in angle brackets defining HTML structure — e.g., <p>, <img>, <b>",
+      "Attribute: extra information inside a tag modifying its behavior — e.g., src, alt, href",
+      "Tags define WHAT an element is; attributes define HOW it behaves",
+      "Attributes are always in opening tags as name=\"value\" pairs"
+    ]
+  },
+  {
+    "id": "sa-ca-055",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is the purpose of <DT> and <DD> tags in a description list? OR Explain the purpose of the following tags: (i) <P>  (ii) <HR>",
+    "modelAnswer": "<DT> (Description Term): Defines the term/name in a description list (<dl>). It appears as the label/heading for each item.\n<DD> (Description Definition): Provides the description/definition for the preceding <DT> term. It is indented under the term.\n\nOR\n\n(i) <P> (Paragraph tag): Creates a new paragraph in a web page. It adds some space/margin before and after the paragraph text. Example: <p>This is a paragraph.</p>\n(ii) <HR> (Horizontal Rule tag): Inserts a horizontal line/divider across the web page. It is an empty tag used to visually separate sections. Example: <hr>",
+    "keyPoints": [
+      "<DT>: defines the term in a description list",
+      "<DD>: provides the definition/description for the term",
+      "<P>: creates a new paragraph with spacing before and after",
+      "<HR>: inserts a horizontal rule/line to separate sections"
+    ]
+  },
+  {
+    "id": "sa-ca-056",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is CSS and why is it used in web designing?",
+    "modelAnswer": "CSS (Cascading Style Sheets) is a stylesheet language used to describe the visual presentation/appearance of HTML documents. It controls the layout, colors, fonts, spacing, and overall design of web pages. It is used in web designing because: (1) It separates content (HTML) from presentation (CSS), making code cleaner and easier to maintain. (2) One CSS file can style multiple pages, ensuring consistent appearance across a website without repeating styles in each HTML file.",
+    "keyPoints": [
+      "CSS: Cascading Style Sheets — controls visual presentation of web pages",
+      "Controls layout, colors, fonts, spacing, design",
+      "Separates content (HTML) from presentation (CSS)",
+      "One CSS file can style entire website consistently"
+    ]
+  },
+  {
+    "id": "sa-ca-057",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2026-Board",
+    "text": "Complete the CSS code: p{ ___: Green; ___: 12px; ___: center; color:yellow; } ___ { width:50% } where: (i) background color of paragraph should be Green, (ii) font size 12, (iii) text alignment center, (iv) horizontal ruler width 50%. OR Complete the HTML: set page title 'About Me', ordered list with uppercase Roman numerals, start from III, first item 'Apple'.",
+    "modelAnswer": "CSS completion:\n<style>\np {\n  background-color: Green;\n  font-size: 12px;\n  text-align: center;\n  color: yellow;\n}\nhr {\n  width: 50%;\n}\n</style>\n\nOR\n\nHTML ordered list completion:\n<html>\n<head><title>About Me</title></head>\n<body>\n<h1>My Favourite Fruits</h1>\n<ol type=\"I\" start=\"3\">\n  <li>Apple</li>\n  <li>Banana</li>\n</ol>\n</body>\n</html>",
+    "keyPoints": [
+      "Line 1: background-color: Green",
+      "Line 2: font-size: 12px",
+      "Line 3: text-align: center",
+      "Line 4: hr { width: 50%; } — hr selector for horizontal rule",
+      "Ordered list: type=\"I\" for uppercase Roman, start=\"3\" to begin at III"
+    ]
+  },
+  {
+    "id": "sa-ca-058",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2026-Board",
+    "text": "What is e-Banking? Mention one difference between e-Banking and e-Shopping.",
+    "modelAnswer": "e-Banking (Electronic Banking / Online Banking): The use of the Internet and digital technology to access bank accounts, transfer funds, pay bills, check balance, and perform other banking transactions without physically visiting a bank branch.\n\nDifference:\ne-Banking: Used for financial/banking services such as money transfer, bill payment, and account management.\ne-Shopping: Used for buying products and services online through e-commerce portals like Amazon, Flipkart, etc.",
+    "keyPoints": [
+      "e-Banking: accessing and managing bank accounts online",
+      "e-Banking services: fund transfer, bill payment, balance check",
+      "e-Shopping: buying goods/products/services online",
+      "e-Banking is for financial transactions; e-Shopping is for purchasing goods"
+    ]
+  },
+  {
+    "id": "sa-ca-059",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Gulzar wrote HTML code to embed audio (GulzarNote1.mp3, autoplay, controls) and video (GulzarMovie1.mp4, 350×250, controls) on his webpage but got errors. Rewrite the correct statements with all corrections underlined.",
+    "modelAnswer": "Correct audio code:\n<audio controls autoplay>\n  <source src=\"GulzarNote1.mp3\">\n</audio>\n\nCorrect video code:\n<video width=\"350\" height=\"250\" controls>\n  <source src=\"GulzarMovie1.mp4\">\n</video>\n\nErrors in original: </audio controls> should be </audio> (closing tag has no attributes); <video> needs the controls attribute; src in <source> tag must use src= not equal-sign without attribute name.",
+    "keyPoints": [
+      "Audio: <audio controls autoplay><source src=\"GulzarNote1.mp3\"></audio>",
+      "Video: <video width=\"350\" height=\"250\" controls><source src=\"GulzarMovie1.mp4\"></video>",
+      "Closing tags </audio> and </video> should have no attributes",
+      "controls and autoplay are attributes of the opening <audio>/<video> tag"
+    ]
+  },
+  {
+    "id": "sa-ca-060",
+    "chapter": "Networking",
+    "marks": 2,
+    "difficulty": "easy",
+    "year": "2022-Board",
+    "text": "Differentiate between the terms Web Site and Web Page. OR What is a Web Browser? Write the names of any two commonly used Web Browsers.",
+    "modelAnswer": "Web Page vs Website:\nA Web Page is a single HTML document displayed in a browser. A Website is a collection of multiple related web pages grouped under a single domain name.\nExample: www.google.com is a website; www.google.com/search is one webpage in it.\n\nOR\n\nWeb Browser: Software that allows users to access, retrieve, and view content on the World Wide Web (web pages, images, videos). Examples: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.",
+    "keyPoints": [
+      "Web Page: single HTML document/page in a browser",
+      "Website: collection of multiple related web pages under one domain",
+      "Web Browser: software to access and display web pages",
+      "Examples: Google Chrome, Mozilla Firefox, Microsoft Edge"
+    ]
+  },
+  {
+    "id": "sa-ca-061",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Rohan is creating a Web page. He wants to insert a link with text 'Click to Open' which on clicking opens the URL 'http://www.Mywebsite.com' in a new window. Help him to write the HTML code to create the hyperlink.",
+    "modelAnswer": "<a href=\"http://www.Mywebsite.com\" target=\"_blank\">Click to Open</a>",
+    "keyPoints": [
+      "Use <a> anchor tag for hyperlinks",
+      "href attribute specifies the URL",
+      "target=\"_blank\" opens link in a new window/tab",
+      "Link text 'Click to Open' goes between opening and closing <a> tags"
+    ]
+  },
+  {
+    "id": "sa-ca-062",
+    "chapter": "HTML",
+    "marks": 2,
+    "difficulty": "hard",
+    "year": "2022-Board",
+    "text": "Write any two differences between the Outline and Border-style properties of CSS.",
+    "modelAnswer": "1. Border is part of the box model and occupies space (affects layout). Outline is drawn outside the border and does NOT occupy space, so it does not affect the layout of surrounding elements.\n2. Border can be applied to individual sides (border-top, border-right, border-bottom, border-left). Outline is always drawn on all four sides at once — individual sides cannot be set separately.\n3. Border can be rounded using border-radius. Outline does not support border-radius.",
+    "keyPoints": [
+      "Border: occupies space, part of box model; Outline: does not occupy space",
+      "Border: can be set for individual sides; Outline: applied to all 4 sides at once",
+      "Border supports border-radius (rounded); Outline does not",
+      "Outline is often used for accessibility/focus indicators without affecting layout"
+    ]
+  },
+  {
+    "id": "sa-ca-063",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Expand the following in the context of Internet Protocols: (a) SMTP (b) POP3. Also write the difference between SMTP and POP3.",
+    "modelAnswer": "(a) SMTP: Simple Mail Transfer Protocol\n(b) POP3: Post Office Protocol (version 3)\n\nDifference:\nSMTP is used to SEND emails from a client to the mail server and between servers. POP3 is used to RECEIVE / download emails from the mail server to the client's local device. SMTP pushes mail; POP3 pulls mail.",
+    "keyPoints": [
+      "SMTP: Simple Mail Transfer Protocol",
+      "POP3: Post Office Protocol version 3",
+      "SMTP: used for sending emails (client→server, server→server)",
+      "POP3: used for receiving/downloading emails (server→client)"
+    ]
+  },
+  {
+    "id": "sa-ca-064",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "What is e-Governance? Explain any two merits of e-Governance.",
+    "modelAnswer": "e-Governance: The use of Information and Communication Technology (ICT) by the government to deliver public services, share information, and communicate with citizens efficiently and transparently.\n\nMerits:\n1. 24×7 Availability — Government services are accessible anytime and from anywhere, without needing to visit a government office in person.\n2. Cost and time saving — Citizens save time and travel costs; government processes become more efficient and paperless.\n3. Transparency — Digital records reduce corruption and increase accountability in government processes.",
+    "keyPoints": [
+      "e-Governance: use of ICT by government to deliver services",
+      "Merit 1: 24×7 availability of services online",
+      "Merit 2: Cost and time saving for citizens and government",
+      "Merit 3: Transparency and reduced corruption"
+    ]
+  },
+  {
+    "id": "sa-ca-065",
+    "chapter": "Networking",
+    "marks": 3,
+    "difficulty": "medium",
+    "year": "2022-Board",
+    "text": "Differentiate between a Web Address and an Email Address. Write an example of each. OR Expand the terms SMS and MMS in context of Mobile Technologies. Differentiate between SMS and MMS.",
+    "modelAnswer": "Web Address vs Email Address:\nA Web Address (URL) is the address of a website/web page on the Internet (e.g., https://www.google.com). An Email Address is the unique address used to send and receive electronic mail (e.g., student@school.edu). Web addresses use http/https; email addresses use the '@' symbol to separate username from domain.\n\nOR\n\nSMS: Short Message Service — text-only messages, up to 160 characters.\nMMS: Multimedia Messaging Service — messages with multimedia content (images, audio, video).\nDifference: SMS can send only plain text. MMS can send text along with multimedia content like photos, audio clips, and videos. MMS messages are typically larger in size than SMS.",
+    "keyPoints": [
+      "Web Address (URL): address of a website — e.g., https://www.google.com",
+      "Email Address: address for emails with '@' — e.g., user@domain.com",
+      "SMS: Short Message Service — text only, up to 160 characters",
+      "MMS: Multimedia Messaging Service — text + images/audio/video"
+    ]
   }
 ]

@@ -383,7 +383,7 @@ function aiRenderPanel() {
           ['λ','λ'],['μ','μ'],['σ','σ'],['φ','φ'],['ω','ω'],
           ['½','½'],['¼','¼'],['¾','¾'],['⅓','⅓'],['⅔','⅔'],
           ['→','→'],['⇒','⇒'],['⇔','⇔'],['∴','∴'],['∵','∵'],
-        ].map(([sym, label]) => `<button class="ai-math-sym" onclick="aiPanel.insertSym('${sym}')" title="${label}">${sym}</button>`).join('')}
+        ].map(([sym, label]) => `<button type="button" class="ai-math-sym" onmousedown="aiPanel.saveCursor()" onclick="aiPanel.insertSym('${sym}')" title="${label}">${sym}</button>`).join('')}
       </div>
       <div class="ai-input-row">
         <button class="ai-icon-btn ai-mic-btn ${aiState.listening ? 'ai-mic-active' : ''}" title="Voice input" onclick="aiPanel.toggleVoice()">🎙️</button>
@@ -529,12 +529,18 @@ const aiPanel = {
     aiState.mathOpen = !aiState.mathOpen;
     this._render();
   },
+  _savedSel: null,
+  saveCursor() {
+    const ta = document.getElementById('ai-input');
+    if (ta) this._savedSel = [ta.selectionStart, ta.selectionEnd];
+  },
   insertSym(sym) {
     const ta = document.getElementById('ai-input');
     if (!ta) return;
-    const s = ta.selectionStart, e = ta.selectionEnd;
+    const [s, e] = this._savedSel ?? [ta.selectionStart, ta.selectionEnd];
     ta.value = ta.value.slice(0, s) + sym + ta.value.slice(e);
     ta.selectionStart = ta.selectionEnd = s + sym.length;
+    this._savedSel = null;
     ta.style.height = 'auto';
     ta.style.height = Math.min(ta.scrollHeight, 240) + 'px';
     ta.focus();
@@ -747,3 +753,13 @@ function openAiConfig() {
   aiPanel.open();
   setTimeout(() => aiPanel.openConfig(), 50);
 }
+
+// If KaTeX loaded after screen-ai.js (slow CDN), re-render any fallback math spans
+(function () {
+  if (window.katex) return;
+  const s = document.querySelector('script[src*="katex"]');
+  if (!s) return;
+  s.addEventListener('load', () => {
+    if (document.querySelector('.ai-math-fb')) aiRenderMessages();
+  });
+})();
