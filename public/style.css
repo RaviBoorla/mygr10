@@ -1237,7 +1237,21 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 #rise-auth-modal:not([hidden]) { display: block; }
 #rise-auth-modal { position: fixed; inset: 0; z-index: 200; }
 #rise-profile-modal:not([hidden]) { display: block; }
-#rise-profile-modal { position: fixed; top: var(--header-h); right: 0; bottom: 0; left: 0; z-index: 200; }
+/* Right-side drawer, same anchoring as the Cloé panel */
+#rise-profile-modal {
+  position: fixed; top: var(--header-h); right: 0; bottom: 0; left: auto;
+  width: min(420px, 100vw); z-index: 200;
+}
+#rise-profile-modal .auth-backdrop {
+  position: fixed; inset: 0; top: var(--header-h);
+}
+#rise-profile-modal .auth-dialog {
+  position: absolute; inset: 0; transform: none;
+  width: 100%; max-height: 100%;
+  border-radius: 0; border: none; border-left: 1px solid var(--border);
+  box-shadow: -4px 0 24px rgba(0,0,0,.14);
+  overflow-y: auto;
+}
 
 .auth-backdrop {
   position: absolute; inset: 0;
