@@ -618,5 +618,110 @@
       "UPDATE modifies row data; ALTER TABLE modifies table structure",
       "UPDATE changes values in existing records; ALTER TABLE adds/drops/modifies columns or constraints"
     ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q19",
+    "chapter": "Computer Networks",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "What is a web server? How is it different from a web browser? (2023 Board)",
+    "modelAnswer": "A web server is a computer/software that stores and delivers web pages to clients over HTTP/HTTPS when requested. A web browser (e.g., Chrome) is client software that sends requests to the server and displays the received web pages to the user. The server hosts content; the browser consumes it.",
+    "keyPoints": [
+      "Web server stores/serves web pages over HTTP",
+      "Web browser is client software that requests and displays pages",
+      "Server is the provider; browser is the consumer"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q20",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "Keshav wrote this query to find the sum of bonus by employees of WEST zone:\nSELECT zone, TOTAL(bonus) FROM employee HAVING zone = 'WEST';\nIdentify the errors and rewrite the query by underlining the corrections. (2023 Board)",
+    "modelAnswer": "Two errors:\n1. TOTAL() is not a valid MySQL function — should be SUM()\n2. HAVING without GROUP BY is invalid for filtering — should use WHERE for row-level filtering\n\nCorrected query:\nSELECT zone, <u>SUM</u>(bonus) FROM employee <u>WHERE</u> zone = 'WEST';",
+    "keyPoints": [
+      "TOTAL() → SUM() (not a valid MySQL aggregate function)",
+      "HAVING (without GROUP BY) → WHERE (for filtering individual rows)"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q21",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "Differentiate between COUNT() and COUNT(*) functions in MySQL. Give suitable examples to support your answer. (2023 Board)",
+    "modelAnswer": "COUNT(column_name) counts only the non-NULL values in the specified column.\nExample: SELECT COUNT(salary) FROM emp; — skips NULL salaries.\n\nCOUNT(*) counts all rows including those with NULL values in any column.\nExample: SELECT COUNT(*) FROM emp; — returns total number of rows.",
+    "keyPoints": [
+      "COUNT(col) ignores NULL values in that column",
+      "COUNT(*) counts all rows including NULLs",
+      "Example for each"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q22",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "Write a Python program to create a series object 'country' using a list that stores the capital of each country. Index: India, UK, Denmark, Thailand; Capitals: New Delhi, London, Copenhagen, Bangkok. (2023 Board)",
+    "modelAnswer": "import pandas as pd\ncapitals = ['New Delhi', 'London', 'Copenhagen', 'Bangkok']\ncountry = pd.Series(capitals, index=['India', 'UK', 'Denmark', 'Thailand'])\nprint(country)",
+    "keyPoints": [
+      "import pandas as pd",
+      "Create list of capitals as data",
+      "Pass index=['India','UK','Denmark','Thailand']",
+      "Assign to variable country"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q23",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "2023 Board",
+    "text": "Explain plagiarism with an example. (2023 Board)",
+    "modelAnswer": "Plagiarism is the act of copying or using someone else's work, ideas, or words without giving proper credit and presenting it as one's own.\nExample: Copying paragraphs from a website into a school project without citing the source, or submitting another student's code as your own in a programming assignment.",
+    "keyPoints": [
+      "Definition: using others' work without attribution",
+      "Can be text, code, images, ideas",
+      "Concrete example given"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q24",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "What will be the output of the following code?\nimport pandas as pd\ns1 = pd.Series(data=2*(3,10))\nprint(s1)\n(2023 Board)",
+    "modelAnswer": "2*(3,10) evaluates to (3, 10, 3, 10) — tuple repetition.\nSo pd.Series(data=(3,10,3,10)) creates a Series with default integer index:\n0     3\n1    10\n2     3\n3    10\ndtype: int64",
+    "keyPoints": [
+      "2*(3,10) is tuple repetition → (3,10,3,10)",
+      "Default index 0 to 3",
+      "Values alternate 3,10,3,10",
+      "dtype: int64"
+    ]
+  },
+  {
+    "id": "xii-ip-2023-sa-q25",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "2023 Board",
+    "text": "Consider the DataFrame 'player' created as:\nimport pandas as pd\ndic={'pid':[101,102,103,104,105], 'pname':['Shyam','Roushan','Archit','Medha','Lalit'], 'sports':['Cricket','Tennis','Football','Cricket','Cricket'], 'points':[45000,20000,15000,53000,60000]}\nplayer = pd.DataFrame(dic)\nWrite Python statements for:\n(i) Set the row labels as 'Player1','Player2','Player3','Player4','Player5'\n(ii) Rename the column 'points' to 'netpoint' (2023 Board)",
+    "modelAnswer": "(i) player.index = ['Player1','Player2','Player3','Player4','Player5']\n\n(ii) player.rename(columns={'points':'netpoint'}, inplace=True)",
+    "keyPoints": [
+      "(i) Assign a list to player.index",
+      "(ii) Use player.rename(columns={'points':'netpoint'}, inplace=True)"
+    ]
   }
 ]

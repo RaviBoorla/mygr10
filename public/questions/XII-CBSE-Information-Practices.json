@@ -1278,5 +1278,372 @@
       "Options (iii) and (iv) incorrectly mark either A or R as false."
     ],
     "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q1",
+    "chapter": "Computer Networks",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following topologies is very efficient and all nodes are connected to a central hub? (2023 Board)",
+    "options": [
+      "Star",
+      "Tree",
+      "Bus",
+      "Ring"
+    ],
+    "correct": 0,
+    "explanation": "In Star topology all nodes connect to a central hub/switch, making it efficient and easy to manage.",
+    "whyWrong": [
+      "Tree has a hierarchical branching structure.",
+      "Bus uses a single backbone cable.",
+      "Ring connects nodes in a closed loop."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q2",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Ramandeep started a company and designed a logo for it. What type of intellectual property does this logo represent? (2023 Board)",
+    "options": [
+      "Patents",
+      "Copyright",
+      "Design",
+      "Trademark"
+    ],
+    "correct": 3,
+    "explanation": "A Trademark protects brand identifiers such as logos, names, and slogans used in commerce.",
+    "whyWrong": [
+      "Patents protect inventions.",
+      "Copyright protects original creative works like books.",
+      "Design right protects the aesthetic appearance of a product shape."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q3",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is a type of cybercrime where objectionable and demeaning comments are posted on social media about a person, such that he/she is mentally harassed? (2023 Board)",
+    "options": [
+      "Phishing",
+      "Hacking",
+      "Cyber bullying",
+      "Identity Theft"
+    ],
+    "correct": 2,
+    "explanation": "Cyber bullying involves using digital platforms to harass, threaten, or demean someone.",
+    "whyWrong": [
+      "Phishing steals credentials via fake websites/emails.",
+      "Hacking is unauthorized access to systems.",
+      "Identity Theft is stealing someone's personal information."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q4",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is the correct output of the SQL command: SELECT ROUND(7876.4568, 2)? (2023 Board)",
+    "options": [
+      "7876.46",
+      "7876.45",
+      "7900",
+      "7900.4568"
+    ],
+    "correct": 0,
+    "explanation": "ROUND(7876.4568, 2) rounds to 2 decimal places: the third decimal is 6 ≥ 5, so 7876.46.",
+    "whyWrong": [
+      "7876.45 would result from truncation not rounding.",
+      "7900 would be ROUND(7876.4568, -2).",
+      "7900.4568 is not a valid rounding output."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q5",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Aggregate functions are also known as: (2023 Board)",
+    "options": [
+      "Scalar Functions",
+      "Single Row Functions",
+      "Multiple Row Functions",
+      "Hybrid Functions"
+    ],
+    "correct": 2,
+    "explanation": "Aggregate (group) functions operate on multiple rows to return a single result, hence they are called Multiple Row Functions.",
+    "whyWrong": [
+      "Scalar/Single Row Functions operate on each row individually.",
+      "Hybrid Functions is not a standard MySQL term."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q6",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "The primary law in India for matters related to e-commerce and cyber crime is: (2023 Board)",
+    "options": [
+      "IT Act 1995",
+      "IT Act 2000",
+      "IT Act 1998",
+      "IT Act 2010"
+    ],
+    "correct": 1,
+    "explanation": "The Information Technology Act 2000 is India's primary legislation governing e-commerce and cyber crime.",
+    "whyWrong": [
+      "IT Act 1995, 1998, and 2010 do not exist as official legislation."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q7",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Ravisha stored records of all students in a MySQL table and wants to display names in alphabetical order. Which SQL clause should she use? (2023 Board)",
+    "options": [
+      "SORT BY",
+      "ALIGN BY",
+      "GROUP BY",
+      "ORDER BY"
+    ],
+    "correct": 3,
+    "explanation": "ORDER BY is the SQL clause used to sort query results in ascending or descending order.",
+    "whyWrong": [
+      "SORT BY is not a valid MySQL clause.",
+      "ALIGN BY does not exist in SQL.",
+      "GROUP BY groups rows for aggregate functions, not sorting."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q8",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "To remove the leading and trailing spaces from data values in a column of a MySQL table, we use: (2023 Board)",
+    "options": [
+      "Left()",
+      "Right()",
+      "Trim()",
+      "Ltrim()"
+    ],
+    "correct": 2,
+    "explanation": "TRIM() removes both leading and trailing spaces from a string in MySQL.",
+    "whyWrong": [
+      "LEFT() extracts characters from the left.",
+      "RIGHT() extracts characters from the right.",
+      "LTRIM() removes only leading spaces."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q9",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "If the substring is not present in a string, the INSTR() function returns: (2023 Board)",
+    "options": [
+      "-1",
+      "1",
+      "NULL",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "INSTR() returns 0 when the substring is not found in the string (unlike Python's find() which returns -1).",
+    "whyWrong": [
+      "-1 is what Python's find() returns, not MySQL's INSTR().",
+      "1 would mean found at position 1.",
+      "NULL is not returned for a missing substring."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q10",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "What will be the output of the following code?\nimport pandas as pd\nmyser = pd.Series([0, 0, 0])\nprint(myser)\n(2023 Board)",
+    "options": [
+      "0  0\n0  0\n0  0",
+      "0  1\n0  1\n0  2",
+      "0  0\n1  0\n2  0",
+      "0  0\n1  1\n2  2"
+    ],
+    "correct": 2,
+    "explanation": "pd.Series([0,0,0]) creates a Series with default integer index 0,1,2 and all values 0, printed as index-value pairs.",
+    "whyWrong": [
+      "Option A shows all rows as '0  0' confusing index with value.",
+      "Option B shows wrong values.",
+      "Option D shows index values as data values."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q11",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is a two-dimensional labelled data structure of Python? (2023 Board)",
+    "options": [
+      "Relation",
+      "Dataframe",
+      "Series",
+      "Square"
+    ],
+    "correct": 1,
+    "explanation": "DataFrame is pandas' two-dimensional labelled data structure with rows and columns.",
+    "whyWrong": [
+      "Relation is a database term.",
+      "Series is one-dimensional.",
+      "Square is not a pandas data structure."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q12",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "To compare data values of commission earned by salesmen over a year, which type of graph should preferably be used? (2023 Board)",
+    "options": [
+      "line",
+      "area",
+      "bar",
+      "scatter"
+    ],
+    "correct": 2,
+    "explanation": "A bar chart is best for comparing discrete categories (different salesmen) side by side.",
+    "whyWrong": [
+      "Line charts show trends over continuous time.",
+      "Area charts show cumulative values.",
+      "Scatter plots show correlation between two variables."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q13",
+    "chapter": "Computer Networks",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a web browser? (2023 Board)",
+    "options": [
+      "Opera",
+      "Google Chrome",
+      "Linux",
+      "Mozilla Firefox"
+    ],
+    "correct": 2,
+    "explanation": "Linux is an operating system, not a web browser.",
+    "whyWrong": [
+      "Opera, Google Chrome, and Mozilla Firefox are all web browsers."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q14",
+    "chapter": "MySQL",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a valid aggregate function in MySQL? (2023 Board)",
+    "options": [
+      "COUNT()",
+      "SUM()",
+      "MAX()",
+      "LEN()"
+    ],
+    "correct": 3,
+    "explanation": "LEN() is not a MySQL function. MySQL uses LENGTH() to find string length, not LEN().",
+    "whyWrong": [
+      "COUNT(), SUM(), and MAX() are all valid MySQL aggregate functions."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q15",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "The digital footprint that we leave online unintentionally is called: (2023 Board)",
+    "options": [
+      "Active digital footprint",
+      "Passive digital footprint",
+      "True digital footprint",
+      "False digital footprint"
+    ],
+    "correct": 1,
+    "explanation": "Passive digital footprint is the data trail left unintentionally (e.g., cookies, IP addresses).",
+    "whyWrong": [
+      "Active digital footprint is deliberately created (e.g., posts, sign-ups).",
+      "True/False digital footprint are not standard terms."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q16",
+    "chapter": "Cyber Ethics & Cyber Crime",
+    "subject": "Informatics Practices",
+    "difficulty": "easy",
+    "text": "E-waste is responsible for environmental degradation if not properly disposed of. Some feasible methods of e-waste management are reduce, _____ and recycle. (2023 Board)",
+    "options": [
+      "reuse",
+      "recheck",
+      "resubmit",
+      "regular"
+    ],
+    "correct": 0,
+    "explanation": "The 3Rs of e-waste management are Reduce, Reuse, and Recycle.",
+    "whyWrong": [
+      "Recheck, resubmit, and regular are not part of the standard e-waste 3R framework."
+    ],
+    "priority": 2
+  },
+  {
+    "id": "xii-ip-2023-q17",
+    "chapter": "Computer Networks",
+    "subject": "Informatics Practices",
+    "difficulty": "medium",
+    "text": "Assertion (A): A static webpage does not change for each person visiting the web page.\nReason (R): When a web server receives a request for a dynamic web page, it locates and updates the page and sends it to the browser of the client.\n(2023 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is NOT the correct explanation for (A)",
+      "(A) is true and (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 1,
+    "explanation": "A is true — static pages serve identical content to all visitors. R is also true — dynamic servers do process and update pages. However, R explains dynamic pages, not why static pages don't change. So R is not the correct explanation for A.",
+    "whyWrong": [
+      "Option (i) is wrong because R explains dynamic pages, not the assertion about static pages.",
+      "Option (iii) is wrong because R is actually true.",
+      "Option (iv) is wrong because A is true."
+    ],
+    "priority": 3
+  },
+  {
+    "id": "xii-ip-2023-q18",
+    "chapter": "Pandas",
+    "subject": "Informatics Practices",
+    "difficulty": "medium",
+    "text": "Assertion (A): The output of addition of two series will be NaN, if one of the elements or both the elements have no value(s).\nReason (R): While performing mathematical operations on a series, by default all missing values are filled in with 0.\n(2023 Board)",
+    "options": [
+      "Both (A) and (R) are true and (R) is the correct explanation for (A)",
+      "Both (A) and (R) are true and (R) is NOT the correct explanation for (A)",
+      "(A) is true and (R) is false",
+      "(A) is false but (R) is true"
+    ],
+    "correct": 2,
+    "explanation": "A is true — any arithmetic with NaN returns NaN. R is false — pandas does NOT fill missing values with 0 by default; they remain NaN unless you use fill_value parameter explicitly.",
+    "whyWrong": [
+      "Options (i) and (ii) are wrong because R is false.",
+      "Option (iv) is wrong because A is true."
+    ],
+    "priority": 3
   }
 ]
