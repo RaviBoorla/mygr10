@@ -216,6 +216,22 @@ function _splitMath(text) {
     }
     if (j < tok.val.length) result.push({ type: 'text', val: tok.val.slice(j) });
   }
+  // Strip trailing unclosed $...$ or $$...$$ (streaming: closing delimiter not yet arrived)
+  if (result.length > 0) {
+    const last = result[result.length - 1];
+    if (last.type === 'text') {
+      const bb = last.val.lastIndexOf('$$');
+      if (bb !== -1 && !last.val.slice(bb + 2).includes('$$')) {
+        last.val = last.val.slice(0, bb).trimEnd();
+      } else {
+        const b = last.val.lastIndexOf('$');
+        if (b !== -1 && !last.val.slice(b + 1).includes('$')) {
+          last.val = last.val.slice(0, b).trimEnd();
+        }
+      }
+      if (!last.val) result.pop();
+    }
+  }
   return result;
 }
 
