@@ -24,13 +24,10 @@
 (function () {
   'use strict';
 
-  let db;
-  try {
-    db = firebase.firestore();
-  } catch (e) {
-    window.riseFamily = { pendingCount: 0, openInviteAccept() {}, renderProfileSection() { return ''; } };
-    return;
-  }
+  // db is initialised lazily inside startListeners() — Firestore is loaded
+  // dynamically by auth.js only after sign-in, so calling firebase.firestore()
+  // here (at module load time) would throw before the compat script loads.
+  let db = null;
 
   let _pendingInvites = [];   // invites addressed to me, status:'pending'
   let _myLinks = [];          // familyLinks rows where I'm either side
@@ -94,6 +91,7 @@
   function startListeners() {
     stopListeners();
     if (!uid()) return;
+    try { if (!db) db = firebase.firestore(); } catch (_) { return; }
     _roleLoaded = false;
     getFamilyRole().then(r => { _myRole = r; _roleLoaded = true; refresh(); });
     // Push existing localStorage progress to Firestore on login so the guardian
