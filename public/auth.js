@@ -342,20 +342,13 @@ const SYNC_KEYS = {
     async _googleSignIn() {
       showError('');
       const provider = new firebase.auth.GoogleAuthProvider();
-      // Popups are unreliable in mobile browsers/webviews (blocked, or throw
-      // auth/internal-error) — redirect there instead. Result is picked up
-      // by getRedirectResult() on the next page load.
-      if (_isMobileUA()) {
-        try { await fbAuth.signInWithRedirect(provider); }
-        catch (e) { showError(_friendlyError(e)); }
-        return;
-      }
-      try {
-        await fbAuth.signInWithPopup(provider);
-        this.closeModal();
-      } catch (e) {
-        showError(_friendlyError(e));
-      }
+      // Always redirect rather than popup: signInWithPopup fails silently
+      // with auth/internal-error (no window ever shown) whenever there's no
+      // existing Google session, third-party cookies are restricted, or the
+      // popup is blocked. Redirect always lands on a real Google sign-in
+      // page. Result is picked up by getRedirectResult() on page reload.
+      try { await fbAuth.signInWithRedirect(provider); }
+      catch (e) { showError(_friendlyError(e)); }
     },
 
     async _emailSubmit(e) {
@@ -486,10 +479,6 @@ const SYNC_KEYS = {
       Object.values(SYNC_KEYS).forEach(k => localStorage.removeItem(k));
     }
     localStorage.setItem(LAST_UID_KEY, uid);
-  }
-
-  function _isMobileUA() {
-    return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
   }
 
   // Picks up the result of signInWithRedirect() after the page reloads.
