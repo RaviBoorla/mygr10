@@ -1,7 +1,7 @@
 // ── Firebase Auth + Firestore Sync ────────────────────────────────────────────
 const FIREBASE_CONFIG = {
   apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
-  authDomain:        "rise-511c6.firebaseapp.com",
+  authDomain:        "rise.strat101.com",
   projectId:         "rise-511c6",
   storageBucket:     "rise-511c6.firebasestorage.app",
   messagingSenderId: "226917606953",
@@ -29,6 +29,9 @@ const SYNC_KEYS = {
   try {
     firebase.initializeApp(FIREBASE_CONFIG);
     fbAuth = firebase.auth();
+    fbAuth.getRedirectResult().catch(e => {
+      if (e && e.code) console.warn('[Rise auth] redirect result:', e.code);
+    });
     // Firestore loaded lazily on first sign-in (see _ensureFirestore)
   } catch (e) {
     console.warn('[Rise auth] Firebase init failed — login disabled.', e);
@@ -343,8 +346,12 @@ const SYNC_KEYS = {
       showError('');
       try {
         const provider = new firebase.auth.GoogleAuthProvider();
-        await fbAuth.signInWithPopup(provider);
-        this.closeModal();
+        if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+          await fbAuth.signInWithRedirect(provider);
+        } else {
+          await fbAuth.signInWithPopup(provider);
+          this.closeModal();
+        }
       } catch (e) {
         showError(_friendlyError(e));
       }
