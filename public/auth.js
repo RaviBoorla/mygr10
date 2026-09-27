@@ -341,8 +341,16 @@ const SYNC_KEYS = {
 
     async _googleSignIn() {
       showError('');
+      const provider = new firebase.auth.GoogleAuthProvider();
+      // Popups are unreliable in mobile browsers/webviews (blocked, or throw
+      // auth/internal-error) — redirect there instead. Result is picked up
+      // by getRedirectResult() on the next page load.
+      if (_isMobileUA()) {
+        try { await fbAuth.signInWithRedirect(provider); }
+        catch (e) { showError(_friendlyError(e)); }
+        return;
+      }
       try {
-        const provider = new firebase.auth.GoogleAuthProvider();
         await fbAuth.signInWithPopup(provider);
         this.closeModal();
       } catch (e) {
@@ -480,6 +488,19 @@ const SYNC_KEYS = {
     localStorage.setItem(LAST_UID_KEY, uid);
   }
 
+  function _isMobileUA() {
+    return /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+  }
+
+  // Picks up the result of signInWithRedirect() after the page reloads.
+  // The auth modal isn't open at this point, so surface an error by
+  // opening it rather than calling showError() directly.
+  fbAuth.getRedirectResult().catch(e => {
+    if (e && e.code === 'auth/cancelled-popup-request') return;
+    window.riseAuth.openModal();
+    showError(_friendlyError(e));
+  });
+
   fbAuth.onAuthStateChanged(async user => {
     currentUser = user || null;
     if (user) {
@@ -521,6 +542,7 @@ const SYNC_KEYS = {
       'auth/popup-closed-by-user':    '',
       'auth/cancelled-popup-request': '',
       'auth/network-request-failed':  'Network error — check your connection.',
+      'auth/internal-error':          'Sign-in failed — please try again.',
     };
     return map[e.code] || e.message || 'Something went wrong.';
   }
