@@ -1,7 +1,7 @@
 // ── Firebase Auth + Firestore Sync ────────────────────────────────────────────
 const FIREBASE_CONFIG = {
   apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
-  authDomain:        "rise.strat101.com",
+  authDomain:        "rise-511c6.firebaseapp.com",
   projectId:         "rise-511c6",
   storageBucket:     "rise-511c6.firebasestorage.app",
   messagingSenderId: "226917606953",
