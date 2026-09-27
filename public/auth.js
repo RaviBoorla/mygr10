@@ -1,7 +1,11 @@
 // ── Firebase Auth + Firestore Sync ────────────────────────────────────────────
 const FIREBASE_CONFIG = {
   apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
-  authDomain:        "rise-511c6.firebaseapp.com",
+  // Own domain, not *.firebaseapp.com — the /__/auth/* helper pages are
+  // reverse-proxied there (see functions/__/[[path]].js) so the OAuth
+  // redirect handoff is same-origin instead of depending on third-party
+  // storage access that Incognito/strict browsers block.
+  authDomain:        "rise.strat101.com",
   projectId:         "rise-511c6",
   storageBucket:     "rise-511c6.firebasestorage.app",
   messagingSenderId: "226917606953",
