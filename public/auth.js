@@ -346,12 +346,8 @@ const SYNC_KEYS = {
       showError('');
       try {
         const provider = new firebase.auth.GoogleAuthProvider();
-        if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
-          await fbAuth.signInWithRedirect(provider);
-        } else {
-          await fbAuth.signInWithPopup(provider);
-          this.closeModal();
-        }
+        await fbAuth.signInWithPopup(provider);
+        this.closeModal();
       } catch (e) {
         showError(_friendlyError(e));
       }
