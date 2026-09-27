@@ -1,11 +1,7 @@
 // ── Firebase Auth + Firestore Sync ────────────────────────────────────────────
 const FIREBASE_CONFIG = {
   apiKey:            "AIzaSyDv-mILuH9bFal_dqkdA35nM12XOW1-6S0",
-  // Own domain, not *.firebaseapp.com — the /__/auth/* helper pages are
-  // reverse-proxied there (see functions/__/[[path]].js) so the OAuth
-  // redirect handoff is same-origin instead of depending on third-party
-  // storage access that Incognito/strict browsers block.
-  authDomain:        "rise.strat101.com",
+  authDomain:        "rise-511c6.firebaseapp.com",
   projectId:         "rise-511c6",
   storageBucket:     "rise-511c6.firebasestorage.app",
   messagingSenderId: "226917606953",
@@ -345,14 +341,13 @@ const SYNC_KEYS = {
 
     async _googleSignIn() {
       showError('');
-      const provider = new firebase.auth.GoogleAuthProvider();
-      // Always redirect rather than popup: signInWithPopup fails silently
-      // with auth/internal-error (no window ever shown) whenever there's no
-      // existing Google session, third-party cookies are restricted, or the
-      // popup is blocked. Redirect always lands on a real Google sign-in
-      // page. Result is picked up by getRedirectResult() on page reload.
-      try { await fbAuth.signInWithRedirect(provider); }
-      catch (e) { showError(_friendlyError(e)); }
+      try {
+        const provider = new firebase.auth.GoogleAuthProvider();
+        await fbAuth.signInWithPopup(provider);
+        this.closeModal();
+      } catch (e) {
+        showError(_friendlyError(e));
+      }
     },
 
     async _emailSubmit(e) {
@@ -484,15 +479,6 @@ const SYNC_KEYS = {
     }
     localStorage.setItem(LAST_UID_KEY, uid);
   }
-
-  // Picks up the result of signInWithRedirect() after the page reloads.
-  // The auth modal isn't open at this point, so surface an error by
-  // opening it rather than calling showError() directly.
-  fbAuth.getRedirectResult().catch(e => {
-    if (e && e.code === 'auth/cancelled-popup-request') return;
-    window.riseAuth.openModal();
-    showError(_friendlyError(e));
-  });
 
   fbAuth.onAuthStateChanged(async user => {
     currentUser = user || null;
