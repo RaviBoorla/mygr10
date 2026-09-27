@@ -45,6 +45,17 @@ grade/board combinations don't share progress.
 
 Always commit and push directly to `main`. Never push to a feature branch.
 
+## Frozen code — do not touch
+
+- **`public/auth.js`: do not touch the Google auth authentication code.**
+  The Google sign-in flow (`FIREBASE_CONFIG.authDomain`, `_googleSignIn()`
+  using `signInWithPopup`) is a known-working configuration reached after
+  extensive debugging of `auth/internal-error` and OAuth
+  `redirect_uri_mismatch` failures. Do not change `authDomain`, switch to
+  `signInWithRedirect`/`getRedirectResult`, add an auth-handler reverse
+  proxy, or otherwise alter this flow — even to fix an unrelated bug —
+  without the user explicitly asking for auth changes specifically.
+
 ## Working conventions
 
 - No build step, no bundler, no framework — plain HTML/CSS/JS. Keep new code
