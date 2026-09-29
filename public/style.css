@@ -596,6 +596,14 @@ kbd {
 }
 .home-top-cards .arena-card-sub { display: none; }
 
+@media (max-width: 520px) {
+  .home-heading-row { flex-direction: column; align-items: stretch; gap: 8px; }
+  .home-heading-row .grade-tabs { width: 100%; justify-content: stretch; }
+  .home-heading-row .grade-tabs .filter-btn { flex: 1; text-align: center; }
+  .home-top-cards { flex-direction: column; overflow: visible; }
+  .home-top-cards .streak-banner { max-width: 100%; }
+}
+
 .rev-topbar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .rev-topbar h2 { margin: 0; white-space: nowrap; }
 
