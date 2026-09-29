@@ -735,8 +735,6 @@ const aiPanel = {
     const el = document.getElementById('ai-panel');
     if (!el) return;
     el.innerHTML = aiRenderPanel();
-    const savedW = localStorage.getItem('rise-ai-width');
-    if (savedW && window.innerWidth > 520) el.style.width = savedW + 'px';
     aiRenderMessages();
   },
 
