@@ -577,7 +577,8 @@ kbd {
   display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   margin-bottom: 12px;
 }
-.home-heading-row .grade-tabs { margin: 0; flex-shrink: 0; }
+.home-heading-row .grade-tabs { margin: 0; flex-shrink: 0; order: 2; }
+.home-heading-row .home-top-cards { order: 1; }
 .home-heading-row .subtitle { text-align: right; }
 
 /* Compact streak + arena row inside heading */

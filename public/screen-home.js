@@ -104,8 +104,8 @@ Object.assign(app, {
     return `
       <div class="screen home-screen">
         <div class="home-heading-row">
-          ${streakArenaRow}
           ${this._gradeTabs()}
+          ${streakArenaRow}
         </div>
         ${resume}
         <section class="home-section">
