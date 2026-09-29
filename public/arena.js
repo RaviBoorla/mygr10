@@ -246,6 +246,110 @@ const COLLECTIBLES = [
     unlock: { type: 'perfect_stages', n: 5 }, unlockDesc: 'Earn 5 perfect stages across runs',
     svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="28" cy="38" r="20"/><circle cx="52" cy="38" r="20"/><line x1="8" y1="38" x2="72" y2="38"/><line x1="28" y1="18" x2="28" y2="58"/><line x1="52" y1="18" x2="52" y2="58"/><line x1="15" y1="25" x2="41" y2="51"/><line x1="15" y1="51" x2="41" y2="25"/><circle cx="28" cy="38" r="5" fill="currentColor" opacity=".25"/><circle cx="52" cy="38" r="5" fill="currentColor" opacity=".25"/><line x1="40" y1="10" x2="40" y2="5" stroke-width="3"/><line x1="40" y1="5" x2="44" y2="1"/></svg>`,
   },
+  // ── Classic additions to Instruments ──────────────────────────────────────
+  {
+    id: 'telescope', set: 'Instruments', name: 'Refracting Telescope', rarity: 'common', color: '#0ea5e9',
+    desc: 'Hans Lippershey patented the first telescope in 1608; Galileo turned one skyward in 1609 — revealing moons of Jupiter and mountains on the Moon.',
+    unlock: { type: 'runs', n: 10 }, unlockDesc: 'Complete 10 arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><polygon points="10,54 70,34 70,44 10,64" fill="currentColor" opacity=".12"/><line x1="10" y1="54" x2="70" y2="34"/><line x1="10" y1="64" x2="70" y2="44"/><line x1="10" y1="54" x2="10" y2="64"/><line x1="70" y1="34" x2="70" y2="44"/><line x1="40" y1="59" x2="30" y2="74"/><line x1="40" y1="59" x2="50" y2="74"/><line x1="40" y1="59" x2="40" y2="74"/><line x1="30" y1="74" x2="50" y2="74"/></svg>`,
+  },
+  {
+    id: 'thermometer', set: 'Instruments', name: 'Mercury Thermometer', rarity: 'common', color: '#ef4444',
+    desc: 'Daniel Gabriel Fahrenheit created the first mercury thermometer in 1714 — mercury\'s uniform expansion made temperature measurement finally reproducible.',
+    unlock: { type: 'answers', n: 100 }, unlockDesc: 'Answer 100 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="36" y="10" width="8" height="44" rx="4"/><circle cx="40" cy="61" r="9" fill="currentColor" opacity=".25"/><circle cx="40" cy="61" r="9"/><line x1="40" y1="38" x2="40" y2="54" stroke-width="4" stroke="currentColor" opacity=".45"/><line x1="44" y1="20" x2="51" y2="20"/><line x1="44" y1="29" x2="51" y2="29"/><line x1="44" y1="38" x2="51" y2="38"/></svg>`,
+  },
+  {
+    id: 'barometer', set: 'Instruments', name: 'Aneroid Barometer', rarity: 'common', color: '#6366f1',
+    desc: 'Evangelista Torricelli invented the mercury barometer in 1643; Lucien Vidie\'s aneroid version (1844) replaced the tube with a sealed metal capsule.',
+    unlock: { type: 'stage', n: 3 }, unlockDesc: 'Reach stage 3 in any run',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="44" r="26"/><circle cx="40" cy="44" r="20"/><path d="M20,54 A23,23 0 0,1 60,54" stroke-dasharray="3,3"/><line x1="40" y1="44" x2="56" y2="30" stroke-width="2.5"/><circle cx="40" cy="44" r="3" fill="currentColor"/><line x1="21" y1="54" x2="25" y2="54"/><line x1="59" y1="54" x2="55" y2="54"/><line x1="40" y1="22" x2="40" y2="26"/></svg>`,
+  },
+  {
+    id: 'geiger-counter', set: 'Instruments', name: 'Geiger Counter', rarity: 'rare', color: '#84cc16',
+    desc: 'Developed by Hans Geiger and Ernest Rutherford in 1908 — ionizing radiation knocks electrons off a gas, producing a measurable current pulse and the iconic click.',
+    unlock: { type: 'stage_subject', n: 8, subj: 'Physics' }, unlockDesc: 'Reach stage 8 with Physics',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="8" y="30" width="42" height="20" rx="3"/><rect x="52" y="34" width="20" height="12" rx="3"/><circle cx="29" cy="40" r="5"/><line x1="29" y1="35" x2="27" y2="26"/><line x1="29" y1="35" x2="34" y2="27"/><line x1="29" y1="35" x2="36" y2="38"/><line x1="60" y1="30" x2="65" y2="22" opacity=".4"/><line x1="65" y1="30" x2="70" y2="22" opacity=".4"/></svg>`,
+  },
+  // ── Modern Lab set ────────────────────────────────────────────────────────
+  {
+    id: 'oscilloscope', set: 'Modern Lab', name: 'Oscilloscope', rarity: 'common', color: '#22c55e',
+    desc: 'First built by Karl Ferdinand Braun in 1897 — displays voltage over time as a waveform on a screen, making invisible electrical signals visible.',
+    unlock: { type: 'runs', n: 15 }, unlockDesc: 'Complete 15 arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="8" y="14" width="56" height="46" rx="3"/><rect x="13" y="19" width="36" height="30" rx="2" fill="currentColor" opacity=".08"/><polyline points="15,34 20,34 24,24 27,44 30,34 34,34 37,24 41,44 44,34 48,34" stroke-width="1.5"/><circle cx="58" cy="26" r="3"/><circle cx="58" cy="38" r="3"/><circle cx="58" cy="50" r="3"/></svg>`,
+  },
+  {
+    id: 'multimeter', set: 'Modern Lab', name: 'Multimeter', rarity: 'common', color: '#f97316',
+    desc: 'Combines voltmeter, ammeter, and ohmmeter in one device — invented in the 1920s by Donald Macadie, who found himself carrying three instruments at once.',
+    unlock: { type: 'answers', n: 200 }, unlockDesc: 'Answer 200 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="22" y="8" width="36" height="56" rx="4"/><rect x="27" y="14" width="26" height="14" rx="2" fill="currentColor" opacity=".12"/><circle cx="40" cy="45" r="9"/><line x1="40" y1="45" x2="47" y2="39" stroke-width="2"/><circle cx="34" cy="59" r="3"/><circle cx="46" cy="59" r="3"/></svg>`,
+  },
+  {
+    id: 'centrifuge', set: 'Modern Lab', name: 'Centrifuge', rarity: 'common', color: '#a855f7',
+    desc: 'Antonin Prandtl built the first dairy centrifuge in 1875; modern lab centrifuges spin at 100,000 rpm generating forces 800,000× gravity to separate blood, DNA, and proteins.',
+    unlock: { type: 'good_stages', n: 5 }, unlockDesc: 'Score 3+ on 5 stages',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><ellipse cx="40" cy="34" rx="26" ry="9"/><rect x="14" y="34" width="52" height="24" rx="3"/><ellipse cx="40" cy="58" rx="26" ry="5"/><line x1="40" y1="25" x2="40" y2="34"/><line x1="30" y1="27" x2="27" y2="34"/><line x1="50" y1="27" x2="53" y2="34"/><path d="M16,34 Q19,20 40,18" stroke-dasharray="3,2" opacity=".5"/><path d="M64,34 Q61,20 40,18" stroke-dasharray="3,2" opacity=".5"/></svg>`,
+  },
+  {
+    id: 'ph-meter', set: 'Modern Lab', name: 'pH Meter', rarity: 'common', color: '#14b8a6',
+    desc: 'Arnold Orville Beckman invented the first commercial pH meter in 1934 — a glass electrode generates a millivolt signal proportional to hydrogen ion concentration.',
+    unlock: { type: 'runs', n: 8 }, unlockDesc: 'Complete 8 arena runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="28" y="7" width="24" height="36" rx="3"/><rect x="32" y="12" width="16" height="10" rx="1" fill="currentColor" opacity=".15"/><line x1="40" y1="43" x2="40" y2="52"/><rect x="36" y="52" width="8" height="20" rx="4"/><ellipse cx="40" cy="72" rx="4" ry="2" fill="currentColor" opacity=".3"/></svg>`,
+  },
+  {
+    id: 'voltmeter', set: 'Modern Lab', name: 'Voltmeter', rarity: 'common', color: '#f59e0b',
+    desc: 'André-Marie Ampère first measured voltage differences in the 1820s; the moving-coil galvanometer (Edward Weston, 1888) gave the classic analogue needle readout.',
+    unlock: { type: 'answers', n: 150 }, unlockDesc: 'Answer 150 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="40" r="28"/><circle cx="40" cy="40" r="22"/><path d="M18,54 A25,25 0 0,1 62,54" stroke-dasharray="2,4"/><line x1="40" y1="40" x2="55" y2="27" stroke-width="2.5"/><circle cx="40" cy="40" r="3" fill="currentColor"/><line x1="19" y1="54" x2="24" y2="54"/><line x1="61" y1="54" x2="56" y2="54"/><line x1="40" y1="19" x2="40" y2="24"/></svg>`,
+  },
+  {
+    id: 'calorimeter', set: 'Modern Lab', name: 'Bomb Calorimeter', rarity: 'rare', color: '#dc2626',
+    desc: 'Pierre Eugène Marcellin Berthelot designed the bomb calorimeter in 1881 — a sealed steel vessel measures the heat of combustion reactions at constant volume.',
+    unlock: { type: 'stage_subject', n: 6, subj: 'Chemistry' }, unlockDesc: 'Reach stage 6 with Chemistry',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="14" y="18" width="52" height="46" rx="3"/><rect x="22" y="26" width="36" height="32" rx="2"/><line x1="40" y1="14" x2="40" y2="58"/><circle cx="40" cy="58" r="4" fill="currentColor" opacity=".35"/><path d="M28,28 Q33,37 28,46" stroke-dasharray="2,2"/><path d="M23,68 Q26,72 29,68" opacity=".5"/><path d="M35,68 Q38,72 41,68" opacity=".5"/><path d="M47,68 Q50,72 53,68" opacity=".5"/></svg>`,
+  },
+  {
+    id: 'chromatograph', set: 'Modern Lab', name: 'Gas Chromatograph', rarity: 'rare', color: '#0891b2',
+    desc: 'Archer Martin and Richard Synge invented partition chromatography in 1941 (Nobel 1952) — a carrier gas sweeps a mixture through a column; each compound exits at its own time.',
+    unlock: { type: 'stage_subject', n: 7, subj: 'Chemistry' }, unlockDesc: 'Reach stage 7 with Chemistry',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="8" y="18" width="46" height="42" rx="3"/><rect x="18" y="24" width="8" height="30" rx="2"/><rect x="18" y="32" width="8" height="6" fill="currentColor" opacity=".28"/><rect x="18" y="41" width="8" height="5" fill="currentColor" opacity=".5"/><polyline points="54,56 58,56 60,40 63,60 66,47 69,56 72,56" stroke-width="1.5"/></svg>`,
+  },
+  {
+    id: 'mass-spec', set: 'Modern Lab', name: 'Mass Spectrometer', rarity: 'rare', color: '#7c3aed',
+    desc: 'J.J. Thomson built the first mass spectrograph in 1913 — ions are accelerated and deflected by a magnetic field; their trajectories reveal mass-to-charge ratio and identity.',
+    unlock: { type: 'stage', n: 8 }, unlockDesc: 'Reach stage 8 in any run',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="6" y="33" width="14" height="14" rx="2"/><line x1="20" y1="40" x2="36" y2="40"/><path d="M36,40 Q48,40 48,28 Q48,16 60,16"/><rect x="58" y="10" width="12" height="12" rx="2"/><line x1="14" y1="66" x2="14" y2="56"/><line x1="25" y1="66" x2="25" y2="48"/><line x1="36" y1="66" x2="36" y2="53"/><line x1="47" y1="66" x2="47" y2="61"/><line x1="9" y1="66" x2="52" y2="66"/></svg>`,
+  },
+  {
+    id: 'electron-microscope', set: 'Modern Lab', name: 'Electron Microscope', rarity: 'rare', color: '#475569',
+    desc: 'Ernst Ruska and Max Knoll built the first electron microscope in 1931 — electrons have wavelengths 100,000× shorter than visible light, enabling atomic-resolution imaging.',
+    unlock: { type: 'stage_subject', n: 8, subj: 'Biology' }, unlockDesc: 'Reach stage 8 with Biology',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="30" y="6" width="20" height="52" rx="2"/><ellipse cx="40" cy="6" rx="10" ry="4" fill="currentColor" opacity=".2"/><line x1="30" y1="22" x2="50" y2="22"/><line x1="30" y1="36" x2="50" y2="36"/><path d="M35,36 L40,58 L45,36" fill="currentColor" opacity=".1"/><rect x="24" y="56" width="32" height="6" rx="2"/><rect x="20" y="68" width="40" height="6" rx="2"/></svg>`,
+  },
+  {
+    id: 'pcr-machine', set: 'Modern Lab', name: 'PCR Thermocycler', rarity: 'exceptional', color: '#f43f5e',
+    desc: 'Kary Mullis invented PCR in 1983 (Nobel 1993) — a thermocycler rapidly cycles temperature to denature, anneal, and extend DNA, amplifying a single copy into billions.',
+    unlock: { type: 'perfect_stages', n: 8 }, unlockDesc: 'Earn 8 perfect stages across runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="10" y="24" width="56" height="40" rx="4"/><rect x="10" y="17" width="56" height="10" rx="3"/><rect x="18" y="31" width="40" height="26" rx="2" fill="currentColor" opacity=".06"/><circle cx="28" cy="39" r="3" fill="currentColor" opacity=".3"/><circle cx="40" cy="39" r="3" fill="currentColor" opacity=".3"/><circle cx="52" cy="39" r="3" fill="currentColor" opacity=".3"/><circle cx="28" cy="49" r="3" fill="currentColor" opacity=".3"/><circle cx="40" cy="49" r="3" fill="currentColor" opacity=".3"/><circle cx="52" cy="49" r="3" fill="currentColor" opacity=".3"/><rect x="54" y="29" width="10" height="8" rx="1" fill="currentColor" opacity=".2"/></svg>`,
+  },
+  {
+    id: 'nmr', set: 'Modern Lab', name: 'NMR Spectrometer', rarity: 'exceptional', color: '#8b5cf6',
+    desc: 'Felix Bloch and Edward Purcell discovered NMR in 1946 (Nobel 1952) — atomic nuclei in a strong magnetic field absorb radio waves at frequencies that reveal molecular structure.',
+    unlock: { type: 'perfect_stages', n: 12 }, unlockDesc: 'Earn 12 perfect stages across runs',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><circle cx="40" cy="43" r="27"/><circle cx="40" cy="43" r="17"/><rect x="37" y="12" width="6" height="60" rx="3"/><polyline points="8,74 13,74 15,64 17,74 23,74 25,58 27,74 33,74" stroke-width="1.5" opacity=".7"/></svg>`,
+  },
+  {
+    id: 'xrd', set: 'Modern Lab', name: 'X-ray Diffractometer', rarity: 'exceptional', color: '#ec4899',
+    desc: 'Max von Laue discovered X-ray diffraction in 1912 (Nobel 1914) — the pattern of diffracted X-rays from a crystal encodes its atomic arrangement; Bragg\'s law unlocks it.',
+    unlock: { type: 'full_clear' }, unlockDesc: 'Complete a full clear run',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><rect x="4" y="33" width="14" height="14" rx="2"/><line x1="18" y1="40" x2="36" y2="40" stroke-dasharray="3,2"/><polygon points="40,32 48,40 40,48 32,40" fill="currentColor" opacity=".12"/><polygon points="40,32 48,40 40,48 32,40"/><line x1="43" y1="37" x2="66" y2="22" stroke-dasharray="2,2" opacity=".65"/><line x1="43" y1="40" x2="70" y2="40" stroke-dasharray="2,2" opacity=".65"/><line x1="43" y1="43" x2="66" y2="58" stroke-dasharray="2,2" opacity=".65"/><path d="M62,18 Q75,40 62,62" stroke-width="3" opacity=".35"/></svg>`,
+  },
+  {
+    id: 'flow-cytometer', set: 'Modern Lab', name: 'Flow Cytometer', rarity: 'exceptional', color: '#06b6d4',
+    desc: 'Mack Fulwyler built the first flow cytometer in 1965 — cells in single file pass through a laser beam; scattered light and fluorescence fingerprint each cell in milliseconds.',
+    unlock: { type: 'answers', n: 1000 }, unlockDesc: 'Answer 1000 questions in Arena',
+    svg: `<svg viewBox="0 0 80 80" stroke="currentColor" fill="none" stroke-width="2"><polygon points="30,8 50,8 45,34 35,34"/><line x1="4" y1="40" x2="76" y2="40" stroke-dasharray="4,2" opacity=".55"/><line x1="40" y1="34" x2="40" y2="72" stroke-width="3" opacity=".25"/><circle cx="40" cy="42" r="3" fill="currentColor" opacity=".4"/><circle cx="40" cy="53" r="3" fill="currentColor" opacity=".4"/><circle cx="40" cy="64" r="3" fill="currentColor" opacity=".4"/><rect x="55" y="34" width="10" height="10" rx="1"/><rect x="35" y="4" width="10" height="8" rx="1"/></svg>`,
+  },
 ];
 
 function getCollectibleState() {
@@ -328,6 +432,7 @@ function renderArenaCollection() {
       <p class="arena-col-sub">Scientific instruments and historical curiosities — each item carries one line of real history.</p>
       ${section('Instruments')}
       ${section('Antiques')}
+      ${section('Modern Lab')}
     </div>`;
 }
 
