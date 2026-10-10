@@ -523,7 +523,7 @@ kbd {
 .rev-wrong-why li + li { margin-top: 4px; }
 
 .small-filters .filter-tab { padding: 4px 10px; font-size: var(--fs-note); }
-.results-actions { display: flex; gap: 8px; }
+.results-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .results-actions .btn { text-align: center; flex: 1; padding: 10px 12px; font-size: var(--fs-body); }
 
 .exit-btn {
@@ -680,6 +680,12 @@ kbd {
   border-bottom: 1px solid var(--bg);
 }
 .rev-item:last-child { border-bottom: none; }
+.rev-item-text { flex: 1; min-width: 0; }
+.note-ask {
+  flex-shrink: 0; border: 1px solid var(--border); background: var(--surface); color: var(--primary);
+  border-radius: 50%; width: 28px; height: 28px; font-size: 13px; cursor: pointer; opacity: .55;
+}
+.note-ask:hover, .note-ask:focus-visible, .rev-item:hover .note-ask { opacity: 1; }
 .note-src { display: block; font-size: var(--fs-sm); color: var(--text-light); font-style: normal; margin-top: 2px; }
 
 .badge {

@@ -34,11 +34,29 @@ Object.assign(app, {
               <div class="results-actions">
                 <button class="btn primary" onclick="app.retryLast()">Retry this ${cfg.mode === 'mock' ? 'mock' : cfg.mode === 'bookmark' ? 'bookmarked set' : cfg.mode === 'srs' ? 'review' : cfg.mode === 'assignment' ? 'assignment' : 'drill'}</button>
                 <button class="btn" onclick="app.exitReview()">Back to practice</button>
+                ${wrong + skipped ? `<button class="btn ghost" onclick="app.explainMistakes()">✦ Explain my mistakes</button>` : ''}
               </div>
             </div>
           </div>
         </div>
       </div>`;
+  },
+
+  explainMistakes() {
+    const cfg = this.lastConfig;
+    const missed = this.reviewData.filter(r => !r.isCorrect).slice(0, 8);
+    if (!missed.length) return;
+    const letter = i => (i === undefined || i === null) ? 'skipped' : String.fromCharCode(65 + i);
+    const qs = missed.map((r, n) =>
+      `Q${n + 1}. ${r.text}\n` +
+      (r.options || []).map((o, i) => `${letter(i)}) ${o}`).join('\n') +
+      `\nMy answer: ${letter(r.userAnswer)} · Correct: ${letter(r.correct)}`
+    ).join('\n\n');
+    aiPanel.ask(
+      `I just did a ${cfg.subject}${cfg.chapter ? ' (' + cfg.chapter + ')' : ''} practice set and got these wrong or skipped them. ` +
+      `For each, explain briefly why the correct answer is right and what I probably misunderstood. ` +
+      `Then list 2–3 concepts I should revise.\n\n${qs}`
+    );
   },
 
   setReviewFilter(id) {

@@ -284,6 +284,7 @@ Object.assign(app, {
   },
 
   _notesBody(key, chapters, idx) {
+    this._noteItems = [];
     const q = state.notesQuery.trim().toLowerCase();
     const inFilter = it => state.notesFilter === 'all' || state.notesFilter === it.cat;
 
@@ -303,8 +304,19 @@ Object.assign(app, {
   },
 
   _noteItem(it, showChapter) {
+    const n = this._noteItems.push(it) - 1;
     return `<li class="rev-item"><span class="badge ${it.cls}">${it.label}</span>
-      <span>${renderMath(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span></li>`;
+      <span class="rev-item-text">${renderMath(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span>
+      <button class="note-ask" onclick="app.askNote(${n})" title="Ask Cloé to explain this" aria-label="Ask Cloé to explain this">✦</button></li>`;
+  },
+
+  askNote(n) {
+    const it = this._noteItems?.[n];
+    if (!it) return;
+    aiPanel.ask(
+      `Explain this ${it.label.toLowerCase()} from the chapter "${it.chapter}" in simple words, ` +
+      `with one short worked example and a common mistake students make:\n\n${it.text}`
+    );
   },
 
   _repaintNotes() {

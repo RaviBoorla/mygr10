@@ -476,6 +476,12 @@ const aiPanel = {
     }
   },
 
+  ask(text) {
+    if (!window.riseAuth?.user) { window.riseAuth?.openModal?.(); return; }
+    this.open();
+    this.send(text);
+  },
+
   toggle() {
     if (aiState.open) this.close(); else this.open();
   },
