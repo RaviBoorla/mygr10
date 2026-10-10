@@ -12,10 +12,11 @@ const AI_DEFAULT_CONFIG = {
   endpoint: '',
   model:    '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
   apiKey:   '',
+  accountId: '',
 };
 
 const AI_PROVIDERS = [
-  { id: 'cloudflare', label: 'Cloudflare AI',  needsKey: false, defaultEndpoint: '' },
+  { id: 'cloudflare', label: 'Cloudflare AI',  needsKey: true,  needsAccount: true, defaultEndpoint: '' },
   { id: 'anthropic',  label: 'Claude',          needsKey: true,  defaultEndpoint: '' },
   { id: 'openai',     label: 'OpenAI',          needsKey: true,  defaultEndpoint: 'https://api.openai.com/v1' },
   { id: 'gemini',     label: 'Gemini',          needsKey: true,  defaultEndpoint: '' },
@@ -170,7 +171,7 @@ function aiSaveConfig(cfg) {
   try {
     localStorage.setItem(AI_LS_KEY, JSON.stringify(cfg));
     // Sync provider/model/endpoint to Firestore — but NOT the API key
-    const { apiKey: _drop, ...syncable } = cfg;
+    const { apiKey: _drop, accountId: _dropAcct, ...syncable } = cfg;
     localStorage.setItem(AI_SYNC_KEY, JSON.stringify(syncable));
     window.riseSync?.push?.();
   } catch { /* ignore */ }
@@ -354,6 +355,7 @@ function aiRenderConfigPanel() {
         <button class="ai-icon-btn" onclick="aiPanel.closeConfig()">✕</button>
       </div>
       <div class="ai-config-body">
+        ${aiPanel._needsSetup() ? `<p class="ai-config-note">Cloé uses your own AI account. Pick a provider and add your key — it stays on this device.</p>` : ''}
         <label class="ai-label">Provider</label>
         <select class="ai-input" id="ai-cfg-provider" onchange="aiPanel.onProviderChange(this.value)">
           ${AI_PROVIDERS.map(p => `<option value="${p.id}" ${p.id === cfg.provider ? 'selected' : ''}>${escHtml(p.label)}</option>`).join('')}
@@ -367,9 +369,14 @@ function aiRenderConfigPanel() {
         <label class="ai-label">Model</label>
         <input class="ai-input" id="ai-cfg-model" value="${escHtml(cfg.model)}" placeholder="e.g. llama-3.1-8b / gpt-4o / claude-haiku-4-5-20251001">
 
+        ${prov.needsAccount ? `
+        <label class="ai-label">Cloudflare Account ID</label>
+        <input class="ai-input" id="ai-cfg-account" value="${escHtml(cfg.accountId || '')}" placeholder="32-character account ID">
+        ` : ''}
+
         ${prov.needsKey ? `
-        <label class="ai-label">API Key</label>
-        <input class="ai-input" type="password" id="ai-cfg-apikey" value="${escHtml(cfg.apiKey)}" placeholder="sk-…">
+        <label class="ai-label">${prov.needsAccount ? 'API Token (Workers AI)' : 'API Key'}</label>
+        <input class="ai-input" type="password" id="ai-cfg-apikey" value="${escHtml(cfg.apiKey)}" placeholder="${prov.needsAccount ? 'Cloudflare API token' : 'sk-…'}">
         ` : ''}
 
         <button class="ai-save-btn" onclick="aiPanel.saveConfig()">Save</button>
@@ -502,10 +509,20 @@ const aiPanel = {
     cfg.model    = document.getElementById('ai-cfg-model')?.value?.trim() || cfg.model;
     cfg.endpoint = document.getElementById('ai-cfg-endpoint')?.value?.trim() || '';
     cfg.apiKey   = document.getElementById('ai-cfg-apikey')?.value?.trim() || '';
+    cfg.accountId = document.getElementById('ai-cfg-account')?.value?.trim() || '';
     aiState.config = cfg;
     aiSaveConfig(cfg);
     aiState.showConfig = false;
     this._render();
+    const pending = aiState.pendingPrompt;
+    aiState.pendingPrompt = null;
+    if (pending && !this._needsSetup()) this.send(pending);
+  },
+
+  _needsSetup() {
+    const cfg = aiState.config;
+    const prov = aiProviderInfo(cfg.provider);
+    return (prov.needsKey && !cfg.apiKey) || (prov.needsAccount && !cfg.accountId);
   },
 
   toggleEmoji() {
@@ -617,6 +634,11 @@ const aiPanel = {
     const text = prefill || ta?.value?.trim();
     if (!text || aiState.streaming) return;
     if (!prefill) { ta.value = ''; ta.style.height = 'auto'; }
+    if (this._needsSetup()) {
+      aiState.pendingPrompt = text; // sent automatically once settings are saved
+      this.openConfig();
+      return;
+    }
 
     const userMsg  = { role: 'user',      content: text,    ts: Date.now() };
     const asstMsg  = { role: 'assistant', content: '',       streaming: true, ts: Date.now() };
@@ -645,6 +667,7 @@ const aiPanel = {
           endpoint:     cfg.endpoint,
           model:        cfg.model,
           apiKey:       cfg.apiKey,
+          accountId:    cfg.accountId,
           history,
           systemPrompt: _aiSystemPrompt(text),
         }),

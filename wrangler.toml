@@ -4,22 +4,17 @@
 #
 # Pages projects use pages_build_output_dir instead of main.
 # Worker-only fields (main, routes) are not valid here and cause a hard error.
+#
+# No Workers AI binding: /api/chat runs every provider (including Cloudflare)
+# on the user's own credentials, so nothing is billed to the site owner.
 
 name = "mygr10"
 compatibility_date = "2024-09-23"
 pages_build_output_dir = "public"
 
-# Cloudflare AI binding for /api/chat (free Workers AI)
-[ai]
-binding = "AI"
-
 # Pages supports only "preview" and "production" named environments.
 [env.preview]
 name = "mygr10-preview"
-[env.preview.ai]
-binding = "AI"
 
 [env.production]
 name = "mygr10-production"
-[env.production.ai]
-binding = "AI"

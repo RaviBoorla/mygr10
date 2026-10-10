@@ -1,16 +1,16 @@
 /**
  * Cloudflare Pages Function — /api/chat
  * Streams chat responses from multiple providers.
- * Cloudflare Workers AI is used when provider = "cloudflare" (no API key needed).
- * All other providers proxy through with the caller-supplied API key.
+ * Every provider runs on the caller's own credentials — nothing is billed to the site owner.
+ * Cloudflare Workers AI is called via the REST API with the caller's account ID + API token.
  *
  * POST /api/chat
- * Body: { provider, endpoint, model, apiKey, history: [{role, content}] }
+ * Body: { provider, endpoint, model, apiKey, accountId, history: [{role, content}] }
  * Streams: newline-delimited JSON  {"delta":"token"} … {"done":true}
  */
 
 export async function onRequestPost(context) {
-  const { request, env } = context;
+  const { request } = context;
 
   let body;
   try { body = await request.json(); } catch {
@@ -22,6 +22,7 @@ export async function onRequestPost(context) {
     endpoint  = '',
     model     = '@cf/meta/llama-3.1-8b-instruct',
     apiKey    = '',
+    accountId = '',
     history   = [],
     systemPrompt = '',
   } = body;
@@ -39,7 +40,7 @@ export async function onRequestPost(context) {
   (async () => {
     try {
       switch (provider) {
-        case 'cloudflare': await streamCF(write, env, model, sys, h); break;
+        case 'cloudflare': await streamCF(write, accountId, apiKey, model, sys, h); break;
         case 'ollama':     await streamOllama(write, endpoint, model, sys, h); break;
         case 'anthropic':  await streamAnthropic(write, model, apiKey, sys, h); break;
         case 'gemini':     await streamGemini(write, model, apiKey, sys, h); break;
@@ -102,32 +103,23 @@ function defaultEndpoint(provider) {
 
 // ── Cloudflare Workers AI ────────────────────────────────────────────────────
 
-async function streamCF(write, env, model, system, history) {
-  if (!env.AI) {
-    await write({ error: 'Cloudflare AI binding not configured. Add AI binding in Pages settings.' });
+async function streamCF(write, accountId, apiToken, model, system, history) {
+  if (!/^[0-9a-f]{32}$/i.test(accountId) || !apiToken) {
+    await write({ error: 'Add your Cloudflare Account ID and API token in Cloé settings (⚙).' });
+    return;
+  }
+  if (!/^@[\w.\-]+(\/[\w.\-]+)+$/.test(model)) {
+    await write({ error: `Invalid Cloudflare model name: ${model}` });
     return;
   }
   const messages = [{ role: 'system', content: system }, ...history];
-  const stream = await env.AI.run(model, { messages, stream: true });
-  const reader = stream.getReader();
-  const dec = new TextDecoder();
-  let buf = '';
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    buf += dec.decode(value, { stream: true });
-    const lines = buf.split('\n');
-    buf = lines.pop();
-    for (const line of lines) {
-      const d = line.replace(/^data:\s*/, '').trim();
-      if (!d || d === '[DONE]') continue;
-      try {
-        const j = JSON.parse(d);
-        const delta = j?.response ?? '';
-        if (delta) await write({ delta });
-      } catch { /* skip */ }
-    }
-  }
+  const upstream = await fetch(`https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${model}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiToken}` },
+    body: JSON.stringify({ messages, stream: true }),
+  });
+  if (!upstream.ok) { await write({ error: `Cloudflare ${upstream.status}: ${await upstream.text()}` }); return; }
+  await pipeSSE(write, upstream, j => j?.response ?? '');
 }
 
 // ── Ollama ───────────────────────────────────────────────────────────────────

@@ -1180,6 +1180,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 .ai-config-body { flex: 1; overflow-y: auto; padding: 16px; }
 .ai-label { display: block; font-size: var(--fs-sm); font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: .05em; margin: 14px 0 4px; }
 .ai-label:first-child { margin-top: 0; }
+.ai-config-note { margin: 0 0 4px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--primary-soft, rgba(37,99,235,.08)); color: var(--text); font-size: var(--fs-sm); line-height: 1.5; }
 .ai-input {
   width: 100%; padding: 8px 10px; border-radius: 8px;
   border: 1px solid var(--border); background: var(--bg); color: var(--text);
