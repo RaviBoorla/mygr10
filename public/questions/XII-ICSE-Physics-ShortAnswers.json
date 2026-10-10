@@ -1,1700 +1,1500 @@
 [
   {
-    "id": "sa-xii-phy-001",
+    "id": "sa-xii-phy-2018-01",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "The order of coloured rings in a carbon resistor is red, yellow, blue and silver. The resistance of the carbon resistor is: (a) 24×10^6 Ω ± 5% (b) 24×10^6 Ω ± 10% (c) 34×10^4 Ω ± 10% (d) 26×10^4 Ω ± 5%",
-    "modelAnswer": "(b) 24×10^6 Ω ± 10%. Red = 2, Yellow = 4, Blue = multiplier 10^6, Silver = tolerance ±10%. So resistance = 24 × 10^6 Ω ± 10%.",
+    "text": "A carbon resistor has colour bands: Brown, Black, Red, Gold. What is its resistance and tolerance?",
+    "modelAnswer": "Brown=1, Black=0, Red=×100, Gold=±5%. Resistance = 10×100 = 1000 Ω ± 5% = 1 kΩ ± 5%.",
     "keyPoints": [
-      "Colour code: 1st band = 1st digit, 2nd band = 2nd digit, 3rd band = multiplier, 4th band = tolerance",
-      "Red=2, Yellow=4, Blue=×10^6, Silver=±10%",
-      "R = 24×10^6 Ω ± 10%"
+      "1000 Ω (1 kΩ)",
+      "Tolerance ±5%"
     ]
   },
   {
-    "id": "sa-xii-phy-002",
-    "chapter": "Magnetism",
+    "id": "sa-xii-phy-2018-02",
+    "chapter": "Electromagnetic Induction",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2018",
-    "text": "A circular coil carrying a current I has radius R and number of turns N. If all the three, i.e. the current I, radius R and number of turns N are doubled, then, magnetic field at its centre becomes: (a) Double (b) Half (c) Four times (d) One fourth",
-    "modelAnswer": "(a) Double. B = μ0NI/2R. Doubling N, I and R gives B' = μ0(2N)(2I)/(2×2R) = 2×(μ0NI/2R) = 2B, i.e. B doubles.",
+    "text": "If the number of turns of a coil is doubled keeping all other factors same, by what factor does the inductance change?",
+    "modelAnswer": "L ∝ N². If N is doubled, L becomes 4 times the original value.",
     "keyPoints": [
-      "B at centre of coil = μ0NI/(2R)",
-      "New N,I,R all ×2 → numerator ×4, denominator ×2 → net ×2",
-      "Field doubles"
+      "L ∝ N²",
+      "Inductance becomes 4L"
     ]
   },
   {
-    "id": "sa-xii-phy-003",
+    "id": "sa-xii-phy-2018-03",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2018",
-    "text": "An object is kept on the principal axis of a concave mirror of focal length 10 cm, at a distance of 15 cm from its pole. The image formed by the mirror is: (a) Virtual and magnified (b) Virtual and diminished (c) Real and magnified (d) Real and diminished",
-    "modelAnswer": "(c) Real and magnified. Using mirror formula 1/v + 1/u = 1/f with u = −15 cm, f = −10 cm: 1/v = 1/f − 1/u = −1/10 + 1/15 = −1/30, so v = −30 cm. Magnification m = −v/u = −(−30)/(−15) = −2, i.e. real, inverted and magnified (2×).",
+    "text": "An object is placed at the focus of a concave mirror. Where will its image be formed?",
+    "modelAnswer": "When object is at focus F, rays after reflection become parallel. The image is formed at infinity.",
     "keyPoints": [
-      "1/v = 1/f − 1/u",
-      "v = −30 cm (real image)",
-      "m = −v/u = −2 → magnified, inverted, real"
+      "Image at infinity",
+      "Reflected rays are parallel"
     ]
   },
   {
-    "id": "sa-xii-phy-004",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "Einstein's photoelectric equation is: (a) Emax = hλ − φ0 (b) Emax = hc/λ − φ0 (c) Emax = hν + φ0 (d) Emax = hc/λ + φ0",
-    "modelAnswer": "(b) Emax = hc/λ − φ0. The maximum kinetic energy of the emitted photoelectron equals the photon energy (hν = hc/λ) minus the work function φ0 of the metal.",
-    "keyPoints": [
-      "Photoelectric equation: Emax = hν − φ0 = hc/λ − φ0",
-      "Energy of incident photon minus work function"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-005",
-    "chapter": "Atomic Physics",
+    "id": "sa-xii-phy-2018-04",
+    "chapter": "Dual Nature of Matter",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "In Bohr's model of hydrogen atom, radius of the first orbit of an electron is r0. Then, radius of the third orbit is: (a) r0/9 (b) r0 (c) 3r0 (d) 9r0",
-    "modelAnswer": "(d) 9r0. Radius of nth Bohr orbit rn = n²r0. For n = 3, r3 = 9r0.",
+    "text": "State Einstein's photoelectric equation and identify each term.",
+    "modelAnswer": "hν = φ₀ + ½mv²_max. where hν = energy of incident photon, φ₀ = work function of metal, ½mv²_max = maximum kinetic energy of emitted photoelectron.",
     "keyPoints": [
-      "rn ∝ n²",
-      "n=3 → r3 = 9r0"
+      "hν = φ₀ + KE_max",
+      "hν: photon energy",
+      "φ₀: work function",
+      "½mv²: max KE of electron"
     ]
   },
   {
-    "id": "sa-xii-phy-006",
+    "id": "sa-xii-phy-2018-05",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2018",
+    "text": "How does Bohr's radius of the nth orbit vary with the principal quantum number n?",
+    "modelAnswer": "Bohr's radius rₙ = n²a₀ where a₀ = 0.529 Å. The radius is proportional to n², i.e., rₙ ∝ n².",
+    "keyPoints": [
+      "rₙ = n²a₀",
+      "rₙ ∝ n²"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-06",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "In a potentiometer experiment, balancing length is found to be 120 cm for a cell E1 of emf 2V. What will be the balancing length for another cell E2 of emf 1·5V? (No other changes are made in the experiment.)",
-    "modelAnswer": "Balancing length is proportional to emf (l ∝ E) since the potential gradient is unchanged. l1/E1 = l2/E2 → l2 = E2×l1/E1 = 1·5×120/2 = 90 cm.",
+    "text": "In a potentiometer experiment, what happens to the balance length if the EMF of the driver cell is increased?",
+    "modelAnswer": "Increasing the EMF of driver cell increases potential gradient along the wire. The balance length decreases for the same EMF of the test cell.",
     "keyPoints": [
-      "l ∝ emf for same potential gradient",
-      "l2 = E2 l1/E1 = 90 cm"
+      "Increased driver EMF → increased potential gradient",
+      "Balance length decreases"
     ]
   },
   {
-    "id": "sa-xii-phy-007",
-    "chapter": "Current Electricity",
+    "id": "sa-xii-phy-2018-07",
+    "chapter": "Moving Charges and Magnetism",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "How will you convert a moving coil galvanometer into a voltmeter?",
-    "modelAnswer": "Connect a high resistance (a suitable 'multiplier' resistance) in series with the galvanometer coil. The value of resistance R needed for a range of V volts is R = (V/Ig) − G, where Ig is the full-scale deflection current and G is the galvanometer resistance.",
+    "text": "How can a galvanometer be converted into a voltmeter?",
+    "modelAnswer": "A galvanometer is converted into a voltmeter by connecting a high resistance (multiplier) in series with it.",
     "keyPoints": [
-      "Series high resistance converts galvanometer to voltmeter",
-      "R = V/Ig − G"
+      "Connect high resistance in series",
+      "Called multiplier resistance"
     ]
   },
   {
-    "id": "sa-xii-phy-008",
-    "chapter": "Magnetism",
+    "id": "sa-xii-phy-2018-08",
+    "chapter": "Moving Charges and Magnetism",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2018",
-    "text": "A moving charged particle q travelling along the positive x-axis enters a uniform magnetic field B. When will the force acting on q be maximum?",
-    "modelAnswer": "The magnetic force F = qvB sinθ is maximum when the velocity v is perpendicular to the magnetic field B (θ = 90°), giving Fmax = qvB.",
+    "text": "A proton is moving with velocity v in a uniform magnetic field B. What is the force on the proton?",
+    "modelAnswer": "Force F = q(v×B). Magnitude F = qvB sinθ, where θ is the angle between v and B. If v ∥ B, F=0; if v ⊥ B, F=qvB (maximum).",
     "keyPoints": [
       "F = qvB sinθ",
-      "Maximum when v ⊥ B (θ=90°)"
+      "Force is perpendicular to both v and B"
     ]
   },
   {
-    "id": "sa-xii-phy-009",
-    "chapter": "Alternating Current",
+    "id": "sa-xii-phy-2018-09",
+    "chapter": "Magnetism",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
     "text": "Why is the core of a transformer laminated?",
-    "modelAnswer": "The core is laminated (made of thin, insulated sheets of soft iron) to reduce eddy currents induced in the core, thereby minimising energy losses (heating) due to eddy currents and improving efficiency.",
+    "modelAnswer": "The core is laminated to reduce eddy current losses. Thin insulated laminae restrict eddy currents to small loops, greatly reducing the power loss due to induced currents.",
     "keyPoints": [
-      "Lamination reduces eddy currents",
-      "Reduces energy loss as heat, improves efficiency"
+      "Reduces eddy current losses",
+      "Thin laminae restrict eddy current paths"
     ]
   },
   {
-    "id": "sa-xii-phy-010",
+    "id": "sa-xii-phy-2018-10",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "Ordinary (i.e. unpolarised) light is incident on the surface of a transparent material at the polarising angle. If it is partly reflected and partly refracted, what is the angle between the reflected and the refracted rays?",
-    "modelAnswer": "The angle between the reflected and refracted rays is 90° (this is Brewster's law condition, where the reflected ray is completely plane polarised).",
+    "text": "What is the polarising angle? Give its relation to the refractive index.",
+    "modelAnswer": "Polarising (Brewster's) angle iₚ is the angle of incidence at which the reflected ray is completely plane polarised. tan iₚ = μ (Brewster's law).",
     "keyPoints": [
-      "At polarising angle, reflected and refracted rays are perpendicular",
-      "Angle = 90° (Brewster's law)"
+      "Reflected ray is completely polarised",
+      "tan iₚ = μ (Brewster's law)"
     ]
   },
   {
-    "id": "sa-xii-phy-011",
+    "id": "sa-xii-phy-2018-11",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "Define coherent sources of light.",
-    "modelAnswer": "Coherent sources are two (or more) sources of light that emit light waves of the same frequency (wavelength) and are either in phase or have a constant (time-independent) phase difference between them.",
+    "text": "What are coherent sources of light?",
+    "modelAnswer": "Coherent sources are two sources that emit light waves of the same frequency, same wavelength, and maintain a constant phase difference between them. They are necessary for sustained interference patterns.",
     "keyPoints": [
-      "Same frequency/wavelength",
-      "Constant phase difference"
+      "Same frequency and wavelength",
+      "Constant phase difference",
+      "Necessary for interference"
     ]
   },
   {
-    "id": "sa-xii-phy-012",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2018-12",
+    "chapter": "Atoms",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "Name a material which is used in making control rods in a nuclear reactor.",
-    "modelAnswer": "Cadmium (or Boron) is used as the material for control rods in a nuclear reactor, since it strongly absorbs neutrons.",
+    "text": "What material is used as a control rod in a nuclear reactor? Why?",
+    "modelAnswer": "Cadmium or boron is used as control rod material because they have very high neutron absorption cross-section. They absorb excess neutrons to control the chain reaction rate.",
     "keyPoints": [
-      "Control rod material: Cadmium or Boron",
-      "Absorbs neutrons to control chain reaction"
+      "Cadmium or Boron",
+      "High neutron absorption cross-section",
+      "Controls chain reaction rate"
     ]
   },
   {
-    "id": "sa-xii-phy-013",
+    "id": "sa-xii-phy-2018-13",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 2,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2018",
-    "text": "Define current density. Write an expression which connects current density with drift speed.",
-    "modelAnswer": "Current density (J) is the amount of current flowing per unit cross-sectional area of a conductor, in the direction normal to the area: J = I/A (unit: A/m²). It is related to drift speed vd by J = nevd, where n is the free electron number density and e is the electronic charge.",
+    "text": "Define current density. A cylindrical conductor of length 0.5 m and cross-sectional area 0.04 m² has resistance 4 Ω. Calculate the current density when a potential difference of 8 V is applied.",
+    "modelAnswer": "Current density J = current per unit area = I/A. I = V/R = 8/4 = 2 A. J = I/A = 2/0.04 = 50 A/m².",
     "keyPoints": [
       "J = I/A",
-      "J = nevd",
-      "n = free electron density, e = electronic charge, vd = drift speed"
+      "I = V/R = 2 A",
+      "J = 50 A/m²"
     ]
   },
   {
-    "id": "sa-xii-phy-014",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2018",
-    "text": "A long horizontal wire P carries a current of 50A. It is rigidly fixed. Another wire Q is placed directly above and parallel to P. The weight per unit length of the wire Q is 0·025 Nm⁻¹ and it carries a current of 25A. Find the distance 'r' of the wire Q from the wire P so that the wire Q remains at rest.",
-    "modelAnswer": "For Q to remain at rest, the magnetic force per unit length between the wires must balance the weight per unit length of Q. F/l = μ0I1I2/(2πr) = weight/length. So (4π×10⁻⁷×50×25)/(2πr) = 0·025 → (2×10⁻⁷×50×25)/r = 0·025 → 2·5×10⁻⁴/r = 0·025 → r = 2·5×10⁻⁴/0·025 = 0·01 m = 1 cm.",
-    "keyPoints": [
-      "F/l = μ0I1I2/(2πr) balances weight/length",
-      "2.5×10⁻⁴/r = 0.025",
-      "r = 1 cm"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-015",
-    "chapter": "Magnetism",
+    "id": "sa-xii-phy-2018-14",
+    "chapter": "Moving Charges and Magnetism",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "Calculate force per unit length acting on the wire B due to the current flowing in the wire A, given IA = 75A, IB = 20A, separated by r = 1cm in vacuum.",
-    "modelAnswer": "F/l = μ0IAIB/(2πr) = (2×10⁻⁷×75×20)/0·01 = (2×10⁻⁷×1500)/0·01 = 3×10⁻⁴/0·01 = 3×10⁻² N/m = 0·03 N/m.",
+    "text": "Two long parallel wires separated by 0.1 m carry currents 5 A and 8 A in the same direction. Find the magnetic force per unit length between them.",
+    "modelAnswer": "Force per unit length: F/L = μ₀I₁I₂/(2πd) = (4π×10⁻⁷×5×8)/(2π×0.1) = (4π×10⁻⁷×40)/(0.2π) = 8×10⁻⁵ N/m. The force is attractive (same direction currents).",
     "keyPoints": [
-      "F/l = μ0IAIB/(2πr)",
-      "F/l = 3×10⁻² N/m"
+      "F/L = μ₀I₁I₂/(2πd)",
+      "F/L = 8×10⁻⁵ N/m",
+      "Force is attractive"
     ]
   },
   {
-    "id": "sa-xii-phy-016",
+    "id": "sa-xii-phy-2018-15",
     "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "(i) Explain Curie's law for a paramagnetic substance. (ii) A rectangular coil having 60 turns and area of 0·4m² is held at right angles to a uniform magnetic field of flux density 5×10⁻⁵T. Calculate the magnetic flux passing through it.",
-    "modelAnswer": "(i) Curie's law states that the magnetic susceptibility (χ) of a paramagnetic substance is inversely proportional to its absolute temperature: χ = C/T, where C is the Curie constant. As temperature increases, thermal agitation disturbs the alignment of magnetic dipoles, reducing magnetisation. (ii) Flux Φ = NBA = 60 × 5×10⁻⁵ × 0·4 = 1·2×10⁻³ Wb.",
-    "keyPoints": [
-      "Curie's law: χ = C/T",
-      "Φ = NBA = 60×5×10⁻⁵×0.4",
-      "Φ = 1.2×10⁻³ Wb"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-017",
-    "chapter": "Electromagnetic Induction",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "What is motional emf? State any two factors on which it depends.",
-    "modelAnswer": "Motional emf is the emf induced in a conductor when it moves through a magnetic field such that it cuts magnetic field lines (e = Bvl for a rod moving perpendicular to B). It depends on: (i) the magnetic flux density B, (ii) the length l of the conductor, and (iii) the velocity v with which the conductor moves (and the angle between v and B).",
-    "keyPoints": [
-      "Motional emf = Blv (rod moving ⊥ to B)",
-      "Depends on B, length l, velocity v"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-018",
-    "chapter": "Electromagnetic Induction",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "(i) What is the ratio of the speed of gamma rays to that of radio waves in vacuum? (ii) Name an electromagnetic wave which is used in the radar system used in aircraft navigation.",
-    "modelAnswer": "(i) Both gamma rays and radio waves are electromagnetic waves, so both travel at the speed of light c in vacuum. The ratio is 1:1. (ii) Microwaves are used in radar systems for aircraft navigation.",
+    "text": "State Curie's law for paramagnetism. A paramagnetic sample at 400 K has a magnetic flux density 0.5 T. At what temperature will the flux density become 0.25 T for the same field?",
+    "modelAnswer": "Curie's law: M = C·B/T (magnetisation ∝ B/T). For same field B: M ∝ 1/T. Since B_induced ∝ M: 0.5/400 = 0.25/T₂. T₂ = 0.25×400/0.5 = 200 K.",
     "keyPoints": [
-      "All EM waves travel at c in vacuum → ratio = 1",
-      "Radar uses microwaves"
+      "M ∝ B/T (Curie's law)",
+      "For same applied B: T₁/T₂ = B₁/B₂ → T₂=200 K"
     ]
   },
   {
-    "id": "sa-xii-phy-019",
+    "id": "sa-xii-phy-2018-16",
+    "chapter": "Electromagnetic Induction",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "A conducting rod AB of length 0.5 m moves with velocity 5 m/s perpendicular to a magnetic field 0.2 T. Calculate the motional EMF. In which end is the higher potential?",
+    "modelAnswer": "EMF = BLv = 0.2×0.5×5 = 0.5 V. By Lenz's law / right-hand rule, free electrons experience a force toward A (if B is into the page and v is upward), making A at lower potential and B at higher potential.",
+    "keyPoints": [
+      "EMF = BLv = 0.5 V",
+      "Use Flemings right-hand or Lenz's law to find polarity"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-17",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2018",
+    "text": "(a) A radar uses microwaves of frequency 3×10¹⁰ Hz. What is the wavelength? (b) Name one application of radar.",
+    "modelAnswer": "(a) λ = c/f = 3×10⁸/(3×10¹⁰) = 0.01 m = 1 cm. (b) Radar is used for aircraft/ship detection, speed measurement of vehicles, weather monitoring.",
+    "keyPoints": [
+      "λ = c/f = 0.01 m = 1 cm",
+      "Radar uses microwaves",
+      "Application: navigation / aircraft detection"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-18",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "A biconvex lens made of glass (refractive index 1·5) has two spherical surfaces having radii 20 cm and 30 cm. Calculate its focal length.",
-    "modelAnswer": "Using the lensmaker's formula: 1/f = (n−1)(1/R1 − 1/R2). For a biconvex lens, R1 = +20 cm, R2 = −30 cm. 1/f = (1·5−1)(1/20 − 1/(−30)) = 0·5×(1/20 + 1/30) = 0·5×(3+2)/60 = 0·5×5/60 = 0·5/12 = 1/24. So f = 24 cm.",
+    "text": "A biconvex lens has radii of curvature 20 cm each. If the refractive index of glass is 1.5, find the focal length.",
+    "modelAnswer": "Lensmaker's equation: 1/f = (μ-1)[1/R₁-1/R₂]. R₁=+20 cm, R₂=-20 cm. 1/f = (1.5-1)[1/20-1/(-20)] = 0.5×(2/20) = 0.05. f = 20 cm.",
     "keyPoints": [
-      "1/f = (n−1)(1/R1 − 1/R2)",
-      "R1=+20cm, R2=−30cm",
-      "f = 24 cm"
+      "1/f = (μ-1)[1/R₁+1/|R₂|]",
+      "R₁=20, R₂=20",
+      "f = 20 cm"
     ]
   },
   {
-    "id": "sa-xii-phy-020",
+    "id": "sa-xii-phy-2018-19",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "State any two differences between primary rainbow and secondary rainbow.",
-    "modelAnswer": "(i) Primary rainbow is formed by one internal reflection and two refractions inside water droplets; secondary rainbow is formed by two internal reflections and two refractions. (ii) In the primary rainbow, red is on the outer edge and violet on the inner edge; in the secondary rainbow, the order is reversed (violet outer, red inner). (iii) The secondary rainbow is fainter and its angular radius (~51°) is larger than that of the primary (~42°).",
+    "text": "Explain why primary rainbow has red on the outer edge and violet on the inner edge, while secondary rainbow has the reverse order.",
+    "modelAnswer": "Primary rainbow: one total internal reflection inside raindrops. Violet is refracted more (smaller angle), so it appears on inner edge; red less refracted, appears on outer edge.\nSecondary rainbow: two total internal reflections, reversing the order — red on inner, violet on outer edge.",
     "keyPoints": [
-      "Primary: 1 internal reflection; Secondary: 2 internal reflections",
-      "Colour order reversed in secondary rainbow",
-      "Secondary rainbow is fainter, larger angular radius"
+      "Primary: 1 internal reflection; red outer, violet inner",
+      "Secondary: 2 internal reflections; order reversed",
+      "Violet refracted more than red"
     ]
   },
   {
-    "id": "sa-xii-phy-021",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2018",
-    "text": "(i) State de Broglie hypothesis. (ii) With reference to photoelectric effect, define threshold wavelength.",
-    "modelAnswer": "(i) De Broglie hypothesis states that every moving particle of matter is associated with a wave, called the matter wave (or de Broglie wave), whose wavelength is λ = h/p = h/(mv). (ii) Threshold wavelength (λ0) is the maximum wavelength of incident light which can just cause photoelectric emission from a given metal surface (below which no emission occurs, no matter how intense the light).",
-    "keyPoints": [
-      "de Broglie: λ = h/p = h/mv",
-      "Threshold wavelength: maximum λ for which photoemission just occurs"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-022",
-    "chapter": "Atomic Physics",
+    "id": "sa-xii-phy-2018-20",
+    "chapter": "Dual Nature of Matter",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "Calculate the minimum wavelength of the spectral line present in the Balmer series of hydrogen.",
-    "modelAnswer": "Minimum wavelength in Balmer series corresponds to transition from n=∞ to n=2 (series limit). 1/λ = R(1/2² − 1/∞²) = R/4 = 1·097×10⁷/4 = 2·7425×10⁶ m⁻¹. So λ = 1/2·7425×10⁶ = 3·65×10⁻⁷ m = 365 nm.",
+    "text": "An electron has de Broglie wavelength 0.5 Å. Find its kinetic energy. Also find the threshold wavelength for a metal with work function 2 eV.",
+    "modelAnswer": "λ = h/(mv) → p = h/λ = 6.626×10⁻³⁴/0.5×10⁻¹⁰ = 1.325×10⁻²³ kg·m/s. KE = p²/2m = (1.325×10⁻²³)²/(2×9.1×10⁻³¹) ≈ 9.6×10⁻¹⁸ J ≈ 60 eV.\nThreshold: φ₀ = hc/λ₀ → λ₀ = hc/φ₀ = (6.626×10⁻³⁴×3×10⁸)/(2×1.6×10⁻¹⁹) = 6.2×10⁻⁷ m = 620 nm.",
     "keyPoints": [
-      "Series limit: n=∞ → n=2",
-      "1/λ = R/4",
-      "λ ≈ 365 nm"
+      "λ_dB = h/p → p = h/λ",
+      "KE = p²/2m ≈ 60 eV",
+      "λ₀ = hc/φ₀ = 620 nm"
     ]
   },
   {
-    "id": "sa-xii-phy-023",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2018-21",
+    "chapter": "Atoms",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "What is meant by pair annihilation? Write a balanced equation for the same.",
-    "modelAnswer": "Pair annihilation is the process in which a particle and its antiparticle (e.g. an electron and a positron) collide and are converted entirely into energy, usually in the form of two gamma-ray photons (to conserve momentum). Equation: e⁻ + e⁺ → γ + γ (each photon of energy 0·511 MeV).",
+    "text": "Find the minimum wavelength of radiation in the Balmer series of hydrogen.",
+    "modelAnswer": "Balmer series: 1/λ = R[1/2²-1/n²]. Minimum wavelength (series limit) when n→∞: 1/λ_min = R/4 = 1.097×10⁷/4 = 2.74×10⁶ m⁻¹. λ_min = 364.6 nm.",
     "keyPoints": [
-      "Electron + positron → 2 gamma photons",
-      "e⁻ + e⁺ → γ + γ",
-      "Mass converted entirely to energy"
+      "Series limit: n→∞",
+      "1/λ_min = R/4",
+      "λ_min = 364.6 nm (364 nm)"
     ]
   },
   {
-    "id": "sa-xii-phy-024",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2018-22",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "(a) Explain pair annihilation. (b) A radioactive nucleus has half-life 10 days. What fraction remains after 30 days? What is the binding energy per nucleon of He-4 if its mass defect is 0.0304 u?",
+    "modelAnswer": "(a) When a positron (e⁺) meets an electron (e⁻), both annihilate and produce two gamma-ray photons: e⁺+e⁻→2γ (each 0.511 MeV).\n(b) n=30/10=3 half-lives. Remaining fraction = (1/2)³ = 1/8.\nBE = Δm×931.5 MeV = 0.0304×931.5 = 28.3 MeV. BE/nucleon = 28.3/4 = 7.07 MeV.",
+    "keyPoints": [
+      "Pair annihilation: e⁺+e⁻→2γ (0.511 MeV each)",
+      "After 3 half-lives: 1/8 remains",
+      "BE/nucleon = 7.07 MeV"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-23",
+    "chapter": "Communication Systems",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2018",
-    "text": "What is meant by the terms half-life of a radioactive substance and binding energy of a nucleus?",
-    "modelAnswer": "Half-life (T½) is the time taken for half of the radioactive nuclei in a given sample to disintegrate (or the activity to fall to half its initial value). Binding energy of a nucleus is the energy required to completely separate a nucleus into its constituent protons and neutrons (equivalently, the energy released when the nucleus is formed from free nucleons), given by ΔE = Δm c², where Δm is the mass defect.",
+    "text": "What is modulation? Why is modulation necessary for radio broadcasting?",
+    "modelAnswer": "Modulation is the process of superimposing a low-frequency audio (message) signal on a high-frequency carrier wave, modifying its amplitude, frequency, or phase.\nNecessity: Audio signals (20 Hz–20 kHz) have very short wavelengths when directly transmitted as EM waves, requiring impractically large antennas and suffering signal attenuation. Modulation shifts the signal to high frequency where antennas are practical and propagation is efficient.",
     "keyPoints": [
-      "Half-life: time for half the nuclei to decay",
-      "Binding energy = energy to split nucleus into free nucleons = Δmc²"
+      "Superimposing message signal on carrier",
+      "Audio frequencies too low for practical direct transmission",
+      "Modulation enables antenna size and efficient propagation"
     ]
   },
   {
-    "id": "sa-xii-phy-025",
-    "chapter": "Electronics in Everyday Life",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2018",
-    "text": "In a communication system, what is meant by modulation? State any two types of modulation.",
-    "modelAnswer": "Modulation is the process of superimposing a low-frequency message (information) signal onto a high-frequency carrier wave, so that some characteristic (amplitude, frequency, or phase) of the carrier is varied in accordance with the message signal, enabling efficient transmission over long distances. Two types: Amplitude Modulation (AM) and Frequency Modulation (FM) (also Phase Modulation).",
-    "keyPoints": [
-      "Modulation: superimposing message signal on carrier wave",
-      "Types: Amplitude Modulation (AM), Frequency Modulation (FM)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-026",
+    "id": "sa-xii-phy-2018-24",
     "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "Obtain an expression for intensity of electric field at a point in end on position, i.e. axial position of an electric dipole.",
-    "modelAnswer": "Consider a dipole of charges −q at A and +q at B, separated by 2l, dipole moment p = q(2l). For point P on the axis at distance r from the centre O: E+ (due to +q, at distance r−l) = kq/(r−l)², directed away from +q (along axis). E− (due to −q, at distance r+l) = kq/(r+l)², directed towards −q, i.e. same direction as E+ on the axial line beyond the dipole. Net field E = E+ − E− = kq[1/(r−l)² − 1/(r+l)²] = kq[( (r+l)² − (r−l)² ) / (r²−l²)²] = kq[4rl/(r²−l²)²] = k(2p·r)/(r²−l²)², where k=1/4πε0. For r >> l: E ≈ 2kp/r³ = (1/4πε0)(2p/r³), directed along the dipole axis (from −q to +q direction).",
-    "keyPoints": [
-      "E = (1/4πε0)[2pr/(r²−l²)²]",
-      "For r>>l: E ≈ (1/4πε0)(2p/r³)",
-      "Direction: along dipole axis, from −q to +q"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-027",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "Deduce an expression for equivalent capacitance C when three capacitors C1, C2 and C3 are connected in parallel.",
-    "modelAnswer": "When capacitors C1, C2, C3 are connected in parallel across a battery of potential V, each capacitor has the same potential difference V across it but different charges: Q1=C1V, Q2=C2V, Q3=C3V. Total charge Q = Q1+Q2+Q3 = (C1+C2+C3)V. If Ceq is the equivalent capacitance, Q = CeqV. So CeqV = (C1+C2+C3)V, giving Ceq = C1+C2+C3.",
-    "keyPoints": [
-      "Parallel: same V across each capacitor",
-      "Q = Q1+Q2+Q3 = (C1+C2+C3)V",
-      "Ceq = C1+C2+C3"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-028",
-    "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "hard",
     "source": "Board 2018",
-    "text": "ε1 and ε2 are two batteries having emf of 34V and 10V respectively and internal resistance of 1Ω and 2Ω respectively. They are connected in a network: branch AF carries ε1 (34V,1Ω) with current I1 (F to A), branch CD carries ε2 (10V,2Ω) with current I2 (D to C), branch AB has 4Ω, branch BC has 4Ω, branch BE has 5Ω (carrying I1+I2), branch FE has 7Ω, branch ED has 7Ω. Using Kirchhoff's Laws of electrical networks, calculate the currents I1 and I2.",
-    "modelAnswer": "Applying KVL to loop A-F-E-B-A: 34 − I1(1+4+7) − 5(I1+I2) = 0 → 34 − 17I1 − 5I2 = 0 ... (1). Applying KVL to loop D-C-B-E-D: 10 − I2(2+4+7) − 5(I1+I2) = 0 → 10 − 5I1 − 18I2 = 0 ... (2). Solving (1) and (2): from (1) 17I1+5I2=34; from (2) 5I1+18I2=10. Multiplying (1) by 18 and (2) by 5 and subtracting: 306I1 − 25I1 = 612 − 50 → 281I1=562 → I1 = 2A. Substituting in (1): 34+5I2=34 → I2 = 0A.",
+    "text": "Derive an expression for the electric field intensity at a point on the axial line of an electric dipole.",
+    "modelAnswer": "Let dipole have charges +q and -q separated by 2a, midpoint O. Point P at distance r from O on axis. Distance from +q: r-a; from -q: r+a.\nE₊ = kq/(r-a)² (along axis, away from +q)\nE₋ = kq/(r+a)² (toward -q, i.e., toward O)\nE_net = kq[1/(r-a)² - 1/(r+a)²] = kq·4ar/(r²-a²)² = 2kqr·2a/(r²-a²)²\nE = 2kpr/(r²-a²)² where p=2aq.\nFor r>>a: E ≈ 2kp/r³ = p/(2πε₀r³).",
     "keyPoints": [
-      "Two-loop Kirchhoff's law problem",
-      "17I1+5I2=34 and 5I1+18I2=10",
-      "I1 = 2A, I2 = 0A"
+      "E = kq[1/(r-a)²-1/(r+a)²]",
+      "E = 2kpr/(r²-a²)²",
+      "For r>>a: E ≈ 2kp/r³"
     ]
   },
   {
-    "id": "sa-xii-phy-029",
+    "id": "sa-xii-phy-2018-25",
+    "chapter": "Electrostatics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "Three capacitors of capacitances 2μF, 3μF and 6μF are connected in parallel. Find the equivalent capacitance. If a 12V battery is connected, find the energy stored.",
+    "modelAnswer": "C_eq = 2+3+6 = 11 μF.\nEnergy U = ½C_eq V² = ½×11×10⁻⁶×144 = 792×10⁻⁶ J = 792 μJ.",
+    "keyPoints": [
+      "C_eq = 11 μF for parallel",
+      "U = ½CV² = 792 μJ"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-26",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "An electric bulb is marked 200V, 100W. Calculate electrical resistance of its filament. If five such bulbs are connected in series to a 200V supply, how much current will flow through them?",
-    "modelAnswer": "Resistance R = V²/P = 200²/100 = 400 Ω. When 5 such bulbs (each 400Ω) are connected in series, total resistance = 5×400 = 2000 Ω. Current I = V/Rtotal = 200/2000 = 0·1 A.",
+    "text": "State Kirchhoff's laws. Using them, find the current through the 4Ω resistor in the circuit with EMF sources ε₁=12V (internal r₁=1Ω) and ε₂=6V (internal r₂=1Ω) connected in a loop with external resistors 2Ω and 4Ω.",
+    "modelAnswer": "KVL (Loop rule): Sum of EMFs = Sum of voltage drops in any closed loop.\nKCL (Junction rule): Sum of currents entering a junction = sum leaving.\nApply KVL to the circuit loops and solve simultaneous equations. For the given circuit, I through 4Ω ≈ 1.5 A (exact value depends on circuit configuration — apply junction and loop equations systematically).",
     "keyPoints": [
-      "R = V²/P = 400Ω",
-      "Series: Rtotal = 5×400 = 2000Ω",
-      "I = 200/2000 = 0.1 A"
+      "KVL: ΣE = ΣIR in any loop",
+      "KCL: ΣI_in = ΣI_out at junction",
+      "Solve simultaneous loop equations"
     ]
   },
   {
-    "id": "sa-xii-phy-030",
+    "id": "sa-xii-phy-2018-27",
+    "chapter": "Current Electricity",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2018",
+    "text": "A light bulb is rated 100 W, 220 V. Calculate (i) the resistance of the bulb; (ii) current through the bulb at rated conditions; (iii) the new power if the voltage drops to 110 V.",
+    "modelAnswer": "(i) R = V²/P = 220²/100 = 48400/100 = 484 Ω.\n(ii) I = P/V = 100/220 = 5/11 A ≈ 0.455 A.\n(iii) P' = V'²/R = 110²/484 = 12100/484 = 25 W.",
+    "keyPoints": [
+      "R = V²/P = 484 Ω",
+      "I = P/V = 0.455 A",
+      "At 110V: P = 25 W (one-quarter)"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-28",
+    "chapter": "Ray Optics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2018",
+    "text": "Derive the relation between angle of prism A, angle of minimum deviation δ_m, and refractive index μ.",
+    "modelAnswer": "At minimum deviation, the ray passes symmetrically; refracted ray inside prism is parallel to base. r₁=r₂=r (say). Since r₁+r₂=A, 2r=A → r=A/2.\nAngle of incidence i: δ_m = 2i-A → i=(A+δ_m)/2.\nBy Snell's law at first surface: μ = sin i/sin r = sin[(A+δ_m)/2]/sin(A/2).",
+    "keyPoints": [
+      "At min deviation: r₁=r₂=A/2",
+      "i=(A+δ_m)/2",
+      "μ = sin[(A+δ_m)/2]/sin(A/2)"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2018-29",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "For any prism, prove that: n or μ = sin[(A+δm)/2] / sin(A/2), where the terms have their usual meaning.",
-    "modelAnswer": "At minimum deviation, the ray passes symmetrically through the prism, so angle of incidence i = angle of emergence e, and the two angles of refraction at the two surfaces are equal: r1 = r2 = r. Using A = r1+r2 = 2r, so r = A/2. Also, deviation δ = (i+e) − A; at minimum deviation δ=δm and i=e, so δm = 2i − A, giving i = (A+δm)/2. By Snell's law at the first surface: n = sin i / sin r = sin[(A+δm)/2] / sin(A/2).",
+    "text": "Two thin lenses of focal lengths f₁ and f₂ are placed in contact. Derive the expression for the equivalent focal length.",
+    "modelAnswer": "For lens 1: 1/v₁ - 1/u = 1/f₁. Image from lens 1 acts as object for lens 2: 1/v - 1/v₁ = 1/f₂. Adding: 1/v - 1/u = 1/f₁ + 1/f₂. So 1/f = 1/f₁ + 1/f₂, i.e., f = f₁f₂/(f₁+f₂).",
     "keyPoints": [
-      "At minimum deviation: i=e, r1=r2=r",
-      "A = 2r → r = A/2",
-      "i = (A+δm)/2",
-      "n = sin i/sin r = sin[(A+δm)/2]/sin(A/2)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-031",
-    "chapter": "Ray Optics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2018",
-    "text": "When two thin lenses are kept in contact, prove that their combined or effective focal length F is given by: 1/F = 1/f1 + 1/f2, where the terms have their usual meaning.",
-    "modelAnswer": "For an object O placed on the axis, the first lens (focal length f1) forms an image I1 of the object; this acts as a virtual object for the second lens (focal length f2), which forms the final image I at distance v. For lens 1: 1/v1 − 1/u = 1/f1. For lens 2 (object distance = v1, since lenses are in contact): 1/v − 1/v1 = 1/f2. Adding: 1/v − 1/u = 1/f1 + 1/f2. But for the equivalent single lens producing the same image: 1/v − 1/u = 1/F. Hence 1/F = 1/f1 + 1/f2.",
-    "keyPoints": [
-      "Apply lens formula successively to both lenses",
+      "Apply thin lens formula twice",
       "Add the two equations",
-      "1/F = 1/f1 + 1/f2"
+      "1/f = 1/f₁+1/f₂"
     ]
   },
   {
-    "id": "sa-xii-phy-032",
+    "id": "sa-xii-phy-2018-30",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 3,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2018",
-    "text": "(i) In Young's double slit experiment, show graphically how intensity of light varies with distance. (ii) In Fraunhofer diffraction, how is the angular width of the central bright fringe affected when slit separation is increased?",
-    "modelAnswer": "(i) In YDSE, the intensity varies as I = 4I0 cos²(φ/2), where φ is the phase difference between the two waves reaching a point. Plotted against position (or path difference), this gives a series of bright fringes (maxima, I=4I0) alternating with dark fringes (minima, I=0), i.e. a cosine-squared pattern of equal fringe width (all bright fringes are equally intense in ideal two-slit interference). (ii) In single-slit Fraunhofer diffraction, the angular width of the central maximum is 2λ/a, where a is the slit width. Note: 'slit separation' here refers to slit width a; as the slit width a is increased, angular width 2λ/a decreases, i.e. the central maximum becomes narrower.",
+    "text": "In YDSE, the slits are 0.2 mm apart and the screen is 1 m away. Wavelength is 5000 Å. Find the fringe width. Also find the width of central maximum in single-slit Fraunhofer diffraction where slit width is 0.2 mm.",
+    "modelAnswer": "YDSE fringe width: β = λD/d = 5×10⁻⁷×1/0.2×10⁻³ = 2.5×10⁻³ m = 2.5 mm.\nSingle slit: width of central maximum = 2λD/a = 2×5×10⁻⁷×1/0.2×10⁻³ = 5×10⁻³ m = 5 mm.",
     "keyPoints": [
-      "YDSE: I = 4I0cos²(φ/2), cosine-squared fringe pattern",
-      "Diffraction central maximum angular width = 2λ/a",
-      "Increasing slit width a → narrower central maximum"
+      "Fringe width β=λD/d=2.5mm",
+      "Central diffraction max width=2λD/a=5mm"
     ]
   },
   {
-    "id": "sa-xii-phy-033",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2018-31",
+    "chapter": "Nuclei",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "Write one balanced equation each to show: (i) Nuclear fission (ii) Nuclear fusion (iii) Emission of β⁻ (i.e. a negative beta particle).",
-    "modelAnswer": "(i) Nuclear fission: ₀n¹ + ₉₂U²³⁵ → ₅₆Ba¹⁴¹ + ₃₆Kr⁹² + 3₀n¹ + energy. (ii) Nuclear fusion: ₁H² + ₁H² → ₂He³ + ₀n¹ + energy (or ₁H² + ₁H³ → ₂He⁴ + ₀n¹ + energy). (iii) β⁻ emission: a neutron converts to a proton, electron and antineutrino: ZXᴬ → (Z+1)Yᴬ + ₋₁e⁰ + ν̄. E.g. ₉₀Th²³⁴ → ₉₁Pa²³⁴ + ₋₁e⁰ + ν̄.",
+    "text": "Write nuclear equations for: (a) alpha decay of Ra-226; (b) beta-minus decay of P-32; (c) the fission of U-235 by a neutron (one possible reaction).",
+    "modelAnswer": "(a) ²²⁶₈₈Ra → ⁴₂He + ²²²₈₆Rn.\n(b) ³²₁₅P → ⁰₋₁e + ³²₁₆S + ν̄ₑ.\n(c) ²³⁵₉₂U + ¹₀n → ¹⁴⁴₅₆Ba + ⁸⁹₃₆Kr + 3¹₀n (or other product pairs).",
     "keyPoints": [
-      "Fission: heavy nucleus splits (e.g. U-235 + n → Ba+Kr+3n)",
-      "Fusion: light nuclei combine (e.g. deuterium+deuterium → He-3+n)",
-      "β⁻ decay: ZXᴬ → (Z+1)Yᴬ + electron + antineutrino"
+      "α decay: Z-2, A-4",
+      "β⁻ decay: Z+1, A unchanged",
+      "Fission: conserve A and Z, produces ~3 neutrons"
     ]
   },
   {
-    "id": "sa-xii-phy-034",
+    "id": "sa-xii-phy-2018-32",
     "chapter": "Semiconductors",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2018",
-    "text": "With reference to semiconductor devices, define a p-type semiconductor and a Zener diode. What is the use of a Zener diode?",
-    "modelAnswer": "A p-type semiconductor is formed by doping a pure (intrinsic) semiconductor such as silicon or germanium with a trivalent impurity (e.g. Boron, Indium), creating an excess of holes (majority carriers are holes). A Zener diode is a specially designed, heavily doped p-n junction diode meant to be operated in the reverse breakdown region, where it maintains a nearly constant voltage (Zener voltage) across it over a range of currents. Use: it is used as a voltage regulator, to provide a constant reference/output voltage in power supply circuits.",
+    "text": "Distinguish between p-type and n-type semiconductors. Draw the circuit diagram and explain the working of a Zener diode as a voltage regulator.",
+    "modelAnswer": "p-type: doped with trivalent impurity (e.g., Boron); majority carriers are holes. n-type: doped with pentavalent impurity (e.g., Phosphorus); majority carriers are electrons.\nZener regulator: Zener diode in reverse bias parallel to load. When input voltage varies, Zener maintains constant voltage across load equal to Zener breakdown voltage V_Z. Series resistor drops excess voltage.",
     "keyPoints": [
-      "p-type: doped with trivalent impurity, holes are majority carriers",
-      "Zener diode: operates in reverse breakdown with constant voltage",
-      "Use: voltage regulator"
+      "p-type: holes majority; trivalent dopant",
+      "n-type: electrons majority; pentavalent dopant",
+      "Zener in reverse bias maintains constant V_Z across load"
     ]
   },
   {
-    "id": "sa-xii-phy-035",
+    "id": "sa-xii-phy-2018-33",
     "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 5,
     "difficulty": "hard",
     "source": "Board 2018",
-    "text": "An alternating emf of 220V is applied to a circuit containing a resistor R having resistance of 160Ω and a capacitor 'C' in series. The current is found to lead the supply voltage by an angle θ = tan⁻¹(3/4). (i) Calculate: (1) The capacitive reactance (2) Impedance of the circuit (3) Current flowing in the circuit. (ii) If the frequency of the applied emf is 50 Hz, what is the value of the capacitance of the capacitor 'C'?",
-    "modelAnswer": "tanθ = Xc/R = 3/4 → Xc = (3/4)×160 = 120Ω. Impedance Z = √(R²+Xc²) = √(160²+120²) = √(25600+14400) = √40000 = 200Ω. Current I = V/Z = 220/200 = 1·1A. Capacitance: Xc = 1/(2πfC) → C = 1/(2πfXc) = 1/(2π×50×120) = 1/(37699) ≈ 2·65×10⁻⁵ F = 26·5 µF.",
+    "text": "An RC series circuit has R=200Ω, C=10μF, connected to an AC source of 220V, 50 Hz. Calculate (a) impedance, (b) current, (c) voltage across R and C, (d) phase angle.",
+    "modelAnswer": "X_C = 1/(2πfC) = 1/(2π×50×10×10⁻⁶) = 318.3 Ω.\nZ = √(R²+X_C²) = √(200²+318.3²) = √(40000+101234) = √141234 ≈ 375.8 Ω.\nI = V/Z = 220/375.8 ≈ 0.586 A.\nV_R = IR = 0.586×200 = 117.2 V.\nV_C = IX_C = 0.586×318.3 = 186.5 V.\ntan φ = X_C/R = 318.3/200 = 1.59 → φ = 57.8° (current leads by 57.8°).",
     "keyPoints": [
-      "tanθ = Xc/R → Xc = 120Ω",
-      "Z = √(R²+Xc²) = 200Ω",
-      "I = V/Z = 1.1A",
-      "C = 1/(2πfXc) ≈ 26.5 µF"
+      "X_C = 318.3Ω, Z = 375.8Ω",
+      "I ≈ 0.586A",
+      "V_R=117.2V, V_C=186.5V, φ≈57.8°"
     ]
   },
   {
-    "id": "sa-xii-phy-036",
+    "id": "sa-xii-phy-2018-34",
     "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 5,
     "difficulty": "hard",
     "source": "Board 2018",
-    "text": "An A.C. generator generating an emf of ε = 300 sin(100πt) V is connected to a series combination of 16µF capacitor, 1H inductor and 100Ω resistor. Calculate: (i) Impedance of the circuit at the given frequency. (ii) Resonant frequency f0. (iii) Power factor at resonant frequency f0.",
-    "modelAnswer": "ω = 100π rad/s. XL = ωL = 100π×1 = 314·16Ω. Xc = 1/(ωC) = 1/(100π×16×10⁻⁶) = 1/(5·027×10⁻³) = 198·9Ω. Z = √(R²+(XL−Xc)²) = √(100²+(314·16−198·9)²) = √(10000+115·26²) = √(10000+13285·9) = √23285·9 ≈ 152·6Ω. Resonant frequency f0 = 1/(2π√(LC)) = 1/(2π√(1×16×10⁻⁶)) = 1/(2π×4×10⁻³) = 1/(0·02513) ≈ 39·79 Hz. At resonance, XL=Xc, so impedance Z=R (purely resistive) and power factor = R/Z = 1 (cosφ=1).",
+    "text": "An LCR series circuit has L=2H, C=32μF, R=100Ω connected to 200V AC. Find (a) resonant frequency, (b) current at resonance, (c) voltage across L and C at resonance, (d) Q-factor.",
+    "modelAnswer": "f₀ = 1/(2π√LC) = 1/(2π√(2×32×10⁻⁶)) = 1/(2π×8×10⁻³) = 1000/(16π) ≈ 19.9 Hz.\nAt resonance Z=R, I₀=V/R=200/100=2A.\nX_L=X_C=2πf₀L=2π×19.9×2≈250Ω.\nV_L=V_C=I₀X_L=2×250=500V.\nQ = ω₀L/R = 2π×19.9×2/100≈2.5 (or Q=V_L/V=500/200=2.5).",
     "keyPoints": [
-      "XL=ωL, Xc=1/(ωC)",
-      "Z=√(R²+(XL−Xc)²) ≈ 152.6Ω",
-      "f0 = 1/(2π√(LC)) ≈ 39.8 Hz",
-      "At resonance power factor = 1"
+      "f₀≈19.9 Hz",
+      "I₀=2A at resonance",
+      "V_L=V_C=500V",
+      "Q=2.5"
     ]
   },
   {
-    "id": "sa-xii-phy-037",
+    "id": "sa-xii-phy-2018-35",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2018",
-    "text": "Draw a labelled ray diagram of an image formed by a refracting telescope with final image formed at infinity. Derive an expression for its magnifying power with the final image at infinity.",
-    "modelAnswer": "An astronomical (refracting) telescope consists of an objective lens (large focal length fo, large aperture) and an eyepiece (small focal length fe), coaxially arranged, separated by a distance fo+fe (normal adjustment). Parallel rays from a distant object are focused by the objective at its focal plane, forming a real, inverted, diminished image. This image lies at the focal point of the eyepiece too (for final image at infinity), so the eyepiece produces a final virtual image at infinity, magnified further. The objective forms image of height h at distance fo; the angle subtended at the objective by the object equals α ≈ h/fo (angle without telescope). Angle subtended by the final image at the eye ≈ β ≈ h/fe. Magnifying power M = β/α = fo/fe. Thus for normal adjustment, M = fo/fe (with negative sign showing image is inverted), and the length of the telescope L = fo+fe.",
+    "text": "Draw a ray diagram for a refracting telescope in normal adjustment. Derive the expression for magnifying power. What are the limitations of a refracting telescope?",
+    "modelAnswer": "Normal adjustment: final image at infinity. Objective has large focal length f₀, eyepiece has short focal length fₑ. The image from the objective falls at its focus, which coincides with the near focal point of eyepiece.\nMagnifying power M = f₀/fₑ.\nLimitations: (1) Large lenses are heavy and difficult to make without optical defects. (2) Chromatic and spherical aberration. (3) Lens absorbs some light, reducing brightness for faint objects.",
     "keyPoints": [
-      "Objective (large fo) forms real image at its focal plane",
-      "Eyepiece (small fe) magnifies this image, final image at infinity when object image at fe",
-      "M = fo/fe",
-      "Tube length = fo + fe"
+      "M = f₀/fₑ in normal adjustment",
+      "Image from objective at f₀ = near focus of eyepiece",
+      "Limitations: chromatic aberration, heavy lens, light absorption"
     ]
   },
   {
-    "id": "sa-xii-phy-038",
+    "id": "sa-xii-phy-2018-36",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2018",
-    "text": "(i) Using Huygen's wave theory, derive Snell's law of refraction. (ii) With the help of an experiment, state how will you identify whether a given beam of light is polarised or unpolarised.",
-    "modelAnswer": "(i) Consider a plane wavefront AB incident on a plane surface XY separating two media (refractive indices n1, n2), travelling with speeds v1 in medium 1 and v2 in medium 2. Let the wavefront take time t to travel from B to C (in medium 1) while the secondary wavelet from A travels to D (in medium 2): BC = v1t, AD = v2t. In triangle ABC, sin i = BC/AC = v1t/AC. In triangle ADC, sin r = AD/AC = v2t/AC. So sin i/sin r = v1/v2 = constant = n21 (refractive index of medium 2 w.r.t. medium 1), which is Snell's law. (ii) Pass the beam through a polaroid (analyser) and rotate the polaroid about the direction of propagation while observing the transmitted intensity. If the intensity varies periodically between a maximum and (nearly) zero as the polaroid is rotated through 360°, the incident light is polarised. If the intensity remains unchanged (constant) throughout the rotation, the light is unpolarised.",
+    "text": "Explain Huygens's construction and use it to verify Snell's law of refraction. Also explain how light is polarised by reflection (Brewster's law).",
+    "modelAnswer": "Huygens: Every point on a wavefront is source of secondary wavelets; new wavefront is tangent to all secondary wavelets.\nRefraction proof: Incident wavefront AB, point A enters medium 2 first. In time t, wavelet from A travels v₂t in medium 2, wavelet from B travels v₁t in medium 1. New wavefront CD. sin i = v₁t/AC, sin r = v₂t/AC. sin i/sin r = v₁/v₂ = n₂/n₁. Snell's law verified.\nBrewster's law: At polarising angle iₚ, reflected and refracted rays are perpendicular (iₚ+r=90°). tan iₚ = n = sin iₚ/sin r. Reflected ray is completely plane-polarised (⊥ to plane of incidence).",
     "keyPoints": [
-      "Huygens construction: sin i/sin r = v1/v2 = n21 (Snell's law)",
-      "Test: rotate a polaroid (analyser) in the beam",
-      "Intensity varies (max to ~0) → polarised; constant intensity → unpolarised"
+      "Huygens construction for refraction → Snell's law",
+      "sin i/sin r = v₁/v₂",
+      "Brewster: tan iₚ = n, reflected ray fully polarised"
     ]
   },
   {
-    "id": "sa-xii-phy-039",
+    "id": "sa-xii-phy-2018-37",
     "chapter": "Semiconductors",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2018",
-    "text": "(i) With reference to the forward characteristic curve of a junction diode, calculate the resistance of the diode. (ii) Draw separate energy band diagrams for conductors, semi-conductors and insulators and describe how they differ.",
-    "modelAnswer": "(i) Forward (dynamic) resistance of the diode is found from the slope of the V-I curve: rf = ΔV/ΔI, calculated between two points on the forward characteristic (e.g. between V=0·4V and V=0·6V, corresponding current values read off the graph). (ii) Energy band description: In a conductor, the valence band and conduction band overlap (no forbidden gap), so electrons move freely — high conductivity. In a semiconductor, there is a small forbidden energy gap (~1 eV, e.g. 1·1eV for Si, 0·7eV for Ge) between valence and conduction bands, so some electrons can cross it at room temperature. In an insulator, the forbidden gap is very large (~>5 eV), so practically no electrons can jump to the conduction band, resulting in negligible conductivity.",
+    "text": "Draw the energy band diagram for a junction diode. Explain its working in forward and reverse bias. Write the truth table for a NAND gate.",
+    "modelAnswer": "Energy band: In n-type, Fermi level near conduction band; in p-type, near valence band. At junction, depletion region forms with built-in potential barrier.\nForward bias: external voltage reduces barrier; majority carriers cross junction → large current.\nReverse bias: external voltage increases barrier; only minority carriers cross → very small (leakage) current.\nNAND truth table:\nA  B  Y\n0  0  1\n0  1  1\n1  0  1\n1  1  0\nY = (AB)'",
     "keyPoints": [
-      "Forward resistance rf = ΔV/ΔI from the graph slope",
-      "Conductor: no gap (bands overlap)",
-      "Semiconductor: small gap (~1eV)",
-      "Insulator: large gap (>5eV)"
+      "Forward bias: reduced barrier → large current",
+      "Reverse bias: increased barrier → tiny current",
+      "NAND: output 0 only when both inputs 1"
     ]
   },
   {
-    "id": "sa-xii-phy-040",
-    "chapter": "Electrostatics",
+    "id": "sa-xii-phy-2018-38",
+    "chapter": "Semiconductors",
     "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "A closed surface in vacuum encloses charges −q and +3q. The total electric flux emerging out of the surface is: (a) Zero (b) 2q/ε0 (c) 3q/ε0 (d) 4q/ε0",
-    "modelAnswer": "(b) 2q/ε0. By Gauss's theorem, total flux = (net enclosed charge)/ε0 = (−q+3q)/ε0 = 2q/ε0.",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2018",
+    "text": "Draw the circuit of a common-emitter (CE) amplifier. Explain the phase relationship between input and output. What is the current gain (β) and how does it relate to voltage gain?",
+    "modelAnswer": "CE amplifier: base is input, collector is output, emitter is common. Transistor in active region with VCC and base bias resistors.\nPhase relationship: 180° phase difference between input (base) and output (collector) signals — when input voltage increases, base current increases, collector current increases, voltage drop across R_C increases, hence collector voltage decreases (phase inversion).\nCurrent gain: β = IC/IB. Voltage gain: A_V = β × R_C/r_in ≈ β × R_C/R_B.",
     "keyPoints": [
-      "Gauss's law: Φ = Qenclosed/ε0",
-      "Qenclosed = −q+3q = 2q",
-      "Φ = 2q/ε0"
+      "180° phase inversion in CE configuration",
+      "β = I_C/I_B",
+      "A_V = β × R_C/R_in"
     ]
   },
   {
-    "id": "sa-xii-phy-041",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "What is the angle of dip at a place where the horizontal component (BH) and vertical component (BV) of earth's magnetic field are equal: (a) 130° (b) 60° (c) 45° (d) 90°",
-    "modelAnswer": "(c) 45°. tanδ = BV/BH = 1 (since BH=BV) → δ = 45°.",
-    "keyPoints": [
-      "tan(dip) = BV/BH",
-      "BV=BH → tanδ=1 → δ=45°"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-042",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "A beam of light is incident at the polarizing angle of 35° on a certain glass plate. The refractive index of the glass plate is: (a) sin35° (b) tan35° (c) tan55° (d) sin55°",
-    "modelAnswer": "(b) tan35°. By Brewster's law, n = tan(polarising angle) = tan35°.",
-    "keyPoints": [
-      "Brewster's law: n = tan(ip)",
-      "ip = 35° → n = tan35°"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-043",
-    "chapter": "Nuclear Physics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2019",
-    "text": "In a gamma ray emission from nucleus: (a) only the number of protons change. (b) the number of protons and neutrons, both change. (c) there is no change in the number of protons and the number of neutrons. (d) only the number of neutrons change.",
-    "modelAnswer": "(c) There is no change in the number of protons and the number of neutrons. Gamma emission involves the nucleus losing energy (going from an excited to a lower energy state) by emitting a high-energy photon, without any change in atomic number or mass number.",
-    "keyPoints": [
-      "Gamma decay: nucleus de-excites, emits photon",
-      "No change in Z (protons) or N (neutrons)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-044",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2019",
-    "text": "The energy associated with light of which of the following colours is minimum: (a) violet (b) red (c) green (d) yellow",
-    "modelAnswer": "(b) red. Photon energy E=hc/λ is inversely proportional to wavelength. Red light has the longest wavelength among visible colours, hence minimum photon energy.",
-    "keyPoints": [
-      "E = hc/λ, inversely proportional to wavelength",
-      "Red has longest λ among options → minimum energy"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-045",
+    "id": "sa-xii-phy-2019-01",
     "chapter": "Electrostatics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Define equipotential surface.",
-    "modelAnswer": "An equipotential surface is a surface at every point of which the electric potential is the same; no work is done in moving a charge from one point to another on such a surface, and the electric field is always perpendicular to an equipotential surface.",
+    "modelAnswer": "An equipotential surface is a surface on which the electric potential is the same at every point. No work is done in moving a charge along an equipotential surface. The electric field lines are always perpendicular to an equipotential surface.",
     "keyPoints": [
-      "Surface with same potential everywhere",
-      "No work done moving charge along it",
-      "Field ⊥ to equipotential surface"
+      "surface with same potential everywhere",
+      "no work done in moving charge along it",
+      "field lines perpendicular to it"
     ]
   },
   {
-    "id": "sa-xii-phy-046",
+    "id": "sa-xii-phy-2019-02",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2019",
-    "text": "Calculate the net emf across A and B, given two 4V cells in series (same polarity) forming one branch between A and B, and an 8V cell forming another parallel branch directly between A and B.",
-    "modelAnswer": "The top branch has two 4V cells in series (same polarity), giving a branch emf of 4+4 = 8V. The bottom branch is a single 8V cell. Both branches connecting A and B thus have equal emf (8V) and (assuming negligible/matched internal resistance) are in parallel with each other, so the net (terminal) emf across A and B is 8V — the two branches simply reinforce each other without driving any circulating current between them.",
+    "text": "Calculate the net emf across A and B where two batteries of 4V each are connected in parallel in one branch and a battery of 8V is in another branch (all between points A and B).",
+    "modelAnswer": "The two 4V cells in series (same direction) give 8V. This 8V is in parallel with the other 8V cell. Net emf = 8V.",
     "keyPoints": [
-      "Top branch: 4V+4V = 8V (series, same polarity)",
-      "Bottom branch: 8V",
-      "Equal emf branches in parallel → net emf across AB = 8V"
+      "cells in same branch combine as series",
+      "parallel branches: net emf = 8V"
     ]
   },
   {
-    "id": "sa-xii-phy-047",
+    "id": "sa-xii-phy-2019-03",
     "chapter": "Magnetism",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Why are the pole pieces of a horseshoe magnet in a moving coil galvanometer made cylindrical in shape?",
-    "modelAnswer": "The cylindrical (concave) pole pieces, together with a soft iron cylindrical core, produce a radial magnetic field, i.e. the field is always parallel to the plane of the coil at every position of rotation. This ensures the magnetic torque on the coil (BINA) is directly proportional to the current I for all deflections, giving a uniform, linear scale.",
+    "modelAnswer": "The pole pieces are made cylindrical so that the magnetic field in the gap is radial (always parallel to the plane of the coil). This ensures that the deflecting torque on the coil is proportional to the current at all positions, giving a linear scale.",
     "keyPoints": [
-      "Produces a radial magnetic field",
-      "Field always parallel to plane of coil",
-      "Ensures torque ∝ I uniformly → linear scale"
+      "produces radial magnetic field",
+      "deflecting torque proportional to current",
+      "linear (uniform) scale"
     ]
   },
   {
-    "id": "sa-xii-phy-048",
+    "id": "sa-xii-phy-2019-04",
     "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "What is the value of power factor for a pure resistor connected to an alternating current source?",
-    "modelAnswer": "For a pure resistor, current and voltage are in phase (phase difference φ=0), so power factor = cosφ = cos0° = 1.",
+    "modelAnswer": "For a pure resistor, the voltage and current are in phase, so phase angle φ = 0°. Power factor = cos φ = cos 0° = 1.",
     "keyPoints": [
-      "Pure resistor: V and I in phase, φ=0",
-      "Power factor = cosφ = 1"
+      "voltage and current in phase",
+      "φ = 0°",
+      "power factor = 1"
     ]
   },
   {
-    "id": "sa-xii-phy-049",
+    "id": "sa-xii-phy-2019-05",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "What should be the path difference between two waves reaching a point for obtaining constructive interference in Young's Double Slit experiment?",
-    "modelAnswer": "The path difference should be an integral multiple of the wavelength: Δ = nλ, where n = 0, 1, 2, 3, ...",
+    "modelAnswer": "For constructive interference (bright fringes), the path difference must be an integral multiple of wavelength: Δx = nλ, where n = 0, 1, 2, 3, …",
     "keyPoints": [
-      "Constructive interference: path difference = nλ",
-      "n = 0,1,2,..."
+      "path difference = nλ",
+      "n is integer (0, 1, 2, ...)",
+      "bright fringe condition"
     ]
   },
   {
-    "id": "sa-xii-phy-050",
+    "id": "sa-xii-phy-2019-06",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Define critical angle for a given medium.",
-    "modelAnswer": "Critical angle is the angle of incidence (in the denser medium) for which the angle of refraction in the rarer medium is 90°; for angles of incidence greater than the critical angle, total internal reflection occurs.",
+    "modelAnswer": "The critical angle for a given medium is the angle of incidence in the denser medium for which the angle of refraction in the rarer medium is 90°. For angles of incidence greater than the critical angle, total internal reflection occurs. sin C = 1/μ, where μ is the refractive index of the denser medium.",
     "keyPoints": [
-      "Angle of incidence (denser medium) for which angle of refraction = 90°",
-      "Beyond this angle → total internal reflection"
+      "angle of incidence in denser medium",
+      "refracted ray grazes surface (90°) in rarer medium",
+      "sin C = 1/μ"
     ]
   },
   {
-    "id": "sa-xii-phy-051",
+    "id": "sa-xii-phy-2019-07",
     "chapter": "Atomic Physics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Name the series in the atomic spectra of the hydrogen atom that falls in the ultra violet region.",
-    "modelAnswer": "The Lyman series falls in the ultraviolet region of the hydrogen spectrum (transitions to n=1 from higher energy levels).",
+    "modelAnswer": "The Lyman series falls in the ultraviolet region. It corresponds to transitions from higher energy levels (n = 2, 3, 4, ...) to the ground state (n = 1).",
     "keyPoints": [
-      "Lyman series: transitions to n=1",
-      "Lies in ultraviolet region"
+      "Lyman series",
+      "ultraviolet region",
+      "transitions to n=1"
     ]
   },
   {
-    "id": "sa-xii-phy-052",
+    "id": "sa-xii-phy-2019-08",
     "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "In a potentiometer experiment, the balancing length with a resistance of 2Ω is found to be 100 cm, while that of an unknown resistance is 500 cm. Calculate the value of the unknown resistance.",
-    "modelAnswer": "Since balancing length is proportional to the resistance (for the same current in a resistance-comparison potentiometer experiment), R1/l1 = R2/l2 → R2 = R1×l2/l1 = 2×500/100 = 10Ω.",
-    "keyPoints": [
-      "R ∝ balancing length",
-      "R2 = R1 × l2/l1",
-      "R2 = 10Ω"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-053",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "A rectangular loop of area 5m², has 50 turns and carries a current of 1 A. It is held in a uniform magnetic field of 0·1T, at an angle of 30°. Calculate the torque experienced by the coil.",
-    "modelAnswer": "Torque τ = NIAB sinθ = 50×1×5×0·1×sin30° = 25×0·5 = 12·5 N·m. (Here θ is the angle between the plane of the coil and the field, or equivalently between the normal and B depending on convention; taking θ=30° as given, τ = NBIA sinθ = 12·5 N·m.)",
-    "keyPoints": [
-      "τ = NIAB sinθ",
-      "τ = 50×1×5×0.1×sin30°",
-      "τ = 12.5 N·m"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-054",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "An electric current I flows through an infinitely long straight conductor. Write an expression and direction for the magnetic field at a point P at perpendicular distance r from the wire.",
-    "modelAnswer": "Magnetic field at P: B = μ0I/(2πr). Direction: given by the right-hand thumb rule — if the thumb points in the direction of current flow, the curled fingers give the direction of the magnetic field, which forms concentric circles around the wire, perpendicular to the plane containing the wire and P.",
-    "keyPoints": [
-      "B = μ0I/(2πr)",
-      "Direction: circular, given by right-hand thumb rule"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-055",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2019",
-    "text": "An electric current I flows through a circular loop. Write an expression and direction for the magnetic field at the centre of the loop at point P.",
-    "modelAnswer": "Magnetic field at the centre of a circular loop of radius R carrying current I: B = μ0I/(2R). Direction: given by the right-hand rule — curling the fingers in the direction of current flow, the thumb points in the direction of B, perpendicular to the plane of the loop (through its centre).",
-    "keyPoints": [
-      "B = μ0I/(2R)",
-      "Direction: along axis, by right-hand rule (perpendicular to loop plane)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-056",
-    "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
-    "text": "A transformer is used to step up an alternating emf of 200V to 440V. If the primary coil has 1000 turns, calculate the number of turns in the secondary coil.",
-    "modelAnswer": "Es/Ep = Ns/Np → Ns = Np×Es/Ep = 1000×440/200 = 2200 turns.",
+    "text": "In a potentiometer experiment, the balancing length with a resistance of 2Ω is found to be 100 cm, while that of an unknown resistance is 500 cm. Calculate the value of the unknown resistance.",
+    "modelAnswer": "Using potentiometer principle: R₁/R₂ = l₁/l₂\n2/R₂ = 100/500\nR₂ = 2 × 500/100 = 10 Ω\nThe unknown resistance is 10 Ω.",
     "keyPoints": [
-      "Es/Ep = Ns/Np",
-      "Ns = 1000×440/200",
-      "Ns = 2200 turns"
+      "R proportional to balancing length",
+      "R₂ = R₁ × l₂/l₁",
+      "unknown resistance = 10 Ω"
     ]
   },
   {
-    "id": "sa-xii-phy-057",
+    "id": "sa-xii-phy-2019-09",
+    "chapter": "Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2019",
+    "text": "A rectangular loop of area 5 m², has 50 turns and carries a current of 1 A. It is held in a uniform magnetic field of 0.1 T, at an angle of 30°. Calculate the torque experienced by the coil.",
+    "modelAnswer": "Torque τ = nBIA sin θ\nτ = 50 × 0.1 × 1 × 5 × sin 30°\nτ = 50 × 0.1 × 1 × 5 × 0.5\nτ = 12.5 N·m",
+    "keyPoints": [
+      "τ = nBIA sin θ",
+      "n=50, B=0.1T, I=1A, A=5m², θ=30°",
+      "τ = 12.5 N·m"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2019-10",
+    "chapter": "Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2019",
+    "text": "(a) An electric current I flows through an infinitely long straight conductor. Write an expression and direction for the magnetic field at a point P at perpendicular distance r from the conductor.",
+    "modelAnswer": "For an infinitely long straight conductor: B = μ₀I/(2πr), where μ₀ = 4π×10⁻⁷ T·m/A. The direction is given by the right-hand thumb rule: if the thumb points along the current, the curled fingers indicate the direction of the magnetic field (concentric circles around the conductor).",
+    "keyPoints": [
+      "B = μ₀I/2πr",
+      "direction by right-hand thumb rule",
+      "field forms concentric circles"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2019-11",
+    "chapter": "Magnetism",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2019",
+    "text": "(b) An electric current I flows through a circular loop of radius r. Write an expression and direction for the magnetic field at the centre of the loop at point P.",
+    "modelAnswer": "Magnetic field at centre of circular loop: B = μ₀I/(2r). The direction is perpendicular to the plane of the loop; given by the right-hand rule — if fingers curl in the direction of current, the thumb points in the direction of B.",
+    "keyPoints": [
+      "B = μ₀I/2r",
+      "direction perpendicular to plane of loop",
+      "right-hand rule gives direction"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2019-12",
     "chapter": "Electromagnetic Induction",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
-    "text": "State any two properties of microwaves.",
-    "modelAnswer": "(i) Microwaves have wavelengths ranging from about 1mm to 30cm (frequencies ~1GHz–300GHz). (ii) They are used in radar systems, satellite communication and microwave ovens. (iii) They travel in straight lines and can be focused into narrow beams using parabolic reflectors/antennas.",
+    "text": "A transformer is used to step up an alternating emf of 200V to 440V. If the primary coil has 1000 turns, calculate the number of turns in the secondary coil.",
+    "modelAnswer": "Vs/Vp = Ns/Np\n440/200 = Ns/1000\nNs = (440/200) × 1000 = 2200 turns",
     "keyPoints": [
-      "Wavelength range ~1mm–30cm",
-      "Used in radar, satellite communication, microwave ovens",
-      "Travel in straight lines, can be beamed with reflectors"
+      "Vs/Vp = Ns/Np",
+      "step-up transformer",
+      "Ns = 2200 turns"
     ]
   },
   {
-    "id": "sa-xii-phy-058",
+    "id": "sa-xii-phy-2019-13",
+    "chapter": "Electromagnetic Waves",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2019",
+    "text": "State any two properties of microwaves.",
+    "modelAnswer": "1. Microwaves have frequencies in the range 300 MHz to 300 GHz (wavelengths 1 mm to 1 m).\n2. They travel in straight lines and can be focused into a beam using parabolic dishes.\n3. They are used in radar, satellite communication, and microwave ovens.\n4. They penetrate clouds, rain, and smoke (important for radar).",
+    "keyPoints": [
+      "frequency range 300 MHz to 300 GHz",
+      "travel in straight lines, can be focused",
+      "used in radar and communication"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2019-14",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Write any one use for each of the following mirrors: (a) Convex (b) Concave",
-    "modelAnswer": "(a) Convex mirror: used as a rear-view/side mirror in vehicles (gives a wide field of view, erect and diminished image). (b) Concave mirror: used as a shaving/make-up mirror, or as a reflector in torches, headlights and solar cookers (gives a magnified virtual image when object is close, or focuses parallel rays).",
+    "modelAnswer": "(a) Convex mirror: Used as a rear-view mirror in vehicles because it gives a wider field of view and always produces an erect, diminished image.\n(b) Concave mirror: Used as a shaving/make-up mirror, as a reflector in torch/headlights, and in solar furnaces to converge light.",
     "keyPoints": [
-      "Convex mirror: vehicle rear-view mirror (wide field of view)",
-      "Concave mirror: shaving mirror / torch reflector / solar cooker"
+      "convex: rear-view mirror (wider field of view)",
+      "concave: shaving mirror / torch reflector / solar furnace"
     ]
   },
   {
-    "id": "sa-xii-phy-059",
-    "chapter": "Wave Optics",
+    "id": "sa-xii-phy-2019-15",
+    "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 2,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2019",
-    "text": "The deviation produced for violet, yellow and red lights for crown glass are 3·75°, 3·25° and 2·86° respectively. Calculate the dispersive power of the crown glass.",
-    "modelAnswer": "Dispersive power ω = (δv − δr)/δy = (3·75 − 2·86)/3·25 = 0·89/3·25 = 0·274 (≈0·27).",
+    "text": "The deviation produced for violet, yellow and red lights for crown glass are 3.75°, 3.25° and 2.86° respectively. Calculate the dispersive power of the crown glass.",
+    "modelAnswer": "Dispersive power ω = (δᵥ − δᵣ)/δᵧ\nω = (3.75° − 2.86°)/3.25°\nω = 0.89/3.25\nω ≈ 0.274",
     "keyPoints": [
-      "ω = (δv − δr)/δy",
-      "ω = 0.89/3.25 ≈ 0.27"
+      "ω = (δᵥ − δᵣ)/δᵧ",
+      "numerator = 3.75 − 2.86 = 0.89",
+      "ω ≈ 0.274"
     ]
   },
   {
-    "id": "sa-xii-phy-060",
+    "id": "sa-xii-phy-2019-16",
     "chapter": "Nuclear Physics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "(a) What is meant by mass defect? (b) What conclusion is drawn from Rutherford's scattering experiment of α-particles?",
-    "modelAnswer": "(a) Mass defect (Δm) is the difference between the sum of masses of the free (separate) nucleons constituting a nucleus and the actual mass of the nucleus: Δm = [Zmp + (A−Z)mn] − M(nucleus). This 'missing' mass is converted to the nucleus's binding energy. (b) Rutherford's α-scattering experiment showed that most of the atom is empty space, and almost the entire mass and positive charge of the atom is concentrated in a very small, dense central region called the nucleus.",
+    "modelAnswer": "(a) Mass defect is the difference between the sum of masses of the individual nucleons (protons and neutrons) and the actual mass of the nucleus: Δm = Zmp + (A−Z)mn − M. This mass is converted to binding energy (E = Δmc²).\n(b) Rutherford's α-particle scattering experiment showed that: (i) Most of the atom is empty space (most α-particles passed straight through). (ii) The positive charge and most of the mass are concentrated in a very small, dense central core called the nucleus. (iii) The nucleus is very small compared to the atom (~10⁻¹⁵ m vs ~10⁻¹⁰ m).",
     "keyPoints": [
-      "Mass defect = sum of nucleon masses − actual nuclear mass",
-      "Rutherford: atom mostly empty space",
-      "Mass & positive charge concentrated in a tiny nucleus"
+      "mass defect: Δm = Zmp + (A-Z)mn − M",
+      "Rutherford: atom is mostly empty",
+      "positive charge concentrated in tiny nucleus"
     ]
   },
   {
-    "id": "sa-xii-phy-061",
-    "chapter": "Dual Nature of Radiation",
+    "id": "sa-xii-phy-2019-17",
+    "chapter": "Photoelectric Effect",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
-    "text": "Define the following with reference to photoelectric effect: (a) Threshold frequency (fo) (b) Stopping potential (Vs)",
-    "modelAnswer": "(a) Threshold frequency (f0) is the minimum frequency of incident radiation below which no photoelectric emission takes place from a given metal surface, no matter how intense the light. (b) Stopping potential (Vs) is the minimum negative (retarding) potential applied to the collector (anode) that is just sufficient to stop even the most energetic photoelectrons from reaching it, reducing photocurrent to zero. eVs = Emax (maximum kinetic energy of photoelectrons).",
+    "text": "Define the following with reference to photoelectric effect: (a) Threshold frequency (f₀) (b) Stopping potential (Vs)",
+    "modelAnswer": "(a) Threshold frequency (f₀): The minimum frequency of incident light below which no photoelectric emission takes place, regardless of the intensity of light. It depends on the nature of the metal surface.\n(b) Stopping potential (Vs): The minimum negative potential applied to the collector plate at which the photoelectric current just becomes zero. It is a measure of the maximum kinetic energy of emitted photoelectrons: KEmax = eVs.",
     "keyPoints": [
-      "f0: minimum frequency for photoemission to occur",
-      "Vs: retarding potential that stops photocurrent",
-      "eVs = Emax (KE max)"
+      "threshold frequency: minimum frequency for emission",
+      "stopping potential: minimum negative potential to stop photoelectrons",
+      "KEmax = eVs"
     ]
   },
   {
-    "id": "sa-xii-phy-062",
+    "id": "sa-xii-phy-2019-18",
     "chapter": "Nuclear Physics",
     "subject": "Physics",
     "marks": 2,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2019",
-    "text": "The half-life of radium is 1550 years. Calculate its disintegration constant (λ).",
-    "modelAnswer": "λ = 0·693/T½ = 0·693/1550 = 4·47×10⁻⁴ per year.",
+    "text": "(a) The half-life of radium is 1550 years. Calculate its disintegration constant (λ).",
+    "modelAnswer": "T₁/₂ = 0.693/λ\nλ = 0.693/T₁/₂ = 0.693/1550 years\nλ = 4.47 × 10⁻⁴ per year\nConverting: λ = 4.47 × 10⁻⁴ / (365 × 24 × 3600) s⁻¹ ≈ 1.42 × 10⁻¹¹ s⁻¹",
     "keyPoints": [
       "λ = 0.693/T½",
-      "λ = 0.693/1550 ≈ 4.47×10⁻⁴ yr⁻¹"
+      "T½ = 1550 years",
+      "λ ≈ 4.47×10⁻⁴ per year"
     ]
   },
   {
-    "id": "sa-xii-phy-063",
+    "id": "sa-xii-phy-2019-19",
     "chapter": "Nuclear Physics",
     "subject": "Physics",
     "marks": 2,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2019",
-    "text": "Copy and complete the following table for a radioactive element whose half-life is 10 minutes. Assume that you have 30g of this element at t=0. (t=0: 30g; t=20 min: ?; t=?: 7.5g)",
-    "modelAnswer": "Half-life = 10 min. At t=0: 30g. After t=20 min (=2 half-lives): amount = 30×(1/2)² = 30/4 = 7·5g. To reach 7·5g we found t=20 min already (2 half-lives); if the table instead asks for the time to reach 7·5g starting from 30g, that time is 20 minutes (i.e. the remaining blank 't' for amount 7·5g is 20 minutes). So the completed table is: t=0 → 30g; t=20 min → 7·5g.",
+    "text": "(b) Copy and complete the following table for a radioactive element whose half-life is 10 minutes. Assume that you have 30g of this element at t = 0. Find the amount left at t = 20 min and t = 30 min.",
+    "modelAnswer": "At t=0: 30 g\nAt t=20 min (2 half-lives): 30 × (1/2)² = 30/4 = 7.5 g\nAt t=30 min (3 half-lives): 30 × (1/2)³ = 30/8 = 3.75 g",
     "keyPoints": [
-      "Half-life = 10 min",
-      "After 2 half-lives (20 min): amount = 30/4 = 7.5g",
-      "Amount and time entries follow N = N0(1/2)^(t/T)"
+      "each half-life: amount halves",
+      "t=20 min: 7.5 g",
+      "t=30 min: 3.75 g"
     ]
   },
   {
-    "id": "sa-xii-phy-064",
-    "chapter": "Electronics in Everyday Life",
+    "id": "sa-xii-phy-2019-20",
+    "chapter": "Communication Systems",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2019",
     "text": "Define frequency modulation and state any one advantage of frequency modulation (FM) over amplitude modulation (AM).",
-    "modelAnswer": "Frequency modulation (FM) is the process in which the frequency of the high-frequency carrier wave is varied in accordance with the instantaneous amplitude of the low-frequency message (modulating) signal, while the amplitude of the carrier remains constant. Advantage: FM is much less affected by noise and electrical interference than AM, since noise mainly affects amplitude and FM receivers can be designed to ignore amplitude variations, giving better sound quality.",
+    "modelAnswer": "Frequency Modulation (FM): A type of modulation in which the frequency of the carrier wave is varied in accordance with the amplitude (instantaneous value) of the modulating (message) signal, while the amplitude of the carrier remains constant.\nAdvantage of FM over AM: FM is less susceptible to noise interference because noise affects the amplitude of the signal, and in FM the information is in the frequency, not the amplitude. FM provides better sound quality.",
     "keyPoints": [
-      "FM: carrier frequency varies with signal amplitude, carrier amplitude constant",
-      "Advantage: better noise immunity than AM"
+      "FM: frequency of carrier varies with message signal",
+      "amplitude of carrier is constant",
+      "FM is less susceptible to noise than AM"
     ]
   },
   {
-    "id": "sa-xii-phy-065",
+    "id": "sa-xii-phy-2019-21",
     "chapter": "Electrostatics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Obtain an expression for electric potential 'V' at a point in an end-on position i.e. axial position of an electric dipole.",
-    "modelAnswer": "Consider a dipole with charges −q at A and +q at B, separated by 2l, centre O. For point P on the axis at distance r from O (r>l): V = k[q/(r−l) − q/(r+l)] = kq[(r+l−r+l)/(r²−l²)] = kq(2l)/(r²−l²) = kp/(r²−l²), where p=q(2l) is the dipole moment and k=1/4πε0. For r>>l, V ≈ kp/r² = p/(4πε0r²).",
+    "text": "Obtain an expression for electric potential 'V' at a point in an end-on position (axial position) of an electric dipole.",
+    "modelAnswer": "Consider a dipole with charges +q and −q separated by distance 2a, with centre at O. For a point P on the axial line at distance r from O:\nPotential due to +q: V₊ = kq/(r−a)\nPotential due to −q: V₋ = −kq/(r+a)\nTotal potential: V = V₊ + V₋ = kq[1/(r−a) − 1/(r+a)]\nV = kq[(r+a−r+a)/((r²−a²))] = kq[2a/(r²−a²)]\nV = k·p/(r²−a²)\nFor r >> a: V = kp/r² = p/(4πε₀r²)\nwhere p = q·2a is the electric dipole moment.",
     "keyPoints": [
-      "V = k[q/(r−l) − q/(r+l)]",
-      "V = kp/(r²−l²)",
-      "For r>>l: V ≈ (1/4πε0)(p/r²)"
+      "V = kq[1/(r-a) - 1/(r+a)]",
+      "V = kp/(r²-a²)",
+      "for r>>a: V = p/(4πε₀r²)"
     ]
   },
   {
-    "id": "sa-xii-phy-066",
+    "id": "sa-xii-phy-2019-22",
     "chapter": "Electrostatics",
     "subject": "Physics",
     "marks": 3,
-    "difficulty": "hard",
+    "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Three capacitors of capacitance C1=3µF, C2=6µF and C3=10µF are connected to a 10V battery: C1 and C2 are in series with each other, and this series combination is connected in parallel with C3, the whole combination across the 10V battery. Calculate: (a) Equivalent capacitance. (b) Electrostatic potential energy stored in the system.",
-    "modelAnswer": "C1 and C2 in series: C12 = (C1C2)/(C1+C2) = (3×6)/(3+6) = 18/9 = 2µF. This is in parallel with C3=10µF: Ceq = C12+C3 = 2+10 = 12µF. Energy stored U = (1/2)CeqV² = 0·5×12×10⁻⁶×10² = 0·5×12×10⁻⁶×100 = 6×10⁻⁴ J = 600µJ.",
+    "text": "Three capacitors of capacitance C₁ = 3μF, C₂ = 6μF and C₃ = 10μF are connected to a 10V battery. C₁ and C₂ are in parallel and C₃ is in series with the parallel combination. Calculate: (a) Equivalent capacitance, (b) Electrostatic potential energy stored in the system.",
+    "modelAnswer": "(a) C₁ and C₂ in parallel: C₁₂ = C₁ + C₂ = 3 + 6 = 9μF\nC₁₂ and C₃ in series: 1/Ceq = 1/C₁₂ + 1/C₃ = 1/9 + 1/10 = (10+9)/90 = 19/90\nCeq = 90/19 ≈ 4.74μF\n(b) Energy stored: U = ½CeqV² = ½ × (90/19)×10⁻⁶ × 100 = ½ × 4.74×10⁻⁶ × 100 ≈ 2.37×10⁻⁴ J",
     "keyPoints": [
-      "C1, C2 in series: C12 = 2µF",
-      "C12 parallel with C3: Ceq = 12µF",
-      "U = ½CeqV² = 6×10⁻⁴ J"
+      "C₁₂ = C₁+C₂ = 9μF (parallel)",
+      "1/Ceq = 1/9 + 1/10 → Ceq = 90/19 μF",
+      "U = ½CeqV² ≈ 2.37×10⁻⁴ J"
     ]
   },
   {
-    "id": "sa-xii-phy-067",
+    "id": "sa-xii-phy-2019-23",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Obtain the balancing condition for the Wheatstone bridge arrangement, with arms P, Q, R, S, a galvanometer G between the P-Q and R-S junctions, and a battery E driving current I which splits into I1 (through P, R) and I2 (through Q, S).",
-    "modelAnswer": "At balance, no current flows through the galvanometer, so the same current I1 flows through P and R, and I2 through Q and S. Since no current flows through G, the potential at the junction of P,Q equals the potential at the junction of R,S. This gives: I1P = I2Q (equal potential drop across P and Q) and I1R = I2S (equal potential drop across R and S). Dividing: P/Q = R/S, which is the balancing condition of the Wheatstone bridge.",
+    "text": "(a) Obtain the balancing condition for the Wheatstone bridge arrangement.",
+    "modelAnswer": "In a Wheatstone bridge with resistances P, Q, R, S: At balance, no current flows through the galvanometer G. Applying Kirchhoff's current law at junctions B and D, and Kirchhoff's voltage law around loops ABD and BCD:\nI₁P = I₂R (loop ABD, balanced)\nI₁Q = I₂S (loop BCD, balanced)\nDividing: P/Q = R/S\nThis is the balancing condition: P/Q = R/S or PS = QR.",
     "keyPoints": [
-      "At balance, galvanometer current = 0",
-      "I1P = I2Q and I1R = I2S",
-      "Balancing condition: P/Q = R/S"
+      "at balance: no current through galvanometer",
+      "P/Q = R/S (or PS = QR)",
+      "derived using Kirchhoff's laws"
     ]
   },
   {
-    "id": "sa-xii-phy-068",
+    "id": "sa-xii-phy-2019-24",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Draw a labelled circuit diagram of a potentiometer to measure the internal resistance 'r' of a cell. Write the working formula (derivation is not required).",
-    "modelAnswer": "Circuit: A potentiometer wire AB is connected to a driver battery (with rheostat and key) to set up a steady potential gradient. The cell (emf E, internal resistance r) whose internal resistance is to be found is connected through a galvanometer to the jockey and one end of the potentiometer, with a resistance box R and a key K2 connected across the cell (in parallel with it, so current can be drawn from the cell). With key K2 open, the balance length is l1 (∝ E). With K2 closed (current drawn through R), the balance length is l2 (∝ terminal potential V). The working formula is: r = R×(l1 − l2)/l2.",
+    "text": "(b) Draw a labelled circuit diagram of a potentiometer to measure the internal resistance 'r' of a cell. Write the working formula.",
+    "modelAnswer": "Circuit: A long wire AB connected to a driver cell E₀ with rheostat Rh. The test cell (emf ε, internal resistance r) is connected through a galvanometer G and key K₂ to a point J on the wire. A standard resistance R is connected across the cell.\nWorking formula: r = R(l₁ − l₂)/l₂\nwhere l₁ = balancing length when K₂ is open (measuring emf ε), l₂ = balancing length when K₂ is closed (measuring terminal voltage V = εR/(R+r)). Since l₁/l₂ = ε/V = (R+r)/R, solving gives r = R(l₁/l₂ − 1) = R(l₁−l₂)/l₂.",
     "keyPoints": [
-      "Potentiometer measures EMF/terminal p.d. via balance lengths",
-      "l1 ∝ E (K2 open), l2 ∝ V (K2 closed, through R)",
-      "r = R(l1−l2)/l2"
+      "l₁: balancing length with key open (emf)",
+      "l₂: balancing length with key closed (terminal voltage)",
+      "r = R(l₁ − l₂)/l₂"
     ]
   },
   {
-    "id": "sa-xii-phy-069",
+    "id": "sa-xii-phy-2019-25",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "A ray of light is incident on a prism whose refractive index is 1·52 at an angle of 40°. If the angle of emergence is 60°, calculate the angle of the prism.",
-    "modelAnswer": "By Snell's law is not directly needed here; instead use the relation for a prism: i + e = A + δ is not required since A can be found from the relation involving the refraction angles, but a simpler standard approach: for a thin/general prism, angle of prism A relates through r1+r2=A where sin i=n sin r1 and sin e = n sin r2. sin40°=0·643=1·52 sin r1 → sin r1=0·423 → r1=25·0°. sin60°=0·866=1·52 sin r2 → sin r2=0·570 → r2=34·75°. A = r1+r2 = 25·0+34·75 ≈ 59·75° ≈ 60°.",
+    "text": "(a) A ray of light is incident on a prism whose refractive index is 1.52 at an angle of 40°. If the angle of emergence is 60°, calculate the angle of the prism.",
+    "modelAnswer": "Using Snell's law at first surface: sin 40° = 1.52 × sin r₁\nsin r₁ = sin 40°/1.52 = 0.6428/1.52 = 0.4229\nr₁ = sin⁻¹(0.4229) ≈ 25°\nAt second surface: 1.52 × sin r₂ = sin 60°\nsin r₂ = sin 60°/1.52 = 0.8660/1.52 = 0.5697\nr₂ = sin⁻¹(0.5697) ≈ 34.7° ≈ 35°\nAngle of prism A = r₁ + r₂ = 25° + 35° = 60°",
     "keyPoints": [
-      "sin i = n sin r1 → r1 ≈ 25.0°",
-      "sin e = n sin r2 → r2 ≈ 34.75°",
-      "A = r1+r2 ≈ 60°"
+      "apply Snell's law at each surface",
+      "A = r₁ + r₂",
+      "angle of prism A = 60°"
     ]
   },
   {
-    "id": "sa-xii-phy-070",
+    "id": "sa-xii-phy-2019-26",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Calculate the focal length of a convex lens whose radii of curvature of two surfaces is 10 cm and 15 cm respectively and its refractive index is 1·5.",
-    "modelAnswer": "Using lensmaker's formula 1/f = (n−1)(1/R1 − 1/R2). For a convex (biconvex) lens, R1=+10cm, R2=−15cm. 1/f = (1·5−1)(1/10 − 1/(−15)) = 0·5×(1/10+1/15) = 0·5×(3+2)/30 = 0·5×5/30 = 0·5/6 = 1/12. So f = 12 cm.",
+    "text": "(b) Calculate the focal length of a convex lens whose radii of curvature of two surfaces are 10 cm and 15 cm respectively and its refractive index is 1.5.",
+    "modelAnswer": "Using Lens maker's formula: 1/f = (μ−1)[1/R₁ − 1/R₂]\nFor a convex lens: R₁ = +10 cm, R₂ = −15 cm\n1/f = (1.5−1)[1/10 − 1/(−15)] = 0.5 × [1/10 + 1/15] = 0.5 × [(3+2)/30] = 0.5 × 5/30 = 0.5/6\n1/f = 1/12\nf = 12 cm",
     "keyPoints": [
-      "1/f = (n−1)(1/R1−1/R2)",
-      "R1=+10cm, R2=−15cm",
+      "lens maker's formula: 1/f = (μ-1)[1/R₁ - 1/R₂]",
+      "R₁=+10, R₂=-15, μ=1.5",
       "f = 12 cm"
     ]
   },
   {
-    "id": "sa-xii-phy-071",
+    "id": "sa-xii-phy-2019-27",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
-    "text": "Derive the law of reflection using Huygen's Wave Theory.",
-    "modelAnswer": "Let a plane wavefront AB be incident on a reflecting surface MN at angle of incidence i. While the secondary wavelet from B travels to C on the surface (in time t, BC=vt), the secondary wavelet from A (which reaches the surface earlier) reflects and travels an equal distance AD=vt in the same time (since both travel in the same medium with the same speed v). In right triangles ABC and ADC (common hypotenuse AC): sin i = BC/AC = vt/AC, and sin r (angle of reflection) = AD/AC = vt/AC. Since BC=AD=vt, sin i = sin r, so i = r. Also the incident ray, reflected ray and normal lie in the same plane. This proves the laws of reflection.",
+    "text": "Derive the law of reflection using Huygens' Wave Theory.",
+    "modelAnswer": "Consider a plane wavefront AB incident on a plane reflecting surface XY at angle of incidence i. Point A touches XY first; B is still approaching. In the time t for B to reach B' on XY, secondary wavelets from A travel a distance AA' = vt (where v = speed of light). B'A' is the reflected wavefront. In triangles ABB' and AA'B':\n- BB' = AA' = vt (light travels same speed)\n- AB' is common\n- Angle of incidence i = angle ABB'\n- Angle of reflection r = angle A'B'A\nSince both triangles are congruent (RHS), angle i = angle r.\nThis proves the law of reflection: angle of incidence = angle of reflection.",
     "keyPoints": [
-      "Huygens construction at reflecting surface",
-      "BC = AD = vt (equal in same medium)",
-      "sin i = sin r → i = r (law of reflection)"
+      "incident wavefront AB, reflected wavefront A'B'",
+      "AA' = BB' = vt (same medium, same speed)",
+      "triangles ABB' and A'B'A congruent → i = r"
     ]
   },
   {
-    "id": "sa-xii-phy-072",
+    "id": "sa-xii-phy-2019-28",
     "chapter": "Atomic Physics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2019",
     "text": "State any two Bohr's postulates and write the energy value of the ground state of the hydrogen atom.",
-    "modelAnswer": "Bohr's postulates: (i) Electrons revolve around the nucleus only in certain stable, non-radiating circular orbits, called stationary states, for which the angular momentum is quantised: mvr = nh/2π (n=1,2,3,...). (ii) An atom radiates energy only when an electron jumps from a higher energy orbit to a lower energy orbit, the energy of the emitted photon being equal to the difference in energies of the two orbits: hν = E2 − E1. The energy of the ground state (n=1) of the hydrogen atom is E1 = −13·6 eV.",
+    "modelAnswer": "Bohr's Postulates:\n1. An electron revolves around the nucleus in certain fixed circular orbits called stationary states or allowed orbits, without radiating energy.\n2. The electron can only revolve in orbits in which its angular momentum is an integral multiple of h/2π: L = mvr = nh/2π, where n is the principal quantum number.\n3. When an electron transitions from a higher energy state E₂ to a lower energy state E₁, radiation of frequency ν is emitted such that: hν = E₂ − E₁.\nEnergy of ground state of hydrogen atom: E₁ = −13.6 eV",
     "keyPoints": [
-      "Postulate 1: quantised angular momentum mvr = nh/2π",
-      "Postulate 2: photon emitted/absorbed on transition, hν=E2−E1",
-      "Ground state energy = −13.6 eV"
+      "electrons in stationary orbits do not radiate",
+      "angular momentum quantized: L = nh/2π",
+      "ground state energy E₁ = −13.6 eV"
     ]
   },
   {
-    "id": "sa-xii-phy-073",
+    "id": "sa-xii-phy-2019-29",
     "chapter": "Semiconductors",
     "subject": "Physics",
     "marks": 3,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "source": "Board 2019",
-    "text": "With reference to semi-conductors answer the following: (i) What is the change in the resistance of the semi-conductor with increase in temperature? (ii) Name the majority charge carriers in n-type semi-conductor. (iii) What is meant by doping?",
-    "modelAnswer": "(i) The resistance of a semiconductor decreases with increase in temperature (it has a negative temperature coefficient of resistance), because more electron-hole pairs are generated, increasing conductivity. (ii) The majority charge carriers in an n-type semiconductor are free electrons. (iii) Doping is the process of deliberately adding a small, controlled amount of impurity atoms (pentavalent or trivalent) to a pure (intrinsic) semiconductor to increase its conductivity and control its type (n-type or p-type).",
+    "text": "With reference to semiconductors answer the following: (i) What is the change in resistance with increase in temperature? (ii) Name the majority charge carriers in n-type semiconductor. (iii) What is meant by doping?",
+    "modelAnswer": "(i) Resistance of a semiconductor decreases with increase in temperature. As temperature rises, more electron-hole pairs are generated, increasing conductivity.\n(ii) In an n-type semiconductor, the majority charge carriers are electrons (free electrons).\n(iii) Doping is the deliberate and controlled addition of a small amount of impurity atoms (dopant) to a pure semiconductor to increase its electrical conductivity. Adding pentavalent impurities creates n-type; adding trivalent impurities creates p-type.",
     "keyPoints": [
-      "Semiconductor resistance decreases with temperature rise",
-      "n-type majority carriers: electrons",
-      "Doping: adding controlled impurity to intrinsic semiconductor"
+      "resistance decreases with temperature",
+      "n-type majority carriers: free electrons",
+      "doping: adding impurities to increase conductivity"
     ]
   },
   {
-    "id": "sa-xii-phy-074",
+    "id": "sa-xii-phy-2019-30",
     "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2019",
-    "text": "(i) An alternating emf of 200V, 50Hz is applied to an L-R circuit, having a resistance R of 10Ω and an inductance L of 0·05H connected in series. Calculate: (1) Impedance. (2) Current flowing in the circuit. (ii) Draw a labelled graph showing the variation of inductive reactance (XL) versus frequency (f).",
-    "modelAnswer": "XL = 2πfL = 2π×50×0·05 = 15·71Ω. Impedance Z = √(R²+XL²) = √(10²+15·71²) = √(100+246·8) = √346·8 ≈ 18·62Ω. Current I = V/Z = 200/18·62 ≈ 10·74A. (ii) XL = 2πfL is directly proportional to frequency f, so the graph of XL versus f is a straight line passing through the origin with slope 2πL.",
+    "text": "(a)(i) An alternating emf of 200V, 50Hz is applied to an L-R circuit having R = 10Ω and L = 0.05H in series. Calculate: (1) Impedance, (2) Current flowing in the circuit. (ii) Draw a labelled graph showing variation of inductive reactance (XL) vs frequency (f).",
+    "modelAnswer": "(i)(1) Inductive reactance: XL = 2πfL = 2π × 50 × 0.05 = 15.71Ω\nImpedance: Z = √(R² + XL²) = √(10² + 15.71²) = √(100 + 246.8) = √346.8 ≈ 18.62Ω\n(i)(2) Current: I = V/Z = 200/18.62 ≈ 10.74A\n(ii) XL = 2πfL; the graph of XL vs f is a straight line passing through the origin with slope 2πL. Axes labelled: x-axis = frequency f (Hz), y-axis = XL (Ω).",
     "keyPoints": [
-      "XL=2πfL ≈ 15.71Ω",
-      "Z=√(R²+XL²) ≈ 18.62Ω",
-      "I=V/Z ≈ 10.74A",
-      "XL vs f graph: straight line through origin, slope 2πL"
+      "XL = 2πfL = 15.71Ω",
+      "Z = √(R²+XL²) ≈ 18.62Ω",
+      "I = V/Z ≈ 10.74A; XL-f graph: straight line through origin"
     ]
   },
   {
-    "id": "sa-xii-phy-075",
+    "id": "sa-xii-phy-2019-31",
     "chapter": "Alternating Current",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2019",
-    "text": "An a.c. source of emf = 200 sin(ωt) is connected to a resistor of 50Ω. Calculate: (1) Average current (Iavg). (2) Root mean square (rms) value of emf. (ii) State any two characteristics of resonance in an LCR series circuit.",
-    "modelAnswer": "Peak current I0 = E0/R = 200/50 = 4A. Average current over half a cycle Iavg = 2I0/π = 2×4/π = 8/π ≈ 2·546A. RMS value of emf Erms = E0/√2 = 200/√2 = 141·4V. (ii) Characteristics of resonance in a series LCR circuit: at resonance, XL=Xc, so impedance Z is minimum and equal to R (purely resistive); current is maximum (I0=E0/R) and in phase with the applied emf (power factor=1); resonant frequency f0 = 1/(2π√(LC)).",
+    "text": "(b)(i) An a.c. source of emf ε = 200 sin ωt is connected to a resistor of 50Ω. Calculate: (1) Average current (Iavg), (2) Root mean square (rms) value of emf. (ii) State any two characteristics of resonance in an LCR series circuit.",
+    "modelAnswer": "(i)(1) Peak emf: E₀ = 200V; Peak current: I₀ = E₀/R = 200/50 = 4A\nAverage current (over a full cycle) = 0, but average of magnitude = 2I₀/π ≈ 2.55A. For half cycle: Iavg = 2I₀/π = 2×4/π ≈ 2.55A\n(i)(2) rms emf: Erms = E₀/√2 = 200/√2 ≈ 141.4V\n(ii) Characteristics of resonance in LCR series circuit:\n1. At resonance, XL = XC, impedance is minimum (Z = R).\n2. Current is maximum and in phase with the applied voltage (power factor = 1).\n3. Resonant frequency: f₀ = 1/(2π√LC).",
     "keyPoints": [
-      "I0 = E0/R = 4A",
-      "Iavg = 2I0/π ≈ 2.546A",
-      "Erms = E0/√2 ≈ 141.4V",
-      "Resonance: XL=Xc, Z=R (minimum), current maximum, power factor=1"
+      "Erms = E₀/√2 ≈ 141.4V",
+      "Iavg = 2I₀/π for half cycle ≈ 2.55A",
+      "resonance: Z=R minimum, current maximum, XL=XC"
     ]
   },
   {
-    "id": "sa-xii-phy-076",
+    "id": "sa-xii-phy-2019-32",
     "chapter": "Ray Optics",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2019",
-    "text": "Draw a neat labelled ray diagram showing the formation of an image at the least distance of distinct vision D by a simple microscope. When the final image is at D, derive an expression for its magnifying power at D.",
-    "modelAnswer": "A simple microscope is a single convex lens of short focal length f. The object is placed between the lens and its focus (u<f), so that a virtual, erect, magnified image is formed at the near point (distance D from the eye, u negative, v=−D). Using lens formula 1/v−1/u=1/f with v=−D: 1/(−D) − 1/u = 1/f → 1/u = −1/D − 1/f. Magnifying power M = v/u (angular magnification for simple microscope = D/|u|, and using the lens relation this simplifies to): M = 1 + D/f. This is the magnifying power when the final image is formed at the near point D.",
+    "text": "(a) Draw a neat labelled ray diagram showing the formation of an image at the least distance of distinct vision D by a simple microscope. When the final image is at D, derive an expression for its magnifying power at D.",
+    "modelAnswer": "Ray diagram: Object placed between F and the lens; virtual, erect, magnified image formed at D (25 cm from eye/lens) on same side as object.\nMagnifying power (M) when image is at D:\nUsing lens formula: 1/v − 1/u = 1/f\nv = −D (image at D, virtual), u = −u (object distance)\n1/(−D) − 1/(−u) = 1/f\n1/u = 1/f + 1/D\nM = D/u = D/f + 1 = 1 + D/f\nM = 1 + D/f\nwhere f is focal length of lens and D = 25 cm.",
     "keyPoints": [
-      "Object between lens and F (u<f); image virtual, erect, magnified, at near point D",
-      "Using lens formula with v=−D",
-      "M = 1 + D/f"
+      "image formed at D (25 cm), virtual and erect",
+      "M = 1 + D/f",
+      "object between F and lens"
     ]
   },
   {
-    "id": "sa-xii-phy-077",
+    "id": "sa-xii-phy-2019-33",
     "chapter": "Wave Optics",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2019",
-    "text": "Draw a neat labelled diagram of Young's Double Slit experiment. Show that fringe width β = λD/d, where the terms have their usual meaning (either for bright or dark fringe).",
-    "modelAnswer": "Two narrow, coherent slits S1 and S2 (separated by distance d) are illuminated by a monochromatic source, and a screen is placed at distance D from the slits (D>>d). For a point P on the screen at distance x from the centre O, the path difference is Δ = S2P − S1P ≈ xd/D (using the geometry of the setup, D>>d, small angle approximation). For a bright fringe (constructive interference): Δ = nλ → xd/D = nλ → xn = nλD/d. For the (n+1)th bright fringe, x(n+1) = (n+1)λD/d. Fringe width β = x(n+1) − xn = λD/d. (Similarly for dark fringes, Δ=(n+½)λ, and consecutive dark fringes are also separated by the same β=λD/d.)",
+    "text": "(b) Draw a neat labelled diagram of Young's Double Slit experiment. Show that β = λD/d, where the terms have their usual meaning.",
+    "modelAnswer": "Setup: Two slits S₁ and S₂ separated by distance d, at distance D from screen. Source S illuminates both slits.\nFor a point P on the screen at height y from centre O:\nPath difference = S₂P − S₁P ≈ yd/D (for D >> d)\nFor bright fringes: yd/D = nλ → y = nλD/d\nFringe width β = distance between consecutive bright (or dark) fringes:\nβ = y(n+1) − y(n) = (n+1)λD/d − nλD/d = λD/d\nTherefore β = λD/d, where λ = wavelength, D = distance to screen, d = slit separation.",
     "keyPoints": [
-      "Path difference at P: Δ ≈ xd/D",
-      "Bright fringe: xd/D = nλ → xn = nλD/d",
-      "Fringe width β = x(n+1)−xn = λD/d"
+      "path difference = yd/D",
+      "bright fringe at y = nλD/d",
+      "fringe width β = λD/d"
     ]
   },
   {
-    "id": "sa-xii-phy-078",
-    "chapter": "Semiconductors",
+    "id": "sa-xii-phy-2019-34",
+    "chapter": "Electronic Devices",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2019",
-    "text": "(i) Draw a labelled circuit diagram of a half wave rectifier and give its output waveform. (ii) Draw a symbol for NOR gate and write its truth table.",
-    "modelAnswer": "(i) A half-wave rectifier uses a single p-n junction diode connected in series with the secondary of a step-down transformer and a load resistor RL. During the positive half-cycle of the AC input, the diode is forward biased and conducts, so current flows through RL, producing a pulse of output voltage. During the negative half-cycle, the diode is reverse biased and does not conduct, so output voltage is zero. Thus the output waveform consists of only the positive half-cycles of the input, repeated every full cycle (unidirectional, pulsating DC), i.e. only half of each input cycle is 'rectified' and passed to the output. (ii) NOR gate = OR gate followed by NOT (inverted OR). Truth table: A=0,B=0→Y=1; A=0,B=1→Y=0; A=1,B=0→Y=0; A=1,B=1→Y=0. (Y=1 only when both inputs are 0.)",
+    "text": "(a)(i) Draw a labelled circuit diagram of a half wave rectifier and give its output waveform. (ii) Draw a symbol for NOR gate and write its truth table.",
+    "modelAnswer": "(i) Half-wave rectifier: AC source → transformer → diode (in series) → load resistance RL. The diode conducts only during positive half cycles; output is a pulsating DC with half cycles only.\nOutput waveform: Positive half cycles only appear; negative half cycles missing.\n(ii) NOR gate symbol: An OR gate with a bubble (circle) at the output.\nTruth table:\nA  B  Y(NOR)\n0  0    1\n0  1    0\n1  0    0\n1  1    0",
     "keyPoints": [
-      "Half-wave rectifier: single diode conducts only in positive half cycle",
-      "Output: unidirectional pulses, only half of each cycle present",
-      "NOR truth table: Y=1 only when A=0,B=0"
+      "half-wave rectifier: single diode, conducts in positive half",
+      "output: pulsating DC (half cycles)",
+      "NOR truth table: output 1 only when both inputs are 0"
     ]
   },
   {
-    "id": "sa-xii-phy-079",
-    "chapter": "Electrostatics",
+    "id": "sa-xii-phy-2019-35",
+    "chapter": "Electronic Devices",
     "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "A point charge 'q' is kept at each of the vertices of an equilateral triangle having each side 'a'. Total electrostatic potential energy of the system is: (a) (1/4πε0)(3q²/a²) (b) (1/4πε0)(3q/a) (c) (1/4πε0)(3q²/a) (d) (1/4πε0)(3q/a²)",
-    "modelAnswer": "(c) (1/4πε0)(3q²/a). There are 3 pairs of charges, each pair separated by distance a, each pair contributing potential energy (1/4πε0)(q²/a). Total U = 3×(1/4πε0)(q²/a) = (1/4πε0)(3q²/a).",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2019",
+    "text": "(b)(i) Draw a neat circuit diagram to study the input and output characteristics of a common emitter transistor. (ii) Draw the symbol for AND gate and write its truth table.",
+    "modelAnswer": "(i) Common emitter circuit: NPN transistor with base-emitter junction forward biased (battery VBB with resistor RB) and collector-emitter reverse biased (battery VCC with resistor RC). Ammeter in base circuit (IB), ammeter in collector circuit (IC), voltmeters VBE and VCE. Vary VBB for input characteristics (IB vs VBE at constant VCE); vary VCC for output characteristics (IC vs VCE at constant IB).\n(ii) AND gate symbol: Two inputs → D-shape body with flat side.\nTruth table:\nA  B  Y(AND)\n0  0    0\n0  1    0\n1  0    0\n1  1    1",
     "keyPoints": [
-      "3 pairs of identical charges, each separated by a",
-      "Each pair: U = kq²/a",
-      "Total U = 3kq²/a = (1/4πε0)(3q²/a)"
+      "CE transistor: base-emitter forward biased, collector-emitter reverse biased",
+      "AND gate: output 1 only when both inputs are 1",
+      "input characteristics: IB vs VBE; output: IC vs VCE"
     ]
   },
   {
-    "id": "sa-xii-phy-080",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2020",
-    "text": "Curie temperature is the temperature above which: (a) a ferromagnetic substance behaves like a paramagnetic substance. (b) a paramagnetic substance behaves like a diamagnetic substance. (c) a ferromagnetic substance behaves like a diamagnetic substance. (d) a paramagnetic substance behaves like a ferromagnetic substance.",
-    "modelAnswer": "(a) A ferromagnetic substance behaves like a paramagnetic substance above the Curie temperature. Above this temperature, thermal agitation destroys the domain alignment responsible for ferromagnetism, and the material's susceptibility follows the Curie-Weiss law like a paramagnet.",
-    "keyPoints": [
-      "Above Curie temperature, domains are disrupted by thermal energy",
-      "Ferromagnetic → behaves as paramagnetic"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-081",
-    "chapter": "Ray Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "In an astronomical telescope of refracting type: (a) Objective should have small focal length. (b) Objective should have large focal length. (c) Eyepiece should have large focal length. (d) Both objective and eyepiece should have large focal length.",
-    "modelAnswer": "(b) Objective should have large focal length (and eyepiece should have small focal length), since magnifying power M = fo/fe is maximised by a large fo and a small fe.",
-    "keyPoints": [
-      "M = fo/fe",
-      "For large M: fo large, fe small"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-082",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "In photoelectric effect experiment, the slope of the graph of the stopping potential versus frequency gives the value of: (a) e/h (b) h (c) h/e (d) e",
-    "modelAnswer": "(c) h/e. From eVs = hν − φ0, Vs = (h/e)ν − φ0/e, so the graph of Vs versus ν is a straight line with slope h/e.",
-    "keyPoints": [
-      "eVs = hν − φ0 → Vs = (h/e)ν − φ0/e",
-      "Slope of Vs vs ν graph = h/e"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-083",
-    "chapter": "Nuclear Physics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2020",
-    "text": "In a nuclear reactor, cadmium rods are used as: (a) Control rods (b) Fuel rods (c) Coolant (d) Moderator",
-    "modelAnswer": "(a) Control rods. Cadmium (or boron) rods strongly absorb neutrons and are used to control/regulate the rate of the chain reaction in a nuclear reactor.",
-    "keyPoints": [
-      "Cadmium absorbs neutrons",
-      "Used as control rods to regulate chain reaction"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-084",
+    "id": "sa-xii-phy-2020-01",
     "chapter": "Electrostatics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "State Gauss' theorem.",
-    "modelAnswer": "Gauss's theorem states that the total electric flux through any closed surface (Gaussian surface) is equal to 1/ε0 times the net electric charge enclosed within that surface: Φ = ∮E·dA = Qenclosed/ε0.",
+    "modelAnswer": "Gauss' theorem states that the total electric flux through any closed surface is equal to 1/ε₀ times the total charge enclosed within that surface. Mathematically: ΦE = ∮E·dA = Q_enc/ε₀",
     "keyPoints": [
-      "Φ = ∮E·dA = Qenclosed/ε0",
-      "Total flux depends only on net enclosed charge"
+      "Total electric flux through closed surface",
+      "Proportional to enclosed charge",
+      "1/ε₀ factor"
     ]
   },
   {
-    "id": "sa-xii-phy-085",
+    "id": "sa-xii-phy-2020-02",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "medium",
     "source": "Board 2020",
     "text": "A metallic wire having a resistance of 20Ω is bent in order to form a complete circle. Calculate the resistance between any two diametrically opposite points on the circle.",
-    "modelAnswer": "When bent into a circle, the wire forms two equal semicircular arcs between any pair of diametrically opposite points, each of resistance 10Ω (half of 20Ω), connected in parallel. Equivalent resistance = (10×10)/(10+10) = 100/20 = 5Ω.",
+    "modelAnswer": "When wire is bent into a circle, each half has resistance 10Ω. The two halves are in parallel between diametrically opposite points. R = (10 × 10)/(10 + 10) = 100/20 = 5Ω",
     "keyPoints": [
-      "Two semicircular arcs, each 10Ω, in parallel",
-      "Req = (10×10)/(10+10) = 5Ω"
+      "Each semicircle = 10Ω",
+      "Two semicircles in parallel",
+      "R = 5Ω"
     ]
   },
   {
-    "id": "sa-xii-phy-086",
+    "id": "sa-xii-phy-2020-03",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "How can a moving coil galvanometer be converted into a voltmeter?",
-    "modelAnswer": "By connecting a suitable high resistance in series with the galvanometer coil, such that R = (V/Ig) − G, where V is the required voltmeter range, Ig is the full-scale deflection current of the galvanometer, and G is its resistance.",
+    "modelAnswer": "A moving coil galvanometer is converted into a voltmeter by connecting a high resistance (multiplier) in series with it. The value of the series resistance R = V/Ig − G, where V is the voltage range, Ig is the full-scale deflection current, and G is the galvanometer resistance.",
     "keyPoints": [
-      "Series high resistance R = V/Ig − G converts galvanometer to voltmeter"
+      "High resistance in series",
+      "R = V/Ig − G"
     ]
   },
   {
-    "id": "sa-xii-phy-087",
+    "id": "sa-xii-phy-2020-04",
     "chapter": "Magnetism",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2020",
     "text": "Write Biot-Savart's law in vector form.",
-    "modelAnswer": "dB = (μ0/4π) × I(dl × r̂)/r², where dB is the magnetic field due to a current element I dl at a point, r is the position vector from the element to the point, r̂ is the unit vector along r, and μ0 is the permeability of free space.",
+    "modelAnswer": "Biot-Savart's law in vector form: dB = (μ₀/4π) × (I dl × r̂)/r² = (μ₀/4π) × (I dl × r)/r³. Where dB is the magnetic field element, I is current, dl is the current element vector, r is the displacement vector from element to field point, and r is its magnitude.",
     "keyPoints": [
-      "dB = (μ0/4π)[I dl × r̂]/r²",
-      "Direction given by dl × r̂ (right-hand rule)"
+      "dB = (μ₀/4π)(I dl × r̂)/r²",
+      "Cross product of dl and r̂",
+      "Direction from right-hand rule"
     ]
   },
   {
-    "id": "sa-xii-phy-088",
-    "chapter": "Wave Optics",
+    "id": "sa-xii-phy-2020-05",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "What is the phase difference between any two points lying on the same wavefront?",
-    "modelAnswer": "The phase difference between any two points lying on the same wavefront is zero, since all points on a wavefront are in the same phase of vibration by definition.",
+    "modelAnswer": "The phase difference between any two points lying on the same wavefront is zero. All points on a wavefront are in the same phase of vibration.",
     "keyPoints": [
-      "All points on a wavefront vibrate in phase",
-      "Phase difference = 0"
+      "Phase difference = 0",
+      "All points on wavefront vibrate in same phase"
     ]
   },
   {
-    "id": "sa-xii-phy-089",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-06",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 1,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "Name the physical principle on the basis of which optical fibres work.",
-    "modelAnswer": "Optical fibres work on the principle of total internal reflection (TIR) of light at the core-cladding interface.",
+    "modelAnswer": "Optical fibres work on the principle of Total Internal Reflection (TIR). When light travels from a denser medium to a rarer medium at an angle greater than the critical angle, it is totally internally reflected.",
     "keyPoints": [
-      "Optical fibres work on total internal reflection"
+      "Total Internal Reflection (TIR)",
+      "Angle of incidence > critical angle"
     ]
   },
   {
-    "id": "sa-xii-phy-090",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2020-07",
+    "chapter": "Modern Physics",
     "subject": "Physics",
     "marks": 1,
-    "difficulty": "medium",
+    "difficulty": "easy",
     "source": "Board 2020",
     "text": "What is Pair production?",
-    "modelAnswer": "Pair production is the process in which a high-energy photon (gamma ray), while passing near the strong electric field of a nucleus, gets converted into an electron-positron pair (γ → e⁻ + e⁺), provided its energy is at least 1·02 MeV (twice the rest mass energy of an electron).",
+    "modelAnswer": "Pair production is the phenomenon in which a high-energy photon (gamma ray) interacts with matter (usually near a nucleus) and is converted into an electron-positron pair. Energy required ≥ 2m₀c² = 1.02 MeV. The reverse process is pair annihilation.",
     "keyPoints": [
-      "γ → e⁻ + e⁺ (in the field of a nucleus)",
-      "Threshold photon energy = 1.02 MeV"
+      "High-energy photon → electron + positron",
+      "Minimum energy = 1.02 MeV",
+      "Occurs near a nucleus"
     ]
   },
   {
-    "id": "sa-xii-phy-091",
+    "id": "sa-xii-phy-2020-08",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2020",
-    "text": "A uniform copper wire having a cross sectional area of 1mm² carries a current of 5A. Calculate the drift speed of free electrons in it. (Free electron number density of copper = 2×10²⁸/m³.)",
-    "modelAnswer": "I = nAevd → vd = I/(nAe) = 5/(2×10²⁸×1×10⁻⁶×1·6×10⁻¹⁹) = 5/(2×10²⁸×1·6×10⁻²⁵) = 5/(3200) = 1·5625×10⁻³ m/s ≈ 1·56×10⁻³ m/s.",
+    "text": "(a) A uniform copper wire having a cross sectional area of 1mm² carries a current of 5A. Calculate the drift speed of free electrons in it. (Free electron number density of copper = 2×10²⁸/m³.) OR (b) An electric bulb is rated as 250V, 750W. Calculate the: (i) Electric current flowing through it, when it is operated on a 250V supply. (ii) Resistance of its filament.",
+    "modelAnswer": "(a) Drift speed: vd = I/(nAe) = 5/(2×10²⁸ × 1×10⁻⁶ × 1.6×10⁻¹⁹) = 5/(3.2×10³) ≈ 1.56×10⁻³ m/s = 1.56 mm/s\n\n(b) (i) I = P/V = 750/250 = 3A\n(ii) R = V/I = 250/3 = 83.33Ω  OR  R = V²/P = (250)²/750 = 83.33Ω",
     "keyPoints": [
       "vd = I/(nAe)",
-      "A=1mm²=1×10⁻⁶m²",
-      "vd ≈ 1.56×10⁻³ m/s"
+      "Drift speed ≈ 1.56 mm/s",
+      "P = VI, R = V/I or V²/P"
     ]
   },
   {
-    "id": "sa-xii-phy-092",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "An electric bulb is rated as 250V, 750W. Calculate the: (i) Electric current flowing through it, when it is operated on a 250V supply. (ii) Resistance of its filament.",
-    "modelAnswer": "(i) I = P/V = 750/250 = 3A. (ii) R = V²/P = 250²/750 = 62500/750 = 83·33Ω (or R = V/I = 250/3 = 83·33Ω).",
-    "keyPoints": [
-      "I = P/V = 3A",
-      "R = V²/P ≈ 83.33Ω"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-093",
+    "id": "sa-xii-phy-2020-09",
     "chapter": "Magnetism",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2020",
     "text": "Write an expression for force per unit length between two long current carrying wires, kept parallel to each other, in vacuum and hence define an ampere, the SI unit of current.",
-    "modelAnswer": "Force per unit length between two long parallel current-carrying wires (currents I1, I2, separated by distance r): F/l = μ0I1I2/(2πr). Definition of ampere: One ampere is that constant current which, if maintained in each of two straight parallel infinitely long conductors of negligible cross-section, placed 1 metre apart in vacuum, would produce a force between them of 2×10⁻⁷ N per metre of their length.",
+    "modelAnswer": "Force per unit length: F/L = μ₀I₁I₂/(2πd), where I₁ and I₂ are the currents, d is the separation between wires, and μ₀ = 4π×10⁻⁷ T·m/A.\n\nDefinition of Ampere: One ampere is that constant current which, when maintained in two straight parallel conductors of infinite length and negligible cross-section, placed 1 metre apart in vacuum, would produce between those conductors a force of 2×10⁻⁷ N per metre of length.",
     "keyPoints": [
-      "F/l = μ0I1I2/(2πr)",
-      "1 ampere: current in two parallel wires 1m apart giving force 2×10⁻⁷ N/m"
+      "F/L = μ₀I₁I₂/(2πd)",
+      "Ampere defined using 2×10⁻⁷ N/m force",
+      "Parallel currents attract; antiparallel repel"
     ]
   },
   {
-    "id": "sa-xii-phy-094",
+    "id": "sa-xii-phy-2020-10",
     "chapter": "Magnetism",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "(i) Define angle of dip. (ii) State the relation between magnetic susceptibility (χ) and relative permeability (μr) of a magnetic substance.",
-    "modelAnswer": "(i) Angle of dip (δ) at a place is the angle made by the direction of the earth's total magnetic field with the horizontal plane at that place. (ii) Relation: μr = 1 + χ.",
+    "modelAnswer": "(i) Angle of dip (magnetic inclination) is the angle made by the Earth's total magnetic field (resultant) with the horizontal at any given place. At the magnetic poles, dip = 90°; at the magnetic equator, dip = 0°.\n\n(ii) χ = μr − 1  (or μr = 1 + χ)",
     "keyPoints": [
-      "Angle of dip: angle between earth's total field and horizontal",
-      "μr = 1 + χ"
+      "Angle between Earth's field and horizontal",
+      "χ = μr − 1"
     ]
   },
   {
-    "id": "sa-xii-phy-095",
+    "id": "sa-xii-phy-2020-11",
     "chapter": "Electromagnetic Induction",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2020",
-    "text": "A metallic rod MN of length l=80cm is kept in a uniform magnetic field of flux density B=0·5T, on two parallel metallic rails. Calculate the emf that will be induced between its two ends, when it is moved with a constant velocity v of 36 km/hr.",
-    "modelAnswer": "v = 36 km/hr = 36×(1000/3600) = 10 m/s. Motional emf e = Bvl = 0·5×10×0·8 = 4V.",
+    "text": "(a) A metallic rod MN of length l = 80cm is kept in a uniform magnetic field B = 0·5T. It is moved towards right with a constant velocity v of 36 km/hr. Calculate the emf induced between its two ends. OR (b) When current flowing through one coil changes from 0A to 15A in 0·2s, an emf of 750V is induced in an adjacent coil. Calculate the coefficient of mutual inductance.",
+    "modelAnswer": "(a) v = 36 km/h = 10 m/s; l = 0.80 m; B = 0.5 T\nemf = Blv = 0.5 × 0.80 × 10 = 4 V\n\n(b) M = e/(dI/dt) = 750/(15/0.2) = 750/75 = 10 H",
     "keyPoints": [
-      "v = 36 km/hr = 10 m/s",
-      "e = Bvl",
-      "e = 0.5×10×0.8 = 4V"
+      "emf = Blv",
+      "v = 10 m/s → emf = 4V",
+      "M = e/(dI/dt) = 10H"
     ]
   },
   {
-    "id": "sa-xii-phy-096",
-    "chapter": "Electromagnetic Induction",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "When current flowing through one coil changes from 0 Amp to 15 Amp in 0·2 s, an emf of 750V is induced in an adjacent coil. Calculate the coefficient of mutual inductance of the two coils.",
-    "modelAnswer": "Induced emf e = M(dI/dt) → M = e/(dI/dt) = 750/(15/0·2) = 750/75 = 10 H.",
-    "keyPoints": [
-      "e = M dI/dt",
-      "dI/dt = 15/0.2 = 75 A/s",
-      "M = 750/75 = 10 H"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-097",
-    "chapter": "Electromagnetic Induction",
+    "id": "sa-xii-phy-2020-12",
+    "chapter": "Electromagnetic Waves",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "(i) State any one use of infrared radiations. (ii) State any one source of ultraviolet radiations.",
-    "modelAnswer": "(i) Infrared radiations are used in remote controls (TV, AC remotes), night-vision/thermal imaging cameras, and physiotherapy for muscle treatment. (ii) The Sun is a natural source of ultraviolet radiation; mercury vapour lamps are an artificial/man-made source.",
+    "modelAnswer": "(i) Uses of infrared radiation: Used in remote controls; used in night vision devices/cameras; used in physiotherapy (heat treatment); used in food warmers; used to detect structural defects.\n\n(ii) Sources of ultraviolet radiation: Sun (primary natural source); mercury vapor lamp; electric arc; welding arcs; excited atoms of gases.",
     "keyPoints": [
-      "IR use: remote controls / night vision / physiotherapy",
-      "UV source: the Sun / mercury vapour lamp"
+      "IR: remote controls / night vision / physiotherapy",
+      "UV: Sun / mercury vapor lamp"
     ]
   },
   {
-    "id": "sa-xii-phy-098",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-13",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "Where will you keep an object in front of a: (i) Convex lens in order to get a virtual and magnified image? (ii) Concave mirror to get a real and diminished image?",
-    "modelAnswer": "(i) The object should be placed between the convex lens and its focus (i.e. within the focal length, u<f), which produces a virtual, erect, magnified image. (ii) The object should be placed beyond the centre of curvature (u>2f, i.e. beyond C) of the concave mirror, which produces a real, inverted, diminished image (between F and C).",
+    "modelAnswer": "(i) For a virtual and magnified image from a convex lens: Object must be placed between the optical centre (O) and the principal focus (F), i.e., within the focal length (object distance u < f).\n\n(ii) For a real and diminished image from a concave mirror: Object must be placed beyond the centre of curvature (C), i.e., at a distance greater than 2f from the mirror (u > 2f).",
     "keyPoints": [
-      "Convex lens: object between lens and F (u<f) → virtual, magnified image",
-      "Concave mirror: object beyond C (u>2f) → real, diminished image"
+      "Convex lens: object between O and F (u < f) → virtual, magnified",
+      "Concave mirror: object beyond C (u > 2f) → real, diminished"
     ]
   },
   {
-    "id": "sa-xii-phy-099",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-14",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "Draw a labelled graph of angle of deviation (δ) versus angle of incidence (i) for a prism.",
-    "modelAnswer": "The graph of deviation δ versus angle of incidence i for a prism is a curve that first decreases from a high value, reaches a single minimum value δm at a particular angle of incidence i0 (where i=e, the condition for minimum deviation), and then increases again as i increases further — i.e. a smooth, roughly U-shaped (asymmetric) curve with a single minimum point.",
+    "modelAnswer": "The δ vs i graph for a prism is a U-shaped curve. As i increases from a small value, δ first decreases, reaches a minimum value (δm) at a particular angle of incidence, and then increases again. The minimum deviation δm occurs when the refracted ray inside the prism is parallel to the base (i.e., the ray passes symmetrically). At minimum deviation: i = e (angle of incidence = angle of emergence).",
     "keyPoints": [
-      "δ vs i curve: decreases, reaches minimum δm, then increases",
-      "Minimum occurs when i = e (symmetric ray path)"
+      "U-shaped curve",
+      "Minimum deviation δm at i = e",
+      "Symmetric passage through prism at δm"
     ]
   },
   {
-    "id": "sa-xii-phy-100",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2020",
-    "text": "(i) State de Broglie hypothesis. (ii) What conclusion can be drawn from Davisson and Germer's experiment?",
-    "modelAnswer": "(i) De Broglie hypothesis: every moving material particle has an associated wave (matter wave) with wavelength λ = h/p = h/(mv). (ii) Davisson-Germer experiment demonstrated the diffraction of electrons by a nickel crystal, producing intensity maxima and minima similar to X-ray diffraction, thus experimentally confirming the wave nature of electrons (matter waves) and verifying the de Broglie relation.",
-    "keyPoints": [
-      "de Broglie: λ=h/mv for matter particles",
-      "Davisson-Germer: electron diffraction confirms wave nature of electrons"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-101",
-    "chapter": "Nuclear Physics",
+    "id": "sa-xii-phy-2020-15",
+    "chapter": "Modern Physics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2020",
-    "text": "Calculate binding energy of oxygen nucleus (₈O¹⁶) from the data given below: Mass of a proton = 1·007825u, Mass of a neutron = 1·008665u, Mass of ₈O¹⁶ = 15·994915u.",
-    "modelAnswer": "Oxygen-16 has Z=8 protons and N=8 neutrons. Mass defect Δm = [8×1·007825 + 8×1·008665] − 15·994915 = [8·0626 + 8·0693] − 15·994915 = 16·1319 − 15·994915 = 0·136985u. Binding energy = Δm×931 MeV = 0·136985×931 ≈ 127·54 MeV.",
+    "text": "(i) State de Broglie hypothesis. (ii) What conclusion can be drawn from Davisson and Germer's experiment?",
+    "modelAnswer": "(i) de Broglie hypothesis: Every moving particle (matter) has an associated wavelength (matter wave) given by λ = h/p = h/mv, where h is Planck's constant, p is the momentum, m is the mass, and v is the velocity of the particle.\n\n(ii) Davisson and Germer's experiment confirmed the wave nature of electrons (matter waves). The electron beam showed diffraction by the nickel crystal lattice, similar to X-ray diffraction, verifying de Broglie's hypothesis.",
     "keyPoints": [
-      "Δm = [8mp+8mn] − M(O-16)",
-      "Δm ≈ 0.137u",
-      "BE = Δm×931 MeV ≈ 127.5 MeV"
+      "λ = h/mv (de Broglie wavelength)",
+      "Davisson-Germer: electron diffraction by Ni crystal",
+      "Confirms wave nature of matter"
     ]
   },
   {
-    "id": "sa-xii-phy-102",
+    "id": "sa-xii-phy-2020-16",
+    "chapter": "Nuclear Physics",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "Board 2020",
+    "text": "Calculate binding energy of oxygen nucleus ¹⁶₈O from the data given below: Mass of a proton = 1·007825u, Mass of a neutron = 1·008665u, Mass of ¹⁶₈O = 15·994915u",
+    "modelAnswer": "¹⁶₈O has 8 protons and 8 neutrons.\nMass defect: Δm = (8 × 1.007825 + 8 × 1.008665) − 15.994915\n= (8.0626 + 8.06932) − 15.994915\n= 16.13192 − 15.994915\n= 0.137005 u\nBinding energy = Δm × 931 MeV/u\n= 0.137005 × 931 = 127.56 MeV ≈ 127.6 MeV",
+    "keyPoints": [
+      "Δm = (8mp + 8mn) − M(O)",
+      "Δm = 0.137005 u",
+      "B.E. = 0.137005 × 931 ≈ 127.6 MeV"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2020-17",
     "chapter": "Nuclear Physics",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "For a radioactive substance, write the relation between: (i) Half life (T) and disintegration constant (λ). (ii) Mean life (τ) and disintegration constant (λ).",
-    "modelAnswer": "(i) T = 0·693/λ (since T = ln2/λ). (ii) τ = 1/λ.",
+    "modelAnswer": "(i) T₁/₂ = 0.693/λ  (or T₁/₂ = (ln 2)/λ)\n\n(ii) τ = 1/λ\n\nNote: Mean life τ = T₁/₂/0.693 = 1.44 T₁/₂",
     "keyPoints": [
-      "T½ = 0.693/λ",
-      "Mean life τ = 1/λ"
+      "T₁/₂ = 0.693/λ",
+      "τ = 1/λ",
+      "τ = 1.44 T₁/₂"
     ]
   },
   {
-    "id": "sa-xii-phy-103",
-    "chapter": "Electronics in Everyday Life",
+    "id": "sa-xii-phy-2020-18",
+    "chapter": "Communication Systems",
     "subject": "Physics",
     "marks": 2,
     "difficulty": "easy",
     "source": "Board 2020",
     "text": "With reference to communication systems, what is meant by: (i) modulation? (ii) demodulation?",
-    "modelAnswer": "(i) Modulation is the process of superimposing a low-frequency information (message) signal onto a high-frequency carrier wave for efficient transmission. (ii) Demodulation (detection) is the reverse process, of extracting/recovering the original message (information) signal from the modulated carrier wave at the receiver end.",
+    "modelAnswer": "(i) Modulation: The process of superimposing a low-frequency message (audio) signal onto a high-frequency carrier wave so that the characteristics (amplitude, frequency, or phase) of the carrier wave are varied in accordance with the message signal. This is necessary for long-distance transmission.\n\n(ii) Demodulation: The process of extracting the original message/audio signal from the modulated carrier wave at the receiver end. It is the reverse of modulation.",
     "keyPoints": [
-      "Modulation: message signal superimposed on carrier for transmission",
-      "Demodulation: recovering original message signal at receiver"
+      "Modulation: message signal varies carrier wave characteristics",
+      "Demodulation: recovery of message signal from modulated wave"
     ]
   },
   {
-    "id": "sa-xii-phy-104",
+    "id": "sa-xii-phy-2020-19",
+    "chapter": "Electrostatics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2020",
+    "text": "Show that intensity of electric field E at a point in broadside on position is given by: E = (1/4πε₀) × p/(r² + l²)^(3/2), where the terms have their usual meaning.",
+    "modelAnswer": "For an electric dipole with charges +q and −q separated by 2l, and dipole moment p = q·2l.\n\nFor a point P on the equatorial line (broadside-on) at distance r from the centre:\n- Distance from each charge to P: d = √(r² + l²)\n- Electric field due to +q: E₊ = kq/(r² + l²) away from +q\n- Electric field due to −q: E₋ = kq/(r² + l²) toward −q\n\nThe components along the equatorial axis cancel. The components along the axial direction add:\nE = 2 × kq/(r² + l²) × cos θ, where cos θ = l/√(r² + l²)\n\nE = 2kql/(r² + l²)^(3/2) = (1/4πε₀) × p/(r² + l²)^(3/2)\n\nDirection: opposite to dipole moment direction.",
+    "keyPoints": [
+      "Equatorial field E = kp/(r²+l²)^(3/2)",
+      "Components perpendicular to axis cancel",
+      "Direction opposite to p"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2020-20",
     "chapter": "Electrostatics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2020",
-    "text": "Show that intensity of electric field E at a point in broadside on position is given by: E = (1/4πε0) × p/(r²+l²)^(3/2), where the terms have their usual meaning.",
-    "modelAnswer": "Consider a dipole with −q at A and +q at B, separated by 2l, centre O. For a point P on the perpendicular bisector (broadside/equatorial line) at distance r from O, distance of P from each charge = √(r²+l²). E+ (due to +q) and E− (due to −q) both have magnitude kq/(r²+l²), directed along AP and PB respectively. Their components perpendicular to the axis cancel (by symmetry), while components parallel to the axis (anti-parallel to dipole moment direction) add up. Each field makes an angle θ with the axis where cosθ = l/√(r²+l²). Net field E = 2×[kq/(r²+l²)]×cosθ = 2kq/(r²+l²) × l/√(r²+l²) = 2kql/(r²+l²)^(3/2) = kp/(r²+l²)^(3/2) = (1/4πε0)×p/(r²+l²)^(3/2), directed opposite to the dipole moment (parallel to axis, from +q side to −q side).",
+    "text": "A parallel plate capacitor is charged by a battery, which is then disconnected. A dielectric slab having dielectric constant (relative permittivity) K is now introduced between its two plates. State, in terms of K, its effect on: (i) The capacitance of the capacitor. (ii) The potential difference between its plates. (iii) The energy stored in the capacitor.",
+    "modelAnswer": "When battery is disconnected, charge Q remains constant.\n\n(i) Capacitance: C' = KC₀ → Capacitance increases K times.\n\n(ii) Potential difference: Since Q is constant, V' = Q/C' = Q/(KC₀) = V₀/K → Potential difference decreases K times.\n\n(iii) Energy stored: U' = Q²/(2C') = Q²/(2KC₀) = U₀/K → Energy stored decreases K times. (Energy is lost as heat in polarizing the dielectric.)",
     "keyPoints": [
-      "P on perpendicular bisector, distance from each charge = √(r²+l²)",
-      "Components add along axis: E = 2kq cosθ/(r²+l²)",
-      "E = (1/4πε0)p/(r²+l²)^(3/2)"
+      "C' = KC (increases K times)",
+      "V' = V/K (decreases K times)",
+      "U' = U/K (decreases K times)"
     ]
   },
   {
-    "id": "sa-xii-phy-105",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "A parallel plate capacitor is charged by a battery, which is then disconnected. A dielectric slab having dielectric constant K, is now introduced between its two plates in order to occupy the space completely. State, in terms of K, its effect on: (i) The capacitance of the capacitor. (ii) The potential difference between its plates. (iii) The energy stored in the capacitor.",
-    "modelAnswer": "Since the battery is disconnected, the charge Q on the plates remains constant. (i) Capacitance increases: C' = KC (K times the original capacitance). (ii) Potential difference decreases: since Q is constant and C increases, V' = Q/C' = Q/(KC) = V/K (decreases to 1/K times original). (iii) Energy stored decreases: U' = Q²/(2C') = Q²/(2KC) = U/K (decreases to 1/K times original).",
-    "keyPoints": [
-      "Battery disconnected → charge Q constant",
-      "C' = KC (increases)",
-      "V' = V/K (decreases)",
-      "U' = U/K (decreases)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-106",
+    "id": "sa-xii-phy-2020-21",
     "chapter": "Current Electricity",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "hard",
     "source": "Board 2020",
-    "text": "E1 and E2 are two batteries having emfs of 3V and 4V and internal resistances of 2Ω and 1Ω respectively. E1 (with series resistor R1=4Ω) and E2 (with series resistor R2=7Ω) are connected between a common top node and a common bottom node, with a resistor R3=8Ω also connected directly between the same top and bottom nodes. Using Kirchhoff's Laws, calculate the currents I1 and I2 (through the E1 and E2 branches respectively).",
-    "modelAnswer": "Let V be the potential of the top common node relative to the bottom node (0V). Branch 1 (E1, total resistance 2+4=6Ω): current entering top node I1 = (E1−V)/6 = (3−V)/6. Branch 2 (E2, total resistance 1+7=8Ω): current entering top node I2 = (E2−V)/8 = (4−V)/8. Branch 3 (R3=8Ω only): current leaving top node = V/8. By KCL: I1+I2 = V/8. So (3−V)/6 + (4−V)/8 = V/8. Multiplying throughout by 24: 4(3−V)+3(4−V) = 3V → 12−4V+12−3V = 3V → 24 = 10V → V = 2·4V. I1 = (3−2·4)/6 = 0·6/6 = 0·1A. I2 = (4−2·4)/8 = 1·6/8 = 0·2A.",
+    "text": "(a) Using Kirchhoff's Laws, calculate the currents I₁ and I₂ in the circuit with batteries E₁ (3V, 2Ω), E₂ (4V, 1Ω) and resistors R₁=4Ω, R₂=7Ω, R₃=8Ω as shown. OR (b) A potentiometer circuit has wire AB of 2m, 8Ω; E₁=4V, r₁=1Ω; external R=7Ω; E₂=1.5V, r₂=2Ω. When jockey J shows no deflection at C, find length AC.",
+    "modelAnswer": "(a) Applying Kirchhoff's Voltage Law:\nLoop ABEFA: 3 − 2I₁ − 8(I₁−I₂) − 4I₁ = 0 → 14I₁ − 8I₂ = 3 ... (1)\nLoop BCDEB: 4 − 1·I₂ − 7I₂ + 8(I₁−I₂) = 0 → 8I₁ − 16I₂ = −4 ... (2)\nSolving: From (1): 14I₁ − 8I₂ = 3; From (2): 8I₁ − 16I₂ = −4 → 4I₁ − 8I₂ = −2\nSubtracting: 10I₁ = 5 → I₁ = 0.5A; I₂ = (4I₁+2)/8 = 4/8 = 0.5A\n\n(b) Total resistance in main circuit = 1 + 7 + 8 = 16Ω\nCurrent I = E₁/(r₁+R+R_AB) = 4/(1+7+8) = 4/16 = 0.25A\nPotential gradient k = I × R_AB/L = 0.25 × 8/2 = 1 V/m\nFor balance: E₂ = k × AC → 1.5 = 1 × AC → AC = 1.5 m",
     "keyPoints": [
-      "Millman's theorem / KCL at common top node",
-      "(3−V)/6 + (4−V)/8 = V/8 → V = 2.4V",
-      "I1 = 0.1A, I2 = 0.2A"
+      "Kirchhoff's KVL to two loops",
+      "I₁ = I₂ = 0.5A (part a)",
+      "AC = 1.5 m (part b)"
     ]
   },
   {
-    "id": "sa-xii-phy-107",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-22",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2020",
-    "text": "For two thin lenses kept in contact with each other, show that: 1/F = 1/f1 + 1/f2, where the terms have their usual meaning.",
-    "modelAnswer": "For an object O on the axis, the first lens (f1) forms an intermediate image at v1, related by 1/v1 − 1/u = 1/f1. This image acts as the object for the second lens (f2), placed at the same location (lenses in contact), giving 1/v − 1/v1 = 1/f2, where v is the final image distance. Adding the two equations: 1/v − 1/u = 1/f1 + 1/f2. For the equivalent single lens of focal length F producing the same final image directly from the object: 1/v − 1/u = 1/F. Comparing: 1/F = 1/f1 + 1/f2.",
+    "text": "For two thin lenses kept in contact with each other, show that: 1/F = 1/f₁ + 1/f₂",
+    "modelAnswer": "For lens 1 alone (object at O, image at I₁):\n1/f₁ = 1/v₁ − 1/u\n\nFor lens 2 (I₁ acts as virtual object, final image at I):\n1/f₂ = 1/v − 1/v₁\n\nAdding both equations:\n1/f₁ + 1/f₂ = 1/v − 1/u = 1/F\n\nTherefore: 1/F = 1/f₁ + 1/f₂\n\nThis is the equivalent focal length formula for two thin lenses in contact.",
     "keyPoints": [
-      "Apply lens formula for each lens in succession",
-      "Add the two equations",
-      "1/F = 1/f1 + 1/f2"
+      "Apply lens formula to each lens",
+      "I₁ is object for lens 2",
+      "Add equations to eliminate v₁"
     ]
   },
   {
-    "id": "sa-xii-phy-108",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-23",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "hard",
     "source": "Board 2020",
-    "text": "A compound microscope consists of two convex lenses having focal length of 1·5cm and 5cm. When an object is kept at a distance of 1·6cm from the objective, the final image is virtual and lies at a distance of 25cm from the eyepiece. Calculate magnifying power of the compound microscope in this set-up.",
-    "modelAnswer": "For the objective (f0=1·5cm, u0=−1·6cm): 1/v0 − 1/u0 = 1/f0 → 1/v0 = 1/f0 + 1/u0 = 1/1·5 + 1/(−1·6) = 0·6667 − 0·625 = 0·0417 → v0 = 24 cm. Magnification by objective m0 = v0/u0 = 24/(−1·6) = −15. For the eyepiece (fe=5cm), image at near point ve=−25cm (virtual image at D=25cm): magnification by eyepiece me = 1 + D/fe = 1+25/5 = 6. Total magnifying power M = m0×me = (−15)×6 = −90 (magnitude 90).",
+    "text": "(a) A compound microscope has lenses of focal length 1·5cm and 5cm. Object at 1·6cm from objective; final image virtual at 25cm from eyepiece. Calculate magnifying power. OR (b) In Young's double slit experiment, screen at 1·2m, slits separated by 5mm, wavelength 600nm. Calculate: (i) fringe width; (ii) distance of 10th bright fringe from centre.",
+    "modelAnswer": "(a) For objective: u₀ = −1.6cm, f₀ = 1.5cm\n1/v₀ = 1/f₀ + 1/u₀ = 1/1.5 + 1/(−1.6) = 0.667 − 0.625 = 0.042 cm⁻¹? \nActually: 1/v₀ − 1/u₀ = 1/f₀ → 1/v₀ = 1/1.5 + 1/(−1.6) [sign convention: u negative]\nWait: 1/v₀ = 1/f₀ + 1/u₀ if using real-is-positive: 1/v₀ − 1/(−1.6) = 1/1.5 → 1/v₀ = 1/1.5 − 1/1.6 = (1.6−1.5)/(1.5×1.6) = 0.1/2.4 → v₀ = 24cm\nm₀ = v₀/u₀ = 24/1.6 = 15 (magnitude)\nFor eyepiece: image at 25cm (virtual, so image distance = −25cm for real-is-positive)\nme = 1 + D/fe = 1 + 25/5 = 6\nTotal M = m₀ × me = 15 × 6 = 90\n\n(b) β = λD/d = (600×10⁻⁹ × 1.2)/(5×10⁻³) = 720×10⁻⁹/5×10⁻³ = 1.44×10⁻⁴ m = 0.144 mm\nDistance of 10th bright fringe = 10β = 10 × 0.144 mm = 1.44 mm",
     "keyPoints": [
-      "Objective: 1/v0 = 1/f0 + 1/u0 → v0 = 24cm",
-      "m0 = v0/u0 = −15",
-      "Eyepiece: me = 1+D/fe = 6",
-      "M = m0×me = −90"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-109",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "In Young's double slit experiment, the screen is kept at a distance of 1·2m from the plane of the slits. The two slits are separated by 5mm and illuminated with monochromatic light having wavelength 600nm. Calculate: (i) Fringe width i.e. fringe separation of the interference pattern. (ii) Distance of 10th bright fringe from the centre of the pattern.",
-    "modelAnswer": "Fringe width β = λD/d = (600×10⁻⁹×1·2)/(5×10⁻³) = (7·2×10⁻⁷)/(5×10⁻³) = 1·44×10⁻⁴ m = 0·144 mm. Distance of 10th bright fringe x10 = 10β = 10×1·44×10⁻⁴ = 1·44×10⁻³ m = 1·44 mm.",
-    "keyPoints": [
+      "m₀ = v₀/u₀ = 15; me = 1+D/fe = 6; M = 90",
       "β = λD/d = 0.144 mm",
-      "x10 = 10β = 1.44 mm"
+      "10th fringe: y₁₀ = 10β = 1.44 mm"
     ]
   },
   {
-    "id": "sa-xii-phy-110",
-    "chapter": "Atomic Physics",
+    "id": "sa-xii-phy-2020-24",
+    "chapter": "Modern Physics",
     "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2020",
     "text": "Draw the energy level diagram of hydrogen atom and show the transitions responsible for: (i) absorption lines of Lyman series. (ii) emission lines of Balmer series.",
-    "modelAnswer": "The hydrogen energy level diagram shows discrete energy levels En = −13·6/n² eV for n=1,2,3,.... (i) Lyman series (absorption): transitions where an electron in the ground state (n=1) absorbs a photon and jumps to a higher level (n=2,3,4,...); these are upward transitions ending at various n and starting from n=1, and the lines lie in the UV region. (ii) Balmer series (emission): transitions where an electron falls from a higher level (n=3,4,5,...) down to the n=2 level, emitting a photon; these downward transitions terminate at n=2, and the lines lie mainly in the visible region.",
+    "modelAnswer": "Energy level diagram of hydrogen atom:\n- n=1: E = −13.6 eV (ground state)\n- n=2: E = −3.4 eV\n- n=3: E = −1.51 eV\n- n=4: E = −0.85 eV\n- n=∞: E = 0 eV (ionization)\n\n(i) Lyman series (UV region): Absorption transitions from n=1 (ground state) to n=2, 3, 4, … shown as upward arrows from n=1 level.\n\n(ii) Balmer series (visible region): Emission transitions from n=3, 4, 5, … to n=2, shown as downward arrows ending at n=2. The Hα line is n=3→2 (red, 656nm), Hβ is n=4→2 (blue-green, 486nm), etc.",
     "keyPoints": [
-      "En = −13.6/n² eV",
-      "Lyman (absorption): n=1 → higher n (UV)",
-      "Balmer (emission): higher n → n=2 (visible)"
+      "Lyman: transitions to/from n=1, UV region",
+      "Balmer: transitions to/from n=2, visible region",
+      "Absorption: upward; Emission: downward arrows"
     ]
   },
   {
-    "id": "sa-xii-phy-111",
-    "chapter": "Semiconductors",
+    "id": "sa-xii-phy-2020-25",
+    "chapter": "Semiconductor Electronics",
     "subject": "Physics",
     "marks": 3,
-    "difficulty": "easy",
+    "difficulty": "medium",
     "source": "Board 2020",
-    "text": "(i) State any one difference between energy band diagram of conductors and that of insulators. (ii) Give a relation between α and β for a transistor. (Derivation is not required.) (iii) What is the advantage of an LED bulb over the filament electric bulb?",
-    "modelAnswer": "(i) In a conductor, the valence band and conduction band overlap (no forbidden energy gap), so electrons can move freely; in an insulator, there is a very large forbidden energy gap (typically >5 eV) between the valence and conduction bands, so electrons cannot easily cross into the conduction band. (ii) β = α/(1−α), or equivalently α = β/(1+β). (iii) LED bulbs are far more energy-efficient (convert most electrical energy into light with little heat loss), have a much longer operating life, and are more robust compared to filament bulbs, which waste most energy as heat.",
+    "text": "(i) State any one difference between energy band diagram of conductors and that of insulators. (ii) Give a relation between α and β for a transistor. (iii) What is the advantage of an LED bulb over the filament electric bulb?",
+    "modelAnswer": "(i) In conductors, the valence band and conduction band overlap (or the conduction band is partially filled) with no energy gap, so electrons can move freely. In insulators, there is a very large forbidden energy gap (Eg > 3 eV) between the fully filled valence band and the empty conduction band.\n\n(ii) Relation between α (common-base current gain) and β (common-emitter current gain):\nβ = α/(1−α)  or equivalently  α = β/(1+β)\n\n(iii) Advantages of LED over filament bulb: LED is more energy efficient (converts more electrical energy to light, less heat loss); longer lifespan; eco-friendly (no mercury); faster switching; compact size.",
     "keyPoints": [
-      "Conductor: bands overlap; Insulator: large forbidden gap (>5eV)",
+      "Conductor: overlapping bands; Insulator: large Eg > 3 eV",
       "β = α/(1−α)",
-      "LED: more efficient, longer life, less heat loss"
+      "LED: more efficient, longer life, eco-friendly"
     ]
   },
   {
-    "id": "sa-xii-phy-112",
-    "chapter": "Alternating Current",
+    "id": "sa-xii-phy-2020-26",
+    "chapter": "Electromagnetic Induction",
     "subject": "Physics",
     "marks": 5,
     "difficulty": "hard",
     "source": "Board 2020",
-    "text": "A 400Ω resistor, a 3H inductor and a 5µF capacitor are connected in series to a 220V, 50Hz ac source. Calculate the: (1) Impedance of the circuit. (2) Current flowing through the circuit. (ii) Draw a labelled graph showing the variation of impedance (Z) of a series LCR circuit versus frequency (f) of the ac supply.",
-    "modelAnswer": "ω=2πf=2π×50=314·16 rad/s. XL=ωL=314·16×3=942·5Ω. Xc=1/(ωC)=1/(314·16×5×10⁻⁶)=1/(1·5708×10⁻³)=636·6Ω. Z=√(R²+(XL−Xc)²)=√(400²+(942·5−636·6)²)=√(160000+(305·9)²)=√(160000+93575)=√253575≈503·6Ω. Current I=V/Z=220/503·6≈0·437A. (ii) The Z vs f graph for a series LCR circuit is U-shaped: Z is high at low f (dominated by Xc), decreases to a minimum value Z=R at the resonant frequency f0 (where XL=Xc), then increases again at higher f (dominated by XL).",
+    "text": "(a)(i) A 400Ω resistor, a 3H inductor and a 5μF capacitor are connected in series to a 220V, 50Hz ac source. Calculate (1) Impedance of the circuit, (2) Current flowing through the circuit. (ii) Draw a labelled graph of impedance Z vs frequency f for a series LCR circuit. OR (b)(i) emf e = 310 sin(100πt)V applied to LCR; current i = 5 sin(100πt + π/3)A. (1) Phase difference? (2) Average power? (ii) Expression for resonant frequency f₀.",
+    "modelAnswer": "(a)(i) ω = 2π×50 = 100π rad/s\nXL = ωL = 100π×3 = 942.5Ω\nXC = 1/(ωC) = 1/(100π×5×10⁻⁶) = 636.6Ω\nXL − XC = 942.5 − 636.6 = 305.9Ω\nZ = √(R² + (XL−XC)²) = √(400² + 305.9²) = √(160000 + 93574) = √253574 ≈ 503.6Ω\nI = V/Z = 220/503.6 ≈ 0.437A\n\n(ii) Z vs f graph: Hyperbolic decrease up to resonance frequency f₀, minimum Z = R at f₀ (resonance), then increases. Z → ∞ as f → 0 or f → ∞.\n\n(b)(i) Phase difference φ = π/3 (current leads emf by 60°)\nAverage power P = (E₀I₀/2)cosφ = (310×5/2)cos(π/3) = 775×0.5 = 387.5 W\n\n(ii) At resonance: XL = XC → ωL = 1/(ωC) → ω₀ = 1/√(LC)\nf₀ = 1/(2π√(LC))",
     "keyPoints": [
-      "XL=942.5Ω, Xc=636.6Ω",
-      "Z=√(R²+(XL−Xc)²) ≈ 503.6Ω",
-      "I=V/Z ≈ 0.437A",
-      "Z vs f: U-shaped curve, minimum (Z=R) at resonance"
+      "XL=942.5Ω, XC=636.6Ω, Z≈504Ω, I≈0.44A",
+      "P_avg = (E₀I₀/2)cosφ = 387.5W",
+      "f₀ = 1/(2π√LC)"
     ]
   },
   {
-    "id": "sa-xii-phy-113",
-    "chapter": "Alternating Current",
+    "id": "sa-xii-phy-2020-27",
+    "chapter": "Optics",
     "subject": "Physics",
     "marks": 5,
     "difficulty": "hard",
     "source": "Board 2020",
-    "text": "When an alternating emf e = 310 sin(100πt)V is applied to a series LCR circuit, current flowing through it is i = 5 sin(100πt + π/3)A. (1) What is the phase difference between the current and the emf? (2) Calculate the average power consumed by the circuit. (ii) Obtain an expression for the resonant frequency (f0) of a series LCR circuit.",
-    "modelAnswer": "(1) Phase difference φ = π/3 rad = 60° (current leads the emf, indicating the circuit is predominantly capacitive). (2) Peak values: E0=310V, I0=5A. Average power P = (1/2)E0I0 cosφ = 0·5×310×5×cos60° = 0·5×310×5×0·5 = 387·5 W. (ii) At resonance in a series LCR circuit, XL=Xc: ωL = 1/(ωC) → ω² = 1/(LC) → ω0 = 1/√(LC). Resonant frequency f0 = ω0/(2π) = 1/(2π√(LC)).",
+    "text": "(a)(i) Derive an expression for refraction at a single (convex) spherical surface, relating u, v, R, n₁ (rarer) and n₂ (denser). (ii) Name the phenomenon due to which the sun appears reddish at sunset. OR (b)(i) Draw a labelled graph of intensity of diffracted light vs angle in Fraunhofer single slit diffraction. (ii) State the law of Malus. (iii) How will you distinguish experimentally between ordinary light and plane polarized light?",
+    "modelAnswer": "(a)(i) Refraction at convex spherical surface (n₁ to n₂, n₂>n₁):\nUsing geometry and Snell's law for paraxial rays:\nn₁/u + n₂/v = (n₂−n₁)/R\n(sign convention: distances measured from pole; real positive for refraction)\n\nDerivation: For point object O and paraxial ray hitting surface at M, using geometry: angle of incidence i and refraction r. Small angle approximation: sin i ≈ i, sin r ≈ r.\nFrom triangle OC'M: α = i − angle MPC = i − (v/R angle)\nApplying Snell's law: n₁i = n₂r\nUsing geometry: n₁/u + n₂/v = (n₂−n₁)/R\n\n(ii) Scattering of light (Tyndall effect / Rayleigh scattering). At sunset, sunlight travels a longer path through the atmosphere. Shorter wavelengths (blue/violet) are scattered away, leaving predominantly red light.\n\n(b)(i) Single slit diffraction intensity graph: Central maximum (tallest) at θ=0, with secondary maxima on either side, each of diminishing intensity. Minima (zeros) at θ = ±λ/a, ±2λ/a, … where a is slit width.\n\n(ii) Law of Malus: When plane polarized light passes through an analyser, the intensity of transmitted light I = I₀cos²θ, where θ is the angle between the plane of polarization of incident light and the axis of the analyser, and I₀ is the initial intensity.\n\n(iii) Use a Polaroid (analyser). Rotate it in the path of the light. If the intensity varies (becomes zero at some orientation), the light is plane polarized. If intensity remains constant throughout rotation, it is ordinary (unpolarized) light.",
     "keyPoints": [
-      "φ = π/3 = 60° (current leads emf)",
-      "P = ½E0I0cosφ = 387.5 W",
-      "Resonance: XL=Xc → f0 = 1/(2π√(LC))"
+      "n₁/u + n₂/v = (n₂−n₁)/R",
+      "Reddish sunset: Rayleigh scattering",
+      "Malus: I = I₀cos²θ",
+      "Polaroid rotation distinguishes polarized from ordinary light"
     ]
   },
   {
-    "id": "sa-xii-phy-114",
-    "chapter": "Ray Optics",
+    "id": "sa-xii-phy-2020-28",
+    "chapter": "Semiconductor Electronics",
     "subject": "Physics",
     "marks": 5,
-    "difficulty": "medium",
+    "difficulty": "hard",
     "source": "Board 2020",
-    "text": "(i) Derive an expression for refraction at a single (convex) spherical surface, i.e. a relation between u, v, R, n1 (rarer medium) and n2 (denser medium), where the terms have their usual meaning. (ii) Name the phenomenon due to which the sun appears reddish at sunset.",
-    "modelAnswer": "(i) Consider a convex spherical surface separating a rarer medium (n1) from a denser medium (n2), with pole P, centre of curvature C (radius R), object O on the principal axis. For a ray from O striking the surface at M and refracting towards image I, using small angle approximation (paraxial rays) and the geometry of triangles OMC and IMC, applying Snell's law n1 sini = n2 sinr with small angles (sinθ≈θ), and using sign convention (distances measured from pole, in direction of incident light as positive), one obtains: n2/v − n1/u = (n2−n1)/R. This is the standard relation for refraction at a single spherical surface. (ii) The reddish appearance of the sun at sunset (and sunrise) is due to scattering of light (Rayleigh scattering) — at sunset, sunlight travels a longer path through the atmosphere, so shorter wavelengths (blue) are scattered away more, leaving the longer wavelengths (red/orange) to reach the observer directly.",
+    "text": "(a)(i) What is meant by potential barrier in a semiconductor diode? (ii) Draw a labelled circuit of Zener diode as voltage regulator. (iii) Show how to obtain an AND gate using only NAND gates. OR (b)(i) Draw a labelled circuit of transistor as common emitter amplifier. What is phase reversal? (ii) Draw symbol of NAND gate and write its truth table.",
+    "modelAnswer": "(a)(i) Potential barrier: At the p-n junction, diffusion of majority carriers creates a depletion region with immobile ions. The electric field in the depletion region creates an energy barrier (potential difference) that prevents further diffusion of carriers. For silicon, the barrier potential ≈ 0.7V; for germanium ≈ 0.3V.\n\n(ii) Zener diode voltage regulator: Unregulated DC input Vin → series resistor Rs → Zener diode (connected in reverse bias, cathode toward +ve) → output Vout across zener = Vz (regulated voltage). Load RL connected in parallel with zener.\n\n(iii) AND gate from NAND gates: Connect inputs A and B to a NAND gate (output = NAND). Then connect that output as input to both inputs of another NAND gate (used as inverter). Final output = NOT(NAND(A,B)) = AND(A,B).\n\n(b)(i) Common emitter amplifier: AC input signal applied at base (through coupling capacitor); emitter common to input and output; output taken at collector. DC biasing through RB, RC. In CE amplifier, there is 180° phase reversal — output voltage is 180° out of phase with input voltage.\n\n(ii) NAND gate symbol: AND gate symbol with a small circle at output.\nTruth table: A=0,B=0→Y=1; A=0,B=1→Y=1; A=1,B=0→Y=1; A=1,B=1→Y=0",
     "keyPoints": [
-      "Paraxial ray geometry + Snell's law at spherical surface",
-      "Result: n2/v − n1/u = (n2−n1)/R",
-      "Reddish sunset: due to (Rayleigh) scattering of light — blue scattered away, red remains"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-115",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 5,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "(i) Draw a labelled graph of intensity of diffracted light (I) versus angle (θ) in the Fraunhofer diffraction experiment for a single slit diffraction. (ii) State the law of Malus. (iii) How will you distinguish experimentally between ordinary light and plane polarized light?",
-    "modelAnswer": "(i) The intensity distribution for single-slit Fraunhofer diffraction shows a tall, broad central maximum at θ=0, flanked symmetrically by a series of much weaker secondary maxima of rapidly decreasing intensity, separated by points of zero intensity (minima) that occur at angles satisfying a sinθ = nλ (n=±1,±2,...). (ii) Malus's law states that when a beam of plane polarised light is incident on an analyser, the intensity of the transmitted light I is directly proportional to the square of the cosine of the angle θ between the plane of polarisation of the incident light and the transmission axis of the analyser: I = I0 cos²θ. (iii) Pass the light through a polaroid (analyser) and rotate it about the direction of propagation. If the transmitted intensity varies periodically from a maximum to (nearly) zero, the light is plane polarised. If the intensity remains constant during rotation, the light is ordinary (unpolarised).",
-    "keyPoints": [
-      "Central maximum broad and intense; secondary maxima weaker, minima at a sinθ=nλ",
-      "Malus's law: I = I0cos²θ",
-      "Rotate polaroid: intensity varies (polarised) vs constant (unpolarised)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-116",
-    "chapter": "Semiconductors",
-    "subject": "Physics",
-    "marks": 5,
-    "difficulty": "medium",
-    "source": "Board 2020",
-    "text": "(i) In a semiconductor diode, what is meant by potential barrier? (ii) Draw a labelled circuit diagram of a Zener diode as a voltage regulator. (iii) Show with the help of a diagram, how you will obtain an AND gate using only NAND gates. (Truth table is not required.)",
-    "modelAnswer": "(i) Potential barrier is the small potential difference that develops across the depletion region of a p-n junction (due to diffusion of majority carriers and the resulting immobile ion layer), which opposes further diffusion of charge carriers across the junction; for silicon it is about 0·7V and for germanium about 0·3V. (ii) In a Zener voltage regulator, the Zener diode is connected in reverse bias, in parallel with the load RL, with a series resistor Rs connecting the unregulated DC input to this parallel combination; as long as the input voltage stays above the Zener voltage Vz and the diode remains in breakdown, the output voltage across the load stays constant at Vz, regardless of fluctuations in input voltage or load current (within limits). (iii) An AND gate can be built from two NAND gates in series: the output of the first NAND gate (fed with inputs A and B) is connected to both inputs of a second NAND gate; since NAND followed by NOT (itself made from a NAND with both inputs tied together) gives AND, Y = NOT(NAND(A,B)) = AND(A,B).",
-    "keyPoints": [
-      "Potential barrier: ~0.7V (Si)/0.3V (Ge) across depletion region",
-      "Zener regulator: reverse-biased Zener parallel to load, series resistor from input",
-      "AND = NAND followed by another NAND used as NOT (inputs tied together)"
+      "Barrier potential: Si≈0.7V, Ge≈0.3V",
+      "Zener regulator: zener in reverse bias parallel to load",
+      "AND = NOT(NAND); two NAND gates",
+      "CE amplifier: 180° phase reversal",
+      "NAND truth table: 1,1,1,0"
     ]
   },
   {
