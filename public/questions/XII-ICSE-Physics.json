@@ -1,1 +1,317 @@
-[]
+[
+  {
+    "id": "isc-phy-2024-01",
+    "source": "Board 2024",
+    "chapter": "Current Electricity",
+    "difficulty": "easy",
+    "text": "If the potential difference between the two ends of a metallic wire is doubled, the drift speed of free electrons in the wire:",
+    "options": [
+      "remains same",
+      "becomes double",
+      "becomes four times",
+      "becomes half"
+    ],
+    "correct": 1,
+    "explanation": "v_d = eEτ/m and E = V/l. Doubling V doubles E, so the drift speed doubles."
+  },
+  {
+    "id": "isc-phy-2024-02",
+    "source": "Board 2024",
+    "chapter": "Current Electricity",
+    "difficulty": "medium",
+    "text": "A metre bridge is balanced with a known resistance R in the left gap and an unknown resistance S in the right gap. The balance point is at l cm from the left end. When the battery and the galvanometer are interchanged, the balance point will:",
+    "options": [
+      "shift towards left",
+      "shift towards right",
+      "remain same",
+      "shift left or right depending on the values of R and S"
+    ],
+    "correct": 2,
+    "explanation": "The balance condition R/S = l/(100 − l) is unchanged when the battery and galvanometer are interchanged (reciprocity of the Wheatstone bridge), so the balance point stays the same."
+  },
+  {
+    "id": "isc-phy-2024-03",
+    "source": "Board 2024",
+    "chapter": "Magnetism",
+    "difficulty": "easy",
+    "text": "Lorentz force in vector form is:",
+    "options": [
+      "F = Bqv sin θ",
+      "F⃗ = q(v⃗ × B⃗)",
+      "F⃗ = q(B⃗ × v⃗)",
+      "F⃗ = v⃗ × (qB⃗)"
+    ],
+    "correct": 1,
+    "explanation": "The magnetic (Lorentz) force on a charge q moving with velocity v in field B is F = q(v × B). The order of the cross product matters: B × v gives the opposite direction."
+  },
+  {
+    "id": "isc-phy-2024-04",
+    "source": "Board 2024",
+    "chapter": "Magnetism",
+    "difficulty": "medium",
+    "text": "Assertion: When an electric current is passed through a moving coil galvanometer, its coil gets deflected.\nReason: A circular coil produces a uniform magnetic field around itself when an electric current is passed through it.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 2,
+    "explanation": "The coil deflects because of the torque on a current loop in the radial field of the permanent magnet, so the Assertion is true. The field produced by a circular coil is not uniform around it, so the Reason is false."
+  },
+  {
+    "id": "isc-phy-2024-05",
+    "source": "Board 2024",
+    "chapter": "Ray Optics",
+    "difficulty": "easy",
+    "text": "When a ray of white light is incident obliquely on the first surface of a prism, then:",
+    "options": [
+      "red colour is deviated most",
+      "green colour is deviated most",
+      "yellow colour is deviated most",
+      "violet colour is deviated most"
+    ],
+    "correct": 3,
+    "explanation": "Refractive index is highest for violet light (shortest wavelength), so violet is deviated the most and red the least."
+  },
+  {
+    "id": "isc-phy-2024-06",
+    "source": "Board 2024",
+    "chapter": "Dual Nature of Radiation",
+    "difficulty": "easy",
+    "text": "The de Broglie wavelength (λ) associated with a moving electron having kinetic energy E is given by:",
+    "options": [
+      "2h / √(2mE)",
+      "2√(2mE) / h",
+      "h / √(2mE)",
+      "√(2mhE)"
+    ],
+    "correct": 2,
+    "explanation": "λ = h/p and p = √(2mE), so λ = h/√(2mE)."
+  },
+  {
+    "id": "isc-phy-2024-07",
+    "source": "Board 2024",
+    "chapter": "Semiconductors",
+    "difficulty": "easy",
+    "text": "The majority charge carriers in a P-type semiconductor are:",
+    "options": [
+      "electrons",
+      "holes",
+      "protons",
+      "ions"
+    ],
+    "correct": 1,
+    "explanation": "P-type semiconductors are doped with trivalent impurities, which create holes; holes are the majority carriers."
+  },
+  {
+    "id": "isc-phy-2025-01",
+    "source": "Board 2025",
+    "chapter": "Current Electricity",
+    "difficulty": "medium",
+    "text": "Four resistors form a bridge between terminals P (top) and Q (bottom): upper-left arm 10 Ω, upper-right arm 10 Ω, lower-left arm 25 Ω and lower-right arm X. A 5 Ω resistor joins the left and right corners. When a battery is connected across P and Q, no current flows through the 5 Ω resistor. The value of X is:",
+    "options": [
+      "10 Ω",
+      "20 Ω",
+      "25 Ω",
+      "45 Ω"
+    ],
+    "correct": 2,
+    "explanation": "No current in the 5 Ω resistor means the Wheatstone bridge is balanced: 10/25 = 10/X ⇒ X = 25 Ω."
+  },
+  {
+    "id": "isc-phy-2025-02",
+    "source": "Board 2025",
+    "chapter": "Magnetism",
+    "difficulty": "easy",
+    "text": "The relative permeability of substance X is slightly less than one and that of substance Y is slightly more than one. Then:",
+    "options": [
+      "X is paramagnetic and Y is ferromagnetic",
+      "X is diamagnetic and Y is ferromagnetic",
+      "X is paramagnetic and Y is diamagnetic",
+      "X is diamagnetic and Y is paramagnetic"
+    ],
+    "correct": 3,
+    "explanation": "μr slightly < 1 ⇒ diamagnetic; μr slightly > 1 ⇒ paramagnetic. (Ferromagnetic materials have μr ≫ 1.)"
+  },
+  {
+    "id": "isc-phy-2025-03",
+    "source": "Board 2025",
+    "chapter": "Dual Nature of Radiation",
+    "difficulty": "easy",
+    "text": "If the kinetic energy of moving electrons is made four times, their de Broglie wavelength becomes:",
+    "options": [
+      "eight times",
+      "four times",
+      "two times",
+      "half"
+    ],
+    "correct": 3,
+    "explanation": "λ = h/√(2mE) ∝ 1/√E. Making E four times makes λ half."
+  },
+  {
+    "id": "isc-phy-2025-04",
+    "source": "Board 2025",
+    "chapter": "Magnetism",
+    "difficulty": "medium",
+    "text": "Two long parallel wires MN and ST are each part of a separate circuit: MN with battery E₁ and resistor R₁, ST with battery E₂ and resistor R₂. A student wanted the wires to repel, but they attract each other. What change should the student make so that they repel?",
+    "options": [
+      "Reverse the terminals of both batteries E₁ and E₂",
+      "Reverse the terminals of battery E₁ or E₂",
+      "Choose supply voltages such that E₁ = E₂",
+      "Add a key and an ammeter to the circuit"
+    ],
+    "correct": 1,
+    "explanation": "Parallel wires attract when their currents are in the same direction and repel when opposite. Reversing one battery reverses the current in one wire only; reversing both keeps them attracting."
+  },
+  {
+    "id": "isc-phy-2025-05",
+    "source": "Board 2025",
+    "chapter": "Semiconductors",
+    "difficulty": "easy",
+    "text": "An N-type semiconductor is one which has:",
+    "options": [
+      "a majority of holes as charge carriers",
+      "a majority of free electrons as charge carriers",
+      "a trivalent element added as an impurity",
+      "an equal number of holes and free electrons"
+    ],
+    "correct": 1,
+    "explanation": "N-type is doped with a pentavalent impurity, so free electrons are the majority carriers."
+  },
+  {
+    "id": "isc-phy-2025-06",
+    "source": "Board 2025",
+    "chapter": "Ray Optics",
+    "difficulty": "medium",
+    "text": "Assertion: When a convex lens made of glass is completely immersed in water, its focal length increases.\nReason: The refractive index of glass with respect to water is greater than that of glass with respect to air.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion",
+      "Assertion is true and Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correct": 2,
+    "explanation": "1/f = (μ_rel − 1)(1/R₁ − 1/R₂). In water μ_rel = 1.5/1.33 ≈ 1.13, smaller than 1.5 in air, so f increases (Assertion true). The Reason is false: glass's refractive index relative to water is less than relative to air."
+  },
+  {
+    "id": "isc-phy-2025-07",
+    "source": "Board 2025",
+    "chapter": "Wave Optics",
+    "difficulty": "medium",
+    "text": "Assertion: Diffraction of light is difficult to observe in everyday situations but can be observed in laboratory conditions.\nReason: To produce diffraction of waves, the size of an obstacle must be comparable to the wavelength of the waves.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion",
+      "Assertion is true and Reason is false",
+      "Both Assertion and Reason are false"
+    ],
+    "correct": 0,
+    "explanation": "Light has a very small wavelength (~10⁻⁷ m); everyday obstacles are far larger, so diffraction is negligible. In the lab we use very narrow slits comparable to λ, so diffraction becomes visible. The Reason explains the Assertion."
+  },
+  {
+    "id": "isc-phy-2026-01",
+    "source": "Board 2026",
+    "chapter": "Current Electricity",
+    "difficulty": "easy",
+    "text": "An electric eel can generate a voltage of up to 800 V. If it can supply a current of 5 mA, the maximum power it can deliver is:",
+    "options": [
+      "4000 W",
+      "400 W",
+      "40 W",
+      "4 W"
+    ],
+    "correct": 3,
+    "explanation": "P = VI = 800 × 5 × 10⁻³ = 4 W."
+  },
+  {
+    "id": "isc-phy-2026-02",
+    "source": "Board 2026",
+    "chapter": "Magnetism",
+    "difficulty": "medium",
+    "text": "A collimated beam of protons travels with constant velocity along the X-axis. A current-carrying solenoid also has its axis along the X-axis. If the beam enters the solenoid along its axis, it will:",
+    "options": [
+      "describe a circular path",
+      "get deflected along the Z-axis",
+      "get deflected along the Y-axis",
+      "continue to travel undeflected"
+    ],
+    "correct": 3,
+    "explanation": "Inside the solenoid B is along its axis, parallel to the protons' velocity. F = q(v × B) = 0 when v ∥ B, so the beam is undeflected."
+  },
+  {
+    "id": "isc-phy-2026-03",
+    "source": "Board 2026",
+    "chapter": "Dual Nature of Radiation",
+    "difficulty": "medium",
+    "text": "An electron, a proton, a deuteron and an alpha particle are all accelerated from rest through the same potential difference. Which one has the maximum de Broglie wavelength?",
+    "options": [
+      "Proton",
+      "Deuteron",
+      "Electron",
+      "Alpha particle"
+    ],
+    "correct": 2,
+    "explanation": "λ = h/√(2mqV). For the same V, the particle with the smallest product mq has the longest wavelength — the electron."
+  },
+  {
+    "id": "isc-phy-2026-04",
+    "source": "Board 2026",
+    "chapter": "Magnetism",
+    "difficulty": "medium",
+    "text": "The magnetic susceptibility of a material is found to decrease with a rise in its temperature. The material is:",
+    "options": [
+      "diamagnetic",
+      "paramagnetic",
+      "ferromagnetic",
+      "not magnetic"
+    ],
+    "correct": 1,
+    "explanation": "By Curie's law, the susceptibility of a paramagnetic material is inversely proportional to absolute temperature (χ ∝ 1/T). Diamagnetic susceptibility is practically independent of temperature."
+  },
+  {
+    "id": "isc-phy-2026-05",
+    "source": "Board 2026",
+    "chapter": "Semiconductors",
+    "difficulty": "easy",
+    "text": "When a p-n junction diode is forward-biased:",
+    "options": [
+      "it acts as an insulator and no current flows through it",
+      "it offers a low resistance and a large current flows through it",
+      "it offers a high resistance and a small current flows through it",
+      "the width of the depletion region increases"
+    ],
+    "correct": 1,
+    "explanation": "Forward bias lowers the potential barrier and narrows the depletion region, so the diode offers low resistance and a large current flows."
+  },
+  {
+    "id": "isc-phy-2026-06",
+    "source": "Board 2026",
+    "chapter": "Ray Optics",
+    "difficulty": "easy",
+    "text": "When a biconvex lens of glass of refractive index 1.6 was dipped in a certain transparent liquid, it behaved like a plane sheet of glass. The refractive index of the liquid is:",
+    "options": [
+      "1.0",
+      "1.4",
+      "1.5",
+      "1.6"
+    ],
+    "correct": 3,
+    "explanation": "The lens has no power when the relative refractive index is 1, i.e. when the liquid has the same refractive index as the glass: 1.6. Light then passes undeviated."
+  },
+  {
+    "id": "isc-phy-2026-07",
+    "source": "Board 2026",
+    "chapter": "Wave Optics",
+    "difficulty": "medium",
+    "text": "Assertion: In Young's double slit experiment, the first bright band for blue light is closer to the centre than the first bright band for green light.\nReason: Blue light has a longer wavelength than green light.",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 2,
+    "explanation": "y₁ = λD/d ∝ λ. Blue light has a shorter wavelength than green, so its first bright band is closer to the centre (Assertion true). The Reason is false — blue has the shorter wavelength."
+  }
+]

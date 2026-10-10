@@ -1,1 +1,677 @@
-[]
+[
+  {
+    "id": "isc-math-2024-01",
+    "source": "Board 2024",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "Let L be a set of all straight lines in a plane. The relation R on L defined as 'perpendicular to' is:",
+    "options": [
+      "Symmetric and Transitive",
+      "Transitive",
+      "Symmetric",
+      "Equivalence"
+    ],
+    "correct": 2,
+    "explanation": "Perpendicularity is symmetric (L₁⊥L₂ ⟹ L₂⊥L₁). It is NOT reflexive (no line ⊥ itself) and NOT transitive (L₁⊥L₂ and L₂⊥L₃ ⟹ L₁∥L₃, not ⊥). So only Symmetric."
+  },
+  {
+    "id": "isc-math-2024-02",
+    "source": "Board 2024",
+    "chapter": "Differential Equations",
+    "difficulty": "easy",
+    "text": "The order and degree of the differential equation 1 + (dy/dx)² = d²y/dx² are:",
+    "options": [
+      "2 and 3/2",
+      "2 and 3",
+      "3 and 4",
+      "2 and 1"
+    ],
+    "correct": 3,
+    "explanation": "Highest derivative is d²y/dx² → order = 2. The equation is polynomial in derivatives with d²y/dx² to power 1 → degree = 1."
+  },
+  {
+    "id": "isc-math-2024-03",
+    "source": "Board 2024",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "Let A be a non-empty set. Statement 1: Identity relation on A is Reflexive. Statement 2: Every Reflexive relation on A is an Identity relation. Which is correct?",
+    "options": [
+      "Both statements are true",
+      "Both statements are false",
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 1 is false and Statement 2 is true"
+    ],
+    "correct": 2,
+    "explanation": "Identity relation {(a,a): a∈A} is reflexive — Statement 1 TRUE. But a reflexive relation can have extra pairs beyond {(a,a)}, so it need not be the identity — Statement 2 FALSE."
+  },
+  {
+    "id": "isc-math-2024-04",
+    "source": "Board 2024",
+    "chapter": "Continuity and Differentiability",
+    "difficulty": "medium",
+    "text": "From a graph of function f, at which values of x is f NOT differentiable?",
+    "options": [
+      "At x = 0 and x = 2",
+      "At x = 1 and x = 3",
+      "At x = −1 and x = 1",
+      "At x = −1·5 and x = 1·5"
+    ],
+    "correct": 0,
+    "explanation": "The graph has sharp corners (cusps/kinks) at x=0 and x=2, making f non-differentiable at those points."
+  },
+  {
+    "id": "isc-math-2024-05",
+    "source": "Board 2024",
+    "chapter": "Inverse Trigonometry",
+    "difficulty": "medium",
+    "text": "cosec(sin⁻¹(−1/2)) − sec(cos⁻¹(−1/2)) is equal to:",
+    "options": [
+      "−4",
+      "0",
+      "−1",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "sin⁻¹(−1/2) = −π/6, so cosec(−π/6) = −2. cos⁻¹(−1/2) = 2π/3, so sec(2π/3) = −2. Result = −2−(−2) = 0."
+  },
+  {
+    "id": "isc-math-2024-06",
+    "source": "Board 2024",
+    "chapter": "Integration",
+    "difficulty": "easy",
+    "text": "The value of ∫₁^√3 dx/(1+x²) is:",
+    "options": [
+      "π/2",
+      "2π/3",
+      "π/6",
+      "π/12"
+    ],
+    "correct": 3,
+    "explanation": "∫₁^√3 dx/(1+x²) = [tan⁻¹x]₁^√3 = tan⁻¹(√3) − tan⁻¹(1) = π/3 − π/4 = π/12."
+  },
+  {
+    "id": "isc-math-2024-07",
+    "source": "Board 2024",
+    "chapter": "Matrices",
+    "difficulty": "hard",
+    "text": "Assertion: For A = [[-3,2],[-5,4]] and B = [[4,-2],[5,-3]] satisfying AB=BA, A¹⁰⁰B = BA¹⁰⁰. Reason: AB=BA implies AⁿB=BAⁿ for all positive integers n. Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 0,
+    "explanation": "AB = BA = −2I (verified by multiplication). If AB=BA, then A·(AB)=(A·BA)=(AA)B ⟹ AⁿB=BAⁿ by induction. Both true and Reason correctly explains Assertion."
+  },
+  {
+    "id": "isc-math-2024-08",
+    "source": "Board 2024",
+    "chapter": "Integration",
+    "difficulty": "medium",
+    "text": "If ∫(cot x − cosec²x)eˣ dx = eˣf(x) + c, then f(x) will be:",
+    "options": [
+      "cot x + cosec x",
+      "cot² x",
+      "cot x",
+      "cosec x"
+    ],
+    "correct": 2,
+    "explanation": "Using ∫eˣ(f(x)+f'(x))dx = eˣf(x)+c: if f(x)=cot x, then f'(x)=−cosec²x. So f(x)+f'(x) = cot x − cosec²x ✓."
+  },
+  {
+    "id": "isc-math-2024-09",
+    "source": "Board 2024",
+    "chapter": "Applications of Derivatives",
+    "difficulty": "easy",
+    "text": "In which interval is f(x) = x³ − 12x increasing?",
+    "options": [
+      "(−2, 2)",
+      "(−∞, −2) ∪ (2, ∞)",
+      "(−2, ∞)",
+      "(−∞, 2)"
+    ],
+    "correct": 1,
+    "explanation": "f'(x) = 3x²−12 = 3(x−2)(x+2). f'>0 when x<−2 or x>2. So f is increasing on (−∞,−2)∪(2,∞)."
+  },
+  {
+    "id": "isc-math-2024-10",
+    "source": "Board 2024",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "If A and B are symmetric matrices of the same order, then AB − BA is:",
+    "options": [
+      "Skew-symmetric matrix",
+      "Symmetric matrix",
+      "Diagonal matrix",
+      "Identity matrix"
+    ],
+    "correct": 0,
+    "explanation": "(AB−BA)ᵀ = (AB)ᵀ−(BA)ᵀ = BᵀAᵀ−AᵀBᵀ = BA−AB = −(AB−BA). So AB−BA is skew-symmetric."
+  },
+  {
+    "id": "isc-math-2024-11",
+    "source": "Board 2024",
+    "chapter": "Vectors",
+    "difficulty": "medium",
+    "text": "If a⃗ = 3î−2ĵ+k̂ and b⃗ = 2î−4ĵ−3k̂, then |a⃗−2b⃗| will be:",
+    "options": [
+      "√85",
+      "√86",
+      "√87",
+      "√88"
+    ],
+    "correct": 1,
+    "explanation": "a⃗−2b⃗ = (3−4)î+(−2+8)ĵ+(1+6)k̂ = −î+6ĵ+7k̂. |a⃗−2b⃗| = √(1+36+49) = √86."
+  },
+  {
+    "id": "isc-math-2024-12",
+    "source": "Board 2024",
+    "chapter": "Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "If a line makes angles α, β and γ with the positive directions of coordinate axes, then sin²α + sin²β + sin²γ will be:",
+    "options": [
+      "1",
+      "3",
+      "−2",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "Direction cosines satisfy cos²α+cos²β+cos²γ=1. So sin²α+sin²β+sin²γ = (1−cos²α)+(1−cos²β)+(1−cos²γ) = 3−1 = 2."
+  },
+  {
+    "id": "isc-math-2024-13",
+    "source": "Board 2024",
+    "chapter": "Mathematics of Commerce",
+    "difficulty": "medium",
+    "text": "A company sells hand towels at ₹100 per unit. Fixed cost is ₹35,000 and variable cost is 30% of total revenue. The total cost function is:",
+    "options": [
+      "35000 + 3x",
+      "35000 + 30x",
+      "35000 + 100x",
+      "35000 + 10x"
+    ],
+    "correct": 1,
+    "explanation": "Revenue = 100x. Variable cost = 30% of 100x = 30x. Total cost = Fixed + Variable = 35000 + 30x."
+  },
+  {
+    "id": "isc-math-2024-14",
+    "source": "Board 2024",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "If the correlation coefficient r = −3/4, which statement is true?",
+    "options": [
+      "Only one regression line has a negative coefficient",
+      "Both regression coefficients are positive",
+      "Both regression coefficients are negative",
+      "One regression line is parallel to x-axis"
+    ],
+    "correct": 2,
+    "explanation": "The sign of both regression coefficients equals the sign of r. Since r = −3/4 < 0, both regression coefficients are negative."
+  },
+  {
+    "id": "isc-math-2025-01",
+    "source": "Board 2025",
+    "chapter": "Matrices",
+    "difficulty": "easy",
+    "text": "If A = [[0, a], [0, 0]], then A¹⁶ is:",
+    "options": [
+      "Unit matrix",
+      "Null matrix",
+      "Diagonal matrix",
+      "Skew matrix"
+    ],
+    "correct": 1,
+    "explanation": "A is strictly upper-triangular so A² = 0 (nilpotent), hence A¹⁶ = 0, the null matrix."
+  },
+  {
+    "id": "isc-math-2025-02",
+    "source": "Board 2025",
+    "chapter": "Differential Equations",
+    "difficulty": "medium",
+    "text": "Which of the following is a homogeneous differential equation?",
+    "options": [
+      "(4x² + 6y + 5) dy − (3y² + 2x + 4) dx = 0",
+      "(xy) dx − (x³ + y³) dy = 0",
+      "(x² + 2y²) dx + 2xy dy = 0",
+      "y² dx + (x² − xy − y²) dy = 0"
+    ],
+    "correct": 2,
+    "explanation": "In option (c), M = x²+2y² and N = 2xy are both homogeneous functions of degree 2. Option (a) has non-homogeneous terms (constants); option (b) has mixed degrees 2 and 3."
+  },
+  {
+    "id": "isc-math-2025-03",
+    "source": "Board 2025",
+    "chapter": "Applications of Derivatives",
+    "difficulty": "medium",
+    "text": "Consider the graph of a function f(x). Statement 1: f(x) is increasing in (½, 2). Statement 2: f(x) is strictly increasing in (½, 1). Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 0,
+    "explanation": "From the graph, f increases on (½, 2) including a flat segment at x = 1, so it is non-decreasing (Statement 1 true). However, the flat part at x = 1 means it is not strictly increasing throughout (½, 1) (Statement 2 false)."
+  },
+  {
+    "id": "isc-math-2025-04",
+    "source": "Board 2025",
+    "chapter": "Integration",
+    "difficulty": "easy",
+    "text": "∫₀¹ (x⁴ − 1)/(x² + 1) dx is equal to:",
+    "options": [
+      "2/3",
+      "1/3",
+      "−2/3",
+      "0"
+    ],
+    "correct": 2,
+    "explanation": "x⁴ − 1 = (x²+1)(x²−1), so the integrand simplifies to x²−1. ∫₀¹ (x²−1) dx = [x³/3 − x]₀¹ = 1/3 − 1 = −2/3."
+  },
+  {
+    "id": "isc-math-2025-05",
+    "source": "Board 2025",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Assertion: For events A and B with n(A) = n(B), P(A/B) = P(B/A). Reason: Events A and B are mutually exclusive. Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 2,
+    "explanation": "When n(A)=n(B), P(A)=P(B), so P(A/B) = P(A∩B)/P(B) = P(A∩B)/P(A) = P(B/A) — Assertion is TRUE. The Reason (mutually exclusive) is FALSE; mutually exclusive events are not required."
+  },
+  {
+    "id": "isc-math-2025-06",
+    "source": "Board 2025",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "The existence of a unique solution of the system x + y = λ and 5x + ky = 2 depends on:",
+    "options": [
+      "λ only",
+      "λ/k = 1",
+      "both k and λ",
+      "k only"
+    ],
+    "correct": 3,
+    "explanation": "For unique solution, det = k − 5 ≠ 0, i.e., k ≠ 5. The condition depends only on k, not on λ."
+  },
+  {
+    "id": "isc-math-2025-07",
+    "source": "Board 2025",
+    "chapter": "Applications of Derivatives",
+    "difficulty": "easy",
+    "text": "A cylindrical popcorn tub of radius 10 cm is being filled at 314 cm³ per minute. The level is rising at the rate of:",
+    "options": [
+      "1 cm/minute",
+      "0·1 cm/minute",
+      "1·1 cm/minute",
+      "0·5 cm/minute"
+    ],
+    "correct": 0,
+    "explanation": "V = πr²h, dV/dt = πr²(dh/dt). So dh/dt = 314/(π × 100) = 314/314 ≈ 1 cm/min."
+  },
+  {
+    "id": "isc-math-2025-08",
+    "source": "Board 2025",
+    "chapter": "Continuity and Differentiability",
+    "difficulty": "medium",
+    "text": "If f(x) = x+2 (x<0), −x²−2 (0≤x<1), x (x≥1), then the number of points of discontinuity of f(x) is/are:",
+    "options": [
+      "1",
+      "3",
+      "2",
+      "0"
+    ],
+    "correct": 2,
+    "explanation": "At x=0: left limit = 2, f(0) = −2 → discontinuous. At x=1: left limit = −3, f(1) = 1 → discontinuous. Total: 2 points."
+  },
+  {
+    "id": "isc-math-2025-09",
+    "source": "Board 2025",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "Assertion: If Set A has m elements, Set B has n elements and n < m, then the number of one-one functions from A→B is zero. Reason: A function f:A→B is defined only if all elements in A have an image in B. Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 1,
+    "explanation": "Assertion is TRUE (by pigeonhole principle, no injection exists from a larger set to a smaller set). Reason is also TRUE (definition of a function) but it doesn't explain the assertion — the real reason is the pigeonhole principle."
+  },
+  {
+    "id": "isc-math-2025-10",
+    "source": "Board 2025",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "Let X be a discrete random variable with P(X=30)=1/5, P(X=10)=3/10, P(X=−10)=1/2. Then E(X) is:",
+    "options": [
+      "1",
+      "4",
+      "2",
+      "30"
+    ],
+    "correct": 1,
+    "explanation": "E(X) = 30(1/5) + 10(3/10) + (−10)(1/2) = 6 + 3 − 5 = 4."
+  },
+  {
+    "id": "isc-math-2025-11",
+    "source": "Board 2025",
+    "chapter": "Matrices",
+    "difficulty": "medium",
+    "text": "Statement 1: If A is invertible, then (A²)⁻¹ = (A⁻¹)². Statement 2: If A is invertible, then |A⁻¹| = |A|⁻¹. Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 2,
+    "explanation": "Statement 1: (A²)⁻¹ = (A·A)⁻¹ = A⁻¹·A⁻¹ = (A⁻¹)² — TRUE. Statement 2: |A⁻¹| = 1/|A| = |A|⁻¹ — TRUE."
+  },
+  {
+    "id": "isc-math-2025-12",
+    "source": "Board 2025",
+    "chapter": "Vectors",
+    "difficulty": "medium",
+    "text": "Assertion: (a⃗+b⃗)² + (b⃗−a⃗)² = 2(a²+b²). Reason: Dot product of any two vectors is commutative. Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 0,
+    "explanation": "|a+b|² + |b−a|² = |a|²+2a·b+|b|² + |b|²−2b·a+|a|² = 2|a|²+2|b|² = 2(a²+b²), using a·b = b·a (commutativity). Both true and Reason IS the explanation."
+  },
+  {
+    "id": "isc-math-2025-13",
+    "source": "Board 2025",
+    "chapter": "Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The angle between the planes x + y + 2z = 9 and 2x − y + z = 15 is:",
+    "options": [
+      "π/2",
+      "π/3",
+      "π",
+      "3π/4"
+    ],
+    "correct": 1,
+    "explanation": "Normal vectors: n₁=(1,1,2), n₂=(2,−1,1). cos θ = |n₁·n₂|/(|n₁||n₂|) = |2−1+2|/(√6·√6) = 3/6 = 1/2. So θ = π/3."
+  },
+  {
+    "id": "isc-math-2025-14",
+    "source": "Board 2025",
+    "chapter": "Mathematics of Commerce",
+    "difficulty": "medium",
+    "text": "Total revenue R(x) = 36x + 3x² + 5. The actual revenue from selling the 10th item is:",
+    "options": [
+      "27",
+      "90",
+      "93",
+      "33"
+    ],
+    "correct": 2,
+    "explanation": "Actual revenue for 10th item = R(10) − R(9) = (360+300+5) − (324+243+5) = 665 − 572 = 93."
+  },
+  {
+    "id": "isc-math-2025-15",
+    "source": "Board 2025",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Which of the following statements about regression coefficients is/are correct?\n(I) Correlation coefficient and regression coefficients are of the same sign.\n(II) Correlation coefficient is the arithmetic mean of regression coefficients.\n(III) Product of two regression coefficients is always equal to 1.\n(IV) Both regression coefficients cannot be numerically greater than unity.",
+    "options": [
+      "Only (IV) is correct",
+      "Only (I) and (II) are correct",
+      "Only (I) and (IV) are correct",
+      "Only (III) and (IV) are correct"
+    ],
+    "correct": 2,
+    "explanation": "(I) TRUE — all three have the same sign. (II) FALSE — r = ±√(bxy·byx), the geometric mean, not arithmetic. (III) FALSE — bxy·byx = r² ≤ 1. (IV) TRUE — since their product ≤ 1, both can't exceed 1 simultaneously."
+  },
+  {
+    "id": "isc-math-2026-01",
+    "source": "Board 2026",
+    "chapter": "Determinants",
+    "difficulty": "easy",
+    "text": "If A is a square matrix of order 3 and |A| = −3, then the value of |−4A| is:",
+    "options": [
+      "202",
+      "192",
+      "−212",
+      "−192"
+    ],
+    "correct": 1,
+    "explanation": "|kA| = k³|A| for a 3×3 matrix. |−4A| = (−4)³×(−3) = −64×(−3) = 192."
+  },
+  {
+    "id": "isc-math-2026-02",
+    "source": "Board 2026",
+    "chapter": "Continuity and Differentiability",
+    "difficulty": "easy",
+    "text": "Consider f(x) = log x (x > 0). Then at x = 1, the function f is:",
+    "options": [
+      "differentiable and continuous",
+      "differentiable but not continuous",
+      "continuous but not differentiable",
+      "neither differentiable nor continuous"
+    ],
+    "correct": 0,
+    "explanation": "log x is continuous on (0,∞) and its derivative 1/x exists at x=1. So f is both differentiable and continuous at x=1."
+  },
+  {
+    "id": "isc-math-2026-03",
+    "source": "Board 2026",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "Events A and B are mutually exclusive with P(A) = 1/5 and P(B) = 2/3. The value of P(A∪B) is:",
+    "options": [
+      "11/15",
+      "3/15",
+      "14/15",
+      "13/15"
+    ],
+    "correct": 3,
+    "explanation": "For mutually exclusive events, P(A∪B) = P(A)+P(B) = 1/5+2/3 = 3/15+10/15 = 13/15."
+  },
+  {
+    "id": "isc-math-2026-04",
+    "source": "Board 2026",
+    "chapter": "Continuity and Differentiability",
+    "difficulty": "medium",
+    "text": "Assertion: f(x) = {1+x, x≤2; 5−x, x>2} is not differentiable at x=2. Reason: A function is differentiable at x=a if Lf'(a) = Rf'(a). Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 0,
+    "explanation": "LHD at x=2: lim [f(2−h)−f(2)]/(−h) = 1. RHD: lim [f(2+h)−f(2)]/h = −1. LHD≠RHD → not differentiable (Assertion TRUE). Reason gives the correct definition and IS the explanation."
+  },
+  {
+    "id": "isc-math-2026-05",
+    "source": "Board 2026",
+    "chapter": "Integration",
+    "difficulty": "easy",
+    "text": "The value of ∫₀^{3/2} |x| dx is:",
+    "options": [
+      "1/8",
+      "9/8",
+      "9/4",
+      "3/4"
+    ],
+    "correct": 1,
+    "explanation": "For x≥0, |x|=x. ∫₀^{3/2} x dx = [x²/2]₀^{3/2} = (9/4)/2 = 9/8."
+  },
+  {
+    "id": "isc-math-2026-06",
+    "source": "Board 2026",
+    "chapter": "Inverse Trigonometry",
+    "difficulty": "medium",
+    "text": "Statement 1: If 0 < x < π/2, then tan⁻¹(cot x) = π/2 − x. Statement 2: tan⁻¹(tan x) = x for all x ∈ R. Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 0,
+    "explanation": "S1: cot x = tan(π/2−x) and (π/2−x)∈(0,π/2) for x∈(0,π/2), so tan⁻¹(cot x)=π/2−x — TRUE. S2: tan⁻¹(tan x)=x only for x∈(−π/2,π/2), not all of R — FALSE."
+  },
+  {
+    "id": "isc-math-2026-07",
+    "source": "Board 2026",
+    "chapter": "Matrices",
+    "difficulty": "easy",
+    "text": "How many matrices of order 3×3 can be formed if each entry is either 0 or 1?",
+    "options": [
+      "64",
+      "256",
+      "512",
+      "216"
+    ],
+    "correct": 2,
+    "explanation": "A 3×3 matrix has 9 entries. Each entry has 2 choices (0 or 1). Total = 2⁹ = 512."
+  },
+  {
+    "id": "isc-math-2026-08",
+    "source": "Board 2026",
+    "chapter": "Applications of Derivatives",
+    "difficulty": "medium",
+    "text": "From the graph of f(x): Statement 1: f increases in (−∞,−1) and (1,∞). Statement 2: f decreases in (−∞,0) and (1,∞). Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 0,
+    "explanation": "From the graph (W-shape), the function increases in (−∞,−1) and (1,∞) — Statement 1 TRUE. It does NOT decrease throughout (−∞,0); it increases in (−∞,−1) — Statement 2 FALSE."
+  },
+  {
+    "id": "isc-math-2026-09",
+    "source": "Board 2026",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If set A contains four elements and set B contains five elements, then the number of one-one and onto mappings from A→B is:",
+    "options": [
+      "120",
+      "0",
+      "720",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "For an onto (surjective) function, we need |A| ≥ |B|. Here |A|=4 < |B|=5, so no onto function from A to B is possible. Count = 0."
+  },
+  {
+    "id": "isc-math-2026-10",
+    "source": "Board 2026",
+    "chapter": "Differential Equations",
+    "difficulty": "medium",
+    "text": "The solution of dy/dx − y = 1, y(0) = 1 is given by:",
+    "options": [
+      "y = −eˣ+1",
+      "y = −e^{−x−1}",
+      "y = −1+eˣ",
+      "y = 2eˣ−1"
+    ],
+    "correct": 3,
+    "explanation": "IF = e^{−x}. d/dx(ye^{−x}) = e^{−x}. ye^{−x} = −e^{−x}+C → y = −1+Ce^x. y(0)=1: C=2. Solution: y = 2eˣ−1."
+  },
+  {
+    "id": "isc-math-2026-11",
+    "source": "Board 2026",
+    "chapter": "Matrices",
+    "difficulty": "easy",
+    "text": "Assertion: A system AX=B of three linear equations in three unknowns has a unique solution X=A⁻¹B. Reason: Matrix A is non-singular. Which is correct?",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation",
+      "Both Assertion and Reason are true but Reason is not the correct explanation",
+      "Assertion is true and Reason is false",
+      "Assertion is false and Reason is true"
+    ],
+    "correct": 0,
+    "explanation": "For AX=B to have unique solution X=A⁻¹B, A must be invertible, which is equivalent to A being non-singular. Both are TRUE and the Reason correctly explains the Assertion."
+  },
+  {
+    "id": "isc-math-2026-12",
+    "source": "Board 2026",
+    "chapter": "Vectors",
+    "difficulty": "easy",
+    "text": "A scalar is multiplied by a unit vector. Statement 1: The result is a vector with the magnitude of the scalar. Statement 2: The result is a vector with unit magnitude. Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 0,
+    "explanation": "Scalar k × unit vector û = vector with magnitude |k|. Statement 1 TRUE. Statement 2 FALSE unless |k|=1."
+  },
+  {
+    "id": "isc-math-2026-13",
+    "source": "Board 2026",
+    "chapter": "Vectors",
+    "difficulty": "medium",
+    "text": "The projection of î + 2ĵ − 3k̂ on 2î − ĵ + k̂ is:",
+    "options": [
+      "√3/√2",
+      "−√3/√2",
+      "−3/2",
+      "−√3/2"
+    ],
+    "correct": 1,
+    "explanation": "Dot product = (1)(2)+(2)(−1)+(−3)(1) = 2−2−3 = −3. |2î−ĵ+k̂| = √6. Projection = −3/√6 = −3/√6 = −3√6/6 = −√6/2 = −√3/√2."
+  },
+  {
+    "id": "isc-math-2026-14",
+    "source": "Board 2026",
+    "chapter": "Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The direction cosines of the line through P(2, 3, 5) and Q(−1, 2, 4) are:",
+    "options": [
+      "(3/√11, 1/√11, 1/√11)",
+      "(1/√11, 1/√11, 1/√11)",
+      "(3/√11, −1/√11, −1/√11)",
+      "(−3/√11, 1/√11, −1/√11)"
+    ],
+    "correct": 0,
+    "explanation": "Direction PQ→QP = P−Q = (3,1,1). |PQ| = √(9+1+1) = √11. DCs = (3/√11, 1/√11, 1/√11)."
+  },
+  {
+    "id": "isc-math-2026-15",
+    "source": "Board 2026",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Statement 1: Two regression coefficients cannot have the same sign. Statement 2: Both regression coefficients can be numerically greater than unity. Which is correct?",
+    "options": [
+      "Statement 1 is true and Statement 2 is false",
+      "Statement 2 is true and Statement 1 is false",
+      "Both statements are true",
+      "Both statements are false"
+    ],
+    "correct": 3,
+    "explanation": "S1 FALSE: both regression coefficients always have the same sign as r. S2 FALSE: bxy·byx = r² ≤ 1, so both cannot exceed 1 simultaneously. Both statements are false."
+  },
+  {
+    "id": "isc-math-2026-16",
+    "source": "Board 2026",
+    "chapter": "Mathematics of Commerce",
+    "difficulty": "medium",
+    "text": "Which statement about Marginal Revenue is correct?",
+    "options": [
+      "It is always constant for all firms",
+      "It is always equal to average revenue",
+      "It is the revenue gained from decreasing output by 1 unit",
+      "MR at x=a is the additional revenue from increasing output from a to a+1"
+    ],
+    "correct": 3,
+    "explanation": "Marginal Revenue = R(a+1)−R(a) = additional revenue from selling one more unit; equivalently MR = dR/dx evaluated at x=a."
+  }
+]

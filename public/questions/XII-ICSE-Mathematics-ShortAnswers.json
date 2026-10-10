@@ -2098,5 +2098,770 @@
       "Regression y on x: y−6 = 0.2(x−8)",
       "At x=20, y = 8.4"
     ]
+  },
+  {
+    "id": "sa-xii-math-2024-01",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "Let f: R−{−1/3}→R−{0} be defined as f(x) = 5/(3x+1). Find f⁻¹(x).",
+    "modelAnswer": "Let y = 5/(3x+1). Then 3x+1 = 5/y → x = (5/y−1)/3 = (5−y)/(3y). Replacing y with x: f⁻¹(x) = (5−x)/(3x).",
+    "keyPoints": [
+      "Set y = f(x) and solve for x",
+      "f⁻¹(x) = (5−x)/(3x)",
+      "Domain of f⁻¹ is R−{0}"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-02",
+    "chapter": "Determinants",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Find the value of |βγ 1 α(β+γ); γα 1 β(γ+α); αβ 1 γ(α+β)| without expanding at any stage.",
+    "modelAnswer": "Apply C₃ → C₃ + C₁: the new C₃ entries become α(β+γ)+βγ = αβ+αγ+βγ, which is the same for all three rows (= αβ+βγ+γα). Since C₂ = (1,1,1) and C₃' = (αβ+βγ+γα)(1,1,1) are proportional, the determinant = 0.",
+    "keyPoints": [
+      "Apply C₃ → C₃ + C₁",
+      "Each entry of new C₃ equals αβ+βγ+γα (same value)",
+      "Proportional columns ⟹ det = 0"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-03",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "Determine k for which f(x) = (x+3)²−36)/(x−3) for x≠3, and k for x=3 is continuous at x=3.",
+    "modelAnswer": "lim_{x→3} [(x+3)²−36]/(x−3) = lim (x²+6x+9−36)/(x−3) = lim (x²+6x−27)/(x−3) = lim (x+9)(x−3)/(x−3) = lim (x+9) = 12. For continuity, k = 12.",
+    "keyPoints": [
+      "Factorise numerator: (x+9)(x−3)",
+      "Cancel (x−3) and take limit as x→3",
+      "k = 12"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-04",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Evaluate: ∫₀^{2π} 1/(1+eˢⁱⁿˣ) dx.",
+    "modelAnswer": "Let I = ∫₀^{2π} dx/(1+eˢⁱⁿˣ). Replace x → 2π−x: I = ∫₀^{2π} dx/(1+e^{−sinx}). Adding both: 2I = ∫₀^{2π} [1/(1+eˢⁱⁿˣ) + eˢⁱⁿˣ/(1+eˢⁱⁿˣ)] dx = ∫₀^{2π} 1·dx = 2π. So I = π.",
+    "keyPoints": [
+      "Apply property: replace x → 2π−x to get second integral",
+      "Add both versions: integrand simplifies to 1",
+      "2I = 2π ⟹ I = π"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-05",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Evaluate P(A∪B) if 2P(A) = P(B) = 5/13 and P(A|B) = 2/5.",
+    "modelAnswer": "P(B) = 5/13, P(A) = 5/26. P(A∩B) = P(A|B)·P(B) = (2/5)(5/13) = 2/13. P(A∪B) = P(A)+P(B)−P(A∩B) = 5/26 + 5/13 − 2/13 = 5/26 + 10/26 − 4/26 = 11/26.",
+    "keyPoints": [
+      "P(B) = 5/13, so P(A) = 5/26",
+      "P(A∩B) = P(A|B)·P(B) = 2/13",
+      "P(A∪B) = 11/26"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-06",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "If y = 3cos(log x) + 4sin(log x), show that x²d²y/dx² + x·dy/dx + y = 0.",
+    "modelAnswer": "y' = [−3sin(log x)/x + 4cos(log x)/x]. xy' = −3sin(log x)+4cos(log x). Differentiate again: y'' = [−3cos(log x)/x² − 4sin(log x)/x²] + ... Using product rule on xy': x·y'' + y' = [−3cos(log x)−4sin(log x)]/x. So x²y'' + xy' = −3cos(log x)−4sin(log x) = −y. Hence x²y''+xy'+y = 0.",
+    "keyPoints": [
+      "Compute y' and multiply by x to simplify",
+      "Differentiate xy' to find x²y''+xy'",
+      "Result equals −y, so x²y''+xy'+y = 0"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-07",
+    "chapter": "Inverse Trigonometry",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Solve for x: sin⁻¹(x/2) + cos⁻¹x = π/6.",
+    "modelAnswer": "Use sin⁻¹(x/2) = π/6 − cos⁻¹x. Taking sin of both sides: x/2 = sin(π/6)cos(cos⁻¹x)−cos(π/6)sin(cos⁻¹x) = (1/2)x−(√3/2)√(1−x²). So x/2−x/2 = −(√3/2)√(1−x²) → 0 = (√3/2)√(1−x²) → 1−x²=0 → x = ±1. Check: x=1 works. x = 1.",
+    "keyPoints": [
+      "Use sin of both sides with angle addition formula",
+      "Solve resulting equation for x",
+      "Verify: x = 1 (x = −1 extraneous)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-08",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Evaluate: ∫ (x+7)/(x²+4x+7) dx.",
+    "modelAnswer": "Write x+7 = (1/2)(2x+4) + 5. Split: ∫(1/2)(2x+4)/(x²+4x+7)dx + 5∫dx/(x²+4x+7). First integral: (1/2)ln|x²+4x+7|. For second: x²+4x+7 = (x+2)²+3. So 5∫dx/((x+2)²+3) = 5·(1/√3)tan⁻¹((x+2)/√3). Answer: (1/2)ln|x²+4x+7| + (5/√3)tan⁻¹((x+2)/√3) + C.",
+    "keyPoints": [
+      "Write x+7 = (1/2)(2x+4) + 5 to split",
+      "First part gives (1/2)ln|x²+4x+7|",
+      "Complete the square; second part gives (5/√3)tan⁻¹((x+2)/√3)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-09",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "A jeweller has 3 boxes: I(1W,2R), II(2W,3R), III(3W,1R). A box is chosen randomly and 2 gems drawn (one white, one red). Find P(gems from Box II).",
+    "modelAnswer": "P(1W+1R | I) = (1×2)/C(3,2) = 2/3. P(1W+1R | II) = (2×3)/C(5,2) = 6/10 = 3/5. P(1W+1R | III) = (3×1)/C(4,2) = 3/6 = 1/2. By Bayes: P(II|1W+1R) = (1/3)(3/5)/[(1/3)(2/3)+(1/3)(3/5)+(1/3)(1/2)] = (1/5)/(2/9+3/15+1/6). LCM=90: (20+18+15)/90=53/90. P(II) = (18/90)/(53/90) = 18/53.",
+    "keyPoints": [
+      "P(1W+1R|I)=2/3, P(1W+1R|II)=3/5, P(1W+1R|III)=1/2",
+      "Apply Bayes theorem with equal prior P(each box)=1/3",
+      "P(Box II) = 18/53"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-10",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "A furniture factory needs teakwood, rosewood and satinwood for tables, chairs and cots. Requirements (tonnes): [[2,3,4],[1,1,2],[3,2,1]] for [table, chair, cot]. Available: 29T teakwood, 13T rosewood, 16T satinwood. Find number of each piece using matrix method.",
+    "modelAnswer": "AX = B where A = [[2,3,4],[1,1,2],[3,2,1]], X = [t,c,cot]ᵀ, B = [29,13,16]ᵀ. |A| = 5. X = A⁻¹B. |A₁|=10, |A₂|=15, |A₃|=20. t=10/5=2, c=15/5=3, cot=20/5=4. Tables=2, Chairs=3, Cots=4.",
+    "keyPoints": [
+      "Form AX=B from the constraints",
+      "|A|=5, solve via Cramer's rule",
+      "Tables=2, Chairs=3, Cots=4"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-11",
+    "chapter": "Applications of Derivatives",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Mrs. Roy designs a window (rectangle surmounted by equilateral triangle) with total perimeter 12 m. Find dimensions for maximum light area.",
+    "modelAnswer": "Let width=2a, height of rectangle=h. Perimeter: 2h+2a+a (triangle side=2a, so 3 sides of triangle, but two sides shared): 2h + 2a + 2a = 12 → Wait: perimeter = 2h + 2a + 2a (equilateral triangle top has side 2a, adds one extra side of 2a). So 2h+4a=12 → h=6−2a. Area = 2ah + √3a². dA/da = 2h+2a(−2)+2√3a = 2(6−2a)−4a+2√3a = 12−4a−4a+2√3a = 12−(8−2√3)a. Set=0: a = 12/(8−2√3) = 6/(4−√3). h = 6−2·6/(4−√3) = 6(4−√3−2)/(4−√3) = 6(2−√3)/(4−√3). Verify d²A/da²<0.",
+    "keyPoints": [
+      "Perimeter constraint: 2h+4a=12, so h=6−2a",
+      "Area A = 2ah+√3a²; substitute h",
+      "Maximise: a = 6/(4−√3), h = 6(2−√3)/(4−√3)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-12",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Solve: 2ye^(x/y)dx + (y−2xe^(x/y))dy = 0, given x=0 when y=1.",
+    "modelAnswer": "Let v = x/y, so x = vy. dx = v dy + y dv. Substitute: 2yeᵛ(v dy+y dv)+(y−2vyeᵛ)dy = 0. 2yeᵛ·y dv + dy(2yeᵛv+y−2vyeᵛ) = 0. 2y²eᵛ dv + y dy = 0. 2eᵛ dv + dy/y = 0. Integrate: 2eᵛ + ln|y| = C. 2e^(x/y) + ln y = C. At x=0, y=1: 2e⁰+0=C → C=2. Solution: 2e^(x/y) + ln y = 2.",
+    "keyPoints": [
+      "Substitute v=x/y to make homogeneous",
+      "Separate variables: 2eᵛ dv + dy/y = 0",
+      "Integrate and apply IC (0,1): 2e^(x/y)+ln y = 2"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-13",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "A teacher selects 2 numbers from {2,3,4,5} without replacement as ordered pairs. X = larger of the two numbers. (i) Complete the sample space. (ii) Find total pairs with one larger number. (iii) Find P(X=x). (iv) Find P(X<5). (v) Find E(X).",
+    "modelAnswer": "(ii) All ordered pairs (a,b) with a≠b: 12 pairs. (iii) P(X=3)=2/12=1/6; P(X=4)=4/12=1/3; P(X=5)=6/12=1/2. (iv) P(X<5)=P(X=3)+P(X=4)=1/6+1/3=1/2. (v) E(X)=3(1/6)+4(1/3)+5(1/2)=1/2+4/3+5/2=3/6+8/6+15/6=26/6=13/3.",
+    "keyPoints": [
+      "Total ordered pairs without replacement: 12",
+      "P(X=3)=1/6, P(X=4)=1/3, P(X=5)=1/2",
+      "E(X) = 13/3 ≈ 4.33"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-14",
+    "chapter": "Vectors",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "If a⃗ = 2î+ĵ+2k̂ and b⃗ = 5î−3ĵ+k̂, find the projection of b⃗ on a⃗.",
+    "modelAnswer": "Projection of b⃗ on a⃗ = (a⃗·b⃗)/|a⃗| = (10−3+2)/√(4+1+4) = 9/3 = 3.",
+    "keyPoints": [
+      "a⃗·b⃗ = 10−3+2 = 9",
+      "|a⃗| = √9 = 3",
+      "Projection = 9/3 = 3"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-15",
+    "chapter": "Application of Integration",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Find the area of the region bounded by y² = 4x and x² = 4y using integration.",
+    "modelAnswer": "Curves intersect at (0,0) and (4,4). For 0≤x≤4, y_upper = 2√x (from y²=4x) and y_lower = x²/4 (from x²=4y). Area = ∫₀⁴ (2√x − x²/4) dx = [4x^(3/2)/3 − x³/12]₀⁴ = 32/3 − 16/3 = 16/3 sq. units.",
+    "keyPoints": [
+      "Find intersection points: (0,0) and (4,4)",
+      "Area = ∫₀⁴ (2√x − x²/4) dx",
+      "Answer = 16/3 sq. units"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-16",
+    "chapter": "Statistics",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Years of service X: 11,7,9,5,8,6,10 and Monthly salary Y (₹1000): 10,8,6,5,9,7,11. (a) Find regression equation of Y on X. (b) Predict salary for 13 years' experience.",
+    "modelAnswer": "(a) x̄ = 56/7=8, ȳ = 56/7=8. Σ(x−x̄)(y−ȳ): (3)(2)+(−1)(0)+(1)(−2)+(−3)(−3)+(0)(1)+(−2)(−1)+(2)(3) = 6+0−2+9+0+2+6=21. Σ(x−x̄)² = 9+1+1+9+0+4+4=28. byx = 21/28 = 3/4. ȳ−byx·x̄ = 8−6=2. Regression eq: Y = (3/4)X+2. (b) At X=13: Y = (3/4)(13)+2 = 9.75+2 = 11.75 → ₹11,750.",
+    "keyPoints": [
+      "x̄ = ȳ = 8",
+      "byx = Σ(x−x̄)(y−ȳ)/Σ(x−x̄)² = 21/28 = 3/4",
+      "Regression: Y = 0.75X+2; at X=13, Y=11.75 (₹11,750)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2024-17",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Aman has ₹1500 to buy rice (₹180/sack) and wheat (₹120/sack). He can store max 10 bags. Profit: ₹11/rice, ₹9/wheat. Formulate LPP and find maximum profit.",
+    "modelAnswer": "Let x=rice bags, y=wheat bags. Constraints: x+y≤10, 180x+120y≤1500 (i.e., 3x+2y≤25), x,y≥0. Maximize Z=11x+9y. Corner points: (0,0), (0,10), (5,5), (25/3,0). At (5,5): Z=55+45=100. At (0,10): Z=0+90=90. At (25/3,0)→(8,0): Z=88. Maximum Z=100 at x=5, y=5. Max profit = ₹100.",
+    "keyPoints": [
+      "Constraints: x+y≤10 and 3x+2y≤25",
+      "Corner points: (0,10), (5,5), (8,0)",
+      "Max profit ₹100 at 5 rice bags + 5 wheat bags"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-01",
+    "chapter": "Applications of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Find the point on the curve y = 2x² − 6x − 4 at which the tangent is parallel to the x-axis.",
+    "modelAnswer": "dy/dx = 4x − 6. For tangent parallel to x-axis, dy/dx = 0 → 4x − 6 = 0 → x = 3/2. y = 2(9/4) − 6(3/2) − 4 = 9/2 − 9 − 4 = −17/2. Point: (3/2, −17/2).",
+    "keyPoints": [
+      "Set dy/dx = 0 to find x",
+      "Substitute back to find y",
+      "Point is (3/2, −17/2)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-02",
+    "chapter": "Inverse Trigonometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Find the value of tan⁻¹x − cot⁻¹x, if (tan⁻¹x)² − (cot⁻¹x)² = 5π/8.",
+    "modelAnswer": "Let a = tan⁻¹x, b = cot⁻¹x. We know a + b = π/2. Given a² − b² = 5π/8, i.e., (a+b)(a−b) = 5π/8. So (π/2)(a−b) = 5π/8 → a − b = 5π/4. Thus tan⁻¹x − cot⁻¹x = 5π/4.",
+    "keyPoints": [
+      "Use tan⁻¹x + cot⁻¹x = π/2",
+      "Factor a² − b² = (a+b)(a−b)",
+      "Solve: a − b = 5π/4"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-03",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "If xʸ = e^(x−y), prove that dy/dx = log x / (1 + log x)².",
+    "modelAnswer": "Taking log: y log x = x − y → y log x + y = x → y(1 + log x) = x → y = x/(1+log x). Differentiating: dy/dx = [(1+log x)(1) − x(1/x)] / (1+log x)² = [1 + log x − 1] / (1+log x)² = log x / (1+log x)².",
+    "keyPoints": [
+      "Take log both sides: y log x = x − y",
+      "Rearrange: y = x/(1+log x)",
+      "Apply quotient rule to differentiate"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-04",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Three shopkeepers Gaurav, Rizwan and Jacob use carry bags made of polythene, handmade paper and newspaper. Numbers used: Gaurav (20, 30, 40), Rizwan (30, 40, 20), Jacob (40, 20, 30). Costs: polythene ₹1, handmade ₹5, newspaper ₹2. They spend ₹A, ₹B and ₹C. (i) Represent in matrix form. (ii) Find ₹A, ₹B and ₹C.",
+    "modelAnswer": "Matrix equation: [[20,30,40],[30,40,20],[40,20,30]] × [[1],[5],[2]] = [[A],[B],[C]]. A = 20+150+80 = 250. B = 30+200+40 = 270. C = 40+100+60 = 200. So ₹A=250, ₹B=270, ₹C=200.",
+    "keyPoints": [
+      "Form 3×3 matrix of bag quantities and 3×1 cost vector",
+      "A = 20(1)+30(5)+40(2) = 250",
+      "B = 270, C = 200"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-05",
+    "chapter": "Determinants",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "If x + y + z = 0, show that |1 1 1; x y z; x³ y³ z³| = 0.",
+    "modelAnswer": "Apply C₂→C₂−C₁, C₃→C₃−C₁: |1 0 0; x y−x z−x; x³ y³−x³ z³−x³|. Factor: (y−x) from C₂ and (z−x) from C₃. y³−x³ = (y−x)(y²+xy+x²), z³−x³ = (z−x)(z²+xz+x²). Det = (y−x)(z−x)|1 0 0; x 1 1; x³ y²+xy+x² z²+xz+x²|. Expanding: (y−x)(z−x)[(z²+xz+x²)−(y²+xy+x²)] = (y−x)(z−x)(z²+xz−y²−xy) = (y−x)(z−x)(z−y)(z+y+x) = 0, since x+y+z=0.",
+    "keyPoints": [
+      "Use column operations to simplify",
+      "Factor difference of cubes",
+      "Use x+y+z=0 in the final factor"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-06",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Evaluate: ∫ cos x / (3cos x − 5) dx.",
+    "modelAnswer": "Write cos x = A(3cos x − 5) + B·(−3sin x)... Better: write cos x = (1/3)(3cos x − 5) + 5/3. So ∫ cos x/(3cos x−5) dx = (1/3)∫dx + (5/3)∫dx/(3cos x−5). For the second integral use t = tan(x/2): cos x = (1−t²)/(1+t²), dx = 2dt/(1+t²). 3cos x−5 = (3(1−t²)−5(1+t²))/(1+t²) = (−2−8t²)/(1+t²). ∫dx/(3cos x−5) = ∫(2dt/(1+t²))·(1+t²)/(−2−8t²) = ∫dt/(−1−4t²) = −(1/4)·(1/2)tan⁻¹(2t) + C = −(1/8)tan⁻¹(2tan(x/2)) + C. Answer: x/3 + (5/3)·(−1/8)tan⁻¹(2tan(x/2)) + C = x/3 − (5/24)tan⁻¹(2tan(x/2)) + C.",
+    "keyPoints": [
+      "Write cos x = (1/3)(3cos x−5) + 5/3 to split",
+      "Use Weierstrass substitution t=tan(x/2) for ∫1/(3cos x−5)dx",
+      "Result: x/3 − (5/24)tan⁻¹(2tan(x/2)) + C"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-07",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Pia, Sia and Dia displayed 15, 5 and 10 paintings respectively. A person buys 3 paintings. (i) Find P(one painting from each). (ii) Find P(all three from the same person).",
+    "modelAnswer": "(i) Total C(30,3)=4060. One from each: C(15,1)·C(5,1)·C(10,1) = 750. P = 750/4060 = 75/406. (ii) All from same: C(15,3)+C(5,3)+C(10,3) = 455+10+120 = 585. P = 585/4060 = 117/812.",
+    "keyPoints": [
+      "Total ways = C(30,3) = 4060",
+      "(i) P = 15·5·10/4060 = 750/4060 = 75/406",
+      "(ii) P = (C(15,3)+C(5,3)+C(10,3))/4060 = 585/4060 = 117/812"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-08",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Prove: ∫(π/4 to 3π/4) x dx / (1 + sin x) = (√2 − 1)π.",
+    "modelAnswer": "Let I = ∫(π/4 to 3π/4) x/(1+sin x) dx. Use property f(a+b−x): replace x → π − x. 1+sin(π−x) = 1+sin x. So I = ∫(π/4 to 3π/4) (π−x)/(1+sin x) dx. Adding: 2I = π∫(π/4 to 3π/4) dx/(1+sin x). Multiply by (1−sin x)/(1−sin x): ∫dx/(1+sin x) = ∫(1−sin x)/cos²x dx = ∫sec²x dx − ∫tan x sec x dx = tan x − sec x + C. Evaluate from π/4 to 3π/4: [tan x − sec x] = (−1−(−√2)) − (1−√2) = (√2−1) − (1−√2) = 2√2−2. So 2I = π(2√2−2) → I = (√2−1)π.",
+    "keyPoints": [
+      "Apply King's property: replace x with (π/4+3π/4−x) = π−x",
+      "Add to get 2I = π∫dx/(1+sin x)",
+      "Use ∫dx/(1+sin x) = tan x − sec x; evaluate limits"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-09",
+    "chapter": "Differential Equations",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Solve: (x + 5y²) dy/dx = y, given x = 2 when y = 1.",
+    "modelAnswer": "Rewrite as dx/dy = (x + 5y²)/y = x/y + 5y. dx/dy − x/y = 5y. IF = e^(∫−1/y dy) = e^(−ln y) = 1/y. Multiply: d/dy(x/y) = 5. x/y = 5y + C. x = 5y² + Cy. At x=2, y=1: 2 = 5 + C → C = −3. Solution: x = 5y² − 3y.",
+    "keyPoints": [
+      "Rewrite as linear DE in x: dx/dy − x/y = 5y",
+      "IF = 1/y; multiply and integrate",
+      "Apply IC (2,1) to get C = −3; answer: x = 5y² − 3y"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-10",
+    "chapter": "Inverse Trigonometry",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "(i) Which graph represents y = sin⁻¹x? (ii) Write domain and range of y = sin⁻¹x. (iii) Prove sin⁻¹(1/√5) + sin⁻¹(2/√5) = π/2. (iv) Find tan⁻¹[2sin(2cos⁻¹(√3/2))].",
+    "modelAnswer": "(i) Graph 1 (passes through origin, bounded between −π/2 and π/2). (ii) Domain: [−1, 1], Range: [−π/2, π/2]. (iii) Let α = sin⁻¹(1/√5), β = sin⁻¹(2/√5). sin α = 1/√5, cos α = 2/√5; sin β = 2/√5, cos β = 1/√5. sin(α+β) = sin α cos β + cos α sin β = (1/√5)(1/√5) + (2/√5)(2/√5) = 1/5 + 4/5 = 1. So α+β = π/2. (iv) cos⁻¹(√3/2) = π/6. 2cos⁻¹(√3/2) = π/3. sin(π/3) = √3/2. 2sin(π/3) = √3. tan⁻¹(√3) = π/3.",
+    "keyPoints": [
+      "Domain of sin⁻¹x is [−1,1], range is [−π/2, π/2]",
+      "Prove using sin(α+β)=1 implies α+β=π/2",
+      "Final answer: tan⁻¹(√3) = π/3"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-11",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Security agencies X, Y, Z have success rates 99%, 98·5% and 98%. They are assigned 1000, 2000 and 3000 people. One participant goes missing. Find P(the missing person was under agency X's responsibility).",
+    "modelAnswer": "P(X assigned) = 1000/6000 = 1/6. P(Y assigned) = 2000/6000 = 1/3. P(Z assigned) = 3000/6000 = 1/2. P(missing|X) = 0·01, P(missing|Y) = 0·015, P(missing|Z) = 0·02. By Bayes: P(X|missing) = P(X)·P(missing|X) / [P(X)P(missing|X)+P(Y)P(missing|Y)+P(Z)P(missing|Z)] = (1/6)(0·01) / [(1/6)(0·01)+(1/3)(0·015)+(1/2)(0·02)] = (0·01/6) / (0·01/6 + 0·005 + 0·01) = 0·001667 / (0·001667+0·005+0·01) = 0·001667/0·016667 = 1/10.",
+    "keyPoints": [
+      "P(assigned X)=1/6, Y=1/3, Z=1/2",
+      "P(missing|X)=0.01, P(missing|Y)=0.015, P(missing|Z)=0.02",
+      "Apply Bayes theorem; answer = 1/10"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-12",
+    "chapter": "Three-Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Show that points P(−2, 3, 5), Q(1, 2, 3) and R(7, 0, −1) are collinear.",
+    "modelAnswer": "PQ⃗ = (3, −1, −2). PR⃗ = (9, −3, −6) = 3·PQ⃗. Since PR⃗ is a scalar multiple of PQ⃗, the points are collinear.",
+    "keyPoints": [
+      "Find PQ⃗ and PR⃗",
+      "Show PR⃗ = 3·PQ⃗ (scalar multiple)",
+      "Conclude collinearity"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-13",
+    "chapter": "Three-Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "One honeybee's path: r⃗ = (î + 2ĵ + 3k̂) + λ(2î + 3ĵ + 4k̂). (a) Write in Cartesian form. (b) Find the equation of a parallel path through (2, 4, 5).",
+    "modelAnswer": "(a) Cartesian: (x−1)/2 = (y−2)/3 = (z−3)/4. (b) Parallel line through (2,4,5): (x−2)/2 = (y−4)/3 = (z−5)/4. Or in vector form: r⃗ = (2î + 4ĵ + 5k̂) + μ(2î + 3ĵ + 4k̂).",
+    "keyPoints": [
+      "Cartesian form: (x−1)/2 = (y−2)/3 = (z−3)/4",
+      "Parallel line has same direction (2,3,4)",
+      "Through (2,4,5): (x−2)/2 = (y−4)/3 = (z−5)/4"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-14",
+    "chapter": "Vectors",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Given OA⃗ = 2î − 2ĵ + k̂, OB⃗ = î + 2ĵ − 2k̂, OC⃗ = 2î − ĵ + 4k̂. (i) Calculate AB⃗ and BC⃗. (ii) Find the projection of AB⃗ on BC⃗. (iii) Find the area of triangle ABC.",
+    "modelAnswer": "(i) AB⃗ = OB⃗ − OA⃗ = (−1, 4, −3). BC⃗ = OC⃗ − OB⃗ = (1, −3, 6). (ii) Projection of AB⃗ on BC⃗ = AB⃗·BC⃗/|BC⃗| = (−1−12−18)/√(1+9+36) = −31/√46. (iii) AB⃗ × BC⃗ = |î ĵ k̂; −1 4 −3; 1 −3 6| = î(24−9) − ĵ(−6+3) + k̂(3−4) = (15, 3, −1). Area = (1/2)|AB⃗ × BC⃗| = (1/2)√(225+9+1) = (1/2)√235.",
+    "keyPoints": [
+      "AB⃗ = (−1,4,−3), BC⃗ = (1,−3,6)",
+      "Projection = AB⃗·BC⃗/|BC⃗| = −31/√46",
+      "Area = (1/2)|AB⃗ × BC⃗| = √235/2"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-15",
+    "chapter": "Application of Integration",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "For the curve y = 4 − x²: (a) Sketch the graph. (b) Find area enclosed between the curve, x-axis, x=0 and x=2. (c) Find the area bounded by the parabola and the x-axis.",
+    "modelAnswer": "(b) ∫₀² (4−x²) dx = [4x − x³/3]₀² = 8 − 8/3 = 16/3 sq units. (c) The parabola meets x-axis at x = ±2. Area = ∫₋₂² (4−x²) dx = 2·(16/3) = 32/3 sq units (by symmetry).",
+    "keyPoints": [
+      "Area under curve from 0 to 2: ∫₀²(4−x²)dx = 16/3",
+      "Full area between parabola and x-axis = 32/3 (use symmetry)",
+      "Curve y=4−x² is downward parabola with vertex (0,4)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-16",
+    "chapter": "Statistics",
+    "subject": "Mathematics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "For the data x: 1, 2, 3, 6 and y: 6, 5, 4, 1: (a) Calculate x̄ and ȳ. (b) Complete the deviation table (x−x̄) and (y−ȳ). (c) Calculate regression coefficient bₓᵧ.",
+    "modelAnswer": "(a) x̄ = (1+2+3+6)/4 = 3, ȳ = (6+5+4+1)/4 = 4. (b) x−x̄: −2,−1,0,3; y−ȳ: 2,1,0,−3. (c) Σ(x−x̄)(y−ȳ) = (−2)(2)+(−1)(1)+(0)(0)+(3)(−3) = −4−1+0−9 = −14. Σ(y−ȳ)² = 4+1+0+9 = 14. bₓᵧ = Σ(x−x̄)(y−ȳ)/Σ(y−ȳ)² = −14/14 = −1.",
+    "keyPoints": [
+      "x̄ = 3, ȳ = 4",
+      "Σ(x−x̄)(y−ȳ) = −14, Σ(y−ȳ)² = 14",
+      "bₓᵧ = −1"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-17",
+    "chapter": "Mathematics of Commerce",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "A manufacturer produces x dinner sets/week and sells at ₹p, where x = (600−p)/8. Cost = x² + 78x + 2000. (a) Write the revenue function. (b) Write the profit function. (c) Find x that maximizes profit.",
+    "modelAnswer": "(a) p = 600−8x. Revenue R = px = x(600−8x) = 600x−8x². (b) Profit P = R − C = 600x−8x² − x²−78x−2000 = −9x²+522x−2000. (c) dP/dx = −18x+522 = 0 → x = 29. d²P/dx² = −18 < 0, so maximum. Produce 29 sets/week.",
+    "keyPoints": [
+      "Revenue R(x) = 600x − 8x²",
+      "Profit P(x) = −9x² + 522x − 2000",
+      "Max profit at x = 29 (sets dP/dx = 0)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2025-18",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Two types of books: Type 1 (weight 1 kg, thickness 6 cm) and Type 2 (weight 1·5 kg, thickness 4 cm). Shelf: 96 cm long, max 21 kg weight. Maximize total books. Formulate and solve graphically.",
+    "modelAnswer": "Let x = Type 1 books, y = Type 2 books. Constraints: 6x+4y ≤ 96 (space) → 3x+2y ≤ 48; x+1·5y ≤ 21 → 2x+3y ≤ 42; x,y ≥ 0. Maximize Z = x+y. Corner points: (0,0), (16,0), (12,6), (0,14). Z values: 0, 16, 18, 14. Maximum Z=18 at (12,6). Place 12 Type-1 and 6 Type-2 books.",
+    "keyPoints": [
+      "Space constraint: 6x+4y ≤ 96",
+      "Weight constraint: x+1.5y ≤ 21",
+      "Max Z=18 at (12,6): 12 Type-1 and 6 Type-2 books"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-01",
+    "chapter": "Determinants",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Using properties of determinants, show that |b−c c−a a−b; c−a a−b b−c; 2(a−b) 2(b−c) 2(c−a)| = 0.",
+    "modelAnswer": "R₃ = 2(R₁+R₂) after adding R₁ and R₂: R₁+R₂ = (b−c+c−a, c−a+a−b, a−b+b−c) = (b−a, c−b, a−c) = −(a−b, b−c, c−a). So R₃ = −2(R₁+R₂), meaning R₃ is a linear combination of R₁ and R₂. Hence the determinant = 0.",
+    "keyPoints": [
+      "Note R₁+R₂ = (b−a, c−b, a−c)",
+      "R₃ = −2(R₁+R₂) shows linear dependence",
+      "Linearly dependent rows ⟹ det = 0"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-02",
+    "chapter": "Relations and Functions",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "Let f(x) = 4 − (x−7)³ be an invertible function. Find f⁻¹(x).",
+    "modelAnswer": "y = 4−(x−7)³ → (x−7)³ = 4−y → x−7 = (4−y)^{1/3} → x = 7+(4−y)^{1/3}. So f⁻¹(x) = 7+(4−x)^{1/3}.",
+    "keyPoints": [
+      "Set y = f(x) and solve for x",
+      "f⁻¹(x) = 7 + (4−x)^{1/3}",
+      "f is invertible since it's one-one onto"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-03",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Evaluate: ∫ eˣ/(1+e²ˣ) dx.",
+    "modelAnswer": "Let t = eˣ, dt = eˣ dx. Integral = ∫ dt/(1+t²) = tan⁻¹(t) + C = tan⁻¹(eˣ) + C.",
+    "keyPoints": [
+      "Substitution: t = eˣ",
+      "Integral becomes ∫dt/(1+t²) = tan⁻¹t",
+      "Answer: tan⁻¹(eˣ) + C"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-04",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A die has faces 1, 2, 3 in red and 4, 5, 6 in green. A = 'odd number', B = 'green number'. Prove A and B are not independent.",
+    "modelAnswer": "P(A) = 3/6 = 1/2 (odd: 1,3,5). P(B) = 3/6 = 1/2 (green: 4,5,6). A∩B = {5}, so P(A∩B) = 1/6. P(A)×P(B) = 1/4. Since 1/6 ≠ 1/4, A and B are not independent.",
+    "keyPoints": [
+      "P(A)=1/2, P(B)=1/2",
+      "A∩B = {5}, so P(A∩B)=1/6",
+      "P(A)P(B)=1/4 ≠ 1/6 → not independent"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-05",
+    "chapter": "Applications of Derivatives",
+    "subject": "Mathematics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "The surface area of a spherical balloon is increasing at 4 cm²/sec. Find the rate of change of volume when its radius is 12 cm.",
+    "modelAnswer": "S = 4πr². dS/dt = 8πr·dr/dt = 4 → dr/dt = 1/(2πr) = 1/(24π). V = (4/3)πr³. dV/dt = 4πr²·dr/dt = 4π(144)·(1/24π) = 576π/24π = 24 cm³/sec.",
+    "keyPoints": [
+      "dS/dt = 8πr·dr/dt = 4 → dr/dt = 1/(24π)",
+      "dV/dt = 4πr²·dr/dt",
+      "At r=12: dV/dt = 24 cm³/sec"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-06",
+    "chapter": "Matrices",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Vinayak's bakery shop sells sandwiches (₹x), fruit juices (₹y) and cookies (₹z). The sales on 3 days give: [[2,3,1],[1,2,3],[3,1,1]]·[x,y,z]ᵀ = [37,26,37]ᵀ with |A|=17. Find price per unit of each item.",
+    "modelAnswer": "X = A⁻¹B. Compute cofactors: C₁₁=2-3=−1, C₁₂=−(1-9)=8, C₁₃=(1-6)=−5; C₂₁=−(3-1)=−2, C₂₂=(2-3)=−1, C₂₃=−(2-9)=7; C₃₁=(9-2)=7, C₃₂=−(6-1)=−5, C₃₃=(4-3)=1. adj A = [[−1,−2,7],[8,−1,−5],[−5,7,1]]. A⁻¹ = adj/17. x = (−37−52+259)/17 = 170/17 = 10. y = (296−26−185)/17 = 85/17 = 5. z = (−185+182+37)/17 = 34/17 = 2. Prices: sandwich ₹10, juice ₹5, cookie ₹2.",
+    "keyPoints": [
+      "Use X = A⁻¹B with |A|=17 given",
+      "Find adjugate matrix from cofactors",
+      "Sandwich=₹10, Juice=₹5, Cookie=₹2"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-07",
+    "chapter": "Inverse Trigonometry",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "If tan⁻¹[(√(1+x²)−√(1−x²))/(√(1+x²)+√(1−x²))] = α, prove that sin 2α = x².",
+    "modelAnswer": "Let t = x². In the expression, multiply by (√(1+t)−√(1−t))/(√(1+t)−√(1−t)): tan α = (√(1+t)−√(1−t))/(√(1+t)+√(1−t)). Use componendo-dividendo: tan α = (√(1+t)−√(1−t))/(√(1+t)+√(1−t)). Apply: (1−tan α)/(1+tan α) = √(1−t)/√(1+t). tan(π/4−α) = √((1−t)/(1+t)). So tan²(π/4−α) = (1−t)/(1+t). cos(2(π/4−α)) = (1−tan²)/(1+tan²) = t. cos(π/2−2α) = t. sin 2α = x².",
+    "keyPoints": [
+      "Let t=x²; simplify using rationalization",
+      "Use componendo-dividendo to find a simpler form",
+      "Convert to get sin 2α = t = x²"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-08",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "If y = x³log(1/x), prove that x·d²y/dx² − 2dy/dx + 3x² = 0.",
+    "modelAnswer": "y = −x³ log x. y' = −3x²log x − x³(1/x) = −3x²log x − x². y'' = −6x log x − 3x²(1/x) − 2x = −6x log x − 3x − 2x = −6x log x − 5x. Now: x·y'' − 2y' + 3x² = x(−6x log x − 5x) − 2(−3x²log x − x²) + 3x² = −6x²log x − 5x² + 6x²log x + 2x² + 3x² = 0. ✓",
+    "keyPoints": [
+      "y = −x³ log x",
+      "Compute y' = −3x²log x − x², y'' = −6x log x − 5x",
+      "Verify x·y''−2y'+3x² = 0"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-09",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Bag 1: 4 white, 4 red; Bag 2: 3 white, 5 red. Two balls transferred from Bag 1 to Bag 2 (without replacement), then one drawn from Bag 2. Customer wins if all three balls are the same colour. Find P(winning).",
+    "modelAnswer": "Cases for 2 balls from Bag 1: (2W): C(4,2)/C(8,2) = 6/28 = 3/14. (1W1R): C(4,1)C(4,1)/C(8,2) = 16/28 = 4/7. (2R): 6/28 = 3/14. For 3 same colour: (2W) then white from Bag 2: P = (3/14)(5/10) = 15/140. (2R) then red from Bag 2: P = (3/14)(7/10) = 21/140. P(win) = 15/140 + 21/140 = 36/140 = 9/35.",
+    "keyPoints": [
+      "P(2W transferred)=3/14, P(2R)=3/14, P(1W1R)=4/7",
+      "After 2W transfer: Bag2 has 5W,5R; after 2R: 3W,7R",
+      "P(win) = (3/14)(5/10)+(3/14)(7/10) = 9/35"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-10",
+    "chapter": "Applications of Derivatives",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A van traces the path h(x) = 2x³ − 18x² + 48x + 3 (x≥0, h in 100m). (i) Prove height at start = 300m. (ii) Find ATM locations (turning points). (iii) Height difference between ATMs. (iv) Is extra security needed? (v) Absolute maxima and minima on [0,4].",
+    "modelAnswer": "(i) h(0) = 3×100 = 300m. (ii) h'(x) = 6x²−36x+48 = 6(x²−6x+8) = 6(x−2)(x−4). Critical points: x=2 and x=4. (iii) h(2)=16−72+96+3=43 (×100=4300m); h(4)=128−288+192+3=35 (×100=3500m). Difference = 800m = 0.8km. (iv) 0.8km < 1km → no extra security needed. (v) h(0)=3, h(2)=43, h(4)=35. Max=43 at x=2, Min=3 at x=0.",
+    "keyPoints": [
+      "h(0)=3 (300m). Turning points at x=2 and x=4",
+      "h(2)=43 (4300m), h(4)=35 (3500m), difference=800m<1km",
+      "On [0,4]: abs max at x=2 (h=43), abs min at x=0 (h=3)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-11",
+    "chapter": "Integration",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Using properties of definite integral, calculate: ∫₀^{π/2} sin²x/(1+sinx·cosx) dx.",
+    "modelAnswer": "Let I = ∫₀^{π/2} sin²x/(1+sinx cosx) dx. Apply x → π/2−x: I = ∫₀^{π/2} cos²x/(1+sinx cosx) dx. Adding: 2I = ∫₀^{π/2} (sin²x+cos²x)/(1+sinx cosx) dx = ∫₀^{π/2} dx/(1+(sin 2x)/2) = ∫₀^{π/2} 2dx/(2+sin 2x). Divide by cos²x: 2I = ∫₀^{π/2} 2sec²x dx/(2sec²x+2tanx) = ∫ 2sec²x dx/(2(1+tan²x)+2tanx). Let t=tanx: 2I = ∫₀^∞ 2dt/(2t²+2t+2) = ∫₀^∞ dt/(t²+t+1) = ∫₀^∞ dt/((t+1/2)²+3/4) = [2/√3·tan⁻¹((2t+1)/√3)]₀^∞ = (2/√3)(π/2−π/6) = (2/√3)(π/3) = 2π/(3√3). So I = π/(3√3).",
+    "keyPoints": [
+      "Apply King's property (x→π/2−x) to get ∫cos²x/(1+sinx cosx)",
+      "Add: 2I = ∫dx/(1+sin2x/2); convert via t=tanx",
+      "I = π/(3√3)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-12",
+    "chapter": "Probability",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A gardener will plant saplings when rain is NOT predicted. P(rain today)=0·4; P(rain tomorrow|rain today)=0·8; P(rain tomorrow|no rain today)=0·7. (i) P(not planting tomorrow). (ii) P(planting tomorrow). (iii) Given not planted tomorrow, find P(no rain today). (iv) P(planting on both days).",
+    "modelAnswer": "(i) P(rain tomorrow) = P(rain today)×0·8 + P(no rain today)×0·7 = 0·4×0·8+0·6×0·7 = 0·32+0·42 = 0·74. P(not planting tomorrow) = P(rain tomorrow) = 0·74. (ii) P(planting tomorrow) = 1−0·74 = 0·26. (iii) P(no rain today|rain tomorrow) = P(no rain today)×P(rain tomorrow|no rain today)/P(rain tomorrow) = (0·6×0·7)/0·74 = 0·42/0·74 = 21/37. (iv) P(planting both) = P(no rain today)×P(no rain tomorrow|no rain today) = 0·6×0·3 = 0·18.",
+    "keyPoints": [
+      "P(rain tomorrow) = 0.4×0.8+0.6×0.7 = 0.74",
+      "P(planting tomorrow) = 0.26",
+      "P(both days) = 0.6×0.3 = 0.18"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-13",
+    "chapter": "Three-Dimensional Geometry",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Two hot air balloon paths: (x−1)/2=(y−b)/3=(z−3)/4 and (x−4)/5=(y−1)/2=z/1. Find b so the balloons do not collide (i.e., lines do not intersect).",
+    "modelAnswer": "For non-intersecting skew lines, use the condition that the determinant of [P₂−P₁, d₁, d₂] ≠ 0 or the lines are skew. For the lines to intersect: |P₂−P₁ d₁ d₂| = 0. P₂−P₁ = (3, 1−b, −3). d₁=(2,3,4), d₂=(5,2,1). Determinant = |3 1−b −3; 2 3 4; 5 2 1| = 3(3−8)−(1−b)(2−20)+(−3)(4−15) = 3(−5)−(1−b)(−18)+(−3)(−11) = −15+18(1−b)+33 = 18+18−18b = 36−18b. For skew (non-colliding): 36−18b ≠ 0 → b ≠ 2. Avoid b = 2.",
+    "keyPoints": [
+      "Set up intersection condition using 3×3 determinant",
+      "det = 36−18b = 0 when b=2 (lines intersect)",
+      "To avoid collision: b ≠ 2"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-14",
+    "chapter": "Application of Integration",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Find the area of the region bounded by y = √(4−x²) and the x-axis.",
+    "modelAnswer": "y = √(4−x²) represents the upper semi-circle x²+y²=4 (radius 2). Area = ∫₋₂² √(4−x²) dx = area of upper semicircle = (1/2)π(2²) = 2π sq. units.",
+    "keyPoints": [
+      "y = √(4−x²) is the upper semicircle of x²+y²=4",
+      "Area = half of circle area = πr²/2 = π(4)/2 = 2π",
+      "Alternatively: use standard integral formula [x/2·√(4−x²)+2sin⁻¹(x/2)]₋₂²"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-15",
+    "chapter": "Statistics",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "For regression lines 4x−5y+33=0 and 20x−9y−107=0: (a) Find arithmetic mean of x and y. (b) Estimate x when y=7. (c) Find variance of y when σₓ=3.",
+    "modelAnswer": "(a) Mean (x̄,ȳ) is their intersection. From 4x−5y=−33 and 20x−9y=107: multiply first by 5: 20x−25y=−165. Subtract: 16y=272 → y=17. 4x=5(17)−33=52 → x=13. So x̄=13, ȳ=17. (b) Regression of x on y: 20x−9y=107 → x = (9y+107)/20. At y=7: x=(63+107)/20=170/20=8.5. (c) byx = 4/5 (from 4x−5y+33=0 → y=4x/5+33/5). r = ±√(bxy·byx). bxy from 20x−9y=107: x=9y/20+107/20 → bxy=9/20. r²=bxy·byx=(9/20)(4/5)=36/100. r=±3/5. σy = r·σx/byx = (3/5·3)/(4/5) = (9/5)/(4/5) = 9/4. Var(y) = 81/16.",
+    "keyPoints": [
+      "Intersection of regression lines gives mean: (13,17)",
+      "Regression of x on y: x=(9y+107)/20; at y=7, x=8.5",
+      "byx=4/5, bxy=9/20, r=3/5, σy=9/4, var(y)=81/16"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2026-16",
+    "chapter": "Linear Programming",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Raunak has ₹5,760 capital and storage for max 20 sewing machines. Electronic: ₹360 cost, ₹22 profit. Manual: ₹240 cost, ₹18 profit. Maximize profit using LPP.",
+    "modelAnswer": "Let x=electronic, y=manual. Constraints: x+y≤20, 360x+240y≤5760 (i.e., 3x+2y≤48), x,y≥0. Maximize Z=22x+18y. Corner points: (0,0), (16,0), (8,12), (0,20). Z values: 0, 352, 176+216=392, 360. Max Z=392 at (8,12). Sell 8 electronic + 12 manual machines for profit ₹392.",
+    "keyPoints": [
+      "Constraints: x+y≤20, 3x+2y≤48",
+      "Corner points: (0,0),(16,0),(8,12),(0,20)",
+      "Max profit ₹392 at x=8, y=12"
+    ]
   }
 ]

@@ -1,1 +1,332 @@
-[]
+[
+  {
+    "id": "isc-cs-Board 2024-01",
+    "source": "Board Board 2024",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "According to the Principle of Duality, the Boolean equation (A + B') · (A + 1) = A + B' will be equivalent to:",
+    "options": [
+      "(A' + B) · (A' + 1) = A' + B",
+      "(A · B') + (A · 0) = A · B'",
+      "(A' · B) + (A' · 1) = A' · B",
+      "(A' · B) + (A' · 0) = A' · B"
+    ],
+    "correct": 1,
+    "explanation": "The Principle of Duality states: replace + with ·, · with +, 0 with 1, and 1 with 0. Applying duality to (A+B')·(A+1)=A+B': replace + with ·, · with +, 1 with 0 → (A·B')+(A·0)=A·B'."
+  },
+  {
+    "id": "isc-cs-Board 2024-02",
+    "source": "Board Board 2024",
+    "chapter": "Logic Gates and Circuits",
+    "difficulty": "medium",
+    "text": "When a sequence of OR, NOT, NOR are connected in series, the logic gate obtained is:",
+    "options": [
+      "AND",
+      "NOT",
+      "OR",
+      "XOR"
+    ],
+    "correct": 2,
+    "explanation": "OR gate output: A+B. NOT of OR: (A+B)'. NOR of that result with itself or another: applying NOR gives ((A+B)')' = A+B. Thus the series combination of OR → NOT → NOR effectively gives OR."
+  },
+  {
+    "id": "isc-cs-Board 2024-03",
+    "source": "Board Board 2024",
+    "chapter": "Boolean Algebra",
+    "difficulty": "easy",
+    "text": "Idempotence Law states that:",
+    "options": [
+      "X + X = X",
+      "X + X' = 0",
+      "X + X = 1",
+      "X + X' = X"
+    ],
+    "correct": 0,
+    "explanation": "The Idempotence Law states X + X = X and X · X = X. A variable OR'd (or AND'd) with itself yields the same variable."
+  },
+  {
+    "id": "isc-cs-Board 2024-04",
+    "source": "Board Board 2024",
+    "chapter": "Boolean Algebra",
+    "difficulty": "hard",
+    "text": "Assertion: For proposition ~A ⟹ B, its contrapositive is B ⟹ ~A.\nReason: Contrapositive is the converse of inverse for any proposition.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation for the Assertion.",
+      "Both Assertion and Reason are true, but Reason is not the correct explanation for the Assertion.",
+      "Assertion is true but Reason is false.",
+      "Assertion is false but Reason is true."
+    ],
+    "correct": 3,
+    "explanation": "Contrapositive of ~A⟹B is ~B⟹A (negate and swap), NOT B⟹~A — so Assertion is FALSE. Reason is TRUE: the contrapositive of P⟹Q is the converse of its inverse (~Q⟹~P = converse of ~P⟹~Q)."
+  },
+  {
+    "id": "isc-cs-Board 2024-05",
+    "source": "Board Board 2024",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "The complement of the Boolean expression (P' · Q) + (R · S') is:",
+    "options": [
+      "(P' + Q) · (R' + S)",
+      "(P + Q') · (R' + S)",
+      "(P' + Q) · (R + S')",
+      "(P + Q') · (R + S')"
+    ],
+    "correct": 1,
+    "explanation": "By De Morgan's law: [(P'·Q)+(R·S')]' = (P'·Q)' · (R·S')' = (P+Q') · (R'+S)."
+  },
+  {
+    "id": "isc-cs-Board 2024-06",
+    "source": "Board Board 2024",
+    "chapter": "Data Structures: Stack and Queue",
+    "difficulty": "medium",
+    "text": "Assertion: Recursive data structure follows the LIFO principle.\nReason: Execution of recursive code follows the concepts of data structure Queue.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true, and Reason is the correct explanation for the Assertion.",
+      "Both Assertion and Reason are true, but Reason is not the correct explanation for the Assertion.",
+      "Assertion is true but Reason is false.",
+      "Assertion is false but Reason is true."
+    ],
+    "correct": 2,
+    "explanation": "Recursion uses a call stack which follows LIFO — so the Assertion is TRUE. However, recursive code uses a Stack (LIFO), not a Queue (FIFO), so the Reason is FALSE."
+  },
+  {
+    "id": "isc-cs-Board 2025-01",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "The complement of the Boolean expression (A · B') + (B' · C) is:",
+    "options": [
+      "(A + B') · (B' + C)",
+      "(A' · B) + (B · C')",
+      "(A' + B) · (B + C')",
+      "(A · B') + (B · C')"
+    ],
+    "correct": 2,
+    "explanation": "By De Morgan's: [(A·B')+(B'·C)]' = (A·B')' · (B'·C)'. (A·B')' = A'+B'' = A'+B. (B'·C)' = B''+C' = B+C'. Product: (A'+B)·(B+C')."
+  },
+  {
+    "id": "isc-cs-Board 2025-02",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "Assertion: The expression ~(X ∨ Y) is logically equivalent to (~X ∧ ~Y).\nReason: The commutative property of logical operators states that the order of operands does not change the result of a binary operation.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 1,
+    "explanation": "Assertion is De Morgan's Law (~(X∨Y) = ~X∧~Y) — TRUE. Reason about commutative property is also TRUE but does NOT explain De Morgan's law. Answer: (b)."
+  },
+  {
+    "id": "isc-cs-Board 2025-03",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "According to the Principle of Duality, the Boolean equation (1 + Y) · (X + Y) = Y + X' will be equivalent to:",
+    "options": [
+      "(1 + Y') · (X' + Y') = Y' + X",
+      "(0 · Y) + (X · Y) = Y · X'",
+      "(0 + Y) · (X + Y) = Y + X'",
+      "(1 · Y) + (X · Y) = Y · X'"
+    ],
+    "correct": 1,
+    "explanation": "Duality: replace + with ·, · with +, 1 with 0, 0 with 1. LHS: (1+Y)·(X+Y) → (0·Y)+(X·Y). RHS: Y+X' → Y·X'. Result: (0·Y)+(X·Y) = Y·X'."
+  },
+  {
+    "id": "isc-cs-Board 2025-04",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "easy",
+    "text": "The Associative Law states that:",
+    "options": [
+      "A · B = B · A",
+      "A + B = B + A",
+      "A · (B + C) = A · B + A · C",
+      "A + (B + C) = (A + B) + C"
+    ],
+    "correct": 3,
+    "explanation": "Associative Law: A+(B+C) = (A+B)+C and A·(B·C) = (A·B)·C. Options (a) and (b) are Commutative; (c) is Distributive; (d) is Associative."
+  },
+  {
+    "id": "isc-cs-Board 2025-05",
+    "source": "Board Board 2025",
+    "chapter": "Java OOP: Classes and Objects",
+    "difficulty": "medium",
+    "text": "Consider the class:\npublic class Person {\n    int age;\n    public Person(int age) { this.age = age; }\n}\nWhich of the following statements about the keyword this are valid?\nI. The keyword this refers to the current instance of the class.\nII. The keyword this differentiates between the instance variable age and the parameter age.\nIII. The keyword this can be used only in constructors.",
+    "options": [
+      "Only I and II",
+      "Only II and III",
+      "Only I and III",
+      "Only III"
+    ],
+    "correct": 0,
+    "explanation": "I is TRUE: 'this' refers to the current object. II is TRUE: 'this.age' distinguishes the field from the parameter. III is FALSE: 'this' can be used in any instance method, not just constructors."
+  },
+  {
+    "id": "isc-cs-Board 2025-06",
+    "source": "Board Board 2025",
+    "chapter": "Java OOP: Classes and Objects",
+    "difficulty": "medium",
+    "text": "Assertion: The break statement prevents fall through effect in switch case construct.\nReason: The break statement enables unnatural exit from the loop.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 1,
+    "explanation": "Assertion is TRUE: break stops execution from falling into the next case. Reason is also TRUE: break exits loops too. However the Reason (loop exit) does NOT explain preventing switch fall-through — they are different contexts. Answer: (b)."
+  },
+  {
+    "id": "isc-cs-Board 2025-07",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "hard",
+    "text": "The canonical expression of F(P, Q, R) = π(2, 5, 7) is:",
+    "options": [
+      "(P + Q' + R) · (P' + Q + R') · (P' + Q' + R')",
+      "(P · Q' · R) + (P' · Q · R') + (P' · Q' · R')",
+      "(P' + Q + R') · (P + Q' + R) · (P + Q + R)",
+      "(P' · Q · R') + (P · Q' · R) + (P · Q · R)"
+    ],
+    "correct": 0,
+    "explanation": "π(2,5,7) is a POS form. M₂(010): P+Q'+R. M₅(101): P'+Q+R'. M₇(111): P'+Q'+R'. Product: (P+Q'+R)·(P'+Q+R')·(P'+Q'+R')."
+  },
+  {
+    "id": "isc-cs-Board 2025-08",
+    "source": "Board Board 2025",
+    "chapter": "Boolean Algebra",
+    "difficulty": "hard",
+    "text": "Given P = It is a holiday, Q = It is a Sunday.\nAssertion: If it is not a Sunday, then it is not a holiday. (Q' ⟹ P')\nReason: Inverse is formed when antecedent and consequent are interchanged.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 2,
+    "explanation": "Assertion: Q'⟹P' is the Inverse of Q⟹P (negate both parts) — TRUE. Reason: Inverse is formed by NEGATING both parts, not interchanging — interchanging gives the Converse. So Reason is FALSE. Answer: (c)."
+  },
+  {
+    "id": "isc-cs-Board 2026-01",
+    "source": "Board Board 2026",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "According to the Principle of Duality, the Boolean equation Q'·0 + P'·Q' + P'·Q = P' will be equivalent to:",
+    "options": [
+      "Q·0 + P·Q + P·Q' = P",
+      "Q'·1 + P'·Q' + P·Q' = P'",
+      "(Q'+1)·(P'+Q')·(P'+Q) = P'",
+      "(Q'+0)·(P'+Q')·(P'+Q) = P'"
+    ],
+    "correct": 2,
+    "explanation": "Duality: replace · with +, + with ·, 0 with 1, 1 with 0. LHS: Q'·0+P'·Q'+P'·Q → (Q'+1)·(P'+Q')·(P'+Q). RHS: P' stays P'. Answer: (c)."
+  },
+  {
+    "id": "isc-cs-Board 2026-02",
+    "source": "Board Board 2026",
+    "chapter": "Java OOP: Classes and Objects",
+    "difficulty": "easy",
+    "text": "Consider: static final String school_Name = \"Co-Ed School\"; as a data member of class Student. Which statements are valid?\nI. All objects of class Student share the same value of school_Name.\nII. The value of school_Name cannot be changed during program execution.\nIII. The keywords static and final cannot be used together for a variable.",
+    "options": [
+      "Only I and II",
+      "Only II and III",
+      "Only I and III",
+      "Only III"
+    ],
+    "correct": 0,
+    "explanation": "I is TRUE: static means class-level, shared by all objects. II is TRUE: final means constant, cannot be reassigned. III is FALSE: static final is commonly used in Java for constants. Answer: (a)."
+  },
+  {
+    "id": "isc-cs-Board 2026-03",
+    "source": "Board Board 2026",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "Given P = You practise regularly, Q = You become skilled. S1: P ⟹ Q and S2: ~P ∨ Q.\nAssertion: S1 and S2 are logically equivalent.\nReason: A conditional statement P ⟹ Q can be expressed as ~P ∨ Q.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 0,
+    "explanation": "Assertion: P⟹Q ≡ ~P∨Q is a fundamental logical equivalence — TRUE. Reason: correctly states P⟹Q = ~P∨Q — TRUE. The Reason IS the explanation for why S1 and S2 are equivalent. Answer: (a)."
+  },
+  {
+    "id": "isc-cs-Board 2026-04",
+    "source": "Board Board 2026",
+    "chapter": "Boolean Algebra",
+    "difficulty": "easy",
+    "text": "The Boolean equations a + 1 = 1 and a · 0 = 0 correspond to:",
+    "options": [
+      "Involution Law",
+      "Law of Identity",
+      "Distributive Law",
+      "Law of Complements"
+    ],
+    "correct": 1,
+    "explanation": "a+1=1 and a·0=0 are the Null/Domination laws, while a+0=a and a·1=a are the Identity laws. In the ISC context these are grouped under the Law of Identity (with 0 and 1 as the identity elements for OR and AND respectively). Answer: (b)."
+  },
+  {
+    "id": "isc-cs-Board 2026-05",
+    "source": "Board Board 2026",
+    "chapter": "Data Structures: Trees",
+    "difficulty": "easy",
+    "text": "The worst-case complexity for the following code segment is:\nfor(int i=1; i<=n; i++)\n  for(int j=1; j<=i; j++)\n    { statement; }",
+    "options": [
+      "O(n+i)",
+      "O(n×i)",
+      "O(n)",
+      "O(n²)"
+    ],
+    "correct": 3,
+    "explanation": "The outer loop runs n times. The inner loop runs 1+2+3+...+n = n(n+1)/2 ≈ n²/2 times in total. Worst-case complexity: O(n²)."
+  },
+  {
+    "id": "isc-cs-Board 2026-06",
+    "source": "Board Board 2026",
+    "chapter": "Java OOP: Classes and Objects",
+    "difficulty": "medium",
+    "text": "Assertion: An interface in Java contains abstract and non-abstract methods.\nReason: All methods in an interface must be implemented by any class that extends this interface.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 2,
+    "explanation": "Assertion: From Java 8+, interfaces CAN have default (non-abstract) methods — TRUE in modern Java. Reason: Classes IMPLEMENT (not extend) interfaces; also, default methods need not be overridden — Reason is FALSE (wrong keyword 'extends'). Answer: (c)."
+  },
+  {
+    "id": "isc-cs-Board 2026-07",
+    "source": "Board Board 2026",
+    "chapter": "Boolean Algebra",
+    "difficulty": "medium",
+    "text": "The complement of the Boolean expression a · b' + a' + a' · b is:",
+    "options": [
+      "a + b' · a' · a' + b",
+      "(a' + b) · a · (a + b')",
+      "(a + b') · a' · (a + b')",
+      "a' · b + a + a · b'"
+    ],
+    "correct": 1,
+    "explanation": "Simplify first: a·b' + a' + a'·b = a·b' + a'(1+b) = a·b' + a'. Complement: (a·b' + a')' = (a·b')'·(a')' = (a'+b)·a = a·b. Option (b): (a'+b)·a·(a+b') = a·b·(a+b') = a·b. ✓"
+  },
+  {
+    "id": "isc-cs-Board 2026-08",
+    "source": "Board Board 2026",
+    "chapter": "Java OOP: Classes and Objects",
+    "difficulty": "medium",
+    "text": "Assertion: The return statement enables the exit of program control from the current method.\nReason: If a method's return type is void, it can still contain 'return 0' statement to return nothing.\nChoose the correct option:",
+    "options": [
+      "Both Assertion and Reason are true and Reason is the correct explanation for Assertion.",
+      "Both Assertion and Reason are true but Reason is not the correct explanation for Assertion.",
+      "Assertion is true and Reason is false.",
+      "Both Assertion and Reason are false."
+    ],
+    "correct": 2,
+    "explanation": "Assertion: TRUE — return exits the current method. Reason: FALSE — a void method can have a bare 'return;' but 'return 0;' causes a compilation error in a void method. Answer: (c)."
+  }
+]
