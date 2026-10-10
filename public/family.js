@@ -472,7 +472,8 @@
       const trimmedPrev = prevAttempts.map(({ reviewData, ...rest }) => rest);
       // FieldValue.serverTimestamp() cannot be used inside an array element — use a client
       // timestamp for entries in `attempts`; only the top-level doc write may use serverTimestamp.
-      const entry = { ...result, attemptNumber: trimmedPrev.length + 1, submittedAt: Date.now() };
+      // Firestore rejects `undefined` (skipped questions have userAnswer: undefined); JSON round-trip drops those keys.
+      const entry = JSON.parse(JSON.stringify({ ...result, attemptNumber: trimmedPrev.length + 1, submittedAt: Date.now() }));
       const attempts = [...trimmedPrev, entry];
       await ref.update({
         status: 'completed',
@@ -503,7 +504,7 @@
           ).catch(() => {});
         }
       }
-    } catch (_) {}
+    } catch (e) { console.error('[family] completeAssignment failed:', e); }
   }
 
   function esc(s) {
