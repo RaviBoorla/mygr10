@@ -6,8 +6,9 @@ exam years are represented and how many questions come from each. Grade X is
 fully covered below; Grade XII now has MCQ banks, Short Answers banks, and
 Solved Exercises banks for CBSE across all listed subjects, plus ICSE Board
 Short Answers banks for Mathematics/Physics/Chemistry/Biology/Computer Science
-(see "Grade XII" section). ICSE MCQ banks are empty stubs (ISC papers are
-entirely descriptive/long-answer with no MCQ section).
+(see "Grade XII" section). ICSE now has both MCQ banks and Short Answers banks
+for all five subjects (ISC 2023–2026 have Section A MCQs; 2019–2020 Phy/Chem/Bio
+also had MCQs; 2017–2018 are SA-only).
 
 Regenerate the year/count breakdown with:
 ```
@@ -115,8 +116,9 @@ Informatics Practices, Economics, Political Science, Psychology, Information Tec
 `SUBJECTS.XII.ICSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science.
 
 CBSE now has MCQ banks, Short Answers banks, and Solved Exercises banks across all subjects
-(see tables below). ICSE has Board Short Answers banks for five subjects; ISC papers are
-entirely descriptive/long-answer with no MCQ section, so ICSE MCQ bank files are empty stubs.
+(see tables below). ICSE now has both MCQ banks and Short Answers banks for all five subjects.
+ISC 2023–2026 papers have a Section A MCQ block; ISC 2019–2020 Physics/Chemistry/Biology
+Paper 1 also had MCQs; earlier years (2017–2018) are SA-only. All years are now represented.
 
 ❌ = not yet built · ✅ = done · ⚠️ = partial
 
@@ -125,15 +127,15 @@ entirely descriptive/long-answer with no MCQ section, so ICSE MCQ bank files are
 | Subject | Board | Revision Notes | MCQ Bank | Short Answers | Solved Exercises | Board Paper Years |
 |---|---|---|---|---|---|---|
 | Mathematics | CBSE | ✅ 13 ch | ✅ 154 Qs | ✅ 126 Qs | ✅ 943 Qs | MCQ: 2026; SA: 2026 |
-| Mathematics | ICSE | ❌ | ❌ | ✅ 140 Qs | ❌ | SA: 2017–2020, 2023 |
+| Mathematics | ICSE | ❌ | ✅ 59 Qs | ✅ 224 Qs | ❌ | MCQ: 2023–2026; SA: 2017–2026 |
 | Physics | CBSE | ✅ 14 ch | ✅ 158 Qs | ✅ 70 Qs | ✅ 158 Qs | MCQ: 2026; SA: 2026 |
-| Physics | ICSE | ❌ | ❌ | ✅ 156 Qs | ❌ | SA: 2018–2020, 2023 |
+| Physics | ICSE | ❌ | ✅ 38 Qs | ✅ 211 Qs | ❌ | MCQ: 2019–2020, 2023–2026; SA: 2018–2026 |
 | Chemistry | CBSE | ✅ 10 ch | ✅ 149 Qs | ✅ 101 Qs | ✅ 268 Qs | MCQ: 2023–2024, 2026; SA: 2022–2024, 2026 |
-| Chemistry | ICSE | ❌ | ❌ | ✅ 150 Qs | ❌ | SA: 2018–2020, 2023 |
+| Chemistry | ICSE | ❌ | ✅ 45 Qs | ✅ 191 Qs | ❌ | MCQ: 2019–2020, 2023–2026; SA: 2018–2026 |
 | Biology | CBSE | ⚠️ 11 ch (Ch 1–2 missing) | ✅ 212 Qs | ✅ 112 Qs | ⚠️ 135 Qs (Ch 1–2 missing) | MCQ: 2023, 2026; SA: 2022–2023, 2026 |
-| Biology | ICSE | ❌ | ❌ | ✅ 122 Qs | ❌ | SA: 2018–2020 |
+| Biology | ICSE | ❌ | ✅ 23 Qs | ✅ 170 Qs | ❌ | MCQ: 2019–2020, 2023–2026; SA: 2018–2026 |
 | Computer Science | CBSE | ✅ 12 ch | ✅ 78 Qs | ✅ 53 Qs | ✅ 122 Qs | MCQ: 2023–2026; SA: 2022–2026 |
-| Computer Science | ICSE | ❌ | ❌ | ✅ 153 Qs | ❌ | SA: 2017–2020, 2023 |
+| Computer Science | ICSE | ❌ | ✅ 49 Qs | ✅ 220 Qs | ❌ | MCQ: 2023–2026; SA: 2017–2026 |
 | Informatics Practices | CBSE | ✅ 6 ch | ✅ 78 Qs | ✅ 53 Qs | ✅ 21 Qs | MCQ: 2023–2026; SA: 2022–2026 |
 | Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ✅ 100 Qs | ✅ 20 Qs | ✅ 183 Qs | MCQ: 2026; SA: 2026 |
 | Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ✅ 78 Qs | ✅ 78 Qs | ✅ 137 Qs | MCQ: 2026; SA: 2026 |
@@ -161,8 +163,19 @@ embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
 | Psychology | `XII-CBSE-Psychology.json` | 14 | 2026 Board — 14 Qs |
 | Information Technology | `XII-CBSE-Information-Technology.json` | 27 | 2026 Board — 27 Qs |
 
-ICSE MCQ bank files (`XII-ICSE-*.json`) are present as empty stubs — ISC papers are
-entirely descriptive/long-answer with no MCQ section, so no questions will be added.
+### Grade XII ICSE MCQ Banks
+
+ICSE MCQ banks follow the same schema: `{id, chapter, text, options[], correct, difficulty, explanation}`.
+All questions are from real ISC (Class XII) past papers. ISC 2023–2026 have a Section A MCQ block;
+ISC 2019–2020 Physics/Chemistry/Biology Paper 1 also included MCQs; 2017–2018 papers are SA-only.
+
+| Subject | File | Total Qs | Board Paper Years |
+|---|---|---|---|
+| Mathematics | `XII-ICSE-Mathematics.json` | 59 | 2023 Board (14), 2024 Board (15), 2025 Board (15), 2026 Board (15) |
+| Physics | `XII-ICSE-Physics.json` | 38 | 2019 Board (5), 2020 Board (5), 2023 Board (7), 2024 Board (7), 2025 Board (7), 2026 Board (7) |
+| Chemistry | `XII-ICSE-Chemistry.json` | 45 | 2019 Board (4), 2020 Board (4), 2023 Board (4), 2024 Board (11), 2025 Board (11), 2026 Board (11) |
+| Biology | `XII-ICSE-Biology.json` | 23 | 2019 Board (4), 2020 Board (4), 2023 Board (3), 2024 Board (4), 2025 Board (4), 2026 Board (4) |
+| Computer Science | `XII-ICSE-Computer-Science.json` | 49 | 2023 Board (9), 2024 Board (13), 2025 Board (13), 2026 Board (14) |
 
 ### Grade XII CBSE Short Answers Banks
 
@@ -211,11 +224,11 @@ authored filler is mixed in. `id`s are prefixed `sa-xii-<subject>-`.
 
 | Subject | File | Total Qs | Source |
 |---|---|---|---|
-| ICSE Mathematics | `XII-ICSE-Mathematics-ShortAnswers.json` | 140 | Board 2017 (32), 2018 (27), 2019 (28), 2020 (28), 2023 (25) — all 5 supplied years. Covers Probability, Applications of Derivatives, Matrices, Inverse Trigonometric Functions, Three-Dimensional Geometry, Integrals, Differential Equations, Vectors, and the Section C commercial-maths/LPP topics. A handful of sub-questions with irreparably garbled source math (illegible fractions/exponents in the extracted PDF text) are dropped rather than guessed. |
-| ICSE Physics | `XII-ICSE-Physics-ShortAnswers.json` | 156 | Board 2018 (39), 2019 (39), 2020 (38), 2023 (40) — 2017 had no Physics paper in the supplied set. Covers Current Electricity, Ray/Wave Optics, Magnetism, Electrostatics, Nuclear/Atomic Physics, Alternating Current, Electromagnetic Induction, Semiconductors. A couple of sub-parts needing an unavailable circuit/diode-curve/logic-gate figure are skipped; pure "draw a diagram" prompts are converted into equivalent descriptive questions testing the same concept instead of being dropped. |
-| ICSE Chemistry | `XII-ICSE-Chemistry-ShortAnswers.json` | 150 | Board 2018 (41), 2019 (37), 2020 (38), 2023 (34) — 2017 had no Chemistry paper in the supplied set. Covers Electrochemistry, d-/f-Block Elements, Solutions, Chemical Kinetics, and the full organic chemistry syllabus (Haloalkanes, Alcohols/Phenols/Ethers, Aldehydes/Ketones/Carboxylic Acids, Amines, Biomolecules, Polymers). Both branches of "OR" internal-choice questions are included as separate entries. |
-| ICSE Biology | `XII-ICSE-Biology-ShortAnswers.json` | 122 | Board 2018 (42), 2019 (41), 2020 (39) — 2017 had no Biology paper in the supplied set, and the file labelled Biology Paper 1 in the 2023 archive turned out to be a scanned PDF with no extractable Biology content, so 2023 is skipped rather than guessed at. Covers Ecology, Genetics and Evolution, Biology and Human Welfare, Biotechnology, Reproduction in Organisms/Humans, Molecular Basis of Inheritance, Cell Division. Diagram-only sub-questions (label/draw a figure, interpret a graph image) are skipped. |
-| ICSE Computer Science | `XII-ICSE-Computer-Science-ShortAnswers.json` | 153 | Board 2017 (28), 2018 (33), 2019 (29), 2020 (29), 2023 (34) — all 5 supplied years. Covers Boolean Algebra/Karnaugh Maps (the largest single topic), Binary Trees, Java Programming (full compilable programs), Recursion, Object-Oriented Programming, and Stack/Queue/Linked-List/Array data structures — this is the Java-based ISC syllabus, distinct from the Python-based CBSE Grade XII Computer Science syllabus. |
+| ICSE Mathematics | `XII-ICSE-Mathematics-ShortAnswers.json` | 224 | Board 2017–2026 — all 10 years. Covers Probability, Applications of Derivatives, Matrices, Inverse Trigonometric Functions, Three-Dimensional Geometry, Integrals, Differential Equations, Vectors, and the Section C commercial-maths/LPP topics. A handful of sub-questions with irreparably garbled source math are dropped rather than guessed. |
+| ICSE Physics | `XII-ICSE-Physics-ShortAnswers.json` | 211 | Board 2018–2026 — 2017 had no Physics paper in the supplied set. Covers Current Electricity, Ray/Wave Optics, Magnetism, Electrostatics, Nuclear/Atomic Physics, Alternating Current, Electromagnetic Induction, Semiconductors. Sub-parts needing an unavailable circuit/figure are skipped; "draw a diagram" prompts converted to equivalent descriptive questions. |
+| ICSE Chemistry | `XII-ICSE-Chemistry-ShortAnswers.json` | 191 | Board 2018–2026 — 2017 had no Chemistry paper in the supplied set. Covers Electrochemistry, d-/f-Block Elements, Solutions, Chemical Kinetics, and the full organic chemistry syllabus (Haloalkanes, Alcohols/Phenols/Ethers, Aldehydes/Ketones/Carboxylic Acids, Amines, Biomolecules, Polymers). Both branches of "OR" internal-choice questions are included as separate entries. |
+| ICSE Biology | `XII-ICSE-Biology-ShortAnswers.json` | 170 | Board 2018–2026 — 2017 had no Biology paper in the supplied set. Covers Ecology, Genetics and Evolution, Biology and Human Welfare, Biotechnology, Reproduction in Organisms/Humans, Molecular Basis of Inheritance, Cell Division. Diagram-only sub-questions are skipped. |
+| ICSE Computer Science | `XII-ICSE-Computer-Science-ShortAnswers.json` | 220 | Board 2017–2026 — all 10 years. Covers Boolean Algebra/Karnaugh Maps (the largest single topic), Binary Trees, Java Programming (full compilable programs), Recursion, Object-Oriented Programming, and Stack/Queue/Linked-List/Array data structures — this is the Java-based ISC syllabus, distinct from the Python-based CBSE Grade XII Computer Science syllabus. |
 
 ## Chapter → subject-area mapping (Science and Social Science)
 
