@@ -1,0 +1,66 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /users/{userId}/{document=**} {
+      allow read, write: if request.auth != null
+                         && request.auth.uid == userId;
+    }
+
+    match /users/{childUid}/sync/familySummary {
+      allow read: if request.auth != null
+                  && exists(/databases/$(database)/documents/familyLinks/$(request.auth.uid + '_' + childUid));
+    }
+
+    match /users/{childUid}/sync/streak {
+      allow read: if request.auth != null
+                  && exists(/databases/$(database)/documents/familyLinks/$(request.auth.uid + '_' + childUid));
+    }
+
+    match /users/{childUid}/assignments/{assignmentId} {
+      allow create: if request.auth != null
+                    && get(/databases/$(database)/documents/familyLinks/$(request.auth.uid + '_' + childUid))
+                         .data.status == 'active';
+
+      allow read: if request.auth != null
+                  && (request.auth.uid == childUid
+                      || request.auth.uid == resource.data.createdBy);
+
+      allow update: if request.auth != null
+                    && (request.auth.uid == childUid
+                        || request.auth.uid == resource.data.createdBy);
+
+      allow delete: if false;
+    }
+
+    match /familyInvites/{emailLower}/items/{itemId} {
+      allow read: if request.auth != null
+                  && (request.auth.token.email.lower() == emailLower
+                      || request.auth.uid == resource.data.fromUid);
+
+      allow delete: if request.auth != null
+                    && request.auth.token.email.lower() == emailLower;
+
+      allow create: if request.auth != null
+                    && request.auth.uid == request.resource.data.fromUid
+                    && request.resource.data.keys().hasAll(['fromUid', 'toEmail', 'status'])
+                    && request.resource.data.status == 'pending';
+
+      allow update: if false;
+    }
+
+    match /familyLinks/{linkId} {
+      allow read, update: if request.auth != null
+                          && (request.auth.uid == resource.data.guardianUid
+                              || request.auth.uid == resource.data.childUid);
+
+      allow create: if request.auth != null
+                    && (request.auth.uid == request.resource.data.guardianUid
+                        || request.auth.uid == request.resource.data.childUid)
+                    && request.resource.data.keys().hasAll(['guardianUid', 'childUid', 'status'])
+                    && request.resource.data.status == 'active';
+
+      allow delete: if false;
+    }
+  }
+}
