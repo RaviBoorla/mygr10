@@ -21,10 +21,12 @@ Object.assign(app, {
     const cards = subjects.map(subject => {
       const hasBank  = !!bankSlug(subject);
       const open     = state.openPicker === subject;
+      const cached   = bankCache[bankSlug(subject)];
+      const mock     = cached ? this._mockSize(subject, cached) : { n: MODES.mock.count, mins: MODES.mock.seconds / 60 };
 
       const actions = hasBank
         ? `<button class="btn act-btn" onclick="app.startTest({subject:'${esc(subject)}',mode:'mock'})">
-             Mock test <small>${MODES.mock.count} Q · ${MODES.mock.seconds / 60} min</small>
+             Mock test <small data-mock-meta="${esc(subject)}">${mock.n} Q · ${mock.mins} min</small>
            </button>
            <button class="btn act-btn" aria-expanded="${open}" onclick="app.togglePicker('${esc(subject)}')">
              Chapter drill <small>${MODES.drill.count} Q · untimed</small>
@@ -118,7 +120,7 @@ Object.assign(app, {
   _hydrateHome() {
     (SUBJECTS[state.grade]?.[state.board] || []).filter(s => bankSlug(s)).forEach(subject => {
       loadBank(subject).then(list => {
-        const meta = document.querySelector(`[data-meta="${CSS.escape(subject)}"]`);
+        this._updateMockMeta(subject);
         if (state.openPicker === subject) this._renderChips(subject, list);
       }).catch(() => {
       });
@@ -145,6 +147,23 @@ Object.assign(app, {
     const bar = document.querySelector(`[data-diff="${CSS.escape(subject)}"]`);
     if (bar) bar.querySelectorAll('.filter-tab').forEach(btn =>
       btn.classList.toggle('active', btn.dataset.level === level));
+    this._updateMockMeta(subject);
+  },
+
+  // A mock shrinks to fit a small bank (or a narrow difficulty filter); time scales with it.
+  _mockSize(subject, list) {
+    const level = state.difficulty[subject] || 'all';
+    const pool = level === 'all' ? list : list.filter(q => q.difficulty === level);
+    const n = Math.min(MODES.mock.count, pool.length);
+    return { n, mins: Math.ceil(MODES.mock.seconds / 60 * n / MODES.mock.count) };
+  },
+
+  _updateMockMeta(subject) {
+    const list = bankCache[bankSlug(subject)];
+    const el = document.querySelector(`[data-mock-meta="${CSS.escape(subject)}"]`);
+    if (!list || !el) return;
+    const { n, mins } = this._mockSize(subject, list);
+    el.textContent = `${n} Q · ${mins} min`;
   },
 
   togglePicker(subject) {

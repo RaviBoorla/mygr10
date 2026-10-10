@@ -27,6 +27,7 @@ Object.assign(app, {
           ? shuffle(pool.filter(q => q.priority || isBoardQuestion(q))).concat(shuffle(pool.filter(q => !q.priority && !isBoardQuestion(q)))).slice(0, cfg.count)
           : shuffle(pool).slice(0, cfg.count);
         this.session.questions = picked.map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
+        if (mode === 'mock' && picked.length < cfg.count) this.session.remaining = this._mockSize(subject, all).mins * 60;
         this.session.loading = false;
         if (state.screen !== 'test') return;
         this.renderQuestion(); this.renderPalette(); this.renderTestMeta();

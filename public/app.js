@@ -308,75 +308,10 @@ const app = {
       case 'shortanswers': return this._screenShortAnswers(params[0]);
       case 'solved':   return this._screenSolvedExercises(params[0]);
       case 'careers':  return this._screenCareers();
-      case 'privacy':  return this._screenPrivacy();
+      case 'privacy':  location.replace('privacy.html'); return '';
       case 'terms':    return this._screenTerms();
       default:         return '';
     }
-  },
-
-  _screenPrivacy() {
-    return `
-      <div class="screen legal-screen">
-        <div class="legal-top-bar"><button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button></div>
-        <h1 class="legal-title">Privacy Policy</h1>
-        <p class="legal-updated">Last updated: September 2026</p>
-        <p>Rise ("the app", "we", "us") is a self-study practice tool for Grade 10 CBSE, ICSE and IB board-exam students, operated by Strat101. This policy explains what personal data we collect, why, how it is used, and your rights over it. It is intended to meet the requirements of applicable privacy laws including the EU General Data Protection Regulation (GDPR), the UK GDPR, the California Consumer Privacy Act (CCPA/CPRA), and India's Digital Personal Data Protection Act (DPDPA).</p>
-
-        <h2>1. Data we collect and why</h2>
-        <p><strong>No account required.</strong> The app works without any sign-in. In that mode no personal data is collected or transmitted by us.</p>
-        <p><strong>Optional sign-in (Google OAuth).</strong> If you choose to sign in with Google, we receive your Google account email address and display name solely to identify your cloud backup. We do not receive your Google password or payment information. Legal basis: your explicit consent (GDPR Art. 6(1)(a)); you may withdraw it by signing out.</p>
-        <p><strong>Optional Arena profile.</strong> For Arena multiplayer features (challenge rooms, leaderboards) you may optionally provide a display name, country, and city. This is shown to other players in Arena sessions. Legal basis: consent. You can update or delete this at any time.</p>
-        <p><strong>Practice data.</strong> Your test scores, bookmarks, streaks, and settings are stored only in your browser's local storage on your device. If you are signed in, a copy is synced to cloud storage linked to your account for cross-device restore. We do not analyse or share this data.</p>
-        <p><strong>Server logs.</strong> Standard web-server access logs (IP address, browser type, pages accessed, timestamps) are retained for up to 30 days for security and operational purposes by our hosting provider (Cloudflare Pages) and then deleted. These are not linked to any personal profile.</p>
-
-        <h2>2. How we use your data</h2>
-        <ul class="legal-list">
-          <li>To provide and improve the app's features</li>
-          <li>To sync your progress across your own devices (if signed in)</li>
-          <li>To display your Arena profile to other players in multiplayer sessions</li>
-          <li>To maintain the security and stability of the service</li>
-        </ul>
-        <p>We do not use your data for advertising, profiling, or automated decision-making.</p>
-
-        <h2>3. Data sharing and third parties</h2>
-        <p>We do not sell, rent, or share your personal data with third parties for their own purposes. The only third-party services we use are:</p>
-        <ul class="legal-list">
-          <li><strong>Google OAuth</strong> — for optional sign-in (governed by Google's Privacy Policy)</li>
-          <li><strong>Cloudflare Pages</strong> — for static hosting and CDN delivery (governed by Cloudflare's Privacy Policy)</li>
-        </ul>
-        <p>Rise does not embed advertising SDKs, analytics/tracking scripts, or third-party cookies.</p>
-
-        <h2>4. Data retention</h2>
-        <p>Local storage data is retained until you clear your browser data or uninstall the app. Cloud backup data is retained until you delete your account or request erasure. Arena profile data is deleted on request. Server logs are deleted within 30 days.</p>
-
-        <h2>5. Your rights</h2>
-        <p>Depending on your jurisdiction you may have the right to:</p>
-        <ul class="legal-list">
-          <li><strong>Access</strong> — request a copy of personal data we hold about you</li>
-          <li><strong>Correction</strong> — ask us to correct inaccurate data</li>
-          <li><strong>Erasure</strong> ("right to be forgotten") — ask us to delete your data</li>
-          <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
-          <li><strong>Withdrawal of consent</strong> — sign out at any time to stop cloud sync</li>
-          <li><strong>Restriction / objection</strong> — object to certain processing</li>
-          <li><strong>Non-discrimination</strong> (CCPA) — exercising privacy rights will not affect your access to the app</li>
-        </ul>
-        <p>To exercise any right, email <a href="mailto:rise@strat101.com">rise@strat101.com</a>. We will respond within 30 days (or the period required by applicable law).</p>
-
-        <h2>6. Children's privacy</h2>
-        <p>Rise is designed for school students. We do not knowingly collect personal data from children under 13 (or under 16 where required by law) without verifiable parental consent. If you believe a child has provided personal data without appropriate consent, contact us and we will delete it promptly.</p>
-
-        <h2>7. Data security</h2>
-        <p>We use industry-standard measures including HTTPS encryption in transit and access-controlled cloud storage. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
-
-        <h2>8. International transfers</h2>
-        <p>If you are located in the EEA, UK, or other regions with data transfer restrictions, be aware that our hosting infrastructure may process data outside your region. Where required, we rely on standard contractual clauses or equivalent safeguards.</p>
-
-        <h2>9. Changes to this policy</h2>
-        <p>If this policy changes materially, we will update the "Last updated" date above. For significant changes affecting your rights we will provide notice within the app where reasonably practicable.</p>
-
-        <h2>10. Contact &amp; complaints</h2>
-        <p>Questions or requests: <a href="mailto:rise@strat101.com">rise@strat101.com</a>. If you are in the EEA or UK and are not satisfied with our response, you have the right to lodge a complaint with your local data protection authority.</p>
-      </div>`;
   },
 
   _screenTerms() {

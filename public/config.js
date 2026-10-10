@@ -40,11 +40,8 @@ const BANKS = {
   'XII CBSE Chemistry':          'XII-CBSE-Chemistry',
   'XII CBSE Biology':            'XII-CBSE-Biology',
   'XII CBSE Computer Science':   'XII-CBSE-Computer-Science',
-  'XII ICSE Mathematics':        'XII-ICSE-Mathematics',
-  'XII ICSE Physics':            'XII-ICSE-Physics',
-  'XII ICSE Chemistry':          'XII-ICSE-Chemistry',
-  'XII ICSE Biology':            'XII-ICSE-Biology',
-  'XII ICSE Computer Science':   'XII-ICSE-Computer-Science',
+  // XII ICSE MCQ files are still empty ([]) — re-add their entries once they hold questions.
+  // Until then those subjects show Board Short Answers only.
 
   'XII CBSE Economics':             'XII-CBSE-Economics',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science',

@@ -19,7 +19,7 @@
 </head>
 <body>
     <h1>Privacy Policy — Rise</h1>
-    <p class="updated">Last updated: September 2026</p>
+    <p class="updated">Last updated: October 2026</p>
 
     <p>Rise ("the app") is a self-study practice tool for Class X and XII CBSE and ICSE board-exam students, operated by Strat101. This policy explains what data is collected, how it is used, and your choices.</p>
 
@@ -49,7 +49,7 @@
     <p>All cloud data is stored under your user ID and protected by Firestore security rules — no other user can read or write your data.</p>
 
     <h3>2e. Ask Cloé (AI study companion)</h3>
-    <p>Cloé is powered by Cloudflare Workers AI by default (requires sign-in). When you send a message to Cloé, your question and relevant chapter context are sent to Cloudflare's AI inference API. Messages are not stored by Rise — they are processed in real time and discarded. If you configure an alternative AI provider (e.g. Anthropic, OpenAI, Gemini) using your own API key, your messages go directly to that provider; Rise does not store or transmit your API key — it remains in your browser's local storage only.</p>
+    <p>Cloé requires sign-in and runs on an AI account you connect yourself (for example Cloudflare Workers AI, Google Gemini, Anthropic, OpenAI, Mistral, Grok or DeepSeek). Rise does not provide a shared AI account. When you send a message, your question, recent chat history and relevant chapter context — together with your API key (and, for Cloudflare, your account ID) — pass through Rise's chat relay on Cloudflare Pages, which forwards them to the provider you chose and streams the reply back. The relay does not store your messages or your key. Your API key and Cloudflare account ID are saved only in your browser's local storage and are never synced to your Rise account; your chosen provider and model name are synced so they follow you across devices. Your use of the provider is governed by that provider's own terms and privacy policy.</p>
 
     <h3>2c. Challenge codes (async multiplayer)</h3>
     <p>When you finish a Free Run and generate a challenge code, the following is stored in Firestore under a random 6-letter code for up to 7 days:</p>
@@ -78,7 +78,7 @@
             <tr><td>Firebase Authentication</td><td>Google LLC</td><td>Sign-in (email/password and Google)</td></tr>
             <tr><td>Cloud Firestore</td><td>Google LLC</td><td>Cloud sync, challenge codes, live rooms</td></tr>
             <tr><td>Cloudflare Pages</td><td>Cloudflare, Inc.</td><td>Hosting; logs standard web access data (IP, browser) transiently for security and performance</td></tr>
-            <tr><td>Cloudflare Workers AI</td><td>Cloudflare, Inc.</td><td>Powers Cloé AI chat (default provider); your question text and chapter context are sent to Cloudflare's AI inference API in real time and not stored by Rise</td></tr>
+            <tr><td>Your chosen AI provider</td><td>Whichever you connect (e.g. Cloudflare, Google, Anthropic, OpenAI)</td><td>Powers Cloé AI chat using your own account; your question, chat history and chapter context are sent to it through Rise's chat relay, which does not store them</td></tr>
             <tr><td>Google Fonts</td><td>Google LLC</td><td>Montserrat and Noto Sans Devanagari typefaces</td></tr>
         </tbody>
     </table>
