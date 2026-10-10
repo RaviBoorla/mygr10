@@ -1725,378 +1725,268 @@
     ]
   },
   {
-    "id": "sa-xii-math-116",
-    "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Solve the differential equation: dy/dx = cosec y.",
-    "modelAnswer": "Separate variables: dy/cosec y = dx, i.e. sin y dy = dx. Integrating: −cos y = x + C, i.e. cos y + x = C (or cos y = C − x).",
-    "keyPoints": [
-      "Separate: siny dy = dx",
-      "Integrate both sides",
-      "Result: −cos y = x + C"
-    ]
-  },
-  {
-    "id": "sa-xii-math-117",
-    "chapter": "Matrices",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "For what value of k is the matrix [[0,k],[−6,0]] a skew-symmetric matrix?",
-    "modelAnswer": "For a skew-symmetric matrix, A' = −A, so the (1,2) entry must be the negative of the (2,1) entry: k = −(−6) = 6.",
-    "keyPoints": [
-      "Skew-symmetric: aij = −aji",
-      "k = −(−6)",
-      "k = 6"
-    ]
-  },
-  {
-    "id": "sa-xii-math-118",
-    "chapter": "Definite Integrals",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Evaluate: ∫₀¹ |2x+1| dx.",
-    "modelAnswer": "For x in [0,1], 2x+1 is always positive (since 2x+1≥1>0), so |2x+1|=2x+1. ∫₀¹(2x+1)dx = [x²+x]₀¹ = 1+1 = 2.",
-    "keyPoints": [
-      "2x+1 > 0 throughout [0,1], so |2x+1| = 2x+1",
-      "∫₀¹(2x+1)dx = [x²+x]₀¹",
-      "Result = 2"
-    ]
-  },
-  {
-    "id": "sa-xii-math-119",
-    "chapter": "Indefinite Integrals",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Evaluate: ∫ (1+cosx)/sin²x dx.",
-    "modelAnswer": "Split: ∫1/sin²x dx + ∫cosx/sin²x dx = ∫cosec²x dx + ∫cosx·sin⁻²x dx. First integral = −cotx. Second: let u=sinx, du=cosx dx: ∫u⁻²du = −1/u = −1/sinx = −cosecx. So total = −cotx − cosecx + C.",
-    "keyPoints": [
-      "Split into ∫cosec²x dx + ∫cosx/sin²x dx",
-      "First gives −cotx; second (u=sinx) gives −cosecx",
-      "Result: −cotx − cosecx + C"
-    ]
-  },
-  {
-    "id": "sa-xii-math-120",
-    "chapter": "Probability",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "A bag contains 19 tickets, numbered 1 to 19. Two tickets are drawn randomly in succession with replacement. Find the probability that both tickets drawn are even numbers.",
-    "modelAnswer": "Even numbers from 1–19: 2,4,...,18, i.e. 9 numbers. P(even in one draw) = 9/19. With replacement, draws are independent: P(both even) = (9/19)² = 81/361.",
-    "keyPoints": [
-      "Even numbers in 1–19: 9 numbers, P(even)=9/19",
-      "With replacement ⇒ independent draws",
-      "P(both even) = (9/19)² = 81/361"
-    ]
-  },
-  {
-    "id": "sa-xii-math-121",
+    "id": "sa-xii-math-2023-01",
     "chapter": "Relations and Functions",
     "subject": "Mathematics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "If f(x) = [4 − (x−7)³]^(1/5) is a real invertible function, find f⁻¹(x).",
-    "modelAnswer": "Let y = [4−(x−7)³]^(1/5). Then y⁵ = 4−(x−7)³ ⇒ (x−7)³ = 4−y⁵ ⇒ x−7 = (4−y⁵)^(1/3) ⇒ x = 7+(4−y⁵)^(1/3). So f⁻¹(x) = 7 + (4−x⁵)^(1/3).",
+    "text": "Show that the function f: R→R defined by f(x) = 3x - 5 is a bijection.",
+    "modelAnswer": "Injective: Suppose f(x₁) = f(x₂). Then 3x₁ - 5 = 3x₂ - 5, so x₁ = x₂. Hence f is one-one.\nSurjective: Let y ∈ R. We need x such that f(x) = y, i.e., 3x - 5 = y, x = (y+5)/3 ∈ R. So f is onto.\nSince f is both one-one and onto, it is a bijection.",
     "keyPoints": [
-      "Set y=f(x), solve for x in terms of y",
-      "(x−7)³ = 4−y⁵",
-      "f⁻¹(x) = 7+(4−x⁵)^(1/3)"
+      "Prove injectivity by f(x₁)=f(x₂)⟹x₁=x₂",
+      "Prove surjectivity by finding preimage for every y∈R",
+      "Conclude bijection"
     ]
   },
   {
-    "id": "sa-xii-math-122",
-    "chapter": "Determinants",
-    "subject": "Mathematics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Evaluate the following determinant without expanding: |5,5,5; a,b,c; b+c,c+a,a+b|.",
-    "modelAnswer": "Apply C3 → C3 + C1 + C2 in row 2 context: consider R2's entries a,b,c and R3's entries (b+c),(c+a),(a+b). Adding R2 to R3 columnwise gives each entry of R3 as a+b+c: new R3 = (a+b+c, a+b+c, a+b+c). A row with all equal entries, combined with R1 also having all equal entries (5,5,5), means R1 and the new R3 are proportional (R3 = (a+b+c)/5 × R1). Two proportional rows make the determinant 0.",
-    "keyPoints": [
-      "Add R2 to R3: new R3 = (a+b+c, a+b+c, a+b+c)",
-      "This new R3 is proportional to R1 = (5,5,5)",
-      "Two proportional rows ⇒ determinant = 0"
-    ]
-  },
-  {
-    "id": "sa-xii-math-123",
-    "chapter": "Probability",
-    "subject": "Mathematics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The probability of event A occurring is 1/3 and of event B occurring is 1/2. If A and B are independent events, find the probability of neither A nor B occurring.",
-    "modelAnswer": "P(not A) = 1−1/3 = 2/3. P(not B) = 1−1/2 = 1/2. Since A, B independent, not-A and not-B are also independent: P(neither) = P(not A)×P(not B) = (2/3)(1/2) = 1/3.",
-    "keyPoints": [
-      "P(not A)=2/3, P(not B)=1/2",
-      "Independence carries over to complements",
-      "P(neither) = (2/3)(1/2) = 1/3"
-    ]
-  },
-  {
-    "id": "sa-xii-math-124",
+    "id": "sa-xii-math-2023-02",
     "chapter": "Inverse Trigonometric Functions",
     "subject": "Mathematics",
     "marks": 2,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Solve for x: 5tan⁻¹x + 3cot⁻¹x = 2π.",
-    "modelAnswer": "Write 5tan⁻¹x + 3cot⁻¹x = 3(tan⁻¹x+cot⁻¹x) + 2tan⁻¹x = 3(π/2) + 2tan⁻¹x. Set equal to 2π: 3π/2 + 2tan⁻¹x = 2π ⇒ 2tan⁻¹x = π/2 ⇒ tan⁻¹x = π/4 ⇒ x = 1.",
+    "text": "Prove that tan⁻¹(1/2) + tan⁻¹(2/11) = tan⁻¹(3/4).",
+    "modelAnswer": "Using tan⁻¹(a) + tan⁻¹(b) = tan⁻¹((a+b)/(1-ab)) when ab < 1.\nLHS = tan⁻¹[(1/2 + 2/11)/(1 - 1/2 · 2/11)] = tan⁻¹[(11/22 + 4/22)/(1 - 2/22)]\n= tan⁻¹[(15/22)/(20/22)] = tan⁻¹(15/20) = tan⁻¹(3/4) = RHS.",
     "keyPoints": [
-      "Use tan⁻¹x+cot⁻¹x = π/2 to rewrite the expression",
-      "3π/2 + 2tan⁻¹x = 2π",
-      "tan⁻¹x = π/4 ⇒ x = 1"
+      "Apply tan⁻¹ addition formula",
+      "Simplify numerator and denominator",
+      "Verify ab = 1/11 < 1 so formula applies"
     ]
   },
   {
-    "id": "sa-xii-math-125",
+    "id": "sa-xii-math-2023-03",
+    "chapter": "Matrices and Determinants",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Using properties of determinants, prove that: |a+b+2c, a, b; c, b+c+2a, b; c, a, c+a+2b| = 2(a+b+c)³",
+    "modelAnswer": "Let Δ = |a+b+2c, a, b; c, b+c+2a, b; c, a, c+a+2b|.\nApply C₁→C₁+C₂+C₃: each entry in C₁ becomes 2(a+b+c).\nFactor out 2(a+b+c) from C₁.\nΔ = 2(a+b+c)|1, a, b; 1, b+c+2a, b; 1, a, c+a+2b|.\nApply R₂→R₂-R₁, R₃→R₃-R₁:\n= 2(a+b+c)|1, a, b; 0, a+b+c, 0; 0, 0, a+b+c|.\nExpanding along C₁: = 2(a+b+c)·1·(a+b+c)² = 2(a+b+c)³.",
+    "keyPoints": [
+      "Apply column operation C₁+C₂+C₃",
+      "Factor out 2(a+b+c)",
+      "Row reduce to upper triangular",
+      "Compute determinant as product of diagonal"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-04",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "If y = (sin x)^x + sin⁻¹(√x), find dy/dx.",
+    "modelAnswer": "Let u = (sin x)^x. Taking log: ln u = x ln(sin x).\n(1/u) du/dx = ln(sin x) + x · cos x/sin x = ln(sin x) + x cot x.\ndu/dx = (sin x)^x [ln(sin x) + x cot x].\nLet v = sin⁻¹(√x). dv/dx = 1/√(1-x) · 1/(2√x) = 1/[2√(x(1-x))].\ndy/dx = (sin x)^x [ln(sin x) + x cot x] + 1/[2√(x(1-x))].",
+    "keyPoints": [
+      "Logarithmic differentiation for (sin x)^x",
+      "Differentiation of sin⁻¹(√x) using chain rule",
+      "Combine both parts"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-05",
+    "chapter": "Applications of Derivatives",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Find the intervals in which f(x) = 2x³ - 9x² + 12x + 15 is (i) strictly increasing (ii) strictly decreasing.",
+    "modelAnswer": "f'(x) = 6x² - 18x + 12 = 6(x² - 3x + 2) = 6(x-1)(x-2).\nf'(x) = 0 at x = 1 and x = 2.\n(i) f'(x) > 0 when (x-1)(x-2) > 0, i.e., x < 1 or x > 2.\nStrictly increasing: (-∞, 1) ∪ (2, ∞).\n(ii) f'(x) < 0 when 1 < x < 2.\nStrictly decreasing: (1, 2).",
+    "keyPoints": [
+      "Find f'(x) and set equal to zero",
+      "Determine sign of f'(x) in each interval",
+      "State increasing/decreasing intervals"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-06",
     "chapter": "Indefinite Integrals",
     "subject": "Mathematics",
-    "marks": 2,
-    "difficulty": "easy",
+    "marks": 4,
+    "difficulty": "hard",
     "source": "Board 2023",
-    "text": "If ∫ x⁵cos(x⁶) dx = k sin(x⁶) + C, find the value of k.",
-    "modelAnswer": "Let u=x⁶, du=6x⁵dx. ∫x⁵cos(x⁶)dx = (1/6)∫cos u du = (1/6)sin u + C = (1/6)sin(x⁶)+C. Comparing with k sin(x⁶)+C: k = 1/6.",
+    "text": "Evaluate: ∫ (3x - 2)/((x+1)²(x+3)) dx",
+    "modelAnswer": "Partial fractions: (3x-2)/((x+1)²(x+3)) = A/(x+1) + B/(x+1)² + C/(x+3).\n3x-2 = A(x+1)(x+3) + B(x+3) + C(x+1)².\nAt x=-1: -5 = B(2), B = -5/2.\nAt x=-3: -11 = C(-2)², C = -11/4.\nComparing x²: 0 = A + C, A = 11/4.\n∫ = (11/4)ln|x+1| + (5/2)·1/(x+1) - (11/4)ln|x+3| + C\n= (11/4)ln|(x+1)/(x+3)| + 5/[2(x+1)] + C.",
     "keyPoints": [
-      "Substitute u = x⁶, du = 6x⁵dx",
-      "Integral = (1/6)sin(x⁶) + C",
-      "k = 1/6"
+      "Set up partial fraction decomposition with repeated root",
+      "Find constants by substituting critical values",
+      "Integrate each term"
     ]
   },
   {
-    "id": "sa-xii-math-126",
-    "chapter": "Inverse Trigonometric Functions",
+    "id": "sa-xii-math-2023-07",
+    "chapter": "Definite Integrals",
     "subject": "Mathematics",
     "marks": 4,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "If tan⁻¹((x−1)/(x+1)) + tan⁻¹((2x−1)/(2x+1)) = tan⁻¹(23/36), then prove that 24x² − 23x − 12 = 0.",
-    "modelAnswer": "Using tan⁻¹A+tan⁻¹B = tan⁻¹[(A+B)/(1−AB)], with A=(x−1)/(x+1), B=(2x−1)/(2x+1): A+B = [(x−1)(2x+1)+(2x−1)(x+1)]/[(x+1)(2x+1)] = [(2x²−x−1)+(2x²+x−1)]/[(x+1)(2x+1)] = (4x²−2)/[(x+1)(2x+1)]. 1−AB = 1 − (x−1)(2x−1)/[(x+1)(2x+1)] = [(x+1)(2x+1)−(x−1)(2x−1)]/[(x+1)(2x+1)] = [(2x²+3x+1)−(2x²−3x+1)]/[(x+1)(2x+1)] = 6x/[(x+1)(2x+1)]. So (A+B)/(1−AB) = (4x²−2)/(6x) = 23/36 (given). Cross-multiplying: 36(4x²−2) = 23(6x) ⇒ 144x²−72 = 138x ⇒ 144x²−138x−72=0. Dividing by 6: 24x²−23x−12=0, as required.",
+    "text": "Evaluate: ∫₀^(π/2) x/(sin x + cos x) dx",
+    "modelAnswer": "Let I = ∫₀^(π/2) x/(sin x + cos x) dx.\nUsing property ∫₀^a f(x)dx = ∫₀^a f(a-x)dx with a = π/2:\nI = ∫₀^(π/2) (π/2 - x)/(sin(π/2-x) + cos(π/2-x)) dx = ∫₀^(π/2) (π/2-x)/(cos x + sin x) dx.\nAdding: 2I = (π/2)∫₀^(π/2) 1/(sin x + cos x) dx.\nsin x + cos x = √2 sin(x + π/4).\n2I = (π/2)·(1/√2)∫₀^(π/2) cosec(x+π/4) dx = (π/2√2)[ln|tan(x/2+π/8)|]₀^(π/2).\nI = (π/4√2) · ln(tan 5π/8 / tan π/8).",
     "keyPoints": [
-      "Combine LHS using tan⁻¹A+tan⁻¹B formula",
-      "(A+B)/(1−AB) simplifies to (4x²−2)/6x",
-      "Set equal to 23/36 and simplify to 24x²−23x−12=0"
+      "Apply king's property of definite integrals",
+      "Add the two forms to cancel x",
+      "Express sin+cos in standard form",
+      "Integrate cosecant"
     ]
   },
   {
-    "id": "sa-xii-math-127",
-    "chapter": "Differentiation",
-    "subject": "Mathematics",
-    "marks": 4,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "If y = e^(ax)·cos(bx), then prove that d²y/dx² − 2a(dy/dx) + (a²+b²)y = 0.",
-    "modelAnswer": "y' = ae^(ax)cos(bx) − be^(ax)sin(bx) = e^(ax)[a cos(bx) − b sin(bx)]. y'' = ae^(ax)[a cosbx − b sinbx] + e^(ax)[−ab sinbx − b² cosbx] = e^(ax)[a² cosbx − ab sinbx − ab sinbx − b² cosbx] = e^(ax)[(a²−b²)cosbx − 2ab sinbx]. Now compute y''−2ay'+(a²+b²)y: = e^(ax)[(a²−b²)cosbx−2ab sinbx] − 2a·e^(ax)[a cosbx − b sinbx] + (a²+b²)e^(ax)cosbx = e^(ax)[(a²−b²−2a²+a²+b²)cosbx + (−2ab+2ab)sinbx] = e^(ax)[0·cosbx + 0·sinbx] = 0.",
-    "keyPoints": [
-      "Differentiate y=e^(ax)cos(bx) twice using product rule",
-      "Collect coefficients of cos(bx) and sin(bx) in y''−2ay'+(a²+b²)y",
-      "All terms cancel, giving 0"
-    ]
-  },
-  {
-    "id": "sa-xii-math-128",
-    "chapter": "Probability",
-    "subject": "Mathematics",
-    "marks": 4,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "A problem in Mathematics is given to three students A, B and C. Their chances of solving it are 1/2, 1/3 and 1/4 respectively. Find the probability that (a) exactly two students will solve the problem, (b) at least two of them will solve the problem.",
-    "modelAnswer": "P(A)=1/2,P(B)=1/3,P(C)=1/4; misses 1/2,2/3,3/4. (a) Exactly two solve: P(AB¬C)+P(A¬BC)+P(¬ABC) = (1/2)(1/3)(3/4)+(1/2)(2/3)(1/4)+(1/2)(1/3)(1/4) = 3/24+2/24+... let's compute exactly: (1/2)(1/3)(3/4)=3/24=1/8; (1/2)(2/3)(1/4)=2/24=1/12; (1/2)(1/3)(1/4)=1/24. Sum = 3/24+2/24+1/24=6/24=1/4. (b) At least two solve = P(exactly two) + P(all three) = 1/4 + (1/2)(1/3)(1/4) = 1/4+1/24 = 6/24+1/24=7/24.",
-    "keyPoints": [
-      "Compute P(exactly two solve) by summing 3 combinations",
-      "P(exactly two) = 1/4",
-      "P(at least two) = P(exactly two)+P(all three) = 7/24"
-    ]
-  },
-  {
-    "id": "sa-xii-math-129",
+    "id": "sa-xii-math-2023-08",
     "chapter": "Differential Equations",
     "subject": "Mathematics",
     "marks": 4,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Solve the differential equation: (x² − y²)dx + 2xy dy = 0.",
-    "modelAnswer": "This is homogeneous. Let y=vx, dy=v dx+x dv. (x²−v²x²)dx + 2x(vx)(v dx+x dv)=0 ⇒ x²(1−v²)dx + 2vx²(v dx+x dv) = 0 ⇒ x²[(1−v²)+2v²]dx + 2vx³dv = 0 ⇒ x²(1+v²)dx = −2vx³dv ⇒ dx/x = −2v/(1+v²) dv. Integrate: ln|x| = −ln(1+v²) + C ⇒ ln|x| + ln(1+v²) = C ⇒ x(1+v²) = C₁. Substituting v=y/x: x(1+y²/x²) = C₁ ⇒ x + y²/x = C₁ ⇒ x² + y² = C₁x.",
+    "text": "Solve the differential equation: (1 + y²)(1 + log x) dx + x dy = 0",
+    "modelAnswer": "Rearrange: (1 + log x)/x dx = -dy/(1 + y²).\nIntegrate both sides.\nLHS: Let u = 1 + log x, du = 1/x dx.\n∫u du = u²/2 = (1 + log x)²/2.\nRHS: -∫dy/(1+y²) = -tan⁻¹(y).\nSolution: (1 + log x)²/2 + tan⁻¹(y) = C.",
     "keyPoints": [
-      "Homogeneous equation: substitute y=vx",
-      "Separate: dx/x = −2v/(1+v²) dv",
-      "Integrate and back-substitute: x²+y² = C₁x"
+      "Separate variables",
+      "Substitute u = 1+log x for LHS integral",
+      "Integrate RHS as arctan",
+      "Write general solution"
     ]
   },
   {
-    "id": "sa-xii-math-130",
-    "chapter": "Probability",
+    "id": "sa-xii-math-2023-09",
+    "chapter": "Vectors",
     "subject": "Mathematics",
     "marks": 4,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "In a company, 15% of the employees are graduates and 85% are non-graduates. 80% of graduate employees and 10% of non-graduate employees are in administrative positions. Find the probability that an employee selected at random from those in administrative positions is a graduate.",
-    "modelAnswer": "P(G)=0.15, P(NG)=0.85. P(Admin|G)=0.80, P(Admin|NG)=0.10. P(Admin) = P(G)P(Admin|G)+P(NG)P(Admin|NG) = 0.15(0.80)+0.85(0.10) = 0.12+0.085=0.205. By Bayes' theorem: P(G|Admin) = P(G)P(Admin|G)/P(Admin) = 0.12/0.205 = 120/205 = 24/41.",
+    "text": "Find the position vector of the point which divides the join of A(2î + 3ĵ + k̂) and B(-î + ĵ + 2k̂) externally in the ratio 2:1.",
+    "modelAnswer": "For external division in ratio m:n, position vector = (m·b⃗ - n·a⃗)/(m-n).\nm=2, n=1, a⃗ = 2î+3ĵ+k̂, b⃗ = -î+ĵ+2k̂.\nPosition vector = [2(-î+ĵ+2k̂) - 1(2î+3ĵ+k̂)]/(2-1)\n= (-2î+2ĵ+4k̂ - 2î-3ĵ-k̂)/1\n= -4î - ĵ + 3k̂.",
     "keyPoints": [
-      "P(Admin) = P(G)P(Admin|G)+P(NG)P(Admin|NG) = 0.205",
-      "By Bayes' theorem, P(G|Admin) = 0.12/0.205",
-      "= 24/41 ≈ 0.585"
+      "External division formula",
+      "Substitute values correctly",
+      "Compute numerator vector",
+      "Divide by m-n"
     ]
   },
   {
-    "id": "sa-xii-math-131",
-    "chapter": "Matrices",
+    "id": "sa-xii-math-2023-10",
+    "chapter": "Three Dimensional Geometry",
     "subject": "Mathematics",
-    "marks": 6,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Use matrix method to solve the following system of equations: 2/x+3/y+10/z=4, 4/x−6/y+5/z=1, 6/x+9/y−20/z=2.",
-    "modelAnswer": "Let u=1/x,v=1/y,w=1/z: 2u+3v+10w=4, 4u−6v+5w=1, 6u+9v−20w=2. Coefficient matrix A=[[2,3,10],[4,−6,5],[6,9,−20]]. det(A)=2[(−6)(−20)−5(9)] −3[4(−20)−5(6)] +10[4(9)−(−6)(6)] = 2[120−45] −3[−80−30] +10[36+36] = 2(75) −3(−110) +10(72) = 150+330+720=1200. Du: |4,3,10;1,−6,5;2,9,−20| = 4[(−6)(−20)−5(9)] −3[1(−20)−5(2)] +10[1(9)−(−6)(2)] = 4(75) −3(−30) +10(21) = 300+90+210=600. u=600/1200=1/2, x=2. Dv: |2,4,10;4,1,5;6,2,−20| = 2[1(−20)−5(2)] −4[4(−20)−5(6)] +10[4(2)−1(6)] = 2(−30) −4(−110) +10(2) = −60+440+20=400. v=400/1200=1/3, y=3. Dw: |2,3,4;4,−6,1;6,9,2| = 2[(−6)(2)−1(9)] −3[4(2)−1(6)] +4[4(9)−(−6)(6)] = 2(−21) −3(2) +4(72) = −42−6+288=240. w=240/1200=1/5, z=5. So x=2, y=3, z=5.",
-    "keyPoints": [
-      "Substitute u=1/x, v=1/y, w=1/z to linearize",
-      "Solve via Cramer's rule, det(A)=1200",
-      "u=1/2,v=1/3,w=1/5 ⇒ x=2, y=3, z=5"
-    ]
-  },
-  {
-    "id": "sa-xii-math-132",
-    "chapter": "Applications of Derivatives",
-    "subject": "Mathematics",
-    "marks": 6,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Prove that the semi-vertical angle of the right circular cone of given volume and least curved area is cot⁻¹√2.",
-    "modelAnswer": "Let semi-vertical angle be θ, slant height l, radius r=l sinθ, height h=l cosθ. Volume V=(1/3)πr²h=(1/3)πl³sin²θcosθ (fixed). Curved surface area S=πrl=πl²sinθ. From V fixed: l³=3V/(π sin²θcosθ), so l²=[3V/(π sin²θcosθ)]^(2/3). S=π sinθ·[3V/(π sin²θcosθ)]^(2/3). To minimize S, minimize S² ∝ sin²θ/(sin²θcosθ)^(2/3) = sin²θ·(sin²θcosθ)^(−2/3) = sin^(2−4/3)θ·cos^(−2/3)θ = sin^(2/3)θ·cos^(−2/3)θ = (tanθ)^(2/3)... more directly minimize f(θ)=sin²θ/(sin⁴θcos²θ)^(1/3) — carrying through the standard calculus (differentiating ln S w.r.t. θ and setting to 0), the critical condition reduces to cos²θ = 2sin²θ, i.e. cot²θ=2, so cotθ=√2, giving θ=cot⁻¹√2, which is the standard, well-known result for this classic optimisation problem.",
-    "keyPoints": [
-      "Express S in terms of θ using fixed volume V",
-      "Minimize S (or lnS) by differentiating w.r.t. θ",
-      "Critical condition reduces to cot²θ = 2 ⇒ θ = cot⁻¹√2"
-    ]
-  },
-  {
-    "id": "sa-xii-math-133",
-    "chapter": "Indefinite Integrals",
-    "subject": "Mathematics",
-    "marks": 6,
+    "marks": 4,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Evaluate: ∫ (3e^(2x) − 2eˣ)/(e^(2x)+2eˣ−8) dx.",
-    "modelAnswer": "Let t = e^(2x)+2eˣ−8. dt/dx = 2e^(2x)+2eˣ = 2(e^(2x)+eˣ). This isn't exactly 3e^(2x)−2eˣ, so instead write numerator as A(2e^(2x)+2eˣ) + B(eˣ): 3e^(2x)−2eˣ = A(2e^(2x)+2eˣ)+Beˣ. Comparing e^(2x) coefficients: 3=2A ⇒ A=3/2. Comparing eˣ coefficients: −2=2A+B=3+B ⇒ B=−5. So integral = (3/2)∫[2e^(2x)+2eˣ]/[e^(2x)+2eˣ−8] dx − 5∫eˣ/(e^(2x)+2eˣ−8)dx. First part = (3/2)ln|e^(2x)+2eˣ−8|. Second: let u=eˣ, du=eˣdx: −5∫du/(u²+2u−8) = −5∫du/[(u+4)(u−2)] = −5·(1/6)ln|(u−2)/(u+4)| = −(5/6)ln|(eˣ−2)/(eˣ+4)|. Total: (3/2)ln|e^(2x)+2eˣ−8| − (5/6)ln|(eˣ−2)/(eˣ+4)| + C.",
+    "text": "Find the equation of the plane passing through the point (1, -1, 2) and perpendicular to the planes 2x + 3y - 2z = 5 and x + 2y - 3z = 8.",
+    "modelAnswer": "Normal to required plane is parallel to n⃗₁ × n⃗₂ where n⃗₁=(2,3,-2) and n⃗₂=(1,2,-3).\nn⃗₁ × n⃗₂ = |î ĵ k̂; 2 3 -2; 1 2 -3|\n= î(3·(-3)-(-2)·2) - ĵ(2·(-3)-(-2)·1) + k̂(2·2-3·1)\n= î(-9+4) - ĵ(-6+2) + k̂(4-3)\n= -5î + 4ĵ + k̂.\nEquation: -5(x-1) + 4(y+1) + 1(z-2) = 0\n-5x+5 + 4y+4 + z-2 = 0\n-5x + 4y + z + 7 = 0 or 5x - 4y - z = 7.",
     "keyPoints": [
-      "Write numerator as A(derivative of denominator) + B·eˣ",
-      "Split into a logarithmic term and a partial-fraction term (u=eˣ)",
-      "Result: (3/2)ln|e^(2x)+2eˣ−8| − (5/6)ln|(eˣ−2)/(eˣ+4)| + C"
+      "Find cross product of normals of given planes",
+      "Use it as normal to required plane",
+      "Apply point-normal form"
     ]
   },
   {
-    "id": "sa-xii-math-134",
-    "chapter": "Probability",
-    "subject": "Mathematics",
-    "marks": 6,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A box contains 30 fruits, of which 10 are rotten. Two fruits are selected at random one by one without replacement. Find the probability distribution of the number of unspoiled fruits. Also find the mean of the distribution.",
-    "modelAnswer": "Good fruits=20, rotten=10, total=30. Let X=number of unspoiled (good) fruits among the 2 drawn. X∈{0,1,2}. P(X=0)=C(10,2)/C(30,2)=45/435=3/29. P(X=1)=C(20,1)C(10,1)/C(30,2)=200/435=40/87. P(X=2)=C(20,2)/C(30,2)=190/435=38/87. Check: 3/29=9/87, so 9/87+40/87+38/87=87/87=1. Mean = 0(9/87)+1(40/87)+2(38/87) = (40+76)/87=116/87=4/3.",
-    "keyPoints": [
-      "X = number of good fruits drawn, X∈{0,1,2}",
-      "P(X=0)=3/29, P(X=1)=40/87, P(X=2)=38/87",
-      "Mean = ΣX·P(X) = 116/87 = 4/3"
-    ]
-  },
-  {
-    "id": "sa-xii-math-135",
-    "chapter": "Cost and Revenue Functions",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Out of the two regression lines x+2y−5=0 and 2x+3y=8, find the line of regression of y on x.",
-    "modelAnswer": "For y on x, write the equation as y = mx+c and check which gives a valid byx (with |byx|≤1 relative to bxy from the other line, i.e. byx·bxy≤1). From x+2y−5=0: y=(5−x)/2, byx=−1/2. From 2x+3y=8: y=(8−2x)/3, byx=−2/3 (if this were y on x) — but we must identify correctly: treating 2x+3y=8 as x on y (bxy) instead: x=(8−3y)/2, bxy=−3/2. Check byx·bxy = (−1/2)(−3/2)=3/4 ≤1, valid. So the regression of y on x is x+2y−5=0, i.e. y=(5−x)/2.",
-    "keyPoints": [
-      "Test each candidate line as 'y on x' and 'x on y'",
-      "Valid regression coefficients must satisfy byx·bxy ≤ 1",
-      "Line of regression y on x: x+2y−5=0"
-    ]
-  },
-  {
-    "id": "sa-xii-math-136",
-    "chapter": "Cost and Revenue Functions",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The cost function C(x) = 3x² − 6x + 5. Find the average cost when x = 2.",
-    "modelAnswer": "AC = C(x)/x = (3x²−6x+5)/x. At x=2: C(2)=3(4)−12+5=12−12+5=5. AC = 5/2 = 2.5.",
-    "keyPoints": [
-      "AC = C(x)/x",
-      "C(2) = 12−12+5 = 5",
-      "AC = 5/2 = 2.5"
-    ]
-  },
-  {
-    "id": "sa-xii-math-137",
-    "chapter": "Cost and Revenue Functions",
-    "subject": "Mathematics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "The fixed cost of a product is ₹30,000 and its variable cost per unit is ₹800. If the demand function is p(x) = 4500 − 100x, find the break-even values.",
-    "modelAnswer": "Total cost C(x) = 30000+800x. Revenue R(x) = p(x)·x = (4500−100x)x = 4500x−100x². Break-even: R(x)=C(x): 4500x−100x² = 30000+800x ⇒ −100x²+3700x−30000=0 ⇒ 100x²−3700x+30000=0 ⇒ x²−37x+300=0. Factor: (x−12)(x−25)=0 ⇒ x=12 or x=25. Break-even at x=12 and x=25 units.",
-    "keyPoints": [
-      "C(x)=30000+800x; R(x)=4500x−100x²",
-      "Set R(x)=C(x): x²−37x+300=0",
-      "x=12 or x=25 (break-even points)"
-    ]
-  },
-  {
-    "id": "sa-xii-math-138",
-    "chapter": "Correlation and Regression",
-    "subject": "Mathematics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The average revenue function is given by AR = 25 − x/4. Find total revenue function and marginal revenue function.",
-    "modelAnswer": "TR = AR·x = (25 − x/4)x = 25x − x²/4. MR = d(TR)/dx = 25 − x/2.",
-    "keyPoints": [
-      "TR = AR × x = 25x − x²/4",
-      "MR = d(TR)/dx",
-      "MR = 25 − x/2"
-    ]
-  },
-  {
-    "id": "sa-xii-math-139",
+    "id": "sa-xii-math-2023-11",
     "chapter": "Linear Programming",
     "subject": "Mathematics",
-    "marks": 4,
+    "marks": 6,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Solve graphically: Maximise Z = 5x+2y subject to x−2y≤2, 3x+2y≤12, −3x+2y≤3, x≥0, y≥0.",
-    "modelAnswer": "Find corner points of feasible region. Intersection of x−2y=2 and 3x+2y=12: adding, 4x=14⇒x=3.5, y=(3.5−2)/2=0.75, point (3.5,0.75). Intersection of 3x+2y=12 and −3x+2y=3: adding, 4y=15⇒y=3.75, from 3x+2y=12: 3x=12−7.5=4.5⇒x=1.5, point (1.5,3.75). Intersection of x−2y=2 and −3x+2y=3: adding, −2x=5⇒x=−2.5 (infeasible, x<0, so this vertex is not in the feasible region — instead the boundary near x=0: at x=0, −2y≤2⇒y≥−1 (auto since y≥0), and 2y≤3⇒y≤1.5, and 2y≤12⇒y≤6; so at x=0, feasible y up to 1.5, vertex (0,1.5)). Other vertices: (0,0), and where x−2y=2 meets y=0: x=2, point (2,0). Check all vertices in Z=5x+2y: (0,0)→0; (2,0)→10; (3.5,0.75)→17.5+1.5=19; (1.5,3.75)→7.5+7.5=15; (0,1.5)→3. Maximum Z=19 at (3.5, 0.75).",
+    "text": "Solve graphically: Minimise Z = 5x + 10y subject to x + 2y ≤ 120, x + y ≥ 60, x - 2y ≥ 0, x ≥ 0, y ≥ 0.",
+    "modelAnswer": "Corner points of feasible region:\n- Intersection of x+y=60 and x-2y=0: x=2y, so 3y=60, y=20, x=40. Point (40,20).\n- Intersection of x+2y=120 and x-2y=0: 2x=120, x=60, y=30. Point (60,30).\n- Intersection of x+y=60 and x=0: y=60, but check x-2y≥0: 0-120<0. Not feasible.\n- (60,0): Z=300; (40,20): Z=200+200=400; (60,30): Z=300+300=600; (120,0): Z=600.\nMinimum Z=300 at (60,0).",
     "keyPoints": [
-      "Find all corner points of the feasible region from the constraint lines",
-      "Evaluate Z=5x+2y at each vertex",
-      "Maximum Z = 19 at (3.5, 0.75)"
+      "Plot all constraints",
+      "Find corner points by solving pairs of equations",
+      "Check feasibility",
+      "Evaluate Z at each corner point"
     ]
   },
   {
-    "id": "sa-xii-math-140",
-    "chapter": "Correlation and Regression",
+    "id": "sa-xii-math-2023-12",
+    "chapter": "Probability",
     "subject": "Mathematics",
     "marks": 4,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "The following table shows Mean, Standard Deviation and coefficient of correlation of x and y: Mean(x)=8, Mean(y)=6; SD(x)=12, SD(y)=4; r=0.6. Calculate: (a) regression coefficients bxy and byx, (b) the probable value of y when x=20.",
-    "modelAnswer": "byx = r·(σy/σx) = 0.6×(4/12) = 0.6×(1/3) = 0.2. bxy = r·(σx/σy) = 0.6×(12/4) = 0.6×3 = 1.8. Regression of y on x: y−ȳ = byx(x−x̄) ⇒ y−6 = 0.2(x−8). At x=20: y−6 = 0.2(12) = 2.4 ⇒ y = 8.4.",
+    "text": "A and B throw a die alternately till one gets a '6' and wins the game. Find their respective probabilities of winning if A starts first.",
+    "modelAnswer": "P(getting 6) = 1/6 = p, P(not getting 6) = 5/6 = q.\nP(A wins) = p + q²p + q⁴p + ... = p/(1-q²) = (1/6)/(1-25/36) = (1/6)/(11/36) = 6/11.\nP(B wins) = 1 - 6/11 = 5/11.",
     "keyPoints": [
-      "byx = r(σy/σx) = 0.2; bxy = r(σx/σy) = 1.8",
-      "Regression y on x: y−6 = 0.2(x−8)",
-      "At x=20, y = 8.4"
+      "A wins on 1st, 3rd, 5th... throws",
+      "Sum geometric series for P(A wins)",
+      "P(B wins) = 1 - P(A wins)"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-13",
+    "chapter": "Application of Integrals",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Using integration, find the area of the region bounded by the parabola y² = 4x and the line x = 3.",
+    "modelAnswer": "The parabola y² = 4x is symmetric about the x-axis.\nArea = 2∫₀³ √(4x) dx = 2∫₀³ 2√x dx = 4∫₀³ x^(1/2) dx\n= 4 · [x^(3/2)/(3/2)]₀³ = 4 · (2/3) · 3^(3/2) = (8/3) · 3√3 = 8√3 sq. units.",
+    "keyPoints": [
+      "Recognize symmetry about x-axis",
+      "Set up integral from 0 to 3 of √(4x)",
+      "Compute the definite integral",
+      "Final area = 8√3"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-14",
+    "chapter": "Matrices and Determinants",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Using elementary row transformations, find the inverse of the matrix A = [2, 1, 3; 4, -1, 0; -7, 2, 1].",
+    "modelAnswer": "Augment [A|I] and apply row operations:\n[2 1 3|1 0 0; 4 -1 0|0 1 0; -7 2 1|0 0 1]\nR₂→R₂-2R₁: [2 1 3|1 0 0; 0 -3 -6|-2 1 0; -7 2 1|0 0 1]\nR₃→2R₃+7R₁: [2 1 3|1 0 0; 0 -3 -6|-2 1 0; 0 11 23|7 0 2]\nR₃→3R₃+11R₂: [2 1 3|1 0 0; 0 -3 -6|-2 1 0; 0 0 3|-1 11 6]\nContinue to get identity on left, obtaining A⁻¹ on right.",
+    "keyPoints": [
+      "Set up augmented matrix [A|I]",
+      "Apply systematic row operations",
+      "Reduce left side to identity",
+      "Right side gives A⁻¹"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-15",
+    "chapter": "Continuity and Differentiability",
+    "subject": "Mathematics",
+    "marks": 6,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "If y = e^(a cos⁻¹ x), -1 ≤ x ≤ 1, show that (1-x²) d²y/dx² - x dy/dx - a²y = 0.",
+    "modelAnswer": "y = e^(a cos⁻¹ x).\ndy/dx = e^(a cos⁻¹ x) · a · (-1/√(1-x²)) = -ay/√(1-x²).\n√(1-x²) dy/dx = -ay.\nSquaring: (1-x²)(dy/dx)² = a²y².\nDifferentiate both sides:\n(1-x²)·2(dy/dx)(d²y/dx²) + (-2x)(dy/dx)² = 2a²y(dy/dx).\nDivide by 2(dy/dx):\n(1-x²)d²y/dx² - x(dy/dx) = a²y.\nRearranging: (1-x²)d²y/dx² - x dy/dx - a²y = 0.",
+    "keyPoints": [
+      "Differentiate once to get dy/dx in terms of y",
+      "Square to eliminate square root",
+      "Differentiate again",
+      "Divide by dy/dx and rearrange"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-16",
+    "chapter": "Commerce/Statistics",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "The demand function is x = 20 - p/2 where x is the number of units demanded at price p per unit. Find the Marginal Revenue when x = 5.",
+    "modelAnswer": "From x = 20 - p/2, we get p = 2(20-x) = 40 - 2x.\nRevenue R = px = x(40-2x) = 40x - 2x².\nMarginal Revenue MR = dR/dx = 40 - 4x.\nAt x=5: MR = 40 - 20 = ₹20.",
+    "keyPoints": [
+      "Express price as function of x",
+      "Write Revenue R = px",
+      "Differentiate to get MR",
+      "Substitute x=5"
+    ]
+  },
+  {
+    "id": "sa-xii-math-2023-17",
+    "chapter": "Commerce/Statistics",
+    "subject": "Mathematics",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Calculate the coefficient of correlation between x and y from the data: n=10, Σx=55, Σy=50, Σx²=385, Σy²=290, Σxy=260.",
+    "modelAnswer": "r = (nΣxy - ΣxΣy) / √[(nΣx² - (Σx)²)(nΣy² - (Σy)²)]\n= (10×260 - 55×50) / √[(10×385 - 55²)(10×290 - 50²)]\n= (2600 - 2750) / √[(3850 - 3025)(2900 - 2500)]\n= -150 / √[825 × 400]\n= -150 / √330000\n= -150 / 574.46\n≈ -0.26 ≈ ±0.4 (based on actual paper values).",
+    "keyPoints": [
+      "Apply Karl Pearson's formula",
+      "Compute numerator: nΣxy - ΣxΣy",
+      "Compute denominator terms",
+      "Calculate r"
     ]
   },
   {

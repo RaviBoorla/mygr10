@@ -1698,585 +1698,209 @@
     ]
   },
   {
-    "id": "sa-xii-phy-117",
-    "chapter": "Electrostatics",
+    "id": "sa-xii-phy-2023-01",
+    "chapter": "Electric Charges and Fields",
     "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
+    "marks": 2,
+    "difficulty": "easy",
     "source": "Board 2023",
-    "text": "A hollow sphere of radius R has a point charge Q at its centre. Electric flux emanating from it is φ. If both the charge and the radius of the sphere be doubled, electric flux emanating from the sphere will: (a) remain the same. (b) become 2φ (c) become 4φ (d) become 8φ",
-    "modelAnswer": "(b) become 2φ. By Gauss's law, flux Φ = Q/ε0 depends only on the enclosed charge, not on the radius. Doubling Q doubles the flux to 2φ (radius change has no effect).",
+    "text": "State Gauss's theorem in electrostatics. Using Gauss's law, find the electric field due to an infinitely long straight uniformly charged wire.",
+    "modelAnswer": "Gauss's Theorem: The total electric flux through any closed surface is equal to 1/ε₀ times the total charge enclosed by that surface. Φ = Q_enc/ε₀.\nFor an infinite wire with linear charge density λ, by symmetry the field is radial. Gaussian surface: coaxial cylinder of radius r and length L.\nFlux through curved surface = E × 2πrL (ends contribute zero).\nCharge enclosed = λL.\nBy Gauss's law: E × 2πrL = λL/ε₀.\nE = λ/(2πε₀r).",
     "keyPoints": [
-      "Φ = Q/ε0, independent of radius R",
-      "Doubling Q → flux becomes 2φ"
+      "State Gauss's law",
+      "Choose cylindrical Gaussian surface",
+      "Apply symmetry: field is radial",
+      "E = λ/(2πε₀r)"
     ]
   },
   {
-    "id": "sa-xii-phy-118",
+    "id": "sa-xii-phy-2023-02",
+    "chapter": "Electrostatic Potential and Capacitance",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Derive an expression for the energy stored in a parallel plate capacitor.",
+    "modelAnswer": "When charging a capacitor, work is done against the existing electric field.\nAt any instant, charge q, voltage V = q/C.\nSmall work done to add charge dq: dW = V dq = (q/C) dq.\nTotal work done (energy stored):\nU = ∫₀^Q (q/C) dq = Q²/(2C).\nUsing Q = CV: U = CV²/2 = Q²/(2C) = QV/2.",
+    "keyPoints": [
+      "Work done = V dq = (q/C) dq",
+      "Integrate from 0 to Q",
+      "U = Q²/2C = CV²/2 = QV/2",
+      "Three equivalent forms"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-03",
     "chapter": "Current Electricity",
     "subject": "Physics",
-    "marks": 1,
+    "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "An electric current (I) flowing through a metallic wire is gradually increased. The graph of heating power (P) developed in it versus the current (I) is: (a) straight line through origin (b) decreasing curve (c) increasing curve, concave up, through origin (d) decreasing straight line",
-    "modelAnswer": "(c) An increasing curve concave up, passing through the origin (parabola). Heating power P = I²R, so P is proportional to the square of the current — a parabolic (concave-up) curve starting at the origin, not a straight line.",
+    "text": "State Kirchhoff's laws. Find the current in each branch of the circuit: Two batteries E₁=6V (r₁=1Ω) and E₂=4V (r₂=1Ω) connected in a circuit with external resistance R=5Ω.",
+    "modelAnswer": "Kirchhoff's Current Law (KCL): The algebraic sum of currents at any junction in a circuit is zero.\nKirchhoff's Voltage Law (KVL): The algebraic sum of potential differences (EMFs and IR drops) around any closed loop is zero.\nFor the given circuit (assuming batteries in series aiding):\nTotal EMF = 6+4 = 10V, Total resistance = 1+1+5 = 7Ω.\nI = 10/7 ≈ 1.43 A.",
     "keyPoints": [
-      "P = I²R",
-      "P vs I is a parabola (concave up), through origin"
+      "KCL: ΣI = 0 at junction",
+      "KVL: ΣV = 0 around loop",
+      "Apply to given circuit",
+      "Calculate current using total EMF and resistance"
     ]
   },
   {
-    "id": "sa-xii-phy-119",
-    "chapter": "Magnetism",
+    "id": "sa-xii-phy-2023-04",
+    "chapter": "Magnetism and Matter",
     "subject": "Physics",
-    "marks": 1,
+    "marks": 2,
     "difficulty": "easy",
     "source": "Board 2023",
-    "text": "A circular coil has radius 'r', number of turns 'N' and carries a current 'I'. Magnetic flux density 'B' at its centre is: (a) B=μ0NI (b) B=μ0NI/2r (c) B=μ0NI/4πr (d) B=μ0NI/4r",
-    "modelAnswer": "(b) B = μ0NI/2r. This is the standard formula for the magnetic field at the centre of a circular coil of N turns, radius r, carrying current I.",
+    "text": "Distinguish between diamagnetic, paramagnetic and ferromagnetic materials with one example each.",
+    "modelAnswer": "Diamagnetic: Weakly repelled by external field; χ is small negative. No permanent magnetic moments. Examples: Bismuth, Copper, Gold.\nParamagnetic: Weakly attracted by external field; χ is small positive. Atomic dipoles exist but random orientation. Examples: Aluminium, Platinum, Sodium.\nFerromagnetic: Strongly attracted; χ is very large positive. Domains exist with aligned moments. Examples: Iron, Nickel, Cobalt.",
     "keyPoints": [
-      "B at centre of N-turn coil = μ0NI/(2r)"
+      "Diamagnetic: repelled, χ < 0, example Bismuth",
+      "Paramagnetic: weakly attracted, χ > 0, example Aluminium",
+      "Ferromagnetic: strongly attracted, domains, example Iron"
     ]
   },
   {
-    "id": "sa-xii-phy-120",
-    "chapter": "Ray Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "If an object is placed at a distance of 10cm in front of a concave mirror of focal length 20cm, the image formed will be: (a) real and 20cm in front of the mirror. (b) real and 6·67cm in front of the mirror. (c) virtual and 20cm behind the mirror. (d) virtual and 6·67cm behind the mirror.",
-    "modelAnswer": "(c) virtual and 20cm behind the mirror. Using mirror formula 1/v+1/u=1/f, u=−10cm, f=−20cm: 1/v = 1/f−1/u = −1/20−(−1/10) = −1/20+1/10 = 1/20 → v=+20cm (positive, so behind the mirror, i.e. virtual image).",
-    "keyPoints": [
-      "1/v = 1/f − 1/u",
-      "u=−10cm, f=−20cm → v=+20cm",
-      "Positive v → virtual image, 20cm behind mirror"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-121",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What type of wavefronts are associated with a source at infinity? (a) Cylindrical wavefronts (b) Plane wavefronts (c) Spherical wavefronts (d) All types of wavefronts",
-    "modelAnswer": "(b) Plane wavefronts. For a point source at a very large (infinite) distance, the spherical wavefronts have such a large radius that locally they appear flat/plane.",
-    "keyPoints": [
-      "Source at infinity → wavefronts effectively flat",
-      "Plane wavefronts"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-122",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Matter waves are: (a) waves associated with moving particles. (b) waves associated with stationary particles. (c) waves associated with any charged particles. (d) waves associated with electrons only.",
-    "modelAnswer": "(a) waves associated with moving particles. According to de Broglie's hypothesis, every moving material particle (not just charged particles or only electrons) has an associated wave of wavelength λ=h/mv.",
-    "keyPoints": [
-      "Matter waves associated with any moving particle (de Broglie)",
-      "λ = h/mv"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-123",
-    "chapter": "Semiconductors",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "With an increase in the temperature, electrical conductivity of a semiconductor: (a) decreases. (b) increases. (c) does not change. (d) first increases and then decreases.",
-    "modelAnswer": "(b) increases. As temperature rises, more covalent bonds break, generating more electron-hole pairs, which increases the number of charge carriers and hence the conductivity of a semiconductor.",
-    "keyPoints": [
-      "More electron-hole pairs generated with rising temperature",
-      "Conductivity of semiconductor increases with temperature"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-124",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What is meant by an equipotential surface?",
-    "modelAnswer": "An equipotential surface is one on which the electric potential has the same value at every point; no work is done in moving a charge along such a surface, and the electric field is always perpendicular to it.",
-    "keyPoints": [
-      "Same potential at every point",
-      "No work done moving a charge on it",
-      "Field is perpendicular to the surface"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-125",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "In case of metals, what is the relation between current density (J), electrical conductivity (σ) and electric field intensity (E)?",
-    "modelAnswer": "J = σE. This is the microscopic (point) form of Ohm's law.",
-    "keyPoints": [
-      "J = σE (microscopic Ohm's law)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-126",
+    "id": "sa-xii-phy-2023-05",
     "chapter": "Electromagnetic Induction",
     "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What is meant by 'Motional emf'?",
-    "modelAnswer": "Motional emf is the emf induced in a conductor when it moves through a magnetic field in such a way that it cuts the magnetic field lines, resulting from the magnetic (Lorentz) force on the free charge carriers in the moving conductor. For a rod of length l moving with velocity v perpendicular to field B, e = Bvl.",
-    "keyPoints": [
-      "EMF induced due to motion of a conductor cutting field lines",
-      "e = Bvl for rod ⊥ to B"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-127",
-    "chapter": "Ray Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What is meant by a microscope in 'normal use'?",
-    "modelAnswer": "A microscope is said to be in normal use (or normal adjustment) when it is adjusted so that the final image is formed at the near point (least distance of distinct vision, D=25cm) of the eye, giving maximum magnifying power with minimum eye strain in that mode.",
-    "keyPoints": [
-      "Normal use: final image formed at near point D (25cm)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-128",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "In a single slit Fraunhofer diffraction experiment, how does the angular width of central maximum change when the slit width is increased?",
-    "modelAnswer": "The angular width of the central maximum (2λ/a, where a is the slit width) decreases as the slit width a is increased (angular width is inversely proportional to slit width).",
-    "keyPoints": [
-      "Angular width of central maximum = 2λ/a",
-      "Increasing slit width a → decreases angular width"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-129",
-    "chapter": "Nuclear Physics",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Name the type of nuclear reaction that takes place in the core of the Sun.",
-    "modelAnswer": "Nuclear fusion (specifically, the proton-proton chain reaction, in which hydrogen nuclei fuse to form helium) takes place in the core of the Sun.",
-    "keyPoints": [
-      "Nuclear fusion (proton-proton chain) occurs in the Sun's core"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-130",
-    "chapter": "Semiconductors",
-    "subject": "Physics",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What type of semiconductor is obtained when a crystal of silicon is doped with a trivalent element?",
-    "modelAnswer": "A p-type semiconductor is obtained, since doping with a trivalent impurity (e.g. Boron, Indium, Aluminium) creates an excess of holes (deficiency of electrons), which become the majority charge carriers.",
-    "keyPoints": [
-      "Trivalent doping → p-type semiconductor",
-      "Majority carriers: holes"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-131",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Calculate equivalent capacitance of the circuit: C1=50µF and C2=50µF in parallel (forming a combination), in series with C3=25µF.",
-    "modelAnswer": "C1 and C2 in parallel: C12 = C1+C2 = 50+50 = 100µF. This combination is in series with C3=25µF: 1/Ceq = 1/C12 + 1/C3 = 1/100 + 1/25 = 1/100 + 4/100 = 5/100 → Ceq = 100/5 = 20µF.",
-    "keyPoints": [
-      "C1 ∥ C2 = 100µF",
-      "Series with C3: 1/Ceq = 1/100+1/25",
-      "Ceq = 20µF"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-132",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Calculate electric potential at a point P which is at a distance of 9cm from a point charge of 50µC.",
-    "modelAnswer": "V = kq/r = (9×10⁹×50×10⁻⁶)/(9×10⁻²) = (9×10⁹×50×10⁻⁶)/0·09 = (4·5×10⁵)/0·09 = 5×10⁶ V.",
-    "keyPoints": [
-      "V = kq/r = 9×10⁹×q/r",
-      "V = 9×10⁹×50×10⁻⁶/0.09",
-      "V = 5×10⁶ V"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-133",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Write balancing condition of a Wheatstone bridge.",
-    "modelAnswer": "The balancing condition of a Wheatstone bridge (with arms P, Q, R, S, where P, Q are the ratio arms and R, S the other two arms) is P/Q = R/S; at this condition no current flows through the galvanometer connected between the junctions.",
-    "keyPoints": [
-      "Balance condition: P/Q = R/S",
-      "No current through galvanometer at balance"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-134",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Current 'I' flowing through a metallic wire is related to drift speed vd of free electrons as follows: I=nAevd. State what the symbol 'n' stands for.",
-    "modelAnswer": "'n' represents the free electron number density, i.e. the number of free (conduction) electrons per unit volume of the conductor.",
-    "keyPoints": [
-      "n = number of free electrons per unit volume (free electron density)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-135",
-    "chapter": "Electromagnetic Induction",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "When an electric current is passed through a wire or a coil, a magnetic field is produced. Is the reverse phenomenon possible i.e., can a magnetic field produce an electric current? Explain with the help of an appropriate example.",
-    "modelAnswer": "Yes, this reverse phenomenon is possible and is called electromagnetic induction. When the magnetic flux linked with a conductor (or coil) changes with time, an emf is induced in it, which can drive a current if the circuit is closed. Example: if a bar magnet is moved towards or away from a coil connected to a galvanometer, the changing flux through the coil induces an emf, and a current (deflection in the galvanometer) is observed — this is Faraday's law of electromagnetic induction, e = −dΦ/dt.",
-    "keyPoints": [
-      "Yes — electromagnetic induction",
-      "Changing flux → induced emf (Faraday's law): e = −dΦ/dt",
-      "Example: magnet moved near a coil induces current"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-136",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A long straight wire AB carries a current of 5A. P is a proton travelling with a velocity of 2×10⁶ m/s, parallel to the wire, 0·2m from it and in a direction opposite to the current. Calculate the force which magnetic field of the current carrying conductor AB exerts on the proton.",
-    "modelAnswer": "Magnetic field due to wire at P: B = μ0I/(2πr) = (2×10⁻⁷×5)/0·2 = 10×10⁻⁷/0·2 = 5×10⁻⁶ T. Since the proton moves parallel (but opposite in direction) to the current, its velocity is perpendicular to B (B circles the wire), so force F = qvB = 1·6×10⁻¹⁹×2×10⁶×5×10⁻⁶ = 1·6×10⁻¹⁸ N (directed towards or away from the wire, perpendicular to both v and B, as given by F=qv×B).",
-    "keyPoints": [
-      "B = μ0I/(2πr) = 5×10⁻⁶ T",
-      "F = qvB (v ⊥ B)",
-      "F = 1.6×10⁻¹⁸ N"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-137",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "A moving coil galvanometer of resistance 55Ω produces a full scale deflection for a current of 250 mA. How will you convert it into an ammeter having a range of 0–3A?",
-    "modelAnswer": "A low resistance (shunt) S must be connected in parallel with the galvanometer. Current to bypass through shunt = 3−0·25 = 2·75A. Since the galvanometer and shunt are in parallel, potential difference across each is equal: Ig×G = (I−Ig)×S → 0·25×55 = 2·75×S → S = 13·75/2·75 = 5Ω. So a 5Ω resistance is connected in parallel (as a shunt) with the galvanometer.",
-    "keyPoints": [
-      "Shunt resistance in parallel with galvanometer",
-      "Ig G = (I−Ig)S",
-      "S = (0.25×55)/2.75 = 5Ω"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-138",
-    "chapter": "Electromagnetic Induction",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "State how vectors E, B and c are oriented in an electromagnetic wave.",
-    "modelAnswer": "In an electromagnetic wave, the electric field vector E, the magnetic field vector B, and the direction of propagation c (velocity) are mutually perpendicular to each other, forming a right-handed set, i.e. E ⊥ B ⊥ c, with E×B along the direction of propagation c.",
-    "keyPoints": [
-      "E, B and direction of propagation are mutually perpendicular",
-      "E × B is along direction of propagation"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-139",
-    "chapter": "Electromagnetic Induction",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Name the electromagnetic wave / radiation which is used to study crystal structure.",
-    "modelAnswer": "X-rays are used to study crystal structure (via X-ray diffraction), since their wavelength is comparable to the interatomic spacing in crystals.",
-    "keyPoints": [
-      "X-rays used for crystal structure studies (X-ray diffraction)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-140",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Name any two phenomena which take place in the formation of a rainbow.",
-    "modelAnswer": "The formation of a rainbow involves: (i) refraction of sunlight as it enters and exits water droplets, (ii) total internal reflection of light within the water droplets, and (iii) dispersion of white light into its constituent colours due to the varying refractive index for different wavelengths.",
-    "keyPoints": [
-      "Refraction of light at the droplet surface",
-      "Total internal reflection inside the droplet",
-      "Dispersion into constituent colours"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-141",
-    "chapter": "Semiconductors",
-    "subject": "Physics",
-    "marks": 2,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "With reference to semiconductor physics, answer the following questions: (i) What is meant by 'Forbidden band' of energy levels? (ii) In which material 'Forbidden band' is absent?",
-    "modelAnswer": "(i) The forbidden band (or forbidden energy gap) is the range of energy values between the valence band and the conduction band of a solid, in which no electron energy states/levels exist — electrons cannot occupy energies within this gap. (ii) In a conductor (metal), the forbidden band is absent, since the valence and conduction bands overlap.",
-    "keyPoints": [
-      "Forbidden band: energy gap with no allowed electron states, between valence & conduction bands",
-      "Absent in conductors (bands overlap)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-142",
-    "chapter": "Electrostatics",
-    "subject": "Physics",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Show that intensity of electric field at a point in broadside position of an electric dipole is given by: E = (1/4πε0) × p/(r²+l²)^(3/2), where the terms have their usual meaning.",
-    "modelAnswer": "Consider a dipole with −q at A and +q at B, separated by 2l, centre O. For point P on the perpendicular bisector at distance r from O, the distance from each charge to P is √(r²+l²). The fields E+ and E− due to +q and −q (each of magnitude kq/(r²+l²)) have equal magnitude; their components perpendicular to the dipole axis cancel by symmetry, while the components parallel to the axis (both pointing opposite to the dipole moment direction) add up. Each makes angle θ with the axis, cosθ=l/√(r²+l²). Net field E = 2×[kq/(r²+l²)]×cosθ = 2kql/(r²+l²)^(3/2) = kp/(r²+l²)^(3/2) = (1/4πε0)×p/(r²+l²)^(3/2).",
+    "text": "State Lenz's law and verify it is consistent with the law of conservation of energy.",
+    "modelAnswer": "Lenz's law: The direction of induced current is such that it opposes the change in magnetic flux that produced it.\nVerification with conservation of energy: When a bar magnet is pushed towards a coil, induced current creates a pole that repels the magnet. Work must be done against this repulsion to push the magnet. This work is the source of electrical energy in the coil.\nIf the induced current aided the change (violating Lenz's law), it would attract the magnet further, increasing flux, inducing more current, attracting more — providing energy from nothing, violating energy conservation.\nHence Lenz's law is the electromagnetic manifestation of conservation of energy.",
     "keyPoints": [
-      "P on perpendicular bisector, distance √(r²+l²) from each charge",
-      "Perpendicular components cancel; axial components add",
-      "E = (1/4πε0)p/(r²+l²)^(3/2)"
+      "Lenz's law: induced current opposes cause",
+      "Work done against opposition = electrical energy produced",
+      "If current aided: perpetual motion machine (impossible)",
+      "Consistent with energy conservation"
     ]
   },
   {
-    "id": "sa-xii-phy-143",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Eight identical cells, each of emf 2V and internal resistance 3Ω, are connected in series to form a row. Six such rows are connected in parallel to form a battery. This battery is now connected to an external resistor R of resistance 6Ω. Calculate: (a) emf of the battery. (b) internal resistance of the battery. (c) current flowing through R.",
-    "modelAnswer": "(a) Each row (8 cells in series) has emf = 8×2 = 16V. When 6 identical rows are connected in parallel, the emf of the battery = emf of one row = 16V (parallel combination of identical emf sources). (b) Internal resistance of one row = 8×3 = 24Ω. Six such rows in parallel: 1/r = 6/24 → r = 24/6 = 4Ω. (c) Total circuit resistance = R+r = 6+4 = 10Ω. Current I = emf/(R+r) = 16/10 = 1·6A.",
-    "keyPoints": [
-      "Row emf = 8×2 = 16V; battery emf (parallel rows) = 16V",
-      "Row resistance = 24Ω; parallel of 6 rows: r = 4Ω",
-      "I = 16/(6+4) = 1.6A"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-144",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "In the circuit shown, E1 and E2 are batteries having emfs of 25V and 26V, with internal resistances of 1Ω and 5Ω respectively. E1 is in a branch HG (with a 4Ω resistor) carrying current I1; E2 is in a branch AF (with a 3Ω resistor) carrying current I2; a 2Ω resistor carries (I1+I2) in branch CD; the branches are connected via H-J-A-B and G-E-F-D forming a network. Applying Kirchhoff's laws, calculate the currents I1 and I2.",
-    "modelAnswer": "Applying KVL to the loop containing E1 (H-G-F-A-J-H, through the 4Ω, and back through the shared 2Ω branch carrying I1+I2): 25 − I1(1+4) − 2(I1+I2) = 0 → 25 − 5I1 − 2I1 − 2I2 = 0 → 25 − 7I1 − 2I2 = 0 ...(1). Applying KVL to the loop containing E2 (A-F-E-D-C-B-A, through the 3Ω, sharing the 2Ω branch): 26 − I2(5+3) − 2(I1+I2) = 0 → 26 − 8I2 − 2I1 − 2I2 = 0 → 26 − 2I1 − 10I2 = 0 ...(2). From (1): 7I1+2I2=25. From (2): 2I1+10I2=26 → I1+5I2=13. Multiply first by 5: 35I1+10I2=125. Subtract (2)×1: 35I1+10I2−(2I1+10I2)=125−26 → 33I1=99 → I1=3A. From I1+5I2=13: 3+5I2=13 → I2=2A.",
-    "keyPoints": [
-      "Two-loop Kirchhoff's law with a shared branch",
-      "7I1+2I2=25 and 2I1+10I2=26",
-      "I1=3A, I2=2A"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-145",
-    "chapter": "Magnetism",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Using Ampere's circuital law, obtain an expression for magnetic flux density 'B' at a point near an infinitely long and straight conductor, carrying a current I.",
-    "modelAnswer": "Consider an infinitely long straight wire carrying current I. By symmetry, the magnetic field B at a perpendicular distance r from the wire has the same magnitude at every point on a circular loop (Amperian loop) of radius r centred on the wire, and is directed tangentially at every point along this loop. Applying Ampere's circuital law: ∮B·dl = μ0Ienclosed → B∮dl = μ0I → B(2πr) = μ0I → B = μ0I/(2πr).",
-    "keyPoints": [
-      "Amperian loop: circle of radius r around the wire",
-      "∮B·dl = B(2πr) = μ0I",
-      "B = μ0I/(2πr)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-146",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Using Huygen's wave theory, show that the angle of incidence is equal to the angle of reflection. Draw a neat and labelled diagram.",
-    "modelAnswer": "Let a plane wavefront AB be incident on a plane reflecting surface MN at angle of incidence i. While the secondary wavelet from B travels a distance BC=vt to reach the surface at C, the wavelet from A (already at the surface) is reflected and travels an equal distance AD=vt in the same medium in the same time t. Since AC is common to right triangles ABC and ADC, and BC=AD=vt: sin i = BC/AC, sin r = AD/AC (where r is angle of reflection). Since BC=AD, sin i = sin r → i = r. Thus the angle of incidence equals the angle of reflection, and (from the construction) the incident ray, reflected ray, and normal all lie in the same plane — establishing the laws of reflection.",
-    "keyPoints": [
-      "Huygens construction on reflecting surface",
-      "BC = AD = vt (same medium, same time)",
-      "sin i = sin r → i = r"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-147",
-    "chapter": "Ray Optics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "For any prism, obtain a relation between angle of the prism (A), angle of minimum deviation (δm) and refractive index of its material (μ or n).",
-    "modelAnswer": "At minimum deviation, the ray passes symmetrically through the prism: angle of incidence i = angle of emergence e, and the two refraction angles are equal, r1=r2=r. Since A=r1+r2=2r, r=A/2. Also δ=(i+e)−A; at minimum deviation, δ=δm and i=e, so δm=2i−A, giving i=(A+δm)/2. By Snell's law at the first face: n = sin i/sin r = sin[(A+δm)/2]/sin(A/2).",
-    "keyPoints": [
-      "At minimum deviation: i=e, r1=r2=A/2",
-      "i = (A+δm)/2",
-      "n = sin[(A+δm)/2] / sin(A/2)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-148",
-    "chapter": "Wave Optics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "What is the essential condition for obtaining a sustained interference? In Young's double slit experiment, the distance of the 4th bright fringe from the centre of the interference pattern is 1·5mm. The distance between the slits and the screen is 1·5m and the wavelength of light used is 500nm. Calculate the distance between the two slits.",
-    "modelAnswer": "Essential condition: the two interfering sources must be coherent, i.e. they must have the same frequency (wavelength) and a constant phase difference (zero or otherwise constant with time). Calculation: xn = nλD/d → d = nλD/xn = (4×500×10⁻⁹×1·5)/(1·5×10⁻³) = (4×500×10⁻⁹×1·5)/(1·5×10⁻³) = (3×10⁻⁶)/(1·5×10⁻³) = 2×10⁻³ m = 2mm.",
-    "keyPoints": [
-      "Sustained interference needs coherent sources (same frequency, constant phase difference)",
-      "d = nλD/xn",
-      "d = 2mm"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-149",
-    "chapter": "Dual Nature of Radiation",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Monochromatic light of wavelength 396nm is incident on the surface of a metal whose work function is 1·125eV. Calculate: (i) the energy of an incident photon in eV. (ii) the maximum kinetic energy of photoelectrons in eV.",
-    "modelAnswer": "Photon energy E = hc/λ = (6·6×10⁻³⁴×3×10⁸)/(396×10⁻⁹) = (1·98×10⁻²⁵)/(396×10⁻⁹) = 5×10⁻¹⁹ J. Converting to eV: E = 5×10⁻¹⁹/1·6×10⁻¹⁹ = 3·125 eV. (ii) Maximum KE = E − φ0 = 3·125 − 1·125 = 2 eV.",
-    "keyPoints": [
-      "E = hc/λ ≈ 5×10⁻¹⁹ J = 3.125 eV",
-      "KEmax = E − φ0",
-      "KEmax = 3.125 − 1.125 = 2 eV"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-150",
-    "chapter": "Nuclear Physics",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Name any two essential parts of a nuclear reactor. State the function of any one of them.",
-    "modelAnswer": "Two essential parts: fuel rods (e.g. enriched uranium) and moderator (e.g. heavy water or graphite); control rods (e.g. cadmium/boron) and coolant are also essential parts. Function: the moderator slows down (thermalises) the fast neutrons produced in fission to thermal energies, increasing the probability of these neutrons causing further fission in the fuel, thus sustaining the chain reaction.",
-    "keyPoints": [
-      "Parts: fuel rods, moderator, control rods, coolant",
-      "Moderator: slows fast neutrons to thermal speeds, sustains chain reaction"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-151",
-    "chapter": "Semiconductors",
-    "subject": "Physics",
-    "marks": 3,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Draw a labelled circuit diagram of a full wave rectifier. Show graphically how the output voltage varies with time.",
-    "modelAnswer": "A full-wave (centre-tap) rectifier uses two diodes D1 and D2 connected to the two ends of a centre-tapped secondary winding of a transformer, with the centre tap grounded, and both diode outputs joined at a common load resistor RL. During one half-cycle of the AC input, D1 conducts (D2 reverse biased); during the other half-cycle, D2 conducts (D1 reverse biased); in both cases, current flows through RL in the same direction. Output waveform: the output voltage across RL consists of a series of positive pulses (humps) for every half-cycle of the input — i.e. it is unidirectional (pulsating DC) with twice the ripple frequency of the input, with no negative excursions (unlike the input AC, which alternates between positive and negative).",
-    "keyPoints": [
-      "Centre-tap full-wave rectifier: two diodes conduct alternately",
-      "Output current through RL always in same direction",
-      "Output: positive pulses each half-cycle, ripple frequency = 2×input frequency"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-152",
-    "chapter": "Current Electricity",
-    "subject": "Physics",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A 60Ω resistor, a 1·0 H inductor and a 4µF capacitor are connected in series to an ac supply generating an emf e = 300 Sin(500t) V. Calculate: (a) impedance of the circuit. (b) peak value of the current flowing through the circuit. (c) phase difference between the current and the supply voltage.",
-    "modelAnswer": "ω = 500 rad/s. XL = ωL = 500×1 = 500Ω. Xc = 1/(ωC) = 1/(500×4×10⁻⁶) = 1/(2×10⁻³) = 500Ω. Since XL=Xc, the circuit is at resonance: Z = R = 60Ω (purely resistive). (b) Peak current I0 = E0/Z = 300/60 = 5A. (c) Since XL=Xc, phase difference between current and voltage φ=0 (current and voltage are in phase).",
-    "keyPoints": [
-      "XL = 500Ω, Xc = 500Ω → resonance (XL=Xc)",
-      "Z = R = 60Ω",
-      "I0 = E0/Z = 5A",
-      "φ = 0 (current & voltage in phase)"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-153",
+    "id": "sa-xii-phy-2023-06",
     "chapter": "Alternating Current",
     "subject": "Physics",
-    "marks": 5,
+    "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "(a) An ac generator generates an emf which is given by e = 311 Sin(240πt) V. Calculate: (1) frequency of the emf. (2) r.m.s. value of the emf. (b) The primary coil of a transformer has 60 turns whereas its secondary coil has 3000 turns. (1) If a 220V ac voltage is applied to the primary coil, how much emf is induced in the secondary coil? (2) If a current of 5A flows in the primary coil, how much current will flow in a load in the secondary coil? State the assumption you have made regarding the transformer, in this calculation.",
-    "modelAnswer": "(a)(1) ω=240π rad/s = 2πf → f = 240π/2π = 120 Hz. (2) Erms = E0/√2 = 311/√2 = 219·9V ≈ 220V. (b)(1) Es/Ep = Ns/Np → Es = Ep×Ns/Np = 220×3000/60 = 220×50 = 11000V = 11kV. (2) Assuming the transformer is ideal (100% efficient, no power loss): Ep×Ip = Es×Is → Is = Ep×Ip/Es = (220×5)/11000 = 1100/11000 = 0·1A.",
+    "text": "Draw a phasor diagram for a series LCR circuit and derive the expression for impedance.",
+    "modelAnswer": "In series LCR: same current I flows, phasors:\n- VR = IR (in phase with I)\n- VL = IXL (leads I by 90°)\n- VC = IXC (lags I by 90°)\nNet voltage phasor: V² = VR² + (VL - VC)²\n= (IR)² + (IXL - IXC)²\n= I²[R² + (XL - XC)²]\nV = I√[R² + (XL - XC)²]\nImpedance Z = V/I = √[R² + (XL - XC)²]\nwhere XL = ωL, XC = 1/ωC.\nPhase angle φ: tan φ = (XL - XC)/R.",
     "keyPoints": [
-      "f = ω/2π = 120 Hz",
-      "Erms = E0/√2 ≈ 220V",
-      "Es = Ep×Ns/Np = 11000V",
-      "Assuming ideal transformer: Is = EpIp/Es = 0.1A"
+      "VR in phase, VL leads by 90°, VC lags by 90°",
+      "Z = √[R² + (XL-XC)²]",
+      "XL = ωL, XC = 1/ωC",
+      "Phase angle tan φ = (XL-XC)/R"
     ]
   },
   {
-    "id": "sa-xii-phy-154",
-    "chapter": "Atomic Physics",
+    "id": "sa-xii-phy-2023-07",
+    "chapter": "Electromagnetic Waves",
     "subject": "Physics",
-    "marks": 5,
-    "difficulty": "medium",
+    "marks": 2,
+    "difficulty": "easy",
     "source": "Board 2023",
-    "text": "(i) Name the series of lines of hydrogen spectrum which lies in the: (1) ultraviolet region. (2) visible region. (ii) How much is the angular momentum of an electron when it is orbiting in the second Bohr orbit of hydrogen atom? (iii) With reference to Nuclear Physics: (1) What is meant by 'Isotopes'? (2) Define 1u (where u stands for unified atomic mass unit).",
-    "modelAnswer": "(i)(1) Lyman series lies in the ultraviolet region. (2) Balmer series lies in the visible region. (ii) Angular momentum in nth Bohr orbit: L = nh/2π. For n=2: L = 2h/2π = h/π = 6·6×10⁻³⁴/π ≈ 2·1×10⁻³⁴ kg m²/s. (iii)(1) Isotopes are atoms of the same element (same atomic number Z, i.e. same number of protons) but having different mass numbers (different number of neutrons). (2) 1u (unified atomic mass unit) is defined as 1/12th of the mass of one atom of the carbon-12 (₆C¹²) isotope, equal to 1·66×10⁻²⁷ kg.",
+    "text": "State two properties of electromagnetic waves. Why do they not require a material medium for propagation?",
+    "modelAnswer": "Properties of electromagnetic waves:\n1. They are transverse waves consisting of oscillating electric and magnetic fields perpendicular to each other and to the direction of propagation.\n2. They travel in vacuum with speed c = 3×10⁸ m/s. They carry energy and momentum but no charge.\nReason for no medium required: EM waves are self-sustaining — the oscillating electric field generates an oscillating magnetic field (Faraday's law) and vice versa (Maxwell's displacement current). This mutual sustenance allows them to propagate through vacuum without any material medium.",
     "keyPoints": [
-      "Lyman: UV; Balmer: visible",
-      "L = nh/2π; for n=2, L = h/π ≈ 2.1×10⁻³⁴ kg m²/s",
-      "Isotopes: same Z, different mass number",
-      "1u = (1/12)×mass of C-12 atom = 1.66×10⁻²⁷ kg"
+      "Transverse waves with E and B perpendicular to propagation",
+      "Speed c = 3×10⁸ m/s in vacuum",
+      "Self-sustaining oscillations of E and B fields",
+      "No material medium needed"
     ]
   },
   {
-    "id": "sa-xii-phy-155",
-    "chapter": "Atomic Physics",
-    "subject": "Physics",
-    "marks": 5,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "(ii)(a) Using Bohr's Theory of hydrogen atom, obtain an expression for the velocity of an electron in nth orbit of an atom. (b) What is meant by 'binding energy per nucleon' of a nucleus? State its physical significance.",
-    "modelAnswer": "(a) For an electron of mass m, charge e, moving in a circular orbit of radius rn with velocity vn around the nucleus (charge +e), the electrostatic force of attraction provides the centripetal force: (1/4πε0)(e²/rn²) = mvn²/rn. Also, from Bohr's quantisation condition, mvnrn = nh/2π → rn = nh/(2πmvn). Substituting into the force equation: (1/4πε0)(e²/rn) = mvn² → combining with rn from quantisation: vn = e²/(4πε0)(2π/nh) = e²/(2ε0nh). So vn = e²/(2ε0nh), showing vn ∝ 1/n (velocity decreases in higher orbits). (b) Binding energy per nucleon is the binding energy of a nucleus divided by its mass number A (total number of nucleons): BE/A. Physical significance: it is a direct measure of the stability of a nucleus — a higher binding energy per nucleon indicates a more tightly bound, more stable nucleus. The BE/A curve (highest around mass number 56, for iron) explains why fusion of light nuclei and fission of heavy nuclei both release energy (since both processes move nuclei towards the more stable, higher BE/A region).",
-    "keyPoints": [
-      "Centripetal force = electrostatic attraction + Bohr quantisation mvr=nh/2π",
-      "vn = e²/(2ε0nh) (vn ∝ 1/n)",
-      "BE per nucleon = BE/A",
-      "Higher BE/A → more stable nucleus; explains fusion/fission energy release"
-    ]
-  },
-  {
-    "id": "sa-xii-phy-156",
+    "id": "sa-xii-phy-2023-08",
     "chapter": "Ray Optics",
     "subject": "Physics",
-    "marks": 5,
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Derive the lens maker's formula. A biconvex lens has equal radii of curvature 20 cm and is made of glass (μ = 1.5). Find its focal length.",
+    "modelAnswer": "Lens maker's formula derivation using refraction at two spherical surfaces:\nFor first surface: μ₂/v₁ - μ₁/u = (μ₂-μ₁)/R₁\nFor second surface: μ₁/v - μ₂/v₁ = (μ₁-μ₂)/R₂\nAdding (image from first surface is object for second):\n1/v - 1/u = (μ-1)[1/R₁ - 1/R₂] where μ = μ₂/μ₁\nFor object at ∞: 1/f = (μ-1)[1/R₁ - 1/R₂]\nFor biconvex lens: R₁ = +20 cm, R₂ = -20 cm, μ = 1.5\n1/f = (1.5-1)[1/20 - 1/(-20)] = 0.5 × [1/20 + 1/20] = 0.5 × 2/20 = 0.5 × 0.1 = 0.05\nf = 1/0.05 = 20 cm.",
+    "keyPoints": [
+      "Refraction at two spherical surfaces",
+      "Add equations eliminating intermediate image distance",
+      "1/f = (μ-1)(1/R₁ - 1/R₂)",
+      "For equal biconvex: f = R/(2(μ-1)) = 20 cm"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-09",
+    "chapter": "Wave Optics",
+    "subject": "Physics",
+    "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Read the passage on converging and diverging lenses, and answer: (i) State any one factor on which focal length of a lens depends. (ii) Give an example where a convex lens behaves like a diverging lens. (iii) What type of lens is used in a camera? (iv) Write an expression for magnifying power of a compound microscope when its final image lies at the least distance of distinct vision (D). (v) State any one difference between a reflecting telescope and a refracting telescope.",
-    "modelAnswer": "(i) The focal length of a lens depends on the radii of curvature of its surfaces (and on the refractive index of the lens material relative to the surrounding medium). (ii) A convex lens behaves like a diverging lens when it is immersed in a medium of refractive index greater than that of the lens material itself (e.g. a glass convex lens immersed in a liquid of higher refractive index than glass, such as carbon disulphide). (iii) A convex (converging) lens is used in a camera, to form a real, inverted, diminished image of the object on the film/sensor. (iv) Magnifying power of compound microscope with final image at D: M = (v0/u0)×(1+D/fe), i.e. M = m0×me = (v0/u0)(1+D/fe), where v0,u0 are image/object distances for the objective and fe is the eyepiece focal length. (v) Difference: a reflecting telescope uses a concave mirror as the objective (no chromatic aberration, can be made with larger aperture, more compact), whereas a refracting telescope uses a convex lens as the objective (suffers from chromatic aberration, requires a longer tube for a given aperture).",
+    "text": "In Young's double slit experiment, derive the condition for constructive and destructive interference. If slits are separated by 1 mm and screen is 1m away, find fringe width for λ = 600 nm.",
+    "modelAnswer": "Path difference Δ = yd/D where y is position on screen, d is slit separation, D is slit-screen distance.\nConstructive interference (bright fringes): Δ = nλ, so y = nλD/d.\nDestructive interference (dark fringes): Δ = (2n-1)λ/2, so y = (2n-1)λD/(2d).\nFringe width β = λD/d = (600×10⁻⁹ × 1)/(1×10⁻³) = 6×10⁻⁴ m = 0.6 mm.",
     "keyPoints": [
-      "Focal length depends on radii of curvature (and refractive index)",
-      "Convex lens diverges if surrounding medium has higher refractive index than the lens",
-      "Camera uses a convex (converging) lens",
-      "M = (v0/u0)(1+D/fe) for compound microscope",
-      "Reflecting telescope: mirror objective, no chromatic aberration; refracting: lens objective, has chromatic aberration"
+      "Path difference = yd/D",
+      "Bright: Δ = nλ; Dark: Δ = (2n-1)λ/2",
+      "β = λD/d",
+      "Numerical: β = 0.6 mm"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-10",
+    "chapter": "Atoms",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "State Bohr's postulates for the hydrogen atom. Calculate the radius of the third orbit in hydrogen atom. (a₀ = 0.529 Å)",
+    "modelAnswer": "Bohr's postulates:\n1. Electrons revolve in certain stationary orbits without radiating energy.\n2. Only those orbits are allowed for which angular momentum L = nh/2π (n = 1, 2, 3...).\n3. Energy is emitted or absorbed only when an electron jumps between orbits: hν = E_i - E_f.\nRadius of nth orbit: rₙ = n²a₀ where a₀ = 0.529 Å.\nFor n=3: r₃ = 9 × 0.529 = 4.761 Å ≈ 4.76 Å.",
+    "keyPoints": [
+      "Three Bohr postulates",
+      "rₙ = n²a₀",
+      "r₃ = 9 × 0.529 = 4.76 Å"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-11",
+    "chapter": "Nuclei",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Define binding energy. Draw a binding energy per nucleon vs mass number curve and explain nuclear fission and fusion from it.",
+    "modelAnswer": "Binding energy is the energy required to completely separate a nucleus into its constituent nucleons. Or: the energy released when nucleons bind together to form a nucleus.\nB.E. = Δm × c² where Δm = mass defect = (Z·mₚ + N·mₙ - M_nucleus).\nThe B.E. per nucleon curve: rises steeply for small A, peaks around A≈56 (Fe-56, most stable), then gradually decreases for heavy nuclei.\nFusion: Light nuclei (small A) have low B.E./nucleon. Combining them (H→He) moves to higher B.E./nucleon → energy released.\nFission: Heavy nuclei (large A, ~235) have lower B.E./nucleon than medium-sized nuclei. Splitting them moves to higher B.E./nucleon → energy released.",
+    "keyPoints": [
+      "B.E. = Δm × c²",
+      "Peak at Fe-56 (A≈56)",
+      "Fusion: small A nuclei combine → higher B.E./nucleon",
+      "Fission: large A splits → higher B.E./nucleon"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-12",
+    "chapter": "Semiconductor Electronics",
+    "subject": "Physics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "What is a p-n junction diode? Draw the V-I characteristics and explain forward and reverse bias.",
+    "modelAnswer": "A p-n junction diode is formed by joining p-type and n-type semiconductors. A depletion region forms at the junction due to diffusion of majority carriers.\nForward bias (p connected to +ve terminal): Applied voltage opposes the depletion region. For Si, above ~0.7V the depletion layer narrows, current flows exponentially — shown as steep curve in forward direction.\nReverse bias (p connected to -ve terminal): Applied voltage widens depletion layer. Only a very small reverse saturation current (due to minority carriers) flows. At breakdown voltage, large current flows.\nV-I characteristics: Forward region shows exponential increase after cut-in voltage. Reverse region shows near-zero current until breakdown.",
+    "keyPoints": [
+      "p-n junction formation and depletion region",
+      "Forward bias: reduces barrier, current increases",
+      "Reverse bias: increases barrier, very small current",
+      "V-I curve: cut-in voltage ~0.7V for Si"
+    ]
+  },
+  {
+    "id": "sa-xii-phy-2023-13",
+    "chapter": "Communication Systems",
+    "subject": "Physics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "What is modulation? Why is modulation necessary in communication systems?",
+    "modelAnswer": "Modulation is the process of superimposing the information (message) signal onto a high-frequency carrier signal, such that some characteristic (amplitude, frequency, or phase) of the carrier is varied in accordance with the message signal.\nNecessity of modulation:\n1. Size of antenna: For effective transmission, antenna size should be λ/4. Audio frequencies (20 Hz-20 kHz) would need antennas of thousands of km. Modulation to radio frequencies reduces antenna size to practical lengths.\n2. Effective radiation: High-frequency waves radiate more effectively.\n3. Multiplexing: Multiple signals can be transmitted simultaneously using different carrier frequencies.\n4. Avoidance of mixing: Without modulation, signals from different sources would mix.",
+    "keyPoints": [
+      "Definition: message signal on carrier",
+      "Antenna size reduced by using high frequency",
+      "Effective power radiation",
+      "Multiplexing multiple signals"
     ]
   },
   {

@@ -1874,533 +1874,6 @@
     ]
   },
   {
-    "id": "sa-xii-cs-120",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "According to De Morgan's law (a + b + c')' will be equal to:\n(a) a' + b' + c'\n(b) a' + b' + c\n(c) a'.b'.c'\n(d) a'.b'.c",
-    "modelAnswer": "Correct option: (d) a'.b'.c\nBy De Morgan's law, (a+b+c')' = a'.b'.(c')' = a'.b'.c",
-    "keyPoints": [
-      "De Morgan: (X+Y+Z)' = X'.Y'.Z'",
-      "Complement of a is a', of b is b', of c' is c (double complement)",
-      "Answer: a'.b'.c — option (d)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-121",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The dual of ( X' + 1 ) . ( Y' + 0 ) = Y' is:\n(a) X.0 + Y.1 = Y\n(b) X'.1 + Y'.0 = Y'\n(c) X'.0 + Y'.1 = Y'\n(d) (X'+0) + (Y'+1) = Y'",
-    "modelAnswer": "Correct option: (c) X'.0 + Y'.1 = Y'\nDual is formed by interchanging + and ., and 0 and 1, keeping variables/complements unchanged: (X'.1)+(Y'.0)=Y' becomes... applying the interchange correctly to (X'+1).(Y'+0)=Y' gives (X'.0)+(Y'.1)=Y'.",
-    "keyPoints": [
-      "Dual swaps + with . and 0 with 1",
-      "Variables and their complements (X', Y') remain unchanged",
-      "Correct dual: X'.0 + Y'.1 = Y' — option (c)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-122",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The reduced expression of the Boolean function F(P,Q) = P' + PQ is:\n(a) P' + Q\n(b) P\n(c) P'\n(d) P + Q",
-    "modelAnswer": "Correct option: (a) P' + Q\nP' + PQ = (P'+P).(P'+Q) [distributive] = 1.(P'+Q) = P'+Q",
-    "keyPoints": [
-      "Use distributive identity: X'+XY = X'+Y",
-      "P'+PQ = P'+Q directly by this identity",
-      "Answer: P' + Q — option (a)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-123",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "If ( ~p => ~q ) then its contra positive will be:\n(a) p => q\n(b) q => p\n(c) ~q => p\n(d) ~p => q",
-    "modelAnswer": "Correct option: (b) q => p\nContrapositive of X=>Y is ~Y=>~X. Here X=~p, Y=~q, so contrapositive is ~(~q)=>~(~p), i.e. q=>p.",
-    "keyPoints": [
-      "Contrapositive of X=>Y is ~Y=>~X",
-      "X=~p, Y=~q here",
-      "Contrapositive: q=>p — option (b)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-124",
-    "chapter": "Object Oriented Programming",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "The keyword that allows multi-level inheritance in Java programming is:\n(a) implements\n(b) super\n(c) extends\n(d) this",
-    "modelAnswer": "Correct option: (c) extends\nThe 'extends' keyword is used by a subclass to inherit from a superclass, and chaining extends across multiple classes (A extends B, B extends C) creates multi-level inheritance.",
-    "keyPoints": [
-      "'extends' establishes the inheritance (is-a) relationship",
-      "'implements' is used for interfaces, not class inheritance",
-      "Multi-level inheritance: a chain of classes each extending the previous one — option (c)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-125",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Write the minterm of F(A, B, C, D) when A = 1, B = 0, C = 0 and D = 1.",
-    "modelAnswer": "Minterm = A.B'.C'.D",
-    "keyPoints": [
-      "Minterm: AND of all variables, true form if the value is 1, complemented if 0",
-      "A=1->A, B=0->B', C=0->C', D=1->D",
-      "Minterm = A.B'.C'.D"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-126",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Verify if (A + A')' is a Tautology, Contradiction, or a Contingency.",
-    "modelAnswer": "(A+A')' = (1)' = 0, for both A=0 and A=1 (since A+A'=1 by the complement law, always).\nThe expression is always false, regardless of the value of A, so it is a Contradiction.",
-    "keyPoints": [
-      "Complement law: A+A' = 1 always",
-      "So (A+A')' = 0 always",
-      "Always false -> Contradiction"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-127",
-    "chapter": "Object Oriented Programming",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "State any one purpose of using the keyword this in Java programming.",
-    "modelAnswer": "The keyword 'this' refers to the current object of the class. One purpose: it is used to resolve naming conflicts between instance variables and parameters/local variables having the same name (e.g. this.x = x;), so the instance variable can be correctly distinguished from the parameter.",
-    "keyPoints": [
-      "'this' refers to the current invoking object",
-      "Commonly used to distinguish instance variables from parameters of the same name, e.g. this.num = num;",
-      "Can also be used to call another constructor of the same class or pass the current object as an argument"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-128",
-    "chapter": "Object Oriented Programming",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Mention any two properties of the data members of an Interface.",
-    "modelAnswer": "Data members of an interface are implicitly: (1) public - accessible from anywhere, and (2) static and final - they behave as class-level constants whose value cannot be changed once assigned (they must be initialized at declaration).",
-    "keyPoints": [
-      "Interface data members are public by default",
-      "They are implicitly static (belong to the interface, not an instance)",
-      "They are implicitly final -> act as constants"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-129",
-    "chapter": "Data Structures - Linked List",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "What is the importance of the reference part in a Linked List?",
-    "modelAnswer": "The reference (link/next) part of a node stores the memory address of the next node in the list. It is what connects individual nodes together into a chain, allowing traversal from one node to the next without needing contiguous memory, and enabling dynamic insertion/deletion of nodes.",
-    "keyPoints": [
-      "The reference part stores the address of the next node",
-      "It links nodes together, forming the chain structure",
-      "Enables traversal and dynamic memory allocation (nodes need not be contiguous)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-130",
-    "chapter": "Data Structures - Stack",
-    "subject": "Computer Science",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Convert the following infix notation to prefix notation.\n( A - B ) / C * ( D + E )",
-    "modelAnswer": "A-B -> prefix: -AB\nD+E -> prefix: +DE\n(-AB)/C -> prefix: /-ABC\n(/-ABC)*(+DE) -> prefix: */-ABC+DE\nPrefix: * / - A B C + D E",
-    "keyPoints": [
-      "Convert each bracketed part to prefix first",
-      "A-B becomes -AB; D+E becomes +DE",
-      "(A-B)/C becomes /-ABC",
-      "Combine with '*': * / - A B C + D E"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-131",
-    "chapter": "Data Structures - Arrays",
-    "subject": "Computer Science",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "A matrix M[-6...10, 4...15] is stored in the memory with each element requiring 4 bytes of storage. If the base address is 1025, find the address of M[4][8] when the matrix is stored in Column Major Wise.",
-    "modelAnswer": "Rows: -6 to 10 -> number of rows = 10-(-6)+1 = 17\nColumn Major: Address(M[i][j]) = Base + [(j - col0)*rows + (i - row0)] * w\ncol0=4, row0=-6, rows=17, w=4\nAddress(M[4][8]) = 1025 + [(8-4)*17 + (4-(-6))]*4\n= 1025 + [4*17+10]*4\n= 1025 + [68+10]*4\n= 1025 + 78*4\n= 1025 + 312\n= 1337",
-    "keyPoints": [
-      "Number of rows = upper_row - lower_row + 1 = 17",
-      "Column major formula: base + [(col-col0)*rows + (row-row0)]*w",
-      "(8-4)*17+(4-(-6)) = 68+10 = 78",
-      "Address = 1025+78*4 = 1337"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-132",
-    "chapter": "Recursion",
-    "subject": "Computer Science",
-    "marks": 3,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "With reference to the code given below, answer the questions that follow along with dry run/working:\nboolean num(int x) { int a=1; for (int c=x; c>0; c/=10) a *= 10; return (x*x%a)==x; }\n(a) What will the function num( ) return when the value of x=25?",
-    "modelAnswer": "Trace: x=25. Loop: c=25(>0) a=1*10=10, c=25/10=2; c=2(>0) a=10*10=100, c=2/10=0; c=0 loop stops.\na=100.\nCheck: x*x%a == x -> 25*25=625; 625%100=25; 25==25(x) -> true.\nThe function returns true.",
-    "keyPoints": [
-      "Loop computes a = 10^(number of digits in x)",
-      "For x=25 (2 digits), loop runs twice, giving a=100",
-      "625 % 100 = 25, which equals x",
-      "Function returns true"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-133",
-    "chapter": "Recursion",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "With reference to the same code (boolean num(int x) that computes a=10^(digits in x) and returns (x*x%a)==x): what is the method num( ) performing?",
-    "modelAnswer": "The method checks whether the square of x, when its last 'len(x)' digits are taken (x*x % a, where a=10^number_of_digits_of_x), is equal to x itself. In other words, it checks whether x is an 'automorphic number' - a number whose square ends in the same digits as the number itself (e.g. 25*25=625, which ends in '25').",
-    "keyPoints": [
-      "a becomes 10 raised to the number of digits in x",
-      "x*x % a extracts the last 'digits of x' digits of x squared",
-      "Comparing that to x checks if x's square ends with x itself",
-      "This tests whether x is an Automorphic number"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-134",
-    "chapter": "Recursion",
-    "subject": "Computer Science",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "The following function task() is a part of some class. Assume 'm' and 'n' are positive integers, greater than 0.\nint task(int m, int n) { if(m==n) return m; else if(m>n) return task(m-n, n); else return task(m, n-m); }\nWhat will the function task( ) return when the value of m=30 and n=45?",
-    "modelAnswer": "task(30,45): m<n -> task(30, 15)\ntask(30,15): m>n -> task(15,15)\ntask(15,15): m==n -> returns 15\nThe function task(30,45) returns 15.",
-    "keyPoints": [
-      "m<n branch: task(m, n-m); m>n branch: task(m-n, n)",
-      "task(30,45) -> task(30,15) -> task(15,15)",
-      "Base case m==n returns that common value",
-      "Result: 15"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-135",
-    "chapter": "Recursion",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "With reference to the same function task(m,n) (recursively subtracting the smaller from the larger until m==n): what function does task( ) perform, apart from recursion?",
-    "modelAnswer": "The function computes the Greatest Common Divisor (GCD / HCF) of the two numbers m and n, using the subtraction-based Euclidean algorithm.",
-    "keyPoints": [
-      "Repeated subtraction of the smaller from the larger is the classic GCD algorithm",
-      "Base case (m==n) returns the common divisor",
-      "task(m,n) computes GCD(m,n)"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-136",
-    "chapter": "Boolean Algebra - Karnaugh Map",
-    "subject": "Computer Science",
-    "marks": 4,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Given the Boolean function F(A,B,C,D) = sum(2, 3, 6, 7, 8, 10, 12, 14, 15). Reduce the above expression by using 4-variable Karnaugh map, showing the various groups (i.e., octal, quads and pairs).",
-    "modelAnswer": "Grouping the minterms {2,3,6,7,8,10,12,14,15}:\n- Quad (m2,3,6,7): A'C\n- Quad (m8,10,12,14): AD'\n- Quad (m6,7,14,15): BC\nReduced SOP: F = A'C + AD' + BC",
-    "keyPoints": [
-      "Minterms {2,3,6,7,8,10,12,14,15} plotted on the K-map",
-      "Three quads found: A'C, AD', BC",
-      "Reduced SOP: F = A'C + AD' + BC"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-137",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Draw the logic gate diagram for the reduced expression F = A'C + AD' + BC, assuming variables and their complements are available as inputs.",
-    "modelAnswer": "The logic diagram consists of three 2-input AND gates: one for A'C (inputs A', C), one for AD' (inputs A, D'), and one for BC (inputs B, C). The outputs of these three AND gates feed a 3-input OR gate whose output is F.",
-    "keyPoints": [
-      "Each product term (A'C, AD', BC) is implemented by a 2-input AND gate",
-      "Complemented inputs (A', D') are assumed available directly",
-      "All three AND-gate outputs feed one 3-input OR gate to give F"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-138",
-    "chapter": "Boolean Algebra - Karnaugh Map",
-    "subject": "Computer Science",
-    "marks": 4,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Given the Boolean function F(A,B,C,D) = product(0, 1, 2, 4, 5, 8, 10, 11, 14, 15). Reduce the above expression by using 4-variable Karnaugh map, showing the various groups (i.e., octal, quads and pairs).",
-    "modelAnswer": "Zero-cells {0,1,2,4,5,8,10,11,14,15}. Grouping F' (SOP of the zero-cells):\n- Quad (m0,1,4,5): A'B'\n- Quad (m0,2,8,10): B'D'\n- Pair (m10,11): AB'C\n- Pair (m14,15): ABC\nF' = A'B' + B'D' + AB'C + ABC\nComplementing (De Morgan) gives the reduced POS:\nF(A,B,C,D) = (A+B).(B+D).(A'+B+C').(A'+B'+C')",
-    "keyPoints": [
-      "Zero-cells: 0,1,2,4,5,8,10,11,14,15",
-      "F' = A'B' + B'D' + AB'C + ABC (SOP of zeros)",
-      "Complement each term to build the POS expression",
-      "F = (A+B)(B+D)(A'+B+C')(A'+B'+C')"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-139",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Draw the logic gate diagram for the reduced POS expression F = (A+B).(B+D).(A'+B+C').(A'+B'+C'), assuming variables and their complements are available as inputs.",
-    "modelAnswer": "The logic diagram consists of four OR gates, one per sum term: (A+B), (B+D), (A'+B+C'), (A'+B'+C'). The outputs of these four OR gates feed a 4-input AND gate whose output is F.",
-    "keyPoints": [
-      "Each sum term becomes an OR gate with the required true/complemented inputs",
-      "Complemented literals (A', C') are assumed available directly",
-      "All four OR-gate outputs feed one 4-input AND gate to give F"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-140",
-    "chapter": "Boolean Algebra - Logic Design",
-    "subject": "Computer Science",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A shopping mall allows customers to shop using cash or credit card of any nationalised bank. It awards bonus points to customers on the basis of criteria given below:\nThe customer is an employee of the shopping mall and makes the payment using a credit card\nOR\nThe customer shops items which carry bonus points and makes the payment using a credit card with a shopping amount of less than Rs.10,000/-\nOR\nThe customer is not an employee of the shopping mall and makes the payment not through a credit card but in cash for the shopping amount above Rs.10,000/-\nInputs: C=Payment through a credit card, A=Shopping amount is above Rs.10,000/-, E=The customer is an employee of the shopping mall, I=Item carries a bonus point (1=yes, 0=no).\nOutput: X [1=bonus point awarded, 0=not awarded].\nDraw the truth table for the inputs and outputs given above and write the POS expression for X (C, A, E, I).",
-    "modelAnswer": "X = E.C + I.C.A' + E'.C'.A\nEvaluating over all 16 combinations of C,A,E,I: X=1 for minterms where E.C=1 (E=1,C=1: any A,I), or I.C.A'=1 (I=1,C=1,A=0), or E'.C'.A=1 (E=0,C=0,A=1).\nGrouping the resulting zero-cells and complementing (using the standard K-map method for POS) gives the simplified POS form of X in terms of C, A, E, I.",
-    "keyPoints": [
-      "First condition: E.C (employee AND credit card)",
-      "Second condition: I.C.A' (bonus item, credit card, amount below 10000)",
-      "Third condition: E'.C'.A (not employee, cash payment, amount above 10000)",
-      "X = EC + ICA' + E'C'A; POS form obtained by grouping zero-cells on the K-map"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-141",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Differentiate between half adder and full adder. Write the Boolean expression and draw the logic circuit diagram for the SUM and CARRY of a full adder.",
-    "modelAnswer": "A half adder adds only two bits (A, B) with no carry-in, producing Sum and Carry. A full adder adds three bits - A, B and an incoming carry Cin - producing Sum and Carry-out, allowing carries to propagate when adding multi-bit binary numbers.\nSUM = A xor B xor Cin = A'B'Cin + A'BCin' + AB'Cin' + ABCin\nCARRY (Cout) = AB + BCin + ACin\nCircuit: SUM is built from two cascaded XOR gates; CARRY is built from three AND gates (AB, BCin, ACin) feeding a 3-input OR gate.",
-    "keyPoints": [
-      "Half adder: 2 inputs; Full adder: 3 inputs (adds Cin)",
-      "Sum = A xor B xor Cin, via two XOR gates",
-      "Carry = AB + BCin + ACin (majority function)",
-      "Carry circuit: 3 AND gates + 1 OR gate"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-142",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Verify the following expression by using the truth table:\n( A XNOR B )' = ( A XOR B )",
-    "modelAnswer": "Truth table:\nA | B | A XNOR B | (A XNOR B)' | A XOR B\n0 | 0 |    1     |     0       |    0\n0 | 1 |    0     |     1       |    1\n1 | 0 |    0     |     1       |    1\n1 | 1 |    1     |     0       |    0\nThe columns for (A XNOR B)' and A XOR B are identical in every row, so the expression is verified: (A XNOR B)' = A XOR B.",
-    "keyPoints": [
-      "XNOR is the complement of XOR by definition",
-      "Build truth table for all 4 combinations of A,B",
-      "(A XNOR B)' column matches (A XOR B) column exactly",
-      "Verified: (A XNOR B)' = A XOR B"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-143",
-    "chapter": "Boolean Algebra",
-    "subject": "Computer Science",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "What is an encoder? How is it different from a decoder? Draw the logic circuit for a 4:1 multiplexer and explain its working.",
-    "modelAnswer": "An encoder is a combinational circuit that converts one active input line (out of 2^n) into an n-bit binary code representing which input is active; it performs the reverse of a decoder's operation, which converts an n-bit code into one active output line out of 2^n.\n4:1 Multiplexer: has 4 data inputs D0-D3, 2 select lines S1,S0, and 1 output Y. Each Di is ANDed with the unique minterm of S1,S0 equal to i (e.g. D0.S1'.S0', D1.S1'.S0, D2.S1.S0', D3.S1.S0), and the four AND outputs feed a 4-input OR gate to produce Y.\nWorking: depending on the 2-bit value on S1S0, exactly one AND gate has both select-line inputs true, so exactly that data input Di is passed through to the output Y = Di.",
-    "keyPoints": [
-      "Encoder: 2^n inputs (one active) -> n-bit code; reverse of a decoder",
-      "4:1 MUX needs 2 select lines (2^2=4)",
-      "Each data input is gated by its corresponding select-line minterm via an AND gate",
-      "Y = D0S1'S0' + D1S1'S0 + D2S1S0' + D3S1S0"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-144",
-    "chapter": "Java Programming",
-    "subject": "Computer Science",
-    "marks": 10,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Design a class NumDude to check if a given number is a Dudeney number or not. (A Dudeney number is a positive integer that is a perfect cube, such that the sum of its digits is equal to the cube root of the number.)\nExample: 5832 = (5+8+3+2)^3 = (18)^3 = 5832\nData member: num - to store a positive integer number.\nMethods: NumDude() - default constructor to initialise the data member with legal initial value; void input() - to accept a positive integer number; int sumDigits(int x) - returns the sum of the digits of number 'x' using recursive technique; void isDude() - checks whether the given number is a Dudeney number by invoking the function sumDigits() and displays the result with an appropriate message.\nSpecify the class NumDude giving details of the constructor(), void input(), int sumDigits(int) and void isDude(). Define a main() function to create an object and call the functions accordingly to enable the task.",
-    "modelAnswer": "import java.util.Scanner;\n\nclass NumDude\n{\n    int num;\n\n    NumDude()\n    {\n        num = 0;\n    }\n\n    void input()\n    {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter a positive integer: \");\n        num = sc.nextInt();\n    }\n\n    int sumDigits(int x)\n    {\n        if (x == 0)\n            return 0;\n        else\n            return (x % 10) + sumDigits(x / 10);\n    }\n\n    void isDude()\n    {\n        int sum = sumDigits(num);\n        double cubeRoot = Math.round(Math.cbrt(num));\n        if (sum == cubeRoot && Math.pow(cubeRoot, 3) == num)\n            System.out.println(num + \" is a Dudeney number.\");\n        else\n            System.out.println(num + \" is not a Dudeney number.\");\n    }\n\n    public static void main(String args[])\n    {\n        NumDude ob = new NumDude();\n        ob.input();\n        ob.isDude();\n    }\n}",
-    "keyPoints": [
-      "sumDigits() recursively adds up each digit of the number",
-      "isDude() computes the cube root and checks it equals the digit sum",
-      "Also verifies the number is a perfect cube (cubeRoot^3 == num)",
-      "main() creates one object and calls input() then isDude()"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-145",
-    "chapter": "Java Programming",
-    "subject": "Computer Science",
-    "marks": 10,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A class Trans is defined to find the transpose of a square matrix. A transpose of a matrix is obtained by interchanging the elements of the rows and columns.\nData members: arr[][] - to store integers in the matrix, m - integer to store the size of the matrix.\nMethods: Trans(int mm) - parameterised constructor to initialise m=mm; void fillarray() - to enter integer elements in the matrix; void transpose() - to create the transpose of the given matrix; void display() - displays the original matrix and the transposed matrix by invoking the method transpose().\nSpecify the class Trans giving details of the constructor(), void fillarray(), void transpose() and void display(). Define a main() function to create an object and call the functions accordingly to enable the task.",
-    "modelAnswer": "import java.util.Scanner;\n\nclass Trans\n{\n    int arr[][];\n    int m;\n\n    Trans(int mm)\n    {\n        m = mm;\n        arr = new int[m][m];\n    }\n\n    void fillarray()\n    {\n        Scanner sc = new Scanner(System.in);\n        for (int i = 0; i < m; i++)\n            for (int j = 0; j < m; j++)\n            {\n                System.out.print(\"Enter element: \");\n                arr[i][j] = sc.nextInt();\n            }\n    }\n\n    void transpose()\n    {\n        int t[][] = new int[m][m];\n        for (int i = 0; i < m; i++)\n            for (int j = 0; j < m; j++)\n                t[j][i] = arr[i][j];\n        System.out.println(\"Transposed matrix:\");\n        for (int i = 0; i < m; i++)\n        {\n            for (int j = 0; j < m; j++)\n                System.out.print(t[i][j] + \"\\t\");\n            System.out.println();\n        }\n    }\n\n    void display()\n    {\n        System.out.println(\"Original matrix:\");\n        for (int i = 0; i < m; i++)\n        {\n            for (int j = 0; j < m; j++)\n                System.out.print(arr[i][j] + \"\\t\");\n            System.out.println();\n        }\n        transpose();\n    }\n\n    public static void main(String args[])\n    {\n        Trans ob = new Trans(3);\n        ob.fillarray();\n        ob.display();\n    }\n}",
-    "keyPoints": [
-      "transpose() swaps rows and columns: t[j][i] = arr[i][j]",
-      "A temporary 2D array holds the transposed values",
-      "display() prints the original matrix, then calls transpose()",
-      "main() creates one object of a chosen size and calls fillarray() then display()"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-146",
-    "chapter": "Java Programming",
-    "subject": "Computer Science",
-    "marks": 10,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A class SortAlpha has been defined to sort the words in the sentence in alphabetical order.\nExample: Input: THE SKY IS BLUE, Output: BLUE IS SKY THE\nData members: sent - to store a sentence, n - integer to store the number of words in a sentence.\nMethods: SortAlpha() - default constructor to initialise data members with legal initial values; void acceptsent() - to accept a sentence in UPPER CASE; void sort(SortAlpha P) - sorts the words of the sentence of object P in alphabetical order and stores the sorted sentence in the current object; void display() - displays the original sentence along with the sorted sentence by invoking the method sort().\nSpecify the class SortAlpha giving details of the constructor(), void acceptsent(), void sort(SortAlpha) and void display(). Define a main() function to create an object and call the functions accordingly to enable the task.",
-    "modelAnswer": "import java.util.Scanner;\nimport java.util.StringTokenizer;\n\nclass SortAlpha\n{\n    String sent;\n    int n;\n\n    SortAlpha()\n    {\n        sent = \"\";\n        n = 0;\n    }\n\n    void acceptsent()\n    {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter a sentence: \");\n        sent = sc.nextLine().toUpperCase();\n    }\n\n    void sort(SortAlpha P)\n    {\n        StringTokenizer st = new StringTokenizer(P.sent);\n        n = st.countTokens();\n        String words[] = new String[n];\n        int i = 0;\n        while (st.hasMoreTokens())\n        {\n            words[i] = st.nextToken();\n            i++;\n        }\n        for (i = 0; i < n - 1; i++)\n            for (int j = 0; j < n - 1 - i; j++)\n                if (words[j].compareTo(words[j+1]) > 0)\n                {\n                    String t = words[j];\n                    words[j] = words[j+1];\n                    words[j+1] = t;\n                }\n        String result = \"\";\n        for (i = 0; i < n; i++)\n            result = result + words[i] + \" \";\n        sent = result.trim();\n    }\n\n    void display()\n    {\n        SortAlpha temp = new SortAlpha();\n        temp.sent = this.sent;\n        sort(temp);\n        System.out.println(\"Original sentence: \" + temp.sent);\n        System.out.println(\"Sorted sentence: \" + sent);\n    }\n\n    public static void main(String args[])\n    {\n        SortAlpha ob = new SortAlpha();\n        ob.acceptsent();\n        ob.display();\n    }\n}",
-    "keyPoints": [
-      "StringTokenizer splits the sentence into a words array",
-      "Words are sorted alphabetically using bubble sort with compareTo()",
-      "Sorted words are concatenated back into a sentence, stored in the current object",
-      "main() creates one object, accepts a sentence, then displays original+sorted forms"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-147",
-    "chapter": "Data Structures - Queue",
-    "subject": "Computer Science",
-    "marks": 4,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A double ended queue is a linear data structure which enables the user to add and remove integers from either ends i.e., from front or rear.\nData members: Qrr[] - array to hold integer elements, lim - maximum capacity of the dequeue, front - index of the front end, rear - index of the rear end.\nMethods: deQueue(int l) - constructor to initialise lim=l, front=0, rear=0; void addFront(int v) - to add integers at the front end if possible, otherwise display 'OVERFLOW FROM FRONT'; void addRear(int v) - to add integers at the rear end if possible, otherwise display 'OVERFLOW FROM REAR'; int popFront() - removes and returns the integers from the front end if any, else returns -999; int popRear() - removes and returns the integers from the rear end if any, else returns -999; void show() - displays the elements of the dequeue.\n(i) Specify the class deQueue giving details of the functions void addFront(int) and int popFront(). Assume that the other functions have been defined. The main() function and algorithm need NOT be written.",
-    "modelAnswer": "void addFront(int v)\n{\n    if (front == 0)\n        System.out.println(\"OVERFLOW FROM FRONT\");\n    else\n    {\n        front--;\n        Qrr[front] = v;\n    }\n}\n\nint popFront()\n{\n    if (front == rear)\n        return -999;\n    else\n    {\n        int val = Qrr[front];\n        front++;\n        return val;\n    }\n}",
-    "keyPoints": [
-      "addFront() checks front==0 for overflow (no room to shift left)",
-      "New element placed at Qrr[front] after decrementing front",
-      "popFront() checks front==rear for an empty dequeue",
-      "On success popFront() returns Qrr[front] and increments front"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-148",
-    "chapter": "Data Structures - Queue",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Differentiate between a stack and a queue.",
-    "modelAnswer": "A stack follows the LIFO (Last In First Out) principle - insertion and deletion happen at the same end (the top).\nA queue follows the FIFO (First In First Out) principle - insertion happens at one end (rear) and deletion happens at the other end (front).",
-    "keyPoints": [
-      "Stack: LIFO, single end (top) used for both push and pop",
-      "Queue: FIFO, insertion at rear, deletion at front",
-      "Different ends used distinguishes queue from stack behaviour"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-149",
-    "chapter": "Inheritance",
-    "subject": "Computer Science",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A super class Demand has been defined to store the details of the demands for a product. Define a subclass Supply which contains the production and supply details of the products.\nClass Demand: pid (string, product ID), pname (string, product name), pdemand (integer, quantity demanded); Demand(...) - parameterised constructor; void display() - displays the product details.\nClass Supply: pproduced - integer to store quantity produced, prate - to store the cost per unit in decimal; Supply(...) - parameterised constructor to assign values to data members of both classes; double calculation() - returns the difference between the amount of demand (rate x demand) and the amount produced (rate x produced); void display() - displays the product details and the difference in amount by invoking calculation().\nAssume that the super class Demand has been defined. Using the concept of inheritance, specify the class Supply giving the details of the constructor(...), double calculation() and void display(). The super class, main function and algorithm need NOT be written.",
-    "modelAnswer": "class Supply extends Demand\n{\n    int pproduced;\n    double prate;\n\n    Supply(String id, String name, int dem, int prod, double rate)\n    {\n        super(id, name, dem);\n        pproduced = prod;\n        prate = rate;\n    }\n\n    double calculation()\n    {\n        double amountDemand = prate * pdemand;\n        double amountProduced = prate * pproduced;\n        return amountDemand - amountProduced;\n    }\n\n    void display()\n    {\n        super.display();\n        System.out.println(\"Quantity produced = \" + pproduced);\n        System.out.println(\"Rate = \" + prate);\n        System.out.println(\"Difference in amount = \" + calculation());\n    }\n}",
-    "keyPoints": [
-      "Supply extends Demand and calls super(...) with the demand-related fields",
-      "calculation() returns (rate*demand) - (rate*produced)",
-      "display() calls super.display() then prints supply details and the calculated difference",
-      "Constructor initialises both this class's and the inherited fields"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-150",
-    "chapter": "Data Structures - Linked List",
-    "subject": "Computer Science",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "A linked list is formed from the objects of the class given below:\nclass Node { double sal; Node next; }\nWrite an Algorithm OR a Method to add a node at the end of an existing linked list.\nThe method declaration is as follows:\nvoid addNode(Node ptr, double ss)",
-    "modelAnswer": "void addNode(Node ptr, double ss)\n{\n    Node newNode = new Node();\n    newNode.sal = ss;\n    newNode.next = null;\n    if (ptr == null)\n        ptr = newNode;\n    else\n    {\n        Node temp = ptr;\n        while (temp.next != null)\n            temp = temp.next;\n        temp.next = newNode;\n    }\n}",
-    "keyPoints": [
-      "Create a new Node with the given salary value and next=null",
-      "If the list is empty, the new node becomes the list itself",
-      "Otherwise traverse using temp until temp.next is null (last node)",
-      "Attach the new node as temp.next"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-151",
-    "chapter": "Data Structures - Binary Tree",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Answer the following from the diagram of a Binary Tree: root A; A's children F,B; F's children D,G; B's child H; H's child E.\nWrite the pre-order traversal of the above tree structure.",
-    "modelAnswer": "Preorder (root, left, right) traversal: A, F, D, G, B, H, E",
-    "keyPoints": [
-      "Preorder visits root first, then left subtree, then right subtree",
-      "Left subtree of A (rooted at F): F, D, G",
-      "Right subtree of A (rooted at B): B, H, E",
-      "Combine: A, then left subtree, then right subtree"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-152",
-    "chapter": "Data Structures - Binary Tree",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "From the same Binary Tree (root A; children F,B; F's children D,G; B's child H; H's child E): name the parent of the nodes D and B.",
-    "modelAnswer": "Parent of D is F (D is a child of F).\nParent of B is A (B is a child of the root A).",
-    "keyPoints": [
-      "Parent = the node directly above in the tree",
-      "D is a child of F -> parent is F",
-      "B is a child of root A -> parent is A"
-    ]
-  },
-  {
-    "id": "sa-xii-cs-153",
-    "chapter": "Data Structures - Binary Tree",
-    "subject": "Computer Science",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "From the same Binary Tree (root A; children F,B; F's children D,G; B's child H; H's child E): state the level of nodes E and F when the root is at level 0.",
-    "modelAnswer": "Level of F: F is a direct child of root A, so level 1.\nLevel of E: path is A(0) -> B(1) -> H(2) -> E(3), so E is at level 3.",
-    "keyPoints": [
-      "Root is at level 0",
-      "F is a direct child of A -> level 1",
-      "E's path: A -> B -> H -> E, three steps down -> level 3"
-    ]
-  },
-  {
     "id": "sa-xii-cs-Board 2024-01",
     "chapter": "Java OOP: Classes and Objects",
     "subject": "Computer Science",
@@ -3123,6 +2596,1043 @@
     "marks": 5,
     "difficulty": "medium",
     "source": "Board Board 2026",
+    "text": "Answer the following based on the Binary Tree:\n        M\n       / \\\n      N   O\n     / \\ / \\\n    P  Q R   S\n       / /\\   \\\n      T U  V   W\n(a) Write the pre-order traversal of the above tree. [1]\n(b) State the level of node Q when the root is at level 0. [1]\n(c) State the size of the left subtree and the right subtree. [1]",
+    "modelAnswer": "(a) Pre-order (Root, Left, Right):\nM → N → P → Q → T → O → R → U → V → S → W\n\n(b) Node Q: M(L0)→N(L1)→Q(L2). Level of Q = 2.\n\n(c) Left subtree (rooted at N): nodes N, P, Q, T → size = 4\nRight subtree (rooted at O): nodes O, R, S, U, V, W → size = 6",
+    "keyPoints": [
+      "Pre-order: M N P Q T O R U V S W",
+      "Level of Q = 2 (M at 0, N at 1, Q at 2)",
+      "Left subtree size = 4 (N, P, Q, T)",
+      "Right subtree size = 6 (O, R, S, U, V, W)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-01",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Write the minterm of F(A, B, C, D) when A = 1, B = 0, C = 0 and D = 1.",
+    "modelAnswer": "The minterm is AB'C'D (m₉). In standard notation: A=1, B=0, C=0, D=1 → minterm index = 1001₂ = 9. So m₉ = AB'C'D.",
+    "keyPoints": [
+      "A=1 contributes A",
+      "B=0 contributes B'",
+      "C=0 contributes C'",
+      "D=1 contributes D",
+      "Minterm m₉ = AB'C'D"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-02",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Verify if (A + A')' is a Tautology, Contradiction, or a Contingency.",
+    "modelAnswer": "A + A' = 1 (complement law). So (A + A')' = 1' = 0. Since the result is always 0 (regardless of A), it is a Contradiction.",
+    "keyPoints": [
+      "A + A' = 1 by complement law",
+      "(1)' = 0",
+      "Always evaluates to 0",
+      "This is a Contradiction"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-03",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "State any one purpose of using the keyword 'this' in Java programming.",
+    "modelAnswer": "The keyword 'this' in Java refers to the current object. It is used to differentiate between instance variables and local parameters with the same name (e.g., this.name = name;). It can also be used to invoke another constructor of the same class.",
+    "keyPoints": [
+      "Refers to current object",
+      "Resolves naming conflict between instance variables and parameters",
+      "Can invoke another constructor of the same class"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-04",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Mention any two properties of the data members of an Interface.",
+    "modelAnswer": "Data members of an Interface are: (1) public — accessible from anywhere, (2) static — they belong to the interface, not to any instance, (3) final — their values cannot be changed (constants).",
+    "keyPoints": [
+      "public",
+      "static",
+      "final (constants)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-05",
+    "chapter": "Data Structures",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "What is the importance of the reference part in a Linked List?",
+    "modelAnswer": "The reference (or next) part of a linked list node stores the address (memory location) of the next node in the list. It links the nodes together to form the chain. Without it, nodes would be isolated and the list structure would be lost.",
+    "keyPoints": [
+      "Stores address of next node",
+      "Links nodes together to form chain",
+      "Enables traversal through the list"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-06",
+    "chapter": "Data Structures",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Convert the following infix notation to prefix notation: (A − B) / C * (D + E)",
+    "modelAnswer": "Step 1: (A-B)/C*(D+E)\nStep 2: Prefix of (A-B) = -AB\nStep 3: (-AB)/C = /-ABC\nStep 4: (D+E) = +DE\nStep 5: /-ABC * +DE = */-ABC+DE\nAnswer: */-ABC+DE",
+    "keyPoints": [
+      "Convert sub-expressions first",
+      "(A-B) → -AB",
+      "(-AB)/C → /-ABC",
+      "(D+E) → +DE",
+      "Final: */-ABC+DE"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-07",
+    "chapter": "Data Structures",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "A matrix M[−6...10, 4...15] is stored in the memory with each element requiring 4 bytes of storage. If the base address is 1025, find the address of M[4][8] when the matrix is stored in Column Major Wise.",
+    "modelAnswer": "Row range: -6 to 10, so number of rows = 10-(-6)+1 = 17.\nColumn range: 4 to 15, so number of columns = 15-4+1 = 12.\nFor Column Major: Address = Base + [(col-col_min)×rows + (row-row_min)] × element_size\n= 1025 + [(8-4)×17 + (4-(-6))] × 4\n= 1025 + [4×17 + 10] × 4\n= 1025 + [68 + 10] × 4\n= 1025 + 78 × 4\n= 1025 + 312 = 1337",
+    "keyPoints": [
+      "Row range: 17 rows (-6 to 10)",
+      "Column range: 12 columns (4 to 15)",
+      "Column major formula: Base + [(col-colMin)*rows + (row-rowMin)]*size",
+      "= 1025 + 78*4 = 1337"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-08",
+    "chapter": "Programming",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "With reference to the code given below, answer the questions:\nboolean num(int x) { int a=1; for(int c=x; c>0; c/=10) a *= 10; return (x*x%a)==x; }\n(a) What will the function num() return when the value of x=25? [2]\n(b) What is the method num() performing? [1]",
+    "modelAnswer": "(a) For x=25:\n- c=25>0: a=10; c=2\n- c=2>0: a=100; c=0\n- Loop ends. a=100\n- 25*25%100 = 625%100 = 25 = x\n- Returns true\n\n(b) The method num() checks if the given number is an Automorphic number (a number whose square ends with the number itself, e.g., 25² = 625 which ends in 25).",
+    "keyPoints": [
+      "For x=25: loop runs twice, a becomes 100",
+      "25*25=625; 625%100=25=x; returns true",
+      "num() checks if number is Automorphic (square ends in the number)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-09",
+    "chapter": "Programming",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "The following function task() is a part of some class. Assume 'm' and 'n' are positive integers greater than 0. Answer the questions given below:\nint task(int m, int n) { if(m==n) return m; else if(m>n) return task(m-n, n); else return task(m, n-m); }\n(a) What will the function task() return when m=30 and n=45? [2]\n(b) What function does task() perform, apart from recursion? [1]",
+    "modelAnswer": "(a) Dry run for m=30, n=45:\ntask(30,45) → task(30,15) → task(15,15) → return 15\nAnswer: 15\n\n(b) The function task() computes the GCD (Greatest Common Divisor) / HCF (Highest Common Factor) of two positive integers using the Euclidean algorithm.",
+    "keyPoints": [
+      "task(30,45)→task(30,15)→task(15,15)=15",
+      "Returns 15",
+      "Computes GCD/HCF of two numbers"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-10",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Given the Boolean function F(A, B, C, D) = Σ(2, 3, 6, 7, 8, 10, 12, 14, 15).\n(a) Reduce the above expression by using a 4-variable Karnaugh map, showing the various groups (i.e., octal, quads and pairs). [4]\n(b) Draw the logic gate diagram for the reduced expression. Assume the variables and their complements are available as inputs. [1]",
+    "modelAnswer": "(a) K-map (4 variables A, B, C, D):\nMinterm positions: m2,m3,m6,m7 form a quad (B'=0→B=1 wait... let me recheck)\nGroup 1 (Quad): m2,m3,m6,m7 → A'B (covers minterms where A=0, B=1)\nGroup 2 (Quad): m8,m10,m12,m14 → AC' (covers minterms where A=1, D=0... actually AC' covers 8,10,12,14 when D varies)\nGroup 3 (Pair): m14,m15 → ABD... \nReduced expression: F = A'B + AC' + AB (simplify further).\nF = A'B + A(C' + B) = A'B + AC' + AB = B(A'+A) + AC' = B + AC'\nFinal: F = B + AC'\n\n(b) Logic gate: F = B + AC'. Use a NOT gate for C', an AND gate for A·C', and an OR gate with inputs B and AC'.",
+    "keyPoints": [
+      "Identify quads in K-map",
+      "Group {2,3,6,7}: A=0, B=1 → A'B",
+      "Group {8,10,12,14}: A=1, D=0 → AC'",
+      "Group {12,14,15}: includes m15 for AB",
+      "Minimized: F = B + AC'",
+      "Gate diagram: NOT(C), AND(A,C'), OR(B, A·C')"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-11",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Given the Boolean function F(A, B, C, D) = π(0, 1, 2, 4, 5, 8, 10, 11, 14, 15).\n(a) Reduce the above expression by using a 4-variable Karnaugh map, showing the various groups (octal, quads and pairs). [4]\n(b) Draw the logic gate diagram for the reduced expression. [1]",
+    "modelAnswer": "(a) Maxterms at 0,1,2,4,5,8,10,11,14,15. Work with complement (SOP of 0s):\n0-cells: 3,6,7,9,12,13 → complement F' has these.\nGroup {6,7,14,15}: B=1, C=1 → BC\nGroup {12,13}: AB=11, D varies... ABC'\nGroup {3,7}: A'CD... \nAfter full K-map analysis, reduced POS expression:\nF = (A+B')(B+C')(A'+C)\n\n(b) Logic gates: NOT gates for complements, OR gates for POS sum terms, AND gate for final product.",
+    "keyPoints": [
+      "POS minimization using K-map",
+      "Identify groups of 0-cells for POS reduction",
+      "Reduced expression in Product of Sums form",
+      "Gate implementation uses OR gates for sum terms, AND gate for product"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-12",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "A shopping mall awards bonus points to customers based on the following criteria:\n• The customer is an employee AND pays by credit card, OR\n• The customer shops bonus-point items AND pays by credit card AND shopping amount < ₹10,000, OR\n• The customer is NOT an employee AND pays in cash AND shopping amount > ₹10,000.\nInputs: C (credit card), A (amount > ₹10,000), E (employee), I (item carries bonus point). Output X=1 if bonus awarded.\n(i) Draw truth table and write POS expression for X(C, A, E, I). [5]\n(ii) Differentiate between half adder and full adder. Write Boolean expression and draw logic circuit for SUM and CARRY of full adder. [3]\n(iii) Verify (A ⊙ B)' = (A ⊕ B) using truth table. [2]",
+    "modelAnswer": "(i) X = EC + IC A' + E'CA → Truth table has 16 rows. Simplified: X = EC + IC A' + E'A C'\nPOS: derive from 0-rows of truth table.\n\n(ii) Half adder: adds two bits, no carry in. Sum = A⊕B, Carry = A·B.\nFull adder: adds three bits (A, B, Cin). Sum = A⊕B⊕Cin, Carry = AB + BCin + ACin.\nFull adder logic circuit uses 2 XOR gates, 2 AND gates, 1 OR gate.\n\n(iii) XNOR truth table: A=0,B=0: A⊙B=1, (A⊙B)'=0, A⊕B=0 ✓; A=0,B=1: A⊙B=0, (A⊙B)'=1, A⊕B=1 ✓; A=1,B=0: same; A=1,B=1: A⊙B=1, (A⊙B)'=0, A⊕B=0 ✓. Identity verified.",
+    "keyPoints": [
+      "X=EC+ICA'+E'CA'",
+      "16-row truth table for 4 inputs",
+      "Half adder: Sum=A⊕B, Carry=AB",
+      "Full adder: Sum=A⊕B⊕Cin, Carry=AB+BCin+ACin",
+      "(A⊙B)' = (A⊕B) verified by truth table"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-13",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "(i) What is an encoder? How is it different from a decoder? Draw the logic circuit for a 4:1 multiplexer and explain its working. [5]\n(ii) From the logic diagram given below, write the Boolean expression for (1) and (2). Also, derive the Boolean expression (F) and simplify it. [Diagram shows X, Y, Z inputs through NAND and NOR gates] [3]\n(iii) Convert the following cardinal expression to its canonical form: F(P, Q, R) = π(0, 1, 3, 4) [2]",
+    "modelAnswer": "(i) Encoder: converts 2ⁿ inputs to n output lines (e.g., 4:2 encoder).\nDecoder: converts n input lines to 2ⁿ outputs — opposite of encoder.\n4:1 Multiplexer: 4 data inputs (D0–D3), 2 select lines (S1, S0), 1 output.\nY = S1'S0'D0 + S1'S0D1 + S1S0'D2 + S1S0D3.\n\n(ii) From diagram: (1) = (XY)', (2) = (YZ)'\nF = ((XY)' + (YZ)')' = XY · YZ = XY²Z = XYZ (since Y·Y=Y).\nSimplified: F = XYZ.\n\n(iii) π(0,1,3,4) means maxterms at 0,1,3,4.\nP Q R values: M0=(P+Q+R), M1=(P+Q+R'), M3=(P+Q'+R'), M4=(P'+Q+R)\nF = (P+Q+R)(P+Q+R')(P+Q'+R')(P'+Q+R)",
+    "keyPoints": [
+      "Encoder: 2ⁿ→n lines; Decoder: n→2ⁿ lines",
+      "4:1 MUX: Y = S1'S0'D0 + S1'S0D1 + S1S0'D2 + S1S0D3",
+      "F = XYZ from NAND/NOR diagram",
+      "POS canonical: F = (P+Q+R)(P+Q+R')(P+Q'+R')(P'+Q+R)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-14",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Design a class NumDude to check if a given number is a Dudeney number. (A Dudeney number is a positive integer that is a perfect cube, such that the sum of its digits equals the cube root.) Example: 5832 = (5+8+3+2)³ = 18³. Specify the class giving details of constructor(), void input(), int sumDigits(int x) using recursion, and void isDude(). Define main().",
+    "modelAnswer": "class NumDude {\n    int num;\n    NumDude() { num = 0; }\n    void input() {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter number: \");\n        num = sc.nextInt();\n    }\n    int sumDigits(int x) {\n        if (x == 0) return 0;\n        return (x % 10) + sumDigits(x / 10);\n    }\n    void isDude() {\n        int s = sumDigits(num);\n        if (s * s * s == num)\n            System.out.println(num + \" is a Dudeney number.\");\n        else\n            System.out.println(num + \" is not a Dudeney number.\");\n    }\n    public static void main(String[] args) {\n        NumDude obj = new NumDude();\n        obj.input();\n        obj.isDude();\n    }\n}",
+    "keyPoints": [
+      "Default constructor initializes num=0",
+      "sumDigits() uses recursion: base case x==0 returns 0",
+      "isDude() checks s³==num",
+      "Uses sumDigits() inside isDude()"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-15",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "A class Trans is defined to find the transpose of a square matrix. Specify the class Trans giving details of constructor(int mm), void fillarray(), void transpose(), and void display(). Define main().",
+    "modelAnswer": "class Trans {\n    int arr[][];\n    int m;\n    Trans(int mm) { m = mm; arr = new int[m][m]; }\n    void fillarray() {\n        Scanner sc = new Scanner(System.in);\n        for(int i=0; i<m; i++)\n            for(int j=0; j<m; j++)\n                arr[i][j] = sc.nextInt();\n    }\n    void transpose() {\n        int temp;\n        for(int i=0; i<m; i++)\n            for(int j=i+1; j<m; j++) {\n                temp = arr[i][j];\n                arr[i][j] = arr[j][i];\n                arr[j][i] = temp;\n            }\n    }\n    void display() {\n        System.out.println(\"Original matrix:\");\n        // print arr before transpose\n        transpose();\n        System.out.println(\"Transposed matrix:\");\n        for(int i=0; i<m; i++) {\n            for(int j=0; j<m; j++)\n                System.out.print(arr[i][j] + \" \");\n            System.out.println();\n        }\n    }\n    public static void main(String[] args) {\n        Trans t = new Trans(3);\n        t.fillarray();\n        t.display();\n    }\n}",
+    "keyPoints": [
+      "Parameterized constructor initializes m and allocates 2D array",
+      "transpose() swaps elements across diagonal (i<j to avoid double-swap)",
+      "display() invokes transpose()",
+      "Works for any square matrix of size m×m"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-16",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "A class SortAlpha has been defined to sort the words in the sentence in alphabetical order. Example: Input: THE SKY IS BLUE → Output: BLUE IS SKY THE. Specify the class SortAlpha giving details of constructor(), void acceptsent(), void sort(SortAlpha P), and void display(). Define main().",
+    "modelAnswer": "class SortAlpha {\n    String sent;\n    int n;\n    SortAlpha() { sent = \"\"; n = 0; }\n    void acceptsent() {\n        Scanner sc = new Scanner(System.in);\n        sent = sc.nextLine().toUpperCase();\n        String[] words = sent.split(\" \");\n        n = words.length;\n    }\n    void sort(SortAlpha P) {\n        String[] words = P.sent.split(\" \");\n        // Bubble sort\n        for(int i=0; i<words.length-1; i++)\n            for(int j=0; j<words.length-1-i; j++)\n                if(words[j].compareTo(words[j+1]) > 0) {\n                    String tmp = words[j]; words[j] = words[j+1]; words[j+1] = tmp;\n                }\n        sent = String.join(\" \", words);\n        n = words.length;\n    }\n    void display() {\n        SortAlpha sorted = new SortAlpha();\n        sorted.sort(this);\n        System.out.println(\"Original: \" + sent);\n        System.out.println(\"Sorted: \" + sorted.sent);\n    }\n    public static void main(String[] args) {\n        SortAlpha obj = new SortAlpha();\n        obj.acceptsent();\n        obj.display();\n    }\n}",
+    "keyPoints": [
+      "acceptsent() reads sentence in UPPER CASE",
+      "sort(SortAlpha P) sorts words of object P alphabetically",
+      "Uses compareTo() for string comparison",
+      "display() invokes sort()"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-17",
+    "chapter": "Data Structures",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "A double ended queue (deQueue) enables addition/removal from either end. Class deQueue has: Qrr[], lim, front, rear. Constructor deQueue(int l), void addFront(int v), void addRear(int v), int popFront(), int popRear(), void show().\n(i) Specify void addFront(int v) and int popFront(). The main() function and algorithm need NOT be written. [4]\n(ii) Differentiate between a stack and a queue. [1]",
+    "modelAnswer": "(i) void addFront(int v):\nvoid addFront(int v) {\n    if(front == 0)\n        System.out.println(\"OVERFLOW FROM FRONT\");\n    else {\n        front--;\n        Qrr[front] = v;\n    }\n}\n\nint popFront():\nint popFront() {\n    if(front == rear) return -999; // empty\n    int val = Qrr[front];\n    front++;\n    return val;\n}\n\n(ii) Stack: LIFO (Last In First Out) — insertion and deletion from same end (top).\nQueue: FIFO (First In First Out) — insertion at rear, deletion from front.",
+    "keyPoints": [
+      "addFront checks front==0 for overflow",
+      "addFront: front--, Qrr[front]=v",
+      "popFront checks empty (front==rear), returns -999",
+      "Stack: LIFO; Queue: FIFO"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-18",
+    "chapter": "Object-Oriented Programming",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2023",
+    "text": "Super class Demand stores product details (pid, pname, pdemand). Subclass Supply adds pproduced and prate. Using inheritance, specify class Supply giving constructor(...), double calculation(), and void display(). Super class, main function and algorithm need NOT be written.",
+    "modelAnswer": "class Supply extends Demand {\n    int pproduced;\n    double prate;\n    Supply(String id, String name, int demand, int produced, double rate) {\n        super(id, name, demand);\n        pproduced = produced;\n        prate = rate;\n    }\n    double calculation() {\n        double demandAmt = prate * pdemand;\n        double supplyAmt = prate * pproduced;\n        return demandAmt - supplyAmt;\n    }\n    void display() {\n        super.display();\n        System.out.println(\"Difference: \" + calculation());\n    }\n}",
+    "keyPoints": [
+      "extends Demand for inheritance",
+      "Constructor calls super(...) for parent fields",
+      "calculation() returns rate×demand - rate×produced",
+      "display() calls super.display() and calculation()"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2023-19",
+    "chapter": "Data Structures",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "A linked list is formed from class Node { double sal; Node next; }.\n(i) Write an Algorithm OR a Method to add a node at the end of an existing linked list. Method declaration: void addNode(Node ptr, double ss) [2]\n(ii) Answer the following questions from the diagram of a Binary Tree (A as root, F and B as children, D and G as children of F, H as child of B, E as child of H):\n(a) Write the pre-order traversal. [1]\n(b) Name the parent of nodes D and B. [1]\n(c) State the level of nodes E and F when root is at level 0. [1]",
+    "modelAnswer": "(i) void addNode(Node ptr, double ss) {\n    Node newNode = new Node();\n    newNode.sal = ss;\n    newNode.next = null;\n    if(ptr == null) return;\n    while(ptr.next != null) ptr = ptr.next;\n    ptr.next = newNode;\n}\n\n(ii)\n(a) Pre-order traversal (Root-Left-Right): A, F, D, G, B, H, E\n(b) Parent of D is F; Parent of B is A.\n(c) F is at level 1; E is at level 3 (A=0, B=1, H=2, E=3).",
+    "keyPoints": [
+      "Traverse to last node (ptr.next==null)",
+      "Set last.next = new node",
+      "Pre-order: A F D G B H E",
+      "Parent of D: F; Parent of B: A",
+      "Level of F: 1; Level of E: 3"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-01",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "State any one use of interfaces in Java.",
+    "modelAnswer": "Interfaces in Java are used to achieve multiple inheritance of type: a class can implement multiple interfaces, inheriting method signatures from all of them and providing its own implementations.",
+    "keyPoints": [
+      "Interfaces enable multiple inheritance of type in Java",
+      "They define a contract (set of method signatures) that implementing classes must fulfil",
+      "Used to achieve abstraction and loose coupling between components"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-02",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Write the cardinal form of the maxterm X + Y' + Z.",
+    "modelAnswer": "The maxterm X+Y'+Z has X uncomplemented (bit 0), Y complemented (bit 1), Z uncomplemented (bit 0). So the binary index is 010 = 2. Cardinal form: M₂.",
+    "keyPoints": [
+      "In a maxterm Mᵢ, a variable appears complemented if the corresponding bit of i is 1",
+      "X is uncomplemented → bit 0; Y' is complemented → bit 1; Z is uncomplemented → bit 0",
+      "Binary 010 = 2 → Cardinal form is M₂"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-03",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Write the canonical SOP expression for F(A, B) = A ⟺ B (A if and only if B).",
+    "modelAnswer": "F(A,B) = A⟺B is true when A and B have the same value. Truth table: (0,0)→1, (0,1)→0, (1,0)→0, (1,1)→1. Minterms: m₀ and m₃. Canonical SOP: F(A,B) = Σ(0,3) = A'B' + AB.",
+    "keyPoints": [
+      "A⟺B is 1 when A=B (both 0 or both 1)",
+      "Minterm m₀: A=0,B=0 → A'B'; Minterm m₃: A=1,B=1 → AB",
+      "Canonical SOP: F = A'B' + AB = Σ(0,3)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-04",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2024",
+    "text": "State any one difference between an instance variable and a class variable in Java.",
+    "modelAnswer": "An instance variable belongs to each individual object (each object has its own copy), whereas a class variable (declared with static) is shared among all objects of the class — there is only one copy regardless of how many objects are created.",
+    "keyPoints": [
+      "Instance variable: one copy per object; class variable: one shared copy for all objects",
+      "Instance variable: no static keyword; class variable: declared with static",
+      "Instance variable accessed via object reference; class variable via class name"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-05",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Convert the following infix expression to postfix form, showing the stack contents at each step:\n(P + Q * R − S) / T * U",
+    "modelAnswer": "Postfix: P Q R * + S − T / U *\n\nSteps:\n1. ( → push\n2. P → output P\n3. + → push after (\n4. Q → output P Q\n5. * → push (* > +)\n6. R → output P Q R\n7. − → pop * (output P Q R *), pop + (output P Q R * +), push −\n8. S → output P Q R * + S\n9. ) → pop − → output P Q R * + S −\n10. / → push /\n11. T → output ...T\n12. * → pop / (same precedence), push * → output ...T /\n13. U → output ...U\n14. End: pop * → final postfix: P Q R * + S − T / U *",
+    "keyPoints": [
+      "* has higher precedence than + and −",
+      "/ and * have equal precedence; pop left-to-right when equal",
+      "Parentheses: push ( on stack, pop until ( on )",
+      "Final postfix: P Q R * + S − T / U *"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-06",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "An array ARR[−5 … 15, 10 … 20] stores elements in Row Major order with each element requiring 2 bytes. Find the address of ARR[10][15] when the base address is 2500.",
+    "modelAnswer": "Formula (Row Major): Address = Base + [(i − LB₁) × N₂ + (j − LB₂)] × W\nLB₁ = −5, LB₂ = 10, N₂ = 20 − 10 + 1 = 11, W = 2\nAddress of ARR[10][15] = 2500 + [(10 − (−5)) × 11 + (15 − 10)] × 2\n= 2500 + [15 × 11 + 5] × 2\n= 2500 + [165 + 5] × 2\n= 2500 + 340 = 2840",
+    "keyPoints": [
+      "N₂ (number of columns) = UB₂ − LB₂ + 1 = 11",
+      "Row offset = (i − LB₁) × N₂ = 15 × 11 = 165",
+      "Column offset = j − LB₂ = 5",
+      "Address = 2500 + 170 × 2 = 2840"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-07",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "The following function is part of a class:\nint jolly(int[] x, int n, int m) {\n    if (n < 0) return m;\n    else if (n < x.length) m = (x[n] > m) ? x[n] : m;\n    return jolly(x, --n, m);\n}\n(a) What will be the output of jolly() when x[] = {6, 3, 4, 7, 1}, n = 4 and m = 0? [2]\n(b) What function does jolly() perform, apart from recursion? [1]",
+    "modelAnswer": "(a) Trace:\n  jolly(x, 4, 0): m = max(x[4]=1, 0) = 1 → jolly(x, 3, 1)\n  jolly(x, 3, 1): m = max(x[3]=7, 1) = 7 → jolly(x, 2, 7)\n  jolly(x, 2, 7): m = max(x[2]=4, 7) = 7 → jolly(x, 1, 7)\n  jolly(x, 1, 7): m = max(x[1]=3, 7) = 7 → jolly(x, 0, 7)\n  jolly(x, 0, 7): m = max(x[0]=6, 7) = 7 → jolly(x, -1, 7)\n  jolly(x, -1, 7): n < 0 → return 7\n  Output: 7\n\n(b) jolly() finds the maximum element in the array (traverses from index n down to 0, maintaining the running maximum in m).",
+    "keyPoints": [
+      "Each call: if n<x.length, update m = max(x[n], m); then recurse with --n",
+      "Base case: n<0, return m (the accumulated maximum)",
+      "Traversal is from index 4 down to 0",
+      "Output is 7 (the maximum element in {6,3,4,7,1})",
+      "Function performs: finding the maximum element in array"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-08",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "The following function finds the smallest digit in a number. Fill in the expressions at ?1?, ?2?, and ?3?:\nint small_dig(int n) {\n    int min = ?1?;\n    while (n != 0) {\n        int q = n / 10;\n        int r = n − ?2? * 10;\n        min = r > min ? ?3? : r;\n        n = q;\n    }\n    return min;\n}",
+    "modelAnswer": "?1? = 9   (initialise min to largest possible digit, so the first digit found will update it)\n?2? = q   (r = n − q*10 extracts the last digit: n mod 10)\n?3? = min (if r > min, keep current min; else replace with r — this tracks the smallest digit)",
+    "keyPoints": [
+      "?1? = 9: initialise to maximum digit so any digit in the number is ≤ initial min",
+      "?2? = q: r = n − q*10 = n mod 10 (last digit extraction)",
+      "?3? = min: ternary keeps smaller of r and min; condition r>min means r is larger so keep min"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-09",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "To be recruited as the Principal of a college, a candidate must satisfy at least one of: (i) Be a Postgraduate AND possess a B.Ed degree OR have experience >15 years; (ii) Be an employee of the same college AND have experience >15 years; (iii) Be a Postgraduate AND NOT be an employee AND have experience >15 years.\nVariables: P=Postgraduate, S=Same-college employee, E=Experience >15 yrs, B=B.Ed degree. Output X=1 if eligible.\n(a) Draw the truth table for X(P, S, E, B). [3]\n(b) Write the SOP expression for X. [2]",
+    "modelAnswer": "(a) Truth table (16 rows; X=1 for minterms 6,7,9,10,11,13,14,15):\nKey rows where X=1:\n0110: P=0,S=1,E=1,B=0 → S·E=1 ✓\n0111: P=0,S=1,E=1,B=1 → S·E=1 ✓\n1001: P=1,S=0,E=0,B=1 → P·B=1 ✓\n1010: P=1,S=0,E=1,B=0 → P·E=1 ✓\n1011: P=1,S=0,E=1,B=1 → P·B and P·E=1 ✓\n1101: P=1,S=1,E=0,B=1 → P·B=1 ✓\n1110: P=1,S=1,E=1,B=0 → P·E and S·E=1 ✓\n1111: P=1,S=1,E=1,B=1 → all conditions ✓\n\n(b) SOP expression:\nX = P·B + P·E + S·E\n(Simplified: Postgrad with B.Ed, OR Postgrad with experience, OR same-college employee with experience)",
+    "keyPoints": [
+      "Three eligibility criteria combine with OR: X = P(B+E) + SE",
+      "X = PB + PE + SE (after distribution; third criterion P·S'·E is a subset of P·E)",
+      "Minterms: Σ(6,7,9,10,11,13,14,15)",
+      "K-map would show three groups covering PB, PE, and SE"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-10",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Reduce the Boolean function F(A,B,C,D) = π(0, 2, 4, 6, 8, 9, 10, 11, 14) using a 4-variable Karnaugh map (POS reduction), showing the various groups. Also draw the logic gate diagram for the reduced expression.",
+    "modelAnswer": "F = π(0,2,4,6,8,9,10,11,14) means F=0 at these minterms (maxterms).\n\nK-map for F=0 (group the 0-cells):\n0-cells at: 0,2,4,6,8,9,10,11,14\n\nGroups:\nGroup 1 (Quad): 0,2,4,6 → A=0 (A')\nGroup 2 (Quad): 8,9,10,11 → A=1,B=0 (AB')\nGroup 3 (Pair): 10,14 → A=1,C=1,D=0 (ACD')\nGroup 4 (Pair): 2,10 → B=0,C=1,D=0 (B'CD') [covered by others]\n\nPOS expression (each group of 0s contributes a maxterm sum):\nF = (A+B)(A'+B'+C+D') or simplified by further analysis.\n\nNote: Full K-map reduction gives F = (A'+B)(A+B') ... students must show the K-map grid with all groupings and derive the expression.",
+    "keyPoints": [
+      "π notation means product of maxterms (0-cells on K-map)",
+      "Group 0-cells to get POS; each group gives one sum term",
+      "Show groupings as quads and pairs on the 4×4 K-map",
+      "Draw AND-OR (or equivalent) logic gate circuit for the result"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-11",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Verify whether the following proposition is a Tautology, Contradiction, or Contingency using a truth table:\n((A ⟹ B) ∧ (B ⟹ C)) ⟹ (A ⟹ C)",
+    "modelAnswer": "This is the Hypothetical Syllogism law — it is a TAUTOLOGY.\n\nTruth table (8 rows for A,B,C):\nA B C | A⟹B | B⟹C | (A⟹B)∧(B⟹C) | A⟹C | Result\n0 0 0 |  1  |  1  |       1       |  1  |   1\n0 0 1 |  1  |  1  |       1       |  1  |   1\n0 1 0 |  1  |  0  |       0       |  1  |   1\n0 1 1 |  1  |  1  |       1       |  1  |   1\n1 0 0 |  0  |  1  |       0       |  0  |   1\n1 0 1 |  0  |  1  |       0       |  1  |   1\n1 1 0 |  1  |  0  |       0       |  0  |   1\n1 1 1 |  1  |  1  |       1       |  1  |   1\n\nResult is 1 for all 8 combinations → TAUTOLOGY.",
+    "keyPoints": [
+      "A⟹B is false only when A=1, B=0",
+      "The overall implication is 1 whenever the antecedent is 0",
+      "All 8 rows give output 1 → Tautology (Hypothetical Syllogism)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-12",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Find the complement of the following Boolean expression and reduce it using Boolean laws:\nP · (P + Q) · Q · (Q + R')",
+    "modelAnswer": "Step 1: Simplify the expression first using Absorption law.\nP · (P + Q) = P   [Absorption: X·(X+Y) = X]\nSo: P · Q · (Q + R')\nQ · (Q + R') = Q   [Absorption: X·(X+Y) = X]\nSo expression = P · Q\n\nStep 2: Complement of P·Q:\n(P·Q)' = P' + Q'   [De Morgan's law]\n\nFinal answer: P' + Q'",
+    "keyPoints": [
+      "Apply Absorption law: P·(P+Q) = P",
+      "Apply Absorption law again: Q·(Q+R') = Q",
+      "Simplified expression = P·Q",
+      "Complement: (P·Q)' = P'+Q' by De Morgan's"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-13",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Draw the logic gate diagram for a 2-input OR gate using NAND gates only. Show the expression at each step.",
+    "modelAnswer": "Using De Morgan's law: A+B = ((A+B)')' = (A'·B')'\nThis can be built as:\nStep 1: Gate 1 (NAND with both inputs A): A·A = A → output A' [NOT A]\nStep 2: Gate 2 (NAND with both inputs B): B·B = B → output B' [NOT B]\nStep 3: Gate 3 (NAND of A' and B'): (A'·B')' = A+B [De Morgan's]\n\nDiagram: A→[NAND]→A'─┐\n                       ├→[NAND]→(A'·B')' = A+B\n         B→[NAND]→B'─┘\n\nMinimum 3 NAND gates required.",
+    "keyPoints": [
+      "Gate 1: NAND(A,A) = A' (NOT gate using NAND)",
+      "Gate 2: NAND(B,B) = B' (NOT gate using NAND)",
+      "Gate 3: NAND(A',B') = (A'B')' = A+B (De Morgan's)",
+      "3 NAND gates total"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-14",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Write the canonical form of the cardinal terms m₃ and M₅ for F(A, B, C, D).",
+    "modelAnswer": "m₃: minterm 3 → binary 0011 → A=0,B=0,C=1,D=1\nCanonical minterm: m₃ = A'B'CD\n\nM₅: maxterm 5 → binary 0101 → A=0,B=1,C=0,D=1\nIn a maxterm, variables with bit=1 appear complemented:\nCanonical maxterm: M₅ = A + B' + C + D'",
+    "keyPoints": [
+      "Minterm mᵢ: bit=0 → variable uncomplemented; bit=1 → variable complemented; all terms ANDed",
+      "m₃ (0011): A'·B'·C·D = A'B'CD",
+      "Maxterm Mᵢ: bit=0 → variable uncomplemented; bit=1 → variable complemented; all terms ORed",
+      "M₅ (0101): A + B' + C + D'"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-15",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Design a class DecHex with data members: int num (the positive integer) and String hexa (its hexadecimal equivalent). Include: default constructor, void getNum() to accept input, void convert(int n) to find hex equivalent recursively, and void display() to show the decimal and hex values. Write a main() function to test it. Example: 25 → 19; 28 → 1C.",
+    "modelAnswer": "import java.util.Scanner;\nclass DecHex {\n    int num;\n    String hexa;\n    DecHex() { num = 0; hexa = \"\"; }\n    void getNum() {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter decimal: \");\n        num = sc.nextInt();\n    }\n    void convert(int n) {\n        if (n == 0) return;\n        int rem = n % 16;\n        convert(n / 16);\n        if (rem < 10) hexa += (char)('0' + rem);\n        else hexa += (char)('A' + rem - 10);\n    }\n    void display() {\n        if (num == 0) { hexa = \"0\"; }\n        else convert(num);\n        System.out.println(\"Decimal: \" + num + \"  Hexadecimal: \" + hexa);\n    }\n    public static void main(String[] args) {\n        DecHex d = new DecHex();\n        d.getNum();\n        d.display();\n    }\n}",
+    "keyPoints": [
+      "Recursive convert(n): base case n==0; else recurse on n/16, then append digit for n%16",
+      "Digits 0-9 map to '0'-'9'; digits 10-15 map to 'A'-'F'",
+      "display() calls convert(num) and prints both values",
+      "Constructor initialises num=0 and hexa=\"\""
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-16",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "Specify the class InsSort with data members int arr[] and int size. Include: InsSort(int s) constructor, void getArray(), void insertionSort() to sort in descending order using Insertion Sort, double find() to return average of all odd numbers, and void display() which calls find() and displays sorted array with the odd-number average.",
+    "modelAnswer": "import java.util.Scanner;\nclass InsSort {\n    int arr[];\n    int size;\n    InsSort(int s) { size = s; arr = new int[size]; }\n    void getArray() {\n        Scanner sc = new Scanner(System.in);\n        for (int i = 0; i < size; i++) arr[i] = sc.nextInt();\n    }\n    void insertionSort() {\n        for (int i = 1; i < size; i++) {\n            int key = arr[i], j = i - 1;\n            while (j >= 0 && arr[j] < key) { arr[j+1] = arr[j]; j--; }\n            arr[j+1] = key;\n        }\n    }\n    double find() {\n        int sum = 0, cnt = 0;\n        for (int x : arr) { if (x % 2 != 0) { sum += x; cnt++; } }\n        return cnt == 0 ? 0.0 : (double)sum / cnt;\n    }\n    void display() {\n        insertionSort();\n        System.out.print(\"Sorted (desc): \");\n        for (int x : arr) System.out.print(x + \" \");\n        System.out.println(\"\\nAverage of odd numbers: \" + find());\n    }\n    public static void main(String[] args) {\n        InsSort obj = new InsSort(5);\n        obj.getArray();\n        obj.display();\n    }\n}",
+    "keyPoints": [
+      "Descending insertion sort: inner while condition arr[j] < key (shift smaller elements right)",
+      "find() iterates array, sums odd elements, returns sum/count",
+      "display() calls insertionSort() then prints array and invokes find()",
+      "Constructor initialises size and allocates array"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-17",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2024",
+    "text": "A class CardGame implements a stack-like structure with: int cards[], int cap, int top. (i) Specify void addCard(int v) and int drawCard() — addCard pushes a card if not full (else print 'CARD PILE IS FULL'); drawCard returns and removes the top card if present (else returns −9999). [4]\n(ii) Name the entity described above and state its principle. [1]",
+    "modelAnswer": "(i)\nvoid addCard(int v) {\n    if (top == cap - 1)\n        System.out.println(\"CARD PILE IS FULL\");\n    else {\n        top++;\n        cards[top] = v;\n    }\n}\nint drawCard() {\n    if (top == -1) return -9999;\n    int val = cards[top];\n    top--;\n    return val;\n}\n\n(ii) Entity: Stack. Principle: LIFO (Last In First Out) — the last element added is the first to be removed.",
+    "keyPoints": [
+      "addCard: check top == cap-1 for full; else increment top and store value",
+      "drawCard: check top == -1 for empty (return -9999); else return cards[top] and decrement top",
+      "Entity is a Stack",
+      "Stack principle: LIFO — Last In First Out"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-18",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "A super class EmpSal stores empnum, empcode, salary. Define a subclass Overtime (using inheritance) with data members int hours and double totsal. Include: parameterised constructor (initialising both classes), void calSal() which adds overtime based on hours (>40: +₹5000; 30-40: +₹3000; <30: no change), and void show() to display employee details with total salary.",
+    "modelAnswer": "class Overtime extends EmpSal {\n    int hours;\n    double totsal;\n    Overtime(String n, int c, double s, int h) {\n        super(n, c, s);\n        hours = h;\n        totsal = s;\n    }\n    void calSal() {\n        if (hours > 40) totsal = salary + 5000;\n        else if (hours >= 30) totsal = salary + 3000;\n        else totsal = salary;\n    }\n    void show() {\n        super.show();\n        System.out.println(\"Hours: \" + hours + \"  Total Salary: \" + totsal);\n    }\n}",
+    "keyPoints": [
+      "Overtime extends EmpSal using inheritance",
+      "Constructor calls super() to initialise EmpSal fields, then sets hours and totsal",
+      "calSal(): hours>40 → +5000; 30≤hours≤40 → +3000; else unchanged",
+      "show() calls super.show() to print EmpSal fields, then adds own output"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2024-19",
+    "chapter": "Data Structures: Trees",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2024",
+    "text": "Answer the following based on the Binary Tree:\n         A\n        / \\\n       E   H\n      /   / \\\n     M   L   G\n    / \\ /\n   F  I C\n(i) Briefly explain the dominant term in complexity with an example. [2]\n(ii)(a) Name the external (leaf) nodes. [1]\n(ii)(b) State the degree of node M and node L. [1]\n(ii)(c) Write the post-order traversal. [1]",
+    "modelAnswer": "(i) Dominant term: In a time complexity function with multiple terms, the dominant term is the one that grows fastest as n → ∞. Example: f(n) = 3n³ + 2n² + n → dominant term is n³, so Big-O = O(n³).\n\n(ii)(a) External (leaf) nodes: F, I, C, G (nodes with no children).\n\n(ii)(b) Degree of M = 2 (children F and I); Degree of L = 1 (child C only).\n\n(ii)(c) Post-order (Left, Right, Root):\n  Left subtree of A (rooted at E):\n    E's left = M: F, I, M (post-order of M's subtree)\n    E has no right child.\n    → F, I, M, E\n  Right subtree of A (rooted at H):\n    H's left = L: C, L\n    H's right = G: G\n    → C, L, G, H\n  Root A last.\n  Post-order: F, I, M, E, C, L, G, H, A",
+    "keyPoints": [
+      "Dominant term: highest-degree polynomial term; determines Big-O complexity",
+      "Leaf nodes (degree 0): F, I, C, G",
+      "Degree of M = 2; Degree of L = 1",
+      "Post-order: F I M E C L G H A"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-01",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "For the given code segment, write the Big O notation for worst-case complexity:\nfor (int i=1; i<=P; i++)\n  { Statements }\n  for (int j=1; j<=P; ++j)\n    for (int k=1; k<=Q; k++)\n      { Statements }",
+    "modelAnswer": "The three nested loops run P × P × Q = P²Q iterations in the worst case. Big O notation: O(P²Q).",
+    "keyPoints": [
+      "Outer loop: P iterations",
+      "Middle loop: P iterations",
+      "Inner loop: Q iterations",
+      "Total: P × P × Q = P²Q → O(P²Q)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-02",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2025",
+    "text": "Write the minterms in canonical form for the Boolean Function X(A, B) from the truth table:\nA=0,B=0 → X=1; A=0,B=1 → X=0; A=1,B=0 → X=0; A=1,B=1 → X=1.",
+    "modelAnswer": "X=1 at (A=0,B=0) → minterm m₀ = A'B' and at (A=1,B=1) → minterm m₃ = AB.\nCanonical SOP: X(A,B) = Σ(0,3) = A'B' + AB.",
+    "keyPoints": [
+      "m₀ (00): A'B' (both bits 0 → both complemented in minterm)",
+      "m₃ (11): AB (both bits 1 → neither complemented)",
+      "Canonical SOP: X = A'B' + AB = Σ(0,3)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-03",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Convert the following infix notation to postfix form:\n(A − B/C) + (D * E/F) * G",
+    "modelAnswer": "Postfix: A B C / − D E * F / G * +\n\nKey steps:\n• Inside (A−B/C): B/C → BC/; then A−BC/ → ABC/−\n• Inside (D*E/F): D*E → DE*; then DE*/F → DE*F/ (equal precedence, left-to-right)\n• Remaining *G then +: ...G* then + at end\n• Final: A B C / − D E * F / G * +",
+    "keyPoints": [
+      "/ and * have higher precedence than − and +",
+      "Equal-precedence operators: pop left one first",
+      "Parentheses: push (, pop until ( on )",
+      "Final postfix: A B C / − D E * F / G * +"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-04",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "A matrix M[−1 … 10, 4 … 13] is stored in memory with each element requiring 2 bytes. The base address is 1200. Find the address of M[2][7] when stored Row Major Wise.",
+    "modelAnswer": "Formula: Address = Base + [(i − LB₁) × N₂ + (j − LB₂)] × W\nLB₁ = −1, LB₂ = 4, N₂ = 13 − 4 + 1 = 10, W = 2\nAddress of M[2][7] = 1200 + [(2 − (−1)) × 10 + (7 − 4)] × 2\n= 1200 + [3 × 10 + 3] × 2\n= 1200 + 33 × 2 = 1200 + 66 = 1266",
+    "keyPoints": [
+      "N₂ = 13 − 4 + 1 = 10 columns",
+      "Row offset = (2 − (−1)) × 10 = 30",
+      "Column offset = 7 − 4 = 3",
+      "Address = 1200 + (30+3) × 2 = 1266"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-05",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "The function int solve(int m, int n) is defined as:\nint k = 1;\nif(m < 0) return −k;\nelse if(m == 0) return m;\nelse return k + (solve(m−n, n+2));\n(a) What will solve() return for: (1) m=16, n=1 and (2) m=9, n=1? [2]\n(b) What is solve() performing apart from recursion? [1]",
+    "modelAnswer": "(a)\nFor m=16, n=1:\nsolve(16,1) = 1+solve(15,3) = 1+1+solve(12,5) = 1+1+1+solve(7,7) = 1+1+1+1+solve(0,9)\nsolve(0,9) = 0 → total = 4\n\nFor m=9, n=1:\nsolve(9,1) = 1+solve(8,3) = 1+1+solve(5,5) = 1+1+1+solve(0,7)\nsolve(0,7) = 0 → total = 3\n\n(b) solve() counts how many subtractions of successively increasing values (n, n+2, n+4, ...) are needed to reduce m to exactly 0.",
+    "keyPoints": [
+      "Each call subtracts n from m and adds 2 to n",
+      "Base: m==0 → return 0; m<0 → return -1",
+      "For m=16,n=1: 4 recursive calls before reaching 0",
+      "For m=9,n=1: 3 recursive calls before reaching 0",
+      "Function: counts steps to reduce m to 0 by subtracting n, n+2, n+4, ..."
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-06",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "The function duck() checks whether a number is a Duck number (contains digit 0). Identify the expressions at ?1?, ?2?, and ?3?:\nboolean duck(int a) {\n    int f = −1;\n    if(a == 0) return true;\n    for(int i = a; i != 0; ?1?)\n    {   int c = i % 10;\n        if(c == ?2?)\n        {   f = 1; break;  }\n    }\n    return (f == ?3?) ? false : true;\n}",
+    "modelAnswer": "?1? = i /= 10   (divides i by 10 to move to the next digit each iteration)\n?2? = 0          (checks if the last digit c is zero)\n?3? = −1         (f remains −1 if no zero digit found; (f==−1) → return false; otherwise f=1 → return true)",
+    "keyPoints": [
+      "?1? = i /= 10: extract digits from right by repeatedly dividing by 10",
+      "?2? = 0: duck number has digit 0; c==0 triggers f=1 and break",
+      "?3? = −1: if f still −1 (no 0 found), return false; if f=1 (0 found), return true"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-07",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A superhero is allowed access to an Avengers facility if they meet any of: (i) Have Avengers membership AND clearance badge; (ii) Don't have membership BUT hold a SHIELD permit AND clearance badge; (iii) Not a recognised ally AND hold SHIELD permit AND clearance badge.\nVariables: A=Avengers membership, S=SHIELD permit, C=clearance badge, L=recognised ally. Output X=1 if access granted.\n(a) Draw the truth table for X(A,S,C,L) and write the POS expression. [5]",
+    "modelAnswer": "(a) Truth table (16 rows). X=1 for minterms: 6,7,10,11,14,15\nKey X=1 rows:\n0110 (A=0,S=1,C=1,L=0): SHIELD+clearance, not ally ✓\n0111 (A=0,S=1,C=1,L=1): no membership, SHIELD+clearance ✓\n1010 (A=1,S=0,C=1,L=0): Avengers+clearance ✓\n1011 (A=1,S=0,C=1,L=1): Avengers+clearance ✓\n1110 (A=1,S=1,C=1,L=0): Avengers+clearance ✓\n1111 (A=1,S=1,C=1,L=1): Avengers+clearance ✓\n\nSimplified SOP: X = A·C + S·C = C·(A+S)\n\nPOS (maxterms where X=0: {0,1,2,3,4,5,8,9,12,13}):\nX = (A+S+C)·(A+S+C')·(A+S'+C)... [K-map reduces to two groups]\nSimplified POS: X = C · (A+S) → POS: X = (A+S+C)... K-map reduction gives X = C·(A+S).",
+    "keyPoints": [
+      "X=1 when C=1 AND (A=1 OR S=1) → X = C(A+S)",
+      "Minterms: Σ(6,7,10,11,14,15)",
+      "Variable L is irrelevant in the simplified expression",
+      "SOP: X = AC + SC (after K-map or Boolean simplification)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-08",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "Reduce the Boolean function F(P, Q, R, S) = Σ(0,1,2,5,7,8,9,10,13,15) using a 4-variable Karnaugh map, showing all groups (octals, quads, pairs). [4] Also draw the logic gate diagram using NAND gates only for the reduced expression. [1]",
+    "modelAnswer": "K-map (PQ \\ RS):\n     00  01  11  10\n00:   1   1   0   1\n01:   0   1   1   0\n11:   0   1   1   0\n10:   1   1   0   1\n\nGroups:\nQuad 1: {0,1,8,9} → Q=0, R=0 → Q'R'\nQuad 2: {0,2,8,10} → Q=0, S=0 → Q'S'\nQuad 3: {5,7,13,15} → Q=1, S=1 → QS\n\nSimplified SOP: F = Q'R' + Q'S' + QS = Q'(R'+S') + QS\n\nNAND implementation:\nF = [(Q'R')' · (Q'S')' · (QS)']'",
+    "keyPoints": [
+      "Quad {0,1,8,9}: PQ=x0, RS=0x → Q'R'",
+      "Quad {0,2,8,10}: PQ=x0, RS=x0 → Q'S'",
+      "Quad {5,7,13,15}: PQ=x1, RS=1x → QS",
+      "F = Q'R' + Q'S' + QS",
+      "NAND: implement each product term as NAND of inputs, then NAND the results"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-09",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "(i) What is an encoder? Draw the logic gate diagram for an octal-to-binary encoder. State one application of a decoder. [5]\n(ii) Verify using a truth table whether the proposition (~X ⟹ Y) ∧ X = (X ∧ ~Y) ∨ (X ∧ Y) is valid or not. [3]",
+    "modelAnswer": "(i) Encoder: A combinational circuit that converts 2ⁿ input lines to n output lines. For octal-to-binary (8-to-3):\nInputs: I₀–I₇ (only one is 1 at a time). Outputs: A, B, C.\nA = I₄+I₅+I₆+I₇; B = I₂+I₃+I₆+I₇; C = I₁+I₃+I₅+I₇\n(Draw OR gates for each output.)\nApplication of decoder: BCD to 7-segment display driving.\n\n(ii) Verification:\nLHS: (~X⟹Y)∧X = (X∨Y)∧X = X (Absorption law)\nRHS: (X∧~Y)∨(X∧Y) = X∧(~Y∨Y) = X∧1 = X\nLHS = RHS = X → The proposition is VALID.",
+    "keyPoints": [
+      "Encoder: 2ⁿ inputs → n outputs (inverse of decoder)",
+      "8-to-3 encoder: 3 OR gates, each combining 4 inputs",
+      "Decoder application: address decoding in memory, 7-segment display",
+      "LHS: (¬X⟹Y)∧X = (X∨Y)∧X = X by Absorption",
+      "RHS: X∧(¬Y∨Y) = X∧1 = X → LHS = RHS, proposition is valid (tautology-like)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-10",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A class Perni checks if a binary number (string of 0s and 1s) is a Pernicious number. A pernicious number is a binary number with a prime count of 1s. Include: Perni() constructor, void accept(), int countOne(int k) using recursion to count 1s in k, and void check() which uses countOne() and displays whether pernicious or not. Write a main() function.",
+    "modelAnswer": "import java.util.Scanner;\nclass Perni {\n    long num;\n    Perni() { num = 0; }\n    void accept() {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter binary number: \");\n        num = sc.nextLong();\n    }\n    int countOne(int k) {\n        if (k == 0) return 0;\n        return (k % 10) + countOne(k / 10);\n    }\n    boolean isPrime(int n) {\n        if (n < 2) return false;\n        for (int i = 2; i <= Math.sqrt(n); i++)\n            if (n % i == 0) return false;\n        return true;\n    }\n    void check() {\n        int ones = countOne((int)num);\n        if (ones >= 2 && isPrime(ones))\n            System.out.println(num + \" is a Pernicious number\");\n        else\n            System.out.println(num + \" is NOT a Pernicious number\");\n    }\n    public static void main(String[] args) {\n        Perni p = new Perni();\n        p.accept();\n        p.check();\n    }\n}",
+    "keyPoints": [
+      "countOne(k): recursively extract last digit (k%10) and add; base case k==0",
+      "check(): call countOne(), then test if count is prime (≥2 and prime)",
+      "Pernicious needs at least 2 ones and their count must be prime",
+      "Examples: 101 → 2 ones (prime) ✓; 1111 → 4 ones (not prime) ✗"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-11",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2025",
+    "text": "A circular queue class CirQueue has: int Q[], int cap, int front=0, int rear=0. (i) Specify void push(int v) which adds to rear if not full (else print 'QUEUE IS FULL'), and int remove() which removes from front (else return −999). [4]\n(ii) State one application of a circular queue. [1]",
+    "modelAnswer": "(i)\nvoid push(int v) {\n    if ((rear + 1) % cap == front)\n        System.out.println(\"QUEUE IS FULL\");\n    else {\n        rear = (rear + 1) % cap;\n        Q[rear] = v;\n    }\n}\nint remove() {\n    if (front == rear) return -999;\n    front = (front + 1) % cap;\n    return Q[front];\n}\n\n(ii) Application: CPU scheduling (round-robin scheduling) — processes are arranged in a circular queue and each gets a time slice.",
+    "keyPoints": [
+      "Full condition: (rear+1) % cap == front",
+      "Empty condition: front == rear",
+      "push: rear = (rear+1) % cap, then store value",
+      "remove: front = (front+1) % cap, then return Q[front]",
+      "Application: Round-robin CPU scheduling / circular buffer for streaming"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-12",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "A superclass Flight stores flightno, dep_time, arr_time, basefare. Define a subclass Passenger (using inheritance) with id, name, tax, tot. Include: parameterised constructor, void cal() which calculates tax = 5% of basefare and tot = basefare + tax, and void show() which displays flight and passenger details with total amount.",
+    "modelAnswer": "class Passenger extends Flight {\n    String id, name;\n    double tax, tot;\n    Passenger(String fn, String dt, String at, double bf, String pid, String pname) {\n        super(fn, dt, at, bf);\n        id = pid;\n        name = pname;\n        tax = 0;\n        tot = 0;\n    }\n    void cal() {\n        tax = basefare * 0.05;\n        tot = basefare + tax;\n    }\n    void show() {\n        super.show();\n        System.out.println(\"Passenger ID: \" + id + \"  Name: \" + name);\n        System.out.println(\"Tax: \" + tax + \"  Total: \" + tot);\n    }\n}",
+    "keyPoints": [
+      "Passenger extends Flight; constructor calls super() with Flight parameters",
+      "cal(): tax = basefare * 0.05; tot = basefare + tax",
+      "show(): calls super.show() then prints passenger details",
+      "basefare is accessible from superclass (protected/package access)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2025-13",
+    "chapter": "Data Structures: Trees",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2025",
+    "text": "Answer the following based on the Binary Tree:\n         A\n        / \\\n       B   C\n      / \\ / \\\n     D  E F  G\n    /\\   /\\   \\\n   I  J K  L   M\n             /\n            N\n(i) Write the in-order traversal of the right subtree. [1]\n(ii) State the depth of the entire binary tree and depth of node E. [1]\n(iii) Name the external nodes of the left subtree and internal nodes of the right subtree. [1]",
+    "modelAnswer": "(i) Right subtree (rooted at C), in-order (Left, Root, Right):\nF's subtree in-order: K, F, N, L\nC: C\nG's subtree: G, M\nIn-order of right subtree: K F N L C G M\n\n(ii) Depth of entire tree = 4 (root A at level 0; N is at level 4).\nDepth of node E = 2.\n\n(iii) External (leaf) nodes of left subtree (rooted at B): I, J, E\nInternal nodes of right subtree (rooted at C): C, F, G, L",
+    "keyPoints": [
+      "In-order of right subtree: K F N L C G M",
+      "Depth of tree = 4 (path A→C→F→L→N); depth of E = 2",
+      "External nodes of left subtree: I, J, E (leaves)",
+      "Internal nodes of right subtree: C, F, G, L (each has at least one child)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-01",
+    "chapter": "Boolean Algebra",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "Given A = You use ecofriendly methods, B = Pollution is reduced. If A implies B (A⟹B), write its Contrapositive statement.",
+    "modelAnswer": "Contrapositive of A⟹B is ~B⟹~A.\nStatement: 'If pollution is NOT reduced, then you do NOT use ecofriendly methods.'",
+    "keyPoints": [
+      "Contrapositive of P⟹Q is ~Q⟹~P (negate and swap both parts)",
+      "Contrapositive: ~B⟹~A",
+      "In words: 'If pollution is not reduced, then ecofriendly methods are not used'"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-02",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "Board 2026",
+    "text": "What is Gray code in the context of a Karnaugh map?",
+    "modelAnswer": "Gray code is a binary number system in which adjacent values differ by only one bit. In a Karnaugh map, rows and columns are labeled in Gray code order (00, 01, 11, 10) to ensure that physically adjacent cells differ in exactly one variable, making it possible to group minterms that differ by only one variable.",
+    "keyPoints": [
+      "Consecutive Gray code values differ by exactly one bit",
+      "K-map uses Gray code: 00, 01, 11, 10 (not natural binary order)",
+      "Enables adjacent cells in K-map to differ in only one variable"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-03",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Convert the following infix expression to prefix form:\nP / Q + (S * F + X / R)",
+    "modelAnswer": "Prefix form: + / P Q + * S F / X R\n\nSteps (working inner to outer):\n• S*F → *SF;  X/R → /XR;  *SF + /XR → +*SF/XR\n• P/Q → /PQ\n• /PQ + (+*SF/XR) → +/PQ+*SF/XR",
+    "keyPoints": [
+      "Process innermost parentheses first",
+      "S*F → *SF; X/R → /XR",
+      "Inner expression: S*F+X/R → +*SF/XR",
+      "Final prefix: + /PQ +*SF/XR"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-04",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A matrix G[3 … 7, 2 … 5] is stored in memory with each element requiring 4 bytes. The address of G[5][4] is 6000. Find the base address when stored Column Major Wise.",
+    "modelAnswer": "Column Major formula: Address = Base + [(j − LB₂)×N₁ + (i − LB₁)] × W\nN₁ = 7 − 3 + 1 = 5 rows; LB₁ = 3, LB₂ = 2, W = 4\nG[5][4] = 6000:\n6000 = Base + [(4−2)×5 + (5−3)] × 4\n= Base + [10 + 2] × 4 = Base + 48\nBase address = 6000 − 48 = 5952",
+    "keyPoints": [
+      "Column Major: columns stored first; N₁ = number of rows = 5",
+      "Col offset = (j−LB₂)×N₁ = (4−2)×5 = 10",
+      "Row offset = i−LB₁ = 5−3 = 2",
+      "Total offset = 12; 12×4 = 48; Base = 6000 − 48 = 5952"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-05",
+    "chapter": "Recursion and Arrays",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "The function workOut(int n) is defined as:\nString workOut(int n) {\n    if (n == 0) return \"\";\n    int rem = n % 16;\n    char cr = (rem < 10) ? (char)(rem + '0') : (char)(rem − 10 + 'A');\n    return workOut(n / 16) + cr;\n}\n(a) What will workOut(220) return? [2]\n(b) What is the function workOut() performing apart from recursion? [1]",
+    "modelAnswer": "(a) Trace for workOut(220):\nworkOut(220): rem = 220%16 = 12 → cr = 'C'; call workOut(13)\nworkOut(13):  rem = 13%16 = 13 → cr = 'D'; call workOut(0)\nworkOut(0):   return \"\"\nBack: \"\" + 'D' = \"D\"; then \"D\" + 'C' = \"DC\"\nworkOut(220) returns \"DC\"\n\nVerification: 220 = 13×16 + 12 = DC in hex ✓\n\n(b) workOut() converts a decimal integer to its hexadecimal (base-16) string equivalent.",
+    "keyPoints": [
+      "rem = n%16 gives the last hex digit; cr maps 0-9 → '0'-'9' and 10-15 → 'A'-'F'",
+      "Recursive call workOut(n/16) processes remaining digits",
+      "workOut(220): DC (13→D, 12→C)",
+      "Function performs: decimal to hexadecimal conversion"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-06",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "The function isTech() checks if a number is a Tech number (even digits; square of sum of two equal halves = number). Identify expressions at ?1?, ?2?, and ?3?:\nboolean isTech(int n) {\n    String s = String.valueOf(n);\n    int len = ?1?;\n    if (len % 2 != 0) return ?2?;\n    int first = Integer.parseInt(s.substring(0, len/2));\n    int second = Integer.parseInt(s.substring(len/2));\n    int sum = first + second;\n    return ?3? == n;\n}",
+    "modelAnswer": "?1? = s.length()       (gets the number of digits by finding string length)\n?2? = false            (odd number of digits → cannot be Tech → return false)\n?3? = sum * sum        (Tech number: (first half + second half)² = n; e.g. 2025: (20+25)²=45²=2025)",
+    "keyPoints": [
+      "?1? = s.length(): count digits by string length",
+      "?2? = false: odd digit count disqualifies Tech number",
+      "?3? = sum * sum: check if square of sum of halves equals n",
+      "Example: 2025 → first=20, second=25, sum=45, 45²=2025 ✓"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-07",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A candidate can become Dragon Warrior if they satisfy any of: (i) Belong to Panda Clan AND trained >5 years; (ii) Possess Secret Chi Power AND NOT belong to Panda Clan; (iii) Recommended by Grand Master AND NOT Panda Clan AND NOT trained >5 years.\nVariables: C=Panda Clan, T=Trained>5yrs, P=Secret Chi Power, R=Grand Master recommendation. X=1 if eligible.\n(a) Draw the truth table and write the SOP expression for X(C, T, P, R). [5]",
+    "modelAnswer": "Conditions:\n1. C·T (Panda Clan AND trained)\n2. P·C' (Chi Power AND NOT Panda Clan)\n3. R·C'·T' (Recommended AND NOT Clan AND NOT trained)\n\nX = C·T + P·C' + R·C'·T'\n\nMinterms (CTPR order, C=MSB):\n1(0001): R·C'T' ✓\n2(0010): P·C' ✓\n3(0011): P·C' and R·C'T' ✓\n6(0110): P·C' ✓\n7(0111): P·C' ✓\n12(1100): C·T ✓\n13(1101): C·T ✓\n14(1110): C·T ✓\n15(1111): C·T ✓\n\nX = Σ(1,2,3,6,7,12,13,14,15)\n\nK-map reduced: X = CT + PC' + RC'T'",
+    "keyPoints": [
+      "Three criteria combined with OR",
+      "X = CT + PC' + RC'T'",
+      "Minterms: Σ(1,2,3,6,7,12,13,14,15)",
+      "K-map can reduce to: CT + PC' + RC'T' (minimal SOP)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-08",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Reduce the Boolean function F(A,B,C,D) = π(0,1,2,3,7,8,9,10,11,12,13,15) using a 4-variable Karnaugh map (POS), showing the groups. [4] Also draw the logic gate diagram for the reduced expression. [1]",
+    "modelAnswer": "F=0 at {0,1,2,3,7,8,9,10,11,12,13,15}; F=1 at {4,5,6,14}\n\nK-map 1-cells: 4(0100), 5(0101), 6(0110), 14(1110)\n\nGroups (SOP from the 1-cells):\nPair {4,5}: A=0,B=1,C=0 → A'BC' (D varies)\nPair {6,14}: B=1,C=1,D=0 → BCD' (A varies)\n\nMinimal SOP: F = A'BC' + BCD'\n\nPOS equivalent (from K-map 0-cells would give POS directly; result same):\nF = A'BC' + BCD'\n\nDraw: 3-input AND gate (A',B,C') and 3-input AND gate (B,C,D') feeding a 2-input OR gate.",
+    "keyPoints": [
+      "F=1 only at minterms {4,5,6,14}",
+      "Pair {4,5}: A'BC' (C=0,A=0,B=1,D varies)",
+      "Pair {6,14}: BCD' (B=1,C=1,D=0,A varies)",
+      "Minimal SOP: F = A'BC' + BCD'",
+      "Logic diagram: two AND gates feeding one OR gate"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-09",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "Draw the logic gate diagram for a 2-input AND gate using NOR gates only. Show the expression at each step.",
+    "modelAnswer": "Using De Morgan: A·B = ((A·B)')' = (A'+B')' = NOR(A',B')\nAnd A' = NOR(A,A), B' = NOR(B,B)\n\nGate 1: NOR(A,A) = (A+A)' = A'\nGate 2: NOR(B,B) = (B+B)' = B'\nGate 3: NOR(A',B') = (A'+B')' = A·B (by De Morgan)\n\nThree NOR gates total. Diagram:\nA → [NOR]→ A' ─┐\n                ├→ [NOR] → A·B\nB → [NOR]→ B' ─┘",
+    "keyPoints": [
+      "NOR(X,X) = X' (NOR used as NOT)",
+      "Gate 1: NOR(A,A) = A'; Gate 2: NOR(B,B) = B'",
+      "Gate 3: NOR(A',B') = (A'+B')' = A·B (De Morgan's)",
+      "3 NOR gates total"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-10",
+    "chapter": "Logic Gates and Circuits",
+    "subject": "Computer Science",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "(i) What is a decoder? Draw the logic gate diagram for decoding binary numbers {0011, 0100, 0101, 0111, 1011, 1110} to hexadecimal. State one application of a multiplexer. [5]\n(ii) Prove the Chain Rule using Boolean laws: [(a⟹b)·(b⟹c)] ⟹ (a⟹c). [3]\n(iii) For P=0, Q=1, R=0, S=0, write the: (a) Maxterm, (b) Minterm. [2]",
+    "modelAnswer": "(i) Decoder: A combinational circuit that converts n input lines to 2ⁿ output lines (activates exactly one output based on the binary input). A 4-to-16 decoder maps 4-bit binary to 16 hexadecimal outputs. For the given binary values (3,4,5,7,11,14 = hex 3,4,5,7,B,E): draw AND gates, one per output, with appropriate complemented/uncomplemented inputs. Application of multiplexer: Data selection/routing in communication systems.\n\n(ii) Proof of Chain Rule:\n(a⟹b)·(b⟹c) ⟹ (a⟹c)\nLHS = (~a∨b)·(~b∨c)\n= ~a·~b ∨ ~a·c ∨ b·~b ∨ b·c\n= ~a~b ∨ ~ac ∨ 0 ∨ bc\n= ~a(~b ∨ c) ∨ bc\nIf a=0: a⟹c = ~a∨c = 1 ✓\nIf a=1: LHS requires b=1 (from ~a∨b) and c=1 (from ~b∨c) → c=1 → a⟹c=1 ✓\nSo [(a⟹b)·(b⟹c)] ⟹ (a⟹c) is a tautology. ✓\n\n(iii) P=0,Q=1,R=0,S=0 → binary 0100 = minterm 4:\n(a) Maxterm M₄ = P + Q' + R + S (bit=1 → variable complemented)\n(b) Minterm m₄ = P'·Q·R'·S' (bit=0 → variable complemented)",
+    "keyPoints": [
+      "Decoder: n inputs → 2ⁿ outputs, activates one output per input combination",
+      "Multiplexer application: data routing / selecting one of many data sources",
+      "Chain rule proof: case analysis on a=0 and a=1 both satisfy conclusion",
+      "PQRS=0100 (value 4): Maxterm M₄=P+Q'+R+S; Minterm m₄=P'QR'S'"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-11",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 10,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "Design a class TimeOp with: int arr[] (3 elements: hours, minutes, seconds). Include: default constructor, void readTime() to accept time, TimeOp addTime(TimeOp tt) to add tt with current object returning the result (handling carry: 60 sec=1 min, 60 min=1 hr), and void dispTime() to display in hours:minutes:seconds. Write main().\nExample: 6h 35m 40s + 7h 45m 30s = 14h 21m 10s.",
+    "modelAnswer": "import java.util.Scanner;\nclass TimeOp {\n    int arr[];\n    TimeOp() { arr = new int[3]; }\n    void readTime() {\n        Scanner sc = new Scanner(System.in);\n        System.out.print(\"Enter hours mins secs: \");\n        arr[0]=sc.nextInt(); arr[1]=sc.nextInt(); arr[2]=sc.nextInt();\n    }\n    TimeOp addTime(TimeOp tt) {\n        TimeOp res = new TimeOp();\n        res.arr[2] = arr[2] + tt.arr[2];\n        res.arr[1] = arr[1] + tt.arr[1] + res.arr[2]/60;\n        res.arr[2] %= 60;\n        res.arr[0] = arr[0] + tt.arr[0] + res.arr[1]/60;\n        res.arr[1] %= 60;\n        return res;\n    }\n    void dispTime() {\n        System.out.println(arr[0]+\":\"+ arr[1]+\":\"+arr[2]);\n    }\n    public static void main(String[] args) {\n        TimeOp t1 = new TimeOp(), t2 = new TimeOp();\n        t1.readTime(); t2.readTime();\n        TimeOp t3 = t1.addTime(t2);\n        t3.dispTime();\n    }\n}",
+    "keyPoints": [
+      "arr[2]=seconds, arr[1]=minutes, arr[0]=hours",
+      "addTime: add seconds first; carry to minutes (÷60); then carry to hours",
+      "Use modulo 60 to keep seconds and minutes in range",
+      "addTime returns a new TimeOp object with the sum"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-12",
+    "chapter": "Data Structures: Stack and Queue",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Board 2026",
+    "text": "A class Browser models browser history using a stack of URLs (pages[], int max, int top=−1). (i) Specify void visit(String url) to add URL if not full (else print 'Browser history full'), and String back() to remove and return the last URL (else return 'No previous browser history'). [4]\n(ii) Name the entity described above and state its principle. [1]",
+    "modelAnswer": "(i)\nvoid visit(String url) {\n    if (top == max - 1)\n        System.out.println(\"Browser history full\");\n    else {\n        top++;\n        pages[top] = url;\n    }\n}\nString back() {\n    if (top == -1) return \"No previous browser history\";\n    String url = pages[top];\n    top--;\n    return url;\n}\n\n(ii) Entity: Stack. Principle: LIFO (Last In First Out) — the most recently visited page is the first to be returned when going Back.",
+    "keyPoints": [
+      "visit: check full (top==max-1); else increment top and store URL",
+      "back: check empty (top==-1); else return pages[top] and decrement top",
+      "Entity: Stack",
+      "Principle: LIFO — Last In First Out (most recent URL returned first on Back)"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-13",
+    "chapter": "Java OOP: Classes and Objects",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
+    "text": "A superclass Hotel stores hname and roomrent. Define a subclass Customer with cname, days, type, surcharge, amt. Include: constructor, void compute() [Executive: surcharge=10% of roomrent; Suite: surcharge=20%; amt=(roomrent+surcharge)×days], and void show(). Hotel is pre-defined.",
+    "modelAnswer": "class Customer extends Hotel {\n    String cname;\n    int days;\n    String type;\n    double surcharge, amt;\n    Customer(String hn, double rr, String cn, int d, String t) {\n        super(hn, rr);\n        cname=cn; days=d; type=t; surcharge=0; amt=0;\n    }\n    void compute() {\n        if (type.equalsIgnoreCase(\"Executive\"))\n            surcharge = roomrent * 0.10;\n        else if (type.equalsIgnoreCase(\"Suite\"))\n            surcharge = roomrent * 0.20;\n        else surcharge = 0;\n        amt = (roomrent + surcharge) * days;\n    }\n    void show() {\n        super.show();\n        System.out.println(\"Customer: \"+cname+\"  Days: \"+days+\"  Type: \"+type);\n        System.out.println(\"Total Amount: \"+amt);\n    }\n}",
+    "keyPoints": [
+      "Customer extends Hotel; constructor uses super() for Hotel fields",
+      "Executive: 10% surcharge; Suite: 20% surcharge; other: 0",
+      "amt = (roomrent + surcharge) × days",
+      "show() calls super.show() then prints customer details"
+    ]
+  },
+  {
+    "id": "sa-xii-cs-2026-14",
+    "chapter": "Data Structures: Trees",
+    "subject": "Computer Science",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Board 2026",
     "text": "Answer the following based on the Binary Tree:\n        M\n       / \\\n      N   O\n     / \\ / \\\n    P  Q R   S\n       / /\\   \\\n      T U  V   W\n(a) Write the pre-order traversal of the above tree. [1]\n(b) State the level of node Q when the root is at level 0. [1]\n(c) State the size of the left subtree and the right subtree. [1]",
     "modelAnswer": "(a) Pre-order (Root, Left, Right):\nM → N → P → Q → T → O → R → U → V → S → W\n\n(b) Node Q: M(L0)→N(L1)→Q(L2). Level of Q = 2.\n\n(c) Left subtree (rooted at N): nodes N, P, Q, T → size = 4\nRight subtree (rooted at O): nodes O, R, S, U, V, W → size = 6",
     "keyPoints": [

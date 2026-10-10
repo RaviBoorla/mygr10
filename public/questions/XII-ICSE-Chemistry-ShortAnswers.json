@@ -1726,496 +1726,237 @@
     ]
   },
   {
-    "id": "sa-xii-chem-117",
-    "chapter": "Alcohols Phenols Ethers",
+    "id": "sa-xii-chem-2023-01",
+    "chapter": "Solid State",
     "subject": "Chemistry",
-    "marks": 1,
+    "marks": 2,
     "difficulty": "easy",
     "source": "Board 2023",
-    "text": "Fill in the blank: The primary alcohols are easily oxidised first into _________ and then into _________.",
-    "modelAnswer": "The primary alcohols are easily oxidised first into aldehydes and then into carboxylic acids.",
+    "text": "What is meant by the term 'coordination number'? Give the coordination number of Na⁺ in NaCl crystal.",
+    "modelAnswer": "Coordination number is the number of nearest neighbours (oppositely charged ions) surrounding an ion in an ionic crystal.\nIn NaCl crystal, each Na⁺ ion is surrounded by 6 Cl⁻ ions, so the coordination number of Na⁺ is 6.",
     "keyPoints": [
-      "Primary alcohol → (oxidation) → aldehyde → (further oxidation) → carboxylic acid"
+      "Definition: number of nearest neighbours",
+      "NaCl has face-centred cubic structure",
+      "Coordination number of Na⁺ = 6"
     ]
   },
   {
-    "id": "sa-xii-chem-118",
-    "chapter": "Chemical Kinetics",
+    "id": "sa-xii-chem-2023-02",
+    "chapter": "Solutions",
     "subject": "Chemistry",
-    "marks": 1,
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Define the term 'molarity'. Calculate the molarity of a solution containing 4.9 g of H₂SO₄ dissolved in 500 mL of solution. (Molar mass of H₂SO₄ = 98 g/mol)",
+    "modelAnswer": "Molarity is the number of moles of solute dissolved per litre of solution. M = moles/volume(L).\nMoles of H₂SO₄ = 4.9/98 = 0.05 mol.\nVolume = 500 mL = 0.5 L.\nMolarity = 0.05/0.5 = 0.1 M.",
+    "keyPoints": [
+      "Definition: moles per litre",
+      "Calculate moles of solute",
+      "Divide by volume in litres"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-03",
+    "chapter": "Electrochemistry",
+    "subject": "Chemistry",
+    "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Fill in the blank: The intermediate activated complex in a chemical reaction is highly _________ due to _________ energy.",
-    "modelAnswer": "The intermediate activated complex in a chemical reaction is highly unstable due to high energy.",
+    "text": "Calculate the emf of the cell: Mg(s)|Mg²⁺(0.1M)||Cu²⁺(0.01M)|Cu(s). Given E°(Mg²⁺/Mg) = -2.37V, E°(Cu²⁺/Cu) = +0.34V.",
+    "modelAnswer": "E°cell = E°cathode - E°anode = 0.34 - (-2.37) = 2.71 V.\nThe cell reaction: Mg + Cu²⁺ → Mg²⁺ + Cu (n=2 electrons).\nUsing Nernst equation at 298K:\nEcell = E°cell - (0.0592/n)log([Mg²⁺]/[Cu²⁺])\n= 2.71 - (0.0592/2)log(0.1/0.01)\n= 2.71 - 0.0296 × log(10)\n= 2.71 - 0.0296 × 1 = 2.6804 ≈ 2.68 V.",
     "keyPoints": [
-      "Activated complex: unstable, high energy (transition state at the peak of the energy barrier)"
+      "Calculate standard emf",
+      "Write cell reaction and find n",
+      "Apply Nernst equation",
+      "Substitute concentration values"
     ]
   },
   {
-    "id": "sa-xii-chem-119",
+    "id": "sa-xii-chem-2023-04",
+    "chapter": "Chemical Kinetics",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "The rate constant for a first-order reaction is 60 s⁻¹. How much time will it take to reduce the initial concentration to 1/16th of its value?",
+    "modelAnswer": "For a first-order reaction: t = (2.303/k) log([A₀]/[A])\n[A] = [A₀]/16, so [A₀]/[A] = 16.\nt = (2.303/60) log 16\n= (2.303/60) × 4 × log 2\n= (2.303/60) × 4 × 0.3010\n= (2.303 × 1.204)/60\n= 2.772/60 ≈ 0.0462 s.",
+    "keyPoints": [
+      "Use first-order integrated rate law",
+      "log([A₀]/[A]) = log 16 = 4 log 2",
+      "Substitute k = 60 s⁻¹",
+      "Calculate time"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-05",
+    "chapter": "Surface Chemistry",
+    "subject": "Chemistry",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Board 2023",
+    "text": "Define adsorption. Distinguish between physisorption and chemisorption.",
+    "modelAnswer": "Adsorption is the phenomenon of accumulation of higher concentration of a substance on the surface of a solid or liquid compared to the bulk.\nPhysisorption: caused by weak van der Waals forces; low heat of adsorption (~20-40 kJ/mol); reversible; occurs at low temperatures.\nChemisorption: involves chemical bond formation; high heat of adsorption (~200-400 kJ/mol); irreversible; occurs at high temperatures.",
+    "keyPoints": [
+      "Definition of adsorption",
+      "Physisorption: van der Waals, low energy, reversible",
+      "Chemisorption: chemical bonds, high energy, irreversible"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-06",
+    "chapter": "p-Block Elements",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Account for the following: (i) PCl₅ exists but NCl₅ does not. (ii) The acidic strength of oxoacids of chlorine increases in the order: HClO < HClO₂ < HClO₃ < HClO₄.",
+    "modelAnswer": "(i) Nitrogen cannot expand its octet as it has no d-orbitals in its valence shell (n=2). Phosphorus has empty 3d-orbitals available for bonding, allowing it to expand its valence shell to accommodate 5 bonds. Hence PCl₅ exists but NCl₅ does not.\n(ii) As the number of oxygen atoms increases from HClO to HClO₄, the electron density on Cl increases and the inductive effect of O atoms withdraws electrons from O-H bond more strongly, increasing the polarity and ease of ionisation. More oxidation states of Cl means more electron withdrawal, making the compound more acidic.",
+    "keyPoints": [
+      "N lacks d-orbitals for octet expansion",
+      "P has 3d-orbitals for expanded octet",
+      "More O atoms = more electron withdrawal = stronger acid",
+      "Inductive effect explanation"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-07",
+    "chapter": "d-Block and f-Block Elements",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Give reasons for the following: (i) Transition metals form coloured compounds. (ii) The second and third row transition elements have similar properties.",
+    "modelAnswer": "(i) Transition metal ions have partially filled d-orbitals. When visible light falls on them, d-d transitions occur where electrons absorb specific wavelengths and get excited to higher d-orbitals. The complementary colour is transmitted/reflected, giving the compound its colour.\n(ii) Due to lanthanoid contraction, the 4d and 5d elements in the same group have almost identical atomic and ionic radii. This leads to similar ionisation enthalpies, electrode potentials, and therefore similar chemical properties.",
+    "keyPoints": [
+      "d-d transitions cause colour in visible range",
+      "Lanthanoid contraction explains size similarity",
+      "Similar radii → similar properties for 2nd/3rd row"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-08",
     "chapter": "Coordination Compounds",
     "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Fill in the blank: The coordination number and oxidation state of the complex K4[Fe(CN)6] are _________ and _________ respectively.",
-    "modelAnswer": "The coordination number and oxidation state of the complex K4[Fe(CN)6] are 6 and 2 respectively.",
-    "keyPoints": [
-      "K4[Fe(CN)6]: CN=6 (6 CN⁻ ligands), Fe oxidation state = +2 (since 4K+ + Fex + 6(−1) = 0 → x=+2)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-120",
-    "chapter": "Aldehydes Ketones Carboxylic Acids",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Fill in the blank: Propanone on reaction with zinc-amalgam in presence of conc. HCl gives _________ and the reaction is known as _________ reduction.",
-    "modelAnswer": "Propanone on reaction with zinc-amalgam in presence of conc. HCl gives propane and the reaction is known as Clemmensen's reduction.",
-    "keyPoints": [
-      "Clemmensen's reduction: ketone + Zn-Hg/conc. HCl → alkane"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-121",
-    "chapter": "Haloalkanes and Haloarenes",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "The reaction of a primary amine with chloroform and ethanolic KOH is called: (a) Carbylamine reaction (b) Kolbe's reaction (c) Reimer-Tiemann reaction (d) Wurtz-Fittig reaction",
-    "modelAnswer": "(a) Carbylamine reaction.",
-    "keyPoints": [
-      "RNH2 + CHCl3 + KOH(alc.) → RNC (carbylamine/isocyanide) — carbylamine reaction"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-122",
-    "chapter": "Electrochemistry",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Which one of the following statements is TRUE for the Galvanic cell? (a) Electrons flow from copper electrode to zinc electrode. (b) Current flows from zinc electrode to copper electrode. (c) Cations move towards copper electrode. (d) Cations move towards zinc electrode.",
-    "modelAnswer": "(c) Cations move towards copper electrode.\n(In a Zn-Cu Galvanic cell, electrons flow from Zn (anode) to Cu (cathode) through the external circuit; conventional current flows from Cu to Zn externally; cations in solution move towards the cathode (Cu electrode) to maintain electrical neutrality.)",
-    "keyPoints": [
-      "In a Galvanic cell, cations migrate towards the cathode (here, Cu electrode)",
-      "Electrons flow anode(Zn)→cathode(Cu) externally; current flows opposite"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-123",
-    "chapter": "d- and f-Block Elements",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Which one of the following compounds is diamagnetic and colourless? (a) K2Cr2O7 (b) ZnSO4 (c) KMnO4 (d) Cr2(SO4)3",
-    "modelAnswer": "(b) ZnSO4.\n(Zn2+ = [Ar]3d10, fully filled d-subshell → no unpaired electrons (diamagnetic) and no d-d transitions (colourless). The others involve partially filled d-orbitals or highly oxidised d0 ions with charge-transfer colour.)",
-    "keyPoints": [
-      "Zn2+ (3d10): diamagnetic and colourless",
-      "K2Cr2O7 (Cr6+, d0, but coloured due to charge transfer), KMnO4 similar, Cr2(SO4)3 (Cr3+, d3, coloured & paramagnetic)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-124",
-    "chapter": "Chemical Kinetics",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "For a first order reaction, the half-life period (t½) is: (a) proportional to the initial concentration. (b) inversely proportional to the initial concentration. (c) proportional to the square root of the initial concentration. (d) independent of the initial concentration.",
-    "modelAnswer": "(d) independent of the initial concentration.\n(For a first order reaction, t1/2 = 0.693/k, which does not depend on the initial concentration.)",
-    "keyPoints": [
-      "First order half-life t1/2 = 0.693/k, independent of initial concentration"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-125",
-    "chapter": "Aromatic Compounds",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "easy",
-    "source": "Board 2023",
-    "text": "Match the following: (i) Phenol (ii) EDTA (iii) Ideal solution (iv) Insulin — with (a) Hexane + heptane (b) Globular protein (c) Azo dye (d) Hexadentate ligand",
-    "modelAnswer": "(i) Phenol → (c) Azo dye (phenol undergoes coupling with diazonium salts to give azo dyes); (ii) EDTA → (d) Hexadentate ligand; (iii) Ideal solution → (a) Hexane + heptane (a classic example of an ideal solution, similar intermolecular forces); (iv) Insulin → (b) Globular protein.",
-    "keyPoints": [
-      "Phenol → forms azo dyes via coupling reactions",
-      "EDTA is a hexadentate ligand",
-      "Hexane + heptane: example of an ideal solution",
-      "Insulin is a globular protein"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-126",
-    "chapter": "Electrochemistry",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Assertion: If a solution contains both H+ and Na+ ions, the H+ ions are reduced first at cathode. Reason: Cations with higher E° value are reduced first at cathode. Choose: (a) Both A and R true, R is correct explanation of A. (b) Both A and R true, R is not correct explanation. (c) A true, R false. (d) A false, R true.",
-    "modelAnswer": "(a) Both Assertion and Reason are true, and Reason is the correct explanation of the Assertion.\n(H+/H2 has E° = 0.00V which is higher (less negative) than Na+/Na, E° = −2.71V; during electrolysis, the cation with the higher (more positive) reduction potential is preferentially reduced at the cathode, so H+ is reduced before Na+.)",
-    "keyPoints": [
-      "Cations with higher (less negative) E° are preferentially reduced at cathode",
-      "E°(H+/H2)=0V > E°(Na+/Na)=−2.71V → H+ reduced first"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-127",
-    "chapter": "Haloalkanes and Haloarenes",
-    "subject": "Chemistry",
-    "marks": 1,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Assertion: Addition of bromine water to 1-butene gives two optical isomers. Reason: The product formed contains two asymmetric carbon atoms. Choose: (a) Both A and R true, R correct explanation. (b) Both true, R not correct explanation. (c) A true, R false. (d) A false, R true.",
-    "modelAnswer": "(c) Assertion is true but Reason is false.\n(Addition of Br2 water/bromine to 1-butene (CH2=CH-CH2-CH3) gives 1,2-dibromobutane (CH2Br-CHBr-CH2-CH3), which has only ONE asymmetric (chiral) carbon atom (C2), not two. A compound with a single chiral centre exists as a pair of enantiomers (2 optical isomers), so the Assertion is correct, but the Reason — stating there are two asymmetric carbons — is false.)",
-    "keyPoints": [
-      "1-butene + Br2/H2O → 1,2-dibromobutane, which has only ONE chiral carbon",
-      "One chiral centre → 2 optical isomers (enantiomers); Assertion true, Reason false"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-128",
-    "chapter": "Solutions",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Calculate the mass of ascorbic acid (molecular mass = 176 g/mol) that should be dissolved in 155g of acetic acid to cause a depression of freezing point by 1.15K. Assume that ascorbic acid does not dissociate or associate in the solution. (Kf for acetic acid = 3.9 K kg/mol)",
-    "modelAnswer": "ΔTf = Kf × (w×1000)/(M×W)\n1.15 = 3.9 × (w×1000)/(176×155)\n1.15 = 3.9×1000×w/27280\nw = 1.15×27280/(3.9×1000) = 31372/3900 = 8.044 g.\nMass of ascorbic acid required ≈ 8.04 g.",
-    "keyPoints": [
-      "ΔTf = Kf×(w×1000)/(M×W)",
-      "Solve for w: w ≈ 8.04 g"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-129",
-    "chapter": "d- and f-Block Elements",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Give a reason for the following: (i) Cu+2 salts are paramagnetic while Cu+ salts are diamagnetic. (ii) Mn+2 compounds are more stable than Fe+2 compounds.",
-    "modelAnswer": "(i) Cu (Z=29) = [Ar]3d10 4s1. Cu2+ has configuration [Ar]3d9 — one unpaired electron, hence paramagnetic. Cu+ has configuration [Ar]3d10 — a completely filled d-subshell with no unpaired electrons, hence diamagnetic.\n(ii) Mn2+ has configuration [Ar]3d5 — a stable, symmetrical half-filled d-subshell (extra stability from exchange energy). Fe2+ has configuration [Ar]3d6, which readily loses an electron to attain the more stable half-filled Fe3+ (3d5) configuration. Since Mn2+ already possesses the extra-stable half-filled configuration, it resists further oxidation, making Mn2+ compounds more stable (relative to oxidation) than Fe2+ compounds.",
-    "keyPoints": [
-      "Cu2+ (3d9, 1 unpaired e-) paramagnetic; Cu+ (3d10, 0 unpaired) diamagnetic",
-      "Mn2+ (3d5, half-filled, stable) resists oxidation more than Fe2+ (3d6, which tends to lose e- to reach stable 3d5)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-130",
-    "chapter": "Haloalkanes and Haloarenes",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Give chemical equations for each of the following: (i) Ethyl chloride is treated with aqueous KOH solution. (ii) Chlorobenzene is treated with ammonia at 573K and high pressure.",
-    "modelAnswer": "(i) C2H5Cl + KOH(aq) →(hydrolysis)→ C2H5OH (ethanol) + KCl\n(ii) C6H5Cl + 2NH3 →(573K/Cu2O, high pressure)→ C6H5NH2 (aniline) + NH4Cl",
-    "keyPoints": [
-      "Ethyl chloride + aq. KOH → ethanol (nucleophilic substitution/hydrolysis)",
-      "Chlorobenzene + NH3, 573K, high pressure, Cu2O catalyst → aniline"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-131",
-    "chapter": "Amines",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "State one reason for each of the following: (i) Alkylamine is soluble in water whereas arylamine is insoluble in water. (ii) Methylamine is a stronger base than methyl alcohol.",
-    "modelAnswer": "(i) Alkylamines (small aliphatic amines) can form strong hydrogen bonds with water through the -NH2 group and have small hydrophobic alkyl chains, making them soluble in water. Arylamines have a bulky hydrophobic aromatic ring, and the lone pair on nitrogen is delocalised into the ring, reducing effective hydrogen bonding with water, making them poorly soluble/insoluble in water.\n(ii) In methylamine (CH3NH2), the lone pair of electrons on nitrogen is localised and readily available for donation/protonation, and the +I effect of the methyl group further increases electron density on N. In methanol (CH3OH), the lone pair on the more electronegative oxygen is held more tightly and less available for donation. Hence methylamine, with its more available/basic lone pair on nitrogen, is a much stronger base than methyl alcohol.",
-    "keyPoints": [
-      "Alkylamine: H-bonds with water, small alkyl group → soluble; Arylamine: bulky ring, delocalised lone pair → insoluble",
-      "N lone pair (methylamine) more available/basic than O lone pair (methanol, more electronegative, holds electrons tightly)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-132",
-    "chapter": "Electrochemistry",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Calculate the emf of the following cell at 298K. Cu/Cu2+(0.025M) // Ag+(0.005M)/Ag. Given E°Cu2+/Cu = 0.34V, E°Ag+/Ag = 0.80V, 1 Faraday = 96500 C mol-1.",
-    "modelAnswer": "Cell reaction: Cu + 2Ag+ → Cu2+ + 2Ag; n = 2.\nE°cell = E°cathode − E°anode = 0.80 − 0.34 = 0.46 V.\nNernst equation: Ecell = E°cell − (0.0591/n) log([Cu2+]/[Ag+]2)\n= 0.46 − (0.0591/2) log(0.025/(0.005)2) = 0.46 − 0.02955×log(0.025/2.5×10⁻5)\n= 0.46 − 0.02955×log(1000) = 0.46 − 0.02955×3 = 0.46 − 0.0887 = 0.371 V.",
-    "keyPoints": [
-      "E°cell = 0.80 − 0.34 = 0.46 V",
-      "Nernst equation with n=2",
-      "Ecell ≈ 0.371 V"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-133",
-    "chapter": "d- and f-Block Elements",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Complete and balance the following chemical equations: (i) KMnO4 + H2SO4 + KI → (ii) K2Cr2O7 + H2SO4 + H2S →",
-    "modelAnswer": "(i) 2KMnO4 + 8H2SO4 + 10KI → 6K2SO4 + 2MnSO4 + 5I2 + 8H2O\n(ii) K2Cr2O7 + 4H2SO4 + 3H2S → Cr2(SO4)3 + 3S + K2SO4 + 7H2O",
-    "keyPoints": [
-      "KMnO4 + H2SO4 + KI → K2SO4 + MnSO4 + I2 + H2O",
-      "K2Cr2O7 + H2SO4 + H2S → Cr2(SO4)3 + S + K2SO4 + H2O"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-134",
-    "chapter": "Alcohols Phenols Ethers",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "How will the following be obtained? (Give chemical equation) (i) Ethanol from Grignard's reagent. (ii) Diethyl ether from sodium ethoxide.",
-    "modelAnswer": "(i) Methylmagnesium iodide reacts with formaldehyde followed by hydrolysis to give ethanol:\nHCHO + CH3MgI → CH3CH2OMgI →(H2O/H+)→ CH3CH2OH (ethanol) + Mg(OH)I\n(ii) Sodium ethoxide reacts with ethyl iodide (Williamson's ether synthesis) to give diethyl ether:\nC2H5ONa + C2H5I → C2H5-O-C2H5 (diethyl ether) + NaI",
-    "keyPoints": [
-      "HCHO + CH3MgI, then hydrolysis → ethanol",
-      "C2H5ONa + C2H5I (Williamson synthesis) → diethyl ether + NaI"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-135",
-    "chapter": "Amines",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "(Alternative to Q8) An organic compound [A] C2H6O, on heating with conc. H2SO4 at 413K gives a neutral compound [B] C4H10O. Compound [B] on treatment with PCl5 gives a product, which on subsequent treatment with KCN yields compound [C] C3H5N. Compound [C] on hydrolysis gives an acid [D] C3H6O2. Identify the compounds [A], [B], [C] and [D].",
-    "modelAnswer": "[A] C2H6O = Ethanol (C2H5OH). On heating with excess conc. H2SO4 at 413K, two molecules of ethanol undergo intermolecular dehydration to give [B] C4H10O = Diethyl ether (C2H5-O-C2H5). Diethyl ether with PCl5 gives ethyl chloride (C2H5Cl), which on treatment with KCN gives [C] C3H5N = Propanenitrile (ethyl cyanide, C2H5CN). Propanenitrile on hydrolysis gives [D] C3H6O2 = Propanoic acid (C2H5COOH).",
-    "keyPoints": [
-      "A = ethanol",
-      "B = diethyl ether (413K, conc. H2SO4, intermolecular dehydration)",
-      "C = propanenitrile/ethyl cyanide (via PCl5 then KCN)",
-      "D = propanoic acid (hydrolysis of nitrile)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-136",
-    "chapter": "Solutions",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "The osmotic pressure of blood at 37°C is 8.21 atm. How much glucose in grams should be used per litre of aqueous solution for an intravenous injection so that it is isotonic with blood? (Molecular wt of glucose = 180g/mol)",
-    "modelAnswer": "π = CRT → C = π/RT = 8.21/(0.0821×310) = 8.21/25.451 = 0.3226 mol/L.\nMass of glucose per litre = C×M = 0.3226×180 = 58.07 g.\nApproximately 58 g of glucose per litre is required.",
-    "keyPoints": [
-      "C = π/RT = 0.3226 mol/L (T=310K)",
-      "Mass = C×M ≈ 58 g/L glucose"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-137",
-    "chapter": "Aromatic Compounds",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "An aromatic carboxylic acid [A] which readily sublimes on heating, produces compound [B] on treatment with PCl5. Compound [B], when reduced in the presence of Pd catalyst over BaSO4 poisoned by sulphur in xylene solution gives compound [C]. When compound [C] is condensed in the presence of alcoholic KCN, it gives compound [D]. (Molecular formula of compound [D] is C14H12O2). Identify the compounds [A], [B], [C] and [D].",
-    "modelAnswer": "[A] = Benzoic acid (C6H5COOH), a common sublimable aromatic carboxylic acid. Treatment with PCl5 gives [B] = Benzoyl chloride (C6H5COCl). Rosenmund reduction (H2/Pd-BaSO4 poisoned with sulphur/quinoline in xylene) of benzoyl chloride gives [C] = Benzaldehyde (C6H5CHO). Two molecules of benzaldehyde undergo benzoin condensation in the presence of alcoholic KCN to give [D] = Benzoin (C6H5CH(OH)COC6H5, C14H12O2), matching the given molecular formula.",
-    "keyPoints": [
-      "A = benzoic acid (sublimes)",
-      "B = benzoyl chloride (+PCl5)",
-      "C = benzaldehyde (Rosenmund reduction)",
-      "D = benzoin (benzoin condensation, C14H12O2, matches given formula)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-138",
-    "chapter": "d- and f-Block Elements",
-    "subject": "Chemistry",
-    "marks": 2,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "State a reason for each of the following: (i) La(OH)3 is more basic than Lu(OH)3. (ii) Transition elements and their compounds act as catalyst.",
-    "modelAnswer": "(i) Across the lanthanide series, ionic radius decreases steadily from La3+ to Lu3+ due to lanthanide contraction. A smaller cation holds the OH⁻ ion more tightly/covalently (less ionic character), reducing the basicity of the hydroxide. Since La3+ is the largest lanthanide ion, La(OH)3 is more ionic and hence more basic than Lu(OH)3, whose smaller Lu3+ ion makes the hydroxide comparatively less basic (more covalent character).\n(ii) Transition elements exhibit variable oxidation states and have vacant d-orbitals available to form unstable/intermediate complexes with reactant molecules, providing an alternate reaction pathway of lower activation energy; they can also adsorb reactants on their surface (large surface area), increasing reaction rate. These properties make transition metals and their compounds effective catalysts.",
-    "keyPoints": [
-      "Lanthanide contraction: La3+ (largest) → most basic hydroxide; Lu3+ (smallest) → least basic",
-      "Transition metals: variable oxidation states + vacant d-orbitals + adsorption → catalytic activity"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-139",
-    "chapter": "Chemical Kinetics",
-    "subject": "Chemistry",
     "marks": 3,
-    "difficulty": "hard",
+    "difficulty": "medium",
     "source": "Board 2023",
-    "text": "20% of a first order reaction is completed in five minutes. How much time will the 60% reaction take to complete? Calculate the half-life period (t½) for the above reaction.",
-    "modelAnswer": "k = (2.303/t) log[a/(a−x)] = (2.303/5) log(100/80) = 0.4606×0.09691 = 0.04464 min⁻1.\nFor 60% completion: t = (2.303/k) log(100/40) = (2.303/0.04464)×log(2.5) = 51.59×0.3979 = 20.53 minutes.\nt1/2 = 0.693/k = 0.693/0.04464 = 15.52 minutes.",
+    "text": "Write the IUPAC name and draw the structure of [Co(NH₃)₄Cl₂]⁺. What type of isomerism does this complex exhibit?",
+    "modelAnswer": "IUPAC name: Tetraamminedichloridocobalt(III) ion.\nCo is in +3 oxidation state (verified: +3 + 4(0) + 2(-1) = +1). \nStructure: Octahedral complex with Co at centre, 4 NH₃ ligands and 2 Cl⁻ ligands.\nIsomerism: Geometrical (cis-trans) isomerism. In cis-isomer, both Cl are adjacent (90°); in trans-isomer, both Cl are opposite (180°).",
     "keyPoints": [
-      "k from 20% data = 0.04464 min⁻1",
-      "t for 60% completion ≈ 20.5 minutes",
-      "t1/2 = 0.693/k ≈ 15.5 minutes"
+      "IUPAC name with correct spelling",
+      "Co oxidation state = +3",
+      "Octahedral geometry",
+      "Geometrical (cis-trans) isomerism"
     ]
   },
   {
-    "id": "sa-xii-chem-140",
+    "id": "sa-xii-chem-2023-09",
     "chapter": "Haloalkanes and Haloarenes",
     "subject": "Chemistry",
     "marks": 3,
     "difficulty": "medium",
     "source": "Board 2023",
-    "text": "Write the balanced chemical equations for the following name reactions: (i) Sandmeyer's reaction (ii) Wurtz reaction (iii) Finkelstein reaction",
-    "modelAnswer": "(i) Sandmeyer's reaction: C6H5N2+Cl⁻ + CuCl →(heat)→ C6H5Cl + N2 (benzene diazonium chloride treated with Cu(I) salt gives aryl halide; similarly with CuBr for aryl bromide or CuCN for nitrile).\n(ii) Wurtz reaction: 2C2H5Br + 2Na →(dry ether)→ C2H5-C2H5 (butane) + 2NaBr.\n(iii) Finkelstein reaction: CH3CH2Br + NaI →(dry acetone)→ CH3CH2I (ethyl iodide) + NaBr.",
+    "text": "Explain why SN2 reactions proceed with inversion of configuration. Give an example.",
+    "modelAnswer": "In SN2, the nucleophile attacks from the back (opposite to the leaving group) while the leaving group departs simultaneously. This leads to inversion of configuration at the carbon centre — like an umbrella flipping inside out.\nExample: CH₃Br + OH⁻ → CH₃OH + Br⁻. For a chiral centre like (R)-2-bromobutane + OH⁻ → (S)-2-butanol. The product has inverted (Walden inversion) configuration.",
     "keyPoints": [
-      "Sandmeyer: ArN2+Cl⁻ + CuCl/CuBr/CuCN → ArCl/ArBr/ArCN + N2",
-      "Wurtz: 2RX + 2Na (dry ether) → R-R + 2NaX",
-      "Finkelstein: RCl/RBr + NaI (dry acetone) → RI + NaCl/NaBr"
+      "Backside attack by nucleophile",
+      "Simultaneous bond formation and breaking",
+      "Transition state is trigonal bipyramidal",
+      "Walden inversion — complete stereochemical inversion"
     ]
   },
   {
-    "id": "sa-xii-chem-141",
+    "id": "sa-xii-chem-2023-10",
+    "chapter": "Alcohols, Phenols and Ethers",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "How is phenol obtained from (i) chlorobenzene (ii) diazonium salt? Write the reactions.",
+    "modelAnswer": "(i) From chlorobenzene (Dow's process):\nC₆H₅Cl + NaOH → C₆H₅ONa + NaCl (at 300°C, 200 atm)\nC₆H₅ONa + HCl → C₆H₅OH + NaCl\n(ii) From diazonium salt:\nC₆H₅N₂⁺Cl⁻ + H₂O → C₆H₅OH + N₂ + HCl\n(Benzene diazonium chloride is hydrolysed to phenol when heated with dilute acid.)",
+    "keyPoints": [
+      "Dow's process: NaOH at high T and P",
+      "Acid hydrolysis of diazonium salt",
+      "Write balanced equations"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-11",
+    "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Describe the Aldol condensation reaction with a suitable example. What conditions favour the reaction?",
+    "modelAnswer": "Aldol condensation occurs between two molecules of an aldehyde (or ketone) containing α-hydrogen, in the presence of dilute alkali.\nExample: CH₃CHO + CH₃CHO → CH₃CH(OH)CH₂CHO (3-hydroxybutanal, β-hydroxybutyraldehyde)\nThis is the aldol. On heating, it loses water to give crotonaldehyde:\nCH₃CH(OH)CH₂CHO → CH₃CH=CHCHO + H₂O\nConditions: dilute NaOH or dilute acid as catalyst; moderate temperature.",
+    "keyPoints": [
+      "Two aldehyde/ketone molecules with α-H",
+      "Dilute alkali catalyst",
+      "Product is β-hydroxy carbonyl compound",
+      "Dehydration gives α,β-unsaturated compound (aldol condensation)"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-12",
+    "chapter": "Amines",
+    "subject": "Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "Compare the basic character of methylamine, dimethylamine, trimethylamine and aniline with reasons.",
+    "modelAnswer": "Basicity order (in aqueous solution): (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > C₆H₅NH₂.\nReasoning:\n- Methylamine: +I effect of CH₃ increases electron density on N, making it more basic than NH₃.\n- Dimethylamine: two CH₃ groups increase electron density further — most basic among aliphatic amines in water (also better solvation).\n- Trimethylamine: three CH₃ groups increase electron density but steric hindrance prevents solvation, reducing basicity.\n- Aniline: lone pair of N is delocalised into benzene ring (resonance), greatly reducing basicity. Least basic.",
+    "keyPoints": [
+      "Inductive effect of alkyl groups increases basicity",
+      "Steric hindrance in trimethylamine reduces hydration",
+      "Resonance in aniline delocalises lone pair",
+      "Basicity order: (CH₃)₂NH > CH₃NH₂ > (CH₃)₃N > C₆H₅NH₂"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-13",
     "chapter": "Biomolecules",
     "subject": "Chemistry",
     "marks": 3,
+    "difficulty": "medium",
+    "source": "Board 2023",
+    "text": "What are enzymes? Explain the lock-and-key model of enzyme action.",
+    "modelAnswer": "Enzymes are biological catalysts, primarily proteins, that catalyse specific biochemical reactions in living organisms.\nLock-and-key model (Fischer, 1894): The enzyme has a specific three-dimensional 'active site' which has a complementary shape to the substrate. The substrate fits into the active site like a key fits into a lock. This forms the enzyme-substrate complex (ES). After the reaction, the products are released and the enzyme is regenerated, ready to catalyse the next reaction.\nSpecificity: The precise shape complementarity means each enzyme acts on only specific substrates.",
+    "keyPoints": [
+      "Enzymes are biological protein catalysts",
+      "Active site has complementary shape to substrate",
+      "ES complex formation → products + free enzyme",
+      "Explains specificity of enzyme action"
+    ]
+  },
+  {
+    "id": "sa-xii-chem-2023-14",
+    "chapter": "Polymers",
+    "subject": "Chemistry",
+    "marks": 2,
     "difficulty": "easy",
     "source": "Board 2023",
-    "text": "(i) Give an example each of reducing sugar and non-reducing sugar. (ii) What is denaturation of proteins? (iii) Give an example each of water soluble vitamin and fat soluble vitamin.",
-    "modelAnswer": "(i) Reducing sugar: Glucose (or any monosaccharide, and maltose/lactose among disaccharides). Non-reducing sugar: Sucrose.\n(ii) Denaturation of proteins: the process by which a protein loses its native three-dimensional (secondary and tertiary) structure/biological activity due to disruption of hydrogen bonds and other weak interactions (caused by heat, change in pH, addition of certain chemicals, etc.), while the primary structure (peptide bond sequence) remains intact. E.g., coagulation of egg white on boiling.\n(iii) Water soluble vitamin: Vitamin C (ascorbic acid). Fat soluble vitamin: Vitamin A (retinol) (or D, E, K).",
+    "text": "Distinguish between addition polymerisation and condensation polymerisation with one example each.",
+    "modelAnswer": "Addition polymerisation: Monomers with double bonds add together without loss of any small molecule. The polymer has the same empirical formula as the monomer.\nExample: nCH₂=CH₂ → [-CH₂-CH₂-]ₙ (polyethylene).\nCondensation polymerisation: Monomers with two different functional groups condense together with elimination of small molecules (H₂O, HCl, etc.).\nExample: Nylon-6,6: hexamethylenediamine + adipic acid → Nylon + nH₂O.",
     "keyPoints": [
-      "Reducing sugar: glucose; Non-reducing sugar: sucrose",
-      "Denaturation: loss of native 2°/3° protein structure, primary structure intact",
-      "Water-soluble vitamin: Vit C; Fat-soluble vitamin: Vit A/D/E/K"
+      "Addition: no byproduct, unsaturated monomers",
+      "Condensation: small molecule eliminated",
+      "Example of each type"
     ]
   },
   {
-    "id": "sa-xii-chem-142",
-    "chapter": "Solutions",
+    "id": "sa-xii-chem-2023-15",
+    "chapter": "Chemistry in Everyday Life",
     "subject": "Chemistry",
-    "marks": 3,
-    "difficulty": "hard",
+    "marks": 2,
+    "difficulty": "easy",
     "source": "Board 2023",
-    "text": "When 2g of benzoic acid is dissolved in 25g of benzene, it shows a depression in freezing point equal to 1.62K. Molal depression constant (Kf) of benzene is 4.9 K kg mol-1 and molecular weight of benzoic acid = 122g/mol. What will be the percentage association of the benzoic acid? (Benzoic acid forms dimer when dissolved in benzene.)",
-    "modelAnswer": "Observed molar mass = (1000×Kf×w)/(ΔTf×W) = (1000×4.9×2)/(1.62×25) = 9800/40.5 = 242.0 g/mol.\ni = normal mol. mass/observed mol. mass = 122/242.0 = 0.504.\nBenzoic acid dimerises: n=2. i = 1 − α(1 − 1/n) = 1 − α(1/2).\n0.504 = 1 − 0.5α → 0.5α = 0.496 → α = 0.992 (99.2%).\nPercentage association of benzoic acid ≈ 99.2%.",
+    "text": "What are analgesics? Give one example each of a narcotic and a non-narcotic analgesic.",
+    "modelAnswer": "Analgesics are drugs that relieve pain without causing loss of consciousness.\nNarcotic analgesic (opioids): Morphine — relieves severe pain but is habit-forming and causes drowsiness. Acts on CNS.\nNon-narcotic analgesic: Aspirin (Acetylsalicylic acid) — relieves mild to moderate pain, also has anti-inflammatory and antipyretic properties. Not habit-forming.",
     "keyPoints": [
-      "Observed mol. mass ≈ 242 g/mol",
-      "i = 122/242 = 0.504",
-      "α (association) ≈ 99.2% using i = 1 − α(1−1/n), n=2"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-143",
-    "chapter": "Alcohols Phenols Ethers",
-    "subject": "Chemistry",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Account for the following: (i) Phenol is a stronger acid than aliphatic alcohols. (ii) Ethanol gives iodoform reaction whereas methanol does not give iodoform reaction. (iii) Ethers should not be distilled to dryness.",
-    "modelAnswer": "(i) In phenol, the -OH group is attached directly to the aromatic ring; the lone pair on oxygen is delocalised (conjugated) into the ring, which withdraws electron density from O and stabilises the phenoxide ion (conjugate base) formed after loss of H+ through resonance. Aliphatic alcohols have no such resonance stabilisation of their alkoxide ion, and the alkyl group's +I effect further destabilises the alkoxide. Hence phenol ionises more readily and is a stronger acid than aliphatic alcohols.\n(ii) The iodoform reaction requires a CH3-CH(OH)- group (or CH3CO- group). Ethanol (CH3CH2OH) has this CH3-CH(OH)- structural feature and gives a positive iodoform test (forms CHI3 yellow ppt). Methanol (CH3OH) does not have a CH3-CH(OH)- group (it is CH2(OH)- essentially with only one carbon), so it does not give the iodoform reaction.\n(iii) Ethers (e.g., diethyl ether) slowly form explosive peroxides on prolonged exposure to air/light. These peroxides have a higher boiling point than the ether itself and remain behind as the ether is distilled off; as distillation continues to dryness, the concentration of the peroxide residue increases and can explode due to the heat of distillation. Hence ethers should never be distilled to complete dryness.",
-    "keyPoints": [
-      "Phenol: resonance-stabilised phenoxide ion → stronger acid than alcohols",
-      "Iodoform test needs CH3CH(OH)- group: ethanol has it, methanol doesn't",
-      "Ethers form explosive peroxides on standing; distilling to dryness concentrates and can detonate them"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-144",
-    "chapter": "Amines",
-    "subject": "Chemistry",
-    "marks": 3,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "Identify the compounds [A], [B] and [C] in the following reactions: (a) CH3COOH →(NH3, Δ)→ [A] →(Br2+KOH)→ [B] →(CHCl3+NaOH(alc))→ [C]. (b) CH3Br →(KCN)→ [A] →(LiAlH4)→ [B] →(HNO2, 273K)→ [C]",
-    "modelAnswer": "(a) Acetic acid with NH3 (heat) gives A = Acetamide (CH3CONH2). Acetamide undergoes Hofmann bromamide degradation (Br2/KOH) to give B = Methylamine (CH3NH2) (loses one carbon). Methylamine undergoes carbylamine reaction with CHCl3/alcoholic NaOH to give C = Methyl isocyanide (CH3NC).\n(b) Methyl bromide with KCN gives A = Acetonitrile (CH3CN). Reduction with LiAlH4 gives B = Ethylamine (CH3CH2NH2). Ethylamine with HNO2 at 273K undergoes diazotisation-type decomposition to give C = Ethanol (C2H5OH) (with evolution of N2 gas).",
-    "keyPoints": [
-      "(a) A=acetamide, B=methylamine (Hofmann degradation), C=methyl isocyanide (carbylamine reaction)",
-      "(b) A=acetonitrile (KCN), B=ethylamine (LiAlH4 reduction), C=ethanol (HNO2, N2 evolved)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-145",
-    "chapter": "Aromatic Compounds",
-    "subject": "Chemistry",
-    "marks": 3,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "How will the following be converted? (Give chemical equation) (a) Ethyl bromide to ethyl isocyanide. (b) Aniline to benzene diazonium chloride. (c) Benzene diazonium chloride to phenol.",
-    "modelAnswer": "(a) C2H5Br + KCN →(alc.)→ C2H5NC (ethyl isocyanide) + KBr.\n(b) C6H5NH2 + NaNO2 + 2HCl →(0-5°C)→ C6H5N2+Cl⁻ (benzene diazonium chloride) + NaCl + 2H2O.\n(c) C6H5N2+Cl⁻ + H2O →(warm/heat, dilute H2SO4)→ C6H5OH (phenol) + N2↑ + HCl.",
-    "keyPoints": [
-      "C2H5Br + KCN(alc.) → C2H5NC + KBr",
-      "Aniline + NaNO2/HCl, 0-5°C → benzene diazonium chloride (diazotisation)",
-      "Diazonium salt + H2O (warm) → phenol + N2 + HCl (hydrolysis)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-146",
-    "chapter": "Chemical Kinetics",
-    "subject": "Chemistry",
-    "marks": 3,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "A first order reaction is 50% completed in 40 minutes at 300K and in 20 minutes at 320K. Calculate the activation energy of the reaction.",
-    "modelAnswer": "For a first order reaction, k ∝ 1/t1/2.\nk2/k1 = t1(300K)/t2(320K) = 40/20 = 2.\nUsing Arrhenius equation: ln(k2/k1) = (Ea/R)(1/T1 − 1/T2)\nln(2) = (Ea/8.314)(1/300 − 1/320) = (Ea/8.314)(3.333×10⁻3 − 3.125×10⁻3) = (Ea/8.314)(2.083×10⁻4)\n0.6931 = Ea×2.506×10⁻5\nEa = 0.6931/2.506×10⁻5 = 27,656 J/mol ≈ 27.66 kJ/mol.",
-    "keyPoints": [
-      "k2/k1 = t1/t2 = 40/20 = 2",
-      "Arrhenius: ln(k2/k1) = (Ea/R)(1/T1−1/T2)",
-      "Ea ≈ 27.66 kJ/mol"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-147",
-    "chapter": "Aldehydes Ketones Carboxylic Acids",
-    "subject": "Chemistry",
-    "marks": 5,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Write the chemical equations to illustrate the following name reactions: (i) Cannizzaro's reaction (ii) HVZ reaction (iii) Aldol condensation. How will the following be converted? (Give chemical equation) (a) Acetaldehyde to acetone (b) Formaldehyde to urotropine",
-    "modelAnswer": "(i) Cannizzaro's reaction: 2HCHO + NaOH(conc.) → CH3OH + HCOONa.\n(ii) HVZ reaction: CH3CH2COOH + Br2 →(red P)→ CH3CHBrCOOH + HBr.\n(iii) Aldol condensation: 2CH3CHO →(dil. NaOH)→ CH3CH(OH)CH2CHO →(heat, −H2O)→ CH3CH=CHCHO.\n\n(a) Acetaldehyde is first converted to ethylmagnesium derivative via addition of CH3MgI, hydrolysed to give an alcohol, then oxidised; more directly: CH3CHO + CH3MgI → CH3CH(OMgI)CH3 →(H2O)→ CH3CH(OH)CH3 (isopropanol), then CH3CH(OH)CH3 →([O], K2Cr2O7/H2SO4)→ CH3COCH3 (acetone).\n(b) Formaldehyde reacts with excess ammonia to give urotropine (hexamethylenetetramine):\n6HCHO + 4NH3 → (CH2)6N4 (urotropine) + 6H2O.",
-    "keyPoints": [
-      "Cannizzaro: 2HCHO + NaOH → CH3OH + HCOONa",
-      "HVZ: CH3CH2COOH + Br2/red P → α-bromo acid",
-      "Aldol condensation: 2CH3CHO → aldol → crotonaldehyde",
-      "Acetaldehyde → (CH3MgI, hydrolysis, then oxidation) → acetone",
-      "6HCHO + 4NH3 → urotropine + 6H2O"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-148",
-    "chapter": "Coordination Compounds",
-    "subject": "Chemistry",
-    "marks": 5,
-    "difficulty": "medium",
-    "source": "Board 2023",
-    "text": "Name the type of isomerism exhibited by the following pairs of compounds: (a) [Co(NH3)5(ONO)]Cl2 and [Co(NH3)5(NO2)]Cl2 (b) [Cr(H2O)5Cl]Cl2.H2O and [Cr(H2O)4Cl2]Cl.2H2O (c) [Pt(NH3)4Cl2]Br2 and [Pt(NH3)4Br2]Cl2. Write the IUPAC names of the following complexes: (a) [Co(NH3)4(H2O)2]Cl3 (b) K2[Ni(CN)4]",
-    "modelAnswer": "(a) Linkage isomerism (ambidentate ligand NO2⁻ bonds via O in -ONO or via N in -NO2).\n(b) Hydrate (solvate) isomerism (water molecules distributed differently between coordination sphere and lattice water).\n(c) Ionisation isomerism (Cl and Br are interchanged between the coordination sphere and as counter ions).\n\n(a) [Co(NH3)4(H2O)2]Cl3 = Tetraamminediaquacobalt(III) chloride.\n(b) K2[Ni(CN)4] = Potassium tetracyanidonickelate(II).",
-    "keyPoints": [
-      "ONO⁻/NO2⁻ pair: linkage isomerism",
-      "Different water distribution: hydrate isomerism",
-      "Cl/Br interchange between sphere & counter ion: ionisation isomerism",
-      "[Co(NH3)4(H2O)2]Cl3 = Tetraamminediaquacobalt(III) chloride",
-      "K2[Ni(CN)4] = Potassium tetracyanidonickelate(II)"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-149",
-    "chapter": "Electrochemistry",
-    "subject": "Chemistry",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "The specific conductance of 2.5 × 10-4 M formic acid is 5.25 × 10-5 ohm-1cm-1. Calculate its molar conductivity and degree of dissociation. Given λ°(H+) = 349.5 ohm-1cm2mol-1 and λ°(HCOO-) = 50.5 ohm-1cm2mol-1. Calculate the time taken to deposit 1.27g of copper at cathode when a current of 2 amp. is passed through the solution of CuSO4. (Atomic weight of Cu = 63.5 gmol-1)",
-    "modelAnswer": "Λm = κ×1000/C = (5.25×10⁻5×1000)/(2.5×10⁻4) = 0.0525/2.5×10⁻4 = 210 ohm⁻1cm2mol⁻1.\nΛ°m = λ°(H+) + λ°(HCOO⁻) = 349.5 + 50.5 = 400 ohm⁻1cm2mol⁻1.\nDegree of dissociation α = Λm/Λ°m = 210/400 = 0.525 (52.5%).\n\nFor copper deposition: Cu2+ + 2e⁻ → Cu, so 2 mol e⁻ deposit 1 mol Cu (63.5g).\nMoles of Cu = 1.27/63.5 = 0.02 mol.\nMoles of electrons required = 2×0.02 = 0.04 mol.\nCharge Q = 0.04×96500 = 3860 C.\nTime t = Q/I = 3860/2 = 1930 s (≈ 32.2 minutes).",
-    "keyPoints": [
-      "Λm = κ×1000/C = 210 ohm⁻1cm2mol⁻1",
-      "Λ°m = 400 ohm⁻1cm2mol⁻1; α = 210/400 = 0.525",
-      "Cu deposition: moles e⁻ = 0.04; Q=3860 C; t = 1930 s ≈ 32.2 min"
-    ]
-  },
-  {
-    "id": "sa-xii-chem-150",
-    "chapter": "Electrochemistry",
-    "subject": "Chemistry",
-    "marks": 5,
-    "difficulty": "hard",
-    "source": "Board 2023",
-    "text": "(Alternative) The resistance of a conductivity cell with 0.1M KCl solution is 200 ohm. When the same cell is filled with 0.02M NaCl solution, the resistance is 1100 ohm. If the conductivity of 0.1M KCl solution is 0.0129 ohm-1cm-1, calculate the cell constant and molar conductivity of 0.02M NaCl solution. The emf (E°cell) of the following reaction is 0.89V: 3Sn4+ + 2Cr → 3Sn2+ + 2Cr3+. Calculate the value of ΔG° for the reaction. Predict whether the above reaction will be spontaneous or not.",
-    "modelAnswer": "Cell constant G* = κ(KCl)×R(KCl) = 0.0129×200 = 2.58 cm⁻1.\nConductivity of NaCl solution κ(NaCl) = G*/R(NaCl) = 2.58/1100 = 2.345×10⁻3 ohm⁻1cm⁻1.\nMolar conductivity of NaCl = κ×1000/C = (2.345×10⁻3×1000)/0.02 = 117.3 ohm⁻1cm2mol⁻1.\n\nFor the reaction 3Sn4+ + 2Cr → 3Sn2+ + 2Cr3+, n = 6 (2 Cr atoms each lose 3 electrons = 6 electrons transferred).\nΔG° = −nFE°cell = −6×96500×0.89 = −515,310 J/mol ≈ −515.31 kJ/mol.\nSince ΔG° is negative, the reaction is spontaneous.",
-    "keyPoints": [
-      "Cell constant = κ×R = 2.58 cm⁻1",
-      "Molar conductivity of NaCl ≈ 117.3 ohm⁻1cm2mol⁻1",
-      "n = 6 electrons transferred",
-      "ΔG° = −nFE° ≈ −515.3 kJ/mol; negative → spontaneous"
+      "Analgesics: pain-relieving drugs",
+      "Narcotic example: Morphine",
+      "Non-narcotic example: Aspirin",
+      "Key difference: habit-forming vs non-habit-forming"
     ]
   },
   {
