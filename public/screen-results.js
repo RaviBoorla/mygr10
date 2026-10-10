@@ -42,16 +42,20 @@ Object.assign(app, {
       </div>`;
   },
 
-  explainMistakes() {
-    const cfg = this.lastConfig;
-    const missed = this.reviewData.filter(r => !r.isCorrect).slice(0, 8);
-    if (!missed.length) return;
+  // Up to 8 wrong/skipped questions as plain text for a Cloé prompt.
+  _formatMissed(reviewData, answerLabel) {
     const letter = i => (i === undefined || i === null) ? 'skipped' : String.fromCharCode(65 + i);
-    const qs = missed.map((r, n) =>
+    return reviewData.filter(r => !r.isCorrect).slice(0, 8).map((r, n) =>
       `Q${n + 1}. ${r.text}\n` +
       (r.options || []).map((o, i) => `${letter(i)}) ${o}`).join('\n') +
-      `\nMy answer: ${letter(r.userAnswer)} · Correct: ${letter(r.correct)}`
+      `\n${answerLabel}: ${letter(r.userAnswer)} · Correct: ${letter(r.correct)}`
     ).join('\n\n');
+  },
+
+  explainMistakes() {
+    const cfg = this.lastConfig;
+    const qs = this._formatMissed(this.reviewData, 'My answer');
+    if (!qs) return;
     aiPanel.ask(
       `I just did a ${cfg.subject}${cfg.chapter ? ' (' + cfg.chapter + ')' : ''} practice set and got these wrong or skipped them. ` +
       `For each, explain briefly why the correct answer is right and what I probably misunderstood. ` +

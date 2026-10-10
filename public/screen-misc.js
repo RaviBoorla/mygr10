@@ -413,6 +413,64 @@ Object.assign(app, {
   // Subjects/chapters must come from the CHILD's own gradeBoard (link.gradeBoard),
   // not the guardian's currently-selected state.board/grade — a guardian could be
   // browsing a different board than the one their child actually practices.
+  // Guardian card: plain-language summary of the latest attempt, worked out from
+  // its reviewData (no AI), plus an optional Cloé button on the guardian's own settings.
+  _assignSummaryHtml(childUid, a, attempts) {
+    const latest = attempts[attempts.length - 1];
+    const rd = latest?.reviewData;
+    if (!rd?.length) return '';
+    const missed = rd.filter(r => !r.isCorrect);
+    const skipped = rd.filter(r => r.userAnswer === undefined).length;
+    const parts = [];
+
+    if (!missed.length) {
+      parts.push('All correct');
+    } else {
+      const chapterOf = r => r.chapter || 'General';
+      const groupOf = new Set(rd.map(chapterOf)).size > 1 ? chapterOf : (r => QTYPE_LABELS[r.qtype] || null);
+      const groups = {};
+      rd.forEach(r => {
+        const g = groupOf(r);
+        if (!g) return;
+        groups[g] = groups[g] || { total: 0, missed: 0 };
+        groups[g].total++;
+        if (!r.isCorrect) groups[g].missed++;
+      });
+      const weak = Object.entries(groups).filter(([, v]) => v.missed)
+        .sort(([, x], [, y]) => (y.missed / y.total) - (x.missed / x.total) || y.missed - x.missed)
+        .slice(0, 2).map(([name, v], i) => `${i ? '' : 'missed '}${v.missed} of ${v.total} in ${name}`);
+      const wrongN = missed.length - skipped;
+      if (weak.length) parts.push(weak.join(', '));
+      else if (wrongN) parts.push(`${wrongN} wrong`);
+      if (skipped) parts.push(`${skipped} skipped`);
+    }
+
+    if (attempts.length > 1) {
+      const prev = attempts[attempts.length - 2].accuracy;
+      const diff = latest.accuracy - prev;
+      parts.push(diff > 0 ? `up from ${prev}%` : diff < 0 ? `down from ${prev}%` : 'same as last attempt');
+    }
+
+    const text = parts.join(' · ');
+    return `<p class="assign-summary">${esc(text.charAt(0).toUpperCase() + text.slice(1))}</p>
+      ${missed.length ? `<button class="btn small ghost" onclick="app.askAssignmentHelp('${esc(childUid)}','${esc(a.id)}')">✦ Ask Cloé how to help</button>` : ''}`;
+  },
+
+  askAssignmentHelp(childUid, assignmentId) {
+    const a = (window.riseFamily?.getChildAssignments(childUid) || []).find(x => x.id === assignmentId);
+    const attempts = a?.attempts || (a?.result ? [a.result] : []);
+    const latest = attempts[attempts.length - 1];
+    if (!latest?.reviewData) return;
+    const [grade, board] = (a.gradeBoard || '').split('::');
+    aiPanel.ask(
+      `My child (Class ${grade || ''} ${board || ''}) did a ${a.subject}${a.chapter ? ' (' + a.chapter + ')' : ''} practice assignment ` +
+      `and scored ${latest.score}/${latest.total}. These are the questions they got wrong or skipped. ` +
+      `In plain language for a parent, tell me what they seem to be struggling with, ` +
+      `and suggest 2–3 specific, simple ways I can help them practise at home.\n\n` +
+      this._formatMissed(latest.reviewData, 'Their answer')
+    );
+  },
+
   _assignmentPanel(childUid, link) {
     const assignments = window.riseFamily?.getChildAssignments(childUid) || [];
     const [childGrade, childBoard] = (link.gradeBoard || `${state.grade}::${state.board}`).split('::');
@@ -469,6 +527,7 @@ Object.assign(app, {
             <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
             <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
             <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
+            ${st === 'completed' ? this._assignSummaryHtml(childUid, a, attempts) : ''}
             ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
           </li>`;
         }).join('')}
