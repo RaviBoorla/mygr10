@@ -1,0 +1,6 @@
+#!/bin/sh
+# Blocks a commit whose ?v= asset versions are stale. Enable once per clone:
+#   git config core.hooksPath .githooks
+node scripts/stamp-versions.mjs --check >/dev/null 2>&1 && exit 0
+echo "Asset versions are stale — run: npm run stamp   (then git add the updated files)" >&2
+exit 1

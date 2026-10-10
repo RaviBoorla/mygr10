@@ -116,7 +116,7 @@ function _ensureRevisionData(cb) {
   if (_revisionCallbacks === undefined) { cb(); return; }
   if (Array.isArray(_revisionCallbacks)) { _revisionCallbacks.push(cb); return; }
   _revisionCallbacks = [cb];
-  _loadScript('revision-data.js?v=5', () => {
+  _loadScript('revision-data.js?v=53aad4ec', () => {
     const pending = _revisionCallbacks || [];
     _revisionCallbacks = null;
     pending.forEach(fn => fn());
@@ -134,7 +134,7 @@ function _ensureRevisionDataXII(cb) {
   _revisionXIICallbacks = [cb];
   // Ensure base file loaded first, then load XII
   _ensureRevisionData(() => {
-    _loadScript('revision-data-xii.js?v=1', () => {
+    _loadScript('revision-data-xii.js?v=2d919395', () => {
       const pending = _revisionXIICallbacks || [];
       _revisionXIICallbacks = null;
       Object.keys(_consolidatedCacheXII).forEach(k => delete _consolidatedCacheXII[k]);

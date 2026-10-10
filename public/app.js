@@ -172,7 +172,7 @@ const app = {
     if (name === 'careers' && !window._careersLoaded) {
       window._careersLoaded = true;
       const sc = document.createElement('script');
-      sc.src = 'careers.js?v=3';
+      sc.src = 'careers.js?v=178464d8';
       sc.onload = () => this.render();
       document.head.appendChild(sc);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading…</div></main>';
@@ -184,7 +184,7 @@ const app = {
     if (arenaRoutes.includes(name) && !window._arenaLoaded) {
       window._arenaLoaded = true;
       const s = document.createElement('script');
-      s.src = 'arena.js?v=12';
+      s.src = 'arena.js?v=e207b5f5';
       s.onload = () => this.render();
       document.head.appendChild(s);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading Arena…</div></main>';

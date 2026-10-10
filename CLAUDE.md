@@ -64,5 +64,12 @@ Always commit and push directly to `main`. Never push to a feature branch.
   are written as "agreed design, implement against it".
 - Update `docs/design.md`'s "Enhancement ideas" log when a listed item is
   completed, matching its existing terse `*(done)*` / `*(in progress)*` style.
-- Cloudflare Pages serves `public/` directly (`wrangler.toml`); there is no
-  server-side code to keep in sync.
+- Cloudflare Pages serves `public/` directly (`wrangler.toml`). The only
+  server-side code is `functions/api/chat.js` (Cloé's AI relay).
+- Don't hand-edit `?v=` numbers on script/style tags. After changing any file
+  under `public/`, run `npm run stamp` — it sets each `?v=` to a hash of the file.
+- Before pushing, run `npm run check` (question banks + stamps). CI
+  (`.github/workflows/checks.yml`) also runs the Firestore rules test and a
+  browser smoke test; `tests/` holds their dependencies (`npm install --prefix tests`).
+- `firestore.rules` is the source of truth for Firestore security rules;
+  deploy with `firebase deploy --only firestore:rules` after `npm run test:rules`.

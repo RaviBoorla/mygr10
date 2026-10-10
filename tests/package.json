@@ -1,0 +1,12 @@
+{
+  "name": "mygr10-tests",
+  "private": true,
+  "type": "module",
+  "description": "Test-only dependencies, kept out of the root package.json so site deploys never install them.",
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^5.0.2",
+    "firebase": "^12.19.0",
+    "firebase-tools": "^15.33.0",
+    "playwright": "^1.56.1"
+  }
+}

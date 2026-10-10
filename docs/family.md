@@ -444,6 +444,10 @@ Add a section covering:
 
 ## Firestore security rules (Phases 1-2, deployed)
 
+> **Superseded by `/firestore.rules`** (tested in `tests/firestore-rules.test.mjs`).
+> The blocks below are the original design notes. Their `$(request.auth.uid)_$(childUid)`
+> path syntax does not compile; the rules file uses `$(request.auth.uid + '_' + childUid)`.
+
 ```
 match /familyInvites/{emailLower}/items/{itemId} {
   allow read: if request.auth != null &&

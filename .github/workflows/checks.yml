@@ -1,0 +1,41 @@
+name: Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: JavaScript syntax
+        run: for f in public/*.js functions/api/*.js scripts/*.mjs tests/*.mjs; do node --check "$f"; done
+
+      - name: Question banks
+        run: node scripts/check-banks.mjs
+
+      - name: Asset versions stamped
+        run: node scripts/stamp-versions.mjs --check
+
+      - name: Install test tools
+        run: |
+          npm install --prefix tests --no-audit --no-fund
+          npx --prefix tests playwright install --with-deps chromium
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Firestore rules
+        run: npm run test:rules
+
+      - name: Browser smoke test
+        run: npm run test:smoke

@@ -1,0 +1,87 @@
+rules_version = '2';
+
+// Source of truth for Firestore security rules (project rise-511c6).
+// Deploy: firebase deploy --only firestore:rules
+// Firestore allows a request if ANY matching rule allows it, so the owner rule
+// is scoped to /sync only — a /users/{uid}/{document=**} wildcard would let a
+// child rewrite their own assignments freely.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function isUser(uid) { return signedIn() && request.auth.uid == uid; }
+    function onlyChanges(keys) {
+      return request.resource.data.diff(resource.data).affectedKeys().hasOnly(keys);
+    }
+
+    // Each user's own synced state: progress, bookmarks, streak, Arena, Cloé
+    // config/history, profile, familySummary.
+    match /users/{userId}/sync/{docId} {
+      allow read, write: if isUser(userId);
+    }
+
+    // A guardian may also read a linked child's summary.
+    match /users/{childUid}/sync/familySummary {
+      allow read: if signedIn() &&
+        exists(/databases/$(database)/documents/familyLinks/$(request.auth.uid + '_' + childUid));
+    }
+
+    match /users/{childUid}/assignments/{assignmentId} {
+      // Guardian creates, only with an active link and only as themselves.
+      allow create: if signedIn() &&
+        request.resource.data.createdBy == request.auth.uid &&
+        request.resource.data.childUid == childUid &&
+        request.resource.data.status == 'pending' &&
+        get(/databases/$(database)/documents/familyLinks/$(request.auth.uid + '_' + childUid)).data.status == 'active';
+
+      allow read: if isUser(childUid) ||
+        (signedIn() && request.auth.uid == resource.data.createdBy);
+
+      // Child submits (or re-submits) a result — the attempt fields only.
+      allow update: if isUser(childUid) &&
+        resource.data.status in ['pending', 'completed', 'expired'] &&
+        request.resource.data.status == 'completed' &&
+        onlyChanges(['status', 'attempts', 'result', 'lastSubmittedAt']);
+
+      // Guardian cancels a pending assignment.
+      allow update: if signedIn() && request.auth.uid == resource.data.createdBy &&
+        resource.data.status == 'pending' &&
+        request.resource.data.status == 'cancelled' &&
+        onlyChanges(['status', 'cancelledAt']);
+
+      allow delete: if false;
+    }
+
+    match /familyInvites/{emailLower}/items/{itemId} {
+      allow read: if signedIn() &&
+        (request.auth.token.email.lower() == emailLower ||
+         request.auth.uid == resource.data.fromUid);
+      allow delete: if signedIn() && request.auth.token.email.lower() == emailLower;
+      allow create: if signedIn() && request.auth.uid == request.resource.data.fromUid;
+      allow update: if false;
+    }
+
+    match /familyLinks/{linkId} {
+      allow read, update: if signedIn() &&
+        (request.auth.uid == resource.data.guardianUid ||
+         request.auth.uid == resource.data.childUid);
+      allow create: if signedIn() &&
+        (request.auth.uid == request.resource.data.guardianUid ||
+         request.auth.uid == request.resource.data.childUid);
+      allow delete: if false;
+    }
+
+    // Arena challenge codes: anyone can open one; joining only appends a result.
+    match /challenges/{code} {
+      allow read, create: if true;
+      allow update: if onlyChanges(['results']) &&
+        request.resource.data.results.size() > resource.data.results.size();
+      allow delete: if false;
+    }
+
+    // Live rooms: open by design (docs/live-room.md) — host and players all write.
+    match /rooms/{code} {
+      allow read, create, update: if true;
+    }
+  }
+}
