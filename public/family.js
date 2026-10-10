@@ -428,7 +428,7 @@
       }, (err) => { console.error('[family] watchChildAssignments error:', err); _childAssignments[childUid] = []; refresh(); });
   }
 
-  async function createAssignment(childUid, { subject, chapter, gradeBoard, questionCount, timeLimitMinutes, dueAt }) {
+  async function createAssignment(childUid, { subject, chapter, gradeBoard, questionCount, timeLimitMinutes, dueAt, questionIds }) {
     if (!uid()) return { ok: false, msg: 'Sign in first.' };
     const link = _linkSets.guardian.find(l => l.childUid === childUid && l.status === 'active');
     if (!link) return { ok: false, msg: 'No active family link for this child.' };
@@ -442,6 +442,7 @@
         questionCount: Number(questionCount) || 10,
         timeLimitMinutes: Number(timeLimitMinutes) || 20,
         dueAt: firebase.firestore.Timestamp.fromDate(new Date(dueAt)),
+        ...(questionIds?.length ? { questionIds } : {}),
         status: 'pending',
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
       });
@@ -536,6 +537,7 @@
     },
 
     completeAssignment,
+    createAssignment,
 
     async _createAssignment(childUid) {
       const subjectEl = document.getElementById(`assign-subject-${childUid}`);

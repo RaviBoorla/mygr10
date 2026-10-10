@@ -289,16 +289,16 @@ Object.assign(app, {
     const inFilter = it => state.notesFilter === 'all' || state.notesFilter === it.cat;
 
     if (q) {
-      const hits = chapters.flatMap((_, i) => this._chapterItems(key, chapters, i))
-        .filter(inFilter).filter(it => it.text.toLowerCase().includes(q));
+      const hits = this._searchNotes(chapters.flatMap((_, i) => this._chapterItems(key, chapters, i)).filter(inFilter), q);
       if (!hits.length) return `<div class="empty-state">No notes match "${esc(state.notesQuery)}".</div>`;
-      return `<h3 class="rev-ch-title">${plural(hits.length, 'match')} for "${esc(state.notesQuery)}"</h3>
+      return `<h3 class="rev-ch-title">${hits.length} ${hits.length === 1 ? 'match' : 'matches'} for "${esc(state.notesQuery)}"</h3>
               <ul class="rev-list">${hits.map(it => this._noteItem(it, true)).join('')}</ul>`;
     }
 
     const items = this._chapterItems(key, chapters, idx).filter(inFilter);
     const chHtml = typeof chapters[idx].html === 'function' ? chapters[idx].html() : '';
-    return `<h3 class="rev-ch-title">${esc(this._chLabel(chapters[idx]))}</h3>${chHtml}
+    setTimeout(() => this._hydrateQuiz(chapters[idx].chapter), 0);
+    return `<h3 class="rev-ch-title">${esc(this._chLabel(chapters[idx]))}</h3><div id="notes-quiz" class="notes-quiz"></div>${chHtml}
       ${items.length ? `<ul class="rev-list">${items.map(it => this._noteItem(it, false)).join('')}</ul>`
                      : (chHtml ? '' : '<div class="empty-state">Nothing under this filter — try "All".</div>')}`;
   },
@@ -308,6 +308,48 @@ Object.assign(app, {
     return `<li class="rev-item"><span class="badge ${it.cls}">${it.label}</span>
       <span class="rev-item-text">${renderMath(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span>
       <button class="note-ask" onclick="app.askNote(${n})" title="Ask Cloé to explain this" aria-label="Ask Cloé to explain this">✦</button></li>`;
+  },
+
+  // Word-based search: every meaningful word must appear (any order) in the note,
+  // its category (e.g. "Formula") or its chapter. Best text matches first.
+  _searchNotes(items, query) {
+    const STOP = new Set(['the', 'of', 'a', 'an', 'and', 'or', 'in', 'on', 'to', 'for', 'is', 'are', 'what', 'how', 'find', 'with', 'about']);
+    const words = query.split(/[^\p{L}\p{N}²³√π]+/u).filter(w => w && !STOP.has(w))
+      .map(w => w.length > 3 ? w.replace(/(es|s)$/, '') : w);
+    if (!words.length) return items.filter(it => it.text.toLowerCase().includes(query));
+    // Match at the start of a word, so "sector" doesn't hit "bisector".
+    const res = words.map(w => new RegExp(`(?<![\\p{L}\\p{N}])${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'u'));
+    return items
+      .map(it => {
+        const text = it.text.toLowerCase();
+        const hay = `${text} ${it.label} ${it.chapter}`.toLowerCase();
+        return res.every(re => re.test(hay)) ? { it, score: res.filter(re => re.test(text)).length } : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => b.score - a.score)
+      .map(x => x.it);
+  },
+
+  _normChapter(s) {
+    return String(s).toLowerCase().replace(/^ch(apter)?\.?\s*\d+\s*[—:–-]\s*/, '')
+      .replace(/&/g, 'and').replace(/[^a-z0-9]+/g, ' ').trim();
+  },
+
+  // Shows "Quiz me" when this notes chapter matches a chapter in one of the board's MCQ banks.
+  async _hydrateQuiz(chapter) {
+    const el = document.getElementById('notes-quiz');
+    if (!el) return;
+    const want = this._normChapter(chapter);
+    for (const subject of (SUBJECTS[state.grade]?.[state.board] || []).filter(s => bankSlug(s))) {
+      const list = await loadBank(subject).catch(() => []);
+      const match = list.find(q => this._normChapter(q.chapter || 'General') === want);
+      if (!match) continue;
+      if (!el.isConnected) return;
+      const n = list.filter(q => q.chapter === match.chapter).length;
+      this._quizTarget = { subject, chapter: match.chapter };
+      el.innerHTML = `<button class="btn small primary" onclick="app.startTest({ ...app._quizTarget, mode: 'drill' })">▶ Quiz me on this chapter · ${Math.min(n, MODES.drill.count)} Q</button>`;
+      return;
+    }
   },
 
   askNote(n) {

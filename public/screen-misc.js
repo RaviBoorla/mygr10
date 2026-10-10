@@ -278,8 +278,8 @@ Object.assign(app, {
     const grade = formEl?.dataset.childGrade || state.grade;
     const subject = subjectEl.value;
     const slug = bankSlug(subject, board, grade);
-    if (!slug) { chapterEl.innerHTML = '<option value="">All chapters</option>'; return; }
-    fetch(`questions/${slug}.json`)
+    if (!slug) { chapterEl.innerHTML = '<option value="">All chapters</option>'; return Promise.resolve(); }
+    return fetch(`questions/${slug}.json`)
       .then(r => r.json())
       .then(list => {
         const chapters = [...new Set(list.map(q => q.chapter || 'General'))].sort();
@@ -287,6 +287,58 @@ Object.assign(app, {
           chapters.map(c => `<option>${esc(c)}</option>`).join('');
       })
       .catch(() => { chapterEl.innerHTML = '<option value="">All chapters</option>'; });
+  },
+
+  _assignDefaultDue() {
+    const d = new Date(Date.now() + 3 * 864e5);
+    d.setHours(20, 0, 0, 0);
+    return d;
+  },
+
+  // Pre-fills the assign form with the child's weakest practised chapter (no AI).
+  async suggestAssignment(childUid) {
+    const link = window.riseFamily.linksAsGuardian.find(l => l.childUid === childUid);
+    const byGB = window.riseFamily.getChildSummary(childUid)?.byGradeBoard || {};
+    const subjectEl = document.getElementById(`assign-subject-${childUid}`);
+    const msgEl = document.getElementById(`assign-msg-${childUid}`);
+    const say = text => { if (msgEl) { msgEl.textContent = text; msgEl.hidden = false; msgEl.style.color = 'var(--text-light)'; } };
+    if (!subjectEl) return;
+    const offered = new Set([...subjectEl.options].map(o => o.value));
+    const weakest = (byGB[link?.gradeBoard] || Object.values(byGB)[0] || [])
+      .filter(r => r.attempts >= 3 && offered.has(r.subject))
+      .sort((a, b) => a.accuracy - b.accuracy || b.attempts - a.attempts)[0];
+    if (!weakest) return say('Not enough practice yet to suggest something — try again after a few drills.');
+
+    subjectEl.value = weakest.subject;
+    await this._populateAssignChapters(childUid);
+    const chapterEl = document.getElementById(`assign-chapter-${childUid}`);
+    if ([...chapterEl.options].some(o => o.value === weakest.chapter)) chapterEl.value = weakest.chapter;
+    document.getElementById(`assign-count-${childUid}`).value = 10;
+    document.getElementById(`assign-limit-${childUid}`).value = 15;
+    const dueEl = document.getElementById(`assign-due-${childUid}`);
+    if (!dueEl.value) {
+      const d = this._assignDefaultDue();
+      dueEl.value = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+    }
+    say(`Suggested: ${weakest.subject} · ${weakest.chapter} — ${weakest.accuracy}% over ${weakest.attempts} answers. Adjust anything, then press Assign.`);
+  },
+
+  // New assignment made of exactly the questions missed in the latest attempt.
+  async reassignMissed(childUid, assignmentId) {
+    const a = (window.riseFamily?.getChildAssignments(childUid) || []).find(x => x.id === assignmentId);
+    const attempts = a?.attempts || (a?.result ? [a.result] : []);
+    const ids = (attempts[attempts.length - 1]?.reviewData || [])
+      .filter(r => !r.isCorrect && r.id && !/^q-\d+$/.test(r.id)).map(r => r.id);
+    if (!ids.length) return;
+    if (!confirm(`Assign the ${ids.length} missed question${ids.length > 1 ? 's' : ''} again, due in 3 days?`)) return;
+    const res = await window.riseFamily.createAssignment(childUid, {
+      subject: a.subject, chapter: a.chapter, gradeBoard: a.gradeBoard,
+      questionCount: ids.length,
+      timeLimitMinutes: Math.max(5, Math.ceil((a.timeLimitMinutes || 20) * ids.length / (a.questionCount || ids.length))),
+      dueAt: this._assignDefaultDue(),
+      questionIds: ids
+    });
+    if (!res.ok) alert(res.msg || 'Could not create the assignment.');
   },
 
   setProgressGradeBoard(childUid, gb) {
@@ -349,7 +401,7 @@ Object.assign(app, {
           ${assignments.map(a => `
             <li class="recent-row card">
               <span class="recent-desc">
-                <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
+                <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}${a.questionIds ? ' · questions you missed' : ''}</strong>
                 <small>${a.questionCount} questions · ${a.timeLimitMinutes} min · due ${this._assignFmtDue(a.dueAt)}</small>
               </span>
               <button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>
@@ -453,7 +505,8 @@ Object.assign(app, {
 
     const text = parts.join(' · ');
     return `<p class="assign-summary">${esc(text.charAt(0).toUpperCase() + text.slice(1))}</p>
-      ${missed.length ? `<button class="btn small ghost" onclick="app.askAssignmentHelp('${esc(childUid)}','${esc(a.id)}')">✦ Ask Cloé how to help</button>` : ''}`;
+      ${missed.length ? `<button class="btn small ghost" onclick="app.askAssignmentHelp('${esc(childUid)}','${esc(a.id)}')">✦ Ask Cloé how to help</button>` : ''}
+      ${missed.some(r => r.id && !/^q-\d+$/.test(r.id)) ? `<button class="btn small ghost" onclick="app.reassignMissed('${esc(childUid)}','${esc(a.id)}')">↻ Re-assign what they missed</button>` : ''}`;
   },
 
   askAssignmentHelp(childUid, assignmentId) {
@@ -510,7 +563,10 @@ Object.assign(app, {
             <input id="assign-due-${esc(childUid)}" type="datetime-local" min="${minDue}">
           </label>
         </div>
-        <button class="btn small primary" onclick="riseFamily._createAssignment('${esc(childUid)}')">Assign</button>
+        <div class="assign-form-actions">
+          <button class="btn small primary" onclick="riseFamily._createAssignment('${esc(childUid)}')">Assign</button>
+          <button class="btn small ghost" onclick="app.suggestAssignment('${esc(childUid)}')">✦ Suggest from weak spots</button>
+        </div>
         <p id="assign-msg-${esc(childUid)}" class="auth-error" hidden></p>
       </div>`;
 

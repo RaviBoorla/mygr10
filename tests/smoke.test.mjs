@@ -76,6 +76,13 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   const { page, errors } = await open('#/notes/Mathematics/2');
   const asks = await page.locator('.note-ask').count();
   check('revision notes render with Ask Cloé buttons', asks > 0, `${asks} buttons`);
+  await page.evaluate(() => app.selectChapter(consolidatedChapters('Mathematics').findIndex(c => c.chapter === 'Real Numbers')));
+  await page.waitForTimeout(800);
+  check('notes chapter offers "Quiz me"', await page.locator('#notes-quiz button').count() === 1);
+  await page.fill('#notes-search', 'formula sector');
+  await page.waitForTimeout(500);
+  const top = await page.locator('#notes-body .rev-item-text').first().textContent();
+  check('notes search matches whole words, best first', /Area of sector/.test(top || ''), (top || '').slice(0, 40));
   check('no page errors on notes', !errors.length, errors.join(' | '));
 }
 {

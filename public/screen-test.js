@@ -62,7 +62,7 @@ Object.assign(app, {
     this.session = {
       subject, mode: 'assignment', chapter,
       assignmentId, assignmentChildUid,
-      assignmentRef: { id: assignmentId, subject, chapter, questionCount, timeLimitMinutes, childUid: assignmentChildUid },
+      assignmentRef: { id: assignmentId, subject, chapter, questionCount, timeLimitMinutes, childUid: assignmentChildUid, questionIds: assignment.questionIds },
       questions: [], answers: {}, marked: [], index: 0,
       remaining: timeLimitMinutes ? timeLimitMinutes * 60 : null,
       loading: true, error: null
@@ -71,7 +71,9 @@ Object.assign(app, {
     this.go(['test']);
     loadBank(subject)
       .then(all => {
-        const pool = chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
+        const ids = assignment.questionIds?.length ? new Set(assignment.questionIds) : null;
+        const pool = ids ? all.filter(q => ids.has(q.id))
+          : chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
         if (!pool.length) throw new Error('No questions available for this assignment.');
         this.session.questions = shuffle(pool).slice(0, questionCount || 25).map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
         this.session.loading = false;

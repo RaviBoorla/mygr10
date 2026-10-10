@@ -681,6 +681,7 @@ kbd {
 }
 .rev-item:last-child { border-bottom: none; }
 .rev-item-text { flex: 1; min-width: 0; }
+.notes-quiz:not(:empty) { margin: 4px 0 12px; }
 .note-ask {
   flex-shrink: 0; border: 1px solid var(--border); background: var(--surface); color: var(--primary);
   border-radius: 50%; width: 28px; height: 28px; font-size: 13px; cursor: pointer; opacity: .55;
@@ -1411,6 +1412,7 @@ body[data-arena-skin="gold"] .card, body[data-arena-skin="gold"] .arena-go-hi { 
 /* ── Assignment form (guardian's Progress screen) ──────────────────────── */
 .assign-form { display: flex; flex-direction: column; gap: 14px; margin-bottom: 16px; }
 .assign-form-row { display: flex; flex-wrap: wrap; gap: 14px; }
+.assign-form-actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .assign-form-row label {
   display: flex; flex-direction: column; gap: 5px;
   font-size: var(--fs-sm); font-weight: 600; color: var(--text);
