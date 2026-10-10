@@ -8,22 +8,31 @@ const AI_BG_KEY   = 'rise-ai-bg';
 const AI_ENDPOINT = '/api/chat';
 
 const AI_DEFAULT_CONFIG = {
-  provider: 'cloudflare',
+  provider: 'gemini',
   endpoint: '',
-  model:    '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+  model:    'gemini-2.5-flash',
   apiKey:   '',
   accountId: '',
 };
 
+// Gemini first: a free key from Google AI Studio is the easiest setup for students.
 const AI_PROVIDERS = [
-  { id: 'cloudflare', label: 'Cloudflare AI',  needsKey: true,  needsAccount: true, defaultEndpoint: '' },
-  { id: 'anthropic',  label: 'Claude',          needsKey: true,  defaultEndpoint: '' },
-  { id: 'openai',     label: 'OpenAI',          needsKey: true,  defaultEndpoint: 'https://api.openai.com/v1' },
-  { id: 'gemini',     label: 'Gemini',          needsKey: true,  defaultEndpoint: '' },
-  { id: 'grok',       label: 'Grok',            needsKey: true,  defaultEndpoint: 'https://api.x.ai/v1' },
-  { id: 'mistral',    label: 'Mistral',         needsKey: true,  defaultEndpoint: 'https://api.mistral.ai/v1' },
-  { id: 'deepseek',   label: 'DeepSeek',        needsKey: true,  defaultEndpoint: 'https://api.deepseek.com/v1' },
-  { id: 'ollama',     label: 'Ollama (local)',  needsKey: false, defaultEndpoint: 'http://localhost:11434' },
+  { id: 'gemini',     label: 'Gemini — free key (recommended)', needsKey: true, defaultEndpoint: '', defaultModel: 'gemini-2.5-flash',
+    keyUrl: 'https://aistudio.google.com/apikey', help: 'Sign in with a Google account, click “Create API key”, copy it here. Free, no card needed.' },
+  { id: 'cloudflare', label: 'Cloudflare Workers AI', needsKey: true, needsAccount: true, defaultEndpoint: '', defaultModel: '@cf/meta/llama-3.3-70b-instruct-fp8-fast',
+    keyUrl: 'https://dash.cloudflare.com/?to=/:account/ai/workers-ai', help: 'In Cloudflare, open AI → Workers AI → “Use REST API”: copy the Account ID and create an API token. Free daily allowance.' },
+  { id: 'anthropic',  label: 'Claude',   needsKey: true, defaultEndpoint: '', defaultModel: 'claude-haiku-4-5-20251001',
+    keyUrl: 'https://console.anthropic.com/settings/keys', help: 'Create a key in the Anthropic Console. Paid, billed per use.' },
+  { id: 'openai',     label: 'OpenAI',   needsKey: true, defaultEndpoint: 'https://api.openai.com/v1', defaultModel: 'gpt-4o-mini',
+    keyUrl: 'https://platform.openai.com/api-keys', help: 'Create a key on the OpenAI platform. Paid, billed per use.' },
+  { id: 'grok',       label: 'Grok',     needsKey: true, defaultEndpoint: 'https://api.x.ai/v1', defaultModel: 'grok-3-mini',
+    keyUrl: 'https://console.x.ai', help: 'Create a key in the xAI console. Paid, billed per use.' },
+  { id: 'mistral',    label: 'Mistral',  needsKey: true, defaultEndpoint: 'https://api.mistral.ai/v1', defaultModel: 'mistral-small-latest',
+    keyUrl: 'https://console.mistral.ai/api-keys', help: 'Create a key in the Mistral console.' },
+  { id: 'deepseek',   label: 'DeepSeek', needsKey: true, defaultEndpoint: 'https://api.deepseek.com/v1', defaultModel: 'deepseek-chat',
+    keyUrl: 'https://platform.deepseek.com/api_keys', help: 'Create a key on the DeepSeek platform. Paid, low cost.' },
+  { id: 'ollama',     label: 'Ollama (runs on your computer)', needsKey: false, defaultEndpoint: 'http://localhost:11434', defaultModel: 'llama3.1',
+    help: 'For advanced users running Ollama locally. Not available on phones.' },
 ];
 
 // ── KB retrieval ──────────────────────────────────────────────────────────────
@@ -360,6 +369,7 @@ function aiRenderConfigPanel() {
         <select class="ai-input" id="ai-cfg-provider" onchange="aiPanel.onProviderChange(this.value)">
           ${AI_PROVIDERS.map(p => `<option value="${p.id}" ${p.id === cfg.provider ? 'selected' : ''}>${escHtml(p.label)}</option>`).join('')}
         </select>
+        ${prov.help ? `<p class="ai-config-help">${escHtml(prov.help)}${prov.keyUrl ? ` <a href="${escHtml(prov.keyUrl)}" target="_blank" rel="noopener">Get a key →</a>` : ''}</p>` : ''}
 
         ${prov.defaultEndpoint !== '' ? `
         <label class="ai-label">Endpoint URL</label>
@@ -367,7 +377,7 @@ function aiRenderConfigPanel() {
         ` : ''}
 
         <label class="ai-label">Model</label>
-        <input class="ai-input" id="ai-cfg-model" value="${escHtml(cfg.model)}" placeholder="e.g. llama-3.1-8b / gpt-4o / claude-haiku-4-5-20251001">
+        <input class="ai-input" id="ai-cfg-model" value="${escHtml(cfg.model)}" placeholder="${escHtml(prov.defaultModel || '')}">
 
         ${prov.needsAccount ? `
         <label class="ai-label">Cloudflare Account ID</label>
@@ -376,7 +386,7 @@ function aiRenderConfigPanel() {
 
         ${prov.needsKey ? `
         <label class="ai-label">${prov.needsAccount ? 'API Token (Workers AI)' : 'API Key'}</label>
-        <input class="ai-input" type="password" id="ai-cfg-apikey" value="${escHtml(cfg.apiKey)}" placeholder="${prov.needsAccount ? 'Cloudflare API token' : 'sk-…'}">
+        <input class="ai-input" type="password" id="ai-cfg-apikey" value="${escHtml(cfg.apiKey)}" placeholder="${prov.needsAccount ? 'Cloudflare API token' : 'Paste your API key'}">
         ` : ''}
 
         <button class="ai-save-btn" onclick="aiPanel.saveConfig()">Save</button>
@@ -394,7 +404,7 @@ function aiRenderPanel() {
         <div class="ai-header-left">
           <span class="ai-star">✦</span>
           <span class="ai-title">Cloé</span>
-          <span class="ai-badge">${escHtml(prov.label)} · ${escHtml(cfg.model || '—')}</span>
+          <span class="ai-badge">${escHtml(prov.label.split(/ — | \(/)[0])} · ${escHtml(cfg.model || '—')}</span>
         </div>
         <div class="ai-header-right">
           ${aiState.messages.length ? `<button class="ai-icon-btn" title="Clear chat" onclick="aiPanel.clear()">↺</button>` : ''}
@@ -498,8 +508,8 @@ const aiPanel = {
 
   onProviderChange(id) {
     const prov = aiProviderInfo(id);
-    // Re-render config panel with updated provider (endpoint/key visibility)
-    aiState.config = { ...aiState.config, provider: id, endpoint: prov.defaultEndpoint };
+    // A model name or key from another provider never works here, so reset both.
+    aiState.config = { ...aiState.config, provider: id, endpoint: prov.defaultEndpoint, model: prov.defaultModel || '', apiKey: '' };
     this._renderConfig();
   },
 

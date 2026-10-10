@@ -962,6 +962,7 @@ function renderArenaGameOver() {
     clearSavedRun();
     ar._newSkins = checkAndUnlockSkins(ar);
     ar._newCols  = checkAndUnlockCollectibles(ar);
+    window.riseSync?.push?.();
 
     // Challenge: submit score, then load leaderboard asynchronously
     if (ar._challengeCode && window.riseChallenge) {
@@ -1111,7 +1112,7 @@ async function arenaBeginChallenge(data, code) {
       if (!slug) return;
       const qs = await loadBank(s, data.board, data.grade);
       banks[s] = qs;
-    } catch (_) {}
+    } catch (e) { console.warn('[arena] challenge bank load failed:', s, e); }
   }));
 
   // Build ordered question list from IDs

@@ -84,7 +84,7 @@
   }
 
   async function lockFamilyRole(role) {
-    try { await profileDoc().set({ familyRole: role }, { merge: true }); } catch (_) {}
+    try { await profileDoc().set({ familyRole: role }, { merge: true }); } catch (e) { console.error('[family] could not save role:', e); }
   }
 
   // ── Live listeners ───────────────────────────────────────────────────────
@@ -407,8 +407,8 @@
       db.collection('users').doc(uid()).collection('sync').doc('familySummary').set({
         byGradeBoard: out,
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-    } catch (_) {}
+      }).catch(e => console.error('[family] summary write failed:', e));
+    } catch (e) { console.error('[family] summary build failed:', e); }
   }
 
   // ── Assignments ──────────────────────────────────────────────────────────
@@ -457,7 +457,7 @@
         status: 'cancelled',
         cancelledAt: firebase.firestore.FieldValue.serverTimestamp()
       });
-    } catch (_) {}
+    } catch (e) { console.error('[family] cancelAssignment failed:', e); }
   }
 
   async function completeAssignment(childUid, assignmentId, result) {

@@ -18,7 +18,11 @@ const SYNC_KEYS = {
   saDrafts:      'rise.saDrafts',
   solvedRevealed:'rise.solvedRevealed',
   aiConfig:      'rise-ai-config-sync',  // provider/model/endpoint only — apiKey never leaves device
-  aiHistory:     'rise-ai-history'       // Cloé chat history — synced across devices
+  aiHistory:     'rise-ai-history',      // Cloé chat history — synced across devices
+  arenaHi:          'rise.arena.hi',
+  arenaSkins:       'rise.arena.skins',
+  arenaCollectibles:'rise.arena.collectibles',
+  arenaDaily:       'rise.arena.daily'
 };
 
 (function () {
@@ -69,7 +73,7 @@ const SYNC_KEYS = {
         const raw = localStorage.getItem(lsKey);
         const data = raw ? JSON.parse(raw) : {};
         batch.set(userDoc(name), { _v: Date.now(), data });
-      } catch (_) {}
+      } catch (e) { console.warn('[sync] skipped unreadable local key:', lsKey, e); }
     }
     await batch.commit();
   }
@@ -77,6 +81,25 @@ const SYNC_KEYS = {
   // Pull Firestore docs down and merge into localStorage.
   // Firestore wins for progress/bookmarks/streak (cross-device truth).
   // saDrafts and solvedRevealed merge (union) so reveals on either device are kept.
+  // Numbers take the max, arrays the union, objects merge key by key; anything else keeps local.
+  function _mergeBest(a, b) {
+    if (Array.isArray(a) || Array.isArray(b)) return [...new Set([...(a || []), ...(b || [])])];
+    if (typeof a === 'number' && typeof b === 'number') return Math.max(a, b);
+    if (a && b && typeof a === 'object' && typeof b === 'object') {
+      const out = { ...b, ...a };
+      for (const k of Object.keys(out)) if (k in a && k in b) out[k] = _mergeBest(a[k], b[k]);
+      return out;
+    }
+    return a ?? b;
+  }
+
+  // Daily results: per day, keep the whole higher-scoring run (fields belong together).
+  function _mergeDaily(local, cloud) {
+    const out = { ...cloud };
+    for (const [k, r] of Object.entries(local)) if (!out[k] || (r?.score || 0) > (out[k].score || 0)) out[k] = r;
+    return out;
+  }
+
   async function pullFromCloud() {
     if (!currentUser) return;
     for (const [name, lsKey] of Object.entries(SYNC_KEYS)) {
@@ -97,6 +120,12 @@ const SYNC_KEYS = {
           const merged = { ...local, ...cloudData, apiKey: local.apiKey || '' };
           localStorage.setItem('rise-ai-config', JSON.stringify(merged));
           localStorage.setItem(lsKey, JSON.stringify(cloudData)); // keep sync copy current
+        } else if (name.startsWith('arena')) {
+          // Arena unlocks and records only ever grow — keep the best of both devices.
+          const raw = localStorage.getItem(lsKey);
+          const local = raw ? JSON.parse(raw) : {};
+          localStorage.setItem(lsKey, JSON.stringify(
+            name === 'arenaDaily' ? _mergeDaily(local, cloudData) : _mergeBest(local, cloudData)));
         } else if (name === 'aiHistory') {
           // Cloud wins; pick whichever array is longer (more history)
           const localRaw = localStorage.getItem(lsKey);
@@ -110,7 +139,7 @@ const SYNC_KEYS = {
           // cloud wins (authoritative cross-device state)
           localStorage.setItem(lsKey, JSON.stringify(cloudData));
         }
-      } catch (_) {}
+      } catch (e) { console.warn('[sync] pull failed for', name, e); }
     }
   }
 
@@ -132,8 +161,8 @@ const SYNC_KEYS = {
           localStorage.setItem(SYNC_KEYS.streak, JSON.stringify(cloudStreak));
           if (typeof app !== 'undefined' && app.render) app.render();
         }
-      } catch (_) {}
-    }, () => {}); // ignore listener errors silently
+      } catch (e) { console.warn('[sync] streak update failed:', e); }
+    }, e => console.warn('[sync] streak listener error:', e));
   }
 
   function stopLiveListener() {
@@ -178,12 +207,12 @@ const SYNC_KEYS = {
     try {
       const snap = await profileDoc().get();
       if (snap.exists) _profile = { nickname: '', country: '', city: '', ...snap.data() };
-    } catch (_) {}
+    } catch (e) { console.warn('[profile] load failed:', e); }
   }
 
   async function saveProfile(nickname, country, city) {
     _profile = { nickname, country, city };
-    try { await profileDoc().set(_profile); } catch (_) {}
+    try { await profileDoc().set(_profile); } catch (e) { console.error('[profile] save failed:', e); }
   }
 
   // ── Profile modal ─────────────────────────────────────────────────────────────
