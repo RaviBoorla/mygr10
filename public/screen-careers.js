@@ -67,6 +67,7 @@ Object.assign(app, {
         width:30px;height:30px;background:#fff;border:1px solid var(--border);
         border-radius:7px;font-size:16px;line-height:30px;text-align:center;
         color:var(--text2);cursor:pointer;user-select:none;transition:color .1s;
+        padding:0;font-family:var(--font);
       }
       .careers-zb:hover{color:var(--text1)}
 
@@ -93,7 +94,7 @@ Object.assign(app, {
       #careers-dclose{
         float:right;margin-top:-1px;
         background:#fff;border:1px solid var(--border);
-        border-radius:5px;padding:3px 8px;font-size:10px;
+        border-radius:6px;min-width:32px;min-height:32px;padding:0 8px;font-size:13px;
         font-family:var(--mono,monospace);color:var(--text2);cursor:pointer;
       }
       #careers-dcrumb{font-size:10px;font-family:var(--mono,monospace);color:var(--text2);line-height:1.8;margin-bottom:9px;padding-right:44px}
@@ -104,11 +105,23 @@ Object.assign(app, {
       .careers-dval.mono{font-family:var(--mono,monospace);font-size:11px}
       .careers-dtags{display:flex;flex-wrap:wrap;gap:3px;margin-top:3px}
       .careers-dtag{padding:2px 7px;border-radius:10px;font-size:9.5px;font-family:var(--mono,monospace);border:1px solid var(--border);color:var(--text2)}
-      .careers-dkids{font-size:11px;color:var(--text2);line-height:1.7}
+      .careers-dkids{display:flex;flex-wrap:wrap;gap:4px;margin-top:3px}
+      .careers-dlink{
+        font:inherit;font-size:11px;line-height:1.3;text-align:left;
+        padding:4px 8px;border-radius:6px;border:1px solid var(--border);
+        background:#fff;color:var(--text1);cursor:pointer;
+      }
+      .careers-dlink:hover,.careers-dlink:focus-visible{border-color:var(--primary);color:var(--primary)}
+      #careers-dcrumb .careers-dlink{border:none;padding:0;background:none;color:inherit;font-size:10px;font-family:var(--mono,monospace);text-decoration:underline dotted}
+      #careers-empty{position:sticky;left:0;padding:48px 24px;text-align:center;line-height:1.6;color:var(--text2);font-size:14px}
+      #careers-empty q{color:var(--text1);font-weight:600}
+      .careers-empty-hint{font-size:12px;margin:4px 0 14px}
       .careers-dpath{margin-top:14px;padding:9px 10px;background:#fff;border:1px solid var(--border);border-radius:7px;font-size:10.5px;font-family:var(--mono,monospace);color:var(--text2);line-height:1.8}
 
       .cngrp{cursor:pointer}
       .cngrp:hover .cnbg{filter:brightness(1.18)}
+      .cngrp:focus{outline:none}
+      .cngrp:focus-visible .cnbg{stroke:var(--primary);stroke-width:2.5}
 
       @media(max-width:640px){
         #careers-bar{align-items:flex-start;}
@@ -123,10 +136,10 @@ Object.assign(app, {
       <div id="careers-bar">
         <div id="careers-sw">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-          <input id="careers-search" placeholder="Search any career, exam…" autocomplete="off" spellcheck="false">
-          <button id="careers-search-clear" title="Clear search" hidden>✕</button>
+          <input id="careers-search" type="search" placeholder="Search any career, exam…" title="Search (press / to focus)" aria-label="Search careers and exams" autocomplete="off" spellcheck="false">
+          <button id="careers-search-clear" title="Clear search" aria-label="Clear search" hidden>✕</button>
         </div>
-        <div id="careers-chips">
+        <div id="careers-chips" role="group" aria-label="Filter careers">
           <button class="careers-chip" data-f="high-salary" data-c="#34D399">💰 High Salary</button>
           <button class="careers-chip" data-f="govt"        data-c="#38BDF8">🏛 Govt / PSU</button>
           <button class="careers-chip" data-f="abroad"      data-c="#B57BF5">✈ Global</button>
@@ -138,22 +151,28 @@ Object.assign(app, {
           </div>
         </div>
         <button class="btn ghost home-btn careers-home-btn" onclick="app.go(['home'])">&#8962; Home</button>
-        </div>
       </div>
 
       <!-- TREE -->
-      <div id="careers-wrap"><div id="careers-inner"><svg id="careers-tsvg"></svg></div></div>
+      <div id="careers-wrap">
+        <div id="careers-inner"><svg id="careers-tsvg" role="group" aria-label="Career paths by stream"></svg></div>
+        <div id="careers-empty" role="status" hidden>
+          <p>No careers match <q></q>.</p>
+          <p class="careers-empty-hint">Try a broader word: <em>doctor</em>, <em>design</em>, <em>law</em>, <em>NEET</em>.</p>
+          <button class="careers-act">Clear search</button>
+        </div>
+      </div>
 
       <!-- ZOOM -->
       <div id="careers-zc">
-        <div class="careers-zb" id="careers-zi">+</div>
-        <div class="careers-zb" id="careers-zo">−</div>
-        <div class="careers-zb" id="careers-zr" title="Reset zoom">⌂</div>
+        <button class="careers-zb" id="careers-zi" title="Zoom in (Ctrl + scroll)" aria-label="Zoom in">+</button>
+        <button class="careers-zb" id="careers-zo" title="Zoom out" aria-label="Zoom out">−</button>
+        <button class="careers-zb" id="careers-zr" title="Reset view" aria-label="Reset view">⌂</button>
       </div>
 
       <!-- DETAIL -->
-      <div id="careers-det">
-        <button id="careers-dclose">esc</button>
+      <div id="careers-det" role="region" aria-label="Career details">
+        <button id="careers-dclose" title="Close (Esc)" aria-label="Close details">✕</button>
         <div id="careers-dcrumb"></div>
         <div id="careers-dcont"></div>
       </div>`;

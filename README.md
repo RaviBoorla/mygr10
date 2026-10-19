@@ -31,7 +31,7 @@ a subject are one click from the same card, where a bank exists.
 │   ├── index.html          # Single-page app shell
 │   ├── app.js              # Revision content + hash router + screen renderer
 │   ├── style.css           # OMR-themed UI
-│   ├── careers.html        # Career Pathing standalone page
+│   ├── careers.html        # Redirect to the in-app Career Pathing screen (#/careers)
 │   ├── manifest.json, sw.js, icons/, .well-known/  # PWA / installability
 │   └── questions/*.json    # Client-side question banks (MCQ + Short Answers, one pair per subject)
 ├── docs/                   # Design log, content inventory, feature specs

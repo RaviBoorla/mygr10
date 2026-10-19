@@ -38,16 +38,19 @@ const check = (kind, map) => {
     if (!Array.isArray(list) || !list.length) { errors.push(`${file}: must be a non-empty array (selectable as "${key}")`); continue; }
     const ids = new Set();
     let bad = 0;
-    const warned = [];
+    const warned = [], garbled = [];
     list.forEach((q, i) => {
       const found = CHECKS[kind](q).filter(Boolean);
+      // Symbol-font private-use glyphs from PDF extraction (render as boxes). The app hides these.
+      if (/[\uf000-\uf8ff]/.test(JSON.stringify(q))) garbled.push(q.id || `#${i}`);
       if (q.id !== undefined) { if (ids.has(q.id)) found.push(`duplicate id ${q.id}`); ids.add(q.id); }
       const problems = found.filter(p => !p.startsWith('WARN '));
       if (found.length > problems.length) warned.push(q.id || `#${i}`);
       if (problems.length && bad++ < 3) errors.push(`${file} #${i}${q.id ? ` (${q.id})` : ''}: ${problems.join('; ')}`);
     });
     if (bad > 3) errors.push(`${file}: …and ${bad - 3} more invalid items`);
-    if (warned.length) warnings.push(`${file}: ${warned.length} question(s) with a blank option: ${warned.join(', ')}`);
+    if (warned.length) warnings.push(`${file}: ${warned.length} question(s) with a blank option (hidden in app): ${warned.join(', ')}`);
+    if (garbled.length) warnings.push(`${file}: ${garbled.length} question(s) with garbled PDF glyphs (hidden in app): ${garbled.join(', ')}`);
   }
 };
 check('mcq', BANKS);

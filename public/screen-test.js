@@ -26,7 +26,7 @@ Object.assign(app, {
         const picked = mode === 'mock'
           ? shuffle(pool.filter(q => q.priority || isBoardQuestion(q))).concat(shuffle(pool.filter(q => !q.priority && !isBoardQuestion(q)))).slice(0, cfg.count)
           : shuffle(pool).slice(0, cfg.count);
-        this.session.questions = picked.map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
+        this.session.questions = picked.map((q, i) => shuffleOptions({ ...q, id: q.id || `q-${i}` }));
         if (mode === 'mock' && picked.length < cfg.count) this.session.remaining = this._mockSize(subject, all).mins * 60;
         this.session.loading = false;
         if (state.screen !== 'test') return;
@@ -45,7 +45,7 @@ Object.assign(app, {
     if (!questions.length) return;
     this.session = {
       subject, mode, chapter: null, difficulty: 'all',
-      questions: shuffle(questions).slice(0, MODES[mode].count).map((q, i) => ({ ...q, id: q.id || `q-${i}` })),
+      questions: shuffle(questions).slice(0, MODES[mode].count).map((q, i) => shuffleOptions({ ...q, id: q.id || `q-${i}` })),
       answers: {}, marked: [], index: 0,
       remaining: null, loading: false, error: null
     };
@@ -75,7 +75,7 @@ Object.assign(app, {
         const pool = ids ? all.filter(q => ids.has(q.id))
           : chapter ? all.filter(q => (q.chapter || 'General') === chapter) : all;
         if (!pool.length) throw new Error('No questions available for this assignment.');
-        this.session.questions = shuffle(pool).slice(0, questionCount || 25).map((q, i) => ({ ...q, id: q.id || `q-${i}` }));
+        this.session.questions = shuffle(pool).slice(0, questionCount || 25).map((q, i) => shuffleOptions({ ...q, id: q.id || `q-${i}` }));
         this.session.loading = false;
         if (state.screen !== 'test') return;
         this.renderQuestion(); this.renderPalette(); this.renderTestMeta();

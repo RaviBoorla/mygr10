@@ -840,7 +840,7 @@ const COMPANIES = {
 'sports':{india:['Sports Authority of India','JSW Sports','IPL Franchises','Reliance Foundation Young Champs','GoSports Foundation','Olympic Gold Quest','Football Sports Development Ltd','Pro Kabaddi League','Hockey India','Athletics Federation of India'],
  global:['Nike','Adidas','FIFA','International Olympic Committee','NBA','English Premier League Clubs','Under Armour','Puma','ESPN','IMG (International Management Group)']}
 };
-function esc(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+// esc() comes from app.js (loaded first).
 function numList(arr){ return arr.map((x,i)=>`${i+1}. ${esc(x)}`).join('<br>'); }
 
 // ── STATE & MATCH ─────────────────────────────────────────────────────────────
@@ -907,17 +907,22 @@ function restoreExpansion(){
   _expSaved=null;
 }
 
-function matchF(n,fs){
-  if(!fs.size) return true;
-  for(const f of fs){
-    if(n.tags?.includes(f)) return true;
-    if(n.children?.some(c=>matchF(c,new Set([f])))) return true;
-  }
-  return false;
+// A node passes the filters if it, or any descendant, carries one of the
+// active tags. Computed once per render (one post-order walk) instead of
+// re-walking each subtree for every node and link.
+let _filterOk = null;
+function buildFilterSet(){
+  if(!S.filters.size){ _filterOk=null; return; }
+  _filterOk = new Set();
+  (function walk(n){
+    let ok = !!n.tags?.some(t=>S.filters.has(t));
+    n.children?.forEach(c=>{ if(walk(c)) ok=true; });
+    if(ok) _filterOk.add(n.id);
+    return ok;
+  })(T);
 }
 function nodeOp(n){
-  const fOk = !S.filters.size || matchF(n,S.filters);
-  return fOk ? 1 : 0.07;
+  return !_filterOk || _filterOk.has(n.id) ? 1 : 0.07;
 }
 
 // ── LAYOUT ────────────────────────────────────────────────────────────────────
@@ -955,7 +960,7 @@ function maxX(n,cur=0){
 }
 
 // ── RENDER ────────────────────────────────────────────────────────────────────
-window.initCareers = function() {
+window.CAREER_TREE = T; // Cloé's KB lookup walks this (screen-ai.js)
 const NS='http://www.w3.org/2000/svg';
 function el(tag,attrs={}){
   const e=document.createElementNS(NS,tag);
@@ -963,15 +968,45 @@ function el(tag,attrs={}){
   return e;
 }
 
-const tsvg = document.getElementById('careers-tsvg');
-const inner = document.getElementById('careers-inner');
+// Document/window listeners are bound once, when this file loads. Each visit
+// to the screen calls initCareers() on fresh DOM and swaps in its handlers;
+// elsewhere in the app they do nothing (binding them inside initCareers
+// stacked one more per visit, and the resize one threw once the screen left).
+let _careersView = null;
+function _onCareersScreen(){ return _careersView && document.getElementById('careers-bar'); }
+document.addEventListener('keydown',e=>{
+  if(!_onCareersScreen()) return;
+  const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName||'');
+  if(e.key==='Escape') _careersView.onEscape();
+  else if(e.key==='/' && !typing){ e.preventDefault(); _careersView.focusSearch(); }
+});
+window.addEventListener('resize',()=>{ if(_onCareersScreen()) _careersView.syncChromeHeight(); });
 
+window.initCareers = function() {
+const tsvg  = document.getElementById('careers-tsvg');
+const inner = document.getElementById('careers-inner');
+const wrap  = document.getElementById('careers-wrap');
+const empty = document.getElementById('careers-empty');
+const det   = document.getElementById('careers-det');
+const _searchEl = document.getElementById('careers-search');
+const _clearEl  = document.getElementById('careers-search-clear');
+const reduceMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
+let _matchQ = null; // query the current _matchSet was built for
 function renderAll(){
-  buildMatchSet(S.q);
+  if(S.q !== _matchQ){ buildMatchSet(S.q); _matchQ = S.q; }
   applySearchExpansion();
+  buildFilterSet();
+  // Re-rendering replaces every node, so carry keyboard focus across it.
+  const focusedId = document.activeElement?.closest?.('#careers-tsvg [data-id]')?.dataset.id;
+
+  const none = !!_matchSet && !_matchSet.size;
+  empty.hidden = !none;
+  if(none) empty.querySelector('q').textContent = S.q;
+
   doLayout(T,PAD_X,PAD_Y,0);
-  const tw = maxX(T)+PAD_X+10;
-  const th = slotH(T)+PAD_Y*2+10;
+  const tw = none ? 0 : maxX(T)+PAD_X+10;
+  const th = none ? 0 : slotH(T)+PAD_Y*2+10;
   tsvg.setAttribute('width',tw);
   tsvg.setAttribute('height',th);
   tsvg.innerHTML='';
@@ -986,8 +1021,9 @@ function renderAll(){
     }
     drawNode(n,ng);
   }
-  visit(T);
+  if(!none) visit(T);
   applyZoom();
+  if(focusedId) tsvg.querySelector(`[data-id="${CSS.escape(focusedId)}"]`)?.focus({preventScroll:true});
 }
 
 function drawLink(p,c,g){
@@ -1014,22 +1050,24 @@ function drawNode(n,g){
   const hasCh=!!n.children?.length;
   const isSelected=n.id===S.sel;
 
-  const grp=document.createElementNS(NS,'g');
-  grp.classList.add('cngrp');
-  grp.dataset.id=n.id;
+  const grp=el('g',{
+    class:'cngrp', 'data-id':n.id, tabindex:0, role:'button',
+    'aria-label': n.label+(n.sublabel?', '+n.sublabel:''),
+    ...(hasCh ? {'aria-expanded': String(!!n._exp)} : {}),
+    ...(isSelected ? {'aria-current':'true'} : {})
+  });
 
   // Background
   let bgFill = n._d===0 ? '#EEF1F8' : n._d===1 ? color+'1c' : '#FFFFFF';
   const bgStroke = n._d===1 ? ink : (isSelected ? ink : '#DCE3EF');
   const bgSW = n._d===1 ? 1.5 : isSelected ? 1.5 : 1;
 
-  const bg=el('rect',{
+  grp.appendChild(el('rect',{
     x,y,width:NW,height:nh,rx:6,
     class:'cnbg',
     fill:bgFill, stroke:bgStroke,
     'stroke-width':bgSW, opacity:op
-  });
-  grp.appendChild(bg);
+  }));
 
   // Left accent stripe (depth > 0)
   if(n._d>0){
@@ -1043,7 +1081,13 @@ function drawNode(n,g){
   const ty=hasSub ? y+nh*0.36 : y+nh/2;
   const avail=NW-14-(hasCh?14:0);
   const maxCh=Math.floor(avail/(fs*0.62));
+  const truncated=n.label.length>maxCh || (hasSub && n.sublabel.length>24);
   const lbl=n.label.length>maxCh ? n.label.slice(0,maxCh-1)+'…' : n.label;
+
+  // Hover tooltip with the full text when the box truncates it
+  if(truncated){
+    const tip=el('title'); tip.textContent=n.label+(n.sublabel?' — '+n.sublabel:''); grp.appendChild(tip);
+  }
 
   const t=el('text',{
     x:x+9, y:ty,
@@ -1051,49 +1095,93 @@ function drawNode(n,g){
     fill: n._d===1?ink:'#111827',
     opacity:op,
     'font-family':RISE_FONT,
-    'font-size':fs,'font-weight':fw
+    'font-size':fs,'font-weight':fw,
+    'pointer-events':'none'
   });
-  t.style.pointerEvents='none';
   t.textContent=lbl;
   grp.appendChild(t);
 
   if(hasSub){
-    const ss=fs*0.73;
     const sub=el('text',{
       x:x+9, y:y+nh*0.68,
       'dominant-baseline':'central',
       fill:ink, opacity:op*0.85,
-      'font-family':RISE_FONT,'font-size':ss
+      'font-family':RISE_FONT,'font-size':fs*0.73,
+      'pointer-events':'none'
     });
-    sub.style.pointerEvents='none';
-    const subText=n.sublabel.length>24?n.sublabel.slice(0,23)+'…':n.sublabel;
-    sub.textContent=subText;
+    sub.textContent=n.sublabel.length>24?n.sublabel.slice(0,23)+'…':n.sublabel;
     grp.appendChild(sub);
   }
 
-  // Expand chevron — separate click target, only toggles expand/collapse
+  // Expand chevron — its own click target (see the delegated handler below);
+  // points down when open, right when closed.
   if(hasCh){
+    // Transparent hit area: the glyph alone is too small to tap on a phone.
+    grp.appendChild(el('rect',{class:'cnchev',x:x+NW-26,y,width:26,height:nh,fill:'transparent',cursor:'pointer'}));
     const chev=el('text',{
       x:x+NW-14, y:y+nh/2,
       'dominant-baseline':'central','text-anchor':'middle',
       fill:color,opacity:op,
       'font-size':18,'font-weight':'700','font-family':RISE_FONT,
-      cursor:'pointer'
+      'pointer-events':'none'
     });
-    chev.textContent=n._exp?'▸':'▾';
-    chev.addEventListener('click',e=>{ e.stopPropagation(); n._exp=!n._exp; renderAll(); });
+    chev.textContent=n._exp?'▾':'▸';
     grp.appendChild(chev);
   }
 
-  grp.addEventListener('click',e=>{ e.stopPropagation(); handleClick(n); });
   g.appendChild(grp);
 }
 
 // ── INTERACTION ───────────────────────────────────────────────────────────────
+// One delegated listener for the whole tree instead of two per node — nodes
+// are rebuilt on every render.
+function nodeFromEvent(e){
+  const g=e.target.closest?.('[data-id]');
+  return g ? nodeOf.get(g.dataset.id) : null;
+}
+// Opening a node on a narrow screen used to put its children off-canvas with
+// no cue — scroll so the opened node sits at the left edge.
+function toggle(n){
+  n._exp=!n._exp; renderAll();
+  if(n._exp && (n._x+STEP+NW)*S.zoom > wrap.scrollLeft+wrap.clientWidth)
+    wrap.scrollTo({left: Math.max(0, n._x*S.zoom-12), behavior: reduceMotion?'auto':'smooth'});
+}
+tsvg.addEventListener('click',e=>{
+  const n=nodeFromEvent(e); if(!n) return;
+  e.stopPropagation();
+  if(e.target.closest('.cnchev')) toggle(n); else handleClick(n);
+});
+tsvg.addEventListener('keydown',e=>{
+  const n=nodeFromEvent(e); if(!n) return;
+  const hasCh=!!n.children?.length;
+  if(e.key==='Enter'||e.key===' '){ e.preventDefault(); handleClick(n); }
+  else if(e.key==='ArrowRight' && hasCh && !n._exp){ e.preventDefault(); toggle(n); }
+  else if(e.key==='ArrowLeft'){
+    e.preventDefault();
+    if(hasCh && n._exp) toggle(n);
+    else if(n._parent) tsvg.querySelector(`[data-id="${CSS.escape(n._parent.id)}"]`)?.focus();
+  }
+});
+
 function handleClick(n){
   S.sel=n.id;
   showDetail(n);
   renderAll();
+}
+
+// Jump to any node (from the detail panel's links/breadcrumb): open its
+// ancestors, select it, and scroll it into view.
+function goTo(id){
+  const n=nodeOf.get(id); if(!n) return;
+  if(_matchSet && !_matchSet.has(id)) clearSearch(false);
+  for(let p=n._parent; p; p=p._parent) p._exp=true;
+  handleClick(n);
+  wrap.scrollTo({
+    left: Math.max(0, n._x*S.zoom - 40),
+    top:  Math.max(0, n._y*S.zoom - wrap.clientHeight/2),
+    behavior: reduceMotion ? 'auto' : 'smooth'
+  });
+  tsvg.querySelector(`[data-id="${CSS.escape(id)}"]`)?.focus({preventScroll:true});
 }
 
 // Zoom
@@ -1105,9 +1193,16 @@ function applyZoom(){
   inner.style.width=w*S.zoom+'px';
   inner.style.height=h*S.zoom+'px';
 }
-document.getElementById('careers-zi').addEventListener('click',()=>{ S.zoom=Math.min(2,+(S.zoom*1.2).toFixed(2)); applyZoom(); });
-document.getElementById('careers-zo').addEventListener('click',()=>{ S.zoom=Math.max(0.3,+(S.zoom/1.2).toFixed(2)); applyZoom(); });
+function setZoom(z){ S.zoom=Math.min(2,Math.max(0.3,+z.toFixed(2))); applyZoom(); }
+document.getElementById('careers-zi').addEventListener('click',()=>setZoom(S.zoom*1.2));
+document.getElementById('careers-zo').addEventListener('click',()=>setZoom(S.zoom/1.2));
 document.getElementById('careers-zr').addEventListener('click',resetView);
+// Ctrl/⌘ + wheel, and trackpad pinch (which browsers report as ctrl+wheel)
+wrap.addEventListener('wheel',e=>{
+  if(!(e.ctrlKey||e.metaKey)) return;
+  e.preventDefault();
+  setZoom(S.zoom*(e.deltaY<0?1.1:1/1.1));
+},{passive:false});
 
 // Expand / Collapse all
 function setAll(node,val){
@@ -1121,10 +1216,11 @@ function collapseToDefault(){
   T._exp=true;
   T.children?.forEach(s=>setAll(s,false));
 }
+const defaultZoom = () => window.innerWidth < 560 ? 0.85 : 1;
 function resetView(){
   collapseToDefault();
   S.sel=null;
-  S.zoom=1;
+  S.zoom=defaultZoom();
   det.classList.remove('open');
   renderAll();
 }
@@ -1132,55 +1228,55 @@ document.getElementById('careers-btn-expand').addEventListener('click',()=>{ set
 document.getElementById('careers-btn-collapse').addEventListener('click',()=>{
   // renderAll() re-expands the path to every match on every call as long as a
   // search term is active (applySearchExpansion) — collapseToDefault() alone
-  // gets silently undone by that on the very next render. Clear the search
-  // too, same as what clearing the search box itself already does correctly.
-  _matchSet=null; _expSaved=null; S.q=''; _searchEl.value=''; _clearEl.hidden=true;
-  collapseToDefault(); renderAll();
+  // gets silently undone by that on the very next render. Clear the search too.
+  clearSearch(false); collapseToDefault(); renderAll();
 });
 
 // Search
-const _searchEl = document.getElementById('careers-search');
-const _clearEl  = document.getElementById('careers-search-clear');
+function clearSearch(render=true){
+  _matchSet=null; _expSaved=null; S.q=''; _searchEl.value=''; _clearEl.hidden=true;
+  if(render){ collapseToDefault(); renderAll(); }
+}
 function _applySearch(val){
-  const prev=S.q; S.q=val;
-  _clearEl.hidden = !val;
-  if(prev && !S.q){ _matchSet=null; _expSaved=null; collapseToDefault(); renderAll(); return; }
-  else if(S.q !== prev) _expSaved=null;
+  val=val.trim();
+  const prev=S.q;
+  if(prev && !val){ clearSearch(); return; }
+  S.q=val; _clearEl.hidden=!val;
+  if(val!==prev) _expSaved=null;
   renderAll();
 }
 let _searchDebounce=null;
 _searchEl.addEventListener('input', e=>{ clearTimeout(_searchDebounce); _searchDebounce=setTimeout(()=>_applySearch(e.target.value), 120); });
-_clearEl.addEventListener('click', ()=>{ _searchEl.value=''; _searchEl.focus(); _applySearch(''); });
+_clearEl.addEventListener('click', ()=>{ _searchEl.focus(); clearSearch(); });
+empty.querySelector('button').addEventListener('click', ()=>{ _searchEl.focus(); clearSearch(); });
 
 // Filters
 document.querySelectorAll('.careers-chip').forEach(btn=>{
+  btn.setAttribute('aria-pressed','false');
   btn.addEventListener('click',()=>{
-    const f=btn.dataset.f;
-    if(S.filters.has(f)){
-      S.filters.delete(f); btn.classList.remove('on');
-      btn.style.background=''; btn.style.color='';
-    } else {
-      S.filters.add(f); btn.classList.add('on');
-      btn.style.background=btn.dataset.c; btn.style.color='#07090F';
-    }
+    const f=btn.dataset.f, on=!S.filters.has(f);
+    if(on) S.filters.add(f); else S.filters.delete(f);
+    btn.classList.toggle('on',on);
+    btn.setAttribute('aria-pressed',String(on));
+    btn.style.background=on?btn.dataset.c:''; btn.style.color=on?'#07090F':'';
     renderAll();
   });
 });
 
 // ── DETAIL ────────────────────────────────────────────────────────────────────
-const det=document.getElementById('careers-det');
 const TL={'high-salary':'💰 High salary','govt':'🏛 Govt / PSU','abroad':'✈ Global demand','no-math':'∑ No math','exam-free':'🎯 No compet. exam'};
 
-function crumbOf(n){
+function ancestorsOf(n){
   const c=[]; let cur=n;
-  while(cur){ c.unshift(cur.label); cur=cur._parent; }
-  c.shift(); return c;
+  while(cur){ c.unshift(cur); cur=cur._parent; }
+  c.shift(); return c; // drop the root
 }
+function linkTo(c){ return `<button class="careers-dlink" data-goto="${esc(c.id)}">${esc(c.label)}</button>`; }
 
 function showDetail(n){
-  const crumbs=crumbOf(n);
+  const path=ancestorsOf(n), crumbs=path.map(p=>p.label);
   const dcrumb=document.getElementById('careers-dcrumb');
-  dcrumb.textContent=crumbs.slice(0,-1).join(' › ')||'';
+  dcrumb.innerHTML=path.slice(0,-1).map(linkTo).join(' › ');
   dcrumb.style.color=n._colorText;
 
   const ch=n.children||[];
@@ -1211,17 +1307,22 @@ function showDetail(n){
     ${collegeBlock}
     ${companyBlock}
     ${n.tags?.length?`<div class="careers-dlbl">Tags</div><div class="careers-dtags">${n.tags.map(t=>`<span class="careers-dtag">${esc(TL[t]||t)}</span>`).join('')}</div>`:''}
-    ${branches.length?`<div class="careers-dlbl">Sub-paths (${branches.length})</div><div class="careers-dkids">${branches.map(c=>esc(c.label)).join(' · ')}</div>`:''}
-    ${leaves.length?`<div class="careers-dlbl">Careers (${leaves.length})</div><div class="careers-dkids">${leaves.map(c=>esc(c.label)).join(' · ')}</div>`:''}
+    ${branches.length?`<div class="careers-dlbl">Sub-paths (${branches.length})</div><div class="careers-dkids">${branches.map(linkTo).join('')}</div>`:''}
+    ${leaves.length?`<div class="careers-dlbl">Careers (${leaves.length})</div><div class="careers-dkids">${leaves.map(linkTo).join('')}</div>`:''}
     ${n.kind==='career'?`<div class="careers-dpath">Stream → ${esc(crumbs[0]||'')}<br>${crumbs[1]?`Path → ${esc(crumbs[1])}<br>`:''} ${crumbs[2]?`Degree → ${esc(crumbs[2])}<br>`:''} ${crumbs[3]?`Specialisation → ${esc(crumbs[3])}`:''}</div>`:''}
   `;
   det.classList.add('open');
+  det.scrollTop=0;
 }
 function hideDetail(){
+  if(!det.classList.contains('open')) return;
   S.sel=null; det.classList.remove('open'); renderAll();
 }
 document.getElementById('careers-dclose').addEventListener('click',hideDetail);
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') hideDetail(); });
+det.addEventListener('click',e=>{
+  const b=e.target.closest('[data-goto]');
+  if(b) goTo(b.dataset.goto);
+});
 
 // ── CHROME HEIGHT ─── the toolbar wraps onto extra rows at narrow widths, so
 // the canvas/detail-panel top offset is measured from the real DOM, not a
@@ -1233,8 +1334,18 @@ function syncChromeHeight(){
 }
 
 // ── BOOTSTRAP ─────────────────────────────────────────────────────────────────
+// The tree's search/filter/selection state (S) outlives a visit, but the
+// fresh toolbar DOM doesn't — start each visit from a clean state.
+S.q=''; S.sel=null; S.filters.clear(); _matchSet=null; _expSaved=null; S.zoom=defaultZoom();
+_careersView = {
+  syncChromeHeight,
+  focusSearch(){ _searchEl.focus(); _searchEl.select(); },
+  onEscape(){
+    if(det.classList.contains('open')) hideDetail();
+    else if(document.activeElement===_searchEl && S.q) clearSearch();
+  }
+};
 collapseToDefault();
 syncChromeHeight();
 renderAll();
-window.addEventListener('resize',()=>{ syncChromeHeight(); renderAll(); });
 }; // end initCareers

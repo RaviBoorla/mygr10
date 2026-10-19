@@ -69,7 +69,8 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   const { page, errors } = await open('#/home', { grade: 'XII', board: 'ICSE' });
   const soon = await page.locator('.soon-tag').count();
   const sa = await page.getByText('Board Short Answers').count();
-  check('XII ICSE shows Short Answers instead of empty mocks', soon >= 5 && sa >= 5, `${soon} coming-soon, ${sa} SA`);
+  // All five XII ICSE subjects have MCQ banks now (ISC Section A papers), so none should be "coming soon".
+  check('XII ICSE shows mocks and Short Answers for every subject', soon === 0 && sa >= 5, `${soon} coming-soon, ${sa} SA`);
   check('no page errors on XII ICSE', !errors.length, errors.join(' | '));
 }
 {
@@ -96,6 +97,43 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   await page.waitForTimeout(800);
   check('results screen offers Explain my mistakes', await page.getByText('Explain my mistakes').isVisible());
   check('no page errors on results', !errors.length, errors.join(' | '));
+}
+{
+  // X ICSE banks key ~83% of answers to option A; a mock must not inherit that.
+  const { page, errors } = await open('#/home', { board: 'ICSE' });
+  await page.evaluate(() => app.startTest({ subject: 'Physics', mode: 'mock' }));
+  await page.waitForTimeout(1200);
+  const atA = await page.evaluate(() => {
+    const qs = app.session.questions;
+    return Math.round(qs.filter(q => q.correct === 0).length / qs.length * 100);
+  });
+  check('mock shuffles answer options', atA < 55, `${atA}% keyed to A`);
+  check('no page errors on ICSE mock', !errors.length, errors.join(' | '));
+}
+{
+  const { page, errors } = await open('#/home', { grade: 'XII' });
+  check('XII CBSE lists Information Technology', await page.locator('[data-mock-meta="Information Technology"]').count() === 1);
+  check('no page errors on XII CBSE', !errors.length, errors.join(' | '));
+}
+{
+  const { page, errors } = await open('#/careers');
+  const nodes = await page.locator('#careers-tsvg [data-id]').count();
+  check('career tree renders streams', nodes >= 5, `${nodes} nodes`);
+  await page.locator('#careers-tsvg [data-id]').nth(1).click();
+  await page.waitForTimeout(300);
+  const link = page.locator('#careers-det .careers-dlink').first();
+  const target = await link.getAttribute('data-goto');
+  await link.click();
+  await page.waitForTimeout(500);
+  check('career detail links jump to that node',
+    !!target && await page.locator(`#careers-tsvg [data-id="${target}"][aria-current="true"]`).count() === 1, target);
+  await page.fill('#careers-search', 'zzqx');
+  await page.waitForTimeout(400);
+  check('career search shows an empty state', await page.locator('#careers-empty').isVisible());
+  await page.evaluate(() => app.go(['home']));
+  await page.setViewportSize({ width: 900, height: 700 });
+  await page.waitForTimeout(300);
+  check('no page errors on careers (incl. resize after leaving)', !errors.length, errors.join(' | '));
 }
 
 await browser.close();

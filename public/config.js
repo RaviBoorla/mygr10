@@ -13,7 +13,7 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XII: {
-    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology'],
+    CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
   }
 };
@@ -49,7 +49,8 @@ const BANKS = {
   'XII CBSE Economics':             'XII-CBSE-Economics',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science',
   'XII CBSE Psychology':            'XII-CBSE-Psychology',
-  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices'
+  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices',
+  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology'
 };
 
 const SA_BANKS = {
@@ -81,7 +82,8 @@ const SA_BANKS = {
   'XII CBSE Economics':             'XII-CBSE-Economics-ShortAnswers',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science-ShortAnswers',
   'XII CBSE Psychology':            'XII-CBSE-Psychology-ShortAnswers',
-  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-ShortAnswers'
+  'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-ShortAnswers',
+  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -167,38 +169,32 @@ const NOTES_CATALOG = [
 ];
 
 // ─── Question bank loading (cached — one fetch per subject per session) ───────
-const bankCache = {};
-function loadBank(subject) {
-  const slug = bankSlug(subject);
-  const cacheKey = slug || subject;
-  if (bankCache[cacheKey]) return Promise.resolve(bankCache[cacheKey]);
-  if (!slug) return Promise.reject(new Error('No question bank for ' + subject));
-  return fetch(`questions/${slug}.json`)
-    .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
-    .then(list => { bankCache[cacheKey] = list; return list; });
+// Some PDF-extracted questions carry Symbol-font private-use glyphs (render as
+// boxes) or blank MCQ options — unanswerable, so they're hidden until re-extracted.
+// `npm run check` lists them.
+const _GARBLED = /[\uf000-\uf8ff]/;
+function _readable(q) {
+  if (_GARBLED.test(JSON.stringify(q))) return false;
+  return !Array.isArray(q.options) || q.options.every(o => String(o).trim());
 }
 
-const saBankCache = {};
-function loadSABank(subject) {
-  const slug = saBankSlug(subject);
+// Caches hold loaded arrays (read synchronously by home + Cloé); in-flight
+// fetches are shared so concurrent callers don't download a bank twice.
+const bankCache = {}, saBankCache = {}, solvedBankCache = {};
+const _bankInflight = {};
+function _loadJsonBank(cache, slug, subject, label) {
   const cacheKey = slug || subject;
-  if (saBankCache[cacheKey]) return Promise.resolve(saBankCache[cacheKey]);
-  if (!slug) return Promise.reject(new Error('No Short Answers bank for ' + subject));
-  return fetch(`questions/${slug}.json`)
+  if (cache[cacheKey]) return Promise.resolve(cache[cacheKey]);
+  if (!slug) return Promise.reject(new Error(`No ${label} for ${subject}`));
+  if (_bankInflight[slug]) return _bankInflight[slug];
+  return _bankInflight[slug] = fetch(`questions/${slug}.json`)
     .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
-    .then(list => { saBankCache[cacheKey] = list; return list; });
+    .then(list => (cache[cacheKey] = list.filter(_readable)))
+    .finally(() => { delete _bankInflight[slug]; });
 }
-
-const solvedBankCache = {};
-function loadSolvedBank(subject) {
-  const slug = solvedBankSlug(subject);
-  const cacheKey = slug || subject;
-  if (solvedBankCache[cacheKey]) return Promise.resolve(solvedBankCache[cacheKey]);
-  if (!slug) return Promise.reject(new Error('No Solved Exercises bank for ' + subject));
-  return fetch(`questions/${slug}.json`)
-    .then(r => { if (!r.ok) throw new Error(`Could not load questions (HTTP ${r.status})`); return r.json(); })
-    .then(list => { solvedBankCache[cacheKey] = list; return list; });
-}
+function loadBank(subject)       { return _loadJsonBank(bankCache, bankSlug(subject), subject, 'question bank'); }
+function loadSABank(subject)     { return _loadJsonBank(saBankCache, saBankSlug(subject), subject, 'Short Answers bank'); }
+function loadSolvedBank(subject) { return _loadJsonBank(solvedBankCache, solvedBankSlug(subject), subject, 'Solved Exercises bank'); }
 
 function realBoardYear(q) {
   // Check source field first (ICSE style: "Board 2017")

@@ -47,6 +47,20 @@ function shuffle(list) {
   return a;
 }
 
+// Many banks put the right answer at index 0 (up to ~85% in X-ICSE), so a
+// mock/drill would teach "pick A". Permute options per session, remapping
+// `correct`. Order-sensitive questions (Assertion-Reason, "both of the above",
+// explanations naming "option (b)") keep their authored order.
+const _ORDER_SENSITIVE = /\b(option|options|answer|ans)\s*[\(\[]?\s*[a-d]\b[\)\]]?|\([a-d]\)\s*(and|&|or)\s*\([a-d]\)|\b(both|all|none|neither)\b.*\b(above|these|of the)\b|\bboth\s+[a-d]\s+and\b|\b[A-D] and [B-D]\b|assertion/i;
+function shuffleOptions(q) {
+  if (!Array.isArray(q.options) || q.options.length < 2 || typeof q.correct !== 'number') return q;
+  if (q.qtype === 'assertion-reason' || _ORDER_SENSITIVE.test(q.text + ' ' + q.options.join(' | ') + ' ' + (q.explanation || ''))) return q;
+  const order = shuffle(q.options.map((_, i) => i));
+  const out = { ...q, options: order.map(i => q.options[i]), correct: order.indexOf(q.correct) };
+  if (Array.isArray(q.whyWrong)) out.whyWrong = order.map(i => q.whyWrong[i] || '');
+  return out;
+}
+
 function plural(n, word) { return `${n} ${word}${n === 1 ? '' : 's'}`; }
 
 const DAILY_GOAL = 30;
@@ -172,7 +186,7 @@ const app = {
     if (name === 'careers' && !window._careersLoaded) {
       window._careersLoaded = true;
       const sc = document.createElement('script');
-      sc.src = 'careers.js?v=178464d8';
+      sc.src = 'careers.js?v=93d722b3';
       sc.onload = () => this.render();
       document.head.appendChild(sc);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading…</div></main>';

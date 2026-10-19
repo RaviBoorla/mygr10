@@ -63,8 +63,8 @@ function _aiKbContext(query) {
     });
   }
 
-  // 2. MCQ banks (already in memory from previous visits)
-  Object.entries(window.bankCache || {}).forEach(([bankKey, questions]) => {
+  // 2. MCQ banks (config.js caches — top-level consts, shared by name, not on window)
+  Object.entries(bankCache).forEach(([bankKey, questions]) => {
     if (!Array.isArray(questions)) return;
     questions.forEach(q2 => {
       const text = [q2.text||'', q2.chapter||'', (q2.options||[]).join(' ')].join(' ');
@@ -74,17 +74,17 @@ function _aiKbContext(query) {
   });
 
   // 3. Short-answer banks (already in memory)
-  Object.entries(window.saBankCache || {}).forEach(([bankKey, questions]) => {
+  Object.entries(saBankCache).forEach(([bankKey, questions]) => {
     if (!Array.isArray(questions)) return;
     questions.forEach(q2 => {
-      const text = [q2.question||q2.text||'', q2.answer||'', q2.chapter||''].join(' ');
+      const text = [q2.question||q2.text||'', q2.modelAnswer||q2.answer||'', q2.chapter||''].join(' ');
       const s = scoreText(text);
       if (s > 0) scored.push({ score: s + 0.2, type: 'sa', bankKey, q: q2 });
     });
   });
 
   // 4. Solved exercise banks (already in memory)
-  Object.entries(window.solvedBankCache || {}).forEach(([bankKey, questions]) => {
+  Object.entries(solvedBankCache).forEach(([bankKey, questions]) => {
     if (!Array.isArray(questions)) return;
     questions.forEach(q2 => {
       const text = [q2.question||q2.text||'', q2.solution||q2.answer||'', q2.chapter||''].join(' ');
@@ -93,21 +93,21 @@ function _aiKbContext(query) {
     });
   });
 
-  // 5. Career data (if careers.js was loaded)
-  if (window.T) {
+  // 5. Career data (careers.js — loaded on demand by _aiEnsureKb)
+  if (window.CAREER_TREE) {
     function walkCareer(node, path) {
       const text = [node.label||'', node.sublabel||'', node.meta?.note||'', node.meta?.exams||'', (node.keywords||'')].join(' ');
       const s = scoreText(text);
       if (s > 0) scored.push({ score: s, type: 'career', node, path: path.join(' › ') });
       (node.children||[]).forEach(c => walkCareer(c, [...path, node.label]));
     }
-    walkCareer(window.T, []);
+    walkCareer(window.CAREER_TREE, []);
   }
 
   scored.sort((a, b) => b.score - a.score);
   const seen = new Set();
   const top = scored.filter(item => {
-    const key = item.type + '|' + (item.subjectKey || item.bankKey || item.node?.id || '');
+    const key = item.type + '|' + (item.ch?.chapter || item.q?.id || item.q?.text || item.node?.id || '');
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
@@ -129,15 +129,15 @@ function _aiKbContext(query) {
     }
     if (item.type === 'mcq') {
       const q2 = item.q;
-      return `[MCQ: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.text||''}\nOptions: ${(q2.options||[]).join(' / ')}\nAnswer: option ${q2.answer ?? ''}`;
+      return `[MCQ: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.text||''}\nOptions: ${(q2.options||[]).join(' / ')}\nAnswer: ${q2.options?.[q2.correct] ?? ''}${q2.explanation ? '\nWhy: ' + q2.explanation : ''}`;
     }
     if (item.type === 'sa') {
       const q2 = item.q;
-      return `[Short Answer: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nA: ${q2.answer||''}`;
+      return `[Short Answer: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nA: ${q2.modelAnswer||q2.answer||''}${q2.keyPoints?.length ? '\nKey points: ' + q2.keyPoints.join('; ') : ''}`;
     }
     if (item.type === 'solved') {
       const q2 = item.q;
-      return `[Solved: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nSolution: ${(q2.solution||q2.answer||'').slice(0,300)}`;
+      return `[Solved: ${item.bankKey} — ${q2.chapter||''}]\nQ: ${q2.question||q2.text||''}\nSolution: ${(q2.solution||(q2.steps||[]).join(' ')||q2.answer||'').slice(0,400)}`;
     }
     if (item.type === 'career') {
       const n = item.node;
@@ -147,13 +147,44 @@ function _aiKbContext(query) {
   }).filter(Boolean).join('\n\n');
 }
 
+// _aiKbContext only searches what's already in memory, which used to mean
+// "whatever screens the student happened to visit". Before each reply, load
+// what the question most likely needs: revision notes for their grade, the
+// banks of the subject they're practising or that the question names, and the
+// career tree for career questions. Capped so a slow network never stalls a reply.
+const AI_CAREER_RE = /career|job|salary|college|universit|stream|course|degree|neet|jee|cuet|clat|upsc|become|profession|after (10|12)/i;
+function _aiLoadCareers() {
+  return new Promise(res => {
+    if (window._careersLoaded) return res(); // loaded, or loading via the careers screen
+    window._careersLoaded = true;
+    const s = document.createElement('script');
+    s.src = 'careers.js?v=93d722b3';
+    s.onload = () => { if (state.screen === 'careers') app.render(); res(); };
+    s.onerror = () => { window._careersLoaded = false; res(); };
+    document.head.appendChild(s);
+  });
+}
+function _aiEnsureKb(query) {
+  const jobs = [];
+  const notes = state.grade === 'XII' ? window._ensureRevisionDataXII : window._ensureRevisionData;
+  if (typeof notes === 'function') jobs.push(new Promise(res => notes(res)));
+  if (!window.CAREER_TREE && AI_CAREER_RE.test(query)) jobs.push(_aiLoadCareers());
+  const q = query.toLowerCase();
+  const named = (SUBJECTS[state.grade]?.[state.board] || []).filter(s => q.includes(s.toLowerCase()));
+  [...new Set([...named, app.session?.subject].filter(Boolean))].slice(0, 2).forEach(s => {
+    if (bankSlug(s))   jobs.push(loadBank(s).catch(() => {}));
+    if (saBankSlug(s)) jobs.push(loadSABank(s).catch(() => {}));
+  });
+  return Promise.race([Promise.all(jobs), new Promise(r => setTimeout(r, 2500))]);
+}
+
 function _aiSystemPrompt(query) {
   const ctx = _aiKbContext(query);
   const base = `You are Cloé, a sharp and curious study companion in Rise, an exam-prep app for CBSE and ICSE board students (Grade X and Grade XII). Your name is Cloé — a warm, witty French study friend.
 
 You cover ALL subjects across both grades:
 Grade X (CBSE & ICSE): Mathematics, Science (Physics, Chemistry, Biology), Social Science, History & Civics, Geography, English, Hindi, Computer Science / Computer Applications, Information Technology.
-Grade XII CBSE: Mathematics, Physics, Chemistry, Biology, Computer Science, Economics (Microeconomics & Macroeconomics), Political Science, Psychology, Informatics Practices.
+Grade XII CBSE: Mathematics, Physics, Chemistry, Biology, Computer Science, Economics (Microeconomics & Macroeconomics), Political Science, Psychology, Informatics Practices, Information Technology.
 Grade XII ICSE: Mathematics, Physics, Chemistry, Biology, Computer Science.
 Also: career pathing, stream selection (Science / Commerce / Humanities / Vocational), and exam guidance (JEE, NEET, CUET, board exams, and more).
 
@@ -669,6 +700,7 @@ const aiPanel = {
     const cfg = aiState.config;
 
     try {
+      await _aiEnsureKb(text);
       const r = await fetch(AI_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
