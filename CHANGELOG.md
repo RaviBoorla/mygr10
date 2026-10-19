@@ -17,6 +17,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Unreadable PDF-extracted XII CBSE Maths questions are hidden.
 
 ### Added
+- Arena redesign: game-style stage, richer HUD, score pops, keyboard play,
+  auto-pause on tab switch, new interstitial / results / setup layouts.
 - XII CBSE Information Technology MCQ and Short Answers banks.
 - Career Pathing: clickable detail links, keyboard navigation, empty search
   state, pinch/ctrl-wheel zoom, mobile auto-scroll.

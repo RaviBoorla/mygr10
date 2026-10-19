@@ -136,6 +136,25 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   check('no page errors on careers (incl. resize after leaving)', !errors.length, errors.join(' | '));
 }
 
+{
+  const { page, errors } = await open('#/arena', { board: 'ICSE' });
+  check('arena setup renders with its stylesheet',
+    await page.locator('.arena-hero').count() === 1 && await page.evaluate(() => !!document.querySelector('link[href^="arena.css"]')?.sheet));
+  await page.evaluate(() => arenaBegin());
+  await page.waitForTimeout(1500);
+  check('arena run shows HUD, timer and four options',
+    await page.locator('.arena-stage .arena-hud').count() === 1 && await page.locator('#arena-opts .arena-opt-btn').count() === 4);
+  await page.keyboard.press('1');
+  await page.waitForTimeout(200);
+  const fx = await page.locator('#arena-fx.show').textContent().catch(() => '');
+  check('arena answers from the keyboard with feedback', /Correct|Not quite|row|combo/.test(fx || ''), fx);
+  await page.waitForTimeout(1200);
+  await page.keyboard.press('p');
+  await page.waitForTimeout(150);
+  check('arena P key pauses', await page.locator('#arena-pause-overlay.active').count() === 1);
+  check('no page errors in arena', !errors.length, errors.join(' | '));
+}
+
 await browser.close();
 server.close();
 console.log(failed ? `\n${failed} smoke check(s) failed.` : '\nAll smoke checks passed.');

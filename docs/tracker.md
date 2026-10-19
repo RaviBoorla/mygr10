@@ -4,6 +4,19 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Arena look & feel *(done)*
+
+- **`public/arena.css`** (new, loaded with `arena.js`; first paint waits for both) — dark gradient "stage" for question / interstitial / game-over hero; setup + Collection light with a skin-tinted hero. Skins are now CSS variable sets; the old per-skin overrides in `style.css` were removed.
+- **Play screen** — stage pill, progress dots, glowing combo badge (1.5× / 2×), live score, labelled pause; question on its own card with subject + difficulty; larger option tiles with staggered entry, pop/shake on answer; smooth timer that turns amber then red; `+points` pop and combo call-outs.
+- **Controls** — A–D / 1–4 to answer, P / Esc to pause; auto-pause on tab switch; pause can't trigger during the answer flash.
+- **Interstitial** — ✓/✗ marks, correct / points / hearts tiles, hearts row, next-stage preview, single primary Continue with "End run here" link.
+- **Game over** — hero card with big score, accuracy, deepest stage, combo, personal best; duplicate "Arena" button removed.
+- **Setup** — hero with best score / stage / combo; Free Run first with subject chips and inline "pick at least 3" (no `alert()`); Daily beside it; Live Room + Join a Challenge second row.
+- **Collection** — centred, skin-tinted header, less washed-out locked items.
+- **Smoke test** — Arena setup/run render, keyboard answer + feedback, pause key, no page errors.
+
+---
+
 ## Option shuffle, Cloé KB fixes, XII IT, Career Pathing polish *(done)*
 
 - **Mock/drill option shuffle** — `shuffleOptions()` (app.js) permutes options + `whyWrong` per session; banks keyed answers to A up to ~85% (X ICSE). Order-sensitive questions (Assertion-Reason, "both of the above", explanations citing a letter) keep their order. Arena/Live Room already shuffled.

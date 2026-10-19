@@ -710,25 +710,35 @@ function renderArenaSetup() {
   });
   if (!available.length) {
     return `<div class="screen arena-setup-screen">
-      <h1 class="arena-title">⚡ Arena</h1>
-      <p class="arena-sub">Coming soon for ${esc(state.board)}!</p>
-      <p>Question banks for Arena are not yet available for your board.</p>
+      <div class="arena-hero"><div class="arena-hero-text">
+        <h1 class="arena-title">⚡ Arena</h1>
+        <p class="arena-sub">Coming soon for ${esc(state.board)} — question banks for Arena aren't ready yet.</p>
+      </div></div>
       <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
     </div>`;
   }
-  const opts = available.map((s, i) => `
+  const opts = available.map(s => `
     <label class="arena-subj-opt">
-      <input type="checkbox" name="arena-subj" value="${esc(s)}" ${!['Hindi','English'].includes(s) ? 'checked' : ''}>
+      <input type="checkbox" name="arena-subj" value="${esc(s)}" checked onchange="arenaSubjChanged()">
       <span>${esc(s)}</span>
     </label>`).join('');
 
+  const hi = getHiScores();
+  const heroStats = hi.score
+    ? `<div class="arena-hero-stats">
+        <div><b>${hi.score.toLocaleString()}</b><span>Best score</span></div>
+        <div><b>${hi.stage}<small>/10</small></b><span>Deepest stage</span></div>
+        <div><b>${hi.combo}</b><span>Best combo</span></div>
+      </div>`
+    : `<div class="arena-hero-stats arena-hero-first"><span>No runs yet — set your first high score.</span></div>`;
+
   return `
     <!-- How to play modal -->
-    <div class="arena-how-backdrop" id="arena-how-backdrop" onclick="document.getElementById('arena-how-backdrop').hidden=true" hidden></div>
-    <div class="arena-how-modal" id="arena-how-modal" hidden>
+    <div class="arena-how-backdrop" id="arena-how-backdrop" onclick="arenaHowToggle(false)" hidden></div>
+    <div class="arena-how-modal" id="arena-how-modal" role="dialog" aria-modal="true" aria-labelledby="arena-how-title" hidden>
       <div class="arena-how-modal-header">
-        <span class="arena-how-modal-title">How to play</span>
-        <button class="arena-how-close" onclick="document.getElementById('arena-how-modal').hidden=true;document.getElementById('arena-how-backdrop').hidden=true">✕</button>
+        <span class="arena-how-modal-title" id="arena-how-title">How to play</span>
+        <button class="arena-how-close" aria-label="Close" onclick="arenaHowToggle(false)">✕</button>
       </div>
       <div class="arena-how-modal-body">
       <p class="arena-how-section-title">Free Run</p>
@@ -740,6 +750,7 @@ function renderArenaSetup() {
         <li><span class="arena-how-icon">💀</span><span>Hearts hit 0 → <strong>run over</strong>. Survive as many stages as you can.</span></li>
         <li><span class="arena-how-icon">⚡</span><span>Chain correct answers for a <strong>combo multiplier</strong> — 5 in a row = 1.5×, 10 = 2×.</span></li>
         <li><span class="arena-how-icon">🔁</span><span>Weak questions resurface more often — Arena also trains your <strong>spaced repetition</strong>.</span></li>
+        <li><span class="arena-how-icon">⌨️</span><span>On a keyboard: <strong>A–D</strong> or <strong>1–4</strong> to answer, <strong>P</strong> to pause.</span></li>
       </ul>
       <p class="arena-how-section-title">Challenge a Friend</p>
       <ul class="arena-how-list">
@@ -758,34 +769,54 @@ function renderArenaSetup() {
     </div>
 
     <div class="screen arena-setup-screen">
-      <div class="arena-setup-header">
-        <div>
+      <div class="arena-hero">
+        <div class="arena-hero-text">
           <h1 class="arena-title">⚡ Arena</h1>
-          <p class="arena-sub">Fast MCQ blitz · ${esc(state.board)} · race the clock</p>
+          <p class="arena-sub">Fast MCQ blitz · ${esc(state.grade)} ${esc(state.board)} · race the clock</p>
         </div>
+        ${heroStats}
         <div class="arena-setup-header-btns">
-          <button class="btn ghost arena-how-btn" onclick="document.getElementById('arena-how-modal').hidden=false;document.getElementById('arena-how-backdrop').hidden=false">How to play</button>
+          <button class="btn ghost arena-how-btn" onclick="arenaHowToggle(true)">How to play</button>
           <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
         </div>
       </div>
 
-      <!-- Row 1: Daily Challenge + Live Room 50:50 -->
+      <!-- Row 1: the main event — Free Run + Daily Challenge -->
       <div class="arena-half-row">
-        <div class="arena-half">
+        <section class="arena-card arena-card-main" aria-labelledby="arena-free-title">
+          <div class="arena-card-head">
+            <h2 class="arena-pick-label" id="arena-free-title">Free Run</h2>
+            <span class="arena-card-tag">10 stages · 5 Qs each</span>
+          </div>
+          <p class="arena-card-desc">Pick at least 3 subjects. Survive the stages, chain combos, beat your best.</p>
+          <div class="arena-subj-grid" role="group" aria-label="Subjects">${opts}</div>
+          <p class="arena-subj-hint" id="arena-subj-hint">${available.length} selected</p>
+          <div class="arena-setup-actions">
+            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run ▸</button>
+          </div>
+        </section>
+        <section class="arena-card">
           ${renderDailyCard()}
-        </div>
-        <div class="arena-half arena-live-half">
-          <p class="arena-pick-label">Live Room <span class="arena-pick-badge">Real-time</span></p>
+        </section>
+      </div>
+
+      <!-- Row 2: play with friends — Live Room + Join Challenge -->
+      <div class="arena-half-row">
+        <section class="arena-card" aria-labelledby="arena-live-title">
+          <div class="arena-card-head">
+            <h2 class="arena-pick-label" id="arena-live-title">Live Room</h2>
+            <span class="arena-pick-badge">Real-time</span>
+          </div>
           <div class="arena-live-options">
             <div class="arena-live-row">
-              <label class="arena-live-label">Questions</label>
+              <label class="arena-live-label" for="live-q-count">Questions</label>
               <select id="live-q-count" class="arena-live-select">
                 <option value="5">5</option>
                 <option value="10" selected>10</option>
                 <option value="15">15</option>
                 <option value="20">20</option>
               </select>
-              <label class="arena-live-label">Seconds/Q</label>
+              <label class="arena-live-label" for="live-timer-secs">Seconds/Q</label>
               <select id="live-timer-secs" class="arena-live-select">
                 <option value="15">15s</option>
                 <option value="20" selected>20s</option>
@@ -795,59 +826,86 @@ function renderArenaSetup() {
             </div>
             <button id="live-create-btn" class="btn primary" onclick="liveCreateAndGo()">Create Room</button>
           </div>
-          <p class="arena-pick-label" style="margin-top:10px">Join a Live Room</p>
+          <p class="arena-pick-sub">Join a Live Room</p>
           <div class="arena-challenge-entry">
-            <input id="live-join-input" type="text" maxlength="6" placeholder="Enter room code"
-                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-            <button id="live-join-btn" class="btn primary" onclick="liveJoinAndGo()">Join</button>
+            <input id="live-join-input" type="text" maxlength="6" placeholder="Room code" aria-label="Live room code"
+                   autocomplete="off" style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button id="live-join-btn" class="btn ghost" onclick="liveJoinAndGo()">Join</button>
           </div>
           <p id="live-join-error" class="arena-code-error" hidden></p>
-        </div>
-      </div>
-
-      <div class="arena-picker-sep"></div>
-
-      <!-- Row 2: Free Run + Join Challenge 50:50 -->
-      <div class="arena-half-row">
-        <div class="arena-half">
-          <p class="arena-pick-label">Free Run</p>
-          <div class="arena-subj-grid">${opts}</div>
-          <p class="arena-subj-hint">Select at least 3 subjects to begin.</p>
-          <div class="arena-setup-actions">
-            <button class="btn primary arena-go-btn" onclick="arenaBegin()">Start Run</button>
+        </section>
+        <section class="arena-card" aria-labelledby="arena-join-title">
+          <div class="arena-card-head">
+            <h2 class="arena-pick-label" id="arena-join-title">Join a Challenge</h2>
+            <span class="arena-card-tag">Same questions, your pace</span>
           </div>
-        </div>
-        <div class="arena-half arena-live-half">
-          <p class="arena-pick-label">Join a Challenge</p>
+          <p class="arena-card-desc">Got a 6-letter code from a friend? Play their exact question set and land on the leaderboard.</p>
           <div class="arena-challenge-entry">
-            <input id="arena-code-input" type="text" maxlength="6" placeholder="Enter 6-letter code"
-                   style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
-            <button class="btn primary" onclick="arenaJoinChallenge()">Join</button>
+            <input id="arena-code-input" type="text" maxlength="6" placeholder="6-letter code" aria-label="Challenge code"
+                   autocomplete="off" style="text-transform:uppercase" oninput="this.value=this.value.toUpperCase()">
+            <button class="btn ghost" onclick="arenaJoinChallenge()">Join</button>
           </div>
           <p id="arena-code-error" class="arena-code-error" hidden></p>
-        </div>
+        </section>
       </div>
-
-      <div class="arena-picker-sep"></div>
 
       <!-- Skins + collectibles -->
-      ${renderSkinPicker()}
-      <div class="arena-col-row">
-        <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
-        <span class="arena-meta-count">${getCollectibleState().unlocked.length}/${COLLECTIBLES.length} items</span>
+      <div class="arena-extras">
+        ${renderSkinPicker()}
+        <div class="arena-col-row">
+          <button class="btn ghost arena-col-link" onclick="app.go(['collection'])">🎒 Collection</button>
+          <span class="arena-meta-count">${getCollectibleState().unlocked.length}/${COLLECTIBLES.length} items</span>
+        </div>
       </div>
-
     </div>`;
+}
+
+window.arenaHowToggle = function(open) {
+  document.getElementById('arena-how-modal').hidden = !open;
+  document.getElementById('arena-how-backdrop').hidden = !open;
+  if (open) document.querySelector('#arena-how-modal .arena-how-close')?.focus();
+};
+
+window.arenaSubjChanged = function() {
+  const n = document.querySelectorAll('input[name="arena-subj"]:checked').length;
+  const hint = document.getElementById('arena-subj-hint');
+  if (!hint) return;
+  hint.textContent = n >= 3 ? `${n} selected` : `${n} selected — pick at least 3`;
+  hint.classList.toggle('arena-hint-warn', n < 3);
+};
+
+function arenaHeartsHtml(lives, cls = '') {
+  const fullHearts = Math.floor(lives);
+  const hasHalf = (lives - fullHearts) >= 0.5;
+  const pips = Array.from({ length: ARENA_LIVES }, (_, i) => {
+    const c = i < fullHearts ? 'alive' : (i === fullHearts && hasHalf ? 'half' : 'lost');
+    return `<span class="arena-life-pip ${c}" aria-hidden="true">♥</span>`;
+  }).join('');
+  return `<span class="arena-lives ${cls}" role="img" aria-label="${lives} of ${ARENA_LIVES} hearts">${pips}</span>`;
+}
+
+// One dot per question in the stage (daily: the whole set) — filled as answered.
+function arenaDotsHtml() {
+  const total = ar.stageQuestions.length;
+  return `<span class="arena-dots" aria-hidden="true">${Array.from({ length: total }, (_, i) => {
+    const r = ar.stageResults[i];
+    const c = r ? (r.correct ? 'ok' : 'bad') : (i === ar.stageIndex ? 'now' : '');
+    return `<i class="arena-dot ${c}"></i>`;
+  }).join('')}</span>`;
+}
+
+function arenaComboTier(combo) {
+  return combo >= COMBO_THRESHOLD_2 ? 2 : combo >= COMBO_THRESHOLD_1 ? 1 : 0;
 }
 
 function renderArenaQuestion() {
   if (!ar || !ar.stageQuestions) return renderArenaSetup();
   const q = ar.stageQuestions[ar.stageIndex];
-  const spec = stageSpec(ar.stage);
-  const timerSecs = ar.isDaily ? DAILY_SECS : spec.secs;
+  const timerSecs = ar.isDaily ? DAILY_SECS : stageSpec(ar.stage).secs;
   const total = ar.stageQuestions.length;
   const qNum = ar.stageIndex + 1;
-  const comboMult = ar.combo >= COMBO_THRESHOLD_2 ? '2.0×' : ar.combo >= COMBO_THRESHOLD_1 ? '1.5×' : '1.0×';
+  const tier = arenaComboTier(ar.combo);
+  const comboMult = ['1.0×', '1.5×', '2.0×'][tier];
 
   // Shuffle display order once per question; store on the question object so
   // re-renders (e.g. after pause/resume) keep the same layout.
@@ -861,39 +919,31 @@ function renderArenaQuestion() {
     q._displayCorrect = order.indexOf(q.correct);
   }
   const opts = q._displayOrder.map((origIdx, displayIdx) => `
-    <button class="arena-opt-btn" onclick="arenaAnswer(${displayIdx})" data-idx="${displayIdx}">
-      <span class="arena-opt-letter">${'ABCD'[displayIdx]}</span>
+    <button class="arena-opt-btn" onclick="arenaAnswer(${displayIdx})" data-idx="${displayIdx}" style="--i:${displayIdx}">
+      <span class="arena-opt-letter" aria-hidden="true">${'ABCD'[displayIdx]}</span>
       <span class="arena-opt-text">${esc(q.options[origIdx])}</span>
     </button>`).join('');
 
-
-
-  const fullHearts = Math.floor(ar.lives);
-  const hasHalf = (ar.lives - fullHearts) >= 0.5;
-  const livePips = Array.from({ length: ARENA_LIVES }, (_, i) => {
-    const cls = i < fullHearts ? 'alive' : (i === fullHearts && hasHalf ? 'half' : 'lost');
-    return `<span class="arena-life-pip ${cls}">♥</span>`;
-  }).join('');
+  const diff = q.difficulty || (ar.isDaily ? '' : stageSpec(ar.stage).diff);
 
   return `
-    <div class="screen arena-screen" id="arena-screen">
+    <div class="screen arena-screen arena-stage" id="arena-screen">
       <div class="arena-hud">
         <div class="arena-hud-left">
-          <span class="arena-hud-stage">${ar.isDaily ? '📅 Daily' : `Stage ${ar.stage}`}</span>
-          <span class="arena-hud-q">Q${qNum}/${total}</span>
+          <span class="arena-hud-stage">${ar.isDaily ? '📅 Daily' : `Stage ${ar.stage}<small>/10</small>`}</span>
+          <span class="arena-hud-q"><span class="sr-only">Question </span>${qNum}/${total}</span>
+          ${arenaDotsHtml()}
         </div>
-        <div class="arena-hud-center">
-          <span class="arena-lives">${livePips}</span>
-        </div>
+        <div class="arena-hud-center">${arenaHeartsHtml(ar.lives)}</div>
         <div class="arena-hud-right">
-          <span class="arena-combo ${ar.combo >= COMBO_THRESHOLD_1 ? 'hot' : ''}">⚡${ar.combo} ${comboMult}</span>
-          <span class="arena-score">${ar.score.toLocaleString()}</span>
-          <button class="arena-pause-btn" onclick="arenaPause()" title="Pause">⏸</button>
+          <span class="arena-combo tier-${tier}" id="arena-combo" title="Combo — 5 in a row = 1.5×, 10 = 2×">🔥<b>${ar.combo}</b><small>${comboMult}</small></span>
+          <span class="arena-score" id="arena-score" aria-label="Score">${ar.score.toLocaleString()}</span>
+          <button class="arena-pause-btn" onclick="arenaPause()" title="Pause (P)" aria-label="Pause">❚❚</button>
         </div>
       </div>
-      <div class="arena-pause-overlay" id="arena-pause-overlay">
+      <div class="arena-pause-overlay" id="arena-pause-overlay" role="dialog" aria-modal="true" aria-label="Paused">
         <div class="arena-pause-card">
-          <p class="arena-pause-title">⏸ Paused</p>
+          <p class="arena-pause-title">Paused</p>
           <p class="arena-pause-sub">Stage ${ar.stage} · ${ar.score.toLocaleString()} pts · ${ar.lives.toFixed(1)}♥</p>
           <button class="btn primary arena-pause-resume" onclick="arenaResume()">▶ Resume</button>
           <button class="btn ghost home-btn" onclick="arenaQuit();app.go(['home'])">&#8962; Home</button>
@@ -901,15 +951,20 @@ function renderArenaQuestion() {
       </div>
 
       <div class="arena-timer-row">
-        <div class="arena-timer-wrap">
-          <div class="arena-timer-bar" id="arena-timer-bar"></div>
-        </div>
-        <div class="arena-timer-label"><span id="arena-timer-secs">${timerSecs}</span>s</div>
+        <div class="arena-timer-wrap"><div class="arena-timer-bar" id="arena-timer-bar"></div></div>
+        <div class="arena-timer-label" id="arena-timer-label"><span id="arena-timer-secs">${timerSecs}</span>s</div>
       </div>
 
-      <div class="arena-subject-tag">${esc(q._subject)}</div>
-      <div class="arena-question-text">${esc(q.text)}</div>
-      <div class="arena-opts-grid" id="arena-opts">${opts}</div>
+      <div class="arena-qcard">
+        <div class="arena-qmeta">
+          <span class="arena-subject-tag">${esc(q._subject)}</span>
+          ${diff ? `<span class="arena-diff diff-${esc(diff)}">${esc(diff)}</span>` : ''}
+        </div>
+        <div class="arena-question-text">${esc(q.text)}</div>
+      </div>
+      <div class="arena-opts-grid" id="arena-opts" role="group" aria-label="Answer options">${opts}</div>
+      <div class="arena-fx" id="arena-fx" aria-live="assertive"></div>
+      <p class="arena-keys-hint">Keys: <kbd>A</kbd>–<kbd>D</kbd> or <kbd>1</kbd>–<kbd>4</kbd> · <kbd>P</kbd> pause</p>
     </div>`;
 }
 
@@ -919,21 +974,33 @@ function renderArenaInterstitial() {
   const cost = ar._lastStageLiveLost || 0;
   const gained = ar._lastStageHeartGained || 0;
   const net = gained - cost;
-  const scoreMsg = ar._lastStageScore ? `+${ar._lastStageScore.toLocaleString()} pts` : '';
-  const lifeMsg = net > 0 ? `+${net}♥ gained — ${ar.lives.toFixed(1)} remaining`
-    : net < 0 ? `${net}♥ — ${ar.lives.toFixed(1)} remaining`
-    : '';
+  const pts = ar._lastStageScore || 0;
+  const title = correct === total ? 'Perfect stage!'
+    : correct >= 4 ? 'Great stage'
+    : correct >= 3 ? 'Stage cleared'
+    : 'Tough one — keep going';
+  const next = stageSpec(ar.stage + 1);
+  const marks = Array.from({ length: total }, (_, i) =>
+    `<span class="arena-inter-mark ${ar.stageResults[i]?.correct ? 'ok' : 'bad'}" style="--i:${i}">${ar.stageResults[i]?.correct ? '✓' : '✗'}</span>`).join('');
+  const netTxt = net > 0 ? `+${net}` : net < 0 ? `${net}` : '±0';
 
   return `
-    <div class="screen arena-interstitial">
-      <div class="arena-inter-badge ${correct === total ? 'perfect' : ''}">
-        ${correct === total ? '✦ Stage Cleared!' : '⚡ Advance'}
+    <div class="screen arena-interstitial arena-stage">
+      <div class="arena-inter-card">
+        <p class="arena-inter-kicker">Stage ${ar.stage} of 10</p>
+        <h2 class="arena-inter-badge ${correct === total ? 'perfect' : correct < 3 ? 'rough' : ''}">${title}</h2>
+        <div class="arena-inter-marks" aria-label="${correct} of ${total} correct">${marks}</div>
+        <div class="arena-inter-stats">
+          <div><b>${correct}/${total}</b><span>correct</span></div>
+          <div><b>+${pts.toLocaleString()}</b><span>points</span></div>
+          <div><b class="${net > 0 ? 'gain' : net < 0 ? 'loss' : ''}">${netTxt}♥</b><span>hearts</span></div>
+        </div>
+        ${arenaHeartsHtml(ar.lives, 'big')}
+        <p class="arena-inter-total">${ar.score.toLocaleString()} pts total · 🔥 ${ar.combo} combo</p>
+        <p class="arena-inter-next">Next: Stage ${ar.stage + 1} · ${esc(next.diff)} · ${next.secs}s per question${ar.stage + 1 === 10 ? ' · boss stage' : ''}</p>
+        <button class="btn primary arena-go-btn arena-continue-btn" onclick="arenaContinue()" autofocus>Continue ▸</button>
+        <button class="arena-quit-link" onclick="arenaForfeit()">End run here</button>
       </div>
-      <p class="arena-inter-detail">${correct}/${total} correct ${scoreMsg}</p>
-      ${lifeMsg ? `<p class="arena-inter-life ${net >= 0 ? 'gained' : ''}">${lifeMsg}</p>` : ''}
-      <p class="arena-inter-next">Stage ${ar.stage + 1} next</p>
-      <button class="btn primary arena-go-btn" onclick="arenaContinue()">Continue</button>
-      <button class="btn arena-quit-btn" onclick="arenaForfeit()">Quit Run</button>
     </div>`;
 }
 
@@ -977,6 +1044,8 @@ function renderArenaGameOver() {
   }
 
   const newBest = ar.score > (ar._prevHiBefore || 0);
+  const answered = ar._allAnswered || [];
+  const accuracy = answered.length ? Math.round(answered.filter(a => a.isCorrect).length / answered.length * 100) : 0;
   const hi = getHiScores(); // read after save so panel shows updated best
 
   const cleared = ar._cleared ? '<p class="arena-cleared">🏆 Full clear! All 10 stages!</p>' : '';
@@ -1013,25 +1082,27 @@ function renderArenaGameOver() {
     <div class="screen arena-gameover">
       <div class="arena-go-layout">
         <div class="arena-go-left">
-          ${cleared}
-          <h2 class="arena-go-title">${ar.isDaily ? `Daily · ${ar.dailyDate}` : ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
-          ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
+          <div class="arena-go-hero arena-stage">
+            ${cleared}
+            <h2 class="arena-go-title">${ar.isDaily ? `Daily · ${ar.dailyDate}` : ar._cleared ? 'Run Complete' : 'Run Over'}</h2>
+            ${newBest ? '<p class="arena-new-best">🌟 New personal best!</p>' : ''}
+            <div class="arena-go-score">${ar.score.toLocaleString()}<small>pts</small></div>
+            <div class="arena-go-stats">
+              <div class="arena-stat"><span class="arena-stat-val">${accuracy}%</span><span class="arena-stat-lbl">Accuracy</span></div>
+              ${ar.isDaily ? '' : `<div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest stage</span></div>`}
+              <div class="arena-stat"><span class="arena-stat-val">${ar.longestCombo}</span><span class="arena-stat-lbl">Longest combo</span></div>
+            </div>
+            <div class="arena-go-hi">
+              <span class="arena-hi-label">Personal best</span>
+              <span>${hi.score.toLocaleString()} pts · Stage ${hi.stage} · ${hi.combo}× combo</span>
+            </div>
+          </div>
           ${newSkinsHtml}
           ${newColsHtml}
-          <div class="arena-go-stats">
-            <div class="arena-stat"><span class="arena-stat-val">${ar.score.toLocaleString()}</span><span class="arena-stat-lbl">Score</span></div>
-            <div class="arena-stat"><span class="arena-stat-val">${ar.deepestStage}</span><span class="arena-stat-lbl">Deepest Stage</span></div>
-            <div class="arena-stat"><span class="arena-stat-val">${ar.longestCombo}</span><span class="arena-stat-lbl">Longest Combo</span></div>
-          </div>
-          <div class="arena-go-hi">
-            <span class="arena-hi-label">Personal Best</span>
-            <span>${hi.score.toLocaleString()} pts · Stage ${hi.stage} · ${hi.combo}× combo</span>
-          </div>
           <div class="arena-go-actions">
             ${ar.isDaily
               ? `<button class="btn primary" onclick="arenaDailyBegin()">Play Again</button>`
               : `<button class="btn primary" onclick="app.go(['arena'])">Play Again</button>`}
-            <button class="btn ghost" onclick="app.go(['arena'])">Arena</button>
             <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
             <button class="btn ghost" onclick="app.go(['collection'])">🎒 Collection</button>
             ${!ar.isDaily ? `<button class="btn ghost arena-challenge-btn" id="arena-challenge-btn" onclick="arenaCreateChallenge()">⚡ Challenge Friends</button>` : ''}
@@ -1190,61 +1261,79 @@ function renderChallengeLeaderboard(results) {
 // ─── Timer ────────────────────────────────────────────────────────────────────
 let _arenaTimer = null;
 let _arenaSecsLeft = 0;
+let _arenaSecsTotal = 0;
 
 function arenaClearTimer() {
   if (_arenaTimer) { clearInterval(_arenaTimer); _arenaTimer = null; }
 }
 
-function arenaStartTimer(secs) {
-  arenaClearTimer();
-  _arenaSecsLeft = secs;
+// Paint the bar for the current second. The bar's CSS width transition is 1s
+// linear, so it drains smoothly between ticks instead of stepping.
+function arenaPaintTimer() {
   const bar = document.getElementById('arena-timer-bar');
   const lbl = document.getElementById('arena-timer-secs');
-  if (bar) bar.style.width = '100%';
+  const wrap = document.getElementById('arena-timer-label');
+  const frac = _arenaSecsTotal ? _arenaSecsLeft / _arenaSecsTotal : 0;
+  if (lbl) lbl.textContent = Math.max(0, _arenaSecsLeft);
+  if (bar) {
+    bar.style.width = `${frac * 100}%`;
+    bar.classList.toggle('mid', frac <= 0.5 && _arenaSecsLeft > 5);
+    bar.classList.toggle('low', _arenaSecsLeft <= 5);
+  }
+  if (wrap) wrap.classList.toggle('low', _arenaSecsLeft <= 5);
+}
 
+function arenaRunTimer() {
+  arenaClearTimer();
   _arenaTimer = setInterval(() => {
     _arenaSecsLeft -= 1;
-    const bar = document.getElementById('arena-timer-bar');
-    const lbl = document.getElementById('arena-timer-secs');
-    if (lbl) lbl.textContent = _arenaSecsLeft;
-    if (bar) bar.style.width = `${(_arenaSecsLeft / secs) * 100}%`;
-    if (_arenaSecsLeft <= 5 && bar) bar.classList.add('low');
-    if (_arenaSecsLeft <= 0) {
-      arenaClearTimer();
-      arenaAnswer(-1); // timeout = wrong
-    }
+    arenaPaintTimer();
+    if (_arenaSecsLeft <= 0) { arenaClearTimer(); arenaAnswer(-1); } // timeout = wrong
   }, 1000);
+}
+
+function arenaStartTimer(secs) {
+  _arenaSecsLeft = _arenaSecsTotal = secs;
+  const bar = document.getElementById('arena-timer-bar');
+  if (bar) { bar.style.transition = 'none'; bar.style.width = '100%'; bar.offsetWidth; bar.style.transition = ''; }
+  arenaRunTimer();
 }
 
 let _arenaPaused = false;
 
 window.arenaPause = function() {
-  if (_arenaPaused) return;
+  if (_arenaPaused || !_arenaTimer || !ar || ar.phase !== 'question') return; // only while a clock is running
   _arenaPaused = true;
   arenaClearTimer();
   const overlay = document.getElementById('arena-pause-overlay');
-  if (overlay) overlay.classList.add('active');
+  if (overlay) { overlay.classList.add('active'); overlay.querySelector('.arena-pause-resume')?.focus(); }
 };
 
 window.arenaResume = function() {
+  if (!_arenaPaused) return;
   _arenaPaused = false;
   const overlay = document.getElementById('arena-pause-overlay');
   if (overlay) overlay.classList.remove('active');
-  const spec = stageSpec(ar.stage);
-  const secs = ar.isDaily ? DAILY_SECS : spec.secs;
-  // Resume from remaining time, not full duration
-  const remaining = _arenaSecsLeft > 0 ? _arenaSecsLeft : secs;
-  _arenaSecsLeft = remaining;
-  _arenaTimer = setInterval(() => {
-    _arenaSecsLeft -= 1;
-    const bar = document.getElementById('arena-timer-bar');
-    const lbl = document.getElementById('arena-timer-secs');
-    if (lbl) lbl.textContent = _arenaSecsLeft;
-    if (bar) bar.style.width = `${(_arenaSecsLeft / secs) * 100}%`;
-    if (_arenaSecsLeft <= 5 && bar) bar.classList.add('low');
-    if (_arenaSecsLeft <= 0) { arenaClearTimer(); arenaAnswer(-1); }
-  }, 1000);
+  if (!_arenaSecsTotal) _arenaSecsTotal = ar.isDaily ? DAILY_SECS : stageSpec(ar.stage).secs;
+  if (_arenaSecsLeft <= 0) _arenaSecsLeft = _arenaSecsTotal; // resume from remaining time, not full duration
+  arenaRunTimer();
 };
+
+// Keyboard play: A–D / 1–4 answer, P or Esc pauses/resumes. Bound once.
+document.addEventListener('keydown', e => {
+  if (state.screen !== 'arena-run' || !ar || ar.phase !== 'question') return;
+  if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName)) return;
+  const k = e.key.toLowerCase();
+  if (k === 'p' || k === 'escape') { e.preventDefault(); _arenaPaused ? arenaResume() : arenaPause(); return; }
+  if (_arenaPaused) return;
+  const idx = '1234'.indexOf(k) >= 0 ? '1234'.indexOf(k) : 'abcd'.indexOf(k);
+  const btn = idx >= 0 && document.querySelector(`#arena-opts [data-idx="${idx}"]:not(:disabled)`);
+  if (btn) { e.preventDefault(); btn.click(); }
+});
+// Switching tabs/apps mid-question shouldn't burn the clock.
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && state.screen === 'arena-run') arenaPause();
+});
 
 window.arenaQuit = function() {
   _arenaPaused = false;
@@ -1257,7 +1346,9 @@ window.arenaQuit = function() {
 window.arenaBegin = async function() {
   const checked = Array.from(document.querySelectorAll('input[name="arena-subj"]:checked')).map(el => el.value);
   if (checked.length < 3) {
-    alert('Please select at least 3 subjects.');
+    arenaSubjChanged();
+    document.getElementById('arena-subj-hint')?.classList.add('arena-hint-shake');
+    setTimeout(() => document.getElementById('arena-subj-hint')?.classList.remove('arena-hint-shake'), 500);
     return;
   }
   const btn = document.querySelector('.arena-go-btn');
@@ -1370,7 +1461,7 @@ window.arenaAnswer = function(idx) {
 
   saveRun();
 
-  // Flash feedback on the button
+  // Flash feedback: option colours, score pop, live HUD update.
   const opts = document.getElementById('arena-opts');
   if (opts) {
     opts.querySelectorAll('.arena-opt-btn').forEach(btn => btn.disabled = true);
@@ -1382,9 +1473,36 @@ window.arenaAnswer = function(idx) {
     const correctBtn = opts.querySelector(`[data-idx="${correctDisplayIdx}"]`);
     if (correctBtn && !isCorrect) correctBtn.classList.add('reveal');
   }
+  arenaShowFx(isCorrect, idx === -1);
 
   setTimeout(() => arenaAdvance(), 900);
 };
+
+function arenaShowFx(isCorrect, timedOut) {
+  const last = ar.stageResults[ar.stageResults.length - 1];
+  const fx = document.getElementById('arena-fx');
+  if (fx) {
+    const tier = arenaComboTier(ar.combo);
+    const milestone = isCorrect && (ar.combo === COMBO_THRESHOLD_1 || ar.combo === COMBO_THRESHOLD_2);
+    const msg = !isCorrect ? (timedOut ? "⏱ Time's up" : '✗ Not quite')
+      : milestone ? `🔥 ${['', '1.5×', '2×'][tier]} combo unlocked!`
+      : ar.combo >= 3 ? `🔥 ${ar.combo} in a row` : '✓ Correct';
+    fx.className = `arena-fx show ${isCorrect ? 'good' : 'bad'}${milestone ? ' milestone' : ''}`;
+    fx.innerHTML = `${isCorrect ? `<span class="arena-fx-pts">+${last.pts.toLocaleString()}</span>` : ''}<span class="arena-fx-msg">${msg}</span>`;
+  }
+  const score = document.getElementById('arena-score');
+  if (score) { score.textContent = ar.score.toLocaleString(); if (isCorrect) score.classList.add('bump'); }
+  const combo = document.getElementById('arena-combo');
+  if (combo) {
+    const tier = arenaComboTier(ar.combo);
+    combo.className = `arena-combo tier-${tier}${isCorrect ? ' bump' : ' broken'}`;
+    combo.innerHTML = `🔥<b>${ar.combo}</b><small>${['1.0×', '1.5×', '2.0×'][tier]}</small>`;
+  }
+  const dots = document.querySelectorAll('.arena-dot');
+  const d = dots[ar.stageResults.length - 1];
+  if (d) { d.classList.remove('now'); d.classList.add(isCorrect ? 'ok' : 'bad'); }
+  document.getElementById('arena-screen')?.classList.add(isCorrect ? 'flash-good' : 'flash-bad');
+}
 
 function arenaAdvance() {
   if (!ar) return;
@@ -1457,6 +1575,7 @@ window.arenaForfeit = function() {
   app._afterRender = function(name, params) {
     if (name === 'arena-run' && ar && ar.phase === 'question') {
       const secs = ar.isDaily ? DAILY_SECS : stageSpec(ar.stage).secs;
+      _arenaPaused = false;
       arenaStartTimer(secs);
     } else {
       arenaClearTimer();

@@ -117,6 +117,19 @@ draining timer bar, and a HUD showing stage, lives, combo and running score.
 Between stages: a short interstitial showing stage cleared, score gained, lives
 remaining. This beat matters — it is where the sense of progress lives.
 
+**Look & feel** *(built)* — styles live in `public/arena.css`, loaded in parallel
+with `arena.js` (the first Arena paint waits for both). Question, interstitial and
+game-over hero render on a dark gradient "stage" panel; setup and Collection stay
+light with a skin-tinted hero. Each skin is a CSS variable set
+(`body[data-arena-skin]`: stage gradient, accent, glow). HUD: stage pill, per-question
+progress dots, hearts, combo badge that glows at 1.5×/2×, live score, labelled pause.
+Timer drains smoothly and turns amber at half time, red under 5 s. Each answer shows a
+`+points` pop or "Time's up / Not quite", and a combo call-out at 5 and 10. Keyboard:
+A–D / 1–4 answer, P / Esc pause; switching tabs auto-pauses. Interstitial: per-question
+✓/✗ marks, correct / points / hearts tiles, next-stage preview, Continue as the only
+primary action ("End run here" is a text link). Setup leads with Free Run (subject
+chips) beside the Daily Challenge; Live Room and Join a Challenge sit in the second row.
+
 Run end: split 40:60 layout — left panel shows final score, deepest stage, longest combo, personal best comparison, and Play Again / Home buttons; right panel lists **all questions attempted** (not just missed), each card colour-coded green (correct) or red (wrong) with a left border, the student's wrong answer shown when applicable, the correct answer, and the explanation. A count badge in the heading shows total questions attempted.
 
 ### Persistence

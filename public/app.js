@@ -197,10 +197,17 @@ const app = {
     const arenaRoutes = ['arena', 'arena-run', 'arena-inter', 'arena-over', 'collection'];
     if (arenaRoutes.includes(name) && !window._arenaLoaded) {
       window._arenaLoaded = true;
+      // arena.css + arena.js load in parallel; render once both are in, so
+      // the first Arena paint is already styled.
+      let pending = 2;
+      const done = () => { if (--pending === 0) this.render(); };
+      const css = document.createElement('link');
+      css.rel = 'stylesheet'; css.href = 'arena.css?v=a62d56e7';
+      css.onload = css.onerror = done;
       const s = document.createElement('script');
-      s.src = 'arena.js?v=e207b5f5';
-      s.onload = () => this.render();
-      document.head.appendChild(s);
+      s.src = 'arena.js?v=a5428783';
+      s.onload = done;
+      document.head.append(css, s);
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading Arena…</div></main>';
       return;
     }
