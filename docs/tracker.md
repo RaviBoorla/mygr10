@@ -4,6 +4,18 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## Option shuffle, Cloé KB fixes, XII IT, Career Pathing polish *(done)*
+
+- **Mock/drill option shuffle** — `shuffleOptions()` (app.js) permutes options + `whyWrong` per session; banks keyed answers to A up to ~85% (X ICSE). Order-sensitive questions (Assertion-Reason, "both of the above", explanations citing a letter) keep their order. Arena/Live Room already shuffled.
+- **Garbled questions hidden** — loaders drop questions with Symbol-font private-use glyphs or blank options: XII CBSE Maths 51/154 MCQs, 37/126 SAs. `check-banks.mjs` warns with ids. *(content still needs re-extraction)*
+- **Cloé KB** — lookup read `window.bankCache`/`window.T` (top-level `const`s aren't on `window`), so banks and careers were never searched; MCQ/SA excerpts sent blank answers. Fixed, and notes/subject banks/careers now load on demand before each reply (2.5 s cap).
+- **XII CBSE Information Technology** — MCQ (27) + SA (18) banks wired into `config.js`; chapters re-tagged to the Code 802 units.
+- **Career Pathing** — clickable detail links + breadcrumb, keyboard nav, empty search state, ctrl/pinch zoom, mobile auto-scroll and default zoom, correct chevrons, larger close button. Fixed per-visit listener stacking (resize threw after leaving), a stray `</div>`, stale filter state; delegated events and a single-pass filter. `careers.html` (blank, stale) now redirects to `#/careers`, removed from sitemap.
+- **Bank loading** — concurrent requests for one bank share a fetch.
+- **Tests** — smoke test: stale XII ICSE "coming soon" assertion updated; new checks for option shuffle, XII IT, career tree/links/empty state/resize.
+
+---
+
 ## Grade XII CBSE board papers 2022 (IP, CS, Chemistry, Biology) *(done)*
 
 CBSE 2022 was Term 2 (April/May 2022) — descriptive only, **no MCQs**. SAs only added.

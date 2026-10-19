@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+- Mocks, drills and assignments shuffle answer options (most banks keyed the
+  right answer to option A).
+- Cloé's knowledge base now searches question banks, revision notes and the
+  career tree, and includes the actual answers in its excerpts.
+- Career Pathing: listeners no longer stack per visit or throw on resize;
+  chevron direction; stray markup. `careers.html` redirects to the app.
+- Unreadable PDF-extracted XII CBSE Maths questions are hidden.
+
+### Added
+- XII CBSE Information Technology MCQ and Short Answers banks.
+- Career Pathing: clickable detail links, keyboard navigation, empty search
+  state, pinch/ctrl-wheel zoom, mobile auto-scroll.
+
 ### Removed
 - Unused Cloudflare Workers API scaffold (`src/`: router, CORS/auth/rate-limit
   middleware, logger, example `/api/v1/*` endpoints) — never wired into the

@@ -126,7 +126,7 @@ Paper 1 also had MCQs; earlier years (2017–2018) are SA-only. All years are no
 
 | Subject | Board | Revision Notes | MCQ Bank | Short Answers | Solved Exercises | Board Paper Years |
 |---|---|---|---|---|---|---|
-| Mathematics | CBSE | ✅ 13 ch | ✅ 154 Qs | ✅ 126 Qs | ✅ 943 Qs | MCQ: 2026; SA: 2026 |
+| Mathematics | CBSE | ✅ 13 ch | ⚠️ 154 Qs (51 hidden — garbled) | ⚠️ 126 Qs (37 hidden — garbled) | ✅ 943 Qs | MCQ: 2026; SA: 2026 |
 | Mathematics | ICSE | ❌ | ✅ 59 Qs | ✅ 224 Qs | ❌ | MCQ: 2023–2026; SA: 2017–2026 |
 | Physics | CBSE | ✅ 14 ch | ✅ 158 Qs | ✅ 70 Qs | ✅ 158 Qs | MCQ: 2026; SA: 2026 |
 | Physics | ICSE | ❌ | ✅ 38 Qs | ✅ 211 Qs | ❌ | MCQ: 2019–2020, 2023–2026; SA: 2018–2026 |
@@ -140,7 +140,7 @@ Paper 1 also had MCQs; earlier years (2017–2018) are SA-only. All years are no
 | Economics | CBSE | ✅ 11 ch (Micro 5 + Macro 6) | ✅ 100 Qs | ✅ 20 Qs | ✅ 183 Qs | MCQ: 2026; SA: 2026 |
 | Political Science | CBSE | ✅ 14 ch (CWP 6 + PISI 8) | ✅ 78 Qs | ✅ 78 Qs | ✅ 137 Qs | MCQ: 2026; SA: 2026 |
 | Psychology | CBSE | ✅ 7 ch | ✅ 14 Qs | ✅ 23 Qs | ✅ 67 Qs | MCQ: 2026; SA: 2026 |
-| Information Technology | CBSE | ❌ | ✅ 27 Qs | ✅ 18 Qs | ❌ | MCQ: 2026; SA: 2026 |
+| Information Technology | CBSE | ❌ | ✅ 27 Qs (wired in) | ✅ 18 Qs (wired in) | ❌ | MCQ: 2026; SA: 2026 |
 
 **ICSE Grade XII revision notes:** ❌ PDFs hard to source; deferred.
 
@@ -152,7 +152,7 @@ embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
 
 | Subject | File | Total Qs | Board Paper Years |
 |---|---|---|---|
-| Mathematics | `XII-CBSE-Mathematics.json` | 154 | 2026 Board — 154 Qs |
+| Mathematics | `XII-CBSE-Mathematics.json` | 154 | 2026 Board — 154 Qs. ⚠️ 51 hidden in-app (Symbol-font glyphs from PDF extraction and/or blank options, all keyed to A) — 103 shown; need re-extraction. `npm run check` lists the ids. |
 | Physics | `XII-CBSE-Physics.json` | 158 | 2026 Board — 158 Qs |
 | Chemistry | `XII-CBSE-Chemistry.json` | 149 | 2023 Board (18), 2024 Board (16), 2026 Board (115) |
 | Biology | `XII-CBSE-Biology.json` | 212 | 2023 Board (16), 2026 Board (196) |
@@ -161,7 +161,7 @@ embedded in its `text` as `"(20XX Board)"` — same convention as Grade X.
 | Economics | `XII-CBSE-Economics.json` | 100 | 2026 Board — 100 Qs |
 | Political Science | `XII-CBSE-Political-Science.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology.json` | 14 | 2026 Board — 14 Qs |
-| Information Technology | `XII-CBSE-Information-Technology.json` | 27 | 2026 Board — 27 Qs |
+| Information Technology | `XII-CBSE-Information-Technology.json` | 27 | 2026 Board — 27 Qs. Chapters re-tagged to the Code 802 units (Database Management, Operating Web-based Applications, Fundamentals of Java Programming, Web Application Project, plus Employability Skills: Communication, Self-Management, ICT, Entrepreneurial, Green). |
 
 ### Grade XII ICSE MCQ Banks
 
@@ -185,7 +185,7 @@ Board paper (and 2025 for CS/IP) — real past-paper VSA/SA sections.
 
 | Subject | File | Total Qs | Board Paper Years |
 |---|---|---|---|
-| Mathematics | `XII-CBSE-Mathematics-ShortAnswers.json` | 126 | 2026 Board — 126 Qs |
+| Mathematics | `XII-CBSE-Mathematics-ShortAnswers.json` | 126 | 2026 Board — 126 Qs. ⚠️ 37 hidden in-app (garbled Symbol-font glyphs) — 89 shown; need re-extraction. |
 | Physics | `XII-CBSE-Physics-ShortAnswers.json` | 70 | 2026 Board — 70 Qs |
 | Chemistry | `XII-CBSE-Chemistry-ShortAnswers.json` | 101 | 2022 Board (7, Term 2 SA-only), 2023 Board (7), 2024 Board (10), 2026 Board (52); remaining 25 curriculum-authored |
 | Biology | `XII-CBSE-Biology-ShortAnswers.json` | 112 | 2022 Board (7, Term 2 SA-only), 2023 Board (5), 2026 Board (100) |
@@ -194,7 +194,7 @@ Board paper (and 2025 for CS/IP) — real past-paper VSA/SA sections.
 | Economics | `XII-CBSE-Economics-ShortAnswers.json` | 20 | 2026 Board — 20 Qs |
 | Political Science | `XII-CBSE-Political-Science-ShortAnswers.json` | 78 | 2026 Board — 78 Qs |
 | Psychology | `XII-CBSE-Psychology-ShortAnswers.json` | 23 | 2026 Board — 23 Qs |
-| Information Technology | `XII-CBSE-Information-Technology-ShortAnswers.json` | 18 | 2026 Board — 18 Qs |
+| Information Technology | `XII-CBSE-Information-Technology-ShortAnswers.json` | 18 | 2026 Board — 18 Qs. Chapters re-tagged as for the MCQ bank. |
 
 ### Grade XII CBSE Solved Exercises Banks
 
