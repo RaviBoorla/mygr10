@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Fixed
+- XII CBSE Mathematics 2026: 68 MCQs and 57 short answers re-transcribed from
+  the question papers with real answer keys and model answers (the old
+  extraction had every MCQ keyed to A and placeholder solutions).
 - Mocks, drills and assignments shuffle answer options (most banks keyed the
   right answer to option A).
 - Cloé's knowledge base now searches question banks, revision notes and the

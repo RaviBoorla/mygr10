@@ -1787,649 +1787,458 @@
     "id": "xiimath-2026-085"
   },
   {
+    "id": "xiimath-2026-086",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "For the feasible region shown below, the non-trivial constraints of the\n linear programming problem are (2026 Board)",
+    "text": "For the feasible region shown (bounded by the line through (5, 0) and (0, 5) and the line through (9, 0) and (0, 3), shaded between them for x from about 3 to 9), the non-trivial constraints of the linear programming problem are (2026 Board)",
     "options": [
-      "x + y  5, x + 3y ",
-      "x + y  5, x + 3y ",
-      "x + y  5, x + 3y ",
-      "x + y  5, 3x + y "
+      "x + y ≤ 5, x + 3y ≤ 9",
+      "x + y ≤ 5, x + 3y ≥ 9",
+      "x + y ≥ 5, x + 3y ≤ 9",
+      "x + y ≥ 5, 3x + y ≤ 9"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Linear Programming",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "The lines are x + y = 5 and x + 3y = 9. The shaded region lies above x + y = 5 (away from the origin) and below x + 3y = 9 (towards the origin): x + y ≥ 5, x + 3y ≤ 9.",
     "priority": true,
-    "id": "xiimath-2026-086"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-087",
     "chapter": "Probability",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "For two events A and B such that P (2026 Board)",
+    "text": "For two events A and B such that P(A) ≠ 0 and P(B) ≠ 1, P(A′|B′) = (2026 Board)",
     "options": [
-      " 0 and P",
-      " 1, P(A/B) =",
-      "1 - P(A/B)",
-      "1 - P(A/B)\n 1 - P(A  B) 1 - P(A  B)"
+      "1 − P(A|B)",
+      "1 − P(A′|B)",
+      "(1 − P(A ∩ B))/P(B′)",
+      "(1 − P(A ∪ B))/P(B′)"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Probability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "P(A′|B′) = P(A′ ∩ B′)/P(B′), and A′ ∩ B′ = (A ∪ B)′, so it equals (1 − P(A ∪ B))/P(B′).",
     "priority": true,
-    "id": "xiimath-2026-087"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-088",
     "chapter": "Relations and Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "A relation R on set A = {1, 2, 3} is defined as R = {(1, 3), (3, 3), (1, 1), (2, 2),\n (3, 1)} is (2026 Board)",
+    "difficulty": "easy",
+    "text": "A relation R on set A = {1, 2, 3} is defined as R = {(1, 3), (3, 3), (1, 1), (2, 2), (3, 1)}. Then R is (2026 Board)",
     "options": [
       "only reflexive and symmetric",
       "reflexive only",
       "only reflexive and transitive",
       "reflexive, symmetric and transitive"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Relations and Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "(1,1), (2,2), (3,3) ∈ R ⇒ reflexive. (1,3) and (3,1) both present ⇒ symmetric. (1,3),(3,1) ⇒ (1,1) ∈ R and (3,1),(1,3) ⇒ (3,3) ∈ R, so it is transitive too — an equivalence relation.",
     "priority": true,
-    "id": "xiimath-2026-088"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Vector Algebra",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-089",
+    "chapter": "Matrices",
     "difficulty": "medium",
-    "text": "If A and B are square matrices of same order, then which of the following\n statements is/are always true ?\n (i) (A + B) (A - B) = A2 - B2\n (ii) AB = BA\n (iii) (A + B)2 = A2 + AB + BA + B2\n (iv) AB = 0  A = 0 or B = (2026 Board)",
+    "text": "If A and B are square matrices of the same order, which of the following statements is/are always true?\n(i) (A + B)(A − B) = A² − B²\n(ii) AB = BA\n(iii) (A + B)² = A² + AB + BA + B²\n(iv) AB = O ⇒ A = O or B = O (2026 Board)",
     "options": [
       "Only (i) and (iii)",
       "Only (ii) and (iii)",
       "Only (iii)",
-      "Only (iii) and (iv)\n\n\f 1 a b"
+      "Only (iii) and (iv)"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Matrix multiplication is not commutative, so (i) and (ii) fail in general; (A + B)² = A² + AB + BA + B² always holds; AB = O is possible with both A, B non-zero, so (iv) fails.",
     "priority": true,
-    "id": "xiimath-2026-089"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-090",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If A =  - 1 2 c  is a symmetric matrix, then the value of 3a + b + c is\n  0 5 3  (2026 Board)",
+    "difficulty": "easy",
+    "text": "If A = [[1, a, b], [−1, 2, c], [0, 5, 3]] is a symmetric matrix, then the value of 3a + b + c is (2026 Board)",
     "options": [
       "2",
+      "6",
       "4",
-      " tan x cot x   ",
-      ""
+      "0"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "Symmetric means aᵢⱼ = aⱼᵢ: a = −1, b = 0, c = 5. So 3a + b + c = −3 + 0 + 5 = 2.",
     "priority": true,
-    "id": "xiimath-2026-090"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-091",
     "chapter": "Matrices",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If A =   and A + A' = 2I, then value of x  0,  is\n  - cot x tan x   2\n  (2026 Board)",
+    "text": "If A = [[tan x, cot x], [−cot x, tan x]] and A + A′ = 2I, then the value of x ∈ [0, π/2] is (2026 Board)",
     "options": [
       "0",
-      " ",
-      "4",
-      ""
+      "π/3",
+      "π/4",
+      "π/2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "A′ = [[tan x, −cot x], [cot x, tan x]], so A + A′ = [[2 tan x, 0], [0, 2 tan x]] = 2I ⇒ tan x = 1 ⇒ x = π/4.",
     "priority": true,
-    "id": "xiimath-2026-091"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-092",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "For a square matrix A, (3A)-1 = (2026 Board)",
+    "difficulty": "easy",
+    "text": "For a square matrix A, (3A)⁻¹ = (2026 Board)",
     "options": [
-      "3A-1",
-      "9A-1\n 1 -1 1 -1",
-      "A",
-      "A\n -1 -2"
+      "3A⁻¹",
+      "9A⁻¹",
+      "(1/3)A⁻¹",
+      "(1/9)A⁻¹"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "(kA)⁻¹ = (1/k)A⁻¹ for k ≠ 0, since (kA)·(1/k)A⁻¹ = I.",
     "priority": true,
-    "id": "xiimath-2026-092"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-093",
     "chapter": "Determinants",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If - 2 a - 1 = -86, then the sum of all possible values of a is\n 0 4 2a (2026 Board)",
+    "text": "If |−1 −2 5; −2 a −1; 0 4 2a| = −86, then the sum of all possible values of a is (2026 Board)",
     "options": [
       "4",
-      "-4",
-      "dy",
-      ""
+      "5",
+      "−4",
+      "9"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Expanding along R1: −1(2a² + 4) + 2(−4a) + 5(−8) = −2a² − 8a − 44 = −86 ⇒ a² + 4a − 21 = 0, whose roots sum to −4.",
     "priority": true,
-    "id": "xiimath-2026-093"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-094",
+    "chapter": "Continuity and Differentiability",
+    "difficulty": "easy",
+    "text": "If x + y = xy, then dy/dx is (2026 Board)",
+    "options": [
+      "y/(x − 1)",
+      "1/(x − 1)",
+      "(y − 1)/(x − 1)",
+      "(1 − y)/(x − 1)"
+    ],
+    "correct": 3,
+    "explanation": "Differentiate: 1 + y′ = y + x y′ ⇒ y′(1 − x) = y − 1 ⇒ y′ = (y − 1)/(1 − x) = (1 − y)/(x − 1).",
+    "priority": true,
+    "subject": "Mathematics"
+  },
+  {
+    "id": "xiimath-2026-095",
     "chapter": "Integrals",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If x + y = xy, then is\n dx\n y (2026 Board)",
+    "text": "∫ dx/(sec x + tan x) is equal to (2026 Board)",
     "options": [
-      "x -1 x -1\n y -1 1- y",
-      "x -1 x -1\n\n\f dx",
-      "",
-      ""
+      "log|sec x + tan x| + C",
+      "log|sec x − tan x| + C",
+      "log|1 + cos x| + C",
+      "log|1 + sin x| + C"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "1/(sec x + tan x) = cos x/(1 + sin x). With t = 1 + sin x, dt = cos x dx, the integral is log|1 + sin x| + C.",
     "priority": true,
-    "id": "xiimath-2026-094"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Integrals",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-096",
+    "chapter": "Application of Derivatives",
     "difficulty": "medium",
-    "text": " sec x  tan x\n is equal to (2026 Board)",
+    "text": "For f(x) = x + 1/x (x ≠ 0) (2026 Board)",
     "options": [
-      "log | sec x + tan x | + C",
-      "log | sec x - tan x | + C",
-      "log | 1 + cos x | + C",
-      "log | 1 + sin x |+ C"
-    ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "priority": true,
-    "id": "xiimath-2026-095"
-  },
-  {
-    "chapter": "Relations and Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "For f(x) = x + (x  0)\n x (2026 Board)",
-    "options": [
-      "local maximum value is",
-      "local minimum value is -2",
-      "local maximum value is -2",
+      "local maximum value is 2",
+      "local minimum value is −2",
+      "local maximum value is −2",
       "local minimum value < local maximum value"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Relations and Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "f'(x) = 1 − 1/x² = 0 ⇒ x = ±1. f''(x) = 2/x³: at x = −1 it is negative, so a local maximum f(−1) = −2; at x = 1 a local minimum f(1) = 2.",
     "priority": true,
-    "id": "xiimath-2026-096"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-097",
     "chapter": "Application of Integrals",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "Which of the following expressions will give the area of region bounded by\n the curve y = x2 and line y = 16 ? (2026 Board)",
+    "text": "Which of the following expressions will give the area of the region bounded by the curve y = x² and the line y = 16? (2026 Board)",
     "options": [
-      " x dx",
-      "2  x 2 dx",
-      " y dy",
-      "2  y dy"
+      "∫₀⁴ x² dx",
+      "2∫₀⁴ x² dx",
+      "∫₀¹⁶ √y dy",
+      "2∫₀¹⁶ √y dy"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "Integrating along y, the region is symmetric about the y-axis with x = ±√y for 0 ≤ y ≤ 16, so the area is 2∫₀¹⁶ √y dy.",
     "priority": true,
-    "id": "xiimath-2026-097"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-098",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The general solution of the differential equation : x2dy + y2dx = 0 is (2026 Board)",
+    "difficulty": "easy",
+    "text": "The general solution of the differential equation x²dy + y²dx = 0 is (2026 Board)",
     "options": [
-      "x3 + y3 = k",
-      "- =k\n y x",
-      " =k",
-      "log y2 + log x2 = k\n y x\n\n dy"
+      "x³ + y³ = k",
+      "1/y − 1/x = k",
+      "1/y + 1/x = k",
+      "log y² + log x² = k"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Separate: dy/y² = −dx/x² ⇒ −1/y = 1/x + C ⇒ 1/x + 1/y = k.",
     "priority": true,
-    "id": "xiimath-2026-098"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Integrals",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-099",
+    "chapter": "Differential Equations",
     "difficulty": "medium",
-    "text": "The integrating factor of the differential equation 2x - y = 3 is\n dx (2026 Board)",
+    "text": "The integrating factor of the differential equation 2x(dy/dx) − y = 3 is (2026 Board)",
     "options": [
-      "x",
-      "x",
-      "ex",
-      "e-x\n\n\f  "
+      "√x",
+      "1/√x",
+      "eˣ",
+      "e⁻ˣ"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Standard form: dy/dx − y/(2x) = 3/(2x). IF = e^(∫−1/(2x) dx) = e^(−½ log x) = 1/√x.",
     "priority": true,
-    "id": "xiimath-2026-099"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-100",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If | a | = 5 and -2    1, then the sum of greatest and the smallest\n \n value of |  a | is (2026 Board)",
+    "text": "If |a⃗| = 5 and −2 ≤ λ ≤ 1, then the sum of the greatest and the smallest value of |λa⃗| is (2026 Board)",
     "options": [
-      "-5",
+      "−5",
+      "5",
       "10",
-      "",
-      ""
+      "15"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "|λa⃗| = |λ|·5 with |λ| ∈ [0, 2], so |λa⃗| ranges over [0, 10]. Greatest + smallest = 10 + 0 = 10.",
     "priority": true,
-    "id": "xiimath-2026-100"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-101",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "Vector of magnitude 3 making equal angles with x and y axes and\n perpendicular to z axis is\n ^ ^ ^ (2026 Board)",
+    "text": "A vector of magnitude 3 making equal angles with the x and y axes and perpendicular to the z axis is (2026 Board)",
     "options": [
-      "i +2 2 j",
-      "3 k\n\n 3 2^ 3 2^ ^ ^ ^",
-      "i + j",
-      "3 i + 3 j + 3k\n Assertion - Reason Based Questions\n Direction : Question numbers 19 and 20 are Assertion"
+      "î + 2√2 ĵ",
+      "3k̂",
+      "(3√2/2)î + (3√2/2)ĵ",
+      "√3 î + √3 ĵ + √3 k̂"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Perpendicular to z ⇒ no k̂ part; equal angles with x and y ⇒ equal î, ĵ parts. Unit vector (î + ĵ)/√2, times 3 gives (3/√2)(î + ĵ) = (3√2/2)î + (3√2/2)ĵ.",
     "priority": true,
-    "id": "xiimath-2026-101"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Vector Algebra",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "For two vectors a and b\n      \n Assertion (2026 Board)",
-    "options": [
-      ": | a  b |2 + ( a · b )2 = | a |2 | b |2\n      \n Reason (R) : | a  b | = ( a · b ) tan ,  θ  \n  2",
-      "",
-      "",
-      ""
-    ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "priority": true,
-    "qtype": "assertion-reason",
-    "id": "xiimath-2026-102"
-  },
-  {
+    "id": "xiimath-2026-103",
     "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "The following graph represents : (2026 Board)",
+    "text": "A graph has two branches: one starts at (1, π/2) and decreases towards the x-axis as x → ∞; the other starts at (−1, −π/2) and rises towards the x-axis as x → −∞. There is no part of the graph for −1 < x < 1. The graph represents (2026 Board)",
     "options": [
-      "y = cos-1 x",
-      "y = sec-1 x",
-      "y = tan-1 x",
-      "y = cosec-1 x\n i - 3j"
+      "y = cos⁻¹x",
+      "y = sec⁻¹x",
+      "y = tan⁻¹x",
+      "y = cosec⁻¹x"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "Domain |x| ≥ 1 with values π/2 at x = 1 and −π/2 at x = −1, approaching 0 but never reaching it: range [−π/2, π/2] − {0}. That is the principal branch of cosec⁻¹x.",
     "priority": true,
-    "id": "xiimath-2026-103"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-104",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If A = [aij] is a 2  2 matrix whose elements are given by aij = ,\n then A is :\n  5  1\n 1 2 1 2 (2026 Board)",
+    "difficulty": "easy",
+    "text": "If A = [aᵢⱼ] is a 2 × 2 matrix whose elements are given by aᵢⱼ = |i − 3j|/2, then A′ is (2026 Board)",
     "options": [
-      " ",
-      " \n 1 2 5 2\n  2   2 \n\n  5  1\n 2 2 2 2",
-      " ",
-      " \n 1 1 5 1\n  2   2 "
+      "[[1, 5/2], [1/2, 2]]",
+      "[[1, 1/2], [5/2, 2]]",
+      "[[2, 5/2], [1/2, 1]]",
+      "[[2, 1/2], [5/2, 1]]"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "a₁₁ = |1 − 3|/2 = 1, a₁₂ = |1 − 6|/2 = 5/2, a₂₁ = |2 − 3|/2 = 1/2, a₂₂ = |2 − 6|/2 = 2. A = [[1, 5/2], [1/2, 2]], so A′ = [[1, 1/2], [5/2, 2]].",
     "priority": true,
-    "id": "xiimath-2026-104"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-105",
     "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The principal value of sec-1 ( 2 ) + 2 cosec-1 ( - 2 ) is :\n   (2026 Board)",
+    "difficulty": "easy",
+    "text": "The principal value of sec⁻¹(√2) + 2 cosec⁻¹(−√2) is (2026 Board)",
     "options": [
-      "-",
-      "-\n  ",
-      "4",
-      ""
+      "−π/2",
+      "−π/4",
+      "π/4",
+      "π/2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "sec⁻¹(√2) = π/4 and cosec⁻¹(−√2) = −π/4, so π/4 + 2(−π/4) = −π/4.",
     "priority": true,
-    "id": "xiimath-2026-105"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Vector Algebra",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If points (2, 3), (0, 4) and (p, 2) are collinear, then the value of p is : (2026 Board)",
+    "id": "xiimath-2026-106",
+    "chapter": "Determinants",
+    "difficulty": "easy",
+    "text": "If points (2, 3), (0, 4) and (p, 2) are collinear, then the value of p is (2026 Board)",
     "options": [
-      "-",
+      "4/7",
+      "−3/7",
       "4",
-      "-4\n\n x",
-      ""
+      "−4"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Collinear ⇔ area = 0: |2 3 1; 0 4 1; p 2 1| = 2(4 − 2) − 3(0 − p) + 1(0 − 4p) = 4 + 3p − 4p = 4 − p = 0 ⇒ p = 4.",
     "priority": true,
-    "id": "xiimath-2026-106"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-107",
     "chapter": "Continuity and Differentiability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Differential of ee with respect to x is :\n x (2026 Board)",
+    "difficulty": "easy",
+    "text": "The derivative of e^(eˣ) with respect to x is (2026 Board)",
     "options": [
       "log x",
-      "ee\n x",
-      "ex ee",
-      "(ex)2"
+      "e^(eˣ)",
+      "eˣ · e^(eˣ)",
+      "(eˣ)²"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Chain rule: d/dx e^(eˣ) = e^(eˣ) · d/dx(eˣ) = eˣ · e^(eˣ).",
     "priority": true,
-    "id": "xiimath-2026-107"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-108",
     "chapter": "Application of Derivatives",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "The surface area of a sphere when its volume changes at the same rate as\n its radius is : (2026 Board)",
+    "text": "The surface area of a sphere when its volume changes at the same rate as its radius is (2026 Board)",
     "options": [
-      "4 sq. units",
+      "4π sq. units",
       "1 sq. unit",
       "4 sq. units",
-      " sq. units\n  sin x\n + cos x, x "
+      "π sq. units"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Derivatives",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "dV/dt = 4πr² dr/dt. Setting dV/dt = dr/dt gives 4πr² = 1, and 4πr² is exactly the surface area: 1 sq. unit.",
     "priority": true,
-    "id": "xiimath-2026-108"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-109",
     "chapter": "Continuity and Differentiability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If f(x) =  x is continuous at x = 0, then the value of k\n  k, x=0\n is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "If f(x) = (sin x)/x + cos x for x ≠ 0, and f(0) = k, is continuous at x = 0, then the value of k is (2026 Board)",
     "options": [
       "0",
-      "-",
-      "-1",
-      ""
+      "−2",
+      "−1",
+      "2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Continuity and Differentiability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "lim (x→0) [(sin x)/x + cos x] = 1 + 1 = 2, so continuity needs k = 2.",
     "priority": true,
-    "id": "xiimath-2026-109"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-110",
     "chapter": "Continuity and Differentiability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The greatest integer function, f(x) = [x], 0 < x < 3 is not differentiable at\n how many points ? (2026 Board)",
+    "difficulty": "easy",
+    "text": "The greatest integer function f(x) = [x], 0 < x < 3, is not differentiable at how many points? (2026 Board)",
     "options": [
       "At only one point",
       "At only two points",
       "At no point",
-      "At three points\n\n  25 - 16x is equal to :\n dx"
+      "At three points"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Continuity and Differentiability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "[x] jumps at every integer. In (0, 3) the integers are 1 and 2, where f is discontinuous and hence not differentiable: two points.",
     "priority": true,
-    "id": "xiimath-2026-110"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-111",
+    "chapter": "Integrals",
     "difficulty": "medium",
-    "text": "If = tan-1 e + k, then the value of k is :\n x -x\n  (2026 Board)",
+    "text": "If ∫ from 0 to 1 of dx/(eˣ + e⁻ˣ) = tan⁻¹e + k, then the value of k is (2026 Board)",
     "options": [
       "e",
-      "",
+      "π/4",
       "0",
-      "-"
+      "−π/4"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "∫ dx/(eˣ + e⁻ˣ) = ∫ eˣ dx/(e²ˣ + 1) = tan⁻¹(eˣ). From 0 to 1: tan⁻¹e − tan⁻¹1 = tan⁻¹e − π/4, so k = −π/4.",
     "priority": true,
-    "id": "xiimath-2026-111"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-112",
     "chapter": "Application of Integrals",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The area of the region bounded by the curve y = x and x-axis, between\n x = 0 and x = 2 is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The area of the region bounded by the curve y = x and the x-axis, between x = 0 and x = 2, is (2026 Board)",
     "options": [
       "2 sq. units",
-      "sq. unit",
+      "1/2 sq. unit",
       "1 sq. unit",
       "4 sq. units"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "∫₀² x dx = [x²/2]₀² = 2 sq. units (a triangle with base 2 and height 2).",
     "priority": true,
-    "id": "xiimath-2026-112"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-113",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Product of the order and degree of differential equation\n  dy   d3y \n 1+   =   3  is :\n  dx   dx \n   (2026 Board)",
+    "difficulty": "easy",
+    "text": "The product of the order and degree of the differential equation 1 + (dy/dx)³ = λ(d³y/dx³)² is (2026 Board)",
     "options": [
       "5",
+      "6",
       "2",
-      "b",
-      ""
+      "3"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Highest derivative d³y/dx³ ⇒ order 3; it appears squared in a polynomial equation ⇒ degree 2. Product = 6.",
     "priority": true,
-    "id": "xiimath-2026-113"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-114",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "Which of the following is not a Linear Differential Equation ? (2026 Board)",
+    "text": "Which of the following is not a linear differential equation? (2026 Board)",
     "options": [
-      "(1 + x2) dy + 2xy dx = cot x dx\n d",
-      "y+ (xy) = x (sin x + log x)\n dx",
-      "x (1 + y2) dx - y (1 + x2) dy =",
-      "y dx - (x + 3y2) dy ="
+      "(1 + x²)dy + 2xy dx = cot x dx",
+      "y + d/dx(xy) = x(sin x + log x)",
+      "x(1 + y²)dx − y(1 + x²)dy = 0",
+      "y dx − (x + 3y²)dy = 0"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "(A) and (B) are linear in y; (D) gives dx/dy − x/y = 3y, linear in x. (C) gives dy/dx = x(1 + y²)/(y(1 + x²)), which has a y² term and is not linear in y (nor in x as a function of y).",
     "priority": true,
-    "id": "xiimath-2026-114"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-115",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "The region represented by the system of inequations 3x + y  3,\n 2x - y  - 5, x, y  0 is : (2026 Board)",
+    "text": "The region represented by the system of inequations 3x + y ≥ 3, 2x − y ≥ −5, x, y ≥ 0 is (2026 Board)",
     "options": [
       "unbounded in 1st quadrant",
       "bounded in 1st quadrant",
@@ -2437,506 +2246,368 @@
       "bounded in 2nd quadrant"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "x, y ≥ 0 restricts to the 1st quadrant. The region lies above 3x + y = 3 and below y = 2x + 5; nothing limits x from above, so it extends without bound: unbounded in the 1st quadrant.",
     "priority": true,
-    "id": "xiimath-2026-115"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-116",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "In the graph, the feasible region representing the Linear Programming\n Problem for maximising objective function Z = px + qy, p, q > 0 is shaded.\n If all points on segment AB give max (Z), then which of the following is\n true ? (2026 Board)",
+    "text": "The feasible region OABC of an LPP for maximising Z = px + qy (p, q > 0) has corners O(0, 0), A(0, 5), B(3, 4) and C(5, 0). If all points on segment AB give the maximum of Z, then which of the following is true? (2026 Board)",
     "options": [
       "p = 2q",
       "p = 3q",
       "q = 3p",
-      "q = 2p\n ^ ^ ^ ^ ^ ^ →"
+      "q = 2p"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Linear Programming",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Every point of AB is optimal ⇒ Z(A) = Z(B): 5q = 3p + 4q ⇒ q = 3p. (AB lies on x + 3y = 15, parallel to px + qy = const when q = 3p.)",
     "priority": true,
-    "id": "xiimath-2026-116"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-117",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If (3 i - 2 j + 5 k )  (4 i + p j + q k ) = 0 , then the values of p and q are :\n 2 5 (2026 Board)",
+    "text": "If (3î − 2ĵ + 5k̂) × (4î + pĵ + qk̂) = 0⃗, then the values of p and q are (2026 Board)",
     "options": [
-      "p=- ,q=",
-      "p=- ,q=\n 3 3",
-      "p= ,q=-",
-      "p = 0, q =\n\fb"
+      "p = −2/3, q = 5/3",
+      "p = −8/3, q = 20/3",
+      "p = 20/3, q = −8/3",
+      "p = 0, q = 0"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Cross product zero ⇒ parallel vectors: 4/3 = p/(−2) = q/5 ⇒ p = −8/3, q = 20/3.",
     "priority": true,
-    "id": "xiimath-2026-117"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-118",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "Three points A(0, 1, 1), B(2, 0, -1) and C(1, 0, 3) form  ABC. The\n ar ( ABC) is : (2026 Board)",
+    "text": "Three points A(0, 1, 1), B(2, 0, −1) and C(1, 0, 3) form ΔABC. The area of ΔABC is (2026 Board)",
     "options": [
-      "sq. units",
-      "53 sq. units",
-      "sq. units",
-      "11 sq. units"
+      "√53/2 sq. units",
+      "√53 sq. units",
+      "√11/2 sq. units",
+      "√11 sq. units"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "AB⃗ = (2, −1, −2), AC⃗ = (1, −1, 2). AB⃗ × AC⃗ = (−2 − 2, −(4 + 2), −2 + 1) = (−4, −6, −1), magnitude √53. Area = √53/2.",
     "priority": true,
-    "id": "xiimath-2026-118"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-119",
     "chapter": "Probability",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "A box contains 4 red, 5 blue and 1 green marble. A child randomly takes\n out a marble from the box, notes down the colour and puts it back in the\n box. If the activity is repeated 3 times, what is the probability that at\n least one marble is red ? (2026 Board)",
+    "text": "A box contains 4 red, 5 blue and 1 green marble. A child randomly takes out a marble from the box, notes down the colour and puts it back in the box. If the activity is repeated 3 times, what is the probability that at least one marble is red? (2026 Board)",
     "options": [
-      "125",
-      "125\nQuestions number 19 and 20 are Assertion and Reason based questions. Two\nstatements are given, one labelled Assertion",
-      "and the other labelled Reason\n(R). Select the correct answer from the codes",
-      "and"
+      "27/125",
+      "8/125",
+      "2/125",
+      "98/125"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Probability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "With replacement, P(red) = 4/10 = 2/5 each time, so P(no red in 3) = (3/5)³ = 27/125. P(at least one red) = 1 − 27/125 = 98/125.",
     "priority": true,
-    "id": "xiimath-2026-119"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-120",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Assertion (2026 Board)",
+    "difficulty": "easy",
+    "text": "Assertion (A): If A and B are two square matrices such that AB and BA are defined, then it is not necessary that AB = BA.\nReason (R): The product of two diagonal matrices of the same order is commutative. (2026 Board)",
     "options": [
-      ": If A and B are two square matrices such that AB and BA\n are defined, then it is not necessary that AB = BA.\n Reason (R) : Product of two diagonal matrices of same order is\n commutative.",
-      "",
-      "",
-      ""
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Matrix multiplication is not commutative in general, so A is true. Diagonal matrices of the same order do commute, so R is true — but that special case does not explain the general statement in A.",
     "priority": true,
-    "qtype": "assertion-reason",
-    "id": "xiimath-2026-120"
+    "subject": "Mathematics",
+    "qtype": "assertion-reason"
   },
   {
+    "id": "xiimath-2026-121",
     "chapter": "Matrices",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If matrix A =   is such that A2 = I, then :\n  r p (2026 Board)",
+    "text": "If matrix A = [[−p, q], [r, p]] is such that A² = I, then (2026 Board)",
     "options": [
-      "1 + p2 + qr =",
-      "1 - p2 - qr =",
-      "1 - p2 + qr =",
-      "1 + p2 - qr ="
+      "1 + p² + qr = 0",
+      "1 − p² − qr = 0",
+      "1 − p² + qr = 0",
+      "1 + p² − qr = 0"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "A² = [[p² + qr, −pq + pq], [−pr + pr, qr + p²]] = (p² + qr)I. A² = I ⇒ p² + qr = 1 ⇒ 1 − p² − qr = 0.",
     "priority": true,
-    "id": "xiimath-2026-121"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-122",
     "chapter": "Matrices",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If A is a square matrix such that A2 = A, then (A - I)3 - A is equal to : (2026 Board)",
+    "text": "If A is a square matrix such that A² = A, then (A − I)³ − A is equal to (2026 Board)",
     "options": [
       "I",
-      "-I",
+      "−I",
       "A",
-      "A2\n\n\fb"
+      "A²"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "(A − I)³ = A³ − 3A² + 3A − I. With A² = A (so A³ = A): A − 3A + 3A − I = A − I. Then (A − I)³ − A = −I.",
     "priority": true,
-    "id": "xiimath-2026-122"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-123",
     "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "For the inverse trigonometric functions, which of the following Principal\n Value Branch is not correctly defined ?\n     (2026 Board)",
+    "difficulty": "easy",
+    "text": "For the inverse trigonometric functions, which of the following principal value branches is not correctly defined? (2026 Board)",
     "options": [
-      "tan-1 : R → \n - , \n  2 2 \n \n π",
-      "sec-1 : R - (-1, 1) → [0, ] - \n \n 2\n ",
-      "cot-1 : R → (0, )\n -1   ",
-      "cosec : R - (-1, 1) →  - , \n  2 2\n\n 0 - 3 4 - 3 0 1"
+      "tan⁻¹ : ℝ → (−π/2, π/2)",
+      "sec⁻¹ : ℝ − (−1, 1) → [0, π] − {π/2}",
+      "cot⁻¹ : ℝ → (0, π)",
+      "cosec⁻¹ : ℝ − (−1, 1) → [−π/2, π/2]"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "The principal branch of cosec⁻¹ is [−π/2, π/2] − {0}: cosec is never 0, so 0 must be excluded. The other three are correct.",
     "priority": true,
-    "id": "xiimath-2026-123"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-124",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Let A =   and B =   . If A + B + C = O, then matrix C\n 1 0 2  2 4 0\n is :\n - 3 - 3 5  3 3 5 (2026 Board)",
+    "difficulty": "easy",
+    "text": "Let A = [[0, −3, 4], [1, 0, 2]] and B = [[−3, 0, 1], [2, 4, 0]]. If A + B + C = O, then matrix C is (2026 Board)",
     "options": [
-      "",
-      " 4 2  - 3 - 4 - 2\n  \n\n  3 3 - 5  - 3 - 3 - 5",
-      "\n  - 3 - 4 - 2\n    4 2 ",
-      ""
+      "[[−3, −3, 5], [3, 4, 2]]",
+      "[[3, 3, 5], [−3, −4, −2]]",
+      "[[3, 3, −5], [−3, −4, −2]]",
+      "[[−3, −3, −5], [3, 4, 2]]"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "A + B = [[−3, −3, 5], [3, 4, 2]], so C = −(A + B) = [[3, 3, −5], [−3, −4, −2]].",
     "priority": true,
-    "id": "xiimath-2026-124"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-125",
     "chapter": "Determinants",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If A is a non-singular matrix, then which of the following is not true ? (2026 Board)",
+    "text": "If A is a non-singular matrix, then which of the following is not true? (2026 Board)",
     "options": [
       "adj A is singular",
-      "(adj A)-1 = (adj A-1)",
-      "|A|",
-      "A-1 exists\n\n  x 2 - 4x -\n  , x  -1\n  x +1"
+      "(adj A)⁻¹ = adj(A⁻¹)",
+      "|A| ≠ 0",
+      "A⁻¹ exists"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Determinants",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "|adj A| = |A|ⁿ⁻¹ ≠ 0 when |A| ≠ 0, so adj A is also non-singular. The other statements are true for a non-singular A.",
     "priority": true,
-    "id": "xiimath-2026-125"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-126",
     "chapter": "Continuity and Differentiability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If f(x) = \n \n  k, x = -1\n\n is continuous at x = - 1, then the value of k is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "If f(x) = (x² − 4x − 5)/(x + 1) for x ≠ −1, and f(−1) = k, is continuous at x = −1, then the value of k is (2026 Board)",
     "options": [
       "Any real value",
-      "-1",
-      "-6\n\n\fb",
-      ""
+      "6",
+      "−1",
+      "−6"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Continuity and Differentiability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "(x² − 4x − 5)/(x + 1) = (x − 5)(x + 1)/(x + 1) = x − 5 for x ≠ −1. The limit at −1 is −6, so k = −6.",
     "priority": true,
-    "id": "xiimath-2026-126"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Application of Integrals",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-127",
+    "chapter": "Determinants",
     "difficulty": "medium",
-    "text": "If the area of  ABC with vertices A(3, 1), B(- 2, 1) and C(0, k) is\n 5 sq. units, then values of k are : (2026 Board)",
+    "text": "If the area of ΔABC with vertices A(3, 1), B(−2, 1) and C(0, k) is 5 sq. units, then the values of k are (2026 Board)",
     "options": [
-      "3,",
-      "- 1,",
-      "- 1,",
-      "0,\n sin x + cos x  π\n  π"
+      "3, 1",
+      "−1, 3",
+      "−1, 2",
+      "0, 2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Area = ½|3(1 − k) − 2(k − 1) + 0| = ½|5 − 5k| = 5 ⇒ |1 − k| = 2 ⇒ k = −1 or 3.",
     "priority": true,
-    "id": "xiimath-2026-127"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-128",
+    "chapter": "Continuity and Differentiability",
     "difficulty": "medium",
-    "text": "Derivative of cos-1 \n  ,\n  4- < x < with respect to x is :\n \n  (2026 Board)",
+    "text": "The derivative of cos⁻¹((sin x + cos x)/√2), −π/4 < x < π/4, with respect to x is (2026 Board)",
     "options": [
-      "-1",
-      "π π",
-      "-",
-      ""
+      "−1",
+      "1",
+      "π/4",
+      "−π/4"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "(sin x + cos x)/√2 = cos(x − π/4). For −π/4 < x < π/4, x − π/4 ∈ (−π/2, 0), so cos⁻¹(cos(x − π/4)) = π/4 − x. Its derivative is −1.",
     "priority": true,
-    "id": "xiimath-2026-128"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Integrals",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Absolute minimum value of f(x) = (x - 2)2 + 5 in the interval [- 3, 2] is : (2026 Board)",
+    "id": "xiimath-2026-129",
+    "chapter": "Application of Derivatives",
+    "difficulty": "easy",
+    "text": "The absolute minimum value of f(x) = (x − 2)² + 5 in the interval [−3, 2] is (2026 Board)",
     "options": [
-      "-3",
+      "−3",
+      "2",
       "5",
-      " 1 + cos 2x dx is equal to :",
-      ""
+      "30"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "(x − 2)² ≥ 0 with equality at x = 2, which lies in [−3, 2]. Minimum value = 5.",
     "priority": true,
-    "id": "xiimath-2026-129"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-130",
     "chapter": "Integrals",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The value of dx is equal to :\n x\n -5 (2026 Board)",
+    "difficulty": "easy",
+    "text": "The value of ∫ from −5 to −1 of (1/x) dx is (2026 Board)",
     "options": [
-      "- log",
-      "x6",
-      "log (- 5)",
-      "x-"
+      "−log 5",
+      "x⁶",
+      "log(−5)",
+      "x⁻⁶"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "∫ dx/x = log|x|. From −5 to −1: log 1 − log 5 = −log 5.",
     "priority": true,
-    "id": "xiimath-2026-130"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-131",
     "chapter": "Application of Integrals",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "An ant is observed crawling on a sheet of paper along a straight line\n given by equation y = 2x - 4. Area of the surface covered by the ant\n bounded by y-axis, x-axis and x = 1 is : (2026 Board)",
+    "text": "An ant is observed crawling on a sheet of paper along a straight line given by y = 2x − 4. The area of the surface covered by the ant bounded by the y-axis, the x-axis and x = 1 is (2026 Board)",
     "options": [
       "1 sq. unit",
       "3 sq. units",
       "2 sq. units",
-      "4 sq. units\n  3 "
+      "4 sq. units"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "On [0, 1], y = 2x − 4 is negative (from −4 to −2), so area = |∫₀¹ (2x − 4)dx| = |1 − 4| = 3 sq. units.",
     "priority": true,
-    "id": "xiimath-2026-131"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-132",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The order and degree of the differential equation\n  d3y  d 2y\n 1+   = is :\n  dx 3  dx\n   (2026 Board)",
+    "difficulty": "easy",
+    "text": "The order and degree of the differential equation 1 + (d³y/dx³)³ = λ(d²y/dx²) are (2026 Board)",
     "options": [
-      "Order = 3, Degree =",
-      "Order = 2, Degree =",
-      "Order = 3, Degree =",
-      "Order = 2, Degree =\n dy"
+      "Order = 3, Degree = 3",
+      "Order = 2, Degree = 2",
+      "Order = 3, Degree = 1",
+      "Order = 2, Degree = 1"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "Highest derivative d³y/dx³ ⇒ order 3; its highest power is 3 ⇒ degree 3.",
     "priority": true,
-    "id": "xiimath-2026-132"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-133",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The general solution for the differential equation = e3x -y is :\n dx (2026 Board)",
+    "difficulty": "easy",
+    "text": "The general solution of the differential equation dy/dx = e^(3x − y) is (2026 Board)",
     "options": [
-      "3ey = e3x + C",
-      "log (3x - y) = C",
-      "e3x -y = C",
-      "- ey + 3e3x = C"
+      "3eʸ = e³ˣ + C",
+      "log(3x − y) = C",
+      "e^(3x − y) = C",
+      "−eʸ + 3e³ˣ = C"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "eʸ dy = e³ˣ dx ⇒ eʸ = e³ˣ/3 + C ⇒ 3eʸ = e³ˣ + C.",
     "priority": true,
-    "id": "xiimath-2026-133"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-134",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The corner points of the feasible region determined by the system of\n linear constraints are (0, 0), (0, 40), (20, 40) (60, 20) and (60, 0). If the\n objective function of an LPP is Z = 4x + 3y, then the maximum value is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The corner points of the feasible region determined by a system of linear constraints are (0, 0), (0, 40), (20, 40), (60, 20) and (60, 0). If the objective function of an LPP is Z = 4x + 3y, then the maximum value is (2026 Board)",
     "options": [
       "200",
+      "300",
       "240",
-      "",
-      ""
+      "120"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Linear Programming",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Z at the corners: 0, 120, 200, 300, 240. Maximum Z = 300 at (60, 20).",
     "priority": true,
-    "id": "xiimath-2026-134"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-135",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "→ →\n If position vector p of a point (24, n) is such that | p |= 25, then the\n value of n is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "If the position vector p⃗ of a point (24, n) is such that |p⃗| = 25, then the value of n is (2026 Board)",
     "options": [
-      "",
-      "5",
-      "1",
-      "7\n\n → ^ ^ ^ → ^ ^ ^"
+      "±49",
+      "±5",
+      "±1",
+      "±7"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "24² + n² = 25² ⇒ n² = 625 − 576 = 49 ⇒ n = ±7.",
     "priority": true,
-    "id": "xiimath-2026-135"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-136",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If vectors a = 3 i + 2 j +  k and b = 2 i - 4 j + 5 k, represent the two\n strips of the Red Cross sign placed outside a doctor’s clinic, then the\n value of  is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "If vectors a⃗ = 3î + 2ĵ + λk̂ and b⃗ = 2î − 4ĵ + 5k̂ represent the two strips of the Red Cross sign placed outside a doctor's clinic, then the value of λ is (2026 Board)",
     "options": [
       "1",
-      "b",
-      "",
-      ""
+      "5/2",
+      "2/5",
+      "0"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "The strips of a cross are perpendicular, so a⃗ · b⃗ = 6 − 8 + 5λ = 0 ⇒ λ = 2/5.",
     "priority": true,
-    "id": "xiimath-2026-136"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-137",
     "chapter": "Probability",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If 3P (2026 Board)",
+    "text": "If 3P(A) = P(B) = 3/5 and P(A|B) = 2/3, then P(A ∪ B) is (2026 Board)",
     "options": [
-      "= P",
-      "= and P(A|B) = , then P(A  B) is :",
-      "5",
-      "15\nQuestions number 19 and 20 are Assertion and Reason based questions. Two\nstatements are given, one labelled Assertion"
+      "3/5",
+      "1/5",
+      "2/15",
+      "2/5"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Probability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "P(A) = 1/5, P(B) = 3/5, P(A ∩ B) = P(A|B)·P(B) = (2/3)(3/5) = 2/5. P(A ∪ B) = 1/5 + 3/5 − 2/5 = 2/5.",
     "priority": true,
-    "id": "xiimath-2026-137"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-138",
     "chapter": "Relations and Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "Let f : ℝ → ℝ be a function defined as f(x) = x3, then f is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "Let f : ℝ → ℝ be a function defined as f(x) = x³. Then f is (2026 Board)",
     "options": [
       "one-one onto function",
       "many-one function",
@@ -2944,366 +2615,264 @@
       "neither one-one nor onto function"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Relations and Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "x₁³ = x₂³ ⇒ x₁ = x₂, so f is one-one. Every real y has the real cube root ∛y as a pre-image, so f is onto.",
     "priority": true,
-    "id": "xiimath-2026-138"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-139",
     "chapter": "Matrices",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The number of all possible matrices of order 2  3 with each\n entry 1 or 2 is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The number of all possible matrices of order 2 × 3 with each entry 1 or 2 is (2026 Board)",
     "options": [
       "16",
+      "81",
       "64",
-      "cos 2 - sin 2 ",
-      ""
+      "32"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Matrices",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "A 2 × 3 matrix has 6 entries, each with 2 choices: 2⁶ = 64.",
     "priority": true,
-    "id": "xiimath-2026-139"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-140",
     "chapter": "Matrices",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "If A =   , then A + A = I, if  is equal to :\n sin 2 cos 2 \n   (2026 Board)",
+    "text": "If A = [[cos 2α, −sin 2α], [sin 2α, cos 2α]], then A + A′ = I if α is equal to (2026 Board)",
     "options": [
-      "3\n  3",
-      "2",
-      "",
-      ""
+      "π/3",
+      "π/6",
+      "π/2",
+      "3π/2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Mathematics",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "A + A′ = [[2cos 2α, 0], [0, 2cos 2α]] = I ⇒ cos 2α = 1/2 ⇒ 2α = π/3 ⇒ α = π/6.",
     "priority": true,
-    "id": "xiimath-2026-140"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Application of Integrals",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-141",
+    "chapter": "Determinants",
     "difficulty": "medium",
-    "text": "If the area of a triangle is 15 sq. units with vertices (3, - 7), (6, 3)\n and (k, 3), then the value(s) of k is/are : (2026 Board)",
+    "text": "If the area of a triangle is 15 sq. units with vertices (3, −7), (6, 3) and (k, 3), then the value(s) of k is/are (2026 Board)",
     "options": [
       "3",
-      "- 9, -",
-      "9,",
-      "* 5 P.T.O.\n\fb"
+      "9",
+      "−9, −3",
+      "9, 3"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "Area = ½|3(3 − 3) + 6(3 + 7) + k(−7 − 3)| = ½|60 − 10k| = 15 ⇒ 60 − 10k = ±30 ⇒ k = 3 or 9.",
     "priority": true,
-    "id": "xiimath-2026-141"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-142",
     "chapter": "Application of Derivatives",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "The interval in which y = x3 . e-3x is an increasing function is : (2026 Board)",
+    "text": "The interval in which y = x³e⁻³ˣ is an increasing function is (2026 Board)",
     "options": [
-      "(- 1, 2)",
-      "(- , 2)",
-      "(1, )",
-      "(0, 1)\n\n  sin 7x\n  , x0"
+      "(−1, 2)",
+      "(−∞, 2)",
+      "(1, ∞)",
+      "(0, 1)"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Derivatives",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "y′ = 3x²e⁻³ˣ − 3x³e⁻³ˣ = 3x²e⁻³ˣ(1 − x), positive for x < 1 (x ≠ 0). Of the options, only (0, 1) lies entirely where y′ > 0; the others include points with x > 1, where y decreases.",
     "priority": true,
-    "id": "xiimath-2026-142"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-143",
     "chapter": "Continuity and Differentiability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The value of k for which f(x) =  5x\n  k, x=0\n \n\n is continuous at x = 0 is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The value of k for which f(x) = (sin 7x)/(5x) for x ≠ 0, and f(0) = k, is continuous at x = 0 is (2026 Board)",
     "options": [
-      "7",
+      "5/7",
+      "7/5",
       "0",
-      " 1 - cos x  dy",
-      ""
+      "1/5"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Continuity and Differentiability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "lim (x→0) (sin 7x)/(5x) = (7/5) · lim (sin 7x)/(7x) = 7/5, so k = 7/5.",
     "priority": true,
-    "id": "xiimath-2026-143"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-144",
+    "chapter": "Continuity and Differentiability",
     "difficulty": "medium",
-    "text": "If y = tan-1   , then is equal to :\n  sin x  dx (2026 Board)",
+    "text": "If y = tan⁻¹((1 − cos x)/sin x), then dy/dx is equal to (2026 Board)",
     "options": [
       "1",
-      "1",
-      "-\n \n cos 2x",
-      ""
+      "2",
+      "1/2",
+      "−1/2"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "(1 − cos x)/sin x = 2sin²(x/2)/(2 sin(x/2)cos(x/2)) = tan(x/2), so y = x/2 (for x in the principal range) and dy/dx = 1/2.",
     "priority": true,
-    "id": "xiimath-2026-144"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-145",
     "chapter": "Integrals",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "dx is equal to :\n sin x cos x (2026 Board)",
+    "text": "∫ cos 2x/(sin²x cos²x) dx is equal to (2026 Board)",
     "options": [
       "cot x + tan x + C",
-      "- cot x + sec x + C",
-      "- cot x + tan x + C",
-      "- (tan x + cot x) + C\n\n \n dx"
+      "−cot x + sec x + C",
+      "−cot x + tan x + C",
+      "−(tan x + cot x) + C"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "cos 2x/(sin²x cos²x) = (cos²x − sin²x)/(sin²x cos²x) = cosec²x − sec²x. Integrating: −cot x − tan x + C = −(tan x + cot x) + C.",
     "priority": true,
-    "id": "xiimath-2026-145"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "is equal to :\n x 2 + 6x + (2026 Board)",
+    "id": "xiimath-2026-146",
+    "chapter": "Integrals",
+    "difficulty": "easy",
+    "text": "∫ dx/(x² + 6x + 10) is equal to (2026 Board)",
     "options": [
-      "x tan-1 (x + 3) + C",
-      "tan-1 (x + 3) + C",
-      "tan-1 (x + 3) + C",
-      "tan-1 x + C"
+      "x tan⁻¹(x + 3) + C",
+      "tan⁻¹(x + 3) + C",
+      "(1/3)tan⁻¹(x + 3) + C",
+      "tan⁻¹x + C"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "x² + 6x + 10 = (x + 3)² + 1, and ∫ dt/(t² + 1) = tan⁻¹t, so the answer is tan⁻¹(x + 3) + C.",
     "priority": true,
-    "id": "xiimath-2026-146"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-147",
     "chapter": "Differential Equations",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The general solution of the differential equation = ey - x is :\n dx (2026 Board)",
+    "difficulty": "easy",
+    "text": "The general solution of the differential equation dy/dx = e^(y − x) is (2026 Board)",
     "options": [
-      "ex - ey = C",
-      "e-y + ex = C",
-      "e-y - e-x = C",
-      "e-x + e-y = C"
+      "eˣ − eʸ = C",
+      "e⁻ʸ + eˣ = C",
+      "e⁻ʸ − e⁻ˣ = C",
+      "e⁻ˣ + e⁻ʸ = C"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Differential Equations",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "e⁻ʸ dy = e⁻ˣ dx ⇒ −e⁻ʸ = −e⁻ˣ + C₁ ⇒ e⁻ʸ − e⁻ˣ = C.",
     "priority": true,
-    "id": "xiimath-2026-147"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Inverse Trigonometric Functions",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-148",
+    "chapter": "Differential Equations",
     "difficulty": "medium",
-    "text": "The integrating factor of (1 + y2) dx = (tan-1 y - x) dy is : (2026 Board)",
+    "text": "The integrating factor of (1 + y²) dx = (tan⁻¹y − x) dy is (2026 Board)",
     "options": [
       "tan y",
-      "tan-1 y\n -1 -1",
-      "etan y",
-      "etan x\n\n → →"
+      "tan⁻¹y",
+      "e^(tan⁻¹y)",
+      "e^(tan⁻¹x)"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Inverse Trigonometric Functions",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "dx/dy + x/(1 + y²) = tan⁻¹y/(1 + y²), linear in x. IF = e^(∫dy/(1 + y²)) = e^(tan⁻¹y).",
     "priority": true,
-    "id": "xiimath-2026-148"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-149",
     "chapter": "Vector Algebra",
-    "subject": "Mathematics",
     "difficulty": "medium",
-    "text": "Let a and b be two unit vectors and  is the angle between\n → →\n them. Then a + 2 b is a unit vector if :\n  2 (2026 Board)",
+    "text": "Let a⃗ and b⃗ be two unit vectors and θ the angle between them. Then a⃗ + 2b⃗ is a unit vector if (2026 Board)",
     "options": [
-      "=",
-      " =\n 3",
-      "=",
-      " = "
+      "θ = π/2",
+      "θ = 2π/3",
+      "θ = 3π/4",
+      "θ = π"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Vector Algebra",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "|a⃗ + 2b⃗|² = 1 + 4 + 4cos θ = 5 + 4cos θ. Setting this to 1 gives cos θ = −1 ⇒ θ = π.",
     "priority": true,
-    "id": "xiimath-2026-149"
+    "subject": "Mathematics"
   },
   {
-    "chapter": "Application of Integrals",
-    "subject": "Mathematics",
+    "id": "xiimath-2026-150",
+    "chapter": "Vector Algebra",
     "difficulty": "medium",
-    "text": "The area (in square units) of a parallelogram, whose diagonals\n → ^ ^ → ^ ^\n are a = i + ^ j - 2 k and b = i - 3 ^j + 4 k is : (2026 Board)",
+    "text": "The area (in square units) of a parallelogram whose diagonals are a⃗ = î + ĵ − 2k̂ and b⃗ = î − 3ĵ + 4k̂ is (2026 Board)",
     "options": [
-      "2",
-      "38",
-      "2",
-      ""
+      "2√14",
+      "√14",
+      "√38",
+      "2√6"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Application of Integrals",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Area = ½|a⃗ × b⃗|. a⃗ × b⃗ = (4 − 6)î − (4 + 2)ĵ + (−3 − 1)k̂ = −2î − 6ĵ − 4k̂, magnitude √56 = 2√14. Area = √14.",
     "priority": true,
-    "id": "xiimath-2026-150"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-151",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The corner points of the feasible region for an LPP are (0, 2),\n (6, 0), (6, 8) and (0, 5). Let Z = 4x + 6y be the objective function.\n (Maximum of Z) - (Minimum of Z) is equal to : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The corner points of the feasible region for an LPP are (0, 2), (6, 0), (6, 8) and (0, 5). Let Z = 4x + 6y be the objective function. (Maximum of Z) − (Minimum of Z) is equal to (2026 Board)",
     "options": [
       "60",
+      "48",
       "42",
-      "65",
-      "* 9 P.T.O.\n\fb"
+      "18"
     ],
     "correct": 0,
-    "explanation": "See NCERT Chapter: Linear Programming",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "explanation": "Z at the corners: 12, 24, 72, 30. Max − Min = 72 − 12 = 60.",
     "priority": true,
-    "id": "xiimath-2026-151"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-152",
     "chapter": "Linear Programming",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "In an LPP, if the objective function has the same minimum\n value on two corner points of the feasible region, then the\n number of points at which the minimum value of objective\n function occurs is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "In an LPP, if the objective function has the same minimum value on two corner points of the feasible region, then the number of points at which the minimum value of the objective function occurs is (2026 Board)",
     "options": [
       "0",
+      "2",
       "Infinite",
-      "Finite",
-      ""
+      "Finite"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Linear Programming",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 2,
+    "explanation": "Every point on the segment joining the two corner points gives the same optimal value, so the minimum occurs at infinitely many points.",
     "priority": true,
-    "id": "xiimath-2026-152"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-153",
     "chapter": "Probability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "If events A and B are such that P(A|B) = P(B|A), then : (2026 Board)",
+    "difficulty": "easy",
+    "text": "If events A and B are such that P(A|B) = P(B|A), then (2026 Board)",
     "options": [
-      "A  B but A  B",
+      "A ⊂ B but A ≠ B",
       "A = B",
-      "A  B=",
-      "P"
+      "A ∩ B = ϕ",
+      "P(A) = P(B)"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Probability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 3,
+    "explanation": "P(A ∩ B)/P(B) = P(A ∩ B)/P(A) ⇒ P(A) = P(B) (when P(A ∩ B) ≠ 0). The events need not be equal.",
     "priority": true,
-    "id": "xiimath-2026-153"
+    "subject": "Mathematics"
   },
   {
+    "id": "xiimath-2026-154",
     "chapter": "Probability",
-    "subject": "Mathematics",
-    "difficulty": "medium",
-    "text": "The probability of getting an odd prime number on each die,\n when a pair of dice is rolled, is : (2026 Board)",
+    "difficulty": "easy",
+    "text": "The probability of getting an odd prime number on each die, when a pair of dice is rolled, is (2026 Board)",
     "options": [
-      "18",
-      "36",
-      "",
-      ""
+      "1/18",
+      "1/9",
+      "1/36",
+      "1/6"
     ],
-    "correct": 0,
-    "explanation": "See NCERT Chapter: Probability",
-    "whyWrong": [
-      "",
-      "",
-      "",
-      ""
-    ],
+    "correct": 1,
+    "explanation": "Odd primes on a die: 3 and 5, so P = 2/6 = 1/3 per die. For both dice: (1/3)² = 1/9.",
     "priority": true,
-    "id": "xiimath-2026-154"
+    "subject": "Mathematics"
   }
 ]

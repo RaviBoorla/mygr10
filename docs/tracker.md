@@ -4,6 +4,19 @@ Chronological log of shipped features and fixes. Newest at the top.
 
 ---
 
+## XII CBSE Mathematics 2026 — re-extraction *(done)*
+
+The earlier PDF extraction left a broken block: MCQs `xiimath-2026-086…154` (69) were all keyed to option A with "See NCERT" placeholder explanations, 51 with Symbol-font glyphs or blank options; Short Answers `xiimath-sa-2026-070…126` (57) all had "[Solution: See NCERT …]" model answers, 37 with garbled text. Each item was located in the uploaded 2026 papers (16 sets; the block came from 65/2/1, 65/2/3, 65/4/1, 65/5/1, 65(B)), re-transcribed from rendered page images (the PDF text layer itself carries the Symbol-font glyphs), and given a worked answer key + explanation / model answer + key points. Chapters corrected where the old tags were wrong (e.g. 089 Matrices, 106 Determinants, 129 Application of Derivatives).
+
+| Bank | Before | After |
+|---|---|---|
+| MCQ | 154 (69 placeholder, 51 hidden) | 153, all real keys — old 102 (A-R, ambiguous key) dropped |
+| Short Answers | 126 (57 placeholder, 37 hidden) | 126, all with model answers |
+
+Same ids kept, so existing progress/Leitner entries still point at the same question. Internal-choice questions use part (a).
+
+---
+
 ## Arena look & feel *(done)*
 
 - **`public/arena.css`** (new, loaded with `arena.js`; first paint waits for both) — dark gradient "stage" for question / interstitial / game-over hero; setup + Collection light with a skin-tinted hero. Skins are now CSS variable sets; the old per-skin overrides in `style.css` were removed.
