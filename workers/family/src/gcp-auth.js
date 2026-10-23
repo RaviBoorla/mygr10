@@ -55,7 +55,7 @@ export async function getAccessToken(serviceAccountJson) {
   const res  = await fetch(OAUTH_URL, {
     method:  'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body:    `grant_type=urn%3Aietf%3Aparams%3Aoauth2%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
+    body:    `grant_type=urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Ajwt-bearer&assertion=${jwt}`
   });
   if (!res.ok) {
     const err = await res.text();
