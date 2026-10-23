@@ -39,6 +39,18 @@ export default {
       if (url.pathname === '/family/notify-assignment-complete') {
         return withCors(env, await handleAssignmentComplete(request, env));
       }
+      if (url.pathname === '/family/run-cron') {
+        if (request.headers.get('X-Cron-Secret') !== env.CRON_SECRET) {
+          return new Response('Unauthorized', { status: 401 });
+        }
+        const isWeekly = new Date().getUTCDay() === 0;
+        ctx.waitUntil((async () => {
+          const token = await getAccessToken(env.FIREBASE_SERVICE_ACCOUNT);
+          if (isWeekly) await runWeeklySummary(token, env);
+          else          await runNightlyDigest(token, env);
+        })());
+        return new Response('OK', { status: 200 });
+      }
     }
 
     return withCors(env, new Response('Not found', { status: 404 }));

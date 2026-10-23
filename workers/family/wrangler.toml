@@ -23,11 +23,8 @@ RESEND_FROM_EMAIL   = "Rise <digest@rise.strat101.com>"
 APP_URL             = "https://rise.strat101.com"
 CORS_ORIGIN         = "https://rise.strat101.com"
 
-[triggers]
-crons = [
-  "30 15 * * *",   # Nightly  21:00 IST (UTC+5:30)
-  "30 15 * * 0"    # Weekly   Sunday 21:00 IST
-]
+# Cron triggers removed — scheduling is handled by uni-cron.ravi-boorla.workers.dev
+# which calls POST /family/run-cron with X-Cron-Secret header at UTC hour 15.
 
 [env.preview]
 name = "mygr10-family-preview"
