@@ -436,12 +436,15 @@ Object.assign(app, {
   _assignmentListChild() {
     const pending = window.riseFamily?.myAssignments || [];
     const history = window.riseFamily?.myAssignmentHistory || [];
+    // Name the grade/board when it differs from the tab the child is on.
     const fmt = ts => this._assignFmtDue(ts);
+    const scope = a => a.gradeBoard && a.gradeBoard !== `${state.grade}::${state.board}`
+      ? `Class ${a.gradeBoard.replace('::', ' · ')} · ` : '';
     const rows = [
       ...pending.map(a => {
         const find = `riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}')`;
         const k = assignKind(a);
-        return { a, meta: this._assignRowMeta(a, fmt), actions: k === 'paper'
+        return { a, meta: scope(a) + this._assignRowMeta(a, fmt), actions: k === 'paper'
           ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>
              <button class="btn small primary" onclick="app.markPaperDone('${esc(a.id)}')">Mark done</button>`
           : k === 'sa' ? `<button class="btn small primary" onclick="app.openSAAssignment('${esc(a.id)}')">Answer</button>`
@@ -452,7 +455,7 @@ Object.assign(app, {
         const latest = attempts[attempts.length - 1];
         const k = assignKind(a);
         const find = `riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}')`;
-        return { a, meta: this._assignRowMeta(a, fmt), actions: `
+        return { a, meta: scope(a) + this._assignRowMeta(a, fmt), actions: `
           ${latest?.reviewData ? `<button class="btn small ghost" onclick="app.reviewAssignment('${esc(a.id)}')">Review</button>` : ''}
           ${k === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'primary' : 'ghost'}" onclick="app.openSAEvaluation(null,'${esc(a.id)}',true)">${a.evaluation ? 'See marks' : 'My answers'}</button>` : ''}
           ${k === 'paper' && a.status !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>` : ''}

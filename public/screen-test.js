@@ -56,6 +56,7 @@ Object.assign(app, {
 
   startAssignment(assignment) {
     if (!assignment) return;
+    this._enterAssignmentScope(assignment);
     const { id: assignmentId, subject, chapter = null, questionCount, timeLimitMinutes } = assignment;
     // childUid: child launching their own assignment → current uid; guardian view stores it explicitly.
     const assignmentChildUid = assignment.childUid || window.riseAuth?.user?.uid;
@@ -88,6 +89,16 @@ Object.assign(app, {
         this.session.error = err.message || 'Could not load questions.';
         if (state.screen === 'test') this.renderTestMeta();
       });
+  },
+
+  // An assignment belongs to the grade/board the parent set it for, whatever
+  // tab the child is on. Switch to it so the right bank loads and progress,
+  // bookmarks, streak and history are recorded under that grade/board.
+  _enterAssignmentScope(a) {
+    const [grade, board] = String(a?.gradeBoard || '').split('::');
+    if (!SUBJECTS[grade]?.[board]) return;
+    if (grade !== state.grade) { state.grade = grade; LS.set(KEY.grade, grade); }
+    if (board !== state.board) { state.board = board; LS.set(KEY.board, board); }
   },
 
   startBookmarkReview(subject) {

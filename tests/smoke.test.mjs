@@ -111,6 +111,19 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   check('no page errors on ICSE mock', !errors.length, errors.join(' | '));
 }
 {
+  // An assignment runs in the parent's grade/board even if the child is on another tab.
+  const { page, errors } = await open('#/home', { grade: 'XII' });
+  const r = await page.evaluate(async () => {
+    app.startAssignment({ id: 't', subject: 'Mathematics', gradeBoard: 'X::CBSE', chapters: ['Circles', 'Triangles'], questionCount: 10, childUid: 'k' });
+    for (let i = 0; i < 100 && app.session?.loading; i++) await new Promise(r => setTimeout(r, 30));
+    clearInterval(app.timerInterval);
+    const qs = app.session?.questions || [];
+    return { n: qs.length, onlyChosen: qs.every(q => ['Circles', 'Triangles'].includes(q.chapter)), scope: `${state.grade}::${state.board}`, error: app.session?.error };
+  });
+  check('X assignment started from the XII tab loads X questions', r.n > 0 && r.onlyChosen && r.scope === 'X::CBSE', JSON.stringify(r));
+  check('no page errors on cross-grade assignment', !errors.length, errors.join(' | '));
+}
+{
   // Board-paper assignments: built from MCQ + short-answer banks, incl. 5-mark questions.
   const { page, errors } = await open('#/home');
   const paper = await page.evaluate(async () => {

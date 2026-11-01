@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   child marks per question and a total percentage.
 
 ### Fixed
+- Assignments open in the grade/board the parent set them for, even when the
+  child is on another grade or board tab (they used to load the wrong bank:
+  "No questions available", or questions from the other grade). Progress,
+  bookmarks, streak and history from the assignment now land there too.
 - XII CBSE Mathematics 2026: 68 MCQs and 57 short answers re-transcribed from
   the question papers with real answer keys and model answers (the old
   extraction had every MCQ keyed to A and placeholder solutions).

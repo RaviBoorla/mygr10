@@ -209,12 +209,12 @@ Object.assign(app, {
   _draft() {
     const d = LS.get(KEY.draft, null);
     if (!d || !d.questions || !d.questions.length) return null;
-    if (d.board !== state.board) return null;
+    if (d.board !== state.board || (d.grade || 'X') !== state.grade) return null;
     return d;
   },
   _saveDraft() {
     if (!this.session) return;
-    LS.set(KEY.draft, { ...this.session, board: state.board });
+    LS.set(KEY.draft, { ...this.session, board: state.board, grade: state.grade });
   },
   discardDraft() { LS.del(KEY.draft); this.render(); },
   resumeDraft() {
