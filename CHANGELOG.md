@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- One class at a time: pick board + class on the welcome screen; change it in
+  Profile (or the header class chip). Grade tabs and the board switcher are
+  gone. A child's class follows them into family links, so a parent's
+  assignment form uses the child's current class. Existing users confirm
+  their class once.
 - Assignments come in three kinds: MCQs, Short answers (child answers online,
   parent marks by hand or with Cloé against the model answer) and a print-only
   Board paper weighted toward high-yield chapters, with an answer-key PDF for

@@ -33,56 +33,18 @@ Object.assign(app, {
             </div><!-- welcome-left-inner -->
           </div>
           <div class="welcome-right">
-            <p class="welcome-pick-label">Choose your board to get started</p>
-            <div class="board-list">
-              ${BOARDS.map(b => `
-                <button class="btn board-btn" onclick="app.setBoard('${b.id}')">
-                  <strong>${esc(b.name)}</strong>
-                  <span>${esc(b.desc)}</span>
-                </button>`).join('')}
+            <p class="welcome-pick-label">Choose your class to get started</p>
+            <div class="class-welcome">
+              ${this._classPickerBody({})}
+              <button class="btn primary class-save class-start" disabled onclick="app._saveClassPick()">Get started</button>
             </div>
-            <p class="welcome-foot">Grade X &amp; XII · Switch board or grade any time from the ☰ menu.</p>
+            <p class="welcome-foot">You can change your class any time from your profile.</p>
           </div>
         </div>
       </div>`;
   },
 
-  setBoard(board) {
-    state.board = board;
-    LS.set(KEY.board, board);
-    this.go(['home'], true);
-  },
 
-  switchBoard(board) {
-    if (board === state.board) return;
-    state.board = board;
-    state.openPicker = null;
-    state.mobileMenuOpen = false;
-    LS.set(KEY.board, board);
-    const cur = parseHash();
-    if (['results', 'notes', 'progress', 'careers'].includes(cur.name)) {
-      this.go(['home']);
-    } else {
-      this.render();
-    }
-  },
-
-  setGrade(grade) {
-    if (grade === state.grade) return;
-    state.grade = grade;
-    state.openPicker = null;
-    LS.set(KEY.grade, grade);
-    this.render();
-  },
-
-  _gradeTabs() {
-    return `
-      <div class="filter-bar grade-tabs" role="group" aria-label="Grade">
-        ${GRADES.map(g => `
-          <button class="filter-tab ${g.id === state.grade ? 'active' : ''}"
-                  aria-pressed="${g.id === state.grade}" onclick="app.setGrade('${g.id}')">${esc(g.label)}</button>`).join('')}
-      </div>`;
-  },
 
   // ── Progress page: two tabs (My Attempts / Assignments), same shell for
   // both roles. The Family section (who I'm shared with, for a child; or
@@ -560,7 +522,7 @@ Object.assign(app, {
 
     const form = `
       <div class="assign-form card" data-child-board="${esc(childBoard)}" data-child-grade="${esc(childGrade)}" data-kind="mcq">
-        <h3 class="family-subheading" style="margin-top:0">Assign practice to ${esc(link.childEmail)}</h3>
+        <h3 class="family-subheading" style="margin-top:0">Assign practice to ${esc(link.childEmail)} <span class="assign-child-class">Class ${esc(childGrade)} · ${esc(childBoard)}</span></h3>
         <div class="assign-kind" role="radiogroup" aria-label="Type">
           ${Object.entries(ASSIGN_KINDS).map(([k, label], i) => `
             <label class="assign-kind-opt"><input type="radio" name="assign-kind-${esc(childUid)}" value="${k}" ${i ? '' : 'checked'}

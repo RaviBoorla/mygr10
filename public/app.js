@@ -248,9 +248,8 @@ const app = {
     </button>`;
 
     const params = state.params || [];
-    const boardName = BOARDS.find(b => b.id === state.board)?.name || '';
-    const gradeLabel = GRADES.find(g => g.id === state.grade)?.label || '';
-    const crumbParts = [boardName, gradeLabel].filter(Boolean);
+    const classChip = state.board ? `<button class="hdr-class" ${inTest ? 'disabled' : ''} onclick="app.openClassPicker()" title="Change class">${esc(classLabel())}</button>` : '';
+    const crumbParts = [];
     if (state.screen === 'notes') crumbParts.push('Revision Notes');
     else if (state.screen === 'progress') crumbParts.push('Progress');
     else if (state.screen === 'shortanswers') { if (params[0]) crumbParts.push(params[0]); crumbParts.push('Board Short Answers'); }
@@ -269,10 +268,8 @@ const app = {
     const notesActive = state.screen === 'notes';
     const progressActive = state.screen === 'progress';
 
-    const menuBoards = BOARDS.map(b => `
-      <button class="btn small ${b.id === state.board ? 'primary' : 'ghost'}"
-              aria-pressed="${b.id === state.board}" ${inTest ? 'disabled' : ''}
-              title="${esc(b.desc)}" onclick="app.switchBoard('${b.id}')">${esc(b.name)}</button>`).join('');
+    const menuClass = state.board ? `
+      <button class="btn small ghost" ${inTest ? 'disabled' : ''} onclick="app.openClassPicker()">My class: ${esc(classLabel())}</button>` : '';
     const hamburgerBtn = `
       <button class="hdr-hamburger" aria-label="Menu" aria-expanded="${state.mobileMenuOpen}"
               ${inTest ? 'disabled' : ''} onclick="app.toggleMobileMenu()">
@@ -281,7 +278,7 @@ const app = {
     const authUser = window.riseAuth?.user;
     const menu = `
       <div class="hdr-menu" ${state.mobileMenuOpen ? '' : 'hidden'}>
-        ${menuBoards}
+        ${menuClass}
         <button class="btn small ${progressActive ? 'primary' : 'ghost'}"
                 ${inTest ? 'disabled' : ''} onclick="app.go(['progress'])">Progress</button>
         <button class="btn small ${notesActive ? 'primary' : 'ghost'}"
@@ -307,7 +304,7 @@ const app = {
 
     return `
       <header class="app-header">
-        <div class="hdr-left">${logo}${crumb}</div>
+        <div class="hdr-left">${logo}${classChip}${crumb}</div>
         <div class="hdr-right">${askAiBtn}${loginBtn}${hamburgerBtn}</div>
         ${menu}
       </header>`;

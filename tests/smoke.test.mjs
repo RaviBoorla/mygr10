@@ -30,6 +30,7 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   await page.addInitScript(([g, b]) => {
     localStorage.setItem('rise.grade', JSON.stringify(g));
     localStorage.setItem('rise.board', JSON.stringify(b));
+    localStorage.setItem('rise.classConfirmed', 'true');
   }, [grade, board]);
   await page.goto(`${BASE}/${hash}`);
   await page.waitForTimeout(2500);
@@ -176,6 +177,29 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   await page.waitForTimeout(150);
   check('arena P key pauses', await page.locator('#arena-pause-overlay.active').count() === 1);
   check('no page errors in arena', !errors.length, errors.join(' | '));
+}
+
+{
+  // First visit: the welcome screen picks board + class together; no grade tabs after.
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.goto(`${BASE}/`);
+  await page.waitForTimeout(1500);
+  const startDisabled = await page.locator('.class-start').isDisabled();
+  await page.locator('input[name="class-board"][value="ICSE"]').check();
+  await page.locator('input[name="class-grade"][value="XII"]').check();
+  await page.click('.class-start');
+  await page.waitForTimeout(1200);
+  const r = await page.evaluate(() => ({ scope: `${state.grade}::${state.board}`, chip: document.querySelector('.hdr-class')?.textContent,
+    tabs: document.querySelectorAll('.grade-tabs').length, confirmed: localStorage.getItem('rise.classConfirmed') }));
+  check('welcome picks class, home shows only that class', startDisabled && r.scope === 'XII::ICSE' && r.chip === 'Class XII · ICSE' && !r.tabs && r.confirmed === 'true', JSON.stringify(r));
+  await page.click('.hdr-class');
+  await page.locator('.class-overlay input[name="class-grade"][value="X"]').check();
+  await page.click('.class-overlay .class-save');
+  await page.waitForTimeout(800);
+  check('class picker switches class', await page.evaluate(() => `${state.grade}::${state.board}`) === 'X::ICSE');
+  check('no page errors on class picking', !errors.length, errors.join(' | '));
 }
 
 await browser.close();

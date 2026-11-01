@@ -170,7 +170,6 @@ Object.assign(app, {
           <div class="rev-heading-row">
             ${this._subjectSelect(id)}
             <div class="rev-heading-right">
-              ${this._gradeTabs()}
               <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
             </div>
           </div>
@@ -187,7 +186,6 @@ Object.assign(app, {
         <div class="rev-heading-row">
           ${this._subjectSelect(id)}
           <div class="rev-heading-right">
-            ${this._gradeTabs()}
             <button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button>
           </div>
         </div>

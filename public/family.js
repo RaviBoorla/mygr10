@@ -127,6 +127,7 @@
   function _mergeLinks(side, snap) {
     _linkSets[side] = snap.docs.map(d => ({ id: d.id, ...d.data() }));
     _myLinks = [..._linkSets.guardian, ..._linkSets.child];
+    if (side === 'child') setTimeout(() => window.app?._syncChildLinkClass?.(), 0);
 
     // Derive role from active links when no profile-stored role exists.
     // This handles the case where the GUARDIAN initiated the invite — acceptInvite()
@@ -361,6 +362,7 @@
 
     return `
       <div class="family-section">
+        ${window.app?._myClassProfileHtml?.() || ''}
         <h3 class="family-heading">Family</h3>
         <p class="auth-sub">Link a parent/guardian account for progress sharing. Either side can invite; a family link needs both sides to agree, and a guardian account can never also be a student account.</p>
         ${invitesHtml}${linksHtml}${inviteHtml}

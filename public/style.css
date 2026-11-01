@@ -565,7 +565,6 @@ kbd {
 .rev-heading-row {
   display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
 }
-.rev-heading-row .grade-tabs { margin: 0; flex-shrink: 0; }
 .notes-subj-select {
   padding: 8px 12px; font-size: var(--fs-body); font-family: inherit;
   border: 1px solid var(--border); border-radius: var(--radius-md);
@@ -577,7 +576,6 @@ kbd {
   display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
   margin-bottom: 12px;
 }
-.home-heading-row .grade-tabs { margin: 0; flex-shrink: 0; order: 2; }
 .home-heading-row .home-top-cards { order: 1; }
 .home-heading-row .subtitle { text-align: right; }
 
@@ -599,8 +597,6 @@ kbd {
 
 @media (max-width: 520px) {
   .home-heading-row { flex-direction: column; align-items: stretch; gap: 8px; }
-  .home-heading-row .grade-tabs { width: 100%; justify-content: stretch; order: 1; }
-  .home-heading-row .grade-tabs .filter-btn { flex: 1; text-align: center; }
   .home-heading-row .home-top-cards { order: 2; }
   .home-top-cards { flex-direction: column; overflow: visible; }
   .home-top-cards .streak-banner { max-width: 100%; }
@@ -1570,3 +1566,34 @@ kbd {
   position: absolute; top: 12px; right: 14px; background: none; border: none;
   font-size: 1rem; cursor: pointer; color: var(--text-light);
 }
+
+/* ── My class: header chip, picker sheet, welcome picker, profile row ── */
+.hdr-class {
+  flex-shrink: 0; padding: 4px 10px; border-radius: 99px; border: 1.5px solid var(--primary-soft);
+  background: var(--primary-soft); color: var(--primary); font: inherit; font-size: var(--fs-sm); font-weight: 700; cursor: pointer; white-space: nowrap;
+}
+.hdr-class:hover:not(:disabled) { border-color: var(--primary); }
+.hdr-class:disabled { cursor: default; opacity: .8; }
+.class-overlay { padding: 16px; }
+.class-sheet { background: var(--surface); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 100%; max-width: 440px; padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+.class-sub { margin: -4px 0 0; color: var(--text-light); font-size: var(--fs-sm); line-height: 1.5; }
+.class-pick-group { display: flex; flex-direction: column; gap: 8px; }
+.class-pick-label { font-size: var(--fs-sm); font-weight: 700; color: var(--text); }
+.class-grade-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.class-opt { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-md); cursor: pointer; background: var(--surface); transition: border-color var(--tx-base), background var(--tx-base); }
+.class-opt:hover { border-color: var(--primary); }
+.class-opt:has(input:checked) { border-color: var(--primary); background: var(--primary-soft); }
+.class-opt input { accent-color: var(--primary); margin: 0; flex-shrink: 0; }
+.class-opt span { display: flex; flex-direction: column; gap: 1px; text-align: left; }
+.class-opt strong { font-size: var(--fs-body); color: var(--text); }
+.class-opt small { font-size: var(--fs-note); color: var(--text-light); }
+.class-note { margin: 0; font-size: var(--fs-sm); color: var(--text-light); }
+.class-sheet .modal-actions { justify-content: flex-end; }
+.class-welcome { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+.class-start { width: 100%; padding: 12px; font-size: var(--fs-body); }
+.class-start:disabled { opacity: .5; cursor: not-allowed; }
+.profile-class-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 14px; margin: 4px 0 14px; border: 1px solid var(--border); border-radius: var(--radius-md); background: var(--bg); }
+.profile-class-row > div { display: flex; flex-direction: column; gap: 2px; }
+.profile-class-label { font-size: var(--fs-note); font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: .04em; }
+.profile-class-row small { font-size: var(--fs-note); color: var(--text-light); }
+.assign-child-class { margin-left: 6px; padding: 2px 8px; border-radius: 99px; background: var(--primary-soft); color: var(--primary); font-size: var(--fs-note); font-weight: 700; vertical-align: middle; }
