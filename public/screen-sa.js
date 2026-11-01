@@ -12,6 +12,7 @@ Object.assign(app, {
               <option>Loading chapters…</option>
             </select>
           </label>
+          <button class="btn work-btn" ${window.workPanel?.touch ? '' : 'hidden'} aria-pressed="false" title="Working panel for rough work" onclick="workPanel.toggleFloat('sa:${esc(subject)}')">&#9998; Working</button>
           <button class="btn quit-btn" onclick="app.go(['home'])">&#10005; Exit</button>
         </div>
         <div id="sa-list" class="sa-list">Loading…</div>

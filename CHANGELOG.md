@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Working panel for rough work on touch screens: a "Working" button in tests,
+  Board Short Answers and short-answer assignments opens a drawing pad (pen
+  pressure, colours, thickness, eraser, undo, white/black background), with
+  a page per question.
 - One class at a time: pick board + class on the welcome screen; change it in
   Profile (or the header class chip). Grade tabs and the board switcher are
   gone. A child's class follows them into family links, so a parent's

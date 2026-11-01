@@ -202,6 +202,28 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   check('no page errors on class picking', !errors.length, errors.join(' | '));
 }
 
+{
+  // Working panel: only on touch screens; opens over the palette and takes ink.
+  const ctx = await browser.newContext({ hasTouch: true, viewport: { width: 1280, height: 860 } });
+  const page = await ctx.newPage();
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.addInitScript(() => { localStorage.setItem('rise.grade', '"X"'); localStorage.setItem('rise.board', '"CBSE"'); localStorage.setItem('rise.classConfirmed', 'true'); });
+  await page.goto(`${BASE}/#/home`);
+  await page.waitForTimeout(1500);
+  await page.evaluate(() => app.startTest({ subject: 'Mathematics', mode: 'mock' }));
+  await page.waitForTimeout(1200);
+  await page.click('.work-btn');
+  const box = await page.locator('.work-canvas').boundingBox();
+  await page.mouse.move(box.x + 40, box.y + 60); await page.mouse.down();
+  for (let i = 1; i <= 10; i++) await page.mouse.move(box.x + 40 + i * 15, box.y + 60 + i * 5);
+  await page.mouse.up();
+  const ink = await page.evaluate(() => { const c = document.querySelector('.work-canvas'); const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let n = 0; for (let i = 3; i < d.length; i += 4) if (d[i]) n++; return n; });
+  check('working panel opens over the palette on touch screens and draws', ink > 0 && await page.locator('#palette-panel').isHidden(), `${ink} ink px`);
+  check('no page errors in working panel', !errors.length, errors.join(' | '));
+  await ctx.close();
+}
+
 await browser.close();
 server.close();
 console.log(failed ? `\n${failed} smoke check(s) failed.` : '\nAll smoke checks passed.');
