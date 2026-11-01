@@ -127,7 +127,7 @@ Object.assign(app, {
         <div class="test-topbar">
           <p class="test-title">${title}</p>
           <div class="test-topbar-right">
-            <button class="btn work-btn" ${window.workPanel?.touch ? '' : 'hidden'} aria-pressed="false" title="Working panel for rough work" onclick="workPanel.toggleTest()">&#9998; Working</button>
+            <button class="btn work-btn" ${window.workPanel?.touch ? '' : 'hidden'} aria-pressed="false" title="Rough pad for working out" onclick="workPanel.toggleTest()">&#9998; Rough Pad</button>
             <span class="answered-count" id="answered-count"></span>
             <div id="timer" class="timer" role="timer" aria-live="off">--:--</div>
             <button class="btn quit-btn" onclick="app.quitTest()">Exit</button>

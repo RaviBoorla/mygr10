@@ -84,7 +84,7 @@ const workPanel = (() => {
           <button type="button" class="work-tool" data-act="undo" title="Undo">↶</button>
           <button type="button" class="work-tool" data-act="clear" title="Clear page">Clear</button>
           <button type="button" class="work-tool" data-act="bg" title="White / black background">${st.dark ? '☀' : '☾'}</button>
-          <button type="button" class="work-tool" data-act="close" title="Close working panel" aria-label="Close">✕</button>
+          <button type="button" class="work-tool" data-act="close" title="Close rough pad" aria-label="Close">✕</button>
         </div>
       </div>`;
   }
@@ -109,7 +109,7 @@ const workPanel = (() => {
     st.open = true; st.mode = mode; st.eraser = false;
     el = document.createElement('div');
     el.className = `work-panel ${mode} ${st.dark ? 'dark' : ''}`;
-    el.setAttribute('role', 'region'); el.setAttribute('aria-label', 'Working panel');
+    el.setAttribute('role', 'region'); el.setAttribute('aria-label', 'Rough pad');
     el.innerHTML = `${tools()}<canvas class="work-canvas"></canvas>`;
     (host || document.body).appendChild(el);
     canvas = el.querySelector('canvas'); ctx = canvas.getContext('2d');

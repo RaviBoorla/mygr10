@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Working panel for rough work on touch screens: a "Working" button in tests,
+- Rough Pad for working out on touch screens: a "Rough Pad" button in tests,
   Board Short Answers and short-answer assignments opens a drawing pad (pen
   pressure, colours, thickness, eraser, undo, white/black background), with
   a page per question.

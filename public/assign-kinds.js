@@ -254,7 +254,7 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     el.querySelector('.ak-sheet').innerHTML = `
       <div class="ak-head"><div><h2 class="ak-title">${esc(a.subject)} · Short answers</h2>
         <p class="subtitle">Write your answers, then submit. Your parent will mark them.</p></div>
-        <div class="ak-head-actions"><button class="btn small ghost work-btn" ${window.workPanel?.touch ? '' : 'hidden'} aria-pressed="false" title="Working panel for rough work" onclick="workPanel.toggleFloat('sa-assign:${esc(a.id)}')">&#9998; Working</button>
+        <div class="ak-head-actions"><button class="btn small ghost work-btn" ${window.workPanel?.touch ? '' : 'hidden'} aria-pressed="false" title="Rough pad for working out" onclick="workPanel.toggleFloat('sa-assign:${esc(a.id)}')">&#9998; Rough Pad</button>
         <button class="btn small ghost" onclick="app.closeAssignSheet()">Close</button></div></div>
       ${qs.map((q, i) => `
         <div class="ak-q">
