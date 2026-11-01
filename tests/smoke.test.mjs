@@ -84,6 +84,14 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   await page.fill('#notes-search', 'formula sector');
   await page.waitForTimeout(500);
   const top = await page.locator('#notes-body .rev-item-text').first().textContent();
+  await page.fill('#notes-search', '');
+  await page.evaluate(() => { app.selectChapter(consolidatedChapters('Mathematics').findIndex(c => c.chapter === 'Statistics')); app.setNotesFilter('formulae'); });
+  await page.waitForTimeout(600);
+  const where = await page.locator('.formula-where').first().textContent().catch(() => '');
+  check('formulas explain their symbols', /x̄ = mean/.test(where || ''), (where || '').slice(0, 60));
+  await page.evaluate(() => app.setNotesFilter('all'));
+  await page.fill('#notes-search', 'formula sector');
+  await page.waitForTimeout(500);
   check('notes search matches whole words, best first', /Area of (minor )?sector/.test(top || ''), (top || '').slice(0, 40));
   check('no page errors on notes', !errors.length, errors.join(' | '));
 }

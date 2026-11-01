@@ -684,6 +684,9 @@ kbd {
 }
 .note-ask:hover, .note-ask:focus-visible, .rev-item:hover .note-ask { opacity: 1; }
 .note-src { display: block; font-size: var(--fs-sm); color: var(--text-light); font-style: normal; margin-top: 2px; }
+.formula-where { display: block; margin-top: 4px; font-size: var(--fs-sm); line-height: 1.5; color: var(--text-light); }
+.formula-where-label { font-style: italic; font-weight: 600; color: var(--text); margin-right: 2px; }
+.formula-where b { color: var(--text); font-weight: 700; }
 
 .badge {
   flex-shrink: 0; padding: 2px 8px; border-radius: var(--radius-lg);

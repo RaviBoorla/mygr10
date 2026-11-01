@@ -111,7 +111,17 @@ function _loadScript(src, onload, onerror) {
   document.head.appendChild(s);
 }
 
+// Symbol glossary for formulas ("where v = image distance, …") — optional; the
+// notes render without it and re-render once it arrives.
+let _symbolsRequested = false;
+function _ensureRevisionSymbols() {
+  if (_symbolsRequested || window.formulaWhere) return;
+  _symbolsRequested = true;
+  _loadScript('revision-symbols.js?v=abf89756', () => { if (state.screen === 'notes') app.render(); }, () => { _symbolsRequested = false; });
+}
+
 function _ensureRevisionData(cb) {
+  _ensureRevisionSymbols();
   if (window.REVISION) { cb(); return; }
   if (_revisionCallbacks === undefined) { cb(); return; }
   if (Array.isArray(_revisionCallbacks)) { _revisionCallbacks.push(cb); return; }
@@ -301,10 +311,21 @@ Object.assign(app, {
                      : (chHtml ? '' : '<div class="empty-state">Nothing under this filter — try "All".</div>')}`;
   },
 
+  _formulaWhereHtml(it) {
+    if (it.cat !== 'formulae' || !window.formulaWhere) return '';
+    const w = window.formulaWhere(it.text, it.chapter);
+    if (!w) return '';
+    const parts = w.split('; ').map(part => {
+      const i = part.indexOf(' = ');
+      return i < 0 ? renderMath(part) : `<b>${renderMath(part.slice(0, i))}</b> = ${renderMath(part.slice(i + 3))}`;
+    });
+    return `<span class="formula-where"><span class="formula-where-label">where</span> ${parts.join('; ')}</span>`;
+  },
+
   _noteItem(it, showChapter) {
     const n = this._noteItems.push(it) - 1;
     return `<li class="rev-item"><span class="badge ${it.cls}">${it.label}</span>
-      <span class="rev-item-text">${renderMath(it.text)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span>
+      <span class="rev-item-text">${renderMath(it.text)}${this._formulaWhereHtml(it)}${showChapter ? `<em class="note-src">${esc(it.chapter)}</em>` : ''}</span>
       <button class="note-ask" onclick="app.askNote(${n})" title="Ask Cloé to explain this" aria-label="Ask Cloé to explain this">✦</button></li>`;
   },
 

@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- Revision notes: each formula now says what its symbols mean ("where v =
+  image distance, u = object distance, f = focal length"), across Maths,
+  Science, Physics, Chemistry, Biology and Economics for Class X and XII.
 - Rough Pad for working out on touch screens: a "Rough Pad" button in tests,
   Board Short Answers and short-answer assignments opens a drawing pad (pen
   pressure, colours, thickness, eraser, undo, white/black background), with
