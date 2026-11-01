@@ -604,7 +604,8 @@ Object.assign(app, {
             <small class="assign-history-meta">${this._assignMeta(a)}</small>
             <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
             ${st === 'completed' && kind === 'mcq' ? this._assignSummaryHtml(childUid, a, attempts) : ''}
-            ${st === 'completed' && kind === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'ghost' : 'primary'}" onclick="app.openSAEvaluation('${esc(childUid)}','${esc(a.id)}')">${a.evaluation ? 'Review marks' : 'Mark answers'}</button>` : ''}
+            ${st === 'completed' && kind === 'mcq' && latest?.reviewData ? `<button class="btn small primary" onclick="app.openAnsweredPaper('${esc(childUid)}','${esc(a.id)}')">View answered paper</button>` : ''}
+            ${st === 'completed' && kind === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'ghost' : 'primary'}" onclick="app.openSAEvaluation('${esc(childUid)}','${esc(a.id)}')">${a.evaluation ? 'View answered paper' : 'Mark answers'}</button>` : ''}
             ${kind === 'paper' && st !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, true)">Print with answer key</button>` : ''}
             ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
           </li>`;

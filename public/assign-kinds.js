@@ -102,6 +102,8 @@ function _akOrderOptions(q, seed) {
 // Question text without its "(2024 Board)" source tag — a paper shouldn't give it away.
 function _akQText(t) { return String(t || '').replace(/\s*\((?:19|20)\d\d[^)]*Board[^)]*\)/gi, ''); }
 
+function _akPct(ev) { return ev?.max ? Math.round(ev.score / ev.max * 100) : 0; }
+
 function _akMath(t) { return window.renderMath ? renderMath(t) : esc(t).replace(/\n/g, '<br>'); }
 
 Object.assign(app, {
@@ -137,7 +139,7 @@ Object.assign(app, {
   _assignKindResult(a) {
     const k = assignKind(a);
     if (k === 'paper') return ' — marked done';
-    if (k === 'sa') return a.evaluation ? ` — ${a.evaluation.score}/${a.evaluation.max} marks` : ' — awaiting marking';
+    if (k === 'sa') return a.evaluation ? ` — ${a.evaluation.score}/${a.evaluation.max} (${_akPct(a.evaluation)}%)` : ' — awaiting marking';
     return '';
   },
 
@@ -281,6 +283,37 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
       <div class="ak-actions"><button class="btn primary" onclick="app.closeAssignSheet()">OK</button></div>`);
   },
 
+  // ── MCQ: the parent's view of the child's answered paper (latest attempt) ───
+  openAnsweredPaper(childUid, assignmentId) {
+    const a = (window.riseFamily?.getChildAssignments(childUid) || []).find(x => x.id === assignmentId);
+    const attempts = a?.attempts || (a?.result ? [a.result] : []);
+    const latest = attempts[attempts.length - 1];
+    const rd = latest?.reviewData;
+    if (!rd) return;
+    const abcd = 'abcdefgh';
+    const skipped = rd.filter(r => r.userAnswer == null).length, correct = rd.filter(r => r.isCorrect).length;
+    const when = latest.submittedAt ? new Date(latest.submittedAt).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }) : '';
+    this._akOverlay(`
+      <div class="ak-head"><div><h2 class="ak-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</h2>
+        <p class="subtitle">Answered paper${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}${when ? ' · submitted ' + esc(when) : ''}</p></div>
+        <button class="btn small ghost" onclick="app.closeAssignSheet()">Close</button></div>
+      <div class="ak-score"><span class="ak-score-big">${latest.score} / ${latest.total}</span><span class="ak-score-pct">${latest.accuracy}%</span>
+        <small>${correct} correct · ${rd.length - correct - skipped} wrong · ${skipped} not answered</small></div>
+      ${rd.map((r, i) => `
+        <div class="ak-q ${r.isCorrect ? 'ok' : r.userAnswer == null ? 'skip' : 'bad'}">
+          <div class="ak-q-head"><strong>Q${i + 1}.</strong>
+            <span class="ak-mark-badge ${r.isCorrect ? 'full' : 'zero'}">${r.isCorrect ? 'Correct' : r.userAnswer == null ? 'Not answered' : 'Wrong'}</span></div>
+          <div class="ak-q-text">${_akMath(_akQText(r.text))}</div>
+          <ul class="ak-opts">${(r.options || []).map((o, j) => {
+            const isRight = j === r.correct, picked = j === r.userAnswer;
+            return `<li class="${isRight ? 'right' : picked ? 'picked' : ''}"><span class="ak-opt-letter">${abcd[j]}</span><span>${_akMath(o)}</span>
+              ${isRight ? `<em>✓ Right answer${picked ? ' · child\'s answer' : ''}</em>` : picked ? '<em>✗ Child\'s answer</em>' : ''}</li>`;
+          }).join('')}</ul>
+          ${r.explanation ? `<details class="ak-model"><summary>Explanation</summary>${_akMath(r.explanation)}</details>` : ''}
+        </div>`).join('')}
+      ${attempts.length > 1 ? '<p class="subtitle">Only the latest attempt keeps its full answers; earlier attempts keep the score.</p>' : ''}`);
+  },
+
   // ── Short answers: parent marks (by hand or with Cloé); child views marks ───
   async openSAEvaluation(childUid, assignmentId, readOnly) {
     const list = readOnly ? (window.riseFamily?.myAssignmentHistory || []) : (window.riseFamily?.getChildAssignments(childUid) || []);
@@ -291,34 +324,57 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     const el = this._akOverlay('<p class="subtitle">Loading answers…</p>');
     const { sa } = await _akBanks(a.subject, a.gradeBoard);
     const byId = new Map(sa.map(q => [q.id, q]));
-    const ev = new Map((a.evaluation?.items || []).map(x => [x.id, x]));
-    this._akEval = { childUid, a, rows: answers.map(x => ({ ...x, q: byId.get(x.id) })).filter(r => r.q) };
+    const evn = a.evaluation;
+    const ev = new Map((evn?.items || []).map(x => [x.id, x]));
+    this._akEval = { childUid, a, rows: answers.map(x => ({ ...x, q: byId.get(x.id) })).filter(r => r.q), by: evn?.by };
     const rows = this._akEval.rows;
+    const marked = readOnly && !!evn;
+    const who = evn?.by === 'cloe' ? 'Marked with Cloé, checked by your parent' : 'Marked by your parent';
+    const head = readOnly
+      ? (marked ? `<div class="ak-score"><span class="ak-score-big">${evn.score} / ${evn.max}</span><span class="ak-score-pct">${_akPct(evn)}%</span><small>${who}</small></div>`
+                : '<p class="subtitle">Submitted — waiting for your parent to mark it.</p>')
+      : `<p class="subtitle">Award marks for each answer (or let Cloé suggest them against the model answer), then submit.</p>
+         <div class="ak-score ak-score-live" id="ak-total"></div>`;
     el.querySelector('.ak-sheet').innerHTML = `
-      <div class="ak-head"><div><h2 class="ak-title">${esc(a.subject)} · Short answers</h2>
-        <p class="subtitle">${readOnly ? (a.evaluation ? `Marked: ${a.evaluation.score}/${a.evaluation.max}` : 'Not marked yet.') : 'Give marks for each answer, or let Cloé suggest marks against the model answer — then save.'}</p></div>
+      <div class="ak-head"><div><h2 class="ak-title">${esc(a.subject)} · Short answers</h2></div>
         <button class="btn small ghost" onclick="app.closeAssignSheet()">Close</button></div>
+      ${head}
       ${rows.map((r, i) => {
         const e = ev.get(r.id) || {};
+        const badge = marked && e.marks != null
+          ? `<span class="ak-mark-badge ${e.marks >= r.q.marks ? 'full' : e.marks > 0 ? 'part' : 'zero'}">${e.marks} / ${r.q.marks}</span>`
+          : `<span class="ak-marks">${r.q.marks} mark${r.q.marks === 1 ? '' : 's'}</span>`;
         return `<div class="ak-q">
-          <div class="ak-q-head"><strong>Q${i + 1}.</strong><span class="ak-marks">${r.q.marks} mark${r.q.marks === 1 ? '' : 's'}</span></div>
+          <div class="ak-q-head"><strong>Q${i + 1}.</strong>${badge}</div>
           <div class="ak-q-text">${_akMath(_akQText(r.q.text))}</div>
           <div class="ak-child-ans"><span class="ak-label">${readOnly ? 'Your answer' : 'Child\'s answer'}</span>${r.text ? esc(r.text) : '<em>(left blank)</em>'}</div>
-          <details class="ak-model" ${readOnly ? '' : 'open'}><summary>Model answer</summary>${_akMath(r.q.modelAnswer)}
-            ${(r.q.keyPoints || []).length ? `<ul>${r.q.keyPoints.map(k => `<li>${_akMath(k)}</li>`).join('')}</ul>` : ''}</details>
-          ${readOnly
-            ? (e.marks != null ? `<p class="ak-mark-line"><strong>${e.marks}/${r.q.marks}</strong>${e.feedback ? ' — ' + esc(e.feedback) : ''}</p>` : '')
-            : `<div class="ak-mark-row">
-                <label>Marks <input type="number" class="ak-mark" data-i="${i}" min="0" max="${r.q.marks}" step="0.5" value="${e.marks ?? ''}"> / ${r.q.marks}</label>
-                <input type="text" class="ak-feedback" data-i="${i}" placeholder="Comment (optional)" value="${esc(e.feedback || '')}">
+          ${marked && e.feedback ? `<p class="ak-comment"><span class="ak-label">Comment</span>${esc(e.feedback)}</p>` : ''}
+          ${!readOnly || marked ? `<details class="ak-model" ${readOnly ? '' : 'open'}><summary>Model answer</summary>${_akMath(r.q.modelAnswer)}
+            ${(r.q.keyPoints || []).length ? `<ul>${r.q.keyPoints.map(k => `<li>${_akMath(k)}</li>`).join('')}</ul>` : ''}</details>` : ''}
+          ${readOnly ? '' : `<div class="ak-mark-row">
+                <label>Award marks <input type="number" class="ak-mark" data-i="${i}" min="0" max="${r.q.marks}" step="0.5" value="${e.marks ?? ''}" oninput="app._akShowTotal()"> / ${r.q.marks}</label>
+                <input type="text" class="ak-feedback" data-i="${i}" placeholder="Comment for your child (optional)" value="${esc(e.feedback || '')}">
               </div>`}
         </div>`;
       }).join('')}
       ${readOnly ? '' : `<p id="ak-eval-msg" class="subtitle" hidden></p>
         <div class="ak-actions">
           <button class="btn ghost" onclick="app.evaluateWithCloe()">✦ Evaluate with Cloé</button>
-          <button class="btn primary" onclick="app.saveSAEvaluation()">Save marks</button>
+          <button class="btn primary" onclick="app.saveSAEvaluation()">${evn ? 'Update marks' : 'Submit marks'}</button>
         </div>`}`;
+    if (!readOnly) this._akShowTotal();
+  },
+
+  // Parent's running total while marking.
+  _akShowTotal() {
+    const el = document.getElementById('ak-total');
+    if (!el || !this._akEval) return;
+    const max = this._akEval.rows.reduce((t, r) => t + r.q.marks, 0);
+    const inputs = [...document.querySelectorAll('.ak-mark')];
+    const done = inputs.filter(i => i.value !== '').length;
+    const score = inputs.reduce((t, i) => t + (Number(i.value) || 0), 0);
+    el.innerHTML = `<span class="ak-score-big">${score} / ${max}</span><span class="ak-score-pct">${max ? Math.round(score / max * 100) : 0}%</span>
+      <small>${done} of ${inputs.length} answers marked</small>`;
   },
 
   async evaluateWithCloe() {
@@ -364,7 +420,8 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
         if (fEl && m.feedback) fEl.value = String(m.feedback);
       });
       this._akEval.by = 'cloe';
-      say('Cloé suggested marks below — check them, change anything you disagree with, then Save marks.');
+      this._akShowTotal();
+      say('Cloé suggested marks and comments below — check them, change anything you disagree with, then Submit marks.');
     } catch (e) {
       say(text ? 'Cloé\'s reply could not be read — try again, or mark by hand.' : `Cloé could not mark these: ${e.message}`, true);
     }
@@ -380,8 +437,12 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     });
     if (items.some(x => x.marks == null || isNaN(x.marks))) { alert('Give marks for every answer (0 if it is wrong or blank).'); return; }
     const evaluation = { items, score: items.reduce((s, x) => s + x.marks, 0), max: items.reduce((s, x) => s + x.max, 0), by: by || 'parent', at: Date.now() };
+    evaluation.pct = _akPct(evaluation);
     const res = await window.riseFamily.saveEvaluation(childUid, a.id, evaluation);
     if (!res.ok) { alert(res.msg || 'Could not save the marks.'); return; }
-    this.closeAssignSheet();
+    this._akOverlay(`<h2 class="ak-title">Marks sent ✓</h2>
+      <div class="ak-score"><span class="ak-score-big">${evaluation.score} / ${evaluation.max}</span><span class="ak-score-pct">${evaluation.pct}%</span></div>
+      <p class="subtitle">Your child can now see the marks for each question and the total.</p>
+      <div class="ak-actions"><button class="btn primary" onclick="app.closeAssignSheet()">Done</button></div>`);
   }
 });

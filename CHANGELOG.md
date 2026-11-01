@@ -12,6 +12,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   parent marks by hand or with Cloé against the model answer) and a print-only
   Board paper weighted toward high-yield chapters, with an answer-key PDF for
   the parent. MCQ and short-answer assignments can cover several chapters.
+- Parents can open the child's answered paper for any MCQ assignment (their
+  answer vs the right one, with explanations); marked short answers show the
+  child marks per question and a total percentage.
 
 ### Fixed
 - XII CBSE Mathematics 2026: 68 MCQs and 57 short answers re-transcribed from
