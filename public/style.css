@@ -1428,23 +1428,32 @@ kbd {
 .assign-status-pill.expired   { background: var(--wrong-bg); color: var(--wrong-fg); }
 .assign-status-pill.cancelled { background: var(--bg); color: var(--text-light); }
 
-/* ── Assignment history: responsive card grid. auto-fill sizes to whatever
-   container it's in (a full-width child Progress screen, or a 50%-wide
-   guardian column) instead of a fixed column count tied to viewport width. */
-.assign-history-grid {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;
-}
-.assign-history-card {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
-  padding: 14px 16px;
-}
-.assign-history-title { font-size: var(--fs-body); color: var(--text); }
-.assign-history-meta  { color: var(--text-light); font-size: var(--fs-note); }
 .assign-summary { margin: 4px 0 0; padding: 8px 10px; border-radius: var(--radius-sm); background: var(--bg); font-size: var(--fs-sm); line-height: 1.5; color: var(--text); }
-.assign-history-card .btn { margin-top: 4px; align-self: stretch; }
-.assign-history-actions { display: flex; gap: 8px; width: 100%; margin-top: 4px; }
-.assign-history-actions .btn { flex: 1; margin-top: 0; }
+
+/* Assignment lists as grouped rows: Pending → Completed → Cancelled */
+.assign-group { margin-top: 16px; }
+.assign-group-head, .assign-group > summary { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+.assign-group > summary { cursor: pointer; list-style: none; }
+.assign-group > summary::-webkit-details-marker { display: none; }
+.assign-group > summary::before { content: '▸'; color: var(--text-light); transition: transform var(--tx-fast, .15s); }
+.assign-group[open] > summary::before { transform: rotate(90deg); }
+.assign-group-title { font-size: var(--fs-sm); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--text-light); }
+.assign-group-count { font-size: var(--fs-note); font-weight: 700; padding: 1px 8px; border-radius: 99px; background: var(--bg); color: var(--text-light); }
+.assign-rows { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.assign-row { display: flex; align-items: center; gap: 12px 16px; padding: 12px 16px; border-left: 4px solid var(--border); }
+.assign-row.pending   { border-left-color: var(--primary); }
+.assign-row.completed { border-left-color: var(--correct-fg); }
+.assign-row.expired   { border-left-color: var(--wrong-fg); }
+.assign-row.cancelled { opacity: .75; }
+.assign-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.assign-row-title { font-size: var(--fs-body); color: var(--text); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.assign-row-meta { color: var(--text-light); font-size: var(--fs-note); }
+.assign-row .assign-summary { margin-top: 4px; align-self: flex-start; }
+.assign-row-actions { display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end; flex-shrink: 0; max-width: 55%; }
+@media (max-width: 640px) {
+  .assign-row { flex-direction: column; align-items: stretch; }
+  .assign-row-actions { max-width: none; justify-content: flex-start; }
+}
 
 .arena-challenge-entry { display: flex; gap: 8px; align-items: center; }
 .arena-challenge-entry input { flex: 1; font-size: var(--fs-base); padding: 8px 10px; border: 1.5px solid var(--border); border-radius: var(--radius-md); background: var(--surface); color: var(--text); letter-spacing: .1em; font-weight: 600; text-transform: uppercase; }

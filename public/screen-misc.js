@@ -386,73 +386,80 @@ Object.assign(app, {
 
   // ── Child's "Assignments" tab: pending inbox + history with Review/Reattempt ──
   _screenAssignmentsChild() {
-    return `${this._assignmentInbox()}${this._assignmentHistoryChild()}`;
+    return this._assignmentListChild();
   },
 
   _assignFmtDue(ts) {
     try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
   },
 
-  // ── Child's assignment inbox (pending) ────────────────────────────────────
-  _assignmentInbox() {
-    const assignments = window.riseFamily?.myAssignments || [];
-    if (!assignments.length) return '<div class="card empty-state">No assignments right now.</div>';
-    return `
-      <section class="home-section">
-        <h2 class="section-title">Pending</h2>
-        <ul class="recent-list">
-          ${assignments.map(a => `
-            <li class="recent-row card">
-              <span class="recent-desc">
-                <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}${a.questionIds ? ' · questions you missed' : ''}</strong>
-                <small>${this._assignMeta(a)} · due ${this._assignFmtDue(a.dueAt)}</small>
-              </span>
-              ${assignKind(a) === 'paper' ? `
-                <button class="btn small ghost" onclick="app.printAssignmentPaper(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'), false)">Print paper</button>
-                <button class="btn small primary" onclick="app.markPaperDone('${esc(a.id)}')">Mark done</button>`
-              : assignKind(a) === 'sa' ? `<button class="btn small primary" onclick="app.openSAAssignment('${esc(a.id)}')">Answer</button>`
-              : `<button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>`}
-            </li>`).join('')}
-        </ul>
-      </section>`;
+  // Assignment lists (guardian and child): rows grouped Pending → Completed
+  // (incl. missed) → Cancelled. Each row: { a, note, actions }.
+  _assignGroups(rows, emptyText) {
+    if (!rows.length) return `<p class="subtitle">${emptyText}</p>`;
+    const groups = [
+      ['Pending', r => r.a.status === 'pending'],
+      ['Completed', r => r.a.status === 'completed' || r.a.status === 'expired'],
+      ['Cancelled', r => r.a.status === 'cancelled']
+    ];
+    return groups.map(([label, test]) => {
+      const list = rows.filter(test);
+      if (!list.length) return '';
+      const items = list.map(({ a, meta, note, actions }) => `
+        <li class="assign-row card ${a.status}">
+          <div class="assign-row-main">
+            <strong class="assign-row-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}${a.questionIds && assignKind(a) === 'mcq' ? ' · missed questions' : ''}
+              ${a.status === 'expired' ? '<span class="assign-status-pill expired">Missed</span>' : ''}</strong>
+            <small class="assign-row-meta">${meta}</small>
+            ${note || ''}
+          </div>
+          ${actions?.trim() ? `<div class="assign-row-actions">${actions}</div>` : ''}
+        </li>`).join('');
+      const head = `<span class="assign-group-title">${label}</span><span class="assign-group-count">${list.length}</span>`;
+      return label === 'Cancelled'
+        ? `<details class="assign-group"><summary>${head}</summary><ul class="assign-rows">${items}</ul></details>`
+        : `<div class="assign-group"><div class="assign-group-head">${head}</div><ul class="assign-rows">${items}</ul></div>`;
+    }).join('');
   },
 
-  // ── Child's assignment history (completed/cancelled/expired) — Review shows
-  // the exact past attempt's questions/answers; Reattempt starts a fresh
-  // shuffled set of the same assignment, same as retrying a mock test. ──────
-  _assignmentHistoryChild() {
-    const statusLabel = { completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
-    const assignments = window.riseFamily?.myAssignmentHistory || [];
-    if (!assignments.length) return '';
-    return `
-      <section class="home-section">
-        <h2 class="section-title">History</h2>
-        <ul class="assign-history-grid">
-          ${assignments.map(a => {
-            const st = a.status;
-            const label = statusLabel[st] || st;
-            const attempts = a.attempts || (a.result ? [a.result] : []);
-            const latest = attempts[attempts.length - 1];
-            const kind = assignKind(a);
-            const result = kind !== 'mcq' ? (st === 'completed' ? this._assignKindResult(a) : '')
-              : latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
-            const canRetry = st !== 'cancelled' && kind === 'mcq';
-            const find = `riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}')`;
-            return `<li class="assign-history-card card">
-              <span class="assign-status-pill ${st}">${label}</span>
-              <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-              <small class="assign-history-meta">${this._assignMeta(a)}</small>
-              <small class="assign-history-meta">due ${this._assignFmtDue(a.dueAt)}${result}</small>
-              <div class="assign-history-actions">
-                ${latest?.reviewData ? `<button class="btn small ghost" onclick="app.reviewAssignment('${esc(a.id)}')">Review</button>` : ''}
-                ${kind === 'sa' && latest?.answers ? `<button class="btn small ghost" onclick="app.openSAEvaluation(null,'${esc(a.id)}',true)">${a.evaluation ? 'See marks' : 'My answers'}</button>` : ''}
-                ${kind === 'paper' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>` : ''}
-                ${canRetry ? `<button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}'))">Reattempt</button>` : ''}
-              </div>
-            </li>`;
-          }).join('')}
-        </ul>
-      </section>`;
+  // Meta line: kind/size · due · result.
+  _assignRowMeta(a, fmtDue) {
+    const attempts = a.attempts || (a.result ? [a.result] : []);
+    const latest = attempts[attempts.length - 1];
+    const result = assignKind(a) !== 'mcq' ? (a.status === 'completed' ? this._assignKindResult(a) : '')
+      : latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
+    return `${this._assignMeta(a)} · due ${fmtDue(a.dueAt)}${result}`;
+  },
+
+  // ── Child's assignments: pending (start/answer/print) + history ───────────
+  // Review shows the exact past attempt; Reattempt starts a fresh shuffled set.
+  _assignmentListChild() {
+    const pending = window.riseFamily?.myAssignments || [];
+    const history = window.riseFamily?.myAssignmentHistory || [];
+    const fmt = ts => this._assignFmtDue(ts);
+    const rows = [
+      ...pending.map(a => {
+        const find = `riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}')`;
+        const k = assignKind(a);
+        return { a, meta: this._assignRowMeta(a, fmt), actions: k === 'paper'
+          ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>
+             <button class="btn small primary" onclick="app.markPaperDone('${esc(a.id)}')">Mark done</button>`
+          : k === 'sa' ? `<button class="btn small primary" onclick="app.openSAAssignment('${esc(a.id)}')">Answer</button>`
+          : `<button class="btn small primary" onclick="app.startAssignment(${find})">Start</button>` };
+      }),
+      ...history.map(a => {
+        const attempts = a.attempts || (a.result ? [a.result] : []);
+        const latest = attempts[attempts.length - 1];
+        const k = assignKind(a);
+        const find = `riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}')`;
+        return { a, meta: this._assignRowMeta(a, fmt), actions: `
+          ${latest?.reviewData ? `<button class="btn small ghost" onclick="app.reviewAssignment('${esc(a.id)}')">Review</button>` : ''}
+          ${k === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'primary' : 'ghost'}" onclick="app.openSAEvaluation(null,'${esc(a.id)}',true)">${a.evaluation ? 'See marks' : 'My answers'}</button>` : ''}
+          ${k === 'paper' && a.status !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>` : ''}
+          ${a.status !== 'cancelled' && k === 'mcq' ? `<button class="btn small primary" onclick="app.startAssignment(${find})">Reattempt</button>` : ''}` };
+      })
+    ];
+    return `<section class="home-section">${this._assignGroups(rows, 'No assignments right now.')}</section>`;
   },
 
   // Opens the read-only Results/Review screen for a PAST assignment attempt,
@@ -482,7 +489,7 @@ Object.assign(app, {
   _assignSummaryHtml(childUid, a, attempts) {
     const latest = attempts[attempts.length - 1];
     const rd = latest?.reviewData;
-    if (!rd?.length) return '';
+    if (!rd?.length) return { note: '', actions: '' };
     const missed = rd.filter(r => !r.isCorrect);
     const skipped = rd.filter(r => r.userAnswer === undefined).length;
     const parts = [];
@@ -516,9 +523,9 @@ Object.assign(app, {
     }
 
     const text = parts.join(' · ');
-    return `<p class="assign-summary">${esc(text.charAt(0).toUpperCase() + text.slice(1))}</p>
-      ${missed.length ? `<button class="btn small ghost" onclick="app.askAssignmentHelp('${esc(childUid)}','${esc(a.id)}')">✦ Ask Cloé how to help</button>` : ''}
-      ${missed.some(r => r.id && !/^q-\d+$/.test(r.id)) ? `<button class="btn small ghost" onclick="app.reassignMissed('${esc(childUid)}','${esc(a.id)}')">↻ Re-assign what they missed</button>` : ''}`;
+    return { note: `<p class="assign-summary">${esc(text.charAt(0).toUpperCase() + text.slice(1))}</p>`,
+      actions: `      ${missed.length ? `<button class="btn small ghost" onclick="app.askAssignmentHelp('${esc(childUid)}','${esc(a.id)}')">✦ Ask Cloé how to help</button>` : ''}
+      ${missed.some(r => r.id && !/^q-\d+$/.test(r.id)) ? `<button class="btn small ghost" onclick="app.reassignMissed('${esc(childUid)}','${esc(a.id)}')">↻ Re-assign what they missed</button>` : ''}` };
   },
 
   askAssignmentHelp(childUid, assignmentId) {
@@ -541,7 +548,6 @@ Object.assign(app, {
     const [childGrade, childBoard] = (link.gradeBoard || `${state.grade}::${state.board}`).split('::');
     const subjects = (SUBJECTS[childGrade]?.[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade) || saBankSlug(s, childBoard, childGrade));
 
-    const statusLabel = { pending: 'Pending', completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
     const fmtDue = ts => {
       try { return new Date(ts.toMillis ? ts.toMillis() : ts).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: 'numeric', minute: '2-digit' }); } catch (_) { return ''; }
     };
@@ -587,30 +593,19 @@ Object.assign(app, {
         <p id="assign-msg-${esc(childUid)}" class="auth-error" hidden></p>
       </div>`;
 
-    const historyHtml = assignments.length ? `
-      <ul class="assign-history-grid">
-        ${assignments.map(a => {
-          const st = a.status;
-          const label = statusLabel[st] || st;
-          const attempts = a.attempts || (a.result ? [a.result] : []);
-          const latest = attempts[attempts.length - 1];
-          const kind = assignKind(a);
-          const result = kind !== 'mcq' ? (st === 'completed' ? this._assignKindResult(a) : '')
-            : latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
-          const find = `riseFamily.getChildAssignments('${esc(childUid)}').find(x=>x.id==='${esc(a.id)}')`;
-          return `<li class="assign-history-card card">
-            <span class="assign-status-pill ${st}">${label}</span>
-            <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-            <small class="assign-history-meta">${this._assignMeta(a)}</small>
-            <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
-            ${st === 'completed' && kind === 'mcq' ? this._assignSummaryHtml(childUid, a, attempts) : ''}
-            ${st === 'completed' && kind === 'mcq' && latest?.reviewData ? `<button class="btn small primary" onclick="app.openAnsweredPaper('${esc(childUid)}','${esc(a.id)}')">View answered paper</button>` : ''}
-            ${st === 'completed' && kind === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'ghost' : 'primary'}" onclick="app.openSAEvaluation('${esc(childUid)}','${esc(a.id)}')">${a.evaluation ? 'View answered paper' : 'Mark answers'}</button>` : ''}
-            ${kind === 'paper' && st !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, true)">Print with answer key</button>` : ''}
-            ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
-          </li>`;
-        }).join('')}
-      </ul>` : '<p class="subtitle">No assignments sent yet.</p>';
+    const historyHtml = this._assignGroups(assignments.map(a => {
+      const st = a.status, kind = assignKind(a);
+      const attempts = a.attempts || (a.result ? [a.result] : []);
+      const latest = attempts[attempts.length - 1];
+      const sum = st === 'completed' && kind === 'mcq' ? this._assignSummaryHtml(childUid, a, attempts) : { note: '', actions: '' };
+      const find = `riseFamily.getChildAssignments('${esc(childUid)}').find(x=>x.id==='${esc(a.id)}')`;
+      return { a, meta: this._assignRowMeta(a, fmtDue), note: sum.note, actions: `
+        ${st === 'completed' && kind === 'mcq' && latest?.reviewData ? `<button class="btn small primary" onclick="app.openAnsweredPaper('${esc(childUid)}','${esc(a.id)}')">View answered paper</button>` : ''}
+        ${st === 'completed' && kind === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'ghost' : 'primary'}" onclick="app.openSAEvaluation('${esc(childUid)}','${esc(a.id)}')">${a.evaluation ? 'View answered paper' : 'Mark answers'}</button>` : ''}
+        ${kind === 'paper' && st !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, true)">Print with answer key</button>` : ''}
+        ${sum.actions}
+        ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}` };
+    }), 'No assignments sent yet.');
 
     return `
       <section class="home-section">
