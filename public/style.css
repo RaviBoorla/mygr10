@@ -1445,6 +1445,11 @@ kbd {
 .assign-row.completed { border-left-color: var(--correct-fg); }
 .assign-row.expired   { border-left-color: var(--wrong-fg); }
 .assign-row.cancelled { opacity: .75; }
+.assign-row { transition: box-shadow var(--tx-base), transform var(--tx-base), border-color var(--tx-base), opacity var(--tx-base); }
+@media (hover: hover) {
+  .assign-row:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,.10); border-top-color: var(--primary-soft); border-right-color: var(--primary-soft); border-bottom-color: var(--primary-soft); }
+  .assign-row.cancelled:hover { opacity: 1; }
+}
 .assign-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .assign-row-title { font-size: var(--fs-body); color: var(--text); display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .assign-row-meta { color: var(--text-light); font-size: var(--fs-note); }
