@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Assignments come in three kinds: MCQs, Short answers (child answers online,
+  parent marks by hand or with Cloé against the model answer) and a print-only
+  Board paper weighted toward high-yield chapters, with an answer-key PDF for
+  the parent. MCQ and short-answer assignments can cover several chapters.
+
 ### Fixed
 - XII CBSE Mathematics 2026: 68 MCQs and 57 short answers re-transcribed from
   the question papers with real answer keys and model answers (the old

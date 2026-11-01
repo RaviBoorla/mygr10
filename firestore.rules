@@ -49,6 +49,11 @@ service cloud.firestore {
         request.resource.data.status == 'cancelled' &&
         onlyChanges(['status', 'cancelledAt']);
 
+      // Guardian marks a submitted short-answer assignment.
+      allow update: if signedIn() && request.auth.uid == resource.data.createdBy &&
+        resource.data.status == 'completed' &&
+        onlyChanges(['evaluation']);
+
       allow delete: if false;
     }
 

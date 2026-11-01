@@ -277,7 +277,7 @@ Object.assign(app, {
     const board = formEl?.dataset.childBoard || state.board;
     const grade = formEl?.dataset.childGrade || state.grade;
     const subject = subjectEl.value;
-    const slug = bankSlug(subject, board, grade);
+    const slug = formEl?.dataset.kind === 'sa' ? saBankSlug(subject, board, grade) : bankSlug(subject, board, grade);
     const empty = '<p class="assign-chapters-empty">All chapters</p>';
     if (!slug) { chapterEl.innerHTML = empty; return Promise.resolve(); }
     return fetch(`questions/${slug}.json`)
@@ -310,6 +310,8 @@ Object.assign(app, {
       .sort((a, b) => a.accuracy - b.accuracy || b.attempts - a.attempts)[0];
     if (!weakest) return say('Not enough practice yet to suggest something — try again after a few drills.');
 
+    const mcqKind = subjectEl.closest('.assign-form')?.querySelector('input[name^="assign-kind"][value="mcq"]');
+    if (mcqKind && !mcqKind.checked) { mcqKind.checked = true; this._onAssignKind(childUid); }
     subjectEl.value = weakest.subject;
     await this._populateAssignChapters(childUid);
     const chapterEl = document.getElementById(`assign-chapter-${childUid}`);
@@ -403,9 +405,13 @@ Object.assign(app, {
             <li class="recent-row card">
               <span class="recent-desc">
                 <strong>${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}${a.questionIds ? ' · questions you missed' : ''}</strong>
-                <small>${a.questionCount} questions · ${a.timeLimitMinutes} min · due ${this._assignFmtDue(a.dueAt)}</small>
+                <small>${this._assignMeta(a)} · due ${this._assignFmtDue(a.dueAt)}</small>
               </span>
-              <button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>
+              ${assignKind(a) === 'paper' ? `
+                <button class="btn small ghost" onclick="app.printAssignmentPaper(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'), false)">Print paper</button>
+                <button class="btn small primary" onclick="app.markPaperDone('${esc(a.id)}')">Mark done</button>`
+              : assignKind(a) === 'sa' ? `<button class="btn small primary" onclick="app.openSAAssignment('${esc(a.id)}')">Answer</button>`
+              : `<button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignments.find(x=>x.id==='${esc(a.id)}'))">Start</button>`}
             </li>`).join('')}
         </ul>
       </section>`;
@@ -427,15 +433,20 @@ Object.assign(app, {
             const label = statusLabel[st] || st;
             const attempts = a.attempts || (a.result ? [a.result] : []);
             const latest = attempts[attempts.length - 1];
-            const result = latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
-            const canRetry = st !== 'cancelled';
+            const kind = assignKind(a);
+            const result = kind !== 'mcq' ? (st === 'completed' ? this._assignKindResult(a) : '')
+              : latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
+            const canRetry = st !== 'cancelled' && kind === 'mcq';
+            const find = `riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}')`;
             return `<li class="assign-history-card card">
               <span class="assign-status-pill ${st}">${label}</span>
               <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-              <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
+              <small class="assign-history-meta">${this._assignMeta(a)}</small>
               <small class="assign-history-meta">due ${this._assignFmtDue(a.dueAt)}${result}</small>
               <div class="assign-history-actions">
                 ${latest?.reviewData ? `<button class="btn small ghost" onclick="app.reviewAssignment('${esc(a.id)}')">Review</button>` : ''}
+                ${kind === 'sa' && latest?.answers ? `<button class="btn small ghost" onclick="app.openSAEvaluation(null,'${esc(a.id)}',true)">${a.evaluation ? 'See marks' : 'My answers'}</button>` : ''}
+                ${kind === 'paper' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, false)">Print paper</button>` : ''}
                 ${canRetry ? `<button class="btn small primary" onclick="app.startAssignment(riseFamily.myAssignmentHistory.find(x=>x.id==='${esc(a.id)}'))">Reattempt</button>` : ''}
               </div>
             </li>`;
@@ -528,7 +539,7 @@ Object.assign(app, {
   _assignmentPanel(childUid, link) {
     const assignments = window.riseFamily?.getChildAssignments(childUid) || [];
     const [childGrade, childBoard] = (link.gradeBoard || `${state.grade}::${state.board}`).split('::');
-    const subjects = (SUBJECTS[childGrade]?.[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade));
+    const subjects = (SUBJECTS[childGrade]?.[childBoard] || []).filter(s => bankSlug(s, childBoard, childGrade) || saBankSlug(s, childBoard, childGrade));
 
     const statusLabel = { pending: 'Pending', completed: 'Done', expired: 'Missed', cancelled: 'Cancelled' };
     const fmtDue = ts => {
@@ -539,12 +550,18 @@ Object.assign(app, {
     const minDue = new Date(Date.now() + 10 * 60000).toISOString().slice(0, 16);
 
     const form = `
-      <div class="assign-form card" data-child-board="${esc(childBoard)}" data-child-grade="${esc(childGrade)}">
+      <div class="assign-form card" data-child-board="${esc(childBoard)}" data-child-grade="${esc(childGrade)}" data-kind="mcq">
         <h3 class="family-subheading" style="margin-top:0">Assign practice to ${esc(link.childEmail)}</h3>
+        <div class="assign-kind" role="radiogroup" aria-label="Type">
+          ${Object.entries(ASSIGN_KINDS).map(([k, label], i) => `
+            <label class="assign-kind-opt"><input type="radio" name="assign-kind-${esc(childUid)}" value="${k}" ${i ? '' : 'checked'}
+              onchange="app._onAssignKind('${esc(childUid)}')"><span>${label}</span></label>`).join('')}
+        </div>
+        <p class="assign-kind-note">Board paper: a full paper built from the whole syllabus (chapters that come up most in real board papers get more questions), to print and write. Your copy has the answer key.</p>
         <div class="assign-form-row">
           <label>Subject
             <select id="assign-subject-${esc(childUid)}" onchange="app._populateAssignChapters('${esc(childUid)}')">
-              ${subjects.map(s => `<option>${esc(s)}</option>`).join('')}
+              ${subjects.map(s => `<option ${bankSlug(s, childBoard, childGrade) ? '' : 'disabled'}>${esc(s)}</option>`).join('')}
             </select>
           </label>
         </div>
@@ -553,10 +570,10 @@ Object.assign(app, {
           <div id="assign-chapter-${esc(childUid)}" class="assign-chapters" role="group" aria-label="Chapters"></div>
         </div>
         <div class="assign-form-row">
-          <label>Questions
+          <label class="assign-count-field">Questions
             <input id="assign-count-${esc(childUid)}" type="number" min="5" max="50" value="10">
           </label>
-          <label>Time limit (min)
+          <label class="assign-limit-field">Time limit (min)
             <input id="assign-limit-${esc(childUid)}" type="number" min="5" max="120" value="20">
           </label>
           <label>Due by
@@ -577,13 +594,18 @@ Object.assign(app, {
           const label = statusLabel[st] || st;
           const attempts = a.attempts || (a.result ? [a.result] : []);
           const latest = attempts[attempts.length - 1];
-          const result = latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
+          const kind = assignKind(a);
+          const result = kind !== 'mcq' ? (st === 'completed' ? this._assignKindResult(a) : '')
+            : latest ? ` — ${latest.accuracy}% (${latest.score}/${latest.total})${attempts.length > 1 ? ` · attempt ${attempts.length}` : ''}` : '';
+          const find = `riseFamily.getChildAssignments('${esc(childUid)}').find(x=>x.id==='${esc(a.id)}')`;
           return `<li class="assign-history-card card">
             <span class="assign-status-pill ${st}">${label}</span>
             <strong class="assign-history-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}</strong>
-            <small class="assign-history-meta">${a.questionCount} q · ${a.timeLimitMinutes} min</small>
+            <small class="assign-history-meta">${this._assignMeta(a)}</small>
             <small class="assign-history-meta">due ${fmtDue(a.dueAt)}${result}</small>
-            ${st === 'completed' ? this._assignSummaryHtml(childUid, a, attempts) : ''}
+            ${st === 'completed' && kind === 'mcq' ? this._assignSummaryHtml(childUid, a, attempts) : ''}
+            ${st === 'completed' && kind === 'sa' && latest?.answers ? `<button class="btn small ${a.evaluation ? 'ghost' : 'primary'}" onclick="app.openSAEvaluation('${esc(childUid)}','${esc(a.id)}')">${a.evaluation ? 'Review marks' : 'Mark answers'}</button>` : ''}
+            ${kind === 'paper' && st !== 'cancelled' ? `<button class="btn small ghost" onclick="app.printAssignmentPaper(${find}, true)">Print with answer key</button>` : ''}
             ${st === 'pending' ? `<button class="btn small ghost" onclick="riseFamily._cancelAssignment('${esc(childUid)}','${esc(a.id)}')">Cancel</button>` : ''}
           </li>`;
         }).join('')}

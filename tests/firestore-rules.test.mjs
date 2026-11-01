@@ -33,6 +33,11 @@ await t('child re-attempts completed', C.doc('users/C/assignments/a2').update({ 
 await t('guardian cancels pending', G.doc('users/C/assignments/a1').update({ status: 'cancelled', cancelledAt: 1 }), true);
 await t('guardian cancels completed', G.doc('users/C/assignments/a2').update({ status: 'cancelled', cancelledAt: 1 }), false);
 await t('guardian edits score', G.doc('users/C/assignments/a2').update({ attempts: [{ score: 99 }] }), false);
+await t('guardian marks completed', G.doc('users/C/assignments/a2').update({ evaluation: { score: 4, max: 5 } }), true);
+await t('guardian marks non-completed', G.doc('users/C/assignments/a1').update({ evaluation: { score: 4 } }), false);
+await t('guardian marks + edits attempts', G.doc('users/C/assignments/a2').update({ evaluation: { score: 4 }, attempts: [] }), false);
+await t('child writes own marks', C.doc('users/C/assignments/a2').update({ evaluation: { score: 5 } }), false);
+await t('stranger marks', X.doc('users/C/assignments/a2').update({ evaluation: { score: 0 } }), false);
 await t('anyone deletes', G.doc('users/C/assignments/a2').delete(), false);
 await t('party reads link', C.doc('familyLinks/G_C').get(), true);
 await t('stranger reads link', X.doc('familyLinks/G_C').get(), false);

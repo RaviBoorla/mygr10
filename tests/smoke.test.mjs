@@ -111,6 +111,16 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   check('no page errors on ICSE mock', !errors.length, errors.join(' | '));
 }
 {
+  // Board-paper assignments: built from MCQ + short-answer banks, incl. 5-mark questions.
+  const { page, errors } = await open('#/home');
+  const paper = await page.evaluate(async () => {
+    const p = _akBuildPaper(await _akBanks('Mathematics', 'X::CBSE'));
+    return { sections: p.sections.length, marks: _akPaperMarks(p), five: p.sections.some(s => s.items.some(i => i.m === 5)) };
+  });
+  check('board paper builds with a 5-mark section', paper.sections >= 4 && paper.marks >= 60 && paper.five, JSON.stringify(paper));
+  check('no page errors building a paper', !errors.length, errors.join(' | '));
+}
+{
   const { page, errors } = await open('#/home', { grade: 'XII' });
   check('XII CBSE lists Information Technology', await page.locator('[data-mock-meta="Information Technology"]').count() === 1);
   check('no page errors on XII CBSE', !errors.length, errors.join(' | '));

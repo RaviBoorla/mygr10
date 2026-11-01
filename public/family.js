@@ -428,7 +428,7 @@
       }, (err) => { console.error('[family] watchChildAssignments error:', err); _childAssignments[childUid] = []; refresh(); });
   }
 
-  async function createAssignment(childUid, { subject, chapter, chapters, gradeBoard, questionCount, timeLimitMinutes, dueAt, questionIds }) {
+  async function createAssignment(childUid, { kind, subject, chapter, chapters, gradeBoard, questionCount, timeLimitMinutes, dueAt, questionIds, paper }) {
     if (!uid()) return { ok: false, msg: 'Sign in first.' };
     const link = _linkSets.guardian.find(l => l.childUid === childUid && l.status === 'active');
     if (!link) return { ok: false, msg: 'No active family link for this child.' };
@@ -448,6 +448,8 @@
         timeLimitMinutes: Number(timeLimitMinutes) || 20,
         dueAt: firebase.firestore.Timestamp.fromDate(new Date(dueAt)),
         ...(questionIds?.length ? { questionIds } : {}),
+        ...(kind && kind !== 'mcq' ? { kind } : {}),
+        ...(paper ? { paper } : {}),
         status: 'pending',
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
       });
@@ -487,8 +489,9 @@
         result: entry, // mirrors the latest attempt, for any older readers
         lastSubmittedAt: firebase.firestore.FieldValue.serverTimestamp()
       });
-      // Notify guardian via Worker HTTP route (best-effort).
-      if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL && snap.exists) {
+      // Notify guardian via Worker HTTP route (best-effort). The email reports a
+      // % score, so short-answer/paper submissions (no score yet) show in-app only.
+      if (typeof FAMILY_WORKER_URL === 'string' && FAMILY_WORKER_URL && snap.exists && !result.kind) {
         const a = snap.data();
         // Find guardian email from active links.
         const link = _linkSets.child.find(l => l.guardianUid === a.createdBy && l.status === 'active');
@@ -511,6 +514,16 @@
         }
       }
     } catch (e) { console.error('[family] completeAssignment failed:', e); }
+  }
+
+  // Guardian's marks for a submitted short-answer assignment.
+  async function saveEvaluation(childUid, assignmentId, evaluation) {
+    try {
+      await db.collection('users').doc(childUid).collection('assignments').doc(assignmentId).update({ evaluation });
+      return { ok: true };
+    } catch (e) {
+      return { ok: false, msg: e.message || 'Could not save the marks.' };
+    }
   }
 
   function esc(s) {
@@ -543,6 +556,7 @@
 
     completeAssignment,
     createAssignment,
+    saveEvaluation,
 
     async _createAssignment(childUid) {
       const subjectEl = document.getElementById(`assign-subject-${childUid}`);
@@ -551,15 +565,23 @@
       const limitEl   = document.getElementById(`assign-limit-${childUid}`);
       const dueEl     = document.getElementById(`assign-due-${childUid}`);
       const msgEl     = document.getElementById(`assign-msg-${childUid}`);
-      const res = await createAssignment(childUid, {
+      const kind      = subjectEl?.closest('.assign-form')?.querySelector('input[name^="assign-kind"]:checked')?.value || 'mcq';
+      const chapters  = [...(chapterEl?.querySelectorAll('input[type=checkbox]:checked') || [])].map(cb => cb.value);
+      const btn       = subjectEl?.closest('.assign-form')?.querySelector('.assign-form-actions .btn.primary');
+      if (btn) btn.disabled = true;
+      const extra = await window.app._assignKindPayload(childUid, kind, chapters, countEl?.value);
+      const res = extra.error ? { ok: false, msg: extra.error } : await createAssignment(childUid, {
+        kind,
         subject: subjectEl?.value,
-        chapters: [...(chapterEl?.querySelectorAll('input[type=checkbox]:checked') || [])].map(cb => cb.value),
+        chapters,
         questionCount: countEl?.value,
         timeLimitMinutes: limitEl?.value,
-        dueAt: dueEl?.value
+        dueAt: dueEl?.value,
+        ...extra
       });
+      if (btn) btn.disabled = false;
       if (msgEl) { msgEl.textContent = res.ok ? 'Assignment sent!' : (res.msg || 'Error'); msgEl.hidden = false; msgEl.style.color = res.ok ? 'var(--primary)' : '#dc2626'; }
-      if (res.ok) { if (subjectEl) subjectEl.selectedIndex = 0; if (chapterEl) chapterEl.querySelectorAll('input[type=checkbox]').forEach(cb => { cb.checked = false; }); if (dueEl) dueEl.value = ''; }
+      if (res.ok) { if (chapterEl) chapterEl.querySelectorAll('input[type=checkbox]').forEach(cb => { cb.checked = false; }); if (dueEl) dueEl.value = ''; }
     },
 
     async _cancelAssignment(childUid, assignmentId) {
