@@ -417,14 +417,19 @@ window.REVISION = {
         formulae: [
           'Area of circle: A = πr²',
           'Circumference: C = 2πr',
-          'Area of sector (angle θ°): A = (θ/360) × πr²',
-          'Arc length (angle θ°): l = (θ/360) × 2πr',
-          'Area of segment = Area of sector − Area of triangle',
+          'Length of minor arc (angle θ°): l = (θ/360) × 2πr',
+          'Length of major arc = 2πr − minor arc = ((360 − θ)/360) × 2πr',
+          'Area of minor sector (angle θ°): A = (θ/360) × πr²',
+          'Area of major sector = πr² − minor sector = ((360 − θ)/360) × πr²',
+          'Area of minor segment = Area of minor sector − Area of triangle',
+          'Area of minor segment (angle θ°): A = (θ/360) × πr² − ½ r² sin θ',
+          'Area of major segment = πr² − Area of minor segment',
           'Area of ring = π(R² − r²)',
           'Area of equilateral triangle with side a: A = (√3/4)a²'
         ],
         logic: [
           'Sector is a "pie slice"; segment is the region between a chord and the arc',
+          'Minor arc / sector / segment: the smaller part, on the side of angle θ (θ < 180°); major = the rest of the circle (360° − θ)',
           'For a semicircle: area = πr²/2; perimeter = πr + 2r',
           'Quadrant (90° sector): area = πr²/4'
         ],

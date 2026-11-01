@@ -84,7 +84,7 @@ async function open(hash, { grade = 'X', board = 'CBSE' } = {}) {
   await page.fill('#notes-search', 'formula sector');
   await page.waitForTimeout(500);
   const top = await page.locator('#notes-body .rev-item-text').first().textContent();
-  check('notes search matches whole words, best first', /Area of sector/.test(top || ''), (top || '').slice(0, 40));
+  check('notes search matches whole words, best first', /Area of (minor )?sector/.test(top || ''), (top || '').slice(0, 40));
   check('no page errors on notes', !errors.length, errors.join(' | '));
 }
 {

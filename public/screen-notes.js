@@ -116,7 +116,7 @@ function _ensureRevisionData(cb) {
   if (_revisionCallbacks === undefined) { cb(); return; }
   if (Array.isArray(_revisionCallbacks)) { _revisionCallbacks.push(cb); return; }
   _revisionCallbacks = [cb];
-  _loadScript('revision-data.js?v=53aad4ec', () => {
+  _loadScript('revision-data.js?v=921acaa5', () => {
     const pending = _revisionCallbacks || [];
     _revisionCallbacks = null;
     pending.forEach(fn => fn());
