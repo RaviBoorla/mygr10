@@ -278,15 +278,16 @@ Object.assign(app, {
     const grade = formEl?.dataset.childGrade || state.grade;
     const subject = subjectEl.value;
     const slug = bankSlug(subject, board, grade);
-    if (!slug) { chapterEl.innerHTML = '<option value="">All chapters</option>'; return Promise.resolve(); }
+    const empty = '<p class="assign-chapters-empty">All chapters</p>';
+    if (!slug) { chapterEl.innerHTML = empty; return Promise.resolve(); }
     return fetch(`questions/${slug}.json`)
       .then(r => r.json())
       .then(list => {
         const chapters = [...new Set(list.map(q => q.chapter || 'General'))].sort();
-        chapterEl.innerHTML = '<option value="">All chapters</option>' +
-          chapters.map(c => `<option>${esc(c)}</option>`).join('');
+        chapterEl.innerHTML = chapters.map(c =>
+          `<label class="assign-chapter-opt"><input type="checkbox" value="${esc(c)}"><span>${esc(c)}</span></label>`).join('') || empty;
       })
-      .catch(() => { chapterEl.innerHTML = '<option value="">All chapters</option>'; });
+      .catch(() => { chapterEl.innerHTML = empty; });
   },
 
   _assignDefaultDue() {
@@ -312,7 +313,7 @@ Object.assign(app, {
     subjectEl.value = weakest.subject;
     await this._populateAssignChapters(childUid);
     const chapterEl = document.getElementById(`assign-chapter-${childUid}`);
-    if ([...chapterEl.options].some(o => o.value === weakest.chapter)) chapterEl.value = weakest.chapter;
+    chapterEl.querySelectorAll('input[type=checkbox]').forEach(cb => { cb.checked = cb.value === weakest.chapter; });
     document.getElementById(`assign-count-${childUid}`).value = 10;
     document.getElementById(`assign-limit-${childUid}`).value = 15;
     const dueEl = document.getElementById(`assign-due-${childUid}`);
@@ -332,7 +333,7 @@ Object.assign(app, {
     if (!ids.length) return;
     if (!confirm(`Assign the ${ids.length} missed question${ids.length > 1 ? 's' : ''} again, due in 3 days?`)) return;
     const res = await window.riseFamily.createAssignment(childUid, {
-      subject: a.subject, chapter: a.chapter, gradeBoard: a.gradeBoard,
+      subject: a.subject, chapter: a.chapter, chapters: a.chapters, gradeBoard: a.gradeBoard,
       questionCount: ids.length,
       timeLimitMinutes: Math.max(5, Math.ceil((a.timeLimitMinutes || 20) * ids.length / (a.questionCount || ids.length))),
       dueAt: this._assignDefaultDue(),
@@ -546,11 +547,10 @@ Object.assign(app, {
               ${subjects.map(s => `<option>${esc(s)}</option>`).join('')}
             </select>
           </label>
-          <label>Chapter (optional)
-            <select id="assign-chapter-${esc(childUid)}">
-              <option value="">All chapters</option>
-            </select>
-          </label>
+        </div>
+        <div class="assign-chapters-field">
+          <span class="assign-chapters-label">Chapters <small>(optional — none ticked means all chapters)</small></span>
+          <div id="assign-chapter-${esc(childUid)}" class="assign-chapters" role="group" aria-label="Chapters"></div>
         </div>
         <div class="assign-form-row">
           <label>Questions

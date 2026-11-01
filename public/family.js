@@ -428,16 +428,21 @@
       }, (err) => { console.error('[family] watchChildAssignments error:', err); _childAssignments[childUid] = []; refresh(); });
   }
 
-  async function createAssignment(childUid, { subject, chapter, gradeBoard, questionCount, timeLimitMinutes, dueAt, questionIds }) {
+  async function createAssignment(childUid, { subject, chapter, chapters, gradeBoard, questionCount, timeLimitMinutes, dueAt, questionIds }) {
     if (!uid()) return { ok: false, msg: 'Sign in first.' };
     const link = _linkSets.guardian.find(l => l.childUid === childUid && l.status === 'active');
     if (!link) return { ok: false, msg: 'No active family link for this child.' };
+    // `chapters` is the source of truth; `chapter` is a short display label
+    // (cards, emails) and the filter older assignments used.
+    const chs = chapters?.length ? chapters : (chapter ? [chapter] : []);
+    const label = chs.length > 2 ? `${chs[0]} +${chs.length - 1} more` : chs.join(', ');
     try {
       await db.collection('users').doc(childUid).collection('assignments').add({
         createdBy: uid(),
         childUid,
         subject,
-        chapter: chapter || null,
+        chapter: label || null,
+        ...(chs.length ? { chapters: chs } : {}),
         gradeBoard: gradeBoard || link.gradeBoard,
         questionCount: Number(questionCount) || 10,
         timeLimitMinutes: Number(timeLimitMinutes) || 20,
@@ -548,13 +553,13 @@
       const msgEl     = document.getElementById(`assign-msg-${childUid}`);
       const res = await createAssignment(childUid, {
         subject: subjectEl?.value,
-        chapter: chapterEl?.value || null,
+        chapters: [...(chapterEl?.querySelectorAll('input[type=checkbox]:checked') || [])].map(cb => cb.value),
         questionCount: countEl?.value,
         timeLimitMinutes: limitEl?.value,
         dueAt: dueEl?.value
       });
       if (msgEl) { msgEl.textContent = res.ok ? 'Assignment sent!' : (res.msg || 'Error'); msgEl.hidden = false; msgEl.style.color = res.ok ? 'var(--primary)' : '#dc2626'; }
-      if (res.ok) { if (subjectEl) subjectEl.selectedIndex = 0; if (chapterEl) chapterEl.value = ''; if (dueEl) dueEl.value = ''; }
+      if (res.ok) { if (subjectEl) subjectEl.selectedIndex = 0; if (chapterEl) chapterEl.querySelectorAll('input[type=checkbox]').forEach(cb => { cb.checked = false; }); if (dueEl) dueEl.value = ''; }
     },
 
     async _cancelAssignment(childUid, assignmentId) {
