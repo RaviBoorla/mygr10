@@ -10,7 +10,7 @@ Object.assign(app, {
         <span class="soon-tag">School practice papers</span>
         <p>Class IX has no CISCE board exam, so these questions are sourced from one school's
            internal unit-test and term-exam papers (2020–2025), not official ICSE board papers —
-           unlike the Class X/XII banks above.</p>
+           unlike the Class X and XII banks.</p>
       </section>` : '';
 
     const resume = draft ? `
@@ -43,7 +43,7 @@ Object.assign(app, {
 
       const saSlug = saBankSlug(subject);
       const saLink = saSlug
-        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">Board Short Answers</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">${state.grade === 'IX' ? 'Practice' : 'Board'} Short Answers</button>`
         : '';
 
       const solvedSlug = solvedBankSlug(subject);

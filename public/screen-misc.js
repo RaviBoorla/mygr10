@@ -17,7 +17,7 @@ Object.assign(app, {
               </svg>
               <span>Rise</span>
             </div>
-            <p class="welcome-tagline">Class X &amp; XII · CBSE / ICSE board prep. No subscription needed.</p>
+            <p class="welcome-tagline">Class IX (ICSE), X &amp; XII · CBSE / ICSE board prep. No subscription needed.</p>
             <ul class="welcome-features">
               <li><span class="wf-icon">📝</span><div><strong>Mock tests</strong><span>Timed MCQs, instant scoring</span></div></li>
               <li><span class="wf-icon">⚡</span><div><strong>Arena</strong><span>Blitz &amp; live challenge rooms</span></div></li>
