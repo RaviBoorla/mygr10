@@ -1,0 +1,556 @@
+[
+  {
+    "id": "sa-ix-math-001",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "If x = 1/(x−5), find: (a) x − 1/x (b) x + 1/x (c) x² − 1/x²",
+    "modelAnswer": "From x = 1/(x−5), we get x − 5 = 1/x, so x − 1/x = 5 directly. Then (x − 1/x)² = x² − 2 + 1/x² = 25, so x² + 1/x² = 27. (x + 1/x)² = x² + 2 + 1/x² = 29, so x + 1/x = ±√29 (x² − 5x − 1 = 0 has one positive and one negative root). Finally x² − 1/x² = (x − 1/x)(x + 1/x) = ±5√29.",
+    "keyPoints": [
+      "x − 1/x = 5 (directly from the given relation)",
+      "x² + 1/x² = 27, so x + 1/x = ±√29",
+      "x² − 1/x² = (x − 1/x)(x + 1/x) = ±5√29"
+    ]
+  },
+  {
+    "id": "sa-ix-math-002",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "If 7√3/(√10+√3) + 2√2/(√15−2√2) = a√30 − b, where a and b are rational numbers, find the values of a and b.",
+    "modelAnswer": "Rationalise the first term by (√10−√3): denominator = 10−3 = 7, so the term becomes (7√30−21)/7 = √30 − 3. Rationalise the second term by (√15+2√2): denominator = 15−8 = 7, so the term becomes (2√30+8)/7. Adding: √30 − 3 + (2√30+8)/7 = (9√30 − 13)/7 = (9/7)√30 − 13/7. Comparing with a√30 − b: a = 9/7, b = 13/7.",
+    "keyPoints": [
+      "Rationalise each surd fraction separately",
+      "First term simplifies to √30 − 3",
+      "Second term simplifies to (2√30+8)/7",
+      "Adding gives a = 9/7, b = 13/7"
+    ]
+  },
+  {
+    "id": "sa-ix-math-003",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2023-24",
+    "text": "If (2√3 − √5)/(4√3 − 3√5) = x − √15 y, find the values of x and y.",
+    "modelAnswer": "Multiply numerator and denominator by the conjugate (4√3+3√5): denominator = 48 − 45 = 3. Numerator = (2√3−√5)(4√3+3√5) = 24 + 6√15 − 4√15 − 15 = 9 + 2√15. So the value = (9+2√15)/3 = 3 + (2/3)√15. Comparing with x − √15 y: x = 3 and y = −2/3.",
+    "keyPoints": [
+      "Rationalise using the conjugate (4√3+3√5)",
+      "Denominator simplifies to 3",
+      "Numerator simplifies to 9 + 2√15",
+      "x = 3, y = −2/3"
+    ]
+  },
+  {
+    "id": "sa-ix-math-004",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "If x = √5 + √3, find the value of x² + 1/x².",
+    "modelAnswer": "x² = (√5+√3)² = 8 + 2√15. Also x(√5−√3) = 5−3 = 2, so 1/x = (√5−√3)/2, and 1/x² = (8−2√15)/4 = (4−√15)/2. Therefore x² + 1/x² = (8+2√15) + (4−√15)/2 = (16+4√15+4−√15)/2 = (20+3√15)/2.",
+    "keyPoints": [
+      "x² = 8 + 2√15",
+      "1/x = (√5−√3)/2 using x(√5−√3) = 2",
+      "x² + 1/x² = (20+3√15)/2 ≈ 15.8"
+    ]
+  },
+  {
+    "id": "sa-ix-math-005",
+    "chapter": "Expansions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2022-23",
+    "text": "If a² + 1/a² = 7, find (i) a + 1/a (ii) a − 1/a (iii) a² − 1/a².",
+    "modelAnswer": "(a+1/a)² = a²+2+1/a² = 7+2 = 9, so a+1/a = 3 (positive value). (a−1/a)² = a²−2+1/a² = 7−2 = 5, so a−1/a = ±√5. Then a² − 1/a² = (a+1/a)(a−1/a) = 3×(±√5) = ±3√5.",
+    "keyPoints": [
+      "a + 1/a = 3",
+      "a − 1/a = ±√5",
+      "a² − 1/a² = (a+1/a)(a−1/a) = ±3√5"
+    ]
+  },
+  {
+    "id": "sa-ix-math-006",
+    "chapter": "Expansions",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2024-25",
+    "text": "If a² + 1/a² = 23, find (i) a + 1/a (ii) a − 1/a (iii) a³ + 1/a³.",
+    "modelAnswer": "(a+1/a)² = 23+2 = 25, so a+1/a = 5. (a−1/a)² = 23−2 = 21, so a−1/a = ±√21. a³+1/a³ = (a+1/a)³ − 3(a+1/a) = 125 − 15 = 110 (this value doesn't depend on the sign of a−1/a).",
+    "keyPoints": [
+      "a + 1/a = 5",
+      "a − 1/a = ±√21",
+      "a³ + 1/a³ = (a+1/a)³ − 3(a+1/a) = 110"
+    ]
+  },
+  {
+    "id": "sa-ix-math-008",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "In the figure, ABCD is a parallelogram. AB is produced to P such that AB = BP, and PQ is drawn parallel to BC to meet AC produced at Q. Given AB = 8 cm, AD = 5 cm, AC = 10 cm: (a) Prove that C is the mid-point of AQ. (b) Find the perimeter of quadrilateral BCQP.",
+    "modelAnswer": "(a) Since BC is parallel to PQ and B is the mid-point of AP (as AB = BP), by the converse of the mid-point theorem applied in triangle APQ, C must be the mid-point of AQ. (b) Since C is the mid-point of AQ, AC = CQ = 10 cm, so AQ = 20 cm. Since BC is the line joining the mid-points of AP and AQ in triangle APQ, BC = ½ PQ, so PQ = 2 × BC = 2 × AD = 10 cm (BC = AD = 5 cm as opposite sides of the parallelogram). PB = AB = 8 cm. Perimeter of BCQP = BC + CQ + QP + PB = 5 + 10 + 10 + 8 = 33 cm.",
+    "keyPoints": [
+      "B is mid-point of AP and BC∥PQ ⇒ C is mid-point of AQ (converse mid-point theorem)",
+      "AC = CQ = 10 cm, so AQ = 20 cm",
+      "PQ = 2×BC = 2×5 = 10 cm",
+      "Perimeter of BCQP = 5+10+10+8 = 33 cm"
+    ]
+  },
+  {
+    "id": "sa-ix-math-009",
+    "chapter": "Simultaneous Linear Equations",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice T1 2024-25",
+    "text": "A boat goes 30 km upstream and 44 km downstream in 10 hours. In 13 hours it goes 40 km upstream and 55 km downstream. Determine the speed of the stream and the speed of the boat in still water.",
+    "modelAnswer": "Let u = 1/(boat speed − stream speed) and d = 1/(boat speed + stream speed). Then 30u + 44d = 10 and 40u + 55d = 13. Multiplying the first by 55 and the second by 44: 1650u+2420d=550 and 1760u+2420d=572. Subtracting: 110u = 22, so u = 1/5, meaning boat speed − stream speed = 5 km/h. Substituting back: 30(0.2)+44d=10 ⇒ 44d=4 ⇒ d=1/11, meaning boat speed + stream speed = 11 km/h. Solving: boat speed = 8 km/h, stream speed = 3 km/h.",
+    "keyPoints": [
+      "Set u = 1/(boat−stream), d = 1/(boat+stream)",
+      "Solve the linear system in u, d to get boat−stream = 5, boat+stream = 11",
+      "Boat speed = 8 km/h, Stream speed = 3 km/h"
+    ]
+  },
+  {
+    "id": "sa-ix-math-010",
+    "chapter": "Simultaneous Linear Equations",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "The sum of digits in a two-digit number is 7. If the digits are reversed, the new number increased by 3 equals 4 times the original number. Find the original number.",
+    "modelAnswer": "Let the number be 10a+b with a+b=7. Reversed number is 10b+a. Given: 10b+a+3 = 4(10a+b). Expanding: 10b+a+3 = 40a+4b ⇒ 6b − 39a + 3 = 0. Using b = 7−a: 6(7−a) − 39a + 3 = 0 ⇒ 42−6a−39a+3=0 ⇒ 45 = 45a ⇒ a=1, b=6. The number is 16. Check: reversed = 61, 61+3=64=4×16. ✓",
+    "keyPoints": [
+      "Let number = 10a+b, with a+b=7",
+      "Set up 10b+a+3 = 4(10a+b)",
+      "Solve to get a=1, b=6, number = 16"
+    ]
+  },
+  {
+    "id": "sa-ix-math-012",
+    "chapter": "Simultaneous Linear Equations",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice T1 2024-25",
+    "text": "For going to a city B from city A, there is a route via city C such that AC ⊥ CB, AC = 2x km and CB = 2(x+7) km. It is proposed to construct a 26 km highway which directly connects A and B. Find how much distance will be saved in reaching B from A after the highway is constructed.",
+    "modelAnswer": "Since AC ⊥ CB, by Pythagoras: AB² = AC² + CB² = (2x)² + [2(x+7)]² = 676. So 4x² + 4(x+7)² = 676 ⇒ x² + (x+7)² = 169 ⇒ 2x² + 14x + 49 = 169 ⇒ 2x² + 14x − 120 = 0 ⇒ x² + 7x − 60 = 0 ⇒ (x+12)(x−5) = 0 ⇒ x = 5. So AC = 10 km, CB = 24 km. Original route distance (via C) = AC + CB = 34 km. New highway AB = 26 km. Distance saved = 34 − 26 = 8 km.",
+    "keyPoints": [
+      "Apply Pythagoras: (2x)²+(2(x+7))² = 26²",
+      "Solve quadratic to get x = 5, so AC=10, CB=24",
+      "Distance saved = (10+24) − 26 = 8 km"
+    ]
+  },
+  {
+    "id": "sa-ix-math-013",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "In the given figure, if AB = AC and BE = CD, prove that: (i) ∆ABD ≅ ∆ACE (ii) AD = AE",
+    "modelAnswer": "In ∆ABD and ∆ACE: AB = AC (given), ∠ABD = ∠ACE (= ∠ABC = ∠ACB, base angles of isosceles triangle ABC since AB=AC), and BD = BC − CD, CE = BC − BE; since BE=CD (given), BD = CE. By SAS, ∆ABD ≅ ∆ACE. From CPCT, AD = AE.",
+    "keyPoints": [
+      "AB = AC (given, base angles ∠ABC=∠ACB equal)",
+      "BD = CE (since BE = CD and BC is common)",
+      "SAS congruence: ∆ABD ≅ ∆ACE",
+      "CPCT gives AD = AE"
+    ]
+  },
+  {
+    "id": "sa-ix-math-014",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2021-22",
+    "text": "In the given figure, PQRS is a square and POS is an equilateral triangle. Prove that: (i) ∆POQ ≅ ∆SOR (ii) OQ = OR (iii) ∠OQR = ∠ORQ = 15°",
+    "modelAnswer": "(i) In ∆POQ and ∆SOR: PQ = SR (sides of the square), PO = SO (sides of the equilateral triangle), and ∠OPQ = ∠OSR = 90° − 60° = 30°. By SAS, ∆POQ ≅ ∆SOR. (ii) By CPCT, OQ = OR. (iii) In ∆POQ, PO = PS = PQ, so ∆POQ is isosceles with ∠PQO = ∠POQ = (180° − 30°)/2 = 75°. Hence ∠OQR = ∠PQR − ∠PQO = 90° − 75° = 15°. Similarly ∠ORQ = 15° (or since OQ = OR, the base angles of ∆OQR are equal).",
+    "keyPoints": [
+      "PQ = SR, PO = SO, ∠OPQ = ∠OSR = 30° ⇒ SAS congruence",
+      "CPCT gives OQ = OR",
+      "PO = PQ ⇒ ∠PQO = 75°, so ∠OQR = 90° − 75° = 15° = ∠ORQ"
+    ]
+  },
+  {
+    "id": "sa-ix-math-015",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "In the given figure, AB = BC, AD is perpendicular to BC, CE is perpendicular to AB. Prove that AD = CE.",
+    "modelAnswer": "In ∆ABD and ∆CBE: ∠ADB = ∠CEB = 90° (given). ∠ABD = ∠CBE (= ∠B, common angle). AB = CB (given). By AAS (or ASA using the common angle and the right angles), ∆ABD ≅ ∆CBE. By CPCT, AD = CE.",
+    "keyPoints": [
+      "∠ADB = ∠CEB = 90°, ∠B common, AB = CB",
+      "AAS/ASA congruence: ∆ABD ≅ ∆CBE",
+      "CPCT gives AD = CE"
+    ]
+  },
+  {
+    "id": "sa-ix-math-016",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2024-25",
+    "text": "If two altitudes BD and CE of a triangle ABC are equal, prove that the triangle is isosceles.",
+    "modelAnswer": "In ∆BEC and ∆CDB: ∠BEC = ∠CDB = 90° (BD, CE are altitudes). BC = CB (common side, hypotenuse). BD = CE (given). By RHS congruence, ∆BEC ≅ ∆CDB. By CPCT, ∠EBC = ∠DCB, i.e. ∠B = ∠C. Since the angles opposite AC and AB are equal, AC = AB, so the triangle is isosceles.",
+    "keyPoints": [
+      "∆BEC ≅ ∆CDB by RHS (BC common, BD=CE given, right angles at D,E)",
+      "CPCT gives ∠B = ∠C",
+      "Equal base angles ⇒ triangle is isosceles (AB=AC)"
+    ]
+  },
+  {
+    "id": "sa-ix-math-017",
+    "chapter": "Isosceles Triangles",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "ABC and DBC are two isosceles triangles on the same base BC. Show that ∠ABD = ∠ACD.",
+    "modelAnswer": "Since ∆ABC is isosceles with AB=AC, ∠ABC = ∠ACB. Since ∆DBC is isosceles with DB=DC, ∠DBC = ∠DCB. Subtracting (or adding, depending on configuration): ∠ABD = ∠ABC − ∠DBC and ∠ACD = ∠ACB − ∠DCB. Since ∠ABC=∠ACB and ∠DBC=∠DCB, we get ∠ABD = ∠ACD.",
+    "keyPoints": [
+      "∆ABC isosceles ⇒ ∠ABC = ∠ACB",
+      "∆DBC isosceles ⇒ ∠DBC = ∠DCB",
+      "Subtracting equal angles from equal angles gives ∠ABD = ∠ACD"
+    ]
+  },
+  {
+    "id": "sa-ix-math-018",
+    "chapter": "Isosceles Triangles",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "AD is perpendicular to the side BC of an equilateral triangle ABC. Prove that 4AD² = 3AB².",
+    "modelAnswer": "Since ABC is equilateral and AD⊥BC, D is the midpoint of BC, so BD = BC/2 = AB/2. By Pythagoras in right triangle ABD: AD² = AB² − BD² = AB² − (AB/2)² = AB² − AB²/4 = (3/4)AB². Multiplying both sides by 4: 4AD² = 3AB².",
+    "keyPoints": [
+      "D is the midpoint of BC since AD is the altitude of an equilateral triangle",
+      "BD = AB/2",
+      "By Pythagoras: AD² = AB² − AB²/4 = 3AB²/4, so 4AD² = 3AB²"
+    ]
+  },
+  {
+    "id": "sa-ix-math-019",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "ABCD is a quadrilateral. P, Q, R, S are the mid-points of sides AB, BC, CD and DA respectively. Prove that PQRS is a parallelogram.",
+    "modelAnswer": "Join diagonal AC. In ∆ABC, P and Q are mid-points of AB and BC, so PQ ∥ AC and PQ = ½AC (mid-point theorem). In ∆ADC, S and R are mid-points of AD and DC, so SR ∥ AC and SR = ½AC. Therefore PQ ∥ SR and PQ = SR, which means PQRS is a parallelogram (one pair of opposite sides equal and parallel).",
+    "keyPoints": [
+      "Join diagonal AC",
+      "In ∆ABC: PQ ∥ AC and PQ = ½AC",
+      "In ∆ADC: SR ∥ AC and SR = ½AC",
+      "PQ ∥ SR and PQ = SR ⇒ PQRS is a parallelogram"
+    ]
+  },
+  {
+    "id": "sa-ix-math-020",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "S and T are respectively the mid-points of equal sides PQ and PR of ∆PQR. Show that QT = RS.",
+    "modelAnswer": "In ∆PQT and ∆PRS: PQ = PR (given equal sides), PT = ½PR = ½PQ = PS (since S, T are mid-points of equal sides), and ∠P is common. By SAS, ∆PQT ≅ ∆PRS. By CPCT, QT = RS.",
+    "keyPoints": [
+      "PQ = PR (given) and PT = PS (halves of equal sides)",
+      "∠P common ⇒ SAS: ∆PQT ≅ ∆PRS",
+      "CPCT gives QT = RS"
+    ]
+  },
+  {
+    "id": "sa-ix-math-021",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "In ∆ABC, D and E are mid-points of the sides AB and AC respectively. Through E, a line is drawn parallel to AB to meet BC at F. Prove that BDEF is a parallelogram. If AB = 8 cm and BC = 9 cm, find the perimeter of parallelogram BDEF.",
+    "modelAnswer": "Since D, E are mid-points of AB, AC, DE ∥ BC and DE = ½BC (mid-point theorem). Also EF ∥ AB is given, and since E is the mid-point of AC with EF ∥ AB, F must be the mid-point of BC (converse mid-point theorem), so BF = ½BC and EF = ½AB. Since DE ∥ BF (both along BC direction via the parallel construction) and BD ∥ EF (both parallel to AB), BDEF is a parallelogram with BD = ½AB = 4 cm and DE = ½BC = 4.5 cm. Perimeter = 2(BD+DE) = 2(4+4.5) = 17 cm.",
+    "keyPoints": [
+      "DE ∥ BC, DE = ½BC = 4.5 cm (mid-point theorem)",
+      "F is mid-point of BC (since EF∥AB), giving BDEF opposite sides equal and parallel",
+      "BD = ½AB = 4 cm",
+      "Perimeter of BDEF = 2(4+4.5) = 17 cm"
+    ]
+  },
+  {
+    "id": "sa-ix-math-022",
+    "chapter": "Rectilinear Figures",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "Show that the quadrilateral formed by joining the mid-points of the adjacent sides of a square is also a square.",
+    "modelAnswer": "Let ABCD be a square with mid-points P, Q, R, S of AB, BC, CD, DA. By the mid-point theorem, PQ ∥ AC and PQ = ½AC; similarly SR ∥ AC and SR = ½AC, so PQ ∥ SR and PQ = SR, making PQRS a parallelogram. Also, QR ∥ BD and QR = ½BD. Since the diagonals AC and BD of a square are equal, PQ = QR, so all sides of PQRS are equal. Since the diagonals of a square are perpendicular, PQ ⊥ QR (as PQ∥AC, QR∥BD), so PQRS has a right angle. A parallelogram with equal sides and one right angle is a square.",
+    "keyPoints": [
+      "PQ∥AC, PQ=½AC; SR∥AC, SR=½AC ⇒ PQRS is a parallelogram",
+      "Since diagonals AC=BD (square), all sides of PQRS are equal",
+      "Since diagonals AC⊥BD, PQRS has a right angle ⇒ PQRS is a square"
+    ]
+  },
+  {
+    "id": "sa-ix-math-023",
+    "chapter": "Rectilinear Figures",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice AE 2022-23",
+    "text": "ABCD is a rhombus and ABE is an equilateral triangle, with E and D on opposite sides of AB. If ∠BCD = 78°, calculate ∠AED and ∠BED.",
+    "modelAnswer": "In the rhombus, ∠BAD = ∠BCD = 78° (opposite angles). In equilateral ∆ABE, ∠BAE = ∠AEB = 60°. Since E and D are on opposite sides of AB, ∠DAE = 78° + 60° = 138°. Also AE = AB = AD, so ∆ADE is isosceles and ∠AED = ∠ADE = (180° − 138°)/2 = 21°. Then ∠BED = ∠AEB − ∠AED = 60° − 21° = 39°.",
+    "keyPoints": [
+      "∠BAD = 78° (opposite angles of a rhombus), ∠BAE = 60°",
+      "∠DAE = 138° and AE = AD ⇒ ∠AED = 21°",
+      "∠BED = 60° − 21° = 39°"
+    ]
+  },
+  {
+    "id": "sa-ix-math-024",
+    "chapter": "Circle",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Chord AB and CD of a circle with centre O intersect at point E. If OE bisects ∠AED, prove that chord AB = chord CD.",
+    "modelAnswer": "Draw OM ⊥ AB and ON ⊥ CD. In ∆OME and ∆ONE: ∠OME = ∠ONE = 90°; ∠OEM = ∠OEN (OE bisects ∠AED, and ∠AEC = ∠BED as vertically opposite, so OE makes equal angles with both chords); OE is common. By AAS, ∆OME ≅ ∆ONE, so OM = ON. Chords that are equidistant from the centre are equal, so AB = CD.",
+    "keyPoints": [
+      "Drop OM⊥AB, ON⊥CD",
+      "OE bisects ∠AED ⇒ ∆OEM ≅ ∆OEN (AAS) ⇒ OM = ON",
+      "Equal distances from centre ⇒ AB = CD"
+    ]
+  },
+  {
+    "id": "sa-ix-math-026",
+    "chapter": "Circle",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice AE 2021-22",
+    "text": "AB is a diameter of a circle with centre O. If chord AC = chord AD, prove that (i) arc BC = arc BD (ii) AB is the bisector of ∠CAD.",
+    "modelAnswer": "(i) Equal chords cut off equal arcs, so arc AC = arc AD. Arcs ACB and ADB are both semicircles, so arc BC = semicircle − arc AC = semicircle − arc AD = arc BD. (ii) Equal arcs BC and BD give chords BC = BD. In ∆ABC and ∆ABD: AC = AD, BC = BD and AB is common, so ∆ABC ≅ ∆ABD (SSS). By CPCT, ∠CAB = ∠DAB, so AB bisects ∠CAD.",
+    "keyPoints": [
+      "Equal chords AC = AD ⇒ equal arcs AC = AD",
+      "Arc BC = Arc BD (subtracting equal arcs from the full circle)",
+      "∆ABC ≅ ∆ABD by SSS (AB common, AC=AD, BC=BD) ⇒ AB bisects ∠CAD"
+    ]
+  },
+  {
+    "id": "sa-ix-math-027",
+    "chapter": "Circle",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2023-24",
+    "text": "Without using trigonometric tables, prove that: cos²26° + cos64° sin26° + tan36°/cot54° + 3(sec40°/cosec50°) = 5",
+    "modelAnswer": "cos64° = sin26° (complementary angles), so cos64°sin26° = sin²26°, and cos²26°+sin²26° = 1. Since 36°+54°=90°, cot54° = tan36°, so tan36°/cot54° = 1. Since 40°+50°=90°, cosec50° = sec40°, so sec40°/cosec50° = 1, and 3×1 = 3. Adding: 1 + 1 + 3 = 5.",
+    "keyPoints": [
+      "cos²26°+cos64°sin26° = cos²26°+sin²26° = 1 (using cos64°=sin26°)",
+      "tan36°/cot54° = 1 (complementary angles)",
+      "3×sec40°/cosec50° = 3 (complementary angles)",
+      "Total = 1+1+3 = 5"
+    ]
+  },
+  {
+    "id": "sa-ix-math-028",
+    "chapter": "Mean/Median/Mode",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "Draw a frequency polygon to represent the following data: Marks 10-20, 20-30, 30-40, 40-50, 50-60 with number of students 10, 25, 12, 8, 5 (class of 60 students).",
+    "modelAnswer": "Find the class marks (midpoints): 15, 25, 35, 45, 55 for the five classes. Also add one class below (0-10, midpoint 5, frequency 0) and one above (60-70, midpoint 65, frequency 0) so the polygon closes to the x-axis. Plot the points (5,0), (15,10), (25,25), (35,12), (45,8), (55,5), (65,0) on graph paper with marks on the x-axis and number of students on the y-axis, and join them with straight lines to form the frequency polygon.",
+    "keyPoints": [
+      "Find class marks (midpoints) of each interval: 15,25,35,45,55",
+      "Add zero-frequency classes at both ends (midpoints 5 and 65) to close the polygon",
+      "Plot all points and join with straight lines"
+    ]
+  },
+  {
+    "id": "sa-ix-math-029",
+    "chapter": "Mean/Median/Mode",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Use graph paper to draw a frequency polygon for the heights of 100 students: Heights(cm): 131-140, 141-150, 151-160, 161-170, 171-180; Number of students: 5, 18, 22, 15, 10.",
+    "modelAnswer": "Find the class marks: 135.5, 145.5, 155.5, 165.5, 175.5. Add a zero-frequency class on each side (125.5 and 185.5, each with frequency 0) to close the polygon at the axis. Plot (125.5,0), (135.5,5), (145.5,18), (155.5,22), (165.5,15), (175.5,10), (185.5,0) on graph paper and join consecutive points with straight lines.",
+    "keyPoints": [
+      "Compute class marks of each height interval",
+      "Add zero-frequency boundary classes on both sides",
+      "Plot points and join with straight line segments to form the polygon"
+    ]
+  },
+  {
+    "id": "sa-ix-math-031",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Mary wants to decorate a Christmas tree box of length 80 cm, breadth 40 cm and height 20 cm with square sheets of coloured paper of side 40 cm (covering the whole box). How many sheets does she need?",
+    "modelAnswer": "Total surface area of the box = 2(lb+bh+hl) = 2(80×40 + 40×20 + 20×80) = 2(3200+800+1600) = 2×5600 = 11200 cm². Area of each sheet = 40×40 = 1600 cm². Number of sheets needed = 11200/1600 = 7.",
+    "keyPoints": [
+      "TSA of box = 2(lb+bh+hl) = 11200 cm²",
+      "Area of one sheet = 1600 cm²",
+      "Number of sheets = 11200/1600 = 7"
+    ]
+  },
+  {
+    "id": "sa-ix-math-033",
+    "chapter": "Trigonometrical Ratios",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "School Practice AE 2022-23",
+    "text": "If 4 cos²x = 3 and x is an acute angle, find the value of (i) x (ii) cos²x + cot²x (iii) sin2x (iv) sec²x + tan²x (v) tan2x",
+    "modelAnswer": "From 4cos²x=3, cos²x=3/4, so cosx=√3/2, giving x=30°. Then sinx=1/2, tanx=1/√3, cotx=√3. (ii) cos²x+cot²x = 3/4+3 = 15/4 = 3.75. (iii) sin2x = 2sinxcosx = 2(1/2)(√3/2) = √3/2. (iv) sec²x+tan²x = 4/3+1/3 = 5/3. (v) tan2x = 2tanx/(1−tan²x) = (2/√3)/(2/3) = √3.",
+    "keyPoints": [
+      "cos²x=3/4 ⇒ x=30°",
+      "cos²x+cot²x = 3.75",
+      "sin2x = √3/2",
+      "sec²x+tan²x = 5/3, tan2x = √3"
+    ]
+  },
+  {
+    "id": "sa-ix-math-034",
+    "chapter": "Coordinate Geometry",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice AE 2024-25",
+    "text": "Without using a graph, show that the points A(8,3), B(0,9) and C(14,11) are the vertices of an isosceles right-angled triangle. Also find the area of ∆ABC.",
+    "modelAnswer": "AB² = (8−0)²+(3−9)² = 64+36 = 100, so AB=10. BC² = (0−14)²+(9−11)² = 196+4 = 200, so BC=10√2. AC² = (8−14)²+(3−11)² = 36+64 = 100, so AC=10. Since AB=AC=10, the triangle is isosceles. Also AB²+AC² = 100+100 = 200 = BC², so by the converse of Pythagoras theorem, the triangle is right-angled at A. Area = ½×AB×AC = ½×10×10 = 50 sq units.",
+    "keyPoints": [
+      "AB = AC = 10 (isosceles)",
+      "AB² + AC² = BC² ⇒ right angle at A (Pythagoras converse)",
+      "Area = ½×AB×AC = 50 sq units"
+    ]
+  },
+  {
+    "id": "sa-ix-math-035",
+    "chapter": "Coordinate Geometry",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "Prove that the points A(7,9), B(3,−7) and C(−3,3) are the vertices of a right isosceles triangle.",
+    "modelAnswer": "AB² = (7−3)²+(9+7)² = 16+256 = 272. BC² = (3+3)²+(−7−3)² = 36+100 = 136. AC² = (7+3)²+(9−3)² = 100+36 = 136. Since BC = AC = √136, the triangle is isosceles. Also BC²+AC² = 136+136 = 272 = AB², so by the converse of Pythagoras theorem, the right angle is at C. Hence ABC is a right isosceles triangle.",
+    "keyPoints": [
+      "BC² = AC² = 136 (isosceles)",
+      "BC²+AC² = AB² = 272 ⇒ right angle at C",
+      "Triangle ABC is right isosceles"
+    ]
+  },
+  {
+    "id": "sa-ix-math-036",
+    "chapter": "Graphs",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2021-22",
+    "text": "Solve the following equations graphically: 3x + 2y − 12 = 0 and 5x − 2y − 4 = 0. Also find the coordinates of the points where the lines meet the y-axis.",
+    "modelAnswer": "Table for 3x + 2y = 12: (0, 6), (2, 3), (4, 0). Table for 5x − 2y = 4: (0, −2), (2, 3), (4, 8). Plot both lines on the same axes; they intersect at (2, 3), so x = 2, y = 3. (Check: adding the equations gives 8x = 16, x = 2, y = 3.) The first line meets the y-axis at (0, 6) and the second at (0, −2).",
+    "keyPoints": [
+      "Make a table of at least 3 points for each line",
+      "The lines intersect at (2, 3), so x = 2, y = 3",
+      "y-intercepts: (0, 6) for 3x+2y=12 and (0, −2) for 5x−2y=4"
+    ]
+  },
+  {
+    "id": "sa-ix-math-037",
+    "chapter": "Trigonometrical Ratios",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "ABC is a right-angled triangle (right angle at C). Prove that sec((A + B)/2) = cosec(C/2).",
+    "modelAnswer": "In ∆ABC, A + B + C = 180°, so (A + B)/2 = 90° − C/2. Therefore sec((A + B)/2) = sec(90° − C/2) = cosec(C/2). (With C = 90°, both sides equal sec 45° = cosec 45° = √2.)",
+    "keyPoints": [
+      "A + B + C = 180° ⇒ (A+B)/2 = 90° − C/2",
+      "sec(90° − θ) = cosec θ",
+      "Hence sec((A+B)/2) = cosec(C/2)"
+    ]
+  },
+  {
+    "id": "sa-ix-math-038",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "PQRS is a parallelogram and T is the mid-point of RQ. ST and PQ produced meet at U. Prove that PU = 2PQ.",
+    "modelAnswer": "In ∆STR and ∆UTQ: RT = QT (T is the mid-point of RQ), ∠STR = ∠UTQ (vertically opposite), and ∠SRT = ∠UQT (alternate angles, since SR ∥ PU). By ASA, ∆STR ≅ ∆UTQ, so SR = QU (CPCT). Since SR = PQ (opposite sides of the parallelogram), QU = PQ. Therefore PU = PQ + QU = 2PQ.",
+    "keyPoints": [
+      "RT = QT, vertically opposite angles at T, alternate angles since SR ∥ PU",
+      "∆STR ≅ ∆UTQ (ASA) ⇒ SR = QU",
+      "SR = PQ ⇒ PU = PQ + QU = 2PQ"
+    ]
+  },
+  {
+    "id": "sa-ix-math-039",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "ABCD is a square. P, Q and R are points on AB, BC and CD such that AP = BQ = CR and ∠PQR = 90°. Prove that (a) ∆PBQ ≅ ∆QCR (b) PQ = QR (c) ∠PRQ = 45°.",
+    "modelAnswer": "(a) AB = BC and AP = BQ, so PB = AB − AP = BC − BQ = QC. Also BQ = CR (given) and ∠PBQ = ∠QCR = 90°. By SAS, ∆PBQ ≅ ∆QCR. (b) By CPCT, PQ = QR. (c) In ∆PQR, ∠PQR = 90° and PQ = QR, so ∠QPR = ∠PRQ = (180° − 90°)/2 = 45°.",
+    "keyPoints": [
+      "PB = QC (equal sides minus equal parts), BQ = CR, right angles at B and C",
+      "SAS ⇒ ∆PBQ ≅ ∆QCR, so PQ = QR",
+      "Isosceles right ∆PQR ⇒ ∠PRQ = 45°"
+    ]
+  },
+  {
+    "id": "sa-ix-math-040",
+    "chapter": "Pythagoras Theorem",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice AE 2023-24",
+    "text": "∆PQR is right-angled at Q. M and N are points on QR and PQ respectively. Prove that PM² + RN² = PR² + MN².",
+    "modelAnswer": "In right ∆PQM: PM² = PQ² + QM². In right ∆NQR: RN² = NQ² + QR². Adding: PM² + RN² = (PQ² + QR²) + (QM² + NQ²). In right ∆PQR, PQ² + QR² = PR², and in right ∆MQN, QM² + NQ² = MN². Hence PM² + RN² = PR² + MN².",
+    "keyPoints": [
+      "PM² = PQ² + QM² and RN² = NQ² + QR²",
+      "Add and regroup the squares",
+      "PQ² + QR² = PR² and QM² + QN² = MN², giving the result"
+    ]
+  },
+  {
+    "id": "sa-ix-math-041",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Represent √5 on the real number line.",
+    "modelAnswer": "Mark O at 0 and A at 2 on the number line. At A draw AB perpendicular to the line with AB = 1 unit. Join OB; by Pythagoras OB = √(2² + 1²) = √5. With O as centre and radius OB, draw an arc cutting the number line at P. Then P represents √5 (about 2.24).",
+    "keyPoints": [
+      "Take OA = 2 units on the number line",
+      "Draw AB = 1 unit perpendicular at A, so OB = √5",
+      "Swing an arc of radius OB from O to the line; the point is √5"
+    ]
+  },
+  {
+    "id": "sa-ix-math-042",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "In ∆ABC, P is a point on AB with AP = BP, PQ ∥ BC (Q on AC), and PR ∥ AC (R on BC); so PQ ∥ RC and PR ∥ QC. (a) Prove that ∆APQ ≅ ∆PBR. (b) Show that PQ = BR.",
+    "modelAnswer": "(a) In ∆APQ and ∆PBR: AP = PB (given); ∠APQ = ∠PBR (corresponding angles, PQ ∥ BC); ∠PAQ = ∠BPR (corresponding angles, PR ∥ AC). By ASA, ∆APQ ≅ ∆PBR. (b) By CPCT, PQ = BR.",
+    "keyPoints": [
+      "AP = PB (given)",
+      "Corresponding angles from PQ ∥ BC and PR ∥ AC",
+      "ASA congruence, then PQ = BR by CPCT"
+    ]
+  },
+  {
+    "id": "sa-ix-math-043",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2024-25",
+    "text": "ABCD is a parallelogram. BM and DN are perpendiculars to the diagonal AC. Prove that (a) ∆BMC ≅ ∆DNA (b) BM = DN.",
+    "modelAnswer": "(a) In ∆BMC and ∆DNA: ∠BMC = ∠DNA = 90°; BC = DA (opposite sides of the parallelogram); ∠BCM = ∠DAN (alternate angles, since BC ∥ AD and AC is a transversal). By AAS, ∆BMC ≅ ∆DNA. (b) By CPCT, BM = DN.",
+    "keyPoints": [
+      "Right angles at M and N; BC = AD",
+      "Alternate angles ∠BCA = ∠DAC",
+      "AAS congruence, then BM = DN by CPCT"
+    ]
+  },
+  {
+    "id": "sa-ix-math-044",
+    "chapter": "Construction of Polygons",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2021-22",
+    "text": "Using ruler and compass, construct a rhombus ABCD with diagonal AC = 4.4 cm and diagonal BD = 6 cm.",
+    "modelAnswer": "Draw AC = 4.4 cm. Construct its perpendicular bisector, meeting AC at O. Since the diagonals of a rhombus bisect each other at right angles, mark OB = OD = 3 cm on the bisector, on either side of AC. Join AB, BC, CD and DA. Each side measures √(2.2² + 3²) ≈ 3.7 cm.",
+    "keyPoints": [
+      "Draw AC = 4.4 cm and its perpendicular bisector",
+      "Mark OB = OD = 3 cm on the bisector",
+      "Join the vertices; side ≈ 3.7 cm"
+    ]
+  }
+]
