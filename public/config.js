@@ -8,7 +8,7 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   IX: {
-    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science']
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Economics', 'Computer Science']
   },
   X: {
     CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
@@ -22,6 +22,16 @@ const SUBJECTS = {
 };
 
 const BANKS = {
+  'IX ICSE Mathematics':          'IX-ICSE-Mathematics',
+  'IX ICSE Physics':              'IX-ICSE-Physics',
+  'IX ICSE Chemistry':            'IX-ICSE-Chemistry',
+  'IX ICSE Biology':              'IX-ICSE-Biology',
+  'IX ICSE History & Civics':     'IX-ICSE-History-Civics',
+  'IX ICSE Geography':            'IX-ICSE-Geography',
+  'IX ICSE English':              'IX-ICSE-English',
+  'IX ICSE Economics':            'IX-ICSE-Economics',
+  'IX ICSE Computer Science':     'IX-ICSE-Computer-Science',
+
   'X CBSE Mathematics':           'X-CBSE-Mathematics',
   'X CBSE Science':               'X-CBSE-Science',
   'X CBSE Social Science':        'X-CBSE-Social-Science',
@@ -57,6 +67,16 @@ const BANKS = {
 };
 
 const SA_BANKS = {
+  'IX ICSE Mathematics':            'IX-ICSE-Mathematics-ShortAnswers',
+  'IX ICSE Physics':                'IX-ICSE-Physics-ShortAnswers',
+  'IX ICSE Chemistry':              'IX-ICSE-Chemistry-ShortAnswers',
+  'IX ICSE Biology':                'IX-ICSE-Biology-ShortAnswers',
+  'IX ICSE History & Civics':       'IX-ICSE-History-Civics-ShortAnswers',
+  'IX ICSE Geography':              'IX-ICSE-Geography-ShortAnswers',
+  'IX ICSE English':                'IX-ICSE-English-ShortAnswers',
+  'IX ICSE Economics':              'IX-ICSE-Economics-ShortAnswers',
+  'IX ICSE Computer Science':       'IX-ICSE-Computer-Science-ShortAnswers',
+
   'X CBSE Mathematics':            'X-CBSE-Mathematics-ShortAnswers',
   'X CBSE Social Science':         'X-CBSE-Social-Science-ShortAnswers',
   'X CBSE Science':                'X-CBSE-Science-ShortAnswers',

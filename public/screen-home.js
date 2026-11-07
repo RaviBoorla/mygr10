@@ -2,9 +2,16 @@
 Object.assign(app, {
 
   _screenHome() {
-    if (state.grade === 'IX') return this._screenGradeIXLanding();
     const subjects = SUBJECTS[state.grade]?.[state.board] || [];
     const draft    = this._draft();
+
+    const ixBanner = state.grade === 'IX' ? `
+      <section class="card ix-source-banner">
+        <span class="soon-tag">School practice papers</span>
+        <p>Class IX has no CISCE board exam, so these questions are sourced from one school's
+           internal unit-test and term-exam papers (2020–2025), not official ICSE board papers —
+           unlike the Class X/XII banks above.</p>
+      </section>` : '';
 
     const resume = draft ? `
       <section class="resume-banner card">
@@ -110,6 +117,7 @@ Object.assign(app, {
           ${streakArenaRow}
         </div>
         ${resume}
+        ${ixBanner}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>
         </section>
@@ -276,27 +284,6 @@ Object.assign(app, {
           <div class="streak-goal-bar"><div class="streak-goal-fill ${goalMet ? 'met' : ''}" style="width:${pct}%"></div></div>
         </div>
       </section>`;
-  },
-
-  // Grade IX has no question banks yet — a coming-soon landing page instead
-  // of the usual subject cards, scoped to ICSE for now (the only board wired
-  // up for IX in SUBJECTS).
-  _screenGradeIXLanding() {
-    const subjects = SUBJECTS.IX?.[state.board] || [];
-    return `
-      <div class="screen ixlanding">
-        <section class="card ixlanding-hero">
-          <span class="soon-tag">Coming soon</span>
-          <h2>Class IX ${esc(state.board)} prep is on the way</h2>
-          <p>Rise is building out Class IX ${esc(state.board)} the same way it covers Class X and XII —
-             mock tests, chapter drills, short answers and revision notes, all free. Question banks
-             aren't live yet, but here's what's planned:</p>
-          <ul class="ixlanding-subjects">
-            ${subjects.map(s => `<li>${esc(s)}</li>`).join('')}
-          </ul>
-          <button class="btn primary" onclick="app.openClassPicker()">Switch class</button>
-        </section>
-      </div>`;
   }
 
 });
