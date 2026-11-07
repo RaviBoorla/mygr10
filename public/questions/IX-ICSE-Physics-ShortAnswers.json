@@ -1,0 +1,790 @@
+[
+  {
+    "id": "sa-ix-phy-001",
+    "chapter": "Measurements and Experimentation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write the factors affecting the time period of a simple pendulum. State how each factor affects the time period, and write the expression for the time period of a simple pendulum.",
+    "modelAnswer": "The time period T of a simple pendulum is given by T = 2π√(l/g), where l is the effective length (from the point of suspension to the centre of gravity of the bob) and g is the acceleration due to gravity. (1) Effective length: T is directly proportional to the square root of l (T ∝ √l) — a longer pendulum has a longer time period. (2) Acceleration due to gravity: T is inversely proportional to the square root of g (T ∝ 1/√g) — where g is smaller (e.g. on the Moon or at high altitude), T is larger. The time period does not depend on the mass or material of the bob, nor on the amplitude (for small oscillations).",
+    "keyPoints": [
+      "T = 2π√(l/g)",
+      "T ∝ √l (effective length)",
+      "T ∝ 1/√g",
+      "Independent of mass of bob and of amplitude (small oscillations)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-002",
+    "chapter": "Measurements and Experimentation",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "(a) How does the time period (T) of a simple pendulum depend on its effective length (l)? (b) Describe the graph of T² against l. (c) How can this graph be used to determine the value of acceleration due to gravity (g)?",
+    "modelAnswer": "(a) T is directly proportional to the square root of the effective length: T ∝ √l. (b) Squaring T = 2π√(l/g) gives T² = (4π²/g) × l, so T² ∝ l. The graph of T² (y-axis) against l (x-axis) is a straight line passing through the origin. (c) The slope of the graph = T²/l = 4π²/g. Measure the slope from the graph, then g = 4π² ÷ slope (equivalently g = 4π² × l/T²).",
+    "keyPoints": [
+      "T ∝ √l",
+      "T² vs l is a straight line through the origin",
+      "Slope = 4π²/g",
+      "g = 4π²/slope"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-003",
+    "chapter": "Measurements and Experimentation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "How are the following derived units related to the fundamental (base) units? (a) newton (b) joule (c) pascal",
+    "modelAnswer": "(a) Force = mass × acceleration, so 1 newton = 1 kg × 1 m s⁻² = 1 kg m s⁻². (b) Work = force × displacement, so 1 joule = 1 N × 1 m = 1 kg m² s⁻². (c) Pressure = force/area, so 1 pascal = 1 N m⁻² = 1 kg m⁻¹ s⁻².",
+    "keyPoints": [
+      "1 N = 1 kg m s⁻²",
+      "1 J = 1 N m = 1 kg m² s⁻²",
+      "1 Pa = 1 N m⁻² = 1 kg m⁻¹ s⁻²"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-004",
+    "chapter": "Measurements and Experimentation",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "With reference to the zero error of a vernier calliper: (a) How is the zero error accounted for in a reading? (b) When is the vernier calliper said to be free from zero error?",
+    "modelAnswer": "(a) The zero error is subtracted (with its sign) from the observed reading: Correct reading = Observed reading − Zero error. A positive zero error is subtracted; a negative zero error, being subtracted with its negative sign, is effectively added. (b) The vernier calliper is free from zero error when, with the jaws closed (just touching each other), the zero mark of the vernier scale exactly coincides with the zero mark of the main scale.",
+    "keyPoints": [
+      "Correct reading = observed reading − zero error (with sign)",
+      "Positive error subtracted, negative error effectively added",
+      "No zero error when vernier zero coincides with main-scale zero with jaws closed"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-005",
+    "chapter": "Measurements and Experimentation",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice T1 2024-25",
+    "text": "Mention the SI units used to represent the following quantities: (a) density (b) work (c) pressure",
+    "modelAnswer": "(a) Density = mass/volume, so its SI unit is kilogram per cubic metre (kg m⁻³). (b) Work: joule (J), where 1 J = 1 N m. (c) Pressure: pascal (Pa), where 1 Pa = 1 N m⁻².",
+    "keyPoints": [
+      "Density: kg m⁻³",
+      "Work: joule (J)",
+      "Pressure: pascal (Pa) = N m⁻²"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-006",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice AE 2022-23",
+    "text": "Derive the third equation of motion, v² = u² + 2aS, for a body moving with uniform acceleration (use a velocity-time graph or the first two equations).",
+    "modelAnswer": "Consider a body with initial velocity u, uniform acceleration a, reaching velocity v after time t. On the velocity-time graph the line rises from (0, u) to (t, v). The displacement S equals the area under the graph, which is a trapezium: S = ½ (u + v) × t. From the first equation of motion (slope of the graph), a = (v − u)/t, so t = (v − u)/a. Substituting: S = ½ (u + v) × (v − u)/a = (v² − u²)/2a. Rearranging gives v² − u² = 2aS, i.e. v² = u² + 2aS.",
+    "keyPoints": [
+      "Displacement = area under v-t graph = ½(u + v)t",
+      "t = (v − u)/a from slope",
+      "S = (v + u)(v − u)/2a",
+      "v² = u² + 2aS"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-007",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "Derive the second equation of motion, S = ut + ½at², graphically, using a velocity-time graph.",
+    "modelAnswer": "Let a body start with velocity u (point A at t = 0) and accelerate uniformly to velocity v at time t (point B). Drop a perpendicular from B to the time axis at D, and draw AC parallel to the time axis meeting BD at C. Displacement S = area under the graph = area of rectangle OACD + area of triangle ABC. Area of rectangle = u × t. Area of triangle = ½ × AC × BC = ½ × t × (v − u). Since a = (v − u)/t, (v − u) = at, so area of triangle = ½ × t × at = ½at². Therefore S = ut + ½at².",
+    "keyPoints": [
+      "Displacement = area under v-t graph",
+      "Rectangle area = ut",
+      "Triangle area = ½ × t × (v − u) = ½at² (using v − u = at)",
+      "S = ut + ½at²"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-008",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2020-21",
+    "text": "Write the three equations of uniformly accelerated motion and explain the symbols used.",
+    "modelAnswer": "(1) v = u + at (2) S = ut + ½at² (3) v² = u² + 2aS. Here u = initial velocity, v = final velocity after time t, a = uniform acceleration, t = time taken, and S = displacement (distance travelled in a straight line in one direction) during time t.",
+    "keyPoints": [
+      "v = u + at",
+      "S = ut + ½at²",
+      "v² = u² + 2aS",
+      "u initial velocity, v final velocity, a acceleration, t time, S displacement"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-009",
+    "chapter": "Motion in One Dimension",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2020-21",
+    "text": "Give one example of each of the following types of motion: (i) uniform retardation (ii) variable velocity.",
+    "modelAnswer": "(i) Uniform retardation: a car slowing down steadily after the brakes are applied, or a ball thrown vertically upward (its velocity decreases by about 9.8 m/s every second while rising). (ii) Variable velocity: a car moving through city traffic, or a body moving in a circle at constant speed (its direction, and hence velocity, keeps changing).",
+    "keyPoints": [
+      "Uniform retardation: e.g. ball thrown vertically upward / braking car",
+      "Variable velocity: e.g. car in traffic / circular motion",
+      "Velocity changes in magnitude or direction"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-010",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Define: (a) displacement (b) uniform velocity (c) acceleration due to gravity.",
+    "modelAnswer": "(a) Displacement is the shortest (straight-line) distance from the initial position to the final position of a body, in a stated direction; it is a vector quantity. (b) A body has uniform velocity if it covers equal displacements in equal intervals of time, however small the intervals — i.e. constant speed in a fixed direction. (c) Acceleration due to gravity (g) is the acceleration produced in a freely falling body due to the Earth's gravitational pull; its average value near the Earth's surface is 9.8 m s⁻².",
+    "keyPoints": [
+      "Displacement: straight-line distance from initial to final position with direction (vector)",
+      "Uniform velocity: equal displacements in equal time intervals",
+      "g: acceleration of a freely falling body due to Earth's gravity ≈ 9.8 m s⁻²"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-011",
+    "chapter": "Motion in One Dimension",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2022-23",
+    "text": "A big truck moving along a straight line at 54 km/h stops in 5 s after the brakes are applied. (a) Find the acceleration, assuming it to be constant. (b) Describe the speed-time graph. (c) Using the graph, find the distance covered by the truck after the brakes are applied.",
+    "modelAnswer": "u = 54 km/h = 54 × 5/18 = 15 m/s; v = 0; t = 5 s. (a) a = (v − u)/t = (0 − 15)/5 = −3 m/s² (a retardation of 3 m/s²). (b) The speed-time graph is a straight line sloping downward from 15 m/s at t = 0 to 0 m/s at t = 5 s. (c) Distance = area under the graph = area of triangle = ½ × 5 s × 15 m/s = 37.5 m.",
+    "keyPoints": [
+      "54 km/h = 15 m/s",
+      "a = −3 m/s² (retardation 3 m/s²)",
+      "Straight line from (0, 15) to (5, 0)",
+      "Distance = ½ × 5 × 15 = 37.5 m"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-012",
+    "chapter": "Motion in One Dimension",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2022-23",
+    "text": "Rohan drops a ball from a height of 5 m and then runs downstairs as fast as he can to catch it, taking 20 s to reach the ground. Will he be able to catch the ball? Neglect air friction (g = 10 m s⁻²).",
+    "modelAnswer": "Time for the ball to fall: h = ½gt² ⟹ 5 = ½ × 10 × t² ⟹ t² = 1 ⟹ t = 1 s. The ball reaches the ground in only 1 s, whereas Rohan needs 20 s. So he will not be able to catch the ball.",
+    "keyPoints": [
+      "h = ½gt²",
+      "t = 1 s for the ball",
+      "Rohan takes 20 s",
+      "No, he cannot catch it"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-013",
+    "chapter": "Motion in One Dimension",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "A car acquires a velocity of 54 km/h in 5 s, starting from rest. Calculate the distance travelled by the car in this time.",
+    "modelAnswer": "u = 0, v = 54 km/h = 15 m/s, t = 5 s. Acceleration a = (v − u)/t = 15/5 = 3 m/s². Distance S = ut + ½at² = 0 + ½ × 3 × 5² = 37.5 m.",
+    "keyPoints": [
+      "54 km/h = 15 m/s",
+      "a = 3 m/s²",
+      "S = ½ × 3 × 25",
+      "S = 37.5 m"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-014",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "A particle moves along a circular path with constant speed. (a) Is its speed constant? (b) What is the direction of its velocity at any instant? (c) Is its motion accelerated? Give reason.",
+    "modelAnswer": "(a) Yes, the speed (magnitude of velocity) is constant — this is uniform circular motion. (b) At any instant the velocity is directed along the tangent to the circular path at that point. (c) Yes, the motion is accelerated. Although the speed is constant, the direction of motion (and hence the velocity) changes continuously, and any change in velocity means acceleration.",
+    "keyPoints": [
+      "Speed is constant",
+      "Velocity is along the tangent at each point",
+      "Motion is accelerated",
+      "Direction of velocity changes continuously"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-015",
+    "chapter": "Motion in One Dimension",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "A body moving on a circular path of radius r starts from point A and reaches point B, diametrically opposite to A. Write expressions, in terms of r, for (a) the total distance covered and (b) the total displacement.",
+    "modelAnswer": "(a) Distance = half the circumference = ½ × 2πr = πr. (b) Displacement = straight-line distance from A to B = the diameter = 2r (directed from A to B).",
+    "keyPoints": [
+      "Distance = πr (half circumference)",
+      "Displacement = 2r (diameter)",
+      "Displacement directed from A to B"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-016",
+    "chapter": "Motion in One Dimension",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Represent the motion of a body falling freely from rest under gravity by describing the following graphs: (a) acceleration-time graph (b) velocity-time graph (c) displacement-time graph.",
+    "modelAnswer": "(a) Acceleration-time: a horizontal straight line parallel to the time axis at a = g (≈ 9.8 m s⁻²), since the acceleration is constant. (b) Velocity-time: a straight line through the origin with slope g, because v = gt increases uniformly. (c) Displacement-time: a parabola-shaped curve starting at the origin and bending upward (getting steeper), because S = ½gt² increases with the square of time.",
+    "keyPoints": [
+      "a-t: horizontal line at a = g",
+      "v-t: straight line through origin, slope g (v = gt)",
+      "S-t: upward-curving parabola through origin (S = ½gt²)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-017",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2022-23",
+    "text": "State Newton's third law of motion. On the basis of this law, explain how a person is able to swim in a pool of water.",
+    "modelAnswer": "Newton's third law: to every action there is an equal and opposite reaction, and action and reaction act on two different bodies. While swimming, the swimmer pushes the water backward with the hands and feet (action). The water exerts an equal force on the swimmer in the forward direction (reaction), which pushes the swimmer forward.",
+    "keyPoints": [
+      "Every action has an equal and opposite reaction",
+      "Action and reaction act on different bodies",
+      "Swimmer pushes water backward (action)",
+      "Water pushes swimmer forward (reaction)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-018",
+    "chapter": "Laws of Motion",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "An object of mass 100 kg is accelerated uniformly from a velocity of 5 m/s to 8 m/s in 6 s. Calculate the initial and final momentum of the object, and the magnitude of the force exerted on it.",
+    "modelAnswer": "Initial momentum p₁ = mu = 100 × 5 = 500 kg m/s. Final momentum p₂ = mv = 100 × 8 = 800 kg m/s. Force = rate of change of momentum = (p₂ − p₁)/t = (800 − 500)/6 = 300/6 = 50 N.",
+    "keyPoints": [
+      "Initial momentum = 500 kg m/s",
+      "Final momentum = 800 kg m/s",
+      "Change in momentum = 300 kg m/s",
+      "Force = 300/6 = 50 N"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-019",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "Prove that the rate of change of momentum = mass × acceleration. Under what condition does this hold true?",
+    "modelAnswer": "Let a body of mass m change its velocity from u to v in time t. Initial momentum = mu; final momentum = mv. Change in momentum = mv − mu = m(v − u). Rate of change of momentum = m(v − u)/t. Since (v − u)/t = a, the acceleration, rate of change of momentum = ma. By Newton's second law, force F = rate of change of momentum, so F = ma. This holds true only when the mass of the body remains constant during the motion.",
+    "keyPoints": [
+      "Change in momentum = m(v − u)",
+      "Rate of change = m(v − u)/t",
+      "(v − u)/t = a, so rate of change = ma",
+      "Valid only when mass remains constant"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-020",
+    "chapter": "Laws of Motion",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "(a) Write the formula relating 'g' and 'G' and explain the symbols used. (b) List three differences between mass and weight.",
+    "modelAnswer": "(a) g = GM/R², where g = acceleration due to gravity on the surface of the Earth (or planet), G = universal gravitational constant (6.67 × 10⁻¹¹ N m² kg⁻²), M = mass of the Earth, and R = radius of the Earth. (b) (1) Mass is the quantity of matter in a body; weight is the force with which the Earth attracts the body (W = mg). (2) Mass is a scalar quantity; weight is a vector quantity (directed towards the centre of the Earth). (3) Mass is constant everywhere; weight changes from place to place with g (e.g. less on the Moon). Also, mass is measured in kg with a beam (physical) balance; weight is measured in N or kgf with a spring balance.",
+    "keyPoints": [
+      "g = GM/R²",
+      "G universal gravitational constant, M mass of Earth, R radius of Earth",
+      "Mass: quantity of matter, scalar, constant everywhere, kg, beam balance",
+      "Weight: gravitational force, vector, varies with g, N or kgf, spring balance"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-021",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2021-22",
+    "text": "(i) Define the term 'weight'. (ii) Write the formula relating 'g' and 'G' and explain the meaning of the symbols used.",
+    "modelAnswer": "(i) The weight of a body is the force with which the Earth attracts it towards its centre. W = mg; its SI unit is the newton. (ii) g = GM/R², where g is the acceleration due to gravity at the Earth's surface, G is the universal gravitational constant, M is the mass of the Earth and R is the radius of the Earth.",
+    "keyPoints": [
+      "Weight = force of Earth's attraction on a body, W = mg",
+      "g = GM/R²",
+      "G gravitational constant; M mass of Earth; R radius of Earth"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-022",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "How does the acceleration produced by a given force depend on the mass of the body? Describe the graph that shows this relationship.",
+    "modelAnswer": "From F = ma, for a constant force, a = F/m, so the acceleration is inversely proportional to the mass of the body (a ∝ 1/m): doubling the mass halves the acceleration. A graph of a against m is a hyperbola-shaped curve that falls as m increases (it never touches either axis). A graph of a against 1/m is a straight line through the origin.",
+    "keyPoints": [
+      "a = F/m for a constant force",
+      "a ∝ 1/m",
+      "a vs m: falling hyperbola-shaped curve",
+      "a vs 1/m: straight line through origin"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-023",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "Explain the following: (a) People often shake the branches of a tree to get its fruits down. (b) A person falls when he jumps out of a moving train. (c) Athletes land on sand or foam after taking a high jump.",
+    "modelAnswer": "(a) When the branch is shaken it suddenly moves, but the fruits tend to remain at rest because of their inertia of rest; they get detached and fall down. (b) While in the train, the person's whole body moves with the train's speed. On touching the ground, the feet are suddenly brought to rest by friction, but the upper body continues to move forward due to inertia of motion, so the person falls forward. (c) Sand or foam yields and increases the time over which the athlete's momentum is reduced to zero. Since force = change in momentum/time, a longer time means a smaller force on the body, preventing injury.",
+    "keyPoints": [
+      "(a) Inertia of rest of the fruits",
+      "(b) Feet stop, upper body continues due to inertia of motion",
+      "(c) Sand/foam increases time of impact",
+      "Larger time ⟹ smaller force (F = Δp/t)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-024",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2023-24",
+    "text": "Give one example in each case where a force: (a) stops a moving body (b) changes the shape of a body.",
+    "modelAnswer": "(a) Applying the brakes stops a moving bicycle or car; a fielder's hands stop a moving cricket ball. (b) Squeezing a rubber ball or kneading dough changes its shape; stretching a spring changes its length.",
+    "keyPoints": [
+      "Force can stop a moving body: brakes stopping a car / catching a ball",
+      "Force can change shape: pressing a rubber ball / kneading dough / stretching a spring"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-025",
+    "chapter": "Laws of Motion",
+    "marks": 1,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2024-25",
+    "text": "Spring balance A is attached to a hook in a wall, and the hook of spring balance B is attached to the hook of A. When the ring of B is pulled, both balances show the same reading. Why?",
+    "modelAnswer": "By Newton's third law, the force with which B pulls A is equal and opposite to the force with which A pulls B (action and reaction). Since the same tension acts through both balances connected in series, both show the same reading.",
+    "keyPoints": [
+      "Newton's third law: action = reaction",
+      "Same tension transmitted through both balances",
+      "Both readings are equal"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-026",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "School Practice AE 2023-24",
+    "text": "The true weight of a body at a place is the gravitational force on it at that place. Is it right to say that the weight of a body measured in air is its true weight? Give reason.",
+    "modelAnswer": "No. Air is a fluid and exerts a small upthrust (buoyant force) on the body equal to the weight of air displaced by it. So the weight measured in air (apparent weight) is slightly less than the true weight. The true weight would be measured only in vacuum. For dense bodies the difference is very small and is usually neglected.",
+    "keyPoints": [
+      "No",
+      "Air exerts upthrust on the body",
+      "Weight in air = true weight − weight of air displaced",
+      "True weight is the weight in vacuum"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-027",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "What is the reason for making two holes in a completely filled, sealed tin can to take oil out of it?",
+    "modelAnswer": "If there is only one hole, as some oil flows out a partial vacuum forms inside the can; the atmospheric pressure outside then becomes greater than the pressure inside and stops the oil from flowing. The second hole lets air enter the can, so the pressure above the oil stays equal to atmospheric pressure, and the oil flows out freely and continuously under gravity.",
+    "keyPoints": [
+      "One hole: partial vacuum forms inside, atmospheric pressure stops the flow",
+      "Second hole lets air in",
+      "Pressure inside stays at atmospheric pressure",
+      "Oil flows out freely"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-028",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "(i) What force must be applied on a piston of cross-sectional area 2 cm² to obtain a force of 150 N on a piston of cross-sectional area 12 cm² in a hydraulic machine? (ii) State the law used to arrive at the answer.",
+    "modelAnswer": "(i) Pressure is the same on both pistons: F₁/A₁ = F₂/A₂ ⟹ F₁ = F₂ × A₁/A₂ = 150 × 2/12 = 25 N. (ii) Pascal's law: pressure applied at any point of a liquid enclosed in a vessel is transmitted equally and undiminished in all directions throughout the liquid.",
+    "keyPoints": [
+      "F₁/A₁ = F₂/A₂",
+      "F₁ = 150 × 2/12",
+      "F₁ = 25 N",
+      "Pascal's law"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-029",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "Define upthrust. When is the upthrust on a body immersed in a fluid maximum?",
+    "modelAnswer": "Upthrust (buoyant force) is the upward force exerted by a fluid on a body that is partly or wholly immersed in it. Since upthrust equals the weight of fluid displaced, it is maximum when the body is completely immersed in the fluid (it then displaces its own full volume of fluid).",
+    "keyPoints": [
+      "Upthrust: upward force exerted by a fluid on an immersed body",
+      "Equals weight of fluid displaced",
+      "Maximum when the body is completely immersed"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-030",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "(1) If W₁ and W₂ are the weights of a body in air and in water respectively, write expressions in terms of W₁ and W₂ for (a) the upthrust on the body when immersed in water (b) the relative density of the body. (2) What change in the submerged portion of a ship is seen when it sails from sea water into river water? Why?",
+    "modelAnswer": "(1)(a) Upthrust = loss in weight = W₁ − W₂. (b) R.D. = weight in air ÷ loss in weight in water = W₁/(W₁ − W₂). (2) The ship sinks a little deeper, so more of it is submerged, in river water. The ship floats in both, so the upthrust must equal its weight in both cases. River (fresh) water is less dense than sea water, so a larger volume of river water must be displaced to provide the same upthrust.",
+    "keyPoints": [
+      "Upthrust = W₁ − W₂",
+      "R.D. = W₁/(W₁ − W₂)",
+      "Ship sinks deeper in river water",
+      "River water less dense, so more volume displaced for the same upthrust"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-031",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "A body weighs 550 gf in air and 310 gf when completely immersed in water. Find: (i) the volume of the body (ii) the loss in weight of the body (iii) the buoyant force on the body (iv) why the body weighs less in water.",
+    "modelAnswer": "(ii) Loss in weight = 550 − 310 = 240 gf. (iii) Buoyant force (upthrust) = loss in weight = 240 gf. (i) Upthrust = weight of water displaced = 240 gf, so the mass of water displaced = 240 g. Since the density of water is 1 g/cm³, the volume of water displaced = 240 cm³, which equals the volume of the body (fully immersed). (iv) The water exerts an upward buoyant force (upthrust) on the body which partly balances its weight, so it appears to weigh less.",
+    "keyPoints": [
+      "Loss in weight = 240 gf",
+      "Buoyant force = 240 gf",
+      "Volume = 240 cm³",
+      "Body weighs less because of upthrust by water"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-032",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice AE 2020-21",
+    "text": "A body of mass 70 kg, when completely immersed in water, displaces 20,000 cm³ of water. Find: (i) the weight of the body in water (ii) the relative density of the material of the body.",
+    "modelAnswer": "Volume displaced = 20,000 cm³ = 0.02 m³. Mass of water displaced = 0.02 × 1000 = 20 kg, so upthrust = 20 kgf. (i) Weight in water = weight in air − upthrust = 70 kgf − 20 kgf = 50 kgf (= 50 × 9.8 = 490 N). (ii) R.D. = weight in air/loss in weight = 70/20 = 3.5.",
+    "keyPoints": [
+      "Volume = 0.02 m³; upthrust = 20 kgf",
+      "Weight in water = 50 kgf (490 N)",
+      "R.D. = 70/20 = 3.5"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-033",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice T1 2021-22",
+    "text": "A metal cube of side 5 cm and density 7.9 g/cm³ is suspended by a thread and completely immersed in a liquid of density 1.1 g/cm³. Find: (i) the weight of the cube (ii) the upthrust on the cube (iii) the tension in the thread.",
+    "modelAnswer": "Volume of cube = 5 × 5 × 5 = 125 cm³. (i) Mass = 125 × 7.9 = 987.5 g, so weight = 987.5 gf. (ii) Upthrust = weight of liquid displaced = 125 × 1.1 = 137.5 gf. (iii) Tension = weight − upthrust = 987.5 − 137.5 = 850 gf.",
+    "keyPoints": [
+      "Volume = 125 cm³",
+      "Weight = 987.5 gf",
+      "Upthrust = 137.5 gf",
+      "Tension = 850 gf"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-034",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice AE 2024-25",
+    "text": "A uniform cube of side 2 cm is immersed in water in a trough, with its top surface 5 cm below the free surface of the water. Calculate (a) the pressure at the top surface of the cube (b) the pressure at the bottom of the cube (c) the resultant pressure (d) the resultant thrust. (Take density of water = 1000 kg/m³ and g = 10 m/s²; atmospheric pressure acts on both faces and cancels.)",
+    "modelAnswer": "(a) Depth of top face h₁ = 5 cm = 0.05 m. P₁ = h₁ρg = 0.05 × 1000 × 10 = 500 Pa. (b) Depth of bottom face h₂ = 5 + 2 = 7 cm = 0.07 m. P₂ = 0.07 × 1000 × 10 = 700 Pa. (c) Resultant pressure = P₂ − P₁ = 200 Pa, acting upward. (d) Area of a face = 2 cm × 2 cm = 4 cm² = 4 × 10⁻⁴ m². Resultant thrust = 200 × 4 × 10⁻⁴ = 0.08 N, upward (this is the upthrust; it equals the weight of 8 cm³ of water displaced). With g = 9.8 m/s² the values are 490 Pa, 686 Pa, 196 Pa and 0.0784 N.",
+    "keyPoints": [
+      "P(top) = 500 Pa",
+      "P(bottom) = 700 Pa",
+      "Resultant pressure = 200 Pa upward",
+      "Resultant thrust = 0.08 N upward (= upthrust)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-035",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "School Practice AE 2024-25",
+    "text": "The volume of a balloon filled with helium is 800 m³. The density of air is 1.29 kg/m³ and the density of helium is 0.18 kg/m³. What is the resultant force acting on the balloon? (Neglect the mass of the balloon fabric; g = 9.8 m/s².)",
+    "modelAnswer": "Upthrust = weight of air displaced = Vρ(air)g = 800 × 1.29 × 9.8 = 10113.6 N. Weight of helium = Vρ(He)g = 800 × 0.18 × 9.8 = 1411.2 N. Resultant force = 10113.6 − 1411.2 = 8702.4 N, acting upward.",
+    "keyPoints": [
+      "Upthrust = 800 × 1.29 × 9.8 = 10113.6 N",
+      "Weight of helium = 1411.2 N",
+      "Resultant = V(ρ_air − ρ_He)g",
+      "≈ 8702 N upward"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-036",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2021-22",
+    "text": "(i) Describe how atmospheric pressure varies with altitude. (ii) The wall of a dam is made broader at the bottom than at the top. Give reason.",
+    "modelAnswer": "(i) Atmospheric pressure decreases as altitude increases, because the height (and density) of the air column above becomes less. The decrease is not uniform: a graph of pressure against altitude is a curve that falls steeply at first and then more gradually. (ii) Liquid pressure increases with depth (P = hρg). The water at the bottom of the dam exerts the greatest pressure, so the wall is made thicker (broader) at the bottom to withstand it.",
+    "keyPoints": [
+      "Atmospheric pressure decreases with altitude (non-uniformly)",
+      "Liquid pressure increases with depth, P = hρg",
+      "Pressure greatest at the bottom of the dam",
+      "Broader base withstands the larger pressure"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-037",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 4,
+    "difficulty": "easy",
+    "source": "School Practice T1 2021-22",
+    "text": "(i) Which physical quantity is measured in torr? (ii) Write the numerical value of atmospheric pressure on the surface of the Earth in pascal. (iii) Name the modified aneroid barometer used in an aircraft to measure its altitude. (iv) If there is a gradual increase in barometric height, what does it indicate about the weather?",
+    "modelAnswer": "(i) Pressure (especially atmospheric/gas pressure); 1 torr = 1 mm of Hg. (ii) About 1.013 × 10⁵ Pa (101325 Pa). (iii) The altimeter. (iv) A gradual rise in barometric height indicates fair (dry, fine) weather.",
+    "keyPoints": [
+      "Torr measures pressure (1 torr = 1 mm Hg)",
+      "Atmospheric pressure ≈ 1.013 × 10⁵ Pa",
+      "Altimeter",
+      "Gradual rise ⟹ fair/dry weather"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-038",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "(a) Name the instrument used to measure atmospheric pressure. (b) State one consequence or application of atmospheric pressure in everyday life. (c) How does atmospheric pressure at a place change with the temperature of that place?",
+    "modelAnswer": "(a) A barometer (simple mercury barometer, Fortin barometer or aneroid barometer). (b) Any one: drinking a liquid through a straw, a syringe or dropper filling with liquid, a rubber sucker sticking to a smooth wall, a siphon working. (c) When the temperature of a place rises, the air expands and its density falls, so the atmospheric pressure decreases; atmospheric pressure is lower on hotter days.",
+    "keyPoints": [
+      "Barometer",
+      "Application: straw / syringe / dropper / rubber sucker",
+      "Higher temperature ⟹ lower air density ⟹ lower atmospheric pressure"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-039",
+    "chapter": "Heat and Energy",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2021-22",
+    "text": "(i) What is meant by anomalous expansion of water? In which temperature range does water show this behaviour? (ii) Describe the graph showing the variation of the density of water with temperature from 0°C to 10°C, marking the temperature of maximum density.",
+    "modelAnswer": "(i) Most liquids expand on heating, but water contracts when heated from 0°C to 4°C and expands only above 4°C. This unusual behaviour is called the anomalous expansion of water, and it occurs in the range 0°C to 4°C. (ii) With temperature on the x-axis and density on the y-axis: from 0°C the density rises to a maximum at 4°C, and then falls steadily as the temperature rises to 10°C. The peak of the curve is at 4°C, where the density of water is maximum, 1 g cm⁻³ (1000 kg m⁻³).",
+    "keyPoints": [
+      "Water contracts on heating from 0°C to 4°C",
+      "Anomalous range: 0°C to 4°C",
+      "Density rises from 0°C to a peak at 4°C, then falls",
+      "Maximum density 1 g cm⁻³ at 4°C"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-040",
+    "chapter": "Heat and Energy",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice T1 2021-22",
+    "text": "What is global warming? Write one consequence of global warming, and suggest one way to minimise its impact.",
+    "modelAnswer": "Global warming is the gradual rise in the average temperature of the Earth's atmosphere and surface, caused by the increase in greenhouse gases (such as CO₂ and methane) that trap infrared radiation emitted by the Earth. Consequence (any one): melting of glaciers and polar ice causing a rise in sea level; extreme weather; changes in rainfall patterns; loss of habitats. Way to minimise (any one): reduce the burning of fossil fuels, use renewable sources such as solar and wind energy, plant trees (afforestation), use energy-efficient devices.",
+    "keyPoints": [
+      "Rise in Earth's average temperature",
+      "Caused by greenhouse gases trapping infrared radiation",
+      "Consequence: e.g. melting ice, rising sea level",
+      "Remedy: e.g. less fossil fuel, renewables, afforestation"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-041",
+    "chapter": "Heat and Energy",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "State the two laws of thermodynamics, giving an example from daily life for the second law.",
+    "modelAnswer": "First law: when heat energy is supplied to a system, it is used partly to increase the internal energy of the system and partly to do work; energy can be transformed from one form to another but the total energy remains constant (ΔQ = ΔU + ΔW). Second law: heat flows on its own only from a body at higher temperature to a body at lower temperature, never from a colder to a hotter body unless external work is done. Example: a hot cup of tea left on a table cools down by giving heat to the cooler surroundings; it never becomes hotter by itself. (A refrigerator can move heat from cold to hot only by using electrical energy.)",
+    "keyPoints": [
+      "First law: energy is conserved, ΔQ = ΔU + ΔW",
+      "Second law: heat flows by itself from hot to cold only",
+      "Example: hot tea cools in the room",
+      "Reverse flow needs external work (refrigerator)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-042",
+    "chapter": "Light (Reflection, Refraction)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "State the position of the object in front of a concave mirror to obtain images with the following characteristics: (a) real, inverted, diminished, formed between C and F (b) virtual, erect, magnified.",
+    "modelAnswer": "(a) The object must be placed beyond the centre of curvature C; the image then forms between C and F, real, inverted and diminished. (b) The object must be placed between the pole P and the focus F; the image is virtual, erect and magnified, formed behind the mirror.",
+    "keyPoints": [
+      "(a) Object beyond C",
+      "(b) Object between P and F"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-043",
+    "chapter": "Light (Reflection, Refraction)",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2020-21",
+    "text": "Name the kind of mirror used to obtain: (i) a real and enlarged image (ii) a virtual and diminished image (iii) a real and diminished image.",
+    "modelAnswer": "(i) Concave mirror — object placed between F and C (real image beyond C, enlarged). (ii) Convex mirror — it always forms virtual, erect, diminished images. (iii) Concave mirror — object placed beyond C (real, diminished image between F and C).",
+    "keyPoints": [
+      "Real and enlarged: concave mirror",
+      "Virtual and diminished: convex mirror",
+      "Real and diminished: concave mirror"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-044",
+    "chapter": "Light (Reflection, Refraction)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2023-24",
+    "text": "When a concave mirror is used as a shaving mirror: (a) where is the image formed? (b) what is the nature of the image?",
+    "modelAnswer": "The face is held between the pole and the focus of the mirror. (a) The image is formed behind the mirror. (b) The image is virtual, erect and magnified, which lets the user see the face enlarged.",
+    "keyPoints": [
+      "Face between pole and focus",
+      "Image formed behind the mirror",
+      "Virtual, erect and magnified"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-045",
+    "chapter": "Light (Reflection, Refraction)",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice AE 2024-25",
+    "text": "A concave mirror produces a three-times magnified real image of an object placed 10 cm in front of it. (a) Where is the image located? (b) State the magnification with its sign. (c) Find the focal length of the mirror.",
+    "modelAnswer": "Using the New Cartesian sign convention: u = −10 cm. For a real image the magnification is negative, so m = −3. (a) m = −v/u ⟹ −3 = −v/(−10) ⟹ v = −30 cm. The image is 30 cm in front of the mirror (on the same side as the object). (b) m = −3; the negative sign shows the image is real and inverted, and it is 3 times the size of the object. (c) 1/f = 1/v + 1/u = 1/(−30) + 1/(−10) = −4/30, so f = −7.5 cm. The focal length is 7.5 cm (concave mirror).",
+    "keyPoints": [
+      "u = −10 cm, m = −3 (real image)",
+      "v = −30 cm: image 30 cm in front of the mirror",
+      "m = −3: real, inverted, 3× size",
+      "f = −7.5 cm (focal length 7.5 cm)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-046",
+    "chapter": "Sound",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "(a) If the distance between two consecutive crests of a wave is 5 mm, what is its wavelength? (b) What is the relationship between the frequency and the time period of a wave? (c) Spectators at a cricket match hear the sound of a stroke a little after they see the batsman make it. Give reason.",
+    "modelAnswer": "(a) Wavelength is the distance between two consecutive crests, so λ = 5 mm. (b) Frequency is the reciprocal of the time period: f = 1/T. (c) Light travels at about 3 × 10⁸ m/s and reaches the spectators almost instantly, whereas sound travels much more slowly in air (about 340 m/s), so the sound arrives a little after the stroke is seen.",
+    "keyPoints": [
+      "λ = 5 mm",
+      "f = 1/T",
+      "Speed of light ≫ speed of sound in air",
+      "Sound reaches the spectators later"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-047",
+    "chapter": "Electricity and Magnetism",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2022-23",
+    "text": "Compare the resistance of two pieces of copper wire A and B when: (i) A and B have the same thickness and temperature, but A is shorter than B. (ii) A and B have the same length and temperature, but A is thicker than B. (iii) A and B have the same thickness and length, but A is at a higher temperature than B.",
+    "modelAnswer": "(i) Resistance is directly proportional to length, so the shorter wire A has less resistance than B. (ii) Resistance is inversely proportional to the area of cross-section, so the thicker wire A has less resistance than B. (iii) The resistance of a metal increases with temperature, so A (hotter) has more resistance than B.",
+    "keyPoints": [
+      "(i) R ∝ l: R(A) < R(B)",
+      "(ii) R ∝ 1/A: R(A) < R(B)",
+      "(iii) R increases with temperature: R(A) > R(B)"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-048",
+    "chapter": "Electricity and Magnetism",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2020-21",
+    "text": "State three factors on which the resistance of a wire depends, and explain how the resistance depends on each.",
+    "modelAnswer": "(1) Length (l): resistance is directly proportional to length (R ∝ l); a longer wire has more resistance. (2) Area of cross-section (A): resistance is inversely proportional to the area of cross-section (R ∝ 1/A); a thicker wire has less resistance. (3) Temperature: the resistance of a metallic wire increases as its temperature increases. (The material of the wire also matters: for the same dimensions, nichrome has much more resistance than copper.)",
+    "keyPoints": [
+      "R ∝ length",
+      "R ∝ 1/area of cross-section",
+      "R of metals increases with temperature",
+      "Also depends on the material"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-049",
+    "chapter": "Electricity and Magnetism",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2020-21",
+    "text": "Define conductors and insulators. Give one example of each.",
+    "modelAnswer": "Conductors are substances that allow electric current (charge) to pass through them easily, e.g. copper, silver, aluminium. Insulators are substances that do not allow electric current to pass through them, e.g. rubber, glass, plastic, dry wood.",
+    "keyPoints": [
+      "Conductor: allows current to pass easily, e.g. copper",
+      "Insulator: does not allow current to pass, e.g. rubber"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-050",
+    "chapter": "Electricity and Magnetism",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "State Ohm's law. Write the mathematical expression for resistance based on this law.",
+    "modelAnswer": "Ohm's law: the current flowing through a conductor is directly proportional to the potential difference across its ends, provided its temperature and other physical conditions remain unchanged (V ∝ I). So V = IR, and resistance R = V/I.",
+    "keyPoints": [
+      "I ∝ V at constant temperature",
+      "V = IR",
+      "R = V/I"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-051",
+    "chapter": "Electricity and Magnetism",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Distinguish between: (a) a.c. and d.c. (b) primary cells and secondary cells.",
+    "modelAnswer": "(a) Direct current (d.c.) flows in one direction only with constant magnitude (e.g. from a cell or battery). Alternating current (a.c.) reverses its direction periodically and its magnitude keeps changing (e.g. household mains supply, 50 Hz in India). (b) A primary cell cannot be recharged because its chemical reaction is irreversible, and it has high internal resistance, giving only a weak current (e.g. Leclanché cell, dry cell). A secondary cell can be recharged because its reaction is reversible, and it has low internal resistance, so it can supply a large current (e.g. lead-acid accumulator).",
+    "keyPoints": [
+      "d.c.: one direction, constant magnitude",
+      "a.c.: reverses direction periodically",
+      "Primary: irreversible, not rechargeable, high internal resistance",
+      "Secondary: reversible, rechargeable, low internal resistance"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-052",
+    "chapter": "Electricity and Magnetism",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT2 2022-23",
+    "text": "State any two properties of magnetic field lines.",
+    "modelAnswer": "Any two: (1) Magnetic field lines are closed continuous curves: outside the magnet they run from the north pole to the south pole, and inside from south to north. (2) Two field lines never intersect, because the field at any point has only one direction. (3) The tangent at any point on a field line gives the direction of the field there. (4) The lines are crowded where the field is strong (near the poles) and spread out where it is weak.",
+    "keyPoints": [
+      "Closed curves: N to S outside, S to N inside",
+      "Never intersect",
+      "Tangent gives field direction",
+      "Crowded where the field is strong"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-053",
+    "chapter": "Electricity and Magnetism",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "What is a neutral point? How is the position of a neutral point located using a compass needle?",
+    "modelAnswer": "A neutral point is a point near a magnet where the magnetic field of the magnet is exactly balanced (equal in magnitude and opposite in direction) by the horizontal component of the Earth's magnetic field, so the resultant field there is zero. To locate it, a small compass needle is moved around the magnet while plotting the field. At a neutral point the needle does not point in any particular direction; it can rest in any direction.",
+    "keyPoints": [
+      "Magnet's field cancels Earth's horizontal field",
+      "Resultant magnetic field is zero",
+      "Compass needle moved around the magnet",
+      "At the neutral point the needle rests in any direction"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-054",
+    "chapter": "Electricity and Magnetism",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "(a) List two evidences of the existence of the Earth's magnetic field. (b) Mention one difference between an electromagnet and a bar magnet.",
+    "modelAnswer": "(a) (1) A freely suspended bar magnet or compass needle always comes to rest pointing north-south. (2) Neutral points are formed when a magnet is placed in the Earth's field (its field is cancelled by the Earth's field); also, a soft iron bar buried north-south in the earth for a long time becomes slightly magnetised. (b) An electromagnet is a temporary magnet that works only while current flows and its strength can be changed, whereas a bar magnet is a permanent magnet of fixed strength.",
+    "keyPoints": [
+      "Suspended magnet points north-south",
+      "Neutral points form near a magnet",
+      "Electromagnet: temporary, strength variable",
+      "Bar magnet: permanent, fixed strength"
+    ]
+  }
+]
