@@ -118,7 +118,7 @@ The papers carry no answer key: every correct option, distractor, explanation an
 model answer was authored and checked by hand. Each question has
 `"source": "School Practice <TERM> <year>"` (e.g. `School Practice AE 2024-25`) and
 never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge. The
-home screen shows a "School practice papers" banner and labels the Short Answers
+home screen shows a "Practice Questions" banner and labels the Short Answers
 button "Practice Short Answers" for this class.
 
 Left out: questions needing a figure, map, graph or circuit not in the text;

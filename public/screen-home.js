@@ -7,9 +7,8 @@ Object.assign(app, {
 
     const ixBanner = state.grade === 'IX' ? `
       <section class="card ix-source-banner">
-        <span class="soon-tag">School practice papers</span>
-        <p>Class IX has no CISCE board exam, so these questions are sourced from one school's
-           internal unit-test and term-exam papers (2020–2025), not official ICSE board papers —
+        <span class="soon-tag">Practice Questions</span>
+        <p>Class IX has no CISCE board exam, so these questions are not official ICSE board papers —
            unlike the Class X and XII banks.</p>
       </section>` : '';
 
