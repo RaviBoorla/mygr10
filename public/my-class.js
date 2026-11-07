@@ -46,17 +46,19 @@ Object.assign(app, {
     });
   },
 
+  // Boards valid for a grade (IX is ICSE-only for now).
+  _boardsFor(grade) {
+    const ids = grade && SUBJECTS[grade] ? Object.keys(SUBJECTS[grade]) : BOARDS.map(b => b.id);
+    return BOARDS.filter(b => ids.includes(b.id));
+  },
+
   // Board + grade choices, shared by the welcome screen and the picker sheet.
   _classPickerBody(pick) {
     const isChild = !!window.riseFamily?.linksAsChild?.length;
     return `
-      <div class="class-pick-group" role="radiogroup" aria-label="Board">
+      <div class="class-pick-group" role="radiogroup" aria-label="Board" id="class-board-group">
         <span class="class-pick-label">Board</span>
-        ${BOARDS.map(b => `
-          <label class="class-opt board-opt">
-            <input type="radio" name="class-board" value="${b.id}" ${pick.board === b.id ? 'checked' : ''} onchange="app._onClassPick()">
-            <span><strong>${esc(b.name)}</strong><small>${esc(b.desc)}</small></span>
-          </label>`).join('')}
+        ${this._boardOptsHtml(this._boardsFor(pick.grade), pick.board)}
       </div>
       <div class="class-pick-group" role="radiogroup" aria-label="Grade">
         <span class="class-pick-label">Class</span>
@@ -71,9 +73,21 @@ Object.assign(app, {
       ${isChild ? '<p class="class-note">Assignments from your parent will use this class.</p>' : ''}`;
   },
 
+  _boardOptsHtml(boards, selected) {
+    return boards.map(b => `
+      <label class="class-opt board-opt">
+        <input type="radio" name="class-board" value="${b.id}" ${selected === b.id ? 'checked' : ''} onchange="app._onClassPick()">
+        <span><strong>${esc(b.name)}</strong><small>${esc(b.desc)}</small></span>
+      </label>`).join('');
+  },
+
   _onClassPick() {
-    const board = document.querySelector('input[name="class-board"]:checked')?.value;
+    let board = document.querySelector('input[name="class-board"]:checked')?.value;
     const grade = document.querySelector('input[name="class-grade"]:checked')?.value;
+    const boards = this._boardsFor(grade);
+    if (!boards.some(b => b.id === board)) board = null;
+    const group = document.getElementById('class-board-group');
+    if (group) group.innerHTML = `<span class="class-pick-label">Board</span>${this._boardOptsHtml(boards, board)}`;
     document.querySelectorAll('.class-save').forEach(b => { b.disabled = !(board && grade); });
   },
 

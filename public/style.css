@@ -246,6 +246,19 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   grid-column: 1 / -1;
 }
 
+.ixlanding-hero { max-width: 620px; margin: 2rem auto; text-align: center; padding: 2rem; }
+.ixlanding-hero .soon-tag { display: inline-block; margin-bottom: 12px; }
+.ixlanding-hero h2 { margin: 0 0 10px; }
+.ixlanding-hero p { color: var(--text-light); margin: 0 0 16px; }
+.ixlanding-subjects {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  list-style: none; padding: 0; margin: 0 0 20px;
+}
+.ixlanding-subjects li {
+  font-size: var(--fs-ui); padding: 6px 12px; border-radius: var(--radius-board);
+  border: 1px solid var(--border); background: var(--bg);
+}
+
 .chapter-picker { border-top: 1px dashed var(--border); padding-top: 12px; }
 .picker-hint    { margin: 0 0 8px; font-size: var(--fs-note); color: var(--text-light); }
 .chapter-chips  { display: flex; flex-wrap: wrap; gap: 6px; font-size: var(--fs-ui); color: var(--text-light); }

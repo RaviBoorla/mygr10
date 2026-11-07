@@ -7,6 +7,9 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
+  IX: {
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science']
+  },
   X: {
     CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
@@ -127,6 +130,7 @@ const BOARDS = [
 ];
 
 const GRADES = [
+  { id: 'IX',  label: 'IX' },
   { id: 'X',   label: 'X Board' },
   { id: 'XII', label: 'XII Board' }
 ];
