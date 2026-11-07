@@ -4633,5 +4633,920 @@
     "correct": 1,
     "explanation": "Magnetic induction is the temporary magnetisation of a magnetic material in the presence of a magnet.",
     "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixphy310",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "What happens to the current in a circuit if the voltage is doubled while the resistance is kept constant?",
+    "options": [
+      "It is halved",
+      "It is doubled",
+      "It is quadrupled",
+      "It remains the same"
+    ],
+    "correct": 1,
+    "explanation": "By Ohm's law I = V/R. With R constant, I is directly proportional to V, so doubling V doubles I.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixphy311",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "easy",
+    "text": "The focal length of a convex mirror whose radius of curvature is 22.5 cm is:",
+    "options": [
+      "45 cm",
+      "5.625 cm",
+      "11.25 cm",
+      "22.5 cm"
+    ],
+    "correct": 2,
+    "explanation": "For a spherical mirror f = R/2 = 22.5/2 = 11.25 cm.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixphy312",
+    "chapter": "Sound",
+    "difficulty": "easy",
+    "text": "Sound waves that have good directivity (can be sent as a narrow beam in a particular direction) are:",
+    "options": [
+      "All sound waves equally",
+      "Audible (sonic) waves",
+      "Infrasonic waves",
+      "Ultrasonic waves"
+    ],
+    "correct": 3,
+    "explanation": "Ultrasonic waves have very high frequency and hence very short wavelength, so they spread very little and can be sent in a narrow beam. This is why they are used in SONAR.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixphy313",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "The nature of the gravitational force between two bodies is always:",
+    "options": [
+      "attractive",
+      "repulsive",
+      "attractive or repulsive, depending on the bodies involved",
+      "neither attractive nor repulsive"
+    ],
+    "correct": 0,
+    "explanation": "Gravitational force between any two masses is always a force of attraction; there is no gravitational repulsion.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy314",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "A footballer hits a football with a force of 25 N. What force does the footballer experience?",
+    "options": [
+      "15 N",
+      "10 N",
+      "50 N",
+      "25 N"
+    ],
+    "correct": 3,
+    "explanation": "By Newton's third law, the ball exerts an equal and opposite reaction of 25 N on the footballer's foot.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy315",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "The pressure P₁ at the top of a dam (at the water surface) and P₂ at a depth h below it inside water of density ρ are related as:",
+    "options": [
+      "P₁ > P₂",
+      "P₁ − P₂ = hρg",
+      "P₂ − P₁ = hρg",
+      "P₁ = P₂"
+    ],
+    "correct": 2,
+    "explanation": "Pressure in a liquid increases with depth: P₂ = P₁ + hρg, so P₂ − P₁ = hρg.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy316",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "A cork floating on the surface of water indicates that:",
+    "options": [
+      "the density of water is less than the density of cork",
+      "the density of water is more than the density of cork",
+      "the density of water plays no role in the floatation of cork",
+      "the density of water is equal to the density of cork"
+    ],
+    "correct": 1,
+    "explanation": "A body floats partly submerged in a liquid when its density is less than that of the liquid. Cork floats, so water is denser than cork.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy317",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "medium",
+    "text": "A body of volume 200 cm³ weighs 10 kgf in air. It is completely immersed in a liquid of density 1.8 × 10³ kg m⁻³. The upthrust due to the liquid and the weight of the body in the liquid are (g = 9.8 m s⁻²):",
+    "options": [
+      "3.528 N and 94.472 N",
+      "35.28 N and 62.72 N",
+      "0.36 N and 9.64 N",
+      "3.528 N and 98 N"
+    ],
+    "correct": 0,
+    "explanation": "Upthrust = Vρg = (200 × 10⁻⁶ m³)(1800 kg m⁻³)(9.8 m s⁻²) = 3.528 N. Weight in air = 10 kgf = 98 N. Weight in liquid = 98 − 3.528 = 94.472 N (≈ 9.64 kgf).",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy318",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "medium",
+    "text": "An object is thrown vertically upwards with a speed of 49 m/s. The maximum height reached and the time it takes to return to the point of projection are (g = 9.8 m/s²):",
+    "options": [
+      "122.5 m and 5 s",
+      "245 m and 10 s",
+      "61.25 m and 5 s",
+      "122.5 m and 10 s"
+    ],
+    "correct": 3,
+    "explanation": "At the top v = 0: h = u²/2g = 49²/(2 × 9.8) = 2401/19.6 = 122.5 m. Time to rise t = u/g = 49/9.8 = 5 s; it takes the same time to come down, so total time = 10 s.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixphy319",
+    "chapter": "Measurements and Experimentation",
+    "difficulty": "easy",
+    "text": "The derived unit of work (or energy) is the joule. Which is the correct relationship between joule and the fundamental units?",
+    "options": [
+      "kg m s⁻²",
+      "kg m² s⁻³",
+      "kg m² s⁻²",
+      "kg m⁻¹ s⁻²"
+    ],
+    "correct": 2,
+    "explanation": "1 J = 1 N × 1 m and 1 N = 1 kg m s⁻². So 1 J = 1 kg m² s⁻². (kg m s⁻² is the newton, kg m⁻¹ s⁻² the pascal, kg m² s⁻³ the watt.)",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy320",
+    "chapter": "Measurements and Experimentation",
+    "difficulty": "easy",
+    "text": "Which option shows the units of distance in increasing order of their magnitude?",
+    "options": [
+      "Å, nm, m, A.U.",
+      "A.U., Å, nm, m",
+      "A.U., nm, Å, m",
+      "nm, Å, A.U., m"
+    ],
+    "correct": 0,
+    "explanation": "1 Å = 10⁻¹⁰ m, 1 nm = 10⁻⁹ m, then the metre, and 1 A.U. ≈ 1.5 × 10¹¹ m. So the increasing order is Å < nm < m < A.U.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy321",
+    "chapter": "Measurements and Experimentation",
+    "difficulty": "medium",
+    "text": "To decrease the least count of a screw gauge:",
+    "options": [
+      "increase the pitch of the screw",
+      "decrease the number of divisions on the circular scale",
+      "increase the number of divisions on the circular scale",
+      "both (a) and (b)"
+    ],
+    "correct": 2,
+    "explanation": "Least count = pitch / number of circular-scale divisions. It decreases if the pitch is decreased or the number of circular-scale divisions is increased. Of the options, only increasing the number of divisions works.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy322",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "easy",
+    "text": "Free fall of a body near the earth's surface (neglecting air resistance) is an example of:",
+    "options": [
+      "variable acceleration",
+      "uniform acceleration",
+      "uniform velocity",
+      "uniform speed"
+    ],
+    "correct": 1,
+    "explanation": "Near the earth's surface a freely falling body has a constant acceleration g ≈ 9.8 m s⁻², so its motion is uniformly accelerated.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy323",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "medium",
+    "text": "A ray of light strikes a concave mirror. In which case will the angle of incidence be zero?",
+    "options": [
+      "When the incident ray is parallel to the principal axis",
+      "When the incident ray passes through the centre of curvature",
+      "When the incident ray passes through the focus",
+      "When the incident ray strikes the pole"
+    ],
+    "correct": 1,
+    "explanation": "A ray through the centre of curvature travels along a radius, which is the normal to the mirror at that point. So it strikes the mirror normally (i = 0°) and retraces its path.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy324",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "easy",
+    "text": "The number of images of an object placed between two plane mirrors:",
+    "options": [
+      "does not depend on the angle between the mirrors",
+      "decreases with a decrease in the angle between the mirrors",
+      "increases with an increase in the angle between the mirrors",
+      "increases with a decrease in the angle between the mirrors"
+    ],
+    "correct": 3,
+    "explanation": "Number of images n = (360°/θ) − 1 (for 360°/θ even). As θ decreases, 360°/θ increases, so more images are formed.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy325",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "easy",
+    "text": "For the magnification of the image formed by a concave mirror to be infinite, the object must be placed:",
+    "options": [
+      "at the focus of the mirror",
+      "at an infinite distance from the mirror",
+      "between the focus and the centre of curvature",
+      "at a distance shorter than the focal length"
+    ],
+    "correct": 0,
+    "explanation": "When the object is at the focus, the reflected rays are parallel and the image is formed at infinity, highly enlarged, so the magnification is infinite.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy326",
+    "chapter": "Sound",
+    "difficulty": "easy",
+    "text": "For an infrasonic sound and an ultrasonic sound travelling in the same medium, which of the following is the same?",
+    "options": [
+      "Wavelength",
+      "Frequency",
+      "Wave velocity",
+      "Frequency, wavelength and wave velocity"
+    ],
+    "correct": 2,
+    "explanation": "The speed of sound depends on the medium, not on the frequency. Frequency differs (infrasonic < 20 Hz, ultrasonic > 20 kHz), so wavelength = v/f also differs.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy327",
+    "chapter": "Sound",
+    "difficulty": "easy",
+    "text": "Sound waves propagate in air in the form of:",
+    "options": [
+      "longitudinal waves",
+      "transverse waves",
+      "both longitudinal and transverse waves",
+      "sound cannot propagate in air because of its low density"
+    ],
+    "correct": 0,
+    "explanation": "In air the particles vibrate back and forth along the direction of propagation, forming compressions and rarefactions, so sound in air is a longitudinal wave.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy328",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "An ammeter is an electrical device of:",
+    "options": [
+      "high resistance, always connected in parallel",
+      "low resistance, always connected in series",
+      "low resistance, always connected in parallel",
+      "high resistance, always connected in series"
+    ],
+    "correct": 1,
+    "explanation": "An ammeter must carry the full circuit current without changing it noticeably, so it has very low resistance and is connected in series.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy329",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "Assertion (A): The ammeter reading decreases to half of its original value when the length of the wire in the circuit is doubled (the voltage across it remaining the same). Reason (R): Resistance is directly proportional to the length of the wire.",
+    "options": [
+      "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+      "(A) is true, but (R) is false.",
+      "(A) is false, but (R) is true."
+    ],
+    "correct": 0,
+    "explanation": "R ∝ l, so doubling the length doubles the resistance. With the same voltage, I = V/R becomes half. Both are true and R explains A.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy330",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "Polarity and magnetic strength always remain unchanged for a/an:",
+    "options": [
+      "electromagnet",
+      "horse-shoe magnet",
+      "both (a) and (b)",
+      "neither (a) nor (b)"
+    ],
+    "correct": 1,
+    "explanation": "A horse-shoe magnet is a permanent magnet: its poles and strength are fixed. An electromagnet's polarity reverses with the current direction and its strength changes with the current.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy331",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "Assertion (A): A compass needle aligns itself in a direction opposite to the magnetic field lines of the earth. Reason (R): The earth has a magnetic field of its own and behaves like a magnet.",
+    "options": [
+      "Both (A) and (R) are true, and (R) is the correct explanation of (A).",
+      "Both (A) and (R) are true, but (R) is not the correct explanation of (A).",
+      "(A) is true, but (R) is false.",
+      "(A) is false, but (R) is true."
+    ],
+    "correct": 3,
+    "explanation": "A freely pivoted compass needle aligns itself along (tangent to) the earth's magnetic field lines, its north pole pointing in the direction of the field, not opposite to it. So A is false; R is true.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy332",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "The earth's magnetic field resembles that of a:",
+    "options": [
+      "circular current loop with no poles",
+      "straight current-carrying wire",
+      "horse-shoe magnet",
+      "bar magnet"
+    ],
+    "correct": 3,
+    "explanation": "The earth behaves as if a huge bar magnet were placed inside it, with its magnetic south pole near the geographic north pole.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy333",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "easy",
+    "text": "In a velocity-time graph, the slope of the graph and the area under the graph give respectively:",
+    "options": [
+      "displacement and acceleration",
+      "acceleration and velocity",
+      "acceleration and displacement",
+      "velocity and distance"
+    ],
+    "correct": 2,
+    "explanation": "Slope = change in velocity / time = acceleration. Area under the v-t graph = velocity × time = displacement (distance for motion in one direction).",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy334",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "Why is a good conductor such as copper wire used for the coil of an electromagnet?",
+    "options": [
+      "It has high resistance, which strengthens the field",
+      "It is cheaper than any other wire",
+      "It is itself a strong magnetic material",
+      "It has low resistance, so a large current can flow with little heating"
+    ],
+    "correct": 3,
+    "explanation": "Copper is non-magnetic but has very low resistance. A large current can pass through many turns without much heating, producing a strong magnetic field in the core.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy335",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "A TV tube shoots out a beam of electrons carrying a current of 100 mA. The charge striking the screen in one minute and the number of electrons striking it each second are (e = 1.6 × 10⁻¹⁹ C):",
+    "options": [
+      "6 C and 6.25 × 10¹⁸",
+      "6000 C and 3.75 × 10¹⁹",
+      "6 C and 6.25 × 10¹⁷",
+      "0.1 C and 6.25 × 10¹⁷"
+    ],
+    "correct": 2,
+    "explanation": "Q = It = 0.1 A × 60 s = 6 C. Charge per second = 0.1 C, so n = 0.1 / (1.6 × 10⁻¹⁹) = 6.25 × 10¹⁷ electrons per second.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy336",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "A circuit has a 12 V battery, a 4 Ω resistor and an ammeter in series. A voltmeter is used to measure the p.d. across the resistor. How is the voltmeter connected, and what is the ammeter reading?",
+    "options": [
+      "In series; 3 A",
+      "In parallel; 3 A",
+      "In parallel; 48 A",
+      "In series; 0.33 A"
+    ],
+    "correct": 1,
+    "explanation": "A voltmeter is always connected in parallel across the component. I = V/R = 12/4 = 3 A (taking the ammeter and battery resistances as negligible).",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy337",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "Two conductors A and B are joined by a copper wire. A is negatively charged and B is uncharged. The direction of conventional current in the wire is:",
+    "options": [
+      "from B to A",
+      "no current flows",
+      "from A to B",
+      "first from A to B, then from B to A"
+    ],
+    "correct": 0,
+    "explanation": "Excess electrons flow from A (negative, lower potential) to B (higher potential) until the potentials are equal. Conventional current is opposite to electron flow, i.e. from B to A.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixphy338",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "Which of the following units is equivalent to the joule?",
+    "options": [
+      "volt × coulomb",
+      "volt × ampere",
+      "coulomb / volt",
+      "volt / coulomb"
+    ],
+    "correct": 0,
+    "explanation": "Work W = QV, so 1 J = 1 C × 1 V. (Volt × ampere is the watt.)",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy339",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "medium",
+    "text": "Assertion (A): A body moving in a circular path with constant speed has zero acceleration. Reason (R): Acceleration is defined as the rate of change of velocity of the body.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true and R is not the correct explanation of A",
+      "Assertion is false but reason is true",
+      "Assertion is true but reason is false"
+    ],
+    "correct": 2,
+    "explanation": "In circular motion the direction of velocity changes continuously even if the speed is constant, so velocity changes and the body is accelerated. A is false; R (definition of acceleration) is true.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy340",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "The magnitude of a non-contact force between two bodies ______ with a decrease in their separation and ______ with an increase in their separation.",
+    "options": [
+      "decreases, decreases",
+      "decreases, increases",
+      "increases, decreases",
+      "increases, increases"
+    ],
+    "correct": 2,
+    "explanation": "Non-contact forces such as gravitational, magnetic and electrostatic forces become stronger as the bodies come closer and weaker as they move apart.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy341",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "Which of the following statements about action and reaction is correct?",
+    "options": [
+      "Action and reaction act on the same body in opposite directions.",
+      "Action and reaction act on different bodies in opposite directions.",
+      "The sum of action and reaction on a body is zero.",
+      "Action and reaction act on different bodies in the same direction."
+    ],
+    "correct": 1,
+    "explanation": "By Newton's third law, action and reaction are equal, opposite and act on two different bodies, so they never cancel each other.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy342",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "The pressure P₁ at a certain depth in sea water and P₂ at the same depth in river water are related as:",
+    "options": [
+      "P₁ = P₂",
+      "P₁ < P₂",
+      "P₁ − P₂ = 0",
+      "P₁ > P₂"
+    ],
+    "correct": 3,
+    "explanation": "Liquid pressure = hρg. Sea water is denser than river water, so at the same depth P₁ > P₂.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy343",
+    "chapter": "Heat and Energy",
+    "difficulty": "easy",
+    "text": "When a lake starts freezing, ice forms:",
+    "options": [
+      "first in the middle",
+      "uniformly throughout",
+      "first at the bottom",
+      "first at the top"
+    ],
+    "correct": 3,
+    "explanation": "Water below 4°C is less dense and stays at the surface, so the top layer reaches 0°C first and freezes, while the denser 4°C water stays at the bottom.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy344",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "easy",
+    "text": "The magnification produced by the rear-view mirror fitted in vehicles:",
+    "options": [
+      "is equal to one",
+      "is less than one",
+      "is more than one",
+      "can be more or less than one, depending on the position of the object"
+    ],
+    "correct": 1,
+    "explanation": "A rear-view mirror is a convex mirror, which always forms a virtual, erect and diminished image, so the magnification is always less than 1.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy345",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "Assertion (A): The north pole of a compass needle points towards the earth's geographic north pole. Reason (R): The earth's magnetic south pole is near the geographic north pole.",
+    "options": [
+      "Both (A) and (R) are true, and the reason correctly explains the assertion",
+      "Both (A) and (R) are true, but the reason is not the correct explanation of (A)",
+      "(A) is true, but (R) is false",
+      "Both (A) and (R) are false"
+    ],
+    "correct": 0,
+    "explanation": "Unlike poles attract. The north pole of the needle is attracted by the earth's magnetic south pole, which lies near the geographic north. So both are true and R explains A.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy346",
+    "chapter": "Heat and Energy",
+    "difficulty": "easy",
+    "text": "Which property of the ice layer formed on the surface of a lake prevents heat flowing from the water below to the cold atmosphere?",
+    "options": [
+      "Ice is a poor conductor of heat",
+      "Ice has maximum density at 4°C",
+      "Ice is a good conductor of heat",
+      "Ice is denser than water"
+    ],
+    "correct": 0,
+    "explanation": "Ice is a bad conductor (insulator) of heat, so the ice layer prevents further loss of heat from the water below, and aquatic life survives in the water at 4°C.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy347",
+    "chapter": "Measurements and Experimentation",
+    "difficulty": "medium",
+    "text": "A simple pendulum has a bob of mass 1 kg, length l and time period T. If the mass is doubled and the length is made 4 times, the new time period is:",
+    "options": [
+      "4T",
+      "2√2 T",
+      "2T",
+      "T"
+    ],
+    "correct": 2,
+    "explanation": "T = 2π√(l/g) is independent of the mass of the bob. With length 4l, T' = 2π√(4l/g) = 2T.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy348",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "easy",
+    "text": "A particle is pushed along a horizontal surface with an initial velocity of 15 m s⁻¹. Its velocity decreases at a uniform rate of 0.5 m s⁻². The time it takes to come to rest is:",
+    "options": [
+      "30 s",
+      "15 s",
+      "3 s",
+      "7.5 s"
+    ],
+    "correct": 0,
+    "explanation": "v = u + at ⇒ 0 = 15 − 0.5t ⇒ t = 30 s.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy349",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "Why is a water supply tank always placed on top of a building?",
+    "options": [
+      "Water at a height is cooler",
+      "Liquid pressure decreases with depth",
+      "It protects the water from atmospheric pressure",
+      "A greater height of water gives greater pressure at the taps"
+    ],
+    "correct": 3,
+    "explanation": "Liquid pressure = hρg increases with the height of the water column. Placing the tank high gives sufficient pressure for water to reach all taps.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy350",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "A rubber suction pad sticks to a smooth wall because:",
+    "options": [
+      "the rubber is attracted to the wall by gravity",
+      "air is pushed out from under it, and the atmospheric pressure outside presses it against the wall",
+      "friction alone holds it, even without pressure difference",
+      "the pad creates high pressure between itself and the wall"
+    ],
+    "correct": 1,
+    "explanation": "Pressing the pad expels the air from under it, leaving very low pressure there. The greater atmospheric pressure on its outer surface then holds it firmly against the wall.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy351",
+    "chapter": "Laws of Motion",
+    "difficulty": "medium",
+    "text": "A car of mass 2000 kg is moving at 18 km/h. The force needed to change its speed to 36 km/h in 2 s is:",
+    "options": [
+      "10000 N",
+      "2500 N",
+      "5000 N",
+      "18000 N"
+    ],
+    "correct": 2,
+    "explanation": "18 km/h = 5 m/s and 36 km/h = 10 m/s. a = (10 − 5)/2 = 2.5 m/s². F = ma = 2000 × 2.5 = 5000 N.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy352",
+    "chapter": "Laws of Motion",
+    "difficulty": "medium",
+    "text": "Two bodies have the same momentum. Their masses are in the ratio 1 : 2. The ratio of their kinetic energies is:",
+    "options": [
+      "4 : 1",
+      "1 : 4",
+      "2 : 1",
+      "1 : 2"
+    ],
+    "correct": 2,
+    "explanation": "KE = p²/2m. With equal p, KE ∝ 1/m, so KE₁ : KE₂ = m₂ : m₁ = 2 : 1.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy353",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "According to the principle of floatation, a body floats in a liquid when:",
+    "options": [
+      "its density is greater than that of the liquid",
+      "its volume is equal to the volume of liquid displaced",
+      "its weight is greater than the upthrust on it",
+      "its weight is equal to the weight of the liquid displaced by its immersed part"
+    ],
+    "correct": 3,
+    "explanation": "A floating body sinks until the weight of liquid displaced by its submerged part equals its own weight; then the upthrust balances the weight.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy354",
+    "chapter": "Heat and Energy",
+    "difficulty": "hard",
+    "text": "A hollow rubber ball just floats fully submerged in water at 4°C. When the water is heated, the ball sinks. Why?",
+    "options": [
+      "Above 4°C water expands and its density decreases, so the upthrust becomes less than the weight of the ball",
+      "Upthrust does not depend on the density of water",
+      "Above 4°C water contracts, so its density increases",
+      "Heating makes the ball heavier"
+    ],
+    "correct": 0,
+    "explanation": "Water has maximum density at 4°C. On heating above 4°C it expands and becomes less dense, so the same submerged volume displaces less weight of water. The upthrust becomes less than the ball's weight, and it sinks.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy355",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "medium",
+    "text": "A spherical mirror forms an image 10 cm behind it when the object is placed 20 cm in front of it. The type of mirror and its focal length are:",
+    "options": [
+      "Concave mirror, 6.67 cm",
+      "Convex mirror, 20 cm",
+      "Convex mirror, 6.67 cm",
+      "Concave mirror, 20 cm"
+    ],
+    "correct": 1,
+    "explanation": "An image behind the mirror is virtual and is closer to the mirror than the object, i.e. diminished, so the mirror is convex. Using 1/f = 1/v + 1/u with u = −20 cm, v = +10 cm: 1/f = 1/10 − 1/20 = 1/20, so f = +20 cm.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy356",
+    "chapter": "Sound",
+    "difficulty": "medium",
+    "text": "Infrasonic, sonic and ultrasonic waves travelling through air, arranged in decreasing order of their wavelength, are:",
+    "options": [
+      "infrasonic > sonic > ultrasonic",
+      "sonic > infrasonic > ultrasonic",
+      "ultrasonic > sonic > infrasonic",
+      "all have the same wavelength"
+    ],
+    "correct": 0,
+    "explanation": "All travel at the same speed in air, and λ = v/f. Infrasonic has the lowest frequency, so the longest wavelength; ultrasonic the shortest.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy357",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "The resistance of an electric iron is 50 Ω. If a current of 4.2 A flows through it, the potential difference across it is:",
+    "options": [
+      "2100 V",
+      "11.9 V",
+      "210 V",
+      "54.2 V"
+    ],
+    "correct": 2,
+    "explanation": "V = IR = 4.2 × 50 = 210 V.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy358",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "medium",
+    "text": "A body shows a weight W in air on a sensitive spring balance. When weighed in a vacuum, its weight reading will be:",
+    "options": [
+      "zero",
+      "exactly W",
+      "slightly less than W, because there is no air pressure",
+      "slightly more than W, because there is no upthrust of air in vacuum"
+    ],
+    "correct": 3,
+    "explanation": "In air the body experiences a small upthrust equal to the weight of air it displaces, so the reading W is slightly less than the true weight. In vacuum there is no upthrust, so the reading is slightly more.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy359",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "difficulty": "easy",
+    "text": "A copper sphere and a brass sphere are completely dipped in water. The upthrust on them will be equal when:",
+    "options": [
+      "they are dipped to the same depth",
+      "their volumes are equal",
+      "their densities are equal",
+      "their masses are equal"
+    ],
+    "correct": 1,
+    "explanation": "Upthrust = Vρg, where V is the volume of water displaced. In the same liquid, two completely immersed bodies get equal upthrust if their volumes are equal.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy360",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "easy",
+    "text": "A 9 V battery is connected across a resistor of 18 Ω. The current in the circuit and the charge flowing through it in 10 minutes are:",
+    "options": [
+      "0.5 A and 30 C",
+      "0.5 A and 300 C",
+      "2 A and 1200 C",
+      "0.5 A and 5 C"
+    ],
+    "correct": 1,
+    "explanation": "I = V/R = 9/18 = 0.5 A. Q = It = 0.5 × (10 × 60) = 300 C.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy361",
+    "chapter": "Electricity and Magnetism",
+    "difficulty": "medium",
+    "text": "Coil A has 200 turns and coil B has 100 turns, both wound on identical soft iron cores and carrying the same current. Which is the stronger electromagnet, and what happens if the current in both is doubled?",
+    "options": [
+      "A is stronger; the strength of both increases",
+      "A is stronger; the strength of both decreases",
+      "Both are equally strong; the strength does not change",
+      "B is stronger; the strength of both increases"
+    ],
+    "correct": 0,
+    "explanation": "The strength of an electromagnet increases with the number of turns and with the current. A (more turns) is stronger, and increasing the current makes both stronger.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixphy362",
+    "chapter": "Laws of Motion",
+    "difficulty": "medium",
+    "text": "A spring balance records the weight of a body X of mass 2 kg on the moon as 3.4 N. The same balance records the weight of another body Y as 7.65 N. The mass of body Y is:",
+    "options": [
+      "3.825 kg",
+      "13 kg",
+      "0.78 kg",
+      "4.5 kg"
+    ],
+    "correct": 3,
+    "explanation": "g on the moon = W/m = 3.4/2 = 1.7 N/kg. Mass of Y = 7.65/1.7 = 4.5 kg.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy363",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "Why do we need to run a certain distance alongside a moving bus before getting into it?",
+    "options": [
+      "To overcome the gravitational pull of the bus",
+      "To reduce the momentum of the bus",
+      "To acquire the speed of the bus, so that the inertia of motion does not make us fall",
+      "To increase friction between the feet and the road"
+    ],
+    "correct": 2,
+    "explanation": "If we step in while at rest, our feet are carried forward by the bus while the body tends to stay at rest (inertia), and we fall backwards. Running first gives our body the same velocity as the bus.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy364",
+    "chapter": "Motion in One Dimension",
+    "difficulty": "medium",
+    "text": "I travel from Mumbai to Pune (150 km) in 2½ h via the Express Highway and return to Mumbai via the old highway (180 km) in 3½ h. The average velocity for the entire journey is:",
+    "options": [
+      "55 km/h",
+      "0 km/h",
+      "51.4 km/h",
+      "60 km/h"
+    ],
+    "correct": 1,
+    "explanation": "The journey ends at the starting point, so the total displacement is zero, and average velocity = displacement/time = 0. (The average speed would be 330/6 = 55 km/h.)",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy365",
+    "chapter": "Sound",
+    "difficulty": "medium",
+    "text": "Sound wave A travels in water and B in CO₂ (case 1); then A travels in CO₂ and B in hydrogen (case 2). Which wave travels faster in each case?",
+    "options": [
+      "Case 1: A; case 2: B",
+      "Case 1: B; case 2: A",
+      "Case 1: A; case 2: A",
+      "Case 1: B; case 2: B"
+    ],
+    "correct": 0,
+    "explanation": "Sound travels faster in liquids than in gases, so A (water) is faster in case 1. Among gases, speed ∝ 1/√density; hydrogen is much less dense than CO₂, so B (hydrogen) is faster in case 2.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy366",
+    "chapter": "Heat and Energy",
+    "difficulty": "easy",
+    "text": "Which two human activities are mainly responsible for the increase of carbon dioxide gas in the atmosphere?",
+    "options": [
+      "Afforestation and use of solar energy",
+      "Rainwater harvesting and organic farming",
+      "Use of wind energy and hydroelectric power",
+      "Burning of fossil fuels and deforestation"
+    ],
+    "correct": 3,
+    "explanation": "Burning coal, petrol and other fossil fuels releases CO₂, and cutting down forests removes the plants that absorb CO₂ in photosynthesis.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy367",
+    "chapter": "Laws of Motion",
+    "difficulty": "medium",
+    "text": "A train of mass 20000 kg moving at 25 m s⁻¹ is brought to rest by brakes that produce a uniform retardation of 0.5 m s⁻². The velocity of the train after 10 s and the braking force are:",
+    "options": [
+      "5 m s⁻¹ and 10000 N",
+      "20 m s⁻¹ and 40000 N",
+      "20 m s⁻¹ and 10000 N",
+      "30 m s⁻¹ and 10000 N"
+    ],
+    "correct": 2,
+    "explanation": "v = u + at = 25 − 0.5 × 10 = 20 m s⁻¹. F = ma = 20000 × 0.5 = 10000 N.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy368",
+    "chapter": "Laws of Motion",
+    "difficulty": "easy",
+    "text": "The value of the universal gravitational constant G in SI units is:",
+    "options": [
+      "6.67 × 10⁻¹¹ N m² kg⁻²",
+      "6.67 × 10¹¹ N m² kg⁻²",
+      "9.8 N kg⁻¹",
+      "6.67 × 10⁻¹¹ N kg² m⁻²"
+    ],
+    "correct": 0,
+    "explanation": "From F = Gm₁m₂/r², G = Fr²/(m₁m₂), so its unit is N m² kg⁻², and G = 6.67 × 10⁻¹¹ N m² kg⁻².",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy369",
+    "chapter": "Sound",
+    "difficulty": "medium",
+    "text": "The speed of sound in air is 320 m s⁻¹ and in water 1600 m s⁻¹. Sound takes 2.5 s to reach a certain distance in air. The distance, and the time sound would take to cover it in water, are:",
+    "options": [
+      "128 m and 0.5 s",
+      "800 m and 12.5 s",
+      "4000 m and 2.5 s",
+      "800 m and 0.5 s"
+    ],
+    "correct": 3,
+    "explanation": "Distance = 320 × 2.5 = 800 m. Time in water = 800/1600 = 0.5 s.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixphy370",
+    "chapter": "Light (Reflection, Refraction)",
+    "difficulty": "medium",
+    "text": "An object 20 cm tall is placed 48 cm in front of a mirror of focal length 12 cm. The mirror forms a virtual, diminished image. The image distance and magnification are:",
+    "options": [
+      "9.6 cm behind the mirror, +5",
+      "9.6 cm behind the mirror, +0.2",
+      "16 cm in front of the mirror, −0.33",
+      "16 cm behind the mirror, +0.33"
+    ],
+    "correct": 1,
+    "explanation": "A virtual, diminished image is formed only by a convex mirror, so f = +12 cm and u = −48 cm. 1/v = 1/f − 1/u = 1/12 + 1/48 = 5/48 ⇒ v = +9.6 cm (behind the mirror). m = −v/u = −9.6/(−48) = +0.2 (image height 4 cm).",
+    "source": "CISCE Specimen 2019"
   }
 ]

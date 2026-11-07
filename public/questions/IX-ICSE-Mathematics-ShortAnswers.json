@@ -552,5 +552,315 @@
       "Mark OB = OD = 3 cm on the bisector",
       "Join the vertices; side ≈ 3.7 cm"
     ]
+  },
+  {
+    "id": "sa-ix-math-045",
+    "chapter": "Expansions",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2025-26",
+    "text": "If a² − 3a − 1 = 0, find the value of: (a) a − 1/a (b) a² + 1/a² (c) a³ − 1/a³",
+    "modelAnswer": "a ≠ 0 (a = 0 does not satisfy the equation), so divide a² − 3a − 1 = 0 by a: a − 3 − 1/a = 0 ⇒ a − 1/a = 3. (b) (a − 1/a)² = a² − 2 + 1/a² ⇒ 9 = a² + 1/a² − 2 ⇒ a² + 1/a² = 11. (c) a³ − 1/a³ = (a − 1/a)³ + 3(a − 1/a) = 27 + 9 = 36.",
+    "keyPoints": [
+      "Divide by a to get a − 1/a = 3",
+      "a² + 1/a² = 3² + 2 = 11",
+      "a³ − 1/a³ = (a − 1/a)³ + 3(a − 1/a) = 36"
+    ]
+  },
+  {
+    "id": "sa-ix-math-046",
+    "chapter": "Mean/Median/Mode",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "The ages of employees in a company are: Age (years) 20, 25, 30, 35, 40, 45 with number of employees f₁, 7, 12, f₂, 8, 5 respectively. If the mean age is 30.6 years and the total number of employees is 50, find f₁ and f₂.",
+    "modelAnswer": "Total: f₁ + 7 + 12 + f₂ + 8 + 5 = 50 ⇒ f₁ + f₂ = 18. Σfx = 20f₁ + 175 + 360 + 35f₂ + 320 + 225 = 20f₁ + 35f₂ + 1080. Mean = Σfx/Σf ⇒ 20f₁ + 35f₂ + 1080 = 30.6 × 50 = 1530 ⇒ 20f₁ + 35f₂ = 450 ⇒ 4f₁ + 7f₂ = 90. Substituting f₁ = 18 − f₂: 72 − 4f₂ + 7f₂ = 90 ⇒ 3f₂ = 18 ⇒ f₂ = 6, f₁ = 12.",
+    "keyPoints": [
+      "Σf = 50 gives f₁ + f₂ = 18",
+      "Σfx = 30.6 × 50 = 1530 gives 4f₁ + 7f₂ = 90",
+      "f₁ = 12, f₂ = 6"
+    ]
+  },
+  {
+    "id": "sa-ix-math-047",
+    "chapter": "Triangles (Congruency)",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "P is a point in the interior of ∠ABC such that the perpendiculars PM (on AB) and PN (on BC) are equal. D is a point on PB. Prove that: (a) BP bisects ∠ABC (b) ΔMDP ≅ ΔNDP",
+    "modelAnswer": "(a) In ΔPMB and ΔPNB: ∠PMB = ∠PNB = 90°, hypotenuse PB = PB (common), PM = PN (given). So ΔPMB ≅ ΔPNB (RHS). Hence ∠MBP = ∠NBP (c.p.c.t.), i.e. BP bisects ∠ABC. Also ∠MPB = ∠NPB (c.p.c.t.). (b) In ΔMDP and ΔNDP: PM = PN (given), ∠MPD = ∠NPD (shown above, since D lies on PB), PD = PD (common). So ΔMDP ≅ ΔNDP (SAS).",
+    "keyPoints": [
+      "ΔPMB ≅ ΔPNB by RHS (right angle, common hypotenuse PB, PM = PN)",
+      "c.p.c.t. gives ∠MBP = ∠NBP, so BP bisects ∠ABC",
+      "Also ∠MPB = ∠NPB",
+      "ΔMDP ≅ ΔNDP by SAS"
+    ]
+  },
+  {
+    "id": "sa-ix-math-048",
+    "chapter": "Graphs",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "Use graph paper. Solve graphically, plotting at least 3 points for each line: 2x − 5y = 14 and x + 2y = −2. (a) Write any two coordinates which lie on the axes. (b) Find the area enclosed by the plotted lines and the x-axis.",
+    "modelAnswer": "Line 1: 2x − 5y = 14 ⇒ y = (2x − 14)/5. Points: (7, 0), (2, −2), (−3, −4). Line 2: x + 2y = −2 ⇒ y = (−2 − x)/2. Points: (−2, 0), (0, −1), (2, −2). The lines intersect at (2, −2), so x = 2, y = −2. (Check: 2(2) − 5(−2) = 14 and 2 + 2(−2) = −2.) (a) Points on the axes: (7, 0) and (−2, 0) on the x-axis; (0, −1) on the y-axis (also (0, −2.8) on line 1). (b) The lines meet the x-axis at (7, 0) and (−2, 0), so the base = 9 units; the height is the distance of (2, −2) from the x-axis = 2 units. Area = ½ × 9 × 2 = 9 sq. units.",
+    "keyPoints": [
+      "Plot at least three points on each line, e.g. (7,0),(2,−2),(−3,−4) and (−2,0),(0,−1),(2,−2)",
+      "Intersection (2, −2): x = 2, y = −2",
+      "x-intercepts (7, 0) and (−2, 0): base 9 units",
+      "Area with x-axis = ½ × 9 × 2 = 9 sq. units"
+    ]
+  },
+  {
+    "id": "sa-ix-math-049",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "The perpendicular bisectors of the sides of a triangle ABC meet at I. Prove that IA = IB = IC.",
+    "modelAnswer": "Let D be the mid-point of BC with ID ⊥ BC. In ΔIDB and ΔIDC: BD = DC (D is the mid-point), ∠IDB = ∠IDC = 90°, ID = ID (common). So ΔIDB ≅ ΔIDC (SAS) ⇒ IB = IC (c.p.c.t.). Similarly, with F the mid-point of AB and IF ⊥ AB, ΔIFA ≅ ΔIFB (SAS) ⇒ IA = IB. Hence IA = IB = IC.",
+    "keyPoints": [
+      "Take the foot of each perpendicular bisector (mid-point of the side)",
+      "ΔIDB ≅ ΔIDC by SAS ⇒ IB = IC",
+      "ΔIFA ≅ ΔIFB by SAS ⇒ IA = IB",
+      "Therefore IA = IB = IC"
+    ]
+  },
+  {
+    "id": "sa-ix-math-050",
+    "chapter": "Graphs",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice T1 2025-26",
+    "text": "Use graph paper to construct a frequency polygon for the following data (2 cm = 10 marks on the x-axis and 2 cm = 4 students on the y-axis): Marks 40-50, 50-60, 60-70, 70-80, 80-90, 90-100; Number of students 7, 18, 26, 37, 20, 6.",
+    "modelAnswer": "Find the class marks (mid-points): 45, 55, 65, 75, 85, 95. Plot the points (45, 7), (55, 18), (65, 26), (75, 37), (85, 20), (95, 6) using the given scales. To close the polygon, take an imaginary class at each end with frequency 0: plot (35, 0) and (105, 0). Join all the points in order with straight line segments: (35, 0) – (45, 7) – (55, 18) – (65, 26) – (75, 37) – (85, 20) – (95, 6) – (105, 0). The figure obtained is the required frequency polygon. (A kink/break mark can be shown on the x-axis since it starts near 30.)",
+    "keyPoints": [
+      "Class marks: 45, 55, 65, 75, 85, 95",
+      "Plot (class mark, frequency) points using the given scale",
+      "Add (35, 0) and (105, 0) to close the polygon",
+      "Join the points in order with straight lines"
+    ]
+  },
+  {
+    "id": "sa-ix-math-051",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "The sides of a triangular field are in the ratio 5 : 3 : 4 and its perimeter is 180 m. Find: (a) its area (b) the altitude of the triangle corresponding to its largest side (c) the cost of levelling the field at ₹10 per square metre.",
+    "modelAnswer": "Sum of ratio terms = 12, so the sides are 180 × 5/12 = 75 m, 180 × 3/12 = 45 m and 180 × 4/12 = 60 m. Since 45² + 60² = 2025 + 3600 = 5625 = 75², the triangle is right-angled with legs 45 m and 60 m. (a) Area = ½ × 45 × 60 = 1350 m² (Heron: s = 90, √(90 × 15 × 45 × 30) = 1350). (b) Altitude on the largest side (75 m) = 2 × Area/75 = 2700/75 = 36 m. (c) Cost = 1350 × 10 = ₹13,500.",
+    "keyPoints": [
+      "Sides: 75 m, 45 m, 60 m",
+      "Area = 1350 m²",
+      "Altitude on 75 m side = 2 × 1350 / 75 = 36 m",
+      "Cost = ₹13,500"
+    ]
+  },
+  {
+    "id": "sa-ix-math-052",
+    "chapter": "Indices",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "School Practice T1 2025-26",
+    "text": "If (9ⁿ · 3² · 3ⁿ − 27ⁿ) / (3^m · 2)³ = 3⁻³, show that m − n = 1.",
+    "modelAnswer": "Numerator: 9ⁿ · 3² · 3ⁿ − 27ⁿ = 3²ⁿ · 9 · 3ⁿ − 3³ⁿ = 9 · 3³ⁿ − 3³ⁿ = 8 · 3³ⁿ. Denominator: (3^m · 2)³ = 3^(3m) · 8. So the expression = 8 · 3³ⁿ / (8 · 3^(3m)) = 3^(3n − 3m). Given 3^(3n − 3m) = 3⁻³ ⇒ 3n − 3m = −3 ⇒ n − m = −1 ⇒ m − n = 1.",
+    "keyPoints": [
+      "Write every term as a power of 3",
+      "Numerator = 8 · 3³ⁿ, denominator = 8 · 3^(3m)",
+      "Equate exponents: 3n − 3m = −3, so m − n = 1"
+    ]
+  },
+  {
+    "id": "sa-ix-math-053",
+    "chapter": "Rational and Irrational Numbers",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "Show that (3√2 − 2√3)/(3√2 + 2√3) + 2√3/(√3 − √2) = 11.",
+    "modelAnswer": "First term: multiply numerator and denominator by (3√2 − 2√3). Numerator = (3√2 − 2√3)² = 18 + 12 − 12√6 = 30 − 12√6; denominator = 18 − 12 = 6. First term = 5 − 2√6. Second term: multiply by (√3 + √2): 2√3(√3 + √2)/(3 − 2) = 6 + 2√6. Sum = 5 − 2√6 + 6 + 2√6 = 11. Hence proved.",
+    "keyPoints": [
+      "First term rationalises to 5 − 2√6",
+      "Second term rationalises to 6 + 2√6",
+      "The √6 terms cancel, giving 11"
+    ]
+  },
+  {
+    "id": "sa-ix-math-054",
+    "chapter": "Triangles (Congruency)",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice T1 2025-26",
+    "text": "ABC and DBC are two isosceles triangles on the same side of base BC (AB = AC and DB = DC), with A inside ΔDBC. DA is produced to meet BC at L. Prove that: (a) ΔBDA ≅ ΔCDA (b) ∠BDA = ∠CDA (c) ΔABL ≅ ΔACL",
+    "modelAnswer": "(a) In ΔBDA and ΔCDA: DB = DC (given), AB = AC (given), DA = DA (common). So ΔBDA ≅ ΔCDA (SSS). (b) Hence ∠BDA = ∠CDA (c.p.c.t.). Also ∠BAD = ∠CAD (c.p.c.t.). (c) Since ∠BAL = 180° − ∠BAD and ∠CAL = 180° − ∠CAD (D, A, L are collinear), ∠BAL = ∠CAL. In ΔABL and ΔACL: AB = AC (given), ∠BAL = ∠CAL, AL = AL (common). So ΔABL ≅ ΔACL (SAS).",
+    "keyPoints": [
+      "ΔBDA ≅ ΔCDA by SSS",
+      "∠BDA = ∠CDA and ∠BAD = ∠CAD by c.p.c.t.",
+      "∠BAL = ∠CAL (supplements of equal angles)",
+      "ΔABL ≅ ΔACL by SAS"
+    ]
+  },
+  {
+    "id": "sa-ix-math-055",
+    "chapter": "Mid-point and Intercept Theorems",
+    "marks": 4,
+    "difficulty": "hard",
+    "source": "School Practice AE 2025-26",
+    "text": "PQRS is a parallelogram in which A is the mid-point of PS and B is a point on the diagonal PR such that PB = ¼PR. AB is produced to meet PQ at C. Prove that C is the mid-point of PQ.",
+    "modelAnswer": "Join SQ; let the diagonals PR and SQ meet at O. Diagonals of a parallelogram bisect each other, so PO = ½PR. Since PB = ¼PR = ½PO, B is the mid-point of PO. In ΔPSO, A is the mid-point of PS and B is the mid-point of PO, so by the mid-point theorem AB ∥ SO, i.e. AC ∥ SQ. In ΔPSQ, A is the mid-point of PS and AC ∥ SQ, so by the converse of the mid-point theorem C is the mid-point of PQ.",
+    "keyPoints": [
+      "Diagonals bisect each other: PO = ½PR, so B is the mid-point of PO",
+      "Mid-point theorem in ΔPSO: AB ∥ SO",
+      "In ΔPSQ, line through mid-point A parallel to SQ bisects PQ",
+      "Hence C is the mid-point of PQ"
+    ]
+  },
+  {
+    "id": "sa-ix-math-056",
+    "chapter": "Trigonometrical Ratios",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "B, C and D lie on a straight line. AB ⊥ BD with AB = 12 m, and ED ⊥ BD with ED = 8 m. C lies between B and D, with ∠ACB = α and ∠ECD = β. If cos α = 5/13 and cos β = 3/5, find the length of BD.",
+    "modelAnswer": "cos α = 5/13 ⇒ sin α = 12/13 ⇒ tan α = 12/5. In right ΔABC, tan α = AB/BC ⇒ BC = 12 ÷ (12/5) = 5 m. cos β = 3/5 ⇒ sin β = 4/5 ⇒ tan β = 4/3. In right ΔEDC, tan β = ED/CD ⇒ CD = 8 ÷ (4/3) = 6 m. BD = BC + CD = 5 + 6 = 11 m.",
+    "keyPoints": [
+      "tan α = 12/5, so BC = 5 m",
+      "tan β = 4/3, so CD = 6 m",
+      "BD = BC + CD = 11 m"
+    ]
+  },
+  {
+    "id": "sa-ix-math-057",
+    "chapter": "Construction of Polygons",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Construct a parallelogram ABCD in which diagonal AC = 6 cm, diagonal BD = 9 cm and the angle between the diagonals is 60°. Measure and write down the length of the shortest side.",
+    "modelAnswer": "Steps: (1) Draw AC = 6 cm and mark its mid-point O (bisect AC). (2) At O construct an angle of 60° with OC and draw a line through O. (3) Diagonals of a parallelogram bisect each other, so with centre O and radius 4.5 cm cut this line on both sides at B and D (OB = OD = 4.5 cm). (4) Join AB, BC, CD, DA. ABCD is the required parallelogram. Measurement: the shortest side is the one opposite the 60° angle between the half-diagonals. By calculation its length = √(3² + 4.5² − 2 × 3 × 4.5 × cos 60°) = √15.75 ≈ 3.97 cm, so it measures about 4.0 cm (the other side ≈ 6.5 cm).",
+    "keyPoints": [
+      "Draw AC = 6 cm and bisect it at O",
+      "Draw a line through O at 60° to AC",
+      "Mark OB = OD = 4.5 cm on it (diagonals bisect each other)",
+      "Join the vertices; shortest side ≈ 4.0 cm"
+    ]
+  },
+  {
+    "id": "sa-ix-math-058",
+    "chapter": "Triangles (Congruency)",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "In ΔABC, AB = AC. P is a point on AB and Q is a point on AC such that AP = AQ. Prove that: (a) ΔAPC ≅ ΔAQB (b) ΔBPC ≅ ΔCQB",
+    "modelAnswer": "(a) In ΔAPC and ΔAQB: AP = AQ (given), ∠PAC = ∠QAB (common ∠A), AC = AB (given). So ΔAPC ≅ ΔAQB (SAS), and hence PC = QB (c.p.c.t.). (b) BP = AB − AP and CQ = AC − AQ; since AB = AC and AP = AQ, BP = CQ. In ΔBPC and ΔCQB: BP = CQ, PC = QB (from part a), BC = CB (common). So ΔBPC ≅ ΔCQB (SSS).",
+    "keyPoints": [
+      "ΔAPC ≅ ΔAQB by SAS (common angle A)",
+      "c.p.c.t.: PC = QB",
+      "BP = CQ (equal sides minus equal parts)",
+      "ΔBPC ≅ ΔCQB by SSS"
+    ]
+  },
+  {
+    "id": "sa-ix-math-059",
+    "chapter": "Graphs",
+    "marks": 5,
+    "difficulty": "easy",
+    "source": "School Practice AE 2025-26",
+    "text": "Draw a frequency polygon for the following distribution: Age (years) 10-20, 20-30, 30-40, 40-50, 50-60, 60-70; Number of diabetic patients 3, 6, 14, 8, 5, 2.",
+    "modelAnswer": "Class marks: 15, 25, 35, 45, 55, 65. Taking a suitable scale (e.g. 2 cm = 10 years on the x-axis and 1 cm = 2 patients on the y-axis), plot (15, 3), (25, 6), (35, 14), (45, 8), (55, 5), (65, 2). Add the imaginary classes 0-10 and 70-80 with frequency 0, i.e. plot (5, 0) and (75, 0). Join (5, 0) – (15, 3) – (25, 6) – (35, 14) – (45, 8) – (55, 5) – (65, 2) – (75, 0) with straight lines to get the frequency polygon.",
+    "keyPoints": [
+      "Class marks 15, 25, 35, 45, 55, 65",
+      "Plot (class mark, frequency) with a stated scale",
+      "Close with (5, 0) and (75, 0)",
+      "Join points in order with straight line segments"
+    ]
+  },
+  {
+    "id": "sa-ix-math-060",
+    "chapter": "Construction of Polygons",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2019",
+    "text": "Construct a parallelogram ABCD in which AB = 6.4 cm, AD = 5.2 cm and the perpendicular distance between AB and DC is 4 cm.",
+    "modelAnswer": "Steps: (1) Draw AB = 6.4 cm. (2) At any point on AB (or at A) draw a perpendicular and mark a point on it 4 cm from AB; through this point draw a line XY parallel to AB (DC lies on XY). (3) With centre A and radius 5.2 cm draw an arc cutting XY at D. (4) With centre D and radius 6.4 cm cut XY at C (on the same side as B), or with centre B and radius 5.2 cm cut XY at C. (5) Join AD, BC. ABCD is the required parallelogram (AB ∥ DC, AB = DC = 6.4 cm, AD = BC = 5.2 cm, height 4 cm).",
+    "keyPoints": [
+      "Draw AB = 6.4 cm",
+      "Draw a line parallel to AB at a distance of 4 cm",
+      "Cut it at D with an arc of radius 5.2 cm from A",
+      "Mark DC = 6.4 cm and join to complete ABCD"
+    ]
+  },
+  {
+    "id": "sa-ix-math-061",
+    "chapter": "Rectilinear Figures",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2019",
+    "text": "ABCD is a parallelogram. APD and BQC are equilateral triangles drawn outside the parallelogram on sides AD and BC. Prove that: (i) ∠PAB = ∠QCD (ii) PB = QD",
+    "modelAnswer": "(i) ∠PAB = ∠PAD + ∠DAB = 60° + ∠A and ∠QCD = ∠QCB + ∠BCD = 60° + ∠C. In a parallelogram opposite angles are equal, so ∠A = ∠C; hence ∠PAB = ∠QCD. (ii) AP = AD (equilateral ΔAPD) and CQ = CB (equilateral ΔBQC); since AD = BC, AP = CQ. Also AB = CD (opposite sides). In ΔPAB and ΔQCD: AP = CQ, ∠PAB = ∠QCD, AB = CD. So ΔPAB ≅ ΔQCD (SAS) ⇒ PB = QD (c.p.c.t.).",
+    "keyPoints": [
+      "∠PAB = 60° + ∠A and ∠QCD = 60° + ∠C, with ∠A = ∠C",
+      "AP = AD = BC = CQ and AB = CD",
+      "ΔPAB ≅ ΔQCD by SAS",
+      "PB = QD by c.p.c.t."
+    ]
+  },
+  {
+    "id": "sa-ix-math-062",
+    "chapter": "Pythagoras Theorem",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2019",
+    "text": "In ΔABC, ∠B = 90° and D is the mid-point of side BC. Prove that AC² = AD² + 3CD².",
+    "modelAnswer": "Since D is the mid-point of BC, BD = CD and BC = 2CD. In right ΔABC: AC² = AB² + BC² = AB² + 4CD². In right ΔABD: AD² = AB² + BD² = AB² + CD² ⇒ AB² = AD² − CD². Substituting: AC² = AD² − CD² + 4CD² = AD² + 3CD².",
+    "keyPoints": [
+      "BD = CD and BC = 2CD",
+      "AC² = AB² + 4CD² (Pythagoras in ΔABC)",
+      "AB² = AD² − CD² (Pythagoras in ΔABD)",
+      "Substitute to get AC² = AD² + 3CD²"
+    ]
+  },
+  {
+    "id": "sa-ix-math-063",
+    "chapter": "Triangles (Congruency)",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "CISCE Specimen 2019",
+    "text": "In ΔABC, ∠ABC = 66° and ∠DAC = 38°, where AD ⊥ BC (D on BC) and CE ⊥ AB (E on AB). AD and CE intersect at P. Prove that CP > AP.",
+    "modelAnswer": "In ΔADC: ∠ADC = 90° and ∠DAC = 38°, so ∠ACD = 180° − 90° − 38° = 52°. In ΔBEC: ∠BEC = 90° and ∠EBC = 66°, so ∠BCE = 180° − 90° − 66° = 24°. Hence ∠PCA = ∠ACB − ∠BCE = 52° − 24° = 28°. In ΔAPC: ∠PAC = 38° and ∠PCA = 28°, so ∠PAC > ∠PCA. The side opposite the greater angle is greater, so CP (opposite ∠PAC) > AP (opposite ∠PCA).",
+    "keyPoints": [
+      "∠ACB = 52° from ΔADC",
+      "∠BCE = 24° from ΔBEC, so ∠PCA = 28°",
+      "In ΔAPC, ∠PAC = 38° > ∠PCA = 28°",
+      "Greater angle has the greater opposite side: CP > AP"
+    ]
+  },
+  {
+    "id": "sa-ix-math-064",
+    "chapter": "Graphs",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2019",
+    "text": "Solve graphically: x − 3y = 3 and 2x + 3y = 6. Also find the area of the triangle formed by these two lines and the y-axis.",
+    "modelAnswer": "Line 1: x − 3y = 3 ⇒ y = (x − 3)/3. Points: (0, −1), (3, 0), (6, 1). Line 2: 2x + 3y = 6 ⇒ y = (6 − 2x)/3. Points: (0, 2), (3, 0), (−3, 4). The lines intersect at (3, 0), so x = 3, y = 0. The lines meet the y-axis at (0, −1) and (0, 2), so the base along the y-axis = 3 units. The height is the distance of (3, 0) from the y-axis = 3 units. Area = ½ × 3 × 3 = 4.5 sq. units.",
+    "keyPoints": [
+      "Tables of values for both lines",
+      "Intersection (3, 0): x = 3, y = 0",
+      "y-intercepts −1 and 2: base 3 units",
+      "Area = ½ × 3 × 3 = 4.5 sq. units"
+    ]
+  },
+  {
+    "id": "sa-ix-math-065",
+    "chapter": "Rectilinear Figures",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2019",
+    "text": "Prove that the opposite angles of a parallelogram are equal.",
+    "modelAnswer": "Let ABCD be a parallelogram; draw diagonal AC. In ΔABC and ΔCDA: ∠BAC = ∠DCA (alternate angles, AB ∥ DC), ∠BCA = ∠DAC (alternate angles, BC ∥ AD), AC = CA (common). So ΔABC ≅ ΔCDA (ASA) ⇒ ∠B = ∠D (c.p.c.t.). Also ∠A = ∠BAC + ∠DAC = ∠DCA + ∠BCA = ∠C. Hence the opposite angles are equal.",
+    "keyPoints": [
+      "Draw a diagonal to form two triangles",
+      "Alternate angles from the two pairs of parallel sides",
+      "ΔABC ≅ ΔCDA by ASA, giving ∠B = ∠D",
+      "Adding equal angle parts gives ∠A = ∠C"
+    ]
   }
 ]

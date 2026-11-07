@@ -3868,5 +3868,875 @@
     "correct": 2,
     "explanation": "Value = 121500 × (0.9)² = 121500 × 0.81 = ₹98,415.",
     "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixmath266",
+    "chapter": "Indices",
+    "difficulty": "easy",
+    "text": "If 4^x = 8^y, then x : y is:",
+    "options": [
+      "2 : 3",
+      "4 : 3",
+      "3 : 4",
+      "3 : 2"
+    ],
+    "correct": 3,
+    "explanation": "4^x = 2^(2x) and 8^y = 2^(3y). So 2x = 3y, giving x/y = 3/2, i.e. x : y = 3 : 2.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath267",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "P is a point on the x-axis at a distance of 3 units from the y-axis, to its right. The coordinates of P are:",
+    "options": [
+      "(3, 0)",
+      "(3, 3)",
+      "(−3, 3)",
+      "(0, 3)"
+    ],
+    "correct": 0,
+    "explanation": "A point on the x-axis has ordinate 0. Being 3 units to the right of the y-axis, its abscissa is +3. So P = (3, 0).",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath268",
+    "chapter": "Expansions",
+    "difficulty": "easy",
+    "text": "If x + 1/x = 5, then x − 1/x is:",
+    "options": [
+      "±2",
+      "±3",
+      "±√21",
+      "±√29"
+    ],
+    "correct": 2,
+    "explanation": "(x − 1/x)² = (x + 1/x)² − 4 = 25 − 4 = 21, so x − 1/x = ±√21.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath269",
+    "chapter": "Rational and Irrational Numbers",
+    "difficulty": "easy",
+    "text": "The number which is to be subtracted from √72 to get √32 is:",
+    "options": [
+      "3√2",
+      "2√2",
+      "2√10",
+      "4√2"
+    ],
+    "correct": 1,
+    "explanation": "√72 = 6√2 and √32 = 4√2. Required number = 6√2 − 4√2 = 2√2.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath270",
+    "chapter": "Simultaneous Linear Equations",
+    "difficulty": "medium",
+    "text": "Solve by the cross-multiplication method: 5x − 3y = 2 and 4x + 7y = −3.",
+    "options": [
+      "x = 5/43, y = −23/43",
+      "x = 23/47, y = −5/47",
+      "x = −5/47, y = 23/47",
+      "x = 5/47, y = −23/47"
+    ],
+    "correct": 3,
+    "explanation": "Write as 5x − 3y − 2 = 0 and 4x + 7y + 3 = 0. x/[(−3)(3) − (−2)(7)] = y/[(−2)(4) − (5)(3)] = 1/[(5)(7) − (−3)(4)], i.e. x/5 = y/(−23) = 1/47. So x = 5/47, y = −23/47. Check: 5(5/47) − 3(−23/47) = 94/47 = 2.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath271",
+    "chapter": "Indices",
+    "difficulty": "medium",
+    "text": "Solve for x: 25^(x−1) = 5^(2x−1) − 100",
+    "options": [
+      "x = 2",
+      "x = 3",
+      "x = 3/2",
+      "x = 1"
+    ],
+    "correct": 0,
+    "explanation": "25^(x−1) = 5^(2x−2). Let t = 5^(2x−2); then 5^(2x−1) = 5t. So t = 5t − 100 ⇒ t = 25 = 5². Hence 2x − 2 = 2 ⇒ x = 2.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixmath272",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "If P(4, 0) and Q(0, 3) are the ends of a diameter of a circle, the radius is:",
+    "options": [
+      "√7 units",
+      "2√5 units",
+      "2.5 units",
+      "5 units"
+    ],
+    "correct": 2,
+    "explanation": "Diameter PQ = √[(4 − 0)² + (0 − 3)²] = √25 = 5 units, so the radius = 5/2 = 2.5 units.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath273",
+    "chapter": "Rational and Irrational Numbers",
+    "difficulty": "easy",
+    "text": "The irrational number obtained on rationalising the denominator of 1/(√7 + 2) is:",
+    "options": [
+      "(√7 + 2)/5",
+      "(√7 − 2)/3",
+      "(√7 + 2)/3",
+      "(√7 + 2)/45"
+    ],
+    "correct": 1,
+    "explanation": "Multiply numerator and denominator by (√7 − 2): 1·(√7 − 2)/(7 − 4) = (√7 − 2)/3.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath274",
+    "chapter": "Graphs",
+    "difficulty": "easy",
+    "text": "The graph of x = 5 is a line:",
+    "options": [
+      "making an intercept 5 on the y-axis",
+      "parallel to the y-axis at a distance of 5 units from the origin",
+      "parallel to the x-axis at a distance of 5 units from the origin",
+      "passing through the origin"
+    ],
+    "correct": 1,
+    "explanation": "Every point on x = 5 has abscissa 5, whatever y is, so the line is vertical: parallel to the y-axis, 5 units from it (and from the origin along the x-axis). It never meets the y-axis.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath275",
+    "chapter": "Triangles (Congruency)",
+    "difficulty": "medium",
+    "text": "It is given that ΔABC ≅ ΔFDE, AB = 5 cm, ∠B = 40° and ∠A = 80°. Which of the following is true?",
+    "options": [
+      "DF = 5 cm, ∠E = 60°",
+      "DF = 5 cm, ∠F = 60°",
+      "DE = 5 cm, ∠D = 40°",
+      "DE = 5 cm, ∠E = 60°"
+    ],
+    "correct": 0,
+    "explanation": "The correspondence is A ↔ F, B ↔ D, C ↔ E. So AB = FD = 5 cm, ∠F = ∠A = 80°, ∠D = ∠B = 40°, and ∠E = ∠C = 180° − 80° − 40° = 60°.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath276",
+    "chapter": "Expansions",
+    "difficulty": "easy",
+    "text": "(x − y)(x + y)(x² + y²)(x⁴ + y⁴) is equal to:",
+    "options": [
+      "x¹⁶ − y¹⁶",
+      "x⁸ + y⁸",
+      "x⁸ − y⁸",
+      "x¹⁶ + y¹⁶"
+    ],
+    "correct": 2,
+    "explanation": "(x − y)(x + y) = x² − y²; (x² − y²)(x² + y²) = x⁴ − y⁴; (x⁴ − y⁴)(x⁴ + y⁴) = x⁸ − y⁸.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath277",
+    "chapter": "Compound Interest",
+    "difficulty": "easy",
+    "text": "The compound interest on ₹8,000 at 5% per annum for 2 years (compounded annually) is:",
+    "options": [
+      "₹860",
+      "₹840",
+      "₹800",
+      "₹820"
+    ],
+    "correct": 3,
+    "explanation": "Amount = 8000 × (1.05)² = 8000 × 1.1025 = ₹8,820. CI = 8820 − 8000 = ₹820.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath278",
+    "chapter": "Indices",
+    "difficulty": "easy",
+    "text": "If √(3ⁿ) = 729, then the value of n is:",
+    "options": [
+      "6",
+      "12",
+      "8",
+      "9"
+    ],
+    "correct": 1,
+    "explanation": "√(3ⁿ) = 3^(n/2) and 729 = 3⁶. So n/2 = 6 ⇒ n = 12.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath279",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "difficulty": "easy",
+    "text": "The area of an equilateral triangle is 9√3 cm². Its side is:",
+    "options": [
+      "6 cm",
+      "12 cm",
+      "9 cm",
+      "3 cm"
+    ],
+    "correct": 0,
+    "explanation": "(√3/4)a² = 9√3 ⇒ a² = 36 ⇒ a = 6 cm.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath280",
+    "chapter": "Mean/Median/Mode",
+    "difficulty": "easy",
+    "text": "The mean of 5 numbers is 20. A new number 32 is added. What is the new mean?",
+    "options": [
+      "21",
+      "23",
+      "25",
+      "22"
+    ],
+    "correct": 3,
+    "explanation": "Sum of 5 numbers = 5 × 20 = 100. New sum = 132 for 6 numbers, so new mean = 132/6 = 22.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath281",
+    "chapter": "Triangles (Congruency)",
+    "difficulty": "medium",
+    "text": "In triangles ABC and DEF, AB = FD and ∠A = ∠D. The two triangles are congruent by the SAS criterion if:",
+    "options": [
+      "BC = EF",
+      "AC = EF",
+      "AC = DE",
+      "BC = DE"
+    ],
+    "correct": 2,
+    "explanation": "For SAS the equal angles must be included between the equal sides. ∠A lies between AB and AC; ∠D lies between DF and DE. Since AB = DF, we also need AC = DE.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath282",
+    "chapter": "Mean/Median/Mode",
+    "difficulty": "medium",
+    "text": "Assertion (A): If the runs scored by the players of a cricket team are 5, 19, 42, 11, 50, 24, 5, 7, 36, 10, 12, then median = 24.\nReason (R): Median = ((n + 1)/2)th value, if n is odd.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true but R is not the correct explanation of A.",
+      "A is true but R is false.",
+      "A is false but R is true."
+    ],
+    "correct": 3,
+    "explanation": "Arranged in order: 5, 5, 7, 10, 11, 12, 19, 24, 36, 42, 50 (n = 11). Median = ((11 + 1)/2)th = 6th value = 12, not 24. So A is false, while R is a correct rule.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath283",
+    "chapter": "Compound Interest",
+    "difficulty": "medium",
+    "text": "Assertion (A): Compound interest for 2 years on a given sum is always greater than simple interest for 2 years at the same (non-zero) rate.\nReason (R): Compound interest for the second year is calculated on the principal as well as the interest of the first year.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A.",
+      "Both A and R are true but R is not the correct explanation of A.",
+      "A is true but R is false.",
+      "A is false but R is true."
+    ],
+    "correct": 0,
+    "explanation": "In the first year CI = SI. In the second year CI is charged on (principal + first-year interest), so it exceeds SI by the interest on the first year's interest. Both statements are true and R explains A.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath284",
+    "chapter": "Logarithms",
+    "difficulty": "medium",
+    "text": "If log 8 = 0.90, find the values of log √32 and log 0.125.",
+    "options": [
+      "0.60 and −0.30",
+      "1.50 and −0.90",
+      "0.75 and 0.90",
+      "0.75 and −0.90"
+    ],
+    "correct": 3,
+    "explanation": "log 8 = 3 log 2 = 0.90 ⇒ log 2 = 0.30. log √32 = (5/2) log 2 = 2.5 × 0.30 = 0.75. log 0.125 = log (1/8) = −log 8 = −0.90.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath285",
+    "chapter": "Pythagoras Theorem",
+    "difficulty": "medium",
+    "text": "The two sides containing the right angle of a right-angled triangle differ by 3 cm and its area is 54 cm². Its perimeter is:",
+    "options": [
+      "30 cm",
+      "24 cm",
+      "36 cm",
+      "42 cm"
+    ],
+    "correct": 2,
+    "explanation": "Let the legs be x and x + 3. ½x(x + 3) = 54 ⇒ x² + 3x − 108 = 0 ⇒ (x + 12)(x − 9) = 0 ⇒ x = 9. Legs 9 cm and 12 cm, hypotenuse √(81 + 144) = 15 cm. Perimeter = 9 + 12 + 15 = 36 cm.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath286",
+    "chapter": "Indices",
+    "difficulty": "medium",
+    "text": "Evaluate: 4/(216)^(−2/3) + 1/(256)^(−3/4) + 2/(243)^(−1/5)",
+    "options": [
+      "214",
+      "204",
+      "216",
+      "150"
+    ],
+    "correct": 0,
+    "explanation": "1/a^(−n) = a^n. (216)^(2/3) = 6² = 36, (256)^(3/4) = 4³ = 64, (243)^(1/5) = 3. Value = 4 × 36 + 64 + 2 × 3 = 144 + 64 + 6 = 214.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath287",
+    "chapter": "Simultaneous Linear Equations",
+    "difficulty": "medium",
+    "text": "Solve: 37x + 41y = 70 and 41x + 37y = 86.",
+    "options": [
+      "x = 2, y = 1",
+      "x = 3, y = −1",
+      "x = −1, y = 3",
+      "x = 3, y = 1"
+    ],
+    "correct": 1,
+    "explanation": "Adding: 78x + 78y = 156 ⇒ x + y = 2. Subtracting the first from the second: 4x − 4y = 16 ⇒ x − y = 4. Hence x = 3, y = −1.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath288",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The vertices of a triangle are A(1, −3), B(−3, 0) and C(4, 1). The triangle is ___ and its area is ___.",
+    "options": [
+      "an isosceles right-angled triangle; 25 sq. units",
+      "an isosceles right-angled triangle; 12.5 sq. units",
+      "an equilateral triangle; 12.5 sq. units",
+      "a scalene triangle; 17.5 sq. units"
+    ],
+    "correct": 1,
+    "explanation": "AB = √(16 + 9) = 5, AC = √(9 + 16) = 5, BC = √(49 + 1) = √50. AB = AC and AB² + AC² = 50 = BC², so it is isosceles and right-angled at A. Area = ½ × 5 × 5 = 12.5 sq. units.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath289",
+    "chapter": "Simultaneous Linear Equations",
+    "difficulty": "medium",
+    "text": "The sum of a two-digit number and the number obtained by reversing its digits is 99. If the digits differ by 3, the number is:",
+    "options": [
+      "54 or 45",
+      "81 or 18",
+      "72 or 27",
+      "63 or 36"
+    ],
+    "correct": 3,
+    "explanation": "Let the number be 10a + b. (10a + b) + (10b + a) = 11(a + b) = 99 ⇒ a + b = 9. With a − b = ±3: a = 6, b = 3 or a = 3, b = 6. So the number is 63 or 36.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath290",
+    "chapter": "Compound Interest",
+    "difficulty": "medium",
+    "text": "Rajeev borrows ₹20,000 at 12% per annum compound interest. He repays ₹8,400 at the end of the first year and ₹9,680 at the end of the second year. The loan outstanding at the beginning of the third year is:",
+    "options": [
+      "₹6,000",
+      "₹6,720",
+      "₹5,680",
+      "₹4,320"
+    ],
+    "correct": 0,
+    "explanation": "Year 1: amount = 20000 × 1.12 = 22,400; after repaying 8,400, principal = 14,000. Year 2: amount = 14000 × 1.12 = 15,680; after repaying 9,680, outstanding = ₹6,000.",
+    "source": "School Practice T1 2025-26"
+  },
+  {
+    "id": "ixmath291",
+    "chapter": "Isosceles Triangles",
+    "difficulty": "easy",
+    "text": "In ΔABC, AB = AC and ∠B = 50°. Then ∠A is equal to:",
+    "options": [
+      "40°",
+      "50°",
+      "80°",
+      "130°"
+    ],
+    "correct": 2,
+    "explanation": "AB = AC ⇒ ∠C = ∠B = 50°. So ∠A = 180° − 50° − 50° = 80°.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath292",
+    "chapter": "Rational and Irrational Numbers",
+    "difficulty": "easy",
+    "text": "The value of √8 + √18 is:",
+    "options": [
+      "6√2",
+      "√26",
+      "2(√2 + √3)",
+      "5√2"
+    ],
+    "correct": 3,
+    "explanation": "√8 = 2√2 and √18 = 3√2, so the sum = 5√2.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath293",
+    "chapter": "Circle",
+    "difficulty": "easy",
+    "text": "A chord of length 40 cm is drawn at a distance of 15 cm from the centre of a circle. The radius of the circle is:",
+    "options": [
+      "17 cm",
+      "25 cm",
+      "15 cm",
+      "12 cm"
+    ],
+    "correct": 1,
+    "explanation": "The perpendicular from the centre bisects the chord, so half-chord = 20 cm. r = √(20² + 15²) = √625 = 25 cm.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath294",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "difficulty": "easy",
+    "text": "Assertion (A): The area of an equilateral triangle with a side of 8 cm is 16√3 cm².\nReason (R): The area of an equilateral triangle with side a units = (√3/4)a² sq. units.",
+    "options": [
+      "(A) is true, (R) is false.",
+      "(A) is false, (R) is true.",
+      "Both (A) and (R) are true and (R) is the correct explanation for (A).",
+      "Both (A) and (R) are true, but (R) is not the correct explanation for (A)."
+    ],
+    "correct": 2,
+    "explanation": "Using R: (√3/4) × 8² = (√3/4) × 64 = 16√3 cm². Both are true and R is the formula that gives A.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath295",
+    "chapter": "Expansions",
+    "difficulty": "easy",
+    "text": "If x + y = 11 and xy = 24, then x² + y² is equal to:",
+    "options": [
+      "6",
+      "5",
+      "73",
+      "121"
+    ],
+    "correct": 2,
+    "explanation": "x² + y² = (x + y)² − 2xy = 121 − 48 = 73.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath296",
+    "chapter": "Mid-point and Intercept Theorems",
+    "difficulty": "easy",
+    "text": "In ΔABC, AB = 3 cm, BC = 4 cm and CA = 5 cm. If D and E are the mid-points of AB and BC respectively, then the length of DE is:",
+    "options": [
+      "2.5 cm",
+      "1.5 cm",
+      "2 cm",
+      "3.5 cm"
+    ],
+    "correct": 0,
+    "explanation": "By the mid-point theorem, DE ∥ AC and DE = ½AC = ½ × 5 = 2.5 cm.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath297",
+    "chapter": "Simultaneous Linear Equations",
+    "difficulty": "easy",
+    "text": "The solution of the pair of linear equations 2x − y = 5 and 5x − y = 11 is:",
+    "options": [
+      "x = −1, y = 2",
+      "x = 2, y = −1",
+      "x = 0, y = −5",
+      "x = 5/2, y = 0"
+    ],
+    "correct": 1,
+    "explanation": "Subtracting the first from the second: 3x = 6 ⇒ x = 2. Then y = 2x − 5 = −1.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath298",
+    "chapter": "Rectilinear Figures",
+    "difficulty": "easy",
+    "text": "If PQRS is a parallelogram, then ∠Q − ∠S is equal to:",
+    "options": [
+      "0°",
+      "60°",
+      "90°",
+      "120°"
+    ],
+    "correct": 0,
+    "explanation": "∠Q and ∠S are opposite angles of the parallelogram, and opposite angles are equal, so ∠Q − ∠S = 0°.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath299",
+    "chapter": "Pythagoras Theorem",
+    "difficulty": "easy",
+    "text": "A girl walks 200 m towards East and then 150 m towards North. Her distance from the starting point is:",
+    "options": [
+      "350 m",
+      "225 m",
+      "300 m",
+      "250 m"
+    ],
+    "correct": 3,
+    "explanation": "The two walks are at right angles. Distance = √(200² + 150²) = √62500 = 250 m.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath300",
+    "chapter": "Indices",
+    "difficulty": "easy",
+    "text": "The product (64)^(13/50) · (64)^(12/50) · (64)⁰ is:",
+    "options": [
+      "64",
+      "√2",
+      "8",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "Add the exponents: 13/50 + 12/50 + 0 = 25/50 = 1/2. So the product = 64^(1/2) = 8.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath301",
+    "chapter": "Mean/Median/Mode",
+    "difficulty": "easy",
+    "text": "In the class intervals 10 – 20, 20 – 30 (exclusive form), the number 20 is included in:",
+    "options": [
+      "neither interval",
+      "20 – 30",
+      "10 – 20",
+      "both the intervals"
+    ],
+    "correct": 1,
+    "explanation": "In the exclusive method the upper limit is not included in a class, so 20 belongs to the class 20 – 30.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath302",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "difficulty": "medium",
+    "text": "The sides of a triangular field are 41 m, 40 m and 9 m. How many flower beds can be prepared in the field if each flower bed needs 900 cm² of space?",
+    "options": [
+      "2000",
+      "200",
+      "1800",
+      "20000"
+    ],
+    "correct": 0,
+    "explanation": "9² + 40² = 81 + 1600 = 1681 = 41², so the field is right-angled with legs 9 m and 40 m. Area = ½ × 9 × 40 = 180 m² = 1,800,000 cm². Number of beds = 1,800,000 ÷ 900 = 2000. (Heron's formula gives the same area: s = 45, √(45 × 4 × 5 × 36) = 180.)",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath303",
+    "chapter": "Circle",
+    "difficulty": "hard",
+    "text": "Chords AB and CD of a circle are parallel and lie on opposite sides of the centre O. If AB = 36 cm, CD = 48 cm and the distance between the chords is 42 cm, the radius of the circle is:",
+    "options": [
+      "26 cm",
+      "35 cm",
+      "30 cm",
+      "25 cm"
+    ],
+    "correct": 2,
+    "explanation": "Let the distances of AB and CD from O be d and 42 − d. Then r² = 18² + d² = 24² + (42 − d)². 324 + d² = 576 + 1764 − 84d + d² ⇒ 84d = 2016 ⇒ d = 24. r² = 324 + 576 = 900 ⇒ r = 30 cm.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath304",
+    "chapter": "Rational and Irrational Numbers",
+    "difficulty": "medium",
+    "text": "If a and b are rational numbers and (√7 − 2)/(√7 + 2) = a√7 + b, find a and b.",
+    "options": [
+      "a = −4/11, b = 3/11",
+      "a = −4/3, b = −11/3",
+      "a = 4/3, b = 11/3",
+      "a = −4/3, b = 11/3"
+    ],
+    "correct": 3,
+    "explanation": "Multiply by (√7 − 2)/(√7 − 2): (√7 − 2)²/(7 − 4) = (7 − 4√7 + 4)/3 = (11 − 4√7)/3. So a = −4/3 and b = 11/3.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath305",
+    "chapter": "Surface Area and Volume of Solids",
+    "difficulty": "medium",
+    "text": "How many bricks, each measuring 20 cm × 16 cm × 8 cm, will be required to build a wall 30 m long, 30 cm thick and 5 m high, if one-ninth of the wall is occupied by cement and sand mixture?",
+    "options": [
+      "17578",
+      "14000",
+      "12500",
+      "15625"
+    ],
+    "correct": 3,
+    "explanation": "Volume of wall = 3000 × 30 × 500 = 45,000,000 cm³. Bricks occupy 8/9 of it = 40,000,000 cm³. Volume of one brick = 20 × 16 × 8 = 2560 cm³. Number of bricks = 40,000,000 ÷ 2560 = 15625.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath306",
+    "chapter": "Indices",
+    "difficulty": "easy",
+    "text": "Simplify: (3^(a+2) − 3^(a+1)) / (4 × 3^a − 3^a)",
+    "options": [
+      "1/2",
+      "2",
+      "3",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "Numerator = 3^a(9 − 3) = 6 × 3^a. Denominator = 3^a(4 − 1) = 3 × 3^a. Value = 6/3 = 2.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath307",
+    "chapter": "Trigonometrical Ratios of Standard Angles",
+    "difficulty": "medium",
+    "text": "Without using tables, find the value of (cos 0° + sin 45° + sin 30°)(sin 90° − cos 45° + cos 60°)(tan 45° + cot 45°)².",
+    "options": [
+      "7/4",
+      "4",
+      "7",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "First bracket = 3/2 + 1/√2, second = 3/2 − 1/√2; their product = 9/4 − 1/2 = 7/4. (tan 45° + cot 45°)² = (1 + 1)² = 4. Value = 7/4 × 4 = 7.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath308",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "easy",
+    "text": "Find the distance between the Police Station at (2, −1) and the Library at (6, 2).",
+    "options": [
+      "5 units",
+      "√7 units",
+      "25 units",
+      "7 units"
+    ],
+    "correct": 0,
+    "explanation": "Distance = √[(6 − 2)² + (2 − (−1))²] = √(16 + 9) = √25 = 5 units.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath309",
+    "chapter": "Area and Perimeter of Plane Figures",
+    "difficulty": "medium",
+    "text": "A circular wheel of radius 28 cm makes 300 revolutions per minute. The speed of the wheel is (π = 22/7):",
+    "options": [
+      "8.8 m/s",
+      "17.6 m/s",
+      "528 m/s",
+      "5.28 m/s"
+    ],
+    "correct": 0,
+    "explanation": "Circumference = 2 × 22/7 × 28 = 176 cm. Distance per minute = 300 × 176 = 52,800 cm = 528 m. Speed = 528 ÷ 60 = 8.8 m/s.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixmath310",
+    "chapter": "Rational and Irrational Numbers",
+    "difficulty": "medium",
+    "text": "Rationalise the denominator: 14/(5√3 − √5)",
+    "options": [
+      "(5√3 + √5)/70",
+      "(5√3 + √5)/5",
+      "(5√3 − √5)/5",
+      "14(5√3 + √5)/65"
+    ],
+    "correct": 1,
+    "explanation": "Multiply by (5√3 + √5): denominator = 75 − 5 = 70. Value = 14(5√3 + √5)/70 = (5√3 + √5)/5.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath311",
+    "chapter": "Factorisation",
+    "difficulty": "easy",
+    "text": "Factorise completely: 6x² + 7x − 5",
+    "options": [
+      "(3x − 1)(2x + 5)",
+      "(2x + 1)(3x − 5)",
+      "(2x − 1)(3x + 5)",
+      "(6x − 5)(x + 1)"
+    ],
+    "correct": 2,
+    "explanation": "Split 7x as 10x − 3x (product 10 × (−3) = −30 = 6 × (−5)): 6x² + 10x − 3x − 5 = 2x(3x + 5) − 1(3x + 5) = (2x − 1)(3x + 5).",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath312",
+    "chapter": "Compound Interest",
+    "difficulty": "medium",
+    "text": "Mr. Ravi borrows ₹16,000 for 2 years. The rates of interest for the two successive years are 10% and 12% respectively. If he repays ₹5,600 at the end of the first year, the amount outstanding at the end of the second year is:",
+    "options": [
+      "₹14,112",
+      "₹12,000",
+      "₹13,000",
+      "₹13,440"
+    ],
+    "correct": 3,
+    "explanation": "Year 1: 16000 × 1.10 = 17,600; after repaying 5,600 the principal is 12,000. Year 2: 12000 × 1.12 = ₹13,440.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath313",
+    "chapter": "Indices",
+    "difficulty": "medium",
+    "text": "Simplify: (8/27)^(−1/3) × (25/4)^(1/2) × (4/9)⁰ + (125/64)^(1/3)",
+    "options": [
+      "4",
+      "5",
+      "25/4",
+      "15/4"
+    ],
+    "correct": 1,
+    "explanation": "(8/27)^(−1/3) = (27/8)^(1/3) = 3/2; (25/4)^(1/2) = 5/2; (4/9)⁰ = 1; (125/64)^(1/3) = 5/4. Value = 3/2 × 5/2 × 1 + 5/4 = 15/4 + 5/4 = 5.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath314",
+    "chapter": "Trigonometrical Ratios of Standard Angles",
+    "difficulty": "medium",
+    "text": "Without using tables, evaluate: 4 tan 60° sec 30° + (sin 31° sec 59° + cot 59° cot 31°)/(8 sin² 30° − tan² 45°)",
+    "options": [
+      "12",
+      "8",
+      "10",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "4 tan 60° sec 30° = 4 × √3 × 2/√3 = 8. sin 31° sec 59° = sin 31°/cos 59° = sin 31°/sin 31° = 1; cot 59° cot 31° = cot 59° tan 59° = 1; numerator = 2. Denominator = 8 × 1/4 − 1 = 1. Total = 8 + 2 = 10.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath315",
+    "chapter": "Logarithms",
+    "difficulty": "medium",
+    "text": "Evaluate: 3 log 2 − (1/3) log 27 + log 12 − log 4 + 3 log 5",
+    "options": [
+      "2",
+      "1",
+      "log 30",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "= log 8 − log 3 + log 12 − log 4 + log 125 = log (8 × 12 × 125)/(3 × 4) = log 1000 = 3.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath316",
+    "chapter": "Circle",
+    "difficulty": "medium",
+    "text": "AB and CD are parallel chords of a circle of radius 13 cm. AB = 24 cm and the distance between AB and CD is 17 cm. The length of chord CD is:",
+    "options": [
+      "10 cm",
+      "24 cm",
+      "5 cm",
+      "12 cm"
+    ],
+    "correct": 0,
+    "explanation": "Distance of AB from the centre = √(13² − 12²) = 5 cm. Since 17 > 13, CD must lie on the other side of the centre, at 17 − 5 = 12 cm from it. Half of CD = √(13² − 12²) = 5 cm, so CD = 10 cm.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath317",
+    "chapter": "Coordinate Geometry",
+    "difficulty": "medium",
+    "text": "The points on the y-axis which are at a distance of 5√2 units from the point (5, 8) are:",
+    "options": [
+      "(0, 13) and (0, 3)",
+      "(0, 3) and (0, −13)",
+      "(0, 8) and (0, −8)",
+      "(0, 13) and (0, −3)"
+    ],
+    "correct": 0,
+    "explanation": "Let the point be (0, y). 5² + (y − 8)² = 50 ⇒ (y − 8)² = 25 ⇒ y − 8 = ±5 ⇒ y = 13 or 3.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath318",
+    "chapter": "Compound Interest",
+    "difficulty": "hard",
+    "text": "A sum of ₹12,500 is deposited for 1½ years, compounded half-yearly. It amounts to ₹13,000 at the end of the first half-year. The rate of interest per annum and the final amount (to the nearest rupee) are:",
+    "options": [
+      "8% p.a.; ₹14,040",
+      "8% p.a.; ₹14,061",
+      "4% p.a.; ₹14,061",
+      "8% p.a.; ₹14,000"
+    ],
+    "correct": 1,
+    "explanation": "Interest for the first half-year = 500 = 4% of 12,500, so the half-yearly rate is 4% and the annual rate is 8%. Final amount = 12500 × (1.04)³ = 12500 × 1.124864 = 14,060.80 ≈ ₹14,061.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath319",
+    "chapter": "Trigonometrical Ratios of Standard Angles",
+    "difficulty": "easy",
+    "text": "Solve for x, where 0° ≤ x ≤ 90°: sin² x + cos² 30° = 5/4",
+    "options": [
+      "90°",
+      "60°",
+      "45°",
+      "30°"
+    ],
+    "correct": 2,
+    "explanation": "cos² 30° = 3/4, so sin² x = 5/4 − 3/4 = 1/2 ⇒ sin x = 1/√2 ⇒ x = 45°.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath320",
+    "chapter": "Indices",
+    "difficulty": "hard",
+    "text": "Solve for x: (√(5/3))^(x−8) = (27/125)^(2x−3)",
+    "options": [
+      "x = −2",
+      "x = 26/11",
+      "x = 3",
+      "x = 2"
+    ],
+    "correct": 3,
+    "explanation": "LHS = (5/3)^((x−8)/2). RHS = (3/5)^(3(2x−3)) = (5/3)^(−6x+9). Equate exponents: (x − 8)/2 = −6x + 9 ⇒ x − 8 = −12x + 18 ⇒ 13x = 26 ⇒ x = 2.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath321",
+    "chapter": "Mean/Median/Mode",
+    "difficulty": "easy",
+    "text": "Find the mean and the median of: 10, 47, 3, 9, 17, 27, 4, 48, 12, 15",
+    "options": [
+      "Mean = 19.2, median = 12",
+      "Mean = 21.3, median = 13.5",
+      "Mean = 19.2, median = 13.5",
+      "Mean = 19.2, median = 17"
+    ],
+    "correct": 2,
+    "explanation": "Sum = 192, so mean = 192/10 = 19.2. In order: 3, 4, 9, 10, 12, 15, 17, 27, 47, 48. n = 10 is even, so median = (5th + 6th)/2 = (12 + 15)/2 = 13.5.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath322",
+    "chapter": "Rectilinear Figures",
+    "difficulty": "easy",
+    "text": "Each interior angle of a regular polygon is 135°. Its exterior angle, number of sides and name are:",
+    "options": [
+      "45°, 8, octagon",
+      "35°, 8, octagon",
+      "45°, 6, hexagon",
+      "60°, 6, hexagon"
+    ],
+    "correct": 0,
+    "explanation": "Exterior angle = 180° − 135° = 45°. Number of sides = 360°/45° = 8, so it is a regular octagon.",
+    "source": "CISCE Specimen 2019"
+  },
+  {
+    "id": "ixmath323",
+    "chapter": "Logarithms",
+    "difficulty": "easy",
+    "text": "If log 4 = 0.6020, find the value of log 80.",
+    "options": [
+      "0.9030",
+      "2.9030",
+      "1.6020",
+      "1.9030"
+    ],
+    "correct": 3,
+    "explanation": "log 2 = ½ log 4 = 0.3010. log 80 = log 8 + log 10 = 3 × 0.3010 + 1 = 1.9030.",
+    "source": "CISCE Specimen 2019"
   }
 ]

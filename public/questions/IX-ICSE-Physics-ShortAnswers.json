@@ -786,5 +786,76 @@
       "Electromagnet: temporary, strength variable",
       "Bar magnet: permanent, fixed strength"
     ]
+  },
+  {
+    "id": "sa-ix-phy-055",
+    "chapter": "Light (Reflection, Refraction)",
+    "marks": 4,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2025-26",
+    "text": "An object is placed in front of a concave mirror of focal length 15 cm. The mirror forms a virtual, erect image four times the size of the object. (i) What is the linear magnification? (ii) Calculate the position of the object from the mirror. (iii) What is the other name of this mirror?",
+    "modelAnswer": "(i) The image is virtual and erect, so m = +4. (ii) m = −v/u = 4 ⇒ v = −4u. For a concave mirror f = −15 cm. Mirror formula: 1/v + 1/u = 1/f ⇒ 1/(−4u) + 1/u = −1/15 ⇒ (−1 + 4)/(4u) = −1/15 ⇒ 3/(4u) = −1/15 ⇒ u = −45/4 = −11.25 cm. The object is 11.25 cm in front of the mirror (between the pole and the focus), and the image is at v = +45 cm, behind the mirror. (iii) A concave mirror is also called a converging mirror.",
+    "keyPoints": [
+      "Virtual erect image: m = +4, so v = −4u",
+      "Use 1/v + 1/u = 1/f with f = −15 cm",
+      "u = −11.25 cm (object between P and F); image 45 cm behind",
+      "Concave mirror = converging mirror"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-056",
+    "chapter": "Fluids (Pressure, Upthrust, Archimedes' Principle)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT2 2025-26",
+    "text": "State two characteristic properties of upthrust.",
+    "modelAnswer": "(1) Upthrust always acts vertically upwards, through the centre of buoyancy (the centre of gravity of the displaced fluid). (2) Its magnitude equals the weight of the fluid displaced by the body, so it increases with the volume of the body submerged and with the density of the fluid (Vρg). Also, the upthrust on a completely immersed body does not depend on its depth.",
+    "keyPoints": [
+      "Acts vertically upward through the centre of buoyancy",
+      "Equals the weight of fluid displaced (Vρg)",
+      "Increases with submerged volume and fluid density"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-057",
+    "chapter": "Measurements and Experimentation",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "School Practice T1 2025-26",
+    "text": "Each statement below has an error in writing the unit of the physical quantity mentioned in it. Identify the error and rewrite the statements. (a) Melting point of ice is 273 k. (b) Weight of a body of mass 1 kg on earth is 9.8 Ns. (c) The maximum depth of the Challenger Deep in the Mariana Trench is estimated to be around 10,984 M.",
+    "modelAnswer": "(a) The symbol of kelvin is capital K: \"Melting point of ice is 273 K.\" (b) Weight is a force, measured in newton (N), not N s (N s is the unit of impulse/momentum): \"Weight of a body of mass 1 kg on earth is 9.8 N.\" (c) The symbol of metre is lower-case m (M is not a unit symbol): \"Its maximum depth is estimated to be around 10,984 m.\"",
+    "keyPoints": [
+      "Kelvin is written K (capital), not k",
+      "Weight is in newton (N), not N s",
+      "Metre is written m (lower case), not M"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-058",
+    "chapter": "Motion in One Dimension",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Derive the first equation of motion, v = u + at, by the graphical method.",
+    "modelAnswer": "Consider a body moving with uniform acceleration a, initial velocity u and velocity v after time t. Draw its velocity-time graph: a straight line AB, where point A (0, u) is on the velocity axis and B (t, v). Draw BC perpendicular to the time axis and AD parallel to the time axis, meeting BC at D. Then OA = DC = u, BC = v and AD = OC = t. Acceleration = slope of the v-t graph = BD/AD = (BC − DC)/AD = (v − u)/t. So a = (v − u)/t ⇒ v = u + at.",
+    "keyPoints": [
+      "v-t graph is a straight line from (0, u) to (t, v)",
+      "Slope of the v-t graph = acceleration",
+      "a = (v − u)/t, rearranged to v = u + at"
+    ]
+  },
+  {
+    "id": "sa-ix-phy-059",
+    "chapter": "Sound",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Answer the following questions related to the bell jar experiment. (a) What does the bell jar experiment demonstrate? (b) What happens to the sound of the bell when air is removed? (c) Will the sound of the bell be heard sooner if the jar is filled with warm air? Justify your answer.",
+    "modelAnswer": "(a) It demonstrates that sound needs a material medium to travel; sound cannot travel through a vacuum. (b) As the air is pumped out of the jar, the sound of the ringing bell becomes fainter and fainter, and when nearly all the air is removed it is barely heard, although the hammer is still seen striking the gong. (c) Yes. The speed of sound in a gas increases with temperature (about 0.61 m/s per °C rise in air), so in warm air the sound travels faster and reaches the listener sooner (though over the small size of a jar the difference is tiny).",
+    "keyPoints": [
+      "Sound requires a material medium; it cannot travel through vacuum",
+      "Sound becomes fainter as air is removed",
+      "Speed of sound increases with temperature, so warm air carries it faster"
+    ]
   }
 ]
