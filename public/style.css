@@ -211,7 +211,12 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 
 .streak-banner {
   display: flex; align-items: flex-start; gap: 12px;
-  border-left: 4px solid var(--primary); background: var(--primary-soft);
+  background: var(--brand-grad); border: none; color: var(--white);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--brand-grad-start) 30%, transparent);
+}
+.streak-banner .streak-count, .streak-banner .streak-sub,
+.streak-arena-card .arena-card-title, .streak-arena-card .arena-card-sub {
+  color: var(--white); text-shadow: 0 1px 3px color-mix(in srgb, var(--primary-dark) 45%, transparent);
 }
 .streak-flame { font-size: 22px; line-height: 1; flex-shrink: 0; }
 .streak-body  { flex: 1; min-width: 0; }
@@ -219,9 +224,9 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .streak-sub   { margin: 0; font-size: var(--fs-ui); color: var(--text-light); }
 .streak-goal-bar {
   margin-top: 8px; height: 6px; border-radius: var(--radius-pill);
-  background: var(--border); overflow: hidden;
+  background: rgba(255,255,255,.35); overflow: hidden;
 }
-.streak-goal-fill { height: 100%; background: var(--primary); border-radius: var(--radius-pill); transition: width var(--tx-slow) ease; }
+.streak-goal-fill { height: 100%; background: var(--white); border-radius: var(--radius-pill); transition: width var(--tx-slow) ease; }
 .streak-goal-fill.met { background: var(--success); }
 
 .subj-grid {
@@ -236,16 +241,18 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   .subj-grid { grid-template-columns: 1fr; }
 }
 .subj-card {
-  display: flex; flex-direction: column; gap: 12px; padding: 18px;
+  display: flex; flex-direction: column; gap: 12px; padding: 18px; overflow: hidden;
   transition: box-shadow var(--tx-base), transform var(--tx-base);
 }
 .subj-card:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,.10);
   transform: translateY(-2px);
 }
-.subj-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
-.subj-head h3 { margin: 0; font-size: var(--fs-card); }
-.subj-meta { font-size: var(--fs-note); color: var(--text-light); text-align: right; }
+.subj-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+  margin: -18px -18px 0; padding: 12px 18px; background: var(--brand-grad); }
+.subj-head h3 { margin: 0; font-size: var(--fs-card); color: var(--white);
+  text-shadow: 0 1px 3px color-mix(in srgb, var(--primary-dark) 45%, transparent); }
+.subj-meta { font-size: var(--fs-note); color: var(--white); text-align: right; }
 
 .subj-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
 .act-btn { text-align: center; padding: 8px 10px; font-size: var(--fs-ui); }
@@ -597,6 +604,7 @@ kbd {
 /* Compact streak + arena row inside heading */
 .home-top-cards {
   display: flex; gap: 8px; align-items: stretch; flex: 1; min-width: 0; overflow: hidden;
+  padding: 4px 10px 12px; margin: -4px -10px -12px;
 }
 .home-top-cards .streak-banner {
   flex: 1 1 0; min-width: 0; max-width: 260px;
@@ -907,9 +915,12 @@ kbd {
 .streak-arena-half { flex: 1 1 0; min-width: 0; display: flex; }
 .streak-arena-half .streak-banner { flex: 1; margin: 0; }
 .streak-arena-card { flex: 1; display: flex; align-items: center; gap: 14px;
-  cursor: pointer; text-decoration: none; color: inherit;
-  transition: border-color var(--tx-base), background var(--tx-base); }
-.streak-arena-card:hover { border-color: var(--correct-em); background: var(--badge-t-bg); }
+  cursor: pointer; text-decoration: none; color: var(--white);
+  background: var(--brand-grad); border: none;
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--brand-grad-start) 30%, transparent);
+  transition: box-shadow var(--tx-base), transform var(--tx-base); }
+.streak-arena-card:hover { transform: translateY(-1px);
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--brand-grad-start) 45%, transparent); }
 .arena-card-icon { font-size: var(--fs-sec); line-height: 1; flex-shrink: 0; }
 .arena-card-body { display: flex; flex-direction: column; gap: 3px; }
 .arena-card-title { font-weight: 800; font-size: var(--fs-btn); margin: 0; }
