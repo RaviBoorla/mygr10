@@ -1,6 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <!-- Background -->
-  <rect width="1200" height="630" fill="#d62828"/>
+  <!-- Background: Diwali red-orange-yellow -->
+  <defs>
+    <linearGradient id="festive" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff1744"/>
+      <stop offset="0.55" stop-color="#ff6d00"/>
+      <stop offset="1" stop-color="#ffd600"/>
+    </linearGradient>
+    <filter id="ts"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#960014" flood-opacity="0.35"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#festive)"/>
+  <circle cx="1010" cy="90" r="6" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="560" cy="40" r="4" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="1120" cy="380" r="5" fill="rgba(255,255,255,0.5)"/>
+  <circle cx="150" cy="560" r="5" fill="rgba(255,255,255,0.45)"/>
 
   <!-- Subtle grid lines -->
   <line x1="0" y1="210" x2="1200" y2="210" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
@@ -18,20 +30,20 @@
   </g>
 
   <!-- Wordmark -->
-  <text x="340" y="305" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+  <text filter="url(#ts)" x="340" y="305" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="148" font-weight="800" fill="#ffffff" letter-spacing="-4">Rise</text>
 
   <!-- Divider -->
   <rect x="90" y="430" width="1020" height="3" rx="2" fill="rgba(255,255,255,0.25)"/>
 
   <!-- Tagline line 1 -->
-  <text x="90" y="505" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+  <text filter="url(#ts)" x="90" y="505" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="36" font-weight="500" fill="rgba(255,255,255,0.92)" letter-spacing="0.3">
     Class X &amp; XII · CBSE / ICSE · Board Prep
   </text>
 
   <!-- Tagline line 2 -->
-  <text x="90" y="565" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+  <text filter="url(#ts)" x="90" y="565" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
         font-size="30" font-weight="400" fill="rgba(255,255,255,0.65)" letter-spacing="0.2">
     MCQs · Short Answers · Solved Exercises · Revision Notes · Career Pathing
   </text>
