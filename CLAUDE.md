@@ -72,6 +72,10 @@ Always commit and push directly to `main`. Never push to a feature branch.
   (social share preview, with a fresh `?v=`) and the PWA icons (needs Playwright).
   Never hardcode a brand hex anywhere else; use `var(--primary)`, `var(--brand-logo)`
   etc. (`color-mix()` for translucent shades). `npm run check` fails if they drift.
+  Saved palettes are in `scripts/brand-presets.json`: **`original` is the original
+  blue Rise branding** (`#2563eb`), `diwali` is the festive red/orange/yellow.
+  Switch with `npm run brand -- --preset original` (then `npm run stamp`).
+  The exact pre-Diwali code is also tagged in git as `brand-original-blue`.
 - Don't hand-edit `?v=` numbers on script/style tags. After changing any file
   under `public/`, run `npm run stamp` — it sets each `?v=` to a hash of the file.
 - Before pushing, run `npm run check` (question banks + stamps). CI

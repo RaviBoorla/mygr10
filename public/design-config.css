@@ -24,7 +24,9 @@
      (or a var() of one). After editing, run `npm run brand`: it copies these
      into everything CSS can't reach — <meta name="theme-color">, manifest.json,
      favicon.svg, og-image.svg/.png (social share preview) and the PWA icons.
-     `npm run check` fails if those are out of sync with this block. */
+     `npm run check` fails if those are out of sync with this block.
+     Saved palettes live in scripts/brand-presets.json — "original" is the
+     original blue Rise branding. Switch with: npm run brand -- --preset original */
   --primary:         #d62828;   /* buttons, links, headings, theme-color */
   --primary-dark:    #a4161a;   /* hover states, text shadows */
   --primary-soft:    #fff0e0;   /* tinted backgrounds, selected states */

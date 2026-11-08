@@ -3,6 +3,8 @@
 // <meta name="theme-color">, manifest.json, favicon.svg, og-image.svg/.png and PWA icons.
 //   node scripts/brand.mjs          rewrite files and re-render PNGs (needs Playwright)
 //   node scripts/brand.mjs --check  exit 1 if anything is out of sync (CI, no Playwright)
+//   node scripts/brand.mjs --preset original   apply a named palette from brand-presets.json first
+//   node scripts/brand.mjs --list   show available presets
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -63,6 +65,26 @@ function textFiles(t) {
 
 const ogHash = () => createHash('sha256').update(readFileSync(join(PUBLIC, 'og-image.png'))).digest('hex').slice(0, 8);
 const stampOg = html => html.replace(/og-image\.png\?v=\w+/g, `og-image.png?v=${ogHash()}`);
+
+const PRESETS = JSON.parse(readFileSync(join(ROOT, 'scripts', 'brand-presets.json'), 'utf8'));
+if (process.argv.includes('--list')) {
+  for (const [name, p] of Object.entries(PRESETS)) console.log(`${name.padEnd(10)} ${p.description}`);
+  process.exit(0);
+}
+const presetArg = process.argv[process.argv.indexOf('--preset') + 1];
+if (process.argv.includes('--preset')) {
+  const preset = PRESETS[presetArg];
+  if (!preset) { console.error(`Unknown preset "${presetArg}". Available: ${Object.keys(PRESETS).join(', ')}`); process.exit(1); }
+  const path = join(PUBLIC, 'design-config.css');
+  let css = readFileSync(path, 'utf8');
+  for (const [name, value] of Object.entries(preset.tokens)) {
+    const re = new RegExp(`(--${name}:\\s*)[^;]+;`);
+    if (!re.test(css)) { console.error(`design-config.css has no --${name}`); process.exit(1); }
+    css = css.replace(re, `$1${value};`);
+  }
+  writeFileSync(path, css);
+  console.log(`Applied preset "${presetArg}" to design-config.css`);
+}
 
 const t = tokens();
 const files = textFiles(t);
