@@ -66,6 +66,12 @@ Always commit and push directly to `main`. Never push to a feature branch.
   completed, matching its existing terse `*(done)*` / `*(in progress)*` style.
 - Cloudflare Pages serves `public/` directly (`wrangler.toml`). The only
   server-side code is `functions/api/chat.js` (Cloé's AI relay).
+- Brand colours live only in the Brand block of `public/design-config.css`.
+  To rebrand, edit that block and run `npm run brand` — it rewrites
+  `<meta name="theme-color">`, `manifest.json`, `favicon.svg`, `og-image.svg`/`.png`
+  (social share preview, with a fresh `?v=`) and the PWA icons (needs Playwright).
+  Never hardcode a brand hex anywhere else; use `var(--primary)`, `var(--brand-logo)`
+  etc. (`color-mix()` for translucent shades). `npm run check` fails if they drift.
 - Don't hand-edit `?v=` numbers on script/style tags. After changing any file
   under `public/`, run `npm run stamp` — it sets each `?v=` to a hash of the file.
 - Before pushing, run `npm run check` (question banks + stamps). CI

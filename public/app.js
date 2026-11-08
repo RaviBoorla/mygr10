@@ -238,7 +238,7 @@ const app = {
     const logoAttrs = inTest ? 'aria-disabled="true"' : `onclick="app.go(['home'])" title="Home"`;
     const logo = `<button class="hdr-logo" ${logoAttrs}>
       <svg class="logo-icon" width="20" height="20" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="7" fill="#d62828"/>
+        <rect class="brand-logo-bg" width="32" height="32" rx="7"/>
         <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
         <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
         <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>

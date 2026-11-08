@@ -19,15 +19,22 @@
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  /* ── Brand ── */
-  --primary:       #d62828;   /* Diwali red */
-  --primary-dark:  #a4161a;
-  --primary-soft:  #fff0e0;   /* warm marigold tint */
-  --accent:        #ff6d00;   /* Diwali orange */
-  --festive-red:    #ff1744;  /* fluorescent festive gradient stops */
-  --festive-orange: #ff6d00;
-  --festive-yellow: #ffd600;
-  --festive-grad:   linear-gradient(135deg, var(--festive-red) 0%, var(--festive-orange) 55%, var(--festive-yellow) 100%);
+  /* ── Brand ──
+     THE place to change brand colours. Every value here must be a #rrggbb hex
+     (or a var() of one). After editing, run `npm run brand`: it copies these
+     into everything CSS can't reach — <meta name="theme-color">, manifest.json,
+     favicon.svg, og-image.svg/.png (social share preview) and the PWA icons.
+     `npm run check` fails if those are out of sync with this block. */
+  --primary:         #d62828;   /* buttons, links, headings, theme-color */
+  --primary-dark:    #a4161a;   /* hover states, text shadows */
+  --primary-soft:    #fff0e0;   /* tinted backgrounds, selected states */
+  --accent:          #ff6d00;   /* secondary highlight */
+  --brand-tint:      #fff8c4;   /* second stop of selected-option tint */
+  --brand-grad-start:#ff1744;   /* hero / share-image / header-strip gradient */
+  --brand-grad-mid:  #ff6d00;
+  --brand-grad-end:  #ffd600;
+  --brand-logo:      var(--brand-grad-start);   /* logo square, favicon, app icons */
+  --brand-grad:      linear-gradient(135deg, var(--brand-grad-start) 0%, var(--brand-grad-mid) 55%, var(--brand-grad-end) 100%);
 
   /* ── Surface & text ── */
   --bg:            #fff7ed;

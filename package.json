@@ -10,9 +10,10 @@
     "dev": "npx serve public",
     "deploy": "wrangler pages deploy public",
     "stamp": "node scripts/stamp-versions.mjs",
-    "check": "node scripts/check-banks.mjs && node scripts/stamp-versions.mjs --check",
+    "check": "node scripts/check-banks.mjs && node scripts/brand.mjs --check && node scripts/stamp-versions.mjs --check",
     "test:smoke": "node tests/smoke.test.mjs",
-    "test:rules": "tests/node_modules/.bin/firebase emulators:exec --only firestore --project demo-rise \"node tests/firestore-rules.test.mjs\""
+    "test:rules": "tests/node_modules/.bin/firebase emulators:exec --only firestore --project demo-rise \"node tests/firestore-rules.test.mjs\"",
+    "brand": "node scripts/brand.mjs"
   },
   "engines": {
     "node": ">=18"
