@@ -37,7 +37,8 @@ body {
   height: var(--header-h);
   padding: 0 16px;
   background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 3px solid var(--primary);
+  border-image: linear-gradient(90deg, var(--primary), var(--accent), #f59e0b) 1;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -122,7 +123,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 
 .btn.primary {
-  background: var(--primary); color: var(--white); border-color: var(--primary); text-align: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent)); color: var(--white); border-color: var(--primary); text-align: center;
 }
 .btn.primary:hover:not(:disabled) { background: var(--primary-dark); border-color: var(--primary-dark); }
 .btn.small { padding: 7px 14px; font-size: var(--fs-ui); text-align: center; flex-shrink: 0; }
@@ -984,7 +985,7 @@ kbd {
   background: transparent;
   transition: background .15s;
 }
-.ai-resize-handle:hover { background: var(--primary-soft, rgba(37,99,235,.15)); }
+.ai-resize-handle:hover { background: var(--primary-soft, rgba(214,40,40,.15)); }
 .ai-resize-handle { display: none; }
 
 .ai-header {
@@ -1096,8 +1097,8 @@ kbd {
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-.ai-math-sym:hover { background: var(--surface-alt, var(--surface)); border-color: var(--accent, #6366f1); }
-.ai-math-btn-active { background: var(--accent, #6366f1) !important; color: #fff !important; }
+.ai-math-sym:hover { background: var(--surface-alt, var(--surface)); border-color: var(--accent, #ea580c); }
+.ai-math-btn-active { background: var(--accent, #ea580c) !important; color: #fff !important; }
 .ai-math-block { display: block; text-align: center; margin: 6px 0; overflow-x: auto; }
 .ai-math-fb, .rise-math-fb { font-family: monospace; opacity: .8; }
 
@@ -1116,7 +1117,7 @@ kbd {
 .ai-label:first-child { margin-top: 0; }
 .ai-config-help { margin: 6px 0 0; font-size: var(--fs-sm); line-height: 1.5; color: var(--text-light); }
 .ai-config-help a { color: var(--primary); font-weight: 600; white-space: nowrap; }
-.ai-config-note { margin: 0 0 4px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--primary-soft, rgba(37,99,235,.08)); color: var(--text); font-size: var(--fs-sm); line-height: 1.5; }
+.ai-config-note { margin: 0 0 4px; padding: 10px 12px; border-radius: var(--radius-sm); background: var(--primary-soft, rgba(214,40,40,.08)); color: var(--text); font-size: var(--fs-sm); line-height: 1.5; }
 .ai-input {
   width: 100%; padding: 8px 10px; border-radius: 8px;
   border: 1px solid var(--border); background: var(--bg); color: var(--text);
@@ -1547,12 +1548,12 @@ kbd {
 /* ── PWA Install Banner & Modal ─────────────────────────────────────────── */
 .install-banner {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  background: var(--primary, #2563eb); color: #fff;
+  background: var(--primary, #d62828); color: #fff;
   padding: 10px 14px; border-radius: 10px; margin-bottom: 14px;
   font-size: var(--fs-sm);
 }
 .install-banner span { flex: 1; min-width: 0; }
-.install-banner .btn { flex-shrink: 0; background: #fff; color: var(--primary, #2563eb); border: none; }
+.install-banner .btn { flex-shrink: 0; background: #fff; color: var(--primary, #d62828); border: none; }
 .install-banner-close {
   background: none; border: none; color: #fff; font-size: 1rem;
   cursor: pointer; padding: 2px 4px; flex-shrink: 0; opacity: .8;

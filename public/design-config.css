@@ -20,14 +20,15 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ── Brand ── */
-  --primary:       #2563eb;
-  --primary-dark:  #1d4ed8;
-  --primary-soft:  #eff6ff;
+  --primary:       #d62828;   /* Diwali red */
+  --primary-dark:  #a4161a;
+  --primary-soft:  #fff1e6;   /* warm marigold tint */
+  --accent:        #ea580c;   /* Diwali orange */
 
   /* ── Surface & text ── */
-  --bg:            #f1f5f9;
+  --bg:            #fff7ed;
   --surface:       #ffffff;
-  --border:        #e2e8f0;
+  --border:        #fde0c8;
   --text:          #1a1a1a;  /* grey-90 */
   --text-light:    #4d4d4d;  /* 70% grey — was a lighter #64748b, too faint for
                                 subject-box captions, sub-heads and the header path */
@@ -68,7 +69,7 @@
   --tile-weak-fg:  #92400e;   /* shares resume amber */
 
   /* ── Explanation block ── */
-  --explain-bg:    #f8fafc;
+  --explain-bg:    #fffaf5;
 
   /* ── Overlays ── */
   --overlay:        rgba(15, 23, 42, .5);    /* modal backdrop */
