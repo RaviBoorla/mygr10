@@ -113,11 +113,11 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 
 Class IX has no CISCE board exam, so there is no official past-paper corpus.
 These banks are built from one school's (Greenwood High) internal Grade IX
-unit-test and term-exam papers, 2020-21 to 2024-25 (UT1, UT2, T1/Term 1, AE/annual).
-The papers carry no answer key: every correct option, distractor, explanation and
-model answer was authored and checked by hand. Each question has
-`"source": "School Practice <TERM> <year>"` (e.g. `School Practice AE 2024-25`) and
-never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge. The
+unit-test and term-exam papers, 2020-21 to 2025-26 (UT1, UT2, T1/Term 1, AE/annual),
+plus CISCE Specimen papers. The papers carry no answer key: every correct option,
+distractor, explanation and model answer was authored and checked by hand. Each question
+has `"source": "School Practice <TERM> <year>"` or `"source": "CISCE Specimen <year>"`
+and never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge. The
 home screen shows a "Practice Questions" banner and labels the Short Answers
 button "Practice Short Answers" for this class.
 
@@ -131,15 +131,15 @@ Commercial Applications, Physical Education, Mass Media, Robotics & AI.
 
 | Subject | MCQ file | MCQs | Short Answers file | SAs |
 |---|---|---|---|---|
-| Mathematics | `IX-ICSE-Mathematics.json` | 258 | `IX-ICSE-Mathematics-ShortAnswers.json` | 39 |
-| Physics | `IX-ICSE-Physics.json` | 309 | `IX-ICSE-Physics-ShortAnswers.json` | 54 |
-| Chemistry | `IX-ICSE-Chemistry.json` | 350 | `IX-ICSE-Chemistry-ShortAnswers.json` | 54 |
-| Biology | `IX-ICSE-Biology.json` | 201 | `IX-ICSE-Biology-ShortAnswers.json` | 47 |
-| History & Civics | `IX-ICSE-History-Civics.json` | 116 | `IX-ICSE-History-Civics-ShortAnswers.json` | 50 |
-| Geography | `IX-ICSE-Geography.json` | 150 | `IX-ICSE-Geography-ShortAnswers.json` | 59 |
-| English | `IX-ICSE-English.json` | 110 | `IX-ICSE-English-ShortAnswers.json` | 54 |
-| Economics | `IX-ICSE-Economics.json` | 98 | `IX-ICSE-Economics-ShortAnswers.json` | 46 |
-| Computer Science | `IX-ICSE-Computer-Science.json` | 123 | `IX-ICSE-Computer-Science-ShortAnswers.json` | 74 |
+| Mathematics | `IX-ICSE-Mathematics.json` | 316 | `IX-ICSE-Mathematics-ShortAnswers.json` | 60 |
+| Physics | `IX-ICSE-Physics.json` | 370 | `IX-ICSE-Physics-ShortAnswers.json` | 59 |
+| Chemistry | `IX-ICSE-Chemistry.json` | 411 | `IX-ICSE-Chemistry-ShortAnswers.json` | 60 |
+| Biology | `IX-ICSE-Biology.json` | 316 | `IX-ICSE-Biology-ShortAnswers.json` | 62 |
+| History & Civics | `IX-ICSE-History-Civics.json` | 158 | `IX-ICSE-History-Civics-ShortAnswers.json` | 82 |
+| Geography | `IX-ICSE-Geography.json` | 224 | `IX-ICSE-Geography-ShortAnswers.json` | 77 |
+| English | `IX-ICSE-English.json` | 241 | `IX-ICSE-English-ShortAnswers.json` | 68 |
+| Economics | `IX-ICSE-Economics.json` | 157 | `IX-ICSE-Economics-ShortAnswers.json` | 78 |
+| Computer Science | `IX-ICSE-Computer-Science.json` | 182 | `IX-ICSE-Computer-Science-ShortAnswers.json` | 97 |
 
 History & Civics questions carry a `subject` field (`History`/`Civics`).
 
