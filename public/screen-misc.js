@@ -9,7 +9,7 @@ Object.assign(app, {
             <div class="welcome-left-inner">
             <div class="welcome-logo">
               <svg class="welcome-logo-icon" width="48" height="48" viewBox="0 0 32 32" aria-hidden="true">
-                <rect width="32" height="32" rx="7" fill="#d62828"/>
+                <rect width="32" height="32" rx="7" fill="#ff1744"/>
                 <rect x="5"  y="22" width="5" height="5"  rx="1.5" fill="rgba(255,255,255,0.55)"/>
                 <rect x="13" y="17" width="5" height="10" rx="1.5" fill="rgba(255,255,255,0.78)"/>
                 <rect x="21" y="11" width="5" height="16" rx="1.5" fill="#ffffff"/>

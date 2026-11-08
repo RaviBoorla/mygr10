@@ -22,8 +22,12 @@
   /* ── Brand ── */
   --primary:       #d62828;   /* Diwali red */
   --primary-dark:  #a4161a;
-  --primary-soft:  #fff1e6;   /* warm marigold tint */
-  --accent:        #ea580c;   /* Diwali orange */
+  --primary-soft:  #fff0e0;   /* warm marigold tint */
+  --accent:        #ff6d00;   /* Diwali orange */
+  --festive-red:    #ff1744;  /* fluorescent festive gradient stops */
+  --festive-orange: #ff6d00;
+  --festive-yellow: #ffd600;
+  --festive-grad:   linear-gradient(135deg, var(--festive-red) 0%, var(--festive-orange) 55%, var(--festive-yellow) 100%);
 
   /* ── Surface & text ── */
   --bg:            #fff7ed;
