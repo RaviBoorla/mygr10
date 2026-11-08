@@ -1,0 +1,2732 @@
+[
+  {
+    "id": "ixcs001",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which keyword in Java represents a set of objects that has common attributes and behaviour?",
+    "options": [
+      "import",
+      "interface",
+      "package",
+      "class"
+    ],
+    "correct": 3,
+    "explanation": "'class' is the Java keyword used to define a blueprint of objects sharing common attributes (fields) and behaviour (methods).",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs002",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which character set is capable of representing almost all writing systems around the world, and is used by Java?",
+    "options": [
+      "ASCII",
+      "ISCII",
+      "Unicode",
+      "EBCDIC"
+    ],
+    "correct": 2,
+    "explanation": "Java uses the 2-byte Unicode character set, which can represent characters from almost every written language in the world.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs003",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "___________ is a word that conveys a special, predefined meaning to the Java compiler.",
+    "options": [
+      "Keyword",
+      "Literal",
+      "Variable",
+      "Operator"
+    ],
+    "correct": 0,
+    "explanation": "A keyword is a reserved word with a special meaning to the compiler (e.g. int, if, class) and cannot be used as an identifier.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs004",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "The character set of Java is ______________.",
+    "options": [
+      "BCD",
+      "Token",
+      "UNICODE",
+      "Primitive"
+    ],
+    "correct": 2,
+    "explanation": "Java's character set is UNICODE, a 2-byte character set covering almost all world languages.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs005",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "The names given to variables, methods, classes, packages, etc. in a Java program are called:",
+    "options": [
+      "Constants",
+      "identifiers",
+      "Literals",
+      "Punctuators"
+    ],
+    "correct": 1,
+    "explanation": "Identifiers are user-defined names given to variables, methods, classes and packages.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs006",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "_________ are non-executable statements in Java.",
+    "options": [
+      "Identifiers",
+      "Expressions",
+      "Comments",
+      "Logical operators"
+    ],
+    "correct": 2,
+    "explanation": "Comments (// or /* */) are ignored by the compiler and do not get executed; they only document the code.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs007",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which of the following are valid comments in Java?\n1. /* comment */\n2. /* comment\n3. // comment\n4. */ comment */",
+    "options": [
+      "Only 1",
+      "1 and 3",
+      "3 and 4",
+      "Only 3"
+    ],
+    "correct": 1,
+    "explanation": "Option 1 is a properly closed multi-line comment and option 3 is a valid single-line comment. Option 2 is never closed, and option 4 starts with an invalid token.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs008",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "The keyword used to bring (call) a package into a Java program is _______.",
+    "options": [
+      "main",
+      "class",
+      "import",
+      "static"
+    ],
+    "correct": 2,
+    "explanation": "The 'import' keyword is used to bring classes of a package into the scope of a program, e.g. import java.util.Scanner;",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs009",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "___________ are the symbols that perform some arithmetic, relational and logical operations in Java.",
+    "options": [
+      "Expressions",
+      "Operators",
+      "Variables",
+      "Operands"
+    ],
+    "correct": 1,
+    "explanation": "Operators are symbols (such as +, >, &&) that act upon operands to perform arithmetic, relational or logical operations.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs010",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "Explicit data values that appear directly in a Java program (such as 12, 'A', 3.14) are called as _________.",
+    "options": [
+      "Literals",
+      "Operators",
+      "Keywords",
+      "Identifiers"
+    ],
+    "correct": 0,
+    "explanation": "Literals are fixed, explicit data values written directly in source code; 12 is an integer literal, 'A' is a character literal, and so on.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs011",
+    "chapter": "Java Fundamentals",
+    "difficulty": "hard",
+    "text": "double CASE = 12;\nSystem.out.println(CASE);\nWhat happens when this code is compiled and run?",
+    "options": [
+      "Displays 12.0",
+      "Causes a run-time error",
+      "Displays the text CASE",
+      "Raises a syntax error because CASE is used as a variable, and 'case' is a keyword"
+    ],
+    "correct": 0,
+    "explanation": "Java is case-sensitive, so 'CASE' (all uppercase) is a perfectly legal identifier, distinct from the lowercase keyword 'case'. The program compiles and prints the double value, 12.0.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs012",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which of the following is not a valid identifier in Java?",
+    "options": [
+      "_cost",
+      "$Amount",
+      "STATIC",
+      "9thclass"
+    ],
+    "correct": 3,
+    "explanation": "An identifier cannot start with a digit, so '9thclass' is invalid. Identifiers may start with a letter, underscore (_) or dollar sign ($).",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs013",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which of the following is a legal identifier in Java?",
+    "options": [
+      "4th Grade",
+      ".Amount",
+      "_mine",
+      "*ToTaL"
+    ],
+    "correct": 2,
+    "explanation": "'_mine' starts with a valid underscore character. The others are illegal: '.Amount' starts with a dot, '4th Grade' starts with a digit and has a space, and '*ToTaL' starts with an invalid symbol.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs014",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "Which of the following is a reserved word in Java but is NOT technically classified as a keyword?",
+    "options": [
+      "super",
+      "null",
+      "static",
+      "final"
+    ],
+    "correct": 1,
+    "explanation": "'null', along with 'true' and 'false', is a reserved literal, not a keyword, even though it cannot be used as an identifier like a keyword.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs015",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid Integer constant in Java?\ni. 4\nii. 4.0\niii. 4.3f\niv. \"four\"",
+    "options": [
+      "Only i",
+      "i and ii",
+      "ii and iv",
+      "i and iii"
+    ],
+    "correct": 0,
+    "explanation": "Only '4' is an integer constant. '4.0' and '4.3f' are floating/float literals, and \"four\" is a String literal.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs016",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "The escape sequence used to move the cursor to a new line in Java is _________.",
+    "options": [
+      "\\ / ",
+      "/N",
+      "\\\\N",
+      "/n"
+    ],
+    "correct": 0,
+    "explanation": "The backslash-n (\\n) escape sequence represents the newline character in Java.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs017",
+    "chapter": "Java Fundamentals",
+    "difficulty": "hard",
+    "text": "Which of the following is NOT a legal basic programming construct?",
+    "options": [
+      "sequence",
+      "jumping",
+      "selection",
+      "iteration"
+    ],
+    "correct": 1,
+    "explanation": "The three legal structured-programming constructs are sequence, selection and iteration (repetition). 'Jumping' (via goto-like statements) is not a recognised structured construct.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs018",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "JVM stands for :",
+    "options": [
+      "Java Virtual Mechanism",
+      "Java Vertical Machine",
+      "Java Virtual Machine",
+      "Java Virtual Manner"
+    ],
+    "correct": 2,
+    "explanation": "JVM stands for Java Virtual Machine, the engine that provides the runtime environment to execute Java bytecode.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs019",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which feature of OOPs describes the reusability of code, where one class can acquire the properties of another?",
+    "options": [
+      "Abstraction",
+      "Inheritance",
+      "Polymorphism",
+      "none of the above"
+    ],
+    "correct": 1,
+    "explanation": "Inheritance lets a class (sub-class) reuse the fields and methods of another class (super-class), enabling code reusability.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs020",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "If a loop does not contain any statement in its body, it is said to be a/an:",
+    "options": [
+      "Time Delay loop",
+      "none",
+      "Empty loop",
+      "both"
+    ],
+    "correct": 2,
+    "explanation": "A loop with no statements inside its body (e.g. for(int i=0;i<1000;i++); ) is called an empty loop.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs021",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "Assertion (A): In Java, non-graphic characters are represented using escape sequences.\nReason (R): Non-graphic characters cannot be printed directly from the keyboard.",
+    "options": [
+      "Both A and R are true and R is a correct explanation of A",
+      "Both A and R are true but R is not a correct explanation of A",
+      "A is true and R is false",
+      "A is false and R is true"
+    ],
+    "correct": 0,
+    "explanation": "Non-graphic characters (like newline, tab) cannot be typed directly, so Java represents them using escape sequences such as \\n and \\t; R correctly explains A.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs022",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "Which of the following constructs is executed depending on the result of a test condition?",
+    "options": [
+      "Relational",
+      "Sequence",
+      "Selection",
+      "None of the above"
+    ],
+    "correct": 2,
+    "explanation": "A selection construct (if-else, switch) chooses between alternative paths of execution based on a test condition.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs023",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a relational operator in Java?",
+    "options": [
+      "<",
+      "||",
+      "!=",
+      ">"
+    ],
+    "correct": 1,
+    "explanation": "|| is the logical OR operator. <, > and != are relational operators used to compare two values.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs024",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "The wrapping up of data and functions (methods) into a single unit (class) is called_______.",
+    "options": [
+      "Polymorphism",
+      "Encapsulation",
+      "Inheritance",
+      "None of the above"
+    ],
+    "correct": 1,
+    "explanation": "Encapsulation is the OOP principle of binding data and the methods that operate on it together inside a single class.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs025",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which of the following is a primitive data type in Java?",
+    "options": [
+      "String",
+      "class",
+      "byte",
+      "array"
+    ],
+    "correct": 2,
+    "explanation": "'byte' is one of Java's eight primitive data types. class, array and String are all reference (non-primitive) types.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs026",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "The act of inheriting the properties of one class into another class is called _________.",
+    "options": [
+      "Encapsulation",
+      "Data Abstraction",
+      "Polymorphism",
+      "Inheritance"
+    ],
+    "correct": 3,
+    "explanation": "Inheritance allows a new class (sub-class) to acquire the properties and behaviours of an existing class (super-class).",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs027",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "What will be the output after evaluating the following?\nint i = 0;\nwhile (i < 3) {\n   System.out.print(i + \" \");\n   i++;\n}",
+    "options": [
+      "1 2 3",
+      "infinite loop",
+      "0 1 2",
+      "0 1 2 3"
+    ],
+    "correct": 2,
+    "explanation": "i starts at 0; the loop prints i and then increments it, running for i=0,1,2 and stopping once i becomes 3 (3<3 is false), giving '0 1 2 '.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs028",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "A class that inherits properties from another class is known as:",
+    "options": [
+      "Super class",
+      "Derived class",
+      "Base class",
+      "all of the above"
+    ],
+    "correct": 1,
+    "explanation": "The class that inherits (extends) properties from another class is called the Derived class (or sub-class/child class).",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs029",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "What will be the data-type of the variable y in the statement:\ny = Math.random();",
+    "options": [
+      "float",
+      "int",
+      "long",
+      "double"
+    ],
+    "correct": 3,
+    "explanation": "Math.random() always returns a double value between 0.0 (inclusive) and 1.0 (exclusive), so y must be declared double.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs030",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "The fall of control from a matched case to the following case(s) in a switch statement, in the absence of a break, is called ________.",
+    "options": [
+      "Runtime error",
+      "Compilation error",
+      "Fall-Through",
+      "Through-fall"
+    ],
+    "correct": 2,
+    "explanation": "When a 'break' is missing, control 'falls through' into the next case's statements — this behaviour is called Fall-Through.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs031",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "The act of representing the essential components of an object while hiding the background implementation details is called:",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Class",
+      "Abstraction"
+    ],
+    "correct": 3,
+    "explanation": "Abstraction means showing only the essential features of an object to the user while hiding the complex implementation details.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs032",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "medium",
+    "text": "Assertion (A): The if-else-if construct is a common programming construct.\nReason (R): The if-else-if construct is based upon a sequence of nested if's.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation of A",
+      "A is true and R is false",
+      "A is false and R is true"
+    ],
+    "correct": 0,
+    "explanation": "The if-else-if ladder is indeed a chain of nested if statements, so R correctly explains why A is true.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs033",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "easy",
+    "text": "Name the package in Java that contains the Scanner class.",
+    "options": [
+      "java.awt",
+      "java.lang",
+      "java.io",
+      "java.util"
+    ],
+    "correct": 3,
+    "explanation": "The Scanner class, used to read input from the keyboard, belongs to the java.util package.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs034",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid method of the Scanner class?",
+    "options": [
+      "nextint()",
+      "nextNumber()",
+      "nextLong()",
+      "NextDouble()"
+    ],
+    "correct": 2,
+    "explanation": "nextLong() is a valid Scanner method used to read a long value. Java method names are case-sensitive, so 'nextint()' and 'NextDouble()' are invalid, and 'nextNumber()' does not exist.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs035",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "easy",
+    "text": "The method of the Scanner class used to accept a decimal (floating-point) value entered by the user is:",
+    "options": [
+      "nextdouble()",
+      "next()",
+      "nextDouble()",
+      "nextfloat()"
+    ],
+    "correct": 2,
+    "explanation": "nextDouble() is the correctly-cased Scanner method used to read a double (decimal) value from the keyboard.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs036",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "medium",
+    "text": "Name the package that contains the BufferedReader class, used to read input in Java.",
+    "options": [
+      "java.lang",
+      "java.io",
+      "java.util",
+      "java.awt"
+    ],
+    "correct": 1,
+    "explanation": "BufferedReader is part of the java.io package, which provides classes for input/output operations.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs037",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "What is the result of the statement:\ndouble x = Math.sqrt(Math.abs(Math.ceil(Math.max(Math.min(144,987),-467))));",
+    "options": [
+      "-467.0",
+      "467.0",
+      "144.0",
+      "12.0"
+    ],
+    "correct": 3,
+    "explanation": "Math.min(144,987)=144; Math.max(144,-467)=144; Math.ceil(144)=144.0; Math.abs(144.0)=144.0; Math.sqrt(144.0)=12.0.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs038",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "double x = 15.5;\nx = (Math.round(Math.pow(((int)Math.max(2, x)), 2)));\nWhat is the new value of x after execution?",
+    "options": [
+      "225.0",
+      "15.0",
+      "240.0",
+      "15.5"
+    ],
+    "correct": 0,
+    "explanation": "Math.max(2,15.5)=15.5; (int)15.5=15; Math.pow(15,2)=225.0; Math.round(225.0)=225, which auto-widens to 225.0 when stored in double x.",
+    "source": "School Practice UT1 2022-23"
+  },
+  {
+    "id": "ixcs039",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "What will System.out.println(Math.floor(23.4)+\"Calling, ByeBye\"+2+2); display?",
+    "options": [
+      "23.0Calling, ByeBye22",
+      "24.0Calling, ByeBye4",
+      "23Calling, ByeBye2",
+      "23.0Calling, ByeBye4"
+    ],
+    "correct": 0,
+    "explanation": "Math.floor(23.4)=23.0; concatenating with the string gives \"23.0Calling, ByeBye\"; then +2 appends \"2\" and +2 again appends another \"2\", giving \"...ByeBye22\" (left-to-right string concatenation, not addition).",
+    "source": "School Practice UT1 2022-23"
+  },
+  {
+    "id": "ixcs040",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "What is the output of:\nSystem.out.println(Math.floor(Math.cbrt(Math.round(26.6))));",
+    "options": [
+      "2.0",
+      "5.0",
+      "3.0",
+      "4.0"
+    ],
+    "correct": 2,
+    "explanation": "Math.round(26.6)=27; Math.cbrt(27.0)=3.0 (since 3*3*3=27); Math.floor(3.0)=3.0.",
+    "source": "School Practice UT2 2023-24"
+  },
+  {
+    "id": "ixcs041",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "What is the result of:\nSystem.out.println(Math.max(Math.abs(2.0),3)+Math.cbrt(8));",
+    "options": [
+      "4.0",
+      "4",
+      "5.0",
+      "5"
+    ],
+    "correct": 2,
+    "explanation": "Math.abs(2.0)=2.0; Math.max(2.0,3)=3.0 (int 3 is promoted to double); Math.cbrt(8)=2.0; 3.0+2.0=5.0.",
+    "source": "School Practice UT2 2024-25"
+  },
+  {
+    "id": "ixcs042",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "What is the result of:\nMath.floor(12.8)+Math.ceil(-13.4)",
+    "options": [
+      "2.0",
+      "0.0",
+      "-1.0",
+      "1.0"
+    ],
+    "correct": 2,
+    "explanation": "Math.floor(12.8)=12.0 (largest integer <= 12.8); Math.ceil(-13.4)=-13.0 (smallest integer >= -13.4); 12.0 + (-13.0) = -1.0.",
+    "source": "School Practice UT2 2024-25"
+  },
+  {
+    "id": "ixcs043",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "hard",
+    "text": "What will be the values stored in x and y after the following statements execute?\ndouble a = -4.56;\nint b = 14;\ndouble x = Math.abs(Math.ceil(a));\ndouble y = Math.floor(Math.max(14.5, b++));",
+    "options": [
+      "x=4.0, y=15.0",
+      "x=4.0, y=14.0",
+      "x=-4.0, y=14.0",
+      "x=4.56, y=14.5"
+    ],
+    "correct": 1,
+    "explanation": "Math.ceil(-4.56)=-4.0; Math.abs(-4.0)=4.0, so x=4.0. b++ uses the current value 14 (promoted to 14.0 for comparison); Math.max(14.5,14.0)=14.5; Math.floor(14.5)=14.0, so y=14.0.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs044",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "The function that returns the nearest previous (smaller) integer value of its argument is :",
+    "options": [
+      "ceil()",
+      "floor()",
+      "abs()",
+      "cbrt()"
+    ],
+    "correct": 1,
+    "explanation": "Math.floor() returns the largest integer that is less than or equal to the given argument, i.e. the nearest previous integer.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs045",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output for a*(++b)%c, if the value of a = 12, b = -3 and c = 13",
+    "options": [
+      "-4",
+      "-11",
+      "3",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "++b makes b=-2; a*b = 12*(-2) = -24; -24 % 13 in Java keeps the sign of the dividend: -24/13 truncates to -1, and -24 - (13*-1) = -11.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs046",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Range of the long data type in Java is approximately ________",
+    "options": [
+      "-10E18 to +10E18",
+      "-2 billion to +2 billion",
+      "-10F18 to +10F18-1",
+      "-2^31 to 2^31-1"
+    ],
+    "correct": 0,
+    "explanation": "long is a 64-bit signed integer type whose range is approximately -9.2 x 10^18 to +9.2 x 10^18, commonly rounded to -10E18 to +10E18.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs047",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "In for loop, if the outer loop executes 10 times and the inner loop executes 15 times for every iteration of the outer loop, the total number of iterations of the inner loop will be_________",
+    "options": [
+      "75 times",
+      "5 times",
+      "150 times",
+      "10 times"
+    ],
+    "correct": 2,
+    "explanation": "The inner loop body runs 15 times for each of the 10 outer iterations, giving a total of 10 x 15 = 150 times.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs048",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "In ______ expressions, the operands are of different data types.",
+    "options": [
+      "Complex",
+      "Pure",
+      "Mixed",
+      "None of the above"
+    ],
+    "correct": 2,
+    "explanation": "A mixed expression is one in which the operands belong to different data types, e.g. an int combined with a double.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs049",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output for:\nSystem.out.println(9+100+\"10\"+\"Computer\"+100+9+\"Application\"+0);",
+    "options": [
+      "10910Computer1009Application0",
+      "910910Computer1009Application0",
+      "100910Computer109Application0",
+      "910010Computer109Application0"
+    ],
+    "correct": 0,
+    "explanation": "9+100=109 (int addition, evaluated before any string is involved). Then string concatenation proceeds left to right: 109+\"10\"=\"10910\", +\"Computer\"=\"10910Computer\", +100=\"10910Computer100\", +9=\"10910Computer1009\", +\"Application\"=\"...Application\", +0=\"...Application0\".",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs050",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int x=15, y=20, z=10;\nz -= (x>y) ? (y++ + ++x) : ( --y - --x );\nSystem.out.println(z);\nWhat is the output?",
+    "options": [
+      "15",
+      "5",
+      "10",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "x>y is 15>20, which is false, so the else branch runs: --y gives 19, --x gives 14; 19-14=5. z -= 5 means z = 10-5 = 5.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs051",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "int a = 10; float b = 25.5f;\nfloat c = a + b;\nThe above code is an example of ________ conversion.",
+    "options": [
+      "Implicit conversion",
+      "Automatic conversion",
+      "Explicit conversion",
+      "Explicit type casting"
+    ],
+    "correct": 1,
+    "explanation": "Since int a is automatically widened to float by the compiler without any explicit cast, this is called Automatic (widening) Conversion.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs052",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Which of the following for loops will execute exactly 13 times?",
+    "options": [
+      "for(int i=3; i<=26; i=i+2)",
+      "for(int i=4; i<39; i=i+4)",
+      "for(int i=3; i<=39; i=i+3)",
+      "All of the above"
+    ],
+    "correct": 2,
+    "explanation": "for(int i=3;i<=39;i=i+3) runs for i=3,6,9,...,39, which is (39-3)/3+1 = 13 iterations. The other two loops run 12 and 9 times respectively.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs053",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which of the following is a unary operator in Java?",
+    "options": [
+      "%",
+      "/",
+      "+",
+      "*"
+    ],
+    "correct": 2,
+    "explanation": "The '+' symbol can act as the unary plus operator (e.g. +5), while /, % and * are strictly binary (arithmetic) operators here.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs054",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "int p = 2;\nint a = p + p++;\nWhat will be the value of variable a after evaluation?",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "3.0"
+    ],
+    "correct": 0,
+    "explanation": "In 'p + p++', the first operand p is read as 2 before any side effect occurs; the second operand p++ also evaluates to the current value 2 (and then increments p to 3). So a = 2 + 2 = 4.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs055",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Which of the following operators has the highest precedence in Java?",
+    "options": [
+      "++",
+      "/",
+      "+",
+      "&&"
+    ],
+    "correct": 0,
+    "explanation": "The increment operator (++) has a higher precedence than the multiplicative (/), additive (+) and logical (&&) operators.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs056",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Name the type of error, if any, in the following statement:\nsystem.out.println(a+b-c);",
+    "options": [
+      "logical",
+      "runtime",
+      "syntax",
+      "no error"
+    ],
+    "correct": 2,
+    "explanation": "Java is case-sensitive; 'system' (lowercase) is not recognised since the class is named 'System'. This is a compile-time syntax error.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs057",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "The following statement represents which type of conversion?\nchar a;\nint c = a;",
+    "options": [
+      "both",
+      "explicit",
+      "none",
+      "implicit"
+    ],
+    "correct": 3,
+    "explanation": "A char can be assigned directly to an int without a cast because char (16-bit, unsigned) always fits within int (32-bit); this automatic widening is an implicit conversion.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs058",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "Predict the output of the following:\nchar st = 'C';\nint r = 2;\nSystem.out.println(st + r++);",
+    "options": [
+      "69",
+      "68",
+      "71",
+      "70"
+    ],
+    "correct": 0,
+    "explanation": "'C' has the ASCII value 67. r++ uses the current value of r (2) in the expression and then increments r. char+int promotes to int: 67+2 = 69.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs059",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid identifier in Java?\n1. '12'\n2. $ab\n3. \"abc\"\n4. a1",
+    "options": [
+      "Only 1.",
+      "1. and 2.",
+      "1. and 3.",
+      "2. and 4."
+    ],
+    "correct": 3,
+    "explanation": "$ab and a1 are valid identifiers. '12' is a character literal and \"abc\" is a string literal, neither of which is a valid identifier.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs060",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "If int p=19, q=25, c=5, then c += (p+q)%7 + q%37 returns:",
+    "options": [
+      "12",
+      "33",
+      "32",
+      "23"
+    ],
+    "correct": 2,
+    "explanation": "(p+q)%7 = 44%7 = 2; q%37 = 25%37 = 25; sum = 2+25 = 27; c += 27 means c = 5+27 = 32.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs061",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output of the following code:\nint ch=23;\nSystem.out.print(ch++);\nSystem.out.println(++ch);",
+    "options": [
+      "2426",
+      "2324",
+      "2323",
+      "2325"
+    ],
+    "correct": 3,
+    "explanation": "ch++ prints the current value 23 and then increments ch to 24. ++ch then increments ch to 25 and prints 25. Combined on one line: '2325'.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs062",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "The smallest integer data type in Java is_____ and its size is _____ bits.",
+    "options": [
+      "byte, 8",
+      "int, 8",
+      "short, 2",
+      "short, 8"
+    ],
+    "correct": 0,
+    "explanation": "byte is the smallest integer primitive type in Java, occupying 8 bits (1 byte), with range -128 to 127.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs063",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "If int x=20, y=7, z=25; then System.out.println((x>=y) || !(z==y) && (z<x)); will result in:",
+    "options": [
+      "0",
+      "true",
+      "2",
+      "false"
+    ],
+    "correct": 1,
+    "explanation": "x>=y (20>=7) is true. Since this is the left operand of ||, Java's short-circuit evaluation means the result of the whole expression is true regardless of the right-hand side.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs064",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "The statement used to immediately stop the execution of a loop or switch construct is :",
+    "options": [
+      "Continue",
+      "STOP",
+      "system.exit(0)",
+      "break"
+    ],
+    "correct": 3,
+    "explanation": "The 'break' statement is used to terminate the execution of the innermost enclosing loop or switch construct.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs065",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "The following code snippet will result in :\nint a=2;\nint res= 12/12%a;",
+    "options": [
+      "2",
+      "1.0",
+      "1",
+      "2.0"
+    ],
+    "correct": 2,
+    "explanation": "12/12 performs integer division giving 1; 1%2 gives 1. Since all operands are int, the result 1 is an int, not 1.0.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs066",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Assertion (A): The while loop is an entry-controlled loop.\nReason (R): The do-while loop is also an entry-controlled loop.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "Both A and R are true but R is not the correct explanation",
+      "A is true and R is false",
+      "A is false and R is true"
+    ],
+    "correct": 2,
+    "explanation": "A is true: while checks its condition before running the body. R is false: do-while is an exit-controlled loop, since its condition is checked after the body executes.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs067",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "The number of bytes occupied by the integer constant 45 stored in a variable are :",
+    "options": [
+      "thirty two bytes",
+      "sixteen bytes",
+      "four bytes",
+      "sixty four bytes"
+    ],
+    "correct": 2,
+    "explanation": "By default, an integer literal like 45 is of type int, which occupies 4 bytes (32 bits) of memory.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs068",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "The output of Math.sqrt(p) + Math.pow(p,q) when p=9.0 and q=2 will be :",
+    "options": [
+      "84.0",
+      "81",
+      "84",
+      "85.0"
+    ],
+    "correct": 0,
+    "explanation": "Math.sqrt(9.0)=3.0; Math.pow(9.0,2)=81.0; 3.0+81.0=84.0 (a double result).",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs069",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int a = -10, b = 5, c = -4, result;\nresult = (++a + b) * c / (a - b) % c;\nSystem.out.println(result);",
+    "options": [
+      "-4",
+      "-10",
+      "-1",
+      "Error message"
+    ],
+    "correct": 2,
+    "explanation": "++a makes a=-9; (++a+b) = -9+5 = -4; *c gives -4*-4=16; (a-b)=-9-5=-14; 16/-14 truncates to -1 (integer division); -1 % -4 = -1.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs070",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "In the following code, what is the condition for the while loop to stop executing?\nint count = 5;\nwhile (count > 0)\n{ System.out.println(count);\n  count-- ; }",
+    "options": [
+      "when count is less than or equal to 0.",
+      "when count is greater than 5.",
+      "when count is equal to 5.",
+      "when count is less than 5."
+    ],
+    "correct": 0,
+    "explanation": "The loop keeps running as long as count > 0, so it stops as soon as count becomes less than or equal to 0.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs071",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "In a for loop statement, which of the following is NOT optional?",
+    "options": [
+      "Initialisation Expression",
+      "Test Expression",
+      "Two Semicolons( ; )",
+      "Update Expression"
+    ],
+    "correct": 2,
+    "explanation": "The initialisation, test and update expressions in a for loop header are all optional, but the two semicolons separating them must always be present.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs072",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "The range of the int data type is ___________ .",
+    "options": [
+      "-2^63 to 2^63-1",
+      "-2^31 to 2^31+1",
+      "-2^31 to 2^31-1",
+      "-2^63 to 2^63+1"
+    ],
+    "correct": 2,
+    "explanation": "int is a 32-bit signed integer type whose range is -2^31 to 2^31-1 (i.e. -2147483648 to 2147483647).",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs073",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "In _______ expressions, all the operands are of the same type.",
+    "options": [
+      "true",
+      "original",
+      "pure",
+      "impure"
+    ],
+    "correct": 2,
+    "explanation": "A pure expression is one in which all the operands belong to the same data type.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs074",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "What is the order of precedence (highest to lowest) of the following operators?\n1. *\n2. +\n3. >\n4. ( )",
+    "options": [
+      "2->1->3->4",
+      "2->3->4->1",
+      "4->1->2->3",
+      "3->4->2->1"
+    ],
+    "correct": 2,
+    "explanation": "Parentheses ( ) are evaluated first, followed by multiplicative (*) operators, then additive (+) operators, and finally relational (>) operators.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs075",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "If an expression contains double, int and float operands together, the whole expression will be promoted into which of these data types?",
+    "options": [
+      "float",
+      "string",
+      "int",
+      "double"
+    ],
+    "correct": 3,
+    "explanation": "In a mixed expression, Java promotes all operands to the data type with the widest range present — here, double, since double is wider than float and int.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs076",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Which of the following is NOT a Relational operator?",
+    "options": [
+      ">=",
+      "!!",
+      "!=",
+      "=="
+    ],
+    "correct": 1,
+    "explanation": "'!!' is not a valid Java operator at all. >=, != and == are all standard relational operators.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs077",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which of the following will be the default value for a character literal (variable) in Java?",
+    "options": [
+      "'0'",
+      "'null'",
+      "0",
+      "\\u0000"
+    ],
+    "correct": 3,
+    "explanation": "The default value of a char variable in Java is the null character, written as the escape sequence \\u0000.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs078",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "Assertion (A): Increment and Decrement are binary operators.\nReason (R): Increment and Decrement operators require only one operand.",
+    "options": [
+      "Both A and R are true and R is a correct explanation of A",
+      "Both A and R are true but R is not a correct explanation of A",
+      "A is true and R is false",
+      "A is false and R is true"
+    ],
+    "correct": 3,
+    "explanation": "A is false: ++ and -- are unary operators, not binary. R is true: they act on just a single operand, which is exactly why they are unary rather than binary.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs079",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a primitive data type in Java?",
+    "options": [
+      "long",
+      "boolean",
+      "byte",
+      "array"
+    ],
+    "correct": 3,
+    "explanation": "long, byte and boolean are all primitive data types in Java. An array is a reference (non-primitive/composite) data type.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs080",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "By default, Java assumes a fractional (decimal-point) number to be of __________ data type unless specified otherwise.",
+    "options": [
+      "double",
+      "int",
+      "float",
+      "long"
+    ],
+    "correct": 0,
+    "explanation": "Any decimal literal (e.g. 3.14) is treated as a double by default, unless explicitly suffixed with 'f'/'F' to make it a float.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs081",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output for the following code:\nSystem.out.println(789+234+\"GreenWood\"+78%10+\"High\"+90+1230);",
+    "options": [
+      "1023GreenWood7810High901230",
+      "1023GreenWood7810High1320",
+      "1023GreenWood8High901230",
+      "1023GreenWood7High901230"
+    ],
+    "correct": 2,
+    "explanation": "789+234=1023 (int addition). 78%10=8 is computed as its own operand (higher precedence than +) before concatenation. Then left-to-right concatenation gives \"1023GreenWood8High901230\".",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs082",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "What happens in the absence of a 'break' statement for a matched case in a switch statement?",
+    "options": [
+      "Program does not get compiled",
+      "break is added automatically",
+      "switch does not get executed",
+      "Fall through condition"
+    ],
+    "correct": 3,
+    "explanation": "Without a break statement, control 'falls through' and continues executing the statements of the next case(s) as well, until a break or the end of the switch is reached.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs083",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Given below is an example of which type of conversion?\nchar ch1 = (char)('g' - 32);",
+    "options": [
+      "Narrowing",
+      "Type promotion",
+      "Widening",
+      "All of the above"
+    ],
+    "correct": 0,
+    "explanation": "'g'-32 is computed as an int (103-32=71); converting this wider int back to the smaller char type with an explicit (char) cast is a narrowing conversion, giving 'G'.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs084",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "medium",
+    "text": "Assertion (A): The expression a+5>c-2 means (a+5)>(c-2).\nReason (R): Relational operators have a lower precedence than arithmetic operators.",
+    "options": [
+      "Both A and R are true and R is a correct explanation of A",
+      "Both A and R are true but R is not a correct explanation of A",
+      "A is false and R is true",
+      "A is true and R is false"
+    ],
+    "correct": 0,
+    "explanation": "Since arithmetic operators (+ and -) bind more tightly than relational operators (>), a+5 and c-2 are each evaluated first and then compared, exactly as A states; R correctly explains why.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs085",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a unary operator?",
+    "options": [
+      "!",
+      "||",
+      "--",
+      "++"
+    ],
+    "correct": 1,
+    "explanation": "|| (logical OR) is a binary operator requiring two operands. ++, -- and ! are all unary operators.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs086",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "Java uses a two-byte character code set that has characters representing most of the world's written languages. Which is this Java character set?",
+    "options": [
+      "ASCII",
+      "ISCII",
+      "UNICODE",
+      "ISO 8859-1"
+    ],
+    "correct": 2,
+    "explanation": "UNICODE is Java's 2-byte character set that can represent characters from virtually all of the world's written languages.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs087",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "for ( int i=52; i>=35; i-- )\n{ System.out.println(i); }\nHow many times will this for loop execute?",
+    "options": [
+      "17",
+      "0",
+      "16",
+      "18"
+    ],
+    "correct": 3,
+    "explanation": "The loop runs for i = 52,51,...,35, which is (52-35)+1 = 18 iterations.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs088",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "Which of the following is an entry-controlled loop?",
+    "options": [
+      "while loop",
+      "for loop",
+      "do-while loop",
+      "Both (a) and (b)"
+    ],
+    "correct": 3,
+    "explanation": "Both the while loop and the for loop check their condition before executing the loop body, making them entry-controlled. The do-while loop checks its condition after the body runs, making it exit-controlled.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs089",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "Read the passage and answer: The do-while loop in Java is similar to the while loop except that the condition is checked after the statements are executed, so the do-while loop guarantees the loop executes at least once. Which of the following is an exit-controlled loop?",
+    "options": [
+      "while loop",
+      "for loop",
+      "do...while loop",
+      "none of the above"
+    ],
+    "correct": 2,
+    "explanation": "The do-while loop checks its test condition only after the loop body has executed at least once, which is why it is classified as an exit-controlled loop.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs090",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "for(int k=1;k<2;k++)\n{ for(int m=1;m<=4;m++)\n    System.out.println(m*2);\n}\nHow many times is the inner loop executed?",
+    "options": [
+      "16",
+      "8",
+      "4",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "The outer loop runs only once (k=1), and for that single pass the inner loop runs for m=1,2,3,4, i.e. 4 times.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs091",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "A continue statement placed in the body of the outer loop of a nested loop structure will skip the current iteration of :",
+    "options": [
+      "Inner loop only",
+      "Outer loop only",
+      "Both loops",
+      "None of these"
+    ],
+    "correct": 1,
+    "explanation": "A continue statement affects only the loop it is directly written inside; placed in the outer loop's body, it skips straight to the outer loop's next iteration, without touching the inner loop's own iterations.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs092",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "How many times will the word JAVA be printed by the following code?\nfor(int i=0;i<3;i++)\n   { for(int j=1;j<4;j++)\n       System.out.println(\"JAVA\");\n   }",
+    "options": [
+      "9",
+      "7",
+      "10",
+      "8"
+    ],
+    "correct": 0,
+    "explanation": "The outer loop runs 3 times (i=0,1,2) and for each of those, the inner loop runs 3 times (j=1,2,3), printing JAVA a total of 3 x 3 = 9 times.",
+    "source": "School Practice UT2 2024-25"
+  },
+  {
+    "id": "ixcs093",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "How many times will the inner and outer loop execute for the following code?\nfor(int m=0;m<3;m++)\n{ for(int n=0;n<2;n++)\n   { int ans=(int)(Math.random()*10); }\n}",
+    "options": [
+      "Inner loop: 6 times, Outer loop: 3 times",
+      "Inner loop: 12 times, Outer loop: 4 times",
+      "Inner loop: 3 times, Outer loop: 6 times",
+      "Inner loop: 6 times, Outer loop: 5 times"
+    ],
+    "correct": 0,
+    "explanation": "The outer loop runs 3 times (m=0,1,2); for each outer pass the inner loop runs 2 times (n=0,1), so the inner loop's body executes 3 x 2 = 6 times in total, and the outer loop itself runs 3 times.",
+    "source": "School Practice UT2 2023-24"
+  },
+  {
+    "id": "ixcs094",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "What is incorrect in the following Java statement?\nfor(int k=2 , k<=10 , ++k)",
+    "options": [
+      "loop counter must be 'i' and not 'k'",
+      "the commas should be semicolons",
+      "there should be a semicolon at the end of the statement",
+      "The increment should always be k++"
+    ],
+    "correct": 1,
+    "explanation": "The three parts of a for loop header (initialisation, condition, update) must be separated by semicolons (;), not commas.",
+    "source": "School Practice UT2 2023-24"
+  },
+  {
+    "id": "ixcs095",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "hard",
+    "text": "How many times will the following loop body repeat, and what values get printed?\nint z = 2;\nwhile (z < 10){\n   if ((z++) % 2 == 0)\n      System.out.println(z);\n}",
+    "options": [
+      "Body runs 4 times; prints 3, 5, 7, 9",
+      "Body runs 8 times; prints 2, 4, 6, 8",
+      "Body runs 10 times; prints 2 to 9",
+      "Body runs 8 times; prints 3, 5, 7, 9"
+    ],
+    "correct": 3,
+    "explanation": "The while condition is checked for z = 2..9, so the body runs 8 times. In each pass, (z++) uses the pre-increment value for the %2 test but z has already advanced by the time it is printed, so the printed values after each even pre-increment check are 3, 5, 7, 9.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs096",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int a=0,p=2,x,n=5;\nfor(x=2;x<=4;x++)\n{\n  if(n%x==0)\n  { a = ++p + p-- + x; break; }\n  else continue;\n}\nSystem.out.println(a);\nSystem.out.println(x + p);",
+    "options": [
+      "0 / 7",
+      "1 / 7",
+      "0 / 5",
+      "5 / 2"
+    ],
+    "correct": 0,
+    "explanation": "n%x is never exactly 0 for x=2,3,4 (5%2=1, 5%3=2, 5%4=1), so the if-branch (and the break) never runs; the for loop keeps using 'continue' until x becomes 5, at which point x<=4 fails. So a stays 0, x ends at 5, p stays 2, giving 0 then 5+2=7.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs097",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "double d = 13.67;\nint k=12,j=10;\nint res = k>10?44:54;\nSystem.out.println(res + (int)d);\nSystem.out.println(\"Java \" + (j<res));\nSystem.out.println(k + j + \"Hello Java\");\nSystem.out.println((char)(k+57) + j);\nSystem.out.println(++k + --j);\nWhat is printed by the five statements, in order?",
+    "options": [
+      "57 / Java true / 22Hello Java / 79 / 22",
+      "57 / Java true / 22Hello Java / E10 / 22",
+      "57 / Java true / 1210Hello Java / 79 / 23",
+      "58 / Java false / 22Hello Java / 79 / 22"
+    ],
+    "correct": 0,
+    "explanation": "k>10 is true so res=44; res+(int)d = 44+13=57. j<res (10<44) is true, giving 'Java true'. k+j is computed as int addition (22) before string concat, giving '22Hello Java'. (k+57)=69 which casts to char 'E'; 'E'+j promotes to int (69+10=79). Finally ++k=13 and --j=9, summing to 22.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs098",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "Assuming p=1:\nint a=1,b=2,c=3;\nchar ch = 'A';\nswitch(p)\n{\n  case 1: a++;\n  case 2: ++b; ch++; break;\n  case 3: c--; ch++;\n}\nSystem.out.println(a + \" \" + b + \" \" + c);\nSystem.out.print(ch);",
+    "options": [
+      "2 3 3 B",
+      "2 2 3 A",
+      "1 3 3 A",
+      "2 3 2 B"
+    ],
+    "correct": 0,
+    "explanation": "p=1 matches case 1 (a becomes 2) and, with no break, falls through into case 2 (b becomes 3, ch becomes 'B'), then hits break. c is never touched, staying 3.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs099",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int sal=3000;\ndouble n=0.0;\nfor(int a=1;a<=2;a++)\n{\n  n = sal>1000?sal-(50.0/100)*sal : sal - 0.2*sal;\n  sal = sal - (int)n;\n}\nSystem.out.println(sal);\nSystem.out.println(n);",
+    "options": [
+      "0 / 750.0",
+      "750 / 750.0",
+      "1500 / 750.0",
+      "750 / 1500.0"
+    ],
+    "correct": 1,
+    "explanation": "Pass 1: sal=3000>1000, so n=3000-1500=1500.0, sal becomes 3000-1500=1500. Pass 2: sal=1500>1000, so n=1500-750=750.0, sal becomes 1500-750=750. Final sal=750 and n=750.0.",
+    "source": "School Practice T1 2020-21"
+  },
+  {
+    "id": "ixcs100",
+    "chapter": "Nested Loops",
+    "difficulty": "hard",
+    "text": "int x,y;\nfor(x=6; x<10; x++)\n{ for(y=4; y<x; y++)\n   { if(x == 7) { break; }\n     System.out.print(y+\" \"); }\n  System.out.println( ); }\nWhat is printed?",
+    "options": [
+      "6 7 8 9 /  /  / ",
+      "4 5 / 4 5 6 / 4 5 6 7 / 4 5 6 7 8",
+      "4 5 6 /  / 4 5 6 7 / 4 5 6 7 8",
+      "4 5  /  / 4 5 6 7  / 4 5 6 7 8 "
+    ],
+    "correct": 3,
+    "explanation": "For x=6, inner loop prints '4 5 '. For x=7, the inner loop breaks on its very first pass (x==7), printing nothing, leaving just a blank line. For x=8, it prints '4 5 6 7 '; for x=9, it prints '4 5 6 7 8 '.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs101",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "char ch = 'P';\nint m = ch;\nm = m + 9;\nSystem.out.println(m + \" \" + ch);",
+    "options": [
+      "89 89",
+      "80 P",
+      "89 P",
+      "P89"
+    ],
+    "correct": 2,
+    "explanation": "'P' has ASCII value 80, so m=80 after the implicit char-to-int conversion. m+9=89. Since ch is still a char in the println, it prints as the character 'P', giving '89 P'.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs102",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "System.out.print(\"J\" + \"j\");\nSystem.out.println('j' + 'J');\nWhat is printed?",
+    "options": [
+      "JjJj",
+      "180Jj",
+      "JjJ",
+      "Jj180"
+    ],
+    "correct": 3,
+    "explanation": "\"J\"+\"j\" concatenates to \"Jj\" (printed with no newline). Then 'j'+'J' adds their ASCII values (106+74=180) since both are char operands with no string involved, and this integer result is printed right after, on the same line: 'Jj180'.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs103",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int x=15, y = -30, z = 11;\ndouble c = y / x + z % 2;\nSystem.out.println (c);\nx = (int)++c - ++x + --y + x++ - y-- + y;\nSystem.out.println (x);\nWhat are the two outputs?",
+    "options": [
+      "-2.0 / -32",
+      "-1.0 / -32",
+      "-1.0 / 0",
+      "-1.0 / 17"
+    ],
+    "correct": 1,
+    "explanation": "y/x = -30/15 = -2 (integer division); z%2 = 11%2 = 1; c = -2+1 = -1.0. Then, evaluating left to right with every increment/decrement taking effect immediately: (int)++c=0, ++x=16, --y=-31, x++=16 (x then 17), y--=-31 (y then -32), final y read as -32. Sum: 0-16-31+16+31-32 = -32.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs104",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "int n=2;\nwhile(n<4)\n{ System.out.println(5+(int)Math.pow(n,2));\n  n++; }\nSystem.out.println(Math.pow(n,-1));\nWhat is printed?",
+    "options": [
+      "9 / 16 / 0.25",
+      "4 / 9 / 0.25",
+      "9 / 14 / 4.0",
+      "9 / 14 / 0.25"
+    ],
+    "correct": 3,
+    "explanation": "n=2: 5+(int)Math.pow(2,2)=5+4=9. n becomes 3, loop continues: 5+(int)Math.pow(3,2)=5+9=14. n becomes 4, loop ends. Math.pow(4,-1)=0.25.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs105",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "int i,j;\nfor (i=3; i<7; i++)\n{\n   for (j=i; j>=3; j--)\n   { System.out.print(j); }\n     System.out.println();\n}\nWhat is printed?",
+    "options": [
+      "3456 / 345 / 34 / 3",
+      "3 / 34 / 345 / 3456",
+      "3 / 43 / 654 / 6543",
+      "3 / 43 / 543 / 6543"
+    ],
+    "correct": 3,
+    "explanation": "For i=3, j runs only 3, printing '3'. For i=4, j runs 4,3 printing '43'. For i=5, j runs 5,4,3 printing '543'. For i=6, j runs 6,5,4,3 printing '6543'.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs106",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "int p=13, q=4, r, s;\nr = ++p - q-- *2;\ns = p/2 * 2 - q--;\nSystem.out.println(r);\nSystem.out.println(s);\n(Given int p = 13, q = 4 initially)",
+    "options": [
+      "5 / 11",
+      "6 / 8",
+      "14 / 6",
+      "6 / 11"
+    ],
+    "correct": 3,
+    "explanation": "++p makes p=14; q-- uses 4 then decrements q to 3, so q--*2=8; r=14-8=6. Next, p/2*2 = 14/2*2=14 (p is still 14); q-- now uses 3 then decrements q to 2; s=14-3=11.",
+    "source": "School Practice UT1 2022-23"
+  },
+  {
+    "id": "ixcs107",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "medium",
+    "text": "int x = 5, y = 2;\nif(1 < 2 && y <= 5)\n   System.out.println(\"Add\"+x+y);\nelse\n   System.out.println(\"Subtract\" + (x - y));\nSystem.out.println(\"Good Job\");\nWhat is printed?",
+    "options": [
+      "AddGood Job",
+      "Subtract3 / Good Job",
+      "Add52 / Good Job",
+      "Add7 / Good Job"
+    ],
+    "correct": 2,
+    "explanation": "1<2 is true and y<=5 (2<=5) is true, so the if-branch runs, printing \"Add\"+5+2 = \"Add52\" (string concatenation, not addition). The 'Good Job' println is a separate statement outside the if-else, so it always executes.",
+    "source": "School Practice UT1 2022-23"
+  },
+  {
+    "id": "ixcs108",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "hard",
+    "text": "int i=1; int y=0;\ndo\n{ y=i++ - --i + i++;\n  if(i%2==0) continue;\n  System.out.println(i+y);\n  y+=5;\n} while(y<=10);\nWhat is printed?",
+    "options": [
+      "5 / 10 / 15",
+      "3 / 7 / 11",
+      "5 / 9 / 13",
+      "1 / 2 / 3"
+    ],
+    "correct": 2,
+    "explanation": "Tracing the three increment/decrement operations each pass shows i advances by 1 net each time and y resets to the small value i-i+i each time; whenever i ends up even the iteration is skipped via continue, and on the odd-i passes the program prints (i+y) as 5, then 9, then 13 before y finally exceeds 10.",
+    "source": "School Practice UT2 2022-23"
+  },
+  {
+    "id": "ixcs109",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "for(int p=2;p<=6;p+=3)\n{ int r=1;\n   for(int q=1; q<=p; q+=2)\n    r=q+r;\n   if(r==4)\n    break;\n   System.out.println(Math.min(p,r));\n}\nWhat is printed?",
+    "options": [
+      "2 / 10",
+      "5 / 10",
+      "4 / 5",
+      "2 / 5"
+    ],
+    "correct": 3,
+    "explanation": "For p=2: inner loop (q=1) gives r=1+1=2; Math.min(2,2)=2. For p=5: inner loop runs q=1,3,5, giving r=1+1+3+5=10; Math.min(5,10)=5. p then becomes 8 and the outer loop ends.",
+    "source": "School Practice UT2 2023-24"
+  },
+  {
+    "id": "ixcs110",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "hard",
+    "text": "public class Demo1\n{ public static void main()\n  { int c=98;\n    char ch1= (char)(c++);\n    int a=20, b=2;\n    if(a%2==0)\n    { b+= a + a++;\n      System.out.println(b);\n    }\n    else\n      System.out.println(a + ++a + a);\n    System.out.println(ch1);\n  }\n}\nWhat is printed?",
+    "options": [
+      "41 / b",
+      "42 / b",
+      "42 / 98",
+      "42 / B"
+    ],
+    "correct": 1,
+    "explanation": "c++ returns 98 (then c becomes 99); (char)98 is 'b', so ch1='b'. a%2==0 is true (a=20); a+a++ reads a as 20 twice (20+20=40, with a becoming 21 only after); b+=40 means b=2+40=42. Finally ch1 ('b') is printed.",
+    "source": "School Practice UT1 2023-24"
+  },
+  {
+    "id": "ixcs111",
+    "chapter": "Nested Loops",
+    "difficulty": "hard",
+    "text": "int x=5, y=10;\nfor(int i=1;i<2;i++)\n{ for(int j=1;j<2;j++)\n  { x = x * 2;\n    if (x < y) {\n      System.out.println(\"x is less than y\");\n      y = y++ * 5;\n    } else {\n      System.out.println(\"x is greater than or equal to y\");\n      x = x++ * y;\n    }\n    System.out.println(\"Value of result is \" + (x+y)); } }\nWhat is printed?",
+    "options": [
+      "x is less than y / Value of result is 150",
+      "x is greater than or equal to y / Value of result is 210",
+      "x is greater than or equal to y / Value of result is 100",
+      "x is greater than or equal to y / Value of result is 110"
+    ],
+    "correct": 3,
+    "explanation": "x becomes 10 (5*2), which is not less than y=10, so the else branch runs: it prints the message, then x=x++*y uses x's pre-increment value 10 (giving x=10*10=100, overwriting the brief increment to 11). Finally it prints 'Value of result is ' + (100+10) = 110.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs112",
+    "chapter": "Nested Loops",
+    "difficulty": "easy",
+    "text": "for(i = 0 ; i < 4 ; i++)\n{\n  for(j = 1 ; j < 4 ; j++)\n  {\n     //statements\n  }\n}\nHow many times in total does the inner loop's body execute?",
+    "options": [
+      "4 times",
+      "16 times",
+      "12 times",
+      "3 times"
+    ],
+    "correct": 2,
+    "explanation": "The inner loop runs 3 times (j=1,2,3) for every one of the 4 passes of the outer loop (i=0,1,2,3), giving 4 x 3 = 12 total executions.",
+    "source": "School Practice AE 2023-24"
+  },
+  {
+    "id": "ixcs113",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "int m=10;\nString res=\"There \"+(m>12/4-1? \"are \"+m+\" Students \":\"is one Student \")+\"in the class\";\nSystem.out.println(res);",
+    "options": [
+      "There is one Student in the class",
+      "There in the class",
+      "There are 10 Students ",
+      "There are 10 Students in the class"
+    ],
+    "correct": 3,
+    "explanation": "12/4-1 = 3-1 = 2 (integer division). m>2 (10>2) is true, so the ternary picks \"are \"+10+\" Students \", giving the full string \"There are 10 Students in the class\".",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs114",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "short a=15, b=10;\nlong c=5;\na=(short)(b++ - c-- + b);\ndouble d=a*b+c/2.0;\nWhat are the final values stored in a and d?",
+    "options": [
+      "a=16, d=178.0",
+      "a=15, d=152.0",
+      "a=16, d=176.0",
+      "a=21, d=178.0"
+    ],
+    "correct": 0,
+    "explanation": "b++ returns 10 (b becomes 11); c-- returns 5 (c becomes 4); the final '+ b' reads the now-updated b (11): 10-5+11=16, so a=16. Then a*b=16*11=176, and c/2.0=4/2.0=2.0, giving d=176.0+2.0=178.0.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs115",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "medium",
+    "text": "char c='D';\nswitch(69-'D')\n{ case 1:\n  case 2 :System.out.println(\"Universe\");\n  case 3: System.out.println(\"Earth\"); break;\n  case 68: System.out.println(\"Mercury\"); break;\n  case 5: System.out.println(\"Venus\");\n  default:System.out.println(\"Satellite\");\n}\nWhat is printed?",
+    "options": [
+      "Earth",
+      "Satellite",
+      "Universe / Earth",
+      "Universe / Earth / Satellite"
+    ],
+    "correct": 2,
+    "explanation": "'D' has ASCII value 68, so 69-'D'=1. This matches case 1, which (with no break) falls through to case 2 (printing 'Universe') and then to case 3 (printing 'Earth'), where the break finally stops execution.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs116",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "hard",
+    "text": "int n=5; double t1=0.0;\ndo\n{ t1=Math.pow(2,n)+2;\n  if(t1>100 && t1%5== 0)\n   break;\n  else if(t1%3==0)\n  { n++; continue; }\n  else\n  { System.out.println(t1); n++; }\n} while(n<=10);\nSystem.out.println(n);\nWhat is printed?",
+    "options": [
+      "34.0 / 66.0 / 7",
+      "34.0 / 130.0 / 7",
+      "66.0 / 7",
+      "34.0 / 7"
+    ],
+    "correct": 3,
+    "explanation": "n=5: t1=2^5+2=34.0, printed, n becomes 6. n=6: t1=2^6+2=66.0, which is divisible by 3, so n becomes 7 and the iteration is skipped via continue (nothing printed). n=7: t1=2^7+2=130.0, which is >100 and divisible by 5, so the loop breaks immediately, leaving n=7.",
+    "source": "School Practice T1 2023-24"
+  },
+  {
+    "id": "ixcs117",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "int i=1, j=1;\nfor(int k=0;k<4;k++)\n{ System.out.print(i*j); }\nWhich do-while loop produces the exact same output as this for loop?",
+    "options": [
+      "int k=1; do { System.out.print(i*j); k++; } while(k<=4);",
+      "int k=0; do { System.out.print(i*j); } while(k<4);",
+      "int k=0; do { System.out.print(i*j); k++; } while(k<4);",
+      "int k=0; do { k++; System.out.print(i*j); } while(k<4);"
+    ],
+    "correct": 2,
+    "explanation": "A for loop's body, then update, then re-test converts directly into a do-while that runs the same body, increments k, and re-checks the same condition (k<4) afterwards.",
+    "source": "School Practice AE 2022-23"
+  },
+  {
+    "id": "ixcs118",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "int p=5, q=20;\nint n = (q - p) > (p - q) ? (q++ - ++p) : (++p - q++);\nSystem.out.println(p+q);\nSystem.out.println(n);\nWhat is printed?",
+    "options": [
+      "27 / 15",
+      "27 / 14",
+      "25 / 14",
+      "20 / 14"
+    ],
+    "correct": 1,
+    "explanation": "(q-p)=15 and (p-q)=-15, so 15>-15 is true, taking the first branch: q++ returns 20 (q becomes 21), ++p returns 6 (p becomes 6); n=20-6=14. Final p=6, q=21, so p+q=27.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs119",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "int m=2;\nfor(int i=1;i<=5;i++)\n{ for(int j=1;j<=i;j++)\n   { System.out.print(Math.abs(j));\n   } System.out.println();\n}\nWhat is printed?",
+    "options": [
+      "1 / 22 / 333 / 4444 / 55555",
+      "12345 / 1234 / 123 / 12 / 1",
+      "1 / 12 / 123 / 1234 / 55555",
+      "1 / 12 / 123 / 1234 / 12345"
+    ],
+    "correct": 3,
+    "explanation": "For each row i (1 to 5), the inner loop prints Math.abs(j) for j=1 up to i, building the increasing triangle 1 / 12 / 123 / 1234 / 12345.",
+    "source": "School Practice AE 2024-25"
+  },
+  {
+    "id": "ixcs120",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "int a=45, b=70;\ndouble x= Math.pow((b-a),0.5) + ++b + --a;\nSystem.out.println(x+a+b);\nWhat is printed?",
+    "options": [
+      "236.0",
+      "225.0",
+      "235.0",
+      "230.0"
+    ],
+    "correct": 2,
+    "explanation": "b-a=25; Math.pow(25,0.5)=5.0 (square root). ++b makes b=71; --a makes a=44. x=5.0+71+44=120.0. Finally x+a+b = 120.0+44+71 = 235.0.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs121",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "char ch = 'Y'; int n = 4;\nn = n + (int)ch;\nchar c = (char)n;\nSystem.out.println((char)((int)c-26));\nSystem.out.println( 10/3 * (int)ch++ % ++n );\nWhat is printed?",
+    "options": [
+      "C / 79",
+      "C / 75",
+      "C / 80",
+      "B / 79"
+    ],
+    "correct": 0,
+    "explanation": "'Y' is ASCII 89, so n=4+89=93; (char)93 is ']'; (int)c-26 = 93-26 = 67, and (char)67 is 'C'. For the second line: ch++ uses ch's value 89 (ch becomes 'Z' afterwards); 10/3=3 (integer division); 3*89=267; ++n makes n=94; 267%94=79.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs122",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "hard",
+    "text": "char ch;\nint x=97;\ndo\n{ ch=(char)x;\n  System.out.print(ch + \" \" );\n  if(x%10 == 0)\n   break;\n  ++x;\n} while(x<=100);\nWhat is printed?",
+    "options": [
+      "a b c d ",
+      "a ",
+      "a b c d e ",
+      "a b c "
+    ],
+    "correct": 0,
+    "explanation": "x goes 97('a'),98('b'),99('c'),100('d'); as soon as x=100 (divisible by 10) the character 'd' is printed and then the loop breaks, so the output is 'a b c d '.",
+    "source": "School Practice T1 2024-25"
+  },
+  {
+    "id": "ixcs123",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "for(x=4;x<7;x++)\n{ if(x==5) break;\n  for(y=4;y<7;y++)\n  { System.out.println(x+\" \"+y); }\n}\nWhat is printed?",
+    "options": [
+      "4 4 / 5 4 / 6 4",
+      "4 4 / 4 5 / 4 6 / 6 4 / 6 5 / 6 6",
+      "5 4 / 5 5 / 5 6",
+      "4 4 / 4 5 / 4 6"
+    ],
+    "correct": 3,
+    "explanation": "For x=4, the inner loop runs fully, printing '4 4', '4 5', '4 6'. For x=5, the if-condition is true, so 'break' immediately terminates the entire outer loop before the inner loop can run again.",
+    "source": "School Practice UT2 2024-25"
+  },
+  {
+    "id": "ixcs124",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "What is Implicit Conversion in Java?",
+    "options": [
+      "Conversion of data from any data type to any data type",
+      "Conversion of data from a higher data type to a lower data type",
+      "Conversion done only with the cast operator",
+      "Conversion of data from a lower data type to a higher data type, done automatically"
+    ],
+    "correct": 3,
+    "explanation": "Implicit (widening) conversion is done automatically by the compiler when a smaller/lower type is converted to a larger/higher type, e.g. int to double.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixcs125",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Assertion (A): Java operators are part of the tokens or lexical units.\nReason (R): Tokens in Java include identifiers, keywords, literals, separators, and operators.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 0,
+    "explanation": "Tokens are the smallest units of a program; operators are one of the token types listed in R, so R correctly explains A.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixcs126",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which operator is used to compare two values for equality in Java?",
+    "options": [
+      "=",
+      "==",
+      "===",
+      "!="
+    ],
+    "correct": 1,
+    "explanation": "== is the relational equality operator. = is assignment, != tests inequality and === does not exist in Java.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixcs127",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "medium",
+    "text": "Consider the following code segment:\nif(a>b)\n  c = a;\nelse\n  c = b;\nIt can be written using the ternary operator as:",
+    "options": [
+      "c = (b > a)?a:b;",
+      "c = (a != b)?a:b;",
+      "c = (a > b)?b:a;",
+      "None of these"
+    ],
+    "correct": 3,
+    "explanation": "The correct form is c = (a > b) ? a : b; (the larger of a and b). Each given option picks the wrong value in some case, so the answer is 'None of these'.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixcs128",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output of the following code segment:\nint a = 5, b = 5;\nint res = a*(b%4) + 3*b++;\nSystem.out.print(a);\nSystem.out.println(res);",
+    "options": [
+      "520",
+      "5 20",
+      "525",
+      "523"
+    ],
+    "correct": 0,
+    "explanation": "b%4 = 1, so a*1 = 5; 3*b++ uses b = 5, giving 15. res = 20. print(a) prints 5 and println(res) prints 20 right after it with no space: 520.",
+    "source": "School Practice UT1 2025-26"
+  },
+  {
+    "id": "ixcs129",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "How many times will the following loop execute?\nint i = 1;\ndo {\n  i++;\n} while (i < 1);",
+    "options": [
+      "3",
+      "0",
+      "1",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "A do-while loop runs its body once before testing. After i++ makes i = 2, the condition 2 < 1 is false, so the body executes exactly once.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixcs130",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "What will be the output of the following code segment?\ndouble z = 7.3;\nSystem.out.println(Math.floor(z) + \" \" + Math.ceil(z) + \" \" + Math.round(z));",
+    "options": [
+      "7.0 8.0 7",
+      "7 8 7",
+      "22.0",
+      "7.0 8.0 7.0"
+    ],
+    "correct": 0,
+    "explanation": "Math.floor(7.3) = 7.0 and Math.ceil(7.3) = 8.0 (both double); Math.round(7.3) returns the long 7. Joined with \" \" strings: 7.0 8.0 7.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixcs131",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output of the following code segment:\nint x = 3, y = 4;\nint result = ++x * y-- - x + y;\nSystem.out.print(x);\nSystem.out.println(\" \" + result);",
+    "options": [
+      "3 15",
+      "4 15",
+      "4 16",
+      "4 13"
+    ],
+    "correct": 1,
+    "explanation": "++x makes x = 4; y-- uses 4 then y becomes 3. result = 4*4 - 4 + 3 = 15. Output: 4 15.",
+    "source": "School Practice UT2 2025-26"
+  },
+  {
+    "id": "ixcs132",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Which of the following is a valid declaration of a boolean variable in Java?",
+    "options": [
+      "boolean b = 'T';",
+      "boolean b = 1;",
+      "boolean b = true;",
+      "boolean b = 2;"
+    ],
+    "correct": 2,
+    "explanation": "A boolean in Java can hold only the literals true or false; numbers and characters cannot be assigned to it.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs133",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "What is the default value of an int variable (instance variable) in Java?",
+    "options": [
+      "null",
+      "undefined",
+      "1",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "Numeric instance variables of type int default to 0. null is the default only for object references.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs134",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "What happens if the condition in a for loop in Java is omitted, e.g. for(int i=1; ; i++)?",
+    "options": [
+      "The loop executes exactly once",
+      "Syntax error",
+      "The loop executes zero times",
+      "The loop executes infinitely"
+    ],
+    "correct": 3,
+    "explanation": "An omitted test expression in a for loop is treated as true, so the loop runs forever unless a break (or return) ends it.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs135",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "What type of error occurs when a program runs but produces incorrect output?",
+    "options": [
+      "Runtime error",
+      "Logical error",
+      "Syntax error",
+      "Compile-time error"
+    ],
+    "correct": 1,
+    "explanation": "A logical error does not stop compilation or execution; the program runs but gives the wrong result because the logic is wrong.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs136",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Which is not a valid loop in Java?",
+    "options": [
+      "do-while",
+      "for",
+      "repeat",
+      "while"
+    ],
+    "correct": 2,
+    "explanation": "Java has only for, while and do-while loops. 'repeat' is not a Java keyword.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs137",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "What is the final value stored in x?\ndouble x = Math.ceil(Math.abs(-6.8));",
+    "options": [
+      "7.0",
+      "6.0",
+      "-6.0",
+      "8.0"
+    ],
+    "correct": 0,
+    "explanation": "Math.abs(-6.8) = 6.8, and Math.ceil(6.8) = 7.0.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs138",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Read the passage and answer the following:\nIt is the ability of a method or data to be processed in more than one form. It is the concept that supports the capability of an object of a class to behave differently in response to a message or action.\nWhich principle of OOP does it represent?",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction",
+      "Encapsulation"
+    ],
+    "correct": 1,
+    "explanation": "Polymorphism ('many forms') lets the same message or method name behave differently depending on the object or arguments.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs139",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Which statement transfers control to the beginning of a loop (the next iteration) in Java?",
+    "options": [
+      "continue",
+      "return",
+      "break",
+      "stop"
+    ],
+    "correct": 0,
+    "explanation": "continue skips the rest of the current iteration and passes control to the next iteration of the loop; break exits the loop.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs140",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "Identify the valid escape sequences in Java:\ni. \\n\nii. \\t\niii. \\x\niv. \\",
+    "options": [
+      "i and ii",
+      "ii and iii",
+      "i, ii and iv",
+      "all of the above"
+    ],
+    "correct": 0,
+    "explanation": "\\n (new line) and \\t (tab) are valid. \\x is not a Java escape sequence, and a lone backslash is not complete (a backslash itself is written \\\\).",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs141",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Assertion (A): A do-while loop executes its body at least once even if the condition is false initially.\nReason (R): In a do-while loop, the condition is checked at the end of each iteration.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A.",
+      "Both A and R are true, but R is not the correct explanation of A.",
+      "A is true, but R is false.",
+      "A is false, but R is true."
+    ],
+    "correct": 0,
+    "explanation": "Because the do-while test comes after the body (exit-controlled), the body always runs once before the first check. R explains A.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs142",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output for the following code snippet:\nint p = 10, q = 4;\nint r = p / q + p % q * q;\nSystem.out.println(r);",
+    "options": [
+      "14",
+      "6",
+      "10",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "p/q = 10/4 = 2 (integer division); p%q = 2 and 2*q = 8. r = 2 + 8 = 10.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs143",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Given the code snippet:\nint x = 10;\nwhile (x != 0) {\n   x -= 2;\n}\nThe loop stops when:",
+    "options": [
+      "x becomes 10",
+      "x becomes 2",
+      "x becomes negative",
+      "x becomes 0"
+    ],
+    "correct": 3,
+    "explanation": "x takes the values 10, 8, 6, 4, 2, 0. When x is 0 the condition x != 0 is false and the loop ends.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs144",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "What will happen if the condition in a do-while loop is always false?",
+    "options": [
+      "Infinite loop",
+      "Compilation error",
+      "The loop executes once",
+      "The loop executes zero times"
+    ],
+    "correct": 2,
+    "explanation": "The body of a do-while executes before the condition is tested, so even with a false condition it runs exactly once.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs145",
+    "chapter": "Java Fundamentals",
+    "difficulty": "medium",
+    "text": "Which of the following is true about bytecode in Java?",
+    "options": [
+      "It is platform-independent.",
+      "The Java compiler produces bytecode.",
+      "It is an intermediate code executed by the JVM.",
+      "All of the above"
+    ],
+    "correct": 3,
+    "explanation": "javac compiles source code into bytecode, an intermediate, platform-independent code that the JVM interprets on any machine. All three statements are true.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs146",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which is not an OOP principle?",
+    "options": [
+      "Inheritance",
+      "Compilation",
+      "Encapsulation",
+      "Polymorphism"
+    ],
+    "correct": 1,
+    "explanation": "Inheritance, polymorphism, encapsulation and abstraction are OOP principles. Compilation is the process of translating source code, not an OOP principle.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs147",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "A switch case statement in Java is a ______ control statement.",
+    "options": [
+      "Selection",
+      "Jump",
+      "Iteration",
+      "Loop"
+    ],
+    "correct": 0,
+    "explanation": "switch selects one of several blocks to execute based on the value of an expression, so it is a selection (decision-making) statement.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs148",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "The Math class belongs to which package in Java?",
+    "options": [
+      "java.util",
+      "java.math",
+      "java.io",
+      "java.lang"
+    ],
+    "correct": 3,
+    "explanation": "Math is in java.lang, which is imported automatically. (java.math contains BigInteger and BigDecimal, not Math.)",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs149",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "What is the order of precedence (highest to lowest) of the following operators?\n1. %\n2. &&\n3. <=\n4. ++",
+    "options": [
+      "2→3→4→1",
+      "2→1→3→4",
+      "4→1→3→2",
+      "4→1→2→3"
+    ],
+    "correct": 2,
+    "explanation": "Unary ++ has the highest precedence, then multiplicative %, then relational <=, then logical &&.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs150",
+    "chapter": "Nested Loops",
+    "difficulty": "hard",
+    "text": "Predict the output:\nint j=1;\nfor (int i = 1; i <= 4; i++) {\n  for (; j <= i; j++) {\n    j++;\n  }\n}\nSystem.out.println(j);",
+    "options": [
+      "4",
+      "5",
+      "6",
+      "Infinite loop"
+    ],
+    "correct": 1,
+    "explanation": "i=1: j=1<=1, body j++ makes 2, update j++ makes 3; 3<=1 is false. i=2: 3<=2 false. i=3: 3<=3, j becomes 4 then 5. i=4: 5<=4 false. j = 5 is printed.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs151",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Predict the output of the following code:\nchar ch = 'A';\nint n = 5;\nn = n + ch;\nchar c = (char) n;\nSystem.out.println((int) c);\nSystem.out.println((char) ((int) c + 2));",
+    "options": [
+      "70\n72",
+      "F\nH",
+      "70\nF",
+      "70\nH"
+    ],
+    "correct": 3,
+    "explanation": "'A' is 65, so n = 70 and c = 'F'. (int)c prints 70; (char)(70 + 2) = (char)72 = 'H'.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs152",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "Predict the output for the following code:\nint a = 8, b = 1;\ndouble y = Math.sqrt(a + b) + a++ + --b;\nSystem.out.println(y + a + b);",
+    "options": [
+      "20.0",
+      "19.0",
+      "11.090",
+      "11.0"
+    ],
+    "correct": 0,
+    "explanation": "Math.sqrt(9) = 3.0; a++ adds 8 (a becomes 9); --b makes b = 0 and adds 0. y = 11.0. y + a + b is numeric addition: 11.0 + 9 + 0 = 20.0.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs153",
+    "chapter": "Nested Loops",
+    "difficulty": "medium",
+    "text": "Give the output of the following program segment:\nint n,k;\nfor(n=1;n<=7;n+=3)\n{\n  for(k=1;k<=3;k++)\n  {\n    if ((n+k) % 2 == 0)\n      break;\n  }\n  System.out.println(n);\n}",
+    "options": [
+      "1\n4",
+      "1\n4\n7",
+      "4\n7",
+      "1\n2\n3"
+    ],
+    "correct": 1,
+    "explanation": "n takes 1, 4, 7. The inner loop only decides when to break; it does not affect the print. Each value of n is printed once: 1, 4, 7.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs154",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "Predict the output of the following code snippet:\ndouble a = 9.0;\ndouble b = 16.0;\ndouble result = Math.sqrt(Math.pow(Math.sqrt(a), Math.sqrt(b)));\nSystem.out.println(result);",
+    "options": [
+      "9.0",
+      "12.0",
+      "3.0",
+      "81.0"
+    ],
+    "correct": 0,
+    "explanation": "Math.sqrt(9.0) = 3.0 and Math.sqrt(16.0) = 4.0; Math.pow(3.0, 4.0) = 81.0; Math.sqrt(81.0) = 9.0.",
+    "source": "School Practice AE 2025-26"
+  },
+  {
+    "id": "ixcs155",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "difficulty": "easy",
+    "text": "Megha knows how to bake cookies in the microwave oven, but she does not know about the internal, unseen components of the microwave oven. Identify the OOPs feature depicted in this scenario.",
+    "options": [
+      "Inheritance",
+      "Polymorphism",
+      "Abstraction",
+      "Modularity"
+    ],
+    "correct": 2,
+    "explanation": "Abstraction shows only the essential features (how to use the oven) and hides the background details (its internal components).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs156",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "medium",
+    "text": "Which Math method accepts a double argument and returns an integer-type value (not a double)?",
+    "options": [
+      "random",
+      "floor",
+      "ceil",
+      "round"
+    ],
+    "correct": 3,
+    "explanation": "Math.round(double) returns a long (an integer type). Math.ceil and Math.floor return double values, and Math.random takes no argument.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs157",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Match the operators in Column A to the type of operators in Column B:\nColumn A: 1. +   2. >   3. &&\nColumn B: (a) Logical   (b) Mathematical   (c) Relational",
+    "options": [
+      "1-(a), 2-(b), 3-(c)",
+      "1-(c), 2-(a), 3-(b)",
+      "1-(b), 2-(a), 3-(c)",
+      "1-(b), 2-(c), 3-(a)"
+    ],
+    "correct": 3,
+    "explanation": "+ is a mathematical (arithmetic) operator, > is relational and && is logical.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs158",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which of the following cannot be used as an identifier in Java?",
+    "options": [
+      "switch",
+      "calculate",
+      "grade",
+      "age"
+    ],
+    "correct": 0,
+    "explanation": "switch is a reserved keyword, and keywords cannot be used as identifiers.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs159",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Which of the following is the correct order of the number of bytes occupied by int, char, double and boolean?",
+    "options": [
+      "2, 1, 4, 8",
+      "4, 8, 1, 2",
+      "4, 2, 8, 1",
+      "2, 8, 4, 1"
+    ],
+    "correct": 2,
+    "explanation": "int = 4 bytes, char = 2 bytes (Unicode), double = 8 bytes, boolean = 1 byte (as taught in the ICSE syllabus).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs160",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "What does the escape sequence \\t represent in Java?",
+    "options": [
+      "form feed",
+      "tab space",
+      "carriage return",
+      "alert bell"
+    ],
+    "correct": 1,
+    "explanation": "\\t inserts a horizontal tab space. Form feed is \\f and carriage return is \\r; Java has no alert-bell escape sequence.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs161",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "The output of the Java statement Math.addExact(7, 9); is ____________.",
+    "options": [
+      "16",
+      "15",
+      "18",
+      "17"
+    ],
+    "correct": 0,
+    "explanation": "Math.addExact returns the sum of its two int arguments: 7 + 9 = 16 (it throws an exception only on overflow).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs162",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "Find the ODD one out of the following:\nint, double, Scanner, char",
+    "options": [
+      "double",
+      "char",
+      "Scanner",
+      "int"
+    ],
+    "correct": 2,
+    "explanation": "int, double and char are primitive data types; Scanner is a class (a non-primitive/reference type).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs163",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "What is the purpose of the if-else-if-else ladder?",
+    "options": [
+      "To declare a variable",
+      "To check for one condition only",
+      "Iteration",
+      "To check multiple conditions sequentially"
+    ],
+    "correct": 3,
+    "explanation": "An if-else-if ladder tests conditions one after another and executes the block of the first true condition (or the final else).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs164",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Evaluate the given expression and identify the result:\n3*5%7+8/3*9",
+    "options": [
+      "19.0",
+      "19",
+      "15",
+      "18"
+    ],
+    "correct": 1,
+    "explanation": "Left to right for * / %: 3*5 = 15, 15%7 = 1; 8/3 = 2 (integer division), 2*9 = 18. 1 + 18 = 19 (an int, not 19.0).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs165",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "easy",
+    "text": "Roy wanted to buy the latest mobile phone. He approached a service provider to get a SIM card with a 10-digit mobile number. Which Scanner class method should be used to accept the mobile number as a number?",
+    "options": [
+      "sc.nextInt( )",
+      "sc.next( ).charAt(0)",
+      "sc.nextLong( )",
+      "sc.next( )"
+    ],
+    "correct": 2,
+    "explanation": "A 10-digit number can exceed the int range (about 2.1 billion), so it must be read as a long with nextLong().",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs166",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "What is the character equivalent of the ASCII code 65?",
+    "options": [
+      "'A'",
+      "'a'",
+      "'Z'",
+      "'6'"
+    ],
+    "correct": 0,
+    "explanation": "ASCII 65 is the uppercase letter 'A'; lowercase 'a' is 97.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs167",
+    "chapter": "Input in Java (Scanner)",
+    "difficulty": "easy",
+    "text": "Fill in the blank to complete the following Java statement:\nScanner SC = __________ Scanner(System.in);",
+    "options": [
+      "Scanner",
+      "new",
+      "class",
+      "dot"
+    ],
+    "correct": 1,
+    "explanation": "An object is created with the new keyword: Scanner SC = new Scanner(System.in);",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs168",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Which of the following loops does NOT execute even once?",
+    "options": [
+      "for(k=100;k>=10;k-=10)",
+      "for(k=10;k<=10;k++)",
+      "for(k=1;k<=10;k++)",
+      "for(k=10;k<=1;k++)"
+    ],
+    "correct": 3,
+    "explanation": "With k = 10 the condition 10 <= 1 is false at the very first test, so the body never runs. The others run 10, 10 and 1 times.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs169",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "hard",
+    "text": "What is the value stored in z?\nz *= z++ + ++z;   where z = 2",
+    "options": [
+      "4",
+      "12",
+      "10",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "z *= expr means z = z * (expr), with the left z (2) taken first. z++ gives 2 (z becomes 3), ++z gives 4. z = 2 * (2 + 4) = 12.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs170",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Name the type of error which occurs while compiling a program.",
+    "options": [
+      "No error",
+      "Runtime error",
+      "Syntax error",
+      "Logical error"
+    ],
+    "correct": 2,
+    "explanation": "Errors detected by the compiler (violations of the language's grammar) are syntax (compile-time) errors.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs171",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "Which Java package is imported by default?",
+    "options": [
+      "java.lang",
+      "java.util",
+      "java.awt",
+      "java.io"
+    ],
+    "correct": 0,
+    "explanation": "java.lang (containing String, Math, System, wrapper classes) is imported automatically into every Java program.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs172",
+    "chapter": "Java Fundamentals",
+    "difficulty": "easy",
+    "text": "What is the full form of JDK?",
+    "options": [
+      "Java Debugging Kernel",
+      "Java Design Kit",
+      "Java Deployment Key",
+      "Java Development Kit"
+    ],
+    "correct": 3,
+    "explanation": "JDK stands for Java Development Kit: the compiler, JVM and tools needed to develop Java programs.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs173",
+    "chapter": "Mathematical Library Methods",
+    "difficulty": "easy",
+    "text": "Which Math method converts -4 to 4?",
+    "options": [
+      "Math.abs()",
+      "Math.ceil()",
+      "Math.sqrt()",
+      "Math.round()"
+    ],
+    "correct": 0,
+    "explanation": "Math.abs() returns the absolute (non-negative) value: Math.abs(-4) = 4.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs174",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "medium",
+    "text": "Evaluate the following expression:\n13*7%6+8/5*7",
+    "options": [
+      "1",
+      "7",
+      "8",
+      "14"
+    ],
+    "correct": 2,
+    "explanation": "13*7 = 91, 91%6 = 1; 8/5 = 1 (integer division), 1*7 = 7. 1 + 7 = 8.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs175",
+    "chapter": "Nested Loops",
+    "difficulty": "easy",
+    "text": "Raj climbs 5 floors by climbing 14 steps to reach each floor. Name the programming concept that can be used to depict this.",
+    "options": [
+      "switch case",
+      "Infinite loop",
+      "Empty loop",
+      "Nested loop"
+    ],
+    "correct": 3,
+    "explanation": "For each of the 5 floors (outer loop), 14 steps are repeated (inner loop): a loop inside a loop, i.e. a nested loop.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs176",
+    "chapter": "Data Types, Variables and Operators",
+    "difficulty": "easy",
+    "text": "What is the value of ch?\nint x = 65;\nchar ch = (char) (x++ + 5);",
+    "options": [
+      "G",
+      "F",
+      "A",
+      "70"
+    ],
+    "correct": 1,
+    "explanation": "x++ uses 65 (then x becomes 66); 65 + 5 = 70, and (char)70 is 'F'.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs177",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "The following method prints the sum of factors of a given number (e.g. for 6 it prints 12 = 1+2+3+6). Choose the correct statements for blanks (1) and (2).\nvoid sumfact(int n)\n{\n  int i, ____(1)____;\n  for(i=1;i<=n;i++)\n  {\n    if(____(2)____)\n      s=s+i;\n  }\n  System.out.println(\"Sum of factors = \"+s);\n}",
+    "options": [
+      "(1) s=0   (2) n%i==0",
+      "(1) s=0   (2) n/i==0",
+      "(1) s=0   (2) i%n==0",
+      "(1) s=1   (2) n%i==0"
+    ],
+    "correct": 0,
+    "explanation": "The sum s must start at 0, and i is a factor of n when n%i==0 (no remainder).",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs178",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "difficulty": "easy",
+    "text": "Given below is a program segment:\nif(a%b==0)\n  System.out.println(a/b);\nelse\n  System.out.println(a%b);\nWhat is the output when (a) a = 50, b = 5 and (b) a = 50, b = 7?",
+    "options": [
+      "(a) 10   (b) 7.14",
+      "(a) 0   (b) 1",
+      "(a) 10   (b) 1",
+      "(a) 10   (b) 7"
+    ],
+    "correct": 2,
+    "explanation": "50%5 is 0, so 50/5 = 10 is printed. 50%7 is 1 (not 0), so the remainder 1 is printed.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs179",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "Give the output of the following program segment (k is an int):\nfor(k=7;k<13;k+=6)\n  System.out.println(k*2);\nSystem.out.println(k*3);",
+    "options": [
+      "14\n26\n39",
+      "14\n39",
+      "14\n26",
+      "14\n21"
+    ],
+    "correct": 1,
+    "explanation": "Only the first println is in the loop. k = 7 prints 14; k becomes 13 and the loop ends. Then k*3 = 39 is printed.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs180",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "medium",
+    "text": "How many times is the following loop executed, and what is the output? (k is an int)\nfor(k=15;k>5;k-=5);\nSystem.out.println(k);",
+    "options": [
+      "Executed 3 times; output 5",
+      "Executed twice; output 10",
+      "Executed 3 times; output 0",
+      "Executed twice; output 5"
+    ],
+    "correct": 3,
+    "explanation": "The semicolon makes the loop body empty. It runs for k = 15 and k = 10; then k = 5 fails k > 5. The println after the loop prints 5.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs181",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Which of the following are the jump statements in Java?",
+    "options": [
+      "for, while, do-while",
+      "if, switch, else",
+      "break, switch, goto",
+      "break, continue, return"
+    ],
+    "correct": 3,
+    "explanation": "break, continue and return transfer control unconditionally (jump statements). for/while/do-while are iteration statements.",
+    "source": "CISCE Specimen 2027"
+  },
+  {
+    "id": "ixcs182",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "difficulty": "easy",
+    "text": "Which of the following are the three iteration statements in Java?",
+    "options": [
+      "if, else and switch",
+      "for, repeat and loop",
+      "for, while and do-while",
+      "break, continue and return"
+    ],
+    "correct": 2,
+    "explanation": "Java's iteration (looping) statements are for, while and do-while.",
+    "source": "CISCE Specimen 2027"
+  }
+]

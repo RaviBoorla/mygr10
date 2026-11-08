@@ -5,6 +5,13 @@ Object.assign(app, {
     const subjects = SUBJECTS[state.grade]?.[state.board] || [];
     const draft    = this._draft();
 
+    const ixBanner = state.grade === 'IX' ? `
+      <section class="card ix-source-banner">
+        <span class="soon-tag">Practice Questions</span>
+        <p>Class IX has no CISCE board exam, so these questions are not official ICSE board papers —
+           unlike the Class X and XII banks.</p>
+      </section>` : '';
+
     const resume = draft ? `
       <section class="resume-banner card">
         <div>
@@ -35,7 +42,7 @@ Object.assign(app, {
 
       const saSlug = saBankSlug(subject);
       const saLink = saSlug
-        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">Board Short Answers</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">${state.grade === 'IX' ? 'Practice' : 'Board'} Short Answers</button>`
         : '';
 
       const solvedSlug = solvedBankSlug(subject);
@@ -109,6 +116,7 @@ Object.assign(app, {
           ${streakArenaRow}
         </div>
         ${resume}
+        ${ixBanner}
         <section class="home-section">
           <div class="subj-grid">${cards}</div>
         </section>

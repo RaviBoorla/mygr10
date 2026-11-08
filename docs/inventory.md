@@ -109,6 +109,40 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 | CBSE Computer Applications | `X-CBSE-Computer-Applications-Solved.json` | 35 | Curriculum-authored, textbook-exercise style conceptual Q&A (definitions, "differentiate between X and Y", write-code tasks) across Networking, HTML, Cyber ethics, and Scratch & Python |
 | CBSE Information Technology | `X-CBSE-Information-Technology-Solved.json` | 45 | Curriculum-authored, textbook-exercise style conceptual Q&A across the 5 subject-specific units plus the 5 Employability Skills units |
 
+## Grade IX (ICSE only)
+
+Class IX has no CISCE board exam, so there is no official past-paper corpus.
+These banks are built from one school's (Greenwood High) internal Grade IX
+unit-test and term-exam papers, 2020-21 to 2025-26 (UT1, UT2, T1/Term 1, AE/annual),
+plus CISCE Specimen papers. The papers carry no answer key: every correct option,
+distractor, explanation and model answer was authored and checked by hand. Each question
+has `"source": "School Practice <TERM> <year>"` or `"source": "CISCE Specimen <year>"`
+and never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge. The
+home screen shows a "Practice Questions" banner and labels the Short Answers
+button "Practice Short Answers" for this class.
+
+Left out: questions needing a figure, map, graph or circuit not in the text;
+unseen-passage comprehension and creative writing (English); items with garbled
+extraction, contradictory data or no correct option. Questions the school reused
+across years appear once. Options were shuffled per question so answers spread
+across A–D (order-sensitive items keep their order). One 2020-21 T1 Geography
+file was a Class X paper and was skipped. Not covered: languages, Economic/
+Commercial Applications, Physical Education, Mass Media, Robotics & AI.
+
+| Subject | MCQ file | MCQs | Short Answers file | SAs |
+|---|---|---|---|---|
+| Mathematics | `IX-ICSE-Mathematics.json` | 316 | `IX-ICSE-Mathematics-ShortAnswers.json` | 60 |
+| Physics | `IX-ICSE-Physics.json` | 370 | `IX-ICSE-Physics-ShortAnswers.json` | 59 |
+| Chemistry | `IX-ICSE-Chemistry.json` | 411 | `IX-ICSE-Chemistry-ShortAnswers.json` | 60 |
+| Biology | `IX-ICSE-Biology.json` | 316 | `IX-ICSE-Biology-ShortAnswers.json` | 62 |
+| History & Civics | `IX-ICSE-History-Civics.json` | 158 | `IX-ICSE-History-Civics-ShortAnswers.json` | 82 |
+| Geography | `IX-ICSE-Geography.json` | 224 | `IX-ICSE-Geography-ShortAnswers.json` | 77 |
+| English | `IX-ICSE-English.json` | 241 | `IX-ICSE-English-ShortAnswers.json` | 68 |
+| Economics | `IX-ICSE-Economics.json` | 157 | `IX-ICSE-Economics-ShortAnswers.json` | 78 |
+| Computer Science | `IX-ICSE-Computer-Science.json` | 182 | `IX-ICSE-Computer-Science-ShortAnswers.json` | 97 |
+
+History & Civics questions carry a `subject` field (`History`/`Civics`).
+
 ## Grade XII
 
 `SUBJECTS.XII.CBSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science,

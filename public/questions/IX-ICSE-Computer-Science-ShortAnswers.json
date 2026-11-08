@@ -1,0 +1,1340 @@
+[
+  {
+    "id": "sa-ix-cs-001",
+    "chapter": "Java Fundamentals",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2020-21",
+    "text": "Define the following along with appropriate examples:\n(a) Type casting\n(b) Literals",
+    "modelAnswer": "(a) Type casting is the explicit conversion of a value of one data type into another using the cast operator, e.g. int n = (int) 23.8; converts the double 23.8 into the int 23.\n(b) Literals are explicit, fixed data values written directly in a program, e.g. 25 (integer literal), 3.14 (floating literal), 'A' (character literal), \"Hi\" (string literal).",
+    "keyPoints": [
+      "Type casting uses the (type) operator to force a conversion, e.g. (int), (double)",
+      "Narrowing casts (double to int) can lose precision/data",
+      "Literals are the literal, unchanging values typed directly into code",
+      "Every literal has an associated data type (int, double, char, String, boolean)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-002",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2020-21",
+    "text": "Define the following along with appropriate examples:\n(a) Object\n(b) Encapsulation",
+    "modelAnswer": "(a) An object is an instance of a class; it is a real-world entity having state (attributes/fields) and behaviour (methods). Example: if 'Car' is a class, then myCar = new Car(); creates an object named myCar.\n(b) Encapsulation is the OOP principle of binding data (fields) and the methods that act on that data together within a single class, and restricting direct access to the data from outside the class. Example: declaring fields as 'private' and providing public getter/setter methods to access them.",
+    "keyPoints": [
+      "An object is created from a class using the 'new' keyword",
+      "A class can have many objects, each with its own copy of the instance data",
+      "Encapsulation hides the internal data of a class from outside interference",
+      "Private fields + public methods is the common way encapsulation is implemented"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-003",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2020-21",
+    "text": "Define 'Empty loop' with an appropriate example.",
+    "modelAnswer": "An empty loop is a loop that does not contain any statement inside its body; it is typically used to deliberately waste a fixed number of CPU cycles (a 'time delay' loop). Example:\nfor(int i=0; i<10000; i++);",
+    "keyPoints": [
+      "The loop body is empty — only the semicolon ends the loop statement",
+      "Commonly used to create a time delay",
+      "The loop variable still increments every iteration even though nothing else happens"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-004",
+    "chapter": "Java Fundamentals",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2020-21",
+    "text": "In procedural programming, more emphasis is given to procedures/functions rather than data, while object-oriented programming emphasises data. Explain this difference with an example.",
+    "modelAnswer": "In procedural programming (e.g. C), a program is organised as a series of functions/procedures that act upon data passed to them, so the design focuses on 'what steps to perform'. In object-oriented programming (e.g. Java), the program is organised around objects that bundle data and the methods that operate on that data together, so the design focuses on 'which objects exist and what they can do'. For example, to print a student's details procedurally, a function printStudent(name, marks) is written; in OOP, a Student class is defined with its own fields and a display() method, and this method is called on a Student object.",
+    "keyPoints": [
+      "Procedural: emphasis on functions/procedures acting on data",
+      "Object-oriented: emphasis on objects that combine data and behaviour",
+      "OOP improves reusability and data security via encapsulation"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-005",
+    "chapter": "Java Fundamentals",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2022-23",
+    "text": "Define tokens in Java. Name any two types of tokens and explain Boolean literals.",
+    "modelAnswer": "A token is the smallest individual unit of a Java program that the compiler recognises, such as a keyword, identifier, literal, operator or punctuator. Two types of tokens are Keywords (e.g. int, if, class) and Literals (e.g. 25, 'A', \"Hi\"). Boolean literals are the two reserved values true and false, which represent the only two possible values of the boolean data type.",
+    "keyPoints": [
+      "Tokens: keywords, identifiers, literals, operators, punctuators/separators",
+      "Keywords have special, predefined meaning and cannot be used as identifiers",
+      "Boolean literals are exactly 'true' and 'false' (lowercase, no quotes)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-006",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2022-23",
+    "text": "Write the range and size of the int data type.",
+    "modelAnswer": "The int data type in Java occupies 4 bytes (32 bits) of memory, and its range is -2^31 to 2^31-1, i.e. -2147483648 to 2147483647.",
+    "keyPoints": [
+      "Size: 4 bytes (32 bits)",
+      "Range: -2147483648 to 2147483647",
+      "int is the default type for integer literals without a suffix"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-007",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2022-23",
+    "text": "Differentiate between println() and print() statements in Java.",
+    "modelAnswer": "print() displays the given output on the screen and leaves the cursor on the same line, so the next output continues on the same line. println() displays the output and then moves the cursor to the beginning of the next line, so subsequent output starts on a new line.",
+    "keyPoints": [
+      "print(): no line break after output",
+      "println(): moves to a new line after output",
+      "Both belong to the System.out object"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-008",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2023-24",
+    "text": "Differentiate between a variable and a constant in Java.",
+    "modelAnswer": "A variable is a named memory location whose value can change during the execution of a program (e.g. int marks = 50; marks = 60;). A constant is a named memory location whose value is fixed and cannot be changed once initialised — it is declared using the 'final' keyword (e.g. final double PI = 3.14;).",
+    "keyPoints": [
+      "Variable: value can be reassigned during program execution",
+      "Constant: declared with 'final', value cannot change after initialisation",
+      "Attempting to reassign a final variable causes a compile-time error"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-009",
+    "chapter": "Java Fundamentals",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2023-24",
+    "text": "Read the given passage and answer the following questions:\nPackages are Java's way of grouping a number of related classes and/or interfaces together into a single unit. Packages make programs more organised and compact, and they save effort because classes' code can be reused.\n(a) Which keyword is used for including a package in our program?\n(b) Which is a default package in Java?",
+    "modelAnswer": "(a) The 'import' keyword is used to include a package in a program, e.g. import java.util.Scanner;\n(b) java.lang is the default package in Java — it is automatically imported into every Java program without an explicit import statement.",
+    "keyPoints": [
+      "import keyword brings a package's classes into scope",
+      "java.lang is implicitly available in every program (contains System, Math, String, etc.)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-010",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "Differentiate between a Run Time Error and a Compile Time (Syntax) Error.",
+    "modelAnswer": "A Compile Time (Syntax) Error occurs when the code violates the grammar/rules of Java and is detected by the compiler before the program runs (e.g. a missing semicolon or misspelled keyword), preventing the program from compiling at all. A Run Time Error occurs while the program is executing, after it has compiled successfully, usually due to an illegal operation such as division by zero or an invalid array index, and it causes the program to terminate abnormally (throwing an exception).",
+    "keyPoints": [
+      "Syntax error: caught by the compiler, before execution, program doesn't compile",
+      "Runtime error: occurs during execution of an already-compiled program",
+      "Example runtime error: ArithmeticException from division by zero"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-011",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2022-23",
+    "text": "Rewrite the following for loop statement using a do-while loop:\nint m=1,n=2;\nfor(int i=0;i<4;i++)\n{ System.out.print(m*n); }",
+    "modelAnswer": "int m=1, n=2;\nint i=0;\ndo\n{\n   System.out.print(m*n);\n   i++;\n} while(i<4);",
+    "keyPoints": [
+      "The initialisation (i=0) is moved before the loop",
+      "The loop body is placed inside the do block",
+      "The update (i++) is placed at the end of the do block",
+      "The for loop's test condition becomes the while condition"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-012",
+    "chapter": "Java Fundamentals",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Explain unary and binary operators in Java with an example of each.",
+    "modelAnswer": "A unary operator acts on only one operand, e.g. the increment operator in x++ (operand: x) or the unary minus in -y. A binary operator acts on two operands, e.g. the addition operator in a+b or the relational operator in a>b.",
+    "keyPoints": [
+      "Unary: one operand, e.g. ++, --, unary +, unary -, !",
+      "Binary: two operands, e.g. +, -, *, /, %, >, &&"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-013",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2024-25",
+    "text": "Define the following:\n(a) Fall through\n(b) Selection Construct",
+    "modelAnswer": "(a) Fall-through is the behaviour in a switch statement where, in the absence of a break statement at the end of a matching case, control continues ('falls through') into the statements of the following case(s) as well.\n(b) A selection construct is a programming construct (such as if-else or switch) that chooses one among several possible paths of execution, based on the result of a test condition.",
+    "keyPoints": [
+      "Fall-through happens only when a case block is missing 'break'",
+      "Selection constructs: if, if-else, if-else-if, switch",
+      "A selection construct always evaluates a condition to decide which branch runs"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-014",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2023-24",
+    "text": "What are escape sequences in Java? Give an example.",
+    "modelAnswer": "Escape sequences are special character combinations, starting with a backslash (\\), used to represent non-graphic (non-printable) characters that cannot be typed directly from the keyboard, such as a newline or tab. Example: '\\n' represents a newline character and '\\t' represents a horizontal tab.",
+    "keyPoints": [
+      "Escape sequences begin with a backslash (\\)",
+      "Common examples: \\n (newline), \\t (tab), \\\\ (backslash), \\' (single quote)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-015",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2023-24",
+    "text": "Differentiate between literals and keywords in Java. Give appropriate examples to support your answer.",
+    "modelAnswer": "A literal is an explicit, fixed data value written directly in the source code, e.g. 25, 3.14, 'A', \"Hi\", true. A keyword is a reserved word that carries a special, predefined meaning to the Java compiler and can never be used as an identifier, e.g. int, if, class, final, static.",
+    "keyPoints": [
+      "Literals represent actual data values of a particular type",
+      "Keywords are reserved words that control the structure/meaning of the program",
+      "A keyword can never be used as a variable name; a literal is not a name at all"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-016",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Mention two differences between the = operator and the == operator in Java.",
+    "modelAnswer": "The '=' operator is the assignment operator; it assigns the value on its right-hand side to the variable on its left (e.g. x = 5;). The '==' operator is the equality (relational) operator; it compares two values and returns a boolean result (true/false) indicating whether they are equal (e.g. x == 5).",
+    "keyPoints": [
+      "'=' assigns a value; '==' compares two values",
+      "'=' expression has no boolean result; '==' always evaluates to true or false",
+      "Using '=' where '==' is intended is a common source of logical errors"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-017",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Arrange the following primitive data types in ascending order of size: char, double, int, byte.\nAlso mention the range of the data type that is smallest in size.",
+    "modelAnswer": "Ascending order of size: byte (1 byte) < char (2 bytes) < int (4 bytes) < double (8 bytes).\nThe smallest data type, byte, has the range -128 to 127.",
+    "keyPoints": [
+      "byte=1 byte, char=2 bytes, int=4 bytes, double=8 bytes",
+      "byte is the smallest primitive numeric type, range -128 to 127"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-018",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Rewrite the following program segment using an if..else construct:\nString res=(marks>=90) ? \"A+\" : (marks>=80)? \"B+\" : \"C+\";",
+    "modelAnswer": "String res;\nif(marks>=90)\n   res = \"A+\";\nelse if(marks>=80)\n   res = \"B+\";\nelse\n   res = \"C+\";",
+    "keyPoints": [
+      "Each ternary condition becomes an if / else-if test",
+      "The final ':' alternative becomes the trailing 'else'"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-019",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "School Practice T1 2023-24",
+    "text": "Explain the 'continue' statement in Java with a short example.",
+    "modelAnswer": "The continue statement, when encountered inside a loop, skips the remaining statements of the current iteration and jumps directly to the loop's update/condition check, so the next iteration can begin — unlike 'break', it does not terminate the loop. Example:\nfor(int i=1;i<=5;i++){\n  if(i==3) continue;\n  System.out.print(i+\" \");\n}\nprints '1 2 4 5 ' since i=3 is skipped.",
+    "keyPoints": [
+      "continue skips only the current iteration, not the whole loop",
+      "Control jumps to the update expression (for) or condition test (while/do-while)",
+      "Different from break, which exits the loop entirely"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-020",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "The following code segment should print all the numbers between 40 to 60 (both inclusive). However, the code has errors. Fix the code so that it compiles and runs correctly.\nint s=40;\nfor( ; ; s++)\n{\n    if(s>=40 || s<=60)\n    System.out.println(s);\n    else\n    Break;\n }",
+    "modelAnswer": "int s=40;\nfor( ; s<=60 ; s++)\n{\n    System.out.println(s);\n}",
+    "keyPoints": [
+      "The condition 's>=40 || s<=60' is always true and never stops the loop; it should be replaced by a proper loop-termination test (s<=60)",
+      "'Break' is capitalised, which is not a valid Java keyword — it should be lowercase 'break' (or removed entirely once the loop condition itself stops the loop)",
+      "Simplest fix: move the stopping condition into the for loop's test slot"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-021",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Identify and correct the error in the following code so that it executes:\nint x = 10.0;\nint y = 20;\nint +z = x + ++y;\nSystem.out.println(z);",
+    "modelAnswer": "double x = 10.0;\nint y = 20;\nint z = x + ++y;\nSystem.out.println(z);",
+    "keyPoints": [
+      "10.0 is a double literal; it cannot be assigned directly to an int variable without a cast, so x must be declared double (or written as int x = 10;)",
+      "'+z' is not a legal identifier — an identifier cannot begin with the '+' symbol; it should simply be 'z'"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-022",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Rewrite the following program segment using nested if-else:\nZ = ( a < b ) ? ( a < c ? a : c ) : ( b < c ? b : c );",
+    "modelAnswer": "if(a < b)\n{\n   if(a < c)\n      Z = a;\n   else\n      Z = c;\n}\nelse\n{\n   if(b < c)\n      Z = b;\n   else\n      Z = c;\n}",
+    "keyPoints": [
+      "Outer ternary (a<b) becomes the outer if-else",
+      "Each inner ternary becomes a nested if-else inside the matching branch"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-023",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Identify the error in the given code and rewrite the correct code:\nint x = (a => b) ? \"Yes\" : \"No\";",
+    "modelAnswer": "String x = (a > b) ? \"Yes\" : \"No\";",
+    "keyPoints": [
+      "'=>' is not a valid Java relational operator — it should be '>' (or '>=' as intended)",
+      "The ternary result is a String (\"Yes\"/\"No\"), so x must be declared as String, not int"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-024",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Write the following switch statement using nested if statements:\nswitch (choice) {\n case 0:\n case 1:\n       x = 111;\n       y = 222;\n       break;\n case 2:\n       x = 333;\n       y = 444;\n       break;\n case 3:\n       x = -11;\n       y = -22;\n       break;\n default:\n        y = 555; }",
+    "modelAnswer": "if(choice == 0 || choice == 1)\n{\n   x = 111;\n   y = 222;\n}\nelse if(choice == 2)\n{\n   x = 333;\n   y = 444;\n}\nelse if(choice == 3)\n{\n   x = -11;\n   y = -22;\n}\nelse\n{\n   y = 555;\n}",
+    "keyPoints": [
+      "Fall-through cases (0 and 1 sharing code) become a combined OR condition",
+      "Each remaining case becomes an else-if branch",
+      "default becomes the final else"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-025",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Rewrite the following program segment using a while loop:\nint i,f=1;\nfor(i=1;i<=5;i++)\n{\n  f *= i;\n }",
+    "modelAnswer": "int i=1, f=1;\nwhile(i<=5)\n{\n   f *= i;\n   i++;\n}",
+    "keyPoints": [
+      "Initialisation (i=1) is written before the loop",
+      "Test condition (i<=5) becomes the while condition",
+      "Update (i++) is placed at the end of the loop body"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-026",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Rewrite the following program using a for loop:\nint i=1;\nint d=5;\ndo\n{ d=d*2;\n     System.out.println(d);\n     i++; }\nwhile (i<=5);",
+    "modelAnswer": "int d=5;\nfor(int i=1; i<=5; i++)\n{\n   d = d*2;\n   System.out.println(d);\n}",
+    "keyPoints": [
+      "do-while's initialisation becomes the for loop's init section",
+      "do-while's condition becomes the for loop's test section",
+      "The i++ inside the body becomes the for loop's update section"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-027",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "A student wants to check whether a number lies within the range 15 to 30 (inclusive) using the following code, but it incorrectly prints 'Within the Range' even for numbers outside that range. Identify the type of error and correct the code.\nint number=34;\nif(number >=15 || number<=30)\n   System.out.println(\"Within the Range\");\nelse\n   System.out.println(\"Out of Range\");",
+    "modelAnswer": "int number=34;\nif(number >=15 && number<=30)\n   System.out.println(\"Within the Range\");\nelse\n   System.out.println(\"Out of Range\");",
+    "keyPoints": [
+      "This is a Logical error — the program compiles and runs, but produces the wrong result",
+      "The '||' (OR) should be '&&' (AND), since BOTH conditions must hold true for a number to lie inside the range"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-028",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2023-24",
+    "text": "The following code segment is meant to print 'You have Distinction' if the student scored above 80 in both Maths (sm) and Science (ss). However, it has errors. Fix the code so it compiles and runs correctly.\nboolean sm= True;\nboolean ss = true;\nif(sm && ss)\nSystem.out.println(\"You do not have Distinction\");\nelse\nSystem.out.println(\"You have Distinction\");",
+    "modelAnswer": "boolean sm = true;\nboolean ss = true;\nif(sm && ss)\n   System.out.println(\"You have Distinction\");\nelse\n   System.out.println(\"You do not have Distinction\");",
+    "keyPoints": [
+      "Java's boolean literal is lowercase 'true', not 'True' (a syntax error otherwise)",
+      "The messages in the if and else branches were swapped — when both sm and ss are true, 'You have Distinction' should print"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-029",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2020-21",
+    "text": "Write a valid Java expression for the following mathematical expression:\n(x^5 + 4xy + 3z) / (2x + z - y)",
+    "modelAnswer": "(Math.pow(x,5) + 4*x*y + 3*z) / (2*x + z - y)",
+    "keyPoints": [
+      "x^5 is written using Math.pow(x,5)",
+      "Implicit multiplication (4xy) must be written explicitly as 4*x*y",
+      "The whole numerator and denominator must each be parenthesised correctly"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-030",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 1,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2022-23",
+    "text": "Write a valid Java expression for the following mathematical statement:\nthe square root of (m + 3n^2)",
+    "modelAnswer": "Math.sqrt(m + 3*n*n)",
+    "keyPoints": [
+      "Square root is written using Math.sqrt()",
+      "n^2 (n-squared) is written as n*n or Math.pow(n,2)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-031",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write the Java statement for the given mathematical expression:\nX = sqrt(a^4 x - b^3 y) / (|p| + |q|)",
+    "modelAnswer": "double X = Math.sqrt(Math.pow(a,4)*x - Math.pow(b,3)*y) / (Math.abs(p) + Math.abs(q));",
+    "keyPoints": [
+      "a^4 and b^3 are written using Math.pow()",
+      "|p| and |q| (absolute value) are written using Math.abs()",
+      "The square root of the whole numerator uses Math.sqrt()"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-032",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Write a Java statement for the given mathematical expression:\nR = 0.02 - (2x^3)/(x-y)",
+    "modelAnswer": "double R = 0.02 - (2*Math.pow(x,3)) / (x - y);",
+    "keyPoints": [
+      "x^3 is written using Math.pow(x,3)",
+      "The denominator (x-y) must be fully parenthesised so it divides the entire numerator"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-033",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2023-24",
+    "text": "Convert the following mathematical statement into a Java statement:\nE = (p + p*v^5 + 3*g*h) / (2*g)",
+    "modelAnswer": "double E = (p + p*Math.pow(v,5) + 3*g*h) / (2*g);",
+    "keyPoints": [
+      "v^5 is written using Math.pow(v,5)",
+      "The entire numerator must be parenthesised before dividing by (2*g)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-034",
+    "chapter": "Mathematical Library Methods",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Convert the following mathematical expression into a valid Java expression:\n3 * cube-root(b^4 - c^3) / 8",
+    "modelAnswer": "3 * Math.cbrt(Math.pow(b,4) - Math.pow(c,3)) / 8",
+    "keyPoints": [
+      "Cube root is written using Math.cbrt()",
+      "b^4 and c^3 are written using Math.pow()"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-035",
+    "chapter": "Input in Java (Scanner)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice T1 2024-25",
+    "text": "(a) Write a Java statement to take a single character input from the user using the Scanner class.\n(b) State the rules for forming a valid identifier in Java, with one example.",
+    "modelAnswer": "(a) Scanner sc = new Scanner(System.in);\nchar ch = sc.next().charAt(0);\n(b) Rules for a Java identifier: it must start with a letter, underscore (_) or dollar sign ($); it cannot start with a digit; it cannot contain spaces or special symbols (other than _ and $); it cannot be a reserved keyword; and it is case-sensitive. Example: _total, $amount, marks1 are valid identifiers.",
+    "keyPoints": [
+      "Scanner has no direct nextChar(); next().charAt(0) is the usual way to read one character",
+      "Identifiers may start with a letter, '_' or '$', never a digit",
+      "Identifiers are case-sensitive and cannot match a keyword"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-036",
+    "chapter": "Mathematical Library Methods",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2024-25",
+    "text": "Name the package that contains:\n(a) the Math class\n(b) the Scanner class",
+    "modelAnswer": "(a) The Math class belongs to the java.lang package (automatically available, no import needed).\n(b) The Scanner class belongs to the java.util package (must be imported explicitly, e.g. import java.util.Scanner;).",
+    "keyPoints": [
+      "java.lang is imported automatically into every Java program",
+      "java.util must be explicitly imported to use Scanner"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-037",
+    "chapter": "Mathematical Library Methods",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "What is the range and default value of the float data type in Java?",
+    "modelAnswer": "The float data type in Java occupies 4 bytes (32 bits) and has an approximate range of -3.4 x 10^38 to 3.4 x 10^38. Its default value, when used as an instance field, is 0.0f.",
+    "keyPoints": [
+      "float: 4 bytes, approx range +-3.4 x 10^38",
+      "Default value of a float field is 0.0f"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-038",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2020-21",
+    "text": "A transport company charges for parcels from Bangalore to Delhi (or vice versa) as per the following criteria:\nWeight in Kg      Charge per Kg\nUpto 10 Kg          Rs. 25 per Kg\nNext 20 Kgs         Rs. 20 per Kg\nAbove 30 Kgs        Rs. 10 per Kg\nAn additional surcharge of 5% is charged on the bill.\nWrite a Java program to input the name of the customer and weight of the parcel. Calculate and display the total bill inclusive of surcharge in the format:\nName   Weight   Total Bill",
+    "modelAnswer": "import java.util.Scanner;\npublic class ParcelBill\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter weight (kg): \");\n    double wt = sc.nextDouble();\n    double charge;\n    if(wt <= 10)\n      charge = wt * 25;\n    else if(wt <= 30)\n      charge = 10*25 + (wt-10)*20;\n    else\n      charge = 10*25 + 20*20 + (wt-30)*10;\n    double bill = charge + 0.05*charge;\n    System.out.println(\"Name\\tWeight\\tTotal Bill\");\n    System.out.println(name+\"\\t\"+wt+\"\\t\"+bill);\n  }\n}",
+    "keyPoints": [
+      "First 10 kg charged at Rs 25/kg",
+      "Next 20 kg (11-30 kg) charged at Rs 20/kg",
+      "Weight above 30 kg charged at Rs 10/kg for the extra portion",
+      "5% surcharge added on top of the computed charge"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-039",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2020-21",
+    "text": "Write a menu driven program in Java to do the following:\n(a) Input a double value (N) and display the series: 1.0 1.2 1.4 ... N\n(b) Input an integer (num) and print the sum of only those digits of the number which are multiples of 2 or 3.\nSample input: num=43961\nSample output: sum = 4 + 3 + 9 + 6 = 22\nAn appropriate error message must be displayed for an incorrect choice. [Use Streams]",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuDriven1\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Series 1.0 to N\\n2. Sum of digits multiple of 2 or 3\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter N: \");\n        double N = sc.nextDouble();\n        for(double i=1.0; i<=N; i+=0.2)\n          System.out.print(i+\" \");\n        break;\n      case 2:\n        System.out.print(\"Enter number: \");\n        int num = sc.nextInt();\n        int sum=0;\n        while(num>0)\n        {\n          int d = num%10;\n          if(d%2==0 || d%3==0)\n            sum += d;\n          num/=10;\n        }\n        System.out.println(\"Sum = \"+sum);\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Series increments N by 0.2 each time (1.0, 1.2, 1.4, ...)",
+      "Digit extraction uses num%10 and num/=10 inside a loop",
+      "A digit qualifies if it is divisible by 2 OR by 3",
+      "default case handles an invalid menu choice"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-040",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2020-21",
+    "text": "An international airline gives the following discount to its customers for the purchase of tickets:\nTicket amount          Discount\nAbove Rs. 79000           18%\nRs. 55001 to Rs. 79000    16%\nRs. 35001 to Rs. 55000    12%\nRs. 25001 to Rs. 35000    10%\nless than Rs. 25001        2%\nWrite a program to input the name and ticket amount for the customer. Calculate and display the discount, discounted amount and net amount to be paid.",
+    "modelAnswer": "import java.util.Scanner;\npublic class AirlineDiscount\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter ticket amount: \");\n    double amt = sc.nextDouble();\n    double disc;\n    if(amt > 79000) disc = 0.18;\n    else if(amt >= 55001) disc = 0.16;\n    else if(amt >= 35001) disc = 0.12;\n    else if(amt >= 25001) disc = 0.10;\n    else disc = 0.02;\n    double discAmt = amt*disc;\n    double net = amt - discAmt;\n    System.out.println(\"Discount: \"+discAmt);\n    System.out.println(\"Net amount payable: \"+net);\n  }\n}",
+    "keyPoints": [
+      "Discount slabs are checked from the highest amount downward",
+      "Discount amount = ticket amount * discount percentage",
+      "Net amount = ticket amount - discount amount"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-041",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2020-21",
+    "text": "Write a program to input a number and reverse the number. Check and display whether the reverse of the number is a Harshad number or not.\n[A Harshad number is an integer that is divisible by the sum of its digits.\nExample: 200 is a Harshad Number as the sum of digits is 2 and 200 is divisible by 2.\n171 is a Harshad Number as the sum of digits is 9 and 171 is divisible by 9.]\n[Use Scanner class]",
+    "modelAnswer": "import java.util.Scanner;\npublic class HarshadReverse\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    int temp = num, rev = 0, sumDigits = 0;\n    while(temp > 0)\n    {\n      int d = temp%10;\n      rev = rev*10 + d;\n      temp /= 10;\n    }\n    int t = rev, sum = 0;\n    while(t > 0)\n    {\n      sum += t%10;\n      t /= 10;\n    }\n    System.out.println(\"Reverse = \"+rev);\n    if(rev % sum == 0)\n      System.out.println(rev+\" is a Harshad Number\");\n    else\n      System.out.println(rev+\" is not a Harshad Number\");\n  }\n}",
+    "keyPoints": [
+      "Reverse the number by repeatedly extracting the last digit",
+      "Sum the digits of the REVERSED number",
+      "A number is Harshad if it is exactly divisible by its digit sum"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-042",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a Java program to print the following pattern, where the user enters the number of rows (showing cubes of 1 to the row number, right-aligned):\n1\n1 8\n1 8 27\n1 8 27 64\n1 8 27 64 125",
+    "modelAnswer": "import java.util.Scanner;\npublic class CubePattern\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter number of rows: \");\n    int n = sc.nextInt();\n    for(int i=1; i<=n; i++)\n    {\n      for(int sp=0; sp<(n-i); sp++)\n        System.out.print(\"   \");\n      for(int j=1; j<=i; j++)\n        System.out.print((j*j*j)+\" \");\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Each row i prints the cubes of 1 up to i (1, 8, 27, 64, 125, ...)",
+      "Leading spaces decrease per row to keep the triangle right-aligned",
+      "Cube of j is computed as j*j*j"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-043",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a menu driven Java program to print the following series and display its sum:\n(i) 2, 8, 32, 128, 512, 2048, ... 10th term\n(ii) 0, 6, 8, 18, 24, 38, ... 10th term",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuSeries\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. 2,8,32,128,...\\n2. 0,6,8,18,24,38,...\");\n    int ch = sc.nextInt();\n    long sum = 0;\n    switch(ch)\n    {\n      case 1:\n        long term = 2;\n        for(int i=1; i<=10; i++)\n        {\n          System.out.print(term+\" \");\n          sum += term;\n          term *= 4;\n        }\n        System.out.println(\"\\nSum = \"+sum);\n        break;\n      case 2:\n        int t = 0;\n        for(int n=1; n<=10; n++)\n        {\n          int val = (n%2==1) ? 4*((n+1)/2)*(((n+1)/2)-1) : 4*(n/2)*(n/2)+2;\n          System.out.print(val+\" \");\n          sum += val;\n        }\n        System.out.println(\"\\nSum = \"+sum);\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Series (i) is geometric: each term is 4 times the previous term, starting at 2",
+      "Series (ii) alternates between two quadratic sub-patterns for odd and even term positions, matched to the given sample terms 0,6,8,18,24,38",
+      "Sum accumulates all 10 terms of the chosen series"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-044",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a Java program to accept a number. Display the largest digit and smallest digit of the number, and print their sum. (Use streams)\nSample Input: 1125\nSample Output: Largest digit = 5. Smallest digit = 1. Sum = 6.",
+    "modelAnswer": "import java.util.Scanner;\npublic class LargestSmallestDigit\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter number: \");\n    long num = sc.nextLong();\n    long n = num;\n    int largest = 0, smallest = 9;\n    while(n != 0)\n    {\n      int d = (int)(n % 10);\n      if(d > largest) largest = d;\n      if(d < smallest) smallest = d;\n      n /= 10;\n    }\n    System.out.println(\"Largest digit = \"+largest+\". Smallest digit = \"+smallest+\". Sum = \"+(largest+smallest));\n  }\n}",
+    "keyPoints": [
+      "Extract each digit using n%10, then remove it using n/=10",
+      "Track the running largest and smallest digit seen so far",
+      "Final answer adds the largest and smallest digit together"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-045",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a Java program to accept Name, Contact number, and cost of 5 items for a customer. Calculate the final amount payable based on:\nTotal Cost            Discount\nLess than Rs. 2000        5%\nRs. 2001 to Rs. 5000     25%\nRs 5001 to Rs. 10000     35%\nRs 10,001 and above      50%",
+    "modelAnswer": "import java.util.Scanner;\npublic class ItemBilling\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter contact number: \");\n    String contact = sc.nextLine();\n    double total = 0;\n    for(int i=1; i<=5; i++)\n    {\n      System.out.print(\"Enter cost of item \"+i+\": \");\n      total += sc.nextDouble();\n    }\n    double disc;\n    if(total < 2000) disc = 0.05;\n    else if(total <= 5000) disc = 0.25;\n    else if(total <= 10000) disc = 0.35;\n    else disc = 0.50;\n    double finalAmt = total - total*disc;\n    System.out.println(\"Total cost: \"+total);\n    System.out.println(\"Final amount payable: \"+finalAmt);\n  }\n}",
+    "keyPoints": [
+      "Sum the cost of all 5 items first",
+      "Discount slab depends on the total cost, checked in increasing order",
+      "Final amount = total cost - discount amount"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-046",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a Java program to accept a number. Check and display if it is a Pronic Number.\n[A Pronic Number is the product of two consecutive integers.\nExample: 12 = 3*4, 42 = 6*7, 20 = 4*5]",
+    "modelAnswer": "import java.util.Scanner;\npublic class PronicNumber\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    boolean isPronic = false;\n    for(int i=0; i*(i+1) <= num; i++)\n    {\n      if(i*(i+1) == num)\n      {\n        isPronic = true;\n        break;\n      }\n    }\n    if(isPronic)\n      System.out.println(num+\" is a Pronic Number\");\n    else\n      System.out.println(num+\" is not a Pronic Number\");\n  }\n}",
+    "keyPoints": [
+      "Check whether num equals i*(i+1) for some integer i",
+      "Loop stops once i*(i+1) exceeds num, since products keep growing"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-047",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2022-23",
+    "text": "Write a program to accept a number from the user and check whether it is Prime or not. If the number is Prime, find the product of the squares of its digits and print the product; otherwise, print that the number is a Composite Number.",
+    "modelAnswer": "import java.util.Scanner;\npublic class PrimeDigitSquareProduct\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    boolean prime = (num > 1);\n    for(int i=2; i<=num/2; i++)\n    {\n      if(num % i == 0)\n      { prime = false; break; }\n    }\n    if(prime)\n    {\n      long product = 1;\n      int n = num;\n      while(n > 0)\n      {\n        int d = n % 10;\n        product *= (d * d);\n        n /= 10;\n      }\n      System.out.println(\"Product of squares of digits = \"+product);\n    }\n    else\n      System.out.println(num+\" is a Composite Number\");\n  }\n}",
+    "keyPoints": [
+      "Primality test checks divisors from 2 up to num/2",
+      "If prime, multiply the square of every digit together",
+      "If not prime (and > 1), report it as a Composite Number"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-048",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2022-23",
+    "text": "Write a program to enter an integer number. Check and display if the number is a single digit, two digit number or three digit number. For more than three digits display 'Invalid Number'. [Use Nested Ternary]",
+    "modelAnswer": "import java.util.Scanner;\npublic class DigitCheckTernary\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = Math.abs(sc.nextInt());\n    String result = (num <= 9) ? \"Single digit number\" :\n                     (num <= 99) ? \"Two digit number\" :\n                     (num <= 999) ? \"Three digit number\" : \"Invalid Number\";\n    System.out.println(result);\n  }\n}",
+    "keyPoints": [
+      "Math.abs() handles negative numbers so the sign doesn't affect digit count",
+      "Nested ternary chain checks ranges 0-9, 10-99, 100-999, else invalid"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-049",
+    "chapter": "Nested Loops",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2022-23",
+    "text": "Write a Java program to accept the number of rows and print the following pattern using symbols # and $ alternately, like a diamond:\nEnter no of rows: 5\n              #\n           $     #\n        #     $     #\n     $     #     $     #\n  #     $     #     $     #",
+    "modelAnswer": "import java.util.Scanner;\npublic class SymbolDiamond\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter no of rows: \");\n    int rows = sc.nextInt();\n    for(int i=1; i<=rows; i++)\n    {\n      for(int sp=0; sp<(rows-i); sp++)\n        System.out.print(\"   \");\n      for(int j=1; j<=i; j++)\n        System.out.print((j%2==0? \"$  \" : \"#  \"));\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Number of symbols printed per row equals the row number",
+      "Symbols alternate between # and $ across each row",
+      "Leading spaces decrease going down the rows to form a triangle"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-050",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Write a program to accept positive numbers and find their sum until the user enters a negative number. [Use Streams]",
+    "modelAnswer": "import java.util.Scanner;\npublic class SumUntilNegative\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    int num, sum = 0;\n    do\n    {\n      System.out.print(\"Enter a number (negative to stop): \");\n      num = sc.nextInt();\n      if(num >= 0)\n        sum += num;\n    } while(num >= 0);\n    System.out.println(\"Sum of positive numbers entered = \"+sum);\n  }\n}",
+    "keyPoints": [
+      "Loop keeps accepting numbers and adding them while they stay non-negative",
+      "A negative number read stops the loop (do-while, since input happens at least once)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-051",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Write a program to input the customer name, the taxi number, and the number of kilometres travelled. Compute the amount the customer pays based on:\nKms Travelled           Amount per Km (in Rs)\nFirst 10 kms                25\nNext 20 kms                 20\nNext 40 kms                 15\nAbove 70 kms                12\nDisplay the output in the format:\nCustomer Name  Taxi No  Bill Amount",
+    "modelAnswer": "import java.util.Scanner;\npublic class TaxiBill\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter taxi number: \");\n    String taxiNo = sc.nextLine();\n    System.out.print(\"Enter kms travelled: \");\n    double km = sc.nextDouble();\n    double bill;\n    if(km <= 10) bill = km*25;\n    else if(km <= 30) bill = 10*25 + (km-10)*20;\n    else if(km <= 70) bill = 10*25 + 20*20 + (km-30)*15;\n    else bill = 10*25 + 20*20 + 40*15 + (km-70)*12;\n    System.out.println(\"Customer Name\\tTaxi No\\tBill Amount\");\n    System.out.println(name+\"\\t\"+taxiNo+\"\\tRs \"+bill);\n  }\n}",
+    "keyPoints": [
+      "Billing follows four increasing distance slabs with different per-km rates",
+      "Each higher slab only charges its own rate on the extra distance beyond the previous slab"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-052",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Write a menu driven program to:\n(a) Input a number and display the sum of the first 10 multiples of the number. (Example: multiples of 3 are 3,6,9,...,30)\n(b) Input a number and display the product of its digits.",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuMultiplesProduct\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Sum of first 10 multiples\\n2. Product of digits\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter number: \");\n        int num = sc.nextInt();\n        int sum = 0;\n        for(int i=1; i<=10; i++)\n          sum += num*i;\n        System.out.println(\"Sum of first 10 multiples = \"+sum);\n        break;\n      case 2:\n        System.out.print(\"Enter number: \");\n        int n = sc.nextInt();\n        long product = 1;\n        while(n>0)\n        {\n          product *= (n%10);\n          n /= 10;\n        }\n        System.out.println(\"Product of digits = \"+product);\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Sum of first 10 multiples = num*1 + num*2 + ... + num*10",
+      "Product of digits multiplies every digit extracted via %10 and /10"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-053",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2023-24",
+    "text": "Write a program to display all the Buzz numbers between the range p and q (where p<q).\n[Buzz numbers are those numbers that are divisible by seven or end with seven.]\nSample: p=10,q=20 -> Buzz nos: 14, 17\nIf p is not less than q, display 'Invalid Input, p should be less than q'.",
+    "modelAnswer": "import java.util.Scanner;\npublic class BuzzNumbers\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter first number: \");\n    int p = sc.nextInt();\n    System.out.print(\"Enter second number: \");\n    int q = sc.nextInt();\n    if(p >= q)\n      System.out.println(\"Invalid Input, p should be less than q\");\n    else\n    {\n      System.out.println(\"Buzz nos. between \"+p+\" and \"+q+\" are:\");\n      for(int i=p; i<=q; i++)\n      {\n        if(i%7==0 || i%10==7)\n          System.out.println(i);\n      }\n    }\n  }\n}",
+    "keyPoints": [
+      "A number qualifies if it's divisible by 7 OR its last digit is 7 (i%10==7)",
+      "Input validated first: p must be less than q"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-054",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2023-24",
+    "text": "A retail shop announced summer discounts on the purchase of items, based on the total cost of items purchased:\nTotal Cost          Discount\n>= 10000               10%\n>= 8000                 8%\n>= 5000                 5%\n< 5000                  3%\nWrite a Java program to accept the total cost and compute and display the discount (in Rs) and amount to be paid by the customer after availing the discount. [Use nested ternary]",
+    "modelAnswer": "import java.util.Scanner;\npublic class RetailDiscount\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter total cost: \");\n    double cost = sc.nextDouble();\n    double rate = (cost >= 10000) ? 0.10 :\n                  (cost >= 8000) ? 0.08 :\n                  (cost >= 5000) ? 0.05 : 0.03;\n    double discount = cost*rate;\n    double amountToPay = cost - discount;\n    System.out.println(\"Discount = Rs \"+discount);\n    System.out.println(\"Amount to be paid = Rs \"+amountToPay);\n  }\n}",
+    "keyPoints": [
+      "Nested ternary checks slabs from highest cost downward",
+      "Discount = total cost * discount rate; amount to pay = total cost - discount"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-055",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Write a menu driven program in Java to do the following:\n(a) Accept the value of a and n and print the sum of the series:\nS = a - (a/2!) + (a/3!) - (a/4!) + ... to n terms\n(b) Print the series: A, C, D, ... first 5 characters (as specified)\nFor an incorrect choice, an appropriate error message should be displayed.",
+    "modelAnswer": "import java.util.Scanner;\npublic class SeriesMenuFactorial\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Factorial series\\n2. Character series\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter a and n: \");\n        double a = sc.nextDouble();\n        int n = sc.nextInt();\n        double sum = 0;\n        for(int i=1; i<=n; i++)\n        {\n          long fact = 1;\n          for(int j=1; j<=i; j++) fact *= j;\n          double term = a/fact;\n          sum += (i%2==1) ? term : -term;\n        }\n        System.out.println(\"Sum = \"+sum);\n        break;\n      case 2:\n        char ch1 = 'A';\n        for(int i=1; i<=5; i++)\n        {\n          System.out.print(ch1+\" \");\n          ch1 += 2;\n        }\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Factorial series alternates signs and divides 'a' by i! each term",
+      "A nested loop computes the factorial of each term index",
+      "Character series skips one letter at a time (A, C, E, G, I) as suggested by the given letters A, C, D"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-056",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "The calorie consumed per minute (CCM) varies through a 90-minute football match:\n- First 15 mins: CCM = 30 cal/min\n- Next 30 mins (till half time at 45 mins): CCM = 20 cal/min\n- Next 30 mins: CCM = 15 cal/min\n- Last 15 mins: CCM = 35 cal/min\nWrite a program to accept the number of minutes played by an athlete (must be less than 90, else print an error message) and calculate the total calories burned.",
+    "modelAnswer": "import java.util.Scanner;\npublic class CaloriesBurned\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter minutes played: \");\n    int mins = sc.nextInt();\n    if(mins >= 90)\n    {\n      System.out.println(\"Error: minutes played must be less than 90\");\n      return;\n    }\n    double calories = 0;\n    for(int m=1; m<=mins; m++)\n    {\n      if(m <= 15) calories += 30;\n      else if(m <= 45) calories += 20;\n      else if(m <= 75) calories += 15;\n      else calories += 35;\n    }\n    System.out.println(\"Total calories burned = \"+calories);\n  }\n}",
+    "keyPoints": [
+      "Each minute played is checked against the four time slabs to add the right CCM",
+      "Input validated: minutes played must be less than 90"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-057",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Write a program to accept a number and check whether it is a Twisted Prime or not.\n[A number is a Twisted Prime if it is a prime number and the reverse of the number is also a prime number.]\nInput: 97 -> Output: Twisted Prime Number (97 and its reverse 79 are both prime)\nInput: 43 -> Output: Not a Twisted Prime Number (43 is prime but its reverse 34 is not)",
+    "modelAnswer": "import java.util.Scanner;\npublic class TwistedPrime\n{\n  static boolean isPrime(int num)\n  {\n    if(num < 2) return false;\n    for(int i=2; i<=num/2; i++)\n      if(num%i==0) return false;\n    return true;\n  }\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    int temp = num, rev = 0;\n    while(temp > 0)\n    {\n      rev = rev*10 + temp%10;\n      temp /= 10;\n    }\n    if(isPrime(num) && isPrime(rev))\n      System.out.println(\"Twisted Prime Number\");\n    else\n      System.out.println(\"Not a Twisted Prime Number\");\n  }\n}",
+    "keyPoints": [
+      "A helper method checks primality by testing divisors up to num/2",
+      "Reverse is built digit by digit",
+      "Number qualifies only if BOTH the number and its reverse are prime"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-058",
+    "chapter": "Nested Loops",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Write a Java program to print every integer between 1 and n that is divisible by m. For each such number, check and print whether it is even or odd.",
+    "modelAnswer": "import java.util.Scanner;\npublic class DivisibleEvenOdd\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter n and m: \");\n    int n = sc.nextInt();\n    int m = sc.nextInt();\n    for(int i=1; i<=n; i++)\n    {\n      if(i % m == 0)\n      {\n        if(i % 2 == 0)\n          System.out.println(i+\" is Even\");\n        else\n          System.out.println(i+\" is Odd\");\n      }\n    }\n  }\n}",
+    "keyPoints": [
+      "Only numbers divisible by m (i%m==0) are considered",
+      "Each qualifying number is separately checked for even/odd using %2"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-059",
+    "chapter": "Nested Loops",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Write a Java program to accept the number of rows and print the following diamond-of-stars pattern:\nEnter the number of rows: 5\n    *\n   **\n  ***\n ****\n*****\n ****\n  ***\n   **\n    *",
+    "modelAnswer": "import java.util.Scanner;\npublic class StarDiamond\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter the number of rows: \");\n    int n = sc.nextInt();\n    for(int i=1; i<=n; i++)\n    {\n      for(int sp=0; sp<(n-i); sp++) System.out.print(\" \");\n      for(int j=1; j<=i; j++) System.out.print(\"*\");\n      System.out.println();\n    }\n    for(int i=n-1; i>=1; i--)\n    {\n      for(int sp=0; sp<(n-i); sp++) System.out.print(\" \");\n      for(int j=1; j<=i; j++) System.out.print(\"*\");\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Top half: stars increase from 1 to n, spaces decrease",
+      "Bottom half: stars decrease from n-1 back down to 1, mirroring the top half"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-060",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2023-24",
+    "text": "Write a program to check and display whether a number entered by the user is a composite number or not. If the number is composite, find the smallest digit of that number; otherwise print the square of the number.\n[A composite number has one or more factors besides 1 and itself.]\nExample 1: 41 -> not composite, so square is 1681\nExample 2: 42 -> composite, so smallest digit is 2",
+    "modelAnswer": "import java.util.Scanner;\npublic class CompositeSmallestDigit\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    boolean composite = false;\n    for(int i=2; i<=num/2; i++)\n    {\n      if(num % i == 0)\n      { composite = true; break; }\n    }\n    if(composite)\n    {\n      int n = num, smallest = 9;\n      while(n > 0)\n      {\n        int d = n%10;\n        if(d < smallest) smallest = d;\n        n /= 10;\n      }\n      System.out.println(\"It's a composite number so smallest digit is \"+smallest);\n    }\n    else\n      System.out.println(\"It's not a composite number so square is \"+(num*num));\n  }\n}",
+    "keyPoints": [
+      "A number is composite if any divisor other than 1 and itself is found",
+      "If composite, find the smallest digit by scanning all digits",
+      "If not composite, simply print the square of the number"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-061",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2023-24",
+    "text": "Write a menu driven program in Java to:\n(1) Display the series: 5 55 555 5555 ... up to n terms\n(2) Find and display the sum of the series:\nS = (1+2+3) + (2+3+4) + (3+4+5) + (4+5+6) + ... up to n terms\nFor an incorrect choice, an appropriate error message should be displayed.",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuSeries3\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. 5,55,555,...\\n2. Sum of (1+2+3)+(2+3+4)+...\");\n    int ch = sc.nextInt();\n    System.out.print(\"Enter n: \");\n    int n = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        long term = 0;\n        for(int i=1; i<=n; i++)\n        {\n          term = term*10 + 5;\n          System.out.print(term+\" \");\n        }\n        break;\n      case 2:\n        long sum = 0;\n        for(int i=1; i<=n; i++)\n          sum += i + (i+1) + (i+2);\n        System.out.println(\"Sum = \"+sum);\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Series (1): each term appends another 5 to the previous term (5, 55, 555, ...)",
+      "Series (2): the i-th group is (i)+(i+1)+(i+2), summed over n groups"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-062",
+    "chapter": "Nested Loops",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2023-24",
+    "text": "Write a program in Java to print the following pattern using nested loops:\n1\n121\n12321\n1234321\n123454321\n1234321\n12321\n121\n1",
+    "modelAnswer": "public class NumberDiamond\n{\n  public static void main(String args[])\n  {\n    int n = 5;\n    for(int i=1; i<=n; i++)\n    {\n      for(int j=1; j<=i; j++) System.out.print(j);\n      for(int j=i-1; j>=1; j--) System.out.print(j);\n      System.out.println();\n    }\n    for(int i=n-1; i>=1; i--)\n    {\n      for(int j=1; j<=i; j++) System.out.print(j);\n      for(int j=i-1; j>=1; j--) System.out.print(j);\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Each row prints 1..i ascending then (i-1)..1 descending, forming a palindrome row",
+      "Rows grow from 1 to n and then shrink back from n-1 to 1, forming the diamond"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-063",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a Java program to input three integers (positive or negative). If they are unequal, display the greatest number, otherwise display that they are equal. The program should also display whether the numbers are 'All Positive', 'All Negative' or 'Mixed Numbers'.\nSample Input: 34, 5, -12\nSample Output: The greatest number is 34 / Mixed Numbers",
+    "modelAnswer": "import java.util.Scanner;\npublic class GreatestAndSign\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter three numbers: \");\n    int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();\n    if(a==b && b==c)\n      System.out.println(\"All numbers are equal\");\n    else\n    {\n      int greatest = Math.max(a, Math.max(b,c));\n      System.out.println(\"The greatest number is \"+greatest);\n    }\n    if(a>0 && b>0 && c>0)\n      System.out.println(\"All Positive\");\n    else if(a<0 && b<0 && c<0)\n      System.out.println(\"All Negative\");\n    else\n      System.out.println(\"Mixed Numbers\");\n  }\n}",
+    "keyPoints": [
+      "Math.max() nested twice finds the greatest of three numbers",
+      "Sign classification checks all three numbers' signs together"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-064",
+    "chapter": "Nested Loops",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a menu driven program to display the following patterns using nested loops:\n(a) A / AB / ABC / ABCD / ABCDE\n(b) E / DE / CDE / BCDE / ABCDE",
+    "modelAnswer": "import java.util.Scanner;\npublic class LetterPatterns\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Increasing letters (A,AB,ABC,...)\\n2. Decreasing-start letters (E,DE,CDE,...)\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        for(int i=0; i<5; i++)\n        {\n          for(char c='A'; c<='A'+i; c++)\n            System.out.print(c);\n          System.out.println();\n        }\n        break;\n      case 2:\n        for(int i=0; i<5; i++)\n        {\n          for(char c=(char)('E'-i); c<='E'; c++)\n            System.out.print(c);\n          System.out.println();\n        }\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Pattern (a) prints letters from A up to A+i on row i",
+      "Pattern (b) prints letters starting earlier each row but always ending at E"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-065",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a Java program to find the smallest digit present in the number entered by the user.\nSample Input: 2315\nSample Output: Smallest Digit is: 1",
+    "modelAnswer": "import java.util.Scanner;\npublic class SmallestDigit\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    int n = Math.abs(num);\n    int smallest = 9;\n    while(n > 0)\n    {\n      int d = n%10;\n      if(d < smallest) smallest = d;\n      n /= 10;\n    }\n    System.out.println(\"Smallest Digit is: \"+smallest);\n  }\n}",
+    "keyPoints": [
+      "Extract digits one at a time with %10 and /10",
+      "Keep updating a running 'smallest' value as each digit is examined"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-066",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a program to accept customer name, bike number and the number of days the bike is taken on rent. Calculate the rent based on:\nNo. of Days        Rent/day\nFirst five days     Rs. 600\nNext five days      Rs. 400\nRest of the days    Rs. 100\nDisplay the output as: Customer Name  Bike No.  Number of Days  Charges",
+    "modelAnswer": "import java.util.Scanner;\npublic class BikeRent\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter bike number: \");\n    String bikeNo = sc.nextLine();\n    System.out.print(\"Enter number of days: \");\n    int days = sc.nextInt();\n    double charges;\n    if(days <= 5) charges = days*600;\n    else if(days <= 10) charges = 5*600 + (days-5)*400;\n    else charges = 5*600 + 5*400 + (days-10)*100;\n    System.out.println(\"Customer Name\\tBike No.\\tNumber of Days\\tCharges\");\n    System.out.println(name+\"\\t\"+bikeNo+\"\\t\"+days+\"\\tRs \"+charges);\n  }\n}",
+    "keyPoints": [
+      "First 5 days charged at Rs 600/day, next 5 days at Rs 400/day, remaining days at Rs 100/day",
+      "Each slab's extra days are charged only at that slab's own rate"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-067",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a program to accept a number and check whether it is an Autopol number or not.\n[An Autopol number is a number whose square ends with the given number itself.]\nExample: 25^2 = 625 (ends with 25), 76^2 = 5776 (ends with 76)",
+    "modelAnswer": "import java.util.Scanner;\npublic class AutopolNumber\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    long num = sc.nextLong();\n    long square = num*num;\n    int digits = String.valueOf(num).length();\n    long divisor = (long)Math.pow(10, digits);\n    if(square % divisor == num)\n      System.out.println(num+\" is an Autopol Number\");\n    else\n      System.out.println(num+\" is not an Autopol Number\");\n  }\n}",
+    "keyPoints": [
+      "The number of digits in num decides how many trailing digits of the square to check",
+      "square % 10^digits extracts the last 'digits' digits of the square",
+      "If that trailing portion equals num itself, it is an Autopol number"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-068",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2024-25",
+    "text": "Write a program to find and display the sum of the following series up to n terms:\nS = 1+2 + (1+2+3) + (1+2+3+4) + ... up to n terms, each term divided respectively by 1x2, 1x2x3, 1x2x3x4, ...",
+    "modelAnswer": "import java.util.Scanner;\npublic class SumSeriesFactorialDenominator\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter n: \");\n    int n = sc.nextInt();\n    double sum = 0;\n    for(int i=2; i<=n+1; i++)\n    {\n      double numerator = 0;\n      for(int k=1; k<=i; k++) numerator += k;\n      double denom = 1;\n      for(int k=1; k<=i; k++) denom *= k;\n      sum += numerator/denom;\n    }\n    System.out.println(\"Sum = \"+sum);\n  }\n}",
+    "keyPoints": [
+      "Each term's numerator is the sum 1+2+...+i for an increasing i",
+      "Each term's denominator is the factorial i! for the same i",
+      "The overall sum accumulates n such term values"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-069",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Write a Java program to input a number from the user and check whether it is prime or not. If the number is prime, find the reverse of that number. If the input number is composite, print all the factors of that number.",
+    "modelAnswer": "import java.util.Scanner;\npublic class PrimeReverseOrFactors\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    boolean prime = (num > 1);\n    for(int i=2; i<=num/2; i++)\n      if(num % i == 0) { prime = false; break; }\n    if(prime)\n    {\n      int n = num, rev = 0;\n      while(n > 0)\n      {\n        rev = rev*10 + n%10;\n        n /= 10;\n      }\n      System.out.println(num+\" is Prime. Reverse = \"+rev);\n    }\n    else\n    {\n      System.out.println(num+\" is Composite. Factors are:\");\n      for(int i=1; i<=num; i++)\n        if(num % i == 0) System.out.print(i+\" \");\n    }\n  }\n}",
+    "keyPoints": [
+      "If prime, reverse the digits of the number",
+      "If composite, print every factor of the number from 1 to the number itself"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-070",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Write a Java program to input a number and check whether it is a Harshad Number or not. [A Harshad Number is an integer that is divisible by the sum of its digits.]\nSample Input: 200 -> sum of digits = 2, 200 is divisible by 2 -> Harshad Number\nSample Input: 273 -> sum of digits = 12, 273 is not divisible by 12 -> not a Harshad Number",
+    "modelAnswer": "import java.util.Scanner;\npublic class HarshadNumber\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int num = sc.nextInt();\n    int n = num, sum = 0;\n    while(n > 0)\n    {\n      sum += n%10;\n      n /= 10;\n    }\n    if(num % sum == 0)\n      System.out.println(num+\" is a Harshad Number\");\n    else\n      System.out.println(num+\" is not a Harshad Number\");\n  }\n}",
+    "keyPoints": [
+      "Sum the digits of the number using %10 and /10",
+      "A number is Harshad if it divides evenly by its own digit sum"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-071",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "A cloth showroom has announced festival discounts and gifts based on the total cost of items purchased:\nTotal Cost              Discount    Gift\nUp to Rs. 2,000            5%      Calculator\nRs. 2,001 to Rs. 5,000    10%      School Bag\nRs. 5,001 to Rs. 10,000   15%      Wall Clock\nAbove Rs. 10,000          20%      Wrist Watch\nWrite a program to input the total cost, then compute and display the amount to be paid along with the gift.",
+    "modelAnswer": "import java.util.Scanner;\npublic class ClothDiscount\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter total cost: \");\n    double cost = sc.nextDouble();\n    double rate; String gift;\n    if(cost <= 2000) { rate=0.05; gift=\"Calculator\"; }\n    else if(cost <= 5000) { rate=0.10; gift=\"School Bag\"; }\n    else if(cost <= 10000) { rate=0.15; gift=\"Wall Clock\"; }\n    else { rate=0.20; gift=\"Wrist Watch\"; }\n    double amountToPay = cost - cost*rate;\n    System.out.println(\"Amount to be paid: Rs \"+amountToPay);\n    System.out.println(\"Gift: \"+gift);\n  }\n}",
+    "keyPoints": [
+      "Each cost slab has its own discount rate AND its own gift",
+      "Amount to pay = total cost - (total cost * discount rate)"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-072",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice T1 2024-25",
+    "text": "Write a menu driven program to print and find the sum of the following:\n(i) S = -1-3-5-7-...-20 (odd negative numbers from -1 down to the one nearest -20)\n(ii) Print and find the sum of all the multiples of 5 that lie between 0 and 100",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuSumOddMultiples\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Sum of -1-3-5-...\\n2. Sum of multiples of 5 (0-100)\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        int sum1 = 0;\n        for(int i=1; i<=19; i+=2)\n        {\n          System.out.print(\"-\"+i+\" \");\n          sum1 -= i;\n        }\n        System.out.println(\"\\nSum = \"+sum1);\n        break;\n      case 2:\n        int sum2 = 0;\n        for(int i=5; i<=100; i+=5)\n        {\n          System.out.print(i+\" \");\n          sum2 += i;\n        }\n        System.out.println(\"\\nSum = \"+sum2);\n        break;\n      default:\n        System.out.println(\"Incorrect choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Series (i) runs through odd numbers 1,3,5,...,19, each made negative",
+      "Series (ii) runs through multiples of 5 from 5 to 100"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-073",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2024-25",
+    "text": "Write a menu driven program to print the first 10 terms of the following series:\n(1) 0, 7, 26, 63, 124, ...\n(2) A, C, E, G, I, ...\nDisplay an appropriate message for an invalid choice.",
+    "modelAnswer": "import java.util.Scanner;\npublic class MenuCubeMinus1AndAlternateLetters\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. 0,7,26,63,124,...\\n2. A,C,E,G,I,...\");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        for(int n=1; n<=10; n++)\n          System.out.print(((n*n*n)-1)+\" \");\n        break;\n      case 2:\n        char c = 'A';\n        for(int i=1; i<=10; i++)\n        {\n          System.out.print(c+\" \");\n          c += 2;\n        }\n        break;\n      default:\n        System.out.println(\"Invalid choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Series (1) follows the formula n^3 - 1 for n=1,2,3,... (0,7,26,63,124,...)",
+      "Series (2) prints every alternate capital letter, starting at A"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-074",
+    "chapter": "Nested Loops",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2024-25",
+    "text": "Write the Java program to print the following pattern using nested loops, alternating 'a' and 'b' row by row (each row repeating its own letter a number of times equal to the row number):\na\nbb\naaa\nbbbb\naaaaa",
+    "modelAnswer": "public class AlternatingLetterPattern\n{\n  public static void main(String args[])\n  {\n    int n = 5;\n    for(int i=1; i<=n; i++)\n    {\n      char ch = (i%2==1) ? 'a' : 'b';\n      for(int j=1; j<=i; j++)\n        System.out.print(ch);\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Odd rows print 'a', even rows print 'b'",
+      "Each row repeats its chosen letter a number of times equal to the row number"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-075",
+    "chapter": "Mathematical Library Methods",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice UT1 2025-26",
+    "text": "Convert the following mathematical expression to an equivalent Java statement:\ns = (c*d)^6 + √((c + d*5) / 7)",
+    "modelAnswer": "s = Math.pow(c*d, 6) + Math.sqrt((c + d*5) / 7);",
+    "keyPoints": [
+      "Use Math.pow(c*d, 6) for the sixth power",
+      "Use Math.sqrt() for the square root",
+      "Keep (c + d*5)/7 inside the brackets of Math.sqrt"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-076",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice UT1 2025-26",
+    "text": "In order to sell an old car, the depreciated value can be calculated as per the tariff given below:\nNo. of months used     Rate of Depreciation\n1-12 months            12%\n13-24 months           15%\n25-48 months           18%\nAbove 48 months        25%\nWrite a program in Java to input the showroom price and the number of months the car is used. Calculate the depreciated value. Display the original price of the car, the depreciated value and the final amount to be paid.",
+    "modelAnswer": "import java.util.Scanner;\npublic class CarDepreciation\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter showroom price: \");\n    double price = sc.nextDouble();\n    System.out.print(\"Enter number of months used: \");\n    int months = sc.nextInt();\n    double rate;\n    if(months >= 1 && months <= 12)\n      rate = 12;\n    else if(months <= 24)\n      rate = 15;\n    else if(months <= 48)\n      rate = 18;\n    else\n      rate = 25;\n    double dep = price * rate / 100;\n    double amount = price - dep;\n    System.out.println(\"Original price = \" + price);\n    System.out.println(\"Depreciated value = \" + dep);\n    System.out.println(\"Final amount to be paid = \" + amount);\n  }\n}",
+    "keyPoints": [
+      "Accept price (double) and months (int) using Scanner",
+      "Use an if-else-if ladder to choose the depreciation rate by months",
+      "Depreciation = price * rate / 100; final amount = price - depreciation",
+      "Display original price, depreciation and final amount"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-077",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2025-26",
+    "text": "Write a menu driven program in Java to do the following:\n1. Input a number n from the user. Check and display whether the number is a Special number or not.\n[A Special number is a positive integer which has more than two factors. E.g. 4 is a Special number as it has 1, 2 and 4 as factors; 15 is a Special number as it has 1, 3, 5, 15 as factors; 3 is not a Special number as it has only 1 and 3 as its factors.]\n2. Compute and display the sum of the following series:\nS = 1 + 3 + 6 + 10 + 15 + ... up to x terms, where x is entered by the user.",
+    "modelAnswer": "import java.util.Scanner;\npublic class SpecialMenu\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. Special number\");\n    System.out.println(\"2. Sum of series 1 + 3 + 6 + 10 + ...\");\n    System.out.print(\"Enter your choice: \");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter a number: \");\n        int n = sc.nextInt();\n        int count = 0;\n        for(int i = 1; i <= n; i++)\n        {\n          if(n % i == 0)\n            count++;\n        }\n        if(n > 0 && count > 2)\n          System.out.println(n + \" is a Special number\");\n        else\n          System.out.println(n + \" is not a Special number\");\n        break;\n      case 2:\n        System.out.print(\"Enter number of terms: \");\n        int x = sc.nextInt();\n        int term = 0, sum = 0;\n        for(int i = 1; i <= x; i++)\n        {\n          term = term + i;   // 1, 3, 6, 10, 15 ...\n          sum = sum + term;\n        }\n        System.out.println(\"Sum = \" + sum);\n        break;\n      default:\n        System.out.println(\"Invalid choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Use switch on the user's choice with a default for invalid input",
+      "Count factors with n % i == 0; Special if the count is more than 2",
+      "Each series term is the previous term plus i (triangular numbers)",
+      "Accumulate the terms in a sum variable and display it"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-078",
+    "chapter": "Nested Loops",
+    "marks": 10,
+    "difficulty": "medium",
+    "source": "School Practice UT2 2025-26",
+    "text": "Write a Java program to generate the following pattern using nested loops:\n1\n3 5\n5 7 9\n7 9 11 13\n9 11 13 15 17",
+    "modelAnswer": "public class OddPattern\n{\n  public static void main(String args[])\n  {\n    for(int i = 1; i <= 5; i++)\n    {\n      int num = 2 * i - 1;\n      for(int j = 1; j <= i; j++)\n      {\n        System.out.print(num + \" \");\n        num = num + 2;\n      }\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Outer loop runs for 5 rows",
+      "Row i starts with the odd number 2*i - 1",
+      "Inner loop prints i numbers, each 2 more than the previous",
+      "println() after each row moves to the next line"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-079",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2025-26",
+    "text": "Write any two advantages of Object Oriented Programming (OOP).",
+    "modelAnswer": "1. Reusability: through inheritance, existing classes can be reused to create new classes, saving time and effort.\n2. Data security: through encapsulation and data hiding, data is bound with the methods that use it and is protected from accidental misuse.\n(Other valid points: easier maintenance and modification of code, modelling of real-world objects, polymorphism allows flexible code.)",
+    "keyPoints": [
+      "Reusability of code through inheritance",
+      "Data hiding/security through encapsulation",
+      "Easier maintenance and modelling of real-world entities"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-080",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2025-26",
+    "text": "Define the following:\n(a) Syntax error\n(b) Abstraction",
+    "modelAnswer": "(a) A syntax error is an error caused by violating the grammatical rules of the programming language (e.g. a missing semicolon or misspelt keyword). It is detected by the compiler at compile time.\n(b) Abstraction is the OOP principle of representing only the essential features of an object while hiding the background details and internal implementation.",
+    "keyPoints": [
+      "Syntax error: violation of the language's grammar rules",
+      "Syntax errors are caught by the compiler at compile time",
+      "Abstraction: showing essential features and hiding background details"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-081",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2025-26",
+    "text": "Rewrite the following for loop construct using a do-while loop in Java:\nint sum = 0;\nfor (int i = 1; i <= 100; i++) {\n  if (i % 10 == 0) {\n    sum += i;\n  }\n}",
+    "modelAnswer": "int sum = 0;\nint i = 1;\ndo {\n  if (i % 10 == 0) {\n    sum += i;\n  }\n  i++;\n} while (i <= 100);",
+    "keyPoints": [
+      "Initialise i = 1 before the do block",
+      "Keep the if (i % 10 == 0) check inside the body",
+      "Increment i inside the body and test i <= 100 in the while condition"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-082",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "School Practice AE 2025-26",
+    "text": "Rewrite the following program segment using an if-else construct in Java:\nString s = (x > y) ? \"x is greater\" : (x < y) ? \"y is greater\" : \"x and y are equal\";",
+    "modelAnswer": "String s;\nif (x > y)\n  s = \"x is greater\";\nelse if (x < y)\n  s = \"y is greater\";\nelse\n  s = \"x and y are equal\";",
+    "keyPoints": [
+      "First condition x > y assigns \"x is greater\"",
+      "The nested ternary becomes else if (x < y)",
+      "The final else assigns \"x and y are equal\""
+    ]
+  },
+  {
+    "id": "sa-ix-cs-083",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Write a menu driven program in Java to calculate and display the sum of the following:\n(i) R = 4 - 8 + 16 - 32 + 64 ... up to n terms [where n is entered by the user]\n(ii) S = 0.5 + 0.25 + 0.125 + ... up to 6 terms",
+    "modelAnswer": "import java.util.Scanner;\npublic class SeriesMenu\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.println(\"1. R = 4 - 8 + 16 - 32 + ... n terms\");\n    System.out.println(\"2. S = 0.5 + 0.25 + 0.125 + ... 6 terms\");\n    System.out.print(\"Enter your choice: \");\n    int ch = sc.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter n: \");\n        int n = sc.nextInt();\n        long r = 0;\n        for(int i = 1; i <= n; i++)\n        {\n          long term = (long)Math.pow(2, i + 1);\n          if(i % 2 == 0)\n            r = r - term;\n          else\n            r = r + term;\n        }\n        System.out.println(\"R = \" + r);\n        break;\n      case 2:\n        double s = 0.0;\n        for(int i = 1; i <= 6; i++)\n        {\n          s = s + 1 / Math.pow(2, i);\n        }\n        System.out.println(\"S = \" + s);\n        break;\n      default:\n        System.out.println(\"Invalid choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "The i-th term of R is 2^(i+1): add for odd i, subtract for even i",
+      "The i-th term of S is 1/2^i, i.e. 0.5, 0.25, 0.125 ...",
+      "Use double for S since its terms are fractional",
+      "switch-case menu with a default for an invalid choice"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-084",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "A car-rental company charges rent on cars on the following basis:\nNo. of days            Rent\nFirst 5 days           Rs. 2000 per day\nNext 5 days            Rs. 1000 per day\nNext 3 days            Rs. 800 per day\nMore than 13 days      Rs. 500 per day\nWrite a Java program that accepts the car number, customer name and number of days the car is rented. Calculate the charge to be paid by the customer based on the above criteria. The output must be printed in the format:\nCar No.    Customer Name    No. of days    Charge",
+    "modelAnswer": "import java.util.Scanner;\npublic class CarRental\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter car number: \");\n    String carNo = sc.nextLine();\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter number of days: \");\n    int days = sc.nextInt();\n    double charge;\n    if(days <= 5)\n      charge = days * 2000;\n    else if(days <= 10)\n      charge = 5 * 2000 + (days - 5) * 1000;\n    else if(days <= 13)\n      charge = 5 * 2000 + 5 * 1000 + (days - 10) * 800;\n    else\n      charge = 5 * 2000 + 5 * 1000 + 3 * 800 + (days - 13) * 500;\n    System.out.println(\"Car No.\\tCustomer Name\\tNo. of days\\tCharge\");\n    System.out.println(carNo + \"\\t\" + name + \"\\t\\t\" + days + \"\\t\\t\" + charge);\n  }\n}",
+    "keyPoints": [
+      "Read car number and name with nextLine(), days with nextInt()",
+      "Charge slab-wise: first 5 days at 2000, next 5 at 1000, next 3 at 800, rest at 500",
+      "Use cumulative amounts for completed slabs (10000, 15000, 17400)",
+      "Print the details in tabular form using \\t"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-085",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Write a Java program to accept 2 positive integers m and n. Check and display all the palindrome numbers between the two integers m and n. Also display the frequency of palindrome numbers.\nSample Input:\nEnter first positive integer (m): 11\nEnter second positive integer (n): 19\nSample Output:\nPalindromes between the given range are : 11\nFrequency is : 1",
+    "modelAnswer": "import java.util.Scanner;\npublic class PalindromeRange\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter first positive integer (m): \");\n    int m = sc.nextInt();\n    System.out.print(\"Enter second positive integer (n): \");\n    int n = sc.nextInt();\n    int freq = 0;\n    System.out.print(\"Palindromes between the given range are : \");\n    for(int i = m; i <= n; i++)\n    {\n      int temp = i, rev = 0;\n      while(temp > 0)\n      {\n        rev = rev * 10 + temp % 10;\n        temp = temp / 10;\n      }\n      if(rev == i)\n      {\n        System.out.print(i + \" \");\n        freq++;\n      }\n    }\n    System.out.println();\n    System.out.println(\"Frequency is : \" + freq);\n  }\n}",
+    "keyPoints": [
+      "Loop i from m to n",
+      "Reverse each number using % 10 and / 10 on a copy",
+      "A number is a palindrome if its reverse equals the number",
+      "Count palindromes in a frequency counter and display it"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-086",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Write a Java program to accept a number from the user. Check and display if the number is an Abundant number or not.\n[An abundant number is a positive integer where the sum of its proper divisors (divisors excluding the number itself) is greater than the number itself.]\nSample input: 12\nSample output: 12 is an Abundant number\n(Proper divisors are 1, 2, 3, 4, 6; their sum = 16; since 16 > 12, 12 is an abundant number.)",
+    "modelAnswer": "import java.util.Scanner;\npublic class Abundant\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int n = sc.nextInt();\n    int sum = 0;\n    for(int i = 1; i < n; i++)\n    {\n      if(n % i == 0)\n        sum = sum + i;\n    }\n    if(sum > n)\n      System.out.println(n + \" is an Abundant number\");\n    else\n      System.out.println(n + \" is not an Abundant number\");\n  }\n}",
+    "keyPoints": [
+      "Loop i from 1 to n-1 (proper divisors exclude n)",
+      "Add i to sum when n % i == 0",
+      "Abundant if sum of proper divisors > n"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-087",
+    "chapter": "Nested Loops",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Write a Java program to generate the following pattern using nested loops:\na\nb d\nc e g\nd f h j\ne g i k m",
+    "modelAnswer": "public class LetterPattern\n{\n  public static void main(String args[])\n  {\n    for(int i = 1; i <= 5; i++)\n    {\n      char ch = (char)('a' + i - 1);\n      for(int j = 1; j <= i; j++)\n      {\n        System.out.print(ch + \" \");\n        ch = (char)(ch + 2);\n      }\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Outer loop for 5 rows; row i has i letters",
+      "Each row starts at the letter 'a' + (i - 1)",
+      "Each next letter in a row skips one letter (add 2 to the character)",
+      "Cast int arithmetic back to char"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-088",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "School Practice AE 2025-26",
+    "text": "Write a Java program to accept a number n from the user. Find and display the sum of the prime digits of the number (excluding 0 and 1).\nSample input: 23745  Sample output: Sum of prime digits = 2 + 3 + 7 + 5 = 17\nSample input: 10012  Sample output: Sum of prime digits = 2\nSample input: 4689   Sample output: Sum of prime digits = 0",
+    "modelAnswer": "import java.util.Scanner;\npublic class PrimeDigitSum\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number: \");\n    int n = sc.nextInt();\n    int sum = 0;\n    while(n > 0)\n    {\n      int d = n % 10;\n      if(d == 2 || d == 3 || d == 5 || d == 7)\n        sum = sum + d;\n      n = n / 10;\n    }\n    System.out.println(\"Sum of prime digits = \" + sum);\n  }\n}",
+    "keyPoints": [
+      "Extract digits one by one using % 10 and / 10",
+      "The only prime digits are 2, 3, 5 and 7",
+      "Add a digit to the sum only if it is prime",
+      "Display 0 if no digit is prime"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-089",
+    "chapter": "Mathematical Library Methods",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "Write the Java expression for the following:\n(mn + |m|) / (m + n)",
+    "modelAnswer": "(m*n + Math.abs(m)) / (m + n)",
+    "keyPoints": [
+      "mn must be written as m*n",
+      "|m| is written as Math.abs(m)",
+      "Bracket both the numerator and the denominator"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-090",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "Rose wrote the following code to check whether a number is an even number or not, and print an appropriate message:\nif(n%2==0)\n  System.out.println(\"even Number\");\nelse\n  System.out.println(\"Not an even number\");\nShe asked Raj to rewrite the code using the ternary operator. What would be the code written by Raj?",
+    "modelAnswer": "String s = (n%2==0) ? \"even Number\" : \"Not an even number\";\nSystem.out.println(s);",
+    "keyPoints": [
+      "Condition n%2==0 comes before the ?",
+      "Value if true before the colon, value if false after it",
+      "Store the result in a String variable and print it"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-091",
+    "chapter": "Elementary Concepts of Objects and Classes",
+    "marks": 15,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "A laptop company gives a discount to its customers based on the number of laptops purchased. If the number of laptops is more than three, the customers get a discount of 10% on the total cost, otherwise the discount is zero.\nDefine a class \"laptop\" to accept the name of the company [String], name of the customer [String], number of laptops [int], and the price of each laptop [double] from the user using Scanner class methods only.\nCalculate the discount [double] and the amount to be paid [double] by the customer.\nDiscount = number of laptops × price × 10%\nAmount to be paid = number of laptops × price - discount\nPrint all the details.",
+    "modelAnswer": "import java.util.Scanner;\nclass laptop\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter company name: \");\n    String company = sc.nextLine();\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter number of laptops: \");\n    int n = sc.nextInt();\n    System.out.print(\"Enter price of each laptop: \");\n    double price = sc.nextDouble();\n    double discount = 0.0;\n    if(n > 3)\n      discount = n * price * 10.0 / 100;\n    double amount = n * price - discount;\n    System.out.println(\"Company: \" + company);\n    System.out.println(\"Customer: \" + name);\n    System.out.println(\"Number of laptops: \" + n);\n    System.out.println(\"Price of each laptop: \" + price);\n    System.out.println(\"Discount: \" + discount);\n    System.out.println(\"Amount to be paid: \" + amount);\n  }\n}",
+    "keyPoints": [
+      "Use nextLine() for Strings, nextInt() and nextDouble() for numbers",
+      "Discount is 10% of n × price only when n > 3, else 0",
+      "Amount = n × price - discount",
+      "Print all input details along with discount and amount"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-092",
+    "chapter": "Iterative Constructs (for, while, do-while)",
+    "marks": 12,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2027",
+    "text": "Define a class \"sumseries\" to calculate and display the sum of the series:\nS = a^2 + a^4 + a^6 + a^8 + ... + a^n",
+    "modelAnswer": "import java.util.Scanner;\nclass sumseries\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a: \");\n    int a = sc.nextInt();\n    System.out.print(\"Enter n: \");\n    int n = sc.nextInt();\n    double s = 0;\n    for(int i = 2; i <= n; i += 2)\n    {\n      s += Math.pow(a, i);\n    }\n    System.out.println(\"Sum = \" + s);\n  }\n}",
+    "keyPoints": [
+      "Accept a and n",
+      "Loop the exponent i from 2 to n in steps of 2",
+      "Add Math.pow(a, i) to the sum each time",
+      "Display the sum"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-093",
+    "chapter": "Nested Loops",
+    "marks": 12,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "Define a class \"pattern\" to print the following format using nested for loops only:\n1*2*3*4*5*\n1*2*3*4*5*\n1*2*3*4*5*\n1*2*3*4*5*",
+    "modelAnswer": "class pattern\n{\n  void print()\n  {\n    int r, c;\n    for(r = 1; r <= 4; r++)\n    {\n      for(c = 1; c <= 5; c++)\n      {\n        System.out.print(c + \"*\");\n      }\n      System.out.println();\n    }\n  }\n}",
+    "keyPoints": [
+      "Outer loop runs 4 times (rows)",
+      "Inner loop prints c followed by * for c = 1 to 5",
+      "println() after each row"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-094",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2027",
+    "text": "In a hill station, bikes are given on rent on an hourly basis as follows:\nNumber of hours                          Rate\nUp to 2 hours                            Rs. 150 per hour\nNext 2 hours (each additional hour)      Rs. 100 per hour\nAbove 4 hours (each additional hour)     Rs. 75 per hour\nDefine a class \"bike\" to accept the name of the customer and the number of hours he would like to hire the bike, then calculate and display the amount to be paid as:\nDear <name of the customer>\nYou need to pay <amount> for <number of hours> hours.",
+    "modelAnswer": "import java.util.Scanner;\nclass bike\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter customer name: \");\n    String name = sc.nextLine();\n    System.out.print(\"Enter number of hours: \");\n    int n = sc.nextInt();\n    double bill;\n    if(n <= 2)\n      bill = n * 150;\n    else if(n <= 4)\n      bill = 150 * 2 + (n - 2) * 100;\n    else\n      bill = 150 * 2 + 100 * 2 + (n - 4) * 75;\n    System.out.println(\"Dear \" + name);\n    System.out.println(\"You need to pay \" + bill + \" for \" + n + \" hours.\");\n  }\n}",
+    "keyPoints": [
+      "Up to 2 hours: n × 150",
+      "3–4 hours: 300 + (n - 2) × 100",
+      "Above 4 hours: 300 + 200 + (n - 4) × 75",
+      "Print the message in the required format"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-095",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 12,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "Define a class \"roman\" to display the corresponding Roman numeral of a Hindu-Arabic number (1 to 5) accepted from the user. The program should be designed using the switch case construct only.",
+    "modelAnswer": "import java.util.Scanner;\nclass roman\n{\n  public static void main(String args[])\n  {\n    Scanner sc = new Scanner(System.in);\n    System.out.print(\"Enter a number (1-5): \");\n    int n = sc.nextInt();\n    switch(n)\n    {\n      case 1: System.out.println(\"I\"); break;\n      case 2: System.out.println(\"II\"); break;\n      case 3: System.out.println(\"III\"); break;\n      case 4: System.out.println(\"IV\"); break;\n      case 5: System.out.println(\"V\"); break;\n      default: System.out.println(\"Invalid number\");\n    }\n  }\n}",
+    "keyPoints": [
+      "switch on the input number",
+      "One case for each of 1 to 5 printing I, II, III, IV, V",
+      "break after each case to prevent fall through",
+      "default case for invalid input"
+    ]
+  },
+  {
+    "id": "sa-ix-cs-096",
+    "chapter": "Data Types, Variables and Operators",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "CISCE Specimen 2027",
+    "text": "What are relational operators in Java? Name any two relational operators.",
+    "modelAnswer": "Relational operators are used to compare two values; the result of the comparison is a boolean value (true or false). Examples: > (greater than), < (less than), >= (greater than or equal to), <= (less than or equal to), == (equal to), != (not equal to).",
+    "keyPoints": [
+      "Relational operators compare two values",
+      "The result is boolean: true or false",
+      "Examples: >, <, >=, <=, ==, !="
+    ]
+  },
+  {
+    "id": "sa-ix-cs-097",
+    "chapter": "Conditional Constructs (if-else, switch)",
+    "marks": 15,
+    "difficulty": "medium",
+    "source": "CISCE Specimen 2027",
+    "text": "Write a menu-driven program to calculate the area of an equilateral triangle and a scalene triangle as per the user's choice (using switch case only).\n(i) Scalene triangle area = √(s(s-a)(s-b)(s-c)), where a, b, c are the sides and s = (a + b + c) / 2\n(ii) Equilateral triangle area = (√3 / 4) × a², where a = side of the triangle",
+    "modelAnswer": "import java.util.Scanner;\nclass menu\n{\n  public static void main(String args[])\n  {\n    Scanner ob = new Scanner(System.in);\n    System.out.println(\"1. Area of a Scalene triangle\");\n    System.out.println(\"2. Area of an Equilateral triangle\");\n    System.out.print(\"Enter your choice: \");\n    int ch = ob.nextInt();\n    switch(ch)\n    {\n      case 1:\n        System.out.print(\"Enter sides a, b and c: \");\n        double a = ob.nextDouble();\n        double b = ob.nextDouble();\n        double c = ob.nextDouble();\n        double s = (a + b + c) / 2;\n        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));\n        System.out.println(\"Area of the Scalene triangle = \" + area);\n        break;\n      case 2:\n        System.out.print(\"Enter side: \");\n        double side = ob.nextDouble();\n        double ar = Math.sqrt(3) / 4 * side * side;\n        System.out.println(\"Area of the Equilateral triangle = \" + ar);\n        break;\n      default:\n        System.out.println(\"Invalid choice\");\n    }\n  }\n}",
+    "keyPoints": [
+      "Display a menu and read the choice",
+      "Case 1: s = (a+b+c)/2, area = Math.sqrt(s*(s-a)*(s-b)*(s-c))",
+      "Case 2: area = Math.sqrt(3)/4 * a * a",
+      "break after each case and a default for an invalid choice"
+    ]
+  }
+]

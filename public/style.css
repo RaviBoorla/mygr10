@@ -246,6 +246,10 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   grid-column: 1 / -1;
 }
 
+.ix-source-banner { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.ix-source-banner .soon-tag { flex: none; }
+.ix-source-banner p { margin: 0; color: var(--text-light); font-size: var(--fs-note); }
+
 .chapter-picker { border-top: 1px dashed var(--border); padding-top: 12px; }
 .picker-hint    { margin: 0 0 8px; font-size: var(--fs-note); color: var(--text-light); }
 .chapter-chips  { display: flex; flex-wrap: wrap; gap: 6px; font-size: var(--fs-ui); color: var(--text-light); }
