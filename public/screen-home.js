@@ -10,6 +10,11 @@ Object.assign(app, {
         <span class="soon-tag">Practice Questions</span>
         <p>Class IX has no CISCE board exam, so these questions are not official ICSE board papers —
            unlike the Class X and XII banks.</p>
+      </section>` : state.grade === 'XI' ? `
+      <section class="card ix-source-banner">
+        <span class="soon-tag">Practice Questions</span>
+        <p>Class XI has no CBSE board exam, so these questions are authored from the NCERT
+           textbook rather than official board papers — unlike the Class X and XII banks.</p>
       </section>` : '';
 
     const resume = draft ? `

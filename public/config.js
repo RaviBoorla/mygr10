@@ -15,6 +15,9 @@ const SUBJECTS = {
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Computer Science'],
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
+  XI: {
+    CBSE: ['Accountancy', 'Economics', 'Psychology']
+  },
   XII: {
     CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
@@ -63,7 +66,11 @@ const BANKS = {
   'XII CBSE Political Science':     'XII-CBSE-Political-Science',
   'XII CBSE Psychology':            'XII-CBSE-Psychology',
   'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices',
-  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology'
+  'XII CBSE Information Technology': 'XII-CBSE-Information-Technology',
+
+  'XI CBSE Accountancy':  'XI-CBSE-Accountancy',
+  'XI CBSE Economics':    'XI-CBSE-Economics',
+  'XI CBSE Psychology':   'XI-CBSE-Psychology'
 };
 
 const SA_BANKS = {
@@ -107,6 +114,7 @@ const SA_BANKS = {
   'XII CBSE Psychology':            'XII-CBSE-Psychology-ShortAnswers',
   'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-ShortAnswers',
   'XII CBSE Information Technology': 'XII-CBSE-Information-Technology-ShortAnswers'
+  // XI CBSE: no Short Answers banks yet — only MCQ + Solved Exercises
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -129,7 +137,11 @@ const SOLVED_BANKS = {
   'XII CBSE Informatics Practices': 'XII-CBSE-Information-Practices-Solved',
   'XII CBSE Political Science':     'XII-CBSE-Political-Science-Solved',
   'XII CBSE Psychology':            'XII-CBSE-Psychology-Solved',
-  'XII CBSE Economics':             'XII-CBSE-Economics-Solved'
+  'XII CBSE Economics':             'XII-CBSE-Economics-Solved',
+
+  'XI CBSE Accountancy':  'XI-CBSE-Accountancy-Solved',
+  'XI CBSE Economics':    'XI-CBSE-Economics-Solved',
+  'XI CBSE Psychology':   'XI-CBSE-Psychology-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;
@@ -152,6 +164,7 @@ const BOARDS = [
 const GRADES = [
   { id: 'IX',  label: 'IX' },
   { id: 'X',   label: 'X Board' },
+  { id: 'XI',  label: 'XI' },
   { id: 'XII', label: 'XII Board' }
 ];
 

@@ -1,0 +1,788 @@
+[
+  {
+    "chapter": "Introduction",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Mark the following statements as true or false: (i) Statistics can only deal with quantitative data. (ii) Statistics solves economic problems. (iii) Statistics is of no use to Economics without data.",
+    "solution": "(i) False — Statistics can also deal with qualitative data if it can be expressed numerically (e.g. through ranks or scores). (ii) False — Statistics does not itself solve economic problems; it provides tools and evidence that help economists and policy makers analyse and address them. (iii) True — Statistics is meaningless without data, since its entire purpose is to organise, present and analyse data.",
+    "steps": [
+      "Check each statement against what Statistics can and cannot do.",
+      "Statistics handles data (even qualitative, if quantifiable) but is only a tool, not a solution by itself."
+    ],
+    "id": "sol-eco-001"
+  },
+  {
+    "chapter": "Introduction",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "'The Government and policy makers use statistical data to formulate suitable policies of economic development.' Illustrate with two examples.",
+    "solution": "Example 1: The government uses National Sample Survey data on unemployment and poverty levels to design and target employment schemes like MGNREGA. Example 2: Using Consumer Price Index data on inflation, the RBI and government decide on monetary policy measures (like changing interest rates) and subsidy levels to protect the poor from rising prices.",
+    "steps": [
+      "Pick two real policy examples.",
+      "Show how statistical data (unemployment %, CPI) directly informs a specific government decision."
+    ],
+    "id": "sol-eco-002"
+  },
+  {
+    "chapter": "Introduction",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "\"You have unlimited wants and limited resources to satisfy them.\" Explain this statement by giving two examples.",
+    "solution": "This is the basic problem of scarcity. Example 1: A family has a fixed monthly income (limited resource) but wants better food, education, healthcare and entertainment all at once (unlimited wants) — it must choose what to prioritise. Example 2: A government has a limited budget but faces demands for more spending on defence, health, education and infrastructure simultaneously, forcing it to allocate funds among competing priorities.",
+    "steps": [
+      "State the problem: resources are limited, wants are infinite.",
+      "Give one household-level and one government-level example of having to choose."
+    ],
+    "id": "sol-eco-003"
+  },
+  {
+    "chapter": "Introduction",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "What are your reasons for studying Economics?",
+    "solution": "Studying Economics helps in understanding how scarce resources are allocated among competing wants, how prices and markets work, how government policies affect everyday life (inflation, taxes, employment), and in developing analytical and statistical skills useful for careers in business, public policy, research and finance.",
+    "id": "sol-eco-004"
+  },
+  {
+    "chapter": "Introduction",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Statistical methods are no substitute for common sense. Comment with examples from your daily life.",
+    "solution": "Statistical methods are powerful tools for organising and analysing data, but they must be guided by sound judgement and context. For example, a statistical average showing 'average family size is 4' does not tell us anything about a specific family's actual needs; or correlation between ice-cream sales and drowning deaths (both rise in summer) does not mean one causes the other — common sense is needed to see that heat is the real underlying factor. So statistics aids reasoning but cannot replace it.",
+    "id": "sol-eco-005"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "State whether the following statements are True or False: (i) There are many sources of data. (ii) Telephone survey is the most suitable method of collecting data when the population is literate and spread over a large area. (iii) Data collected by investigator is called secondary data. (iv) There is a certain bias involved in the non-random selection of samples. (v) Non-sampling errors can be minimised by taking large samples.",
+    "solution": "(i) True. (ii) False — telephone surveys are suitable mainly when most households have telephones and the population is spread over a large area, but literacy is not the deciding factor (it works even for non-literate respondents since it's oral) — more precisely, this method is unsuitable when telephone ownership is low, so the statement as commonly answered is False because it excludes non-telephone households regardless of literacy. (iii) False — data collected directly by the investigator is primary data, not secondary. (iv) True — non-random (purposive/judgement) sampling can introduce the investigator's personal bias. (v) False — increasing sample size reduces sampling error, but non-sampling errors (e.g. from a badly designed questionnaire) are not reduced, and can even increase, with a larger sample.",
+    "steps": [
+      "Go statement by statement.",
+      "Recall: primary=investigator collects it directly; sampling error ≠ non-sampling error."
+    ],
+    "id": "sol-eco-006"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "In a village of 200 farms, a study was conducted to find the cropping pattern. Out of the 50 farms surveyed, 50% grew only wheat. What is the population and the sample size?",
+    "solution": "The population is all 200 farms in the village (the entire group of interest), and the sample size is 50 (the number of farms actually surveyed).",
+    "steps": [
+      "Population = total units of interest = 200 farms.",
+      "Sample size = units actually surveyed = 50 farms."
+    ],
+    "id": "sol-eco-007"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Give two examples each of sample, population and variable.",
+    "solution": "Population examples: (1) All students enrolled in Class XI across India. (2) All households in a district. Sample examples: (1) 500 Class XI students randomly selected from different schools for a survey. (2) 100 households selected from a district for a consumption survey. Variable examples: (1) Monthly household income (a continuous variable). (2) Number of members in a household (a discrete variable).",
+    "id": "sol-eco-008"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Which of the following methods give better results and why? (a) Census (b) Sample.",
+    "solution": "Neither is universally 'better' — it depends on the purpose, time and cost available. A census gives more accurate and complete information since every unit is covered, which is essential when exact figures are legally or administratively required (e.g. the national Census). A sample survey is quicker, cheaper and sufficient when a reasonably accurate estimate (not an exact count) is enough, and is often the only practical option for very large populations.",
+    "id": "sol-eco-009"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Which of the following errors is more serious and why? (a) Sampling error (b) Non-Sampling error.",
+    "solution": "Non-sampling errors are generally considered more serious. Sampling error can be reduced simply by increasing the sample size (and vanishes in a full census), but non-sampling errors — arising from poor questionnaire design, interviewer bias, non-response, or errors in recording/processing data — persist (and can even increase) regardless of sample size, and are harder to detect and correct.",
+    "id": "sol-eco-010"
+  },
+  {
+    "chapter": "Collection of Data",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Suppose there are 10 students in your class. You want to select three out of them. How many samples are possible?",
+    "solution": "The number of ways to choose 3 students out of 10 (order not mattering) is given by the combination formula C(10,3) = 10!/(3!×7!) = (10×9×8)/(3×2×1) = 720/6 = 120. So 120 different samples of 3 students are possible.",
+    "steps": [
+      "Use combinations since the order of selection doesn't matter: C(n,r) = n!/(r!(n-r)!).",
+      "C(10,3) = (10×9×8)/(3×2×1) = 120."
+    ],
+    "id": "sol-eco-011"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Which of the following alternatives is true? (i) The class midpoint is equal to... (ii) The frequency distribution of two variables is known as... (iii) Statistical calculations in classified data are based on... (iv) Range is the...",
+    "solution": "(i) The average of the upper class limit and the lower class limit. (ii) Bivariate Distribution. (iii) The class midpoints. (iv) Difference between the largest and the smallest observations.",
+    "id": "sol-eco-012"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What is a variable? Distinguish between a discrete and a continuous variable.",
+    "solution": "A variable is a characteristic that can take different numerical values for different observations/units (e.g. income, age, marks). A discrete variable can take only specific, usually whole-number values with no values possible in between (e.g. number of children = 0,1,2,3...), while a continuous variable can take any value, including fractions, within a given range (e.g. height, weight, time).",
+    "id": "sol-eco-013"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Explain the 'exclusive' and 'inclusive' methods used in classification of data.",
+    "solution": "In the exclusive method, class intervals are formed so that the upper class limit of one class equals the lower class limit of the next, and an item exactly equal to the upper limit is excluded from that class and placed in the next class instead (e.g. 0-10, 10-20, 20-30 — a value of exactly 10 goes into the 10-20 class). In the inclusive method, both the upper and lower limits are included within the same class, so class boundaries do not coincide and there is a gap handled by convention (e.g. 0-9, 10-19, 20-29).",
+    "id": "sol-eco-014"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "What is 'loss of information' in classified data?",
+    "solution": "When individual raw observations are grouped into class intervals, we no longer know the exact value of each observation — only how many observations fall within each class range. This loss of the exact individual values, in exchange for a more compact and usable summary, is called the 'loss of information' in classified data.",
+    "id": "sol-eco-015"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Distinguish between univariate and bivariate frequency distribution.",
+    "solution": "A univariate frequency distribution shows the frequencies of a single variable alone (e.g. only the marks scored by students). A bivariate frequency distribution jointly classifies and shows the frequencies of two variables observed together on the same units (e.g. the joint distribution of students' height and weight).",
+    "id": "sol-eco-016"
+  },
+  {
+    "chapter": "Organisation of Data",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Prepare a frequency distribution by inclusive method taking class interval of 7 from the following data: 28,17,15,22,29,21,23,27,18,12,7,2,9,4,1,8,3,10,5,20,16,12,8,4,33,27,21,15,3,36,27,18,9,2,4,6,32,31,29,18,14,13,15,11,9,7,1,5,37,32,28,26,24,20,19,25,19,20,6,9.",
+    "solution": "The data ranges from 1 to 37, so using class width 7 and the inclusive method, the classes are 1-7, 8-14, 15-21, 22-28, 29-35, 36-42. Tallying the 60 given values into these classes gives approximately: 1-7: 10, 8-14: 11, 15-21: 15, 22-28: 13, 29-35: 7, 36-42: 4 (totaling 60). (Exact tallies may vary slightly by ±1 depending on careful recount, but the distribution shows most values clustering in the middle classes 15-28.)",
+    "steps": [
+      "Find the range: min=1, max=37.",
+      "With class width 7 (inclusive), form classes starting at 1: 1-7, 8-14, 15-21, 22-28, 29-35, 36-42.",
+      "Tally each of the 60 values into its class to get the frequency distribution."
+    ],
+    "id": "sol-eco-017"
+  },
+  {
+    "chapter": "Presentation of Data",
+    "exercise": "Exercises",
+    "number": "Q1-10",
+    "question": "Answer questions 1 to 10 by choosing the correct option (bar diagram dimension, histogram/ogive/line-graph uses, equal/unequal bar widths, True/False items).",
+    "solution": "1. One-dimensional diagram. 2. Mode. 3. Median. 4. All the above (long-term trend, cyclicity and seasonality). 5. True (bar width need not be equal in principle). 6. True (rectangle widths should be equal with equal class intervals). 7. True (histogram needs continuous classification). 8. False (histogram ≠ column diagram; histogram is for continuous grouped data with touching bars). 9. True (mode can be read off a histogram). 10. False (median can be read off from the ogives' intersection point).",
+    "id": "sol-eco-018"
+  },
+  {
+    "chapter": "Presentation of Data",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "What kind of diagrams are more effective in representing the following? (i) Monthly rainfall in a year (ii) Composition of the population of Delhi by religion (iii) Components of cost in a factory.",
+    "solution": "(i) A simple bar diagram, with one bar per month, effectively shows month-to-month variation in rainfall. (ii) A pie diagram is most effective, since it clearly shows each religion's share as a proportion (slice) of the total population. (iii) A pie diagram (or a component/sub-divided bar diagram) is most suitable, as it shows how the total cost is split among components like labour, raw material, overheads, etc.",
+    "id": "sol-eco-019"
+  },
+  {
+    "chapter": "Presentation of Data",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "How does the procedure of drawing a histogram differ when class intervals are unequal in comparison to equal class intervals in a frequency table?",
+    "solution": "With equal class intervals, the height of each histogram bar is simply drawn proportional to that class's frequency. With unequal class intervals, the bar heights must instead be adjusted to frequency density (frequency ÷ class width) rather than raw frequency, so that it is the AREA of each bar (not just its height) that correctly represents the class's frequency.",
+    "steps": [
+      "Equal intervals: height ∝ frequency.",
+      "Unequal intervals: height ∝ frequency/width (frequency density), so area stays proportional to frequency."
+    ],
+    "id": "sol-eco-020"
+  },
+  {
+    "chapter": "Presentation of Data",
+    "exercise": "Exercises",
+    "number": "Q17",
+    "question": "If the salary of a person in the base year is Rs 4,000 per annum and the current year salary is Rs 6,000, by how much should his salary be raised to maintain the same standard of living if the CPI is 400? (Shown under Index Numbers chapter exercises, included here as a cross-chapter numerical illustration of presenting/interpreting index data.)",
+    "solution": "To maintain the same real standard of living, the required salary = old salary × (current CPI/100) = 4,000 × 400/100 = Rs 16,000. Since the person currently earns only Rs 6,000, their salary needs to rise by Rs 16,000 − Rs 6,000 = Rs 10,000 to fully offset the price rise shown by the CPI.",
+    "steps": [
+      "Required salary to maintain real income = old salary × CPI/100.",
+      "4000 × 400/100 = 16000.",
+      "Shortfall = 16000 − current salary (6000) = Rs 10,000 more needed."
+    ],
+    "id": "sol-eco-021"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Indicate the most appropriate alternative from the multiple choices: (i) most suitable average for qualitative measurement (ii) average most affected by extreme items (iii) algebraic sum of deviation of values from A.M.",
+    "solution": "(i) Median. (ii) Arithmetic mean. (iii) 0 (zero).",
+    "id": "sol-eco-022"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Comment whether the following statements are true or false: (i) sum of deviation of items from median is zero (ii) an average alone is not enough to compare series (iii) arithmetic mean is a positional value (iv) upper quartile is the lowest value of top 25% of items (v) median is unduly affected by extreme observations.",
+    "solution": "(i) False — only deviations from the mean sum to zero, not generally from the median. (ii) True — series with the same average can differ greatly in dispersion, so dispersion measures are also needed. (iii) False — the arithmetic mean is a calculated value using every observation, not a positional value like the median. (iv) True — the upper quartile (Q3) is exactly the lowest value among the top 25% of (ordered) items. (v) False — the median, being positional, is not unduly affected by extreme values, unlike the mean.",
+    "id": "sol-eco-023"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "If the arithmetic mean of the data given below is 28, find (a) the missing frequency, and (b) the median of the series: Profit per retail shop (Rs) 0-10,10-20,20-30,30-40,40-50,50-60 with number of shops 12,18,27,f,17,6.",
+    "solution": "(a) The missing frequency f = 20. (b) The median of the series ≈ Rs 27.41.",
+    "steps": [
+      "Total frequency N = 12+18+27+f+17+6 = 80+f.",
+      "Using the step-deviation/assumed-mean method with mean = 28 and solving for f gives f = 20, so N = 100.",
+      "With N=100, N/2=50th item lies in the 20-30 class; applying the median formula gives median ≈ Rs 27.41."
+    ],
+    "id": "sol-eco-024"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "The following table gives the daily income of ten workers in a factory: A-120, B-150, C-180, D-200, E-250, F-300, G-220, H-350, I-370, J-260 (Rs). Find the arithmetic mean.",
+    "solution": "Arithmetic mean = Rs 240.",
+    "steps": [
+      "Sum = 120+150+180+200+250+300+220+350+370+260 = 2400.",
+      "Mean = Sum/n = 2400/10 = Rs 240."
+    ],
+    "id": "sol-eco-025"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Daily income of 150 families is given as a 'more than' cumulative frequency table (More than 75: 150 families ... More than 145: 25 families, in steps of Rs 10). Calculate the arithmetic mean.",
+    "solution": "Converting the 'more than' cumulative frequencies into simple class frequencies and computing the step-deviation mean gives an arithmetic mean of approximately Rs 116.3, matching the textbook's answer.",
+    "steps": [
+      "Convert 'more than' cumulative frequencies into ordinary class frequencies by successive subtraction.",
+      "Apply the direct/step-deviation formula for the mean of grouped data: Mean = A + (Σfd/N)×h.",
+      "This gives Mean ≈ Rs 116.3."
+    ],
+    "id": "sol-eco-026"
+  },
+  {
+    "chapter": "Measures of Central Tendency",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "The size of land holdings of 380 families in a village is given below (classes: <100, 100-200, 200-300, 300-400, 400 & above; frequencies 40, 89, 148, 64, 39). Find the median size of land holdings.",
+    "solution": "Median size of land holdings ≈ 241.22 acres.",
+    "steps": [
+      "N = 380, so N/2 = 190.",
+      "Cumulative frequencies: 40, 129, 277, 341, 380 — the 190th item falls in the 200-300 class.",
+      "Apply the median formula: Median = L + ((N/2 − cf)/f) × h = 200 + ((190−129)/148)×100 ≈ 241.22 acres."
+    ],
+    "id": "sol-eco-027"
+  },
+  {
+    "chapter": "Correlation",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Why is r preferred to covariance as a measure of association?",
+    "solution": "Covariance depends on the units in which the two variables are measured (e.g. Rupees and kilograms), so its numeric value is hard to interpret or compare across different pairs of variables. The correlation coefficient r standardises covariance by dividing it by the product of the standard deviations of the two variables, making it a pure, unit-free number always between −1 and +1 — far easier to interpret and compare.",
+    "id": "sol-eco-028"
+  },
+  {
+    "chapter": "Correlation",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Does correlation imply causation?",
+    "solution": "No. Correlation only measures the degree of statistical association between two variables; it does not establish that one variable causes the other. Two variables may be correlated because one genuinely causes the other, because both are influenced by a third common factor, or purely by coincidence — correlation alone cannot distinguish between these possibilities.",
+    "id": "sol-eco-029"
+  },
+  {
+    "chapter": "Correlation",
+    "exercise": "Exercises",
+    "number": "Q18",
+    "question": "Calculate the correlation coefficient between the heights of fathers in inches (X) and their sons (Y): X: 65,66,57,67,68,69,70,72; Y: 67,56,65,68,72,72,69,71.",
+    "solution": "Using Karl Pearson's correlation coefficient formula on this paired data gives r ≈ 0.603, as given in the textbook, indicating a moderately strong positive relationship between fathers' and sons' heights.",
+    "steps": [
+      "Compute means of X and Y.",
+      "Compute deviations from the mean for each pair, their products, and squared deviations.",
+      "Apply r = Σ(x−x̄)(y−ȳ) / √[Σ(x−x̄)² × Σ(y−ȳ)²] to get r ≈ 0.603."
+    ],
+    "id": "sol-eco-030"
+  },
+  {
+    "chapter": "Correlation",
+    "exercise": "Exercises",
+    "number": "Q19",
+    "question": "Calculate the correlation coefficient between X: −3,−2,−1,1,2,3 and Y: 9,4,1,1,4,9, and comment on their relationship.",
+    "solution": "r = 0. Even though Y is perfectly related to X non-linearly (Y = X²), the symmetric, U-shaped pattern means there is no net linear association, so the linear correlation coefficient is exactly zero — illustrating that zero correlation does not always mean 'no relationship', only 'no linear relationship'.",
+    "steps": [
+      "Note Y = X², a non-linear (quadratic) relation.",
+      "Because the data is symmetric about X=0, positive and negative deviations cancel, giving r = 0."
+    ],
+    "id": "sol-eco-031"
+  },
+  {
+    "chapter": "Correlation",
+    "exercise": "Exercises",
+    "number": "Q20",
+    "question": "Calculate the correlation coefficient between X: 1,3,4,5,7,8 and Y: 2,6,8,10,14,16, and comment on their relationship.",
+    "solution": "r = 1. Here Y = 2X exactly for every pair, so X and Y have a perfect positive linear relationship, giving the maximum possible correlation coefficient of +1.",
+    "steps": [
+      "Observe that each Y value is exactly twice the corresponding X value (Y = 2X).",
+      "A perfect linear relationship always gives r = +1 (if positive slope) or r = −1 (if negative slope)."
+    ],
+    "id": "sol-eco-032"
+  },
+  {
+    "chapter": "Index Numbers",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "Monthly per capita expenditure on five items (weights 75,10,5,6,4) in 1980 and 2005: Food 100→200, Clothing 20→25, Fuel & lighting 15→20, House rent 30→40, Misc 35→65. Prepare a weighted index number for the cost of living for 2005 with 1980 as base.",
+    "solution": "The weighted cost-of-living index for 2005 (1980=100) works out to approximately 184.6, meaning the cost of living for this worker nearly doubled (rose by about 84.6%) between 1980 and 2005.",
+    "steps": [
+      "Compute each item's price relative = (P1/P0)×100: Food=200, Clothing=125, Fuel≈133.3, Rent≈133.3, Misc≈185.7.",
+      "Multiply each price relative by its weight and sum: (75×200)+(10×125)+(5×133.3)+(6×133.3)+(4×185.7) ≈ 18,459.5.",
+      "Divide by total weight (100): weighted index ≈ 184.6."
+    ],
+    "id": "sol-eco-033"
+  },
+  {
+    "chapter": "Index Numbers",
+    "exercise": "Exercises",
+    "number": "Q17",
+    "question": "If the salary of a person in the base year is Rs 4,000 per annum and the current year salary is Rs 6,000, by how much should his salary be raised to maintain the same standard of living if the CPI is 400?",
+    "solution": "Required salary to maintain the same real standard of living = old salary × (CPI/100) = 4,000 × 400/100 = Rs 16,000. Since the person is currently paid only Rs 6,000, the salary must be raised by a further Rs 10,000 (from 6,000 to 16,000) to fully compensate for the price rise.",
+    "steps": [
+      "Compensated salary = base salary × current CPI / 100 = 4000 × 4 = 16000.",
+      "Additional raise needed = 16000 − 6000 = Rs 10,000."
+    ],
+    "id": "sol-eco-034"
+  },
+  {
+    "chapter": "Index Numbers",
+    "exercise": "Exercises",
+    "number": "Q18",
+    "question": "The consumer price index for June 2005 was 125. The food index was 120 and that of other items 135. What is the percentage of the total weight given to food?",
+    "solution": "About 66.7% of the total weight was assigned to food.",
+    "steps": [
+      "Let w = fraction of weight on food; weight on 'other items' = (1−w).",
+      "125 = 120w + 135(1−w) ⇒ 125 = 135 − 15w ⇒ 15w = 10 ⇒ w = 0.667.",
+      "So food's weight share ≈ 66.7% of the total."
+    ],
+    "id": "sol-eco-035"
+  },
+  {
+    "chapter": "Index Numbers",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "What are the desirable properties of the base period?",
+    "solution": "A good base period should be (i) a 'normal' year, free from unusual events like wars, famines, strikes or extreme booms/slumps that would distort comparisons; (ii) not too far in the past, so that the comparison with the current year remains meaningful and relevant; and (iii) one for which reliable, good-quality data is actually available.",
+    "id": "sol-eco-036"
+  },
+  {
+    "chapter": "Index Numbers",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "What is the difference between a price index and a quantity index?",
+    "solution": "A price index measures the relative change in the prices of a fixed basket of goods/services between a base period and a current period. A quantity index, in contrast, measures the relative change in the physical quantity (volume) of goods produced, consumed or sold, holding prices constant — e.g. the Index of Industrial Production measures changes in output volumes, not prices.",
+    "id": "sol-eco-037"
+  },
+  {
+    "chapter": "Use of Statistical Tools",
+    "exercise": "Suggested Project Framework",
+    "number": "Q1",
+    "question": "Outline the key steps involved in designing and carrying out a statistics project.",
+    "solution": "(1) Choose and clearly define the topic/problem to be studied. (2) Decide whether primary or secondary data is needed, and the appropriate method/sampling design for collecting it. (3) Collect the data carefully, using a well-designed questionnaire if primary data is involved. (4) Organise and classify the collected data into a usable form (tables, frequency distributions). (5) Present the data using suitable diagrams/graphs. (6) Analyse the data using appropriate statistical tools (averages, correlation, index numbers, as relevant to the question). (7) Interpret the results and write a clear project report with the objective, method, analysis and conclusions.",
+    "steps": [
+      "Define the problem.",
+      "Decide data source (primary/secondary) and collection method.",
+      "Collect, organise, present and analyse the data.",
+      "Interpret and report the conclusions."
+    ],
+    "id": "sol-eco-038"
+  },
+  {
+    "chapter": "Use of Statistical Tools",
+    "exercise": "Suggested Project Framework",
+    "number": "Q2",
+    "question": "Suggest one possible statistics project topic each using (a) primary data and (b) secondary data, with the tools you would use.",
+    "solution": "(a) Primary data project: 'Study of smartphone usage patterns among students in my school' — collected via a questionnaire; analysed using a frequency distribution, bar diagrams/pie charts for usage categories, and the mode/median to summarise typical usage hours. (b) Secondary data project: 'Trends in India's Consumer Price Index over the last 10 years' — using RBI/MOSPI published CPI data; analysed using a time-series (line) graph to show the trend and simple growth-rate calculations between years.",
+    "id": "sol-eco-039"
+  },
+  {
+    "chapter": "Use of Statistical Tools",
+    "exercise": "Suggested Project Framework",
+    "number": "Q3",
+    "question": "Why must the topic and objective of a statistics project be defined clearly at the very start?",
+    "solution": "A clearly defined topic and objective determines every subsequent step — what kind of data is needed (primary or secondary), how it should be collected (questionnaire design, sampling method), and which statistical tools (mean, correlation, index numbers, diagrams) are appropriate for analysis. Without a clear objective, the data collected may be irrelevant or insufficient to answer the actual question of interest.",
+    "id": "sol-eco-040"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "What was the focus of the economic policies pursued by the colonial government in India? What were the impacts of these policies?",
+    "solution": "The colonial government's economic policies were focused purely on protecting and promoting British commercial interests, not on India's development. They aimed to turn India into a supplier of cheap raw materials and foodstuffs for British industries and a captive market for British manufactured goods. The impact was the ruin of India's traditional handicrafts (without a corresponding rise of modern industry), stagnant agriculture, a largely agrarian occupational structure, and a colonial drain of wealth — leaving India at independence with a very low per-capita income and widespread poverty.",
+    "id": "sol-eco-041"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What were the main causes of India's agricultural stagnation during the colonial period?",
+    "solution": "Agricultural stagnation was caused mainly by: (i) the zamindari system, under which zamindars had to pay a fixed, high revenue to the colonial government regardless of the actual harvest, discouraging investment in land improvement; (ii) low levels of technology, use of outdated methods, and negligible irrigation/fertiliser use; (iii) the forced cultivation of cash crops (like indigo) for export at the expense of food crops; and (iv) lack of security of tenure for the actual cultivators, who had little incentive to invest in the land they tilled.",
+    "id": "sol-eco-042"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What was the two-fold motive behind the systematic de-industrialisation effected by the British in pre-independent India?",
+    "solution": "The two-fold colonial motive was: (i) to reduce India to the status of a mere exporter of important raw materials needed by rising British industries, and (ii) simultaneously to turn India into a captive market for finished goods produced in British factories — so Indian industry was deliberately suppressed to serve both ends of this exploitative trade relationship.",
+    "id": "sol-eco-043"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "What do you understand by the drain of Indian wealth during the colonial period?",
+    "solution": "The 'drain of wealth' refers to a significant part of India's wealth/output being transferred to Britain without India receiving an adequate economic return. This happened through channels like salaries and pensions paid to British officials, interest on India's foreign debt, profits repatriated by British-owned companies, and 'Home Charges' (administrative expenses of ruling India, paid for by India itself) — all of which benefited Britain at India's expense.",
+    "id": "sol-eco-044"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Highlight the salient features of India's pre-independence occupational structure.",
+    "solution": "India's occupational structure at independence was heavily skewed towards agriculture, which engaged about 70-75% of the workforce, while manufacturing/industry and services together accounted for a much smaller share. There was also considerable inter-regional variation — some regions (like the then Madras, Bombay and Bengal presidencies) saw a decline in their dependence on agriculture alongside a rise in manufacturing and services, whereas others (like Odisha, Punjab and Rajasthan) saw increased dependence on agriculture.",
+    "id": "sol-eco-045"
+  },
+  {
+    "chapter": "Indian Economy on the Eve of Independence",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "When was India's first official census operation undertaken?",
+    "solution": "India's first official, synchronous all-India census was conducted in 1881, though an earlier, non-synchronous census attempt had been made in 1872.",
+    "id": "sol-eco-046"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Define a plan.",
+    "solution": "A plan specifies the goals that a nation wants to achieve in a defined future period, along with the ways and means — allocation of resources, policies, and targets for different sectors — to achieve those goals.",
+    "id": "sol-eco-047"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "What are High Yielding Variety (HYV) seeds?",
+    "solution": "HYV seeds are improved varieties of crop seeds (developed through plant breeding/genetic research, notably for wheat and rice) that give a much larger output per hectare than traditional seeds, provided they are used along with adequate irrigation and chemical fertilisers — they were the technological backbone of India's Green Revolution.",
+    "id": "sol-eco-048"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What is marketable surplus?",
+    "solution": "Marketable surplus is the portion of agricultural produce that farmers sell in the market, over and above what they retain for their own family's consumption and other on-farm needs (like seeds for the next sowing).",
+    "id": "sol-eco-049"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "What is Green Revolution? Why was it implemented and how did it benefit the farmers?",
+    "solution": "The Green Revolution refers to the large increase in foodgrain (especially wheat and rice) production achieved from the mid-1960s through the use of HYV seeds, assured irrigation and chemical fertilisers/pesticides. It was implemented to make India self-sufficient in foodgrains after repeated droughts and dependence on imported food (like under PL-480). It benefited farmers — particularly medium and large farmers in well-irrigated regions like Punjab and Haryana — through sharply higher yields and incomes, though smaller and rain-fed farmers benefited much less.",
+    "id": "sol-eco-050"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Explain 'growth with equity' as a planning objective.",
+    "solution": "'Growth with equity' means that Indian planners wanted the economy not only to grow in terms of total output (GDP) but to ensure that the fruits of this growth were fairly distributed — i.e. that growth also reduced poverty and inequality, rather than benefiting only a small section of the population while leaving the rest behind.",
+    "id": "sol-eco-051"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Why was public sector given a leading role in industrial development during the planning period?",
+    "solution": "The public sector was given a leading role because: (i) private industry at independence lacked the capital and expertise to set up large, capital-intensive heavy/basic industries (steel, power, machine-building) needed for long-term development; (ii) the government wanted to prevent concentration of economic power in a few private hands; and (iii) it was felt that only the state could undertake investments with long gestation periods and low immediate profitability but high long-term social benefit (like infrastructure).",
+    "id": "sol-eco-052"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q17",
+    "question": "Explain how import substitution can protect domestic industry.",
+    "solution": "Under import substitution, the government restricts or bans the import of goods that can be produced domestically (through high tariffs or import licensing). This shields fledgling domestic ('infant') industries from foreign competition, letting them grow their production, achieve economies of scale, and become self-reliant, before (ideally) later facing open competition.",
+    "id": "sol-eco-053"
+  },
+  {
+    "chapter": "Indian Economy 1950–1990",
+    "exercise": "Exercises",
+    "number": "Q19",
+    "question": "Match the following: Prime Minister / Gross Domestic Product / Quota / Land Reforms / HYV Seeds / Subsidy — against their correct definitions.",
+    "solution": "1. Prime Minister → C. Chairperson of the Planning Commission. 2. Gross Domestic Product → D. The money value of all final goods and services produced within the economy in one year. 3. Quota → B. Quantity of goods that can be imported. 4. Land Reforms → E. Improvements in the field of agriculture to increase its productivity. 5. HYV Seeds → A. Seeds that give a large proportion of output. 6. Subsidy → F. Monetary assistance given by the government for production activities.",
+    "id": "sol-eco-054"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Why were reforms introduced in India?",
+    "solution": "Reforms were introduced in 1991 because India faced a severe balance-of-payments crisis: foreign exchange reserves had fallen so low they could finance barely two weeks of essential imports, inflation was high, and the fiscal deficit was unsustainably large. To avert a default and secure emergency loans from the IMF/World Bank, India agreed to undertake structural reforms — liberalisation, privatisation and globalisation — as part of a stabilisation and structural adjustment programme.",
+    "id": "sol-eco-055"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What do you understand by devaluation of rupee?",
+    "solution": "Devaluation of the rupee means a deliberate reduction in the official exchange-rate value of the rupee relative to foreign currencies (like the US dollar), making Indian exports cheaper and more competitive abroad and imports costlier — it was one of the early measures taken in 1991 to correct the balance-of-payments crisis.",
+    "id": "sol-eco-056"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Distinguish between: (i) Strategic and Minority sale (ii) Bilateral and Multi-lateral trade (iii) Tariff and Non-tariff barriers.",
+    "solution": "(i) A strategic sale transfers a substantial stake (often majority ownership and management control) of a public sector unit to a private buyer, whereas a minority sale (disinvestment) sells only a minority stake, with the government retaining ownership and control. (ii) Bilateral trade is trade conducted between two countries under an agreement between them, while multi-lateral trade involves trade and agreements among three or more countries (often under a common framework like the WTO). (iii) A tariff barrier restricts trade by imposing a tax/duty on imports, raising their price, while a non-tariff barrier restricts trade through other means like import quotas, licensing requirements or technical/quality standards, without directly taxing the good.",
+    "id": "sol-eco-057"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Why are tariffs imposed?",
+    "solution": "Tariffs (import duties) are imposed mainly to protect domestic industries from foreign competition by making imported goods costlier, and also to generate revenue for the government.",
+    "id": "sol-eco-058"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "India has certain advantages which make it a favourite outsourcing destination. What are these advantages?",
+    "solution": "India's advantages for outsourcing include a large pool of skilled, English-speaking workers available at relatively low wages, a strong IT/engineering education base, favourable time-zone differences with the US/Europe (enabling round-the-clock service), and relatively lower operational costs — together making it cost-effective for firms abroad to outsource services like call centres, software development and back-office work to India.",
+    "id": "sol-eco-059"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "What are the major factors responsible for the high growth of the service sector?",
+    "solution": "The service sector's high growth has been driven by: rapid growth of IT and IT-enabled services (software, BPO) that found a global market; rising demand for financial, banking, insurance, telecom and transport services as the economy modernised; outsourcing of services by developed countries to India; and generally higher income elasticity of demand for services as household incomes have risen.",
+    "id": "sol-eco-060"
+  },
+  {
+    "chapter": "Liberalisation, Privatisation and Globalisation: An Appraisal",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "Agriculture sector appears to be adversely affected by the reform process. Why?",
+    "solution": "Agriculture has suffered relatively because reforms reduced public investment in agricultural infrastructure (irrigation, research), removed/reduced input subsidies over time, exposed Indian farmers to global price volatility after trade liberalisation (e.g. cheaper imports undercutting domestic prices), and shifted some government focus and investment priority toward industry and services — leaving agricultural growth lagging behind the other two sectors.",
+    "id": "sol-eco-061"
+  },
+  {
+    "chapter": "Human Capital Formation in India",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "What are the two major sources of human capital in a country?",
+    "solution": "The two major sources are expenditure on education and expenditure on health, since these directly build the knowledge, skills and physical well-being that make a population more productive; additional sources include on-the-job training and migration of skilled people.",
+    "id": "sol-eco-062"
+  },
+  {
+    "chapter": "Human Capital Formation in India",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Bring out the differences between human capital and human development.",
+    "solution": "Human capital views education and health as investments that increase a person's productivity, treating people primarily as a means to raise economic output/growth. Human development, by contrast, views the well-being, capabilities and freedoms of people as ends in themselves — the goal is to expand people's choices and quality of life, not merely to use them as an input for growth.",
+    "id": "sol-eco-063"
+  },
+  {
+    "chapter": "Human Capital Formation in India",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "What factors contribute to human capital formation?",
+    "solution": "Human capital formation is driven mainly by: (i) investment in education, (ii) investment in health (including maternal, child and public health), (iii) on-the-job training provided by firms, (iv) expenditure related to migration of labour in search of better jobs, and (v) expenditure by firms on acquiring information relevant to employment and productivity.",
+    "id": "sol-eco-064"
+  },
+  {
+    "chapter": "Human Capital Formation in India",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Discuss the following as a source of human capital formation: (i) Health infrastructure (ii) Expenditure on migration.",
+    "solution": "(i) Health infrastructure (hospitals, clinics, vaccination programmes, clean water/sanitation) improves people's physical well-being and life expectancy, enabling them to work longer, more productively and with fewer days lost to illness — directly raising human capital. (ii) Expenditure on migration — the cost incurred by workers moving from low-wage/low-opportunity regions to better job markets — is considered an investment in human capital because it allows labour to be more productively employed, raising both individual earnings and overall economic output, even though it involves short-term costs (transport, settling-in) for a long-term gain.",
+    "id": "sol-eco-065"
+  },
+  {
+    "chapter": "Human Capital Formation in India",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "How does investment in human capital contribute to growth?",
+    "solution": "Investment in human capital raises the productivity of the workforce — healthier, better-educated workers produce more, adapt faster to new technology, and are more innovative — thereby raising aggregate output. It also enables workers to shift to higher-productivity sectors, supports technological progress, and improves overall efficiency of resource use, all of which contribute to higher sustained economic growth.",
+    "id": "sol-eco-066"
+  },
+  {
+    "chapter": "Rural Development",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Discuss the importance of credit in rural development.",
+    "solution": "Credit allows farmers and rural households to meet the working-capital needs of agriculture (seeds, fertilisers, labour) in advance of harvest income, and to invest in productivity-raising assets (irrigation equipment, livestock). Since institutional, low-interest credit (from banks/cooperatives) is often scarce, many poor farmers rely on expensive informal credit from moneylenders, which can trap them in debt — making expansion of affordable rural credit crucial for rural development.",
+    "id": "sol-eco-067"
+  },
+  {
+    "chapter": "Rural Development",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Explain the role of micro-credit in meeting the credit requirements of the poor.",
+    "solution": "Micro-credit refers to very small loans provided, often without collateral, typically through Self Help Groups (SHGs) and microfinance institutions, to poor rural households — especially women — who cannot access formal bank credit. By pooling savings and providing timely small loans for productive purposes, micro-credit reduces dependence on exploitative moneylenders and helps households build small enterprises and smooth consumption.",
+    "id": "sol-eco-068"
+  },
+  {
+    "chapter": "Rural Development",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "What do you mean by agricultural marketing?",
+    "solution": "Agricultural marketing refers to all the processes and activities — assembling, storage, grading, transportation, and sale — involved in moving farm produce from the producer (farmer) to the final consumer or user.",
+    "id": "sol-eco-069"
+  },
+  {
+    "chapter": "Rural Development",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Mention some obstacles that hinder the mechanism of agricultural marketing.",
+    "solution": "Key obstacles include: too many layers of intermediaries/middlemen reducing the farmer's share of the final price, inadequate storage/warehousing facilities leading to distress sales right after harvest, poor rural roads and transport, lack of accurate and timely market information for farmers, malpractices in unregulated markets (faulty weighing, forced commission), and inadequate grading/standardisation facilities.",
+    "id": "sol-eco-070"
+  },
+  {
+    "chapter": "Rural Development",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Distinguish between 'Green Revolution' and 'Golden Revolution'.",
+    "solution": "The Green Revolution (from the mid-1960s) refers to the dramatic rise in foodgrain (wheat/rice) production using HYV seeds, irrigation and fertilisers. The Golden Revolution (roughly 1991–2003) refers to the period of rapid growth in horticulture — fruits, vegetables and flowers — through improved production and marketing of horticultural produce, so named for the high-value, 'golden' returns this diversification brought to farmers.",
+    "id": "sol-eco-071"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Who is a worker?",
+    "solution": "A worker is a person who is engaged in any economic activity — i.e. any activity that contributes to the production of goods and services and adds to the value of national product — whether paid or as unpaid family labour on a household farm/enterprise.",
+    "id": "sol-eco-072"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Are the following workers — a beggar, a thief, a smuggler, a gambler? Why?",
+    "solution": "None of them is considered a 'worker' in the economic sense, because being a worker requires engagement in a legitimate economic activity that produces goods/services and contributes to the national product. Begging, theft, smuggling and gambling do not involve production of goods or services — they are not recognised as economic activities, so the national income accounts do not treat these individuals as part of the workforce.",
+    "id": "sol-eco-073"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Raj is going to school. When he is not in school, you will find him working on his farm. Can you consider him as a worker? Why?",
+    "solution": "Yes, Raj can be considered a worker, because even though he is primarily a student, the time he spends working on the family farm counts as (unpaid family) economic activity that contributes to agricultural production — and anyone contributing to production, even part-time or unpaid, is classified as a worker.",
+    "id": "sol-eco-074"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Compared to urban women, more rural women are found working. Why?",
+    "solution": "Rural women's work participation appears higher mainly because a large part of their labour — working in the family's farm, tending livestock, or helping in a household enterprise — is directly visible and counted as part of the agricultural/allied economic activity. In urban areas, women are more often engaged only in unpaid household (domestic) work, which is not counted as economic activity, lowering the recorded urban female work-participation rate; also, urban women often face greater social/structural barriers to formal paid employment.",
+    "id": "sol-eco-075"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Meena is a housewife. Besides taking care of household chores, she works in the cloth shop which is owned and operated by her husband. Can she be considered as a worker? Why?",
+    "solution": "Yes, Meena is a worker. Although her household chores (cooking, cleaning for her own family) are not counted as economic activity, her work in the family-owned cloth shop is unpaid family labour contributing directly to the production/sale of goods and services — which is classified as a genuine economic activity, making her a worker even though she draws no separate wage.",
+    "id": "sol-eco-076"
+  },
+  {
+    "chapter": "Employment: Growth, Informalisation and Other Issues",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "An establishment with four hired workers is known as a ______ (formal/informal) sector establishment.",
+    "solution": "Informal — in India, establishments employing fewer than 10 hired workers are generally classified as belonging to the informal (unorganised) sector, which typically lacks the job security and social-security benefits found in the formal sector.",
+    "id": "sol-eco-077"
+  },
+  {
+    "chapter": "Environment and Sustainable Development",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "What is meant by environment?",
+    "solution": "The environment refers to the sum total of all the biotic (living — plants, animals) and abiotic (non-living — air, water, land, climate) elements and their interactions, which together form the life-sustaining system that supplies resources and absorbs waste for all living organisms, including the human economy.",
+    "id": "sol-eco-078"
+  },
+  {
+    "chapter": "Environment and Sustainable Development",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What happens when the rate of resource extraction exceeds that of their regeneration?",
+    "solution": "When resources are extracted faster than they can naturally regenerate or be replenished, the resource stock steadily depletes — this is called resource depletion. Over time, this can make the resource scarce or exhausted (e.g. falling groundwater tables, shrinking forest cover), threatening the sustainability of economic activities and livelihoods that depend on it.",
+    "id": "sol-eco-079"
+  },
+  {
+    "chapter": "Environment and Sustainable Development",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Classify the following into renewable and non-renewable resources: (i) trees (ii) fish (iii) petroleum (iv) coal (v) iron-ore (vi) water.",
+    "solution": "Renewable: trees, fish, water (these can regenerate/replenish naturally over time, if not overexploited). Non-renewable: petroleum, coal, iron-ore (these are finite, exhaustible resources that take millions of years to form and cannot be replenished within a human timescale).",
+    "id": "sol-eco-080"
+  },
+  {
+    "chapter": "Environment and Sustainable Development",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Two major environmental issues facing the world today are ___ and ___.",
+    "solution": "Global warming (climate change) and depletion of the ozone layer are two of the most widely cited major global environmental issues (other acceptable answers include large-scale deforestation and loss of biodiversity).",
+    "id": "sol-eco-081"
+  },
+  {
+    "chapter": "Environment and Sustainable Development",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "What are the functions of the environment?",
+    "solution": "The environment performs four key functions: (i) it supplies resources (renewable and non-renewable) used in production and consumption; (ii) it assimilates/absorbs waste generated by economic activity; (iii) it sustains life by providing genetic and biological diversity; and (iv) it provides aesthetic services (scenic beauty, recreation) that enhance quality of life.",
+    "id": "sol-eco-082"
+  },
+  {
+    "chapter": "Comparative Development Experiences of India and its Neighbours",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Why are regional and economic groupings formed?",
+    "solution": "Regional and economic groupings (like SAARC, ASEAN, BRICS) are formed so that neighbouring/like-minded countries can cooperate on trade, investment and policy coordination, strengthen their collective bargaining power in global forums, share the benefits of economies of scale through a larger combined market, and collaborate on shared regional challenges such as security and environmental issues.",
+    "id": "sol-eco-083"
+  },
+  {
+    "chapter": "Comparative Development Experiences of India and its Neighbours",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What similar developmental strategies have India and Pakistan followed for their respective developmental paths?",
+    "solution": "Both India and Pakistan adopted a mixed economy framework with government-led Five Year Plans after independence, emphasised the public sector for heavy/basic industries, pursued import-substitution industrialisation initially, and later moved toward market-oriented liberalisation reforms (India from 1991; Pakistan around a similar period), though Pakistan's planning was more frequently interrupted by military rule.",
+    "id": "sol-eco-084"
+  },
+  {
+    "chapter": "Comparative Development Experiences of India and its Neighbours",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Explain the Great Leap Forward campaign of China as initiated in 1958.",
+    "solution": "The Great Leap Forward (1958) was a campaign by China's government aimed at rapidly transforming the country from an agrarian economy into an industrial one through mass mobilisation — organising peasants into large agricultural communes and promoting backyard industrial production (e.g. small-scale steel furnaces). It is widely regarded as a policy failure, leading to a severe decline in agricultural output and a catastrophic famine that caused millions of deaths.",
+    "id": "sol-eco-085"
+  },
+  {
+    "chapter": "Comparative Development Experiences of India and its Neighbours",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "What is the important implication of the 'one child norm' in China?",
+    "solution": "The one-child policy sharply reduced China's population growth rate over several decades, contributing to a faster demographic transition and a temporarily favourable worker-to-dependent ratio ('demographic dividend'). However, it has also led to a rapidly ageing population, a shrinking future workforce, and a skewed sex ratio (due to a cultural preference for male children), which pose long-term economic and social challenges.",
+    "id": "sol-eco-086"
+  },
+  {
+    "chapter": "Comparative Development Experiences of India and its Neighbours",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Compare and contrast India and China's sectoral contribution towards GVA/GDP. What does it indicate?",
+    "solution": "In China, the industrial (secondary) sector has historically contributed a much larger share of GDP/GVA, reflecting its strategy of becoming a global manufacturing hub, while the services sector has also grown steadily. In India, the services (tertiary) sector contributes the largest share of GDP, with industry's share comparatively lower, even though agriculture continues to employ a disproportionately large share of the workforce. This indicates that China's growth has been more industry/manufacturing-led and employment-intensive in that sector, whereas India has followed a more services-led growth path without a matching structural shift of its workforce out of agriculture.",
+    "id": "sol-eco-087"
+  }
+]
