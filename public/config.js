@@ -17,7 +17,7 @@ const SUBJECTS = {
     // IB: ['Mathematics', 'Biology', 'Individuals & Societies', 'Language & Literature']  // hidden — no banks yet
   },
   XI: {
-    CBSE: ['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Computer Science']
+    CBSE: ['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Computer Science', 'Mathematics', 'Political Science']
   },
   XII: {
     CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
@@ -76,7 +76,9 @@ const BANKS = {
   'XI CBSE Psychology':      'XI-CBSE-Psychology',
   'XI CBSE Physics':         'XI-CBSE-Physics',
   'XI CBSE Chemistry':       'XI-CBSE-Chemistry',
-  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science'
+  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science',
+  'XI CBSE Mathematics':     'XI-CBSE-Mathematics',
+  'XI CBSE Political Science': 'XI-CBSE-Political-Science'
 };
 
 const SA_BANKS = {
@@ -123,7 +125,9 @@ const SA_BANKS = {
 
   'XI CBSE Physics':         'XI-CBSE-Physics-ShortAnswers',
   'XI CBSE Chemistry':       'XI-CBSE-Chemistry-ShortAnswers',
-  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science-ShortAnswers'
+  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science-ShortAnswers',
+  'XI CBSE Mathematics':     'XI-CBSE-Mathematics-ShortAnswers',
+  'XI CBSE Political Science': 'XI-CBSE-Political-Science-ShortAnswers'
   // XI CBSE Accountancy/Economics/Psychology: no Short Answers banks yet — only MCQ + Solved Exercises
 };
 function saBankSlug(subject, board, grade) {
@@ -156,7 +160,9 @@ const SOLVED_BANKS = {
   'XI CBSE Psychology':      'XI-CBSE-Psychology-Solved',
   'XI CBSE Physics':         'XI-CBSE-Physics-Solved',
   'XI CBSE Chemistry':       'XI-CBSE-Chemistry-Solved',
-  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science-Solved'
+  'XI CBSE Computer Science': 'XI-CBSE-Computer-Science-Solved',
+  'XI CBSE Mathematics':     'XI-CBSE-Mathematics-Solved',
+  'XI CBSE Political Science': 'XI-CBSE-Political-Science-Solved'
 };
 function solvedBankSlug(subject, board, grade) {
   board = board || state.board;

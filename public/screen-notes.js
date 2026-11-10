@@ -42,12 +42,14 @@ const NOTES_SOURCES = {
     Geography:   { ICSE: [['ICSE Geography']] }
   },
   XI: {
-    Accountancy:     { CBSE: [['XI Accountancy']] },
-    Economics:       { CBSE: [['XI Economics']] },
-    Psychology:      { CBSE: [['XI Psychology']] },
-    Physics:         { CBSE: [['XI Physics']] },
-    Chemistry:       { CBSE: [['XI Chemistry']] },
-    'Comp App & IT': { CBSE: [['XI Computer Science']] }
+    Accountancy:        { CBSE: [['XI Accountancy']] },
+    Economics:          { CBSE: [['XI Economics']] },
+    Psychology:         { CBSE: [['XI Psychology']] },
+    Physics:            { CBSE: [['XI Physics']] },
+    Chemistry:          { CBSE: [['XI Chemistry']] },
+    'Comp App & IT':    { CBSE: [['XI Computer Science']] },
+    Mathematics:        { CBSE: [['XI Mathematics']] },
+    'Political Science': { CBSE: [['XI Political Science']] }
   },
   XII: {
     Mathematics:        { CBSE: [['XII Mathematics']] },
@@ -76,7 +78,9 @@ const REVISION_EXTRA_FILES = {
     { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },
     { file: 'revision-data-xi-physics.js?v=6df3807c',          probeKey: 'XI Physics' },
     { file: 'revision-data-xi-chemistry.js?v=bbd1886f',        probeKey: 'XI Chemistry' },
-    { file: 'revision-data-xi-compsci.js?v=df59f23b',          probeKey: 'XI Computer Science' }
+    { file: 'revision-data-xi-compsci.js?v=df59f23b',          probeKey: 'XI Computer Science' },
+    { file: 'revision-data-xi-maths.js?v=0884abfb',         probeKey: 'XI Mathematics' },
+    { file: 'revision-data-xi-polsci.js?v=9893dce3',        probeKey: 'XI Political Science' }
   ],
   XII: [
     { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
@@ -250,7 +254,7 @@ Object.assign(app, {
     const BY_GRADE = {
       IX:  new Set(['Physics', 'Chemistry', 'Biology']),
       X:   new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'English', 'Hindi', 'Comp App & IT']),
-      XI:  new Set(['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Comp App & IT']),
+      XI:  new Set(['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Comp App & IT', 'Mathematics', 'Political Science']),
       XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
     };
     const allowed = BY_GRADE[state.grade] || BY_GRADE.X;

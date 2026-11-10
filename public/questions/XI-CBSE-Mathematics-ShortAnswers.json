@@ -1,0 +1,463 @@
+[
+  {
+    "id": "sa-math-001",
+    "chapter": "Sets",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between a finite set and an infinite set, with one example each.",
+    "modelAnswer": "A finite set has a countable, definite number of elements (its cardinality n(S) is a whole number), e.g. {1,2,3,4,5} has 5 elements. An infinite set has no definite (uncountable) number of elements, e.g. the set of natural numbers N = {1,2,3,...} never terminates.",
+    "keyPoints": [
+      "Finite: cardinality is a fixed natural number",
+      "Infinite: cannot list all elements, continues without end",
+      "Example each: {days of the week} vs N"
+    ]
+  },
+  {
+    "id": "sa-math-002",
+    "chapter": "Sets",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State the empty-set property of the symbol φ with respect to every set A, and give one example of an empty set.",
+    "modelAnswer": "φ (the empty/null set) is a subset of every set A, written φ ⊂ A, because the condition 'every element of φ is in A' is vacuously true (φ has no elements to check). Example: {x : x is a natural number, 1 < x < 2} is empty since no natural number lies strictly between 1 and 2.",
+    "keyPoints": [
+      "φ ⊂ A for every set A (vacuous truth)",
+      "φ itself is finite (has 0 elements)",
+      "Example: {x ∈ N : 1 < x < 2} = φ"
+    ]
+  },
+  {
+    "id": "sa-math-003",
+    "chapter": "Sets",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "If A = {1,2,3,4}, B = {3,4,5,6}, C = {5,6,7,8}, find A ∪ (B ∩ C) and (A ∪ B) ∩ (A ∪ C), and verify they are equal.",
+    "modelAnswer": "B ∩ C = {5,6}, so A ∪ (B ∩ C) = {1,2,3,4,5,6}. A ∪ B = {1,2,3,4,5,6}, A ∪ C = {1,2,3,4,5,6,7,8}; their intersection = {1,2,3,4,5,6}. Both sides equal {1,2,3,4,5,6}, verifying the distributive law A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C).",
+    "keyPoints": [
+      "B ∩ C = {5,6}",
+      "A ∪ B = {1,2,3,4,5,6}, A ∪ C = {1,2,3,4,5,6,7,8}",
+      "Both sides = {1,2,3,4,5,6} — distributive law verified"
+    ]
+  },
+  {
+    "id": "sa-math-004",
+    "chapter": "Sets",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Using Venn diagrams reasoning (describe in words), explain why A − B = A ∩ B′.",
+    "modelAnswer": "A − B is the set of elements in A that are NOT in B. 'Not in B' is exactly the definition of B′ (complement of B). So an element is in A − B exactly when it is in A AND in B′ simultaneously — which is precisely the definition of A ∩ B′. Hence A − B = A ∩ B′ for any two sets A, B.",
+    "keyPoints": [
+      "A − B means: in A, not in B",
+      "'Not in B' = B′ by definition",
+      "'In A and in B′' = A ∩ B′"
+    ]
+  },
+  {
+    "id": "sa-math-005",
+    "chapter": "Relations and Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Define 'relation' and 'function' from set A to set B, and state the key difference between them.",
+    "modelAnswer": "A relation R from A to B is any subset of A × B. A function is a special relation in which every element of A appears as the first element of exactly one ordered pair — i.e. each input has a unique output. The key difference: a relation permits an element of A to relate to zero, one, or many elements of B, while a function requires exactly one image for every element of A.",
+    "keyPoints": [
+      "Relation = any subset of A×B",
+      "Function = every element of A has exactly one image",
+      "Function is a special, more restrictive kind of relation"
+    ]
+  },
+  {
+    "id": "sa-math-006",
+    "chapter": "Relations and Functions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the domain and range of the real function f(x) = √(9 − x²).",
+    "modelAnswer": "For f(x) to be real, we need 9 − x² ≥ 0, i.e. x² ≤ 9, i.e. −3 ≤ x ≤ 3. So domain = [−3, 3]. As x ranges over [−3,3], x² ranges over [0,9], so 9−x² ranges over [0,9], and its square root ranges over [0,3]. So range = [0, 3].",
+    "keyPoints": [
+      "Need 9 − x² ≥ 0 for a real square root",
+      "Solve: x² ≤ 9 → −3 ≤ x ≤ 3 (domain)",
+      "Max value of √(9−x²) is 3 at x=0, min is 0 at x=±3 (range [0,3])"
+    ]
+  },
+  {
+    "id": "sa-math-007",
+    "chapter": "Relations and Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "If f(x) = x² and g(x) = 2x+1, find (f/g)(x) and state any value excluded from its domain.",
+    "modelAnswer": "(f/g)(x) = x² / (2x+1). This is defined for all real x except where the denominator is zero: 2x+1=0 ⟹ x = −1/2, which must be excluded from the domain.",
+    "keyPoints": [
+      "(f/g)(x) = f(x)/g(x) = x²/(2x+1)",
+      "Excluded value: where g(x)=0, i.e. x = −1/2"
+    ]
+  },
+  {
+    "id": "sa-math-008",
+    "chapter": "Trigonometric Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Convert 6 radians into degree measure.",
+    "modelAnswer": "Degrees = radians × (180/π) = 6 × 180/π = 1080/π ≈ 343.77°, which is 343° 46′ approximately (0.77×60 ≈ 46′).",
+    "keyPoints": [
+      "Formula: degrees = radians × 180/π",
+      "6 × 180/π = 1080/π ≈ 343.77°",
+      "Convert the decimal part of the degree to minutes: 0.77×60 ≈ 46′"
+    ]
+  },
+  {
+    "id": "sa-math-009",
+    "chapter": "Trigonometric Functions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Prove that sin(x+y)sin(x−y) = sin²x − sin²y.",
+    "modelAnswer": "sin(x+y)sin(x−y) = (sinx cosy + cosx siny)(sinx cosy − cosx siny) = sin²x cos²y − cos²x sin²y (difference of squares). Substitute cos²y = 1−sin²y and cos²x = 1−sin²x: = sin²x(1−sin²y) − (1−sin²x)sin²y = sin²x − sin²x sin²y − sin²y + sin²x sin²y = sin²x − sin²y.",
+    "keyPoints": [
+      "Apply sum and difference formulas, multiply as (A+B)(A−B) = A²−B²",
+      "Substitute cos² = 1 − sin² for both variables",
+      "Simplify — the sin²x sin²y terms cancel, leaving sin²x − sin²y"
+    ]
+  },
+  {
+    "id": "sa-math-010",
+    "chapter": "Trigonometric Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the value of cos(−1710°).",
+    "modelAnswer": "cos is even, so cos(−1710°) = cos(1710°). Reduce 1710° mod 360°: 1710 = 4×360 + 270, so cos(1710°) = cos(270°) = 0.",
+    "keyPoints": [
+      "Use cos(−θ)=cos θ (even function)",
+      "Reduce the angle mod 360°: 1710° − 4(360°) = 270°",
+      "cos 270° = 0"
+    ]
+  },
+  {
+    "id": "sa-math-011",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Express (1 − i)⁴ in the form a + ib.",
+    "modelAnswer": "(1−i)² = 1 −2i +i² = 1−2i−1 = −2i. So (1−i)⁴ = (−2i)² = 4i² = −4. In the form a+ib, this is −4 + 0i.",
+    "keyPoints": [
+      "Square first: (1−i)² = −2i",
+      "Square the result: (−2i)² = 4i² = −4",
+      "Final form: −4 + 0i"
+    ]
+  },
+  {
+    "id": "sa-math-012",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the multiplicative inverse of 2 − 3i.",
+    "modelAnswer": "For z = a+ib, the multiplicative inverse is (a−ib)/(a²+b²). Here a=2, b=−3 so a²+b²=4+9=13, and the inverse is (2+3i)/13 = 2/13 + (3/13)i.",
+    "keyPoints": [
+      "Inverse of z=a+ib is z̄/|z|²",
+      "|z|² = 2²+(−3)² = 13",
+      "Inverse = (2+3i)/13"
+    ]
+  },
+  {
+    "id": "sa-math-013",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Solve the quadratic equation x² + 3x + 5 = 0 using the quadratic formula.",
+    "modelAnswer": "Using x = [−b ± √(b²−4ac)]/2a with a=1,b=3,c=5: discriminant = 9−20 = −11. So x = [−3 ± √(−11)]/2 = [−3 ± i√11]/2, giving two complex conjugate roots.",
+    "keyPoints": [
+      "Identify a=1, b=3, c=5",
+      "Discriminant = 9 − 20 = −11 (negative → complex roots)",
+      "x = (−3 ± i√11)/2"
+    ]
+  },
+  {
+    "id": "sa-math-014",
+    "chapter": "Linear Inequalities",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Solve the inequality 2(2x+3) − 10 < 6(x−2), and represent the solution on a number line (describe it).",
+    "modelAnswer": "2(2x+3)−10 < 6(x−2) ⟹ 4x+6−10 < 6x−12 ⟹ 4x−4 < 6x−12 ⟹ −4+12 < 6x−4x ⟹ 8 < 2x ⟹ x > 4. On a number line: an open circle at 4, with shading extending to the right (all values greater than 4).",
+    "keyPoints": [
+      "Expand both sides first",
+      "Collect x-terms on one side, constants on the other",
+      "x > 4 — open circle at 4, shade rightward"
+    ]
+  },
+  {
+    "id": "sa-math-015",
+    "chapter": "Linear Inequalities",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A solution of 8% boric acid is to be diluted by adding a 2% boric acid solution to it. If 640 litres of the 8% solution is used, how many litres of the 2% solution should be added so the resulting mixture is more than 4% but less than 6% boric acid?",
+    "modelAnswer": "Let x litres of 2% solution be added. Total acid = 0.08(640) + 0.02x = 51.2 + 0.02x. Total volume = 640+x. Need 4% < [acid]/[volume] < 6%. Lower bound: 51.2+0.02x > 0.04(640+x) ⟹ 51.2+0.02x > 25.6+0.04x ⟹ 25.6 > 0.02x ⟹ x < 1280. Upper bound: 51.2+0.02x < 0.06(640+x) ⟹ 51.2+0.02x < 38.4+0.06x ⟹ 12.8 < 0.04x ⟹ x > 320. So 320 < x < 1280 litres.",
+    "keyPoints": [
+      "Set up acid-content inequality for both the 4% and 6% boundary conditions",
+      "Solve each resulting linear inequality for x separately",
+      "Combine: 320 < x < 1280 litres"
+    ]
+  },
+  {
+    "id": "sa-math-016",
+    "chapter": "Permutations and Combinations",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "How many words, with or without meaning, can be formed using all the letters of the word 'EQUATION', using each letter exactly once?",
+    "modelAnswer": "EQUATION has 8 distinct letters (E,Q,U,A,T,I,O,N — all different). The number of arrangements is 8! = 40320.",
+    "keyPoints": [
+      "Count the letters: 8, all distinct",
+      "No repeated letters means no division needed",
+      "Answer: 8! = 40320"
+    ]
+  },
+  {
+    "id": "sa-math-017",
+    "chapter": "Permutations and Combinations",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A committee of 3 persons is to be formed from a group of 4 men and 2 women. In how many ways can this be done so that the committee has at least one woman?",
+    "modelAnswer": "Total ways to choose any 3 from 6 people = C(6,3) = 20. Ways with NO woman (all 3 men from the 4 men) = C(4,3) = 4. At least one woman = total − no woman = 20 − 4 = 16.",
+    "keyPoints": [
+      "Total unrestricted selections: C(6,3)",
+      "Subtract the all-men case: C(4,3)",
+      "At least one woman = 20 − 4 = 16"
+    ]
+  },
+  {
+    "id": "sa-math-018",
+    "chapter": "Binomial Theorem",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the 4th term in the expansion of (x + 2)^5.",
+    "modelAnswer": "T(r+1) = nCr·x^(n−r)·2^r with n=5. For the 4th term, r=3: T4 = 5C3 · x^2 · 2^3 = 10 · x² · 8 = 80 x².",
+    "keyPoints": [
+      "4th term means r=3 (since T(r+1) is the (r+1)th term)",
+      "5C3 = 10, and 2³=8",
+      "T4 = 10 × 8 × x² = 80x²"
+    ]
+  },
+  {
+    "id": "sa-math-019",
+    "chapter": "Binomial Theorem",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Using the binomial theorem, expand (1−2x)^4 fully.",
+    "modelAnswer": "(1−2x)^4 = Σ 4Cr · 1^(4−r) · (−2x)^r for r=0..4 = 4C0 − 4C1(2x) + 4C2(2x)² − 4C3(2x)³ + 4C4(2x)⁴ = 1 − 8x + 24x² − 32x³ + 16x⁴.",
+    "keyPoints": [
+      "Apply the binomial theorem with a=1, b=−2x, n=4",
+      "Compute each term's coefficient: 4C0=1, 4C1=4, 4C2=6, 4C3=4, 4C4=1, multiplied by powers of (−2)",
+      "Final expansion: 1 − 8x + 24x² − 32x³ + 16x⁴"
+    ]
+  },
+  {
+    "id": "sa-math-020",
+    "chapter": "Sequences and Series",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the sum of the first 15 terms of the AP 2, 7, 12, 17, ... .",
+    "modelAnswer": "Here a=2, d=5, n=15. Sum = n/2 × [2a+(n−1)d] = 15/2 × [4 + 14×5] = 15/2 × [4+70] = 15/2 × 74 = 15×37 = 555.",
+    "keyPoints": [
+      "Identify a=2, d=5, n=15",
+      "Apply Sn = n/2[2a+(n−1)d]",
+      "Sn = 15/2 × 74 = 555"
+    ]
+  },
+  {
+    "id": "sa-math-021",
+    "chapter": "Sequences and Series",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Insert 3 geometric means between 1 and 256.",
+    "modelAnswer": "We need a GP: 1, G1, G2, G3, 256 — 5 terms total. So 256 = 1×r⁴, giving r⁴=256, r=4 (taking the positive real root, 4⁴=256). The means are G1=4, G2=16, G3=64.",
+    "keyPoints": [
+      "5-term GP from 1 to 256 means r⁴ = 256",
+      "Solve: r = 4 (since 4⁴=256)",
+      "Means: 1×4=4, 4×4=16, 16×4=64"
+    ]
+  },
+  {
+    "id": "sa-math-022",
+    "chapter": "Straight Lines",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the slope of a line which makes an angle of 30° with the positive direction of the x-axis.",
+    "modelAnswer": "Slope m = tan(θ) where θ is the angle made with the positive x-axis. m = tan(30°) = 1/√3.",
+    "keyPoints": [
+      "Slope = tan of the angle with the positive x-axis",
+      "tan(30°) = 1/√3",
+      "So m = 1/√3"
+    ]
+  },
+  {
+    "id": "sa-math-023",
+    "chapter": "Straight Lines",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the equation of the line passing through (−2, 3) with slope −4.",
+    "modelAnswer": "Using point-slope form: y − 3 = −4(x − (−2)) = −4(x+2) = −4x − 8. So y = −4x − 8 + 3 = −4x − 5, i.e. 4x + y + 5 = 0.",
+    "keyPoints": [
+      "Apply y − y1 = m(x − x1) with (x1,y1)=(−2,3), m=−4",
+      "Simplify: y − 3 = −4x − 8",
+      "Rearranged general form: 4x + y + 5 = 0"
+    ]
+  },
+  {
+    "id": "sa-math-024",
+    "chapter": "Conic Sections",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the equation of the circle with centre (0,2) and radius 2.",
+    "modelAnswer": "Using (x−h)²+(y−k)²=r² with h=0, k=2, r=2: x² + (y−2)² = 4, i.e. x² + y² − 4y + 4 = 4, simplifying to x² + y² − 4y = 0.",
+    "keyPoints": [
+      "Substitute centre and radius into standard form",
+      "(x−0)²+(y−2)²=2²",
+      "Expand to get x²+y²−4y=0"
+    ]
+  },
+  {
+    "id": "sa-math-025",
+    "chapter": "Conic Sections",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the coordinates of the foci and the length of the latus rectum of the ellipse 36x² + 4y² = 144.",
+    "modelAnswer": "Divide by 144: x²/4 + y²/36 = 1, so a²=36 (along y, since 36>4), b²=4. Here the major axis is along y, c² = a²−b² = 36−4 = 32, c=√32=4√2. Foci: (0, ±4√2). Length of latus rectum = 2b²/a = 2(4)/6 = 4/3.",
+    "keyPoints": [
+      "Normalize to standard form: x²/4 + y²/36 = 1",
+      "Since 36 > 4, major axis is along the y-axis; c² = a²−b² = 32",
+      "Foci (0,±4√2); latus rectum = 2b²/a = 4/3"
+    ]
+  },
+  {
+    "id": "sa-math-026",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the distance between the points P(1,−3,4) and Q(−4,1,2).",
+    "modelAnswer": "d = √[(−4−1)²+(1−(−3))²+(2−4)²] = √[25+16+4] = √45 = 3√5.",
+    "keyPoints": [
+      "Apply the 3D distance formula",
+      "(−5)²+(4)²+(−2)² = 25+16+4 = 45",
+      "√45 = 3√5"
+    ]
+  },
+  {
+    "id": "sa-math-027",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Show that the points A(−2,3,5), B(1,2,3) and C(7,0,−1) are collinear.",
+    "modelAnswer": "AB = √[(1−(−2))²+(2−3)²+(3−5)²] = √[9+1+4] = √14. BC = √[(7−1)²+(0−2)²+(−1−3)²] = √[36+4+16] = √56 = 2√14. AC = √[(7−(−2))²+(0−3)²+(−1−5)²] = √[81+9+36] = √126 = 3√14. Since AB+BC = √14+2√14 = 3√14 = AC, the three points are collinear (B lies between A and C on the same straight line).",
+    "keyPoints": [
+      "Compute all three pairwise distances AB, BC, AC",
+      "Check if the shortest two distances sum to the longest: AB+BC = AC",
+      "Confirmed: √14 + 2√14 = 3√14 → collinear"
+    ]
+  },
+  {
+    "id": "sa-math-028",
+    "chapter": "Limits and Derivatives",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the derivative of f(x) = x² + 3x + 5 using the first-principles (limit) definition.",
+    "modelAnswer": "f′(x) = lim(h→0) [f(x+h)−f(x)]/h = lim(h→0) [((x+h)²+3(x+h)+5) − (x²+3x+5)]/h = lim(h→0) [2xh+h²+3h]/h = lim(h→0) (2x+h+3) = 2x+3.",
+    "keyPoints": [
+      "Write f(x+h) and expand",
+      "Subtract f(x) and simplify, then divide by h",
+      "Take the limit as h→0: 2x+3"
+    ]
+  },
+  {
+    "id": "sa-math-029",
+    "chapter": "Limits and Derivatives",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Evaluate lim(x→0) [(1+x)⁵ − 1]/x.",
+    "modelAnswer": "This limit matches the standard form lim(x→0) [(1+x)^n − 1]/x = n. Here n=5, so the limit equals 5. (Verification via binomial expansion: (1+x)^5 = 1+5x+10x²+... , so [(1+x)^5−1]/x = 5+10x+..., which → 5 as x→0.)",
+    "keyPoints": [
+      "Recognize the standard limit form [(1+x)ⁿ−1]/x → n as x→0",
+      "Here n=5",
+      "Limit = 5"
+    ]
+  },
+  {
+    "id": "sa-math-030",
+    "chapter": "Statistics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the mean deviation about the mean for the data: 4, 7, 8, 9, 10, 12, 13, 17.",
+    "modelAnswer": "Mean = (4+7+8+9+10+12+13+17)/8 = 80/8 = 10. Deviations from mean (absolute): |4−10|=6,|7−10|=3,|8−10|=2,|9−10|=1,|10−10|=0,|12−10|=2,|13−10|=3,|17−10|=7. Sum of absolute deviations = 6+3+2+1+0+2+3+7=24. Mean deviation = 24/8 = 3.",
+    "keyPoints": [
+      "Compute the mean first: 80/8 = 10",
+      "Find |xi − mean| for every value and sum them: total 24",
+      "Mean deviation = 24/8 = 3"
+    ]
+  },
+  {
+    "id": "sa-math-031",
+    "chapter": "Statistics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Find the variance and standard deviation of the first 6 natural numbers (1,2,3,4,5,6).",
+    "modelAnswer": "Mean = 21/6 = 3.5. Deviations squared: (1-3.5)²=6.25, (2-3.5)²=2.25, (3-3.5)²=0.25, (4-3.5)²=0.25, (5-3.5)²=2.25, (6-3.5)²=6.25. Sum = 17.5. Variance = 17.5/6 ≈ 2.92. SD = √2.92 ≈ 1.71.",
+    "keyPoints": [
+      "Mean of 1..6 = 3.5",
+      "Sum of squared deviations = 17.5",
+      "Variance ≈ 2.92, SD = √variance ≈ 1.71"
+    ]
+  },
+  {
+    "id": "sa-math-032",
+    "chapter": "Probability",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A bag contains 5 red and 4 black balls. Find the probability of drawing a red ball.",
+    "modelAnswer": "Total balls = 5+4 = 9. Favourable outcomes (red) = 5. P(red) = 5/9.",
+    "keyPoints": [
+      "Total outcomes = 5+4 = 9",
+      "Favourable = 5 (red balls)",
+      "P(red) = 5/9"
+    ]
+  },
+  {
+    "id": "sa-math-033",
+    "chapter": "Probability",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A card is drawn from a well-shuffled deck of 52 cards. Find the probability that it is either a king or a queen.",
+    "modelAnswer": "Kings and queens are mutually exclusive events (a card can't be both). P(king) = 4/52, P(queen) = 4/52. By the addition rule for mutually exclusive events: P(king or queen) = 4/52 + 4/52 = 8/52 = 2/13.",
+    "keyPoints": [
+      "King and queen are mutually exclusive outcomes",
+      "P(king)=4/52, P(queen)=4/52",
+      "Sum: 8/52 = 2/13"
+    ]
+  }
+]

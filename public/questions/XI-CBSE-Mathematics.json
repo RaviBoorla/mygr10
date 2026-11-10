@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "ximath001",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "Which of the following is a well-defined set?",
+    "options": [
+      "The collection of all tall students in a class",
+      "The collection of all natural numbers less than 100",
+      "The collection of best cricketers in the world",
+      "The collection of most dangerous animals"
+    ],
+    "correct": 1,
+    "explanation": "Being less than 100 is an objective, verifiable criterion, so membership is unambiguous — the other collections depend on subjective judgement.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath002",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "If A = {1, 2, 3, 4, 5, 6}, which statement is correct?",
+    "options": [
+      "8 ∈ A",
+      "0 ∈ A",
+      "5 ∈ A",
+      "10 ∈ A"
+    ],
+    "correct": 2,
+    "explanation": "A lists the elements 1 through 6, so 5 is a member; 8, 0 and 10 are not in the list.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath003",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "The set {x : x is an integer and −3 ≤ x < 7} in roster form has how many elements?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "Integers from −3 up to but not including 7 are −3,−2,−1,0,1,2,3,4,5,6 — 10 elements.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath004",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "Which of the following sets is empty?",
+    "options": [
+      "{x : x is a natural number, x < 5 and x > 7}",
+      "{x : x is an even prime number}",
+      "{x : x is a natural number less than 1}",
+      "Both (i) and (iii)"
+    ],
+    "correct": 3,
+    "explanation": "No natural number is both <5 and >7, and no natural number is less than 1 — both describe the empty set φ.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath005",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "How many subsets does the set {1, 2, 3} have in total (including φ and the set itself)?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "A set with n elements has 2ⁿ subsets; here n = 3, so 2³ = 8.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath006",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "If A = {a, b, c} and B = {b, c, d}, which is true?",
+    "options": [
+      "A ⊂ B",
+      "B ⊂ A",
+      "A ∩ B = {b, c}",
+      "A ∩ B = φ"
+    ],
+    "correct": 2,
+    "explanation": "The common elements of A and B are b and c, so A ∩ B = {b, c}; neither set is wholly contained in the other.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath007",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "If U = {1,...,9}, A = {1,2,3,4}, B = {2,4,6,8}, what is (A ∪ B)′?",
+    "options": [
+      "{5, 7, 9}",
+      "{1, 3, 5, 7, 9}",
+      "{5, 6, 7, 8, 9}",
+      "{2, 4}"
+    ],
+    "correct": 0,
+    "explanation": "A ∪ B = {1,2,3,4,6,8}; its complement in U = {1..9} is {5,7,9}, the elements of U not in A ∪ B.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath008",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "For any two sets A and B, (A ∪ B)′ equals:",
+    "options": [
+      "A′ ∪ B′",
+      "A′ ∩ B′",
+      "A ∩ B",
+      "A′ ∪ B"
+    ],
+    "correct": 1,
+    "explanation": "This is De Morgan's law: the complement of a union is the intersection of the complements.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath009",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "If A = {3,6,9,12,15,18,21} and B = {4,8,12,16,20}, what is A − B?",
+    "options": [
+      "{12}",
+      "{3,6,9,15,18,21}",
+      "{4,8,16,20}",
+      "A ∪ B"
+    ],
+    "correct": 1,
+    "explanation": "A − B removes from A any element also in B; only 12 is common, so the rest of A remains: {3,6,9,15,18,21}.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath010",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "The interval (−3, 0) in set-builder form is:",
+    "options": [
+      "{x : x ∈ R, −3 ≤ x ≤ 0}",
+      "{x : x ∈ R, −3 < x < 0}",
+      "{x : x ∈ R, −3 ≤ x < 0}",
+      "{x : x ∈ R, −3 < x ≤ 0}"
+    ],
+    "correct": 1,
+    "explanation": "Round brackets on both ends mean both endpoints are excluded — a strict open interval.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath011",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If set A has 3 elements and B = {3,4,5}, how many elements does A × B have?",
+    "options": [
+      "6",
+      "9",
+      "8",
+      "12"
+    ],
+    "correct": 1,
+    "explanation": "n(A×B) = n(A)×n(B) = 3×3 = 9.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath012",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If A = {1,2}, B = {3,4}, how many subsets (relations) can be formed from A to B?",
+    "options": [
+      "8",
+      "16",
+      "4",
+      "12"
+    ],
+    "correct": 1,
+    "explanation": "n(A×B)=4, and the number of relations = number of subsets of A×B = 2⁴ = 16.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath013",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "For the relation R = {(x,y): y = x+1} on A = {1,2,3,4,5,6}, what is the range?",
+    "options": [
+      "{1,2,3,4,5}",
+      "{2,3,4,5,6}",
+      "{1,2,3,4,5,6}",
+      "{1,6}"
+    ],
+    "correct": 1,
+    "explanation": "Applying y=x+1 to each domain value 1-5 gives range values 2,3,4,5,6.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath014",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "A function f: A → B must satisfy which condition?",
+    "options": [
+      "Every element of A has at least one image in B",
+      "Every element of A has exactly one image in B",
+      "Every element of B has exactly one pre-image in A",
+      "A and B must have the same number of elements"
+    ],
+    "correct": 1,
+    "explanation": "The defining property of a function is that each domain element maps to exactly one (unique) element of the codomain.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath015",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If f(x) = x², what is the range of f when the domain is R (all real numbers)?",
+    "options": [
+      "R",
+      "[0, ∞)",
+      "(0, ∞)",
+      "(−∞, 0]"
+    ],
+    "correct": 1,
+    "explanation": "Squares of real numbers are never negative and can be arbitrarily large, so the range is all non-negative reals [0, ∞).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath016",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "Given f(x) = 2x − 5 and g(x) = x², what is (f+g)(2)?",
+    "options": [
+      "3",
+      "7",
+      "−1",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "f(2)=2(2)-5=-1; g(2)=2^2=4; (f+g)(2) = f(2)+g(2) = -1+4 = 3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath017",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "The domain of the real function f(x) = 1/(x−3) is:",
+    "options": [
+      "R",
+      "R − {3}",
+      "R − {0}",
+      "(3, ∞)"
+    ],
+    "correct": 1,
+    "explanation": "f is undefined when the denominator is zero, i.e. at x=3, so the domain excludes 3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath018",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "The domain of f(x) = √(x − 1) (real-valued) is:",
+    "options": [
+      "R",
+      "x ≥ 1",
+      "x > 1",
+      "x ≤ 1"
+    ],
+    "correct": 1,
+    "explanation": "The expression under a square root must be non-negative for a real output, so x − 1 ≥ 0, i.e. x ≥ 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath019",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If f(x) = x³, this function is an example of:",
+    "options": [
+      "An even function",
+      "An odd function",
+      "Neither even nor odd",
+      "A constant function"
+    ],
+    "correct": 1,
+    "explanation": "f(−x) = (−x)³ = −x³ = −f(x), which is the defining property of an odd function.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath020",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "The Cartesian product A × B is defined as:",
+    "options": [
+      "{(a,b) : a ∈ A or b ∈ B}",
+      "{(a,b) : a ∈ A and b ∈ B}",
+      "{(a,b) : a ∈ B and b ∈ A}",
+      "{a ∪ b : a ∈ A, b ∈ B}"
+    ],
+    "correct": 1,
+    "explanation": "By definition, the Cartesian product is the set of all ordered pairs with first coordinate from A and second from B.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath021",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "One radian equals approximately:",
+    "options": [
+      "57° 16′",
+      "60°",
+      "90°",
+      "180°"
+    ],
+    "correct": 0,
+    "explanation": "1 radian = 180/π degrees ≈ 57.2958°, i.e. about 57°16′.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath022",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The radian measure of 40° 20′ is: (40°20′ = 40 + 20/60 degrees = 121/3 degrees)",
+    "options": [
+      "121π/540",
+      "121π/720",
+      "121π/60",
+      "121π/360"
+    ],
+    "correct": 0,
+    "explanation": "40°20′ = (121/3)°; radians = degrees × π/180 = (121/3)×(π/180) = 121π/540.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath023",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "sin(−x) equals:",
+    "options": [
+      "sin x",
+      "−sin x",
+      "cos x",
+      "−cos x"
+    ],
+    "correct": 1,
+    "explanation": "Sine is an odd function: sin(−x) = −sin(x).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath024",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "cos(−x) equals:",
+    "options": [
+      "cos x",
+      "−cos x",
+      "sin x",
+      "−sin x"
+    ],
+    "correct": 0,
+    "explanation": "Cosine is an even function: cos(−x) = cos(x).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath025",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The value of sin(30°) + cos(60°) is:",
+    "options": [
+      "1",
+      "1/2",
+      "√3/2",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "sin30°=1/2, cos60°=1/2; sum = 1/2+1/2 = 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath026",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The value of tan(45°) is:",
+    "options": [
+      "0",
+      "1",
+      "√3",
+      "undefined"
+    ],
+    "correct": 1,
+    "explanation": "tan45° = sin45°/cos45° = (√2/2)/(√2/2) = 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath027",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "sin(x+y) expands to:",
+    "options": [
+      "sin x cos y + cos x sin y",
+      "sin x cos y − cos x sin y",
+      "cos x cos y − sin x sin y",
+      "cos x cos y + sin x sin y"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard sine addition formula.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath028",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "cos(2x) can be written as:",
+    "options": [
+      "2sin²x − 1",
+      "1 − 2sin²x",
+      "2cos x",
+      "sin²x − cos²x"
+    ],
+    "correct": 1,
+    "explanation": "cos2x = cos²x − sin²x = 1 − 2sin²x (using sin²x+cos²x=1), one of the standard double-angle forms.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath029",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The general solution of sin θ = 0 is:",
+    "options": [
+      "θ = nπ, n ∈ Z",
+      "θ = 2nπ, n ∈ Z",
+      "θ = nπ/2, n ∈ Z",
+      "θ = (2n+1)π/2, n ∈ Z"
+    ],
+    "correct": 0,
+    "explanation": "sinθ=0 at every integer multiple of π.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath030",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "If sin x = 3/5 and x is in the second quadrant, cos x equals:",
+    "options": [
+      "4/5",
+      "−4/5",
+      "3/4",
+      "−3/4"
+    ],
+    "correct": 1,
+    "explanation": "sin²x+cos²x=1 ⟹ cos x = ±4/5 (from 3-4-5 triple); in quadrant II, cosine is negative, so cos x = −4/5.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath031",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The value of i² is:",
+    "options": [
+      "1",
+      "−1",
+      "i",
+      "−i"
+    ],
+    "correct": 1,
+    "explanation": "By definition, i = √−1, so i² = −1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath032",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "i^19 simplifies to:",
+    "options": [
+      "i",
+      "−i",
+      "1",
+      "−1"
+    ],
+    "correct": 1,
+    "explanation": "19 = 4×4+3, so i^19 = i^3 = −i (since i^4=1, the cycle repeats every 4 powers).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath033",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The conjugate of z = 3 − 4i is:",
+    "options": [
+      "3 + 4i",
+      "−3 − 4i",
+      "−3 + 4i",
+      "4 − 3i"
+    ],
+    "correct": 0,
+    "explanation": "The conjugate flips the sign of the imaginary part only: 3−4i → 3+4i.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath034",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The modulus of z = 3 + 4i is:",
+    "options": [
+      "5",
+      "7",
+      "25",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "|z| = √(3²+4²) = √(9+16) = √25 = 5.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath035",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "(5 − 3i)(2 − i) simplifies to:",
+    "options": [
+      "7 − 11i",
+      "13 − 11i",
+      "7 + i",
+      "13 + i"
+    ],
+    "correct": 0,
+    "explanation": "(5-3i)(2-i) = 10 -5i -6i +3i^2 = 10 -11i -3 = 7-11i.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath036",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "For the quadratic x² + x + 1 = 0, the discriminant is:",
+    "options": [
+      "−3",
+      "3",
+      "5",
+      "−5"
+    ],
+    "correct": 0,
+    "explanation": "Discriminant b²−4ac = 1² − 4(1)(1) = 1 − 4 = −3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath037",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If the discriminant of a quadratic (with real coefficients) is negative, the roots are:",
+    "options": [
+      "Real and equal",
+      "Real and distinct",
+      "Complex conjugates",
+      "One real, one complex"
+    ],
+    "correct": 2,
+    "explanation": "A negative discriminant means the square root involves a negative number, giving a pair of complex conjugate roots.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath038",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The multiplicative inverse of i is:",
+    "options": [
+      "i",
+      "−i",
+      "1",
+      "−1"
+    ],
+    "correct": 1,
+    "explanation": "i × (−i) = −i² = 1, so the inverse of i is −i.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath039",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "In polar form, if z = 1 + i, the modulus r equals:",
+    "options": [
+      "1",
+      "√2",
+      "2",
+      "√2/2"
+    ],
+    "correct": 1,
+    "explanation": "|z| = √(1²+1²) = √2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath040",
+    "chapter": "Complex Numbers and Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The roots of x² − 2x + 2 = 0 are:",
+    "options": [
+      "1 ± i",
+      "1 ± 2i",
+      "2 ± i",
+      "−1 ± i"
+    ],
+    "correct": 0,
+    "explanation": "x = [2 ± √(4−8)]/2 = [2 ± √(−4)]/2 = [2 ± 2i]/2 = 1 ± i.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath041",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "Solving 3x + 8 > 2, the solution is:",
+    "options": [
+      "x > −2",
+      "x > 2",
+      "x < −2",
+      "x < 2"
+    ],
+    "correct": 0,
+    "explanation": "3x > 2−8 = −6, so x > −2 (dividing by positive 3 keeps inequality direction).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath042",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "When you multiply or divide both sides of an inequality by a negative number, the inequality sign:",
+    "options": [
+      "Stays the same",
+      "Reverses",
+      "Becomes an equality",
+      "Is removed"
+    ],
+    "correct": 1,
+    "explanation": "This is a fundamental rule of inequalities — multiplying/dividing by a negative flips the direction of the inequality.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath043",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "Solving 5x − 3 ≥ 7, the solution is:",
+    "options": [
+      "x ≥ 2",
+      "x ≥ −2",
+      "x ≤ 2",
+      "x ≤ −2"
+    ],
+    "correct": 0,
+    "explanation": "5x ≥ 10, x ≥ 2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath044",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of −3x + 12 < 0 is:",
+    "options": [
+      "x < 4",
+      "x > 4",
+      "x < −4",
+      "x > −4"
+    ],
+    "correct": 1,
+    "explanation": "−3x < −12; dividing by −3 flips the inequality: x > 4.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath045",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The graph of the solution set of x > 3 on a number line is represented by:",
+    "options": [
+      "A closed circle at 3, shading left",
+      "An open circle at 3, shading right",
+      "A closed circle at 3, shading right",
+      "An open circle at 3, shading left"
+    ],
+    "correct": 1,
+    "explanation": "Strict inequality (>) uses an open circle (3 itself excluded) with shading to the right (greater values).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath046",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "For the system x ≥ 0, y ≥ 0, the feasible region lies in which quadrant?",
+    "options": [
+      "First quadrant",
+      "Second quadrant",
+      "Third quadrant",
+      "Fourth quadrant"
+    ],
+    "correct": 0,
+    "explanation": "Both coordinates non-negative describes exactly the first quadrant (including the axes).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath047",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "How many 2-digit numbers can be formed from the digits 1,2,3,4,5 with no digit repeated?",
+    "options": [
+      "20",
+      "25",
+      "10",
+      "32"
+    ],
+    "correct": 0,
+    "explanation": "Number of arrangements of 5 digits taken 2 at a time = P(5,2) = 5×4 = 20.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath048",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "In how many ways can 6 people be seated in a row?",
+    "options": [
+      "720",
+      "36",
+      "720/2",
+      "64"
+    ],
+    "correct": 0,
+    "explanation": "6 distinct people in 6 distinct seats: 6! = 720.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath049",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "The value of 0! is:",
+    "options": [
+      "0",
+      "1",
+      "undefined",
+      "−1"
+    ],
+    "correct": 1,
+    "explanation": "By convention/definition, 0! = 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath050",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of ways to choose 3 students out of 10 for a committee (order doesn't matter) is:",
+    "options": [
+      "120",
+      "720",
+      "30",
+      "1000"
+    ],
+    "correct": 0,
+    "explanation": "This is a combination (order irrelevant): C(10,3) = 120.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath051",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of permutations of the letters of the word 'APPLE' is:",
+    "options": [
+      "60",
+      "120",
+      "20",
+      "30"
+    ],
+    "correct": 0,
+    "explanation": "APPLE has 5 letters with 'P' repeated twice: 5!/2! = 60.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath052",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "How many diagonals does a hexagon (6 sides) have?",
+    "options": [
+      "9",
+      "15",
+      "21",
+      "12"
+    ],
+    "correct": 0,
+    "explanation": "Total line segments between 6 vertices = C(6,2) = 15; subtract the 6 sides to leave only diagonals = 9.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath053",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of ways to arrange the letters of 'MISSISSIPPI' is given by 11!/(4!4!2!) because:",
+    "options": [
+      "M appears once, I appears 4 times, S appears 4 times, P appears 2 times",
+      "All 11 letters are distinct",
+      "There are only 4 distinct letters total",
+      "The word has 11 vowels"
+    ],
+    "correct": 0,
+    "explanation": "MISSISSIPPI has 11 letters: M×1, I×4, S×4, P×2 — dividing by the factorial of each repeat count removes overcounting of identical-letter swaps.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath054",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "nCr equals:",
+    "options": [
+      "n!/(r!(n−r)!)",
+      "n!/r!",
+      "n!/(n−r)!",
+      "r!/(n!(n−r)!)"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard definition/formula for combinations.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath055",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "nCr and nC(n−r) are related by:",
+    "options": [
+      "nCr = nC(n−r)",
+      "nCr = 2·nC(n−r)",
+      "nCr + nC(n−r) = n!",
+      "nCr = −nC(n−r)"
+    ],
+    "correct": 0,
+    "explanation": "Choosing r items to include is equivalent to choosing n−r items to exclude, so the counts are equal.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath056",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The number of terms in the expansion of (a+b)ⁿ is:",
+    "options": [
+      "n",
+      "n+1",
+      "n−1",
+      "2n"
+    ],
+    "correct": 1,
+    "explanation": "The binomial expansion (a+b)ⁿ has terms for k=0,1,...,n — that is n+1 terms in total.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath057",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The general term T(r+1) in the expansion of (a+b)ⁿ is:",
+    "options": [
+      "nCr aⁿ⁻ʳbʳ",
+      "nCr aʳbⁿ⁻ʳ",
+      "nCr aⁿbʳ",
+      "r! aⁿ⁻ʳbʳ"
+    ],
+    "correct": 0,
+    "explanation": "By definition, the (r+1)th term is nCr · a^(n−r) · b^r.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath058",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The expansion of (x+1)² is:",
+    "options": [
+      "x²+1",
+      "x²+2x+1",
+      "x²−2x+1",
+      "x²+x+1"
+    ],
+    "correct": 1,
+    "explanation": "(x+1)² = x²+2x+1, standard binomial square expansion.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath059",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The middle term of (x+y)^6 (which has 7 terms total) is the:",
+    "options": [
+      "3rd term",
+      "4th term",
+      "5th term",
+      "6th term"
+    ],
+    "correct": 1,
+    "explanation": "With n=6 (even), there are 7 terms total, and the single middle term is the ((n/2)+1)th = 4th term.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath060",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The coefficient of x³ in the expansion of (1+x)^5 is:",
+    "options": [
+      "10",
+      "5",
+      "15",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "Coefficient of x^r in (1+x)^n is nCr; here nC3 = 10.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath061",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "In (a+b)ⁿ, the sum of all binomial coefficients nC0+nC1+...+nCn equals:",
+    "options": [
+      "n",
+      "n²",
+      "2ⁿ",
+      "2n"
+    ],
+    "correct": 2,
+    "explanation": "Setting a=b=1 in (a+b)ⁿ gives the sum of all coefficients = 2ⁿ.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath062",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "If the first term of an AP is 3 and common difference is 5, the 20th term is:",
+    "options": [
+      "98",
+      "95",
+      "100",
+      "93"
+    ],
+    "correct": 0,
+    "explanation": "nth term = a+(n−1)d = 3+19×5 = 98.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath063",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The sum of the first n natural numbers is given by:",
+    "options": [
+      "n(n+1)/2",
+      "n(n−1)/2",
+      "n²",
+      "n(n+1)"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard AP sum formula for 1,2,...,n.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath064",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "In a GP, if a=2 and r=3, the 4th term is:",
+    "options": [
+      "54",
+      "18",
+      "81",
+      "24"
+    ],
+    "correct": 0,
+    "explanation": "nth term of GP = a·r^(n−1) = 2×3³ = 54.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath065",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The sum to infinity of a GP exists only if:",
+    "options": [
+      "r > 1",
+      "|r| < 1",
+      "r = 1",
+      "r < 0"
+    ],
+    "correct": 1,
+    "explanation": "The infinite GP sum formula a/(1−r) converges only when the common ratio's absolute value is less than 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath066",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The geometric mean of 4 and 16 is:",
+    "options": [
+      "8",
+      "10",
+      "64",
+      "20"
+    ],
+    "correct": 0,
+    "explanation": "GM = √(4×16) = √64 = 8.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath067",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The sum of n terms of a GP (r≠1) is given by:",
+    "options": [
+      "a(rⁿ−1)/(r−1)",
+      "a(1−rⁿ)/n",
+      "arⁿ",
+      "an + d"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard finite GP sum formula (for r≠1).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath068",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "For two positive unequal numbers, the relation between AM and GM is always:",
+    "options": [
+      "AM > GM",
+      "AM < GM",
+      "AM = GM",
+      "Cannot be determined"
+    ],
+    "correct": 0,
+    "explanation": "By the AM-GM inequality, the arithmetic mean of two distinct positive numbers always exceeds their geometric mean.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath069",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The sum 1+2+3+...+10 equals:",
+    "options": [
+      "55",
+      "45",
+      "50",
+      "60"
+    ],
+    "correct": 0,
+    "explanation": "Using n(n+1)/2 with n=10: 10×11/2 = 55.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath070",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The slope of the line passing through (2,3) and (5,9) is:",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "slope = (y2−y1)/(x2−x1) = (9−3)/(5−2) = 6/3 = 2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath071",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "A line with slope 0 is:",
+    "options": [
+      "Vertical",
+      "Horizontal",
+      "At 45° to the x-axis",
+      "Undefined"
+    ],
+    "correct": 1,
+    "explanation": "Slope 0 means no rise over run — the line is horizontal (parallel to the x-axis).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath072",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The slope of a vertical line (parallel to the y-axis) is:",
+    "options": [
+      "0",
+      "1",
+      "Undefined",
+      "−1"
+    ],
+    "correct": 2,
+    "explanation": "A vertical line has no horizontal change (Δx=0), making the slope ratio Δy/Δx undefined.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath073",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "Two lines with slopes m1 and m2 are perpendicular if:",
+    "options": [
+      "m1 = m2",
+      "m1·m2 = −1",
+      "m1·m2 = 1",
+      "m1 + m2 = 0"
+    ],
+    "correct": 1,
+    "explanation": "The standard perpendicularity condition for two lines is that the product of their slopes equals −1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath074",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The equation of a line with slope m passing through (x1,y1) is:",
+    "options": [
+      "y − y1 = m(x − x1)",
+      "y + y1 = m(x + x1)",
+      "y = mx",
+      "x − x1 = m(y − y1)"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard point-slope form of a line's equation.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath075",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The distance from the point (4, −7) to the line 3x − 4y + 2 = 0 is:",
+    "options": [
+      "6",
+      "42/5",
+      "8",
+      "10"
+    ],
+    "correct": 1,
+    "explanation": "Distance = |3(4)−4(−7)+2| / √(3²+4²) = |12+28+2|/5 = 42/5 = 8.4.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath076",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The general form of a linear equation Ax + By + C = 0 represents:",
+    "options": [
+      "A circle",
+      "A straight line",
+      "A parabola",
+      "An ellipse"
+    ],
+    "correct": 1,
+    "explanation": "A first-degree equation in x and y (linear, no squared terms) always represents a straight line.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath077",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The equation x² + y² = 25 represents a circle with radius:",
+    "options": [
+      "5",
+      "25",
+      "10",
+      "625"
+    ],
+    "correct": 0,
+    "explanation": "Comparing to x²+y²=r², r²=25, so r=5.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath078",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The circle with centre (h,k) and radius r has the equation:",
+    "options": [
+      "x²+y²=r²",
+      "(x−h)²+(y−k)²=r²",
+      "(x+h)²+(y+k)²=r²",
+      "x²−y²=r²"
+    ],
+    "correct": 1,
+    "explanation": "This is the standard centre-radius form of a circle's equation.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath079",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "In the parabola y² = 4ax (a>0), the axis of the parabola is:",
+    "options": [
+      "The y-axis",
+      "The x-axis",
+      "The line y=x",
+      "The origin only"
+    ],
+    "correct": 1,
+    "explanation": "For y²=4ax, the parabola opens along the x-axis (symmetric about the x-axis), which is its axis.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath080",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "For the parabola y² = 12x, the value of 4a (comparing to y²=4ax) is:",
+    "options": [
+      "12",
+      "3",
+      "6",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "Direct comparison: 4a=12.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath081",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "For the parabola y²=12x, the focus is at:",
+    "options": [
+      "(3, 0)",
+      "(0, 3)",
+      "(12, 0)",
+      "(−3, 0)"
+    ],
+    "correct": 0,
+    "explanation": "4a=12 so a=3; for y²=4ax the focus is at (a,0) = (3,0).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath082",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "In an ellipse x²/a² + y²/b² = 1 with a>b, the eccentricity e is given by:",
+    "options": [
+      "e = √(1 − b²/a²)",
+      "e = √(1 + b²/a²)",
+      "e = a/b",
+      "e = b/a"
+    ],
+    "correct": 0,
+    "explanation": "This is the standard eccentricity formula for an ellipse with major axis along x.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath083",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "A conic section with eccentricity e=1 is a:",
+    "options": [
+      "Circle",
+      "Ellipse",
+      "Parabola",
+      "Hyperbola"
+    ],
+    "correct": 2,
+    "explanation": "By definition, e=0 is a circle, 0<e<1 ellipse, e=1 parabola, e>1 hyperbola.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath084",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The eccentricity of a hyperbola is always:",
+    "options": [
+      "e = 0",
+      "0 < e < 1",
+      "e = 1",
+      "e > 1"
+    ],
+    "correct": 3,
+    "explanation": "Hyperbolas are defined by eccentricity strictly greater than 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath085",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "In 3D space, a point is represented by:",
+    "options": [
+      "(x, y)",
+      "(x, y, z)",
+      "(r, θ)",
+      "(x, y, z, w)"
+    ],
+    "correct": 1,
+    "explanation": "A point in 3D (Cartesian) space needs 3 coordinates: x, y and z.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath086",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The distance between points (1,−1,2) and (2,3,0) is:",
+    "options": [
+      "√21",
+      "√19",
+      "√17",
+      "√15"
+    ],
+    "correct": 0,
+    "explanation": "d = √[(2−1)²+(3−(−1))²+(0−2)²] = √[1+16+4] = √21.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath087",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The three coordinate planes in 3D divide space into how many octants?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "Just as the x-y axes split a plane into 4 quadrants, the three mutually perpendicular coordinate planes split 3D space into 8 octants.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath088",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The coordinates of the midpoint of the segment joining (1,2,3) and (3,4,5) are:",
+    "options": [
+      "(2,3,4)",
+      "(4,6,8)",
+      "(1,1,1)",
+      "(2,2,2)"
+    ],
+    "correct": 0,
+    "explanation": "Midpoint = average of each coordinate: ((1+3)/2,(2+4)/2,(3+5)/2) = (2,3,4).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath089",
+    "chapter": "Introduction to Three Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "A point lying on the y-axis has coordinates of the form:",
+    "options": [
+      "(x, 0, 0)",
+      "(0, y, 0)",
+      "(0, 0, z)",
+      "(x, y, 0)"
+    ],
+    "correct": 1,
+    "explanation": "Points on the y-axis have both their x and z coordinates equal to zero.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath090",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim(x→2) (x²−4)/(x−2) equals:",
+    "options": [
+      "0",
+      "2",
+      "4",
+      "Undefined"
+    ],
+    "correct": 2,
+    "explanation": "Factor: (x²−4)/(x−2) = (x−2)(x+2)/(x−2) = x+2 for x≠2; taking the limit as x→2 gives 2+2=4.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath091",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "The derivative of xⁿ with respect to x is:",
+    "options": [
+      "xⁿ⁻¹",
+      "nxⁿ⁻¹",
+      "nxⁿ",
+      "xⁿ/n"
+    ],
+    "correct": 1,
+    "explanation": "This is the standard power rule for differentiation.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath092",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "The derivative of a constant c is:",
+    "options": [
+      "c",
+      "1",
+      "0",
+      "cx"
+    ],
+    "correct": 2,
+    "explanation": "A constant function has zero rate of change everywhere, so its derivative is 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath093",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "The derivative of sin(x) is:",
+    "options": [
+      "cos x",
+      "−cos x",
+      "−sin x",
+      "sec²x"
+    ],
+    "correct": 0,
+    "explanation": "This is a standard derivative result: d/dx(sin x) = cos x.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath094",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "The derivative of x³ at x=2 is:",
+    "options": [
+      "8",
+      "12",
+      "6",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "d/dx(x³) = 3x²; at x=2, this is 3×4 = 12.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath095",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim(x→0) sin(x)/x equals:",
+    "options": [
+      "0",
+      "1",
+      "∞",
+      "Undefined"
+    ],
+    "correct": 1,
+    "explanation": "This is the standard fundamental trigonometric limit, equal to 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath096",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "The product rule for derivatives states d/dx[f(x)g(x)] equals:",
+    "options": [
+      "f′(x)g′(x)",
+      "f(x)g′(x) + f′(x)g(x)",
+      "f(x)g′(x) − f′(x)g(x)",
+      "f′(x)/g(x)"
+    ],
+    "correct": 1,
+    "explanation": "The product rule: derivative of a product is first-times-derivative-of-second plus second-times-derivative-of-first.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath097",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "For the data 6,7,10,12,13,4,8,12 the mean is:",
+    "options": [
+      "9",
+      "10",
+      "8.5",
+      "9.5"
+    ],
+    "correct": 0,
+    "explanation": "Sum = 6+7+10+12+13+4+8+12 = 72, n=8, mean = 72/8 = 9.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath098",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "Mean deviation about the mean is always calculated using which values of the deviations?",
+    "options": [
+      "Signed (as is)",
+      "Absolute values",
+      "Squared values",
+      "Cubed values"
+    ],
+    "correct": 1,
+    "explanation": "Mean deviation uses the absolute value of each deviation from the mean/median, so that positive and negative deviations don't cancel out.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath099",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "Variance is defined as the:",
+    "options": [
+      "Mean of the deviations",
+      "Mean of the absolute deviations",
+      "Mean of the squared deviations",
+      "Square root of the mean deviation"
+    ],
+    "correct": 2,
+    "explanation": "Variance = (1/n)Σ(xi−x̄)², the average of the squared deviations from the mean.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath100",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "Standard deviation is:",
+    "options": [
+      "The square of variance",
+      "The square root of variance",
+      "Equal to variance always",
+      "The mean of the data"
+    ],
+    "correct": 1,
+    "explanation": "By definition, SD = √variance.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath101",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "If all observations in a data set are increased by a constant k, the variance:",
+    "options": [
+      "Increases by k",
+      "Increases by k²",
+      "Remains unchanged",
+      "Is multiplied by k"
+    ],
+    "correct": 2,
+    "explanation": "Adding a constant shifts every value but doesn't change the spread of the data, so variance is unaffected (only the mean shifts by k).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath102",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The coefficient of variation is defined as:",
+    "options": [
+      "(SD/Mean)×100",
+      "SD×Mean",
+      "Mean/SD",
+      "SD − Mean"
+    ],
+    "correct": 0,
+    "explanation": "CV = (standard deviation / mean) × 100, used to compare relative variability across data sets.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath103",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "When a fair coin is tossed once, the probability of getting a head is:",
+    "options": [
+      "1/4",
+      "1/2",
+      "1",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "A fair coin has 2 equally likely outcomes; P(head)=1/2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath104",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "When a fair die is rolled, the probability of getting an even number is:",
+    "options": [
+      "1/6",
+      "1/3",
+      "1/2",
+      "2/3"
+    ],
+    "correct": 2,
+    "explanation": "Even numbers on a die: 2,4,6 — 3 out of 6 equally likely outcomes, so P=3/6=1/2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath105",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The probability of an impossible event is:",
+    "options": [
+      "1",
+      "0",
+      "0.5",
+      "Undefined"
+    ],
+    "correct": 1,
+    "explanation": "By definition, an event that cannot occur has probability 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath106",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The probability of a sure (certain) event is:",
+    "options": [
+      "0",
+      "0.5",
+      "1",
+      "Undefined"
+    ],
+    "correct": 2,
+    "explanation": "A certain event always happens, so its probability is 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath107",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "If P(A) = 0.3, then P(not A) equals:",
+    "options": [
+      "0.3",
+      "0.7",
+      "1.3",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "P(not A) = 1 − P(A) = 1 − 0.3 = 0.7.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath108",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "For two mutually exclusive events A and B, P(A∪B) equals:",
+    "options": [
+      "P(A)×P(B)",
+      "P(A)+P(B)",
+      "P(A)−P(B)",
+      "P(A)+P(B)−P(A∩B)"
+    ],
+    "correct": 1,
+    "explanation": "Mutually exclusive events cannot both occur (P(A∩B)=0), so the addition rule simplifies to P(A)+P(B).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath109",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "In drawing a single card from a well-shuffled deck of 52, the probability of drawing a king is:",
+    "options": [
+      "1/52",
+      "1/13",
+      "4/52",
+      "Both (ii) and (iii) are equivalent"
+    ],
+    "correct": 3,
+    "explanation": "There are 4 kings out of 52 cards: 4/52 simplifies to 1/13 — both describe the same probability.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ximath110",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two dice are thrown. The probability of getting a sum of 7 is:",
+    "options": [
+      "1/6",
+      "1/12",
+      "1/36",
+      "7/36"
+    ],
+    "correct": 0,
+    "explanation": "There are 6 ways to get sum 7 out of 36 total outcomes: (1,6)(2,5)(3,4)(4,3)(5,2)(6,1) → 6/36 = 1/6.",
+    "source": "NCERT Textbook"
+  }
+]
