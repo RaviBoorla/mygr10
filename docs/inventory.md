@@ -175,6 +175,51 @@ Commercial Applications, Physical Education, Mass Media, Robotics & AI.
 
 History & Civics questions carry a `subject` field (`History`/`Civics`).
 
+## Grade XI (CBSE only)
+
+Class XI has no CBSE board exam, so — same reasoning as Grade IX above — there is no
+official past-paper corpus to source from. These banks are authored directly from the
+NCERT Class XI textbooks (Accountancy Part I & II, Statistics for Economics + Indian
+Economic Development, Psychology). Every MCQ carries `"source": "NCERT Textbook"` and
+never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge, and the home
+screen shows the same "Practice Questions" banner used for Grade IX. No Short Answers
+banks yet for this grade — only MCQ banks and Solved Exercises banks.
+
+| Subject | MCQ file | MCQs | Solved file | Solved Qs |
+|---|---|---|---|---|
+| Accountancy | `XI-CBSE-Accountancy.json` | 90 | `XI-CBSE-Accountancy-Solved.json` | 54 |
+| Economics | `XI-CBSE-Economics.json` | 166 | `XI-CBSE-Economics-Solved.json` | 87 |
+| Psychology | `XI-CBSE-Psychology.json` | 138 | `XI-CBSE-Psychology-Solved.json` | 71 |
+
+**Accountancy** (9 chapters, Financial Accounting Parts I & II): Introduction to
+Accounting, Theory Base of Accounting, Recording of Transactions – I, Recording of
+Transactions – II, Bank Reconciliation Statement, Trial Balance and Rectification of
+Errors, Depreciation/Provisions and Reserves, Financial Statements – I, Financial
+Statements – II. Numerical questions (journal/ledger entries, BRS, rectification,
+depreciation, financial-statement adjustments) are worked from the textbook's own
+accounting rules and cross-checked against its answer keys where given.
+
+**Economics** (16 chapters across two NCERT books, one combined "Economics" subject —
+no `subject` sub-field, just accurate `chapter` names): *Statistics for Economics* —
+Introduction, Collection of Data, Organisation of Data, Presentation of Data, Measures
+of Central Tendency, Correlation, Index Numbers, Use of Statistical Tools; *Indian
+Economic Development* — Indian Economy on the Eve of Independence, Indian Economy
+1950–1990, Liberalisation Privatisation and Globalisation: An Appraisal, Human Capital
+Formation in India, Rural Development, Employment: Growth Informalisation and Other
+Issues, Environment and Sustainable Development, Comparative Development Experiences of
+India and its Neighbours. Statistics chapters include real numerical problems
+(mean/median/mode, correlation coefficient, index numbers) worked from the formulas
+given in that same chapter.
+
+**Psychology** (8 chapters): What is Psychology?, Methods of Enquiry in Psychology,
+Human Development, Sensory Attentional and Perceptual Processes, Learning, Human
+Memory, Thinking, Motivation and Emotion. Covers concept definitions, named
+psychologists/theories, distinguishing closely related terms, and applied/scenario
+questions.
+
+Left out throughout: questions depending on a printed table/figure/diagram not
+reproducible in plain text, and anything with garbled PDF extraction.
+
 ## Grade XII
 
 `SUBJECTS.XII.CBSE` lists: Mathematics, Physics, Chemistry, Biology, Computer Science,
