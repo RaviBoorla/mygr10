@@ -93,7 +93,13 @@ function consolidatedChapters(subjectId) {
 }
 
 let _revisionCallbacks = null;      // null = not started; [] = loading; undefined = failed
-const _revisionExtraCallbacks = {}; // per grade, same states as above
+// Per grade, same states as above (null/[]/undefined) — every grade key is
+// pre-seeded to null so an untouched grade reads as "not started", not
+// "failed" (an absent object key and an explicit `undefined` value are the
+// same thing to `=== undefined`, which would otherwise make _revisionFailedFor
+// report every not-yet-attempted grade as already failed, before its load was
+// ever even requested).
+const _revisionExtraCallbacks = Object.fromEntries(Object.keys(REVISION_EXTRA_FILES).map(g => [g, null]));
 
 function _loadScript(src, onload, onerror) {
   const s = document.createElement('script');
