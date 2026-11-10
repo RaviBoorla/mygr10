@@ -109,7 +109,30 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 | CBSE Computer Applications | `X-CBSE-Computer-Applications-Solved.json` | 35 | Curriculum-authored, textbook-exercise style conceptual Q&A (definitions, "differentiate between X and Y", write-code tasks) across Networking, HTML, Cyber ethics, and Scratch & Python |
 | CBSE Information Technology | `X-CBSE-Information-Technology-Solved.json` | 45 | Curriculum-authored, textbook-exercise style conceptual Q&A across the 5 subject-specific units plus the 5 Employability Skills units |
 
-## Grade IX (ICSE only)
+## Grade IX
+
+### CBSE Science (NCERT textbook)
+
+Like ICSE below, Class IX has no CBSE board exam, so there is no official
+past-paper corpus here either. `IX-CBSE-Science.json` and
+`-Solved.json` are authored directly from the NCERT Class IX Science textbook
+(current 2024-25 reprint, revised curriculum — chapter titles and ordering
+differ from the older edition). Every question carries `"source": "NCERT
+Textbook"` and never the word "Board", plus a `subject` field
+(Physics/Chemistry/Biology/General) the same way `X-CBSE-Science.json` does.
+The home screen shows the same "Practice Questions — no board exam" banner
+used for ICSE below, worded for CBSE/NCERT.
+
+| File | Total Qs | Per-chapter counts |
+|---|---|---|
+| `IX-CBSE-Science.json` | 169 | Exploration: Entering the World of Secondary Science 14 (General) · Cell: The Building Block of Life 17 (Biology) · Tissues in Action 17 (Biology) · Describing Motion Around Us 9 (Physics) · Exploring Mixtures and their Separation 9 (Chemistry) · How Forces Affect Motion 8 (Physics) · Work, Energy, and Simple Machines 8 (Physics) · Journey Inside the Atom 18 (Chemistry) · Atomic Foundations of Matter 15 (Chemistry) · Sound Waves: Characteristics and Applications 15 (Physics) · Reproduction: How Life Continues 15 (Biology) · Patterns in Life: Diversity and Classification 13 (Biology) · Earth as a System: Energy, Matter, and Life 11 (General) |
+| `IX-CBSE-Science-Solved.json` | 116 | Same 13 chapters, 5-14 questions each, pulled from each chapter's own end-of-chapter exercise/review sections, full worked solutions (numericals show complete working) |
+
+Left out: questions depending on a printed figure/diagram/table not
+reproducible in plain text, and anything with garbled PDF extraction. No
+Short Answers bank yet for this subject.
+
+### ICSE
 
 Class IX has no CISCE board exam, so there is no official past-paper corpus.
 These banks are built from one school's (Greenwood High) internal Grade IX

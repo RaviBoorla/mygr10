@@ -5,12 +5,17 @@ Object.assign(app, {
     const subjects = SUBJECTS[state.grade]?.[state.board] || [];
     const draft    = this._draft();
 
-    const ixBanner = state.grade === 'IX' ? `
+    const ixBanner = state.grade === 'IX' ? (state.board === 'CBSE' ? `
+      <section class="card ix-source-banner">
+        <span class="soon-tag">Practice Questions</span>
+        <p>Class IX has no CBSE board exam, so these questions are authored from the NCERT
+           textbook rather than official board papers — unlike the Class X and XII banks.</p>
+      </section>` : `
       <section class="card ix-source-banner">
         <span class="soon-tag">Practice Questions</span>
         <p>Class IX has no CISCE board exam, so these questions are not official ICSE board papers —
            unlike the Class X and XII banks.</p>
-      </section>` : '';
+      </section>`) : '';
 
     const resume = draft ? `
       <section class="resume-banner card">

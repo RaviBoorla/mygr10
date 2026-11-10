@@ -8,6 +8,7 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   IX: {
+    CBSE: ['Science'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Economics', 'Computer Science']
   },
   X: {
@@ -22,6 +23,8 @@ const SUBJECTS = {
 };
 
 const BANKS = {
+  'IX CBSE Science':              'IX-CBSE-Science',
+
   'IX ICSE Mathematics':          'IX-ICSE-Mathematics',
   'IX ICSE Physics':              'IX-ICSE-Physics',
   'IX ICSE Chemistry':            'IX-ICSE-Chemistry',
@@ -115,6 +118,8 @@ function saBankSlug(subject, board, grade) {
 }
 
 const SOLVED_BANKS = {
+  'IX CBSE Science':       'IX-CBSE-Science-Solved',
+
   'X CBSE Mathematics':    'X-CBSE-Mathematics-Solved',
   'X CBSE Science':        'X-CBSE-Science-Solved',
   'X CBSE Social Science': 'X-CBSE-Social-Science-Solved',
