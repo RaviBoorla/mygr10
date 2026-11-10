@@ -1,0 +1,632 @@
+[
+  {
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the primary role of the system bus? Why is the data bus bidirectional while the address bus is unidirectional?",
+    "modelAnswer": "The system bus is the set of physical wires (data bus, address bus and control bus) used to transfer data, addresses and control signals between the components of a computer system. The data bus is bidirectional because data must flow both ways — from the CPU to memory (on a write) and from memory to the CPU (on a read). The address bus is unidirectional because only the CPU ever specifies an address (of the memory location to read/write) — memory never sends an address back to the CPU.",
+    "keyPoints": [
+      "System bus = data bus + address bus + control bus",
+      "Data bus carries data both ways (read and write) → bidirectional",
+      "Address bus carries only the CPU's requested address → unidirectional"
+    ],
+    "id": "sa-cs-001"
+  },
+  {
+    "chapter": "Computer System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between proprietary software and freeware. Name two examples of each.",
+    "modelAnswer": "Proprietary software is copyrighted software that must be purchased/licensed from its vendor, and its source code is not available — e.g. Microsoft Windows, Tally. Freeware is software that can be used free of cost, but like proprietary software its source code is not released to the public — e.g. Skype, Adobe Reader.",
+    "keyPoints": [
+      "Proprietary: must be purchased, no source code (e.g. Windows, Tally)",
+      "Freeware: free to use, but still no source code (e.g. Skype, Adobe Reader)",
+      "Both differ from FOSS, where source code IS freely available"
+    ],
+    "id": "sa-cs-002"
+  },
+  {
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write the main difference between a microcontroller and a microprocessor. Why do smart home appliances use a microcontroller instead of a microprocessor?",
+    "modelAnswer": "A microprocessor is a CPU implemented on a single chip, requiring separate external RAM, ROM and other peripherals. A microcontroller integrates the CPU along with a fixed amount of RAM, ROM and peripherals, all on one single chip. Smart appliances (like washing machines) use microcontrollers because they perform one specific, repetitive task, so a small, low-cost, task-specific chip is more suitable and economical than a general-purpose microprocessor.",
+    "keyPoints": [
+      "Microprocessor = only CPU on chip, needs external RAM/ROM",
+      "Microcontroller = CPU + RAM + ROM + peripherals on one chip",
+      "Appliances need small, cheap, task-specific control → microcontroller preferred"
+    ],
+    "id": "sa-cs-003"
+  },
+  {
+    "chapter": "Computer System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Categorise the following data as structured, semi-structured or unstructured: (a) a newspaper (b) a cricket match score (c) an HTML page (d) patient records in a hospital.",
+    "modelAnswer": "(a) Newspaper — unstructured (text and images with no fixed record format). (b) Cricket match score — structured (follows a well-defined tabular/numeric format of runs, overs, wickets). (c) HTML page — semi-structured (uses tags to mark up data without a strict fixed record format). (d) Patient records — structured (maintained in a fixed tabular format: name, age, diagnosis, etc.).",
+    "keyPoints": [
+      "Structured: pre-defined tabular format (e.g. cricket score, patient records)",
+      "Unstructured: no fixed format (e.g. newspaper text)",
+      "Semi-structured: tagged but no strict record structure (e.g. HTML)"
+    ],
+    "id": "sa-cs-004"
+  },
+  {
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "How does the computer understand a program written in a high-level language? Explain the role of a compiler and an interpreter.",
+    "modelAnswer": "A computer's hardware can only execute machine language (0s and 1s). A program written in a high-level language (the source code) must first be translated into machine code (object code) by a language translator. A compiler translates the entire source code into machine code in one go before execution begins; once compiled, it can be run directly and the compiler isn't needed again. An interpreter instead translates and executes the source code one line at a time, and is required every single time the program is run.",
+    "keyPoints": [
+      "High-level code must be translated to machine code before execution",
+      "Compiler: translates whole program at once, ahead of running",
+      "Interpreter: translates and runs one line at a time, needed every run"
+    ],
+    "id": "sa-cs-005"
+  },
+  {
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the need of RAM? How does it differ from ROM?",
+    "modelAnswer": "RAM (Random Access Memory) is needed to temporarily hold the programs and data that the CPU is actively working with, since the CPU interacts directly with primary memory, not secondary storage. RAM is volatile — its contents are lost when power is switched off — and is used for fast, temporary storage during processing. ROM (Read Only Memory) is non-volatile — its contents persist even without power — and stores small, rarely-changed data such as the boot loader that starts up the operating system.",
+    "keyPoints": [
+      "RAM: holds active program/data for CPU, volatile",
+      "ROM: non-volatile, stores fixed startup instructions (e.g. boot loader)",
+      "CPU interacts directly only with primary (RAM) memory, not secondary storage"
+    ],
+    "id": "sa-cs-006"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between ASCII and UNICODE encoding schemes.",
+    "modelAnswer": "ASCII (American Standard Code for Information Interchange) is a character-encoding scheme using 7 (or 8) bits, sufficient to represent English letters, digits and common symbols, but not characters from other scripts. UNICODE is a much larger encoding standard capable of representing characters from almost all the world's writing systems (including Indian scripts) in a single consistent scheme, overcoming ASCII's limitation to English only.",
+    "keyPoints": [
+      "ASCII: 7/8-bit, English letters/digits/symbols only",
+      "UNICODE: represents characters of nearly all world scripts",
+      "UNICODE solves the multi-language limitation of ASCII"
+    ],
+    "id": "sa-cs-007"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Convert (220)8 to binary and (11001010)2 to decimal.",
+    "modelAnswer": "(220)8 to binary: each octal digit maps to 3 binary bits — 2=010, 2=010, 0=000, giving 010 010 000, i.e. 010010000 (or simplified 10010000). (11001010)2 to decimal: 1×128+1×64+0+0+1×8+0+1×2+0 = 128+64+8+2 = 202.",
+    "keyPoints": [
+      "Each octal digit → 3 binary bits (2→010, 0→000)",
+      "Binary to decimal: sum of bit × 2^position",
+      "(220)8 = 010010000₂; (11001010)2 = 202₁₀"
+    ],
+    "id": "sa-cs-008"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What advantage does preparing digital content in an Indian language using UNICODE offer, compared to older font-based methods?",
+    "modelAnswer": "UNICODE assigns each character of an Indian script a unique, standard code point recognised uniformly across all devices and software, so text displays correctly and consistently everywhere, can be searched, sorted, and copy-pasted reliably, and doesn't depend on a specific proprietary font being installed on the viewer's system (unlike older font-hack methods which often broke when the exact font wasn't available).",
+    "keyPoints": [
+      "UNICODE gives each character a universal, standard code — not tied to one font",
+      "Ensures consistent display/search/sort across devices and software",
+      "Avoids the font-dependency problems of older encoding hacks"
+    ],
+    "id": "sa-cs-009"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A number system X has B distinct symbols. What is its base value? Give an example.",
+    "modelAnswer": "The base (or radix) of a number system equals the number of distinct symbols it uses, so the base value of X is B. For example, the binary system has 2 symbols (0, 1), so its base is 2; the hexadecimal system has 16 symbols (0–9, A–F), so its base is 16.",
+    "keyPoints": [
+      "Base (radix) = number of distinct digit symbols used",
+      "Binary: 2 symbols → base 2",
+      "Hexadecimal: 16 symbols → base 16"
+    ],
+    "id": "sa-cs-010"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Encode the word 'HOT' using 7-bit ASCII and explain how a computer 'understands' such text.",
+    "modelAnswer": "Each character of 'HOT' is mapped to its 7-bit ASCII binary code: H=1001000, O=1001111, T=1010100. Internally, the computer stores and processes all data — including text — purely as sequences of 0s and 1s; the ASCII standard is simply the agreed mapping between each printable character and a specific binary pattern, letting the computer 'understand' and reproduce text correctly.",
+    "keyPoints": [
+      "Every character maps to a fixed 7-bit ASCII binary code",
+      "Computer internally stores/processes everything as 0s and 1s",
+      "ASCII is just the agreed character-to-binary-code mapping"
+    ],
+    "id": "sa-cs-011"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between Cloud Computing and Grid Computing, with an example each.",
+    "modelAnswer": "Cloud computing is an on-demand model where a centralised provider delivers computing resources (storage, servers, software) over the internet to users as a managed service — e.g. Google Drive for storage. Grid computing instead pools together the computing power of many separate, often geographically-distributed computers/organisations to jointly solve one large computational problem — e.g. a scientific research grid analysing large astronomical datasets. Cloud computing is provider-managed and on-demand; grid computing is collaborative and problem-focused.",
+    "keyPoints": [
+      "Cloud: centrally provided, on-demand service (e.g. Google Drive)",
+      "Grid: many computers pool resources to solve one big problem together",
+      "Key difference: provider-managed service vs. collaborative resource pooling"
+    ],
+    "id": "sa-cs-012"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Justify the statement: 'Storage of data is cost-effective and time-saving in cloud computing.'",
+    "modelAnswer": "In cloud computing, a user pays only for the storage actually used (pay-as-you-go), avoiding the upfront capital cost of buying and maintaining physical servers/hard disks. The cloud provider handles maintenance, backups, scaling and security, saving the user time and effort. Storage capacity can also be increased or decreased instantly on demand, without the delay of procuring new hardware.",
+    "keyPoints": [
+      "Pay only for storage actually used — no large upfront hardware cost",
+      "Provider handles maintenance/backup/scaling, saving user's time",
+      "Capacity can scale instantly without hardware procurement delay"
+    ],
+    "id": "sa-cs-013"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "List two examples of real-life applications of the Internet of Things (IoT) and explain how they work.",
+    "modelAnswer": "(1) A smart watch (wearable IoT device) can monitor heart rate and steps and send this data over the internet to a connected health app for analysis. (2) A smart home security camera with motion sensors can detect movement and instantly send an alert/video stream to the owner's smartphone over the internet. In both cases, a physical object is embedded with a sensor and network connectivity, letting it collect and exchange data automatically without manual intervention.",
+    "keyPoints": [
+      "IoT device = physical object + embedded sensor + internet connectivity",
+      "Example 1: smart watch monitors health data, sends it online",
+      "Example 2: smart camera detects motion, alerts owner remotely"
+    ],
+    "id": "sa-cs-014"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is Big Data? Mention two of its key characteristics.",
+    "modelAnswer": "Big Data refers to extremely large, fast-growing and complex datasets that traditional data-processing tools cannot efficiently store, manage or analyse. Two key characteristics are Volume (the sheer, massive quantity of data generated) and Velocity (the very high speed at which new data is generated and needs to be processed, e.g. real-time social media feeds).",
+    "keyPoints": [
+      "Big Data = very large, complex, fast-growing datasets",
+      "Volume: massive quantity of data",
+      "Velocity: very high speed of data generation/processing"
+    ],
+    "id": "sa-cs-015"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "How can blockchain technology promote transparency in the distribution of government scholarships?",
+    "modelAnswer": "Blockchain maintains a distributed, tamper-resistant ledger where every transaction (e.g. a scholarship disbursement) is recorded as a block, time-stamped, and linked to previous blocks, visible to all authorised participants in the network. Since records cannot be secretly altered or deleted once added, this ensures every disbursement is traceable and verifiable by all stakeholders, reducing the chances of fraud, duplication or diversion of funds, and increasing overall accountability.",
+    "keyPoints": [
+      "Blockchain = distributed, tamper-resistant, chronologically-linked ledger",
+      "Every scholarship transaction is permanently recorded and visible to stakeholders",
+      "Prevents secret alteration/fraud, increasing transparency and accountability"
+    ],
+    "id": "sa-cs-016"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What are conditionals? When are they required in a program? Give an example.",
+    "modelAnswer": "Conditionals are statements (like IF, IF-ELSE, IF-ELIF-ELSE) that allow a program to execute a particular set of instructions only when a specified condition evaluates to true, and optionally execute a different set of instructions otherwise. They are required whenever a program's behaviour must change depending on some input or state — for example, checking whether a user-entered number is positive, negative, or zero, and printing a different message in each case.",
+    "keyPoints": [
+      "Conditionals let a program branch its behaviour based on a condition",
+      "Needed whenever a decision must be made depending on data/input",
+      "Example: checking if a number is positive, negative or zero"
+    ],
+    "id": "sa-cs-017"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write pseudocode to calculate the factorial of a number.",
+    "modelAnswer": "START\nINPUT Number\nSET Factorial = 1\nSET i = 1\nWHILE i <= Number:\n    Factorial = Factorial * i\n    i = i + 1\nPRINT Factorial\nSTOP\nThis repeatedly multiplies Factorial by each integer from 1 up to Number (e.g. for Number=5, Factorial becomes 1×1×2×3×4×5 = 120).",
+    "keyPoints": [
+      "Initialise a running product (Factorial) to 1",
+      "Loop multiplying Factorial by each integer up to Number",
+      "For Number=5: 1×2×3×4×5 = 120"
+    ],
+    "id": "sa-cs-018"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Draw/describe a flowchart (in words) to check whether a given number is an Armstrong number of 3 digits.",
+    "modelAnswer": "START → INPUT Number → extract digits d1 (hundreds), d2 (tens), d3 (units) of Number → COMPUTE sum = d1³+d2³+d3³ → DECISION: is sum equal to Number? → if YES, PRINT 'Armstrong number'; if NO, PRINT 'Not an Armstrong number' → STOP. For example, for 371: 3³+7³+1³ = 27+343+1 = 371, which equals the number itself, so it IS an Armstrong number.",
+    "keyPoints": [
+      "Extract the hundreds, tens and units digits of the number",
+      "Sum the cubes of each digit",
+      "Compare the sum to the original number (equal → Armstrong)"
+    ],
+    "id": "sa-cs-019"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between an algorithm and a flowchart.",
+    "modelAnswer": "An algorithm is a step-by-step sequence of instructions (often written as pseudocode or plain structured text) to solve a problem. A flowchart is a visual/graphical representation of the same logic, using standard symbols (oval for start/stop, parallelogram for input/output, rectangle for process, diamond for decision) connected by arrows showing the flow of control. Both describe the same underlying logic, but a flowchart communicates it pictorially while an algorithm/pseudocode communicates it in words.",
+    "keyPoints": [
+      "Algorithm = textual, step-by-step instructions (pseudocode)",
+      "Flowchart = graphical representation using standard symbols",
+      "Same logic, different representation (textual vs. pictorial)"
+    ],
+    "id": "sa-cs-020"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Which of these identifiers are invalid in Python, and why: (i) Serial_no. (ii) 1st_Room (iii) Hundred$ (iv) True?",
+    "modelAnswer": "(i) Serial_no. is invalid because identifiers cannot contain a period/full stop ('.'). (ii) 1st_Room is invalid because an identifier cannot start with a digit. (iii) Hundred$ is invalid because the special character '$' is not allowed in identifiers. (iv) True is invalid because it is a reserved keyword in Python and cannot be used as a variable name.",
+    "keyPoints": [
+      "Identifiers cannot contain '.' or '$' (only letters, digits, underscore)",
+      "Identifiers cannot start with a digit",
+      "Keywords like True/False/None cannot be used as identifiers"
+    ],
+    "id": "sa-cs-021"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write Python statements to: (a) assign 10 to length and 20 to breadth, (b) assign the average of length and breadth to sum.",
+    "modelAnswer": "length = 10\nbreadth = 20\nsum = (length + breadth) / 2\nThis gives sum = (10+20)/2 = 15.0.",
+    "keyPoints": [
+      "Simple assignment: variable = value",
+      "Average = (a+b)/2",
+      "Division '/' in Python 3 always gives a float result"
+    ],
+    "id": "sa-cs-022"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Categorise the following as syntax error, logical error, or runtime error: (a) 25/0 (b) using '+' instead of '*' to calculate area.",
+    "modelAnswer": "(a) 25/0 is a runtime error — the statement is syntactically correct Python, but dividing by zero causes a ZeroDivisionError only when the line actually executes. (b) Using '+' instead of '*' for area calculation is a logical error — the program runs without crashing and produces an output, but that output is wrong because the wrong operator/formula was used.",
+    "keyPoints": [
+      "Syntax error: breaks the language's grammar rules, caught before running",
+      "Runtime error: valid syntax but fails during execution (e.g. division by zero)",
+      "Logical error: runs and gives output, but the output is wrong"
+    ],
+    "id": "sa-cs-023"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Which data type would you use to represent each of the following, and why: (a) number of months in a year (b) volume of a sphere (c) name of a student?",
+    "modelAnswer": "(a) Number of months in a year → int, since it is always a whole number (e.g. 12), with no fractional part. (b) Volume of a sphere → float, since it is computed using π and typically results in a decimal value. (c) Name of a student → str (string), since a name is textual data, not numeric.",
+    "keyPoints": [
+      "int: whole numbers with no decimal part",
+      "float: numbers that can have a decimal/fractional part",
+      "str: textual data like names"
+    ],
+    "id": "sa-cs-024"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a program to calculate Simple Interest given Principal (P), Rate (R) and Time (T), using SI = (P×R×T)/100.",
+    "modelAnswer": "P = float(input('Enter Principal: '))\nR = float(input('Enter Rate: '))\nT = float(input('Enter Time: '))\nSI = (P * R * T) / 100\nAmount = P + SI\nprint('Simple Interest =', SI)\nprint('Amount payable =', Amount)",
+    "keyPoints": [
+      "Take P, R, T as input (often as float, since they may be decimal)",
+      "Apply formula SI = (P×R×T)/100",
+      "Amount payable = Principal + SI"
+    ],
+    "id": "sa-cs-025"
+  },
+  {
+    "chapter": "Flow of Control",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between break and continue statements, using an example of each.",
+    "modelAnswer": "'break' immediately terminates the entire loop, skipping any remaining iterations — e.g. in 'for i in range(10): if i==5: break; print(i)', the loop prints 0,1,2,3,4 and then stops completely when i becomes 5. 'continue' instead skips only the rest of the CURRENT iteration and moves on to the next one — e.g. in 'for i in range(5): if i==2: continue; print(i)', the loop prints 0,1,3,4, skipping just the print for i=2 but continuing the loop afterwards.",
+    "keyPoints": [
+      "break: exits the loop entirely, no further iterations run",
+      "continue: skips only the rest of the current iteration, loop continues",
+      "Example: break stops at the trigger value; continue just skips that one value"
+    ],
+    "id": "sa-cs-026"
+  },
+  {
+    "chapter": "Flow of Control",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the purpose of the range() function? Give one example.",
+    "modelAnswer": "range() generates a sequence of numbers, commonly used to control the number of times a for loop repeats. range(start, stop, step) generates numbers starting at 'start', up to but excluding 'stop', incrementing by 'step' each time. For example, range(1, 10, 2) generates 1, 3, 5, 7, 9 — used as 'for i in range(1,10,2): print(i)' to print those odd numbers.",
+    "keyPoints": [
+      "range(start, stop, step) generates a sequence of numbers",
+      "'stop' value is excluded from the sequence",
+      "Commonly used to control how many times a for loop iterates"
+    ],
+    "id": "sa-cs-027"
+  },
+  {
+    "chapter": "Flow of Control",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is an infinite loop? Give one example and explain how it can occur accidentally.",
+    "modelAnswer": "An infinite loop is a loop whose terminating condition never becomes false (or that has no break to exit), so it keeps executing forever. For example, 'i = 1\\nwhile i > 0:\\n    print(i)\\n    i += 1' never stops, since i only ever increases and stays greater than 0. It can occur accidentally if a programmer forgets to update the loop-control variable inside the loop body, or updates it in a way that never actually makes the condition false.",
+    "keyPoints": [
+      "A loop whose condition never becomes false runs forever",
+      "Example: a while loop whose counter never decreases to meet the stop condition",
+      "Often caused by forgetting to update the loop-control variable correctly"
+    ],
+    "id": "sa-cs-028"
+  },
+  {
+    "chapter": "Flow of Control",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the difference between 'if-else' and 'if-elif-else' constructs?",
+    "modelAnswer": "'if-else' tests only a single condition: if it's true one block runs, otherwise (else) a different single block runs — only two possible paths. 'if-elif-else' allows testing a whole chain of conditions in sequence: Python checks each 'elif' only if all earlier conditions were false, allowing more than two possible outcomes, with the final 'else' catching the case where none of the conditions were true.",
+    "keyPoints": [
+      "if-else: exactly two possible branches (true / false)",
+      "if-elif-else: a chain of several conditions checked in order",
+      "elif is checked only if the preceding condition(s) were false"
+    ],
+    "id": "sa-cs-029"
+  },
+  {
+    "chapter": "Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between an argument and a parameter, with an example.",
+    "modelAnswer": "A parameter is the variable name listed inside the parentheses in a function's definition — it is a placeholder for a value the function expects. An argument is the actual value supplied when the function is called. For example, in 'def greet(name): print(\"Hello\", name)', 'name' is the parameter; in the call 'greet(\"Riya\")', the string \"Riya\" is the argument passed to that parameter.",
+    "keyPoints": [
+      "Parameter: placeholder variable named in the function definition",
+      "Argument: actual value passed at the function call",
+      "Example: def greet(name) → name is parameter; greet('Riya') → 'Riya' is argument"
+    ],
+    "id": "sa-cs-030"
+  },
+  {
+    "chapter": "Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between a global variable and a local variable, with an example.",
+    "modelAnswer": "A global variable is defined outside any function (at the top level of the program/module) and can be accessed from anywhere in the program, including inside functions (for reading). A local variable is defined inside a function and exists only during that function's execution — it cannot be accessed from outside that function, and is destroyed once the function returns. For example, if 'count = 0' is written outside all functions, it is global; if 'total = 0' is written inside a function body, it is local to that function.",
+    "keyPoints": [
+      "Global variable: defined outside functions, accessible program-wide",
+      "Local variable: defined inside a function, exists only during that call",
+      "Local variables are destroyed once the function finishes executing"
+    ],
+    "id": "sa-cs-031"
+  },
+  {
+    "chapter": "Functions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Using an example, show how a function in Python can return multiple values.",
+    "modelAnswer": "def minMax(numbers):\n    return min(numbers), max(numbers)\n\nsmallest, largest = minMax([4, 9, 1, 7])\nprint(smallest, largest)   # prints: 1 9\n\nWriting several comma-separated values after 'return' makes Python automatically pack them into a single tuple, which the caller can then unpack into separate variables, as shown with smallest and largest.",
+    "keyPoints": [
+      "Separate return values with commas: return a, b",
+      "Python automatically packs them into one tuple",
+      "Caller can unpack the tuple into multiple variables at once"
+    ],
+    "id": "sa-cs-032"
+  },
+  {
+    "chapter": "Functions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Does a function always return a value? Explain with an example.",
+    "modelAnswer": "No. If a function's body has no return statement at all, or uses a bare 'return' with no expression, Python automatically makes it return the special value None. For example, 'def printMsg(): print(\"Hi\")' has no return statement; calling 'result = printMsg()' prints 'Hi' and sets result to None, not to anything meaningful.",
+    "keyPoints": [
+      "No explicit return (or bare 'return') → function returns None",
+      "Printing something is not the same as returning something",
+      "Example: a function that only prints, with no return, gives result = None"
+    ],
+    "id": "sa-cs-033"
+  },
+  {
+    "chapter": "Strings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between the find() and index() string methods when the substring is not present.",
+    "modelAnswer": "Both find() and index() search for the first occurrence of a substring within a string. The key difference is in how they handle a 'not found' case: find() simply returns -1 if the substring is not present, without raising any error. index(), on the other hand, raises a ValueError (a runtime error) if the substring cannot be found, which must be handled (e.g. with try-except) if there's a chance the substring is absent.",
+    "keyPoints": [
+      "Both return the position of the first occurrence of a substring",
+      "find(): returns -1 if not found, no error raised",
+      "index(): raises a ValueError if not found"
+    ],
+    "id": "sa-cs-034"
+  },
+  {
+    "chapter": "Strings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a user-defined function deleteChar(text, char) that removes all occurrences of a given character from a string and returns the new string.",
+    "modelAnswer": "def deleteChar(text, char):\n    result = ''\n    for ch in text:\n        if ch != char:\n            result = result + ch\n    return result\n\nprint(deleteChar('banana', 'a'))   # prints: bnn\n\nSince strings are immutable, a new string is built up character by character, skipping the character to be removed, and this new string is returned.",
+    "keyPoints": [
+      "Strings are immutable — build a NEW string rather than modifying the original",
+      "Loop through each character, skip the one to delete",
+      "Concatenate the remaining characters into the result string"
+    ],
+    "id": "sa-cs-035"
+  },
+  {
+    "chapter": "Strings",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the difference between a string's split() method and its partition() method?",
+    "modelAnswer": "split(separator) breaks the string into a list of ALL substrings wherever the separator occurs — e.g. 'a,b,c'.split(',') gives ['a','b','c']. partition(separator) instead splits the string into exactly THREE parts (a 3-element tuple): the part before the FIRST occurrence of the separator, the separator itself, and the part after it — e.g. 'a,b,c'.partition(',') gives ('a', ',', 'b,c').",
+    "keyPoints": [
+      "split(): returns a list of ALL pieces, breaking at every occurrence",
+      "partition(): returns exactly 3 parts (before, separator, after), using only the FIRST occurrence",
+      "partition() keeps the separator itself in the result; split() discards it"
+    ],
+    "id": "sa-cs-036"
+  },
+  {
+    "chapter": "Lists",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between a list and a tuple, with an example of when each is more suitable.",
+    "modelAnswer": "A list is a mutable, ordered collection — its elements can be changed, added, or removed after creation, e.g. marks = [85, 90, 78] (useful for data that may change, like a shopping cart). A tuple is an immutable, ordered collection — once created, its elements cannot be changed, e.g. coordinates = (10, 20) (useful for fixed data that must not accidentally change, like a geographic coordinate or a function's fixed return values).",
+    "keyPoints": [
+      "List: mutable, elements can be added/removed/changed — e.g. []",
+      "Tuple: immutable, fixed once created — e.g. ()",
+      "Use tuple for fixed/protected data, list for data expected to change"
+    ],
+    "id": "sa-cs-037"
+  },
+  {
+    "chapter": "Lists",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a program to find the number of times a given element occurs in a list, without using the built-in count() method.",
+    "modelAnswer": "def countOccurrences(myList, element):\n    total = 0\n    for item in myList:\n        if item == element:\n            total = total + 1\n    return total\n\nnums = [2, 5, 2, 8, 2, 9]\nprint(countOccurrences(nums, 2))   # prints: 3",
+    "keyPoints": [
+      "Initialise a counter to 0 before the loop",
+      "Loop through the list, incrementing the counter on each match",
+      "Return the final count after the loop ends"
+    ],
+    "id": "sa-cs-038"
+  },
+  {
+    "chapter": "Lists",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a function to find and return the second largest number from a list of numbers.",
+    "modelAnswer": "def secondLargest(numbers):\n    uniqueSorted = sorted(set(numbers), reverse=True)\n    return uniqueSorted[1]\n\nprint(secondLargest([4, 9, 2, 9, 7]))   # prints: 7\n\nConverting to a set first removes duplicate values (so a repeated maximum doesn't hide the true second-largest distinct value), then sorting in descending order and picking the element at index 1 gives the second largest.",
+    "keyPoints": [
+      "Remove duplicate values first (e.g. using set())",
+      "Sort the unique values in descending order",
+      "The element at index 1 of the sorted list is the second largest"
+    ],
+    "id": "sa-cs-039"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between a tuple and a dictionary, and give one situation where each is more useful.",
+    "modelAnswer": "A tuple is an ordered, immutable collection of values accessed by numeric position/index, e.g. point = (3, 7) — useful for fixed groups of related values like coordinates. A dictionary is an unordered (conceptually; insertion order is preserved in modern Python) collection of key-value pairs accessed by a meaningful key rather than a position, e.g. marks = {'Math': 90, 'Science': 85} — useful when you need to look up a value using a descriptive name/key rather than remembering its position.",
+    "keyPoints": [
+      "Tuple: ordered, accessed by numeric index, e.g. (3,7)",
+      "Dictionary: accessed by key-value pairs, e.g. {'Math':90}",
+      "Use dictionary when lookups are by meaningful name; tuple for fixed positional groups"
+    ],
+    "id": "sa-cs-040"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Prove with an example that a variable holding an immutable value is 'rebuilt' (not modified in place) when its value changes.",
+    "modelAnswer": "x = 5\nprint(id(x))      # e.g. prints some memory address, say 140001\nx = x + 1\nprint(id(x))      # prints a DIFFERENT address, say 140002\n\nSince integers are immutable, 'x = x + 1' does not change the object 5 in place — it creates a brand new integer object 6 in memory and makes the name x point to this new object, which is why id(x) changes after the operation.",
+    "keyPoints": [
+      "Immutable objects (like int, str, tuple) cannot be changed in place",
+      "'x = x + 1' creates a NEW object; x is just rebound to it",
+      "id(x) changing before/after proves a different object was created"
+    ],
+    "id": "sa-cs-041"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "When would you prefer a dictionary over a list to store data about several students? Justify with an example.",
+    "modelAnswer": "A dictionary is preferable when you need to look up a student's data directly using a meaningful key, such as their roll number or name, rather than remembering their position in a sequence. For example, studentMarks = {'A-36': 78.8, 'A-37': 85.2} lets you instantly retrieve a student's marks with studentMarks['A-36'], whereas a plain list would require knowing the exact index position, which is error-prone and less meaningful.",
+    "keyPoints": [
+      "Dictionary allows lookup by a meaningful key (e.g. roll number)",
+      "List requires remembering a numeric index position instead",
+      "Example: studentMarks['A-36'] is clearer than studentMarks[5]"
+    ],
+    "id": "sa-cs-042"
+  },
+  {
+    "chapter": "Societal Impact",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain, with the help of the SMS/email scenario style questions in the chapter, why one should never share an OTP (One-Time Password) received from a bank.",
+    "modelAnswer": "An OTP sent by a bank is meant to authorise or verify a transaction only for the account holder themselves; it proves that the person completing the transaction has access to the registered mobile number/email. If shared with anyone else — even someone claiming to be from the bank — that person can use it to authorise a fraudulent transaction (a form of phishing/identity theft), since banks never genuinely need a customer to read out their OTP to staff.",
+    "keyPoints": [
+      "OTP authenticates that the real account holder is making the transaction",
+      "Sharing it lets a fraudster complete an unauthorised transaction",
+      "Genuine banks never ask customers to share their OTP"
+    ],
+    "id": "sa-cs-043"
+  },
+  {
+    "chapter": "Societal Impact",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between hacking and identity theft, with reference to cyber crime.",
+    "modelAnswer": "Hacking refers to breaking into a computer system or network without authorisation, typically to access, alter or steal data, e.g. breaking into someone's email server to read private messages. Identity theft refers to illegally obtaining and using another person's personal/identifying information (like their login credentials or an already-open session) to impersonate them, e.g. using someone's logged-in email account to send messages pretending to be them. Hacking is about breaking in; identity theft is about impersonation using stolen/misused identity information.",
+    "keyPoints": [
+      "Hacking: unauthorised breaking into a system/account",
+      "Identity theft: impersonating someone using their stolen/misused identity information",
+      "The two can overlap but are conceptually distinct crimes"
+    ],
+    "id": "sa-cs-044"
+  },
+  {
+    "chapter": "Societal Impact",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What ethical and legal issues arise from copying images from the internet and using them in a school project without permission?",
+    "modelAnswer": "Using someone else's copyrighted images without permission or attribution is a form of copyright infringement/plagiarism — even for a school project, it is ethically dishonest to present others' creative work as part of one's own submission, and legally it can infringe the original creator's copyright, who has exclusive rights over the reproduction and use of their work. The ethical practice is to use royalty-free/open-licence images, or properly cite the source and seek permission where required.",
+    "keyPoints": [
+      "Using others' images without permission is copyright infringement",
+      "Presenting others' work as part of your own submission is also plagiarism",
+      "Ethical practice: use royalty-free images or cite the source/seek permission"
+    ],
+    "id": "sa-cs-045"
+  }
+]

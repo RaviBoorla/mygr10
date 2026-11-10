@@ -1,0 +1,1097 @@
+[
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Name the software required to make a computer functional. Write down its two primary services.",
+    "solution": "System software (especially the Operating System) is required to make a computer functional. Its two primary services are: (1) providing services for building and running application programs — loading programs into memory and allocating them to the CPU, and (2) providing a user interface through which the user can interact with and give commands to the computer.",
+    "id": "sol-cs-001"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "How does the computer understand a program written in high level language?",
+    "solution": "The computer's hardware only understands machine language (0s and 1s). A program written in a high-level language (source code) is converted into machine-understandable object code using a language translator — either a compiler (translates the whole program at once) or an interpreter (translates and executes one line at a time).",
+    "id": "sol-cs-002"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Why is the execution time of the machine code less than that of source code?",
+    "solution": "Machine code is already in the binary form that the CPU can execute directly, with no further translation needed. Source code, however, must first be translated (by a compiler or interpreter) into machine code before it can run, and this translation step adds extra time — hence source code's overall execution (translation + running) takes longer than running already-translated machine code alone.",
+    "id": "sol-cs-003"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "What is the need of RAM? How does it differ from ROM?",
+    "solution": "RAM is needed because the CPU interacts directly only with primary memory — any program or data must be loaded into RAM before the CPU can process it. RAM is volatile (loses contents when power is off) and used for fast, temporary storage during processing. ROM is non-volatile (retains contents without power) and stores small, rarely-changing data, such as the boot-loader program that starts the operating system.",
+    "steps": [
+      "RAM: CPU's working memory, holds active data/programs, volatile",
+      "ROM: stores permanent startup instructions, non-volatile",
+      "Key difference: volatility and purpose (temporary working storage vs. fixed firmware)"
+    ],
+    "id": "sol-cs-004"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "What is the need for secondary memory?",
+    "solution": "Primary memory (RAM) is volatile and has limited capacity, so it cannot be used to store data and programs permanently. Secondary memory is non-volatile and offers much larger storage capacity (though slower than RAM), so it is needed to permanently store data, programs and files for future use, even after the computer is switched off.",
+    "id": "sol-cs-005"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "How do different components of the computer communicate with each other?",
+    "solution": "Different components of a computer system communicate using the system bus, a set of physical wires comprising three parts: the data bus (transfers the actual data between components), the address bus (carries the memory address the CPU wants to read from or write to), and the control bus (carries control signals, such as read/write commands, between components).",
+    "steps": [
+      "Communication happens via the system bus",
+      "Data bus: carries data; Address bus: carries memory addresses",
+      "Control bus: carries control/command signals"
+    ],
+    "id": "sol-cs-006"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Draw the block diagram of a computer system. Briefly write about the functionality of each component.",
+    "solution": "A computer system's block diagram shows: Input Device → (sends data to) → CPU (comprising Control Unit and ALU) ↔ Primary Memory ↔ Secondary Storage, and CPU → Output Device. Functionality: Input devices (keyboard, mouse) feed data/instructions into the system. The CPU's ALU performs arithmetic/logic operations while the CU directs instruction execution and data flow. Primary memory temporarily holds the program/data the CPU is actively using. Secondary storage holds data/programs permanently. Output devices (monitor, printer) present the processed results to the user.",
+    "id": "sol-cs-007"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "What is the primary role of system bus? Why is data bus bidirectional while address bus is unidirectional?",
+    "solution": "The system bus transfers data, addresses and control signals between the components of a computer. The data bus is bidirectional because the CPU both sends data to memory (write) and receives data from memory (read). The address bus is unidirectional because only the CPU specifies addresses to be accessed — memory never sends an address back to the CPU.",
+    "steps": [
+      "System bus role: carry data, addresses, and control signals between components",
+      "Data flows both ways between CPU and memory → bidirectional data bus",
+      "Only the CPU ever supplies an address → unidirectional address bus"
+    ],
+    "id": "sol-cs-008"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Differentiate between proprietary software and freeware software. Name two software for each type.",
+    "solution": "Proprietary software must be purchased from the vendor holding its copyright, and its source code is not publicly available — examples: Microsoft Windows, Tally. Freeware is free to use but, like proprietary software, its source code is not released publicly — examples: Skype, Adobe Reader.",
+    "id": "sol-cs-009"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Write the main difference between microcontroller and microprocessor. Why do smart home appliances have a microcontroller instead of microprocessor embedded in them?",
+    "solution": "A microprocessor is a CPU on a single chip, needing separate external RAM, ROM and peripherals. A microcontroller integrates the CPU plus a fixed amount of RAM, ROM and other peripherals all on one single chip. Smart appliances use microcontrollers because they need to perform only one specific, repetitive task (e.g. running a wash cycle), so a small, low-cost, dedicated chip suffices — a full general-purpose microprocessor (with separate RAM/ROM) would be unnecessarily expensive and larger.",
+    "id": "sol-cs-010"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "Mention the different types of data that you deal with while browsing the Internet.",
+    "solution": "While browsing, a user deals with all three types of data: structured data (e.g. an online shopping order table, flight booking details), unstructured data (e.g. images, videos, social media posts), and semi-structured data (e.g. the HTML pages themselves, or JSON/XML data exchanged by web applications).",
+    "id": "sol-cs-011"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "Categorise the following data as structured, semi-structured and unstructured: Newspaper, Cricket Match Score, HTML Page, Patient records in a hospital.",
+    "solution": "Newspaper — unstructured (free-form text and images, no fixed record format). Cricket Match Score — structured (runs, overs, wickets follow a strict numeric/tabular format). HTML Page — semi-structured (tagged, but no rigid record structure). Patient records in a hospital — structured (maintained in a fixed tabular format of fields like name, age, diagnosis).",
+    "id": "sol-cs-012"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q13",
+    "question": "Name the input or output device used to do the following: (a) output audio (b) enter textual data (c) make hard copy of a text file (d) display data (e) enter audio-based command (f) build 3D models (g) assist a visually-impaired individual in entering data.",
+    "solution": "(a) Speaker/Headphone (output). (b) Keyboard (input). (c) Printer (output). (d) Monitor/Display (output). (e) Microphone (input, for voice commands). (f) 3D printer (output). (g) Braille keyboard (input).",
+    "id": "sol-cs-013"
+  },
+  {
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "Identify the category (system, application, programming tool) of the following software: (a) Compiler (b) Assembler (c) Ubuntu (d) Text editor.",
+    "solution": "(a) Compiler — Programming tool (translator). (b) Assembler — Programming tool (translator). (c) Ubuntu — System software (it is an operating system). (d) Text editor — Programming tool (a program-development tool used to write source code).",
+    "id": "sol-cs-014"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "Write base values of binary, octal and hexadecimal number system.",
+    "solution": "Binary number system base value = 2. Octal number system base value = 8. Hexadecimal number system base value = 16.",
+    "id": "sol-cs-015"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "Give full form of ASCII and ISCII.",
+    "solution": "ASCII — American Standard Code for Information Interchange. ISCII — Indian Script Code for Information Interchange.",
+    "id": "sol-cs-016"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "Convert: (i) (514)8 to decimal (ii) (220)8 to binary (iii) (76F)16 to decimal (iv) (4D9)16 to decimal (v) (11001010)2 to decimal (vi) (1010111)2 to decimal.",
+    "solution": "(i) (514)8 = 5×64+1×8+4×1 = 320+8+4 = 332 (decimal). (ii) (220)8 → each octal digit to 3 binary bits: 2=010, 2=010, 0=000 → (010010000)2. (iii) (76F)16 = 7×256+6×16+15×1 = 1792+96+15 = 1903 (decimal). (iv) (4D9)16 = 4×256+13×16+9×1 = 1024+208+9 = 1241 (decimal). (v) (11001010)2 = 128+64+8+2 = 202 (decimal). (vi) (1010111)2 = 64+16+4+2+1 = 87 (decimal).",
+    "steps": [
+      "Octal/hex to decimal: multiply each digit by its place value (base^position) and sum",
+      "Octal to binary: convert each octal digit to its 3-bit binary equivalent",
+      "Binary to decimal: sum of (bit × 2^position) for each set bit"
+    ],
+    "id": "sol-cs-017"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q4",
+    "question": "Convert from decimal to other number systems: (i) (54)10 to binary (ii) (120)10 to binary (iii) (76)10 to octal (iv) (889)10 to octal (v) (789)10 to hexadecimal (vi) (108)10 to hexadecimal.",
+    "solution": "(i) 54 → 110110 (binary). (ii) 120 → 1111000 (binary). (iii) 76 → 114 (octal). (iv) 889 → 1571 (octal). (v) 789 → 315 (hexadecimal). (vi) 108 → 6C (hexadecimal).",
+    "steps": [
+      "Repeatedly divide the decimal number by the target base",
+      "Collect the remainders; read them bottom-to-top for the final answer",
+      "Verify: e.g. 54/2=27r0, 27/2=13r1, 13/2=6r1, 6/2=3r0, 3/2=1r1, 1/2=0r1 → 110110"
+    ],
+    "id": "sol-cs-018"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Express the following octal numbers into their equivalent decimal numbers: (i) 145 (ii) 6760 (iii) 455 (iv) 10.75.",
+    "solution": "(i) (145)8 = 1×64+4×8+5×1 = 64+32+5 = 101. (ii) (6760)8 = 6×512+7×64+6×8+0×1 = 3072+448+48+0 = 3568. (iii) (455)8 = 4×64+5×8+5×1 = 256+40+5 = 301. (iv) (10.75)8 = 1×8+0×1 + 7×(1/8)+5×(1/64) = 8 + 0.875+0.078125 = 8.953125 (approximately).",
+    "id": "sol-cs-019"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q6",
+    "question": "Express the following decimal numbers into hexadecimal numbers: (i) 548 (ii) 4052 (iii) 58 (iv) 100.25.",
+    "solution": "(i) 548 → 224 (hex). (ii) 4052 → FD4 (hex). (iii) 58 → 3A (hex). (iv) The integer part 100 → 64 (hex); 0.25 in hex fraction ≈ 0.4, giving approximately 64.4 (hex).",
+    "steps": [
+      "Repeatedly divide the integer part by 16, collecting remainders (0-9, A-F)",
+      "Verify 58: 58/16=3 r10(A) → 3A",
+      "For the fractional part, repeatedly multiply by 16 and take the integer part each time"
+    ],
+    "id": "sol-cs-020"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "Express the following hexadecimal numbers into equivalent decimal numbers: (i) 4A2 (ii) 9E1A (iii) 6BD (iv) 6C.34.",
+    "solution": "(i) (4A2)16 = 4×256+10×16+2×1 = 1024+160+2 = 1186. (ii) (9E1A)16 = 9×4096+14×256+1×16+10×1 = 36864+3584+16+10 = 40474. (iii) (6BD)16 = 6×256+11×16+13×1 = 1536+176+13 = 1725. (iv) (6C)16 integer part = 6×16+12 = 108; .34 in hex ≈ 3×(1/16)+4×(1/256) ≈ 0.1875+0.015625 ≈ 0.203, so (6C.34)16 ≈ 108.203 decimal.",
+    "id": "sol-cs-021"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q8",
+    "question": "Convert the following binary numbers into octal and hexadecimal numbers: (i) 1110001000 (ii) 110110101 (iii) 1010100 (iv) 1010.1001.",
+    "solution": "(i) 1110001000: octal → group in 3s from right: 001 110 001 000 = 1610 (octal); hex → group in 4s from right: 0011 1000 1000 = 388 (hex). (ii) 110110101: octal → 001 101 101 01 → pad: 1 65 1 → 665 (octal); hex → 0001 1011 0101 = 1B5 (hex). (iii) 1010100: octal → 001 010 100 = 124 (octal); hex → 0101 0100 = 54 (hex). (iv) 1010.1001: octal → 001 010 . 100 100 = 12.44 (octal); hex → 1010.1001 = A.9 (hex).",
+    "steps": [
+      "For octal: group binary digits in sets of 3 from the binary point outward, padding with zeros as needed",
+      "For hex: group binary digits in sets of 4 from the binary point outward",
+      "Convert each group to its octal/hex digit equivalent"
+    ],
+    "id": "sol-cs-022"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q9",
+    "question": "Write binary equivalent of the following octal numbers: (i) 2306 (ii) 5610 (iii) 742 (iv) 65.203.",
+    "solution": "Each octal digit expands to exactly 3 binary bits. (i) 2306 → 010 011 000 110 = 010011000110. (ii) 5610 → 101 110 001 000 = 101110001000. (iii) 742 → 111 100 010 = 111100010. (iv) 65.203 → 110 101 . 010 000 011 = 110101.010000011.",
+    "id": "sol-cs-023"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q10",
+    "question": "Write binary representation of the following hexadecimal numbers: (i) 4026 (ii) BCA1 (iii) 98E (iv) 132.45.",
+    "solution": "Each hex digit expands to exactly 4 binary bits. (i) 4026 → 0100 0000 0010 0110. (ii) BCA1 → 1011 1100 1010 0001. (iii) 98E → 1001 1000 1110. (iv) 132.45 → 0001 0011 0010 . 0100 0101.",
+    "id": "sol-cs-024"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q13",
+    "question": "Let X be a number system having B symbols only. Write down the base value of this number system.",
+    "solution": "By definition, the base (or radix) of a number system equals the count of distinct symbols it uses. Since X has B symbols, the base value of X is B.",
+    "id": "sol-cs-025"
+  },
+  {
+    "chapter": "Encoding Schemes and Number System",
+    "exercise": "Exercise",
+    "number": "Q17",
+    "question": "Encode the word 'COMPUTER' using ASCII and convert the encoded value into binary values.",
+    "solution": "Each letter's 7-bit ASCII code: C=67=1000011, O=79=1001111, M=77=1001101, P=80=1010000, U=85=1010101, T=84=1010100, E=69=1000101, R=82=1010010. So 'COMPUTER' encodes to the binary sequence: 1000011 1001111 1001101 1010000 1010101 1010100 1000101 1010010.",
+    "steps": [
+      "Find each letter's decimal ASCII value (standard ASCII table)",
+      "Convert each decimal value to its 7-bit binary form",
+      "Concatenate all 8 letters' binary codes in order"
+    ],
+    "id": "sol-cs-026"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "What do you understand by the Internet of Things? List some of its potential applications.",
+    "solution": "The Internet of Things (IoT) is a network of physical devices/objects embedded with sensors, software and connectivity that lets them collect and exchange data over the internet, often without direct human intervention. Potential applications include smart homes (automated lighting/security), smart health (wearable fitness/heart-rate trackers), smart cities (smart parking, traffic management) and smart agriculture (soil-moisture sensors for irrigation).",
+    "id": "sol-cs-027"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q4a",
+    "question": "Explain Artificial Intelligence along with its applications.",
+    "solution": "Artificial Intelligence (AI) is the simulation of human intelligence processes — such as learning, reasoning and self-correction — by computer systems, enabling them to perform tasks that would normally require human intelligence. Applications include voice assistants (Siri, Google Assistant), facial recognition systems, recommendation engines (e.g. on e-commerce/streaming sites), self-driving cars, and medical diagnosis support systems.",
+    "id": "sol-cs-028"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q4b",
+    "question": "Explain Machine Learning along with its applications.",
+    "solution": "Machine Learning (ML) is a subset of AI in which a system learns patterns from data and improves its performance on a task over time without being explicitly reprogrammed for every scenario. Applications include spam-email filtering, product recommendation systems, credit-card fraud detection, and predictive text/autocomplete.",
+    "id": "sol-cs-029"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Differentiate between cloud computing and grid computing with suitable examples.",
+    "solution": "Cloud computing is an on-demand model where a centralised provider delivers computing resources (storage, servers, software) over the internet as a managed service, e.g. Google Drive, Amazon Web Services. Grid computing pools the computing resources of many distributed, independent computers (often across organisations) to jointly solve one large computational problem together, e.g. a global scientific research grid analysing astronomical or genomic data.",
+    "id": "sol-cs-030"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "What is on-demand service? How is it provided in cloud computing?",
+    "solution": "On-demand service means a user can provision and use computing resources (storage, processing power, software) automatically, as and when needed, without requiring direct human interaction with the service provider. In cloud computing, this is provided through a web-based self-service portal/API where a user can instantly request more storage or computing capacity, pay only for what is used, and scale up or down at any time.",
+    "id": "sol-cs-031"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q9",
+    "question": "A company wants a provider offering basic services like virtual server provisioning and on-demand storage, to be combined into a platform for deploying customised applications. Which cloud model fits: (a) Platform as a Service (b) Software as a Service (c) Application as a Service (d) Infrastructure as a Service?",
+    "solution": "(d) Infrastructure as a Service (IaaS) — it provides the fundamental computing infrastructure (virtual servers, storage, networking) on top of which the company can build and deploy its own customised applications, matching the described requirement exactly.",
+    "id": "sol-cs-032"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q13",
+    "question": "How are IoT and WoT related?",
+    "solution": "IoT (Internet of Things) connects physical devices and objects to the internet so they can collect and exchange data. WoT (Web of Things) builds on top of IoT by using standard web technologies (like HTTP, URIs) to make these connected 'things' directly accessible and controllable through the web, essentially bringing IoT devices into the familiar structure of the World Wide Web so they can be more easily integrated, searched, and interacted with like any other web resource.",
+    "id": "sol-cs-033"
+  },
+  {
+    "chapter": "Emerging Trends",
+    "exercise": "Exercise",
+    "number": "Q14",
+    "question": "Match the columns: (1) Reminder to take medication (2) SMS alert for forgetting to lock the door (3) SMS alert for parking space available nearby (4) Turning off LED TV from a wrist watch — with: A. Smart Parking, B. Smart Wearable, C. Home Automation, D. Smart Health.",
+    "solution": "(1) Reminder to take medication → D. Smart Health. (2) SMS alert for forgetting to lock the door → C. Home Automation. (3) SMS alert for parking space available → A. Smart Parking. (4) Turning off LED TV from a wrist watch → B. Smart Wearable.",
+    "id": "sol-cs-034"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "Write pseudocode that reads two numbers and divides one by another and displays the quotient.",
+    "solution": "START\nINPUT num1, num2\nIF num2 == 0 THEN\n    PRINT 'Error: division by zero'\nELSE\n    quotient = num1 / num2\n    PRINT quotient\nSTOP",
+    "steps": [
+      "Read both input numbers",
+      "Check for division by zero before dividing",
+      "Compute and print the quotient if the divisor is non-zero"
+    ],
+    "id": "sol-cs-035"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "Write the pseudocode to print all multiples of 5 between 10 and 25 (including both).",
+    "solution": "START\nSET i = 10\nWHILE i <= 25:\n    IF i MOD 5 == 0 THEN\n        PRINT i\n    i = i + 1\nSTOP\nThis prints 10, 15, 20, 25 — the multiples of 5 in that inclusive range.",
+    "steps": [
+      "Loop i from 10 to 25 inclusive",
+      "Check if i is divisible by 5 (i MOD 5 == 0)",
+      "Print i whenever the condition is true"
+    ],
+    "id": "sol-cs-036"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "You need ₹200 in all, collected from parents, uncles, aunts and grandparents giving ₹10, ₹20 or ₹50 each. Write the algorithm to collect till the total becomes 200.",
+    "solution": "START\nSET total = 0\nWHILE total < 200:\n    INPUT amountGiven\n    total = total + amountGiven\nPRINT 'Required amount of 200 collected. Total =', total\nSTOP",
+    "steps": [
+      "Keep a running total, starting at 0",
+      "Repeatedly accept an amount and add it to the total",
+      "Stop looping once the total reaches (or exceeds) 200"
+    ],
+    "id": "sol-cs-037"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q8",
+    "question": "Write an algorithm to find the greatest among two different numbers entered by the user.",
+    "solution": "START\nINPUT num1, num2\nIF num1 > num2 THEN\n    PRINT num1, 'is the greatest'\nELSE\n    PRINT num2, 'is the greatest'\nSTOP",
+    "id": "sol-cs-038"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q9",
+    "question": "Write an algorithm: Ask the user to enter a number. If between 5–15 write GREEN, 15–25 write BLUE, 25–35 write ORANGE, else write ALL COLOURS ARE BEAUTIFUL.",
+    "solution": "START\nINPUT number\nIF number >= 5 AND number <= 15 THEN\n    PRINT 'GREEN'\nELSE IF number > 15 AND number <= 25 THEN\n    PRINT 'BLUE'\nELSE IF number > 25 AND number <= 35 THEN\n    PRINT 'ORANGE'\nELSE\n    PRINT 'ALL COLOURS ARE BEAUTIFUL'\nSTOP",
+    "steps": [
+      "Use a chain of IF-ELSE IF conditions for the three ranges",
+      "Each ELSE IF is checked only if the earlier range conditions were false",
+      "A final ELSE catches any number outside all three given ranges"
+    ],
+    "id": "sol-cs-039"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q10",
+    "question": "Write an algorithm that accepts four numbers as input and finds the largest and smallest of them.",
+    "solution": "START\nINPUT a, b, c, d\nSET largest = a\nSET smallest = a\nIF b > largest THEN largest = b\nIF c > largest THEN largest = c\nIF d > largest THEN largest = d\nIF b < smallest THEN smallest = b\nIF c < smallest THEN smallest = c\nIF d < smallest THEN smallest = d\nPRINT 'Largest =', largest\nPRINT 'Smallest =', smallest\nSTOP",
+    "steps": [
+      "Initialise both largest and smallest to the first number",
+      "Compare each remaining number against the current largest/smallest, updating as needed",
+      "After checking all four numbers, print the final largest and smallest"
+    ],
+    "id": "sol-cs-040"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q11",
+    "question": "Write an algorithm to display the total water bill depending on units consumed: first 100 units @5/unit, next 150 @10/unit, more than 250 @20/unit, plus meter charge of 75/month.",
+    "solution": "START\nINPUT units\nSET bill = 75   (meter charge)\nIF units <= 100 THEN\n    bill = bill + units * 5\nELSE IF units <= 250 THEN\n    bill = bill + 100*5 + (units-100)*10\nELSE\n    bill = bill + 100*5 + 150*10 + (units-250)*20\nPRINT 'Total water bill =', bill\nSTOP",
+    "steps": [
+      "Always add the fixed meter charge of 75",
+      "First 100 units billed at ₹5/unit",
+      "Units beyond 100 (up to 250) at ₹10/unit, and beyond 250 at ₹20/unit"
+    ],
+    "id": "sol-cs-041"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q15",
+    "question": "Write a pseudocode to calculate the factorial of a number (Hint: 5! = 5×4×3×2×1).",
+    "solution": "START\nINPUT n\nSET factorial = 1\nSET i = 1\nWHILE i <= n:\n    factorial = factorial * i\n    i = i + 1\nPRINT factorial\nSTOP\nFor n=5: factorial = 1×1×2×3×4×5 = 120.",
+    "steps": [
+      "Start a running product at 1",
+      "Multiply it by each integer from 1 up to n",
+      "Print the final product as the factorial"
+    ],
+    "id": "sol-cs-042"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q16",
+    "question": "Draw a flowchart to check whether a given number is a 3-digit Armstrong number (sum of cubes of digits equals the number).",
+    "solution": "Flowchart logic: START → INPUT number → extract hundreds digit d1, tens digit d2, units digit d3 → COMPUTE sum = d1³ + d2³ + d3³ → DECISION: sum == number? → YES: PRINT 'Armstrong number'; NO: PRINT 'Not an Armstrong number' → STOP. Example: for 371, 3³+7³+1³ = 27+343+1 = 371, which equals the number, confirming it is an Armstrong number.",
+    "steps": [
+      "Extract the three digits of the number",
+      "Sum the cube of each digit",
+      "Compare the sum to the original number"
+    ],
+    "id": "sol-cs-043"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q17",
+    "question": "This algorithm classifies numbers as 'Single Digit' (Number<9), 'Double Digit' (Number<99), else 'Big'. Verify for (5, 9, 47, 99, 100, 200) and correct the algorithm if required.",
+    "solution": "Tracing the ORIGINAL algorithm: 5 → Single Digit (correct, 5<9). 9 → since 9 is NOT <9, it falls to the next check 9<99 which is true → 'Double Digit' (INCORRECT — 9 is itself single digit, but this boundary condition misclassifies it). 47 → Double Digit (correct). 99 → not <9, not <99 (99 is not <99) → 'Big' (INCORRECT, 99 should be Double Digit). 100 → Big (correct). 200 → Big (correct). The algorithm has boundary errors at 9 and 99. Corrected version: use Number<=9 for Single Digit and Number<=99 for Double Digit (i.e. <= instead of <).",
+    "steps": [
+      "Boundary values (9 and 99) expose a logical flaw in the original '<' comparisons",
+      "9 is wrongly classified as Double Digit; 99 is wrongly classified as Big",
+      "Fix: change '<' to '<=' at both boundary checks"
+    ],
+    "id": "sol-cs-044"
+  },
+  {
+    "chapter": "Introduction to Problem Solving",
+    "exercise": "Exercise",
+    "number": "Q18",
+    "question": "An algorithm accepts only positive integers up to 100: IF (0<=Number) AND (Number<=100) ACCEPT ELSE REJECT. On what values will this fail? Can you improve it?",
+    "solution": "This algorithm fails to properly reject non-integer (decimal) inputs, since it only checks the numeric RANGE and never verifies the input is actually a whole number — e.g. 50.5 would be wrongly ACCEPTed since 0<=50.5<=100 is true, even though the requirement was 'positive integers' only. An improved algorithm should additionally check that Number is a whole number (e.g. Number == INT(Number)) before accepting it, in addition to the existing range check.",
+    "steps": [
+      "The original check only verifies the numeric range, not whether the value is a whole number",
+      "A decimal value within range (e.g. 50.5) would be wrongly accepted",
+      "Add a check that the number equals its own integer (rounded-down) value"
+    ],
+    "id": "sol-cs-045"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "Which of the following identifier names are invalid and why: (i) Serial_no. (ii) 1st_Room (iii) Hundred$ (iv) Total Marks (v) total-Marks (vi) True?",
+    "solution": "(i) Serial_no. — invalid: contains a period '.', not allowed in identifiers. (ii) 1st_Room — invalid: starts with a digit. (iii) Hundred$ — invalid: contains the special character '$'. (iv) Total Marks — invalid: contains a space. (v) total-Marks — invalid: contains a hyphen '-' (which Python reads as a minus operator). (vi) True — invalid: it is a reserved Python keyword.",
+    "id": "sol-cs-046"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "Write the corresponding Python assignment statements: (a) assign 10 to length, 20 to breadth (b) assign average of length and breadth to sum (c) assign list ['Paper','Gel Pen','Eraser'] to stationery (d) assign 'Mohandas','Karamchand','Gandhi' to first, middle, last (e) assign concatenated value of first, middle, last to fullname with spaces.",
+    "solution": "length = 10\nbreadth = 20\nsum = (length + breadth) / 2\nstationery = ['Paper', 'Gel Pen', 'Eraser']\nfirst, middle, last = 'Mohandas', 'Karamchand', 'Gandhi'\nfullname = first + ' ' + middle + ' ' + last",
+    "id": "sol-cs-047"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Write the output of the following:\n(a) num1=4; num2=num1+1; num1=2; print(num1,num2)\n(b) num1,num2=2,6; num1,num2=num2,num1+2; print(num1,num2)\n(c) num1,num2=2,3; num3,num2=num1,num3+1; print(num1,num2,num3)",
+    "solution": "(a) 2 5 — num2 is computed as 4+1=5 before num1 is reassigned to 2. (b) 6 4 — the right side is evaluated first using OLD values (num2=6, num1+2=4), then assigned together: num1=6, num2=4. (c) This raises an error (UnboundLocalError/NameError) — num3 is used on the right side (num3+1) before it has ever been assigned a value, since the assignment num3=num1 and num2=num3+1 happen simultaneously from the OLD state where num3 doesn't yet exist.",
+    "steps": [
+      "Multiple assignment evaluates the entire right-hand side using OLD values first",
+      "Only after evaluating all right-hand values are they assigned, left to right",
+      "Using an unassigned variable (num3) on the right side causes an error"
+    ],
+    "id": "sol-cs-048"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q6",
+    "question": "Which data type will be used to represent: (a) number of months in a year (b) resident of Delhi or not (c) mobile number (d) pocket money (e) volume of a sphere (f) perimeter of a square (g) name of student (h) address of student?",
+    "solution": "(a) int (whole number, e.g. 12). (b) bool (True/False). (c) str (not used in arithmetic, may have leading zeros/+ prefix). (d) int or float (a monetary amount, often needs decimals so float is safer, though int works for whole-rupee amounts). (e) float (involves π, usually a decimal result). (f) int or float, typically int if side lengths are whole numbers. (g) str (text). (h) str (text).",
+    "id": "sol-cs-049"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "Give the output when num1=4, num2=3, num3=2: (a) num1+=num2+num3; print(num1) (b) num1=num1**(num2+num3); print(num1) (f) num1=2+9*((3*12)-8)/10; print(num1) (g) num1=24//4//2; print(num1).",
+    "solution": "(a) num1 += num2+num3 → num1 = 4 + (3+2) = 9 → prints 9. (b) num1 = num1**(num2+num3) = 4**(3+2) = 4**5 = 1024 → prints 1024. (f) num1 = 2 + 9*((3*12)-8)/10 = 2 + 9*(36-8)/10 = 2 + 9*28/10 = 2 + 252/10 = 2 + 25.2 = 27.2 → prints 27.2. (g) num1 = 24//4//2 = 6//2 = 3 → prints 3.",
+    "steps": [
+      "Follow operator precedence: parentheses, then **/*//, then +-",
+      "Evaluate compound assignment (+=) as num1 = num1 + (expression)",
+      "'//' performs floor (integer) division, evaluated left to right"
+    ],
+    "id": "sol-cs-050"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q8",
+    "question": "Categorise as syntax error, logical error or runtime error: (a) 25/0 (b) num1=25; num2=0; num1/num2.",
+    "solution": "(a) 25/0 is a runtime error — syntactically valid, but dividing by zero (ZeroDivisionError) occurs only when the line executes. (b) Similarly, num1/num2 where num2=0 is also a runtime error for the same reason (ZeroDivisionError at execution time).",
+    "id": "sol-cs-051"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q10",
+    "question": "Write a Python program to convert temperature in Celsius to Fahrenheit (Hint: T(°F)=T(°C)×9/5+32). Find the boiling (100°C) and freezing (0°C) points in Fahrenheit.",
+    "solution": "celsius = float(input('Enter temperature in Celsius: '))\nfahrenheit = celsius * 9/5 + 32\nprint('Temperature in Fahrenheit =', fahrenheit)\n\nFor boiling point (100°C): F = 100×9/5+32 = 180+32 = 212°F.\nFor freezing point (0°C): F = 0×9/5+32 = 32°F.",
+    "steps": [
+      "Apply the formula F = C×9/5 + 32",
+      "Boiling point: 100°C → 212°F",
+      "Freezing point: 0°C → 32°F"
+    ],
+    "id": "sol-cs-052"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q11",
+    "question": "Write a Python program to calculate the amount payable on simple interest. SI = (P×R×T)/100; Amount = P + SI.",
+    "solution": "P = float(input('Enter Principal: '))\nR = float(input('Enter Rate: '))\nT = float(input('Enter Time: '))\nSI = (P * R * T) / 100\namount = P + SI\nprint('Simple Interest =', SI)\nprint('Amount payable =', amount)",
+    "id": "sol-cs-053"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q14",
+    "question": "Write a program to swap two numbers using a third variable.",
+    "solution": "num1 = int(input('Enter first number: '))\nnum2 = int(input('Enter second number: '))\ntemp = num1\nnum1 = num2\nnum2 = temp\nprint('After swapping: num1 =', num1, ', num2 =', num2)",
+    "steps": [
+      "Store num1's original value in a temporary variable first",
+      "Assign num2's value into num1",
+      "Assign the temporary (original num1) value into num2"
+    ],
+    "id": "sol-cs-054"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q15",
+    "question": "Write a program to swap two numbers without using a third variable.",
+    "solution": "num1 = int(input('Enter first number: '))\nnum2 = int(input('Enter second number: '))\nnum1, num2 = num2, num1\nprint('After swapping: num1 =', num1, ', num2 =', num2)",
+    "steps": [
+      "Python allows simultaneous (tuple) assignment: a, b = b, a",
+      "The right side (b, a) is evaluated fully using old values before assigning",
+      "No temporary variable is needed since both swaps happen together"
+    ],
+    "id": "sol-cs-055"
+  },
+  {
+    "chapter": "Getting Started with Python",
+    "exercise": "Exercise",
+    "number": "Q18",
+    "question": "The volume of a sphere with radius r is 4/3πr³. Write a program to find the volume for radii 7cm, 12cm, 16cm.",
+    "solution": "import math\nfor r in [7, 12, 16]:\n    volume = (4/3) * math.pi * r**3\n    print('Radius', r, 'cm -> Volume =', round(volume, 2))\n\nThis prints the volume for each of the three given radii using the standard sphere-volume formula.",
+    "steps": [
+      "Import math to use the accurate value of π (math.pi)",
+      "Apply the formula (4/3) × π × r³ for each radius",
+      "A loop avoids repeating the same calculation three times manually"
+    ],
+    "id": "sol-cs-056"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "What is the difference between else and elif construct of if statement?",
+    "solution": "'else' is used only once, at the end of an if (or if-elif) chain, and its block executes when NONE of the preceding conditions were true — it does not itself test any condition. 'elif' (else-if) tests an ADDITIONAL condition, and is checked only if all earlier if/elif conditions in the chain were false; there can be multiple elif clauses but only one else.",
+    "id": "sol-cs-057"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "What is the purpose of the range() function? Give one example.",
+    "solution": "range() generates a sequence of numbers, most commonly used to control the number of times a for loop executes. Example: for i in range(1, 6): print(i) prints 1, 2, 3, 4, 5 — numbers from 1 up to (but excluding) 6.",
+    "id": "sol-cs-058"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "Differentiate between break and continue statements using examples.",
+    "solution": "'break' terminates the entire loop immediately. Example: for i in range(5): \\n    if i==3: break \\n    print(i) → prints 0,1,2 then stops. 'continue' skips only the rest of the current iteration and proceeds to the next one. Example: for i in range(5): \\n    if i==3: continue \\n    print(i) → prints 0,1,2,4 (skipping only the print when i==3, but the loop still continues to i=4).",
+    "id": "sol-cs-059"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q4",
+    "question": "What is an infinite loop? Give one example.",
+    "solution": "An infinite loop is a loop whose terminating condition never becomes false, so it runs forever (unless manually interrupted). Example: i = 1 \\n while i > 0: \\n     print(i) \\n     i += 1 — since i keeps increasing and stays greater than 0, the condition i>0 is always true, so this loop never ends.",
+    "id": "sol-cs-060"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q5i",
+    "question": "Find the output: a=110; while a>100: print(a); a-=2",
+    "solution": "Output: 110, 108, 106, 104, 102 (each printed on its own line) — the loop keeps printing and decreasing a by 2 as long as a remains greater than 100; it stops once a becomes 100, since 100>100 is false.",
+    "steps": [
+      "Loop condition a>100 is checked before each iteration",
+      "a decreases by 2 each time, starting from 110",
+      "Loop stops once a reaches 100 (100>100 is false)"
+    ],
+    "id": "sol-cs-061"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q5iv",
+    "question": "Find the output: i=0; sum=0; while i<9: if i%4==0: sum=sum+i; i=i+2; print(sum)",
+    "solution": "Output: 12. The loop runs for i = 0, 2, 4, 6, 8 (stops once i becomes 10, since 10<9 is false). Among these, i%4==0 is true for i=0, i=4 and i=8, so sum = 0+4+8 = 12.",
+    "steps": [
+      "i takes the values 0,2,4,6,8 before the loop condition fails",
+      "Check i%4==0 for each of those values: true for 0, 4, 8",
+      "Sum of the matching values: 0+4+8 = 12"
+    ],
+    "id": "sol-cs-062"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise",
+    "number": "Q5v",
+    "question": "Find the output: for x in range(1,4): for y in range(2,5): if x*y>10: break; print(x*y)",
+    "solution": "Output: 2 3 4 4 6 8 6 9 (each on its own line). For x=1: y=2,3,4 → products 2,3,4 (none exceed 10). For x=2: y=2,3,4 → products 4,6,8 (none exceed 10). For x=3: y=2→6, y=3→9, y=4→12 which exceeds 10, so it breaks before printing 12 — giving 6, 9 for x=3.",
+    "steps": [
+      "Trace the inner loop fully for each value of x",
+      "x=3,y=4 gives 12>10, triggering break BEFORE that print executes",
+      "Final printed sequence: 2,3,4 (x=1), 4,6,8 (x=2), 6,9 (x=3)"
+    ],
+    "id": "sol-cs-063"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise Programming",
+    "number": "Q4",
+    "question": "Write a program to check if the year entered by the user is a leap year or not.",
+    "solution": "year = int(input('Enter year: '))\nif (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):\n    print(year, 'is a leap year')\nelse:\n    print(year, 'is not a leap year')",
+    "steps": [
+      "A year is a leap year if divisible by 4 but NOT by 100, UNLESS it's also divisible by 400",
+      "Combine these with 'and'/'or' in one condition",
+      "Examples: 2024 (leap, div by 4 not 100), 1900 (not leap, div by 100 not 400), 2000 (leap, div by 400)"
+    ],
+    "id": "sol-cs-064"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise Programming",
+    "number": "Q8",
+    "question": "Write a function that checks whether an input number is a palindrome or not.",
+    "solution": "def isPalindrome(num):\n    original = str(num)\n    reversed_str = original[::-1]\n    return original == reversed_str\n\nn = int(input('Enter a number: '))\nif isPalindrome(n):\n    print(n, 'is a palindrome')\nelse:\n    print(n, 'is not a palindrome')",
+    "steps": [
+      "Convert the number to a string to make reversal easy",
+      "Reverse the string using slicing [::-1]",
+      "Compare the original string to its reversed version"
+    ],
+    "id": "sol-cs-065"
+  },
+  {
+    "chapter": "Flow of Control",
+    "exercise": "Exercise Programming",
+    "number": "Q10",
+    "question": "Write a program to find the grade of a student based on percentage: >90% A, 80-90% B, 70-80% C, 60-70% D, below 60% E.",
+    "solution": "percentage = float(input('Enter percentage: '))\nif percentage > 90:\n    grade = 'A'\nelif percentage > 80:\n    grade = 'B'\nelif percentage > 70:\n    grade = 'C'\nelif percentage > 60:\n    grade = 'D'\nelse:\n    grade = 'E'\nprint('Grade:', grade)",
+    "steps": [
+      "Use an if-elif-else chain, checking the highest threshold first",
+      "Each elif is only reached if earlier (higher) conditions failed",
+      "The final else catches anything below the lowest threshold"
+    ],
+    "id": "sol-cs-066"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q1a",
+    "question": "Identify the error: def create(text, freq): for i in range(1,freq): print text; create(5)   #function call",
+    "solution": "Two errors: (1) 'print text' is Python 2 syntax; in Python 3 it must be 'print(text)' with parentheses. (2) The call create(5) supplies only ONE argument, but the function create() requires TWO parameters (text, freq) — this causes a TypeError: missing a required positional argument.",
+    "steps": [
+      "print must be called as a function: print(text), not 'print text'",
+      "The function needs 2 arguments (text, freq) but is called with only 1",
+      "Both errors must be fixed: add parentheses, and supply both arguments"
+    ],
+    "id": "sol-cs-067"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q1c",
+    "question": "Identify the error: mynum=9; def add9(): mynum=mynum+9; print mynum; add9()  #function call",
+    "solution": "Error: inside add9(), 'mynum' is used on the right side of 'mynum = mynum + 9' before it has a local value assigned — since mynum is assigned INSIDE the function, Python treats it as a local variable throughout that function, so it raises an UnboundLocalError (it does not automatically refer to the global mynum=9). To use/modify the global mynum inside the function, a 'global mynum' declaration would be needed first.",
+    "steps": [
+      "Assigning to a variable inside a function makes it LOCAL to that function by default",
+      "Using it before assignment (even though a global of the same name exists) causes an error",
+      "Fix: declare 'global mynum' at the top of the function to modify the global variable"
+    ],
+    "id": "sol-cs-068"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "How is math.ceil(89.7) different from math.floor(89.7)?",
+    "solution": "math.ceil(89.7) rounds UP to the nearest integer, returning 90. math.floor(89.7) rounds DOWN to the nearest integer, returning 89.",
+    "id": "sol-cs-069"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "Out of random() and randint(), which function should be used to generate random numbers between 1 and 5? Justify.",
+    "solution": "randint(1, 5) should be used. random.random() returns a random float between 0.0 and 1.0 (exclusive of 1.0), which is not directly an integer in the range 1–5. random.randint(a, b) directly returns a random INTEGER N such that a <= N <= b, which is exactly what's needed to get a number between 1 and 5 inclusive.",
+    "id": "sol-cs-070"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q4",
+    "question": "How is the built-in pow() function different from math.pow()? Explain with an example.",
+    "solution": "Built-in pow(x, y) returns an int if both x and y are integers (e.g. pow(2,3) returns 8, an int), and also supports an optional third argument for modular exponentiation: pow(x,y,z) = (x**y) % z. math.pow(x, y) always returns a float regardless of input types (e.g. math.pow(2,3) returns 8.0) and does not support the modulus argument.",
+    "id": "sol-cs-071"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Using an example show how a function in Python can return multiple values.",
+    "solution": "def minMax(numbers):\n    return min(numbers), max(numbers)\n\nsmall, large = minMax([3, 7, 1, 9])\nprint(small, large)   # prints: 1 9\n\nListing multiple comma-separated values after 'return' makes Python pack them into a tuple, which the caller unpacks into separate variables.",
+    "steps": [
+      "Write multiple values after return, separated by commas",
+      "Python automatically packs them into a tuple",
+      "The caller unpacks the returned tuple into separate variables"
+    ],
+    "id": "sol-cs-072"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q6a",
+    "question": "Differentiate between Argument and Parameter with an example.",
+    "solution": "A parameter is the variable name in the function's definition (a placeholder), e.g. 'name' in def greet(name):. An argument is the actual value supplied at the function call, e.g. 'Aarav' in greet('Aarav').",
+    "id": "sol-cs-073"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q6b",
+    "question": "Differentiate between Global and Local variable with an example.",
+    "solution": "A global variable is declared outside all functions and is accessible throughout the program, e.g. 'count = 0' at the top level. A local variable is declared inside a function and is accessible only within that function, e.g. 'total = 0' inside def calculate():, which ceases to exist once the function returns.",
+    "id": "sol-cs-074"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "Does a function always return a value? Explain with an example.",
+    "solution": "No. If a function has no return statement (or a bare 'return' with no value), it implicitly returns None. Example: def show(): print('Hello') — calling result = show() prints 'Hello' but sets result to None, since show() never explicitly returns anything.",
+    "id": "sol-cs-075"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Suggested Lab Exercises",
+    "number": "Q1",
+    "question": "Write a program to check the divisibility of a number by 7, passed as a parameter to a user-defined function.",
+    "solution": "def checkDivisibleBy7(num):\n    if num % 7 == 0:\n        print(num, 'is divisible by 7')\n    else:\n        print(num, 'is not divisible by 7')\n\nn = int(input('Enter a number: '))\ncheckDivisibleBy7(n)",
+    "id": "sol-cs-076"
+  },
+  {
+    "chapter": "Functions",
+    "exercise": "Suggested Lab Exercises",
+    "number": "Q3",
+    "question": "Write a program with a user-defined function to accept coefficients a,b,c of a quadratic equation and calculate its determinant b²-4ac, checking if it is positive, zero or negative.",
+    "solution": "def checkDeterminant(a, b, c):\n    determinant = b**2 - 4*a*c\n    if determinant > 0:\n        print('Determinant', determinant, '- two real distinct roots')\n    elif determinant == 0:\n        print('Determinant', determinant, '- two equal real roots')\n    else:\n        print('Determinant', determinant, '- no real roots (complex roots)')\n\na, b, c = 1, -5, 6\ncheckDeterminant(a, b, c)",
+    "steps": [
+      "Compute determinant = b² - 4ac using the given coefficients",
+      "Determinant > 0: two distinct real roots",
+      "Determinant = 0: equal roots; Determinant < 0: no real roots"
+    ],
+    "id": "sol-cs-077"
+  },
+  {
+    "chapter": "Strings",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "mySubject = 'Computer Science'. Find output of: (i) mySubject[0:len(mySubject)] (ii) mySubject[-7:-1] (iii) mySubject[::2] (iv) mySubject[len(mySubject)-1] (v) 2*mySubject (vi) mySubject[::-2] (vii) mySubject[:3]+mySubject[3:] (viii) mySubject.swapcase() (ix) mySubject.startswith('Comp') (x) mySubject.isalpha().",
+    "solution": "(i) 'Computer Science' (the whole string, since the slice covers index 0 to the full length). (ii) 'Science' sliced -7:-1 gives 'Scienc' (excludes the very last character). (iii) 'Cmue cec' (every 2nd character starting at index 0). (iv) 'e' (the last character of the string, at index len-1). (v) 'Computer ScienceComputer Science' (string repeated twice). (vi) the string read backwards taking every 2nd character: 'eccSrtmo' (reverse order, step 2). (vii) 'Computer Science' (splitting and rejoining at index 3 reconstructs the original string exactly). (viii) 'cOMPUTER sCIENCE' (case of every letter swapped). (ix) True (the string does start with 'Comp'). (x) False (the string contains a space, so not ALL characters are alphabetic).",
+    "steps": [
+      "Negative indices count from the end of the string (-1 is the last character)",
+      "A [start:stop:step] slice with step 2 or -2 picks every 2nd character, forward or backward",
+      "isalpha() is False if ANY character (including spaces) is non-alphabetic"
+    ],
+    "id": "sol-cs-078"
+  },
+  {
+    "chapter": "Strings",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "myAddress = 'WZ-1,New Ganga Nagar,New Delhi'. Find output of: (i) lower() (ii) upper() (iii) count('New') (iv) find('New') (v) rfind('New') (vi) split(',') (vii) split(' ') (viii) replace('New','Old') (ix) partition(',').",
+    "solution": "(i) 'wz-1,new ganga nagar,new delhi' (all lowercase). (ii) 'WZ-1,NEW GANGA NAGAR,NEW DELHI' (all uppercase). (iii) 2 ('New' occurs twice). (iv) 5 (index of the FIRST 'New', right after 'WZ-1,'). (v) a higher index — the position of the LAST 'New' (before 'Delhi'). (vi) ['WZ-1', 'New Ganga Nagar', 'New Delhi'] (split at every comma). (vii) a list split at every space: ['WZ-1,New', 'Ganga', 'Nagar,New', 'Delhi']. (viii) 'WZ-1,Old Ganga Nagar,Old Delhi' (every 'New' replaced with 'Old'). (ix) ('WZ-1', ',', 'New Ganga Nagar,New Delhi') — split into exactly 3 parts at the FIRST comma.",
+    "steps": [
+      "find() locates the first occurrence; rfind() locates the last occurrence",
+      "split(sep) breaks the string into a list at every occurrence of sep",
+      "partition(sep) returns exactly 3 parts using only the first occurrence of sep"
+    ],
+    "id": "sol-cs-079"
+  },
+  {
+    "chapter": "Strings",
+    "exercise": "Programming Problems",
+    "number": "Q2",
+    "question": "Write a user-defined function to convert a string with more than one word into title case (first letter of each word capitalised), where the string is passed as a parameter.",
+    "solution": "def toTitleCase(text):\n    return text.title()\n\nprint(toTitleCase('computer science is fun'))   # prints: Computer Science Is Fun\n\n(Note: Python's built-in str.title() already does exactly this; a from-scratch version would split the string on spaces, capitalise the first letter of each word, then join them back with spaces.)",
+    "steps": [
+      "Python's built-in title() method capitalises the first letter of every word",
+      "Alternative manual approach: split on spaces, capitalise first letter of each word, rejoin",
+      "Either approach achieves the same title-case result"
+    ],
+    "id": "sol-cs-080"
+  },
+  {
+    "chapter": "Strings",
+    "exercise": "Programming Problems",
+    "number": "Q3",
+    "question": "Write a function deleteChar(str, char) that removes all occurrences of the given character from the string and returns the new string.",
+    "solution": "def deleteChar(text, char):\n    result = ''\n    for ch in text:\n        if ch != char:\n            result += ch\n    return result\n\nprint(deleteChar('banana', 'a'))   # prints: bnn",
+    "steps": [
+      "Since strings are immutable, build a fresh result string",
+      "Loop over every character, appending it only if it doesn't match 'char'",
+      "Return the newly built string"
+    ],
+    "id": "sol-cs-081"
+  },
+  {
+    "chapter": "Strings",
+    "exercise": "Programming Problems",
+    "number": "Q5",
+    "question": "Write a function that takes a sentence (words separated by spaces) as input and replaces each blank with a hyphen, returning the modified sentence.",
+    "solution": "def replaceSpacesWithHyphen(sentence):\n    return sentence.replace(' ', '-')\n\nprint(replaceSpacesWithHyphen('this is a test'))   # prints: this-is-a-test",
+    "steps": [
+      "str.replace(old, new) replaces every occurrence of 'old' with 'new'",
+      "Here, old=' ' (space) and new='-' (hyphen)",
+      "A single replace() call handles all spaces in one step"
+    ],
+    "id": "sol-cs-082"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "What will be the output of: (i) list1=[12,32,65,26,80,10]; list1.sort(); print(list1) (ii) list1=[12,32,65,26,80,10]; sorted(list1); print(list1) (iii) list1=[1..10]; list1[::-2]; list1[:3]+list1[3:] (iv) list1=[1,2,3,4,5]; list1[len(list1)-1].",
+    "solution": "(i) [10, 12, 26, 32, 65, 80] — sort() modifies list1 in place, ascending by default. (ii) [12, 32, 65, 26, 80, 10] — UNCHANGED, because sorted() returns a NEW sorted list without modifying the original, and that return value was never captured/printed. (iii) list1[::-2] by itself (not printed or assigned) produces a value [10,8,6,4,2] that is simply discarded; list1[:3]+list1[3:] similarly evaluates to the full original list [1..10] but, again, is not printed, so nothing is shown for either expression alone. (iv) 5 — the last element, accessed via index len(list1)-1 = 4.",
+    "steps": [
+      "sort() mutates the list in place; sorted() returns a new list, leaving the original untouched",
+      "An expression that is neither printed nor assigned produces no visible output",
+      "Negative-step slicing reverses order; index len(list)-1 always gives the last element"
+    ],
+    "id": "sol-cs-083"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "myList=[10,20,30,40]. What are the elements after: (i) myList.append([50,60]) (ii) myList.extend([80,90])?",
+    "solution": "After append([50,60]): myList becomes [10, 20, 30, 40, [50, 60]] — the entire list [50,60] is added as ONE single (nested) element. After then calling extend([80,90]) on this result: myList becomes [10, 20, 30, 40, [50, 60], 80, 90] — each element of [80,90] is added individually.",
+    "steps": [
+      "append() adds its argument as a single element, even if that argument is itself a list",
+      "extend() adds each element of its argument individually",
+      "The two operations are applied one after another on the evolving list"
+    ],
+    "id": "sol-cs-084"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "What will be the output of: myList=[1..10]; for i in range(0,len(myList)): if i%2==0: print(myList[i])",
+    "solution": "Output: 1, 3, 5, 7, 9 (each on its own line). The loop checks INDEX i (not the value) for evenness; even indices 0,2,4,6,8 correspond to list VALUES 1,3,5,7,9 respectively (since list indices start at 0).",
+    "steps": [
+      "The condition i%2==0 checks the INDEX, not the stored value",
+      "Even indices 0,2,4,6,8 hold the values 1,3,5,7,9 in this particular list",
+      "So the printed values are the odd numbers 1,3,5,7,9"
+    ],
+    "id": "sol-cs-085"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q4",
+    "question": "What will be the output of: (a) myList=[1..10]; del myList[3:]; print(myList) (b) del myList[:5] (c) del myList[::2]?",
+    "solution": "(a) [1, 2, 3] — deletes everything from index 3 onward, keeping indices 0,1,2. (b) [6, 7, 8, 9, 10] — deletes indices 0 through 4 (the first five elements), keeping the rest. (c) [2, 4, 6, 8, 10] — deletes every element at an even index (0,2,4,6,8, i.e. values 1,3,5,7,9), keeping the odd-indexed ones.",
+    "steps": [
+      "del list[a:] removes everything from index a to the end",
+      "del list[:b] removes everything from the start up to (not including) index b",
+      "del list[::2] removes every element at step-2 positions starting from index 0"
+    ],
+    "id": "sol-cs-086"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Differentiate between append() and extend() functions of a list.",
+    "solution": "append(x) adds x as a SINGLE new element at the end of the list, regardless of whether x is itself a list (in which case the whole list becomes one nested element). extend(iterable) adds EACH element of the given iterable individually to the end of the list, effectively concatenating the two lists' elements.",
+    "id": "sol-cs-087"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q6",
+    "question": "list1=[6,7,8,9]. What is the difference between: (a) list1*2 (b) list1*=2 (c) list1=list1*2?",
+    "solution": "(a) list1*2 is just an EXPRESSION producing a new repeated list [6,7,8,9,6,7,8,9], but since it's not assigned to anything, list1 itself remains [6,7,8,9] unchanged. (b) list1*=2 is shorthand for list1 = list1*2, so list1 IS updated to become [6,7,8,9,6,7,8,9]. (c) list1=list1*2 explicitly reassigns list1 to the repeated list, achieving the same end result as (b): [6,7,8,9,6,7,8,9].",
+    "id": "sol-cs-088"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "stRecord=['Raman','A-36',[56,98,99,72,69],78.8]. Write statements to retrieve: (a) percentage (b) marks in 5th subject (c) maximum marks (d) roll no (e) change name to 'Raghav'.",
+    "solution": "(a) stRecord[3] → 78.8 (the percentage). (b) stRecord[2][4] → 69 (5th subject, index 4 of the nested marks list). (c) max(stRecord[2]) → 99 (maximum of the marks list). (d) stRecord[1] → 'A-36' (the roll number). (e) stRecord[0] = 'Raghav' (reassigns the name at index 0).",
+    "steps": [
+      "Index into the outer list first (0=name, 1=roll no, 2=marks list, 3=percentage)",
+      "For marks-list items, index again into stRecord[2] for a specific subject",
+      "max() finds the largest value directly from the nested marks list"
+    ],
+    "id": "sol-cs-089"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Programming Problems",
+    "number": "Q3",
+    "question": "Write a function that returns the largest element of the list passed as parameter.",
+    "solution": "def findLargest(numbers):\n    return max(numbers)\n\nprint(findLargest([4, 19, 2, 77, 15]))   # prints: 77\n\n(A from-scratch version without using max(): initialise largest to the first element, then loop through the rest, updating largest whenever a bigger value is found.)",
+    "steps": [
+      "Using the built-in max() is the simplest correct solution",
+      "Manual version: initialise largest to list[0], then compare each subsequent element",
+      "Update largest whenever a bigger element is encountered during the loop"
+    ],
+    "id": "sol-cs-090"
+  },
+  {
+    "chapter": "Lists",
+    "exercise": "Programming Problems",
+    "number": "Q5",
+    "question": "Write a program to read a list of n integers and find their median.",
+    "solution": "n = int(input('How many numbers? '))\nnumbers = []\nfor i in range(n):\n    numbers.append(int(input('Enter number: ')))\nnumbers.sort()\nif n % 2 == 1:\n    median = numbers[n//2]\nelse:\n    median = (numbers[n//2 - 1] + numbers[n//2]) / 2\nprint('Median =', median)",
+    "steps": [
+      "Sort the list first — median requires values in order",
+      "Odd count: the single middle element (index n//2) is the median",
+      "Even count: average of the two middle elements"
+    ],
+    "id": "sol-cs-091"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "tuple1=(23,1,45,67,45,9,55,45); tuple2=(100,200). Find output of: (i) tuple1.index(45) (ii) tuple1.count(45) (iii) tuple1+tuple2 (iv) len(tuple2) (v) max(tuple1) (vi) min(tuple1) (vii) sum(tuple2) (viii) sorted(tuple1); print(tuple1).",
+    "solution": "(i) 2 — index() returns the position of the FIRST occurrence of 45 (at index 2). (ii) 3 — 45 appears three times in tuple1. (iii) (23,1,45,67,45,9,55,45,100,200) — concatenation of both tuples. (iv) 2 — tuple2 has 2 elements. (v) 67 — the maximum value in tuple1. (vi) 1 — the minimum value in tuple1. (vii) 300 — sum of tuple2's elements (100+200). (viii) sorted(tuple1) returns a new sorted LIST [1,9,23,45,45,45,55,67], but since it isn't assigned anywhere, print(tuple1) afterward still shows the ORIGINAL unsorted tuple1 = (23,1,45,67,45,9,55,45), since tuples are immutable and sorted() never modifies the original anyway.",
+    "steps": [
+      "index()/count() locate/count the first occurrence(s)",
+      "'+' concatenates two tuples into a new one; sum()/max()/min() work directly on tuple elements",
+      "sorted() returns a new list and cannot and does not alter an immutable tuple"
+    ],
+    "id": "sol-cs-092"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "stateCapital={'AndhraPradesh':'Hyderabad','Bihar':'Patna','Maharashtra':'Mumbai','Rajasthan':'Jaipur'}. Find output of: (i) get('Bihar') (ii) keys() (iii) values() (iv) items() (v) len() (vi) 'Maharashtra' in stateCapital (vii) get('Assam') (viii) del stateCapital['Rajasthan']; print(stateCapital).",
+    "solution": "(i) 'Patna'. (ii) dict_keys(['AndhraPradesh','Bihar','Maharashtra','Rajasthan']). (iii) dict_values(['Hyderabad','Patna','Mumbai','Jaipur']). (iv) dict_items([('AndhraPradesh','Hyderabad'), ('Bihar','Patna'), ('Maharashtra','Mumbai'), ('Rajasthan','Jaipur')]). (v) 4 (number of key-value pairs). (vi) True (since 'Maharashtra' IS a key in the dictionary). (vii) None (since 'Assam' is not a key, get() returns None rather than raising an error). (viii) After deleting the 'Rajasthan' key: {'AndhraPradesh':'Hyderabad', 'Bihar':'Patna', 'Maharashtra':'Mumbai'}.",
+    "steps": [
+      "get(key) returns None (not an error) if the key doesn't exist",
+      "'in' checks membership among the dictionary's KEYS",
+      "del dict[key] permanently removes that key-value pair"
+    ],
+    "id": "sol-cs-093"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "'Lists and Tuples are ordered'. Explain.",
+    "solution": "Being 'ordered' means that lists and tuples maintain their elements in a fixed sequence/position, and each element can be accessed using its specific numeric index (0, 1, 2, ...), with the order of insertion preserved. This is unlike a set, which does not guarantee any particular order of its elements.",
+    "id": "sol-cs-094"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "What advantages do tuples have over lists?",
+    "solution": "Tuples are immutable, protecting their data from accidental modification after creation, which is valuable for fixed data that should not change (like coordinates or configuration constants). This immutability also allows Python to apply certain internal optimisations, making tuples slightly faster to create and iterate over than an equivalent list, and tuples can be used as dictionary keys (since keys must be immutable/hashable) whereas lists cannot.",
+    "id": "sol-cs-095"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q6",
+    "question": "When to use tuple or dictionary in Python? Give examples.",
+    "solution": "Use a tuple when you have a fixed, ordered collection of related values that should not change, and position/order is the natural way to access them — e.g. (latitude, longitude) coordinates, or (red, green, blue) colour values. Use a dictionary when you need to look up values by a meaningful, descriptive key rather than a numeric position — e.g. storing student marks as {'Math': 90, 'Science': 85}, or phone-book style data {name: phoneNumber}.",
+    "id": "sol-cs-096"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q7",
+    "question": "Prove with an example that a variable is rebuilt in case of immutable data types.",
+    "solution": "x = (1, 2, 3)\nprint(id(x))      # e.g. prints 140001\nx = x + (4,)\nprint(id(x))      # prints a DIFFERENT id, e.g. 140050\n\nSince tuples are immutable, 'x + (4,)' cannot modify the original tuple (1,2,3) in place — it creates an entirely NEW tuple object (1,2,3,4), and the name x is simply rebound to point to this new object, which is confirmed by id(x) changing.",
+    "steps": [
+      "Tuples (and other immutable types) cannot be changed in place",
+      "An operation like x = x + (...) creates a brand new object",
+      "id(x) changing before/after proves a different object now exists"
+    ],
+    "id": "sol-cs-097"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Exercise",
+    "number": "Q8",
+    "question": "TypeError occurs while statement 2 runs: >>> tuple1=(5) #statement1  >>> len(tuple1) #statement2. Give reason. How can it be corrected?",
+    "solution": "Reason: tuple1 = (5) does NOT actually create a tuple — parentheses around a single value with no trailing comma are just grouping parentheses, so tuple1 is simply the integer 5. Calling len() on an integer raises a TypeError, since integers have no length. Correction: write tuple1 = (5,) with a trailing comma, which correctly creates a one-element tuple; then len(tuple1) correctly returns 1.",
+    "steps": [
+      "A single value in parentheses without a comma is NOT a tuple — it's just that value",
+      "A one-element tuple requires a trailing comma: (5,)",
+      "len() works correctly once tuple1 is an actual tuple"
+    ],
+    "id": "sol-cs-098"
+  },
+  {
+    "chapter": "Tuples and Dictionaries",
+    "exercise": "Programming Problems",
+    "number": "Q3",
+    "question": "Write a Python program to find the highest 2 values in a dictionary.",
+    "solution": "marks = {'Riya': 88, 'Aman': 95, 'Zoya': 72, 'Kabir': 91}\nsortedValues = sorted(marks.values(), reverse=True)\nprint('Highest 2 values:', sortedValues[0], 'and', sortedValues[1])",
+    "steps": [
+      "Extract just the dictionary's values using .values()",
+      "Sort those values in descending order",
+      "The first two elements of the sorted list are the highest two values"
+    ],
+    "id": "sol-cs-099"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q1",
+    "question": "Revaan sends inflammatory emails using Atharv's still-logged-in account. Which cyber crime is this, and why?",
+    "solution": "This is an example of Identity Theft combined with Cyber Bullying. It is identity theft because Revaan is using Atharv's account/identity (without authorisation) to send messages that appear to come from Atharv. It is also cyber bullying because the messages themselves are inflammatory/harmful to classmates. It is not simple 'Hacking', since no unauthorised technical break-in occurred — the account was merely left open.",
+    "id": "sol-cs-100"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q2",
+    "question": "Rishika finds Garvit's crumpled, struck-off password. What is ethically correct for her to do?",
+    "solution": "The ethically correct action is (a) — Inform Garvit so that he may change his password. Using the password herself, or sharing it with other classmates, would be a serious ethical and legal violation of Garvit's privacy and account security, even though the password was not obtained by deliberate hacking.",
+    "id": "sol-cs-101"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q3",
+    "question": "Shaurya downloads a video clip, adds the text 'Prepared by Shaurya', and emails it to Suhana as his own explanation. Which of these is this an example of: Fair use / Hacking / Copyright infringement / Cyber crime?",
+    "solution": "This is an example of Copyright infringement (and plagiarism). Shaurya has taken someone else's original work (the downloaded video) and misrepresented it as his own creation by adding his name to it, without permission from or credit to the original creator, which violates the creator's copyright and constitutes academic dishonesty.",
+    "id": "sol-cs-102"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q4",
+    "question": "Which of these activities after a fight with a friend is NOT cyber bullying: (a) apology email 'I am sorry' (b) threatening message to stop contact (c) embarrassing picture uploaded online?",
+    "solution": "(a) is NOT cyber bullying — sending a genuine apology is not a harmful or harassing act. (b) IS cyber bullying — sending a threatening message is intimidation/harassment. (c) IS cyber bullying — creating and uploading an embarrassing image of someone without consent is a clear act of online harassment.",
+    "id": "sol-cs-103"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q5",
+    "question": "Sourabh downloads web content for his project. Which of his actions is plagiarism/copyright infringement: (a) rephrasing a paragraph in his own words (b) making a collage from downloaded images (c) using a downloaded icon on his report's front page?",
+    "solution": "All three (a), (b) and (c) can be considered plagiarism/copyright infringement if done without proper citation or permission: (a) is plagiarism, since presenting someone else's IDEAS as your own — even reworded — without crediting the source is still using their intellectual work without attribution. (b) and (c) are copyright infringement, since using others' copyrighted images/icons without permission or licence violates the creators' rights, regardless of how the images are repurposed (collage or icon use).",
+    "id": "sol-cs-104"
+  },
+  {
+    "chapter": "Societal Impact",
+    "exercise": "Exercise",
+    "number": "Q6",
+    "question": "Match the following: Plagiarism / Hacking / Credit card fraud / Digital Footprint — with: copy-paste from internet and organise; break into computers to read private emails; fakers offering rewards for personal bank information; the trail created when using the internet.",
+    "solution": "Plagiarism → Copy and paste information from the Internet into your report and then organise it. Hacking → Breaking into computers to read private emails and other files. Credit card fraud → Fakers, by offering special rewards or money prizes, asked for personal information such as bank account information. Digital Footprint → The trail that is created when a person uses the Internet.",
+    "id": "sol-cs-105"
+  }
+]

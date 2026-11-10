@@ -1,0 +1,576 @@
+[
+  {
+    "id": "sa-chem-001",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between precision and accuracy with an example.",
+    "modelAnswer": "Accuracy is how close a measured value is to the true/correct value; precision is how close repeated measurements are to each other, regardless of whether they are close to the true value. E.g. if the true mass of an object is 2.00 g, readings of 1.95, 1.93, 1.94 g are precise (close to each other) but not very accurate; readings of 2.01, 1.99, 2.00 g are both precise and accurate.",
+    "keyPoints": [
+      "Accuracy = closeness to true value",
+      "Precision = closeness among repeated readings",
+      "A result can be precise without being accurate"
+    ]
+  },
+  {
+    "id": "sa-chem-002",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State the Law of Definite Proportions and illustrate it with Proust's cupric carbonate example.",
+    "modelAnswer": "The Law of Definite (or Constant) Proportions, given by Joseph Proust, states that a given compound always contains exactly the same proportion of elements by mass, irrespective of the source or method of preparation. Proust analysed natural and synthetic cupric carbonate and found both contained 51.35% copper, 9.74% carbon and 38.91% oxygen by mass — identical composition despite different origins.",
+    "keyPoints": [
+      "Same compound = same mass composition always",
+      "True regardless of source (natural vs synthetic)",
+      "Confirmed by Proust's cupric carbonate experiment"
+    ]
+  },
+  {
+    "id": "sa-chem-003",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Define molarity and molality. Why does molality not change with temperature while molarity does?",
+    "modelAnswer": "Molarity (M) is moles of solute per litre of solution; molality (m) is moles of solute per kilogram of solvent. Molarity changes with temperature because the volume of a solution expands or contracts with temperature, changing the concentration per unit volume, whereas molality is based on mass of solvent, which does not change with temperature.",
+    "keyPoints": [
+      "Molarity = mol solute / L solution",
+      "Molality = mol solute / kg solvent",
+      "Volume (hence molarity) varies with temperature; mass (hence molality) does not"
+    ]
+  },
+  {
+    "id": "sa-chem-004",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain the mole concept and state Avogadro's number.",
+    "modelAnswer": "A mole is the amount of substance that contains as many elementary entities (atoms, molecules, ions) as there are atoms in exactly 12 g of the carbon-12 isotope. This number, called Avogadro's number/constant (NA), is 6.022×10²³ mol⁻¹. One mole of any substance has a mass equal to its molar mass in grams and contains NA particles.",
+    "keyPoints": [
+      "1 mole = 6.022×10²³ entities",
+      "Defined relative to 12 g of ¹²C",
+      "Mass of 1 mole = molar mass in grams"
+    ]
+  },
+  {
+    "id": "sa-chem-005",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What is the difference between empirical formula and molecular formula?",
+    "modelAnswer": "The empirical formula shows the simplest whole-number ratio of atoms of each element in a compound, while the molecular formula shows the actual number of atoms of each element in one molecule. The molecular formula is always a whole-number multiple (n) of the empirical formula, e.g. glucose has empirical formula CH2O and molecular formula C6H12O6 (n = 6).",
+    "keyPoints": [
+      "Empirical = simplest whole-number ratio",
+      "Molecular = actual atoms per molecule",
+      "Molecular formula = n × empirical formula"
+    ]
+  },
+  {
+    "id": "sa-chem-006",
+    "chapter": "Some Basic Concepts of Chemistry",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "A sample of drinking water is contaminated with chloroform (CHCl3) at 15 ppm by mass. Express this as percentage by mass and describe what 'ppm' means.",
+    "modelAnswer": "15 ppm (parts per million) by mass means 15 g of chloroform per 10⁶ g (one million grams) of water, i.e. 15/10⁶ × 100 = 1.5×10⁻³ % by mass. ppm is used for extremely dilute solutions where percentage would give an inconveniently small number.",
+    "keyPoints": [
+      "ppm = parts per 10⁶ parts",
+      "15 ppm = 1.5×10⁻³ %",
+      "Used for trace/very dilute contamination levels"
+    ]
+  },
+  {
+    "id": "sa-chem-007",
+    "chapter": "Structure of Atom",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State Heisenberg's Uncertainty Principle and explain its significance for the Bohr model.",
+    "modelAnswer": "Heisenberg's Uncertainty Principle states that it is impossible to simultaneously determine both the exact position and exact momentum of a microscopic particle like an electron; Δx·Δp ≥ h/4π. This invalidates Bohr's idea of an electron moving in a fixed, well-defined circular orbit with a precise position and velocity, and led to the probabilistic, orbital-based quantum mechanical model of the atom.",
+    "keyPoints": [
+      "Δx · Δp ≥ h/4π",
+      "Cannot know exact position + momentum together",
+      "Rules out Bohr's fixed-orbit picture"
+    ]
+  },
+  {
+    "id": "sa-chem-008",
+    "chapter": "Structure of Atom",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between an orbit and an orbital.",
+    "modelAnswer": "An orbit (Bohr model) is a well-defined circular path of fixed radius and energy in which an electron is assumed to revolve around the nucleus with a precisely known position and velocity. An orbital (quantum mechanical model) is a three-dimensional region of space around the nucleus where the probability of finding an electron is maximum; it has no fixed path, and an electron's exact position cannot be known, only the probability of finding it there (given by ψ²).",
+    "keyPoints": [
+      "Orbit = fixed circular path with defined position/velocity (Bohr)",
+      "Orbital = probability region, no fixed path (quantum mechanics)",
+      "Orbital reflects the uncertainty principle; orbit does not"
+    ]
+  },
+  {
+    "id": "sa-chem-009",
+    "chapter": "Structure of Atom",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State the Aufbau principle and Hund's rule of maximum multiplicity.",
+    "modelAnswer": "The Aufbau principle states that electrons are filled into orbitals in order of increasing energy, lowest-energy orbitals first. Hund's rule states that when filling degenerate orbitals (same sub-shell, e.g. the three p orbitals), electrons occupy each orbital singly with parallel spins before any orbital gets a second electron.",
+    "keyPoints": [
+      "Aufbau: fill lowest-energy orbitals first",
+      "Hund's rule: singly occupy degenerate orbitals before pairing",
+      "Both govern ground-state electronic configuration"
+    ]
+  },
+  {
+    "id": "sa-chem-010",
+    "chapter": "Structure of Atom",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why Bohr's model could not explain the spectra of multi-electron atoms.",
+    "modelAnswer": "Bohr's model treated the electron as moving in a fixed circular orbit under the simple electrostatic attraction of the nucleus, which works reasonably for hydrogen (one electron) but ignores electron-electron repulsions present in multi-electron atoms. These repulsions, along with the wave nature and uncertainty associated with electrons, mean energy levels in multi-electron atoms split further (fine structure) in ways Bohr's simple n-dependent energy formula cannot account for.",
+    "keyPoints": [
+      "Bohr's model ignores electron-electron repulsion",
+      "Only works well for one-electron (hydrogen-like) species",
+      "Real spectra of multi-electron atoms show finer splitting than Bohr predicts"
+    ]
+  },
+  {
+    "id": "sa-chem-011",
+    "chapter": "Structure of Atom",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What are isotopes, isobars and isoelectronic species? Give one example of each.",
+    "modelAnswer": "Isotopes are atoms of the same element (same atomic number/protons) with different mass numbers (different neutrons), e.g. ¹²C and ¹⁴C. Isobars are atoms of different elements with the same mass number but different atomic numbers, e.g. ¹⁴C and ¹⁴N. Isoelectronic species are atoms/ions with the same number of electrons, e.g. Na⁺, Mg²⁺ and Ne all have 10 electrons.",
+    "keyPoints": [
+      "Isotopes: same Z, different A (e.g. ¹²C/¹⁴C)",
+      "Isobars: same A, different Z (e.g. ¹⁴C/¹⁴N)",
+      "Isoelectronic: same number of electrons (e.g. Na⁺, Mg²⁺, Ne)"
+    ]
+  },
+  {
+    "id": "sa-chem-012",
+    "chapter": "Classification of Elements and Periodicity in Properties",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between ionization enthalpy and electron gain enthalpy.",
+    "modelAnswer": "Ionization enthalpy is the minimum energy required to remove the most loosely bound electron from an isolated gaseous atom in its ground state, forming a cation; it is always positive (energy must be supplied). Electron gain enthalpy is the enthalpy change when an electron is added to an isolated gaseous atom to form an anion; it is usually negative (energy is released) but can be positive for some elements (e.g. noble gases, or the second electron gain of O or S).",
+    "keyPoints": [
+      "Ionization enthalpy: removing an electron (always endothermic/positive)",
+      "Electron gain enthalpy: adding an electron (usually exothermic/negative)",
+      "Both defined for isolated gaseous atoms in ground state"
+    ]
+  },
+  {
+    "id": "sa-chem-013",
+    "chapter": "Classification of Elements and Periodicity in Properties",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Why is the second ionization enthalpy of sodium much higher than its first, but the second ionization enthalpy of magnesium is not as dramatically higher than its first?",
+    "modelAnswer": "Sodium's first electron is removed from the outer 3s¹ subshell, which is easy since it leaves behind the very stable, fully-filled noble-gas-like Ne core (2,8). The second electron must then be removed from this stable core, which requires a huge amount of energy, giving a very large jump. Magnesium's outer configuration is 3s²; removing the first electron leaves 3s¹ (still a valence electron to remove), so the second ionization enthalpy, while higher than the first, does not represent breaking into the noble-gas core and is a much smaller jump.",
+    "keyPoints": [
+      "Na's 2nd electron comes from a stable, filled Ne-like core → huge jump",
+      "Mg's 2nd electron is still a valence 3s electron → moderate increase",
+      "Big jumps in successive IE values reveal the number of valence electrons"
+    ]
+  },
+  {
+    "id": "sa-chem-014",
+    "chapter": "Classification of Elements and Periodicity in Properties",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State the general trend of atomic radius across a period and down a group, with reasons.",
+    "modelAnswer": "Across a period (left to right), atomic radius decreases because electrons are added to the same principal shell while nuclear charge increases, pulling the electron cloud in more tightly. Down a group, atomic radius increases because a new principal quantum shell (farther from the nucleus) is added at each step, and this shielding/shell effect outweighs the increase in nuclear charge.",
+    "keyPoints": [
+      "Period: radius decreases (same shell, rising nuclear charge)",
+      "Group: radius increases (new shell added each time)",
+      "Shielding by inner electrons also matters down a group"
+    ]
+  },
+  {
+    "id": "sa-chem-015",
+    "chapter": "Classification of Elements and Periodicity in Properties",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why first ionization enthalpy of sodium is lower than magnesium, but sodium's second ionization enthalpy is higher than magnesium's second.",
+    "modelAnswer": "Sodium (3s¹) has only one loosely held valence electron, easier to remove than one of magnesium's two 3s² electrons (which experience a higher effective nuclear charge as Mg has one more proton), so Na's first IE < Mg's first IE. However, removing a second electron from Na means breaking into its stable, fully-filled Ne core, requiring a very large amount of energy, while Mg's second electron is still a normal valence 3s electron — so Na's second IE ends up higher than Mg's second IE.",
+    "keyPoints": [
+      "First IE: Mg > Na (higher effective nuclear charge in Mg)",
+      "Second IE: Na > Mg (Na's second removal breaks a stable noble-gas core)",
+      "Core-breaking ionizations always show a huge jump"
+    ]
+  },
+  {
+    "id": "sa-chem-016",
+    "chapter": "Classification of Elements and Periodicity in Properties",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What is the diagonal relationship? Give one example.",
+    "modelAnswer": "The diagonal relationship is the resemblance in chemical and physical properties between certain period-2 elements and the period-3 elements diagonally below and to their right, due to similar charge density (charge/size ratio). Example: Lithium (group 1, period 2) resembles Magnesium (group 2, period 3) — both form covalent-character compounds, their carbonates decompose on heating, and both form a nitride directly with N2.",
+    "keyPoints": [
+      "Diagonal pairs: Li-Mg, Be-Al, B-Si",
+      "Caused by similar charge/size (charge density) ratios",
+      "Li resembles Mg more than it resembles Na (its own group)"
+    ]
+  },
+  {
+    "id": "sa-chem-017",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define the octet rule and state one of its limitations.",
+    "modelAnswer": "The octet rule states that atoms react by gaining, losing or sharing electrons so as to achieve 8 electrons in their valence shell, resembling the electronic configuration of the nearest noble gas. Limitation: it fails for molecules with an odd number of electrons (e.g. NO, NO2), for electron-deficient molecules like BCl3 (boron has only 6 electrons), and for expanded-octet molecules like PCl5 or SF6 (central atom has more than 8 electrons).",
+    "keyPoints": [
+      "Octet rule: atoms aim for 8 valence electrons",
+      "Fails for odd-electron species (NO)",
+      "Fails for electron-deficient (BCl3) and expanded-octet (SF6, PCl5) species"
+    ]
+  },
+  {
+    "id": "sa-chem-018",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain, with the help of VSEPR theory, why the bond angle in NH3 (≈107°) is slightly less than the ideal tetrahedral angle (109.5°).",
+    "modelAnswer": "NH3's nitrogen has 4 electron pairs arranged tetrahedrally: 3 bond pairs (to H) and 1 lone pair. Since lone pair–bond pair repulsion is stronger than bond pair–bond pair repulsion, the lone pair pushes the three N-H bond pairs slightly closer together than the ideal tetrahedral angle, compressing the H-N-H angle from 109.5° to about 107°.",
+    "keyPoints": [
+      "4 electron domains → tetrahedral electron geometry",
+      "1 lone pair + 3 bond pairs → trigonal pyramidal molecular shape",
+      "Lone pair-bond pair repulsion > bond pair-bond pair repulsion → angle compressed below 109.5°"
+    ]
+  },
+  {
+    "id": "sa-chem-019",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is resonance? Why is the actual bond length of all three C-O bonds in CO3²⁻ found to be equal and intermediate between a C-O single and C=O double bond?",
+    "modelAnswer": "Resonance occurs when a single Lewis structure cannot adequately represent a molecule/ion, and the true structure is best described as a hybrid of two or more valid canonical (contributing) structures differing only in electron arrangement. In CO3²⁻, three equivalent canonical structures can be drawn (each placing the C=O double bond on a different oxygen); since the true structure is an average/hybrid of all three, all three C-O bonds become equivalent with a bond order of 4/3, giving a bond length between a pure single and pure double bond.",
+    "keyPoints": [
+      "Resonance: true structure is a hybrid of multiple canonical (contributing) Lewis structures",
+      "CO3²⁻ has 3 equivalent canonical forms",
+      "Hybrid bond order (4/3) explains the intermediate, equal C-O bond lengths"
+    ]
+  },
+  {
+    "id": "sa-chem-020",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between a sigma (σ) bond and a pi (π) bond.",
+    "modelAnswer": "A sigma (σ) bond is formed by the head-on (axial) overlap of atomic/hybrid orbitals along the internuclear axis, giving maximum electron density along that axis; it permits free rotation and is always the first bond formed between two atoms. A pi (π) bond is formed by the sideways (lateral) overlap of unhybridised p orbitals above and below the internuclear axis, has electron density on either side of the axis (not along it), restricts free rotation, and is generally weaker than a sigma bond.",
+    "keyPoints": [
+      "σ bond: head-on/axial overlap, free rotation possible, always present first",
+      "π bond: sideways overlap of p orbitals, restricts rotation, formed in addition to σ in double/triple bonds",
+      "A double bond = 1σ + 1π; a triple bond = 1σ + 2π"
+    ]
+  },
+  {
+    "id": "sa-chem-021",
+    "chapter": "Chemical Bonding and Molecular Structure",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define dipole moment and explain its significance.",
+    "modelAnswer": "Dipole moment (μ) is the product of the magnitude of charge separation (δ) and the distance between the charge centres (d) in a polar bond/molecule: μ = δ × d, usually expressed in Debye units. It is significant because it indicates both the polarity of individual bonds and, as a vector sum, whether an overall molecule is polar or non-polar, which helps predict molecular shape (e.g. a symmetric molecule like CO2 has zero net dipole despite polar bonds, revealing its linear shape).",
+    "keyPoints": [
+      "μ = charge × distance (Debye units)",
+      "Vector sum of bond dipoles = molecular dipole moment",
+      "Used to distinguish molecular shapes (e.g. linear CO2 vs bent H2O)"
+    ]
+  },
+  {
+    "id": "sa-chem-022",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define a state function and a path function, with one example of each.",
+    "modelAnswer": "A state function depends only on the initial and final state of a system, not the path taken to get there — e.g. internal energy (U), enthalpy (H), entropy (S). A path function depends on the actual path/process followed — e.g. heat (q) and work (w), which can differ for the same initial and final states depending on whether the process is reversible or irreversible.",
+    "keyPoints": [
+      "State function: depends only on initial/final state (U, H, S)",
+      "Path function: depends on the route taken (q, w)",
+      "This is why ΔU but not individual q, w can be found from Hess's law type addition"
+    ]
+  },
+  {
+    "id": "sa-chem-023",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State Hess's Law of constant heat summation and explain its usefulness with an example.",
+    "modelAnswer": "Hess's Law states that the total enthalpy change for a chemical reaction is the same whether it occurs in a single step or in a series of steps, as long as the initial reactants and final products are identical, because enthalpy is a state function. This is useful for calculating enthalpy changes of reactions that are difficult or impossible to carry out directly, e.g. the enthalpy of formation of CO(g) (since carbon burns to a mixture of CO and CO2, not pure CO) can be found by combining the measurable enthalpies of combustion of carbon to CO2 and of CO to CO2 using Hess's law (algebraically subtracting the equations).",
+    "keyPoints": [
+      "Hess's Law: total ΔH is path-independent (depends only on initial/final states)",
+      "Follows from enthalpy being a state function",
+      "Lets us calculate ΔH for reactions that can't be measured directly, via known steps"
+    ]
+  },
+  {
+    "id": "sa-chem-024",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between an exothermic and an endothermic reaction in terms of enthalpy change, with an example of each.",
+    "modelAnswer": "An exothermic reaction releases heat to the surroundings, so the enthalpy of products is lower than reactants and ΔH is negative, e.g. combustion of methane (ΔH = −890.3 kJ/mol). An endothermic reaction absorbs heat from the surroundings, so the enthalpy of products is higher than reactants and ΔH is positive, e.g. the decomposition of calcium carbonate, CaCO3(s) → CaO(s) + CO2(g), ΔH is positive.",
+    "keyPoints": [
+      "Exothermic: ΔH negative, heat released (e.g. combustion)",
+      "Endothermic: ΔH positive, heat absorbed (e.g. CaCO3 decomposition)",
+      "Sign of ΔH tells direction of heat flow relative to the system"
+    ]
+  },
+  {
+    "id": "sa-chem-025",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain the second law of thermodynamics and the significance of entropy.",
+    "modelAnswer": "The second law of thermodynamics states that the total entropy of the universe (system + surroundings) always increases for a spontaneous process; entropy (S) is a measure of the randomness or disorder of a system. For any spontaneous process, ΔS(total) = ΔS(system) + ΔS(surroundings) > 0. This explains why heat flows from hot to cold, why gases expand to fill available volume, and underlies the Gibbs free energy criterion ΔG = ΔH − TΔS for spontaneity at constant T, P.",
+    "keyPoints": [
+      "Second law: total entropy of universe increases in a spontaneous process",
+      "Entropy = measure of disorder/randomness",
+      "Basis for the ΔG = ΔH − TΔS spontaneity criterion"
+    ]
+  },
+  {
+    "id": "sa-chem-026",
+    "chapter": "Equilibrium",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between Kc and Kp. When are they equal?",
+    "modelAnswer": "Kc is the equilibrium constant expressed in terms of molar concentrations of reactants and products, while Kp is expressed in terms of their partial pressures (for gaseous equilibria). They are related by Kp = Kc(RT)^Δn, where Δn is the change in moles of gas. Kp and Kc are numerically equal only when Δn = 0, i.e. when the number of moles of gaseous reactants equals the number of moles of gaseous products.",
+    "keyPoints": [
+      "Kc: concentration-based; Kp: pressure-based",
+      "Kp = Kc(RT)^Δn",
+      "Equal only when Δn = 0"
+    ]
+  },
+  {
+    "id": "sa-chem-027",
+    "chapter": "Equilibrium",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State Le Chatelier's Principle and explain its application to the industrial (Haber) synthesis of ammonia.",
+    "modelAnswer": "Le Chatelier's Principle states that if a system at equilibrium is subjected to a change in concentration, temperature or pressure, the system adjusts to partially counteract the change and establish a new equilibrium. In the Haber process, N2(g) + 3H2(g) ⇌ 2NH3(g) is exothermic with a decrease in moles of gas on the product side; so high pressure favours more NH3 (shifts equilibrium toward fewer gas moles), while although low temperature favours the exothermic forward reaction thermodynamically, a moderately high temperature (~700 K) is actually used industrially to achieve a faster rate, with a catalyst, accepting a somewhat lower equilibrium yield for a practical reaction rate.",
+    "keyPoints": [
+      "Le Chatelier: system opposes an imposed change to re-establish equilibrium",
+      "High pressure favours NH3 (fewer gas moles on product side)",
+      "Moderate temperature + catalyst used industrially to balance yield against rate"
+    ]
+  },
+  {
+    "id": "sa-chem-028",
+    "chapter": "Equilibrium",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between a strong electrolyte and a weak electrolyte, with an example of each.",
+    "modelAnswer": "A strong electrolyte ionises almost completely in solution, so its degree of dissociation is close to 1, e.g. HCl, NaOH, NaCl — these conduct electricity very well. A weak electrolyte ionises only partially in solution (degree of dissociation ≪1) and exists mostly in the undissociated molecular form, e.g. CH3COOH (acetic acid), NH4OH — these conduct electricity relatively weakly and establish a dynamic ionisation equilibrium.",
+    "keyPoints": [
+      "Strong electrolyte: almost complete dissociation (e.g. HCl)",
+      "Weak electrolyte: partial/incomplete dissociation (e.g. CH3COOH)",
+      "Only weak electrolytes show a meaningful ionisation equilibrium constant (Ka/Kb)"
+    ]
+  },
+  {
+    "id": "sa-chem-029",
+    "chapter": "Equilibrium",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain the common ion effect with an example.",
+    "modelAnswer": "The common ion effect is the suppression of the degree of ionisation (dissociation) of a weak electrolyte when a strong electrolyte containing an ion common to it is added to the solution, by Le Chatelier's principle. For example, adding sodium acetate (CH3COONa, a strong electrolyte providing CH3COO⁻) to a solution of acetic acid (CH3COOH ⇌ CH3COO⁻ + H⁺) shifts the acetic acid's ionisation equilibrium backward (toward undissociated CH3COOH), decreasing [H⁺] and hence decreasing the acid's degree of ionisation.",
+    "keyPoints": [
+      "Common ion effect: adding an ion already present in the equilibrium suppresses dissociation",
+      "Follows directly from Le Chatelier's principle",
+      "Example: CH3COONa added to CH3COOH solution suppresses acetic acid ionisation"
+    ]
+  },
+  {
+    "id": "sa-chem-030",
+    "chapter": "Redox Reactions",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define oxidation and reduction in terms of change in oxidation number, with one example each.",
+    "modelAnswer": "Oxidation is a process in which the oxidation number of an element in a species increases (due to loss of electrons), e.g. Fe2+ → Fe3+ + e⁻ (oxidation number of Fe increases from +2 to +3). Reduction is a process in which the oxidation number of an element decreases (due to gain of electrons), e.g. Cu2+ + 2e⁻ → Cu (oxidation number of Cu decreases from +2 to 0).",
+    "keyPoints": [
+      "Oxidation: oxidation number increases (electron loss)",
+      "Reduction: oxidation number decreases (electron gain)",
+      "Both always occur together in a redox reaction"
+    ]
+  },
+  {
+    "id": "sa-chem-031",
+    "chapter": "Redox Reactions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why hydrogen peroxide (H2O2) can act as both an oxidising agent and a reducing agent.",
+    "modelAnswer": "In H2O2, oxygen has an intermediate oxidation state of −1 (between 0 in O2 and −2 in H2O/oxides). As an oxidising agent, H2O2 is itself reduced, with oxygen's oxidation number decreasing from −1 to −2 (e.g. oxidising Fe2+ to Fe3+, H2O2 → H2O). As a reducing agent, H2O2 is itself oxidised, with oxygen's oxidation number increasing from −1 to 0 (e.g. reducing KMnO4, H2O2 → O2). Because the oxidation state of oxygen in H2O2 is between its extremes, it can move in either direction.",
+    "keyPoints": [
+      "Oxygen in H2O2 has an intermediate oxidation state (−1)",
+      "Can be reduced further (−1→−2) acting as oxidant",
+      "Can be oxidised (−1→0, giving O2) acting as reductant"
+    ]
+  },
+  {
+    "id": "sa-chem-032",
+    "chapter": "Redox Reactions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is a disproportionation reaction? Illustrate with the decomposition of H2O2.",
+    "modelAnswer": "A disproportionation reaction is a special type of redox reaction in which an element in a single, intermediate oxidation state in one species is simultaneously oxidised to a higher state and reduced to a lower state, in two different product species. Example: 2H2O2(aq) → 2H2O(l) + O2(g) — oxygen in H2O2 (−1) is reduced to −2 in H2O and oxidised to 0 in O2, both happening in the same overall reaction.",
+    "keyPoints": [
+      "Same element, same starting oxidation state, splits into higher and lower states",
+      "Classic example: decomposition of H2O2",
+      "A special sub-type of redox reaction"
+    ]
+  },
+  {
+    "id": "sa-chem-033",
+    "chapter": "Redox Reactions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Describe the ion-electron (half-reaction) method of balancing redox equations in acidic medium, briefly.",
+    "modelAnswer": "Step 1: Split the equation into two half-reactions (oxidation and reduction). Step 2: Balance atoms other than O and H in each half-reaction. Step 3: Balance O atoms by adding H2O, then balance H atoms by adding H⁺ (acidic medium). Step 4: Balance charge on each side by adding electrons. Step 5: Multiply each half-reaction by a suitable integer so the number of electrons lost equals the number gained. Step 6: Add the two half-reactions, cancelling electrons (and any species common to both sides), to get the final balanced overall equation.",
+    "keyPoints": [
+      "Split into oxidation and reduction half-reactions",
+      "Balance atoms, then O (H2O), then H (H⁺ in acid), then charge (electrons)",
+      "Equalise electrons between the two half-reactions before adding them"
+    ]
+  },
+  {
+    "id": "sa-chem-034",
+    "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What is catenation and why is carbon especially good at it?",
+    "modelAnswer": "Catenation is the ability of an element's atoms to link together via covalent bonds to form chains, branches or rings. Carbon shows catenation to an extraordinary degree because of its small size, four valence electrons allowing four strong covalent bonds, and the high strength/stability of the C-C single bond, enabling the formation of a vast number of chain and ring structures that form the basis of organic chemistry.",
+    "keyPoints": [
+      "Catenation = self-linking via covalent bonds",
+      "Carbon's small size + tetravalency + strong C-C bonds enable it",
+      "Basis for the huge diversity of organic compounds"
+    ]
+  },
+  {
+    "id": "sa-chem-035",
+    "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain hybridisation in methane, ethene and ethyne, relating it to the type of carbon-carbon bond in each.",
+    "modelAnswer": "In methane, carbon is sp³ hybridised (4 equivalent sigma bonds, tetrahedral, 109.5°). In ethene, each carbon is sp² hybridised (3 sigma bonds in a plane, 120°), with one unhybridised p orbital per carbon overlapping sideways to form one pi bond, giving the C=C double bond (1σ+1π). In ethyne, each carbon is sp hybridised (2 sigma bonds, linear, 180°), with two unhybridised p orbitals per carbon forming two pi bonds, giving the C≡C triple bond (1σ+2π).",
+    "keyPoints": [
+      "sp³ (methane): all single bonds, tetrahedral",
+      "sp² (ethene): one double bond (1σ+1π), planar/120°",
+      "sp (ethyne): one triple bond (1σ+2π), linear/180°"
+    ]
+  },
+  {
+    "id": "sa-chem-036",
+    "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between a nucleophile and an electrophile.",
+    "modelAnswer": "A nucleophile ('nucleus-loving') is an electron-rich species (bearing a lone pair or negative charge) that donates electrons to form a new bond with an electron-deficient centre, e.g. OH⁻, NH3, Cl⁻. An electrophile ('electron-loving') is an electron-deficient species that accepts an electron pair to form a new bond, e.g. H⁺, carbocations, BF3. In a reaction, nucleophiles attack electrophiles.",
+    "keyPoints": [
+      "Nucleophile: electron-rich, donates electron pair (e.g. OH⁻)",
+      "Electrophile: electron-deficient, accepts electron pair (e.g. H⁺, carbocation)",
+      "Nucleophiles attack electrophilic centres in a reaction"
+    ]
+  },
+  {
+    "id": "sa-chem-037",
+    "chapter": "Organic Chemistry – Some Basic Principles and Techniques",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Describe the principle behind Lassaigne's test for detecting nitrogen, sulphur and halogens in an organic compound.",
+    "modelAnswer": "The organic compound is fused with sodium metal, converting any covalently bound nitrogen, sulphur or halogen present into water-soluble, ionic sodium compounds: NaCN (if N present, and more readily if both N and S are present together, forming NaSCN), Na2S (if S present) and NaX (if a halogen is present). The resulting aqueous extract (Lassaigne's extract) is then tested using standard ionic tests — e.g. the Prussian blue test confirms CN⁻ (nitrogen), lead acetate test confirms S²⁻ (sulphur), and silver nitrate test confirms halide ions.",
+    "keyPoints": [
+      "Sodium fusion converts covalent N/S/halogen into ionic, water-soluble sodium salts",
+      "NaCN, Na2S, NaX are the respective products tested",
+      "Each then detected via its own characteristic ionic test"
+    ]
+  },
+  {
+    "id": "sa-chem-038",
+    "chapter": "Hydrocarbons",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State Markovnikov's rule with one example.",
+    "modelAnswer": "Markovnikov's rule states that when an unsymmetrical reagent HX is added across an unsymmetrical alkene, the hydrogen atom adds to the carbon already bearing the greater number of hydrogen atoms, while X adds to the carbon bearing fewer hydrogens. Example: propene (CH3-CH=CH2) + HBr → 2-bromopropane (CH3-CHBr-CH3) as the major product, since Br adds to the middle carbon (fewer H) and H adds to the terminal CH2 (more H).",
+    "keyPoints": [
+      "H adds to the carbon with more H already; X adds to the carbon with fewer H",
+      "Explained via the more stable carbocation intermediate forming preferentially",
+      "Example: propene + HBr → 2-bromopropane"
+    ]
+  },
+  {
+    "id": "sa-chem-039",
+    "chapter": "Hydrocarbons",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain the peroxide (Kharasch) effect in the addition of HBr to alkenes.",
+    "modelAnswer": "In the presence of peroxides, HBr addition to an unsymmetrical alkene follows a free-radical chain mechanism instead of the usual ionic (carbocation) mechanism: the peroxide first generates a bromine radical (Br•), which adds to the alkene at the terminal (less hindered) carbon, forming the more stable secondary (or tertiary) free radical, which then abstracts H from another HBr molecule. This gives the anti-Markovnikov product, e.g. propene + HBr/peroxide → 1-bromopropane, opposite to the normal Markovnikov product (2-bromopropane) obtained without peroxide.",
+    "keyPoints": [
+      "Peroxides switch the mechanism from ionic to free-radical",
+      "Br radical adds first, forming the more stable radical intermediate",
+      "Gives the anti-Markovnikov product (opposite regiochemistry to normal HBr addition)"
+    ]
+  },
+  {
+    "id": "sa-chem-040",
+    "chapter": "Hydrocarbons",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Why does benzene prefer electrophilic substitution over electrophilic addition, unlike a typical alkene?",
+    "modelAnswer": "Benzene's stability comes from the complete delocalisation of its 6 pi electrons around the ring (aromatic resonance stabilisation). An addition reaction (like with a normal alkene) would convert one or more of these delocalised double bonds into single bonds, destroying this aromatic stabilisation. A substitution reaction, however, replaces a hydrogen atom while regenerating the fully conjugated, aromatic ring system afterward, so the large resonance stabilisation energy is preserved — making substitution energetically far more favourable than addition for benzene.",
+    "keyPoints": [
+      "Aromatic delocalisation gives benzene extra stability (resonance energy)",
+      "Addition would destroy this delocalised ring system",
+      "Substitution regenerates the aromatic ring, so it's strongly preferred"
+    ]
+  },
+  {
+    "id": "sa-chem-041",
+    "chapter": "Hydrocarbons",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Describe the conditions required for aromaticity (Hückel's rule) and explain why cyclohexane (and cyclobutadiene) are not aromatic.",
+    "modelAnswer": "A compound is aromatic if it is cyclic, planar, has a continuous ring of overlapping p orbitals (fully conjugated), and contains (4n+2) pi electrons in that ring (Hückel's rule). Cyclohexane is not aromatic because it has no pi system at all (no double bonds, all sp³ carbons) — it fails the conjugation requirement entirely. Cyclobutadiene is cyclic, planar and conjugated but has 4 pi electrons, which fits the (4n) pattern, not (4n+2) — it is actually anti-aromatic (destabilised), not aromatic.",
+    "keyPoints": [
+      "Hückel's rule needs cyclic + planar + conjugated + (4n+2) π electrons",
+      "Cyclohexane: no pi system at all (fails conjugation)",
+      "Cyclobutadiene: has 4π electrons (4n pattern) → anti-aromatic, not aromatic"
+    ]
+  }
+]

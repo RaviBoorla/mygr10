@@ -42,9 +42,12 @@ const NOTES_SOURCES = {
     Geography:   { ICSE: [['ICSE Geography']] }
   },
   XI: {
-    Accountancy: { CBSE: [['XI Accountancy']] },
-    Economics:   { CBSE: [['XI Economics']] },
-    Psychology:  { CBSE: [['XI Psychology']] }
+    Accountancy:     { CBSE: [['XI Accountancy']] },
+    Economics:       { CBSE: [['XI Economics']] },
+    Psychology:      { CBSE: [['XI Psychology']] },
+    Physics:         { CBSE: [['XI Physics']] },
+    Chemistry:       { CBSE: [['XI Chemistry']] },
+    'Comp App & IT': { CBSE: [['XI Computer Science']] }
   },
   XII: {
     Mathematics:        { CBSE: [['XII Mathematics']] },
@@ -60,12 +63,24 @@ const NOTES_SOURCES = {
 };
 
 // Extra lazy-loaded files per grade, beyond the always-loaded base
-// revision-data.js (which holds Grade X's CBSE/ICSE/IB content). Each entry's
-// `probeKey` is a REVISION key that only exists once that file has loaded.
+// revision-data.js (which holds Grade X's CBSE/ICSE/IB content). Each grade
+// maps to an ARRAY of {file, probeKey} specs (a grade can be split across
+// several sibling files); `probeKey` is a REVISION key that only exists once
+// that particular file has loaded. All of a grade's specs load in parallel;
+// the grade is "ready" once every one of them has landed.
 const REVISION_EXTRA_FILES = {
-  IX:  { file: 'revision-data-ix.js?v=0fd12941',  probeKey: 'IX Science' },
-  XI:  { file: 'revision-data-xi.js?v=d8f28c28',  probeKey: 'XI Accountancy' },
-  XII: { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
+  IX: [
+    { file: 'revision-data-ix.js?v=0fd12941', probeKey: 'IX Science' }
+  ],
+  XI: [
+    { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },
+    { file: 'revision-data-xi-physics.js?v=6df3807c',          probeKey: 'XI Physics' },
+    { file: 'revision-data-xi-chemistry.js?v=bbd1886f',        probeKey: 'XI Chemistry' },
+    { file: 'revision-data-xi-compsci.js?v=df59f23b',          probeKey: 'XI Computer Science' }
+  ],
+  XII: [
+    { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
+  ]
 };
 
 const _consolidatedCache = {};
@@ -135,34 +150,44 @@ function _ensureRevisionData(cb) {
 }
 
 // A grade with no entry in REVISION_EXTRA_FILES (currently only X) is fully
-// covered by the base file alone.
+// covered by the base file alone. A grade with several specs is ready only
+// once every one of its sibling files has landed.
 function _revisionReadyFor(grade) {
   if (!window.REVISION) return false;
-  const spec = REVISION_EXTRA_FILES[grade];
-  return !spec || !!window.REVISION[spec.probeKey];
+  const specs = REVISION_EXTRA_FILES[grade] || [];
+  return specs.every(s => !!window.REVISION[s.probeKey]);
 }
 function _revisionFailedFor(grade) {
   if (_revisionCallbacks === undefined) return true;
-  const spec = REVISION_EXTRA_FILES[grade];
-  return !!spec && _revisionExtraCallbacks[grade] === undefined;
+  return (REVISION_EXTRA_FILES[grade] || []).length > 0 && _revisionExtraCallbacks[grade] === undefined;
 }
 function _ensureRevisionDataFor(grade, cb) {
-  const spec = REVISION_EXTRA_FILES[grade];
+  const specs = REVISION_EXTRA_FILES[grade] || [];
   _ensureRevisionData(() => {
-    if (!spec) { cb(); return; }
-    if (window.REVISION[spec.probeKey]) { cb(); return; }
+    if (_revisionReadyFor(grade)) { cb(); return; }
     const existing = _revisionExtraCallbacks[grade];
     if (existing === undefined) { cb(); return; }
     if (Array.isArray(existing)) { existing.push(cb); return; }
     _revisionExtraCallbacks[grade] = [cb];
-    _loadScript(spec.file, () => {
+    const remaining = specs.filter(s => !window.REVISION[s.probeKey]);
+    let failed = false, left = remaining.length;
+    const settle = () => {
       const pending = _revisionExtraCallbacks[grade] || [];
       _revisionExtraCallbacks[grade] = null;
       Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
       pending.forEach(fn => fn());
-    }, () => {
-      _revisionExtraCallbacks[grade] = undefined;
-      app.render();
+    };
+    if (!left) { settle(); return; } // shouldn't happen (ready-check above would have short-circuited), kept as a safety net
+    remaining.forEach(spec => {
+      _loadScript(spec.file, () => {
+        if (failed) return;
+        if (--left === 0) settle();
+      }, () => {
+        if (failed) return;
+        failed = true;
+        _revisionExtraCallbacks[grade] = undefined;
+        app.render();
+      });
     });
   });
 }
@@ -225,7 +250,7 @@ Object.assign(app, {
     const BY_GRADE = {
       IX:  new Set(['Physics', 'Chemistry', 'Biology']),
       X:   new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'English', 'Hindi', 'Comp App & IT']),
-      XI:  new Set(['Accountancy', 'Economics', 'Psychology']),
+      XI:  new Set(['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Comp App & IT']),
       XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
     };
     const allowed = BY_GRADE[state.grade] || BY_GRADE.X;

@@ -182,14 +182,21 @@ official past-paper corpus to source from. These banks are authored directly fro
 NCERT Class XI textbooks (Accountancy Part I & II, Statistics for Economics + Indian
 Economic Development, Psychology). Every MCQ carries `"source": "NCERT Textbook"` and
 never the word "Board", so `realBoardYear()` gives none of them a 🔥 badge, and the home
-screen shows the same "Practice Questions" banner used for Grade IX. No Short Answers
-banks yet for this grade — only MCQ banks and Solved Exercises banks.
+screen shows the same "Practice Questions" banner used for Grade IX. Revision notes
+exist for all six subjects (`public/revision-data-xi.js` for Accountancy/Economics/
+Psychology; `revision-data-xi-physics.js`, `-chemistry.js`, `-compsci.js` for the
+other three — split into sibling files per CLAUDE.md's "add a new sibling file"
+convention). Accountancy/Economics/Psychology have no Short Answers bank yet (MCQ +
+Solved only); Physics/Chemistry/Computer Science have all three surfaces.
 
-| Subject | MCQ file | MCQs | Solved file | Solved Qs |
-|---|---|---|---|---|
-| Accountancy | `XI-CBSE-Accountancy.json` | 90 | `XI-CBSE-Accountancy-Solved.json` | 54 |
-| Economics | `XI-CBSE-Economics.json` | 166 | `XI-CBSE-Economics-Solved.json` | 87 |
-| Psychology | `XI-CBSE-Psychology.json` | 138 | `XI-CBSE-Psychology-Solved.json` | 71 |
+| Subject | MCQ file | MCQs | SA file | SAs | Solved file | Solved Qs |
+|---|---|---|---|---|---|---|
+| Accountancy | `XI-CBSE-Accountancy.json` | 90 | — | — | `XI-CBSE-Accountancy-Solved.json` | 54 |
+| Economics | `XI-CBSE-Economics.json` | 166 | — | — | `XI-CBSE-Economics-Solved.json` | 87 |
+| Psychology | `XI-CBSE-Psychology.json` | 138 | — | — | `XI-CBSE-Psychology-Solved.json` | 71 |
+| Physics | `XI-CBSE-Physics.json` | 166 | `XI-CBSE-Physics-ShortAnswers.json` | 54 | `XI-CBSE-Physics-Solved.json` | 71 |
+| Chemistry | `XI-CBSE-Chemistry.json` | 120 | `XI-CBSE-Chemistry-ShortAnswers.json` | 41 | `XI-CBSE-Chemistry-Solved.json` | 57 |
+| Computer Science | `XI-CBSE-Computer-Science.json` | 137 | `XI-CBSE-Computer-Science-ShortAnswers.json` | 45 | `XI-CBSE-Computer-Science-Solved.json` | 105 |
 
 **Accountancy** (9 chapters, Financial Accounting Parts I & II): Introduction to
 Accounting, Theory Base of Accounting, Recording of Transactions – I, Recording of
@@ -216,6 +223,27 @@ Human Development, Sensory Attentional and Perceptual Processes, Learning, Human
 Memory, Thinking, Motivation and Emotion. Covers concept definitions, named
 psychologists/theories, distinguishing closely related terms, and applied/scenario
 questions.
+
+**Physics** (14 chapters, Parts I & II): Units and Measurement, Motion in a Straight
+Line, Motion in a Plane, Laws of Motion, Work/Energy and Power, Systems of Particles
+and Rotational Motion, Gravitation, Mechanical Properties of Solids, Mechanical
+Properties of Fluids, Thermal Properties of Matter, Thermodynamics, Kinetic Theory,
+Oscillations, Waves. Numericals verified against the textbook's own answer-key PDFs
+(`keph1an.pdf`/`keph2an.pdf`). The Gravitation chapter PDF (`keph107.pdf`) had a
+font-encoding bug that made `pdftotext` return near-blank output on its first page —
+worked around with PyMuPDF, which extracted the rest of the chapter cleanly.
+
+**Chemistry** (9 chapters/units, Parts I & II): Some Basic Concepts of Chemistry,
+Structure of Atom, Classification of Elements and Periodicity in Properties, Chemical
+Bonding and Molecular Structure, Thermodynamics, Equilibrium, Redox Reactions, Organic
+Chemistry – Some Basic Principles and Techniques, Hydrocarbons. Numericals verified
+against the answer-key PDFs (`kech1an.pdf`/`kech2an.pdf`).
+
+**Computer Science** (11 chapters): Computer System, Encoding Schemes and Number
+System, Emerging Trends, Introduction to Problem Solving, Getting Started with Python,
+Flow of Control, Functions, Strings, Lists, Tuples and Dictionaries, Societal Impact.
+Chapters 1-3/11 are conceptual; 4-10 are Python programming — every code-output MCQ/SA/
+Solved item was independently traced/run to confirm its stated output is correct.
 
 Left out throughout: questions depending on a printed table/figure/diagram not
 reproducible in plain text, and anything with garbled PDF extraction.

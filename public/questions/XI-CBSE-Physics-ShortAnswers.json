@@ -1,0 +1,741 @@
+[
+  {
+    "id": "sa-phy-001",
+    "chapter": "Units and Measurement",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define a base quantity and give two examples with their SI units.",
+    "modelAnswer": "A base quantity is a physical quantity that is not defined in terms of other quantities and is assigned a fundamental, independently chosen unit. Examples: length (metre, m) and mass (kilogram, kg).",
+    "keyPoints": [
+      "Not derived from other quantities",
+      "Examples: length(m), mass(kg), time(s), current(A)"
+    ]
+  },
+  {
+    "id": "sa-phy-002",
+    "chapter": "Units and Measurement",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why dimensional analysis cannot determine the value of dimensionless constants in a formula, with an example.",
+    "modelAnswer": "Dimensional analysis only checks that both sides of an equation have matching dimensions; a pure number (dimensionless constant) contributes no dimension and so cannot be fixed by this method. Example: the formula for the period of a simple pendulum, T = 2π√(l/g), is dimensionally consistent even without the 2π — dimensional analysis alone cannot tell us the numerical factor 2π is required; that comes from the detailed dynamics (solving the SHM equation).",
+    "keyPoints": [
+      "Dimensional analysis checks consistency, not exact numerical factors",
+      "Pure numbers are dimensionless so can't be deduced this way",
+      "Example: 2π in pendulum formula"
+    ]
+  },
+  {
+    "id": "sa-phy-003",
+    "chapter": "Units and Measurement",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "A new unit of length is chosen such that the speed of light in vacuum is unity. If light takes 8 min 20 s to travel from the Sun to the Earth, what is the Sun–Earth distance in the new unit?",
+    "modelAnswer": "In the new unit, speed of light c = 1 (new length unit)/s. Time taken = 8×60+20 = 500 s. Distance = speed × time = 1 × 500 = 500 new units.",
+    "keyPoints": [
+      "Convert time to seconds: 500 s",
+      "distance = c × t with c = 1 in new units",
+      "Answer: 500 new units (light-seconds)"
+    ]
+  },
+  {
+    "id": "sa-phy-004",
+    "chapter": "Units and Measurement",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the rule for the number of significant figures when multiplying or dividing measured quantities.",
+    "modelAnswer": "The final result should be rounded off to retain only as many significant figures as are present in the quantity with the fewest significant figures among those being multiplied or divided.",
+    "keyPoints": [
+      "Result limited by least-precise input",
+      "Fewest sig figs among operands decides final sig figs"
+    ]
+  },
+  {
+    "id": "sa-phy-005",
+    "chapter": "Units and Measurement",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Why is the triple point of water preferred over the melting point of ice and boiling point of water as a reference for measurement standards in general, and what does this illustrate about choosing physical standards?",
+    "modelAnswer": "A good measurement standard must be precisely reproducible and insensitive to incidental conditions like pressure, whereas the melting/boiling points of water vary with pressure and the presence of dissolved impurities — only the triple point (a unique combination of temperature and pressure where ice, water and vapour coexist) gives one exact, universally reproducible value. This illustrates the general principle that physical standards must be invariant, accessible and precisely reproducible everywhere.",
+    "keyPoints": [
+      "Melting/boiling points depend on pressure/impurities",
+      "Triple point is a single fixed, reproducible state",
+      "General principle: standards must be invariant and reproducible"
+    ]
+  },
+  {
+    "id": "sa-phy-006",
+    "chapter": "Motion in a Straight Line",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between distance and displacement with an example.",
+    "modelAnswer": "Distance (path length) is the total length of the actual path travelled, always positive and never decreasing; displacement is the vector from the initial to the final position, which can be positive, negative, or zero. Example: a person walking 5 m east then 5 m west has travelled a distance of 10 m, but their displacement is zero.",
+    "keyPoints": [
+      "Distance = scalar, total path length",
+      "Displacement = vector, straight-line change in position",
+      "Example: out-and-back walk has non-zero distance but zero displacement"
+    ]
+  },
+  {
+    "id": "sa-phy-007",
+    "chapter": "Motion in a Straight Line",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Derive the kinematic relation v² = u² + 2as from v = u + at and s = ut + ½at².",
+    "modelAnswer": "From v = u+at, t = (v−u)/a. Substitute into s = ut + ½at²: s = u(v−u)/a + ½a[(v−u)/a]² = (uv−u²)/a + (v−u)²/2a = [2uv−2u² + v²−2uv+u²]/2a = (v²−u²)/2a. Rearranging gives 2as = v² − u², i.e. v² = u² + 2as.",
+    "keyPoints": [
+      "Eliminate t between the two equations using t=(v−u)/a",
+      "Substitute and simplify algebraically",
+      "Result: v² = u² + 2as"
+    ]
+  },
+  {
+    "id": "sa-phy-008",
+    "chapter": "Motion in a Straight Line",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does the sign of acceleration not by itself tell us whether a particle is speeding up or slowing down?",
+    "modelAnswer": "Whether a particle speeds up or slows down depends on whether acceleration is in the same direction as velocity (speeding up) or opposite to it (slowing down) — and this depends on the chosen positive direction of the axis, not on the sign of acceleration alone. For example, with 'up' taken positive, a falling object has negative acceleration (−g) yet is speeding up, while an object thrown upward also has acceleration −g but is slowing down.",
+    "keyPoints": [
+      "Depends on relative direction of v and a, not sign of a alone",
+      "Example: falling object has a<0 but speeds up; rising object has same a<0 but slows down"
+    ]
+  },
+  {
+    "id": "sa-phy-009",
+    "chapter": "Motion in a Straight Line",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "A drunkard takes 5 steps forward and 3 steps backward repeatedly, each step 1 m and taking 1 s. How long does he take to fall into a pit 13 m away?",
+    "modelAnswer": "Net gain per complete cycle (8 s) = 5−3 = 2 m. After 5 complete cycles (40 s) he has net advanced 10 m. In the next cycle he takes 5 more steps forward (5 s), reaching 10+5 = 15 m — but he actually reaches the pit at 13 m after only 3 of those 5 forward steps, i.e. at 40+3 = 43 s (since he crosses 13 m during his forward run, before he could step back again).",
+    "keyPoints": [
+      "Net progress per 8 s cycle = 5−3 = 2 m",
+      "After 5 cycles (40 s): net 10 m",
+      "3 more forward steps (3 s) reach 13 m → total 43 s"
+    ]
+  },
+  {
+    "id": "sa-phy-010",
+    "chapter": "Motion in a Plane",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why can two vectors of unequal magnitude never add up to give a zero resultant, but three (or more) can?",
+    "modelAnswer": "Two vectors sum to zero only if they are exactly equal in magnitude and opposite in direction; if their magnitudes differ there's always a leftover component. Three or more vectors of various magnitudes can be arranged (geometrically, head to tail) to close into a polygon, giving a net zero resultant even though no two of them need be equal and opposite.",
+    "keyPoints": [
+      "Two unequal vectors can't cancel exactly",
+      "Three+ vectors can form a closed polygon (zero resultant) without being pairwise equal-opposite"
+    ]
+  },
+  {
+    "id": "sa-phy-011",
+    "chapter": "Motion in a Plane",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Derive the expression for the maximum height and time of flight of a projectile launched with speed u at angle θ to the horizontal.",
+    "modelAnswer": "Taking vertically upward as positive, initial vertical velocity = u sinθ, acceleration = −g. At maximum height the vertical velocity is zero: 0 = (u sinθ)² − 2g H, giving H = u²sin²θ/2g. Time to reach maximum height: 0 = u sinθ − g t_up, so t_up = u sinθ/g; by symmetry of projectile motion the total time of flight T = 2t_up = 2u sinθ/g.",
+    "keyPoints": [
+      "Resolve initial velocity into u sinθ (vertical) and u cosθ (horizontal)",
+      "Use v²=u²−2gH with v=0 at the top: H = u²sin²θ/2g",
+      "Time of flight T = 2u sinθ/g by symmetry"
+    ]
+  },
+  {
+    "id": "sa-phy-012",
+    "chapter": "Motion in a Plane",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the parallelogram law of vector addition.",
+    "modelAnswer": "If two vectors are represented in magnitude and direction by the two adjacent sides of a parallelogram drawn from a common point, their resultant (sum) is represented in magnitude and direction by the diagonal of the parallelogram drawn from that same point.",
+    "keyPoints": [
+      "Two vectors as adjacent sides of a parallelogram",
+      "Resultant = diagonal from the common point"
+    ]
+  },
+  {
+    "id": "sa-phy-013",
+    "chapter": "Motion in a Plane",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why the horizontal range of a projectile is maximum at a launch angle of 45°, for a given launch speed.",
+    "modelAnswer": "Range R = u²sin(2θ)/g. Since sin(2θ) has its maximum possible value of 1 when 2θ=90°, i.e. θ=45°, the range is maximised at this launch angle for a fixed speed u, because no larger value of sin(2θ) is achievable at any other angle.",
+    "keyPoints": [
+      "Range formula R = u²sin(2θ)/g",
+      "sin(2θ) is maximum (=1) at θ=45°",
+      "Hence range is largest at 45° for fixed u"
+    ]
+  },
+  {
+    "id": "sa-phy-014",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State Newton's second law of motion in its mathematical form, defining each symbol.",
+    "modelAnswer": "Newton's second law: F = dp/dt, which for constant mass reduces to F = ma, where F is the net external force (N), m is the mass (kg) of the body, and a is the acceleration (m/s²) produced in the direction of F.",
+    "keyPoints": [
+      "F = dp/dt (rate of change of momentum)",
+      "Reduces to F=ma for constant mass",
+      "F in direction of net force, producing acceleration a"
+    ]
+  },
+  {
+    "id": "sa-phy-015",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why a horse cannot pull a cart and run in empty space (i.e. explain the role of the ground's reaction force in a horse-cart system).",
+    "modelAnswer": "In empty space, the forces the horse and cart exert on each other are internal to the horse-cart system and, by Newton's third law, exactly cancel — they cannot produce a net external force to accelerate the system. Motion is only possible because the horse's feet push backward against the GROUND, and the ground pushes the horse forward (friction, an external force on the system) — in empty space there is no ground to push against, so there is no external force and the system cannot start moving.",
+    "keyPoints": [
+      "Horse-cart mutual forces are internal and cancel (Newton's third law)",
+      "Real forward motion needs an EXTERNAL force — friction from the ground",
+      "No ground in empty space ⟹ no external force ⟹ no motion possible"
+    ]
+  },
+  {
+    "id": "sa-phy-016",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define impulse and state the impulse-momentum theorem.",
+    "modelAnswer": "Impulse is the product of a large force acting for a very short time, J = F×Δt (or more generally the time-integral of force), and equals the change in momentum it produces: J = Δp = m(v−u). This is the impulse-momentum theorem.",
+    "keyPoints": [
+      "Impulse J = F×Δt (or ∫F dt)",
+      "Equals change in momentum: J = Δp"
+    ]
+  },
+  {
+    "id": "sa-phy-017",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Why does a passenger standing in a bus lurch forward when the bus suddenly stops?",
+    "modelAnswer": "By Newton's first law (inertia), the passenger's body tends to continue moving at the bus's original speed even though the bus (and the floor in contact with their feet) has suddenly decelerated — since there is no force acting on the upper body to decelerate it at the same rate as the bus, it continues forward relative to the now-slower bus, causing the passenger to lurch forward.",
+    "keyPoints": [
+      "Passenger's body has inertia — tends to keep moving at the original speed",
+      "Only the feet (in contact with the floor) decelerate with the bus",
+      "Relative forward lurch results from this mismatch"
+    ]
+  },
+  {
+    "id": "sa-phy-018",
+    "chapter": "Work, Energy and Power",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the work-energy theorem and give its mathematical form.",
+    "modelAnswer": "The work-energy theorem states that the total work done by the net force acting on a body equals the change in its kinetic energy: W_net = ΔKE = ½mv² − ½mu².",
+    "keyPoints": [
+      "W_net = ΔKE",
+      "Follows from Newton's second law integrated over displacement"
+    ]
+  },
+  {
+    "id": "sa-phy-019",
+    "chapter": "Work, Energy and Power",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between elastic and inelastic collisions, and state which quantities are conserved in each.",
+    "modelAnswer": "In an elastic collision, both total linear momentum and total kinetic energy are conserved; the bodies separate after collision with their shapes/internal energy unchanged. In an inelastic collision, total linear momentum is still conserved, but total kinetic energy is NOT conserved — some is converted to heat, sound, or deformation; in a perfectly inelastic collision the bodies stick together and the kinetic energy loss is maximum for the given momentum.",
+    "keyPoints": [
+      "Elastic: momentum AND kinetic energy both conserved",
+      "Inelastic: momentum conserved, kinetic energy is not",
+      "Perfectly inelastic: bodies stick together, maximum KE loss"
+    ]
+  },
+  {
+    "id": "sa-phy-020",
+    "chapter": "Work, Energy and Power",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why is work done by gravity over a complete closed orbit (e.g. a planet going once around the sun) equal to zero?",
+    "modelAnswer": "Gravity is a conservative force, and the work done by any conservative force over a closed path (returning to the starting point) is always zero, since the potential energy at the start and end of a closed loop is identical, so there is no net change in energy to account for via work done.",
+    "keyPoints": [
+      "Gravity is conservative",
+      "Work over any closed path by a conservative force = 0",
+      "Start and end PE are identical on a closed loop"
+    ]
+  },
+  {
+    "id": "sa-phy-021",
+    "chapter": "Work, Energy and Power",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Explain why the casing of a rocket in flight burns up due to friction, and at whose expense (the rocket's or the atmosphere's) is this heat energy obtained.",
+    "modelAnswer": "As the rocket moves through the atmosphere at high speed, air resistance (friction) does negative work on it, converting part of the rocket's kinetic energy into heat at the casing surface. This heat energy is obtained at the expense of the rocket's own kinetic energy (its mechanical energy decreases as it does work against friction), not the atmosphere's.",
+    "keyPoints": [
+      "Friction converts rocket's kinetic energy to heat",
+      "Heat energy comes at the expense of the rocket's own KE",
+      "The atmosphere provides the resistive force, but the energy lost is the rocket's"
+    ]
+  },
+  {
+    "id": "sa-phy-022",
+    "chapter": "Systems of Particles and Rotational Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define centre of mass and state whether it must lie within the material of the body.",
+    "modelAnswer": "The centre of mass of a system is the point at which the entire mass of the system may be considered to be concentrated for describing its translational motion; it is the mass-weighted average position of all the particles. It need NOT lie within the material of the body — e.g. for a ring or a hollow sphere, the centre of mass lies in the empty space at the geometric centre.",
+    "keyPoints": [
+      "CM = mass-weighted average position",
+      "Need not lie inside the body's material (e.g. a ring)"
+    ]
+  },
+  {
+    "id": "sa-phy-023",
+    "chapter": "Systems of Particles and Rotational Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "State the law of conservation of angular momentum and give one everyday example.",
+    "modelAnswer": "In the absence of an external torque, the total angular momentum of a system remains constant: L = Iω = constant. Example: an ice skater spinning with arms outstretched has a large moment of inertia I and modest ω; when they pull their arms in, I decreases, and since L=Iω must stay constant (no external torque), ω increases sharply — they spin much faster.",
+    "keyPoints": [
+      "No external torque ⟹ L=Iω=constant",
+      "Example: ice skater pulling arms in spins faster",
+      "I decreases ⟹ ω increases, to keep L constant"
+    ]
+  },
+  {
+    "id": "sa-phy-024",
+    "chapter": "Systems of Particles and Rotational Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between the centre of mass and the centre of gravity of a body.",
+    "modelAnswer": "The centre of mass is the point representing the mass-weighted average position of a system, relevant for its translational dynamics (F=Ma_cm), regardless of any gravitational field. The centre of gravity is the point where the entire weight of the body may be considered to act; it coincides with the centre of mass only when the gravitational field (g) is uniform over the body, which is the case for all ordinary-sized objects near Earth's surface.",
+    "keyPoints": [
+      "CM: mass-weighted average position (dynamics)",
+      "CG: point where weight effectively acts",
+      "Coincide when g is uniform over the body (true for ordinary objects)"
+    ]
+  },
+  {
+    "id": "sa-phy-025",
+    "chapter": "Systems of Particles and Rotational Motion",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Derive why a solid sphere rolling down an incline (without slipping) reaches the bottom faster than a hollow cylinder of the same mass and radius released from the same height.",
+    "modelAnswer": "For rolling without slipping, total KE = ½Mv² + ½Iω² = ½Mv²(1 + I/MR²) using ω=v/R. By energy conservation, Mgh = ½Mv²(1+I/MR²), so v² = 2gh/(1+I/MR²). Since I/MR² is smaller for a solid sphere (2/5) than a hollow cylinder (1), the sphere attains a larger v² (and hence larger v, and reaches the bottom sooner) for the same drop height h — more of its gravitational PE converts into translational KE rather than rotational KE.",
+    "keyPoints": [
+      "Total KE while rolling = ½Mv²(1 + I/MR²)",
+      "v² = 2gh/(1+I/MR²) from energy conservation",
+      "Smaller I/MR² (solid sphere, 2/5) ⟹ larger v ⟹ reaches bottom faster than hollow cylinder (I/MR²=1)"
+    ]
+  },
+  {
+    "id": "sa-phy-026",
+    "chapter": "Gravitation",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State Kepler's three laws of planetary motion (briefly).",
+    "modelAnswer": "(1) Law of orbits: every planet moves in an elliptical orbit with the sun at one focus. (2) Law of areas: the line joining a planet to the sun sweeps out equal areas in equal time intervals (planet moves faster when nearer the sun). (3) Law of periods: the square of a planet's orbital period is proportional to the cube of its orbit's semi-major axis (T² ∝ R³).",
+    "keyPoints": [
+      "Law of orbits: elliptical, sun at a focus",
+      "Law of areas: equal areas in equal times (angular momentum conservation)",
+      "Law of periods: T² ∝ R³"
+    ]
+  },
+  {
+    "id": "sa-phy-027",
+    "chapter": "Gravitation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Derive the relation between escape speed and the acceleration due to gravity at a planet's surface.",
+    "modelAnswer": "Escape speed is found by setting the total mechanical energy at launch equal to zero (just enough to reach infinity with zero residual speed): ½mv_e² − GMm/R = 0 ⟹ v_e = √(2GM/R). Since g = GM/R² at the surface, GM = gR², so v_e = √(2gR²/R) = √(2gR).",
+    "keyPoints": [
+      "Energy condition for escape: ½mv_e² = GMm/R",
+      "v_e = √(2GM/R)",
+      "Substitute GM=gR²: v_e = √(2gR)"
+    ]
+  },
+  {
+    "id": "sa-phy-028",
+    "chapter": "Gravitation",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why is the gravitational potential energy of two masses taken to be negative, with the usual convention?",
+    "modelAnswer": "By convention, gravitational potential energy is taken as zero when the two masses are infinitely far apart (no interaction). Since gravity is always attractive and does positive work as two masses approach each other, the potential energy at any finite separation must be LESS than its value at infinity (zero) — hence it is negative at all finite distances, reflecting the fact that work must be done (energy supplied) to pull the masses apart to infinity.",
+    "keyPoints": [
+      "Convention: PE = 0 at infinite separation",
+      "Gravity is attractive — PE decreases (becomes negative) as masses approach",
+      "Negative PE reflects a bound, attractive system"
+    ]
+  },
+  {
+    "id": "sa-phy-029",
+    "chapter": "Gravitation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why the Moon's tidal effect on the Earth is greater than the Sun's, even though the Sun's gravitational pull on the Earth is much stronger than the Moon's.",
+    "modelAnswer": "Tidal effect depends on the DIFFERENCE in gravitational pull across the Earth's diameter, which falls off much faster with distance (as 1/r³) than the gravitational force itself (which falls as 1/r²). Although the Sun's force on the Earth as a whole is stronger, the Moon is vastly closer, so the fractional variation of its pull across the Earth's diameter (and hence its tide-raising effect, ∝1/r³) is larger than the Sun's.",
+    "keyPoints": [
+      "Tidal effect ∝ 1/r³ (gradient of force), unlike force itself which ∝ 1/r²",
+      "Moon is much closer than Sun, so its 1/r³ dependence dominates",
+      "Hence Moon's tidal effect > Sun's, despite the Sun's pull on Earth being stronger overall"
+    ]
+  },
+  {
+    "id": "sa-phy-030",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Define Young's modulus and state its SI unit.",
+    "modelAnswer": "Young's modulus is the ratio of longitudinal (tensile or compressive) stress to the corresponding longitudinal strain, within the elastic limit of a material: Y = (F/A)/(ΔL/L). Its SI unit is the pascal (Pa), the same as stress, since strain is dimensionless.",
+    "keyPoints": [
+      "Y = longitudinal stress/longitudinal strain",
+      "Unit: Pascal (Pa), same as stress"
+    ]
+  },
+  {
+    "id": "sa-phy-031",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain, using the stress-strain graph, the terms 'elastic limit', 'yield point' and 'fracture point'.",
+    "modelAnswer": "On a stress-strain graph: the elastic limit is the stress beyond which the material no longer returns completely to its original shape when unloaded (permanent/plastic deformation begins). The yield point is where the material starts to deform significantly (plastically) even for a small further increase in stress — the curve flattens noticeably. The fracture (or breaking) point is where the material physically breaks, at the extreme right end of the stress-strain curve.",
+    "keyPoints": [
+      "Elastic limit: beyond this, deformation is no longer fully reversible",
+      "Yield point: large strain increase for small extra stress",
+      "Fracture point: the material breaks"
+    ]
+  },
+  {
+    "id": "sa-phy-032",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why is it that, for the same force, a thick rope is harder to stretch than a thin rope of the same material and length?",
+    "modelAnswer": "Stress = force/area, so for the same applied force, a thicker rope (larger cross-sectional area) experiences LESS stress than a thin one. Since strain = stress/Y, less stress means less strain (elongation), so the thick rope stretches less — it is 'harder to stretch'.",
+    "keyPoints": [
+      "Same force, larger area ⟹ smaller stress (F/A)",
+      "Smaller stress ⟹ smaller strain (for same Y) ⟹ less elongation"
+    ]
+  },
+  {
+    "id": "sa-phy-033",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State Pascal's law and give one practical application.",
+    "modelAnswer": "Pascal's law states that pressure applied at any point of an enclosed, incompressible fluid at rest is transmitted equally and undiminished to every point of the fluid and to the walls of the containing vessel. Application: hydraulic brakes/hydraulic lifts, where a small force on a narrow piston produces a much larger force on a wide piston, since pressure (not force) is transmitted equally.",
+    "keyPoints": [
+      "Pressure transmitted equally, undiminished, throughout a confined fluid",
+      "Application: hydraulic lift/brakes"
+    ]
+  },
+  {
+    "id": "sa-phy-034",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Derive the expression for excess pressure inside a liquid drop of radius r and surface tension T, using an energy (work) argument.",
+    "modelAnswer": "Consider increasing the drop's radius from r to r+dr. The increase in surface area is dA = 8πr·dr (since A=4πr²), requiring work dW = T·dA = T·8πr·dr against surface tension. This work is supplied by the excess pressure Δp doing work Δp·dV, where dV=4πr²dr. Equating: Δp·4πr²dr = T·8πr dr, giving Δp = 2T/r.",
+    "keyPoints": [
+      "Work to increase surface area: dW = T·d(4πr²) = 8πTr dr",
+      "This equals work done by excess pressure: Δp·dV = Δp·4πr²dr",
+      "Equate and solve: Δp = 2T/r"
+    ]
+  },
+  {
+    "id": "sa-phy-035",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does water rise in a thin capillary tube (capillary action), but not in a wide tube?",
+    "modelAnswer": "Capillary rise is caused by surface tension acting around the (small) circumference of the tube; the narrower the tube, the smaller the weight of water that needs to be supported for a given rise, so the rise height h=2Tcosθ/(ρgr) is inversely proportional to the tube's radius r — a wide tube has too little surface-tension force relative to the weight of liquid in the (large-area) column, so the rise becomes negligible.",
+    "keyPoints": [
+      "Capillary rise h = 2Tcosθ/ρgr, inversely proportional to tube radius r",
+      "Narrow tube: surface tension force can support a significant column",
+      "Wide tube: rise becomes negligibly small"
+    ]
+  },
+  {
+    "id": "sa-phy-036",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Explain why the triple point of water is preferred as a fixed reference point over the ordinary melting and boiling points.",
+    "modelAnswer": "The melting point of ice and the boiling point of water both vary with external pressure and with the presence of dissolved impurities, making them unreliable as precise universal reference points. The triple point — the single, unique combination of temperature and pressure at which ice, liquid water and water vapour coexist in equilibrium — occurs at one exact, reproducible value (273.16 K) regardless of location, making it a far more precise and universal fixed point.",
+    "keyPoints": [
+      "Melting/boiling points vary with pressure and impurities",
+      "Triple point is a single, precisely reproducible state",
+      "Hence triple point (273.16 K) is the preferred standard"
+    ]
+  },
+  {
+    "id": "sa-phy-037",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why coolants used in nuclear/chemical plants should have a high specific heat capacity.",
+    "modelAnswer": "A coolant with a high specific heat capacity can absorb a large quantity of heat for only a modest rise in its own temperature (Q=msΔT, so for fixed Q, higher s means smaller ΔT). This means the coolant can carry away a lot of heat from hot components efficiently without itself overheating excessively, keeping the circulating coolant — and hence the system — at a safer, more stable temperature.",
+    "keyPoints": [
+      "High specific heat ⟹ absorbs more heat for a given temperature rise (Q=msΔT)",
+      "Keeps the coolant (and the system) from overheating while removing heat efficiently"
+    ]
+  },
+  {
+    "id": "sa-phy-038",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does a brass tumbler feel colder than a wooden tray at the same (room) temperature on a chilly day?",
+    "modelAnswer": "Brass is a much better conductor of heat than wood. Touching the brass tumbler, heat flows rapidly away from your warmer hand into the brass (and spreads through it), making your hand feel a sudden drop in temperature; wood conducts heat away much more slowly, so your hand doesn't lose heat as quickly and the wood feels comparatively warmer — even though both objects are actually at the same room temperature.",
+    "keyPoints": [
+      "Both objects are at the same temperature",
+      "Brass is a much better thermal conductor than wood",
+      "Faster heat conduction away from the hand makes brass feel colder"
+    ]
+  },
+  {
+    "id": "sa-phy-039",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "A body cools from 80°C to 50°C in 5 minutes, with surroundings at 20°C. Using Newton's law of cooling (rate ∝ average excess temperature), set up (without fully solving) how you would find the time to cool from 60°C to 30°C.",
+    "modelAnswer": "By Newton's law of cooling applied over an interval, (T₁−T₂)/t ≈ k×[(T₁+T₂)/2 − T_s], where T_s is the surroundings' temperature. For the first interval: (80−50)/5 = k×[(80+50)/2 − 20] = k×45, giving k = 30/(5×45) = 2/15. For the second interval, (60−30)/t = k×[(60+30)/2 − 20] = k×25; substituting k and solving for t gives the required cooling time (t comes out close to 9 minutes, matching the structure of the textbook's own answer for this exercise).",
+    "keyPoints": [
+      "Newton's law (interval form): (T₁−T₂)/t = k×[average temp − surroundings]",
+      "Use the first interval's data to find the constant k",
+      "Apply the same equation to the second interval and solve for t"
+    ]
+  },
+  {
+    "id": "sa-phy-040",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the first law of thermodynamics and explain the sign convention used for Q and W.",
+    "modelAnswer": "The first law states ΔU = Q − W, where ΔU is the change in internal energy, Q is the heat SUPPLIED TO the system (positive if absorbed, negative if released), and W is the work done BY the system (positive if the system expands and does work on the surroundings, negative if work is done ON the system by compression).",
+    "keyPoints": [
+      "ΔU = Q − W",
+      "Q positive: heat absorbed by system",
+      "W positive: work done BY the system (expansion)"
+    ]
+  },
+  {
+    "id": "sa-phy-041",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain, using the first law, why the molar specific heat of a gas at constant pressure (Cp) is greater than at constant volume (Cv).",
+    "modelAnswer": "At constant volume, all the heat supplied goes entirely into raising internal energy (no work is done, since ΔV=0): Q_v = ΔU = n Cv ΔT. At constant pressure, the gas also expands and does external work (W=PΔV), so the heat supplied must cover BOTH the same rise in internal energy AND this extra work: Q_p = ΔU + PΔV = n Cp ΔT. Since Q_p includes this additional work term beyond Q_v for the same ΔT, Cp > Cv (specifically Cp − Cv = R for an ideal gas, Mayer's relation).",
+    "keyPoints": [
+      "Constant V: all heat → internal energy only (Q_v = nCvΔT)",
+      "Constant P: heat → internal energy AND expansion work (Q_p = nCpΔT)",
+      "Hence Cp > Cv; Cp − Cv = R for an ideal gas"
+    ]
+  },
+  {
+    "id": "sa-phy-042",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why should the walls of a container used for an adiabatic process be good insulators?",
+    "modelAnswer": "An adiabatic process is defined by Q=0, i.e. no heat exchange with the surroundings. This can only be ensured in practice if the container walls are good thermal insulators (preventing heat conduction) — otherwise heat would inevitably leak in or out, and the process would no longer be truly adiabatic.",
+    "keyPoints": [
+      "Adiabatic requires Q=0 by definition",
+      "Insulating walls prevent heat leaking in/out, keeping the process genuinely adiabatic"
+    ]
+  },
+  {
+    "id": "sa-phy-043",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Why does air pressure in a car tyre increase during driving?",
+    "modelAnswer": "As the car is driven, friction between the tyre and road, and repeated flexing of the tyre material, generates heat, raising the temperature of the air trapped inside the tyre. Since the tyre's volume is essentially fixed (constant volume, rigid casing), by the ideal gas law (PV=nRT) an increase in temperature T at constant V and n must produce a proportional increase in pressure P.",
+    "keyPoints": [
+      "Driving generates heat (friction, flexing) raising the air's temperature inside the tyre",
+      "Tyre volume is essentially constant",
+      "By PV=nRT, higher T at constant V ⟹ higher P"
+    ]
+  },
+  {
+    "id": "sa-phy-044",
+    "chapter": "Kinetic Theory",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the law of equipartition of energy.",
+    "modelAnswer": "The law of equipartition of energy states that, in thermal equilibrium, the total energy of a system is distributed equally among all its accessible degrees of freedom, with each quadratic degree of freedom (translational, rotational, or vibrational) contributing an average energy of (1/2)kT per molecule, where k is Boltzmann's constant and T is the absolute temperature.",
+    "keyPoints": [
+      "Energy shared equally among all accessible degrees of freedom",
+      "Each quadratic degree of freedom contributes (1/2)kT on average"
+    ]
+  },
+  {
+    "id": "sa-phy-045",
+    "chapter": "Kinetic Theory",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why the molar specific heat of diatomic gases is higher than that of monatomic gases, using the equipartition theorem.",
+    "modelAnswer": "Monatomic gas molecules have only 3 translational degrees of freedom, giving average energy (3/2)kT per molecule and Cv=(3/2)R. Diatomic molecules have, in addition to the 3 translational degrees of freedom, 2 rotational degrees of freedom (rotation about the two axes perpendicular to the bond axis), giving a total of 5 degrees of freedom and average energy (5/2)kT, so Cv=(5/2)R — higher than the monatomic value, since the same temperature rise must now supply energy to more modes of motion.",
+    "keyPoints": [
+      "Monatomic: 3 translational DOF, Cv=(3/2)R",
+      "Diatomic: 3 translational + 2 rotational DOF = 5, Cv=(5/2)R",
+      "More DOF ⟹ more energy needed per degree of temperature rise ⟹ higher Cv"
+    ]
+  },
+  {
+    "id": "sa-phy-046",
+    "chapter": "Kinetic Theory",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does Avogadro's law hold for ideal gases of different chemical identity at the same T, P and V?",
+    "modelAnswer": "In the kinetic theory derivation, gas pressure comes out depending only on the number density of molecules and their average kinetic energy (which in turn depends only on temperature), not on what kind of molecule it is. So at the same T and P, any ideal gas must have the same number density, and hence the same total number of molecules in the same volume — regardless of its chemical identity.",
+    "keyPoints": [
+      "Kinetic theory: pressure depends on number density and average KE (set by T), not molecule type",
+      "Same T,P ⟹ same number density for any ideal gas",
+      "Hence same volume contains the same number of molecules, for any gas"
+    ]
+  },
+  {
+    "id": "sa-phy-047",
+    "chapter": "Oscillations",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "State the necessary and sufficient condition for a motion to be simple harmonic.",
+    "modelAnswer": "A motion is simple harmonic if and only if the restoring acceleration (or force) is directly proportional to the displacement from the mean/equilibrium position and is always directed opposite to that displacement (toward the equilibrium position): a = −ω²x.",
+    "keyPoints": [
+      "a ∝ −x (proportional to displacement, opposite direction)",
+      "Mathematically: a = −ω²x"
+    ]
+  },
+  {
+    "id": "sa-phy-048",
+    "chapter": "Oscillations",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Derive the expression for the period of a simple pendulum undergoing small-angle oscillations.",
+    "modelAnswer": "For small angular displacement θ, the restoring torque about the pivot is τ = −mgl sinθ ≈ −mglθ (small angle approximation). This gives angular acceleration (d²θ/dt²) = −(g/l)θ, which is the SHM equation with ω² = g/l. Hence the period T = 2π/ω = 2π√(l/g).",
+    "keyPoints": [
+      "Restoring torque τ ≈ −mglθ for small θ",
+      "This matches the SHM form with ω² = g/l",
+      "T = 2π/ω = 2π√(l/g)"
+    ]
+  },
+  {
+    "id": "sa-phy-049",
+    "chapter": "Oscillations",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does a pendulum clock run slow if taken to a higher altitude (or to the top of a mountain)?",
+    "modelAnswer": "At higher altitude, g (acceleration due to gravity) is slightly smaller (since g decreases with height above the Earth's surface). Since the period T=2π√(l/g) increases as g decreases, each swing of the pendulum takes slightly longer, so the clock (which counts swings to measure time) runs slow.",
+    "keyPoints": [
+      "g is slightly smaller at higher altitude",
+      "T = 2π√(l/g) increases when g decreases",
+      "Longer period per swing ⟹ clock runs slow"
+    ]
+  },
+  {
+    "id": "sa-phy-050",
+    "chapter": "Oscillations",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Explain the difference between free oscillations, damped oscillations, and forced oscillations with resonance.",
+    "modelAnswer": "Free oscillations occur when a system, displaced and released, oscillates at its own natural frequency with no energy loss and no external driving force (an idealisation). Damped oscillations occur when a resistive force (friction, air/viscous drag) is present, causing the amplitude to gradually decrease over time as energy is dissipated, though the system still oscillates near its natural frequency (at least initially). Forced oscillations occur when an external periodic force continuously drives the system at some external frequency; if that driving frequency matches the system's natural frequency, resonance occurs and the amplitude becomes very large (limited only by whatever damping is present).",
+    "keyPoints": [
+      "Free: natural frequency, no energy loss (idealised)",
+      "Damped: amplitude decreases over time due to a resistive force",
+      "Forced + resonance: external driving frequency matching natural frequency gives very large amplitude"
+    ]
+  },
+  {
+    "id": "sa-phy-051",
+    "chapter": "Waves",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Distinguish between transverse and longitudinal waves, with one example of each.",
+    "modelAnswer": "In a transverse wave, particles of the medium oscillate perpendicular to the direction of wave propagation (example: waves on a stretched string, or light/electromagnetic waves). In a longitudinal wave, particles oscillate parallel to (along) the direction of propagation, as a series of compressions and rarefactions (example: sound waves in air).",
+    "keyPoints": [
+      "Transverse: particle motion ⊥ to propagation (e.g. string wave)",
+      "Longitudinal: particle motion ∥ to propagation (e.g. sound in air)"
+    ]
+  },
+  {
+    "id": "sa-phy-052",
+    "chapter": "Waves",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Explain why only odd harmonics are produced in a pipe closed at one end, using the boundary conditions.",
+    "modelAnswer": "A closed end must be a displacement NODE (air can't move into the rigid closed end), while an open end must be (approximately) a displacement ANTINODE (air is free to move there). For a pipe of length L closed at one end, the allowed standing-wave patterns must fit a node at the closed end and an antinode at the open end; this geometric constraint is only satisfiable for L = (2n−1)λ/4, i.e. odd multiples of a quarter-wavelength, which corresponds exactly to the odd-harmonic frequencies f, 3f, 5f, ... — even harmonics simply cannot satisfy this node-antinode boundary condition.",
+    "keyPoints": [
+      "Closed end = node; open end = antinode",
+      "This forces L = (2n−1)λ/4, i.e. only odd multiples of λ/4 fit",
+      "Hence only odd harmonics (f, 3f, 5f,...) are possible"
+    ]
+  },
+  {
+    "id": "sa-phy-053",
+    "chapter": "Waves",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why does the pitch of an ambulance siren sound higher as it approaches you and lower as it moves away (Doppler effect)?",
+    "modelAnswer": "As the ambulance approaches, each successive sound wave crest is emitted from a position slightly closer to you than the previous one, effectively compressing the wavelength and increasing the frequency you receive — so the pitch sounds higher. As it moves away, each crest is emitted from slightly farther away, stretching the effective wavelength and lowering the received frequency, so the pitch sounds lower.",
+    "keyPoints": [
+      "Approaching source: successive crests emitted closer to listener ⟹ compressed wavelength ⟹ higher pitch",
+      "Receding source: crests emitted farther away ⟹ stretched wavelength ⟹ lower pitch"
+    ]
+  },
+  {
+    "id": "sa-phy-054",
+    "chapter": "Waves",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Explain how a stationary (standing) wave can be understood as the superposition of two identical travelling waves moving in opposite directions.",
+    "modelAnswer": "If two waves of the same amplitude, frequency and wavelength travel in exactly opposite directions along a medium (e.g. an incident wave and its reflection from a fixed boundary), their superposition at every point and instant produces a standing wave pattern: y = y₁+y₂ = 2A sin(kx)cos(ωt) (or similar form), which has fixed points of zero displacement (nodes, where the two travelling waves always cancel) and fixed points of maximum displacement (antinodes, where they always reinforce) — unlike a true travelling wave, the pattern does not move along the medium; it only oscillates in place.",
+    "keyPoints": [
+      "Superposition of two equal, oppositely-directed travelling waves",
+      "Produces y=2A sin(kx)cos(ωt): fixed nodes (always-cancelling points) and antinodes (always-reinforcing points)",
+      "Pattern oscillates in place rather than propagating, unlike a travelling wave"
+    ]
+  }
+]
