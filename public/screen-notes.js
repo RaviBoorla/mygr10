@@ -1,4 +1,7 @@
 // ─── Revision Notes screen (with lazy-loaded REVISION + THEOREMS data) ────────
+// Notes are scoped to exactly the current grade + board (no merging across
+// boards) — a subject with no notes for that grade/board shows "coming soon"
+// rather than borrowing another grade's or board's content.
 
 const CBSE_SCIENCE_SPLIT = {
   Chemistry: ['Chemical Reactions & Equations', 'Acids, Bases & Salts', 'Metals & Non-Metals', 'Carbon & its Compounds'],
@@ -6,90 +9,79 @@ const CBSE_SCIENCE_SPLIT = {
   Biology:   ['Life Processes', 'Control & Coordination', 'Reproduction', 'Heredity & Evolution']
 };
 
-const NOTES_SOURCES = {
-  Mathematics: [
-    ['CBSE', 'CBSE Mathematics', 'Mathematics'],
-    ['ICSE', 'ICSE Mathematics', 'Mathematics'],
-    ['IB',   'IB Mathematics',   'Mathematics']
-  ],
-  Physics: [
-    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Physics],
-    ['ICSE', 'Physics', 'Physics']
-  ],
-  Chemistry: [
-    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Chemistry],
-    ['ICSE', 'Chemistry', 'Chemistry']
-  ],
-  Biology: [
-    ['CBSE', 'Science', 'Science', CBSE_SCIENCE_SPLIT.Biology],
-    ['ICSE', 'Biology', 'Biology'],
-    ['IB',   'Biology', 'Biology']
-  ],
-  English: [
-    ['CBSE', 'English', 'English'],
-    ['ICSE', 'English', 'English']
-  ],
-  Hindi: [
-    ['CBSE', 'Hindi', 'Hindi']
-  ],
-  'Comp App & IT': [
-    ['ICSE', 'Computer Science', 'Computer Science'],
-    ['CBSE', 'Computer Applications', 'Computer Applications'],
-    ['CBSE', 'Information Technology', 'Information Technology']
-  ],
-  'Social Science': [
-    ['CBSE', 'Social Science', 'Social Science']
-  ],
-  'History': [
-    ['ICSE', 'ICSE History', 'ICSE History']
-  ],
-  'Geography': [
-    ['ICSE', 'ICSE Geography', 'ICSE Geography']
-  ]
+// Grade IX CBSE "Science" is one combined subject/bank (unlike X/XII, which
+// split into separate Physics/Chemistry/Biology test subjects) — split its
+// chapters across the Physics/Chemistry/Biology notes tabs by the same
+// `subject` tag used in IX-CBSE-Science.json. The two cross-disciplinary
+// chapters are folded into the nearest tab.
+const IX_SCIENCE_SPLIT = {
+  Physics: ['Exploration: Entering the World of Secondary Science', 'Describing Motion Around Us', 'How Forces Affect Motion', 'Work, Energy, and Simple Machines', 'Sound Waves: Characteristics and Applications'],
+  Chemistry: ['Exploring Mixtures and their Separation', 'Journey Inside the Atom', 'Atomic Foundations of Matter'],
+  Biology: ['Cell: The Building Block of Life', 'Tissues in Action', 'Reproduction: How Life Continues', 'Patterns in Life: Diversity and Classification', 'Earth as a System: Energy, Matter, and Life']
 };
 
-// Grade XII revision sources — keys match REVISION['XII <subject>'] entries
-const NOTES_SOURCES_XII = {
-  Mathematics:         [['CBSE', 'XII Mathematics']],
-  Physics:             [['CBSE', 'XII Physics']],
-  Chemistry:           [['CBSE', 'XII Chemistry']],
-  Biology:             [['CBSE', 'XII Biology']],
-  'Comp App & IT':     [['CBSE', 'XII Computer Science']],
-  Economics:           [['CBSE', 'XII Economics'], ['CBSE', 'XII Economics Macro']],
-  'Political Science': [['CBSE', 'XII Political Science CWP'], ['CBSE', 'XII Political Science PISI']],
-  Psychology:          [['CBSE', 'XII Psychology']],
-  'Informatics Practices': [['CBSE', 'XII Informatics Practices']],
+// NOTES_SOURCES[grade][subjectId][board] = [[revisionKey, theoremKey?, onlyChapters?], ...]
+// Multiple entries under the SAME board merge into one chapter list (e.g. a
+// notes tab fed by two separate test subjects); different boards never merge.
+const NOTES_SOURCES = {
+  IX: {
+    Physics:   { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]] },
+    Chemistry: { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]] },
+    Biology:   { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]] }
+  },
+  X: {
+    Mathematics: { CBSE: [['CBSE Mathematics', 'Mathematics']], ICSE: [['ICSE Mathematics', 'Mathematics']], IB: [['IB Mathematics', 'Mathematics']] },
+    Physics:     { CBSE: [['Science', null, CBSE_SCIENCE_SPLIT.Physics]], ICSE: [['Physics']] },
+    Chemistry:   { CBSE: [['Science', null, CBSE_SCIENCE_SPLIT.Chemistry]], ICSE: [['Chemistry']] },
+    Biology:     { CBSE: [['Science', null, CBSE_SCIENCE_SPLIT.Biology]], ICSE: [['Biology']], IB: [['Biology']] },
+    English:     { CBSE: [['English']], ICSE: [['English']] },
+    Hindi:       { CBSE: [['Hindi']] },
+    'Comp App & IT': { ICSE: [['Computer Science']], CBSE: [['Computer Applications'], ['Information Technology']] },
+    'Social Science': { CBSE: [['Social Science']] },
+    History:     { ICSE: [['ICSE History']] },
+    Geography:   { ICSE: [['ICSE Geography']] }
+  },
+  XI: {
+    Accountancy: { CBSE: [['XI Accountancy']] },
+    Economics:   { CBSE: [['XI Economics']] },
+    Psychology:  { CBSE: [['XI Psychology']] }
+  },
+  XII: {
+    Mathematics:        { CBSE: [['XII Mathematics']] },
+    Physics:            { CBSE: [['XII Physics']] },
+    Chemistry:          { CBSE: [['XII Chemistry']] },
+    Biology:            { CBSE: [['XII Biology']] },
+    'Comp App & IT':    { CBSE: [['XII Computer Science']] },
+    Economics:          { CBSE: [['XII Economics'], ['XII Economics Macro']] },
+    'Political Science': { CBSE: [['XII Political Science CWP'], ['XII Political Science PISI']] },
+    Psychology:         { CBSE: [['XII Psychology']] },
+    'Informatics Practices': { CBSE: [['XII Informatics Practices']] }
+  }
+};
+
+// Extra lazy-loaded files per grade, beyond the always-loaded base
+// revision-data.js (which holds Grade X's CBSE/ICSE/IB content). Each entry's
+// `probeKey` is a REVISION key that only exists once that file has loaded.
+const REVISION_EXTRA_FILES = {
+  IX:  { file: 'revision-data-ix.js?v=0fd12941',  probeKey: 'IX Science' },
+  XI:  { file: 'revision-data-xi.js?v=d8f28c28',  probeKey: 'XI Accountancy' },
+  XII: { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
 };
 
 const _consolidatedCache = {};
-const _consolidatedCacheXII = {};
-
-function consolidatedChaptersXII(subjectId) {
-  if (_consolidatedCacheXII[subjectId]) return _consolidatedCacheXII[subjectId];
-  const merged = [];
-  (NOTES_SOURCES_XII[subjectId] || []).forEach(([board, key]) => {
-    (REVISION[key] || []).forEach(ch => {
-      const name = ch.chapter.trim().toLowerCase();
-      const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
-      if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
-      else merged.push({ ...ch, _boards: [board] });
-    });
-  });
-  _consolidatedCacheXII[subjectId] = merged;
-  return merged;
-}
 
 function consolidatedChapters(subjectId) {
-  if (_consolidatedCache[subjectId]) return _consolidatedCache[subjectId];
+  const cacheKey = `${state.grade}::${state.board}::${subjectId}`;
+  if (_consolidatedCache[cacheKey]) return _consolidatedCache[cacheKey];
+  const entries = (NOTES_SOURCES[state.grade] || {})[subjectId]?.[state.board] || [];
   const merged = [];
-  (NOTES_SOURCES[subjectId] || []).forEach(([board, key, theoremKey, only]) => {
+  entries.forEach(([key, theoremKey, only]) => {
     (REVISION[key] || [])
       .filter(ch => !only || only.includes(ch.chapter))
       .forEach(ch => {
         const name = ch.chapter.trim().toLowerCase();
-        const hit = merged.find(m => m.chapter.trim().toLowerCase() === name);
-        if (hit) { if (!hit._boards.includes(board)) hit._boards.push(board); }
-        else merged.push({ ...ch, _boards: [board], _theoremKey: theoremKey });
+        if (merged.some(m => m.chapter.trim().toLowerCase() === name)) return;
+        merged.push({ ...ch, _theoremKey: theoremKey || subjectId });
       });
   });
   merged.sort((a, b) => {
@@ -97,11 +89,11 @@ function consolidatedChapters(subjectId) {
     const bi = b.chapter.startsWith('Important Dates');
     return ai && !bi ? -1 : !ai && bi ? 1 : 0;
   });
-  return (_consolidatedCache[subjectId] = merged);
+  return (_consolidatedCache[cacheKey] = merged);
 }
 
-let _revisionCallbacks = null;    // null = not started; [] = loading; undefined = failed
-let _revisionXIICallbacks = null; // same states, for XII file
+let _revisionCallbacks = null;      // null = not started; [] = loading; undefined = failed
+const _revisionExtraCallbacks = {}; // per grade, same states as above
 
 function _loadScript(src, onload, onerror) {
   const s = document.createElement('script');
@@ -136,21 +128,34 @@ function _ensureRevisionData(cb) {
   });
 }
 
-function _ensureRevisionDataXII(cb) {
-  // XII data depends on the base REVISION object existing first
-  if (window.REVISION && window.REVISION['XII Mathematics']) { cb(); return; }
-  if (_revisionXIICallbacks === undefined) { cb(); return; }
-  if (Array.isArray(_revisionXIICallbacks)) { _revisionXIICallbacks.push(cb); return; }
-  _revisionXIICallbacks = [cb];
-  // Ensure base file loaded first, then load XII
+// A grade with no entry in REVISION_EXTRA_FILES (currently only X) is fully
+// covered by the base file alone.
+function _revisionReadyFor(grade) {
+  if (!window.REVISION) return false;
+  const spec = REVISION_EXTRA_FILES[grade];
+  return !spec || !!window.REVISION[spec.probeKey];
+}
+function _revisionFailedFor(grade) {
+  if (_revisionCallbacks === undefined) return true;
+  const spec = REVISION_EXTRA_FILES[grade];
+  return !!spec && _revisionExtraCallbacks[grade] === undefined;
+}
+function _ensureRevisionDataFor(grade, cb) {
+  const spec = REVISION_EXTRA_FILES[grade];
   _ensureRevisionData(() => {
-    _loadScript('revision-data-xii.js?v=2d919395', () => {
-      const pending = _revisionXIICallbacks || [];
-      _revisionXIICallbacks = null;
-      Object.keys(_consolidatedCacheXII).forEach(k => delete _consolidatedCacheXII[k]);
+    if (!spec) { cb(); return; }
+    if (window.REVISION[spec.probeKey]) { cb(); return; }
+    const existing = _revisionExtraCallbacks[grade];
+    if (existing === undefined) { cb(); return; }
+    if (Array.isArray(existing)) { existing.push(cb); return; }
+    _revisionExtraCallbacks[grade] = [cb];
+    _loadScript(spec.file, () => {
+      const pending = _revisionExtraCallbacks[grade] || [];
+      _revisionExtraCallbacks[grade] = null;
+      Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
       pending.forEach(fn => fn());
     }, () => {
-      _revisionXIICallbacks = undefined;
+      _revisionExtraCallbacks[grade] = undefined;
       app.render();
     });
   });
@@ -162,19 +167,11 @@ Object.assign(app, {
     const gradeCatalog = this._notesGradeCatalog();
     const id = gradeCatalog.some(s => s.id === subjectId) ? subjectId : gradeCatalog[0].id;
 
-    const isXII = state.grade === 'XII';
-    const xiiReady = window.REVISION && window.REVISION['XII Mathematics'];
-    const needsLoad = isXII ? !xiiReady : !window.REVISION;
+    const needsLoad = !_revisionReadyFor(state.grade);
 
     if (needsLoad) {
-      const failed = isXII ? _revisionXIICallbacks === undefined : _revisionCallbacks === undefined;
-      if (!failed) {
-        const loader = isXII ? _ensureRevisionDataXII : _ensureRevisionData;
-        loader(() => {
-          if (!isXII) Object.keys(_consolidatedCache).forEach(k => delete _consolidatedCache[k]);
-          app.render();
-        });
-      }
+      const failed = _revisionFailedFor(state.grade);
+      if (!failed) _ensureRevisionDataFor(state.grade, () => app.render());
       return `
         <div class="screen rev-screen">
           <div class="rev-heading-row">
@@ -189,7 +186,7 @@ Object.assign(app, {
         </div>`;
     }
 
-    const chapters = state.grade === 'XII' ? consolidatedChaptersXII(id) : consolidatedChapters(id);
+    const chapters = consolidatedChapters(id);
     const idx = chapters.length ? Math.max(0, Math.min(chapterIdx, chapters.length - 1)) : 0;
     return `
       <div class="screen rev-screen">
@@ -219,10 +216,14 @@ Object.assign(app, {
   },
 
   _notesGradeCatalog() {
-    const XII_ONLY = new Set(['Economics','Political Science','Psychology','Informatics Practices']);
-    const X_ONLY   = new Set(['Social Science','History','Geography','English','Hindi']);
-    if (state.grade === 'XII') return NOTES_CATALOG.filter(s => !X_ONLY.has(s.id));
-    return NOTES_CATALOG.filter(s => !XII_ONLY.has(s.id));
+    const BY_GRADE = {
+      IX:  new Set(['Physics', 'Chemistry', 'Biology']),
+      X:   new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'English', 'Hindi', 'Comp App & IT']),
+      XI:  new Set(['Accountancy', 'Economics', 'Psychology']),
+      XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
+    };
+    const allowed = BY_GRADE[state.grade] || BY_GRADE.X;
+    return NOTES_CATALOG.filter(s => allowed.has(s.id));
   },
 
   _subjectSelect(activeId) {
@@ -232,8 +233,7 @@ Object.assign(app, {
   },
 
   _chLabel(ch) {
-    if (!ch._boards?.length) return ch.chapter;
-    return `${ch.chapter} (${ch._boards.join(', ')})`;
+    return ch.chapter;
   },
 
   _FILTERS: [
@@ -383,7 +383,7 @@ Object.assign(app, {
   _repaintNotes() {
     const gc2 = app._notesGradeCatalog();
     const id = gc2.some(s => s.id === state.params[0]) ? state.params[0] : gc2[0].id;
-    const chapters = state.grade === 'XII' ? consolidatedChaptersXII(id) : consolidatedChapters(id);
+    const chapters = consolidatedChapters(id);
     if (!chapters.length) return;
     const idx = Math.max(0, Math.min(Number(state.params[1]) || 0, chapters.length - 1));
     const nav  = document.getElementById('notes-nav');

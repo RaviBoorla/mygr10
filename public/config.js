@@ -191,6 +191,7 @@ const NOTES_CATALOG = [
   { id: 'English',          label: 'English' },
   { id: 'Hindi',            label: 'Hindi' },
   { id: 'Comp App & IT',     label: 'Computer Science' },
+  { id: 'Accountancy',       label: 'Accountancy' },
   { id: 'Economics',         label: 'Economics' },
   { id: 'Political Science', label: 'Political Science' },
   { id: 'Psychology',        label: 'Psychology' },

@@ -166,8 +166,7 @@ function _aiLoadCareers() {
 }
 function _aiEnsureKb(query) {
   const jobs = [];
-  const notes = state.grade === 'XII' ? window._ensureRevisionDataXII : window._ensureRevisionData;
-  if (typeof notes === 'function') jobs.push(new Promise(res => notes(res)));
+  if (typeof window._ensureRevisionDataFor === 'function') jobs.push(new Promise(res => _ensureRevisionDataFor(state.grade, res)));
   if (!window.CAREER_TREE && AI_CAREER_RE.test(query)) jobs.push(_aiLoadCareers());
   const q = query.toLowerCase();
   const named = (SUBJECTS[state.grade]?.[state.board] || []).filter(s => q.includes(s.toLowerCase()));
@@ -506,9 +505,8 @@ const aiPanel = {
     aiState.open = true;
     this._ensureMount();
     this._render();
-    // Preload revision KB (both grades) so context is ready when user asks
-    _ensureRevisionData(() => {});
-    _ensureRevisionDataXII(() => {});
+    // Preload revision KB for the current grade so context is ready when user asks
+    _ensureRevisionDataFor(state.grade, () => {});
     requestAnimationFrame(() => {
       const el = document.getElementById('ai-panel');
       if (el) el.classList.add('ai-panel-open');
