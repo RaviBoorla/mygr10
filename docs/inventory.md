@@ -111,7 +111,16 @@ tracked per question id in `localStorage` (`rise.solvedRevealed`).
 
 ## Grade IX
 
-### CBSE Science (NCERT textbook)
+### CBSE
+
+`SUBJECTS.IX.CBSE` lists all seven subjects, matching Grade X CBSE's lineup:
+Mathematics, Science, Social Science, English, Hindi, Computer Applications,
+Information Technology. Only **Science** has a question bank so far — the
+other six show an "In Progress" tag on their subject card (no mock test or
+chapter drill button) instead of "Question bank coming soon", same pattern
+the app uses for any subject listed with no bank behind it yet.
+
+#### Science (NCERT textbook)
 
 Like ICSE below, Class IX has no CBSE board exam, so there is no official
 past-paper corpus here either. `IX-CBSE-Science.json` and

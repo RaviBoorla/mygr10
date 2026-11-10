@@ -8,7 +8,7 @@ const FAMILY_WORKER_URL = 'https://mygr10-family.ravi-boorla.workers.dev';
 // ─── Catalogue ────────────────────────────────────────────────────────────────
 const SUBJECTS = {
   IX: {
-    CBSE: ['Science'],
+    CBSE: ['Mathematics', 'Science', 'Social Science', 'English', 'Hindi', 'Computer Applications', 'Information Technology'],
     ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'History & Civics', 'Geography', 'English', 'Economics', 'Computer Science']
   },
   X: {

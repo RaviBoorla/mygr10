@@ -43,7 +43,7 @@ Object.assign(app, {
            <button class="btn act-btn" aria-expanded="${open}" onclick="app.togglePicker('${esc(subject)}')">
              Chapter drill <small>${MODES.drill.count} Q · untimed</small>
            </button>`
-        : `<span class="soon-tag">Question bank coming soon</span>`;
+        : `<span class="soon-tag">In Progress</span>`;
 
       const saSlug = saBankSlug(subject);
       const saLink = saSlug
