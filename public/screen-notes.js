@@ -78,7 +78,7 @@ const REVISION_EXTRA_FILES = {
   IX: [
     { file: 'revision-data-ix.js?v=0fd12941',       probeKey: 'IX Science' },
     { file: 'revision-data-ix-maths.js?v=c8b5bd84', probeKey: 'IX Mathematics' },
-    { file: 'revision-data-ix-sst.js?v=2cc98f5d', probeKey: 'IX Social Science' }
+    { file: 'revision-data-ix-sst.js?v=4811031e', probeKey: 'IX Social Science' }
   ],
   XI: [
     { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },

@@ -27,8 +27,8 @@ const SUBJECTS = {
 
 const BANKS = {
   'IX CBSE Mathematics':          'IX-CBSE-Mathematics',
-  'IX CBSE Science':              'IX-CBSE-Science',
   'IX CBSE Social Science':       'IX-CBSE-Social-Science',
+  'IX CBSE Science':              'IX-CBSE-Science',
 
   'IX ICSE Mathematics':          'IX-ICSE-Mathematics',
   'IX ICSE Physics':              'IX-ICSE-Physics',
