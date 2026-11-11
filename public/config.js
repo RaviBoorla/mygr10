@@ -28,6 +28,7 @@ const SUBJECTS = {
 const BANKS = {
   'IX CBSE Mathematics':          'IX-CBSE-Mathematics',
   'IX CBSE Science':              'IX-CBSE-Science',
+  'IX CBSE Social Science':       'IX-CBSE-Social-Science',
 
   'IX ICSE Mathematics':          'IX-ICSE-Mathematics',
   'IX ICSE Physics':              'IX-ICSE-Physics',
@@ -86,6 +87,7 @@ const BANKS = {
 
 const SA_BANKS = {
   'IX CBSE Mathematics':            'IX-CBSE-Mathematics-ShortAnswers',
+  'IX CBSE Social Science':         'IX-CBSE-Social-Science-ShortAnswers',
 
   'IX ICSE Mathematics':            'IX-ICSE-Mathematics-ShortAnswers',
   'IX ICSE Physics':                'IX-ICSE-Physics-ShortAnswers',
@@ -143,8 +145,9 @@ function saBankSlug(subject, board, grade) {
 }
 
 const SOLVED_BANKS = {
-  'IX CBSE Mathematics':   'IX-CBSE-Mathematics-Solved',
-  'IX CBSE Science':       'IX-CBSE-Science-Solved',
+  'IX CBSE Mathematics':        'IX-CBSE-Mathematics-Solved',
+  'IX CBSE Science':            'IX-CBSE-Science-Solved',
+  'IX CBSE Social Science':     'IX-CBSE-Social-Science-Solved',
 
   'X CBSE Mathematics':    'X-CBSE-Mathematics-Solved',
   'X CBSE Science':        'X-CBSE-Science-Solved',

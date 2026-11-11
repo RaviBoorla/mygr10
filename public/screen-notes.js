@@ -28,7 +28,8 @@ const NOTES_SOURCES = {
     Physics:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]] },
     Chemistry:        { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]] },
     Biology:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]] },
-    Mathematics:      { CBSE: [['IX Mathematics']] }
+    Mathematics:      { CBSE: [['IX Mathematics']] },
+    'Social Science': { CBSE: [['IX Social Science']] }
   },
   X: {
     Mathematics: { CBSE: [['CBSE Mathematics', 'Mathematics']], ICSE: [['ICSE Mathematics', 'Mathematics']], IB: [['IB Mathematics', 'Mathematics']] },
@@ -76,7 +77,8 @@ const NOTES_SOURCES = {
 const REVISION_EXTRA_FILES = {
   IX: [
     { file: 'revision-data-ix.js?v=0fd12941',       probeKey: 'IX Science' },
-    { file: 'revision-data-ix-maths.js?v=c8b5bd84', probeKey: 'IX Mathematics' }
+    { file: 'revision-data-ix-maths.js?v=c8b5bd84', probeKey: 'IX Mathematics' },
+    { file: 'revision-data-ix-sst.js?v=2cc98f5d', probeKey: 'IX Social Science' }
   ],
   XI: [
     { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },
@@ -258,7 +260,7 @@ Object.assign(app, {
 
   _notesGradeCatalog() {
     const BY_GRADE = {
-      IX:  new Set(['Physics', 'Chemistry', 'Biology', 'Mathematics']),
+      IX:  new Set(['Physics', 'Chemistry', 'Biology', 'Mathematics', 'Social Science']),
       X:   new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'English', 'Hindi', 'Comp App & IT']),
       XI:  new Set(['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Comp App & IT', 'Mathematics', 'Political Science', 'Informatics Practices', 'Biology']),
       XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
