@@ -25,9 +25,10 @@ const IX_SCIENCE_SPLIT = {
 // notes tab fed by two separate test subjects); different boards never merge.
 const NOTES_SOURCES = {
   IX: {
-    Physics:   { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]] },
-    Chemistry: { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]] },
-    Biology:   { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]] }
+    Physics:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]] },
+    Chemistry:        { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]] },
+    Biology:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]] },
+    Mathematics:      { CBSE: [['IX Mathematics']] }
   },
   X: {
     Mathematics: { CBSE: [['CBSE Mathematics', 'Mathematics']], ICSE: [['ICSE Mathematics', 'Mathematics']], IB: [['IB Mathematics', 'Mathematics']] },
@@ -74,7 +75,8 @@ const NOTES_SOURCES = {
 // the grade is "ready" once every one of them has landed.
 const REVISION_EXTRA_FILES = {
   IX: [
-    { file: 'revision-data-ix.js?v=0fd12941', probeKey: 'IX Science' }
+    { file: 'revision-data-ix.js?v=0fd12941',       probeKey: 'IX Science' },
+    { file: 'revision-data-ix-maths.js?v=c8b5bd84', probeKey: 'IX Mathematics' }
   ],
   XI: [
     { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },
@@ -256,7 +258,7 @@ Object.assign(app, {
 
   _notesGradeCatalog() {
     const BY_GRADE = {
-      IX:  new Set(['Physics', 'Chemistry', 'Biology']),
+      IX:  new Set(['Physics', 'Chemistry', 'Biology', 'Mathematics']),
       X:   new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Social Science', 'History', 'Geography', 'English', 'Hindi', 'Comp App & IT']),
       XI:  new Set(['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Comp App & IT', 'Mathematics', 'Political Science', 'Informatics Practices', 'Biology']),
       XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
