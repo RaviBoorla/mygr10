@@ -1,0 +1,562 @@
+[
+  {
+    "id": "sa-ip-001",
+    "chapter": "Computer System",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Name the software required to make a computer functional. Write down its two primary functions.",
+    "modelAnswer": "The Operating System is required to make a computer functional — without it, no other software can run. Its two primary functions are: (1) managing other application programs (allocating memory, CPU time, storage, etc.) and (2) providing access and security to the users of the system.",
+    "keyPoints": [
+      "Operating System is essential system software",
+      "Manages other application programs",
+      "Provides access and security to users"
+    ]
+  },
+  {
+    "id": "sa-ip-002",
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the need of RAM? How does it differ from ROM?",
+    "modelAnswer": "RAM (Random Access Memory) is the computer's main/primary memory used to temporarily store data and instructions currently being processed — the CPU interacts directly with it for fast read/write access while a program runs. ROM (Read Only Memory) is non-volatile — its contents, such as the boot loader that starts the operating system, are retained even when power is off, unlike RAM which is volatile and loses its contents on power-off.",
+    "keyPoints": [
+      "RAM stores data/instructions temporarily during processing; ROM stores permanent, rarely-changed content like the boot loader",
+      "RAM is volatile (loses contents on power-off); ROM is non-volatile",
+      "Both are types of primary memory, but serve different purposes"
+    ]
+  },
+  {
+    "id": "sa-ip-003",
+    "chapter": "Computer System",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between proprietary software and freeware. Name two examples of each.",
+    "modelAnswer": "Proprietary software must be purchased from a vendor who holds its copyright, and its source code is not available (e.g. Microsoft Windows, Tally). Freeware is software available for use free of cost, but its source code is also not shared (e.g. Skype, Adobe Reader). The key difference is that proprietary software must be paid for, while freeware is free — but both are closed-source, unlike FOSS.",
+    "keyPoints": [
+      "Proprietary: must be purchased, copyrighted, closed source (e.g. Windows, Tally)",
+      "Freeware: free to use, but closed source (e.g. Skype, Adobe Reader)",
+      "Neither shares source code (unlike FOSS)"
+    ]
+  },
+  {
+    "id": "sa-ip-004",
+    "chapter": "Computer System",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Convert the following into bytes: (a) 2 MB (b) 3.7 GB (c) 1.2 TB",
+    "modelAnswer": "(a) 2 MB = 2 x 1024 x 1024 B = 2,097,152 bytes. (b) 3.7 GB = 3.7 x 1024 x 1024 x 1024 B ~ 3,972,844,749 bytes. (c) 1.2 TB = 1.2 x 1024^4 B ~ 1,319,413,953,331 bytes.",
+    "keyPoints": [
+      "1 KB=1024 B, 1 MB=1024 KB, 1 GB=1024 MB, 1 TB=1024 GB",
+      "Multiply successively by 1024 for each unit step up",
+      "Always convert through the full chain of units, not directly"
+    ]
+  },
+  {
+    "id": "sa-ip-005",
+    "chapter": "Computer System",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What type of memory should be used to (a) store data permanently, (b) execute a running program, (c) store instructions that cannot be overwritten?",
+    "modelAnswer": "(a) Secondary memory (e.g. HDD/SSD) — non-volatile, for permanent storage. (b) Primary memory/RAM — the CPU interacts directly with RAM to execute programs. (c) ROM — non-volatile and used for fixed instructions like the boot loader.",
+    "keyPoints": [
+      "Permanent storage -> secondary memory",
+      "Running/executing programs -> RAM (primary memory)",
+      "Fixed, non-overwritable instructions -> ROM"
+    ]
+  },
+  {
+    "id": "sa-ip-006",
+    "chapter": "Emerging Trends",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What do you understand by the Internet of Things (IoT)?",
+    "modelAnswer": "IoT is a network of devices embedded with hardware and software that lets them communicate (connect and exchange data) with other devices over the same network, without needing constant human intervention — e.g. a smart air conditioner that can be accessed and controlled remotely via a smartphone.",
+    "keyPoints": [
+      "Network of devices with embedded hardware/software",
+      "Devices connect and exchange data autonomously",
+      "Enables remote monitoring/control, e.g. via smartphone"
+    ]
+  },
+  {
+    "id": "sa-ip-007",
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between cloud computing and grid computing with suitable examples.",
+    "modelAnswer": "Cloud computing involves a service provider who rents out computing infrastructure, platform or software to users over the Internet on a pay-per-use basis (e.g. Google Drive for storage). Grid computing is a network of geographically dispersed computing resources (nodes) that voluntarily join together to solve one large computational problem, with no single provider renting resources — instead, independent nodes pool their own memory and processing power.",
+    "keyPoints": [
+      "Cloud: a provider rents infrastructure/platform/software to users",
+      "Grid: independent nodes join to solve one large computational task together",
+      "Cloud is service-oriented; grid is application/problem-specific"
+    ]
+  },
+  {
+    "id": "sa-ip-008",
+    "chapter": "Emerging Trends",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Write a short note on Big Data and its characteristics.",
+    "modelAnswer": "Big Data refers to datasets of such enormous volume and complexity that they cannot be processed using traditional data-processing tools. It is characterised by five properties (the 5 Vs): Volume, Velocity, Variety, Veracity and Value.",
+    "keyPoints": [
+      "Big Data = datasets too large/complex for traditional tools",
+      "5 Vs: Volume, Velocity, Variety, Veracity, Value",
+      "Requires specialised software/methods to process and analyse"
+    ]
+  },
+  {
+    "id": "sa-ip-009",
+    "chapter": "Emerging Trends",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Explain Artificial Intelligence and Machine Learning along with their applications.",
+    "modelAnswer": "Artificial Intelligence (AI) is the field that endeavours to simulate human intelligence in machines so they can learn, make decisions and solve problems with minimal human intervention — e.g. intelligent assistants like Siri or Alexa. Machine Learning (ML) is a subsystem of AI in which algorithms (models) learn from data using statistical techniques, without being explicitly programmed, improving through training and testing — e.g. a model that learns to recognise faces after training on labelled images.",
+    "keyPoints": [
+      "AI: machines simulating human intelligence (learning, decisions, problem-solving)",
+      "ML: a subset of AI where models learn patterns from data",
+      "Applications: virtual assistants (AI), recommendation/prediction systems (ML)"
+    ]
+  },
+  {
+    "id": "sa-ip-010",
+    "chapter": "Emerging Trends",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is on-demand service in cloud computing? How is it provided?",
+    "modelAnswer": "An on-demand service means a user can access and pay for exactly the computing resources (storage, processing power, software) they need, exactly when they need them, rather than investing upfront in fixed hardware/software. It is provided through the cloud's service models -- IaaS, PaaS and SaaS -- where the provider makes resources available over the Internet, typically charged on a pay-per-use basis.",
+    "keyPoints": [
+      "User gets resources exactly when needed, without upfront investment",
+      "Delivered via IaaS, PaaS or SaaS over the Internet",
+      "Usually billed on a pay-per-use basis"
+    ]
+  },
+  {
+    "id": "sa-ip-011",
+    "chapter": "Brief Overview of Python",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Categorise the following as syntax error, logical error or runtime error: a) 25/0  b) num1=25; num2=0; num1/num2",
+    "modelAnswer": "Both (a) and (b) are runtime errors -- division by zero is syntactically valid Python but cannot be executed, so the interpreter raises a ZeroDivisionError while the program is running.",
+    "keyPoints": [
+      "Both are runtime errors (ZeroDivisionError)",
+      "Syntactically correct, but fails during execution",
+      "Different from logical errors, which run but give wrong output"
+    ]
+  },
+  {
+    "id": "sa-ip-012",
+    "chapter": "Brief Overview of Python",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a Python program to calculate the amount payable if money is lent on simple interest, given Principal P, Rate R% and Time T years.",
+    "modelAnswer": "P = float(input('Enter Principal: '))\nR = float(input('Enter Rate: '))\nT = float(input('Enter Time: '))\nSI = (P * R * T) / 100\namount = P + SI\nprint('Simple Interest =', SI)\nprint('Amount payable =', amount)",
+    "keyPoints": [
+      "SI = (P x R x T) / 100",
+      "Amount = Principal + SI",
+      "Take P, R, T as input using input()/float()"
+    ]
+  },
+  {
+    "id": "sa-ip-013",
+    "chapter": "Brief Overview of Python",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "What is the difference between else and elif in an if statement?",
+    "modelAnswer": "'else' is used at the end of an if (or if-elif) chain and executes unconditionally when none of the preceding conditions are true -- it has no condition of its own. 'elif' (else-if) lets you check an additional condition if the previous if/elif was false; you can have multiple elif blocks, but only one else.",
+    "keyPoints": [
+      "else has no condition; runs when nothing above it was true",
+      "elif checks a new condition; you can have several elif blocks",
+      "Only one else is allowed per if chain; many elifs are allowed"
+    ]
+  },
+  {
+    "id": "sa-ip-014",
+    "chapter": "Brief Overview of Python",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Find the output of:\ni = 0; sum = 0\nwhile i < 9:\n    if i % 4 == 0:\n        sum = sum + i\n    i = i + 2\nprint(sum)",
+    "modelAnswer": "i takes the values 0,2,4,6,8 (incrementing by 2, stopping before 9). Of these, i%4==0 is true for i=0,4,8. So sum = 0+4+8 = 12. Output: 12",
+    "keyPoints": [
+      "Loop runs for i = 0,2,4,6,8",
+      "Only add i when i % 4 == 0, i.e. i = 0, 4, 8",
+      "Final sum = 0+4+8 = 12"
+    ]
+  },
+  {
+    "id": "sa-ip-015",
+    "chapter": "Brief Overview of Python",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write a program to find the average of 3 numbers entered by the user.",
+    "modelAnswer": "num1 = float(input('Enter first number: '))\nnum2 = float(input('Enter second number: '))\nnum3 = float(input('Enter third number: '))\navg = (num1+num2+num3)/3\nprint('Average =', avg)",
+    "keyPoints": [
+      "Take 3 numbers as input",
+      "avg = (num1+num2+num3)/3",
+      "Print the result"
+    ]
+  },
+  {
+    "id": "sa-ip-016",
+    "chapter": "Working with Lists and Dictionaries",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between append() and extend() methods of a list.",
+    "modelAnswer": "append() adds its argument as a SINGLE new element at the end of the list -- even if that argument is itself a list, it is added as one nested element. extend() adds EACH element of the argument (an iterable such as a list) individually to the end of the list.",
+    "keyPoints": [
+      "append(x) adds x as one single element (even a whole list becomes one nested item)",
+      "extend(iterable) adds each item of the iterable separately",
+      "list.append([1,2]) -> length +1; list.extend([1,2]) -> length +2"
+    ]
+  },
+  {
+    "id": "sa-ip-017",
+    "chapter": "Working with Lists and Dictionaries",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Consider list1=[6,7,8,9]. What is the difference between: a) list1*2  b) list1*=2  c) list1=list1*2 ?",
+    "modelAnswer": "a) list1*2 creates and returns a NEW list with the elements repeated twice but does NOT change list1 itself, since the result isn't assigned to anything. b) list1*=2 is shorthand for list1=list1*2 -- it updates list1 in place with the repeated version. c) list1=list1*2 has exactly the same effect as (b).",
+    "keyPoints": [
+      "list1*2 alone: computes a new list but doesn't store it anywhere",
+      "list1*=2 and list1=list1*2 are equivalent -- both update list1",
+      "Only (b) and (c) actually change the value of list1"
+    ]
+  },
+  {
+    "id": "sa-ip-018",
+    "chapter": "Working with Lists and Dictionaries",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "What will be the output of: list1=[12,32,65,26,80,10]; sorted(list1); print(list1)",
+    "modelAnswer": "[12, 32, 65, 26, 80, 10] -- unchanged. sorted(list1) returns a NEW sorted list but, since its result isn't assigned to any variable here, list1 itself remains in its original, unsorted order.",
+    "keyPoints": [
+      "sorted() returns a new list and leaves the original list untouched",
+      "sort() (a list method) sorts the list in place",
+      "The result of sorted(list1) is discarded here since it isn't assigned"
+    ]
+  },
+  {
+    "id": "sa-ip-019",
+    "chapter": "Working with Lists and Dictionaries",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Consider stateCapital = {'Assam':'Guwahati','Bihar':'Patna','Maharashtra':'Mumbai','Rajasthan':'Jaipur'}. Find the output of: a) stateCapital.get('Bihar')  b) len(stateCapital)  c) 'Maharashtra' in stateCapital",
+    "modelAnswer": "a) 'Patna' -- get() returns the value for key 'Bihar'. b) 4 -- there are 4 key-value pairs. c) True -- 'Maharashtra' is one of the keys in the dictionary.",
+    "keyPoints": [
+      "get(key) returns the value for that key",
+      "len(dict) returns the number of key-value pairs",
+      "'x in dict' checks membership among the KEYS, not the values"
+    ]
+  },
+  {
+    "id": "sa-ip-020",
+    "chapter": "Working with Lists and Dictionaries",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What will be the elements of myList=[10,20,30,40] after: a) myList.append([50,60])  b) myList.extend([80,90])?",
+    "modelAnswer": "a) After append: myList = [10, 20, 30, 40, [50, 60]] -- the list [50,60] is added as a single nested element. b) Continuing from (a): myList = [10, 20, 30, 40, [50, 60], 80, 90] -- each element of [80,90] is added individually.",
+    "keyPoints": [
+      "append adds its argument as one single element, even if it's a list",
+      "extend adds each element of its argument individually",
+      "The two operations compound if applied one after another"
+    ]
+  },
+  {
+    "id": "sa-ip-021",
+    "chapter": "Understanding Data",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between structured and unstructured data, giving one example of each.",
+    "modelAnswer": "Structured data is organised in a well-defined, fixed tabular format of rows and columns (e.g. a spreadsheet of student marks). Unstructured data has no fixed format or structure (e.g. the content of an email, which can have any number of lines, paragraphs or attachments).",
+    "keyPoints": [
+      "Structured: fixed row-column/tabular format (e.g. inventory table)",
+      "Unstructured: no fixed format (e.g. emails, social media posts, images)",
+      "Structured data is easier to summarise/process with standard statistical tools"
+    ]
+  },
+  {
+    "id": "sa-ip-022",
+    "chapter": "Understanding Data",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Consider the temperature (C) of 7 days of a week: 34, 34, 27, 28, 27, 34, 34. Find the appropriate statistical technique and value for: a) average temperature  b) temperature range  c) standard deviation.",
+    "modelAnswer": "a) Mean (average) = (34+34+27+28+27+34+34)/7 = 218/7 ~ 31.14 C. b) Range = Maximum - Minimum = 34 - 27 = 7 C. c) Standard deviation measures the spread of the 7 values around the mean (~31.14); computed as the square root of the average of the squared deviations of each value from this mean -- relatively small here since most readings (34,34,34,34) cluster near the top.",
+    "keyPoints": [
+      "Mean = sum of values / count = 218/7 ~ 31.14 C",
+      "Range = Max - Min = 34-27 = 7 C",
+      "Standard deviation = square root of (average of squared deviations from the mean)"
+    ]
+  },
+  {
+    "id": "sa-ip-023",
+    "chapter": "Understanding Data",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Which statistical technique should be used to find the popular colour for a car after surveying car owners of a small city?",
+    "modelAnswer": "Mode -- since 'colour' is categorical (non-numeric) data, we need the value that occurs most frequently among the responses, which is exactly what Mode measures.",
+    "keyPoints": [
+      "Mode works for both numeric and non-numeric (categorical) data",
+      "It identifies the most frequently occurring value",
+      "Mean/Median are not meaningful for non-numeric data like colour names"
+    ]
+  },
+  {
+    "id": "sa-ip-024",
+    "chapter": "Understanding Data",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "A principal wants to compare the purchase and sale price of fruit juice and biscuits in the canteen, and also compare their sales volumes. Identify the type of data and an appropriate statistical technique for each comparison.",
+    "modelAnswer": "This involves structured, numeric data (prices and quantities sold), recorded in a table with columns like ItemName, PurchasePrice, SalePrice and QuantitySold. Purchase vs sale price per item can be compared by directly subtracting (sale - purchase) to find the profit margin. Sales volumes across items can be compared using Mean (average daily sales), while Range or Standard Deviation of sales reveal how much sales fluctuate day to day.",
+    "keyPoints": [
+      "Data should be structured/tabular with price and quantity columns",
+      "Profit margin = sale price - purchase price, computed per item",
+      "Mean/Range/Standard Deviation help compare sales volumes and their variability"
+    ]
+  },
+  {
+    "id": "sa-ip-025",
+    "chapter": "Understanding Data",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Identify the type of data being collected/generated in: a) recording a video  b) writing tweets  c) filling an online application form.",
+    "modelAnswer": "a) Recording a video generates unstructured data (no fixed row/column format). b) Writing tweets generates unstructured data (free-form text of varying length). c) Filling an online application form generates structured data (entered into well-defined, fixed fields).",
+    "keyPoints": [
+      "Video recording -> unstructured data",
+      "Tweets/free text -> unstructured data",
+      "Filling a form with fixed fields -> structured data"
+    ]
+  },
+  {
+    "id": "sa-ip-026",
+    "chapter": "Introduction to NumPy",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "What is NumPy? How is it installed?",
+    "modelAnswer": "NumPy ('Numerical Python') is a Python package for data analysis and scientific computing that provides a powerful n-dimensional array object (ndarray) along with functions and tools to create, manipulate and analyse such arrays efficiently. It can be installed using the command `pip install NumPy` from the terminal.",
+    "keyPoints": [
+      "NumPy = Numerical Python, a library for scientific computing",
+      "Provides the powerful ndarray object for fast array operations",
+      "Installed via `pip install NumPy`"
+    ]
+  },
+  {
+    "id": "sa-ip-027",
+    "chapter": "Introduction to NumPy",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is an array and how is it different from a list? What is the name of the built-in array class in NumPy?",
+    "modelAnswer": "An array is a data type that stores an ordered collection of elements, ALL of the SAME data type, stored contiguously in memory, each identified by an integer index. A Python list can hold elements of DIFFERENT data types and is not stored contiguously, making element-wise arithmetic generally slower and less memory-efficient than with arrays. The built-in array class in NumPy is officially called `ndarray`.",
+    "keyPoints": [
+      "Array: same data type for every element, contiguous in memory, supports fast element-wise operations",
+      "List: can mix data types, not contiguous, no native element-wise arithmetic",
+      "NumPy's array class is officially named `ndarray`"
+    ]
+  },
+  {
+    "id": "sa-ip-028",
+    "chapter": "Introduction to NumPy",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "What do you understand by the 'rank' of an ndarray?",
+    "modelAnswer": "The rank of an ndarray is the number of dimensions (axes) it has -- the same value returned by its `.ndim` attribute. A 1-D array has rank 1, while a 2-D array (rows and columns) has rank 2.",
+    "keyPoints": [
+      "Rank = number of dimensions/axes of the array",
+      "Same as the array's .ndim attribute",
+      "1-D array -> rank 1; 2-D array -> rank 2"
+    ]
+  },
+  {
+    "id": "sa-ip-029",
+    "chapter": "Introduction to NumPy",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Write the NumPy commands to: a) find the shape of an array called myarray1  b) reshape an array called ones (currently 2 rows x 5 columns) to have all 10 elements in a single row  c) reverse an array called vowels.",
+    "modelAnswer": "a) myarray1.shape\nb) ones.reshape(1,10)\nc) vowels[::-1]",
+    "keyPoints": [
+      "shape attribute (no parentheses) gives dimensions",
+      "reshape(rows, cols) must keep the same total element count (2x5=10 -> 1x10)",
+      "Negative step slicing [::-1] reverses an array, same as for lists"
+    ]
+  },
+  {
+    "id": "sa-ip-030",
+    "chapter": "Introduction to NumPy",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between np.loadtxt() and np.genfromtxt().",
+    "modelAnswer": "Both functions load array data from a text/CSV file, but np.genfromtxt() can additionally handle MISSING values -- it automatically converts missing entries or non-numeric strings in numeric columns to `nan` (or a value you specify via `filling_values`), whereas np.loadtxt() expects every row to be complete and valid.",
+    "keyPoints": [
+      "Both load array data from text/CSV files",
+      "genfromtxt() can handle missing values (converts them to nan or a chosen fill value)",
+      "loadtxt() requires complete, clean data in every row"
+    ]
+  },
+  {
+    "id": "sa-ip-031",
+    "chapter": "Database Concepts",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Why are foreign keys allowed to have NULL values? Explain with an example.",
+    "modelAnswer": "A foreign key is allowed to be NULL when the relationship it represents is optional, i.e. a row might legitimately have no related row in the referenced table. For example, in the STUDENT table, GUID (foreign key referencing GUARDIAN) can be NULL for a student whose guardian details have not yet been recorded.",
+    "keyPoints": [
+      "A foreign key may be NULL when the relationship is optional",
+      "It must NOT be part of its own table's primary key to take NULL",
+      "Example: a STUDENT's GUID can be NULL if guardian details are pending"
+    ]
+  },
+  {
+    "id": "sa-ip-032",
+    "chapter": "Database Concepts",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between: a) Database state and database schema  b) Primary key and foreign key.",
+    "modelAnswer": "a) Database schema is the fixed DESIGN/structure of the database (table names, columns, data types, relationships). Database state (instance) is the actual DATA held at a given moment, which changes constantly. b) A primary key uniquely identifies each row within its own table and cannot be NULL. A foreign key refers to the primary key of ANOTHER table, linking the two, and it CAN be NULL.",
+    "keyPoints": [
+      "Schema = fixed design/structure; state (instance) = the current actual data",
+      "Primary key uniquely identifies rows in its own table, never NULL",
+      "Foreign key links to another table's primary key, and can be NULL"
+    ]
+  },
+  {
+    "id": "sa-ip-033",
+    "chapter": "Database Concepts",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between degree and cardinality of a relation.",
+    "modelAnswer": "Degree is the number of ATTRIBUTES (columns) in a relation -- it stays fixed once the table is designed. Cardinality is the number of TUPLES (rows) in a relation -- it changes as records are inserted or deleted.",
+    "keyPoints": [
+      "Degree = number of columns (attributes)",
+      "Cardinality = number of rows (tuples)",
+      "Degree is fixed by design; cardinality changes with data"
+    ]
+  },
+  {
+    "id": "sa-ip-034",
+    "chapter": "Database Concepts",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Compared to a file system, how does a DBMS avoid redundancy in data?",
+    "modelAnswer": "In a plain file system, the same information (e.g. a guardian's name/phone) may be repeated across multiple separate files, since files cannot be linked. A DBMS avoids this by organising data into separate, related tables, each storing one kind of information exactly once, linked via keys (e.g. a GUARDIAN table storing guardian details once, linked to STUDENT via a foreign key GUID), with related data joined through queries instead of duplicated.",
+    "keyPoints": [
+      "File systems repeat the same data across multiple unlinked files",
+      "A DBMS splits data into separate related tables, storing each fact once",
+      "Tables are linked via keys (primary/foreign), and joined via queries when needed"
+    ]
+  },
+  {
+    "id": "sa-ip-035",
+    "chapter": "Database Concepts",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Name the term for: a) collection of logically related records  b) a special value used when an attribute's value is unknown/not applicable.",
+    "modelAnswer": "a) Database (a collection of logically related tables/records). b) NULL -- used to represent missing, unknown or not-applicable data for an attribute.",
+    "keyPoints": [
+      "A database is a collection of logically related data/tables",
+      "NULL represents an unknown or not-applicable value",
+      "NULL is different from zero or an empty string"
+    ]
+  },
+  {
+    "id": "sa-ip-036",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Write the SQL statements to create a database named 'School' and then select it for use.",
+    "modelAnswer": "CREATE DATABASE School;\nUSE School;",
+    "keyPoints": [
+      "CREATE DATABASE statement creates a new, empty database",
+      "USE statement makes a database the 'active' one for subsequent statements",
+      "Every SQL statement should end with a semicolon (;)"
+    ]
+  },
+  {
+    "id": "sa-ip-037",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "Write the CREATE TABLE statement for a table STUDENT with RollNumber (integer, primary key), SName (variable-length string up to 20 characters, not null), and GUID (12-character fixed string).",
+    "modelAnswer": "CREATE TABLE STUDENT(\n  RollNumber INT,\n  SName VARCHAR(20) NOT NULL,\n  GUID CHAR(12),\n  PRIMARY KEY (RollNumber)\n);",
+    "keyPoints": [
+      "CREATE TABLE tablename(attribute datatype constraint, ...)",
+      "VARCHAR(n) for variable-length strings, CHAR(n) for fixed-length",
+      "PRIMARY KEY(column) marks the uniquely-identifying column"
+    ]
+  },
+  {
+    "id": "sa-ip-038",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "marks": 2,
+    "difficulty": "hard",
+    "source": "NCERT Textbook",
+    "text": "Differentiate between the DELETE and DROP SQL statements.",
+    "modelAnswer": "DELETE FROM tablename WHERE condition removes specific ROWS from a table, while the table's structure remains intact. DROP TABLE tablename removes the ENTIRE table -- both its data AND structure -- permanently from the database.",
+    "keyPoints": [
+      "DELETE removes rows (data), the table structure stays",
+      "DROP removes the whole table (structure + data), permanently",
+      "DROP is far more destructive -- use with great caution"
+    ]
+  },
+  {
+    "id": "sa-ip-039",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "marks": 3,
+    "difficulty": "easy",
+    "source": "NCERT Textbook",
+    "text": "Write an SQL query to display the name and salary of all employees from the EMPLOYEE table who work in department 'D01' and earn more than 30000, ordered by salary in descending order.",
+    "modelAnswer": "SELECT Ename, Salary\nFROM EMPLOYEE\nWHERE DeptId = 'D01' AND Salary > 30000\nORDER BY Salary DESC;",
+    "keyPoints": [
+      "WHERE combines conditions with AND (both must be true)",
+      "String values like 'D01' must be in single quotes",
+      "ORDER BY ... DESC sorts the result in descending order"
+    ]
+  },
+  {
+    "id": "sa-ip-040",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "NCERT Textbook",
+    "text": "What is the purpose of the DISTINCT keyword in a SELECT query? Give an example.",
+    "modelAnswer": "DISTINCT removes duplicate values from the query result, returning only unique rows/values. For example, `SELECT DISTINCT DeptId FROM EMPLOYEE;` lists each department ID only once, instead of repeating it for every matching employee.",
+    "keyPoints": [
+      "DISTINCT eliminates duplicate rows/values from the output",
+      "Especially useful when a column has many repeated values",
+      "Example: SELECT DISTINCT DeptId FROM EMPLOYEE;"
+    ]
+  }
+]

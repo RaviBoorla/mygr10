@@ -1,0 +1,606 @@
+[
+  {
+    "id": "sol-ip-01-01",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Name the software required to make a computer functional. Write down its two primary functions.",
+    "solution": "The Operating System is required to make a computer functional -- without it, no other software can run. Its two primary functions are: (1) managing other application programs (allocating memory, CPU time, storage, etc.) and (2) providing access and security to the users of the system."
+  },
+  {
+    "id": "sol-ip-01-02",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What is the need of RAM? How does it differ from ROM?",
+    "solution": "RAM is the computer's main/primary memory, used to temporarily store data and instructions currently being processed -- the CPU interacts directly with it for fast read/write access while a program runs. ROM is non-volatile -- its contents (such as the boot loader) are retained even when power is off, unlike RAM, which is volatile and loses its contents on power-off."
+  },
+  {
+    "id": "sol-ip-01-03",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What is the need for secondary memory?",
+    "solution": "Secondary memory is needed because primary memory (RAM) is volatile and limited in capacity -- its contents are lost on power-off and it cannot permanently store large amounts of data. Secondary memory (HDD, SSD, CD/DVD, memory cards, etc.) is non-volatile with much larger storage capacity, allowing data to be stored permanently, though it is slower and cannot be accessed directly by the CPU -- its contents must first be loaded into RAM."
+  },
+  {
+    "id": "sol-ip-01-04",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Differentiate between proprietary software and freeware software. Name two software of each type.",
+    "solution": "Proprietary software must be purchased from a vendor who holds its copyright, and its source code is not available (e.g. Microsoft Windows, Tally). Freeware is available for use free of cost, but its source code is also not shared (e.g. Skype, Adobe Reader)."
+  },
+  {
+    "id": "sol-ip-01-05",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Mention any browsers used for browsing the internet.",
+    "solution": "Examples of web browsers used for browsing the Internet include Mozilla Firefox, Google Chrome, Microsoft Edge, Safari and Opera."
+  },
+  {
+    "id": "sol-ip-01-06",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Convert the following into bytes: a) 2 MB  b) 3.7 GB  c) 1.2 TB",
+    "solution": "a) 2 MB = 2 x 1024 x 1024 B = 2,097,152 bytes. b) 3.7 GB = 3.7 x 1024 x 1024 x 1024 B ~ 3,972,844,749 bytes. c) 1.2 TB = 1.2 x 1024^4 B ~ 1,319,413,953,331 bytes.",
+    "steps": [
+      "1 KB = 1024 B, 1 MB = 1024 KB, 1 GB = 1024 MB, 1 TB = 1024 GB",
+      "2 MB = 2 x 1024 x 1024 B = 2,097,152 B",
+      "3.7 GB = 3.7 x 1024^3 B ~ 3,972,844,749 B",
+      "1.2 TB = 1.2 x 1024^4 B ~ 1,319,413,953,331 B"
+    ]
+  },
+  {
+    "id": "sol-ip-01-07",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "What is the security threat involved when we throw away electronic gadgets that are non-functional?",
+    "solution": "Even when a storage device is thrown away without being properly erased, deleted data is usually not actually removed -- only its address entry is marked free while the actual bits remain until overwritten. If such discarded devices fall into the hands of unauthorised persons, they can use data-recovery tools to retrieve this 'deleted' data, posing a serious threat to data confidentiality. Proper tools to securely delete or shred data should be used before disposing of any old or faulty storage device."
+  },
+  {
+    "id": "sol-ip-01-08",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q11",
+    "question": "Write down the type of memory needed to do the following: a) To store data permanently  b) To execute the program  c) To store the instructions which cannot be overwritten.",
+    "solution": "a) Secondary memory (e.g. HDD/SSD) -- non-volatile, for permanent storage. b) Primary memory/RAM -- the CPU interacts directly with RAM to execute programs. c) ROM -- non-volatile, used for fixed instructions like the boot loader."
+  },
+  {
+    "id": "sol-ip-01-09",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Draw the block diagram of a computer system. Briefly write about the functionality of each component.",
+    "solution": "A computer system's block diagram (Von Neumann model) has four main components: (1) Input Device -- accepts data/instructions and converts it to digital form; (2) CPU -- made up of the Control Unit (CU), which interprets instructions and controls sequential execution, and the Arithmetic Logic Unit (ALU), which performs arithmetic/logical operations; (3) Primary Memory -- stores data/instructions being processed (RAM) and permanent startup instructions (ROM); (4) Output Device -- converts processed digital information into human-understandable form. Data flows: Input Device -> CPU (CU + ALU + Memory) -> Output Device.",
+    "steps": [
+      "Input Device: accepts and digitises data/instructions",
+      "CPU (CU + ALU): interprets instructions, controls execution, performs arithmetic/logic",
+      "Primary Memory: stores data/instructions being used",
+      "Output Device: converts processed data back into human-readable form"
+    ]
+  },
+  {
+    "id": "sol-ip-01-10",
+    "chapter": "Computer System",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Name the input/output device used to do the following: a) To output audio  b) To enter textual data  c) To make hard copy of a text file  d) To display the data/information  e) To enter audio-based command  f) To build 3D models  g) To assist a visually impaired individual in entering data",
+    "solution": "a) Speaker/headphone. b) Keyboard. c) Printer. d) Monitor/display screen. e) Microphone (e.g. via voice input/Google voice search). f) 3D printer. g) Braille keyboard."
+  },
+  {
+    "id": "sol-ip-02-01",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "List some of the cloud-based services that you are using at present.",
+    "solution": "Examples include storing photos/files as backup using Google Drive, Dropbox or OneDrive (storage as a service), editing documents online using Google Docs or Microsoft Office 365 (SaaS), and hosting email on Gmail/Outlook servers."
+  },
+  {
+    "id": "sol-ip-02-02",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What do you understand by the Internet of Things? List some of its potential applications.",
+    "solution": "IoT is a network of devices embedded with hardware and software that lets them communicate (connect and exchange data) with other devices over a network, without needing constant human intervention. Potential applications include smart homes (remotely controlled appliances), smart cities (traffic/waste/utility management), wearable health monitors, and connected vehicles."
+  },
+  {
+    "id": "sol-ip-02-03",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q3a",
+    "question": "Write a short note on Cloud computing.",
+    "solution": "Cloud computing is an emerging trend where computer-based services (software, hardware, databases, storage) are delivered over the Internet by cloud service providers, usually charged on a pay-per-use basis. It lets users run applications or process large amounts of data without owning the required infrastructure themselves, through three standard service models: IaaS, PaaS and SaaS."
+  },
+  {
+    "id": "sol-ip-02-04",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q3b",
+    "question": "Write a short note on Big data and its characteristics.",
+    "solution": "Big Data refers to datasets of such enormous volume and complexity that they cannot be processed using traditional data-processing tools. It is characterised by five properties (the 5 Vs): Volume, Velocity, Variety, Veracity and Value."
+  },
+  {
+    "id": "sol-ip-02-05",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Explain the following along with their applications: a) Artificial Intelligence  b) Machine Learning",
+    "solution": "a) Artificial Intelligence (AI) endeavours to simulate human intelligence in machines so they can learn, make decisions and solve problems with minimal human intervention -- e.g. intelligent assistants like Siri or Alexa. b) Machine Learning (ML) is a subsystem of AI in which algorithms (models) learn from data using statistical techniques, without being explicitly programmed, improving through training and testing -- e.g. recommendation systems or face-recognition models."
+  },
+  {
+    "id": "sol-ip-02-06",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Differentiate between cloud computing and grid computing with suitable examples.",
+    "solution": "Cloud computing involves a service provider who rents out computing infrastructure, platform or software to users over the Internet on a pay-per-use basis (e.g. Google Drive). Grid computing is a network of geographically dispersed computing resources (nodes) that voluntarily join together to solve one large computational problem, with no single renting provider (e.g. distributed scientific computing projects)."
+  },
+  {
+    "id": "sol-ip-02-07",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Justify the following statement: 'Storage of data is cost effective and time saving in cloud computing.'",
+    "solution": "Cloud storage is cost-effective because users pay only for the storage they actually use (pay-per-use), avoiding the upfront cost of purchasing and maintaining physical hardware, backup systems and IT staff. It is time-saving because data can be uploaded/accessed instantly from anywhere with an Internet connection, backups happen automatically, and the provider handles maintenance, scaling and redundancy."
+  },
+  {
+    "id": "sol-ip-02-08",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "What is on-demand service? How is it provided in cloud computing?",
+    "solution": "An on-demand service means a user can access and pay for exactly the computing resources they need, exactly when they need them, rather than investing upfront. It is provided through the cloud's service models -- Infrastructure as a Service (IaaS), Platform as a Service (PaaS) and Software as a Service (SaaS) -- delivered over the Internet, typically on a pay-per-use basis."
+  },
+  {
+    "id": "sol-ip-02-09",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "A company looking for a provider offering basic services such as virtual server provisioning and on-demand storage that can be combined into a platform for deploying/running customised applications -- which cloud computing model fits these requirements? a) Platform as a Service  b) Software as a Service  c) Infrastructure as a Service",
+    "solution": "c) Infrastructure as a Service (IaaS) -- the company needs raw virtual server provisioning and storage (infrastructure-level resources) which it can then use to build and deploy its own customised platform/applications, exactly what IaaS provides."
+  },
+  {
+    "id": "sol-ip-02-10",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Which is not one of the features of IoT devices? a) Remotely controllable  b) Programmable  c) Can turn themselves off if necessary  d) All of the above",
+    "solution": "c) 'Can turn themselves off if necessary' is not a defining feature of IoT devices. IoT devices are characterised by being remotely controllable and programmable, communicating over a network -- spontaneous self-shutdown is not an inherent IoT characteristic."
+  },
+  {
+    "id": "sol-ip-02-11",
+    "chapter": "Emerging Trends",
+    "exercise": "Exercises",
+    "number": "Q14",
+    "question": "How are IoT and WoT related?",
+    "solution": "IoT connects physical devices to the Internet so they can communicate and exchange data, typically requiring a separate app for each type of device. WoT builds on top of IoT using standard web technologies/services to provide one common interface through which all these connected 'things' can be accessed and made to communicate with each other, making IoT more usable and unified."
+  },
+  {
+    "id": "sol-ip-03-01",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Which of the following identifier names are invalid and why? a) Serial_no.  b) 1st_Room  c) Hundred$  d) Total Marks  e) Total_Marks  f) total-Marks  g) _Percentage  h) True",
+    "solution": "Invalid: a) Serial_no. -- contains a period (.), not allowed. b) 1st_Room -- starts with a digit. c) Hundred$ -- contains the special symbol $. d) Total Marks -- contains a space. f) total-Marks -- contains a hyphen (-), a special symbol. h) True -- is a reserved Python keyword. Valid: e) Total_Marks, g) _Percentage (identifiers may start with an underscore)."
+  },
+  {
+    "id": "sol-ip-03-02",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Write the corresponding Python assignment statements: a) Assign 10 to length and 20 to breadth  b) Assign the average of length and breadth to sum  c) Assign a list of 'Paper','Gel Pen','Eraser' to stationery  d) Assign the strings 'Mohandas','Karamchand','Gandhi' to first, middle, last  e) Assign the concatenated full name (with spaces) to fullname",
+    "solution": "a) length = 10; breadth = 20\nb) sum = (length + breadth) / 2\nc) stationery = ['Paper', 'Gel Pen', 'Eraser']\nd) first = 'Mohandas'; middle = 'Karamchand'; last = 'Gandhi'\ne) fullname = first + ' ' + middle + ' ' + last",
+    "steps": [
+      "Assignment uses =, e.g. var = value",
+      "A list is written with square brackets and comma-separated items",
+      "String concatenation with + needs an explicit ' ' to add spaces between parts"
+    ]
+  },
+  {
+    "id": "sol-ip-03-03",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Which data type will be used to represent the following data values and why? a) Number of months in a year  b) Resident of Delhi or not  c) Mobile number  d) Pocket money  e) Volume of a sphere  f) Perimeter of a square  g) Name of the student  h) Address of the student",
+    "solution": "a) int (a whole, fixed count). b) bool (True/False). c) string (no arithmetic performed on it, may have leading zeros). d) float or int (a numeric amount). e) float (involves a decimal/pi-based calculation). f) int or float (a numeric measurement). g) string. h) string."
+  },
+  {
+    "id": "sol-ip-03-04",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Give the output of the following when num1=4, num2=3, num3=2: a) num1 += num2+num3  b) print(num1)  c) num1 = num1**(num2+num3)  d) print(num1)  f) num1='5'+'5'  g) print(num1)  h) print(4.00/(2.0+2.0))  i) num1=2+9*((3*12)-8)/10  j) print(num1)  k) num1=float(10)  l) print(num1)  o) print(10 != 9 and 20 >= 20)  p) print(5 % 10 + 10 < 50 and 29 <= 29)",
+    "solution": "a-b) num1 += num2+num3 -> num1 = 4+3+2 = 9, so print(num1) gives 9. c-d) num1 = num1**(num2+num3) = 9**5 = 59049, so print(num1) gives 59049. f-g) num1 = '5'+'5' -> '55' (string concatenation, not addition), so print(num1) gives 55. h) print(4.00/(2.0+2.0)) gives 1.0. i-j) num1 = 2+9*((3*12)-8)/10 = 2+9*28/10 = 2+25.2 = 27.2, so print(num1) gives 27.2. k-l) num1=float(10) -> 10.0, so print(num1) gives 10.0. o) print(10 != 9 and 20 >= 20) -> True and True -> True. p) print(5 % 10 + 10 < 50 and 29 <= 29) -> (5+10=15 < 50 is True) and (29<=29 is True) -> True.",
+    "steps": [
+      "+= reassigns a new value by adding to the existing one",
+      "** is exponentiation; string + string concatenates rather than adds",
+      "Operator precedence: () then * / // % then + -, left to right within a level"
+    ]
+  },
+  {
+    "id": "sol-ip-03-05",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Categorise as syntax error, logical error or runtime error: a) 25/0  b) num1=25; num2=0; num1/num2",
+    "solution": "Both are runtime errors -- division by zero is syntactically valid Python code but cannot be carried out when the program actually runs, raising a ZeroDivisionError at that point."
+  },
+  {
+    "id": "sol-ip-03-06",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q11a",
+    "question": "Find the output of: for i in range(20,30,2): print(i)",
+    "solution": "20, 22, 24, 26, 28 -- each printed on its own line (start=20, stop=30 is excluded, step=2).",
+    "steps": [
+      "range(20,30,2) generates 20,22,24,26,28",
+      "stop value 30 itself is excluded",
+      "Each value is printed on a separate line inside the loop"
+    ]
+  },
+  {
+    "id": "sol-ip-03-07",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q11b",
+    "question": "Find the output of: country='INDIA'\nfor i in country:\n    print(i)",
+    "solution": "Prints each character of the string on its own line: I, N, D, I, A."
+  },
+  {
+    "id": "sol-ip-03-08",
+    "chapter": "Brief Overview of Python",
+    "exercise": "Exercises",
+    "number": "Q11c",
+    "question": "Find the output of: i = 0; sum = 0\nwhile i < 9:\n    if i % 4 == 0:\n        sum = sum + i\n    i = i + 2\nprint(sum)",
+    "solution": "i takes the values 0,2,4,6,8. Of these, i%4==0 is true for i=0,4,8. So sum = 0+4+8 = 12. Output: 12",
+    "steps": [
+      "Loop runs for i = 0,2,4,6,8 (increments by 2, stops before 9)",
+      "Condition i%4==0 is true only for i=0,4,8",
+      "Final sum = 0+4+8 = 12"
+    ]
+  },
+  {
+    "id": "sol-ip-04-01",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q1a",
+    "question": "list1 = [12,32,65,26,80,10]\nlist1.sort()\nprint(list1)",
+    "solution": "[10, 12, 26, 32, 65, 80] -- sort() rearranges list1 in place in ascending order."
+  },
+  {
+    "id": "sol-ip-04-02",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q1c",
+    "question": "list1 = [1,2,3,4,5,6,7,8,9,10]\nlist1[::-2]\nlist1[:3] + list1[3:]",
+    "solution": "list1[::-2] (evaluated but not stored, so has no visible effect on list1) would give [10, 8, 6, 4, 2]. list1[:3]+list1[3:] gives [1,2,3]+[4,5,6,7,8,9,10] = [1,2,3,4,5,6,7,8,9,10] -- slicing a list at any point and concatenating the two halves back together always reproduces the original list."
+  },
+  {
+    "id": "sol-ip-04-03",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Consider myList = [10,20,30,40]. What will be the elements of myList after: a) myList.append([50,60])  b) myList.extend([80,90])?",
+    "solution": "a) myList = [10, 20, 30, 40, [50, 60]] -- the list [50,60] is added as a single nested element. b) Continuing from (a): myList = [10, 20, 30, 40, [50, 60], 80, 90] -- each element of [80,90] is added individually."
+  },
+  {
+    "id": "sol-ip-04-04",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q4a",
+    "question": "myList = [1,2,3,4,5,6,7,8,9,10]\ndel myList[3:]\nprint(myList)",
+    "solution": "[1, 2, 3] -- deletes everything from index 3 onward, keeping only the first three elements."
+  },
+  {
+    "id": "sol-ip-04-05",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q4b",
+    "question": "myList = [1,2,3,4,5,6,7,8,9,10]\ndel myList[:5]\nprint(myList)",
+    "solution": "[6, 7, 8, 9, 10] -- deletes everything up to (not including) index 5."
+  },
+  {
+    "id": "sol-ip-04-06",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q4c",
+    "question": "myList = [1,2,3,4,5,6,7,8,9,10]\ndel myList[::2]\nprint(myList)",
+    "solution": "[2, 4, 6, 8, 10] -- deletes every element at an even index (0,2,4,6,8), leaving only the elements originally at odd indices."
+  },
+  {
+    "id": "sol-ip-04-07",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Differentiate between append() and extend() methods of list.",
+    "solution": "append(x) adds x as ONE single element at the end of the list, even if x is itself a list (it becomes a nested element). extend(iterable) adds EACH element of the given iterable individually to the end of the list, so the list grows by the number of items in the iterable."
+  },
+  {
+    "id": "sol-ip-04-08",
+    "chapter": "Working with Lists and Dictionaries",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Consider stateCapital={'Assam':'Guwahati','Bihar':'Patna','Maharashtra':'Mumbai','Rajasthan':'Jaipur'}. Find the output of: a) stateCapital.get('Bihar')  b) stateCapital.keys()  c) stateCapital.values()  d) stateCapital.items()  e) len(stateCapital)  f) 'Maharashtra' in stateCapital  g) stateCapital.get('Assam')  h) del stateCapital['Assam']; print(stateCapital)",
+    "solution": "a) 'Patna'. b) dict_keys(['Assam','Bihar','Maharashtra','Rajasthan']). c) dict_values(['Guwahati','Patna','Mumbai','Jaipur']). d) dict_items([('Assam','Guwahati'),('Bihar','Patna'),('Maharashtra','Mumbai'),('Rajasthan','Jaipur')]). e) 4. f) True. g) 'Guwahati'. h) After deleting 'Assam', the dictionary becomes {'Bihar': 'Patna', 'Maharashtra': 'Mumbai', 'Rajasthan': 'Jaipur'}."
+  },
+  {
+    "id": "sol-ip-05-01",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Identify the type of data being collected/generated in: a) Recording a video  b) Marking attendance by teacher  c) Writing tweets  d) Filling an application form online",
+    "solution": "a) Unstructured (video/audio has no fixed row-column structure). b) Structured (attendance is recorded against fixed fields: RollNo, Name, Status). c) Unstructured (free-form text of varying length). d) Structured (form fields are fixed and well-defined)."
+  },
+  {
+    "id": "sol-ip-05-02",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Consider the temperature (C) of 7 days of a week: 34, 34, 27, 28, 27, 34, 34. Identify the appropriate statistical technique to calculate: a) average temperature  b) temperature Range  c) standard deviation.",
+    "solution": "a) Mean = (34+34+27+28+27+34+34)/7 = 218/7 ~ 31.14 C. b) Range = Max - Min = 34-27 = 7 C. c) Standard deviation = square root of the average of the squared deviations of each value from the mean (~31.14 C); it will be a moderate value since most readings cluster at 34 with a few lower outliers.",
+    "steps": [
+      "Mean = sum of values / count = 218/7 ~ 31.14 C",
+      "Range = Max - Min = 34-27 = 7 C",
+      "Standard deviation uses every value's deviation from the mean, not just the two extremes"
+    ]
+  },
+  {
+    "id": "sol-ip-05-03",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "a) Teacher wants to compare division secured by students in Class XII A and Class XII B, where each class strength is same. Which statistical technique and why?  b) Teacher has conducted five unit tests for that class from July to November and wants to compare class performance in these five months. Which technique?",
+    "solution": "a) Mean -- since class strengths are equal, comparing the average (mean) marks/division of each class gives a fair, direct overall comparison. b) Compare the Mean of each month's test scores (to track the performance trend over time), along with Standard Deviation (to see how consistent performance was within each month)."
+  },
+  {
+    "id": "sol-ip-05-04",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Annual day: felicitate parents who are alumni of the school. a) Which statistical technique to find the number of students whose BOTH parents are alumni?  b) How varied are the ages of these parents?",
+    "solution": "a) This is a count/frequency of a categorical (Yes/No) condition -- a simple tally/count of students meeting the 'both parents alumni' criterion is used, which is the basis for categorical (Mode-style) summarisation. b) Standard Deviation (or Range) of the parents' ages -- Standard Deviation is preferred since it considers every age value, giving a fuller picture of how spread out the ages are."
+  },
+  {
+    "id": "sol-ip-05-05",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Teacher is looking for an anchor in a class of 42 students, based on singing, writing and monitoring skill. a) Which mode of data collection?  b) How would you represent the skill of students as data?",
+    "solution": "a) A survey/observation-based data collection, e.g. a rating form or short audition/trial where each student is scored on each skill. b) Each skill could be represented as a numeric rating (e.g. 1-10) for every student across the three skills, stored in a structured table with columns StudentName, SingingScore, WritingScore, MonitoringScore -- enabling the teacher to compute an average/total score per student."
+  },
+  {
+    "id": "sol-ip-05-06",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Differentiate between structured and unstructured data giving one example.",
+    "solution": "Structured data is organised in a well-defined, fixed tabular (row/column) format, e.g. a spreadsheet of student marks. Unstructured data has no fixed format, e.g. the content of an email or a social media post, which can vary in length and structure."
+  },
+  {
+    "id": "sol-ip-05-07",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "A school of 500 students wants to identify merit-cum-means scholarship beneficiaries: >75% for two consecutive years, family income <5 lakh/year. Briefly describe the data processing steps.",
+    "solution": "Step 1 (Input/Data Collection): gather each student's marks/percentage for the last two academic years and their family's annual income -- structured data with fields StudentID, Year1%, Year2%, FamilyIncome. Step 2 (Processing): for each student, check whether Year1% > 75 AND Year2% > 75 AND FamilyIncome < 500000, filtering/classifying students who satisfy both conditions. Step 3 (Output): generate a report/list of the names of all qualifying students as the final list of scholarship beneficiaries.",
+    "steps": [
+      "Input: collect marks for two years and family income per student",
+      "Processing: filter students meeting BOTH the percentage and income conditions",
+      "Output: generate the final beneficiary list/report"
+    ]
+  },
+  {
+    "id": "sol-ip-05-08",
+    "chapter": "Understanding Data",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "A bank 'xyz' wants to know its popularity among residents of city 'ABC' based on number of bank accounts per family and average monthly balance. Briefly describe the steps to be taken for collecting data and what results can be checked.",
+    "solution": "Data collection: survey/census of families in the city recording how many accounts with this bank each family holds and the average monthly balance maintained, along with identifying details like FamilyID/Locality. Processing/results: computing the Mean number of accounts per family and the Mean average balance across all surveyed families gives an overall picture of the bank's popularity and usage; comparing these means across different localities would further reveal where the bank is more/less popular."
+  },
+  {
+    "id": "sol-ip-06-01",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "What is an array and how is it different from a list? What is the name of the built-in array class in NumPy?",
+    "solution": "An array is a data type storing an ordered collection of elements, ALL of the same data type, stored contiguously in memory, each identified by an index. A list can hold elements of different data types and is not stored contiguously, making it less efficient for numeric operations. NumPy's built-in array class is officially called `ndarray`."
+  },
+  {
+    "id": "sol-ip-06-02",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "What do you understand by rank of an ndarray?",
+    "solution": "The rank of an ndarray is the number of dimensions (axes) it has -- the same value returned by its `.ndim` attribute. A 1-D array has rank 1; a 2-D array has rank 2."
+  },
+  {
+    "id": "sol-ip-06-03",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Create the following NumPy arrays: a) a 1-D array 'zeros' of 10 elements all 0  b) a 1-D array 'vowels' with 'a','e','i','o','u'  c) a 2-D array 'ones' of 2 rows, 5 columns, all 1, dtype int  d) a 2-D array 'myarray1' (3x3) with nested lists [[2.7,-2,-19],[0,3.4,99.9],[10.6,0,13]]",
+    "solution": "a) zeros = np.zeros(10)\nb) vowels = np.array(['a','e','i','o','u'])\nc) ones = np.ones((2,5), dtype=int)\nd) myarray1 = np.array([[2.7,-2,-19],[0,3.4,99.9],[10.6,0,13]])",
+    "steps": [
+      "np.zeros(n) for a 1-D zero-filled array",
+      "np.array([...]) converts a Python list/nested list into a NumPy array",
+      "dtype=int forces integer elements where needed"
+    ]
+  },
+  {
+    "id": "sol-ip-06-04",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Using arrays created above, write NumPy commands for: a) find dimensions, shape, size, dtype, itemsize of zeros, vowels, ones, myarray1  b) reshape ones to a single row  c) display 2nd and 3rd element of vowels  d) display all elements in 2nd and 3rd row of myarray1",
+    "solution": "a) Use `.ndim`, `.shape`, `.size`, `.dtype`, `.itemsize` on each array (e.g. `zeros.ndim` -> 1, `zeros.shape` -> (10,), `ones.shape` -> (2,5)). b) ones.reshape(1,10). c) vowels[1:3] -> array(['e','i']). d) myarray1[1:3,:] -> array([[0.,3.4,99.9],[10.6,0.,13.]])."
+  },
+  {
+    "id": "sol-ip-06-05",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Using the arrays from Q4, write NumPy commands for: a) divide all elements of ones by 3  b) add myarray1 and myarray2.",
+    "solution": "a) ones / 3\nb) myarray1 + myarray2 (both arrays must have the same shape for element-wise addition to work)."
+  },
+  {
+    "id": "sol-ip-06-06",
+    "chapter": "Introduction to NumPy",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Using myarray4 (14 rows, 3 columns), find: a) sum of all elements  b) sum row-wise  c) sum column-wise.",
+    "solution": "a) myarray4.sum() -- total of every element. b) myarray4.sum(axis=1) -- one sum per row (14 values). c) myarray4.sum(axis=0) -- one sum per column (3 values).",
+    "steps": [
+      "sum() with no axis argument totals every element",
+      "axis=1 gives one sum per row",
+      "axis=0 gives one sum per column"
+    ]
+  },
+  {
+    "id": "sol-ip-07-01",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Give the terms for each of the following: a) Collection of logically related records  b) DBMS file describing data stored in the database  c) Attribute that can uniquely identify tuples  d) Special value for unknown data  e) Attribute that uniquely identifies tuples but is not the primary key  f) Software to create, manipulate and maintain a relational database.",
+    "solution": "a) Database. b) Meta-data (database catalog/dictionary). c) Candidate key. d) NULL. e) Alternate key. f) DBMS (specifically, an RDBMS for a relational database)."
+  },
+  {
+    "id": "sol-ip-07-02",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Why are foreign keys allowed to have NULL values? Explain with an example.",
+    "solution": "A foreign key can be NULL when the relationship it represents is optional, i.e. a row might legitimately have no related row in the referenced table. For example, a STUDENT's GUID (foreign key referencing GUARDIAN) can be NULL for a student whose guardian details have not yet been recorded."
+  },
+  {
+    "id": "sol-ip-07-03",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Differentiate between: a) Database state and database schema  b) Primary key and foreign key  c) Degree and cardinality of a relation.",
+    "solution": "a) Schema is the fixed design/structure of the database; state (instance) is the actual data at a given moment. b) A primary key uniquely identifies rows in its own table and cannot be NULL; a foreign key refers to another table's primary key and CAN be NULL. c) Degree is the number of attributes (columns); cardinality is the number of tuples (rows)."
+  },
+  {
+    "id": "sol-ip-07-04",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Compared to a file system, how does a database management system avoid redundancy in data through a database?",
+    "solution": "In a file system, the same information may be repeated across multiple unlinked files. A DBMS avoids this by organising data into separate, related tables, each storing one kind of information exactly once, linked via keys (primary/foreign), with related data retrieved together through queries instead of being duplicated across files."
+  },
+  {
+    "id": "sol-ip-07-05",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "A school has a rule that each student gives only one sports preference. For the given Sports Preferences table (with a NULL preference for roll_no 24, a repeated roll_no 17 with two preferences, and a NULL roll_no for 'Kabaddi'): a) Can roll_no 24 have a NULL preference?  b) Which property is violated by roll_no 17 having two preferences, and what constraint would prevent it?  c) Can the Kabaddi tuple (with NULL roll_no) exist?",
+    "solution": "a) Yes -- if the student genuinely has no preference yet, NULL correctly represents that unknown/not-applicable value, as long as the identifying attribute (Roll_no) itself is not NULL. b) This violates the rule that each tuple must have a unique identifying value -- Roll_no should be the PRIMARY KEY of this relation (unique and NOT NULL); a primary-key constraint on Roll_no would reject the duplicate row for roll_no 17. c) No -- if Roll_no is the primary key, it can never be NULL, so a tuple with a NULL Roll_no cannot be inserted."
+  },
+  {
+    "id": "sol-ip-07-06",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Two class sections have prepared Sports Preferences tables with different row order and different column order. Are the states of both relations equivalent? Justify.",
+    "solution": "Yes. In the relational data model, both the order of attributes (columns) and the order of tuples (rows) within a relation are immaterial -- a relation is simply a SET of tuples, not an ordered table. Since both tables contain exactly the same (Roll_no, Sports) pairs, just displayed with columns/rows rearranged, they represent the same underlying relation state."
+  },
+  {
+    "id": "sol-ip-07-07",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "An organisation creates EMPLOYEE(AadharNumber, Name, Address, Department, EmployeeID) and DEPENDENT(EmployeeID, DependentName, Relationship). a) Which EMPLOYEE attributes can be candidate keys?  b) Which tables/key retrieve a particular employee's dependents?  c) Degree of EMPLOYEE and DEPENDENT?",
+    "solution": "a) AadharNumber and EmployeeID can both be candidate keys, since each uniquely identifies an employee. b) EMPLOYEE and DEPENDENT, joined using the common attribute EmployeeID (primary key of EMPLOYEE, foreign key in DEPENDENT). c) Degree of EMPLOYEE = 5; Degree of DEPENDENT = 3."
+  },
+  {
+    "id": "sol-ip-07-08",
+    "chapter": "Database Concepts",
+    "exercise": "Exercises",
+    "number": "Q12",
+    "question": "For the STUDENT-PROJECT database (STUDENT, PROJECT, PROJECT_ASSIGNED tables): a) Name primary key of each table.  b) Find foreign key(s) in PROJECT_ASSIGNED.  c) Is there an alternate key in STUDENT?  d) Can RollNo of STUDENT have duplicate values?",
+    "solution": "a) STUDENT: RollNo. PROJECT: ProjectNo. PROJECT_ASSIGNED: Registration_ID. b) In PROJECT_ASSIGNED, Registration_ID is a foreign key referencing STUDENT, and ProjectNo is a foreign key referencing PROJECT. c) Yes -- Registration_ID in STUDENT is also unique for every student, so it is an alternate key (since RollNo was chosen as primary key). d) No -- RollNo is the primary key of STUDENT, and primary key values must be unique."
+  },
+  {
+    "id": "sol-ip-08-01",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q1",
+    "question": "Write the SQL statement to create a database called StudentAttendance.",
+    "solution": "CREATE DATABASE StudentAttendance;"
+  },
+  {
+    "id": "sol-ip-08-02",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q2",
+    "question": "Write the SQL statement to create a table STUDENT with columns RollNumber (INT, primary key), SName (VARCHAR(20)), SDateofBirth (DATE), GUID (CHAR(12)).",
+    "solution": "CREATE TABLE STUDENT(\n  RollNumber INT,\n  SName VARCHAR(20),\n  SDateofBirth DATE,\n  GUID CHAR(12),\n  PRIMARY KEY (RollNumber)\n);"
+  },
+  {
+    "id": "sol-ip-08-03",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q3",
+    "question": "Write the SQL statement to add a FOREIGN KEY on GUID in STUDENT, referencing GUID in GUARDIAN.",
+    "solution": "ALTER TABLE STUDENT ADD FOREIGN KEY(GUID) REFERENCES GUARDIAN(GUID);"
+  },
+  {
+    "id": "sol-ip-08-04",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q4",
+    "question": "Write the SQL statement to insert a record into STUDENT: RollNumber=1, SName='Atharv Ahuja', SDateofBirth='2003-05-15', GUID=444444444444.",
+    "solution": "INSERT INTO STUDENT VALUES(1,'Atharv Ahuja','2003-05-15',444444444444);"
+  },
+  {
+    "id": "sol-ip-08-05",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q5",
+    "question": "Write a query to display the name and date of birth of the student with RollNumber 2.",
+    "solution": "SELECT SName, SDateofBirth FROM STUDENT WHERE RollNumber = 2;"
+  },
+  {
+    "id": "sol-ip-08-06",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q6",
+    "question": "Write a query to display distinct department IDs from EMPLOYEE.",
+    "solution": "SELECT DISTINCT DeptId FROM EMPLOYEE;"
+  },
+  {
+    "id": "sol-ip-08-07",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q7",
+    "question": "Write a query to display all employees earning more than 20000 and working in department D04.",
+    "solution": "SELECT * FROM EMPLOYEE WHERE Salary > 20000 AND DeptId = 'D04';"
+  },
+  {
+    "id": "sol-ip-08-08",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q8",
+    "question": "Write a query to display Ename and DeptId of employees earning between 20000 and 50000 (inclusive) using BETWEEN.",
+    "solution": "SELECT Ename, DeptId FROM EMPLOYEE WHERE Salary BETWEEN 20000 AND 50000;"
+  },
+  {
+    "id": "sol-ip-08-09",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q9",
+    "question": "Write a query to display details of all employees whose name ends with 'a'.",
+    "solution": "SELECT * FROM EMPLOYEE WHERE Ename LIKE '%a';"
+  },
+  {
+    "id": "sol-ip-08-10",
+    "chapter": "Introduction to Structured Query Language (SQL)",
+    "exercise": "Exercises",
+    "number": "Q10",
+    "question": "Write an SQL statement to update guardian 466444444666's address to 'WZ-68, Azad Avenue, Bijnour, MP' and phone to 9010810547.",
+    "solution": "UPDATE GUARDIAN\nSET GAddress = 'WZ-68, Azad Avenue, Bijnour, MP', GPhone = 9010810547\nWHERE GUID = 466444444666;"
+  }
+]
