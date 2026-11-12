@@ -5,12 +5,12 @@
     "difficulty": "easy",
     "text": "The type of cell division that results in daughter cells with the same chromosome number as the parent cell is:",
     "options": [
+      "Only bacteria undergo meiosis because they reproduce sexually through conjugation and spore formation",
       "Mitosis",
-      "Meiosis",
-      "Amitosis",
-      "Binary fission"
+      "All body cells (somatic cells) divide by meiosis to replace worn-out tissues in an organism",
+      "Prokaryotes carry out a modified form of meiosis to generate genetic diversity within a colony"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Mitosis produces two daughter cells each with the same (diploid) chromosome number as the parent cell. Meiosis halves the chromosome number.",
     "priority": true
   },
@@ -20,12 +20,12 @@
     "difficulty": "easy",
     "text": "Meiosis occurs in:",
     "options": [
+      "All body cells undergo meiosis to allow tissues to grow and replace damaged cells continuously",
       "Reproductive cells (germ cells)",
-      "All body cells",
-      "Bacteria",
-      "Prokaryotes"
+      "Prokaryotes carry out meiosis using a specialised spindle apparatus absent in eukaryotes",
+      "Bacteria perform meiosis as part of their reproduction during conditions of environmental stress"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Meiosis (reductive division) occurs in reproductive organs to form gametes (sperm and egg), reducing chromosome number from diploid (2n) to haploid (n).",
     "priority": true
   },
@@ -35,12 +35,12 @@
     "difficulty": "medium",
     "text": "During which phase of mitosis do chromosomes line up at the equatorial plate?",
     "options": [
-      "Metaphase",
+      "Telophase",
       "Anaphase",
       "Prophase",
-      "Telophase"
+      "Metaphase"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "During metaphase, chromosomes align at the metaphase plate (cell equator), attached to spindle fibres.",
     "priority": true
   },
@@ -50,12 +50,12 @@
     "difficulty": "medium",
     "text": "Crossing over (exchange of genetic material) occurs during:",
     "options": [
-      "Prophase I of meiosis",
       "Metaphase II",
+      "Prophase I of meiosis",
       "Anaphase I",
       "Interphase"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Crossing over (chiasma formation) occurs during Prophase I of meiosis (specifically diplotene stage), when homologous chromosomes are paired.",
     "priority": true
   },
@@ -65,13 +65,13 @@
     "difficulty": "hard",
     "text": "A diploid organism with 2n = 46 undergoes meiosis. The chromosome number in each gamete is:",
     "options": [
-      "23",
       "46",
       "92",
+      "23",
       "12"
     ],
-    "correct": 0,
-    "explanation": "Meiosis halves the chromosome number: 2n=46 \u2192 n=23. Each gamete has 23 chromosomes.",
+    "correct": 2,
+    "explanation": "Meiosis halves the chromosome number: 2n=46 → n=23. Each gamete has 23 chromosomes.",
     "priority": true
   },
   {
@@ -81,9 +81,9 @@
     "text": "The stage of mitosis during which the nuclear membrane disappears is:",
     "options": [
       "Prophase",
-      "Anaphase",
+      "Telophase",
       "Metaphase",
-      "Telophase"
+      "Anaphase"
     ],
     "correct": 0,
     "explanation": "During prophase of mitosis, the nuclear envelope breaks down, chromatin condenses into chromosomes, and the spindle begins to form.",
@@ -95,12 +95,12 @@
     "difficulty": "easy",
     "text": "The physical appearance of an organism is called its:",
     "options": [
-      "Phenotype",
+      "Chromatype",
       "Genotype",
       "Karyotype",
-      "Chromatype"
+      "Phenotype"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Phenotype is the observable characteristics of an organism. Genotype is the genetic constitution. Karyotype is the chromosome set.",
     "priority": true
   },
@@ -110,12 +110,12 @@
     "difficulty": "easy",
     "text": "A dominant allele is one that:",
     "options": [
+      "Mitosis produces genetically different daughter cells by separating homologous chromosomes apart",
       "Expresses itself in both homozygous and heterozygous condition",
-      "Only expresses in homozygous condition",
-      "Suppresses the recessive allele always",
-      "Masks all other alleles"
+      "Both mitosis and meiosis always reduce the chromosome number by half in every cell division",
+      "Meiosis produces genetically identical daughter cells that are exact copies of the parent cell"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "A dominant allele expresses its trait whenever present, whether in heterozygous (Aa) or homozygous dominant (AA) condition.",
     "priority": true
   },
@@ -123,15 +123,15 @@
     "id": "icb009",
     "chapter": "Genetics",
     "difficulty": "medium",
-    "text": "In a monohybrid cross (Tt \u00d7 Tt), the phenotypic ratio is:",
+    "text": "In a monohybrid cross (Tt × Tt), the phenotypic ratio is:",
     "options": [
-      "3:1",
       "1:2:1",
       "1:1",
-      "2:1"
+      "2:1",
+      "3:1"
     ],
-    "correct": 0,
-    "explanation": "Tt \u00d7 Tt gives TT:Tt:tt = 1:2:1 genotypic ratio. Phenotypic ratio = 3 tall : 1 short = 3:1 (T is dominant).",
+    "correct": 3,
+    "explanation": "Tt × Tt gives TT:Tt:tt = 1:2:1 genotypic ratio. Phenotypic ratio = 3 tall : 1 short = 3:1 (T is dominant).",
     "priority": true
   },
   {
@@ -146,7 +146,7 @@
       "Genotype IAi"
     ],
     "correct": 0,
-    "explanation": "Blood group O has genotype ii \u2014 no A or B antigens on red blood cells, but both anti-A and anti-B antibodies in plasma.",
+    "explanation": "Blood group O has genotype ii — no A or B antigens on red blood cells, but both anti-A and anti-B antibodies in plasma.",
     "priority": true
   },
   {
@@ -155,12 +155,12 @@
     "difficulty": "hard",
     "text": "A colourblind man marries a normal woman (carrier). The probability of their son being colourblind is:",
     "options": [
-      "50%",
+      "0%",
       "25%",
-      "100%",
-      "0%"
+      "50%",
+      "100%"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Man: X^c Y. Carrier woman: X^C X^c. Sons: X^C Y (normal) or X^c Y (colourblind) = 50% chance.",
     "priority": true
   },
@@ -170,13 +170,13 @@
     "difficulty": "hard",
     "text": "In incomplete dominance, a cross between red (RR) and white (rr) flowers gives:",
     "options": [
-      "All pink flowers (Rr)",
-      "3 red:1 white",
       "1 red:2 pink:1 white",
+      "3 red:1 white",
+      "All pink flowers (Rr)",
       "All red flowers"
     ],
-    "correct": 0,
-    "explanation": "Incomplete dominance: Rr phenotype = pink (intermediate). F1 from RR \u00d7 rr = all Rr (all pink). F2 from Rr \u00d7 Rr = 1RR:2Rr:1rr = 1 red:2 pink:1 white.",
+    "correct": 2,
+    "explanation": "Incomplete dominance: Rr phenotype = pink (intermediate). F1 from RR × rr = all Rr (all pink). F2 from Rr × Rr = 1RR:2Rr:1rr = 1 red:2 pink:1 white.",
     "priority": true
   },
   {
@@ -185,13 +185,13 @@
     "difficulty": "easy",
     "text": "Water enters root hair cells by:",
     "options": [
-      "Osmosis",
-      "Active transport",
       "Diffusion",
-      "Imbibition"
+      "Active transport",
+      "Imbibition",
+      "Osmosis"
     ],
-    "correct": 0,
-    "explanation": "Water moves from soil (high water potential) into root hair cells (lower water potential) by osmosis \u2014 through the partially permeable cell membrane.",
+    "correct": 3,
+    "explanation": "Water moves from soil (high water potential) into root hair cells (lower water potential) by osmosis — through the partially permeable cell membrane.",
     "priority": true
   },
   {
@@ -201,9 +201,9 @@
     "text": "Root hairs increase the surface area for:",
     "options": [
       "Absorption of water and minerals",
+      "Reproduction",
       "Photosynthesis",
-      "Gas exchange",
-      "Reproduction"
+      "Gas exchange"
     ],
     "correct": 0,
     "explanation": "Root hairs are elongated extensions of epidermal cells that greatly increase the surface area for absorption of water and dissolved minerals.",
@@ -216,12 +216,12 @@
     "text": "Minerals are absorbed by root cells against a concentration gradient through:",
     "options": [
       "Active transport (energy-requiring)",
-      "Osmosis",
-      "Simple diffusion",
-      "Facilitated diffusion"
+      "Diffusion uses ATP to push molecules against their concentration gradient through protein channels",
+      "Osmosis moves solutes from low concentration to high concentration across a freely permeable membrane",
+      "Active transport requires no energy and moves water molecules down their concentration gradient freely"
     ],
     "correct": 0,
-    "explanation": "Mineral ions are absorbed by active transport \u2014 energy (ATP) is used to move ions against their concentration gradient across cell membranes.",
+    "explanation": "Mineral ions are absorbed by active transport — energy (ATP) is used to move ions against their concentration gradient across cell membranes.",
     "priority": true
   },
   {
@@ -230,13 +230,13 @@
     "difficulty": "medium",
     "text": "The pathway of water from soil to xylem is:",
     "options": [
-      "Root hair \u2192 cortex \u2192 endodermis \u2192 pericycle \u2192 xylem",
-      "Root hair \u2192 xylem \u2192 cortex \u2192 endodermis",
-      "Root hair \u2192 phloem \u2192 xylem",
-      "Soil \u2192 xylem directly"
+      "Root hair → cortex → endodermis → pericycle → xylem",
+      "Root hair → xylem → cortex → endodermis",
+      "Soil → xylem directly",
+      "Root hair → phloem → xylem"
     ],
     "correct": 0,
-    "explanation": "Water travels: root hair \u2192 cortex (by osmosis) \u2192 endodermis (Casparian strip forces apoplast water to cross membrane) \u2192 pericycle \u2192 xylem.",
+    "explanation": "Water travels: root hair → cortex (by osmosis) → endodermis (Casparian strip forces apoplast water to cross membrane) → pericycle → xylem.",
     "priority": true
   },
   {
@@ -246,8 +246,8 @@
     "text": "Transpiration is the loss of water vapour from:",
     "options": [
       "Aerial parts of a plant, mainly through stomata",
-      "Only leaves through cuticle",
       "Roots",
+      "Only leaves through cuticle",
       "Phloem vessels"
     ],
     "correct": 0,
@@ -261,9 +261,9 @@
     "text": "Guard cells control transpiration by:",
     "options": [
       "Regulating the opening and closing of stomata",
-      "Absorbing CO\u2082",
+      "Photosynthesising",
       "Producing water vapour",
-      "Photosynthesising"
+      "Absorbing CO₂"
     ],
     "correct": 0,
     "explanation": "Guard cells (kidney-shaped cells flanking each stoma) regulate stomatal aperture by changing turgor pressure, controlling gas exchange and water loss."
@@ -275,9 +275,9 @@
     "text": "Which of the following increases the rate of transpiration?",
     "options": [
       "High temperature, low humidity, windy conditions",
+      "Low temperature",
       "High humidity",
-      "Still air",
-      "Low temperature"
+      "Still air"
     ],
     "correct": 0,
     "explanation": "Transpiration rate increases with: higher temperature, lower humidity (greater water potential gradient), wind (removes water vapour from leaf surface).",
@@ -289,13 +289,13 @@
     "difficulty": "hard",
     "text": "The transpiration pull (cohesion-tension theory) explains:",
     "options": [
+      "Red blood cells are non-nucleated because they expel their nucleus to maximise mitochondria space",
       "How water rises to tops of tall trees against gravity",
-      "Why roots absorb water",
-      "How mineral salts move in phloem",
-      "Why stomata open at night"
+      "Red blood cells are non-nucleated because the nucleus is converted into additional haemoglobin chains",
+      "Red blood cells retain their nucleus in the bone marrow and lose it only when they enter capillaries"
     ],
-    "correct": 0,
-    "explanation": "Transpiration creates tension in xylem; water's cohesion keeps a continuous column \u2014 this 'pull' draws water up even 100+ m tall trees."
+    "correct": 1,
+    "explanation": "Transpiration creates tension in xylem; water's cohesion keeps a continuous column — this 'pull' draws water up even 100+ m tall trees."
   },
   {
     "id": "icb021",
@@ -303,13 +303,13 @@
     "difficulty": "easy",
     "text": "The raw materials for photosynthesis are:",
     "options": [
-      "CO\u2082 and H\u2082O (and light energy)",
-      "O\u2082 and glucose",
-      "CO\u2082 and O\u2082",
-      "H\u2082O and glucose"
+      "O₂ and glucose",
+      "CO₂ and H₂O (and light energy)",
+      "H₂O and glucose",
+      "CO₂ and O₂"
     ],
-    "correct": 0,
-    "explanation": "Photosynthesis: 6CO\u2082 + 6H\u2082O + light energy \u2192 C\u2086H\u2081\u2082O\u2086 + 6O\u2082. Raw materials are carbon dioxide and water.",
+    "correct": 1,
+    "explanation": "Photosynthesis: 6CO₂ + 6H₂O + light energy → C₆H₁₂O₆ + 6O₂. Raw materials are carbon dioxide and water.",
     "priority": true
   },
   {
@@ -318,12 +318,12 @@
     "difficulty": "easy",
     "text": "Photosynthesis occurs in which organelle?",
     "options": [
-      "Chloroplast",
-      "Mitochondria",
       "Nucleus",
-      "Ribosome"
+      "Ribosome",
+      "Chloroplast",
+      "Mitochondria"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Photosynthesis occurs in chloroplasts, which contain the green pigment chlorophyll that absorbs light energy.",
     "priority": true
   },
@@ -333,12 +333,12 @@
     "difficulty": "medium",
     "text": "The light reactions of photosynthesis occur in the:",
     "options": [
+      "Cytoplasm",
       "Thylakoid membranes (grana)",
       "Stroma",
-      "Cytoplasm",
       "Nucleus"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Light reactions occur in the thylakoid membranes (grana) where chlorophyll is located and ATP + NADPH are produced. Dark reactions occur in stroma.",
     "priority": true
   },
@@ -348,13 +348,13 @@
     "difficulty": "medium",
     "text": "Which gas is released during photosynthesis?",
     "options": [
-      "Oxygen",
+      "Hydrogen",
       "Carbon dioxide",
-      "Nitrogen",
-      "Hydrogen"
+      "Oxygen",
+      "Nitrogen"
     ],
-    "correct": 0,
-    "explanation": "Oxygen (O\u2082) is released as a by-product of photosynthesis during the light reactions (photolysis of water: 2H\u2082O \u2192 4H\u207a + 4e\u207b + O\u2082).",
+    "correct": 2,
+    "explanation": "Oxygen (O₂) is released as a by-product of photosynthesis during the light reactions (photolysis of water: 2H₂O → 4H⁺ + 4e⁻ + O₂).",
     "priority": true
   },
   {
@@ -363,12 +363,12 @@
     "difficulty": "hard",
     "text": "Blackman's law of limiting factors states:",
     "options": [
+      "Aerobic respiration uses no oxygen and produces only lactic acid as the final waste product",
       "Rate of photosynthesis is limited by the factor present in lowest relative amount",
-      "All factors equally limit photosynthesis",
-      "Oxygen limits photosynthesis",
-      "Temperature alone controls photosynthesis"
+      "Anaerobic respiration in yeast produces carbon dioxide and water just as aerobic respiration does",
+      "Anaerobic respiration always produces the same amount of ATP as aerobic respiration per glucose unit"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Blackman's law: when multiple factors affect a process, the one present at the least favourable level (limiting factor) determines the rate.",
     "priority": true
   },
@@ -380,8 +380,8 @@
     "options": [
       "Nephron",
       "Neuron",
-      "Glomerulus",
-      "Ureter"
+      "Ureter",
+      "Glomerulus"
     ],
     "correct": 0,
     "explanation": "The nephron is the structural and functional unit of the kidney. Each kidney contains about 1 million nephrons.",
@@ -393,13 +393,13 @@
     "difficulty": "easy",
     "text": "The main nitrogenous waste product excreted by humans is:",
     "options": [
-      "Urea",
       "Uric acid",
+      "Creatinine",
       "Ammonia",
-      "Creatinine"
+      "Urea"
     ],
-    "correct": 0,
-    "explanation": "Humans are ureotelic \u2014 they excrete urea, formed in the liver from excess amino acids (deamination) and CO\u2082 via the urea (ornithine) cycle.",
+    "correct": 3,
+    "explanation": "Humans are ureotelic — they excrete urea, formed in the liver from excess amino acids (deamination) and CO₂ via the urea (ornithine) cycle.",
     "priority": true
   },
   {
@@ -423,12 +423,12 @@
     "difficulty": "medium",
     "text": "Selective reabsorption of glucose from the glomerular filtrate occurs in the:",
     "options": [
+      "Distal convoluted tubule",
       "Proximal convoluted tubule",
       "Loop of Henle",
-      "Distal convoluted tubule",
       "Collecting duct"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Glucose, amino acids, and most water are selectively reabsorbed in the proximal convoluted tubule (PCT) back into the blood.",
     "priority": true
   },
@@ -438,12 +438,12 @@
     "difficulty": "hard",
     "text": "Anti-diuretic hormone (ADH) controls:",
     "options": [
-      "Water reabsorption in collecting duct and distal tubule",
-      "Filtration rate",
-      "Glucose reabsorption",
-      "Secretion of urea"
+      "Phloem transport carries water upward through sieve tubes using pressure flow driven by gravity",
+      "Water moves up the xylem by capillary action alone, with cohesion playing no measurable role",
+      "Transpiration pull draws water upward by root pressure generated by active ion pumping in root cells",
+      "Water reabsorption in collecting duct and distal tubule"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "ADH (vasopressin) from posterior pituitary makes collecting duct and distal tubule more permeable to water, increasing reabsorption and producing more concentrated urine.",
     "priority": true
   },
@@ -453,13 +453,13 @@
     "difficulty": "easy",
     "text": "The basic unit of the nervous system is the:",
     "options": [
-      "Neuron (nerve cell)",
       "Nerve",
-      "Neuroglia",
-      "Synapse"
+      "Neuron (nerve cell)",
+      "Synapse",
+      "Neuroglia"
     ],
-    "correct": 0,
-    "explanation": "A neuron (nerve cell) is the structural and functional unit of the nervous system \u2014 it receives, processes, and transmits nerve impulses.",
+    "correct": 1,
+    "explanation": "A neuron (nerve cell) is the structural and functional unit of the nervous system — it receives, processes, and transmits nerve impulses.",
     "priority": true
   },
   {
@@ -468,13 +468,13 @@
     "difficulty": "easy",
     "text": "The reflex arc involves:",
     "options": [
-      "Receptor \u2192 sensory neuron \u2192 CNS \u2192 motor neuron \u2192 effector",
-      "Only the spinal cord",
+      "Brain to muscle directly",
       "Only motor nerves",
-      "Brain to muscle directly"
+      "Only the spinal cord",
+      "Receptor → sensory neuron → CNS → motor neuron → effector"
     ],
-    "correct": 0,
-    "explanation": "A reflex arc: receptor (detects stimulus) \u2192 sensory neuron \u2192 CNS (spinal cord) \u2192 motor neuron \u2192 effector (muscle or gland).",
+    "correct": 3,
+    "explanation": "A reflex arc: receptor (detects stimulus) → sensory neuron → CNS (spinal cord) → motor neuron → effector (muscle or gland).",
     "priority": true
   },
   {
@@ -483,12 +483,12 @@
     "difficulty": "medium",
     "text": "The synapse is the:",
     "options": [
-      "Junction between two neurons (or neuron and effector)",
-      "Part of the axon",
       "Cell body of a neuron",
-      "Node of Ranvier"
+      "Node of Ranvier",
+      "Part of the axon",
+      "Junction between two neurons (or neuron and effector)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "A synapse is the gap junction between the axon terminal of one neuron and the dendrite/cell body of the next, where chemical transmission (neurotransmitters) occurs.",
     "priority": true
   },
@@ -498,12 +498,12 @@
     "difficulty": "medium",
     "text": "The cerebellum controls:",
     "options": [
-      "Balance, posture, and coordination of movement",
-      "Memory and reasoning",
       "Heartbeat and breathing",
-      "Vision"
+      "Vision",
+      "Memory and reasoning",
+      "Balance, posture, and coordination of movement"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The cerebellum (hindbrain) coordinates voluntary muscle movement, maintains balance and posture, and coordinates fine motor skills.",
     "priority": true
   },
@@ -513,13 +513,13 @@
     "difficulty": "hard",
     "text": "Saltatory conduction in myelinated nerves refers to:",
     "options": [
-      "Impulse jumping from one node of Ranvier to the next",
-      "Slow conduction along the axon",
-      "Conduction in unmyelinated fibres",
-      "Neurotransmitter release"
+      "Carbohydrates are absorbed only in the large intestine after bacterial fermentation produces glucose",
+      "Proteins are digested in the mouth by amylase and then further broken down by pepsin in the stomach",
+      "Lipids are absorbed directly into the blood capillaries of the villi without any prior digestion",
+      "Impulse jumping from one node of Ranvier to the next"
     ],
-    "correct": 0,
-    "explanation": "In myelinated axons, the impulse 'jumps' between gaps in myelin (nodes of Ranvier) \u2014 this is saltatory conduction, which is much faster than in unmyelinated fibres.",
+    "correct": 3,
+    "explanation": "In myelinated axons, the impulse 'jumps' between gaps in myelin (nodes of Ranvier) — this is saltatory conduction, which is much faster than in unmyelinated fibres.",
     "priority": true
   },
   {
@@ -529,9 +529,9 @@
     "text": "The master gland of the endocrine system is:",
     "options": [
       "Pituitary gland",
-      "Thyroid gland",
+      "Pancreas",
       "Adrenal gland",
-      "Pancreas"
+      "Thyroid gland"
     ],
     "correct": 0,
     "explanation": "The pituitary gland (hypophysis) is called the 'master gland' because it secretes trophic hormones that regulate other endocrine glands.",
@@ -545,11 +545,11 @@
     "options": [
       "Beta cells of islets of Langerhans in the pancreas",
       "Thyroid gland",
-      "Adrenal cortex",
-      "Liver"
+      "Liver",
+      "Adrenal cortex"
     ],
     "correct": 0,
-    "explanation": "Insulin is produced by \u03b2-cells of the islets of Langerhans in the pancreas. It lowers blood glucose by promoting uptake into cells.",
+    "explanation": "Insulin is produced by β-cells of the islets of Langerhans in the pancreas. It lowers blood glucose by promoting uptake into cells.",
     "priority": true
   },
   {
@@ -558,12 +558,12 @@
     "difficulty": "medium",
     "text": "Adrenaline (epinephrine) is secreted by:",
     "options": [
-      "Adrenal medulla",
+      "Pituitary",
       "Adrenal cortex",
       "Thyroid",
-      "Pituitary"
+      "Adrenal medulla"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Adrenaline is secreted by the adrenal medulla (inner part of adrenal gland). It prepares the body for 'fight or flight' response.",
     "priority": true
   },
@@ -574,12 +574,12 @@
     "text": "The hormone that regulates blood calcium level is:",
     "options": [
       "Parathormone (PTH)",
+      "ADH",
       "Insulin",
-      "Thyroxine",
-      "ADH"
+      "Thyroxine"
     ],
     "correct": 0,
-    "explanation": "Parathyroid hormone (PTH) from parathyroid glands raises blood calcium by mobilising Ca\u00b2\u207a from bones, increasing gut absorption, and reducing kidney excretion.",
+    "explanation": "Parathyroid hormone (PTH) from parathyroid glands raises blood calcium by mobilising Ca²⁺ from bones, increasing gut absorption, and reducing kidney excretion.",
     "priority": true
   },
   {
@@ -588,12 +588,12 @@
     "difficulty": "hard",
     "text": "Hyposecretion of growth hormone (GH) in childhood leads to:",
     "options": [
-      "Dwarfism (Pituitary dwarfism)",
-      "Acromegaly",
       "Gigantism",
-      "Cretinism"
+      "Cretinism",
+      "Dwarfism (Pituitary dwarfism)",
+      "Acromegaly"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Insufficient GH during childhood impairs bone growth, causing pituitary dwarfism. Excess GH in childhood causes gigantism; in adults, acromegaly. Cretinism is due to thyroid deficiency.",
     "priority": true
   },
@@ -603,12 +603,12 @@
     "difficulty": "easy",
     "text": "Fertilisation in humans occurs in the:",
     "options": [
-      "Fallopian tube (oviduct)",
       "Uterus",
+      "Fallopian tube (oviduct)",
       "Ovary",
       "Vagina"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Fertilisation (sperm meets egg) occurs in the outer third (ampulla) of the fallopian tube (oviduct), not in the uterus.",
     "priority": true
   },
@@ -618,13 +618,13 @@
     "difficulty": "easy",
     "text": "The placenta serves to:",
     "options": [
+      "Angiosperms produce naked seeds that are exposed on cone scales rather than enclosed in a fruit wall",
       "Exchange nutrients, gases and waste between mother and foetus",
-      "Protect the foetus only",
-      "Produce sperm",
-      "Produce the foetus independently"
+      "Gymnosperms produce seeds enclosed in a fruit formed from the ripened ovary wall after fertilisation",
+      "Both angiosperms and gymnosperms produce flowers with petals and stamens to attract pollinating insects"
     ],
-    "correct": 0,
-    "explanation": "The placenta allows exchange of O\u2082, nutrients, antibodies from mother to foetus and CO\u2082, urea from foetus to mother, without mixing their blood.",
+    "correct": 1,
+    "explanation": "The placenta allows exchange of O₂, nutrients, antibodies from mother to foetus and CO₂, urea from foetus to mother, without mixing their blood.",
     "priority": true
   },
   {
@@ -633,12 +633,12 @@
     "difficulty": "medium",
     "text": "Ovulation in the human menstrual cycle occurs approximately on day:",
     "options": [
-      "14",
       "1",
+      "7",
       "28",
-      "7"
+      "14"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "In a 28-day cycle, ovulation (release of egg from ovary) typically occurs around day 14, stimulated by a surge in LH.",
     "priority": true
   },
@@ -648,12 +648,12 @@
     "difficulty": "medium",
     "text": "The corpus luteum produces:",
     "options": [
-      "Progesterone (and oestrogen)",
       "FSH",
+      "Testosterone",
       "LH",
-      "Testosterone"
+      "Progesterone (and oestrogen)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "After ovulation, the ruptured follicle becomes the corpus luteum, which secretes progesterone (and some oestrogen), maintaining the uterine lining.",
     "priority": true
   },
@@ -663,12 +663,12 @@
     "difficulty": "hard",
     "text": "The hormone that triggers parturition (labour) is:",
     "options": [
-      "Oxytocin",
       "Progesterone",
+      "Oxytocin",
       "Oestrogen",
       "LH"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Oxytocin (from posterior pituitary) stimulates uterine contractions during labour. Positive feedback causes increasing contractions until birth.",
     "priority": true
   },
@@ -678,12 +678,12 @@
     "difficulty": "hard",
     "text": "The Casparian strip forces water to cross the endodermis by:",
     "options": [
-      "Symplast pathway (through living cells)",
       "Apoplast pathway (cell walls only)",
-      "Transmembrane pathway",
-      "Active transport at xylem"
+      "Symplast pathway (through living cells)",
+      "Active transport at xylem",
+      "Transmembrane pathway"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The waxy Casparian strip blocks the apoplast (cell wall) route at the endodermis. Water must cross the plasma membrane (symplast path), allowing selective control of ion entry to xylem.",
     "priority": true
   },
@@ -694,9 +694,9 @@
     "text": "Xerophytes reduce transpiration by:",
     "options": [
       "Thick waxy cuticle, sunken stomata, reduced leaves (spines)",
-      "Having more stomata",
-      "Storing large amounts of CO\u2082",
-      "Growing near water sources"
+      "Storing large amounts of CO₂",
+      "Growing near water sources",
+      "Having more stomata"
     ],
     "correct": 0,
     "explanation": "Desert plants (xerophytes) have adaptations: thick cuticle, sunken stomata, rolled leaves, reduced leaf area, and CAM metabolism to minimise water loss."
@@ -707,13 +707,13 @@
     "difficulty": "medium",
     "text": "Chlorophyll absorbs light mainly in which wavelengths?",
     "options": [
-      "Red and blue-violet (least in green)",
-      "Green light only",
       "All wavelengths equally",
-      "Ultraviolet and infrared"
+      "Red and blue-violet (least in green)",
+      "Ultraviolet and infrared",
+      "Green light only"
     ],
-    "correct": 0,
-    "explanation": "Chlorophyll absorbs red (~660 nm) and blue-violet (~430 nm) light most strongly. It reflects green light \u2014 that's why plants appear green.",
+    "correct": 1,
+    "explanation": "Chlorophyll absorbs red (~660 nm) and blue-violet (~430 nm) light most strongly. It reflects green light — that's why plants appear green.",
     "priority": true
   },
   {
@@ -722,12 +722,12 @@
     "difficulty": "medium",
     "text": "Cytokinesis in plant cells occurs by:",
     "options": [
-      "Cell plate formation in the middle",
+      "Fragmentation",
       "Cleavage furrow (constriction)",
       "Budding",
-      "Fragmentation"
+      "Cell plate formation in the middle"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Plant cells (with rigid cell wall) cannot pinch off. Cytokinesis occurs by formation of a cell plate (phragmoplast) at the equator, which becomes the new cell wall.",
     "priority": true
   },
@@ -737,13 +737,13 @@
     "difficulty": "medium",
     "text": "Which of the following is an autosomal recessive disease?",
     "options": [
+      "Phototropism is the growth response of a plant to gravity, with roots growing downward in soil",
       "Cystic fibrosis",
-      "Haemophilia",
-      "Colour blindness",
-      "Sickle cell trait (not disease)"
+      "Thigmotropism is the growth response of a plant to water, with roots bending toward soil moisture",
+      "Geotropism is the growth response of a plant to touch, with tendrils curling around support structures"
     ],
-    "correct": 0,
-    "explanation": "Cystic fibrosis is autosomal recessive \u2014 a person must inherit two defective copies (one from each parent) to have the disease. Haemophilia and colour blindness are X-linked recessive.",
+    "correct": 1,
+    "explanation": "Cystic fibrosis is autosomal recessive — a person must inherit two defective copies (one from each parent) to have the disease. Haemophilia and colour blindness are X-linked recessive.",
     "priority": true
   },
   {
@@ -752,12 +752,12 @@
     "difficulty": "medium",
     "text": "The part of the brain responsible for vision is:",
     "options": [
-      "Occipital lobe",
       "Frontal lobe",
-      "Temporal lobe",
-      "Parietal lobe"
+      "Occipital lobe",
+      "Parietal lobe",
+      "Temporal lobe"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The visual cortex is located in the occipital lobe (back of the brain). It processes visual information from the eyes.",
     "priority": true
   },
@@ -767,13 +767,13 @@
     "difficulty": "medium",
     "text": "The process by which the kidney maintains blood pH and ion balance is:",
     "options": [
-      "Osmoregulation and homeostasis",
-      "Excretion only",
       "Filtration only",
+      "Excretion only",
+      "Osmoregulation and homeostasis",
       "Dialysis"
     ],
-    "correct": 0,
-    "explanation": "The kidney regulates blood composition (pH, ion concentrations, water volume) through filtration, selective reabsorption, and secretion \u2014 a key part of homeostasis.",
+    "correct": 2,
+    "explanation": "The kidney regulates blood composition (pH, ion concentrations, water volume) through filtration, selective reabsorption, and secretion — a key part of homeostasis.",
     "priority": true
   },
   {
@@ -782,12 +782,12 @@
     "difficulty": "medium",
     "text": "Thyroid hormones (T3 and T4) are essential for:",
     "options": [
-      "Normal growth, metabolism, and mental development",
-      "Blood sugar regulation",
       "Calcium balance",
-      "Blood pressure control"
+      "Blood pressure control",
+      "Blood sugar regulation",
+      "Normal growth, metabolism, and mental development"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Thyroid hormones regulate basal metabolic rate, growth, development (especially brain development in foetus), and body temperature.",
     "priority": true
   },
@@ -797,12 +797,12 @@
     "difficulty": "easy",
     "text": "Mitosis results in:",
     "options": [
-      "Two genetically identical daughter cells",
-      "Four haploid cells",
       "Two different daughter cells",
-      "One daughter cell"
+      "One daughter cell",
+      "Four haploid cells",
+      "Two genetically identical daughter cells"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Mitosis produces two genetically identical daughter cells, each with the same chromosome number as the parent cell. Used for growth and repair.",
     "priority": true
   },
@@ -813,9 +813,9 @@
     "text": "In humans, sex is determined by:",
     "options": [
       "Sex chromosomes (XX = female, XY = male)",
-      "Environment",
-      "Size of egg",
-      "Hormone levels"
+      "Veins always carry oxygenated blood toward the heart and have no valves in their lumen",
+      "Arteries always carry deoxygenated blood away from the heart toward the body tissues and organs",
+      "Capillaries carry blood at high pressure and have thick muscular walls to withstand the flow"
     ],
     "correct": 0,
     "explanation": "Human sex: XX = female, XY = male. The Y chromosome (from father's sperm) determines male sex. Eggs always carry X.",
@@ -827,13 +827,13 @@
     "difficulty": "hard",
     "text": "The products of the light-independent reactions (Calvin cycle) include:",
     "options": [
+      "O₂ and H₂O",
       "Glucose (G3P) and ADP + Pi",
-      "ATP and NADPH",
-      "O\u2082 and H\u2082O",
-      "Only CO\u2082"
+      "Only CO₂",
+      "ATP and NADPH"
     ],
-    "correct": 0,
-    "explanation": "The Calvin cycle (light-independent/dark reactions) uses ATP and NADPH from light reactions to fix CO\u2082 into glyceraldehyde-3-phosphate (G3P), from which glucose is synthesised.",
+    "correct": 1,
+    "explanation": "The Calvin cycle (light-independent/dark reactions) uses ATP and NADPH from light reactions to fix CO₂ into glyceraldehyde-3-phosphate (G3P), from which glucose is synthesised.",
     "priority": true
   },
   {
@@ -842,12 +842,12 @@
     "difficulty": "hard",
     "text": "Mendel's Law of Independent Assortment states:",
     "options": [
-      "Alleles for different traits separate independently during gamete formation",
-      "Dominant allele always expresses",
+      "Traits blend in offspring",
       "Only one allele passes to offspring",
-      "Traits blend in offspring"
+      "Alleles for different traits separate independently during gamete formation",
+      "Dominant allele always expresses"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Law of Independent Assortment: alleles of different genes (on non-homologous chromosomes) segregate independently during meiosis, producing various combinations.",
     "priority": true
   },
@@ -857,12 +857,12 @@
     "difficulty": "hard",
     "text": "In haemodialysis, blood is filtered through a:",
     "options": [
-      "Selectively permeable membrane (artificial kidney)",
-      "Natural kidney membrane",
+      "Lung membrane",
       "Liver dialysis",
-      "Lung membrane"
+      "Natural kidney membrane",
+      "Selectively permeable membrane (artificial kidney)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "In haemodialysis (kidney dialysis machine), blood passes through a semi-permeable membrane that allows urea and excess ions to diffuse out into a dialysis fluid, but retains blood proteins and cells.",
     "priority": true
   },
@@ -872,12 +872,12 @@
     "difficulty": "hard",
     "text": "The neurotransmitter released at a neuromuscular junction (causing muscle contraction) is:",
     "options": [
+      "Noradrenaline",
       "Acetylcholine",
-      "Dopamine",
       "Serotonin",
-      "Noradrenaline"
+      "Dopamine"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "At neuromuscular junctions, motor neurons release acetylcholine (ACh) which binds to receptors on muscle fibres, triggering depolarisation and contraction.",
     "priority": true
   },
@@ -887,13 +887,13 @@
     "difficulty": "medium",
     "text": "Plants wilt when soil water is:",
     "options": [
+      "Rods are concentrated in the fovea centralis and are responsible for colour vision in bright light",
+      "Both rods and cones contain the same photopigment and differ only in their size and distribution",
       "Hypertonic to root cell contents (less water potential)",
-      "Hypotonic",
-      "Of same concentration",
-      "Pure water"
+      "Cones are distributed uniformly across the retina and are most sensitive to dim light conditions"
     ],
-    "correct": 0,
-    "explanation": "Wilting occurs when soil water concentration is higher in solutes than cell sap (hypertonic soil) \u2014 osmosis reverses, cells lose water and become flaccid.",
+    "correct": 2,
+    "explanation": "Wilting occurs when soil water concentration is higher in solutes than cell sap (hypertonic soil) — osmosis reverses, cells lose water and become flaccid.",
     "priority": true
   },
   {
@@ -903,12 +903,12 @@
     "text": "Non-disjunction during meiosis leads to:",
     "options": [
       "Chromosomal aneuploidy (trisomy/monosomy)",
-      "Only tumour formation",
       "No effect",
-      "Polyploidy in next generation"
+      "Polyploidy in next generation",
+      "Only tumour formation"
     ],
     "correct": 0,
-    "explanation": "Non-disjunction = failure of chromosomes to separate during meiosis. Results in gametes with extra or missing chromosomes \u2192 aneuploid offspring (e.g., trisomy 21 = Down syndrome).",
+    "explanation": "Non-disjunction = failure of chromosomes to separate during meiosis. Results in gametes with extra or missing chromosomes → aneuploid offspring (e.g., trisomy 21 = Down syndrome).",
     "priority": true
   },
   {
@@ -917,12 +917,12 @@
     "difficulty": "easy",
     "text": "Stomata are found mainly on:",
     "options": [
+      "Axons carry impulses toward the cell body after receiving signals from adjacent receptor cells",
+      "Myelin sheath is made of Schwann cell nuclei and functions to generate the action potential directly",
       "Lower epidermis of leaves",
-      "Upper surface only",
-      "Stem only",
-      "Roots"
+      "Dendrites carry impulses away from the cell body toward the target muscle or gland cell"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Most stomata are on the lower epidermis of leaves (abaxial surface), reducing water loss from direct sunlight. Some plants have them on both surfaces."
   },
   {
@@ -932,12 +932,12 @@
     "text": "Diabetes mellitus is caused by:",
     "options": [
       "Insufficient insulin (Type 1) or insulin resistance (Type 2)",
-      "Excess insulin",
       "Insufficient thyroxine",
-      "Excess adrenaline"
+      "Excess adrenaline",
+      "Excess insulin"
     ],
     "correct": 0,
-    "explanation": "Diabetes mellitus: Type 1 = no insulin production (pancreatic \u03b2-cells destroyed). Type 2 = cells resistant to insulin. Results in high blood glucose (hyperglycaemia).",
+    "explanation": "Diabetes mellitus: Type 1 = no insulin production (pancreatic β-cells destroyed). Type 2 = cells resistant to insulin. Results in high blood glucose (hyperglycaemia).",
     "priority": true
   },
   {
@@ -948,8 +948,8 @@
     "options": [
       "Sperm and testosterone",
       "Eggs and oestrogen",
-      "Progesterone",
-      "FSH and LH"
+      "FSH and LH",
+      "Progesterone"
     ],
     "correct": 0,
     "explanation": "Testes produce sperm (in seminiferous tubules) and testosterone (in Leydig cells). Testosterone controls secondary sexual characteristics.",
@@ -962,12 +962,12 @@
     "text": "The observable characteristics of a pea plant (e.g., tall or short) are controlled by:",
     "options": [
       "Genes (alleles) inherited from both parents",
-      "Environment only",
+      "No genetic control",
       "Only dominant alleles",
-      "No genetic control"
+      "Environment only"
     ],
     "correct": 0,
-    "explanation": "Traits (phenotypes) in pea plants are controlled by alleles \u2014 one from each parent. Mendel's experiments showed that these alleles separate during gamete formation.",
+    "explanation": "Traits (phenotypes) in pea plants are controlled by alleles — one from each parent. Mendel's experiments showed that these alleles separate during gamete formation.",
     "priority": true
   },
   {
@@ -976,13 +976,13 @@
     "difficulty": "easy",
     "text": "The green colour of plants is due to:",
     "options": [
-      "Chlorophyll reflecting green light",
-      "Chlorophyll absorbing green light",
       "Lack of pigments",
-      "Carotenoid pigments"
+      "Carotenoid pigments",
+      "Chlorophyll reflecting green light",
+      "Chlorophyll absorbing green light"
     ],
-    "correct": 0,
-    "explanation": "Chlorophyll absorbs red and blue-violet light for photosynthesis and reflects green light \u2014 this reflected green light is what we see.",
+    "correct": 2,
+    "explanation": "Chlorophyll absorbs red and blue-violet light for photosynthesis and reflects green light — this reflected green light is what we see.",
     "priority": true
   },
   {
@@ -991,13 +991,13 @@
     "difficulty": "easy",
     "text": "Plants excrete waste through:",
     "options": [
-      "Stomata (CO\u2082 and O\u2082), vacuoles (tannins, resins), and falling leaves",
-      "Only roots",
-      "Only through flowers",
-      "They don't excrete"
+      "Only through flowers, releasing volatile compounds and pollen as the main excretory strategy",
+      "They do not excrete at all, since all metabolic by-products are reused within the cell",
+      "Only through roots, using root hairs for the absorption of water and dissolved minerals from soil",
+      "Stomata (CO₂ and O₂), vacuoles (tannins, resins), and falling leaves"
     ],
-    "correct": 0,
-    "explanation": "Plants excrete O\u2082 (during photosynthesis) and CO\u2082 (during respiration) through stomata. Other waste products (tannins, resins, latex) are stored in vacuoles or shed with leaves.",
+    "correct": 3,
+    "explanation": "Plants excrete O₂ (during photosynthesis) and CO₂ (during respiration) through stomata. Other waste products (tannins, resins, latex) are stored in vacuoles or shed with leaves.",
     "priority": true
   },
   {
@@ -1006,12 +1006,12 @@
     "difficulty": "easy",
     "text": "The part of a neuron that conducts impulses away from the cell body is the:",
     "options": [
+      "Phloem transports water and dissolved minerals from roots to leaves by transpiration pull",
       "Axon",
-      "Dendrite",
-      "Myelin sheath",
-      "Node of Ranvier"
+      "Both xylem and phloem transport glucose and water bidirectionally throughout the plant at all times",
+      "Xylem transports dissolved sugars from leaves to all living cells through a pressure-flow mechanism"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The axon is the long fibre that conducts nerve impulses away from the cell body to the next neuron or effector. Dendrites carry impulses towards the cell body.",
     "priority": true
   },
@@ -1022,9 +1022,9 @@
     "text": "The significance of mitosis includes:",
     "options": [
       "Growth, repair of tissues, and asexual reproduction",
+      "Genetic variation",
       "Only sexual reproduction",
-      "Producing gametes",
-      "Genetic variation"
+      "Producing gametes"
     ],
     "correct": 0,
     "explanation": "Mitosis is used for: growth (increasing cell number), repair (replacing damaged cells), asexual reproduction (in simple organisms and plants), and maintenance of chromosome number.",
@@ -1036,13 +1036,13 @@
     "difficulty": "medium",
     "text": "Goitre is caused by:",
     "options": [
+      "High insulin",
       "Iodine deficiency (hypothyroidism)",
-      "Excess iodine",
       "Vitamin C deficiency",
-      "High insulin"
+      "Excess iodine"
     ],
-    "correct": 0,
-    "explanation": "Goitre is swelling of the thyroid gland. Common cause: iodine deficiency \u2192 insufficient thyroxine \u2192 TSH increases \u2192 gland enlarges. Also caused by autoimmune diseases.",
+    "correct": 1,
+    "explanation": "Goitre is swelling of the thyroid gland. Common cause: iodine deficiency → insufficient thyroxine → TSH increases → gland enlarges. Also caused by autoimmune diseases.",
     "priority": true
   },
   {
@@ -1052,9 +1052,9 @@
     "text": "The hormone LH (Luteinising Hormone) in females:",
     "options": [
       "Triggers ovulation and development of corpus luteum",
-      "Stimulates follicle development",
+      "Causes menstruation",
       "Inhibits ovulation",
-      "Causes menstruation"
+      "Stimulates follicle development"
     ],
     "correct": 0,
     "explanation": "LH surge around day 14 triggers ovulation. After ovulation, LH stimulates the ruptured follicle to become the corpus luteum, which secretes progesterone.",
@@ -1068,8 +1068,8 @@
     "options": [
       "Males produce equal numbers of X-bearing and Y-bearing sperm",
       "Females produce equal X eggs",
-      "Random combination of XX and YY",
-      "Female chromosomes always split equally"
+      "Female chromosomes always split equally",
+      "Random combination of XX and YY"
     ],
     "correct": 0,
     "explanation": "Males produce X-bearing sperm and Y-bearing sperm in equal numbers (50:50). Since female eggs always carry X, the ratio of XX (female) to XY (male) is 1:1.",
@@ -1081,28 +1081,28 @@
     "difficulty": "easy",
     "text": "The force that allows water to move up through xylem is collectively called:",
     "options": [
-      "Transpiration pull (cohesion-tension)",
       "Root pressure alone",
+      "Atmospheric pressure",
       "Osmotic pressure",
-      "Atmospheric pressure"
+      "Transpiration pull (cohesion-tension)"
     ],
-    "correct": 0,
-    "explanation": "The main mechanism is transpiration pull \u2014 negative pressure (tension) generated by evaporation at leaves, transmitted down water columns held together by cohesion.",
+    "correct": 3,
+    "explanation": "The main mechanism is transpiration pull — negative pressure (tension) generated by evaporation at leaves, transmitted down water columns held together by cohesion.",
     "priority": true
   },
   {
     "id": "icb074",
     "chapter": "Photosynthesis",
     "difficulty": "medium",
-    "text": "C\u2084 plants (e.g., maize, sugarcane) have higher photosynthetic efficiency because:",
+    "text": "C₄ plants (e.g., maize, sugarcane) have higher photosynthetic efficiency because:",
     "options": [
-      "They fix CO\u2082 first into 4-carbon compounds (oxaloacetate) and concentrate CO\u2082 around RuBisCO",
-      "They have more chlorophyll",
-      "They grow only at night",
-      "They use C\u2083 pathway only"
+      "They fix CO₂ first into 4-carbon compounds (oxaloacetate) and concentrate CO₂ around RuBisCO",
+      "They use the C₃ pathway exclusively and lack any specialised mesophyll arrangement",
+      "They grow only at night to avoid photorespiration and reduce water loss through stomata",
+      "They have more chlorophyll per unit leaf area and therefore absorb more light energy for photosynthesis"
     ],
     "correct": 0,
-    "explanation": "C\u2084 plants use PEP carboxylase to initially fix CO\u2082 into 4-carbon acids in mesophyll cells, then decarboxylate to concentrate CO\u2082 in bundle sheath cells, suppressing photorespiration.",
+    "explanation": "C₄ plants use PEP carboxylase to initially fix CO₂ into 4-carbon acids in mesophyll cells, then decarboxylate to concentrate CO₂ in bundle sheath cells, suppressing photorespiration.",
     "priority": true
   },
   {
@@ -1112,12 +1112,12 @@
     "text": "Which organ performs the main excretory function in humans?",
     "options": [
       "Kidney",
-      "Liver",
-      "Lung",
-      "Skin"
+      "CAM plants fix CO₂ during the day when stomata are open and store it as malate at night",
+      "In C₃ plants, the bundle sheath cells contain large starch-filled chloroplasts for carbon fixation",
+      "In C₄ plants, the mesophyll cells perform both primary and secondary carbon fixation independently"
     ],
     "correct": 0,
-    "explanation": "The kidney is the primary excretory organ \u2014 it removes urea (nitrogenous waste), excess salts, and water as urine. Lungs excrete CO\u2082; liver produces urea; skin excretes some salts via sweat.",
+    "explanation": "The kidney is the primary excretory organ — it removes urea (nitrogenous waste), excess salts, and water as urine. Lungs excrete CO₂; liver produces urea; skin excretes some salts via sweat.",
     "priority": true
   },
   {
@@ -1126,12 +1126,12 @@
     "difficulty": "medium",
     "text": "The autonomic nervous system controls:",
     "options": [
-      "Involuntary functions (heartbeat, digestion, breathing)",
-      "Voluntary muscles",
       "Thinking and speech",
-      "Only reflexes"
+      "Only reflexes",
+      "Voluntary muscles",
+      "Involuntary functions (heartbeat, digestion, breathing)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The autonomic nervous system (ANS) regulates involuntary internal functions: heart rate, blood pressure, digestion, breathing, glandular secretions. It has sympathetic and parasympathetic divisions.",
     "priority": true
   },
@@ -1141,13 +1141,13 @@
     "difficulty": "hard",
     "text": "Which hormone is responsible for 'fight or flight' response?",
     "options": [
-      "Adrenaline (epinephrine)",
-      "Insulin",
+      "Oxytocin",
       "Thyroxine",
-      "Oxytocin"
+      "Adrenaline (epinephrine)",
+      "Insulin"
     ],
-    "correct": 0,
-    "explanation": "Adrenaline (from adrenal medulla) prepares the body for emergency: \u2191heart rate, \u2191blood pressure, dilates airways, redirects blood to muscles, raises blood glucose.",
+    "correct": 2,
+    "explanation": "Adrenaline (from adrenal medulla) prepares the body for emergency: ↑heart rate, ↑blood pressure, dilates airways, redirects blood to muscles, raises blood glucose.",
     "priority": true
   },
   {
@@ -1156,12 +1156,12 @@
     "difficulty": "medium",
     "text": "Which stage of meiosis results in genetically different cells?",
     "options": [
-      "Meiosis I (with crossing over in Prophase I)",
       "Meiosis II",
-      "Cytokinesis",
-      "Interphase"
+      "Interphase",
+      "Meiosis I (with crossing over in Prophase I)",
+      "Cytokinesis"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Meiosis I is the reductional division. Crossing over during Prophase I and independent assortment during Metaphase I generate genetic variation.",
     "priority": true
   },
@@ -1171,12 +1171,12 @@
     "difficulty": "medium",
     "text": "The amnion protects the foetus by:",
     "options": [
-      "Containing amniotic fluid that cushions the foetus",
       "Providing oxygen directly",
-      "Producing hormones",
-      "Connecting to placenta"
+      "Containing amniotic fluid that cushions the foetus",
+      "Connecting to placenta",
+      "Producing hormones"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The amnion is a membrane surrounding the foetus containing amniotic fluid, which cushions against mechanical shocks, prevents desiccation, and allows foetal movement.",
     "priority": true
   },
@@ -1186,13 +1186,13 @@
     "difficulty": "hard",
     "text": "In ABO blood type system, if both parents are blood group AB, the children can be:",
     "options": [
+      "Guard cells lack chloroplasts and cannot photosynthesize, so they rely entirely on neighbouring cells",
       "A, B, or AB only (not O)",
-      "Only AB",
-      "A, B, AB, or O",
-      "Only A or B"
+      "Stomata open in darkness because photosynthesis is inhibited and CO₂ concentration inside rises",
+      "Guard cells shrink when potassium ions enter them, causing the stomatal pore to open wider"
     ],
-    "correct": 0,
-    "explanation": "IAIB \u00d7 IAIB \u2192 IAIA (A), IAIB (AB), IBIB (B), IAIB (AB). Ratio: A:AB:B = 1:2:1. O (ii) is impossible since neither parent has i allele.",
+    "correct": 1,
+    "explanation": "IAIB × IAIB → IAIA (A), IAIB (AB), IBIB (B), IAIB (AB). Ratio: A:AB:B = 1:2:1. O (ii) is impossible since neither parent has i allele.",
     "priority": true
   },
   {
@@ -1201,13 +1201,13 @@
     "difficulty": "hard",
     "text": "Guttation (exudation of liquid water from leaves) occurs due to:",
     "options": [
-      "Root pressure when transpiration is low",
-      "Transpiration pull",
       "Osmosis in leaves",
-      "Phloem transport"
+      "Phloem transport",
+      "Root pressure when transpiration is low",
+      "Transpiration pull"
     ],
-    "correct": 0,
-    "explanation": "Guttation occurs when transpiration is low (e.g., at night) but root pressure continues to push water up \u2014 excess water is exuded as droplets from hydathodes at leaf margins.",
+    "correct": 2,
+    "explanation": "Guttation occurs when transpiration is low (e.g., at night) but root pressure continues to push water up — excess water is exuded as droplets from hydathodes at leaf margins.",
     "priority": true
   },
   {
@@ -1216,12 +1216,12 @@
     "difficulty": "easy",
     "text": "An iodine test on a leaf from a plant kept in darkness would show:",
     "options": [
-      "No colour change (no starch)",
-      "Blue-black colour (starch present)",
       "Yellow colour",
-      "Turns red"
+      "Blue-black colour (starch present)",
+      "Turns red",
+      "No colour change (no starch)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Plants in darkness cannot photosynthesise. No glucose is produced, so no starch is formed. The iodine test shows no blue-black colour.",
     "priority": true
   },
@@ -1231,12 +1231,12 @@
     "difficulty": "medium",
     "text": "Urine is transported from kidney to bladder by:",
     "options": [
+      "Vas deferens",
       "Ureter",
-      "Urethra",
       "Renal vein",
-      "Vas deferens"
+      "Urethra"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Ureters (two tubes, one from each kidney) transport urine to the urinary bladder for storage. The urethra then carries urine from bladder to outside.",
     "priority": true
   },
@@ -1246,12 +1246,12 @@
     "difficulty": "easy",
     "text": "The myelin sheath around an axon:",
     "options": [
-      "Speeds up nerve impulse conduction and insulates the axon",
-      "Slows down impulses",
       "Absorbs nutrients",
-      "Contains receptors"
+      "Contains receptors",
+      "Speeds up nerve impulse conduction and insulates the axon",
+      "Slows down impulses"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Myelin sheath (formed by Schwann cells) insulates the axon and allows saltatory conduction, greatly increasing the speed of impulse transmission.",
     "priority": true
   },
@@ -1261,12 +1261,12 @@
     "difficulty": "medium",
     "text": "FSH (Follicle Stimulating Hormone) in females stimulates:",
     "options": [
-      "Development of ovarian follicles and oestrogen secretion",
-      "Ovulation directly",
-      "Progesterone secretion",
-      "Corpus luteum formation"
+      "Alveoli are surrounded by dense connective tissue that prevents gas exchange with capillaries",
+      "Alveoli have thick walls made of ciliated columnar epithelium to filter incoming air particles",
+      "Alveoli are found in the bronchi and function as the first site of oxygen absorption from air",
+      "Development of ovarian follicles and oestrogen secretion"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "FSH from anterior pituitary stimulates growth of ovarian follicles and oestrogen production. High oestrogen then triggers LH surge, causing ovulation.",
     "priority": true
   },
@@ -1291,13 +1291,13 @@
     "difficulty": "medium",
     "text": "A test cross (backcross) is used to:",
     "options": [
-      "Determine whether an organism with dominant phenotype is homozygous or heterozygous",
-      "Find genotype of recessive organisms",
       "Identify sex of offspring",
-      "Create hybrid plants"
+      "Create hybrid plants",
+      "Determine whether an organism with dominant phenotype is homozygous or heterozygous",
+      "Find genotype of recessive organisms"
     ],
-    "correct": 0,
-    "explanation": "A test cross: organism with unknown genotype (Aa or AA) is crossed with homozygous recessive (aa). If offspring all dominant \u2192 AA. If 50% dominant, 50% recessive \u2192 Aa.",
+    "correct": 2,
+    "explanation": "A test cross: organism with unknown genotype (Aa or AA) is crossed with homozygous recessive (aa). If offspring all dominant → AA. If 50% dominant, 50% recessive → Aa.",
     "priority": true
   },
   {
@@ -1306,12 +1306,12 @@
     "difficulty": "easy",
     "text": "Parthenogenesis is the development of:",
     "options": [
-      "An unfertilised egg into an organism",
-      "A fertilised egg",
       "Asexual reproduction by budding",
-      "Sperm without meiosis"
+      "An unfertilised egg into an organism",
+      "Sperm without meiosis",
+      "A fertilised egg"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Parthenogenesis = development of an unfertilised egg into a new organism (e.g., honeybee males, some reptiles). A form of asexual reproduction.",
     "priority": true
   },
@@ -1321,12 +1321,12 @@
     "difficulty": "medium",
     "text": "When a plant is placed in a concentrated salt solution, it wilts because:",
     "options": [
-      "Water moves out of plant cells by osmosis (plasmolysis)",
-      "Salt enters cells",
+      "Stomata close",
       "Roots absorb salt",
-      "Stomata close"
+      "Salt enters cells",
+      "Water moves out of plant cells by osmosis (plasmolysis)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Concentrated external solution has lower water potential. Water moves out of plant cells by osmosis, causing the cells to shrink (plasmolysis) and the plant to wilt.",
     "priority": true
   },
@@ -1336,12 +1336,12 @@
     "difficulty": "easy",
     "text": "The colour of urine is due to:",
     "options": [
-      "Urochrome (a bile pigment breakdown product)",
-      "Urea",
-      "Water",
-      "Creatinine"
+      "The nephron loop of Henle reabsorbs glucose in the descending limb using active transport pumps",
+      "Urea is actively secreted into the distal convoluted tubule and then reabsorbed in the collecting duct",
+      "The glomerulus filters large proteins and red blood cells freely into the Bowman's capsule space",
+      "Urochrome (a bile pigment breakdown product)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Urine's yellow colour comes from urochrome (urobilin), a breakdown product of haemoglobin metabolism that passes through the kidneys.",
     "priority": true
   },
@@ -1351,13 +1351,13 @@
     "difficulty": "medium",
     "text": "De Saussure's experiment proved that:",
     "options": [
-      "Plants absorb CO\u2082 and release O\u2082 during photosynthesis",
-      "Plants only release CO\u2082",
-      "Light is not needed for photosynthesis",
-      "Photosynthesis uses O\u2082"
+      "Plants only release CO₂",
+      "Plants absorb CO₂ and release O₂ during photosynthesis",
+      "Photosynthesis uses O₂",
+      "Light is not needed for photosynthesis"
     ],
-    "correct": 0,
-    "explanation": "Nicolas de Saussure showed through gas analysis that photosynthesising plants absorb CO\u2082 and release O\u2082, and that the increase in plant mass comes from water and CO\u2082.",
+    "correct": 1,
+    "explanation": "Nicolas de Saussure showed through gas analysis that photosynthesising plants absorb CO₂ and release O₂, and that the increase in plant mass comes from water and CO₂.",
     "priority": true
   },
   {
@@ -1366,12 +1366,12 @@
     "difficulty": "medium",
     "text": "The parasympathetic nervous system (part of ANS) generally:",
     "options": [
-      "Slows heart rate, stimulates digestion ('rest and digest')",
       "Speeds heart rate, inhibits digestion",
       "Controls voluntary muscles",
-      "Only active during sleep"
+      "Only active during sleep",
+      "Slows heart rate, stimulates digestion ('rest and digest')"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Parasympathetic division = 'rest and digest': slows heart rate, increases digestion, contracts pupils. Sympathetic = 'fight or flight': opposite effects.",
     "priority": true
   },
@@ -1379,15 +1379,15 @@
     "id": "icb093",
     "chapter": "Genetics",
     "difficulty": "medium",
-    "text": "In a dihybrid cross (AABB \u00d7 aabb), the F\u2081 generation is:",
+    "text": "In a dihybrid cross (AABB × aabb), the F₁ generation is:",
     "options": [
-      "All AaBb (double heterozygote)",
-      "All aabb",
       "1:1:1:1 ratio",
-      "AaBb and aabb only"
+      "All aabb",
+      "AaBb and aabb only",
+      "All AaBb (double heterozygote)"
     ],
-    "correct": 0,
-    "explanation": "AaBb \u00d7 AaBb (or AABB \u00d7 aabb \u2192 F1 all AaBb). F1 is all AaBb when P generation is AABB \u00d7 aabb.",
+    "correct": 3,
+    "explanation": "AaBb × AaBb (or AABB × aabb → F1 all AaBb). F1 is all AaBb when P generation is AABB × aabb.",
     "priority": true
   },
   {
@@ -1396,13 +1396,13 @@
     "difficulty": "medium",
     "text": "Abscisic acid (ABA) causes stomata to:",
     "options": [
+      "Grow larger",
       "Close (during water stress)",
       "Open",
-      "Grow larger",
       "Divide"
     ],
-    "correct": 0,
-    "explanation": "Abscisic acid (a plant hormone) triggers stomatal closure by causing K\u207a to leave guard cells, reducing turgor, during drought or water stress.",
+    "correct": 1,
+    "explanation": "Abscisic acid (a plant hormone) triggers stomatal closure by causing K⁺ to leave guard cells, reducing turgor, during drought or water stress.",
     "priority": true
   },
   {
@@ -1411,12 +1411,12 @@
     "difficulty": "medium",
     "text": "Oxytocin is involved in:",
     "options": [
+      "Bone growth and longitudinal skeletal remodelling in response to growth hormone signals",
+      "Blood sugar regulation by stimulating insulin secretion from the pancreatic beta cells",
       "Uterine contractions during childbirth and milk let-down during breastfeeding",
-      "Blood sugar regulation",
-      "Bone growth",
-      "Digestive secretions"
+      "Digestive secretion control and enzyme synthesis in the pancreas and stomach lining"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Oxytocin (posterior pituitary) has two main roles: stimulates uterine contractions during labour, and milk ejection reflex in breastfeeding (let-down reflex).",
     "priority": true
   },
@@ -1432,7 +1432,7 @@
       "Chromosome crossing over"
     ],
     "correct": 0,
-    "explanation": "Telomeres protect chromosome ends but shorten with each mitotic division. When critically short, cells enter senescence or apoptosis \u2014 the Hayflick limit. Telomerase activity maintains them in cancer cells.",
+    "explanation": "Telomeres protect chromosome ends but shorten with each mitotic division. When critically short, cells enter senescence or apoptosis — the Hayflick limit. Telomerase activity maintains them in cancer cells.",
     "priority": true
   },
   {
@@ -1441,13 +1441,13 @@
     "difficulty": "medium",
     "text": "After fertilisation, the zygote implants in the:",
     "options": [
+      "Oestrogen is produced in the adrenal cortex and controls only the menstrual cycle in females",
+      "Progesterone is released by the corpus luteum during the first week after menstruation begins",
       "Endometrium of the uterus",
-      "Fallopian tube",
-      "Ovary",
-      "Cervix"
+      "Testosterone is secreted by the anterior pituitary gland in response to signals from the hypothalamus"
     ],
-    "correct": 0,
-    "explanation": "The fertilised egg (zygote) undergoes cleavage as it moves down the fallopian tube, becoming a blastocyst that implants into the endometrium (uterine lining) \u2248 6\u201310 days after fertilisation.",
+    "correct": 2,
+    "explanation": "The fertilised egg (zygote) undergoes cleavage as it moves down the fallopian tube, becoming a blastocyst that implants into the endometrium (uterine lining) ≈ 6–10 days after fertilisation.",
     "priority": true
   },
   {
@@ -1456,13 +1456,13 @@
     "difficulty": "medium",
     "text": "The loop of Henle is responsible for:",
     "options": [
-      "Concentrating urine (creating osmotic gradient in medulla)",
       "Filtering blood",
+      "Concentrating urine (creating osmotic gradient in medulla)",
       "Reabsorbing glucose",
       "Secreting hormones"
     ],
-    "correct": 0,
-    "explanation": "The loop of Henle (in the medulla) creates a concentration gradient by selective reabsorption of Na\u207a and Cl\u207b in ascending limb, allowing water to be reabsorbed from collecting duct.",
+    "correct": 1,
+    "explanation": "The loop of Henle (in the medulla) creates a concentration gradient by selective reabsorption of Na⁺ and Cl⁻ in ascending limb, allowing water to be reabsorbed from collecting duct.",
     "priority": true
   },
   {
@@ -1473,11 +1473,11 @@
     "options": [
       "Deoxyribonucleic acid",
       "Diribonucleic acid",
-      "Deoxyribose nucleic acid",
-      "Deribose nucleic acid"
+      "Deribose nucleic acid",
+      "Deoxyribose nucleic acid"
     ],
     "correct": 0,
-    "explanation": "DNA = Deoxyribonucleic acid \u2014 the molecule that carries genetic information in the form of a sequence of nucleotide bases.",
+    "explanation": "DNA = Deoxyribonucleic acid — the molecule that carries genetic information in the form of a sequence of nucleotide bases.",
     "priority": true
   },
   {
@@ -1486,13 +1486,13 @@
     "difficulty": "medium",
     "text": "The stroma of the chloroplast is the site of:",
     "options": [
+      "Germination requires complete darkness because light inhibits enzyme activation in the seed coat",
+      "Seeds germinate only in acidic soil because alkaline conditions denature the stored enzymes",
       "Calvin cycle (light-independent reactions)",
-      "Light reactions",
-      "DNA synthesis",
-      "Cellular respiration"
+      "Germination is triggered by freezing temperatures which crack the seed coat and allow water entry"
     ],
-    "correct": 0,
-    "explanation": "The stroma (fluid-filled interior of chloroplast outside thylakoids) contains enzymes for the Calvin cycle (CO\u2082 fixation), RuBisCO, and chloroplast DNA.",
+    "correct": 2,
+    "explanation": "The stroma (fluid-filled interior of chloroplast outside thylakoids) contains enzymes for the Calvin cycle (CO₂ fixation), RuBisCO, and chloroplast DNA.",
     "priority": true
   },
   {
@@ -1501,12 +1501,12 @@
     "difficulty": "medium",
     "text": "Which part of the brain controls breathing and heart rate?",
     "options": [
+      "Hypothalamus",
       "Medulla oblongata",
       "Cerebrum",
-      "Cerebellum",
-      "Hypothalamus"
+      "Cerebellum"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The medulla oblongata (part of brainstem) contains vital centres controlling automatic functions: breathing, heart rate, blood pressure, swallowing.",
     "priority": true
   },
@@ -1516,12 +1516,12 @@
     "difficulty": "easy",
     "text": "Testosterone is the male sex hormone produced by:",
     "options": [
-      "Leydig cells in testes",
-      "Seminiferous tubules",
+      "Adrenal gland",
       "Prostate gland",
-      "Adrenal gland"
+      "Leydig cells in testes",
+      "Dominant alleles are always expressed even when only one copy is present in a heterozygous individual"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Testosterone is produced by interstitial (Leydig) cells in the testes. It controls male secondary sexual characteristics and sperm production.",
     "priority": true
   },
@@ -1531,13 +1531,13 @@
     "difficulty": "easy",
     "text": "The zone of a root where absorption mainly occurs is:",
     "options": [
-      "Root hair zone (just behind root tip)",
-      "Root cap zone",
+      "Throughout the root",
       "Zone of maturation near stem",
-      "Throughout the root"
+      "Root cap zone",
+      "Root hair zone (just behind root tip)"
     ],
-    "correct": 0,
-    "explanation": "Root hairs (extensions of epidermal cells) are found just behind the growing tip \u2014 this is the primary zone of water and mineral absorption.",
+    "correct": 3,
+    "explanation": "Root hairs (extensions of epidermal cells) are found just behind the growing tip — this is the primary zone of water and mineral absorption.",
     "priority": true
   },
   {
@@ -1546,12 +1546,12 @@
     "difficulty": "easy",
     "text": "The phase of the cell cycle in which DNA replication occurs is:",
     "options": [
-      "S phase (Synthesis phase of Interphase)",
+      "G2 phase",
       "M phase (Mitosis)",
       "G1 phase",
-      "G2 phase"
+      "S phase (Synthesis phase of Interphase)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "During the S (Synthesis) phase of interphase, DNA replication occurs and the chromosomal content doubles in preparation for cell division.",
     "priority": true
   },
@@ -1562,12 +1562,12 @@
     "text": "The law of segregation (Mendel's First Law) states:",
     "options": [
       "Each gamete receives only one allele of each gene (pairs separate during meiosis)",
-      "Both alleles pass to every gamete",
-      "Alleles blend in offspring",
-      "Dominant allele multiplies"
+      "The dominant allele multiplies itself during meiosis and suppresses recombination with the recessive",
+      "Alleles blend together in offspring to produce intermediate traits as proposed by blending theory",
+      "Both alleles of each gene pass together to every gamete so that offspring receive two copies"
     ],
     "correct": 0,
-    "explanation": "Mendel's Law of Segregation: the two alleles of a gene separate (segregate) during gamete formation \u2014 each gamete contains only one allele.",
+    "explanation": "Mendel's Law of Segregation: the two alleles of a gene separate (segregate) during gamete formation — each gamete contains only one allele.",
     "priority": true
   },
   {
@@ -1576,13 +1576,13 @@
     "difficulty": "hard",
     "text": "The process by which waste products and drugs are actively moved from blood capillaries into the tubular lumen is:",
     "options": [
-      "Tubular secretion",
-      "Filtration",
+      "Osmosis",
       "Reabsorption",
-      "Osmosis"
+      "Filtration",
+      "Tubular secretion"
     ],
-    "correct": 0,
-    "explanation": "Tubular secretion actively moves substances (H\u207a, drugs, creatinine) from blood into the tubule \u2014 the third major process after filtration and reabsorption in urine formation.",
+    "correct": 3,
+    "explanation": "Tubular secretion actively moves substances (H⁺, drugs, creatinine) from blood into the tubule — the third major process after filtration and reabsorption in urine formation.",
     "priority": true
   },
   {
@@ -1592,9 +1592,9 @@
     "text": "The embryo is protected from immune rejection by the mother because:",
     "options": [
       "The placenta prevents direct mixing of foetal and maternal blood; placenta produces immunosuppressive hormones",
-      "The foetus has no antigens",
-      "The mother's immune system is suppressed totally",
-      "The uterus has no immune cells"
+      "The uterus has no immune cells or lymphocytes present during the period of implantation",
+      "The foetus has no surface antigens on its red blood cells during the first trimester of development",
+      "The mother's immune system is completely suppressed during pregnancy to prevent any rejection response"
     ],
     "correct": 0,
     "explanation": "The placenta acts as a barrier between foetal and maternal circulations. Additionally, the placenta produces hormones that locally suppress maternal immune response towards foetal antigens.",
@@ -1606,13 +1606,13 @@
     "difficulty": "easy",
     "text": "The potometer measures:",
     "options": [
-      "Rate of transpiration (water uptake by shoot)",
-      "Rate of photosynthesis",
+      "Stomatal density",
       "Root pressure",
-      "Stomatal density"
+      "Rate of photosynthesis",
+      "Rate of transpiration (water uptake by shoot)"
     ],
-    "correct": 0,
-    "explanation": "A potometer indirectly measures transpiration rate by measuring the rate at which a leafy shoot takes up water (assuming water uptake \u2248 water lost by transpiration).",
+    "correct": 3,
+    "explanation": "A potometer indirectly measures transpiration rate by measuring the rate at which a leafy shoot takes up water (assuming water uptake ≈ water lost by transpiration).",
     "priority": true
   },
   {
@@ -1621,13 +1621,13 @@
     "difficulty": "medium",
     "text": "Which mineral is essential for chlorophyll synthesis?",
     "options": [
-      "Magnesium (Mg\u00b2\u207a)",
-      "Calcium",
       "Phosphorus",
-      "Iron (as cofactor)"
+      "Iron (as cofactor)",
+      "Calcium",
+      "Magnesium (Mg²⁺)"
     ],
-    "correct": 0,
-    "explanation": "Magnesium (Mg\u00b2\u207a) is the central atom of the chlorophyll molecule (porphyrin ring). Iron is needed for cytochrome synthesis. Both are essential for photosynthesis.",
+    "correct": 3,
+    "explanation": "Magnesium (Mg²⁺) is the central atom of the chlorophyll molecule (porphyrin ring). Iron is needed for cytochrome synthesis. Both are essential for photosynthesis.",
     "priority": true
   },
   {
@@ -1636,13 +1636,13 @@
     "difficulty": "hard",
     "text": "The resting membrane potential of a neuron is approximately:",
     "options": [
-      "\u221270 mV (inside negative)",
-      "0 mV",
-      "+70 mV",
-      "\u2212140 mV"
+      "−70 mV (inside negative)",
+      "Recessive alleles are expressed in every generation regardless of whether they are paired or not",
+      "A heterozygous organism always produces offspring in a fixed 1:1 ratio of dominant to recessive",
+      "Homozygous dominant and heterozygous individuals have different phenotypes and are always distinguishable"
     ],
     "correct": 0,
-    "explanation": "At rest, neuron interior is \u221270 mV relative to exterior due to K\u207a leak and Na\u207a/K\u207a ATPase pump. Na\u207a influx during action potential depolarises to +30 to +40 mV.",
+    "explanation": "At rest, neuron interior is −70 mV relative to exterior due to K⁺ leak and Na⁺/K⁺ ATPase pump. Na⁺ influx during action potential depolarises to +30 to +40 mV.",
     "priority": true
   },
   {
@@ -1651,12 +1651,12 @@
     "difficulty": "medium",
     "text": "The hormone that stimulates the thyroid gland is:",
     "options": [
+      "ACTH",
       "TSH (Thyroid Stimulating Hormone) from anterior pituitary",
       "Calcitonin",
-      "Thyroxine itself",
-      "ACTH"
+      "Thyroxine itself"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "TSH (thyrotropin) from the anterior pituitary gland stimulates the thyroid gland to produce and release thyroxine (T4) and triiodothyronine (T3).",
     "priority": true
   },
@@ -1667,9 +1667,9 @@
     "text": "Mycorrhizae are associations between fungi and plant roots that:",
     "options": [
       "Increase the surface area for water and mineral absorption",
-      "Produce hormones",
-      "Fix nitrogen",
-      "Protect roots from pathogens only"
+      "In a test cross, the dominant parent is crossed with another dominant parent to reveal hidden alleles",
+      "A test cross is only used for sex-linked traits and cannot determine autosomal dominance patterns",
+      "A test cross uses F₂ generation plants crossed among themselves to calculate the ratio of genotypes"
     ],
     "correct": 0,
     "explanation": "Mycorrhizal fungi greatly extend the effective root surface area for absorption of water and especially phosphorus and other minerals. The fungus gets sugars from the plant in return.",
@@ -1681,12 +1681,12 @@
     "difficulty": "easy",
     "text": "The process of release of eggs from the ovary is called:",
     "options": [
+      "Implantation",
       "Ovulation",
       "Menstruation",
-      "Fertilisation",
-      "Implantation"
+      "Fertilisation"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Ovulation is the release of a mature egg (secondary oocyte) from the Graafian follicle in the ovary, typically around day 14 of the 28-day cycle.",
     "priority": true
   },
@@ -1696,13 +1696,13 @@
     "difficulty": "medium",
     "text": "Which of the following is the correct order of mitotic stages?",
     "options": [
-      "Prophase \u2192 Metaphase \u2192 Anaphase \u2192 Telophase",
-      "Prophase \u2192 Anaphase \u2192 Metaphase \u2192 Telophase",
-      "Metaphase \u2192 Prophase \u2192 Anaphase \u2192 Telophase",
-      "Telophase \u2192 Anaphase \u2192 Metaphase \u2192 Prophase"
+      "Telophase → Anaphase → Metaphase → Prophase",
+      "Prophase → Metaphase → Anaphase → Telophase",
+      "Prophase → Anaphase → Metaphase → Telophase",
+      "Metaphase → Prophase → Anaphase → Telophase"
     ],
-    "correct": 0,
-    "explanation": "Mitosis stages (PMAT): Prophase (chromosome condensation) \u2192 Metaphase (alignment at equator) \u2192 Anaphase (chromatids separate) \u2192 Telophase (nuclear envelope reforms) \u2192 Cytokinesis.",
+    "correct": 1,
+    "explanation": "Mitosis stages (PMAT): Prophase (chromosome condensation) → Metaphase (alignment at equator) → Anaphase (chromatids separate) → Telophase (nuclear envelope reforms) → Cytokinesis.",
     "priority": true
   },
   {
@@ -1711,12 +1711,12 @@
     "difficulty": "hard",
     "text": "A woman who is a carrier for haemophilia (X^H X^h) marries a normal man (X^H Y). The probability of their daughter having haemophilia is:",
     "options": [
-      "0%",
-      "25%",
-      "50%",
-      "100%"
+      "Natural selection favours individuals with the lowest reproductive rate to maintain population balance",
+      "Acquired characteristics such as muscle size and learned skills are passed to offspring by Lamarck's law",
+      "Evolution occurs in single individuals who adapt consciously to their environment over their lifetime",
+      "0%"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Daughters: X^H X^H (normal) or X^H X^h (carrier). Since the father contributes X^H, no daughter receives X^h from father. All daughters get X^H from father + X^H or X^h from mother. None are X^h X^h. P(haemophiliac daughter) = 0.",
     "priority": true
   },
@@ -1727,13 +1727,13 @@
     "difficulty": "medium",
     "text": "The dark reaction of photosynthesis occurs in:",
     "options": [
-      "Stroma of chloroplast",
-      "Grana of chloroplast",
+      "Mitochondria",
       "Cytoplasm",
-      "Mitochondria"
+      "Stroma of chloroplast",
+      "Grana of chloroplast"
     ],
-    "correct": 0,
-    "explanation": "Dark reactions (Calvin cycle) occur in the stroma of chloroplast where CO\u2082 is fixed. [Board 2017] Grana contain thylakoids where light reactions occur; cytoplasm is outside chloroplast; mitochondria are for respiration."
+    "correct": 2,
+    "explanation": "Dark reactions (Calvin cycle) occur in the stroma of chloroplast where CO₂ is fixed. [Board 2017] Grana contain thylakoids where light reactions occur; cytoplasm is outside chloroplast; mitochondria are for respiration."
   },
   {
     "id": "icb117",
@@ -1742,13 +1742,13 @@
     "difficulty": "medium",
     "text": "The functional unit of the kidney is:",
     "options": [
-      "Nephron",
       "Glomerulus",
+      "Nephron",
       "Bowman's capsule",
       "Ureter"
     ],
-    "correct": 0,
-    "explanation": "The nephron is the structural and functional unit of the kidney \u2014 includes Bowman's capsule, glomerulus, tubules and loop of Henle. [Board 2017] Glomerulus is part of nephron; Bowman's capsule is part of nephron; ureter is a duct, not the functional unit."
+    "correct": 1,
+    "explanation": "The nephron is the structural and functional unit of the kidney — includes Bowman's capsule, glomerulus, tubules and loop of Henle. [Board 2017] Glomerulus is part of nephron; Bowman's capsule is part of nephron; ureter is a duct, not the functional unit."
   },
   {
     "id": "icb118",
@@ -1757,13 +1757,13 @@
     "difficulty": "medium",
     "text": "The longest cells in the human body are:",
     "options": [
-      "Neurons",
+      "Liver cells",
       "RBCs",
-      "Muscle cells",
-      "Liver cells"
+      "Neurons",
+      "Muscle cells"
     ],
-    "correct": 0,
-    "explanation": "Neurons (nerve cells) can be over 1 metre long (motor neurons to toes). They are the longest cells. [Board 2017] RBCs are tiny (7\u03bcm); muscle cells are long but shorter; liver cells are compact."
+    "correct": 2,
+    "explanation": "Neurons (nerve cells) can be over 1 metre long (motor neurons to toes). They are the longest cells. [Board 2017] RBCs are tiny (7μm); muscle cells are long but shorter; liver cells are compact."
   },
   {
     "id": "icb119",
@@ -1773,9 +1773,9 @@
     "text": "The transpiration pull is responsible for:",
     "options": [
       "Ascent of water in xylem",
+      "Gas exchange in stomata",
       "Downward movement of food",
-      "Absorption of minerals",
-      "Gas exchange in stomata"
+      "Absorption of minerals"
     ],
     "correct": 0,
     "explanation": "Transpiration pull (tension) is the main force driving upward movement of water through xylem from roots to leaves. [Board 2017] Food moves downward in phloem; mineral absorption involves active transport; gas exchange is by diffusion."
@@ -1785,15 +1785,15 @@
     "source": "Board 2017",
     "chapter": "Genetics",
     "difficulty": "medium",
-    "text": "In a monohybrid cross between TT (tall) and tt (dwarf), F\u2081 generation is:",
+    "text": "In a monohybrid cross between TT (tall) and tt (dwarf), F₁ generation is:",
     "options": [
-      "All Tt (tall)",
-      "25% TT, 75% Tt",
-      "50% TT, 50% tt",
-      "All tt"
+      "Analogous structures in different species always indicate a close common ancestor shared recently",
+      "Homologous structures in different species arise from completely different embryonic tissue origins",
+      "Vestigial structures are actively functional in modern organisms and have increased in size over time",
+      "All Tt (tall)"
     ],
-    "correct": 0,
-    "explanation": "TT \u00d7 tt \u2192 all Tt (heterozygous tall). Tall is dominant. [Board 2017] 25:75 is F\u2082 ratio; 50:50 TT/tt would be if T and t were codominant; all tt ignores dominance."
+    "correct": 3,
+    "explanation": "TT × tt → all Tt (heterozygous tall). Tall is dominant. [Board 2017] 25:75 is F₂ ratio; 50:50 TT/tt would be if T and t were codominant; all tt ignores dominance."
   },
   {
     "id": "icb121",
@@ -1803,8 +1803,8 @@
     "text": "The heart of a mammal has:",
     "options": [
       "4 chambers",
-      "2 chambers",
       "3 chambers",
+      "2 chambers",
       "6 chambers"
     ],
     "correct": 0,
@@ -1817,13 +1817,13 @@
     "difficulty": "hard",
     "text": "During anaerobic respiration in yeast, glucose is converted to:",
     "options": [
-      "Ethanol + CO\u2082",
-      "Lactic acid + CO\u2082",
-      "CO\u2082 + H\u2082O",
-      "Pyruvate only"
+      "Lactic acid + CO₂",
+      "Pyruvate only",
+      "Ethanol + CO₂",
+      "CO₂ + H₂O"
     ],
-    "correct": 0,
-    "explanation": "Yeast (anaerobic): C\u2086H\u2081\u2082O\u2086 \u2192 2C\u2082H\u2085OH + 2CO\u2082 + 2ATP. [Board 2017] Lactic acid forms in animal muscles; CO\u2082+H\u2082O is aerobic; pyruvate is the intermediate."
+    "correct": 2,
+    "explanation": "Yeast (anaerobic): C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 2ATP. [Board 2017] Lactic acid forms in animal muscles; CO₂+H₂O is aerobic; pyruvate is the intermediate."
   },
   {
     "id": "icb123",
@@ -1832,13 +1832,13 @@
     "difficulty": "easy",
     "text": "The blind spot in the eye is where:",
     "options": [
-      "Optic nerve leaves the retina",
+      "Iris meets the cornea",
       "Maximum cones are present",
-      "Lens is attached",
-      "Iris meets the cornea"
+      "Optic nerve leaves the retina",
+      "Lens is attached"
     ],
-    "correct": 0,
-    "explanation": "The blind spot (optic disc) is where the optic nerve exits \u2014 no photoreceptors, so no vision there. [Board 2017] Maximum cones = fovea (centre of vision); lens attachment = zonule fibres; iris/cornea junction is different."
+    "correct": 2,
+    "explanation": "The blind spot (optic disc) is where the optic nerve exits — no photoreceptors, so no vision there. [Board 2017] Maximum cones = fovea (centre of vision); lens attachment = zonule fibres; iris/cornea junction is different."
   },
   {
     "id": "icb124",
@@ -1847,13 +1847,13 @@
     "difficulty": "medium",
     "text": "Double fertilisation is a characteristic feature of:",
     "options": [
+      "Bryophytes",
       "Angiosperms",
       "Gymnosperms",
-      "Bryophytes",
       "Pteridophytes"
     ],
-    "correct": 0,
-    "explanation": "In angiosperms, one sperm fuses with egg (zygote) and another fuses with two polar nuclei (endosperm) \u2014 double fertilisation. [Board 2017] Gymnosperms have simple fertilisation; bryophytes and pteridophytes are non-flowering."
+    "correct": 1,
+    "explanation": "In angiosperms, one sperm fuses with egg (zygote) and another fuses with two polar nuclei (endosperm) — double fertilisation. [Board 2017] Gymnosperms have simple fertilisation; bryophytes and pteridophytes are non-flowering."
   },
   {
     "id": "icb125",
@@ -1863,9 +1863,9 @@
     "text": "Bile is produced by the liver and stored in the:",
     "options": [
       "Gall bladder",
-      "Pancreas",
-      "Stomach",
-      "Duodenum"
+      "Bacteria are killed by antibiotics because antibiotics block bacterial DNA replication in ribosomes",
+      "Viruses are treated with antibiotics because antibiotics destroy the protein coat of viral particles",
+      "Fungi are controlled by antiviral drugs because fungi and viruses share the same cell wall composition"
     ],
     "correct": 0,
     "explanation": "Bile is produced by hepatocytes in the liver and stored/concentrated in the gall bladder until needed. [Board 2017] Pancreas secretes pancreatic juice; stomach secretes gastric juice; duodenum is where bile is released, not stored."
@@ -1877,28 +1877,28 @@
     "difficulty": "medium",
     "text": "The powerhouse of the cell is:",
     "options": [
-      "Mitochondria",
-      "Chloroplast",
       "Ribosome",
-      "Golgi apparatus"
+      "Mitochondria",
+      "Golgi apparatus",
+      "Chloroplast"
     ],
-    "correct": 0,
-    "explanation": "Mitochondria produce ATP through cellular respiration \u2014 hence called the 'powerhouse of the cell'. [Board 2018] Chloroplast is for photosynthesis; ribosome for protein synthesis; Golgi for packaging/secretion."
+    "correct": 1,
+    "explanation": "Mitochondria produce ATP through cellular respiration — hence called the 'powerhouse of the cell'. [Board 2018] Chloroplast is for photosynthesis; ribosome for protein synthesis; Golgi for packaging/secretion."
   },
   {
     "id": "icb127",
     "source": "Board 2018",
     "chapter": "Photosynthesis",
     "difficulty": "hard",
-    "text": "Photosynthesis can be summarised as: 6CO\u2082 + 6H\u2082O \u2192 C\u2086H\u2081\u2082O\u2086 + 6O\u2082. This process requires:",
+    "text": "Photosynthesis can be summarised as: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂. This process requires:",
     "options": [
-      "Light and chlorophyll",
-      "Only CO\u2082",
+      "Darkness and chlorophyll",
       "Only water",
-      "Darkness and chlorophyll"
+      "Only CO₂",
+      "Light and chlorophyll"
     ],
-    "correct": 0,
-    "explanation": "Photosynthesis requires: CO\u2082 (raw material), H\u2082O (raw material), light (energy), and chlorophyll (pigment to absorb light). [Board 2018] CO\u2082 alone is just one factor; water alone insufficient; darkness stops light reaction."
+    "correct": 3,
+    "explanation": "Photosynthesis requires: CO₂ (raw material), H₂O (raw material), light (energy), and chlorophyll (pigment to absorb light). [Board 2018] CO₂ alone is just one factor; water alone insufficient; darkness stops light reaction."
   },
   {
     "id": "icb128",
@@ -1907,27 +1907,27 @@
     "difficulty": "medium",
     "text": "Urea is formed in the:",
     "options": [
-      "Liver",
+      "Spleen",
       "Kidney",
       "Pancreas",
-      "Spleen"
+      "Liver"
     ],
-    "correct": 0,
-    "explanation": "Urea is synthesised in the liver through the ornithine cycle (urea cycle) from ammonia and CO\u2082. [Board 2018] Kidneys filter and excrete urea but don't produce it; pancreas makes digestive enzymes/insulin; spleen filters blood."
+    "correct": 3,
+    "explanation": "Urea is synthesised in the liver through the ornithine cycle (urea cycle) from ammonia and CO₂. [Board 2018] Kidneys filter and excrete urea but don't produce it; pancreas makes digestive enzymes/insulin; spleen filters blood."
   },
   {
     "id": "icb129",
     "source": "Board 2018",
     "chapter": "Genetics",
     "difficulty": "hard",
-    "text": "In F\u2082 of a monohybrid cross (Tt \u00d7 Tt), the genotypic ratio is:",
+    "text": "In F₂ of a monohybrid cross (Tt × Tt), the genotypic ratio is:",
     "options": [
-      "1:2:1",
-      "3:1",
       "1:1",
-      "2:1:1"
+      "1:2:1",
+      "2:1:1",
+      "3:1"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "TT:Tt:tt = 1:2:1 (genotypic ratio). Phenotypic ratio = 3:1 (tall:dwarf). [Board 2018] 3:1 is phenotypic; 1:1 is test cross ratio; 2:1:1 is for incomplete dominance."
   },
   {
@@ -1937,13 +1937,13 @@
     "difficulty": "medium",
     "text": "Stomata open in the presence of light because:",
     "options": [
-      "Guard cells gain turgor by accumulating K\u207a",
-      "CO\u2082 increases",
-      "Guard cells lose water",
-      "Temperature drops"
+      "Biodiversity is measured only at the genetic level and does not include ecosystem or species diversity",
+      "Guard cells gain turgor by accumulating K⁺",
+      "Biodiversity refers only to the total number of individual animals within a single geographic region",
+      "High biodiversity always leads to ecosystem instability because competition between species increases"
     ],
-    "correct": 0,
-    "explanation": "Light \u2192 photosynthesis in guard cells \u2192 K\u207a ion pumped in \u2192 water follows (osmosis) \u2192 guard cells become turgid \u2192 stomata open. [Board 2018] CO\u2082 increase actually causes closing; water loss causes closing; temperature doesn't directly open stomata."
+    "correct": 1,
+    "explanation": "Light → photosynthesis in guard cells → K⁺ ion pumped in → water follows (osmosis) → guard cells become turgid → stomata open. [Board 2018] CO₂ increase actually causes closing; water loss causes closing; temperature doesn't directly open stomata."
   },
   {
     "id": "icb131",
@@ -1952,13 +1952,13 @@
     "difficulty": "hard",
     "text": "A reflex arc involves signals in the order:",
     "options": [
-      "Receptor \u2192 Sensory neuron \u2192 Spinal cord \u2192 Motor neuron \u2192 Effector",
-      "Brain \u2192 Spinal cord \u2192 Motor neuron \u2192 Muscle",
-      "Muscle \u2192 Brain \u2192 Spinal cord \u2192 Muscle",
-      "Receptor \u2192 Brain \u2192 Effector"
+      "Receptor → Brain → Effector",
+      "Brain → Spinal cord → Motor neuron → Muscle",
+      "Receptor → Sensory neuron → Spinal cord → Motor neuron → Effector",
+      "Muscle → Brain → Spinal cord → Muscle"
     ],
-    "correct": 0,
-    "explanation": "Reflex arc: Receptor \u2192 Sensory nerve \u2192 Spinal cord (integration) \u2192 Motor nerve \u2192 Effector (muscle/gland). Brain is bypassed for speed. [Board 2018]"
+    "correct": 2,
+    "explanation": "Reflex arc: Receptor → Sensory nerve → Spinal cord (integration) → Motor nerve → Effector (muscle/gland). Brain is bypassed for speed. [Board 2018]"
   },
   {
     "id": "icb132",
@@ -1969,8 +1969,8 @@
     "options": [
       "Deoxygenated blood",
       "Oxygenated blood",
-      "Mixed blood",
-      "Lymph"
+      "Lymph",
+      "Mixed blood"
     ],
     "correct": 0,
     "explanation": "The right side of the heart (right atrium and ventricle) receives and pumps deoxygenated blood to the lungs. [Board 2018] Oxygenated blood is in the left side; mixed blood concept is wrong; lymph is in lymph vessels."
@@ -1982,12 +1982,12 @@
     "difficulty": "medium",
     "text": "The site of fertilisation in humans is:",
     "options": [
-      "Fallopian tube",
-      "Uterus",
       "Ovary",
-      "Cervix"
+      "Cervix",
+      "Fallopian tube",
+      "Uterus"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Fertilisation occurs in the fallopian tube (usually the ampulla region) when a sperm meets the ovum. [Board 2018] Uterus is for implantation; ovary produces eggs; cervix connects uterus to vagina."
   },
   {
@@ -1998,9 +1998,9 @@
     "text": "Enzyme pepsin works in:",
     "options": [
       "Acidic medium (stomach)",
+      "Absence of any medium",
       "Alkaline medium (intestine)",
-      "Neutral medium",
-      "Absence of any medium"
+      "Neutral medium"
     ],
     "correct": 0,
     "explanation": "Pepsin (protease) is secreted as pepsinogen, activated by HCl in stomach. Works optimally at pH 1.5-3.5. [Board 2018] Trypsin works in alkaline intestine; neutral is wrong; enzymes need aqueous medium."
@@ -2012,12 +2012,12 @@
     "difficulty": "medium",
     "text": "The part of the ear responsible for maintaining body balance is:",
     "options": [
-      "Semi-circular canals",
-      "Cochlea",
-      "Ear drum",
-      "Eustachian tube"
+      "Pollution from agriculture only affects plants and has no impact on soil micro-organisms or insects",
+      "Overfishing has no effect on marine ecosystems because fish populations regenerate within one season",
+      "Deforestation increases biodiversity because sunlight reaches the forest floor and new plants colonise",
+      "Semi-circular canals"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Semi-circular canals (3 fluid-filled canals at right angles) detect rotational movement and help maintain balance. [Board 2018] Cochlea is for hearing; eardrum detects sound; Eustachian tube equalises pressure."
   },
   {
@@ -2028,9 +2028,9 @@
     "text": "Which organelle is responsible for protein synthesis?",
     "options": [
       "Ribosome",
+      "Golgi apparatus",
       "Mitochondria",
-      "Nucleus",
-      "Golgi apparatus"
+      "Nucleus"
     ],
     "correct": 0,
     "explanation": "Ribosomes are the site of protein synthesis (translation of mRNA). [Board 2019] Mitochondria produce ATP; nucleus contains DNA; Golgi apparatus processes/packages proteins after synthesis."
@@ -2042,12 +2042,12 @@
     "difficulty": "medium",
     "text": "The green pigment present in chloroplast that absorbs light is:",
     "options": [
-      "Chlorophyll",
-      "Haemoglobin",
+      "Carotene",
       "Melanin",
-      "Carotene"
+      "Haemoglobin",
+      "Chlorophyll"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Chlorophyll (a and b) is the primary photosynthetic pigment in chloroplasts, absorbing red and blue light. [Board 2019] Haemoglobin is in blood; melanin is skin pigment; carotene is accessory pigment not primary."
   },
   {
@@ -2059,11 +2059,11 @@
     "options": [
       "Glomerulus",
       "Loop of Henle",
-      "Distal convoluted tubule",
-      "Collecting duct"
+      "Collecting duct",
+      "Distal convoluted tubule"
     ],
     "correct": 0,
-    "explanation": "Blood is filtered under high pressure in the glomerulus \u2192 Bowman's capsule (ultrafiltration). Plasma minus proteins = glomerular filtrate. [Board 2019] Loop of Henle = concentration; DCT = selective reabsorption; collecting duct = water reabsorption."
+    "explanation": "Blood is filtered under high pressure in the glomerulus → Bowman's capsule (ultrafiltration). Plasma minus proteins = glomerular filtrate. [Board 2019] Loop of Henle = concentration; DCT = selective reabsorption; collecting duct = water reabsorption."
   },
   {
     "id": "icb139",
@@ -2072,13 +2072,13 @@
     "difficulty": "medium",
     "text": "Sex of a child is determined by:",
     "options": [
-      "The father (sperm)",
-      "The mother (egg)",
       "Both equally",
-      "The environment"
+      "The environment",
+      "The father (sperm)",
+      "The mother (egg)"
     ],
-    "correct": 0,
-    "explanation": "Eggs carry X chromosome only. Sperm carry either X (girl) or Y (boy). Father's sperm determines sex: XY = boy, XX = girl. [Board 2019] Mother's egg always contributes X; both don't equally \u2014 father's Y is unique; environment doesn't determine genetic sex."
+    "correct": 2,
+    "explanation": "Eggs carry X chromosome only. Sperm carry either X (girl) or Y (boy). Father's sperm determines sex: XY = boy, XX = girl. [Board 2019] Mother's egg always contributes X; both don't equally — father's Y is unique; environment doesn't determine genetic sex."
   },
   {
     "id": "icb140",
@@ -2087,12 +2087,12 @@
     "difficulty": "medium",
     "text": "The net ATP yield from one molecule of glucose in aerobic respiration is:",
     "options": [
-      "38 ATP",
-      "2 ATP",
-      "4 ATP",
-      "10 ATP"
+      "Denitrification converts ammonium ions back into atmospheric nitrogen by aerobic bacteria in soil",
+      "Bacteria decompose organic matter using sunlight as their only energy source in the carbon cycle",
+      "Nitrogen fixation is performed by legume plants themselves without the need for any microbial symbiont",
+      "38 ATP"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Aerobic respiration: Glycolysis (2 ATP net) + Krebs cycle (2 ATP) + Oxidative phosphorylation (34 ATP) = 38 ATP total. [Board 2019] 2 ATP = anaerobic/glycolysis only; 4 ATP = substrate-level phosphorylation; 10 ATP underestimates ETC."
   },
   {
@@ -2102,13 +2102,13 @@
     "difficulty": "easy",
     "text": "Vitamin C deficiency causes:",
     "options": [
-      "Scurvy",
-      "Rickets",
       "Night blindness",
-      "Anaemia"
+      "Scurvy",
+      "Anaemia",
+      "Rickets"
     ],
-    "correct": 0,
-    "explanation": "Scurvy (bleeding gums, loose teeth) is caused by Vitamin C deficiency. [Board 2019] Rickets = Vitamin D; Night blindness = Vitamin A; Anaemia = Iron/B\u2081\u2082 deficiency."
+    "correct": 1,
+    "explanation": "Scurvy (bleeding gums, loose teeth) is caused by Vitamin C deficiency. [Board 2019] Rickets = Vitamin D; Night blindness = Vitamin A; Anaemia = Iron/B₁₂ deficiency."
   },
   {
     "id": "icb142",
@@ -2117,12 +2117,12 @@
     "difficulty": "medium",
     "text": "Wilting of plant leaves occurs due to:",
     "options": [
-      "Excessive loss of water (transpiration > absorption)",
-      "Excess water in cells",
       "Lack of sunlight",
-      "Root pressure increase"
+      "Root pressure increase",
+      "Excess water in cells",
+      "Excessive loss of water (transpiration > absorption)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Wilting = loss of turgor. Occurs when transpiration rate exceeds water absorption, causing cells to lose water and become flaccid. [Board 2019] Excess water causes turgidity (opposite); sunlight causes stomata to open; root pressure pushes water up."
   },
   {
@@ -2132,12 +2132,12 @@
     "difficulty": "medium",
     "text": "The cerebellum controls:",
     "options": [
+      "Breathing rate",
       "Balance and coordination",
-      "Intelligence and memory",
       "Heartbeat",
-      "Breathing rate"
+      "Intelligence and memory"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Cerebellum coordinates voluntary movements and maintains balance and posture. [Board 2019] Intelligence/memory = cerebral cortex; heartbeat = medulla oblongata; breathing rate = medulla oblongata."
   },
   {
@@ -2147,13 +2147,13 @@
     "difficulty": "hard",
     "text": "The sequence of blood flow through the heart is:",
     "options": [
-      "RA \u2192 RV \u2192 lungs \u2192 LA \u2192 LV \u2192 body",
-      "LA \u2192 LV \u2192 lungs \u2192 RA \u2192 RV \u2192 body",
-      "RA \u2192 LA \u2192 RV \u2192 LV \u2192 body",
-      "Body \u2192 LA \u2192 RA \u2192 LV \u2192 RV \u2192 lungs"
+      "Body → LA → RA → LV → RV → lungs",
+      "RA → LA → RV → LV → body",
+      "LA → LV → lungs → RA → RV → body",
+      "RA → RV → lungs → LA → LV → body"
     ],
-    "correct": 0,
-    "explanation": "Double circulation: body \u2192 RA \u2192 RV \u2192 pulmonary artery \u2192 lungs \u2192 pulmonary veins \u2192 LA \u2192 LV \u2192 aorta \u2192 body. [Board 2019]"
+    "correct": 3,
+    "explanation": "Double circulation: body → RA → RV → pulmonary artery → lungs → pulmonary veins → LA → LV → aorta → body. [Board 2019]"
   },
   {
     "id": "icb145",
@@ -2162,12 +2162,12 @@
     "difficulty": "medium",
     "text": "Parthenogenesis is the development of a new organism from:",
     "options": [
+      "Conservation of keystone species has no measurable effect on the broader ecosystem food web",
+      "Ex situ conservation is always more effective than in situ because it removes threats entirely",
       "Unfertilised egg",
-      "Fertilised egg",
-      "Spore",
-      "Vegetative part"
+      "In situ conservation preserves species in zoos and botanical gardens away from their natural habitat"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Parthenogenesis = development from unfertilised egg (e.g., worker bees, drones in honeybees, aphids). [Board 2019] Fertilised egg = normal sexual reproduction; spore = sporogenesis; vegetative part = vegetative propagation."
   },
   {
@@ -2177,12 +2177,12 @@
     "difficulty": "medium",
     "text": "The cell wall of plant cells is made of:",
     "options": [
-      "Cellulose",
-      "Chitin",
       "Peptidoglycan",
-      "Protein"
+      "Protein",
+      "Chitin",
+      "Cellulose"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Plant cell walls are composed of cellulose fibres providing strength and rigidity. [Board 2020] Chitin = fungal cell walls; peptidoglycan = bacterial cell walls; protein = animal cell membrane not wall."
   },
   {
@@ -2192,13 +2192,13 @@
     "difficulty": "hard",
     "text": "In the light reaction of photosynthesis, water is split to release:",
     "options": [
-      "O\u2082, H\u207a and electrons",
-      "CO\u2082 and O\u2082",
-      "Glucose and O\u2082",
-      "ATP only"
+      "ATP only",
+      "O₂, H⁺ and electrons",
+      "CO₂ and O₂",
+      "Glucose and O₂"
     ],
-    "correct": 0,
-    "explanation": "Photolysis of water: 2H\u2082O \u2192 4H\u207a + 4e\u207b + O\u2082. O\u2082 is released, H\u207a and electrons go to reduce NADP\u207a. [Board 2020] CO\u2082 is fixed in dark reaction; glucose is the final product; ATP is produced but not directly from water splitting."
+    "correct": 1,
+    "explanation": "Photolysis of water: 2H₂O → 4H⁺ + 4e⁻ + O₂. O₂ is released, H⁺ and electrons go to reduce NADP⁺. [Board 2020] CO₂ is fixed in dark reaction; glucose is the final product; ATP is produced but not directly from water splitting."
   },
   {
     "id": "icb148",
@@ -2207,12 +2207,12 @@
     "difficulty": "medium",
     "text": "The hormone that regulates water reabsorption in kidney tubules is:",
     "options": [
+      "Testosterone",
       "ADH (vasopressin)",
       "Insulin",
-      "Glucagon",
-      "Testosterone"
+      "Glucagon"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "ADH (Anti-Diuretic Hormone) from posterior pituitary increases water reabsorption in collecting ducts. [Board 2020] Insulin/glucagon regulate blood sugar; testosterone is a sex hormone."
   },
   {
@@ -2222,12 +2222,12 @@
     "difficulty": "hard",
     "text": "A colourblind mother (X^c X^c) and normal-visioned father (X^N Y) will have children:",
     "options": [
+      "All normal",
       "All sons colourblind, daughters carrier",
       "All daughters colourblind, sons normal",
-      "All normal",
       "All colourblind"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Mother gives X^c to all. Father gives X^N to daughters, Y to sons. Daughters = X^N X^c (carrier). Sons = X^c Y (colourblind). [Board 2020] All daughters normal vision is wrong (they are carriers); all colourblind is wrong (daughters are carriers)."
   },
   {
@@ -2238,9 +2238,9 @@
     "text": "Bile salts play a role in:",
     "options": [
       "Emulsification of fats",
-      "Digestion of proteins",
-      "Absorption of glucose",
-      "Digestion of carbohydrates"
+      "Adult stem cells are more versatile than embryonic stem cells and can form any tissue in the body",
+      "Embryonic stem cells can only form tissues of the same germ layer from which they were derived",
+      "Stem cells are fully differentiated cells that have permanently specialised to perform one function"
     ],
     "correct": 0,
     "explanation": "Bile salts emulsify large fat droplets into smaller ones, increasing surface area for lipase action. [Board 2020] Proteins are digested by proteases; glucose is absorbed by active transport; carbohydrates by amylase."
@@ -2253,12 +2253,12 @@
     "text": "Oxygen is transported in the blood mainly by:",
     "options": [
       "Haemoglobin in RBCs",
+      "Platelets",
       "Plasma alone",
-      "WBCs",
-      "Platelets"
+      "WBCs"
     ],
     "correct": 0,
-    "explanation": "~98% O\u2082 is carried as oxyhaemoglobin in red blood cells. Only ~2% dissolves in plasma. [Board 2020] Plasma alone is insufficient; WBCs are for immunity; platelets are for clotting."
+    "explanation": "~98% O₂ is carried as oxyhaemoglobin in red blood cells. Only ~2% dissolves in plasma. [Board 2020] Plasma alone is insufficient; WBCs are for immunity; platelets are for clotting."
   },
   {
     "id": "icb152",
@@ -2267,12 +2267,12 @@
     "difficulty": "medium",
     "text": "The stomatal transpiration accounts for approximately:",
     "options": [
-      "90%",
+      "100%",
       "50%",
       "10%",
-      "100%"
+      "90%"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "About 90% of transpiration occurs through stomata. Cuticular transpiration accounts for the remaining ~10%. [Board 2020] 50% underestimates stomatal role; 10% is the cuticular proportion; 100% ignores cuticular route."
   },
   {
@@ -2283,12 +2283,12 @@
     "text": "Platelets (thrombocytes) are essential for:",
     "options": [
       "Blood clotting",
-      "Oxygen transport",
       "Fighting infection",
-      "Nutrient transport"
+      "Nutrient transport",
+      "Oxygen transport"
     ],
     "correct": 0,
-    "explanation": "Platelets initiate blood clotting by releasing clotting factors and forming a platelet plug. [Board 2020] O\u2082 transport = RBCs; infection fighting = WBCs; nutrients are in plasma."
+    "explanation": "Platelets initiate blood clotting by releasing clotting factors and forming a platelet plug. [Board 2020] O₂ transport = RBCs; infection fighting = WBCs; nutrients are in plasma."
   },
   {
     "id": "icb154",
@@ -2297,13 +2297,13 @@
     "difficulty": "hard",
     "text": "In angiosperms, the endosperm develops from:",
     "options": [
+      "Pollen grain alone",
       "Triple fusion (2 polar nuclei + sperm)",
-      "Egg + sperm",
       "Vegetative cell",
-      "Pollen grain alone"
+      "Egg + sperm"
     ],
-    "correct": 0,
-    "explanation": "Triple fusion: 1 sperm + 2 polar nuclei \u2192 triploid (3n) endosperm nucleus \u2192 endosperm (food store). [Board 2020] Egg + sperm = zygote (embryo); vegetative cell is in pollen; pollen alone \u2192 parthenogenesis."
+    "correct": 1,
+    "explanation": "Triple fusion: 1 sperm + 2 polar nuclei → triploid (3n) endosperm nucleus → endosperm (food store). [Board 2020] Egg + sperm = zygote (embryo); vegetative cell is in pollen; pollen alone → parthenogenesis."
   },
   {
     "id": "icb155",
@@ -2312,13 +2312,13 @@
     "difficulty": "medium",
     "text": "In a myopic (short-sighted) eye, the image of a distant object is formed:",
     "options": [
+      "Genetic engineering replaces entire chromosomes between unrelated species to introduce new traits",
+      "Selective breeding uses radiation to induce beneficial mutations in crop plants and livestock",
       "In front of retina",
-      "Behind retina",
-      "On retina",
-      "On cornea"
+      "Cloning produces offspring that are genetically different from the parent due to random mutation"
     ],
-    "correct": 0,
-    "explanation": "In myopia, the eyeball is too long or cornea too curved \u2192 image forms in front of retina. Corrected with concave lens. [Board 2020] Behind retina = hypermetropia; on retina = normal vision; cornea is at front of eye."
+    "correct": 2,
+    "explanation": "In myopia, the eyeball is too long or cornea too curved → image forms in front of retina. Corrected with concave lens. [Board 2020] Behind retina = hypermetropia; on retina = normal vision; cornea is at front of eye."
   },
   {
     "id": "icb156",
@@ -2327,12 +2327,12 @@
     "difficulty": "medium",
     "text": "Osmosis is defined as movement of water from:",
     "options": [
-      "Hypotonic to hypertonic solution through semi-permeable membrane",
       "Hypertonic to hypotonic solution",
-      "High solute to low solute",
-      "High pressure to low pressure"
+      "Hypotonic to hypertonic solution through semi-permeable membrane",
+      "High pressure to low pressure",
+      "High solute to low solute"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Osmosis: water moves from area of lower solute concentration (hypotonic) to higher (hypertonic) across a semi-permeable membrane. [Board 2023] Direction is reversed in option B; solute doesn't move in osmosis; pressure difference drives pressure filtration."
   },
   {
@@ -2342,13 +2342,13 @@
     "difficulty": "medium",
     "text": "The guard cells of stomata are unique because they:",
     "options": [
-      "Contain chloroplasts unlike other epidermal cells",
+      "Are dead cells",
       "Have no cell wall",
       "Are filled with water only",
-      "Are dead cells"
+      "Contain chloroplasts unlike other epidermal cells"
     ],
-    "correct": 0,
-    "explanation": "Guard cells contain chloroplasts, enabling photosynthesis and K\u207a pumping to control turgor and stomatal opening. [Board 2023] All plant cells have cell walls; they contain many organelles; guard cells are living cells."
+    "correct": 3,
+    "explanation": "Guard cells contain chloroplasts, enabling photosynthesis and K⁺ pumping to control turgor and stomatal opening. [Board 2023] All plant cells have cell walls; they contain many organelles; guard cells are living cells."
   },
   {
     "id": "icb158",
@@ -2357,13 +2357,13 @@
     "difficulty": "medium",
     "text": "Dialysis (kidney machine) mimics which function of the kidney?",
     "options": [
-      "Ultrafiltration and removal of wastes",
-      "Hormone secretion",
+      "Erythropoietin production",
       "Blood pressure regulation",
-      "Erythropoietin production"
+      "Ultrafiltration and removal of wastes",
+      "Hormone secretion"
     ],
-    "correct": 0,
-    "explanation": "Dialysis filters blood across a semi-permeable membrane removing urea, creatinine and excess ions \u2014 mimicking kidney filtration. [Board 2023] Hormone/EPO secretion is not done by dialysis; BP regulation is secondary."
+    "correct": 2,
+    "explanation": "Dialysis filters blood across a semi-permeable membrane removing urea, creatinine and excess ions — mimicking kidney filtration. [Board 2023] Hormone/EPO secretion is not done by dialysis; BP regulation is secondary."
   },
   {
     "id": "icb159",
@@ -2374,11 +2374,11 @@
     "options": [
       "25%",
       "50%",
-      "75%",
-      "100%"
+      "100%",
+      "75%"
     ],
     "correct": 0,
-    "explanation": "Both parents = Ss (carriers). Cross: Ss \u00d7 Ss \u2192 SS:Ss:Ss:ss = 1:2:1. P(ss, affected) = 1/4 = 25%. [Board 2023] 50% are carriers; 75% are unaffected; 100% implies both parents affected."
+    "explanation": "Both parents = Ss (carriers). Cross: Ss × Ss → SS:Ss:Ss:ss = 1:2:1. P(ss, affected) = 1/4 = 25%. [Board 2023] 50% are carriers; 75% are unaffected; 100% implies both parents affected."
   },
   {
     "id": "icb160",
@@ -2387,12 +2387,12 @@
     "difficulty": "easy",
     "text": "The structural and functional unit of the nervous system is:",
     "options": [
+      "HIV is transmitted only through contaminated food and water and not through blood or sexual contact",
       "Neuron",
-      "Brain",
-      "Spinal cord",
-      "Synapse"
+      "HIV vaccines are widely available and have eliminated new infections in vaccinated populations",
+      "HIV destroys red blood cells directly, reducing oxygen-carrying capacity and causing anaemia"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The neuron (nerve cell) is the basic structural and functional unit of the nervous system. [Board 2023] Brain and spinal cord are organs made of neurons; synapse is the junction between neurons."
   },
   {
@@ -2402,13 +2402,13 @@
     "difficulty": "medium",
     "text": "Arteries carry blood:",
     "options": [
-      "Away from the heart",
       "Towards the heart",
       "Only oxygenated blood",
-      "Only in the pulmonary circuit"
+      "Only in the pulmonary circuit",
+      "Away from the heart"
     ],
-    "correct": 0,
-    "explanation": "Arteries carry blood away from the heart (both oxygenated and deoxygenated \u2014 pulmonary artery carries deoxygenated). [Board 2023] Veins carry blood towards heart; arteries carry both types of blood; not only pulmonary."
+    "correct": 3,
+    "explanation": "Arteries carry blood away from the heart (both oxygenated and deoxygenated — pulmonary artery carries deoxygenated). [Board 2023] Veins carry blood towards heart; arteries carry both types of blood; not only pulmonary."
   },
   {
     "id": "icb162",
@@ -2417,12 +2417,12 @@
     "difficulty": "medium",
     "text": "The enzyme responsible for digestion of starch in the mouth is:",
     "options": [
-      "Salivary amylase (ptyalin)",
+      "Trypsin",
       "Pepsin",
       "Lipase",
-      "Trypsin"
+      "Salivary amylase (ptyalin)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Salivary amylase (ptyalin) in saliva hydrolyses starch to maltose. [Board 2023] Pepsin digests proteins; lipase digests fats; trypsin is pancreatic protease."
   },
   {
@@ -2432,12 +2432,12 @@
     "difficulty": "medium",
     "text": "Vegetative propagation in Bryophyllum occurs through:",
     "options": [
-      "Leaf buds (adventitious buds)",
-      "Seeds",
       "Spores",
-      "Pollen"
+      "Pollen",
+      "Seeds",
+      "Leaf buds (adventitious buds)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Bryophyllum reproduces vegetatively through adventitious buds formed on leaf margins, each growing into a new plant. [Board 2023] Seeds are from sexual reproduction; spores are in ferns; pollen is for sexual reproduction."
   },
   {
@@ -2447,12 +2447,12 @@
     "difficulty": "hard",
     "text": "The importance of transpiration includes:",
     "options": [
-      "Cooling of plant, mineral transport, maintains turgor",
-      "Increases soil temperature",
       "Stores water in stems",
-      "Prevents photosynthesis"
+      "Prevents photosynthesis",
+      "Cooling of plant, mineral transport, maintains turgor",
+      "Increases soil temperature"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Transpiration: (1) cools plant by evaporation; (2) creates transpiration pull for mineral/water transport; (3) maintains turgor in cells. [Board 2023] It doesn't heat soil, store water, or prevent photosynthesis (transpiration and photosynthesis both use stomata)."
   },
   {
@@ -2463,12 +2463,12 @@
     "text": "Which of the following represents a sex-linked trait?",
     "options": [
       "Colour blindness (X-linked)",
-      "Height",
-      "Blood group",
-      "Skin colour"
+      "Benign tumours are more dangerous than malignant tumours because they grow faster and spread sooner",
+      "Chemotherapy targets only cancer cells and has no side effects on healthy dividing cells in the body",
+      "Cancer cells divide at the same controlled rate as normal cells but accumulate damage over decades"
     ],
     "correct": 0,
-    "explanation": "Colour blindness is controlled by a gene on the X chromosome \u2014 classic sex-linked (X-linked recessive) trait. [Board 2023] Height, blood group, and skin colour are autosomal traits not sex-linked."
+    "explanation": "Colour blindness is controlled by a gene on the X chromosome — classic sex-linked (X-linked recessive) trait. [Board 2023] Height, blood group, and skin colour are autosomal traits not sex-linked."
   },
   {
     "id": "icb166",
@@ -2477,12 +2477,12 @@
     "source": "Board 2024",
     "text": "Duplicated chromosomes are joined at a point termed:",
     "options": [
-      "Centrosome",
-      "Centromere",
       "Centriole",
-      "Chromatid"
+      "Centrosome",
+      "Chromatid",
+      "Centromere"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The centromere is the constriction point where duplicated chromatids are joined together. Centrosome organizes mitotic spindle; Centriole is part of centrosome; Chromatid is each individual duplicated strand."
   },
   {
@@ -2492,12 +2492,12 @@
     "source": "Board 2024",
     "text": "The process of conversion of ADP to ATP during photosynthesis is called:",
     "options": [
-      "Photolysis",
+      "Polymerisation",
       "Phagocytosis",
-      "Photophosphorylation",
-      "Polymerisation"
+      "Photolysis",
+      "Photophosphorylation"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Photophosphorylation is the light-driven conversion of ADP to ATP using energy from light (photo). Photolysis is splitting of water; phagocytosis is cell eating; polymerization is linking monomers into polymers."
   },
   {
@@ -2508,11 +2508,11 @@
     "text": "The process in which water is lost from the margins of strawberry leaves is:",
     "options": [
       "Osmosis",
-      "Imbibition",
+      "Guttation",
       "Diffusion",
-      "Guttation"
+      "Imbibition"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Guttation is the loss of water in liquid form from leaf margins/tips through hydathodes, occurring when transpiration is low (e.g., at night or in humid conditions). Stomatal transpiration loses vapour, not liquid drops."
   },
   {
@@ -2522,13 +2522,13 @@
     "source": "Board 2024",
     "text": "The hormone that affects urination is:",
     "options": [
-      "Adrenaline",
+      "Thyroxine",
       "Vasopressin",
-      "Oestrogen",
-      "Thyroxine"
+      "Adrenaline",
+      "Oestrogen"
     ],
     "correct": 1,
-    "explanation": "Vasopressin (ADH \u2014 Antidiuretic Hormone) regulates water reabsorption in kidneys, directly affecting urine output. Adrenaline is stress hormone; Oestrogen is sex hormone; Thyroxine controls metabolism."
+    "explanation": "Vasopressin (ADH — Antidiuretic Hormone) regulates water reabsorption in kidneys, directly affecting urine output. Adrenaline is stress hormone; Oestrogen is sex hormone; Thyroxine controls metabolism."
   },
   {
     "id": "icb170",
@@ -2537,13 +2537,13 @@
     "source": "Board 2024",
     "text": "Which one helps in the opening of stomata:",
     "options": [
+      "Plasma proteins such as albumin carry oxygen from the lungs to tissues instead of haemoglobin",
       "Cobalt ions",
       "Potassium ions",
-      "Magnesium ions",
-      "Aluminium ions"
+      "White blood cells are produced in the thymus and are released directly into the arterial system"
     ],
-    "correct": 1,
-    "explanation": "Potassium ions (K\u207a) accumulate in guard cells, increasing osmotic pressure, causing water influx, making cells turgid and opening stomata. Cobalt, Magnesium, and Aluminium ions don't directly control stomatal opening."
+    "correct": 2,
+    "explanation": "Potassium ions (K⁺) accumulate in guard cells, increasing osmotic pressure, causing water influx, making cells turgid and opening stomata. Cobalt, Magnesium, and Aluminium ions don't directly control stomatal opening."
   },
   {
     "id": "icb171",
@@ -2553,11 +2553,11 @@
     "text": "A zygote which has Y chromosome inherited from the father will develop into a:",
     "options": [
       "Depends on chromosome from mother",
+      "Boy",
       "Girl",
-      "Either boy or girl",
-      "Boy"
+      "Either boy or girl"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Sex is determined by chromosomes: XX = girl, XY = boy. If father contributes Y chromosome, and mother always contributes X, the child will be XY = Boy. Sex does not depend on any other factors."
   },
   {
@@ -2567,12 +2567,12 @@
     "source": "Board 2024",
     "text": "The ear ossicle that transports sound vibrations to the inner ear:",
     "options": [
-      "Stapes",
-      "Malleus",
+      "Cochlea",
       "Incus",
-      "Cochlea"
+      "Stapes",
+      "Malleus"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Stapes (stirrup) is the last ossicle, transmitting vibrations to the oval window of the inner ear (cochlea). Malleus (hammer) receives vibrations from eardrum; Incus (anvil) connects malleus and stapes; Cochlea converts to nerve impulses."
   },
   {
@@ -2582,13 +2582,13 @@
     "source": "Board 2024",
     "text": "If a person has a heart attack, what must be done immediately?",
     "options": [
-      "P and Q",
+      "P, Q and R",
       "P and S",
-      "R and S",
-      "P, Q and R"
+      "P and Q",
+      "R and S"
     ],
-    "correct": 3,
-    "explanation": "Loosen clothing (P) to ease breathing, make them lie down in airy room (Q) for oxygen, and rush to hospital (R) for medical treatment. Engaging in conversation (S) is not helpful \u2014 wastes time for emergency care."
+    "correct": 0,
+    "explanation": "Loosen clothing (P) to ease breathing, make them lie down in airy room (Q) for oxygen, and rush to hospital (R) for medical treatment. Engaging in conversation (S) is not helpful — wastes time for emergency care."
   },
   {
     "id": "icb174",
@@ -2598,12 +2598,12 @@
     "text": "Adjusting focal length of eye lens to view objects at different distances is done by:",
     "options": [
       "Cornea",
+      "Sclera",
       "Iris",
-      "Ciliary muscles",
-      "Sclera"
+      "Ciliary muscles"
     ],
-    "correct": 2,
-    "explanation": "Ciliary muscles change the curvature (thickness) of the eye lens \u2014 accommodation. Cornea provides fixed refraction; Iris controls pupil size (amount of light); Sclera is the protective outer coat."
+    "correct": 3,
+    "explanation": "Ciliary muscles change the curvature (thickness) of the eye lens — accommodation. Cornea provides fixed refraction; Iris controls pupil size (amount of light); Sclera is the protective outer coat."
   },
   {
     "id": "icb175",
@@ -2612,13 +2612,13 @@
     "source": "Board 2024",
     "text": "Which friends gave correct examples of genetic disorders? P: Colour blindness & Malaria, Q: Albinism & Cholera, R: Haemophilia & Colour blindness, S: Haemophilia & Albinism",
     "options": [
+      "The spleen filters blood to remove worn-out white blood cells and produces lymphocytes continuously",
+      "Antibodies are produced by phagocytes after they engulf pathogens in the lymph nodes and spleen",
       "P and Q",
-      "R and S",
-      "P and R",
-      "Q and S"
+      "R and S"
     ],
-    "correct": 1,
-    "explanation": "Genetic disorders: Haemophilia (X-linked), Colour blindness (X-linked), Albinism (autosomal recessive) \u2014 all hereditary. Malaria and Cholera are infectious diseases, not genetic. R and S gave correct examples."
+    "correct": 3,
+    "explanation": "Genetic disorders: Haemophilia (X-linked), Colour blindness (X-linked), Albinism (autosomal recessive) — all hereditary. Malaria and Cholera are infectious diseases, not genetic. R and S gave correct examples."
   },
   {
     "id": "icb176",
@@ -2627,10 +2627,10 @@
     "source": "Board 2024",
     "text": "Osmosis takes place when there is:",
     "options": [
+      "An impermeable membrane",
       "A freely permeable membrane",
-      "A cell wall",
       "A selectively permeable membrane",
-      "An impermeable membrane"
+      "A cell wall"
     ],
     "correct": 2,
     "explanation": "Osmosis is the movement of water molecules through a selectively (semi) permeable membrane from higher water potential to lower. A freely permeable membrane allows all molecules through; impermeable blocks everything."
@@ -2648,7 +2648,7 @@
       "16"
     ],
     "correct": 0,
-    "explanation": "Sperms are haploid (n) \u2014 they have half the chromosome number of body (diploid, 2n) cells. 48\u00f72 = 24 chromosomes per sperm. 48 would be for diploid cells; 12 and 16 are incorrect halving."
+    "explanation": "Sperms are haploid (n) — they have half the chromosome number of body (diploid, 2n) cells. 48÷2 = 24 chromosomes per sperm. 48 would be for diploid cells; 12 and 16 are incorrect halving."
   },
   {
     "id": "icb178",
@@ -2672,12 +2672,12 @@
     "source": "Board 2024",
     "text": "A person is colour blind. His parents have normal vision. About his parents:",
     "options": [
-      "Both parents are carriers",
       "Mother is carrier, father has normal vision",
-      "Father is carrier, mother has normal vision",
-      "Cannot be determined"
+      "Both parents are carriers",
+      "Cannot be determined",
+      "Father is carrier, mother has normal vision"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Colour blindness is X-linked recessive. Normal-visioned parents with colour-blind son: mother must be carrier (X^c X), father has normal X^Y. Carrier father is impossible (he'd be colour blind himself)."
   },
   {
@@ -2685,14 +2685,14 @@
     "chapter": "Respiration",
     "difficulty": "easy",
     "source": "Board 2024",
-    "text": "Which process produces more energy \u2014 aerobic or anaerobic respiration?",
+    "text": "Which process produces more energy — aerobic or anaerobic respiration?",
     "options": [
-      "Anaerobic \u2014 38 ATP",
-      "Aerobic \u2014 38 ATP",
-      "Anaerobic \u2014 2 ATP",
-      "Aerobic \u2014 2 ATP"
+      "Aerobic — 38 ATP",
+      "Cardiac muscle fatigues rapidly with continuous use and must rest between contractions to recover",
+      "Anaerobic — 38 ATP",
+      "Skeletal muscle can contract without any nerve impulse and maintains tone purely through stretching"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Aerobic respiration produces ~38 ATP per glucose molecule. Anaerobic respiration produces only 2 ATP per glucose. Aerobic is far more efficient because it completely oxidizes glucose using oxygen."
   },
   {
@@ -2702,12 +2702,12 @@
     "source": "Board 2025",
     "text": "The number of live births per thousand people per year is called:",
     "options": [
-      "Mortality",
       "Population density",
+      "Natality",
       "Population growth rate",
-      "Natality"
+      "Mortality"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Natality (birth rate) = live births per 1000 population per year. Mortality = death rate; Population density = people per unit area; Population growth rate accounts for births, deaths, and migration combined."
   },
   {
@@ -2718,8 +2718,8 @@
     "text": "The structure at the junction of the choroid and iris, itself a part of choroid, is called:",
     "options": [
       "Ciliary body",
-      "Suspensory ligament",
       "Pupil",
+      "Suspensory ligament",
       "Lens"
     ],
     "correct": 0,
@@ -2748,11 +2748,11 @@
     "text": "The hormone that induces vigorous contractions of the uterus in a pregnant mother is:",
     "options": [
       "Oestrogen",
-      "Prolactin",
       "Oxytocin",
+      "Prolactin",
       "Progesterone"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Oxytocin causes uterine contractions during labour and is used medically to induce labour. Oestrogen prepares uterus; Prolactin stimulates milk production; Progesterone maintains pregnancy (relaxes uterus)."
   },
   {
@@ -2762,13 +2762,13 @@
     "source": "Board 2025",
     "text": "A scientist cut tails of all mice and made them reproduce. What will be the phenotype of offspring?",
     "options": [
-      "All offspring will be tailless",
-      "Mix of tailed and tailless",
       "All offspring will have tails",
-      "Cannot be predicted"
+      "Inhibitory neurotransmitters always cause the postsynaptic cell to generate a larger action potential",
+      "Synaptic transmission uses gap junctions to pass electrical signals directly without any chemical intermediary",
+      "All offspring will be tailless"
     ],
-    "correct": 2,
-    "explanation": "Cutting tails is an acquired characteristic \u2014 it doesn't affect the DNA/genes. Genetics (not Lamarck's theory) governs inheritance. All offspring will still inherit the tail gene and have tails."
+    "correct": 0,
+    "explanation": "Cutting tails is an acquired characteristic — it doesn't affect the DNA/genes. Genetics (not Lamarck's theory) governs inheritance. All offspring will still inherit the tail gene and have tails."
   },
   {
     "id": "icb186",
@@ -2792,13 +2792,13 @@
     "source": "Board 2025",
     "text": "The optimum temperature for photosynthesis is:",
     "options": [
-      "10\u201315\u00b0C",
-      "60\u201365\u00b0C",
-      "40\u201345\u00b0C",
-      "25\u201335\u00b0C"
+      "60–65°C",
+      "10–15°C",
+      "25–35°C",
+      "40–45°C"
     ],
-    "correct": 3,
-    "explanation": "Photosynthesis works best at 25\u201335\u00b0C. Below 10\u00b0C enzymes become too slow; above 40\u00b0C enzymes denature. 60\u201365\u00b0C would destroy photosynthetic enzymes completely."
+    "correct": 2,
+    "explanation": "Photosynthesis works best at 25–35°C. Below 10°C enzymes become too slow; above 40°C enzymes denature. 60–65°C would destroy photosynthetic enzymes completely."
   },
   {
     "id": "icb188",
@@ -2807,13 +2807,13 @@
     "source": "Board 2025",
     "text": "Ajay can roll his tongue, Vijay cannot. Tongue rolling is dominant. What is the genotype of their parents?",
     "options": [
+      "One parent homozygous dominant, other recessive",
       "Both parents homozygous dominant",
       "Both parents homozygous recessive",
-      "One parent homozygous dominant, other recessive",
       "Both parents heterozygous"
     ],
     "correct": 3,
-    "explanation": "If both siblings from same parents \u2014 one roller (at least one R allele) and one non-roller (rr) \u2014 both parents must be Rr\u00d7Rr (heterozygous). Homozygous dominant (RR\u00d7RR) would give all rollers; homozygous recessive can't produce rollers."
+    "explanation": "If both siblings from same parents — one roller (at least one R allele) and one non-roller (rr) — both parents must be Rr×Rr (heterozygous). Homozygous dominant (RR×RR) would give all rollers; homozygous recessive can't produce rollers."
   },
   {
     "id": "icb189",
@@ -2822,13 +2822,13 @@
     "source": "Board 2025",
     "text": "The stomatal pores open during daytime when:",
     "options": [
-      "CO\u2082 concentration increases",
-      "K\u207a ions move out of guard cells",
+      "CO₂ concentration increases",
+      "K⁺ ions move out of guard cells",
       "Light intensity increases",
       "Temperature decreases"
     ],
     "correct": 2,
-    "explanation": "Light triggers opening of stomata: light \u2192 K\u207a ions enter guard cells \u2192 water follows (osmosis) \u2192 cells become turgid \u2192 stomata open. CO\u2082 increase causes closing; K\u207a moving OUT causes closing; temperature decrease is not the primary trigger."
+    "explanation": "Light triggers opening of stomata: light → K⁺ ions enter guard cells → water follows (osmosis) → cells become turgid → stomata open. CO₂ increase causes closing; K⁺ moving OUT causes closing; temperature decrease is not the primary trigger."
   },
   {
     "id": "icb190",
@@ -2837,13 +2837,13 @@
     "source": "Board 2025",
     "text": "The functional unit of kidney is:",
     "options": [
+      "The hypothalamus coordinates voluntary skeletal movements and maintains balance and posture during activity",
       "Nephron",
-      "Ureter",
-      "Renal pelvis",
-      "Glomerulus"
+      "The medulla oblongata processes sensory information from the eyes and ears using the optic and auditory centres",
+      "The cerebellum controls personality, decision-making and speech production in the frontal association area"
     ],
-    "correct": 0,
-    "explanation": "The nephron is the functional unit of the kidney \u2014 it filters blood and forms urine. Ureter carries urine to bladder; Renal pelvis collects urine from nephrons; Glomerulus is just the filtration knot within the nephron."
+    "correct": 1,
+    "explanation": "The nephron is the functional unit of the kidney — it filters blood and forms urine. Ureter carries urine to bladder; Renal pelvis collects urine from nephrons; Glomerulus is just the filtration knot within the nephron."
   },
   {
     "id": "icb191",
@@ -2852,9 +2852,9 @@
     "source": "Board 2025",
     "text": "Blood entering the right atrium from the vena cava is:",
     "options": [
-      "Oxygenated blood",
-      "Deoxygenated blood",
       "Mixed blood",
+      "Deoxygenated blood",
+      "Oxygenated blood",
       "Lymph"
     ],
     "correct": 1,
@@ -2868,11 +2868,11 @@
     "text": "The fluid present in between the meninges (cerebrospinal fluid) functions to:",
     "options": [
       "Supply oxygen to brain",
-      "Protect brain from mechanical shock",
       "Transmit nerve impulses",
+      "Protect brain from mechanical shock",
       "Regulate body temperature"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Cerebrospinal fluid (CSF) acts as a shock absorber, protecting the brain and spinal cord from mechanical injury. It doesn't supply oxygen, transmit impulses, or regulate temperature directly."
   },
   {
@@ -2882,12 +2882,12 @@
     "source": "Board 2025",
     "text": "Which structure in the male reproductive system stores and matures sperms?",
     "options": [
+      "Vas deferens",
       "Seminal vesicle",
       "Epididymis",
-      "Prostate gland",
-      "Vas deferens"
+      "Prostate gland"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Epididymis is where sperm mature and are stored. Seminal vesicle secretes fructose for sperm; Prostate gland secretes alkaline fluid; Vas deferens carries sperms to urethra."
   },
   {
@@ -2897,13 +2897,13 @@
     "source": "Board 2025",
     "text": "Which of the following is NOT a product of the light reactions of photosynthesis?",
     "options": [
+      "Oxygen",
       "ATP",
-      "NADPH",
       "Glucose",
-      "Oxygen"
+      "NADPH"
     ],
     "correct": 2,
-    "explanation": "Glucose is produced in the Calvin cycle (dark reactions), not in light reactions. Light reactions produce ATP, NADPH, and O\u2082 (from photolysis of water). Glucose synthesis uses ATP and NADPH."
+    "explanation": "Glucose is produced in the Calvin cycle (dark reactions), not in light reactions. Light reactions produce ATP, NADPH, and O₂ (from photolysis of water). Glucose synthesis uses ATP and NADPH."
   },
   {
     "id": "icb195",
@@ -2912,13 +2912,13 @@
     "source": "Board 2025",
     "text": "The powerhouse of the cell is:",
     "options": [
-      "Ribosome",
       "Mitochondria",
-      "Nucleus",
-      "Chloroplast"
+      "Glucagon lowers blood glucose by stimulating glucose uptake into cells and glycogen synthesis",
+      "Ribosome",
+      "Adrenaline decreases blood glucose levels by promoting insulin secretion from the pancreatic alpha cells"
     ],
-    "correct": 1,
-    "explanation": "Mitochondria produce ATP (energy currency) through aerobic respiration \u2014 called the powerhouse of the cell. Ribosome makes proteins; Nucleus contains DNA; Chloroplast performs photosynthesis (in plants)."
+    "correct": 0,
+    "explanation": "Mitochondria produce ATP (energy currency) through aerobic respiration — called the powerhouse of the cell. Ribosome makes proteins; Nucleus contains DNA; Chloroplast performs photosynthesis (in plants)."
   },
   {
     "id": "icb196",
@@ -2927,12 +2927,12 @@
     "source": "Board 2026",
     "text": "Which friends gave correct examples of genetic disorders? P: Colour blindness & Malaria, Q: Albinism & Cholera, R: Haemophilia & Colour blindness, S: Haemophilia & Albinism",
     "options": [
-      "P and Q",
-      "R and S",
+      "Q and S",
       "P and R",
-      "Q and S"
+      "R and S",
+      "P and Q"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Genetic disorders: Haemophilia, Colour blindness, Albinism are all inherited genetic conditions. Malaria and Cholera are infectious diseases caused by pathogens, not genetic mutations. R and S are correct."
   },
   {
@@ -2942,12 +2942,12 @@
     "source": "Board 2026",
     "text": "During ventricular systole, the atrioventricular valves (P) ___ and the semilunar valves (Q) ___.",
     "options": [
-      "P\u2013close and Q\u2013open",
-      "P\u2013close and Q\u2013close",
-      "P\u2013open and Q\u2013close",
-      "P\u2013open and Q\u2013open"
+      "P–close and Q–close",
+      "P–open and Q–open",
+      "P–open and Q–close",
+      "P–close and Q–open"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "During ventricular systole (contraction): AV valves (mitral, tricuspid) CLOSE to prevent backflow into atria; semilunar valves (aortic, pulmonary) OPEN to let blood into arteries."
   },
   {
@@ -2963,7 +2963,7 @@
       "Both A and R are true but R is not correct explanation"
     ],
     "correct": 0,
-    "explanation": "A is true: thick cuticle reduces water loss from leaf surface. R is false: desert plants actually have small, thick, or absent leaves (or spines) to REDUCE transpiration \u2014 not large thin leaves."
+    "explanation": "A is true: thick cuticle reduces water loss from leaf surface. R is false: desert plants actually have small, thick, or absent leaves (or spines) to REDUCE transpiration — not large thin leaves."
   },
   {
     "id": "icb199",
@@ -2972,13 +2972,13 @@
     "source": "Board 2026",
     "text": "A DNA sequence has 300 base pairs, of which 75 are Guanine. What is the number of Thymine?",
     "options": [
-      "150",
-      "100",
       "50",
-      "75"
+      "75",
+      "100",
+      "150"
     ],
-    "correct": 0,
-    "explanation": "By Chargaff's rule: G = C and A = T. G = 75, so C = 75. Total G+C = 150. Remaining = 300\u2013150 = 150 base pairs are A+T. Since A = T, each = 75. Wait: total pairs = 300, so A+T pairs = 300\u2013150 = 150. T = A = 75. But option D is 75... Let me recalc: 300 BASE PAIRS means 300 pairs. G=75 pairs, C=75 pairs, so A+T pairs = 300\u201375\u201375=150. T=150/2=75. Hmm but option A says 150. If 300 nitrogenous base pairs: G=75, C=75, remaining=150 pairs = A+T, so T=75... Answer should be 75 (D). But the paper says 150? Let me check: if 300 individual bases (not pairs): G+C+A+T=300, G=75, C=75, so A+T=150, T=75. So T=75. Actually answer is D."
+    "correct": 3,
+    "explanation": "By Chargaff's rule: G = C and A = T. G = 75, so C = 75. Total G+C = 150. Remaining = 300–150 = 150 base pairs are A+T. Since A = T, each = 75. Wait: total pairs = 300, so A+T pairs = 300–150 = 150. T = A = 75. But option D is 75... Let me recalc: 300 BASE PAIRS means 300 pairs. G=75 pairs, C=75 pairs, so A+T pairs = 300–75–75=150. T=150/2=75. Hmm but option A says 150. If 300 nitrogenous base pairs: G=75, C=75, remaining=150 pairs = A+T, so T=75... Answer should be 75 (D). But the paper says 150? Let me check: if 300 individual bases (not pairs): G+C+A+T=300, G=75, C=75, so A+T=150, T=75. So T=75. Actually answer is D."
   },
   {
     "id": "icb200",
@@ -3002,10 +3002,10 @@
     "source": "Board 2026",
     "text": "Assertion: Leukoderma is the biological term for blood cancer. Reason: Abnormal increase in WBCs causes blood cancer. Which is correct?",
     "options": [
-      "A is true and R is false",
-      "A is false and R is true",
       "Both A and R are true and R is correct explanation",
-      "Both A and R are true but R is not correct explanation"
+      "A is false and R is true",
+      "Both A and R are true but R is not correct explanation",
+      "A is true and R is false"
     ],
     "correct": 1,
     "explanation": "A is false: Leukoderma is a skin condition (loss of pigmentation), NOT blood cancer. Leukaemia is the term for blood cancer. R is true: Leukaemia involves abnormal proliferation of WBCs."
@@ -3017,12 +3017,12 @@
     "source": "Board 2026",
     "text": "A health organisation wants to educate rural audience about population control using visually engaging methods. Which would be effective? P-Posters, Q-Loudspeakers, R-Film shows, S-Street plays",
     "options": [
-      "P, R and S",
-      "Q, R and S",
-      "P, Q and R",
-      "P, Q and S"
+      "Active immunity requires reinfection every few months to maintain sufficient antibody titres in the blood",
+      "Natural passive immunity lasts a lifetime because the infant produces its own antibodies from birth",
+      "Immunity acquired by vaccination is a form of passive immunity because no antigens enter the body",
+      "P, R and S"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Posters (P), Film shows (R), and Street plays (S) are all visual, engaging methods. Loudspeakers (Q) are audio-only, not visually engaging. For rural literacy-variable populations, visual media is most effective."
   },
   {
@@ -3032,13 +3032,13 @@
     "source": "Board 2026",
     "text": "Mother is a carrier of colour blindness (X^c X), father has normal vision (XY). Probability of sons being colour blind:",
     "options": [
-      "25%",
       "50%",
       "75%",
+      "25%",
       "0%"
     ],
-    "correct": 1,
-    "explanation": "Cross: X^c X \u00d7 XY \u2192 sons get Y from father and either X or X^c from mother. Sons: X^c Y (colour blind) or XY (normal) \u2014 50% chance each. So 50% of sons are colour blind. 25% includes daughters' probability."
+    "correct": 0,
+    "explanation": "Cross: X^c X × XY → sons get Y from father and either X or X^c from mother. Sons: X^c Y (colour blind) or XY (normal) — 50% chance each. So 50% of sons are colour blind. 25% includes daughters' probability."
   },
   {
     "id": "icb204",
@@ -3047,12 +3047,12 @@
     "source": "Board 2026",
     "text": "Bharat missed the school bus (stress). His sympathetic nervous system was stimulated, resulting in:",
     "options": [
-      "Constriction of coronary arteries",
-      "Muscle relaxation",
+      "Bronchodilation",
       "Decrease in respiration rate",
-      "Bronchodilation"
+      "Muscle relaxation",
+      "Constriction of coronary arteries"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Sympathetic (fight-or-flight) system: dilates bronchi (bronchodilation) for more oxygen, increases heart rate, dilates coronary arteries. It causes constriction of non-essential vessels, but muscle relaxation and decreased respiration are PARASYMPATHETIC effects."
   },
   {
@@ -3062,13 +3062,13 @@
     "source": "Board 2026",
     "text": "The main nitrogenous waste excreted by humans is:",
     "options": [
-      "Uric acid",
+      "Antibiotic resistance develops because bacteria consciously mutate when they sense the antibiotic present",
       "Urea",
-      "Ammonia",
-      "Creatinine"
+      "Uric acid",
+      "Broad-spectrum antibiotics target only Gram-positive bacteria and are ineffective against Gram-negative strains"
     ],
     "correct": 1,
-    "explanation": "Humans are ureotelic \u2014 they excrete mainly urea (formed in liver from amino acid deamination). Uric acid is excreted by birds/reptiles (uricotelic); ammonia by aquatic animals (ammonotelic); creatinine is a minor waste product."
+    "explanation": "Humans are ureotelic — they excrete mainly urea (formed in liver from amino acid deamination). Uric acid is excreted by birds/reptiles (uricotelic); ammonia by aquatic animals (ammonotelic); creatinine is a minor waste product."
   },
   {
     "id": "icb206",
@@ -3077,13 +3077,13 @@
     "source": "Board 2026",
     "text": "Which mineral is essential for chlorophyll synthesis?",
     "options": [
-      "Iron",
       "Magnesium",
+      "Iron",
       "Calcium",
       "Zinc"
     ],
-    "correct": 1,
-    "explanation": "Magnesium (Mg) is the central atom of the chlorophyll molecule \u2014 it is essential for chlorophyll synthesis. Without Mg, plants show chlorosis (yellowing). Iron helps in chlorophyll formation but is not part of the chlorophyll ring."
+    "correct": 0,
+    "explanation": "Magnesium (Mg) is the central atom of the chlorophyll molecule — it is essential for chlorophyll synthesis. Without Mg, plants show chlorosis (yellowing). Iron helps in chlorophyll formation but is not part of the chlorophyll ring."
   },
   {
     "id": "icb207",
@@ -3092,12 +3092,12 @@
     "source": "Board 2026",
     "text": "Fertilization in humans takes place in the:",
     "options": [
-      "Uterus",
-      "Cervix",
+      "Ovary",
       "Fallopian tube",
-      "Ovary"
+      "Cervix",
+      "Uterus"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Fertilization occurs in the Fallopian tube (oviduct), specifically in its ampulla region. The fertilized egg then travels to the uterus for implantation. Ovary releases the egg; uterus is for implantation; cervix connects uterus to vagina."
   },
   {
@@ -3107,12 +3107,12 @@
     "source": "Board 2026",
     "text": "Which organelle is responsible for protein synthesis?",
     "options": [
-      "Mitochondria",
-      "Golgi body",
       "Ribosome",
+      "Golgi body",
+      "Mitochondria",
       "Lysosome"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Ribosomes are the sites of protein synthesis (translation). Mitochondria produce ATP; Golgi body modifies and packages proteins; Lysosomes contain digestive enzymes and break down cellular waste."
   },
   {
@@ -3123,11 +3123,11 @@
     "text": "The part of the brain responsible for maintaining balance and coordination is:",
     "options": [
       "Cerebrum",
+      "Hypothalamus",
       "Cerebellum",
-      "Medulla oblongata",
-      "Hypothalamus"
+      "Medulla oblongata"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Cerebellum coordinates voluntary movement, maintains posture and balance. Cerebrum handles conscious thought; Medulla oblongata controls involuntary actions (breathing, heart rate); Hypothalamus regulates homeostasis."
   },
   {
@@ -3137,12 +3137,12 @@
     "source": "Board 2026",
     "text": "Which factors increase the rate of transpiration? 1. High temperature 2. High humidity 3. Good air circulation 4. Low light intensity",
     "options": [
-      "1 and 3",
-      "2 and 4",
       "1, 2 and 3",
+      "2 and 4",
+      "1 and 3",
       "2, 3 and 4"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "High temperature increases evaporation rate. Good air circulation removes water vapour, maintaining concentration gradient. High humidity REDUCES transpiration (less gradient); low light closes stomata, reducing transpiration."
   }
 ]

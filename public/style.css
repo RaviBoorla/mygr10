@@ -412,7 +412,7 @@ h2 { margin: 0 0 4px; font-size: var(--fs-h2); }
   font-size: var(--fs-2xs); font-weight: 700; text-transform: uppercase; letter-spacing: .02em;
   background: var(--primary-soft); color: var(--primary); border-radius: 999px;
 }
-.q-text    { margin: 0; font-size: var(--fs-read); line-height: 1.5; white-space: pre-line; }
+.q-text    { margin: 0; font-size: var(--fs-read); line-height: 1.5; white-space: pre-wrap; }
 
 .inline-state {
   padding: 14px 16px; border-radius: var(--radius-md); background: var(--bg);
@@ -523,7 +523,7 @@ kbd {
 .rev-badge.wrong   { background: var(--wrong-bg); color: var(--wrong-fg); }
 .rev-badge.skipped { background: var(--skip-badge-bg); color: var(--skip-badge-fg); }
 
-.rev-q-text  { margin: 0; font-size: var(--fs-read); font-weight: 600; line-height: 1.5; white-space: pre-line; }
+.rev-q-text  { margin: 0; font-size: var(--fs-read); font-weight: 600; line-height: 1.5; white-space: pre-wrap; }
 .rev-options { display: flex; flex-direction: column; gap: 6px; }
 .rev-opt {
   display: flex; align-items: center; gap: 10px;
