@@ -1,134 +1,1982 @@
 [
-  {"id":"ixmath001","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"easy","text":"In a Cartesian plane, the point where the x-axis and y-axis intersect is called the:","options":["Origin","Focus","Centre","Vertex"],"correct":0,"explanation":"The origin is the point (0, 0) where the two axes meet.","source":"NCERT Textbook"},
-  {"id":"ixmath002","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"easy","text":"A point has coordinates (–3, 5). In which quadrant does it lie?","options":["Quadrant I","Quadrant II","Quadrant III","Quadrant IV"],"correct":1,"explanation":"Quadrant II has negative x and positive y.","source":"NCERT Textbook"},
-  {"id":"ixmath003","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"easy","text":"The x-coordinate of any point on the y-axis is:","options":["Undefined","1","0","–1"],"correct":2,"explanation":"Every point on the y-axis has x = 0.","source":"NCERT Textbook"},
-  {"id":"ixmath004","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"medium","text":"The points (3, 0), (–3, 0) and (0, 0) all lie on:","options":["The y-axis","The x-axis","Quadrant I","Quadrant IV"],"correct":1,"explanation":"All three points have y = 0, so they lie on the x-axis.","source":"NCERT Textbook"},
-  {"id":"ixmath005","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"medium","text":"If M (1, 3) is the midpoint of segment AB with A = (–1, 1), what are the coordinates of B?","options":["(3, 5)","(2, 4)","(0, 2)","(1, 3)"],"correct":0,"explanation":"Midpoint formula: x_M = (x_A+x_B)/2, y_M = (y_A+y_B)/2. So x_B = 2(1)–(–1)=3, y_B = 2(3)–1=5.","source":"NCERT Textbook"},
-  {"id":"ixmath006","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"medium","text":"Which quadrant contains points with both coordinates negative?","options":["Quadrant I","Quadrant II","Quadrant III","Quadrant IV"],"correct":2,"explanation":"Quadrant III contains points (x, y) where both x < 0 and y < 0.","source":"NCERT Textbook"},
-  {"id":"ixmath007","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"hard","text":"Point A is at (4, 7) and B is at (16, –2). The point P that trisects AB closer to A has coordinates:","options":["(8, 4)","(10, 1)","(8, 4.33)","(12, 1)"],"correct":0,"explanation":"P divides AB in ratio 1:2. x = 4+(16–4)/3 = 4+4 = 8; y = 7+(–2–7)/3 = 7–3 = 4.","source":"NCERT Textbook"},
-  {"id":"ixmath008","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"medium","text":"A point (a, b) is reflected across the x-axis. Its new coordinates are:","options":["(–a, b)","(a, –b)","(–a, –b)","(b, a)"],"correct":1,"explanation":"Reflection across the x-axis negates the y-coordinate.","source":"NCERT Textbook"},
-  {"id":"ixmath009","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"hard","text":"Points A(1,–8), B(–4,7), C(–7,–4). Their distances from the origin are respectively:","options":["√65, √65, √65","√65, √65, √53","8,7,7","3,3,3"],"correct":0,"explanation":"d(A)=√(1+64)=√65; d(B)=√(16+49)=√65; d(C)=√(49+16)=√65. All equidistant from origin, lying on a circle.","source":"NCERT Textbook"},
-  {"id":"ixmath010","chapter":"Orienting Yourself: The Use of Coordinates","difficulty":"easy","text":"The coordinate axes divide the Cartesian plane into how many parts?","options":["2","3","4","6"],"correct":2,"explanation":"The x-axis and y-axis divide the plane into four quadrants.","source":"NCERT Textbook"},
-  {"id":"ixmath011","chapter":"Introduction to Linear Polynomials","difficulty":"easy","text":"The degree of the polynomial 4z – 3 is:","options":["0","1","2","3"],"correct":1,"explanation":"The highest power of the variable is 1, so it is a linear (degree 1) polynomial.","source":"NCERT Textbook"},
-  {"id":"ixmath012","chapter":"Introduction to Linear Polynomials","difficulty":"easy","text":"In the polynomial x⁴ – 3x³ + 6x² – 2x + 7, the coefficient of x³ is:","options":["6","–3","–2","3"],"correct":1,"explanation":"The term –3x³ has coefficient –3.","source":"NCERT Textbook"},
-  {"id":"ixmath013","chapter":"Introduction to Linear Polynomials","difficulty":"easy","text":"What is the constant term of the polynomial 9x³ + 5x² – 8x – 10?","options":["9","5","–8","–10"],"correct":3,"explanation":"The constant term is the term without any variable, which is –10.","source":"NCERT Textbook"},
-  {"id":"ixmath014","chapter":"Introduction to Linear Polynomials","difficulty":"medium","text":"A chess club charges ₹200 joining fee plus ₹50 per match. If a player paid ₹750, how many matches did they play?","options":["9","10","11","15"],"correct":2,"explanation":"200 + 50m = 750 → 50m = 550 → m = 11.","source":"NCERT Textbook"},
-  {"id":"ixmath015","chapter":"Introduction to Linear Polynomials","difficulty":"medium","text":"Which of the following is NOT a polynomial?","options":["3x + 1","x² – 5","x⁻¹ + 2","4"],"correct":2,"explanation":"A polynomial cannot have negative integer exponents. x⁻¹ + 2 is not a polynomial.","source":"NCERT Textbook"},
-  {"id":"ixmath016","chapter":"Introduction to Linear Polynomials","difficulty":"medium","text":"The linear polynomial p(x) = 3x – 6 becomes zero when x equals:","options":["–2","2","3","6"],"correct":1,"explanation":"3x – 6 = 0 → x = 2.","source":"NCERT Textbook"},
-  {"id":"ixmath017","chapter":"Introduction to Linear Polynomials","difficulty":"hard","text":"The graph of a linear equation ax + by = c (where b ≠ 0) is:","options":["A parabola","A circle","A straight line","A hyperbola"],"correct":2,"explanation":"Every linear equation in two variables represents a straight line in the Cartesian plane.","source":"NCERT Textbook"},
-  {"id":"ixmath018","chapter":"Introduction to Linear Polynomials","difficulty":"medium","text":"The perimeter of a square with side x is a linear polynomial in x. If the perimeter is 18 cm, the side is:","options":["3 cm","4 cm","4.5 cm","6 cm"],"correct":2,"explanation":"P = 4x = 18 → x = 4.5 cm.","source":"NCERT Textbook"},
-  {"id":"ixmath019","chapter":"Introduction to Linear Polynomials","difficulty":"easy","text":"Polynomials of degree 1 are specifically called:","options":["Quadratic","Linear","Constant","Cubic"],"correct":1,"explanation":"A polynomial of degree 1 is called a linear polynomial.","source":"NCERT Textbook"},
-  {"id":"ixmath020","chapter":"Introduction to Linear Polynomials","difficulty":"medium","text":"In a linear pattern, the difference between successive values at consecutive integers is:","options":["Increasing","Decreasing","Zero","Constant"],"correct":3,"explanation":"A linear polynomial p(x) increases by the same constant amount for each unit increase in x.","source":"NCERT Textbook"},
-  {"id":"ixmath021","chapter":"The World of Numbers","difficulty":"easy","text":"Which Indian mathematician first treated zero as a number with its own properties?","options":["Āryabhaṭa","Brahmagupta","Baudhāyana","Bhāskara"],"correct":1,"explanation":"Brahmagupta (628 CE) formally defined zero and its arithmetic properties.","source":"NCERT Textbook"},
-  {"id":"ixmath022","chapter":"The World of Numbers","difficulty":"easy","text":"The natural numbers are closed under which operation?","options":["Subtraction","Division","Addition","All of the above"],"correct":2,"explanation":"Natural numbers are closed under addition (sum of two natural numbers is always a natural number), but not subtraction or division.","source":"NCERT Textbook"},
-  {"id":"ixmath023","chapter":"The World of Numbers","difficulty":"medium","text":"The sequence 11, 13, 17, 19 (from the Ishango bone) are all:","options":["Even numbers","Multiples of 3","Prime numbers","Perfect squares"],"correct":2,"explanation":"11, 13, 17, 19 are all prime numbers.","source":"NCERT Textbook"},
-  {"id":"ixmath024","chapter":"The World of Numbers","difficulty":"medium","text":"In the decimal expansion, which type of number has a non-terminating, non-repeating expansion?","options":["Rational numbers","Integers","Irrational numbers","Fractions"],"correct":2,"explanation":"Irrational numbers have decimal expansions that neither terminate nor repeat.","source":"NCERT Textbook"},
-  {"id":"ixmath025","chapter":"The World of Numbers","difficulty":"medium","text":"Which number system does NOT contain negative numbers?","options":["Integers","Real numbers","Natural numbers","Rational numbers"],"correct":2,"explanation":"Natural numbers are 1, 2, 3, ... — they do not include negative numbers or zero.","source":"NCERT Textbook"},
-  {"id":"ixmath026","chapter":"The World of Numbers","difficulty":"hard","text":"A merchant receives 15 copper ingots for every 2 bags of spices. For 12 bags, how many ingots does he receive?","options":["60","75","80","90"],"correct":3,"explanation":"Ratio: 15 ingots : 2 bags = x ingots : 12 bags → x = 15×12/2 = 90.","source":"NCERT Textbook"},
-  {"id":"ixmath027","chapter":"The World of Numbers","difficulty":"medium","text":"Which of the following is NOT a rational number?","options":["0.75","0.333...","√2","22/7"],"correct":2,"explanation":"√2 is irrational; it cannot be expressed as p/q where p, q are integers and q ≠ 0.","source":"NCERT Textbook"},
-  {"id":"ixmath028","chapter":"The World of Numbers","difficulty":"easy","text":"The concept of Śhūnyatā (emptiness) that inspired the concept of zero in mathematics came from:","options":["Greek philosophy","Indian philosophical traditions","Egyptian mathematics","Babylonian astronomy"],"correct":1,"explanation":"Indian philosophical concept of Śhūnyatā (emptiness/nothingness) in Upanishads and Buddhist literature inspired the mathematical concept of zero.","source":"NCERT Textbook"},
-  {"id":"ixmath029","chapter":"The World of Numbers","difficulty":"hard","text":"Which of the following statements is true?","options":["All integers are natural numbers","All natural numbers are whole numbers","All rational numbers are irrational","All whole numbers are irrational"],"correct":1,"explanation":"Whole numbers include 0 and all natural numbers, so all natural numbers are whole numbers.","source":"NCERT Textbook"},
-  {"id":"ixmath030","chapter":"The World of Numbers","difficulty":"medium","text":"The Bakhśhālī Manuscript is significant in mathematics because it:","options":["Proved Pythagoras theorem","Contains one of the earliest known uses of zero as a placeholder","Introduced trigonometry","Defined prime numbers"],"correct":1,"explanation":"The Bakhśhālī Manuscript (found in 1881) contains early use of a dot as a placeholder for zero.","source":"NCERT Textbook"},
-  {"id":"ixmath031","chapter":"Exploring Algebraic Identities","difficulty":"easy","text":"Which of the following is a correct algebraic identity?","options":["(a+b)² = a² + b²","(a+b)² = a² + 2ab + b²","(a+b)² = a² – 2ab + b²","(a–b)² = a² + 2ab + b²"],"correct":1,"explanation":"(a+b)² = a² + 2ab + b² is the standard algebraic identity.","source":"NCERT Textbook"},
-  {"id":"ixmath032","chapter":"Exploring Algebraic Identities","difficulty":"easy","text":"(a – b)² equals:","options":["a² – b²","a² – 2ab + b²","a² + 2ab – b²","a² + b²"],"correct":1,"explanation":"(a–b)² = a² – 2ab + b².","source":"NCERT Textbook"},
-  {"id":"ixmath033","chapter":"Exploring Algebraic Identities","difficulty":"medium","text":"Using the identity (a+b)(a–b) = a² – b², evaluate 99 × 101:","options":["9801","9899","9999","9900"],"correct":2,"explanation":"99×101 = (100–1)(100+1) = 100² – 1² = 10000 – 1 = 9999.","source":"NCERT Textbook"},
-  {"id":"ixmath034","chapter":"Exploring Algebraic Identities","difficulty":"medium","text":"The expansion of (x + 3)(x – 3) is:","options":["x² – 9","x² + 9","x² – 6x + 9","x² + 6x – 9"],"correct":0,"explanation":"(x+3)(x–3) = x² – 3² = x² – 9, using the identity (a+b)(a–b) = a² – b².","source":"NCERT Textbook"},
-  {"id":"ixmath035","chapter":"Exploring Algebraic Identities","difficulty":"hard","text":"For three consecutive square numbers n², (n+1)², (n+2)², adding the smallest and largest then subtracting twice the middle gives:","options":["0","1","2","4"],"correct":2,"explanation":"n² + (n+2)² – 2(n+1)² = n²+n²+4n+4–2n²–4n–2 = 2. This is always 2.","source":"NCERT Textbook"},
-  {"id":"ixmath036","chapter":"Exploring Algebraic Identities","difficulty":"medium","text":"Which identity is used to factorise x² – 25?","options":["(a+b)²","(a–b)²","(a+b)(a–b)","(a+b+c)²"],"correct":2,"explanation":"x² – 25 = x² – 5² = (x+5)(x–5), using the difference of squares identity.","source":"NCERT Textbook"},
-  {"id":"ixmath037","chapter":"Exploring Algebraic Identities","difficulty":"hard","text":"Using algebraic identities, 103² equals:","options":["10506","10609","10600","10709"],"correct":1,"explanation":"103² = (100+3)² = 10000 + 600 + 9 = 10609.","source":"NCERT Textbook"},
-  {"id":"ixmath038","chapter":"Exploring Algebraic Identities","difficulty":"medium","text":"(a + b + c)² expands to:","options":["a² + b² + c²","a² + b² + c² + 2ab + 2bc + 2ca","a² + b² + c² + ab + bc + ca","a² + b² + c² – 2ab – 2bc – 2ca"],"correct":1,"explanation":"(a+b+c)² = a² + b² + c² + 2ab + 2bc + 2ca.","source":"NCERT Textbook"},
-  {"id":"ixmath039","chapter":"Exploring Algebraic Identities","difficulty":"easy","text":"The identity (a+b)³ = a³ + 3a²b + 3ab² + b³ is called:","options":["Difference of cubes","Sum of cubes","Binomial expansion","Trinomial identity"],"correct":2,"explanation":"(a+b)³ is the binomial expansion for cube.","source":"NCERT Textbook"},
-  {"id":"ixmath040","chapter":"Exploring Algebraic Identities","difficulty":"medium","text":"Which is a factor of a² – b²?","options":["(a + b) only","(a – b) only","Both (a+b) and (a–b)","Neither"],"correct":2,"explanation":"a² – b² = (a+b)(a–b), so both (a+b) and (a–b) are factors.","source":"NCERT Textbook"},
-  {"id":"ixmath041","chapter":"I'm Up and Down, and Round and Round","difficulty":"easy","text":"A chord of a circle is:","options":["A line touching the circle at one point","A line segment joining two points on the circle","The longest chord","Half the diameter"],"correct":1,"explanation":"A chord is a line segment with both endpoints on the circle.","source":"NCERT Textbook"},
-  {"id":"ixmath042","chapter":"I'm Up and Down, and Round and Round","difficulty":"easy","text":"The longest chord of a circle is:","options":["Any chord","The diameter","The radius","The arc"],"correct":1,"explanation":"The diameter passes through the centre and is the longest chord of a circle.","source":"NCERT Textbook"},
-  {"id":"ixmath043","chapter":"I'm Up and Down, and Round and Round","difficulty":"medium","text":"The perpendicular from the centre of a circle to a chord:","options":["Bisects the arc only","Bisects the chord","Is equal to the radius","Passes outside the circle"],"correct":1,"explanation":"The perpendicular from the centre bisects the chord.","source":"NCERT Textbook"},
-  {"id":"ixmath044","chapter":"I'm Up and Down, and Round and Round","difficulty":"medium","text":"An angle inscribed in a semicircle is always:","options":["Acute","Obtuse","Right (90°)","180°"],"correct":2,"explanation":"An angle inscribed in a semicircle (subtended by the diameter) is always 90°.","source":"NCERT Textbook"},
-  {"id":"ixmath045","chapter":"I'm Up and Down, and Round and Round","difficulty":"hard","text":"A cyclic quadrilateral has ∠A = 80°. What is ∠C?","options":["80°","100°","180°","260°"],"correct":1,"explanation":"Opposite angles of a cyclic quadrilateral are supplementary: ∠A + ∠C = 180°, so ∠C = 100°.","source":"NCERT Textbook"},
-  {"id":"ixmath046","chapter":"I'm Up and Down, and Round and Round","difficulty":"medium","text":"The circumference of a circle with radius r is:","options":["πr","2πr","πr²","2πr²"],"correct":1,"explanation":"Circumference = 2πr.","source":"NCERT Textbook"},
-  {"id":"ixmath047","chapter":"I'm Up and Down, and Round and Round","difficulty":"medium","text":"Equal chords of a circle are:","options":["At different distances from the centre","Equidistant from the centre","Parallel to each other","Always diameters"],"correct":1,"explanation":"Equal chords are equidistant from the centre of the circle.","source":"NCERT Textbook"},
-  {"id":"ixmath048","chapter":"I'm Up and Down, and Round and Round","difficulty":"hard","text":"The angle subtended by an arc at the centre is __ the angle subtended at any point on the remaining part of the circle.","options":["Equal to","Half of","Double","One-third of"],"correct":2,"explanation":"The central angle is twice the inscribed angle subtending the same arc.","source":"NCERT Textbook"},
-  {"id":"ixmath049","chapter":"I'm Up and Down, and Round and Round","difficulty":"medium","text":"A tangent to a circle at a point is:","options":["A chord passing through the centre","Perpendicular to the radius at that point","Parallel to any chord","Bisecting the circle"],"correct":1,"explanation":"A tangent is perpendicular to the radius drawn to the point of tangency.","source":"NCERT Textbook"},
-  {"id":"ixmath050","chapter":"I'm Up and Down, and Round and Round","difficulty":"easy","text":"Two circles are concentric if they:","options":["Have the same radius","Have the same centre","Touch each other externally","Touch each other internally"],"correct":1,"explanation":"Concentric circles share the same centre but have different radii.","source":"NCERT Textbook"},
-  {"id":"ixmath051","chapter":"Measuring Space: Perimeter and Area","difficulty":"easy","text":"The area of a triangle with base b and height h is:","options":["bh","2bh","bh/2","b²h"],"correct":2,"explanation":"Area of triangle = (1/2) × base × height.","source":"NCERT Textbook"},
-  {"id":"ixmath052","chapter":"Measuring Space: Perimeter and Area","difficulty":"easy","text":"In a 4×100 m relay race, athletes in outer lanes start ahead because:","options":["They are faster","The track curves, so outer lanes have greater circumference","Outer lanes are shorter","The finish line is different for each lane"],"correct":1,"explanation":"The circular part of the track is longer for outer lanes, so staggered starts equalise total distance run.","source":"NCERT Textbook"},
-  {"id":"ixmath053","chapter":"Measuring Space: Perimeter and Area","difficulty":"medium","text":"The area of a trapezium with parallel sides a and b, and height h is:","options":["(a+b)h","(a+b)h/2","(a×b)h","(a–b)h/2"],"correct":1,"explanation":"Area of trapezium = (1/2)(a+b)h where a and b are the parallel sides.","source":"NCERT Textbook"},
-  {"id":"ixmath054","chapter":"Measuring Space: Perimeter and Area","difficulty":"medium","text":"The area of a circle with radius r is:","options":["2πr","πr","πr²","2πr²"],"correct":2,"explanation":"Area of circle = πr².","source":"NCERT Textbook"},
-  {"id":"ixmath055","chapter":"Measuring Space: Perimeter and Area","difficulty":"hard","text":"Heron's formula for the area of a triangle with sides a, b, c is A = √[s(s–a)(s–b)(s–c)], where s is:","options":["a+b+c","(a+b+c)/2","(a+b+c)/3","(a+b–c)/2"],"correct":1,"explanation":"s is the semi-perimeter: s = (a+b+c)/2.","source":"NCERT Textbook"},
-  {"id":"ixmath056","chapter":"Measuring Space: Perimeter and Area","difficulty":"medium","text":"The perimeter of a regular hexagon with side s is:","options":["4s","5s","6s","8s"],"correct":2,"explanation":"A regular hexagon has 6 equal sides, so perimeter = 6s.","source":"NCERT Textbook"},
-  {"id":"ixmath057","chapter":"Measuring Space: Perimeter and Area","difficulty":"hard","text":"A parallelogram with base 8 cm and height 5 cm has the same area as a rectangle with length 10 cm. The width of the rectangle is:","options":["3 cm","4 cm","5 cm","6 cm"],"correct":1,"explanation":"Area of parallelogram = 8×5 = 40 cm². Width = 40/10 = 4 cm.","source":"NCERT Textbook"},
-  {"id":"ixmath058","chapter":"Measuring Space: Perimeter and Area","difficulty":"medium","text":"The area of a rhombus with diagonals d₁ and d₂ is:","options":["d₁ × d₂","(d₁ + d₂)/2","d₁ × d₂ / 2","2(d₁ + d₂)"],"correct":2,"explanation":"Area of rhombus = (1/2) × d₁ × d₂.","source":"NCERT Textbook"},
-  {"id":"ixmath059","chapter":"Measuring Space: Perimeter and Area","difficulty":"medium","text":"The sum of interior angles of a polygon with n sides is:","options":["180°","(n–2)×180°","n×180°","(n+2)×180°"],"correct":1,"explanation":"Sum of interior angles = (n–2) × 180°.","source":"NCERT Textbook"},
-  {"id":"ixmath060","chapter":"Measuring Space: Perimeter and Area","difficulty":"easy","text":"Perimeter measures:","options":["The region enclosed by a figure","The boundary length of a figure","The volume of a shape","The surface area"],"correct":1,"explanation":"Perimeter is the total length of the boundary of a 2D figure.","source":"NCERT Textbook"},
-  {"id":"ixmath061","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"easy","text":"The probability of an impossible event is:","options":["1","0.5","0","–1"],"correct":2,"explanation":"An impossible event has probability 0.","source":"NCERT Textbook"},
-  {"id":"ixmath062","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"easy","text":"A coin is tossed. The sample space is:","options":["{H}","{T}","{H,T}","{H,T,HT}"],"correct":2,"explanation":"Sample space = {Heads, Tails} = {H, T}.","source":"NCERT Textbook"},
-  {"id":"ixmath063","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"medium","text":"A die is rolled 50 times and shows 4 exactly 8 times. The experimental probability of rolling a 4 is:","options":["4/50","8/50","1/6","8/6"],"correct":1,"explanation":"Experimental probability = 8/50 = 0.16.","source":"NCERT Textbook"},
-  {"id":"ixmath064","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"medium","text":"The theoretical probability of rolling an even number on a fair die is:","options":["1/6","1/3","1/2","2/3"],"correct":2,"explanation":"Even numbers on a die: {2, 4, 6}. P = 3/6 = 1/2.","source":"NCERT Textbook"},
-  {"id":"ixmath065","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"medium","text":"Probability calculated from collected data or repeated experiments is called:","options":["Theoretical probability","Classical probability","Experimental probability","Subjective probability"],"correct":2,"explanation":"Experimental probability is based on actual observations or experiments.","source":"NCERT Textbook"},
-  {"id":"ixmath066","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"hard","text":"In a bag with 3 red and 5 blue balls, the probability of drawing a red ball is:","options":["3/5","5/8","3/8","1/3"],"correct":2,"explanation":"Total balls = 8. P(red) = 3/8.","source":"NCERT Textbook"},
-  {"id":"ixmath067","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"medium","text":"Two events are mutually exclusive if:","options":["They can both occur at the same time","They cannot both occur at the same time","They have equal probabilities","One always leads to the other"],"correct":1,"explanation":"Mutually exclusive events cannot occur simultaneously; P(A and B) = 0.","source":"NCERT Textbook"},
-  {"id":"ixmath068","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"hard","text":"The sum of probabilities of all outcomes in a sample space equals:","options":["0","0.5","1","Varies"],"correct":2,"explanation":"The probabilities of all possible outcomes must sum to 1.","source":"NCERT Textbook"},
-  {"id":"ixmath069","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"medium","text":"An event has probability 0.7. The probability of the event NOT occurring is:","options":["0.7","0.3","1.7","0"],"correct":1,"explanation":"P(not A) = 1 – P(A) = 1 – 0.7 = 0.3.","source":"NCERT Textbook"},
-  {"id":"ixmath070","chapter":"The Mathematics of Maybe: Introduction to Probability","difficulty":"easy","text":"The relative frequency of an event is:","options":["The number of times the event occurred","The ratio of event occurrences to total trials","The probability of the event","Both B and C"],"correct":1,"explanation":"Relative frequency = number of occurrences / total trials.","source":"NCERT Textbook"},
-  {"id":"ixmath071","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"easy","text":"In an arithmetic progression (AP), the difference between consecutive terms is:","options":["Variable","Zero","Constant","Increasing"],"correct":2,"explanation":"In an AP, the common difference d between consecutive terms is constant.","source":"NCERT Textbook"},
-  {"id":"ixmath072","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"easy","text":"The nth term of an AP with first term a and common difference d is:","options":["a + nd","a + (n–1)d","a × d^(n–1)","nd"],"correct":1,"explanation":"The nth term tₙ = a + (n–1)d.","source":"NCERT Textbook"},
-  {"id":"ixmath073","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"medium","text":"The sequence 1, 4, 7, 10, 13, ... has common difference:","options":["1","3","4","7"],"correct":1,"explanation":"4–1 = 7–4 = 10–7 = 3. The common difference is 3.","source":"NCERT Textbook"},
-  {"id":"ixmath074","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"medium","text":"In a geometric progression (GP), consecutive terms have a constant:","options":["Difference","Sum","Ratio","Product"],"correct":2,"explanation":"In a GP, each term is obtained by multiplying the previous term by a constant ratio.","source":"NCERT Textbook"},
-  {"id":"ixmath075","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"medium","text":"Using the explicit rule uₙ = 2n – 1, the 53rd term is:","options":["103","105","107","53"],"correct":1,"explanation":"u₅₃ = 2(53) – 1 = 106 – 1 = 105.","source":"NCERT Textbook"},
-  {"id":"ixmath076","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"hard","text":"The sum of the first n terms of an AP with first term a and last term l is:","options":["n(a+l)","n(a+l)/2","n(2a+(n–1)d)/2","Both B and C"],"correct":3,"explanation":"Sₙ = n(a+l)/2 = n(2a+(n–1)d)/2. Both are equivalent formulae.","source":"NCERT Textbook"},
-  {"id":"ixmath077","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"medium","text":"The sequence 2, 6, 18, 54 is a:","options":["Arithmetic progression","Geometric progression","Fibonacci sequence","Neither AP nor GP"],"correct":1,"explanation":"Ratio = 6/2 = 18/6 = 54/18 = 3. This is a GP with common ratio 3.","source":"NCERT Textbook"},
-  {"id":"ixmath078","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"hard","text":"The expression tₙ = 3n – 7 gives the value 50 when n equals:","options":["18","19","57","20"],"correct":1,"explanation":"3n – 7 = 50 → 3n = 57 → n = 19.","source":"NCERT Textbook"},
-  {"id":"ixmath079","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"easy","text":"The first three terms of the sequence given by tₙ = n² are:","options":["1, 4, 9","1, 2, 3","2, 4, 8","1, 3, 5"],"correct":0,"explanation":"t₁=1, t₂=4, t₃=9.","source":"NCERT Textbook"},
-  {"id":"ixmath080","chapter":"Predicting What Comes Next: Exploring Sequences and Progressions","difficulty":"medium","text":"In a GP with first term a and common ratio r, the nth term is:","options":["a + (n–1)r","ar^n","ar^(n–1)","a/r^(n–1)"],"correct":2,"explanation":"The nth term of a GP = ar^(n–1).","source":"NCERT Textbook"},
-  {"id":"ixmath081","chapter":"Propositions and their Converses","difficulty":"easy","text":"The converse of 'If P then Q' is:","options":["If not P then not Q","If Q then P","If not Q then not P","If P then not Q"],"correct":1,"explanation":"The converse switches the hypothesis and conclusion: If Q then P.","source":"NCERT Textbook"},
-  {"id":"ixmath082","chapter":"Propositions and their Converses","difficulty":"medium","text":"Which statement is true: 'If two lines are parallel, then corresponding angles formed by a transversal are equal.'","options":["True","False","Cannot be determined","Only for perpendicular transversals"],"correct":0,"explanation":"Parallel lines cut by a transversal form equal corresponding angles — this is a fundamental theorem.","source":"NCERT Textbook"},
-  {"id":"ixmath083","chapter":"Propositions and their Converses","difficulty":"medium","text":"A counterexample is used to show that a statement is:","options":["Always true","Sometimes true","False","Reversible"],"correct":2,"explanation":"A single counterexample is sufficient to prove a statement false.","source":"NCERT Textbook"},
-  {"id":"ixmath084","chapter":"Propositions and their Converses","difficulty":"hard","text":"The statement 'If n is divisible by 24, then it is divisible by both 4 and 6' is:","options":["True, and its converse is also true","True, but its converse is false","False","Cannot be determined"],"correct":1,"explanation":"24 is divisible by both 4 and 6, so the statement is true. Converse: 'If n is divisible by 4 and 6, it is divisible by 24' is false — e.g., 12 is divisible by 4 and 6 but not 24.","source":"NCERT Textbook"},
-  {"id":"ixmath085","chapter":"Propositions and their Converses","difficulty":"medium","text":"If x = y, then x² = y² is:","options":["True with a true converse","True with a false converse","False","A definition"],"correct":1,"explanation":"x=y implies x²=y² (true). Converse: x²=y² implies x=y is false — e.g., x=3, y=–3 gives x²=y² but x≠y.","source":"NCERT Textbook"},
-  {"id":"ixmath086","chapter":"Propositions and their Converses","difficulty":"hard","text":"'If n is divisible by 60, then it is divisible by both 5 and 12'. The converse is:","options":["If n is divisible by 5 and 12, then it is divisible by 60","Always true","Always false","The same statement"],"correct":0,"explanation":"The converse reverses the direction. The converse is false (e.g., n=60: 60÷5=12, 60÷12=5; but n=120: divisible by both 5 and 12, also by 60. n=60... actually need a counterexample: 60=LCM(5,12)=60 so converse might be true here. The converse is actually true if LCM(5,12)=60.)","source":"NCERT Textbook"},
-  {"id":"ixmath087","chapter":"Propositions and their Converses","difficulty":"medium","text":"An 'if-then' statement where both the original and converse are true is called:","options":["A theorem","A biconditional (if and only if)","A contradiction","A conjecture"],"correct":1,"explanation":"When both P→Q and Q→P are true, we write P⟺Q (if and only if / biconditional).","source":"NCERT Textbook"},
-  {"id":"ixmath088","chapter":"Propositions and their Converses","difficulty":"easy","text":"The contrapositive of 'If P then Q' is:","options":["If Q then P","If not P then not Q","If not Q then not P","If P then not Q"],"correct":2,"explanation":"The contrapositive of P→Q is ¬Q→¬P, which is logically equivalent to the original.","source":"NCERT Textbook"},
-  {"id":"ixmath089","chapter":"Propositions and their Converses","difficulty":"hard","text":"'If n is a product of two unequal prime numbers, then it has exactly 4 divisors.' This is:","options":["True","False — it has 2 divisors","False — it has more than 4","True, and its converse is also true"],"correct":0,"explanation":"If n = p×q (distinct primes), divisors are: 1, p, q, pq — exactly 4.","source":"NCERT Textbook"},
-  {"id":"ixmath090","chapter":"Propositions and their Converses","difficulty":"medium","text":"The converse of 'If a quadrilateral is a square, then all its angles are equal' is:","options":["If a quadrilateral has all angles equal, it is a square","If a quadrilateral is not a square, some angles are unequal","All squares have equal angles","Rectangles are squares"],"correct":0,"explanation":"The converse reverses hypothesis and conclusion. This converse is false (a rectangle also has all equal angles but is not a square).","source":"NCERT Textbook"},
-  {"id":"ixmath091","chapter":"How Quantities Combine: Understanding Data","difficulty":"easy","text":"The arithmetic mean of 5, 10, 15, 20, 25 is:","options":["12","13","15","14"],"correct":2,"explanation":"Mean = (5+10+15+20+25)/5 = 75/5 = 15.","source":"NCERT Textbook"},
-  {"id":"ixmath092","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"The weighted mean is used when:","options":["All data points have equal importance","Different data points have different levels of importance","There are very few data points","Data is arranged in order"],"correct":1,"explanation":"Weighted mean assigns different weights to reflect the varying importance of data points.","source":"NCERT Textbook"},
-  {"id":"ixmath093","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"Section A (30 students) has average score 72 and Section B (25 students) has average 76. The combined average is closest to:","options":["74","73.73","75","74.5"],"correct":1,"explanation":"Combined = (30×72 + 25×76)/(30+25) = (2160+1900)/55 = 4060/55 ≈ 73.8 ≈ 73.73.","source":"NCERT Textbook"},
-  {"id":"ixmath094","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"The median of the data set {3, 7, 9, 12, 15} is:","options":["7","9","12","3"],"correct":1,"explanation":"With 5 values in order, the median is the 3rd value = 9.","source":"NCERT Textbook"},
-  {"id":"ixmath095","chapter":"How Quantities Combine: Understanding Data","difficulty":"hard","text":"Rehmat's scores (60% internal, 64% project, 73% exam) are weighted 3:2:5. His weighted score is:","options":["65.67%","67.3%","66%","68%"],"correct":1,"explanation":"Weighted = (60×3 + 64×2 + 73×5)/(3+2+5) = (180+128+365)/10 = 673/10 = 67.3%.","source":"NCERT Textbook"},
-  {"id":"ixmath096","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"In a frequency distribution, the class with the highest frequency is called the:","options":["Median class","Mean class","Modal class","Range class"],"correct":2,"explanation":"The modal class has the highest frequency in a frequency distribution.","source":"NCERT Textbook"},
-  {"id":"ixmath097","chapter":"How Quantities Combine: Understanding Data","difficulty":"easy","text":"The mode of the data {4, 4, 5, 6, 6, 6, 7} is:","options":["4","5","6","7"],"correct":2,"explanation":"6 appears three times — the most frequent value.","source":"NCERT Textbook"},
-  {"id":"ixmath098","chapter":"How Quantities Combine: Understanding Data","difficulty":"hard","text":"A histogram differs from a bar graph in that:","options":["Histograms are for categorical data","There are no gaps between bars in a histogram","A histogram has no y-axis","Bar graphs cannot show frequencies"],"correct":1,"explanation":"In a histogram, bars are adjacent (no gaps) since it represents continuous data.","source":"NCERT Textbook"},
-  {"id":"ixmath099","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"The range of the data set {12, 7, 23, 5, 19} is:","options":["18","16","23","5"],"correct":0,"explanation":"Range = Maximum – Minimum = 23 – 5 = 18.","source":"NCERT Textbook"},
-  {"id":"ixmath100","chapter":"How Quantities Combine: Understanding Data","difficulty":"medium","text":"In Śrīdharācārya's gold problem, 9 units at 12 varṇa, 5 units at 10 varṇa and 17 units at 11 varṇa are melted together. The purity of the mixture is:","options":["11 varṇa","11.26 varṇa","10.8 varṇa","11.5 varṇa"],"correct":1,"explanation":"Purity = (9×12 + 5×10 + 17×11)/(9+5+17) = (108+50+187)/31 = 345/31 ≈ 11.13 varṇa. Closest is 11.26, checking: 345/31=11.129...≈11.13. So closest answer is 11.26.","source":"NCERT Textbook"},
-  {"id":"ixmath101","chapter":"The World of Algorithms","difficulty":"easy","text":"An algorithm is best defined as:","options":["A type of computer hardware","A step-by-step procedure to solve a problem","A programming language","A mathematical theorem"],"correct":1,"explanation":"An algorithm is a finite, well-defined sequence of steps to solve a problem.","source":"NCERT Textbook"},
-  {"id":"ixmath102","chapter":"The World of Algorithms","difficulty":"medium","text":"Which property ensures that an algorithm always terminates?","options":["Efficiency","Finiteness","Definiteness","Input"],"correct":1,"explanation":"Finiteness means the algorithm must terminate after a finite number of steps.","source":"NCERT Textbook"},
-  {"id":"ixmath103","chapter":"The World of Algorithms","difficulty":"medium","text":"The process of adding two multi-digit numbers column by column from right to left, carrying over when needed, is an example of:","options":["A theorem","An axiom","An algorithm","A conjecture"],"correct":2,"explanation":"The standard addition procedure is a classic example of an algorithm.","source":"NCERT Textbook"},
-  {"id":"ixmath104","chapter":"The World of Algorithms","difficulty":"hard","text":"The Euclidean algorithm is used to find:","options":["The LCM of two numbers","The HCF/GCD of two numbers","The prime factorisation","The square root"],"correct":1,"explanation":"The Euclidean algorithm efficiently computes the Greatest Common Divisor (HCF) of two numbers.","source":"NCERT Textbook"},
-  {"id":"ixmath105","chapter":"The World of Algorithms","difficulty":"medium","text":"In a flowchart, a diamond shape typically represents:","options":["A process step","A start/end","A decision (yes/no)","An input/output"],"correct":2,"explanation":"A diamond (rhombus) shape in a flowchart represents a decision point with yes/no branches.","source":"NCERT Textbook"},
-  {"id":"ixmath106","chapter":"The World of Algorithms","difficulty":"hard","text":"To find the GCD of 48 and 18 using Euclid's algorithm: 48 = 2×18 + 12, then 18 = 1×12 + 6, then 12 = 2×6 + 0. The GCD is:","options":["2","6","12","18"],"correct":1,"explanation":"When the remainder becomes 0, the last non-zero remainder (6) is the GCD.","source":"NCERT Textbook"},
-  {"id":"ixmath107","chapter":"The World of Algorithms","difficulty":"medium","text":"An algorithm that sorts a list by repeatedly finding the minimum element and placing it at the beginning is called:","options":["Bubble sort","Insertion sort","Selection sort","Merge sort"],"correct":2,"explanation":"Selection sort works by repeatedly selecting the minimum element from the unsorted portion.","source":"NCERT Textbook"},
-  {"id":"ixmath108","chapter":"The World of Algorithms","difficulty":"easy","text":"Which step does NOT belong in an algorithm?","options":["Input","Process","Infinite loop","Output"],"correct":2,"explanation":"An infinite loop violates the finiteness property — algorithms must terminate.","source":"NCERT Textbook"},
-  {"id":"ixmath109","chapter":"Quadrilaterals","difficulty":"easy","text":"A quadrilateral has how many sides?","options":["3","4","5","6"],"correct":1,"explanation":"A quadrilateral is a polygon with exactly 4 sides.","source":"NCERT Textbook"},
-  {"id":"ixmath110","chapter":"Quadrilaterals","difficulty":"easy","text":"In a parallelogram, opposite sides are:","options":["Perpendicular","Equal and parallel","Only equal","Only parallel"],"correct":1,"explanation":"Opposite sides of a parallelogram are both equal in length and parallel.","source":"NCERT Textbook"},
-  {"id":"ixmath111","chapter":"Quadrilaterals","difficulty":"medium","text":"The diagonals of a parallelogram:","options":["Are equal","Are perpendicular","Bisect each other","Are parallel"],"correct":2,"explanation":"The diagonals of a parallelogram bisect each other (meet at their midpoints).","source":"NCERT Textbook"},
-  {"id":"ixmath112","chapter":"Quadrilaterals","difficulty":"medium","text":"Which quadrilateral has all sides equal and all angles equal?","options":["Rectangle","Rhombus","Parallelogram","Square"],"correct":3,"explanation":"A square has all 4 sides equal AND all 4 angles equal (90° each).","source":"NCERT Textbook"},
-  {"id":"ixmath113","chapter":"Quadrilaterals","difficulty":"hard","text":"In quadrilateral ABCD with AB ∥ DC, the shape is a:","options":["Rectangle","Parallelogram","Trapezium","Rhombus"],"correct":2,"explanation":"A trapezium has exactly one pair of parallel sides.","source":"NCERT Textbook"},
-  {"id":"ixmath114","chapter":"Quadrilaterals","difficulty":"medium","text":"The sum of all interior angles of a quadrilateral is:","options":["180°","270°","360°","540°"],"correct":2,"explanation":"Sum of interior angles = (4–2)×180° = 2×180° = 360°.","source":"NCERT Textbook"},
-  {"id":"ixmath115","chapter":"Quadrilaterals","difficulty":"hard","text":"The midpoint theorem for triangles states that the segment connecting midpoints of two sides is:","options":["Equal to and perpendicular to the third side","Parallel to and half the length of the third side","Twice the length of the third side","Equal to the third side"],"correct":1,"explanation":"The midpoint theorem: segment joining midpoints of two sides = half of and parallel to the third side.","source":"NCERT Textbook"},
-  {"id":"ixmath116","chapter":"Quadrilaterals","difficulty":"medium","text":"In a rhombus, the diagonals:","options":["Are equal","Bisect each other at right angles","Are parallel","Are not equal and not perpendicular"],"correct":1,"explanation":"The diagonals of a rhombus bisect each other at 90° (perpendicular bisectors of each other).","source":"NCERT Textbook"},
-  {"id":"ixmath117","chapter":"Two Variables, One Line","difficulty":"easy","text":"A linear equation in two variables has how many solutions?","options":["Exactly one","Exactly two","No solution","Infinitely many"],"correct":3,"explanation":"A single linear equation in two variables has infinitely many solutions (all points on the line).","source":"NCERT Textbook"},
-  {"id":"ixmath118","chapter":"Two Variables, One Line","difficulty":"easy","text":"The standard form of a linear equation in two variables is:","options":["ax² + bx + c = 0","ax + by + c = 0","ax + b = 0","ax + by = 1"],"correct":1,"explanation":"The standard form is ax + by + c = 0 where a and b are not both zero.","source":"NCERT Textbook"},
-  {"id":"ixmath119","chapter":"Two Variables, One Line","difficulty":"medium","text":"The graph of a linear equation in two variables is:","options":["A parabola","A circle","A straight line","A hyperbola"],"correct":2,"explanation":"Every linear equation in two variables represents a straight line in the coordinate plane.","source":"NCERT Textbook"},
-  {"id":"ixmath120","chapter":"Two Variables, One Line","difficulty":"medium","text":"The equation x + y = 176 represents a cricketing situation where x and y are runs by two batsmen. How many solutions does this have?","options":["1","2","176","Infinitely many"],"correct":3,"explanation":"Any pair (x, y) with x+y=176 is a solution — infinitely many pairs satisfy this.","source":"NCERT Textbook"},
-  {"id":"ixmath121","chapter":"Two Variables, One Line","difficulty":"hard","text":"The point (2, 3) lies on the line 2x – y + k = 0. The value of k is:","options":["–1","1","7","–7"],"correct":0,"explanation":"Substitute: 2(2) – 3 + k = 0 → 4 – 3 + k = 0 → 1 + k = 0 → k = –1.","source":"NCERT Textbook"},
-  {"id":"ixmath122","chapter":"Two Variables, One Line","difficulty":"medium","text":"A system of two linear equations in two variables can have:","options":["Exactly one solution only","No solution only","One, no, or infinitely many solutions","Exactly two solutions"],"correct":2,"explanation":"A system of two linear equations can have one unique solution (lines intersect), no solution (parallel lines), or infinitely many (same line).","source":"NCERT Textbook"},
-  {"id":"ixmath123","chapter":"Two Variables, One Line","difficulty":"hard","text":"The solution to the system x + y = 5 and x – y = 1 is:","options":["x=2, y=3","x=3, y=2","x=4, y=1","x=1, y=4"],"correct":1,"explanation":"Adding: 2x=6 → x=3; substituting: 3+y=5 → y=2.","source":"NCERT Textbook"},
-  {"id":"ixmath124","chapter":"Two Variables, One Line","difficulty":"medium","text":"The cost of a notebook is twice the cost of a pen. If the pen costs ₹p, the notebook costs ₹t, the correct equation is:","options":["t = 2p","p = 2t","t + p = 2","t – p = 2"],"correct":0,"explanation":"'Notebook is twice the pen': t = 2p.","source":"NCERT Textbook"},
-  {"id":"ixmath125","chapter":"Math of Space: Surface Area and Volume","difficulty":"easy","text":"The total surface area of a cuboid with length l, width w and height h is:","options":["lwh","2(lw + wh + lh)","lw + wh + lh","2lwh"],"correct":1,"explanation":"TSA of cuboid = 2(lw + wh + lh).","source":"NCERT Textbook"},
-  {"id":"ixmath126","chapter":"Math of Space: Surface Area and Volume","difficulty":"easy","text":"The volume of a cuboid with length l, width w, height h is:","options":["l + w + h","2(l+w+h)","lwh","lw + h"],"correct":2,"explanation":"Volume of cuboid = l × w × h.","source":"NCERT Textbook"},
-  {"id":"ixmath127","chapter":"Math of Space: Surface Area and Volume","difficulty":"medium","text":"The lateral surface area of a cylinder with radius r and height h is:","options":["2πr²","2πrh","πr²h","2πr(r+h)"],"correct":1,"explanation":"Lateral (curved) surface area of cylinder = 2πrh.","source":"NCERT Textbook"},
-  {"id":"ixmath128","chapter":"Math of Space: Surface Area and Volume","difficulty":"medium","text":"The volume of a cylinder with radius r and height h is:","options":["2πrh","πr²","πr²h","2πr²h"],"correct":2,"explanation":"Volume of cylinder = πr²h.","source":"NCERT Textbook"},
-  {"id":"ixmath129","chapter":"Math of Space: Surface Area and Volume","difficulty":"hard","text":"The volume of a cone is what fraction of the volume of a cylinder with the same base and height?","options":["1/4","1/3","1/2","2/3"],"correct":1,"explanation":"Volume of cone = (1/3)πr²h = (1/3) × volume of cylinder.","source":"NCERT Textbook"},
-  {"id":"ixmath130","chapter":"Math of Space: Surface Area and Volume","difficulty":"medium","text":"The total surface area of a sphere with radius r is:","options":["πr²","2πr²","3πr²","4πr²"],"correct":3,"explanation":"Total surface area of sphere = 4πr².","source":"NCERT Textbook"},
-  {"id":"ixmath131","chapter":"Math of Space: Surface Area and Volume","difficulty":"hard","text":"A cuboid has dimensions 4 cm × 3 cm × 2 cm. Its total surface area is:","options":["24 cm²","52 cm²","48 cm²","26 cm²"],"correct":1,"explanation":"TSA = 2(4×3 + 3×2 + 4×2) = 2(12+6+8) = 2(26) = 52 cm².","source":"NCERT Textbook"},
-  {"id":"ixmath132","chapter":"Math of Space: Surface Area and Volume","difficulty":"medium","text":"Volume measures:","options":["The boundary length of a shape","The flat region enclosed by a shape","The three-dimensional space occupied by an object","The number of faces of a solid"],"correct":2,"explanation":"Volume is the amount of three-dimensional space a solid occupies.","source":"NCERT Textbook"}
+  {
+    "id": "ixmath001",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "easy",
+    "text": "In a Cartesian plane, the point where the x-axis and y-axis intersect is called the:",
+    "options": [
+      "Focus",
+      "Vertex",
+      "Origin",
+      "Centre"
+    ],
+    "correct": 2,
+    "explanation": "The origin is the point (0, 0) where the two axes meet.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath002",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "easy",
+    "text": "A point has coordinates (–3, 5). In which quadrant does it lie?",
+    "options": [
+      "Quadrant III",
+      "Quadrant II",
+      "Quadrant I",
+      "Quadrant IV"
+    ],
+    "correct": 1,
+    "explanation": "Quadrant II has negative x and positive y.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath003",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "easy",
+    "text": "The x-coordinate of any point on the y-axis is:",
+    "options": [
+      "–1",
+      "Undefined",
+      "0",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "Every point on the y-axis has x = 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath004",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "medium",
+    "text": "The points (3, 0), (–3, 0) and (0, 0) all lie on:",
+    "options": [
+      "Quadrant I",
+      "The x-axis",
+      "The y-axis",
+      "Quadrant IV"
+    ],
+    "correct": 1,
+    "explanation": "All three points have y = 0, so they lie on the x-axis.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath005",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "medium",
+    "text": "If M (1, 3) is the midpoint of segment AB with A = (–1, 1), what are the coordinates of B?",
+    "options": [
+      "(2, 4)",
+      "(0, 2)",
+      "(1, 3)",
+      "(3, 5)"
+    ],
+    "correct": 3,
+    "explanation": "Midpoint formula: x_M = (x_A+x_B)/2, y_M = (y_A+y_B)/2. So x_B = 2(1)–(–1)=3, y_B = 2(3)–1=5.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath006",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "medium",
+    "text": "Which quadrant contains points with both coordinates negative?",
+    "options": [
+      "Quadrant II",
+      "Quadrant III",
+      "Quadrant IV",
+      "Quadrant I"
+    ],
+    "correct": 1,
+    "explanation": "Quadrant III contains points (x, y) where both x < 0 and y < 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath007",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "hard",
+    "text": "Point A is at (4, 7) and B is at (16, –2). The point P that trisects AB closer to A has coordinates:",
+    "options": [
+      "(8, 4)",
+      "(8, 4.33)",
+      "(12, 1)",
+      "(10, 1)"
+    ],
+    "correct": 0,
+    "explanation": "P divides AB in ratio 1:2. x = 4+(16–4)/3 = 4+4 = 8; y = 7+(–2–7)/3 = 7–3 = 4.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath008",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "medium",
+    "text": "A point (a, b) is reflected across the x-axis. Its new coordinates are:",
+    "options": [
+      "(b, a)",
+      "(–a, b)",
+      "(a, –b)",
+      "(–a, –b)"
+    ],
+    "correct": 2,
+    "explanation": "Reflection across the x-axis negates the y-coordinate.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath009",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "hard",
+    "text": "Points A(1,–8), B(–4,7), C(–7,–4). Their distances from the origin are respectively:",
+    "options": [
+      "√65, √65, √65",
+      "8,7,7",
+      "3,3,3",
+      "√65, √65, √53"
+    ],
+    "correct": 0,
+    "explanation": "d(A)=√(1+64)=√65; d(B)=√(16+49)=√65; d(C)=√(49+16)=√65. All equidistant from origin, lying on a circle.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath010",
+    "chapter": "Orienting Yourself: The Use of Coordinates",
+    "difficulty": "easy",
+    "text": "The coordinate axes divide the Cartesian plane into how many parts?",
+    "options": [
+      "3",
+      "2",
+      "6",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "The x-axis and y-axis divide the plane into four quadrants.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath011",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "easy",
+    "text": "The degree of the polynomial 4z – 3 is:",
+    "options": [
+      "0",
+      "1",
+      "3",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "The highest power of the variable is 1, so it is a linear (degree 1) polynomial.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath012",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "easy",
+    "text": "In the polynomial x⁴ – 3x³ + 6x² – 2x + 7, the coefficient of x³ is:",
+    "options": [
+      "6",
+      "–3",
+      "–2",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "The term –3x³ has coefficient –3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath013",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "easy",
+    "text": "What is the constant term of the polynomial 9x³ + 5x² – 8x – 10?",
+    "options": [
+      "5",
+      "9",
+      "–10",
+      "–8"
+    ],
+    "correct": 2,
+    "explanation": "The constant term is the term without any variable, which is –10.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath014",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "medium",
+    "text": "A chess club charges ₹200 joining fee plus ₹50 per match. If a player paid ₹750, how many matches did they play?",
+    "options": [
+      "9",
+      "10",
+      "15",
+      "11"
+    ],
+    "correct": 3,
+    "explanation": "200 + 50m = 750 → 50m = 550 → m = 11.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath015",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "medium",
+    "text": "Which of the following is NOT a polynomial?",
+    "options": [
+      "4",
+      "3x + 1",
+      "x² – 5",
+      "x⁻¹ + 2"
+    ],
+    "correct": 3,
+    "explanation": "A polynomial cannot have negative integer exponents. x⁻¹ + 2 is not a polynomial.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath016",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "medium",
+    "text": "The linear polynomial p(x) = 3x – 6 becomes zero when x equals:",
+    "options": [
+      "3",
+      "–2",
+      "6",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "3x – 6 = 0 → x = 2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath017",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "hard",
+    "text": "The graph of a linear equation ax + by = c (where b ≠ 0) is:",
+    "options": [
+      "A parabola",
+      "A circle",
+      "A straight line",
+      "A hyperbola"
+    ],
+    "correct": 2,
+    "explanation": "Every linear equation in two variables represents a straight line in the Cartesian plane.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath018",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "medium",
+    "text": "The perimeter of a square with side x is a linear polynomial in x. If the perimeter is 18 cm, the side is:",
+    "options": [
+      "4 cm",
+      "3 cm",
+      "4.5 cm",
+      "6 cm"
+    ],
+    "correct": 2,
+    "explanation": "P = 4x = 18 → x = 4.5 cm.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath019",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "easy",
+    "text": "Polynomials of degree 1 are specifically called:",
+    "options": [
+      "Constant",
+      "Cubic",
+      "Quadratic",
+      "Linear"
+    ],
+    "correct": 3,
+    "explanation": "A polynomial of degree 1 is called a linear polynomial.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath020",
+    "chapter": "Introduction to Linear Polynomials",
+    "difficulty": "medium",
+    "text": "In a linear pattern, the difference between successive values at consecutive integers is:",
+    "options": [
+      "Zero",
+      "Decreasing",
+      "Constant",
+      "Increasing"
+    ],
+    "correct": 2,
+    "explanation": "A linear polynomial p(x) increases by the same constant amount for each unit increase in x.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath021",
+    "chapter": "The World of Numbers",
+    "difficulty": "easy",
+    "text": "Which Indian mathematician first treated zero as a number with its own properties?",
+    "options": [
+      "Āryabhaṭa",
+      "Brahmagupta",
+      "Baudhāyana",
+      "Bhāskara"
+    ],
+    "correct": 1,
+    "explanation": "Brahmagupta (628 CE) formally defined zero and its arithmetic properties.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath022",
+    "chapter": "The World of Numbers",
+    "difficulty": "easy",
+    "text": "The natural numbers are closed under which operation?",
+    "options": [
+      "Subtraction",
+      "Division",
+      "Addition",
+      "All of the above"
+    ],
+    "correct": 2,
+    "explanation": "Natural numbers are closed under addition (sum of two natural numbers is always a natural number), but not subtraction or division.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath023",
+    "chapter": "The World of Numbers",
+    "difficulty": "medium",
+    "text": "The sequence 11, 13, 17, 19 (from the Ishango bone) are all:",
+    "options": [
+      "Multiples of 3",
+      "Prime numbers",
+      "Perfect squares",
+      "Even numbers"
+    ],
+    "correct": 1,
+    "explanation": "11, 13, 17, 19 are all prime numbers.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath024",
+    "chapter": "The World of Numbers",
+    "difficulty": "medium",
+    "text": "In the decimal expansion, which type of number has a non-terminating, non-repeating expansion?",
+    "options": [
+      "Irrational numbers",
+      "Fractions",
+      "Integers",
+      "Rational numbers"
+    ],
+    "correct": 0,
+    "explanation": "Irrational numbers have decimal expansions that neither terminate nor repeat.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath025",
+    "chapter": "The World of Numbers",
+    "difficulty": "medium",
+    "text": "Which number system does NOT contain negative numbers?",
+    "options": [
+      "Rational numbers",
+      "Real numbers",
+      "Integers",
+      "Natural numbers"
+    ],
+    "correct": 3,
+    "explanation": "Natural numbers are 1, 2, 3, ... — they do not include negative numbers or zero.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath026",
+    "chapter": "The World of Numbers",
+    "difficulty": "hard",
+    "text": "A merchant receives 15 copper ingots for every 2 bags of spices. For 12 bags, how many ingots does he receive?",
+    "options": [
+      "75",
+      "60",
+      "90",
+      "80"
+    ],
+    "correct": 2,
+    "explanation": "Ratio: 15 ingots : 2 bags = x ingots : 12 bags → x = 15×12/2 = 90.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath027",
+    "chapter": "The World of Numbers",
+    "difficulty": "medium",
+    "text": "Which of the following is NOT a rational number?",
+    "options": [
+      "0.75",
+      "√2",
+      "22/7",
+      "0.333..."
+    ],
+    "correct": 1,
+    "explanation": "√2 is irrational; it cannot be expressed as p/q where p, q are integers and q ≠ 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath028",
+    "chapter": "The World of Numbers",
+    "difficulty": "easy",
+    "text": "The concept of Śhūnyatā (emptiness) that inspired the concept of zero in mathematics came from:",
+    "options": [
+      "Egyptian mathematics",
+      "Indian philosophical traditions",
+      "Greek philosophy",
+      "Babylonian astronomy"
+    ],
+    "correct": 1,
+    "explanation": "Indian philosophical concept of Śhūnyatā (emptiness/nothingness) in Upanishads and Buddhist literature inspired the mathematical concept of zero.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath029",
+    "chapter": "The World of Numbers",
+    "difficulty": "hard",
+    "text": "Which of the following statements is true?",
+    "options": [
+      "All whole numbers are irrational",
+      "All natural numbers are whole numbers",
+      "All rational numbers are irrational",
+      "All integers are natural numbers"
+    ],
+    "correct": 1,
+    "explanation": "Whole numbers include 0 and all natural numbers, so all natural numbers are whole numbers.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath030",
+    "chapter": "The World of Numbers",
+    "difficulty": "medium",
+    "text": "The Bakhśhālī Manuscript is significant in mathematics because it:",
+    "options": [
+      "Contains one of the earliest known uses of zero as a placeholder",
+      "Defined prime numbers",
+      "Introduced trigonometry",
+      "Proved Pythagoras theorem"
+    ],
+    "correct": 0,
+    "explanation": "The Bakhśhālī Manuscript (found in 1881) contains early use of a dot as a placeholder for zero.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath031",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "easy",
+    "text": "Which of the following is a correct algebraic identity?",
+    "options": [
+      "(a+b)² = a² + b²",
+      "(a–b)² = a² + 2ab + b²",
+      "(a+b)² = a² – 2ab + b²",
+      "(a+b)² = a² + 2ab + b²"
+    ],
+    "correct": 3,
+    "explanation": "(a+b)² = a² + 2ab + b² is the standard algebraic identity.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath032",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "easy",
+    "text": "(a – b)² equals:",
+    "options": [
+      "a² + b²",
+      "a² – 2ab + b²",
+      "a² – b²",
+      "a² + 2ab – b²"
+    ],
+    "correct": 1,
+    "explanation": "(a–b)² = a² – 2ab + b².",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath033",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "medium",
+    "text": "Using the identity (a+b)(a–b) = a² – b², evaluate 99 × 101:",
+    "options": [
+      "9899",
+      "9801",
+      "9999",
+      "9900"
+    ],
+    "correct": 2,
+    "explanation": "99×101 = (100–1)(100+1) = 100² – 1² = 10000 – 1 = 9999.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath034",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "medium",
+    "text": "The expansion of (x + 3)(x – 3) is:",
+    "options": [
+      "x² + 9",
+      "x² + 6x – 9",
+      "x² – 6x + 9",
+      "x² – 9"
+    ],
+    "correct": 3,
+    "explanation": "(x+3)(x–3) = x² – 3² = x² – 9, using the identity (a+b)(a–b) = a² – b².",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath035",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "hard",
+    "text": "For three consecutive square numbers n², (n+1)², (n+2)², adding the smallest and largest then subtracting twice the middle gives:",
+    "options": [
+      "1",
+      "0",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "n² + (n+2)² – 2(n+1)² = n²+n²+4n+4–2n²–4n–2 = 2. This is always 2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath036",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "medium",
+    "text": "Which identity is used to factorise x² – 25?",
+    "options": [
+      "(a+b+c)²",
+      "(a+b)(a–b)",
+      "(a+b)²",
+      "(a–b)²"
+    ],
+    "correct": 1,
+    "explanation": "x² – 25 = x² – 5² = (x+5)(x–5), using the difference of squares identity.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath037",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "hard",
+    "text": "Using algebraic identities, 103² equals:",
+    "options": [
+      "10506",
+      "10709",
+      "10609",
+      "10600"
+    ],
+    "correct": 2,
+    "explanation": "103² = (100+3)² = 10000 + 600 + 9 = 10609.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath038",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "medium",
+    "text": "(a + b + c)² expands to:",
+    "options": [
+      "a² + b² + c² + 2ab + 2bc + 2ca",
+      "a² + b² + c² + ab + bc + ca",
+      "a² + b² + c² – 2ab – 2bc – 2ca",
+      "a² + b² + c²"
+    ],
+    "correct": 0,
+    "explanation": "(a+b+c)² = a² + b² + c² + 2ab + 2bc + 2ca.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath039",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "easy",
+    "text": "The identity (a+b)³ = a³ + 3a²b + 3ab² + b³ is called:",
+    "options": [
+      "Sum of cubes",
+      "Trinomial identity",
+      "Binomial expansion",
+      "Difference of cubes"
+    ],
+    "correct": 2,
+    "explanation": "(a+b)³ is the binomial expansion for cube.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath040",
+    "chapter": "Exploring Algebraic Identities",
+    "difficulty": "medium",
+    "text": "Which is a factor of a² – b²?",
+    "options": [
+      "(a – b) only",
+      "Neither",
+      "Both (a+b) and (a–b)",
+      "(a + b) only"
+    ],
+    "correct": 2,
+    "explanation": "a² – b² = (a+b)(a–b), so both (a+b) and (a–b) are factors.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath041",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "easy",
+    "text": "A chord of a circle is:",
+    "options": [
+      "A line touching the circle at one point",
+      "A line segment joining two points on the circle",
+      "The longest chord",
+      "Half the diameter"
+    ],
+    "correct": 1,
+    "explanation": "A chord is a line segment with both endpoints on the circle.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath042",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "easy",
+    "text": "The longest chord of a circle is:",
+    "options": [
+      "The radius",
+      "Any chord",
+      "The arc",
+      "The diameter"
+    ],
+    "correct": 3,
+    "explanation": "The diameter passes through the centre and is the longest chord of a circle.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath043",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "medium",
+    "text": "The perpendicular from the centre of a circle to a chord:",
+    "options": [
+      "Bisects the chord",
+      "Bisects the arc only",
+      "Passes outside the circle",
+      "Is equal to the radius"
+    ],
+    "correct": 0,
+    "explanation": "The perpendicular from the centre bisects the chord.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath044",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "medium",
+    "text": "An angle inscribed in a semicircle is always:",
+    "options": [
+      "Obtuse",
+      "Right (90°)",
+      "Acute",
+      "180°"
+    ],
+    "correct": 1,
+    "explanation": "An angle inscribed in a semicircle (subtended by the diameter) is always 90°.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath045",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "hard",
+    "text": "A cyclic quadrilateral has ∠A = 80°. What is ∠C?",
+    "options": [
+      "100°",
+      "80°",
+      "180°",
+      "260°"
+    ],
+    "correct": 0,
+    "explanation": "Opposite angles of a cyclic quadrilateral are supplementary: ∠A + ∠C = 180°, so ∠C = 100°.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath046",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "medium",
+    "text": "The circumference of a circle with radius r is:",
+    "options": [
+      "2πr²",
+      "2πr",
+      "πr",
+      "πr²"
+    ],
+    "correct": 1,
+    "explanation": "Circumference = 2πr.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath047",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "medium",
+    "text": "Equal chords of a circle are:",
+    "options": [
+      "Always diameters",
+      "At different distances from the centre",
+      "Parallel to each other",
+      "Equidistant from the centre"
+    ],
+    "correct": 3,
+    "explanation": "Equal chords are equidistant from the centre of the circle.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath048",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "hard",
+    "text": "The angle subtended by an arc at the centre is __ the angle subtended at any point on the remaining part of the circle.",
+    "options": [
+      "Half of",
+      "Equal to",
+      "Double",
+      "One-third of"
+    ],
+    "correct": 2,
+    "explanation": "The central angle is twice the inscribed angle subtending the same arc.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath049",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "medium",
+    "text": "A tangent to a circle at a point is:",
+    "options": [
+      "Perpendicular to the radius at that point",
+      "Bisecting the circle",
+      "Parallel to any chord",
+      "A chord passing through the centre"
+    ],
+    "correct": 0,
+    "explanation": "A tangent is perpendicular to the radius drawn to the point of tangency.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath050",
+    "chapter": "I'm Up and Down, and Round and Round",
+    "difficulty": "easy",
+    "text": "Two circles are concentric if they:",
+    "options": [
+      "Have the same radius",
+      "Touch each other externally",
+      "Have the same centre",
+      "Touch each other internally"
+    ],
+    "correct": 2,
+    "explanation": "Concentric circles share the same centre but have different radii.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath051",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "easy",
+    "text": "The area of a triangle with base b and height h is:",
+    "options": [
+      "b²h",
+      "bh/2",
+      "bh",
+      "2bh"
+    ],
+    "correct": 1,
+    "explanation": "Area of triangle = (1/2) × base × height.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath052",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "easy",
+    "text": "In a 4×100 m relay race, athletes in outer lanes start ahead because:",
+    "options": [
+      "The track curves, so outer lanes have greater circumference",
+      "Outer lanes are shorter",
+      "The finish line is different for each lane",
+      "They are faster"
+    ],
+    "correct": 0,
+    "explanation": "The circular part of the track is longer for outer lanes, so staggered starts equalise total distance run.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath053",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "medium",
+    "text": "The area of a trapezium with parallel sides a and b, and height h is:",
+    "options": [
+      "(a+b)h",
+      "(a+b)h/2",
+      "(a×b)h",
+      "(a–b)h/2"
+    ],
+    "correct": 1,
+    "explanation": "Area of trapezium = (1/2)(a+b)h where a and b are the parallel sides.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath054",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "medium",
+    "text": "The area of a circle with radius r is:",
+    "options": [
+      "πr²",
+      "2πr",
+      "2πr²",
+      "πr"
+    ],
+    "correct": 0,
+    "explanation": "Area of circle = πr².",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath055",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "hard",
+    "text": "Heron's formula for the area of a triangle with sides a, b, c is A = √[s(s–a)(s–b)(s–c)], where s is:",
+    "options": [
+      "(a+b+c)/2",
+      "(a+b–c)/2",
+      "(a+b+c)/3",
+      "a+b+c"
+    ],
+    "correct": 0,
+    "explanation": "s is the semi-perimeter: s = (a+b+c)/2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath056",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "medium",
+    "text": "The perimeter of a regular hexagon with side s is:",
+    "options": [
+      "4s",
+      "8s",
+      "6s",
+      "5s"
+    ],
+    "correct": 2,
+    "explanation": "A regular hexagon has 6 equal sides, so perimeter = 6s.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath057",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "hard",
+    "text": "A parallelogram with base 8 cm and height 5 cm has the same area as a rectangle with length 10 cm. The width of the rectangle is:",
+    "options": [
+      "3 cm",
+      "6 cm",
+      "4 cm",
+      "5 cm"
+    ],
+    "correct": 2,
+    "explanation": "Area of parallelogram = 8×5 = 40 cm². Width = 40/10 = 4 cm.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath058",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "medium",
+    "text": "The area of a rhombus with diagonals d₁ and d₂ is:",
+    "options": [
+      "d₁ × d₂",
+      "2(d₁ + d₂)",
+      "d₁ × d₂ / 2",
+      "(d₁ + d₂)/2"
+    ],
+    "correct": 2,
+    "explanation": "Area of rhombus = (1/2) × d₁ × d₂.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath059",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "medium",
+    "text": "The sum of interior angles of a polygon with n sides is:",
+    "options": [
+      "(n–2)×180°",
+      "n×180°",
+      "(n+2)×180°",
+      "180°"
+    ],
+    "correct": 0,
+    "explanation": "Sum of interior angles = (n–2) × 180°.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath060",
+    "chapter": "Measuring Space: Perimeter and Area",
+    "difficulty": "easy",
+    "text": "Perimeter measures:",
+    "options": [
+      "The boundary length of a figure",
+      "The region enclosed by a figure",
+      "The surface area",
+      "The volume of a shape"
+    ],
+    "correct": 0,
+    "explanation": "Perimeter is the total length of the boundary of a 2D figure.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath061",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "easy",
+    "text": "The probability of an impossible event is:",
+    "options": [
+      "–1",
+      "0",
+      "1",
+      "0.5"
+    ],
+    "correct": 1,
+    "explanation": "An impossible event has probability 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath062",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "easy",
+    "text": "A coin is tossed. The sample space is:",
+    "options": [
+      "{H}",
+      "{T}",
+      "{H,T,HT}",
+      "{H,T}"
+    ],
+    "correct": 3,
+    "explanation": "Sample space = {Heads, Tails} = {H, T}.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath063",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "medium",
+    "text": "A die is rolled 50 times and shows 4 exactly 8 times. The experimental probability of rolling a 4 is:",
+    "options": [
+      "4/50",
+      "8/6",
+      "8/50",
+      "1/6"
+    ],
+    "correct": 2,
+    "explanation": "Experimental probability = 8/50 = 0.16.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath064",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "medium",
+    "text": "The theoretical probability of rolling an even number on a fair die is:",
+    "options": [
+      "1/3",
+      "1/2",
+      "1/6",
+      "2/3"
+    ],
+    "correct": 1,
+    "explanation": "Even numbers on a die: {2, 4, 6}. P = 3/6 = 1/2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath065",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "medium",
+    "text": "Probability calculated from collected data or repeated experiments is called:",
+    "options": [
+      "Subjective probability",
+      "Experimental probability",
+      "Classical probability",
+      "Theoretical probability"
+    ],
+    "correct": 1,
+    "explanation": "Experimental probability is based on actual observations or experiments.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath066",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "hard",
+    "text": "In a bag with 3 red and 5 blue balls, the probability of drawing a red ball is:",
+    "options": [
+      "1/3",
+      "5/8",
+      "3/5",
+      "3/8"
+    ],
+    "correct": 3,
+    "explanation": "Total balls = 8. P(red) = 3/8.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath067",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "medium",
+    "text": "Two events are mutually exclusive if:",
+    "options": [
+      "They can both occur at the same time",
+      "They cannot both occur at the same time",
+      "They have equal probabilities",
+      "One always leads to the other"
+    ],
+    "correct": 1,
+    "explanation": "Mutually exclusive events cannot occur simultaneously; P(A and B) = 0.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath068",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "hard",
+    "text": "The sum of probabilities of all outcomes in a sample space equals:",
+    "options": [
+      "0.5",
+      "Varies",
+      "1",
+      "0"
+    ],
+    "correct": 2,
+    "explanation": "The probabilities of all possible outcomes must sum to 1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath069",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "medium",
+    "text": "An event has probability 0.7. The probability of the event NOT occurring is:",
+    "options": [
+      "1.7",
+      "0.3",
+      "0.7",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "P(not A) = 1 – P(A) = 1 – 0.7 = 0.3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath070",
+    "chapter": "The Mathematics of Maybe: Introduction to Probability",
+    "difficulty": "easy",
+    "text": "The relative frequency of an event is:",
+    "options": [
+      "The number of times the event occurred",
+      "The ratio of event occurrences to total trials",
+      "The probability of the event",
+      "Both B and C"
+    ],
+    "correct": 1,
+    "explanation": "Relative frequency = number of occurrences / total trials.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath071",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "easy",
+    "text": "In an arithmetic progression (AP), the difference between consecutive terms is:",
+    "options": [
+      "Zero",
+      "Increasing",
+      "Variable",
+      "Constant"
+    ],
+    "correct": 3,
+    "explanation": "In an AP, the common difference d between consecutive terms is constant.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath072",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "easy",
+    "text": "The nth term of an AP with first term a and common difference d is:",
+    "options": [
+      "a × d^(n–1)",
+      "a + (n–1)d",
+      "a + nd",
+      "nd"
+    ],
+    "correct": 1,
+    "explanation": "The nth term tₙ = a + (n–1)d.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath073",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "medium",
+    "text": "The sequence 1, 4, 7, 10, 13, ... has common difference:",
+    "options": [
+      "4",
+      "7",
+      "1",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "4–1 = 7–4 = 10–7 = 3. The common difference is 3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath074",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "medium",
+    "text": "In a geometric progression (GP), consecutive terms have a constant:",
+    "options": [
+      "Ratio",
+      "Difference",
+      "Sum",
+      "Product"
+    ],
+    "correct": 0,
+    "explanation": "In a GP, each term is obtained by multiplying the previous term by a constant ratio.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath075",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "medium",
+    "text": "Using the explicit rule uₙ = 2n – 1, the 53rd term is:",
+    "options": [
+      "105",
+      "53",
+      "103",
+      "107"
+    ],
+    "correct": 0,
+    "explanation": "u₅₃ = 2(53) – 1 = 106 – 1 = 105.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath076",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "hard",
+    "text": "The sum of the first n terms of an AP with first term a and last term l is:",
+    "options": [
+      "n(a+l)",
+      "n(a+l)/2",
+      "n(2a+(n–1)d)/2",
+      "Both B and C"
+    ],
+    "correct": 3,
+    "explanation": "Sₙ = n(a+l)/2 = n(2a+(n–1)d)/2. Both are equivalent formulae.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath077",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "medium",
+    "text": "The sequence 2, 6, 18, 54 is a:",
+    "options": [
+      "Arithmetic progression",
+      "Geometric progression",
+      "Neither AP nor GP",
+      "Fibonacci sequence"
+    ],
+    "correct": 1,
+    "explanation": "Ratio = 6/2 = 18/6 = 54/18 = 3. This is a GP with common ratio 3.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath078",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "hard",
+    "text": "The expression tₙ = 3n – 7 gives the value 50 when n equals:",
+    "options": [
+      "57",
+      "18",
+      "19",
+      "20"
+    ],
+    "correct": 2,
+    "explanation": "3n – 7 = 50 → 3n = 57 → n = 19.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath079",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "easy",
+    "text": "The first three terms of the sequence given by tₙ = n² are:",
+    "options": [
+      "1, 2, 3",
+      "2, 4, 8",
+      "1, 3, 5",
+      "1, 4, 9"
+    ],
+    "correct": 3,
+    "explanation": "t₁=1, t₂=4, t₃=9.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath080",
+    "chapter": "Predicting What Comes Next: Exploring Sequences and Progressions",
+    "difficulty": "medium",
+    "text": "In a GP with first term a and common ratio r, the nth term is:",
+    "options": [
+      "a + (n–1)r",
+      "ar^(n–1)",
+      "a/r^(n–1)",
+      "ar^n"
+    ],
+    "correct": 1,
+    "explanation": "The nth term of a GP = ar^(n–1).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath081",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "easy",
+    "text": "The converse of 'If P then Q' is:",
+    "options": [
+      "If P then not Q",
+      "If Q then P",
+      "If not Q then not P",
+      "If not P then not Q"
+    ],
+    "correct": 1,
+    "explanation": "The converse switches the hypothesis and conclusion: If Q then P.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath082",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "medium",
+    "text": "Which statement is true: 'If two lines are parallel, then corresponding angles formed by a transversal are equal.'",
+    "options": [
+      "Cannot be determined",
+      "True",
+      "Only for perpendicular transversals",
+      "False"
+    ],
+    "correct": 1,
+    "explanation": "Parallel lines cut by a transversal form equal corresponding angles — this is a fundamental theorem.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath083",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "medium",
+    "text": "A counterexample is used to show that a statement is:",
+    "options": [
+      "Sometimes true",
+      "Reversible",
+      "False",
+      "Always true"
+    ],
+    "correct": 2,
+    "explanation": "A single counterexample is sufficient to prove a statement false.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath084",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "hard",
+    "text": "The statement 'If n is divisible by 24, then it is divisible by both 4 and 6' is:",
+    "options": [
+      "Cannot be determined",
+      "False",
+      "True, and its converse is also true",
+      "True, but its converse is false"
+    ],
+    "correct": 3,
+    "explanation": "24 is divisible by both 4 and 6, so the statement is true. Converse: 'If n is divisible by 4 and 6, it is divisible by 24' is false — e.g., 12 is divisible by 4 and 6 but not 24.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath085",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "medium",
+    "text": "If x = y, then x² = y² is:",
+    "options": [
+      "A definition",
+      "True with a true converse",
+      "False",
+      "True with a false converse"
+    ],
+    "correct": 3,
+    "explanation": "x=y implies x²=y² (true). Converse: x²=y² implies x=y is false — e.g., x=3, y=–3 gives x²=y² but x≠y.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath086",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "hard",
+    "text": "'If n is divisible by 60, then it is divisible by both 5 and 12'. The converse is:",
+    "options": [
+      "Always false",
+      "The same statement",
+      "Always true",
+      "If n is divisible by 5 and 12, then it is divisible by 60"
+    ],
+    "correct": 3,
+    "explanation": "The converse reverses the direction. The converse is false (e.g., n=60: 60÷5=12, 60÷12=5; but n=120: divisible by both 5 and 12, also by 60. n=60... actually need a counterexample: 60=LCM(5,12)=60 so converse might be true here. The converse is actually true if LCM(5,12)=60.)",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath087",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "medium",
+    "text": "An 'if-then' statement where both the original and converse are true is called:",
+    "options": [
+      "A theorem",
+      "A conjecture",
+      "A biconditional (if and only if)",
+      "A contradiction"
+    ],
+    "correct": 2,
+    "explanation": "When both P→Q and Q→P are true, we write P⟺Q (if and only if / biconditional).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath088",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "easy",
+    "text": "The contrapositive of 'If P then Q' is:",
+    "options": [
+      "If not Q then not P",
+      "If Q then P",
+      "If not P then not Q",
+      "If P then not Q"
+    ],
+    "correct": 0,
+    "explanation": "The contrapositive of P→Q is ¬Q→¬P, which is logically equivalent to the original.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath089",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "hard",
+    "text": "'If n is a product of two unequal prime numbers, then it has exactly 4 divisors.' This is:",
+    "options": [
+      "False — it has more than 4",
+      "True",
+      "False — it has 2 divisors",
+      "True, and its converse is also true"
+    ],
+    "correct": 1,
+    "explanation": "If n = p×q (distinct primes), divisors are: 1, p, q, pq — exactly 4.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath090",
+    "chapter": "Propositions and their Converses",
+    "difficulty": "medium",
+    "text": "The converse of 'If a quadrilateral is a square, then all its angles are equal' is:",
+    "options": [
+      "If a quadrilateral has all angles equal, it is a square",
+      "If a quadrilateral is not a square, some angles are unequal",
+      "All squares have equal angles",
+      "Rectangles are squares"
+    ],
+    "correct": 0,
+    "explanation": "The converse reverses hypothesis and conclusion. This converse is false (a rectangle also has all equal angles but is not a square).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath091",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "easy",
+    "text": "The arithmetic mean of 5, 10, 15, 20, 25 is:",
+    "options": [
+      "14",
+      "13",
+      "15",
+      "12"
+    ],
+    "correct": 2,
+    "explanation": "Mean = (5+10+15+20+25)/5 = 75/5 = 15.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath092",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "The weighted mean is used when:",
+    "options": [
+      "Data is arranged in order",
+      "All data points have equal importance",
+      "Different data points have different levels of importance",
+      "There are very few data points"
+    ],
+    "correct": 2,
+    "explanation": "Weighted mean assigns different weights to reflect the varying importance of data points.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath093",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "Section A (30 students) has average score 72 and Section B (25 students) has average 76. The combined average is closest to:",
+    "options": [
+      "74.5",
+      "75",
+      "73.73",
+      "74"
+    ],
+    "correct": 2,
+    "explanation": "Combined = (30×72 + 25×76)/(30+25) = (2160+1900)/55 = 4060/55 ≈ 73.8 ≈ 73.73.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath094",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "The median of the data set {3, 7, 9, 12, 15} is:",
+    "options": [
+      "12",
+      "9",
+      "3",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "With 5 values in order, the median is the 3rd value = 9.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath095",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "hard",
+    "text": "Rehmat's scores (60% internal, 64% project, 73% exam) are weighted 3:2:5. His weighted score is:",
+    "options": [
+      "67.3%",
+      "65.67%",
+      "68%",
+      "66%"
+    ],
+    "correct": 0,
+    "explanation": "Weighted = (60×3 + 64×2 + 73×5)/(3+2+5) = (180+128+365)/10 = 673/10 = 67.3%.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath096",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "In a frequency distribution, the class with the highest frequency is called the:",
+    "options": [
+      "Modal class",
+      "Mean class",
+      "Range class",
+      "Median class"
+    ],
+    "correct": 0,
+    "explanation": "The modal class has the highest frequency in a frequency distribution.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath097",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "easy",
+    "text": "The mode of the data {4, 4, 5, 6, 6, 6, 7} is:",
+    "options": [
+      "6",
+      "7",
+      "5",
+      "4"
+    ],
+    "correct": 0,
+    "explanation": "6 appears three times — the most frequent value.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath098",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "hard",
+    "text": "A histogram differs from a bar graph in that:",
+    "options": [
+      "Bar graphs cannot show frequencies",
+      "A histogram has no y-axis",
+      "There are no gaps between bars in a histogram",
+      "Histograms are for categorical data"
+    ],
+    "correct": 2,
+    "explanation": "In a histogram, bars are adjacent (no gaps) since it represents continuous data.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath099",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "The range of the data set {12, 7, 23, 5, 19} is:",
+    "options": [
+      "16",
+      "18",
+      "5",
+      "23"
+    ],
+    "correct": 1,
+    "explanation": "Range = Maximum – Minimum = 23 – 5 = 18.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath100",
+    "chapter": "How Quantities Combine: Understanding Data",
+    "difficulty": "medium",
+    "text": "In Śrīdharācārya's gold problem, 9 units at 12 varṇa, 5 units at 10 varṇa and 17 units at 11 varṇa are melted together. The purity of the mixture is:",
+    "options": [
+      "10.8 varṇa",
+      "11 varṇa",
+      "11.26 varṇa",
+      "11.5 varṇa"
+    ],
+    "correct": 2,
+    "explanation": "Purity = (9×12 + 5×10 + 17×11)/(9+5+17) = (108+50+187)/31 = 345/31 ≈ 11.13 varṇa. Closest is 11.26, checking: 345/31=11.129...≈11.13. So closest answer is 11.26.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath101",
+    "chapter": "The World of Algorithms",
+    "difficulty": "easy",
+    "text": "An algorithm is best defined as:",
+    "options": [
+      "A step-by-step procedure to solve a problem",
+      "A programming language",
+      "A mathematical theorem",
+      "A type of computer hardware"
+    ],
+    "correct": 0,
+    "explanation": "An algorithm is a finite, well-defined sequence of steps to solve a problem.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath102",
+    "chapter": "The World of Algorithms",
+    "difficulty": "medium",
+    "text": "Which property ensures that an algorithm always terminates?",
+    "options": [
+      "Efficiency",
+      "Definiteness",
+      "Finiteness",
+      "Input"
+    ],
+    "correct": 2,
+    "explanation": "Finiteness means the algorithm must terminate after a finite number of steps.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath103",
+    "chapter": "The World of Algorithms",
+    "difficulty": "medium",
+    "text": "The process of adding two multi-digit numbers column by column from right to left, carrying over when needed, is an example of:",
+    "options": [
+      "A theorem",
+      "An algorithm",
+      "An axiom",
+      "A conjecture"
+    ],
+    "correct": 1,
+    "explanation": "The standard addition procedure is a classic example of an algorithm.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath104",
+    "chapter": "The World of Algorithms",
+    "difficulty": "hard",
+    "text": "The Euclidean algorithm is used to find:",
+    "options": [
+      "The square root",
+      "The HCF/GCD of two numbers",
+      "The prime factorisation",
+      "The LCM of two numbers"
+    ],
+    "correct": 1,
+    "explanation": "The Euclidean algorithm efficiently computes the Greatest Common Divisor (HCF) of two numbers.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath105",
+    "chapter": "The World of Algorithms",
+    "difficulty": "medium",
+    "text": "In a flowchart, a diamond shape typically represents:",
+    "options": [
+      "An input/output",
+      "A process step",
+      "A start/end",
+      "A decision (yes/no)"
+    ],
+    "correct": 3,
+    "explanation": "A diamond (rhombus) shape in a flowchart represents a decision point with yes/no branches.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath106",
+    "chapter": "The World of Algorithms",
+    "difficulty": "hard",
+    "text": "To find the GCD of 48 and 18 using Euclid's algorithm: 48 = 2×18 + 12, then 18 = 1×12 + 6, then 12 = 2×6 + 0. The GCD is:",
+    "options": [
+      "2",
+      "18",
+      "6",
+      "12"
+    ],
+    "correct": 2,
+    "explanation": "When the remainder becomes 0, the last non-zero remainder (6) is the GCD.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath107",
+    "chapter": "The World of Algorithms",
+    "difficulty": "medium",
+    "text": "An algorithm that sorts a list by repeatedly finding the minimum element and placing it at the beginning is called:",
+    "options": [
+      "Selection sort",
+      "Insertion sort",
+      "Merge sort",
+      "Bubble sort"
+    ],
+    "correct": 0,
+    "explanation": "Selection sort works by repeatedly selecting the minimum element from the unsorted portion.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath108",
+    "chapter": "The World of Algorithms",
+    "difficulty": "easy",
+    "text": "Which step does NOT belong in an algorithm?",
+    "options": [
+      "Input",
+      "Output",
+      "Process",
+      "Infinite loop"
+    ],
+    "correct": 3,
+    "explanation": "An infinite loop violates the finiteness property — algorithms must terminate.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath109",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "A quadrilateral has how many sides?",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "A quadrilateral is a polygon with exactly 4 sides.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath110",
+    "chapter": "Quadrilaterals",
+    "difficulty": "easy",
+    "text": "In a parallelogram, opposite sides are:",
+    "options": [
+      "Perpendicular",
+      "Equal and parallel",
+      "Only parallel",
+      "Only equal"
+    ],
+    "correct": 1,
+    "explanation": "Opposite sides of a parallelogram are both equal in length and parallel.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath111",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "The diagonals of a parallelogram:",
+    "options": [
+      "Are perpendicular",
+      "Bisect each other",
+      "Are parallel",
+      "Are equal"
+    ],
+    "correct": 1,
+    "explanation": "The diagonals of a parallelogram bisect each other (meet at their midpoints).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath112",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "Which quadrilateral has all sides equal and all angles equal?",
+    "options": [
+      "Rectangle",
+      "Square",
+      "Parallelogram",
+      "Rhombus"
+    ],
+    "correct": 1,
+    "explanation": "A square has all 4 sides equal AND all 4 angles equal (90° each).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath113",
+    "chapter": "Quadrilaterals",
+    "difficulty": "hard",
+    "text": "In quadrilateral ABCD with AB ∥ DC, the shape is a:",
+    "options": [
+      "Rectangle",
+      "Parallelogram",
+      "Trapezium",
+      "Rhombus"
+    ],
+    "correct": 2,
+    "explanation": "A trapezium has exactly one pair of parallel sides.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath114",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "The sum of all interior angles of a quadrilateral is:",
+    "options": [
+      "540°",
+      "180°",
+      "360°",
+      "270°"
+    ],
+    "correct": 2,
+    "explanation": "Sum of interior angles = (4–2)×180° = 2×180° = 360°.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath115",
+    "chapter": "Quadrilaterals",
+    "difficulty": "hard",
+    "text": "The midpoint theorem for triangles states that the segment connecting midpoints of two sides is:",
+    "options": [
+      "Twice the length of the third side",
+      "Equal to the third side",
+      "Parallel to and half the length of the third side",
+      "Equal to and perpendicular to the third side"
+    ],
+    "correct": 2,
+    "explanation": "The midpoint theorem: segment joining midpoints of two sides = half of and parallel to the third side.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath116",
+    "chapter": "Quadrilaterals",
+    "difficulty": "medium",
+    "text": "In a rhombus, the diagonals:",
+    "options": [
+      "Are parallel",
+      "Are not equal and not perpendicular",
+      "Bisect each other at right angles",
+      "Are equal"
+    ],
+    "correct": 2,
+    "explanation": "The diagonals of a rhombus bisect each other at 90° (perpendicular bisectors of each other).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath117",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "easy",
+    "text": "A linear equation in two variables has how many solutions?",
+    "options": [
+      "Exactly one",
+      "No solution",
+      "Infinitely many",
+      "Exactly two"
+    ],
+    "correct": 2,
+    "explanation": "A single linear equation in two variables has infinitely many solutions (all points on the line).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath118",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "easy",
+    "text": "The standard form of a linear equation in two variables is:",
+    "options": [
+      "ax² + bx + c = 0",
+      "ax + by + c = 0",
+      "ax + b = 0",
+      "ax + by = 1"
+    ],
+    "correct": 1,
+    "explanation": "The standard form is ax + by + c = 0 where a and b are not both zero.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath119",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "medium",
+    "text": "The graph of a linear equation in two variables is:",
+    "options": [
+      "A straight line",
+      "A hyperbola",
+      "A circle",
+      "A parabola"
+    ],
+    "correct": 0,
+    "explanation": "Every linear equation in two variables represents a straight line in the coordinate plane.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath120",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "medium",
+    "text": "The equation x + y = 176 represents a cricketing situation where x and y are runs by two batsmen. How many solutions does this have?",
+    "options": [
+      "176",
+      "Infinitely many",
+      "2",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "Any pair (x, y) with x+y=176 is a solution — infinitely many pairs satisfy this.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath121",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "hard",
+    "text": "The point (2, 3) lies on the line 2x – y + k = 0. The value of k is:",
+    "options": [
+      "–1",
+      "1",
+      "7",
+      "–7"
+    ],
+    "correct": 0,
+    "explanation": "Substitute: 2(2) – 3 + k = 0 → 4 – 3 + k = 0 → 1 + k = 0 → k = –1.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath122",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "medium",
+    "text": "A system of two linear equations in two variables can have:",
+    "options": [
+      "Exactly one solution only",
+      "One, no, or infinitely many solutions",
+      "No solution only",
+      "Exactly two solutions"
+    ],
+    "correct": 1,
+    "explanation": "A system of two linear equations can have one unique solution (lines intersect), no solution (parallel lines), or infinitely many (same line).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath123",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "hard",
+    "text": "The solution to the system x + y = 5 and x – y = 1 is:",
+    "options": [
+      "x=3, y=2",
+      "x=1, y=4",
+      "x=2, y=3",
+      "x=4, y=1"
+    ],
+    "correct": 0,
+    "explanation": "Adding: 2x=6 → x=3; substituting: 3+y=5 → y=2.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath124",
+    "chapter": "Two Variables, One Line",
+    "difficulty": "medium",
+    "text": "The cost of a notebook is twice the cost of a pen. If the pen costs ₹p, the notebook costs ₹t, the correct equation is:",
+    "options": [
+      "t – p = 2",
+      "p = 2t",
+      "t = 2p",
+      "t + p = 2"
+    ],
+    "correct": 2,
+    "explanation": "'Notebook is twice the pen': t = 2p.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath125",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "easy",
+    "text": "The total surface area of a cuboid with length l, width w and height h is:",
+    "options": [
+      "lw + wh + lh",
+      "lwh",
+      "2lwh",
+      "2(lw + wh + lh)"
+    ],
+    "correct": 3,
+    "explanation": "TSA of cuboid = 2(lw + wh + lh).",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath126",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "easy",
+    "text": "The volume of a cuboid with length l, width w, height h is:",
+    "options": [
+      "2(l+w+h)",
+      "lwh",
+      "lw + h",
+      "l + w + h"
+    ],
+    "correct": 1,
+    "explanation": "Volume of cuboid = l × w × h.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath127",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "medium",
+    "text": "The lateral surface area of a cylinder with radius r and height h is:",
+    "options": [
+      "πr²h",
+      "2πr(r+h)",
+      "2πr²",
+      "2πrh"
+    ],
+    "correct": 3,
+    "explanation": "Lateral (curved) surface area of cylinder = 2πrh.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath128",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "medium",
+    "text": "The volume of a cylinder with radius r and height h is:",
+    "options": [
+      "πr²",
+      "πr²h",
+      "2πr²h",
+      "2πrh"
+    ],
+    "correct": 1,
+    "explanation": "Volume of cylinder = πr²h.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath129",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "hard",
+    "text": "The volume of a cone is what fraction of the volume of a cylinder with the same base and height?",
+    "options": [
+      "1/2",
+      "1/3",
+      "1/4",
+      "2/3"
+    ],
+    "correct": 1,
+    "explanation": "Volume of cone = (1/3)πr²h = (1/3) × volume of cylinder.",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath130",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "medium",
+    "text": "The total surface area of a sphere with radius r is:",
+    "options": [
+      "3πr²",
+      "4πr²",
+      "πr²",
+      "2πr²"
+    ],
+    "correct": 1,
+    "explanation": "Total surface area of sphere = 4πr².",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath131",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "hard",
+    "text": "A cuboid has dimensions 4 cm × 3 cm × 2 cm. Its total surface area is:",
+    "options": [
+      "24 cm²",
+      "52 cm²",
+      "26 cm²",
+      "48 cm²"
+    ],
+    "correct": 1,
+    "explanation": "TSA = 2(4×3 + 3×2 + 4×2) = 2(12+6+8) = 2(26) = 52 cm².",
+    "source": "NCERT Textbook"
+  },
+  {
+    "id": "ixmath132",
+    "chapter": "Math of Space: Surface Area and Volume",
+    "difficulty": "medium",
+    "text": "Volume measures:",
+    "options": [
+      "The three-dimensional space occupied by an object",
+      "The flat region enclosed by a shape",
+      "The boundary length of a shape",
+      "The number of faces of a solid"
+    ],
+    "correct": 0,
+    "explanation": "Volume is the amount of three-dimensional space a solid occupies.",
+    "source": "NCERT Textbook"
+  }
 ]

@@ -4,12 +4,12 @@
     "difficulty": "easy",
     "text": "Which of these is NOT one of the four physical components of a computer system described in the chapter?",
     "options": [
-      "CPU",
       "Primary Memory",
       "Compiler",
-      "Input/Output devices"
+      "Input/Output devices",
+      "CPU"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The textbook lists CPU, Primary Memory, Input Device and Output Device as the four hardware components; a compiler is software, not hardware.",
     "source": "NCERT Textbook",
     "id": "xics001"
@@ -20,11 +20,11 @@
     "text": "The two main components inside the CPU are:",
     "options": [
       "RAM and ROM",
-      "ALU and Control Unit",
       "Register and Cache",
-      "Bus and Memory"
+      "Bus and Memory",
+      "ALU and Control Unit"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The CPU's two main components are the Arithmetic Logic Unit (ALU), which performs arithmetic/logic operations, and the Control Unit (CU), which directs instruction execution and data flow.",
     "source": "NCERT Textbook",
     "id": "xics002"
@@ -35,11 +35,11 @@
     "text": "Which memory is volatile, i.e. loses its contents when power is switched off?",
     "options": [
       "ROM",
-      "RAM",
+      "Pen drive",
       "Hard disk",
-      "Pen drive"
+      "RAM"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "RAM (Random Access Memory) is volatile — its contents are wiped out when power is turned off, unlike ROM which is non-volatile.",
     "source": "NCERT Textbook",
     "id": "xics003"
@@ -49,9 +49,9 @@
     "difficulty": "easy",
     "text": "A very high-speed memory placed between the CPU and primary memory to speed up CPU operations is called:",
     "options": [
-      "ROM",
-      "Cache memory",
       "Secondary memory",
+      "Cache memory",
+      "ROM",
       "Register"
     ],
     "correct": 1,
@@ -64,10 +64,10 @@
     "difficulty": "easy",
     "text": "1 Petabyte (PB) is equal to:",
     "options": [
-      "1024 GB",
+      "1024 EB",
       "1024 MB",
       "1024 TB",
-      "1024 EB"
+      "1024 GB"
     ],
     "correct": 2,
     "explanation": "Per the chapter's memory-unit table, 1 PB = 1024 TB (Terabytes).",
@@ -79,12 +79,12 @@
     "difficulty": "medium",
     "text": "The address bus in a computer system is used to:",
     "options": [
-      "Transfer data between components",
-      "Transfer the address of a memory location between CPU and main memory",
       "Communicate control signals",
-      "Connect the keyboard to the CPU"
+      "Transfer data between components",
+      "Connect the keyboard to the CPU",
+      "Transfer the address of a memory location between CPU and main memory"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The address bus carries the address of the memory location the CPU wants to read from or write to; it is unidirectional, unlike the bidirectional data bus.",
     "source": "NCERT Textbook",
     "id": "xics006"
@@ -94,12 +94,12 @@
     "difficulty": "hard",
     "text": "Why is the data bus bidirectional while the address bus is unidirectional?",
     "options": [
+      "There is no real difference, it is just a convention",
       "Because the CPU only ever reads data, never writes it",
       "Because the CPU both reads data from and writes data to memory, but only ever specifies (sends) an address, never receives one",
-      "Because address buses are physically thinner than data buses",
-      "There is no real difference, it is just a convention"
+      "Because address buses are physically thinner than data buses"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Data must flow both ways (CPU→memory on write, memory→CPU on read), so the data bus is bidirectional; the address is always supplied by the CPU to specify a location, so the address bus only needs to carry signals one way.",
     "source": "NCERT Textbook",
     "id": "xics007"
@@ -109,12 +109,12 @@
     "difficulty": "easy",
     "text": "A processor (CPU) implemented on a single microchip is called a:",
     "options": [
-      "Microcontroller",
-      "Microprocessor",
+      "Bus",
       "Register",
-      "Bus"
+      "Microcontroller",
+      "Microprocessor"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A CPU built on a single microchip is called a microprocessor; almost all modern CPUs are microprocessors.",
     "source": "NCERT Textbook",
     "id": "xics008"
@@ -124,12 +124,12 @@
     "difficulty": "medium",
     "text": "How does a microcontroller differ from a microprocessor?",
     "options": [
-      "A microcontroller has only a CPU on the chip, while a microprocessor also has RAM and ROM",
-      "A microcontroller has a CPU plus a fixed amount of RAM, ROM and peripherals all on a single chip, while a microprocessor has only the CPU",
+      "A microprocessor is used only in washing machines",
       "They are exactly the same thing",
-      "A microprocessor is used only in washing machines"
+      "A microcontroller has a CPU plus a fixed amount of RAM, ROM and peripherals all on a single chip, while a microprocessor has only the CPU",
+      "A microcontroller has only a CPU on the chip, while a microprocessor also has RAM and ROM"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A microcontroller embeds CPU, a fixed RAM/ROM and peripherals on one chip for a specific task (e.g. a washing machine), whereas a microprocessor is just the CPU on a chip, needing external RAM/ROM/peripherals.",
     "source": "NCERT Textbook",
     "id": "xics009"
@@ -139,12 +139,12 @@
     "difficulty": "medium",
     "text": "Smart home appliances (like a washing machine) use a microcontroller rather than a general-purpose microprocessor chiefly because:",
     "options": [
-      "Microcontrollers are always faster",
-      "Microcontrollers are designed for a specific, repetitive task, keeping size and cost low",
+      "Microcontrollers cannot be mass-produced",
       "Microprocessors cannot be embedded in appliances at all",
-      "Microcontrollers cannot be mass-produced"
+      "Microcontrollers are always faster",
+      "Microcontrollers are designed for a specific, repetitive task, keeping size and cost low"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Since the appliance needs to repeatedly perform one specific function, an inexpensive, small, task-specific microcontroller (with CPU+RAM+ROM+peripherals on one chip) is preferred over a general-purpose microprocessor.",
     "source": "NCERT Textbook",
     "id": "xics010"
@@ -154,12 +154,12 @@
     "difficulty": "easy",
     "text": "Which of the following is an example of structured data?",
     "options": [
-      "A social media post",
       "An audio file",
-      "A table of monthly student attendance with fixed columns",
-      "An HTML page"
+      "A social media post",
+      "An HTML page",
+      "A table of monthly student attendance with fixed columns"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Structured data follows a strict, pre-specified tabular (row/column) record format, like the attendance table example in the chapter.",
     "source": "NCERT Textbook",
     "id": "xics011"
@@ -185,11 +185,11 @@
     "text": "Which of these is an example of unstructured data?",
     "options": [
       "A csv file",
+      "A database table",
       "A satellite image",
-      "An email document",
-      "A database table"
+      "An email document"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Unstructured data has no pre-defined record format at all; examples given in the chapter include audio/video files, graphics, text documents and satellite images.",
     "source": "NCERT Textbook",
     "id": "xics013"
@@ -199,10 +199,10 @@
     "difficulty": "medium",
     "text": "The process of retrieving deleted, corrupted or lost data from secondary storage devices is called:",
     "options": [
-      "Data capturing",
+      "Data encryption",
       "Data storage",
       "Data recovery",
-      "Data encryption"
+      "Data capturing"
     ],
     "correct": 2,
     "explanation": "Data recovery is defined in the chapter as retrieving deleted, corrupted and lost data from secondary storage, possible only if the space has not been overwritten.",
@@ -215,11 +215,11 @@
     "text": "When a file is deleted from a storage device, what actually happens (as explained in the chapter)?",
     "options": [
       "The data is immediately and permanently erased bit by bit",
-      "Only the address entry is marked as free; the actual data remains until overwritten",
       "The file is automatically encrypted",
+      "Only the address entry is marked as free; the actual data remains until overwritten",
       "The file is moved to ROM"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Deleting a file marks its storage space as free (available) without actually erasing the bits, which is why recovery tools can often retrieve 'deleted' files.",
     "source": "NCERT Textbook",
     "id": "xics015"
@@ -229,10 +229,10 @@
     "difficulty": "easy",
     "text": "Software that provides basic functionality to operate a computer by interacting directly with hardware is called:",
     "options": [
-      "Application software",
+      "Freeware",
       "System software",
       "Customised software",
-      "Freeware"
+      "Application software"
     ],
     "correct": 1,
     "explanation": "System software (e.g. the operating system, system utilities, device drivers) interacts directly with hardware and provides the basic platform other software runs on.",
@@ -244,12 +244,12 @@
     "difficulty": "medium",
     "text": "Which of the following is a System Utility rather than an Operating System?",
     "options": [
+      "Disk defragmentation tool",
       "Windows",
       "Linux",
-      "Disk defragmentation tool",
       "Android"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "A disk defragmentation tool is a system utility used for maintenance/configuration; Windows, Linux and Android are themselves operating systems.",
     "source": "NCERT Textbook",
     "id": "xics017"
@@ -259,12 +259,12 @@
     "difficulty": "medium",
     "text": "The role of a device driver is to:",
     "options": [
-      "Replace the operating system",
       "Act as an interface between a specific hardware device and the operating system",
-      "Convert high-level code to machine code",
-      "Store data permanently"
+      "Replace the operating system",
+      "Store data permanently",
+      "Convert high-level code to machine code"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A device driver manages a particular device at the hardware level and acts as the interface/mediator between that device and the operating system, like a translator.",
     "source": "NCERT Textbook",
     "id": "xics018"
@@ -274,12 +274,12 @@
     "difficulty": "medium",
     "text": "Low-level languages that are machine-dependent include:",
     "options": [
-      "Python and Java",
-      "C++ and Java",
       "Machine language and Assembly language",
+      "C++ and Java",
+      "Python and Java",
       "Only Machine language"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Both machine language (1s and 0s) and assembly language (symbolic, but CPU-specific) are machine-dependent low-level languages; high-level languages like C++/Java/Python are machine-independent.",
     "source": "NCERT Textbook",
     "id": "xics019"
@@ -290,11 +290,11 @@
     "text": "The program code written in a high-level or assembly language, before translation, is called:",
     "options": [
       "Object code",
+      "Byte code",
       "Source code",
-      "Machine code",
-      "Byte code"
+      "Machine code"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Code as originally written by the programmer (in assembly or a high-level language) is called source code; the translator converts it into object/machine code.",
     "source": "NCERT Textbook",
     "id": "xics020"
@@ -304,12 +304,12 @@
     "difficulty": "easy",
     "text": "Which translator converts assembly language code into machine language?",
     "options": [
-      "Compiler",
-      "Interpreter",
       "Assembler",
+      "Interpreter",
+      "Compiler",
       "Editor"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "An assembler specifically converts assembly-language source code into machine code; it understands only one specific microprocessor's instruction set.",
     "source": "NCERT Textbook",
     "id": "xics021"
@@ -319,12 +319,12 @@
     "difficulty": "medium",
     "text": "What is the key difference between a compiler and an interpreter?",
     "options": [
-      "A compiler translates the whole program at once before execution; an interpreter translates and executes one line at a time",
-      "An interpreter is only used for assembly language",
+      "There is no real difference",
       "A compiler is needed every time the program runs, while an interpreter is not",
-      "There is no real difference"
+      "A compiler translates the whole program at once before execution; an interpreter translates and executes one line at a time",
+      "An interpreter is only used for assembly language"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "A compiler translates the entire source program into machine code in one go (and is not needed again once compiled); an interpreter translates and executes the program line by line, and is required every time the program runs.",
     "source": "NCERT Textbook",
     "id": "xics022"
@@ -335,9 +335,9 @@
     "text": "Software whose source code is freely available to the public for anyone to study, use and improve is called:",
     "options": [
       "Freeware",
-      "Proprietary software",
+      "Customised software",
       "Free and Open Source Software (FOSS)",
-      "Customised software"
+      "Proprietary software"
     ],
     "correct": 2,
     "explanation": "FOSS provides both the software and its source code freely, e.g. Python, LibreOffice, Mozilla Firefox and Ubuntu, so the community can develop and improve it.",
@@ -349,12 +349,12 @@
     "difficulty": "medium",
     "text": "Skype and Adobe Reader are examples of:",
     "options": [
-      "FOSS",
       "Freeware (free to use, but source code not available)",
-      "Proprietary software requiring purchase",
-      "System utilities"
+      "System utilities",
+      "FOSS",
+      "Proprietary software requiring purchase"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Freeware is freely usable but its source code is not made available, unlike FOSS; Skype and Adobe Reader are the chapter's examples of freeware.",
     "source": "NCERT Textbook",
     "id": "xics024"
@@ -365,11 +365,11 @@
     "text": "Microsoft Windows and Tally are examples of:",
     "options": [
       "Freeware",
-      "FOSS",
       "Proprietary software",
-      "Customised software"
+      "Customised software",
+      "FOSS"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Proprietary software must be purchased from a vendor who holds its copyright; Windows and Tally are given as examples of proprietary software.",
     "source": "NCERT Textbook",
     "id": "xics025"
@@ -379,10 +379,10 @@
     "difficulty": "medium",
     "text": "The operating system's job of allocating and freeing primary memory among running processes without disturbing others is called:",
     "options": [
-      "File management",
+      "Process management",
       "Memory management",
       "Device management",
-      "Process management"
+      "File management"
     ],
     "correct": 1,
     "explanation": "Memory management concerns allocating and freeing main memory dynamically among multiple running processes while tracking free/occupied locations.",
@@ -395,9 +395,9 @@
     "text": "Creation, updation, deletion and protection of files in secondary storage is the job of the OS's:",
     "options": [
       "Memory management",
-      "Process management",
+      "Device management",
       "File management",
-      "Device management"
+      "Process management"
     ],
     "correct": 2,
     "explanation": "File management handles files stored in secondary storage — their creation, updating, deletion and protection from unauthorised access — distinct from memory management, which handles main memory.",
@@ -410,11 +410,11 @@
     "text": "A command-based interface, as opposed to a GUI, typically:",
     "options": [
       "Uses icons and menus for interaction",
+      "Cannot be used with a keyboard",
       "Requires the user to type specific commands and is usually less interactive",
-      "Only works with touchscreens",
-      "Cannot be used with a keyboard"
+      "Only works with touchscreens"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Command-based interfaces (e.g. MS-DOS, Unix) require the user to remember and type commands, and are usually less interactive than GUI, often running one program at a time.",
     "source": "NCERT Textbook",
     "id": "xics028"
@@ -424,12 +424,12 @@
     "difficulty": "easy",
     "text": "What is the base (radix) of the hexadecimal number system?",
     "options": [
-      "2",
       "8",
-      "10",
-      "16"
+      "16",
+      "2",
+      "10"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Hexadecimal uses 16 symbols (0–9, A–F), so its base value is 16.",
     "source": "NCERT Textbook",
     "id": "xics029"
@@ -439,12 +439,12 @@
     "difficulty": "medium",
     "text": "Convert the binary number (1010111)2 to decimal.",
     "options": [
-      "85",
       "87",
-      "89",
-      "91"
+      "91",
+      "85",
+      "89"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "1010111₂ = 1×64 + 0×32 + 1×16 + 0×8 + 1×4 + 1×2 + 1×1 = 64+16+4+2+1 = 87.",
     "source": "NCERT Textbook",
     "id": "xics030"
@@ -454,12 +454,12 @@
     "difficulty": "medium",
     "text": "Convert the decimal number 54 to binary.",
     "options": [
-      "110110",
-      "111000",
       "101010",
-      "110010"
+      "111000",
+      "110010",
+      "110110"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "54 = 32+16+4+2 = 110110₂ (54/2=27 r0, 27/2=13 r1, 13/2=6 r1, 6/2=3 r0, 3/2=1 r1, 1/2=0 r1 → reading remainders bottom-up: 110110).",
     "source": "NCERT Textbook",
     "id": "xics031"
@@ -470,8 +470,8 @@
     "text": "Convert the octal number (145)8 to its decimal equivalent.",
     "options": [
       "101",
-      "97",
       "105",
+      "97",
       "85"
     ],
     "correct": 0,
@@ -484,10 +484,10 @@
     "difficulty": "hard",
     "text": "Convert the hexadecimal number (4A2)16 to decimal.",
     "options": [
-      "1154",
       "1186",
+      "1250",
       "1192",
-      "1250"
+      "1154"
     ],
     "correct": 2,
     "explanation": "(4A2)₁₆ = 4×256 + 10×16 + 2×1 = 1024+160+2 = 1186... recompute: actually 4×256=1024, A=10×16=160, 2×1=2, total=1186.",
@@ -499,12 +499,12 @@
     "difficulty": "easy",
     "text": "ASCII is a character encoding scheme that primarily represents:",
     "options": [
+      "Images",
       "Indian language scripts",
-      "English alphabets, digits and special symbols using 7 or 8 bits",
       "Only numeric digits",
-      "Images"
+      "English alphabets, digits and special symbols using 7 or 8 bits"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "ASCII (American Standard Code for Information Interchange) encodes English letters, digits and symbols, traditionally using 7 bits (extended ASCII uses 8).",
     "source": "NCERT Textbook",
     "id": "xics034"
@@ -515,11 +515,11 @@
     "text": "ISCII stands for:",
     "options": [
       "International Standard Code for Information Interchange",
-      "Indian Script Code for Information Interchange",
       "Indian Standard Computer Information Interchange",
-      "Internal System Code for Indian Interchange"
+      "Internal System Code for Indian Interchange",
+      "Indian Script Code for Information Interchange"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "ISCII (Indian Script Code for Information Interchange) is designed to represent Indian language scripts in digital form.",
     "source": "NCERT Textbook",
     "id": "xics035"
@@ -544,12 +544,12 @@
     "difficulty": "easy",
     "text": "A 'Nibble' is a group of how many bits?",
     "options": [
-      "2 bits",
-      "4 bits",
       "8 bits",
-      "16 bits"
+      "16 bits",
+      "4 bits",
+      "2 bits"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A nibble is a 4-bit word (e.g. 1010); two nibbles make an 8-bit byte.",
     "source": "NCERT Textbook",
     "id": "xics037"
@@ -559,12 +559,12 @@
     "difficulty": "easy",
     "text": "Which statement about number system bases is correct?",
     "options": [
+      "Hexadecimal has base 10",
       "Binary has base 2, Octal has base 8, Decimal has base 10, Hexadecimal has base 16",
       "Binary has base 10, Octal has base 2",
-      "All number systems have base 10 internally",
-      "Hexadecimal has base 10"
+      "All number systems have base 10 internally"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The standard bases are: Binary=2, Octal=8, Decimal=10, Hexadecimal=16, matching the chapter's definitions.",
     "source": "NCERT Textbook",
     "id": "xics038"
@@ -575,11 +575,11 @@
     "text": "Convert the binary number (1110001000)2 into its octal equivalent.",
     "options": [
       "1610",
-      "1610 (grouped in 3s from the right: 001 110 001 000)",
       "1610",
-      "1620"
+      "1620",
+      "1610 (grouped in 3s from the right: 001 110 001 000)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Grouping from the right in 3s: 001 110 001 000 → 1 6 1 0, giving octal 1610.",
     "source": "NCERT Textbook",
     "id": "xics039"
@@ -604,12 +604,12 @@
     "difficulty": "easy",
     "text": "How many distinct digit symbols does the octal number system use?",
     "options": [
-      "2 (0,1)",
-      "8 (0–7)",
+      "16 (0–9, A–F)",
       "10 (0–9)",
-      "16 (0–9, A–F)"
+      "8 (0–7)",
+      "2 (0,1)"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Octal uses the 8 digits 0 through 7.",
     "source": "NCERT Textbook",
     "id": "xics041"
@@ -619,12 +619,12 @@
     "difficulty": "easy",
     "text": "Artificial Intelligence (AI), as described in the chapter, refers to:",
     "options": [
+      "A programming language",
       "Only robots that look like humans",
       "The ability of computer systems to perform tasks that normally require human intelligence, like learning and decision-making",
-      "A type of storage device",
-      "A programming language"
+      "A type of storage device"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "AI is the simulation of human intelligence processes (learning, reasoning, self-correction) by machines/computer systems.",
     "source": "NCERT Textbook",
     "id": "xics042"
@@ -634,10 +634,10 @@
     "difficulty": "medium",
     "text": "Which of these best characterises Big Data?",
     "options": [
-      "Any data stored on a single computer",
+      "Data that is always structured",
       "Extremely large and complex datasets, often described by volume, velocity and variety, that traditional tools struggle to process",
       "Only data about large companies",
-      "Data that is always structured"
+      "Any data stored on a single computer"
     ],
     "correct": 1,
     "explanation": "Big Data refers to voluminous, fast-growing, varied datasets (the 'V's — Volume, Velocity, Variety, etc.) that need specialised tools/techniques to store and analyse.",
@@ -649,12 +649,12 @@
     "difficulty": "easy",
     "text": "The Internet of Things (IoT) refers to:",
     "options": [
-      "A network connecting only computers",
-      "A network of physical devices/objects embedded with sensors and software that can connect and exchange data over the internet",
       "A type of cloud storage",
-      "A programming framework"
+      "A programming framework",
+      "A network connecting only computers",
+      "A network of physical devices/objects embedded with sensors and software that can connect and exchange data over the internet"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "IoT connects everyday physical objects (sensors, appliances, wearables, vehicles) to the internet so they can collect and exchange data.",
     "source": "NCERT Textbook",
     "id": "xics044"
@@ -664,10 +664,10 @@
     "difficulty": "medium",
     "text": "In Cloud Computing, 'on-demand service' means:",
     "options": [
-      "Services must be requested months in advance",
+      "The user must own the hardware",
       "Computing resources (storage, processing) can be provisioned and used as needed, without requiring human interaction with the service provider",
       "Services are available only on weekends",
-      "The user must own the hardware"
+      "Services must be requested months in advance"
     ],
     "correct": 1,
     "explanation": "On-demand self-service is a defining feature of cloud computing — a user can provision computing resources automatically as needed.",
@@ -679,8 +679,8 @@
     "difficulty": "hard",
     "text": "Which cloud service model provides basic services like virtual servers and on-demand storage, as a platform for deploying customised applications?",
     "options": [
-      "Software as a Service (SaaS)",
       "Platform as a Service (PaaS)",
+      "Software as a Service (SaaS)",
       "Application as a Service",
       "Infrastructure as a Service (IaaS)"
     ],
@@ -694,12 +694,12 @@
     "difficulty": "hard",
     "text": "How does Grid Computing differ from Cloud Computing?",
     "options": [
-      "They are exactly identical",
-      "Grid computing pools distributed computing resources (often from many organisations) to solve a specific large computational problem together, while cloud computing provides on-demand, centrally-managed services over the internet",
       "Grid computing only works offline",
-      "Cloud computing cannot provide storage"
+      "Cloud computing cannot provide storage",
+      "They are exactly identical",
+      "Grid computing pools distributed computing resources (often from many organisations) to solve a specific large computational problem together, while cloud computing provides on-demand, centrally-managed services over the internet"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Grid computing links many computers' resources to jointly tackle large tasks (often scientific), whereas cloud computing is a provider-managed, on-demand model for general services.",
     "source": "NCERT Textbook",
     "id": "xics047"
@@ -709,12 +709,12 @@
     "difficulty": "medium",
     "text": "Blockchain technology is best described as:",
     "options": [
-      "A single centralised database controlled by one authority",
       "A distributed, decentralised and tamper-resistant digital ledger shared across many systems",
+      "A single centralised database controlled by one authority",
       "A type of printer",
       "An operating system"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A blockchain is a distributed ledger of records (blocks) linked and secured using cryptography, maintained across a decentralised network rather than one central authority.",
     "source": "NCERT Textbook",
     "id": "xics048"
@@ -724,12 +724,12 @@
     "difficulty": "medium",
     "text": "Which application area would benefit most directly from blockchain for improving transparency and accountability?",
     "options": [
-      "Watching a movie online",
-      "Distribution of government scholarships to students, where every transaction needs to be tamper-proof and traceable",
+      "Printing a photo",
       "Typing a document",
-      "Printing a photo"
+      "Distribution of government scholarships to students, where every transaction needs to be tamper-proof and traceable",
+      "Watching a movie online"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Blockchain's tamper-resistant, transparent ledger is well suited to tracking fund distribution (like scholarships) so every step is traceable and accountable.",
     "source": "NCERT Textbook",
     "id": "xics049"
@@ -739,12 +739,12 @@
     "difficulty": "medium",
     "text": "A 'smart school' using IoT might use Wi-Fi sensors on classroom doors to:",
     "options": [
-      "Automatically detect and report whether a classroom door is open/closed or occupancy status",
       "Replace teachers",
-      "Print report cards",
-      "Store student marks permanently"
+      "Store student marks permanently",
+      "Automatically detect and report whether a classroom door is open/closed or occupancy status",
+      "Print report cards"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "IoT sensors on doors can automatically sense and report status (open/closed, occupancy) as part of making a school 'smart', per the chapter's smart-school scenario.",
     "source": "NCERT Textbook",
     "id": "xics050"
@@ -754,12 +754,12 @@
     "difficulty": "easy",
     "text": "Which of these is an example of a wearable IoT device mentioned for attendance monitoring?",
     "options": [
-      "A desktop computer",
-      "A smart watch or smart belt",
+      "A hard disk drive",
       "A dot-matrix printer",
-      "A hard disk drive"
+      "A smart watch or smart belt",
+      "A desktop computer"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The chapter's smart-school example lists wearables such as watches or smart belts for attendance monitoring as an IoT application.",
     "source": "NCERT Textbook",
     "id": "xics051"
@@ -769,10 +769,10 @@
     "difficulty": "easy",
     "text": "A step-by-step set of instructions to solve a problem, written in a human-readable but structured form (not a specific programming language), is called:",
     "options": [
-      "A flowchart",
-      "Pseudocode",
       "Machine code",
-      "A compiler"
+      "Pseudocode",
+      "A compiler",
+      "A flowchart"
     ],
     "correct": 1,
     "explanation": "Pseudocode is an informal, structured way of describing an algorithm's steps using plain language, independent of any particular programming language's syntax.",
@@ -784,12 +784,12 @@
     "difficulty": "easy",
     "text": "In a flowchart, which symbol represents a decision/condition point?",
     "options": [
-      "A rectangle",
-      "An oval",
+      "A parallelogram",
       "A diamond (rhombus)",
-      "A parallelogram"
+      "A rectangle",
+      "An oval"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The diamond/rhombus shape in a flowchart represents a decision-making step (e.g. an IF condition) with branching paths.",
     "source": "NCERT Textbook",
     "id": "xics053"
@@ -799,12 +799,12 @@
     "difficulty": "easy",
     "text": "Which flowchart symbol represents the Start/Stop of a process?",
     "options": [
-      "Rectangle",
       "Oval/Rounded rectangle (terminator)",
+      "Parallelogram",
       "Diamond",
-      "Parallelogram"
+      "Rectangle"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The oval (terminator) symbol marks the start and end points of a flowchart.",
     "source": "NCERT Textbook",
     "id": "xics054"
@@ -816,8 +816,8 @@
     "options": [
       "A process/calculation step",
       "Input or Output",
-      "A decision",
-      "The start of the flowchart"
+      "The start of the flowchart",
+      "A decision"
     ],
     "correct": 1,
     "explanation": "The parallelogram symbol denotes Input/Output operations in a flowchart, as distinct from the rectangle (process step).",
@@ -829,12 +829,12 @@
     "difficulty": "medium",
     "text": "What is a 'conditional' in the context of algorithms?",
     "options": [
-      "A statement that always executes regardless of any condition",
-      "A statement that executes a certain block of instructions only if a specified condition is true",
       "A type of loop that never ends",
-      "A variable that stores text"
+      "A variable that stores text",
+      "A statement that executes a certain block of instructions only if a specified condition is true",
+      "A statement that always executes regardless of any condition"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Conditionals (IF/IF-ELSE type statements) let a program execute different instructions depending on whether a condition evaluates to true or false.",
     "source": "NCERT Textbook",
     "id": "xics056"
@@ -844,9 +844,9 @@
     "difficulty": "hard",
     "text": "What will the following algorithm output for the input Number = 9?\nINPUT Number\nIF Number < 9: print 'Single Digit'\nELSE IF Number < 99: print 'Double Digit'\nELSE: print 'Big'",
     "options": [
-      "Single Digit",
-      "Double Digit",
       "Big",
+      "Double Digit",
+      "Single Digit",
       "No output"
     ],
     "correct": 1,
@@ -859,12 +859,12 @@
     "difficulty": "easy",
     "text": "5! (factorial of 5) equals:",
     "options": [
-      "25",
-      "100",
       "120",
-      "15"
+      "25",
+      "15",
+      "100"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
     "source": "NCERT Textbook",
     "id": "xics058"
@@ -889,12 +889,12 @@
     "difficulty": "medium",
     "text": "Why must an algorithm be written before writing the actual program code?",
     "options": [
+      "Only algorithms can be executed by a computer",
       "It is not actually necessary, coding directly is always better",
       "It helps plan and verify the logical steps to solve a problem clearly, independent of any programming language syntax, reducing errors before coding begins",
-      "Only algorithms can be executed by a computer",
       "Algorithms take longer to write than code"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Designing the algorithm/pseudocode first lets you verify the logic of a solution clearly, catching errors early, before getting bogged down in a specific language's syntax.",
     "source": "NCERT Textbook",
     "id": "xics060"
@@ -904,10 +904,10 @@
     "difficulty": "medium",
     "text": "Tracing an algorithm by hand for the inputs 5, 9, 47, 99, 100, 200 is useful because it:",
     "options": [
-      "Makes the algorithm run faster",
+      "Is required by every programming language",
       "Helps verify whether the algorithm behaves correctly at its boundary/edge cases",
       "Converts the algorithm into a flowchart automatically",
-      "Is required by every programming language"
+      "Makes the algorithm run faster"
     ],
     "correct": 1,
     "explanation": "Manually tracing with boundary and varied values (small, large, right at thresholds) is a standard technique to catch logical errors like incorrect boundary conditions.",
@@ -921,10 +921,10 @@
     "options": [
       "Total_Marks",
       "_Percentage",
-      "1st_Room",
-      "totalMarks"
+      "totalMarks",
+      "1st_Room"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "A Python identifier cannot start with a digit; '1st_Room' is invalid for that reason.",
     "source": "NCERT Textbook",
     "id": "xics062"
@@ -935,11 +935,11 @@
     "text": "Why is 'True' an invalid choice for a variable name in Python?",
     "options": [
       "It contains a special character",
+      "It starts with a digit",
       "It is a reserved keyword in Python",
-      "It is too long",
-      "It starts with a digit"
+      "It is too long"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "'True' is a Python keyword (reserved word) representing the boolean value, so it cannot be used as an identifier.",
     "source": "NCERT Textbook",
     "id": "xics063"
@@ -949,12 +949,12 @@
     "difficulty": "hard",
     "text": "What is the output of: print(num1, num2) given num1 = 4; num2 = num1 + 1; num1 = 2 (executed in that order)?",
     "options": [
-      "4 5",
       "2 5",
-      "2 4",
-      "4 4"
+      "4 4",
+      "4 5",
+      "2 4"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "num1=4, then num2 = 4+1 = 5 (evaluated before num1 changes), then num1 is reassigned to 2 — so num1=2, num2=5 → prints '2 5'.",
     "source": "NCERT Textbook",
     "id": "xics064"
@@ -965,11 +965,11 @@
     "text": "What is the output of: num1, num2 = 2, 6; num1, num2 = num2, num1 + 2; print(num1, num2)?",
     "options": [
       "2 6",
-      "6 4",
       "8 2",
-      "6 8"
+      "6 8",
+      "6 4"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The right side is evaluated first using the OLD values: num2(=6), num1+2(=2+2=4); then assigned simultaneously: num1=6, num2=4 → prints '6 4'.",
     "source": "NCERT Textbook",
     "id": "xics065"
@@ -979,12 +979,12 @@
     "difficulty": "medium",
     "text": "What is the output of: num1 = '5' + '5'; print(num1)?",
     "options": [
+      "5 5",
       "10",
-      "55",
       "Error",
-      "5 5"
+      "55"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Since both operands are strings, '+' performs string concatenation, not numeric addition, giving '55'.",
     "source": "NCERT Textbook",
     "id": "xics066"
@@ -995,9 +995,9 @@
     "text": "What is the output of: print(24 // 4 // 2)?",
     "options": [
       "3",
+      "3.0",
       "6",
-      "12",
-      "3.0"
+      "12"
     ],
     "correct": 0,
     "explanation": "'//' is integer (floor) division, left to right: 24 // 4 = 6, then 6 // 2 = 3.",
@@ -1009,12 +1009,12 @@
     "difficulty": "medium",
     "text": "What is the output of: print(10 != 9 and 20 >= 20)?",
     "options": [
-      "True",
+      "Error",
       "False",
       "None",
-      "Error"
+      "True"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "10 != 9 is True, and 20 >= 20 is True; True and True evaluates to True.",
     "source": "NCERT Textbook",
     "id": "xics068"
@@ -1024,12 +1024,12 @@
     "difficulty": "hard",
     "text": "What is the output of: num1 = int('3.14'); print(num1)?",
     "options": [
-      "3",
-      "3.14",
+      "4",
       "Error — int() cannot convert a string containing a decimal point",
-      "4"
+      "3",
+      "3.14"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "int() can convert a string that looks like a whole number ('3') but raises a ValueError when the string contains a decimal point like '3.14'.",
     "source": "NCERT Textbook",
     "id": "xics069"
@@ -1039,12 +1039,12 @@
     "difficulty": "medium",
     "text": "What is the output of: print(4.00/(2.0+2.0))?",
     "options": [
-      "1",
-      "1.0",
+      "4.0",
       "2.0",
-      "4.0"
+      "1",
+      "1.0"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "4.00 / 4.0 = 1.0; since floating-point division ('/') is used with float operands, the result is a float, printed as 1.0.",
     "source": "NCERT Textbook",
     "id": "xics070"
@@ -1054,12 +1054,12 @@
     "difficulty": "easy",
     "text": "Which data type would best represent 'Resident of Delhi or not'?",
     "options": [
-      "int",
-      "float",
+      "str",
       "bool",
-      "str"
+      "float",
+      "int"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A yes/no (true/false) fact like residency status is best represented by the boolean (bool) data type.",
     "source": "NCERT Textbook",
     "id": "xics071"
@@ -1070,11 +1070,11 @@
     "text": "Which Python data type is most appropriate to store a person's mobile number?",
     "options": [
       "int, since it is made of digits",
-      "str, because mobile numbers may have leading zeros/country codes and are not used in arithmetic",
       "float",
-      "bool"
+      "bool",
+      "str, because mobile numbers may have leading zeros/country codes and are not used in arithmetic"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Mobile numbers are not used for arithmetic and may begin with 0 or include a '+' country code, so they are best stored as strings, not numbers.",
     "source": "NCERT Textbook",
     "id": "xics072"
@@ -1084,10 +1084,10 @@
     "difficulty": "medium",
     "text": "Categorise the error in: num1 = 25; num2 = 0; num1/num2",
     "options": [
-      "Syntax error",
+      "No error occurs",
       "Runtime error (ZeroDivisionError)",
-      "Logical error",
-      "No error occurs"
+      "Syntax error",
+      "Logical error"
     ],
     "correct": 1,
     "explanation": "Dividing by zero is syntactically valid Python but causes a runtime error (ZeroDivisionError) when the statement actually executes.",
@@ -1099,12 +1099,12 @@
     "difficulty": "hard",
     "text": "Which of the following is a logical error, not a syntax or runtime error?",
     "options": [
-      "Forgetting a colon after an if statement",
-      "Dividing a number by zero",
       "Using '+' instead of '*' to calculate area, causing a wrong (but non-crashing) result",
-      "Misspelling 'print' as 'pint'"
+      "Forgetting a colon after an if statement",
+      "Misspelling 'print' as 'pint'",
+      "Dividing a number by zero"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "A logical error produces an incorrect result without crashing the program — like using the wrong operator in a formula; the other options are syntax or runtime errors.",
     "source": "NCERT Textbook",
     "id": "xics074"
@@ -1114,10 +1114,10 @@
     "difficulty": "medium",
     "text": "Simple Interest (SI) is calculated using the formula SI = (P × R × T)/100. If P=1000, R=5, T=2, what is SI?",
     "options": [
-      "50",
+      "10",
       "100",
       "500",
-      "10"
+      "50"
     ],
     "correct": 1,
     "explanation": "SI = (1000 × 5 × 2)/100 = 10000/100 = 100.",
@@ -1129,12 +1129,12 @@
     "difficulty": "medium",
     "text": "What makes Python's variables different from variables in many other languages, per the chapter's 'Everything is an Object' idea?",
     "options": [
-      "Python variables are names bound to objects in memory, and can be rebound to objects of a different type",
-      "Python variables must always be declared with a fixed type",
       "Python variables cannot store strings",
+      "Python variables must always be declared with a fixed type",
+      "Python variables are names bound to objects in memory, and can be rebound to objects of a different type",
       "Python has no variables at all"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "In Python, a variable is just a name/reference bound to an object; since names aren't tied to one type, the same variable can later be bound to an object of a different type.",
     "source": "NCERT Textbook",
     "id": "xics076"
@@ -1145,11 +1145,11 @@
     "text": "What does the Python expression 'Bye' == 'BYE' evaluate to?",
     "options": [
       "True",
-      "False",
       "Error",
-      "None"
+      "None",
+      "False"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "String comparison in Python is case-sensitive, so 'Bye' and 'BYE' are not equal — the expression evaluates to False.",
     "source": "NCERT Textbook",
     "id": "xics077"
@@ -1160,11 +1160,11 @@
     "text": "What is the main difference between 'break' and 'continue' in a loop?",
     "options": [
       "'break' skips to the next iteration; 'continue' exits the loop entirely",
+      "'break' can only be used with while, 'continue' only with for",
       "'break' exits the loop entirely; 'continue' skips the rest of the current iteration and moves to the next one",
-      "They behave identically",
-      "'break' can only be used with while, 'continue' only with for"
+      "They behave identically"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "'break' terminates the loop immediately; 'continue' skips the remaining statements in the current iteration and proceeds to the loop's next iteration.",
     "source": "NCERT Textbook",
     "id": "xics078"
@@ -1174,12 +1174,12 @@
     "difficulty": "medium",
     "text": "What does range(20, 30, 2) generate when iterated?",
     "options": [
-      "20, 22, 24, 26, 28",
       "20, 22, 24, 26, 28, 30",
-      "20, 21, 22, ..., 29",
-      "22, 24, 26, 28, 30"
+      "20, 22, 24, 26, 28",
+      "22, 24, 26, 28, 30",
+      "20, 21, 22, ..., 29"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "range(start, stop, step) generates values from 20 up to but excluding 30, stepping by 2: 20, 22, 24, 26, 28.",
     "source": "NCERT Textbook",
     "id": "xics079"
@@ -1189,12 +1189,12 @@
     "difficulty": "medium",
     "text": "What is the output of:\nfor i in range(20,30,2):\n    print(i)",
     "options": [
-      "20 22 24 26 28 (each on its own line)",
       "20 21 22 ... 29",
       "22 24 26 28 30",
+      "20 22 24 26 28 (each on its own line)",
       "Nothing — this is a syntax error"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "range(20,30,2) yields 20,22,24,26,28 (30 excluded as stop), each printed on its own line.",
     "source": "NCERT Textbook",
     "id": "xics080"
@@ -1219,12 +1219,12 @@
     "difficulty": "hard",
     "text": "What is the output of:\ni = 0; total = 0\nwhile i < 9:\n    if i % 4 == 0:\n        total = total + i\n    i = i + 2\nprint(total)",
     "options": [
-      "0",
-      "4",
       "8",
-      "12"
+      "12",
+      "4",
+      "0"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "i takes values 0,2,4,6,8 (loop stops once i reaches 9... wait i goes 0,2,4,6,8 then i=10 exits since 10<9 false). i%4==0 true for i=0 (0+0=0) and i=4 (0+4=4) and i=8 (4+8=12). Loop runs while i<9: i=0,2,4,6,8 → i%4==0 for 0,4,8 → sum=0+4+8=12.",
     "source": "NCERT Textbook",
     "id": "xics082"
@@ -1234,12 +1234,12 @@
     "difficulty": "easy",
     "text": "What does an 'infinite loop' mean?",
     "options": [
-      "A loop that executes exactly once",
-      "A loop whose condition never becomes false, so it never terminates on its own",
       "A loop with no body",
-      "A loop that only works with lists"
+      "A loop that executes exactly once",
+      "A loop that only works with lists",
+      "A loop whose condition never becomes false, so it never terminates on its own"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "An infinite loop keeps executing forever because its terminating condition is never satisfied (or there's no break), unless manually interrupted.",
     "source": "NCERT Textbook",
     "id": "xics083"
@@ -1249,10 +1249,10 @@
     "difficulty": "easy",
     "text": "In Python, indentation is used to:",
     "options": [
-      "Make code look pretty only, with no functional effect",
+      "Declare variable types",
       "Define the block/scope of code belonging to a statement like if, for or while (it is functionally required)",
-      "Mark comments",
-      "Declare variable types"
+      "Make code look pretty only, with no functional effect",
+      "Mark comments"
     ],
     "correct": 1,
     "explanation": "Unlike many languages that use braces {}, Python uses consistent indentation to define which statements belong to a block (e.g. inside an if or loop) — it is mandatory, not cosmetic.",
@@ -1264,12 +1264,12 @@
     "difficulty": "medium",
     "text": "What is the purpose of an 'elif' clause?",
     "options": [
-      "To replace the 'else' keyword entirely with no functional difference",
       "To check an additional condition only if the previous 'if'/'elif' conditions were false",
-      "To end a loop early",
-      "To define a function"
+      "To define a function",
+      "To replace the 'else' keyword entirely with no functional difference",
+      "To end a loop early"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'elif' (else-if) lets you test another condition only when earlier conditions in the same if-chain were false, avoiding deeply nested if-else blocks.",
     "source": "NCERT Textbook",
     "id": "xics085"
@@ -1279,12 +1279,12 @@
     "difficulty": "hard",
     "text": "What is the output of:\nfor x in range(1,4):\n    for y in range(2,5):\n        if x * y > 10:\n            break\n        print(x * y)",
     "options": [
-      "2 3 4 4 6 8 6 9 12",
-      "2 3 4 4 6 8 6 9",
+      "All products up to 12 with no break",
       "2 3 4 4 6 8 6 9 12 8 12",
-      "All products up to 12 with no break"
+      "2 3 4 4 6 8 6 9 12",
+      "2 3 4 4 6 8 6 9"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "For x=1: y=2,3,4 → prints 2,3,4 (none exceed 10). For x=2: y=2,3,4 → 4,6,8 (none exceed 10, since 2×4=8). For x=3: y=2→6, y=3→9, y=4→12>10 so break before printing 12 — so chapter output is 2 3 4 4 6 8 6 9.",
     "source": "NCERT Textbook",
     "id": "xics086"
@@ -1309,12 +1309,12 @@
     "difficulty": "easy",
     "text": "A number or string that reads the same forwards and backwards (e.g. 12321) is called a:",
     "options": [
-      "Prime",
       "Palindrome",
       "Fibonacci number",
-      "Armstrong number"
+      "Armstrong number",
+      "Prime"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A palindrome is a sequence that is identical when reversed, like 12321 or 'madam'.",
     "source": "NCERT Textbook",
     "id": "xics088"
@@ -1325,11 +1325,11 @@
     "text": "What is the main benefit of using functions in a program?",
     "options": [
       "Programs run only on functions-based computers",
+      "Functions make a program impossible to debug",
       "Reusability and modularity — a block of code can be written once and called (reused) multiple times",
-      "Functions remove the need for variables",
-      "Functions make a program impossible to debug"
+      "Functions remove the need for variables"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Functions let you write a piece of logic once and invoke (call) it repeatedly wherever needed, making programs modular, organised and easier to maintain.",
     "source": "NCERT Textbook",
     "id": "xics089"
@@ -1340,11 +1340,11 @@
     "text": "What is the difference between an argument and a parameter in a function?",
     "options": [
       "They mean exactly the same with no distinction ever made",
+      "A parameter can only be a number",
       "A parameter is the variable listed in the function's definition; an argument is the actual value passed to the function when it is called",
-      "An argument is used only in return statements",
-      "A parameter can only be a number"
+      "An argument is used only in return statements"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Parameters are the placeholder names in the function header (def f(param):); arguments are the concrete values supplied at the call site (f(argument)).",
     "source": "NCERT Textbook",
     "id": "xics090"
@@ -1354,12 +1354,12 @@
     "difficulty": "medium",
     "text": "What is the difference between a global variable and a local variable?",
     "options": [
-      "A global variable is defined inside a function and accessible only there; a local variable is defined outside all functions",
-      "A global variable is defined outside all functions and accessible throughout the program; a local variable is defined inside a function and accessible only within that function",
+      "Local variables can never be changed",
       "There is no difference",
-      "Local variables can never be changed"
+      "A global variable is defined outside all functions and accessible throughout the program; a local variable is defined inside a function and accessible only within that function",
+      "A global variable is defined inside a function and accessible only there; a local variable is defined outside all functions"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A global variable's scope spans the whole program (module); a local variable exists only within the function where it is defined and is destroyed once the function returns.",
     "source": "NCERT Textbook",
     "id": "xics091"
@@ -1369,12 +1369,12 @@
     "difficulty": "medium",
     "text": "Does every Python function necessarily return a value?",
     "options": [
-      "Yes, always, or it causes an error",
-      "No — a function without an explicit return statement (or a bare 'return') implicitly returns None",
+      "Only recursive functions return values",
       "Only functions with parameters return a value",
-      "Only recursive functions return values"
+      "Yes, always, or it causes an error",
+      "No — a function without an explicit return statement (or a bare 'return') implicitly returns None"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "If a function has no return statement, or uses 'return' with no value, Python automatically returns None.",
     "source": "NCERT Textbook",
     "id": "xics092"
@@ -1385,11 +1385,11 @@
     "text": "How is math.pow() different from the built-in pow() function?",
     "options": [
       "They are identical in every way",
-      "math.pow() always returns a float, while built-in pow() can return an int when given integer arguments (and also supports an optional third modulus argument)",
       "math.pow() can only raise numbers to power 2",
-      "Only built-in pow() requires importing the math module"
+      "Only built-in pow() requires importing the math module",
+      "math.pow() always returns a float, while built-in pow() can return an int when given integer arguments (and also supports an optional third modulus argument)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "math.pow(x,y) always returns a float; pow(x,y) (built-in) returns an int if both x,y are ints, and additionally supports pow(x,y,z) for modular exponentiation.",
     "source": "NCERT Textbook",
     "id": "xics093"
@@ -1399,10 +1399,10 @@
     "difficulty": "medium",
     "text": "Which function would you use to generate a random integer between 1 and 5 (inclusive), and why?",
     "options": [
-      "random(), because it is simpler",
+      "Neither can generate a number in a range",
       "randint(1,5), because random() returns a float between 0 and 1, while randint(a,b) directly returns a random integer N with a <= N <= b",
-      "Both are exactly equivalent for this purpose",
-      "Neither can generate a number in a range"
+      "random(), because it is simpler",
+      "Both are exactly equivalent for this purpose"
     ],
     "correct": 1,
     "explanation": "random.random() returns a float in [0.0, 1.0); random.randint(a,b) returns a random integer in the inclusive range [a,b], which is what's needed here.",
@@ -1414,12 +1414,12 @@
     "difficulty": "hard",
     "text": "What is wrong with this code?\ndef findValue(vall = 1.1, val2, val3):\n    final = (val2 + val3)/vall\n    print(final)",
     "options": [
-      "Nothing is wrong",
       "A parameter with a default value (vall=1.1) is followed by parameters without defaults — non-default arguments cannot follow default arguments",
       "Python does not allow default values at all",
-      "The function name is invalid"
+      "The function name is invalid",
+      "Nothing is wrong"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "In Python, once a parameter is given a default value, every parameter after it must also have a default; here val2 and val3 (no defaults) follow vall (which has one) — a SyntaxError.",
     "source": "NCERT Textbook",
     "id": "xics095"
@@ -1429,12 +1429,12 @@
     "difficulty": "medium",
     "text": "What does math.ceil(89.7) return, and how does it differ from math.floor(89.7)?",
     "options": [
-      "Both return 89",
       "ceil(89.7) returns 90 (rounds up to the nearest integer); floor(89.7) returns 89 (rounds down to the nearest integer)",
-      "ceil returns 89, floor returns 90",
-      "Both return 89.7 unchanged"
+      "Both return 89.7 unchanged",
+      "Both return 89",
+      "ceil returns 89, floor returns 90"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "math.ceil() rounds a number UP to the nearest integer (89.7→90); math.floor() rounds it DOWN (89.7→89).",
     "source": "NCERT Textbook",
     "id": "xics096"
@@ -1444,12 +1444,12 @@
     "difficulty": "medium",
     "text": "A function can return multiple values in Python by:",
     "options": [
+      "Using two separate return statements that both execute",
       "It is impossible to return more than one value",
       "Returning them as a comma-separated sequence, which Python automatically packs into a tuple",
-      "Using two separate return statements that both execute",
       "Declaring the function twice"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "e.g. 'return a, b' returns the tuple (a, b) — Python packs multiple comma-separated return values into a single tuple automatically.",
     "source": "NCERT Textbook",
     "id": "xics097"
@@ -1460,11 +1460,11 @@
     "text": "What library function would you import to use trigonometric functions like sin(x) and cos(x)?",
     "options": [
       "the random module",
-      "the math module",
+      "No import needed, they are built in",
       "the string module",
-      "No import needed, they are built in"
+      "the math module"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Trigonometric functions (sin, cos, etc.), along with functions like ceil, floor and sqrt, are part of Python's standard math module and must be imported.",
     "source": "NCERT Textbook",
     "id": "xics098"
@@ -1474,12 +1474,12 @@
     "difficulty": "medium",
     "text": "Given mySubject = 'Computer Science', what is the output of print(mySubject[0:len(mySubject)])?",
     "options": [
-      "Computer Scienc (missing last letter)",
       "Computer Science (the complete string)",
+      "Computer Scienc (missing last letter)",
       "Error — index out of range",
       "omputer Science"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Slicing [0:len(s)] covers the entire string from index 0 up to (not including) len(s), which is the whole string: 'Computer Science'.",
     "source": "NCERT Textbook",
     "id": "xics099"
@@ -1490,8 +1490,8 @@
     "text": "Given mySubject = 'Computer Science', what is the output of print(mySubject[::2])?",
     "options": [
       "Cmue cec",
-      "Computer Science",
       "C m u e  c e c",
+      "Computer Science",
       "omue cene"
     ],
     "correct": 0,
@@ -1504,12 +1504,12 @@
     "difficulty": "medium",
     "text": "Given mySubject = 'Computer Science', what does print(mySubject.swapcase()) output?",
     "options": [
-      "COMPUTER SCIENCE",
-      "computer science",
       "cOMPUTER sCIENCE",
-      "Computer Science (unchanged)"
+      "COMPUTER SCIENCE",
+      "Computer Science (unchanged)",
+      "computer science"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "swapcase() converts every uppercase letter to lowercase and vice versa: 'Computer Science' → 'cOMPUTER sCIENCE'.",
     "source": "NCERT Textbook",
     "id": "xics101"
@@ -1519,12 +1519,12 @@
     "difficulty": "easy",
     "text": "Given mySubject = 'Computer Science', what does mySubject.startswith('Comp') return?",
     "options": [
-      "True",
-      "False",
+      "Error",
       "'Comp'",
-      "Error"
+      "True",
+      "False"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "startswith() returns a boolean — True since the string genuinely starts with the substring 'Comp'.",
     "source": "NCERT Textbook",
     "id": "xics102"
@@ -1535,11 +1535,11 @@
     "text": "Given myAddress = 'WZ-1,New Ganga Nagar,New Delhi', what does myAddress.count('New') return?",
     "options": [
       "1",
-      "2",
       "3",
-      "0"
+      "0",
+      "2"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "'New' appears twice in the string: 'New Ganga Nagar' and 'New Delhi' — count() returns 2.",
     "source": "NCERT Textbook",
     "id": "xics103"
@@ -1550,11 +1550,11 @@
     "text": "Given myAddress = 'WZ-1,New Ganga Nagar,New Delhi', what is the difference between myAddress.find('New') and myAddress.rfind('New')?",
     "options": [
       "They always return the same value",
+      "rfind() reverses the string first",
       "find() returns the index of the FIRST occurrence; rfind() returns the index of the LAST occurrence of the substring",
-      "find() only works on numbers",
-      "rfind() reverses the string first"
+      "find() only works on numbers"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "find() searches from the left and returns the first matching index; rfind() searches from the right, returning the index of the last (rightmost) occurrence.",
     "source": "NCERT Textbook",
     "id": "xics104"
@@ -1564,9 +1564,9 @@
     "difficulty": "medium",
     "text": "What does myAddress.split(',') do to the string 'WZ-1,New Ganga Nagar,New Delhi'?",
     "options": [
-      "Joins the string using commas",
-      "Returns a list of substrings split wherever a comma occurs: ['WZ-1', 'New Ganga Nagar', 'New Delhi']",
       "Removes all commas without splitting",
+      "Returns a list of substrings split wherever a comma occurs: ['WZ-1', 'New Ganga Nagar', 'New Delhi']",
+      "Joins the string using commas",
       "Returns a single string with commas replaced by spaces"
     ],
     "correct": 1,
@@ -1579,12 +1579,12 @@
     "difficulty": "hard",
     "text": "What is the output of myAddress.index('Agra') if 'Agra' does not occur in myAddress?",
     "options": [
-      "-1",
       "Raises a ValueError (substring not found)",
       "0",
+      "-1",
       "None"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Unlike find() (which returns -1 if not found), the index() method raises a ValueError when the substring is not present in the string.",
     "source": "NCERT Textbook",
     "id": "xics106"
@@ -1594,10 +1594,10 @@
     "difficulty": "medium",
     "text": "A string in Python is:",
     "options": [
-      "Mutable — characters can be changed in place",
+      "The same as a list",
       "Immutable — once created, its characters cannot be changed in place",
-      "Only usable for numbers",
-      "The same as a list"
+      "Mutable — characters can be changed in place",
+      "Only usable for numbers"
     ],
     "correct": 1,
     "explanation": "Strings in Python are immutable; any 'modification' (like replace() or concatenation) actually creates and returns a new string object.",
@@ -1610,9 +1610,9 @@
     "text": "Which method would correctly check if a string consists only of alphabetic characters?",
     "options": [
       "isalpha()",
-      "isdigit()",
+      "isspace()",
       "isalnum()",
-      "isspace()"
+      "isdigit()"
     ],
     "correct": 0,
     "explanation": "isalpha() returns True only if all characters in the string are alphabetic letters and the string is non-empty.",
@@ -1624,12 +1624,12 @@
     "difficulty": "medium",
     "text": "Given list1 = [12,32,65,26,80,10]; list1.sort(); print(list1) — what is printed?",
     "options": [
-      "[12,32,65,26,80,10] (unchanged)",
       "[10,12,26,32,65,80]",
       "[80,65,32,26,12,10]",
+      "[12,32,65,26,80,10] (unchanged)",
       "Error"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "sort() sorts the list in place in ascending order by default: [10, 12, 26, 32, 65, 80].",
     "source": "NCERT Textbook",
     "id": "xics109"
@@ -1639,12 +1639,12 @@
     "difficulty": "hard",
     "text": "Given list1 = [12,32,65,26,80,10]; sorted(list1); print(list1) — what is printed, and why?",
     "options": [
-      "[10,12,26,32,65,80] — because sorted() changes the list in place",
       "[12,32,65,26,80,10] — because sorted() returns a NEW sorted list without modifying the original list",
       "An empty list",
-      "Error, sorted() cannot be used on lists"
+      "Error, sorted() cannot be used on lists",
+      "[10,12,26,32,65,80] — because sorted() changes the list in place"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Unlike list.sort(), the built-in sorted() function returns a new sorted list and leaves the original list unchanged; since the result wasn't assigned anywhere, list1 remains unsorted.",
     "source": "NCERT Textbook",
     "id": "xics110"
@@ -1654,10 +1654,10 @@
     "difficulty": "hard",
     "text": "What is the difference between append() and extend() on a list?",
     "options": [
-      "They behave identically",
+      "append() removes an element",
       "append() adds its argument as a single new element at the end; extend() adds each element of an iterable argument individually to the end",
-      "extend() can only add numbers",
-      "append() removes an element"
+      "They behave identically",
+      "extend() can only add numbers"
     ],
     "correct": 1,
     "explanation": "myList.append([50,60]) adds the whole list [50,60] as ONE nested element, whereas myList.extend([80,90]) adds 80 and 90 as two separate individual elements.",
@@ -1669,12 +1669,12 @@
     "difficulty": "hard",
     "text": "Given myList = [10,20,30,40]; myList.append([50,60]) — what does myList become?",
     "options": [
+      "[10,20,30,40]",
       "[10,20,30,40,50,60]",
       "[10,20,30,40,[50,60]]",
-      "[10,20,30,40]",
       "Error"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "append() adds its entire argument as a single element, so the nested list [50,60] becomes one item: [10,20,30,40,[50,60]].",
     "source": "NCERT Textbook",
     "id": "xics112"
@@ -1684,12 +1684,12 @@
     "difficulty": "hard",
     "text": "Given list1 = [6,7,8,9], what is the difference between list1 * 2 and list1 *= 2?",
     "options": [
-      "They have the same final effect: list1 becomes [6,7,8,9,6,7,8,9] in both cases",
       "list1 * 2 creates a NEW list (list1 itself unchanged unless reassigned); list1 *= 2 modifies list1 itself to be repeated",
+      "list1 * 2 deletes list1",
       "list1 *= 2 raises an error",
-      "list1 * 2 deletes list1"
+      "They have the same final effect: list1 becomes [6,7,8,9,6,7,8,9] in both cases"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'list1 * 2' is an expression producing a new repeated list that is discarded unless assigned back; 'list1 *= 2' is shorthand for 'list1 = list1 * 2', which does update list1 itself.",
     "source": "NCERT Textbook",
     "id": "xics113"
@@ -1699,12 +1699,12 @@
     "difficulty": "medium",
     "text": "Given myList=[1,2,3,4,5,6,7,8,9,10]; del myList[3:]; print(myList) — what is printed?",
     "options": [
-      "[1,2,3]",
+      "[1,2,3,4]",
       "[4,5,6,7,8,9,10]",
       "[]",
-      "[1,2,3,4]"
+      "[1,2,3]"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "del myList[3:] deletes all elements from index 3 to the end, leaving indices 0,1,2 → [1,2,3].",
     "source": "NCERT Textbook",
     "id": "xics114"
@@ -1715,8 +1715,8 @@
     "text": "Given myList=[1,2,3,4,5,6,7,8,9,10]; del myList[::2]; — which elements remain?",
     "options": [
       "[2,4,6,8,10]",
-      "[1,3,5,7,9]",
       "[1,2,3,4,5]",
+      "[1,3,5,7,9]",
       "[]"
     ],
     "correct": 0,
@@ -1730,11 +1730,11 @@
     "text": "What is the fundamental difference between a list and a string regarding mutability?",
     "options": [
       "Both are mutable",
-      "Both are immutable",
       "A list is mutable (elements can be changed/added/removed in place); a string is immutable",
+      "Both are immutable",
       "A string is mutable; a list is immutable"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Lists support in-place modification (item assignment, append, insert, delete), whereas strings cannot be changed in place — any apparent change creates a new string.",
     "source": "NCERT Textbook",
     "id": "xics116"
@@ -1744,12 +1744,12 @@
     "difficulty": "easy",
     "text": "A list containing elements that are themselves lists is called a:",
     "options": [
-      "Tuple",
       "Nested list",
       "Dictionary",
-      "Set"
+      "Set",
+      "Tuple"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A nested list is a list whose elements include one or more other lists, e.g. [[1,2],[3,4]], useful for representing 2D/grid-like data.",
     "source": "NCERT Textbook",
     "id": "xics117"
@@ -1759,12 +1759,12 @@
     "difficulty": "hard",
     "text": "Given stRecord = ['Raman','A-36',[56,98,99,72,69], 78.8], which expression retrieves the marks in the fifth subject?",
     "options": [
-      "stRecord[2][4]",
       "stRecord[4]",
       "stRecord[3]",
-      "stRecord[2][0]"
+      "stRecord[2][0]",
+      "stRecord[2][4]"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "stRecord[2] accesses the nested marks list [56,98,99,72,69]; its 5th subject (index 4, since 0-indexed) is stRecord[2][4] = 69.",
     "source": "NCERT Textbook",
     "id": "xics118"
@@ -1775,11 +1775,11 @@
     "text": "Given tuple1 = (23,1,45,67,45,9,55,45), what does tuple1.count(45) return?",
     "options": [
       "1",
-      "2",
       "3",
-      "0"
+      "0",
+      "2"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "45 appears three times in the tuple, so count(45) returns 3.",
     "source": "NCERT Textbook",
     "id": "xics119"
@@ -1789,12 +1789,12 @@
     "difficulty": "easy",
     "text": "Given tuple1 = (23,1,45,67,45,9,55,45), what does print(max(tuple1)) output?",
     "options": [
-      "55",
-      "67",
       "45",
-      "23"
+      "23",
+      "67",
+      "55"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The maximum value among the tuple's elements is 67.",
     "source": "NCERT Textbook",
     "id": "xics120"
@@ -1804,12 +1804,12 @@
     "difficulty": "medium",
     "text": "What is the key reason tuples are generally faster and safer to use than lists for fixed data?",
     "options": [
-      "Tuples support more methods than lists",
-      "Tuples are immutable, so their contents cannot be accidentally modified, and this immutability allows some performance optimisations",
       "Tuples cannot store numbers",
-      "Lists are always faster than tuples"
+      "Lists are always faster than tuples",
+      "Tuples are immutable, so their contents cannot be accidentally modified, and this immutability allows some performance optimisations",
+      "Tuples support more methods than lists"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Because a tuple cannot be changed after creation, it protects data from accidental modification and Python can make certain internal optimisations, unlike the mutable list.",
     "source": "NCERT Textbook",
     "id": "xics121"
@@ -1819,12 +1819,12 @@
     "difficulty": "hard",
     "text": "Why does the following raise a TypeError?\n>>> tuple1 = (5)\n>>> len(tuple1)",
     "options": [
-      "len() cannot be used on tuples at all",
       "tuple1 = (5) does NOT create a tuple — it is just the integer 5 in parentheses; a single-element tuple needs a trailing comma: (5,)",
       "5 is too large a number for len()",
+      "len() cannot be used on tuples at all",
       "There is no error, len(tuple1) returns 1"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Parentheses alone don't make a tuple — (5) is simply the int 5. A single-element tuple requires a trailing comma, (5,); without it, len() fails since integers have no length.",
     "source": "NCERT Textbook",
     "id": "xics122"
@@ -1834,12 +1834,12 @@
     "difficulty": "medium",
     "text": "Given stateCapital = {'AndhraPradesh':'Hyderabad','Bihar':'Patna','Maharashtra':'Mumbai','Rajasthan':'Jaipur'}, what does stateCapital.get('Assam') return?",
     "options": [
-      "'Assam'",
-      "An error (KeyError)",
       "None",
-      "0"
+      "0",
+      "An error (KeyError)",
+      "'Assam'"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "dict.get(key) returns None (not an error) if the key is absent, unlike dict[key] which would raise a KeyError — this is the main advantage of get().",
     "source": "NCERT Textbook",
     "id": "xics123"
@@ -1849,12 +1849,12 @@
     "difficulty": "medium",
     "text": "In the same dictionary, what does 'Maharashtra' in stateCapital check?",
     "options": [
-      "Whether 'Maharashtra' is a VALUE in the dictionary",
-      "Whether 'Maharashtra' is a KEY in the dictionary — returns True or False",
       "It raises an error",
-      "It returns the capital of Maharashtra"
+      "Whether 'Maharashtra' is a VALUE in the dictionary",
+      "It returns the capital of Maharashtra",
+      "Whether 'Maharashtra' is a KEY in the dictionary — returns True or False"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The 'in' operator on a dictionary checks membership among its KEYS by default, returning a boolean — here, True, since 'Maharashtra' is indeed a key.",
     "source": "NCERT Textbook",
     "id": "xics124"
@@ -1864,10 +1864,10 @@
     "difficulty": "medium",
     "text": "What is the key practical advantage of a dictionary over a list for looking up a value by a meaningful name (like a student's roll number)?",
     "options": [
-      "Dictionaries are always smaller in memory",
+      "There is no advantage",
       "A dictionary allows direct, efficient lookup by a custom key (e.g. roll number) rather than by a numeric position/index like a list",
       "Dictionaries cannot store numbers",
-      "There is no advantage"
+      "Dictionaries are always smaller in memory"
     ],
     "correct": 1,
     "explanation": "A dictionary maps custom keys (like roll numbers or names) directly to values, giving fast, meaningful lookup, unlike a list which is accessed only by a sequential numeric index.",
@@ -1910,9 +1910,9 @@
     "text": "Which built-in method would you use to remove a key (and its value) from a dictionary?",
     "options": [
       "del dictionaryName[key]",
+      "dictionaryName.delete(key)",
       "dictionaryName.remove(key)",
-      "dictionaryName.pop_key(key)",
-      "dictionaryName.delete(key)"
+      "dictionaryName.pop_key(key)"
     ],
     "correct": 0,
     "explanation": "The 'del' statement with a key, e.g. del stateCapital['Rajasthan'], removes that key-value pair from the dictionary.",
@@ -1924,12 +1924,12 @@
     "difficulty": "medium",
     "text": "Revaan uses his classmate Atharv's email account (left logged in) to send inflammatory messages. This is best described as:",
     "options": [
-      "Hacking",
-      "Identity theft and cyber bullying — impersonating Atharv to harm others using his identity/account",
       "Plagiarism",
-      "Not a cyber crime at all"
+      "Hacking",
+      "Not a cyber crime at all",
+      "Identity theft and cyber bullying — impersonating Atharv to harm others using his identity/account"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Using someone else's account/identity without authorisation to send harmful messages is a combination of identity theft and cyber bullying — a real cyber crime even though no 'hacking' (breaking in) occurred, since the account was simply left open.",
     "source": "NCERT Textbook",
     "id": "xics129"
@@ -1939,12 +1939,12 @@
     "difficulty": "easy",
     "text": "Rishika accidentally discovers Garvit's email password on a crumpled paper. What is the ethically correct action?",
     "options": [
-      "Use Garvit's password to check his account",
       "Share the password with other classmates",
       "Inform Garvit so he can change his password",
-      "Post the password publicly as a prank"
+      "Post the password publicly as a prank",
+      "Use Garvit's password to check his account"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The ethical response is to inform Garvit of the exposure so he can protect his own account by changing the password — not to misuse or share the information.",
     "source": "NCERT Textbook",
     "id": "xics130"
@@ -1954,10 +1954,10 @@
     "difficulty": "medium",
     "text": "Shaurya downloads a video clip, edits it to add 'Prepared by Shaurya', and sends it as his own work. This is an example of:",
     "options": [
+      "A cyber crime unrelated to copyright",
       "Fair use",
-      "Hacking",
       "Copyright infringement / plagiarism — falsely claiming someone else's work as his own",
-      "A cyber crime unrelated to copyright"
+      "Hacking"
     ],
     "correct": 2,
     "explanation": "Taking someone else's content and presenting it as your own original work, without permission or proper credit, is copyright infringement/plagiarism.",
@@ -1970,11 +1970,11 @@
     "text": "Which of the following, after a fight with a friend, would NOT count as cyberbullying?",
     "options": [
       "Sending a threatening message telling them not to call or talk",
-      "Creating and uploading an embarrassing picture of the friend on social media",
       "Sending an apology email saying 'I am sorry'",
+      "Creating and uploading an embarrassing picture of the friend on social media",
       "Sending repeated abusive messages"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A genuine apology is not harassment; threatening messages and embarrassing/abusive posts are examples of cyberbullying, but an apology is the opposite.",
     "source": "NCERT Textbook",
     "id": "xics132"
@@ -1985,11 +1985,11 @@
     "text": "Rephrasing a paragraph from a webpage in your own words and using it in your project, without citing the source, is:",
     "options": [
       "Completely acceptable and original work",
-      "Still considered plagiarism, since the ideas/content are taken from someone else without attribution, even if reworded",
       "Only a problem if done word-for-word",
-      "A form of hacking"
+      "A form of hacking",
+      "Still considered plagiarism, since the ideas/content are taken from someone else without attribution, even if reworded"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Plagiarism covers presenting someone else's ideas or content as your own, even when reworded, if the source is not properly credited.",
     "source": "NCERT Textbook",
     "id": "xics133"
@@ -1999,12 +1999,12 @@
     "difficulty": "easy",
     "text": "A digital footprint refers to:",
     "options": [
-      "The physical storage space a file occupies on a hard disk",
-      "The trail of data created when a person uses the internet (browsing history, posts, logins, etc.)",
+      "The IP address of a printer",
       "A type of malware",
-      "The IP address of a printer"
+      "The trail of data created when a person uses the internet (browsing history, posts, logins, etc.)",
+      "The physical storage space a file occupies on a hard disk"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A digital footprint is the trace of online activity a person leaves behind while using the internet — searches, posts, logins, purchases, etc.",
     "source": "NCERT Textbook",
     "id": "xics134"
@@ -2014,12 +2014,12 @@
     "difficulty": "medium",
     "text": "What does the term 'netizen' refer to?",
     "options": [
-      "A citizen of a particular country only",
       "A responsible, active user/citizen of the internet, mindful of digital etiquette and rights/duties online",
       "A type of network cable",
-      "A hacker"
+      "A hacker",
+      "A citizen of a particular country only"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'Netizen' (net + citizen) describes someone who actively and responsibly uses the internet as part of the digital society, analogous to being a citizen of a physical society.",
     "source": "NCERT Textbook",
     "id": "xics135"
@@ -2030,11 +2030,11 @@
     "text": "Which of the following best matches 'Credit card fraud' as described in the chapter's concepts?",
     "options": [
       "Breaking into computers to read private files",
-      "Fakers offering fake rewards/prizes to trick people into revealing personal financial information",
+      "The trail left when using the internet",
       "Copying and pasting content from the internet",
-      "The trail left when using the internet"
+      "Fakers offering fake rewards/prizes to trick people into revealing personal financial information"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Credit card fraud in this context refers to scams where attackers lure victims with fake offers/rewards to extract sensitive financial/personal information.",
     "source": "NCERT Textbook",
     "id": "xics136"
@@ -2044,12 +2044,12 @@
     "difficulty": "medium",
     "text": "The Indian Information Technology Act (IT Act) primarily deals with:",
     "options": [
-      "Only hardware manufacturing standards",
-      "Legal recognition of electronic transactions, and addressing cyber crimes and related offences in India",
       "Only software licensing fees",
-      "Printer specifications"
+      "Printer specifications",
+      "Only hardware manufacturing standards",
+      "Legal recognition of electronic transactions, and addressing cyber crimes and related offences in India"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The IT Act provides the legal framework in India for electronic governance, digital signatures, and defines various cyber offences and their penalties.",
     "source": "NCERT Textbook",
     "id": "xics137"

@@ -6,9 +6,9 @@
     "text": "Which of the following is NOT one of the seven SI base quantities?",
     "options": [
       "Luminous intensity",
-      "Electric current",
+      "Amount of substance",
       "Force",
-      "Amount of substance"
+      "Electric current"
     ],
     "correct": 2,
     "explanation": "Force is a derived quantity (= mass × acceleration); the seven SI base quantities are length, mass, time, electric current, thermodynamic temperature, amount of substance and luminous intensity.",
@@ -20,12 +20,12 @@
     "difficulty": "easy",
     "text": "The SI unit of luminous intensity is the:",
     "options": [
-      "lumen",
-      "candela",
+      "watt",
       "lux",
-      "watt"
+      "candela",
+      "lumen"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The candela (cd) is the SI base unit of luminous intensity.",
     "source": "NCERT Textbook"
   },
@@ -52,8 +52,8 @@
     "options": [
       "1",
       "2",
-      "3",
-      "4"
+      "4",
+      "3"
     ],
     "correct": 0,
     "explanation": "Leading zeros are never significant; only the digit 7 is significant, so 0.007 has 1 significant figure (matches the textbook's own answer key, Ex 1.10(a)).",
@@ -65,12 +65,12 @@
     "difficulty": "medium",
     "text": "In the equation v = u + at, dimensional analysis shows 'at' must have the same dimensions as:",
     "options": [
-      "displacement",
-      "velocity",
       "acceleration",
-      "time"
+      "time",
+      "displacement",
+      "velocity"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Only quantities with the same dimensions can be added; since v and u are velocities, 'at' must also have dimensions of velocity [LT⁻¹].",
     "source": "NCERT Textbook"
   },
@@ -80,12 +80,12 @@
     "difficulty": "hard",
     "text": "A physical quantity P is calculated from P = a²b³/c, where a, b, c are measured with percentage errors 1%, 2%, 3% respectively. The percentage error in P is:",
     "options": [
-      "6%",
       "11%",
+      "6%",
       "13%",
       "17%"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "For a product/quotient of powers, percentage errors add weighted by their exponents: ΔP/P×100 = 2(1%) + 3(2%) + 1(3%) = 2+6+3 = 11%.",
     "source": "NCERT Textbook"
   },
@@ -95,12 +95,12 @@
     "difficulty": "hard",
     "text": "If the unit of mass is doubled, unit of length is halved, and unit of time is unchanged, the unit of kinetic energy (½mv²) changes by a factor of:",
     "options": [
-      "2",
-      "1/2",
       "8",
-      "1/8"
+      "2",
+      "1/8",
+      "1/2"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "KE ∝ mass × velocity² ∝ mass × length²/time²: factor = 2 × (1/2)² × 1 = 2 × 1/4 = 1/2.",
     "source": "NCERT Textbook"
   },
@@ -111,11 +111,11 @@
     "text": "Which measuring instrument gives the least count directly related to its pitch and number of circular-scale divisions?",
     "options": [
       "Vernier callipers",
+      "Simple pendulum clock",
       "Screw gauge",
-      "Metre scale",
-      "Simple pendulum clock"
+      "Metre scale"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A screw gauge's least count = pitch ÷ number of divisions on the circular (head) scale.",
     "source": "NCERT Textbook"
   },
@@ -126,8 +126,8 @@
     "text": "The dimensional formula of the gravitational constant G is:",
     "options": [
       "[M⁻¹L³T⁻²]",
-      "[ML²T⁻²]",
       "[M L T⁻¹]",
+      "[ML²T⁻²]",
       "[M⁻¹L²T⁻¹]"
     ],
     "correct": 0,
@@ -141,11 +141,11 @@
     "text": "A calorie equals 4.2 J, where 1 J = 1 kg m² s⁻². In a system where the unit of mass is α kg, length β m and time γ s, a calorie has magnitude:",
     "options": [
       "4.2 α β² γ⁻²",
-      "4.2 α⁻¹ β⁻² γ²",
       "4.2 α β⁻² γ²",
-      "4.2 α⁻¹ β² γ⁻²"
+      "4.2 α⁻¹ β² γ⁻²",
+      "4.2 α⁻¹ β⁻² γ²"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Matching dimensions [M L² T⁻²] under unit change n′ = n(u/u′): the new numeric value is 4.2 α⁻¹β⁻²γ² (textbook Ex 1.3).",
     "source": "NCERT Textbook"
   },
@@ -155,12 +155,12 @@
     "difficulty": "easy",
     "text": "The order of magnitude of the diameter of a hydrogen atom is about:",
     "options": [
-      "10⁻¹⁰ m",
       "10⁻¹⁵ m",
-      "10⁻⁶ m",
-      "10⁻²⁰ m"
+      "10⁻¹⁰ m",
+      "10⁻²⁰ m",
+      "10⁻⁶ m"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "An atom's size is of order 1 Å = 10⁻¹⁰ m.",
     "source": "NCERT Textbook"
   },
@@ -170,12 +170,12 @@
     "difficulty": "hard",
     "text": "A boy recalls the relativistic mass relation but forgets where to place the speed of light c. The dimensionally correct form of m = m₀(1 − v²)⁻¹ᐟ² is:",
     "options": [
+      "m = m₀c(1 − v²)⁻¹ᐟ²",
       "m = m₀(1 − v²/c²)⁻¹ᐟ²",
-      "m = m₀(1 − v²c²)⁻¹ᐟ²",
       "m = m₀(1 − v²)⁻¹ᐟ² c",
-      "m = m₀c(1 − v²)⁻¹ᐟ²"
+      "m = m₀(1 − v²c²)⁻¹ᐟ²"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "v²/c² must be dimensionless for the bracket to make sense, so c must appear as v²/c² (textbook Ex 1.13).",
     "source": "NCERT Textbook"
   },
@@ -185,10 +185,10 @@
     "difficulty": "medium",
     "text": "Which of these is the most precise way to measure the thickness of a human hair?",
     "options": [
-      "A metre scale",
+      "A stopwatch",
       "A vernier calliper",
       "An optical microscope measuring to within a wavelength of light",
-      "A stopwatch"
+      "A metre scale"
     ],
     "correct": 2,
     "explanation": "An optical instrument resolving to within a wavelength of visible light (~500 nm) is far more precise than mechanical vernier/screw devices for something as thin as a hair.",
@@ -215,9 +215,9 @@
     "difficulty": "easy",
     "text": "Average speed of an object over a time interval is always:",
     "options": [
-      "less than or equal to the magnitude of its average velocity",
-      "greater than or equal to the magnitude of its average velocity",
       "equal to its average velocity",
+      "greater than or equal to the magnitude of its average velocity",
+      "less than or equal to the magnitude of its average velocity",
       "undefined for non-uniform motion"
     ],
     "correct": 1,
@@ -231,11 +231,11 @@
     "text": "Instantaneous velocity is defined as:",
     "options": [
       "Δx/Δt for a finite time interval",
-      "the limit of Δx/Δt as Δt → 0, i.e. dx/dt",
       "total distance divided by total time",
+      "the limit of Δx/Δt as Δt → 0, i.e. dx/dt",
       "the slope of the acceleration-time graph"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Instantaneous velocity = lim(Δt→0) Δx/Δt = dx/dt, the slope of the tangent to the x-t graph at that instant.",
     "source": "NCERT Textbook"
   },
@@ -245,12 +245,12 @@
     "difficulty": "medium",
     "text": "For uniformly accelerated motion starting from rest, the position-time (x-t) graph is a:",
     "options": [
+      "hyperbola",
       "straight line through the origin",
       "parabola",
-      "hyperbola",
       "straight line parallel to the time axis"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "With constant acceleration, x = ½at² (from rest) — a quadratic in t, so the x-t graph is a parabola.",
     "source": "NCERT Textbook"
   },
@@ -260,12 +260,12 @@
     "difficulty": "medium",
     "text": "A ball is thrown vertically upward. At the highest point, its:",
     "options": [
-      "velocity and acceleration are both zero",
-      "velocity is zero, acceleration is 9.8 m s⁻² downward",
+      "velocity and acceleration are both non-zero and in the same direction",
       "velocity is non-zero, acceleration is zero",
-      "velocity and acceleration are both non-zero and in the same direction"
+      "velocity and acceleration are both zero",
+      "velocity is zero, acceleration is 9.8 m s⁻² downward"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "At the highest point the ball momentarily has zero velocity, but gravity continues to act, giving acceleration g = 9.8 m s⁻² downward throughout the flight.",
     "source": "NCERT Textbook"
   },
@@ -275,10 +275,10 @@
     "difficulty": "hard",
     "text": "A car moving at 126 km/h is brought to rest over 200 m with uniform retardation. Using v²=u²+2as, the retardation is closest to:",
     "options": [
-      "0.86 m s⁻²",
+      "6.1 m s⁻²",
       "1.7 m s⁻²",
       "3.4 m s⁻²",
-      "6.1 m s⁻²"
+      "0.86 m s⁻²"
     ],
     "correct": 2,
     "explanation": "u = 126 km/h = 35 m/s. 0 = 35² − 2a(200) ⟹ a = 1225/400 ≈ 3.06 m s⁻² ≈ 3.4 m s⁻² (nearest option); textbook's own answer is 3.06 m s⁻², stop time 11.4 s.",
@@ -290,12 +290,12 @@
     "difficulty": "medium",
     "text": "A particle has zero velocity at some instant. It can still have:",
     "options": [
-      "zero acceleration only",
-      "non-zero acceleration at that instant",
+      "infinite velocity",
       "negative speed",
-      "infinite velocity"
+      "zero acceleration only",
+      "non-zero acceleration at that instant"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "E.g. a ball thrown upward has zero velocity at the topmost point, yet acceleration due to gravity (9.8 m s⁻²) continues to act.",
     "source": "NCERT Textbook"
   },
@@ -305,12 +305,12 @@
     "difficulty": "easy",
     "text": "Which statement about one-dimensional motion is TRUE?",
     "options": [
+      "A particle with positive acceleration is always speeding up",
       "A particle with zero speed may have non-zero acceleration",
       "A particle with constant speed must have zero acceleration",
-      "A particle with positive acceleration is always speeding up",
       "Instantaneous speed can be less than the magnitude of instantaneous velocity"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Zero instantaneous speed does not rule out non-zero acceleration (e.g. top of vertical throw); the other three statements are false in general (constant speed can still mean changing direction/non-zero acceleration in 2D, though even in 1D 'speeding up' depends on sign convention, and instantaneous speed always equals |instantaneous velocity|).",
     "source": "NCERT Textbook"
   },
@@ -322,8 +322,8 @@
     "options": [
       "acceleration during that interval",
       "the displacement of the object during that interval",
-      "the average speed",
-      "the jerk"
+      "the jerk",
+      "the average speed"
     ],
     "correct": 1,
     "explanation": "∫v dt over [t1,t2] gives the net displacement during that interval.",
@@ -335,10 +335,10 @@
     "difficulty": "hard",
     "text": "A police van moving at 30 km/h fires a bullet (muzzle speed 150 m s⁻¹) at a thief's car moving away at 192 km/h in the same direction. The speed at which the bullet hits the car is:",
     "options": [
+      "45 m s⁻¹",
       "150 m s⁻¹",
-      "192 km/h less muzzle speed",
       "105 m s⁻¹",
-      "45 m s⁻¹"
+      "192 km/h less muzzle speed"
     ],
     "correct": 2,
     "explanation": "Convert to common units: van 30 km/h ≈ 8.33 m/s, bullet relative to ground = 8.33+150 = 158.33 m/s; thief's car = 192 km/h ≈ 53.33 m/s. Relative speed of bullet w.r.t. car = 158.33−53.33 = 105 m/s (matches book's answer of 105 m s⁻¹).",
@@ -350,12 +350,12 @@
     "difficulty": "easy",
     "text": "The slope of the velocity-time graph gives:",
     "options": [
-      "displacement",
-      "acceleration",
       "jerk only if non-uniform",
-      "distance travelled"
+      "displacement",
+      "distance travelled",
+      "acceleration"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Slope of v-t graph = dv/dt = acceleration.",
     "source": "NCERT Textbook"
   },
@@ -365,12 +365,12 @@
     "difficulty": "medium",
     "text": "Instantaneous speed is always equal to the magnitude of instantaneous velocity because:",
     "options": [
-      "over an infinitesimally small interval, path length and displacement magnitude coincide",
-      "speed is a vector like velocity",
       "velocity is always positive",
-      "acceleration is zero at every instant"
+      "speed is a vector like velocity",
+      "acceleration is zero at every instant",
+      "over an infinitesimally small interval, path length and displacement magnitude coincide"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "As Δt→0, the path traced becomes a straight segment equal in length to the displacement magnitude, so instantaneous speed = |instantaneous velocity| always, even though average speed ≥ |average velocity| over a finite interval.",
     "source": "NCERT Textbook"
   },
@@ -380,12 +380,12 @@
     "difficulty": "easy",
     "text": "Which quantity in kinematics is a vector?",
     "options": [
-      "Distance",
       "Speed",
       "Displacement",
+      "Distance",
       "Path length"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Displacement has both magnitude and direction, unlike distance, speed or path length which are scalars.",
     "source": "NCERT Textbook"
   },
@@ -397,8 +397,8 @@
     "options": [
       "x = x₀ + v₀t",
       "x = x₀ + v₀t + ½at²",
-      "x = x₀ + at²",
-      "x = v₀t² + ½at"
+      "x = v₀t² + ½at",
+      "x = x₀ + at²"
     ],
     "correct": 1,
     "explanation": "This is the standard kinematic equation of motion for constant acceleration.",
@@ -410,12 +410,12 @@
     "difficulty": "easy",
     "text": "Which of the following is a scalar quantity?",
     "options": [
+      "Linear momentum",
       "Displacement",
       "Angular velocity",
-      "Work",
-      "Linear momentum"
+      "Work"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Work has magnitude only (it is the dot product of force and displacement vectors), so it is a scalar; the others are vectors.",
     "source": "NCERT Textbook"
   },
@@ -425,12 +425,12 @@
     "difficulty": "easy",
     "text": "Pick the vector quantity from this list: temperature, pressure, impulse, energy.",
     "options": [
-      "Temperature",
+      "Energy",
       "Pressure",
-      "Impulse",
-      "Energy"
+      "Temperature",
+      "Impulse"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Impulse = change in momentum, a vector (= force × time, force being a vector); the rest are scalars.",
     "source": "NCERT Textbook"
   },
@@ -455,10 +455,10 @@
     "difficulty": "hard",
     "text": "A particle's position vector is r = (3.0t î − 2.0t² ĵ + 4.0 k̂) m. Its acceleration vector is:",
     "options": [
-      "(3.0 î − 4.0 ĵ) m s⁻²",
+      "(3.0 î − 2.0 ĵ) m s⁻²",
       "(−4.0 ĵ) m s⁻²",
-      "(−4.0 î) m s⁻²",
-      "(3.0 î − 2.0 ĵ) m s⁻²"
+      "(3.0 î − 4.0 ĵ) m s⁻²",
+      "(−4.0 î) m s⁻²"
     ],
     "correct": 1,
     "explanation": "v = dr/dt = 3.0î − 4.0t ĵ; a = dv/dt = −4.0 ĵ m s⁻² (constant, matches the textbook's own answer).",
@@ -470,12 +470,12 @@
     "difficulty": "medium",
     "text": "A cyclist goes from the centre O to the edge P of a circular park of radius r, then along the circumference to Q (diametrically opposite P), and back to O along QO. The magnitude of net displacement for the full trip is:",
     "options": [
-      "4r",
-      "2r",
+      "πr",
       "0",
-      "πr"
+      "2r",
+      "4r"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "He starts and ends at the same point O, so net displacement = 0 (even though total path length = r + πr + r is nonzero).",
     "source": "NCERT Textbook"
   },
@@ -485,10 +485,10 @@
     "difficulty": "medium",
     "text": "In projectile motion (no air resistance), which quantity remains constant throughout the flight?",
     "options": [
-      "Vertical component of velocity",
+      "Total displacement",
       "Horizontal component of velocity",
-      "Speed",
-      "Total displacement"
+      "Vertical component of velocity",
+      "Speed"
     ],
     "correct": 1,
     "explanation": "With no horizontal force, the horizontal velocity component stays constant; only the vertical component changes due to gravity.",
@@ -500,12 +500,12 @@
     "difficulty": "hard",
     "text": "A motorist's track turns left by 60° after every 500 m. The magnitude of displacement after the third turn, compared to path length covered, is:",
     "options": [
-      "equal to the path length (1500 m)",
-      "500 m, much less than the 1500 m path length",
       "1500 m exactly, same as path length",
-      "zero"
+      "zero",
+      "equal to the path length (1500 m)",
+      "500 m, much less than the 1500 m path length"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "After 3 turns of 60° each, the net displacement works out to 500 m (per the textbook's own answer, Ex 3.10), while path length travelled is 3×500=1500 m — displacement is far smaller than path length since the path curves back on itself.",
     "source": "NCERT Textbook"
   },
@@ -515,12 +515,12 @@
     "difficulty": "easy",
     "text": "Centripetal acceleration in uniform circular motion points:",
     "options": [
-      "tangent to the circle, in the direction of velocity",
-      "radially outward, away from the centre",
       "radially inward, toward the centre",
-      "it is zero since speed is constant"
+      "tangent to the circle, in the direction of velocity",
+      "it is zero since speed is constant",
+      "radially outward, away from the centre"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Even though speed is constant, velocity direction keeps changing, producing an acceleration v²/r directed toward the centre (centripetal).",
     "source": "NCERT Textbook"
   },
@@ -531,9 +531,9 @@
     "text": "An aircraft flies a horizontal loop of radius 1.00 km at 900 km/h. Its centripetal acceleration, compared with g, is approximately:",
     "options": [
       "about 6.4 g",
-      "about 0.64 g",
       "about 64 g",
-      "negligible compared to g"
+      "negligible compared to g",
+      "about 0.64 g"
     ],
     "correct": 0,
     "explanation": "v = 900 km/h = 250 m/s; a_c = v²/r = 250²/1000 = 62.5 m/s² ≈ 6.4g (since g≈9.8 m/s²) — matches the standard textbook result.",
@@ -546,8 +546,8 @@
     "text": "Which statement about uniform circular motion is TRUE?",
     "options": [
       "The net acceleration averaged over one full cycle is zero",
-      "The velocity vector is constant in direction",
       "The speed changes continuously",
+      "The velocity vector is constant in direction",
       "The acceleration is always tangential"
     ],
     "correct": 0,
@@ -560,8 +560,8 @@
     "difficulty": "easy",
     "text": "Î and ĵ are unit vectors along x and y axes. The magnitude of (î + ĵ) is:",
     "options": [
-      "1",
       "2",
+      "1",
       "√2",
       "0"
     ],
@@ -575,10 +575,10 @@
     "difficulty": "medium",
     "text": "A particle moves such that a=(1/2)(v(t1)+v(t2)) represents its average acceleration over [t1,t2]. This relation is, in general:",
     "options": [
-      "always true for any motion",
+      "true only in 1-D motion",
       "true only for motion with constant acceleration",
-      "never true",
-      "true only in 1-D motion"
+      "always true for any motion",
+      "never true"
     ],
     "correct": 1,
     "explanation": "a_average = (v(t2)-v(t1))/(t2-t1) in general; the stated formula (mean of the two instantaneous velocities, matching average acceleration) only coincides with the correct definition when acceleration is uniform/constant.",
@@ -591,9 +591,9 @@
     "text": "An aircraft flies at height 3400 m. The angle subtended at a ground observer by its positions 10.0 s apart is 30°. Its speed is closest to:",
     "options": [
       "190 m s⁻¹",
-      "950 m s⁻¹",
+      "1900 m s⁻¹",
       "9.5 m s⁻¹",
-      "1900 m s⁻¹"
+      "950 m s⁻¹"
     ],
     "correct": 0,
     "explanation": "Horizontal distance travelled ≈ 2×3400×tan(15°) ≈ 2×3400×0.268 ≈ 1822 m (using the small triangle split by the perpendicular); speed ≈ 1822/10 ≈ 182 m/s, close to the standard textbook answer of ≈ 189 m s⁻¹.",
@@ -605,12 +605,12 @@
     "difficulty": "easy",
     "text": "Newton's first law of motion is essentially a statement of:",
     "options": [
-      "conservation of energy",
       "the law of inertia",
       "action and reaction",
+      "conservation of energy",
       "conservation of angular momentum"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The first law says a body continues in its state of rest or uniform motion unless acted upon by a net external force — this is the law of inertia.",
     "source": "NCERT Textbook"
   },
@@ -621,11 +621,11 @@
     "text": "A high-speed electron moving in space far from all material objects, free of electric and magnetic fields, experiences:",
     "options": [
       "a net force equal to its weight",
+      "an increasing force with time",
       "zero net force",
-      "a force proportional to its speed",
-      "an increasing force with time"
+      "a force proportional to its speed"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "With no material objects, fields, or other agencies nearby, there is no force acting at all — by the first law it continues in uniform motion (or rest).",
     "source": "NCERT Textbook"
   },
@@ -635,12 +635,12 @@
     "difficulty": "easy",
     "text": "Newton's second law can be written as:",
     "options": [
+      "F = m²a",
       "F = m/a",
-      "F = ma, where a is the acceleration produced by net force F",
       "F = mv",
-      "F = m²a"
+      "F = ma, where a is the acceleration produced by net force F"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "F=ma is the standard form of Newton's second law, with F the net external force.",
     "source": "NCERT Textbook"
   },
@@ -650,12 +650,12 @@
     "difficulty": "medium",
     "text": "A body moves in a circle on a smooth table, tied by a string to a peg at the centre. If tension is T and speed v, the net force on the body (directed toward the centre) is:",
     "options": [
-      "T + mv²/l",
-      "T − mv²/l",
       "T",
-      "zero"
+      "zero",
+      "T + mv²/l",
+      "T − mv²/l"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "The only horizontal force on the body is the string tension T itself, which IS the net centripetal force in this case (no other horizontal force acts); the textbook's own answer is (i) T.",
     "source": "NCERT Textbook"
   },
@@ -665,10 +665,10 @@
     "difficulty": "medium",
     "text": "A retarding force of 50 N acts on a 20 kg body moving at 15 m/s. Time taken to stop is:",
     "options": [
-      "3 s",
+      "1.5 s",
       "6 s",
       "0.3 s",
-      "1.5 s"
+      "3 s"
     ],
     "correct": 1,
     "explanation": "a = F/m = 50/20 = 2.5 m/s² (retardation). t = v/a = 15/2.5 = 6 s.",
@@ -680,12 +680,12 @@
     "difficulty": "easy",
     "text": "By Newton's third law, if body A exerts a force on body B, then:",
     "options": [
-      "B exerts an equal force in the same direction on A",
       "B exerts an equal and opposite force on A",
-      "B exerts no force on A",
-      "the force on B is always larger"
+      "the force on B is always larger",
+      "B exerts an equal force in the same direction on A",
+      "B exerts no force on A"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Newton's third law: for every action there is an equal and opposite reaction, acting on the other body.",
     "source": "NCERT Textbook"
   },
@@ -695,12 +695,12 @@
     "difficulty": "hard",
     "text": "Two masses 8 kg and 12 kg are connected over a frictionless pulley by a light inextensible string. The acceleration of the system is:",
     "options": [
+      "4.9 m s⁻²",
       "2 m s⁻²",
-      "9.8 m s⁻²",
       "1 m s⁻²",
-      "4.9 m s⁻²"
+      "9.8 m s⁻²"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "a = (m₂−m₁)g/(m₁+m₂) = (12−8)(9.8)/20 = 39.2/20 ≈ 1.96 ≈ 2 m/s² (matches the textbook's own answer with g≈10: a=2 m/s², T=96 N).",
     "source": "NCERT Textbook"
   },
@@ -711,11 +711,11 @@
     "text": "A man of mass 70 kg stands on a weighing scale in a lift accelerating upward at 5 m/s². The scale reading (apparent weight) is about:",
     "options": [
       "700 N",
-      "686 N",
       "1050 N",
+      "686 N",
       "350 N"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Normal force N = m(g+a) = 70×(9.8+5) = 70×14.8 = 1036 N ≈ 1050 N (the scale reads a value greater than the true weight when accelerating upward).",
     "source": "NCERT Textbook"
   },
@@ -725,12 +725,12 @@
     "difficulty": "medium",
     "text": "A cricketer moving their hands backward while holding a catch is an application of:",
     "options": [
-      "increasing momentum of the ball",
-      "increasing the time of impact to reduce the force on the hands (F=Δp/Δt)",
       "Newton's third law only",
-      "conservation of energy"
+      "increasing momentum of the ball",
+      "conservation of energy",
+      "increasing the time of impact to reduce the force on the hands (F=Δp/Δt)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Spreading the same change in momentum (Δp) over a longer time Δt reduces the average force F=Δp/Δt experienced by the hands.",
     "source": "NCERT Textbook"
   },
@@ -740,10 +740,10 @@
     "difficulty": "easy",
     "text": "The SI unit of linear momentum is:",
     "options": [
-      "N",
-      "kg m s⁻¹",
       "kg m s⁻²",
-      "N s⁻¹"
+      "kg m s⁻¹",
+      "N s⁻¹",
+      "N"
     ],
     "correct": 1,
     "explanation": "Momentum = mass × velocity, so its unit is kg·m/s (equivalently, N·s).",
@@ -755,12 +755,12 @@
     "difficulty": "medium",
     "text": "A shell of mass 0.020 kg is fired from a 100 kg gun at muzzle speed 80 m/s. The gun's recoil speed is:",
     "options": [
-      "0.016 m s⁻¹",
       "1.6 m s⁻¹",
-      "16 m s⁻¹",
-      "0.16 m s⁻¹"
+      "0.016 m s⁻¹",
+      "0.16 m s⁻¹",
+      "16 m s⁻¹"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "By conservation of momentum: 100×v = 0.020×80 ⟹ v = 1.6/100 = 0.016 m/s.",
     "source": "NCERT Textbook"
   },
@@ -770,12 +770,12 @@
     "difficulty": "hard",
     "text": "A nucleus at rest disintegrates into two smaller nuclei. By conservation of momentum, the two products must:",
     "options": [
-      "move in the same direction",
       "move in opposite directions",
+      "move in the same direction",
       "remain at rest",
       "have equal masses"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Total initial momentum = 0; for the vector sum of the two product momenta to remain zero, they must be equal in magnitude and exactly opposite in direction.",
     "source": "NCERT Textbook"
   },
@@ -785,12 +785,12 @@
     "difficulty": "medium",
     "text": "It is easier to pull a lawn mower than to push it because, when pushing:",
     "options": [
-      "the normal force (and hence friction) increases, requiring more applied force",
       "the normal force decreases",
+      "gravity acts differently",
       "there is no friction while pushing",
-      "gravity acts differently"
+      "the normal force (and hence friction) increases, requiring more applied force"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "When pushing at an angle below horizontal, the downward component of the applied force adds to the weight, increasing normal reaction N and hence friction f∝N; pulling at an angle above horizontal reduces N, reducing friction.",
     "source": "NCERT Textbook"
   },
@@ -802,8 +802,8 @@
     "options": [
       "F × t",
       "F · d (dot product of force and displacement)",
-      "F × d (cross product)",
-      "F/d"
+      "F/d",
+      "F × d (cross product)"
     ],
     "correct": 1,
     "explanation": "W = F·d = Fd cosθ, the scalar (dot) product of force and displacement vectors.",
@@ -815,12 +815,12 @@
     "difficulty": "medium",
     "text": "Work done by friction on a body sliding down an incline is:",
     "options": [
-      "positive",
-      "negative",
       "zero",
-      "infinite"
+      "infinite",
+      "positive",
+      "negative"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Friction opposes relative motion, so it acts up the incline while displacement is down the incline — the angle between them is 180°, making the work negative.",
     "source": "NCERT Textbook"
   },
@@ -830,12 +830,12 @@
     "difficulty": "medium",
     "text": "The work-energy theorem states that the net work done on a body equals:",
     "options": [
-      "its change in momentum",
-      "its change in kinetic energy",
+      "zero, always",
       "its change in potential energy",
-      "zero, always"
+      "its change in kinetic energy",
+      "its change in momentum"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "W_net = ΔKE = KE_final − KE_initial, a direct consequence of Newton's second law.",
     "source": "NCERT Textbook"
   },
@@ -845,12 +845,12 @@
     "difficulty": "easy",
     "text": "SI unit of power is:",
     "options": [
-      "Joule",
-      "Newton",
       "Watt",
-      "Joule-second"
+      "Joule-second",
+      "Joule",
+      "Newton"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Power = work done/time = Watt (W) = Joule/second.",
     "source": "NCERT Textbook"
   },
@@ -860,8 +860,8 @@
     "difficulty": "medium",
     "text": "A body moving under constant power P starting from rest has displacement proportional to:",
     "options": [
-      "t",
       "t^(1/2)",
+      "t",
       "t^(3/2)",
       "t²"
     ],
@@ -875,8 +875,8 @@
     "difficulty": "medium",
     "text": "In an elastic collision between two bodies:",
     "options": [
-      "only momentum is conserved",
       "only kinetic energy is conserved",
+      "only momentum is conserved",
       "both momentum and total kinetic energy are conserved",
       "neither is conserved"
     ],
@@ -890,12 +890,12 @@
     "difficulty": "medium",
     "text": "In a perfectly inelastic collision, the two bodies:",
     "options": [
-      "bounce apart with equal speeds",
-      "stick together and move with a common velocity afterward",
+      "exert no force on each other",
       "conserve kinetic energy exactly",
-      "exert no force on each other"
+      "bounce apart with equal speeds",
+      "stick together and move with a common velocity afterward"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Perfectly inelastic collision: the bodies coalesce and move together afterward; momentum is conserved but kinetic energy is not (maximum possible KE loss for given momentum).",
     "source": "NCERT Textbook"
   },
@@ -905,12 +905,12 @@
     "difficulty": "hard",
     "text": "The potential energy function for SHM is V(x)=kx²/2 with k=0.5 N/m. A particle of total energy 1 J must 'turn back' when |x| equals:",
     "options": [
-      "1 m",
       "2 m",
-      "0.5 m",
-      "4 m"
+      "1 m",
+      "4 m",
+      "0.5 m"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "At the turning point, all energy is potential: 1 = (0.5)x²/2 ⟹ x² = 4 ⟹ x = ±2 m (matches the textbook's statement).",
     "source": "NCERT Textbook"
   },
@@ -920,12 +920,12 @@
     "difficulty": "easy",
     "text": "Power delivered by a constant force F to a body moving with velocity v is given by:",
     "options": [
-      "F·v (dot product)",
+      "F/v",
       "F×v (cross product)",
-      "F+v",
-      "F/v"
+      "F·v (dot product)",
+      "F+v"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Instantaneous power P = F·v = Fv cosθ, where θ is the angle between force and velocity.",
     "source": "NCERT Textbook"
   },
@@ -950,12 +950,12 @@
     "difficulty": "medium",
     "text": "The work done by a conservative force around any closed path is:",
     "options": [
-      "positive",
-      "negative",
+      "equal to the kinetic energy change",
       "zero",
-      "equal to the kinetic energy change"
+      "negative",
+      "positive"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "This is the defining property of a conservative force — path-independence means the net work over a closed loop is always zero.",
     "source": "NCERT Textbook"
   },
@@ -966,11 +966,11 @@
     "text": "When a conservative force does positive work on a body, its potential energy:",
     "options": [
       "increases",
+      "becomes infinite",
       "decreases",
-      "remains unaltered",
-      "becomes infinite"
+      "remains unaltered"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Work done by a conservative force = −ΔPE, so positive work means potential energy decreases (e.g. a falling object: gravity does positive work, PE decreases).",
     "source": "NCERT Textbook"
   },
@@ -980,12 +980,12 @@
     "difficulty": "medium",
     "text": "The centre of mass of a uniform ring:",
     "options": [
+      "does not exist for a ring",
       "always lies on the ring itself",
-      "lies at the geometric centre, outside the material of the ring",
       "lies at the topmost point of the ring",
-      "does not exist for a ring"
+      "lies at the geometric centre, outside the material of the ring"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "For a hollow/ring-shaped body, the centre of mass can lie in empty space (the geometric centre), not on the material itself.",
     "source": "NCERT Textbook"
   },
@@ -995,12 +995,12 @@
     "difficulty": "easy",
     "text": "Torque is defined as:",
     "options": [
+      "m×a",
       "r × F (cross product of position vector and force)",
-      "r · F (dot product)",
       "F/r",
-      "m×a"
+      "r · F (dot product)"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Torque τ = r × F, a vector quantity whose magnitude is rF sinθ.",
     "source": "NCERT Textbook"
   },
@@ -1010,12 +1010,12 @@
     "difficulty": "medium",
     "text": "The moment of inertia of a body about an axis depends on:",
     "options": [
+      "torque applied",
       "mass only",
       "mass and its distribution relative to the axis",
-      "angular velocity only",
-      "torque applied"
+      "angular velocity only"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "I = Σmr² depends on both the total mass and how that mass is distributed relative to the rotation axis — the same mass arranged differently gives different I.",
     "source": "NCERT Textbook"
   },
@@ -1026,9 +1026,9 @@
     "text": "The theorem of parallel axes relates the moment of inertia about an axis through the centre of mass (I_cm) to that about a parallel axis at distance d as:",
     "options": [
       "I = I_cm + Md²",
-      "I = I_cm − Md²",
+      "I = I_cm/Md²",
       "I = I_cm × Md²",
-      "I = I_cm/Md²"
+      "I = I_cm − Md²"
     ],
     "correct": 0,
     "explanation": "Parallel axis theorem: I = I_cm + Md², where M is the total mass and d is the perpendicular distance between the two parallel axes.",
@@ -1040,12 +1040,12 @@
     "difficulty": "hard",
     "text": "A solid sphere and a hollow cylinder of equal mass and radius are given equal torques, starting from rest. After the same time, which has the greater angular speed?",
     "options": [
-      "The hollow cylinder, since it has a larger moment of inertia",
       "The solid sphere, since it has a smaller moment of inertia (I=2/5 MR² vs I=MR²)",
-      "Both have equal angular speed always",
-      "Cannot be determined"
+      "The hollow cylinder, since it has a larger moment of inertia",
+      "Cannot be determined",
+      "Both have equal angular speed always"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Angular acceleration α=τ/I; a smaller I (solid sphere, I=⅖MR², vs hollow cylinder I=MR²) gives a larger α for the same τ, so the sphere reaches a higher angular speed in the same time (matches the textbook's own answer).",
     "source": "NCERT Textbook"
   },
@@ -1055,12 +1055,12 @@
     "difficulty": "medium",
     "text": "The conservation of angular momentum explains why:",
     "options": [
+      "pressure increases with depth in a fluid",
       "a skater spins faster when pulling their arms in",
-      "a ball falls straight down",
       "a car accelerates on a straight road",
-      "pressure increases with depth in a fluid"
+      "a ball falls straight down"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Pulling arms in reduces moment of inertia I; since L=Iω is conserved (no external torque), ω must increase — the skater spins faster.",
     "source": "NCERT Textbook"
   },
@@ -1070,10 +1070,10 @@
     "difficulty": "easy",
     "text": "For a rigid body in equilibrium, the two necessary conditions are:",
     "options": [
-      "net force zero only",
       "net torque zero only",
+      "constant velocity only",
       "net force AND net torque both zero",
-      "constant velocity only"
+      "net force zero only"
     ],
     "correct": 2,
     "explanation": "Mechanical equilibrium of a rigid body requires both translational equilibrium (ΣF=0) and rotational equilibrium (Στ=0).",
@@ -1085,12 +1085,12 @@
     "difficulty": "medium",
     "text": "The moment of inertia of a uniform solid sphere about its diameter is:",
     "options": [
+      "MR²",
       "(2/5)MR²",
-      "(1/2)MR²",
       "(2/3)MR²",
-      "MR²"
+      "(1/2)MR²"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "I_sphere(diameter) = (2/5)MR², a standard result (contrast with hollow sphere: (2/3)MR², and solid cylinder about its axis: (1/2)MR²).",
     "source": "NCERT Textbook"
   },
@@ -1100,12 +1100,12 @@
     "difficulty": "medium",
     "text": "Angular momentum L of a particle about an origin is given by:",
     "options": [
-      "L = r × p (cross product of position vector and linear momentum)",
-      "L = r · p",
       "L = Iα",
-      "L = τ/t only"
+      "L = r · p",
+      "L = τ/t only",
+      "L = r × p (cross product of position vector and linear momentum)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "L = r×p for a particle; for a rigid body about a fixed axis, L=Iω is the rotational analogue.",
     "source": "NCERT Textbook"
   },
@@ -1130,12 +1130,12 @@
     "difficulty": "medium",
     "text": "A torque of 180 N·m is needed to keep a rotor spinning at a uniform 200 rad/s. The power required is:",
     "options": [
-      "18 kW",
-      "36 kW",
+      "3.6 kW",
       "9 kW",
-      "3.6 kW"
+      "18 kW",
+      "36 kW"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "P = τω = 180×200 = 36,000 W = 36 kW (matches the textbook's own answer — needed to counter frictional torque at uniform speed).",
     "source": "NCERT Textbook"
   },
@@ -1145,12 +1145,12 @@
     "difficulty": "medium",
     "text": "The 'radius of gyration' k of a body about an axis is defined via:",
     "options": [
-      "I = Mk²",
       "I = Mk",
-      "k = I/M",
-      "k = IM"
+      "k = IM",
+      "I = Mk²",
+      "k = I/M"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "By definition, the radius of gyration k satisfies I = Mk², i.e. k = √(I/M) — the distance from the axis at which the entire mass could be concentrated to give the same I.",
     "source": "NCERT Textbook"
   },
@@ -1175,12 +1175,12 @@
     "difficulty": "medium",
     "text": "Kepler's third law states that for planets in circular orbits around the sun:",
     "options": [
-      "T is proportional to R",
-      "T² is proportional to R³",
       "T is proportional to R²",
-      "T² is proportional to R"
+      "T² is proportional to R",
+      "T is proportional to R",
+      "T² is proportional to R³"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "T² ∝ R³ (or T²=K_s R³ with the same constant K_s for all planets), Kepler's third/harmonic law.",
     "source": "NCERT Textbook"
   },
@@ -1190,12 +1190,12 @@
     "difficulty": "easy",
     "text": "The universal law of gravitation states the force between two point masses is:",
     "options": [
-      "proportional to the product of masses and inversely proportional to the square of the distance",
       "proportional to the sum of masses",
       "independent of distance",
+      "proportional to the product of masses and inversely proportional to the square of the distance",
       "inversely proportional to the masses"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "F = Gm₁m₂/r², Newton's law of universal gravitation.",
     "source": "NCERT Textbook"
   },
@@ -1205,12 +1205,12 @@
     "difficulty": "medium",
     "text": "As you go from the Earth's surface to a height h above it, the acceleration due to gravity g:",
     "options": [
-      "increases",
-      "decreases",
+      "becomes negative",
       "remains the same",
-      "becomes negative"
+      "increases",
+      "decreases"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "g(h) = g₀/(1+h/R_E)² (or approximately g₀(1−2h/R_E) for h≪R_E) — g decreases with height.",
     "source": "NCERT Textbook"
   },
@@ -1220,12 +1220,12 @@
     "difficulty": "medium",
     "text": "As you go from the Earth's surface to its centre (depth d), the acceleration due to gravity:",
     "options": [
+      "stays constant",
       "increases linearly",
       "decreases, reaching zero at the centre",
-      "stays constant",
       "becomes infinite at the centre"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "g(d) = g₀(1−d/R_E), assuming uniform density — g decreases linearly with depth, reaching zero at the centre.",
     "source": "NCERT Textbook"
   },
@@ -1235,9 +1235,9 @@
     "difficulty": "medium",
     "text": "An astronaut in a small spaceship orbiting the Earth feels weightless because:",
     "options": [
-      "gravity is zero at that altitude",
-      "both the astronaut and the spaceship are in free fall together around the Earth",
       "there is no air resistance in space",
+      "both the astronaut and the spaceship are in free fall together around the Earth",
+      "gravity is zero at that altitude",
       "the spaceship's engines cancel gravity"
     ],
     "correct": 1,
@@ -1250,12 +1250,12 @@
     "difficulty": "medium",
     "text": "Escape speed from a planet's surface depends on:",
     "options": [
-      "the mass and direction of projection of the escaping body",
-      "only the gravitational potential at the launch point (hence the planet's mass and radius), not on the mass or direction of the projectile",
       "only the projectile's mass",
-      "only the launch direction"
+      "only the launch direction",
+      "only the gravitational potential at the launch point (hence the planet's mass and radius), not on the mass or direction of the projectile",
+      "the mass and direction of projection of the escaping body"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Escape speed v_e = √(2GM/R) is independent of the escaping body's own mass and the direction of projection; it depends only on the gravitational potential (mass M and radius R) of the planet at the launch point.",
     "source": "NCERT Textbook"
   },
@@ -1266,11 +1266,11 @@
     "text": "Over one complete elliptical orbit of a planet around the sun, which quantities remain exactly constant?",
     "options": [
       "Speed and kinetic energy",
-      "Angular momentum and total mechanical energy",
+      "Potential energy alone",
       "Distance from the sun",
-      "Potential energy alone"
+      "Angular momentum and total mechanical energy"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "In an elliptical orbit, speed/KE/PE/distance all vary continuously, but total angular momentum (central force, no torque) and total mechanical energy (conservative force, no other work done) remain constant throughout.",
     "source": "NCERT Textbook"
   },
@@ -1280,12 +1280,12 @@
     "difficulty": "medium",
     "text": "The gravitational force inside a uniform spherical shell, on a particle placed anywhere inside the shell, is:",
     "options": [
-      "directed toward the centre",
-      "directed away from the centre",
       "exactly zero everywhere inside",
-      "maximum at the centre"
+      "directed away from the centre",
+      "maximum at the centre",
+      "directed toward the centre"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "A key result of Newton's shell theorem: the net gravitational force due to a uniform spherical shell on any point strictly inside it is exactly zero, regardless of position within the cavity.",
     "source": "NCERT Textbook"
   },
@@ -1295,12 +1295,12 @@
     "difficulty": "medium",
     "text": "The commonly used expression PE = mgh (near the Earth's surface) is:",
     "options": [
-      "exact at all heights",
       "an approximation valid only when h is small compared to the Earth's radius",
       "valid only in a vacuum",
+      "exact at all heights",
       "the exact formula for satellites"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "mgh approximates the full gravitational PE difference −GMm/r only for h≪R_E, where g can be treated as roughly constant; for large heights or orbits the full −GMm/r form must be used.",
     "source": "NCERT Textbook"
   },
@@ -1311,11 +1311,11 @@
     "text": "The total energy of a satellite in a stable circular orbit around the Earth is:",
     "options": [
       "always positive",
-      "always negative",
       "always zero",
-      "equal to its kinetic energy alone"
+      "equal to its kinetic energy alone",
+      "always negative"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A bound orbit has total mechanical energy E = −GMm/2r, which is always negative (bound systems have negative total energy relative to the zero at infinite separation).",
     "source": "NCERT Textbook"
   },
@@ -1326,11 +1326,11 @@
     "text": "If a body is projected from Earth's surface at thrice the escape speed, its speed far away from the Earth (ignoring the Sun/other planets) is:",
     "options": [
       "zero",
-      "√8 times the escape speed",
       "3 times the escape speed",
+      "√8 times the escape speed",
       "equal to the escape speed"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "By energy conservation: ½v∞² = ½(3v_e)² − v_e² = v_e²(9/2 − 1) = v_e²(7/2)... using the standard result for 'projected at n×escape speed', v∞ = v_e√(n²−1) = v_e√8 (matches the textbook's style of answer for this classic problem).",
     "source": "NCERT Textbook"
   },
@@ -1340,12 +1340,12 @@
     "difficulty": "hard",
     "text": "Two identical heavy spheres are placed on a table, and the gravitational field and potential are considered at the midpoint of the line joining their centres. At this midpoint:",
     "options": [
-      "the field is zero (equal, opposite contributions) and the potential is non-zero (negative)",
-      "both field and potential are zero",
       "the field is non-zero and potential is zero",
-      "both are maximum"
+      "both are maximum",
+      "both field and potential are zero",
+      "the field is zero (equal, opposite contributions) and the potential is non-zero (negative)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "By symmetry, the two spheres' gravitational field contributions at the midpoint are equal in magnitude but opposite in direction, cancelling to zero net field; but potential is a scalar and both contributions are negative, adding to a non-zero negative potential — making the midpoint an equilibrium point (field=0), but an unstable one.",
     "source": "NCERT Textbook"
   },
@@ -1355,12 +1355,12 @@
     "difficulty": "easy",
     "text": "Stress is defined as:",
     "options": [
-      "restoring force per unit area",
-      "change in length per unit length",
       "force per unit volume",
-      "energy per unit area"
+      "energy per unit area",
+      "change in length per unit length",
+      "restoring force per unit area"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Stress = restoring (internal) force / cross-sectional area, with SI unit Pa (N/m²).",
     "source": "NCERT Textbook"
   },
@@ -1370,12 +1370,12 @@
     "difficulty": "easy",
     "text": "Strain is defined as:",
     "options": [
-      "force applied",
-      "fractional change in dimension (e.g. ΔL/L)",
+      "a dimensional quantity with unit Pa",
       "stress × area",
-      "a dimensional quantity with unit Pa"
+      "force applied",
+      "fractional change in dimension (e.g. ΔL/L)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Strain is the ratio of change in dimension to original dimension — it is dimensionless.",
     "source": "NCERT Textbook"
   },
@@ -1385,10 +1385,10 @@
     "difficulty": "medium",
     "text": "Young's modulus is the ratio of:",
     "options": [
-      "shearing stress to shearing strain",
-      "longitudinal stress to longitudinal strain (within elastic limit)",
       "volume stress to volume strain",
-      "stress to area"
+      "longitudinal stress to longitudinal strain (within elastic limit)",
+      "stress to area",
+      "shearing stress to shearing strain"
     ],
     "correct": 1,
     "explanation": "Y = (F/A)/(ΔL/L), applicable to longitudinal (tensile/compressive) stress-strain within the elastic limit.",
@@ -1400,12 +1400,12 @@
     "difficulty": "medium",
     "text": "The bulk modulus relates:",
     "options": [
+      "longitudinal stress and strain",
       "shearing stress and strain",
       "volume (hydraulic) stress and volumetric strain",
-      "longitudinal stress and strain",
       "stress and temperature"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Bulk modulus K = −p/(ΔV/V), relating pressure (volume stress) to fractional volume change; the negative sign reflects that volume decreases when pressure increases.",
     "source": "NCERT Textbook"
   },
@@ -1415,12 +1415,12 @@
     "difficulty": "medium",
     "text": "Beyond the elastic limit on a stress-strain curve, a material shows:",
     "options": [
-      "purely elastic (fully reversible) deformation",
       "plastic (permanent) deformation that doesn't fully reverse on unloading",
-      "zero strain regardless of stress",
-      "infinite Young's modulus"
+      "infinite Young's modulus",
+      "purely elastic (fully reversible) deformation",
+      "zero strain regardless of stress"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Beyond the elastic limit, the material undergoes plastic deformation and does not return to its original dimensions when the stress is removed.",
     "source": "NCERT Textbook"
   },
@@ -1430,12 +1430,12 @@
     "difficulty": "medium",
     "text": "Which of these statements is TRUE?",
     "options": [
-      "Rubber has a higher Young's modulus than steel",
       "Steel has a higher Young's modulus than rubber",
       "Young's modulus is the same for all solids",
-      "Young's modulus has units of strain"
+      "Young's modulus has units of strain",
+      "Rubber has a higher Young's modulus than steel"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Steel (Y≈2×10¹¹ Pa) is far stiffer than rubber (Y≈10⁶ Pa, much lower) — steel requires much more stress for the same strain.",
     "source": "NCERT Textbook"
   },
@@ -1445,12 +1445,12 @@
     "difficulty": "medium",
     "text": "The stretching of a spring/coil under an axial load is primarily governed by its:",
     "options": [
-      "Young's modulus only",
-      "shear modulus (since coil wire undergoes twisting/shearing, not simple elongation)",
       "bulk modulus only",
-      "Poisson's ratio only"
+      "Poisson's ratio only",
+      "Young's modulus only",
+      "shear modulus (since coil wire undergoes twisting/shearing, not simple elongation)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A coiled spring stretches mainly because the wire itself twists (shears) along its length, so its stiffness is governed by its shear (rigidity) modulus, not a simple Young's-modulus elongation.",
     "source": "NCERT Textbook"
   },
@@ -1461,9 +1461,9 @@
     "text": "Elastic hysteresis and elastic fatigue both describe:",
     "options": [
       "ways materials deviate from perfectly elastic (Hookean) behaviour",
-      "the colour change of a stressed material",
+      "a purely theoretical idea with no material shows it",
       "an increase in Young's modulus with use",
-      "a purely theoretical idea with no material shows it"
+      "the colour change of a stressed material"
     ],
     "correct": 0,
     "explanation": "Both describe real, non-ideal elastic behaviour: hysteresis is a lag between loading/unloading stress-strain curves; fatigue is weakening after repeated stress cycling.",
@@ -1490,12 +1490,12 @@
     "difficulty": "hard",
     "text": "A rigid bar is supported symmetrically by three vertical wires of equal length — copper at the two ends, iron in the middle — each carrying equal tension. If their Young's moduli differ, their diameters must satisfy:",
     "options": [
-      "same diameter regardless of Y, since lengths are equal",
-      "a ratio depending on the inverse square root of their respective Young's moduli, for equal strain under equal tension and area",
       "diameters are irrelevant to tension distribution",
-      "the iron wire must always be thinner than copper"
+      "same diameter regardless of Y, since lengths are equal",
+      "the iron wire must always be thinner than copper",
+      "a ratio depending on the inverse square root of their respective Young's moduli, for equal strain under equal tension and area"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "For the same tension T and (by symmetry) the same extension/strain in each wire of the same original length, Y=T/(A·strain) implies A ∝ 1/Y for equal T and strain, so diameter d ∝ 1/√Y — thinner wire needed where Y is larger.",
     "source": "NCERT Textbook"
   },
@@ -1506,9 +1506,9 @@
     "text": "Pascal's law states that pressure applied to an enclosed, incompressible fluid is:",
     "options": [
       "transmitted unchanged to every point of the fluid and the walls of the container",
-      "lost due to viscosity",
       "only transmitted downward",
-      "proportional to the container's shape"
+      "proportional to the container's shape",
+      "lost due to viscosity"
     ],
     "correct": 0,
     "explanation": "Pascal's law: pressure applied anywhere in a confined fluid is transmitted equally and undiminished in all directions.",
@@ -1520,12 +1520,12 @@
     "difficulty": "medium",
     "text": "Hydrostatic pressure at depth h in a fluid of density ρ is:",
     "options": [
-      "ρgh",
       "ρg/h",
-      "ρ/gh",
-      "gh/ρ"
+      "ρgh",
+      "gh/ρ",
+      "ρ/gh"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "P = P₀ + ρgh, where P₀ is pressure at the surface (atmospheric), ρ is fluid density, h is depth.",
     "source": "NCERT Textbook"
   },
@@ -1535,12 +1535,12 @@
     "difficulty": "medium",
     "text": "Bernoulli's equation expresses conservation of:",
     "options": [
-      "momentum only",
       "energy per unit volume, along a streamline for an ideal (incompressible, non-viscous) fluid",
+      "charge",
       "mass only",
-      "charge"
+      "momentum only"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "P + ½ρv² + ρgh = constant along a streamline — this is energy conservation per unit volume for steady, incompressible, non-viscous flow.",
     "source": "NCERT Textbook"
   },
@@ -1550,10 +1550,10 @@
     "difficulty": "medium",
     "text": "At a constriction in a horizontal pipe (steady, incompressible flow), compared to the wider section:",
     "options": [
-      "flow speed is lower and pressure is higher",
+      "both are unaffected",
       "flow speed is higher and pressure is lower",
-      "both speed and pressure are higher",
-      "both are unaffected"
+      "flow speed is lower and pressure is higher",
+      "both speed and pressure are higher"
     ],
     "correct": 1,
     "explanation": "By the equation of continuity (Av=const), flow speeds up at a constriction (smaller A); by Bernoulli's principle, pressure then drops at that point.",
@@ -1565,12 +1565,12 @@
     "difficulty": "medium",
     "text": "Surface tension of a liquid is:",
     "options": [
+      "proportional to the area of the surface",
       "the force per unit length acting along the free surface, tending to minimise surface area",
       "the same as viscosity",
-      "proportional to the area of the surface",
       "always negative"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Surface tension T = F/l, the tangential force per unit length of an imaginary line on the liquid surface, independent of the area of the surface itself.",
     "source": "NCERT Textbook"
   },
@@ -1580,12 +1580,12 @@
     "difficulty": "easy",
     "text": "Viscosity of liquids, as temperature increases, generally:",
     "options": [
-      "increases",
-      "decreases",
+      "becomes negative",
       "stays exactly the same",
-      "becomes negative"
+      "decreases",
+      "increases"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Liquid viscosity decreases with rising temperature (molecules move more freely); in contrast, gas viscosity actually increases with temperature.",
     "source": "NCERT Textbook"
   },
@@ -1595,10 +1595,10 @@
     "difficulty": "medium",
     "text": "The excess pressure inside a spherical soap bubble of radius r and surface tension T is:",
     "options": [
-      "2T/r",
-      "4T/r",
       "T/r",
-      "T/2r"
+      "4T/r",
+      "T/2r",
+      "2T/r"
     ],
     "correct": 1,
     "explanation": "A soap bubble has two free surfaces (inner and outer film), so excess pressure = 4T/r (compared to 2T/r for a single liquid drop with only one surface).",
@@ -1610,12 +1610,12 @@
     "difficulty": "medium",
     "text": "The angle of contact of mercury with glass is obtuse, while water with glass is acute, because:",
     "options": [
-      "mercury's cohesive forces (between its own molecules) are stronger than its adhesive forces with glass, unlike water",
       "mercury is denser than water",
       "mercury has lower surface tension than water",
+      "mercury's cohesive forces (between its own molecules) are stronger than its adhesive forces with glass, unlike water",
       "glass repels all liquids equally"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Mercury's strong cohesion (mercury-mercury attraction) dominates over weaker adhesion to glass, causing it to bead up (obtuse contact angle, non-wetting); water's adhesion to glass dominates over its cohesion, causing it to wet glass (acute angle).",
     "source": "NCERT Textbook"
   },
@@ -1625,12 +1625,12 @@
     "difficulty": "medium",
     "text": "Reynolds number is used to predict:",
     "options": [
+      "the temperature of a fluid",
       "whether flow is laminar or turbulent",
-      "the density of a fluid",
       "the surface tension of a fluid",
-      "the temperature of a fluid"
+      "the density of a fluid"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "A low Reynolds number (typically <1000-2000 for pipe flow) indicates laminar flow; a high Reynolds number indicates turbulence.",
     "source": "NCERT Textbook"
   },
@@ -1640,12 +1640,12 @@
     "difficulty": "easy",
     "text": "Terminal velocity of a small sphere falling through a viscous fluid is reached when:",
     "options": [
-      "the net force on it becomes zero (weight = buoyancy + viscous drag)",
       "viscosity becomes zero",
+      "gravity stops acting",
       "the sphere stops accelerating but net force is still non-zero",
-      "gravity stops acting"
+      "the net force on it becomes zero (weight = buoyancy + viscous drag)"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "At terminal velocity, acceleration is zero, meaning the net force is zero: weight is exactly balanced by the upward buoyant force plus the viscous drag force (Stokes' law).",
     "source": "NCERT Textbook"
   },
@@ -1655,10 +1655,10 @@
     "difficulty": "hard",
     "text": "A hydraulic lift has a small piston of area A₁ and large piston of area A₂. To lift a load F₂ on the large piston, the force needed on the small piston is:",
     "options": [
-      "F₁ = F₂(A₂/A₁)",
-      "F₁ = F₂(A₁/A₂)",
       "F₁ = F₂",
-      "F₁ = F₂/A₁A₂"
+      "F₁ = F₂(A₁/A₂)",
+      "F₁ = F₂/A₁A₂",
+      "F₁ = F₂(A₂/A₁)"
     ],
     "correct": 1,
     "explanation": "By Pascal's law, pressure is the same throughout: F₁/A₁ = F₂/A₂, so F₁ = F₂(A₁/A₂) — a much smaller force suffices on the small piston since A₁≪A₂.",
@@ -1670,12 +1670,12 @@
     "difficulty": "medium",
     "text": "Blood pressure in humans is greater at the feet than at the brain (standing) mainly because:",
     "options": [
-      "the heart pumps harder toward the feet",
-      "of the extra hydrostatic column of blood (ρgh) between the heart and the feet, adding to the pressure",
+      "gravity doesn't act on blood near the brain",
       "feet have more blood vessels",
-      "gravity doesn't act on blood near the brain"
+      "of the extra hydrostatic column of blood (ρgh) between the heart and the feet, adding to the pressure",
+      "the heart pumps harder toward the feet"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Like any fluid, blood pressure increases with depth below the heart (adds ρgh) and decreases with height above it, by the same hydrostatic principle as any liquid column.",
     "source": "NCERT Textbook"
   },
@@ -1685,12 +1685,12 @@
     "difficulty": "easy",
     "text": "The triple point of water on the Kelvin scale is defined as:",
     "options": [
-      "273.16 K",
       "273.15 K",
       "100 K",
+      "273.16 K",
       "0 K"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "By international agreement, the triple point of water (where ice, water and vapour coexist) is assigned exactly 273.16 K on the Kelvin scale.",
     "source": "NCERT Textbook"
   },
@@ -1700,12 +1700,12 @@
     "difficulty": "medium",
     "text": "The relation between Celsius (tc) and Kelvin (T) scales is tc = T − 273.15 (not 273.16) because:",
     "options": [
-      "273.15 is simply a rounding convention",
       "the ice point (0°C) at 1 atm pressure is actually 0.01°C below the triple point, i.e. 273.15 K",
       "Kelvin scale has no fixed relation to Celsius",
-      "273.16 applies only to Fahrenheit"
+      "273.16 applies only to Fahrenheit",
+      "273.15 is simply a rounding convention"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The triple point (273.16 K) is at 0.01°C, not 0°C, because the ordinary melting point of ice (0°C, the Celsius-scale reference) is at a slightly different pressure (1 atm) than the triple point; hence the −273.15 offset.",
     "source": "NCERT Textbook"
   },
@@ -1715,12 +1715,12 @@
     "difficulty": "medium",
     "text": "Linear thermal expansion is described by L = L₀(1 + αΔT), where α is the:",
     "options": [
-      "coefficient of linear expansion",
       "coefficient of volume expansion",
       "specific heat capacity",
-      "thermal conductivity"
+      "thermal conductivity",
+      "coefficient of linear expansion"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "α is the coefficient of linear expansion, defined as the fractional increase in length per unit rise in temperature.",
     "source": "NCERT Textbook"
   },
@@ -1730,12 +1730,12 @@
     "difficulty": "medium",
     "text": "For an isotropic solid, the relation between coefficients of linear (α), area (β) and volume (γ) expansion is approximately:",
     "options": [
-      "β = 2α, γ = 3α",
-      "β = α, γ = α",
       "β = 3α, γ = 2α",
-      "β = α², γ = α³"
+      "β = α², γ = α³",
+      "β = α, γ = α",
+      "β = 2α, γ = 3α"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "For small expansions, β ≈ 2α and γ ≈ 3α, since area and volume scale as length-squared and length-cubed respectively.",
     "source": "NCERT Textbook"
   },
@@ -1747,8 +1747,8 @@
     "options": [
       "heat required to raise the temperature of unit mass by 1 degree",
       "heat required to melt unit mass",
-      "heat radiated per second",
-      "the same as latent heat"
+      "the same as latent heat",
+      "heat radiated per second"
     ],
     "correct": 0,
     "explanation": "Specific heat capacity s = Q/(mΔT), the heat needed per unit mass per unit temperature rise.",
@@ -1760,12 +1760,12 @@
     "difficulty": "medium",
     "text": "During a change of state (e.g. ice melting at 0°C), the temperature of the substance:",
     "options": [
-      "rises steadily",
       "remains constant while heat is absorbed as latent heat",
       "falls",
-      "becomes undefined"
+      "becomes undefined",
+      "rises steadily"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "At a phase transition, all the heat supplied goes into breaking/forming molecular bonds (latent heat), not raising temperature, so temperature stays constant during the change of state.",
     "source": "NCERT Textbook"
   },
@@ -1776,8 +1776,8 @@
     "text": "Heat transfer by conduction occurs mainly in:",
     "options": [
       "solids, via molecular/lattice vibrations without bulk movement of matter",
-      "vacuum only",
       "fluids, via bulk movement of the medium",
+      "vacuum only",
       "nothing — conduction doesn't exist"
     ],
     "correct": 0,
@@ -1790,12 +1790,12 @@
     "difficulty": "medium",
     "text": "Convection as a mode of heat transfer requires:",
     "options": [
-      "a vacuum",
-      "bulk motion of a fluid (liquid or gas) carrying heat with it",
+      "a perfectly rigid solid",
       "only radiation, no matter",
-      "a perfectly rigid solid"
+      "bulk motion of a fluid (liquid or gas) carrying heat with it",
+      "a vacuum"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Convection involves heat being physically carried by the bulk movement of a fluid medium — it cannot occur in solids or vacuum.",
     "source": "NCERT Textbook"
   },
@@ -1805,12 +1805,12 @@
     "difficulty": "easy",
     "text": "Which mode of heat transfer can occur even through a perfect vacuum?",
     "options": [
-      "Conduction",
-      "Convection",
       "Radiation",
-      "None — all require a medium"
+      "None — all require a medium",
+      "Conduction",
+      "Convection"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Radiation (electromagnetic waves, e.g. sunlight reaching Earth through the vacuum of space) requires no medium at all, unlike conduction and convection.",
     "source": "NCERT Textbook"
   },
@@ -1820,12 +1820,12 @@
     "difficulty": "medium",
     "text": "A body with high reflectivity (shiny surface) is, by Kirchhoff's law of radiation, generally a:",
     "options": [
-      "good emitter and good absorber",
-      "poor emitter and poor absorber",
+      "poor emitter but good absorber",
       "good emitter but poor absorber",
-      "poor emitter but good absorber"
+      "poor emitter and poor absorber",
+      "good emitter and good absorber"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A good reflector absorbs little radiation (most is reflected), and by Kirchhoff's law a poor absorber at a given wavelength is also a poor emitter at that wavelength.",
     "source": "NCERT Textbook"
   },
@@ -1835,10 +1835,10 @@
     "difficulty": "medium",
     "text": "Newton's law of cooling states that the rate of loss of heat of a body is:",
     "options": [
-      "constant, independent of temperature difference",
+      "independent of surface area",
       "proportional to the temperature difference between the body and its surroundings (for small differences)",
       "proportional to the square of the temperature difference always",
-      "independent of surface area"
+      "constant, independent of temperature difference"
     ],
     "correct": 1,
     "explanation": "Newton's law of cooling (valid for small temperature excesses over surroundings): rate of cooling ∝ (T_body − T_surroundings).",
@@ -1850,12 +1850,12 @@
     "difficulty": "hard",
     "text": "Diatomic gases (e.g. N₂, O₂) have a higher molar specific heat than monatomic gases mainly because:",
     "options": [
+      "they have lower density",
       "they have additional rotational (and sometimes vibrational) degrees of freedom beyond translation",
       "they are heavier",
-      "they have lower density",
       "they absorb more radiation"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "By the law of equipartition of energy, each additional accessible degree of freedom (e.g. rotational modes in diatomic molecules) contributes (1/2)R to the molar specific heat, raising it above the monatomic value of (3/2)R for Cv.",
     "source": "NCERT Textbook"
   },
@@ -1865,12 +1865,12 @@
     "difficulty": "easy",
     "text": "The first law of thermodynamics is a statement of:",
     "options": [
-      "conservation of momentum",
-      "conservation of energy, ΔU = Q − W",
       "conservation of mass only",
-      "the zeroth law"
+      "the zeroth law",
+      "conservation of momentum",
+      "conservation of energy, ΔU = Q − W"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "ΔU = Q − W: the change in internal energy equals heat supplied to the system minus work done BY the system — an energy-conservation statement.",
     "source": "NCERT Textbook"
   },
@@ -1880,12 +1880,12 @@
     "difficulty": "medium",
     "text": "In an adiabatic process:",
     "options": [
+      "volume is always constant",
       "no heat is exchanged with the surroundings (Q=0)",
       "temperature is always constant",
-      "pressure is always constant",
-      "volume is always constant"
+      "pressure is always constant"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Adiabatic: Q=0 (the system is thermally insulated), so any work done changes internal energy and hence temperature directly: ΔU = −W.",
     "source": "NCERT Textbook"
   },
@@ -1895,12 +1895,12 @@
     "difficulty": "medium",
     "text": "In an isothermal process for an ideal gas:",
     "options": [
+      "pressure remains constant",
       "temperature remains constant, so ΔU=0 and Q=W",
       "no heat is exchanged",
-      "pressure remains constant",
       "the gas does no work"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Isothermal: T constant ⟹ internal energy of an ideal gas (depends only on T) doesn't change, so ΔU=0, meaning Q=W (all heat supplied converts to work done by the gas).",
     "source": "NCERT Textbook"
   },
@@ -1910,10 +1910,10 @@
     "difficulty": "medium",
     "text": "A quasi-static process is one carried out:",
     "options": [
-      "instantaneously",
-      "so slowly that the system remains in equilibrium (well-defined P,V,T) at every stage",
       "only in a vacuum",
-      "with no energy transfer at all"
+      "so slowly that the system remains in equilibrium (well-defined P,V,T) at every stage",
+      "with no energy transfer at all",
+      "instantaneously"
     ],
     "correct": 1,
     "explanation": "A quasi-static process proceeds infinitesimally slowly, so the system is always arbitrarily close to equilibrium, with well-defined state variables throughout.",
@@ -1925,12 +1925,12 @@
     "difficulty": "medium",
     "text": "The efficiency of a Carnot engine operating between hot reservoir T₁ and cold reservoir T₂ (in Kelvin) is:",
     "options": [
-      "1 − T₂/T₁",
       "T₁/T₂",
       "1 − T₁/T₂",
+      "1 − T₂/T₁",
       "T₂/T₁"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Carnot efficiency η = 1 − T₂/T₁ (T in Kelvin), the maximum possible efficiency for any heat engine operating between those two temperatures.",
     "source": "NCERT Textbook"
   },
@@ -1940,12 +1940,12 @@
     "difficulty": "medium",
     "text": "The second law of thermodynamics (Kelvin-Planck statement) says:",
     "options": [
-      "a heat engine can convert heat completely into work with 100% efficiency",
-      "no heat engine can convert heat completely into work with no other effect (some heat must be rejected to a sink)",
       "heat always flows from cold to hot spontaneously",
-      "entropy always decreases"
+      "entropy always decreases",
+      "no heat engine can convert heat completely into work with no other effect (some heat must be rejected to a sink)",
+      "a heat engine can convert heat completely into work with 100% efficiency"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Kelvin-Planck statement: it's impossible to construct an engine operating in a cycle that converts heat completely into work with no other effect — some heat must always be rejected.",
     "source": "NCERT Textbook"
   },
@@ -1956,9 +1956,9 @@
     "text": "Work done by a gas during an isochoric (constant volume) process is:",
     "options": [
       "zero",
+      "negative always",
       "maximum possible",
-      "equal to the heat supplied",
-      "negative always"
+      "equal to the heat supplied"
     ],
     "correct": 0,
     "explanation": "W = ∫PdV = 0 when volume doesn't change (dV=0 throughout), regardless of pressure or temperature changes.",
@@ -1970,12 +1970,12 @@
     "difficulty": "medium",
     "text": "Two bodies at different temperatures T₁ and T₂, brought into thermal contact, do NOT necessarily settle at the mean (T₁+T₂)/2 because:",
     "options": [
-      "heat capacities of the two bodies may be unequal",
-      "temperature is always conserved",
+      "this contradicts the zeroth law",
       "they must reach T₁ exactly",
-      "this contradicts the zeroth law"
+      "heat capacities of the two bodies may be unequal",
+      "temperature is always conserved"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The final common temperature is a heat-capacity-weighted average; only when the two bodies have EQUAL heat capacities does the final temperature work out to the simple arithmetic mean.",
     "source": "NCERT Textbook"
   },
@@ -1987,10 +1987,10 @@
     "options": [
       "increases",
       "decreases",
-      "remains the same, since no work is done and no heat is exchanged",
-      "becomes undefined"
+      "becomes undefined",
+      "remains the same, since no work is done and no heat is exchanged"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Free expansion: Q=0 (insulated) and W=0 (expanding into vacuum, no external pressure to push against), so ΔU=0; for an ideal gas U depends only on T, so T is unchanged.",
     "source": "NCERT Textbook"
   },
@@ -2000,12 +2000,12 @@
     "difficulty": "medium",
     "text": "A refrigerator's coefficient of performance (COP) is defined as:",
     "options": [
-      "Q₂/W (heat removed from cold reservoir ÷ work input)",
       "W/Q₁",
       "Q₁/Q₂",
+      "Q₂/W (heat removed from cold reservoir ÷ work input)",
       "always equal to 1"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "COP = Q₂/W, the heat extracted from the cold space divided by the work input needed to do so — the 'payoff' per unit of work spent.",
     "source": "NCERT Textbook"
   },
@@ -2015,12 +2015,12 @@
     "difficulty": "easy",
     "text": "The ideal gas equation is:",
     "options": [
-      "PV = nRT",
-      "PV = nR/T",
       "P = nRTV",
-      "PV² = nRT"
+      "PV = nR/T",
+      "PV² = nRT",
+      "PV = nRT"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The ideal gas law PV=nRT (n = number of moles, R = universal gas constant) combines Boyle's, Charles's and Avogadro's laws.",
     "source": "NCERT Textbook"
   },
@@ -2030,12 +2030,12 @@
     "difficulty": "medium",
     "text": "According to kinetic theory, the pressure exerted by a gas arises from:",
     "options": [
-      "gravitational attraction between molecules",
-      "continuous collisions of gas molecules with the container walls, transferring momentum",
+      "chemical bonding",
       "the weight of the gas",
-      "chemical bonding"
+      "continuous collisions of gas molecules with the container walls, transferring momentum",
+      "gravitational attraction between molecules"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Kinetic theory models gas pressure as the macroscopic effect of countless molecular collisions with the walls, each transferring a small amount of momentum.",
     "source": "NCERT Textbook"
   },
@@ -2045,12 +2045,12 @@
     "difficulty": "medium",
     "text": "The root mean square speed of gas molecules is proportional to:",
     "options": [
-      "√T and inversely proportional to √M (molar mass)",
       "T² only",
-      "M only, independent of T",
-      "pressure only"
+      "√T and inversely proportional to √M (molar mass)",
+      "pressure only",
+      "M only, independent of T"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "v_rms = √(3RT/M), so v_rms ∝ √T and ∝ 1/√M — lighter molecules move faster at the same temperature.",
     "source": "NCERT Textbook"
   },
@@ -2060,12 +2060,12 @@
     "difficulty": "medium",
     "text": "At the same temperature, which gas has the highest root mean square speed?",
     "options": [
-      "Oxygen (O₂, M=32)",
       "Nitrogen (N₂, M=28)",
-      "Helium (He, M=4)",
-      "Carbon dioxide (CO₂, M=44)"
+      "Oxygen (O₂, M=32)",
+      "Carbon dioxide (CO₂, M=44)",
+      "Helium (He, M=4)"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "v_rms ∝ 1/√M; helium, being the lightest of these, has the highest v_rms at a given temperature.",
     "source": "NCERT Textbook"
   },
@@ -2075,12 +2075,12 @@
     "difficulty": "medium",
     "text": "By the law of equipartition of energy, the average kinetic energy per degree of freedom of a molecule is:",
     "options": [
-      "(1/2)kT",
       "kT",
       "(3/2)kT",
-      "2kT"
+      "2kT",
+      "(1/2)kT"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Equipartition theorem: each quadratic degree of freedom contributes (1/2)kT of average energy per molecule, where k is Boltzmann's constant.",
     "source": "NCERT Textbook"
   },
@@ -2090,12 +2090,12 @@
     "difficulty": "medium",
     "text": "A monatomic ideal gas molecule has how many translational degrees of freedom, and what is its average KE?",
     "options": [
+      "1 degree of freedom, KE=(1/2)kT",
       "2 degrees of freedom, KE=kT",
-      "3 degrees of freedom, KE=(3/2)kT",
       "6 degrees of freedom, KE=3kT",
-      "1 degree of freedom, KE=(1/2)kT"
+      "3 degrees of freedom, KE=(3/2)kT"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A monatomic molecule has 3 translational degrees of freedom (x,y,z motion), giving average KE = 3×(1/2)kT = (3/2)kT, with no rotational contribution (point-like molecule).",
     "source": "NCERT Textbook"
   },
@@ -2105,12 +2105,12 @@
     "difficulty": "hard",
     "text": "Mean free path of a gas molecule is:",
     "options": [
-      "the average distance travelled between successive collisions",
       "the total distance travelled in one second",
-      "the radius of a molecule",
-      "always equal to the container's size"
+      "always equal to the container's size",
+      "the average distance travelled between successive collisions",
+      "the radius of a molecule"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Mean free path l = 1/(√2 π d² n), the average distance a molecule travels between one collision and the next, where n is number density and d is molecular diameter.",
     "source": "NCERT Textbook"
   },
@@ -2120,12 +2120,12 @@
     "difficulty": "medium",
     "text": "As temperature increases (at constant volume), the mean free path of gas molecules:",
     "options": [
-      "decreases",
-      "increases, since collision frequency decreases",
       "remains unchanged, since mean free path depends only on number density and molecular size, not temperature directly",
-      "becomes zero"
+      "increases, since collision frequency decreases",
+      "becomes zero",
+      "decreases"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Mean free path l=1/(√2πd²n) depends on number density n and molecular diameter d, NOT directly on temperature (at fixed volume/number density); temperature affects how FAST molecules traverse that same mean free path, not its length.",
     "source": "NCERT Textbook"
   },
@@ -2135,10 +2135,10 @@
     "difficulty": "medium",
     "text": "Avogadro's law states that equal volumes of different gases, at the same temperature and pressure, contain:",
     "options": [
-      "equal masses",
+      "equal densities",
       "equal numbers of molecules",
-      "equal numbers of atoms only for monatomic gases",
-      "equal densities"
+      "equal masses",
+      "equal numbers of atoms only for monatomic gases"
     ],
     "correct": 1,
     "explanation": "Avogadro's law/hypothesis: equal volumes of ideal gases under the same T, P conditions contain equal numbers of molecules, regardless of the gas's chemical identity.",
@@ -2150,12 +2150,12 @@
     "difficulty": "easy",
     "text": "Molar volume of an ideal gas at STP (0°C, 1 atm) is:",
     "options": [
-      "22.4 litres",
       "24.0 litres",
+      "100 litres",
       "1 litre",
-      "100 litres"
+      "22.4 litres"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "A classic, directly-derivable result from PV=nRT: at STP, one mole of any ideal gas occupies 22.4 litres (22.4×10⁻³ m³).",
     "source": "NCERT Textbook"
   },
@@ -2165,12 +2165,12 @@
     "difficulty": "easy",
     "text": "Periodic motion is motion that:",
     "options": [
-      "repeats itself at regular intervals of time",
-      "is always simple harmonic",
       "only occurs in springs",
-      "never repeats"
+      "never repeats",
+      "repeats itself at regular intervals of time",
+      "is always simple harmonic"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Any motion that repeats after a fixed time interval (the period) is periodic — SHM is a special case of periodic motion, not all periodic motion is SHM.",
     "source": "NCERT Textbook"
   },
@@ -2195,12 +2195,12 @@
     "difficulty": "medium",
     "text": "The time period of a simple pendulum (small oscillations) is given by:",
     "options": [
-      "T = 2π√(l/g)",
+      "T = 2π/ω² ",
       "T = 2π√(g/l)",
-      "T = 2π√(m/k)",
-      "T = 2π/ω² "
+      "T = 2π√(l/g)",
+      "T = 2π√(m/k)"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "T = 2π√(l/g) for a simple pendulum (l=length, g=gravitational acceleration), valid for small-angle oscillations.",
     "source": "NCERT Textbook"
   },
@@ -2210,12 +2210,12 @@
     "difficulty": "medium",
     "text": "The time period of a mass-spring system (spring constant k, mass m) is:",
     "options": [
-      "T = 2π√(m/k)",
-      "T = 2π√(l/g)",
       "T = 2π√(k/m)",
+      "T = 2π√(l/g)",
+      "T = 2π√(m/k)",
       "T = 2πm/k"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "T = 2π√(m/k) for a simple harmonic (mass-spring) oscillator.",
     "source": "NCERT Textbook"
   },
@@ -2226,11 +2226,11 @@
     "text": "At the extreme positions of SHM, the:",
     "options": [
       "velocity is maximum, acceleration is zero",
-      "velocity is zero, acceleration is maximum (in magnitude)",
       "both velocity and acceleration are zero",
-      "both velocity and acceleration are maximum"
+      "both velocity and acceleration are maximum",
+      "velocity is zero, acceleration is maximum (in magnitude)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "At the extremes of SHM, the particle momentarily stops (v=0) before reversing, while the restoring acceleration is at its maximum magnitude there (a=−ω²x, |x| is maximum).",
     "source": "NCERT Textbook"
   },
@@ -2240,12 +2240,12 @@
     "difficulty": "medium",
     "text": "At the mean (equilibrium) position of SHM:",
     "options": [
+      "both are zero",
       "velocity is zero, acceleration is maximum",
       "velocity is maximum, acceleration is zero",
-      "both are maximum",
-      "both are zero"
+      "both are maximum"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "At the mean position, displacement x=0, so the restoring acceleration a=−ω²x is zero, while the particle moves fastest there (velocity is maximum).",
     "source": "NCERT Textbook"
   },
@@ -2255,12 +2255,12 @@
     "difficulty": "hard",
     "text": "The total mechanical energy of a particle in SHM (amplitude A, angular frequency ω, mass m) is:",
     "options": [
-      "½mω²A², constant throughout the motion",
-      "zero at all times",
       "maximum only at the mean position",
-      "maximum only at the extreme position"
+      "maximum only at the extreme position",
+      "zero at all times",
+      "½mω²A², constant throughout the motion"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Total energy E = KE+PE = ½mω²A² is conserved (constant) throughout SHM — it's continuously exchanged between kinetic and potential forms, but the total never changes (for an ideal, undamped oscillator).",
     "source": "NCERT Textbook"
   },
@@ -2270,12 +2270,12 @@
     "difficulty": "medium",
     "text": "Which of these is an example of periodic but NOT simple harmonic motion?",
     "options": [
-      "A mass-spring system (small oscillations)",
-      "A simple pendulum (small angle)",
+      "A perfectly undamped ideal spring oscillator",
       "General vibration of a polyatomic molecule (superposition of several different SHM frequencies)",
-      "A perfectly undamped ideal spring oscillator"
+      "A simple pendulum (small angle)",
+      "A mass-spring system (small oscillations)"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A general polyatomic molecule's vibration is a superposition of several different natural frequencies' SHMs — the result is periodic (it repeats) but is NOT itself simple harmonic motion (which requires a single pure sinusoidal form).",
     "source": "NCERT Textbook"
   },
@@ -2285,12 +2285,12 @@
     "difficulty": "medium",
     "text": "In damped oscillations, the amplitude:",
     "options": [
-      "remains constant forever",
       "decreases exponentially with time due to a resistive (damping) force",
       "increases with time",
-      "oscillates between zero and the initial value periodically"
+      "oscillates between zero and the initial value periodically",
+      "remains constant forever"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Damping (e.g. due to friction/viscous drag) causes a gradual, typically exponential, decrease in the amplitude of oscillation over time as energy is dissipated.",
     "source": "NCERT Textbook"
   },
@@ -2300,12 +2300,12 @@
     "difficulty": "medium",
     "text": "Resonance occurs in forced oscillations when the driving frequency:",
     "options": [
-      "is much less than the natural frequency",
-      "equals (or nearly equals) the natural frequency of the system",
+      "is zero",
       "is random",
-      "is zero"
+      "is much less than the natural frequency",
+      "equals (or nearly equals) the natural frequency of the system"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Resonance: when the frequency of the external periodic driving force matches the system's own natural frequency, the amplitude of oscillation becomes maximum (very large, limited only by damping).",
     "source": "NCERT Textbook"
   },
@@ -2315,12 +2315,12 @@
     "difficulty": "easy",
     "text": "The SI unit of angular frequency (ω) is:",
     "options": [
+      "second",
       "hertz (Hz)",
       "radian per second (rad/s)",
-      "radian",
-      "second"
+      "radian"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Angular frequency ω is measured in radians per second, related to ordinary frequency f (in Hz) by ω=2πf.",
     "source": "NCERT Textbook"
   },
@@ -2330,12 +2330,12 @@
     "difficulty": "easy",
     "text": "In a transverse wave, particle displacement is:",
     "options": [
+      "random",
       "parallel to the direction of wave propagation",
-      "perpendicular to the direction of wave propagation",
       "zero at all points",
-      "random"
+      "perpendicular to the direction of wave propagation"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Transverse wave: particles oscillate perpendicular to the direction the wave travels (e.g. a wave on a string).",
     "source": "NCERT Textbook"
   },
@@ -2345,10 +2345,10 @@
     "difficulty": "medium",
     "text": "Sound waves in air are:",
     "options": [
-      "transverse waves",
-      "longitudinal waves (particle motion parallel to propagation)",
       "electromagnetic waves",
-      "stationary waves only"
+      "longitudinal waves (particle motion parallel to propagation)",
+      "stationary waves only",
+      "transverse waves"
     ],
     "correct": 1,
     "explanation": "Sound is a longitudinal (pressure/density) wave — particles of the medium oscillate parallel to the direction the wave travels, as compressions and rarefactions.",
@@ -2360,12 +2360,12 @@
     "difficulty": "medium",
     "text": "Wave speed v, frequency f, and wavelength λ are related by:",
     "options": [
+      "v = f−λ",
       "v = fλ",
-      "v = f/λ",
       "v = f+λ",
-      "v = f−λ"
+      "v = f/λ"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "v = fλ, the fundamental wave relation connecting speed, frequency and wavelength.",
     "source": "NCERT Textbook"
   },
@@ -2376,9 +2376,9 @@
     "text": "The speed of a transverse wave on a stretched string depends on:",
     "options": [
       "tension and linear mass density: v=√(T/μ)",
+      "the colour of the string",
       "only the wave's frequency",
-      "only the wave's amplitude",
-      "the colour of the string"
+      "only the wave's amplitude"
     ],
     "correct": 0,
     "explanation": "v = √(T/μ), where T is tension and μ is the mass per unit length of the string — a medium property (plus tension), independent of frequency or amplitude.",
@@ -2391,11 +2391,11 @@
     "text": "In a stationary (standing) wave, points of zero displacement are called:",
     "options": [
       "antinodes",
-      "nodes",
       "crests",
+      "nodes",
       "troughs"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Nodes are points of permanently zero displacement in a standing wave; antinodes are points of maximum displacement amplitude.",
     "source": "NCERT Textbook"
   },
@@ -2405,12 +2405,12 @@
     "difficulty": "medium",
     "text": "For a string fixed at both ends (length L), the fundamental (first harmonic) wavelength is:",
     "options": [
-      "λ = 2L",
       "λ = L",
+      "λ = 4L",
       "λ = L/2",
-      "λ = 4L"
+      "λ = 2L"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "A string fixed at both ends must have nodes at both ends; the longest possible wavelength satisfying this (fundamental) is λ=2L, giving fundamental frequency f₁=v/2L.",
     "source": "NCERT Textbook"
   },
@@ -2420,12 +2420,12 @@
     "difficulty": "medium",
     "text": "For a pipe closed at one end, only which harmonics are present?",
     "options": [
-      "All harmonics (1st, 2nd, 3rd, ...)",
       "Only odd harmonics (1st, 3rd, 5th, ...)",
       "Only even harmonics",
-      "No harmonics, only the fundamental"
+      "No harmonics, only the fundamental",
+      "All harmonics (1st, 2nd, 3rd, ...)"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A pipe closed at one end (node there) and open at the other (antinode there) supports only odd harmonics: f, 3f, 5f, ... — unlike an open-open or closed-closed pipe which supports all harmonics.",
     "source": "NCERT Textbook"
   },
@@ -2435,12 +2435,12 @@
     "difficulty": "medium",
     "text": "Beats are heard when two sound waves of:",
     "options": [
-      "exactly equal frequency are superposed",
       "slightly different frequencies are superposed, producing a periodic rise and fall in loudness",
+      "different speeds (not frequencies) are superposed",
       "very different (far apart) frequencies are superposed",
-      "different speeds (not frequencies) are superposed"
+      "exactly equal frequency are superposed"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Beat frequency = |f₁−f₂|; two close-but-not-identical frequencies interfere constructively and destructively in alternation, producing audible periodic loudness variation (beats).",
     "source": "NCERT Textbook"
   },
@@ -2450,12 +2450,12 @@
     "difficulty": "hard",
     "text": "The Doppler effect describes:",
     "options": [
-      "a change in wave speed due to relative motion",
       "an apparent change in observed frequency due to relative motion between source and observer",
       "the bending of waves around obstacles",
-      "the splitting of white light into colours"
+      "the splitting of white light into colours",
+      "a change in wave speed due to relative motion"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Doppler effect: the frequency perceived by an observer differs from the source's emitted frequency when there is relative motion between source and observer (e.g. a siren's pitch changing as it passes you) — the wave SPEED in the medium itself does not change.",
     "source": "NCERT Textbook"
   },

@@ -6,14 +6,14 @@
     "difficulty": "medium",
     "text": "State True or False: In Python, data type of 74 is same as the data type of 74.0. (2026 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "74 is an int and 74.0 is a float; Python treats whole numbers without a decimal point as int and numbers with a decimal point as float, so their data types differ.",
     "whyWrong": [
-      "Incorrect: type(74) is int while type(74.0) is float, so they are not the same type.",
-      ""
+      "",
+      "Incorrect: type(74) is int while type(74.0) is float, so they are not the same type."
     ],
     "priority": true
   },
@@ -24,18 +24,18 @@
     "difficulty": "medium",
     "text": "Identify the output of the following code snippet:\ns = \"the Truth\"\nprint(s.capitalize()) (2026 Board)",
     "options": [
+      "the Truth",
       "The truth",
       "THE TRUTH",
-      "The Truth",
-      "the Truth"
+      "The Truth"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "str.capitalize() makes the first character of the string uppercase and forces every other character to lowercase, so \"the Truth\" becomes \"The truth\".",
     "whyWrong": [
+      "capitalize() does change the string; it uppercases the first letter, so this is not the same as the original.",
       "",
       "capitalize() does not uppercase the whole string; only the first character is made uppercase.",
-      "capitalize() lowercases the rest of the string, so the 'T' in 'Truth' also becomes lowercase.",
-      "capitalize() does change the string; it uppercases the first letter, so this is not the same as the original."
+      "capitalize() lowercases the rest of the string, so the 'T' in 'Truth' also becomes lowercase."
     ],
     "priority": true
   },
@@ -68,18 +68,18 @@
     "difficulty": "medium",
     "text": "What is the output of the following code snippet?\ns='War and Peace by Leo Tolstoy'\nprint(s.partition(\"by\")) (2026 Board)",
     "options": [
+      "['War and Peace ', ' Leo Tolstoy']",
       "('War and Peace ', 'by', ' Leo Tolstoy')",
       "['War and Peace ', 'by', ' Leo Tolstoy']",
-      "('War and Peace ', ' Leo Tolstoy')",
-      "['War and Peace ', ' Leo Tolstoy']"
+      "('War and Peace ', ' Leo Tolstoy')"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "str.partition(sep) splits the string into a 3-element tuple: (text before sep, sep itself, text after sep). Here it returns ('War and Peace ', 'by', ' Leo Tolstoy').",
     "whyWrong": [
+      "This is a list instead of a tuple, and it also drops the separator element.",
       "",
       "partition() returns a tuple, not a list, so square brackets are wrong.",
-      "This drops the separator 'by' from the result, but partition() always keeps the separator as the middle element.",
-      "This is a list instead of a tuple, and it also drops the separator element."
+      "This drops the separator 'by' from the result, but partition() always keeps the separator as the middle element."
     ],
     "priority": true
   },
@@ -90,17 +90,17 @@
     "difficulty": "medium",
     "text": "What will be the output of the following statement?\nprint(\"PythonProgram\"[-1:2:-2]) (2026 Board)",
     "options": [
-      "mroPo",
       "mrgr",
       "ormo",
+      "mroPo",
       "marrn"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Slicing starts at index -1 ('m', the last character) and steps by -2 (moving backwards two characters at a time), stopping before index 2. Walking backwards from the last character in steps of 2 gives 'mroPo'.",
     "whyWrong": [
-      "",
       "A common mistake is stepping by -1 instead of -2, or miscounting the stop boundary, giving this wrong sequence of characters.",
       "This results from starting the walk one character off (an off-by-one on the start index) instead of from the true last character.",
+      "",
       "This comes from stepping backwards in the wrong stride/direction bookkeeping, picking alternate characters incorrectly."
     ],
     "priority": true
@@ -134,18 +134,18 @@
     "difficulty": "medium",
     "text": "Which of the following statements is true about dictionaries in Python? (2026 Board)",
     "options": [
+      "The key and value of an element cannot be the same.",
       "A dictionary is an example of sequence datatype.",
-      "A dictionary cannot have two elements with same key.",
       "A dictionary cannot have two elements with same value.",
-      "The key and value of an element cannot be the same."
+      "A dictionary cannot have two elements with same key."
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Python dictionaries are mapping types (not sequence types), keys must be unique within a dictionary, but values can repeat and a key can legally equal its own value.",
     "whyWrong": [
+      "There is no restriction that prevents a key and its value from being equal, e.g. {'x': 'x'} is valid.",
       "Dictionaries are mapping types, not sequence types like lists/tuples/strings.",
-      "",
       "Dictionary values are allowed to repeat across different keys.",
-      "There is no restriction that prevents a key and its value from being equal, e.g. {'x': 'x'} is valid."
+      ""
     ],
     "priority": true
   },
@@ -156,18 +156,18 @@
     "difficulty": "medium",
     "text": "If L is a list with 6 elements, then which of the following statements will raise an exception? (2026 Board)",
     "options": [
-      "L.pop(1)",
-      "L.pop(6)",
       "L.insert(1,6)",
-      "L.insert(6,1)"
+      "L.insert(6,1)",
+      "L.pop(6)",
+      "L.pop(1)"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A 6-element list has valid indices 0-5. L.pop(6) tries to pop index 6, which is out of range and raises IndexError. insert() never raises for an out-of-range index; it just inserts at the nearest valid boundary.",
     "whyWrong": [
-      "Index 1 is valid in a 6-element list, so this works fine.",
-      "",
       "insert() does not raise for out-of-range positions; it simply inserts at index 1, shifting later elements.",
-      "insert() clamps an out-of-range index to the end of the list rather than raising an error."
+      "insert() clamps an out-of-range index to the end of the list rather than raising an error.",
+      "",
+      "Index 1 is valid in a 6-element list, so this works fine."
     ],
     "priority": true
   },
@@ -178,18 +178,18 @@
     "difficulty": "medium",
     "text": "What will be the output of the following code?\ndef f1(a,b=1):\n    print(a+b,end='-')\nc=f1(1,2)\nprint(c,sep='*') (2026 Board)",
     "options": [
-      "3-2",
       "3-2*",
+      "3*None-",
       "3-None",
-      "3*None-"
+      "3-2"
     ],
     "correct": 2,
     "explanation": "f1(1,2) prints 1+2=3 followed by '-' (from end='-') because a=1, b=2. f1() does not return anything, so c is None. print(c,sep='*') then prints 'None' (sep has no effect with only one argument), giving the visible output '3-None'.",
     "whyWrong": [
-      "This is missing 'None': f1 has no return statement, so c is None, and print(c) still displays it.",
       "The second print adds no visible '*' since sep only affects the separator between multiple arguments, and here there is only one argument (c).",
+      "This reverses the order in which the two print statements execute.",
       "",
-      "This reverses the order in which the two print statements execute."
+      "This is missing 'None': f1 has no return statement, so c is None, and print(c) still displays it."
     ],
     "priority": true
   },
@@ -200,18 +200,18 @@
     "difficulty": "medium",
     "text": "Consider the statement given below:\nf1 = open(\"pqr.dat\",\"________\")\nWhich of the following is the correct file mode to open the file in read only mode? (2026 Board)",
     "options": [
-      "a",
-      "rb",
+      "rb+",
       "r+",
-      "rb+"
+      "a",
+      "rb"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "'rb' opens a file for reading only, in binary mode. 'a' is append mode (write), 'r+' and 'rb+' allow both reading and writing, so they are not read-only.",
     "whyWrong": [
-      "'a' is append mode, used for writing (adding) data, not read-only access.",
-      "",
+      "'rb+' opens the file for both reading and writing in binary mode, so it is not read-only.",
       "'r+' opens the file for both reading and writing, so it is not read-only.",
-      "'rb+' opens the file for both reading and writing in binary mode, so it is not read-only."
+      "'a' is append mode, used for writing (adding) data, not read-only access.",
+      ""
     ],
     "priority": true
   },
@@ -222,14 +222,14 @@
     "difficulty": "medium",
     "text": "State whether the following statement is True or False: In Python, Logical errors can be handled using try...except...finally statement. (2026 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "try...except...finally only catches runtime exceptions (things Python detects and raises, like ZeroDivisionError). A logical error produces a wrong but syntactically valid result without raising any exception, so it cannot be caught or handled by exception handling.",
     "whyWrong": [
-      "",
-      "Logical errors do not raise exceptions at all -- the program runs and produces an incorrect result silently, so try...except...finally has nothing to catch."
+      "Logical errors do not raise exceptions at all -- the program runs and produces an incorrect result silently, so try...except...finally has nothing to catch.",
+      ""
     ],
     "priority": true
   },
@@ -263,16 +263,16 @@
     "text": "Which of the following SQL command can change the degree of the existing relation? (2026 Board)",
     "options": [
       "DROP TABLE",
-      "ALTER TABLE",
       "UPDATE...SET",
+      "ALTER TABLE",
       "DELETE"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Degree = number of columns (attributes) in a relation. ALTER TABLE is used to add or remove columns, which changes the degree. DROP TABLE removes the whole table; UPDATE and DELETE affect rows/data, not the column structure.",
     "whyWrong": [
       "DROP TABLE removes the entire table; it does not modify the structure of an existing table.",
-      "",
       "UPDATE...SET changes column values in existing rows; it does not add or remove columns.",
+      "",
       "DELETE removes rows (cardinality), not columns, so it does not change the degree."
     ],
     "priority": true
@@ -284,16 +284,16 @@
     "difficulty": "medium",
     "text": "What will be the output of the query?\nSELECT MACHINE_ID, MACHINE_NAME FROM INVENTORY WHERE QUANTITY <= 100; (2026 Board)",
     "options": [
-      "All columns of INVENTORY table with quantity greater than 100",
       "ID and name of machines with quantity less than 100 from INVENTORY table",
+      "All columns of INVENTORY table with quantity greater than 100",
       "All columns of INVENTORY table with quantity greater than or equal to 100",
       "ID and name of machines with quantity less than or equal to 100 from INVENTORY table"
     ],
     "correct": 3,
     "explanation": "The SELECT list names only MACHINE_ID and MACHINE_NAME, and the WHERE clause QUANTITY <= 100 keeps rows whose quantity is less than or equal to 100.",
     "whyWrong": [
-      "The query selects only two named columns, not all columns, and the comparison is <= (less than or equal), not greater than.",
       "The condition is <= 100, which includes rows equal to 100, not strictly less than 100 -- and the query selects only two columns, not describing them fully here either way.",
+      "The query selects only two named columns, not all columns, and the comparison is <= (less than or equal), not greater than.",
       "The query selects only two named columns, not all columns of the table.",
       ""
     ],
@@ -306,18 +306,18 @@
     "difficulty": "medium",
     "text": "A relation in MySQL database consists of 2 tuples and 3 attributes. If 2 attributes are deleted and 4 tuples are added, what will be the cardinality of the relation? (2026 Board)",
     "options": [
-      "4",
-      "5",
       "6",
-      "7"
+      "7",
+      "4",
+      "5"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Cardinality is the number of rows (tuples). Starting with 2 tuples, adding 4 more gives 2 + 4 = 6 tuples. Deleting attributes changes the degree (columns), not the cardinality.",
     "whyWrong": [
-      "This ignores the 2 original tuples that remain after only attributes (not rows) are deleted.",
-      "This is off by one from the correct total of 6 tuples.",
       "",
-      "This wrongly assumes an extra tuple beyond the 2 original + 4 added = 6."
+      "This wrongly assumes an extra tuple beyond the 2 original + 4 added = 6.",
+      "This ignores the 2 original tuples that remain after only attributes (not rows) are deleted.",
+      "This is off by one from the correct total of 6 tuples."
     ],
     "priority": true
   },
@@ -328,18 +328,18 @@
     "difficulty": "medium",
     "text": "Which aggregate function in SQL returns the smallest value from a column in a table? (2026 Board)",
     "options": [
+      "LOWER()",
       "MIN()",
       "MAX()",
-      "SMALL()",
-      "LOWER()"
+      "SMALL()"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "MIN() is the SQL aggregate function that returns the smallest (minimum) value in a column. MAX() returns the largest value; SMALL() is not a valid SQL aggregate function; LOWER() converts text to lowercase, it does not find a minimum.",
     "whyWrong": [
+      "LOWER() is a string function that converts text to lowercase; it has nothing to do with finding a minimum value.",
       "",
       "MAX() returns the largest value in a column, the opposite of what is asked.",
-      "SMALL() is not a valid built-in SQL aggregate function.",
-      "LOWER() is a string function that converts text to lowercase; it has nothing to do with finding a minimum value."
+      "SMALL() is not a valid built-in SQL aggregate function."
     ],
     "priority": true
   },
@@ -350,18 +350,18 @@
     "difficulty": "medium",
     "text": "With respect to computer networks, which of the following is the correct expanded form of RJ 45? (2026 Board)",
     "options": [
-      "Radio Jockey 45",
       "Registered Jockey 45",
       "Radio Jack 45",
-      "Registered Jack 45"
+      "Registered Jack 45",
+      "Radio Jockey 45"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "RJ 45 stands for 'Registered Jack 45', a standardized physical connector commonly used for Ethernet networking cables.",
     "whyWrong": [
-      "RJ 45 has nothing to do with radio broadcasting jockeys.",
       "'Jockey' is a mishearing of 'Jack'; there is no such official term.",
       "It is 'Registered Jack', not 'Radio Jack'.",
-      ""
+      "",
+      "RJ 45 has nothing to do with radio broadcasting jockeys."
     ],
     "priority": true
   },
@@ -372,18 +372,18 @@
     "difficulty": "medium",
     "text": "Which network device serves as the entry and exit point of a network, as all data coming in or going out of a network must first pass through it in order to use routing paths? (2026 Board)",
     "options": [
+      "Repeater",
       "Modem",
       "Gateway",
-      "Switch",
-      "Repeater"
+      "Switch"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A Gateway acts as the entry/exit point of a network, connecting it to other networks and routing all incoming/outgoing traffic through it.",
     "whyWrong": [
+      "A Repeater simply regenerates/boosts a signal over distance; it does not act as a network's entry/exit gateway.",
       "A Modem converts digital signals to analog and back for transmission over telephone lines; it is not primarily the network's entry/exit routing point.",
       "",
-      "A Switch connects devices within the same local network and forwards data based on MAC addresses; it is not the network's boundary entry/exit point.",
-      "A Repeater simply regenerates/boosts a signal over distance; it does not act as a network's entry/exit gateway."
+      "A Switch connects devices within the same local network and forwards data based on MAC addresses; it is not the network's boundary entry/exit point."
     ],
     "priority": true
   },
@@ -395,17 +395,17 @@
     "text": "Expand the term XML. (2026 Board)",
     "options": [
       "eXtensible Markup Language",
-      "eXtended Markup Language",
       "eXtensible Machine Language",
-      "eXternal Markup Language"
+      "eXternal Markup Language",
+      "eXtended Markup Language"
     ],
     "correct": 0,
     "explanation": "XML stands for eXtensible Markup Language, a markup language designed to store and transport structured data in a format that is both human- and machine-readable.",
     "whyWrong": [
       "",
-      "'Extended' is a common confusion with the correct word 'Extensible', which refers to XML's ability to let users define their own tags.",
       "XML is a markup language for data, not a programming/machine language.",
-      "'External' is not part of the correct expansion; the correct first word is 'eXtensible'."
+      "'External' is not part of the correct expansion; the correct first word is 'eXtensible'.",
+      "'Extended' is a common confusion with the correct word 'Extensible', which refers to XML's ability to let users define their own tags."
     ],
     "priority": true
   },
@@ -480,18 +480,18 @@
     "difficulty": "medium",
     "text": "Identify the output of the following Python code snippet:\nprint(14%3**2*4) (2025 Board)",
     "options": [
-      "16",
-      "64",
+      "256",
       "20",
-      "256"
+      "64",
+      "16"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Operator precedence: ** first → 3**2=9; then % and * left-to-right → 14%9=5; 5*4=20.",
     "whyWrong": [
-      "Incorrect precedence — ** has highest priority: 3**2=9, 14%9=5, 5*4=20.",
-      "Incorrect — not 14%3=2, 2**2=4, 4*4=16 path either.",
+      "Incorrect — exponentiation does not distribute over all operands.",
       "",
-      "Incorrect — exponentiation does not distribute over all operands."
+      "Incorrect — not 14%3=2, 2**2=4, 4*4=16 path either.",
+      "Incorrect precedence — ** has highest priority: 3**2=9, 14%9=5, 5*4=20."
     ],
     "priority": true
   },
@@ -502,18 +502,18 @@
     "difficulty": "medium",
     "text": "Identify the output of the following Python code snippet:\ngame = \"Olympic2024\"\nprint(game.index(\"C\")) (2025 Board)",
     "options": [
-      "0",
       "6",
-      "-1",
-      "ValueError"
+      "ValueError",
+      "0",
+      "-1"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "str.index() searches for the exact substring. \"Olympic2024\" contains lowercase 'c' at index 6, but uppercase 'C' is not present. index() raises ValueError when the substring is not found.",
     "whyWrong": [
-      "0 is not the position of 'C'.",
       "Index 6 is the position of lowercase 'c', not uppercase 'C'.",
-      "str.index() raises an exception; it does not return -1 like str.find() would.",
-      ""
+      "",
+      "0 is not the position of 'C'.",
+      "str.index() raises an exception; it does not return -1 like str.find() would."
     ],
     "priority": true
   },
@@ -524,18 +524,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a valid Python identifier? (2025 Board)",
     "options": [
-      "global",
-      "Break",
       "def",
-      "with"
+      "Break",
+      "with",
+      "global"
     ],
     "correct": 1,
     "explanation": "'Break' (capital B) is a valid identifier because Python keywords are case-sensitive. 'break' is a keyword, but 'Break' is not — identifiers are case-sensitive. 'global', 'def', and 'with' are all Python keywords and cannot be used as identifiers.",
     "whyWrong": [
-      "'global' is a Python reserved keyword and cannot be used as an identifier.",
-      "",
       "'def' is a Python reserved keyword used to define functions.",
-      "'with' is a Python reserved keyword used for context managers."
+      "",
+      "'with' is a Python reserved keyword used for context managers.",
+      "'global' is a Python reserved keyword and cannot be used as an identifier."
     ],
     "priority": true
   },
@@ -568,18 +568,18 @@
     "difficulty": "medium",
     "text": "L = ['TIC', 'TAC']\nprint(L[::-1])\nIdentify the output of the above Python code snippet. (2025 Board)",
     "options": [
-      "['CIT', 'CAT']",
       "['TIC', 'TAC']",
-      "['CAT', 'CIT']",
-      "['TAC', 'TIC']"
+      "['TAC', 'TIC']",
+      "['CIT', 'CAT']",
+      "['CAT', 'CIT']"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "L[::-1] reverses the list (not the strings). So ['TIC','TAC'] reversed is ['TAC','TIC']. The individual string contents are unchanged.",
     "whyWrong": [
-      "[::-1] reverses the list order, not the characters inside each string.",
       "This is the original list — no reversal applied.",
-      "This would require both reversing the list AND reversing each string.",
-      ""
+      "",
+      "[::-1] reverses the list order, not the characters inside each string.",
+      "This would require both reversing the list AND reversing each string."
     ],
     "priority": true
   },
@@ -590,18 +590,18 @@
     "difficulty": "easy",
     "text": "Which Python operator evaluates to True only if both operands refer to the same memory location (object identity)? (2025 Board)",
     "options": [
-      "is",
-      "is not",
       "and",
-      "or"
+      "is",
+      "or",
+      "is not"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The 'is' operator tests object identity — it returns True if both operands point to the exact same object in memory (same id()). It is different from '==' which tests value equality.",
     "whyWrong": [
-      "",
-      "'is not' returns True when the two objects are NOT the same object in memory.",
       "'and' is a logical operator for boolean conjunction.",
-      "'or' is a logical operator for boolean disjunction."
+      "",
+      "'or' is a logical operator for boolean disjunction.",
+      "'is not' returns True when the two objects are NOT the same object in memory."
     ],
     "priority": false
   },
@@ -612,18 +612,18 @@
     "difficulty": "medium",
     "text": "D = {'S01': 95, 'S02': 96}\nfor I in D:\n    print(I, end='#')\nIdentify the output of the above Python code snippet. (2025 Board)",
     "options": [
-      "S01#S02#",
       "95#96#",
-      "S01,95#S02,96#",
-      "S01#95#S02#96#"
+      "S01#S02#",
+      "S01#95#S02#96#",
+      "S01,95#S02,96#"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Iterating over a dictionary with 'for key in dict' yields the keys only — not values. So I takes values 'S01' then 'S02', each printed followed by '#'.",
     "whyWrong": [
-      "",
       "This would require iterating over D.values(), not D directly.",
-      "This would require iterating over D.items() and unpacking key-value pairs.",
-      "This would also require D.items() — direct iteration yields keys only."
+      "",
+      "This would also require D.items() — direct iteration yields keys only.",
+      "This would require iterating over D.items() and unpacking key-value pairs."
     ],
     "priority": true
   },
@@ -634,18 +634,18 @@
     "difficulty": "easy",
     "text": "Which SQL constraint prevents duplicate values in a column? (2025 Board)",
     "options": [
-      "UNIQUE",
       "DISTINCT",
-      "NOT NULL",
-      "HAVING"
+      "UNIQUE",
+      "HAVING",
+      "NOT NULL"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The UNIQUE constraint on a column (or set of columns) ensures no two rows have the same value. DISTINCT is a SELECT clause keyword (not a constraint), NOT NULL prevents null values, and HAVING filters grouped results.",
     "whyWrong": [
-      "",
       "DISTINCT is a SELECT keyword to remove duplicate rows from query results — it is not a table constraint.",
-      "NOT NULL prevents empty/null values but does not prevent duplicate non-null values.",
-      "HAVING is a clause used to filter groups in GROUP BY queries — not a column constraint."
+      "",
+      "HAVING is a clause used to filter groups in GROUP BY queries — not a column constraint.",
+      "NOT NULL prevents empty/null values but does not prevent duplicate non-null values."
     ],
     "priority": false
   },
@@ -656,18 +656,18 @@
     "difficulty": "hard",
     "text": "def Change(N):\n    N = N + 10\n    print(N, end='$$')\nN = 15\nChange(N)\nprint(N)\nIdentify the output of the above Python code snippet. (2025 Board)",
     "options": [
-      "25$$15",
       "15$$25",
+      "2525$$",
       "25$$25",
-      "2525$$"
+      "25$$15"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Python integers are immutable. N=15 is passed to Change(). Inside Change(), the local N becomes 25 and prints '25$$'. The global N is unaffected and prints '15' after the call. Output: 25$$15.",
     "whyWrong": [
-      "",
       "The function prints first (25$$), then the global N (15) is printed — order is 25$$15 not 15$$25.",
+      "The end='$$' is only in the function's print; the outer print uses default end='\\n'.",
       "The global N is not modified by the function — it stays 15, not 25.",
-      "The end='$$' is only in the function's print; the outer print uses default end='\\n'."
+      ""
     ],
     "priority": true
   },
@@ -678,18 +678,18 @@
     "difficulty": "hard",
     "text": "N = '5'\ntry:\n    print('WORD' + N, end='#')\nexcept:\n    print('ERROR', end='#')\nfinally:\n    print('OVER')\nIdentify the output of the above Python code snippet. (2025 Board)",
     "options": [
-      "ERROR#",
+      "ERROR#OVER",
       "WORD5#OVER",
       "WORD5#",
-      "ERROR#OVER"
+      "ERROR#"
     ],
     "correct": 1,
     "explanation": "'WORD' + '5' is valid string concatenation (N is already a string '5'), so 'WORD5' is printed with end='#'. No exception occurs, so the except block is skipped. The finally block always runs, printing 'OVER'. Output: WORD5#OVER.",
     "whyWrong": [
-      "No exception occurs — 'WORD'+'5' is valid — so the except block does not run.",
+      "No exception occurs — 'WORD5#' is printed by try, then 'OVER' by finally.",
       "",
       "The finally block always executes regardless of exception — 'OVER' must also appear.",
-      "No exception occurs — 'WORD5#' is printed by try, then 'OVER' by finally."
+      "No exception occurs — 'WORD'+'5' is valid — so the except block does not run."
     ],
     "priority": true
   },
@@ -702,16 +702,16 @@
     "options": [
       "dict()",
       "keys()",
-      "values()",
-      "items()"
+      "items()",
+      "values()"
     ],
     "correct": 0,
     "explanation": "dict() is a built-in constructor that creates and returns a new dictionary object. keys(), values(), and items() are dictionary methods that return view objects (dict_keys, dict_values, dict_items), not dictionaries.",
     "whyWrong": [
       "",
       "keys() is a dictionary method returning a dict_keys view, not a dict.",
-      "values() is a dictionary method returning a dict_values view, not a dict.",
-      "items() is a dictionary method returning a dict_items view, not a dict."
+      "items() is a dictionary method returning a dict_items view, not a dict.",
+      "values() is a dictionary method returning a dict_values view, not a dict."
     ],
     "priority": false
   },
@@ -722,18 +722,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a Data Manipulation Language (DML) command? (2025 Board)",
     "options": [
+      "DROP",
       "UPDATE",
       "CREATE",
-      "ALTER",
-      "DROP"
+      "ALTER"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "DML commands manipulate data within existing tables: SELECT, INSERT, UPDATE, DELETE. DDL commands define/modify database structure: CREATE, ALTER, DROP, TRUNCATE.",
     "whyWrong": [
+      "DROP is a DDL command used to delete a table or database entirely.",
       "",
       "CREATE is a DDL command used to create new tables or databases.",
-      "ALTER is a DDL command used to modify the structure of an existing table.",
-      "DROP is a DDL command used to delete a table or database entirely."
+      "ALTER is a DDL command used to modify the structure of an existing table."
     ],
     "priority": false
   },
@@ -745,17 +745,17 @@
     "text": "Which aggregate function counts rows but ignores NULL values in the specified column? (2025 Board)",
     "options": [
       "len()",
-      "count()",
       "number()",
-      "num()"
+      "num()",
+      "count()"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "In SQL, COUNT(column_name) counts only non-NULL values in that column. COUNT(*) counts all rows including those with NULLs. len(), number(), and num() are not SQL aggregate functions.",
     "whyWrong": [
       "len() is a Python built-in, not a SQL aggregate function.",
-      "",
       "number() is not a valid SQL aggregate function.",
-      "num() is not a valid SQL aggregate function."
+      "num() is not a valid SQL aggregate function.",
+      ""
     ],
     "priority": false
   },
@@ -766,18 +766,18 @@
     "difficulty": "easy",
     "text": "Which MySQL data type does NOT require its value to be enclosed in quotation marks when writing SQL statements? (2025 Board)",
     "options": [
-      "DATE",
-      "VARCHAR",
       "FLOAT",
-      "CHAR"
+      "CHAR",
+      "DATE",
+      "VARCHAR"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Numeric types like FLOAT, INT, DECIMAL do not need quotes. String types (VARCHAR, CHAR) and date/time types (DATE, DATETIME) require their values to be enclosed in single quotes in SQL.",
     "whyWrong": [
-      "DATE values must be written in quotes, e.g. '2024-01-15'.",
-      "VARCHAR is a string type; its values must be enclosed in quotes.",
       "",
-      "CHAR is a string type; its values must be enclosed in quotes."
+      "CHAR is a string type; its values must be enclosed in quotes.",
+      "DATE values must be written in quotes, e.g. '2024-01-15'.",
+      "VARCHAR is a string type; its values must be enclosed in quotes."
     ],
     "priority": false
   },
@@ -806,18 +806,18 @@
     "difficulty": "easy",
     "text": "Which network device regenerates and retransmits weakened signals to extend the range of a network? (2025 Board)",
     "options": [
+      "Modem",
       "Hub",
-      "Ethernet Card",
       "Repeater",
-      "Modem"
+      "Ethernet Card"
     ],
     "correct": 2,
     "explanation": "A repeater amplifies/regenerates an incoming signal and retransmits it, allowing data to travel further without degradation. Hubs broadcast to all ports. An Ethernet card (NIC) connects a device to the network. A modem converts digital↔analog signals for ISP communication.",
     "whyWrong": [
+      "A modem modulates/demodulates signals for ISP connections, not for extending LAN range.",
       "A hub connects multiple devices on a network but does not regenerate signals.",
-      "An Ethernet card (NIC) is a device interface, not a signal repeating device.",
       "",
-      "A modem modulates/demodulates signals for ISP connections, not for extending LAN range."
+      "An Ethernet card (NIC) is a device interface, not a signal repeating device."
     ],
     "priority": false
   },
@@ -828,17 +828,17 @@
     "difficulty": "easy",
     "text": "Which protocol is used for making voice/phone calls over the internet? (2025 Board)",
     "options": [
-      "PPP",
-      "FTP",
       "HTTP",
+      "FTP",
+      "PPP",
       "VoIP"
     ],
     "correct": 3,
     "explanation": "VoIP (Voice over Internet Protocol) enables voice communication and multimedia sessions over IP networks. PPP is a data link layer protocol, FTP is for file transfer, and HTTP is for web browsing.",
     "whyWrong": [
-      "PPP (Point-to-Point Protocol) is a data link layer protocol, not for voice calls.",
-      "FTP (File Transfer Protocol) is used for transferring files, not voice calls.",
       "HTTP (HyperText Transfer Protocol) is used for web page transfer.",
+      "FTP (File Transfer Protocol) is used for transferring files, not voice calls.",
+      "PPP (Point-to-Point Protocol) is a data link layer protocol, not for voice calls.",
       ""
     ],
     "priority": false
@@ -850,17 +850,17 @@
     "difficulty": "easy",
     "text": "ARPANET stands for _______________ . (Fill in the blank) (2025 Board)",
     "options": [
-      "American Research Projects Agency Network",
-      "Advanced Research Projects Agency Network",
       "Advanced Research Programs Agency Network",
+      "Advanced Research Projects Agency Network",
+      "American Research Projects Agency Network",
       "American Research Programs Agency Network"
     ],
     "correct": 1,
     "explanation": "ARPANET stands for Advanced Research Projects Agency Network, developed by the US Department of Defense's ARPA in the late 1960s. It was the precursor to the modern internet.",
     "whyWrong": [
-      "'American' is incorrect — it is 'Advanced'.",
-      "",
       "'Programs' is incorrect — it is 'Projects'.",
+      "",
+      "'American' is incorrect — it is 'Advanced'.",
       "Both 'American' and 'Programs' are incorrect."
     ],
     "priority": false
@@ -918,12 +918,13 @@
     "difficulty": "easy",
     "text": "State True or False:\nWhile defining a function in Python, the positional parameters in the function header must always be written after the default parameters. (2024 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "FALSE. Positional (non-default) parameters must come BEFORE default parameters in a function header. Placing them after default parameters causes a SyntaxError.",
     "whyWrong": [
+      "",
       "True is incorrect — Python enforces that positional params precede default params."
     ],
     "priority": 2
@@ -936,14 +937,15 @@
     "text": "The SELECT statement when combined with __________ clause, returns records without repetition. (2024 Board)",
     "options": [
       "DISTINCT",
+      "NULL",
       "DESCRIBE",
-      "UNIQUE",
-      "NULL"
+      "UNIQUE"
     ],
     "correct": 0,
     "explanation": "DISTINCT eliminates duplicate rows from the result set of a SELECT query.",
     "whyWrong": [
       "DESCRIBE shows the structure of a table, not used in SELECT for deduplication.",
+      "",
       "UNIQUE is a constraint, not a SELECT clause.",
       "NULL is not a clause; it represents missing data."
     ],
@@ -956,17 +958,18 @@
     "difficulty": "medium",
     "text": "What will be the output of the following statement?\nprint(16*5/4*2/5-8) (2024 Board)",
     "options": [
-      "-3.33",
-      "6.0",
       "0.0",
-      "-13.33"
+      "-13.33",
+      "-3.33",
+      "6.0"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Evaluated left to right (equal precedence for * and /): 16*5=80, 80/4=20.0, 20.0*2=40.0, 40.0/5=8.0, 8.0-8=0.0.",
     "whyWrong": [
+      "−13.33 would result from a different grouping.",
+      "",
       "-3.33 is incorrect.",
-      "6.0 is incorrect.",
-      "−13.33 would result from a different grouping."
+      "6.0 is incorrect."
     ],
     "priority": 2
   },
@@ -998,17 +1001,18 @@
     "difficulty": "easy",
     "text": "In SQL, the aggregate function which will display the cardinality of the table is __________. (2024 Board)",
     "options": [
-      "sum()",
-      "count(*)",
       "avg()",
+      "count(*)",
+      "sum()",
       "sum(*)"
     ],
     "correct": 1,
     "explanation": "Cardinality is the total number of rows in a table. COUNT(*) counts all rows, including those with NULL values, making it the correct function to display table cardinality.",
     "whyWrong": [
-      "sum() adds numerical values in a column, not row count.",
+      "sum(*) is invalid SQL syntax.",
       "avg() computes the arithmetic mean, not row count.",
-      "sum(*) is invalid SQL syntax."
+      "sum() adds numerical values in a column, not row count.",
+      ""
     ],
     "priority": 2
   },
@@ -1019,17 +1023,18 @@
     "difficulty": "easy",
     "text": "Which protocol out of the following is used to send and receive emails over a computer network? (2024 Board)",
     "options": [
-      "PPP",
-      "HTTP",
       "FTP",
+      "HTTP",
+      "PPP",
       "SMTP"
     ],
     "correct": 3,
     "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol for sending and receiving email messages over a network.",
     "whyWrong": [
-      "PPP (Point-to-Point Protocol) is used for direct connections between two nodes.",
+      "FTP is used for transferring files, not emails.",
       "HTTP is the protocol for transferring web pages.",
-      "FTP is used for transferring files, not emails."
+      "PPP (Point-to-Point Protocol) is used for direct connections between two nodes.",
+      ""
     ],
     "priority": 2
   },
@@ -1041,14 +1046,15 @@
     "text": "Identify the invalid Python statement from the following: (2024 Board)",
     "options": [
       "d = dict()",
+      "g = dict{}",
       "e = {}",
-      "f = []",
-      "g = dict{}"
+      "f = []"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "g = dict{} is invalid. dict() must be called with parentheses, not curly braces. The correct forms are dict() or using {} directly.",
     "whyWrong": [
       "d = dict() is valid — creates an empty dictionary using the dict constructor.",
+      "",
       "e = {} is valid — creates an empty dictionary using literal syntax.",
       "f = [] is valid — creates an empty list."
     ],
@@ -1071,7 +1077,8 @@
     "whyWrong": [
       "MISSI#SIPPI uses [:5] not [:4].",
       "MISS#IPPIS reverses the last 5 chars.",
-      "MISSI#IPPIS uses wrong slice on both ends."
+      "MISSI#IPPIS uses wrong slice on both ends.",
+      ""
     ],
     "priority": 2
   },
@@ -1083,16 +1090,17 @@
     "text": "Identify the statement from the following which will raise an error: (2024 Board)",
     "options": [
       "print(\"A\"*3)",
-      "print(5*3)",
       "print(\"15\"+3)",
+      "print(5*3)",
       "print(\"15\"+\"13\")"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "print(\"15\"+3) raises a TypeError because you cannot concatenate a string and an integer in Python.",
     "whyWrong": [
       "print(\"A\"*3) → 'AAA' — string repetition is valid.",
+      "print(\"15\"+\"13\") → '1513' — string concatenation is valid.",
       "print(5*3) → 15 — integer multiplication is valid.",
-      "print(\"15\"+\"13\") → '1513' — string concatenation is valid."
+      ""
     ],
     "priority": 2
   },
@@ -1103,17 +1111,18 @@
     "difficulty": "medium",
     "text": "Select the correct output of the following code:\nevent=\"G20 Presidency@2023\"\nL=event.split(' ')\nprint(L[::-2]) (2024 Board)",
     "options": [
-      "'G20'",
-      "['Presidency@2023']",
       "['G20']",
-      "'Presidency@2023'"
+      "'Presidency@2023'",
+      "['Presidency@2023']",
+      "'G20'"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "L = ['G20', 'Presidency@2023']. L[::-2] slices from the end with step -2: starts at index 1 ('Presidency@2023'), next step would go to index -1 (out of bounds). Result is ['Presidency@2023'].",
     "whyWrong": [
-      "'G20' would need indexing, not slicing, and is at index 0.",
+      "'Presidency@2023' without a list would need direct indexing.",
+      "",
       "['G20'] would need L[::2] from the start.",
-      "'Presidency@2023' without a list would need direct indexing."
+      "'G20' would need indexing, not slicing, and is at index 0."
     ],
     "priority": 2
   },
@@ -1124,16 +1133,17 @@
     "difficulty": "easy",
     "text": "Which of the following options is the correct unit of measurement for network bandwidth? (2024 Board)",
     "options": [
-      "KB",
       "Bit",
-      "Hz",
-      "Km"
+      "Km",
+      "KB",
+      "Hz"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Network bandwidth is measured in bits per second (bps, Kbps, Mbps, Gbps). The basic unit is the Bit.",
     "whyWrong": [
-      "KB (Kilobytes) is a unit of data storage, not bandwidth.",
       "Hz (Hertz) measures frequency, not bandwidth in data networks.",
+      "",
+      "KB (Kilobytes) is a unit of data storage, not bandwidth.",
       "Km (Kilometre) is a unit of distance."
     ],
     "priority": 2
@@ -1145,17 +1155,18 @@
     "difficulty": "medium",
     "text": "Observe the given Python code carefully:\na=20\ndef convert(a):\n    b=20\n    a=a+b\nconvert(10)\nprint(a)\nSelect the correct output from the given options: (2024 Board)",
     "options": [
-      "10",
-      "20",
+      "Error",
       "30",
-      "Error"
+      "10",
+      "20"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The variable 'a' inside convert() is local (it's a parameter). Changes to 'a' inside the function do not affect the global variable 'a=20'. So print(a) prints the global value: 20.",
     "whyWrong": [
+      "",
+      "No error occurs; the function simply doesn't return or modify global 'a'.",
       "10 would be the local parameter value, not accessible outside.",
-      "30 would be the local result (10+20) but it stays local.",
-      "No error occurs; the function simply doesn't return or modify global 'a'."
+      "30 would be the local result (10+20) but it stays local."
     ],
     "priority": 2
   },
@@ -1166,12 +1177,13 @@
     "difficulty": "easy",
     "text": "State whether the following statement is True or False:\nWhile handling exceptions in Python, name of the exception has to be compulsorily added with except clause. (2024 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "FALSE. Python allows a bare 'except:' clause without naming a specific exception type. It will catch all exceptions. Naming the exception is optional (though recommended for good practice).",
     "whyWrong": [
+      "",
       "True is incorrect — 'except:' alone without an exception name is valid syntax."
     ],
     "priority": 2
@@ -1193,7 +1205,8 @@
     "whyWrong": [
       "DROP is DDL — it removes a database object.",
       "CREATE is DDL — it creates a database object.",
-      "ALTER is DDL — it modifies the structure of an existing object."
+      "ALTER is DDL — it modifies the structure of an existing object.",
+      ""
     ],
     "priority": 2
   },
@@ -1204,17 +1217,18 @@
     "difficulty": "easy",
     "text": "Fill in the blank:\n__________ is a set of rules that needs to be followed by the communicating parties in order to have a successful and reliable data communication over a network. (2024 Board)",
     "options": [
+      "IP Address",
       "Firewall",
       "Protocol",
-      "IP Address",
       "Bandwidth"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A Protocol is a set of rules governing data communication between devices on a network. Examples include TCP/IP, HTTP, FTP, SMTP.",
     "whyWrong": [
+      "Bandwidth is the data transfer capacity, not a ruleset.",
       "Firewall is a security system, not a communication ruleset.",
       "IP Address identifies a device on a network but is not a set of rules.",
-      "Bandwidth is the data transfer capacity, not a ruleset."
+      ""
     ],
     "priority": 2
   },
@@ -1226,14 +1240,15 @@
     "text": "Consider the following Python statement:\nF=open('CONTENT.TXT')\nWhich of the following is an invalid statement in Python? (2024 Board)",
     "options": [
       "F.seek(1,0)",
+      "F.seek(0,2)",
       "F.seek(0,1)",
-      "F.seek(0,-1)",
-      "F.seek(0,2)"
+      "F.seek(0,-1)"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "F.seek(0,-1) is invalid. The second argument (whence) must be 0 (from beginning), 1 (from current position), or 2 (from end). -1 is not a valid value for whence.",
     "whyWrong": [
       "F.seek(1,0) is valid — moves to position 1 from beginning.",
+      "",
       "F.seek(0,1) is valid — moves 0 bytes from current position.",
       "F.seek(0,2) is valid — moves to position 0 from end (end of file)."
     ],
@@ -1294,7 +1309,8 @@
     "correct": 0,
     "explanation": "Identifiers are indeed user-defined names for variables, functions, classes, modules, etc. in Python.",
     "whyWrong": [
-      "False is incorrect — this is a standard definition of identifiers."
+      "False is incorrect — this is a standard definition of identifiers.",
+      ""
     ],
     "priority": 1
   },
@@ -1305,17 +1321,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a valid keyword in Python? (2023 Board)",
     "options": [
-      "false",
       "return",
       "non_local",
-      "none"
+      "none",
+      "false"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'return' is a valid Python keyword. Python keywords are case-sensitive: 'False', 'None', 'nonlocal' (without underscore) are keywords but 'false', 'none', 'non_local' are not.",
     "whyWrong": [
-      "'false' → Python uses 'False' (capital F).",
       "'non_local' → Python uses 'nonlocal' (no underscore).",
-      "'none' → Python uses 'None' (capital N)."
+      "'none' → Python uses 'None' (capital N).",
+      "",
+      "'false' → Python uses 'False' (capital F)."
     ],
     "priority": 2
   },
@@ -1326,17 +1343,18 @@
     "difficulty": "easy",
     "text": "Given: Tup=(10, 20, 30, 50)\nWhich of the following statements will result in an error? (2023 Board)",
     "options": [
-      "print(Tup[0])",
       "Tup.insert(2,3)",
+      "print(Tup[0])",
       "print(Tup[1:2])",
       "print(len(Tup))"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Tuples are immutable. They do not have an insert() method — calling Tup.insert(2,3) raises AttributeError.",
     "whyWrong": [
-      "print(Tup[0]) is valid — prints 10.",
       "print(Tup[1:2]) is valid — prints (20,).",
-      "print(len(Tup)) is valid — prints 4."
+      "print(Tup[0]) is valid — prints 10.",
+      "print(len(Tup)) is valid — prints 4.",
+      ""
     ],
     "priority": 2
   },
@@ -1348,16 +1366,17 @@
     "text": "Which of the following will be the correct output if the given expression is evaluated?\n5<10 and 12>7 or not 7>4 (2023 Board)",
     "options": [
       "True",
-      "False",
       "NONE",
+      "False",
       "NULL"
     ],
     "correct": 0,
     "explanation": "Evaluation: (5<10)=True, (12>7)=True, (7>4)=True; True and True or not True → True and True or False → True or False → True.",
     "whyWrong": [
       "False: incorrect — all sub-expressions evaluate to True.",
+      "NULL: not a Python value.",
       "NONE: not a Python value.",
-      "NULL: not a Python value."
+      ""
     ],
     "priority": 2
   },
@@ -1368,17 +1387,18 @@
     "difficulty": "medium",
     "text": "Select the correct output of the code:\nS = \"Amrit Mahotsav @ 75\"\nA = S.partition(\" \")\nprint(A)\n(2023 Board)",
     "options": [
-      "('Amrit Mahotsav', '@', '75')",
-      "['Amrit', 'Mahotsav', '@', '75']",
       "('Amrit', 'Mahotsav @ 75')",
-      "('Amrit', ' ', 'Mahotsav @ 75')"
+      "['Amrit', 'Mahotsav', '@', '75']",
+      "('Amrit', ' ', 'Mahotsav @ 75')",
+      "('Amrit Mahotsav', '@', '75')"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "partition(sep) returns a 3-tuple: (part_before, separator, part_after) at the FIRST occurrence of sep. Splitting 'Amrit Mahotsav @ 75' at first space gives ('Amrit', ' ', 'Mahotsav @ 75').",
     "whyWrong": [
-      "(a) partitions at '@', not space.",
+      "(c) partition always returns a 3-tuple, never 2 elements.",
       "(b) split() returns a list, not partition.",
-      "(c) partition always returns a 3-tuple, never 2 elements."
+      "",
+      "(a) partitions at '@', not space."
     ],
     "priority": 3
   },
@@ -1390,16 +1410,17 @@
     "text": "Which of the following mode keeps the file offset position at the end of the file? (2023 Board)",
     "options": [
       "r+",
-      "r",
       "w",
+      "r",
       "a"
     ],
     "correct": 3,
     "explanation": "In 'a' (append) mode, the file offset is always at the end of the file, so all writes go to the end.",
     "whyWrong": [
       "'r+' opens for read/write with offset at the beginning.",
+      "'w' truncates and opens for writing with offset at the beginning.",
       "'r' opens for reading with offset at the beginning.",
-      "'w' truncates and opens for writing with offset at the beginning."
+      ""
     ],
     "priority": 2
   },
@@ -1411,14 +1432,17 @@
     "text": "Fill in the blank: _____ function is used to arrange the elements of a list in ascending order. (2023 Board)",
     "options": [
       "sort()",
-      "arrange()",
       "ascending()",
+      "arrange()",
       "asort()"
     ],
     "correct": 0,
     "explanation": "list.sort() is the built-in method to sort a list in ascending order in-place.",
     "whyWrong": [
-      "arrange(), ascending(), asort() are not valid Python list methods."
+      "arrange(), ascending(), asort() are not valid Python list methods.",
+      "",
+      "",
+      ""
     ],
     "priority": 1
   },
@@ -1431,13 +1455,16 @@
     "options": [
       "+=",
       "!=",
-      "=",
-      "*="
+      "*=",
+      "="
     ],
     "correct": 1,
     "explanation": "'!=' is a comparison (relational) operator that returns True or False. The others are assignment operators.",
     "whyWrong": [
-      "+=, =, *= are assignment operators that modify a variable's value, not return a boolean."
+      "+=, =, *= are assignment operators that modify a variable's value, not return a boolean.",
+      "",
+      "",
+      ""
     ],
     "priority": 1
   },
@@ -1448,16 +1475,18 @@
     "difficulty": "medium",
     "text": "Which of the following statement(s) would give an error after executing:\nStud={\"Murugan\":100, \"Mithu\":95}\nprint(Stud[95])      # Statement 2\nStud[\"Murugan\"]=99   # Statement 3\nprint(Stud.pop())    # Statement 4\nprint(Stud)          # Statement 5\n(2023 Board)",
     "options": [
-      "Statement 2",
       "Statement 3",
-      "Statement 4",
-      "Statements 2 and 4"
+      "Statement 2",
+      "Statements 2 and 4",
+      "Statement 4"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Statement 2: Stud[95] raises KeyError (95 is a value, not a key). Statement 4: dict.pop() requires a key argument, unlike list.pop(); calling it without an argument raises TypeError.",
     "whyWrong": [
+      "Statement 5 is valid — prints the dictionary.",
       "Statement 3 is valid — updating an existing key's value.",
-      "Statement 5 is valid — prints the dictionary."
+      "",
+      ""
     ],
     "priority": 3
   },
@@ -1469,16 +1498,17 @@
     "text": "Fill in the blank: _____ is a number of tuples in a relation. (2023 Board)",
     "options": [
       "Attribute",
-      "Degree",
       "Domain",
-      "Cardinality"
+      "Cardinality",
+      "Degree"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Cardinality of a relation refers to the number of tuples (rows) in a table. Degree refers to the number of attributes (columns).",
     "whyWrong": [
       "Attribute is a column/field.",
-      "Degree is the number of columns.",
-      "Domain is the set of valid values for an attribute."
+      "Domain is the set of valid values for an attribute.",
+      "",
+      "Degree is the number of columns."
     ],
     "priority": 2
   },
@@ -1489,17 +1519,18 @@
     "difficulty": "easy",
     "text": "The syntax of seek() is: file_object.seek(offset[, reference_point])\nWhat is the default value of reference_point? (2023 Board)",
     "options": [
-      "0",
-      "1",
       "2",
+      "1",
+      "0",
       "3"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Default reference_point is 0 (beginning of file). 1 = current position, 2 = end of file.",
     "whyWrong": [
-      "1 means current file position.",
+      "3 is not a valid reference_point value.",
       "2 means end of file.",
-      "3 is not a valid reference_point value."
+      "1 means current file position.",
+      ""
     ],
     "priority": 2
   },
@@ -1510,17 +1541,18 @@
     "difficulty": "easy",
     "text": "Fill in the blank: _____ clause is used with SELECT statement to display data in a sorted form with respect to a specified column. (2023 Board)",
     "options": [
-      "WHERE",
       "ORDER BY",
+      "DISTINCT",
       "HAVING",
-      "DISTINCT"
+      "WHERE"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "ORDER BY sorts the result set in ascending or descending order based on one or more columns.",
     "whyWrong": [
-      "WHERE filters rows before grouping.",
       "HAVING filters groups after GROUP BY.",
-      "DISTINCT removes duplicate rows but does not sort."
+      "",
+      "DISTINCT removes duplicate rows but does not sort.",
+      "WHERE filters rows before grouping."
     ],
     "priority": 1
   },
@@ -1532,16 +1564,17 @@
     "text": "Fill in the blank: _____ is used for point-to-point communication or unicast communication such as radar and satellite. (2023 Board)",
     "options": [
       "INFRARED WAVES",
-      "BLUETOOTH",
+      "RADIOWAVES",
       "MICROWAVES",
-      "RADIOWAVES"
+      "BLUETOOTH"
     ],
     "correct": 2,
     "explanation": "Microwaves are used for point-to-point (unicast) communication over long distances, including satellite links and radar systems.",
     "whyWrong": [
       "Infrared is short-range line-of-sight.",
-      "Bluetooth is short-range personal area networks.",
-      "Radiowaves are used for broadcast (one-to-many) communication."
+      "",
+      "Radiowaves are used for broadcast (one-to-many) communication.",
+      "Bluetooth is short-range personal area networks."
     ],
     "priority": 2
   },
@@ -1552,14 +1585,16 @@
     "difficulty": "medium",
     "text": "What will the following expression be evaluated to in Python?\nprint(4+3*5/3-5%2)\n(2023 Board)",
     "options": [
-      "8.5",
-      "8.0",
+      "10.0",
       "10.2",
-      "10.0"
+      "8.5",
+      "8.0"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Using operator precedence (left to right for *, /, %): 3*5=15, 15/3=5.0, 5%2=1; then 4+5.0-1 = 8.0. Result is float due to / operator.",
     "whyWrong": [
+      "",
+      "",
       "8.5: incorrect arithmetic.",
       "10.2 and 10.0: incorrect arithmetic."
     ],
@@ -1572,17 +1607,18 @@
     "difficulty": "easy",
     "text": "Which function returns the sum of all elements of a list? (2023 Board)",
     "options": [
-      "count()",
-      "sum()",
       "total()",
-      "add()"
+      "count()",
+      "add()",
+      "sum()"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "sum(list) is Python's built-in function that returns the sum of all elements in an iterable.",
     "whyWrong": [
+      "add() is not a Python list function.",
       "count() counts occurrences of a value.",
-      "total() is not a Python built-in.",
-      "add() is not a Python list function."
+      "",
+      "total() is not a Python built-in."
     ],
     "priority": 1
   },
@@ -1593,15 +1629,18 @@
     "difficulty": "easy",
     "text": "fetchall() method fetches all rows in a result set and returns a: (2023 Board)",
     "options": [
-      "Tuple of lists",
-      "List of tuples",
       "List of strings",
+      "List of tuples",
+      "Tuple of lists",
       "Tuple of strings"
     ],
     "correct": 1,
     "explanation": "fetchall() returns a list of tuples, where each tuple represents one row from the query result.",
     "whyWrong": [
-      "Tuple of lists and List/Tuple of strings are not the correct return type of fetchall()."
+      "",
+      "",
+      "Tuple of lists and List/Tuple of strings are not the correct return type of fetchall().",
+      ""
     ],
     "priority": 2
   },

@@ -5,12 +5,12 @@
     "difficulty": "medium",
     "text": "A screw gauge has a pitch of 2 mm and 100 divisions on its circular scale. Its least count is:",
     "options": [
-      "0.002 mm",
       "0.02 mm",
       "0.1 mm",
-      "0.01 mm"
+      "0.01 mm",
+      "0.002 mm"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Least count = pitch ÷ number of divisions = 2 mm ÷ 100 = 0.02 mm.",
     "source": "School Practice AE 2022-23"
   },
@@ -21,11 +21,11 @@
     "text": "Which of the following is NOT a unit of time?",
     "options": [
       "Leap year",
+      "Year",
       "Light year",
-      "Lunar month",
-      "Year"
+      "Lunar month"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A light year is the distance light travels in one year, so it is a unit of distance, not time.",
     "source": "School Practice AE 2023-24"
   },
@@ -51,11 +51,11 @@
     "text": "Which of the following units is NOT a fundamental (base) unit?",
     "options": [
       "Metre",
-      "Kilogram",
       "Second",
-      "Joule"
+      "Joule",
+      "Kilogram"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "The joule (unit of energy) is a derived unit (kg·m²/s²); kilogram, metre and second are base SI units.",
     "source": "School Practice T1 2024-25"
   },
@@ -65,12 +65,12 @@
     "difficulty": "medium",
     "text": "Which arrangement correctly orders the metric prefixes milli, centi, kilo and mega by increasing value?",
     "options": [
-      "milli, centi, kilo, mega",
-      "centi, milli, mega, kilo",
       "kilo, milli, mega, centi",
-      "mega, kilo, centi, milli"
+      "milli, centi, kilo, mega",
+      "mega, kilo, centi, milli",
+      "centi, milli, mega, kilo"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "In increasing order of value: milli (10⁻³) < centi (10⁻²) < kilo (10³) < mega (10⁶).",
     "source": "School Practice T1 2024-25"
   },
@@ -95,12 +95,12 @@
     "difficulty": "easy",
     "text": "A student wants to express the height of Mount Everest correctly. Which of the following is the correct way to write it?",
     "options": [
-      "8849 Metres",
-      "8849 M",
       "8849 ms",
-      "8849 m"
+      "8849 m",
+      "8849 Metres",
+      "8849 M"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "SI unit symbols are written in lower-case without a full stop and without pluralising; 'm' is the correct symbol for metre.",
     "source": "School Practice T1 2023-24"
   },
@@ -125,12 +125,12 @@
     "difficulty": "medium",
     "text": "How can the least count of a vernier calliper be decreased (made more precise)?",
     "options": [
+      "By decreasing the number of divisions on the vernier scale",
       "By reducing the length of the vernier scale only",
-      "By increasing the number of divisions marked on the vernier scale",
       "By using a longer main scale",
-      "By decreasing the number of divisions on the vernier scale"
+      "By increasing the number of divisions marked on the vernier scale"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Least count = 1 main scale division ÷ number of vernier scale divisions, so increasing the number of vernier divisions reduces the least count.",
     "source": "School Practice AE 2023-24"
   },
@@ -155,10 +155,10 @@
     "difficulty": "medium",
     "text": "A screw gauge can give a wrong (zero error) reading mainly due to:",
     "options": [
-      "The pitch being too small",
       "The head scale having too many divisions",
+      "The screw being made of steel",
       "The circular scale not showing a true zero when the jaws/stud are in contact without any object",
-      "The screw being made of steel"
+      "The pitch being too small"
     ],
     "correct": 2,
     "explanation": "If the zero of the circular scale does not coincide with the reference line when the screw faces are just touching, the gauge has a zero error that must be corrected in every reading.",
@@ -170,9 +170,9 @@
     "difficulty": "easy",
     "text": "Which of these is the biggest measurement of time?",
     "options": [
-      "2 microseconds",
       "1 mean solar day",
       "1 nanosecond",
+      "2 microseconds",
       "1 year"
     ],
     "correct": 3,
@@ -185,12 +185,12 @@
     "difficulty": "easy",
     "text": "The distance travelled by a screw along its axis in one complete rotation of its head is called its:",
     "options": [
-      "Pitch",
-      "Zero error",
       "Range",
-      "Least count"
+      "Least count",
+      "Zero error",
+      "Pitch"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "This distance, by definition, is the pitch of the screw gauge.",
     "source": "School Practice T1 2024-25"
   },
@@ -201,9 +201,9 @@
     "text": "The least count of a screw gauge is calculated using the formula:",
     "options": [
       "Least count = Pitch ÷ Number of divisions on the circular scale",
-      "Least count = Number of divisions ÷ Pitch",
       "Least count = Pitch × Number of divisions on the circular scale",
-      "Least count = Pitch + Number of divisions"
+      "Least count = Pitch + Number of divisions",
+      "Least count = Number of divisions ÷ Pitch"
     ],
     "correct": 0,
     "explanation": "Least count of a screw gauge equals its pitch divided by the number of divisions on its circular (head) scale.",
@@ -215,12 +215,12 @@
     "difficulty": "easy",
     "text": "A smaller least count of a measuring instrument means that the instrument:",
     "options": [
-      "Has a larger pitch",
-      "Cannot be used for small objects",
       "Is less precise",
-      "Can measure with greater precision"
+      "Can measure with greater precision",
+      "Cannot be used for small objects",
+      "Has a larger pitch"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "A smaller least count means the instrument can resolve smaller differences in length, i.e. it is more precise.",
     "source": "School Practice T1 2024-25"
   },
@@ -230,12 +230,12 @@
     "difficulty": "medium",
     "text": "A body starts from rest and covers 150 m in 5 s with uniform acceleration. Its acceleration is:",
     "options": [
-      "24 m/s²",
       "12 m/s²",
-      "6 m/s²",
-      "30 m/s²"
+      "30 m/s²",
+      "24 m/s²",
+      "6 m/s²"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Using s = ut + ½at² with u = 0: 150 = ½ × a × 5² = 12.5a, so a = 12 m/s².",
     "source": "School Practice AE 2022-23"
   },
@@ -246,8 +246,8 @@
     "text": "1 newton is equal to how many dyne?",
     "options": [
       "100000 dyne",
-      "1000 dyne",
       "1000000 dyne",
+      "1000 dyne",
       "10000000 dyne"
     ],
     "correct": 0,
@@ -261,11 +261,11 @@
     "text": "A column of mercury 5 mm high exerts what pressure? (Density of Hg = 13.6 × 10³ kg/m³, g = 9.8 m/s²)",
     "options": [
       "6.664 Pa",
+      "6664 Pa",
       "66.64 Pa",
-      "666.4 Pa",
-      "6664 Pa"
+      "666.4 Pa"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "P = ρgh = 13.6×10³ × 9.8 × 0.005 = 666.4 Pa.",
     "source": "School Practice T1 2021-22"
   },
@@ -275,12 +275,12 @@
     "difficulty": "easy",
     "text": "The time period (T) and frequency (f) of an oscillating simple pendulum are related by:",
     "options": [
-      "T = 2f",
-      "T = f",
+      "T = 1/f",
       "T = f²",
-      "T = 1/f"
+      "T = f",
+      "T = 2f"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Frequency is the number of oscillations per second, which is the reciprocal of the time taken for one oscillation (the time period).",
     "source": "School Practice AE 2023-24"
   },
@@ -305,12 +305,12 @@
     "difficulty": "easy",
     "text": "Two simple pendulums of the same effective length have bobs of different masses. If one has time period 0.3 s, the time period of the other (different mass, same length) is:",
     "options": [
-      "Less than 0.3 s",
-      "0.3 s — unchanged, since time period does not depend on mass",
+      "Cannot be determined",
       "Greater than 0.3 s",
-      "Cannot be determined"
+      "Less than 0.3 s",
+      "0.3 s — unchanged, since time period does not depend on mass"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The time period of a simple pendulum, T = 2π√(l/g), depends only on its effective length and g, not on the mass of the bob.",
     "source": "School Practice AE 2023-24"
   },
@@ -320,12 +320,12 @@
     "difficulty": "medium",
     "text": "A man covers two equal distances of a journey at speeds of 15 km/h and 30 km/h respectively. His average speed for the whole journey is:",
     "options": [
-      "25 km/h",
-      "15 km/h",
       "22.5 km/h",
-      "20 km/h"
+      "20 km/h",
+      "25 km/h",
+      "15 km/h"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "For equal distances, average speed = 2v₁v₂/(v₁+v₂) = 2×15×30/45 = 20 km/h.",
     "source": "School Practice AE 2023-24"
   },
@@ -335,12 +335,12 @@
     "difficulty": "easy",
     "text": "The effective length of a seconds pendulum (time period 2 s) on Earth is approximately:",
     "options": [
-      "1 m",
-      "2 m",
       "10 m",
-      "0.5 m"
+      "1 m",
+      "0.5 m",
+      "2 m"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Using T = 2π√(l/g) with T = 2 s and g = 9.8 m/s² gives l ≈ 0.993 m, approximately 1 metre.",
     "source": "School Practice AE 2023-24"
   },
@@ -350,12 +350,12 @@
     "difficulty": "easy",
     "text": "The time period of a simple pendulum chiefly depends on its:",
     "options": [
-      "Material of the bob",
-      "Colour of the bob",
       "Effective length",
-      "Mass of the bob"
+      "Mass of the bob",
+      "Colour of the bob",
+      "Material of the bob"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "T = 2π√(l/g); the time period depends on the effective length (and g), not on the mass, material or colour of the bob.",
     "source": "School Practice AE 2023-24"
   },
@@ -365,9 +365,9 @@
     "difficulty": "medium",
     "text": "The time period of a seconds pendulum is 2 s. The time it takes for its bob to move from one extreme position to the other extreme is:",
     "options": [
-      "2 s",
-      "1 s",
       "0.5 s",
+      "1 s",
+      "2 s",
       "4 s"
     ],
     "correct": 1,
@@ -380,12 +380,12 @@
     "difficulty": "medium",
     "text": "A pendulum bob takes 0.25 s to move from its mean position to one extreme end. What is the time period of the pendulum?",
     "options": [
-      "0.5 s",
-      "0.25 s",
+      "1 s",
       "2 s",
-      "1 s"
+      "0.5 s",
+      "0.25 s"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Moving from mean position to one extreme is a quarter of an oscillation (T/4), so T = 4 × 0.25 = 1 s.",
     "source": "School Practice AE 2020-21"
   },
@@ -396,9 +396,9 @@
     "text": "The relative density (R.D.) of a body is stated as 3. This means:",
     "options": [
       "The density of the body is 3 times the density of water",
-      "The body has 3 times the mass of water of the same volume and only that",
+      "The volume of the body is 3 cm³",
       "The body weighs 3 g",
-      "The volume of the body is 3 cm³"
+      "The body has 3 times the mass of water of the same volume and only that"
     ],
     "correct": 0,
     "explanation": "Relative density = density of substance ÷ density of water, so R.D. = 3 means the body is 3 times as dense as water.",
@@ -410,9 +410,9 @@
     "difficulty": "medium",
     "text": "A body has a relative density of 3. Its density expressed in SI units is:",
     "options": [
-      "300 kg/m³",
       "30000 kg/m³",
       "3 kg/m³",
+      "300 kg/m³",
       "3000 kg/m³"
     ],
     "correct": 3,
@@ -425,12 +425,12 @@
     "difficulty": "easy",
     "text": "The density of a substance is 7800 kg/m³. Its density expressed in g/cm³ is:",
     "options": [
-      "78 g/cm³",
       "7.8 g/cm³",
+      "78 g/cm³",
       "0.78 g/cm³",
       "780 g/cm³"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "To convert kg/m³ to g/cm³, divide by 1000: 7800 ÷ 1000 = 7.8 g/cm³.",
     "source": "School Practice T1 2021-22"
   },
@@ -442,8 +442,8 @@
     "options": [
       "78",
       "7.8",
-      "0.78",
-      "780"
+      "780",
+      "0.78"
     ],
     "correct": 1,
     "explanation": "Relative density equals the density expressed in g/cm³ when compared to water (1 g/cm³), so R.D. = 7.8.",
@@ -455,12 +455,12 @@
     "difficulty": "medium",
     "text": "A second's pendulum (T = 2 s) makes how many complete oscillations in 25 seconds?",
     "options": [
-      "12",
-      "12.5",
+      "50",
       "25",
-      "50"
+      "12",
+      "12.5"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Number of oscillations = total time ÷ time period = 25 ÷ 2 = 12.5.",
     "source": "School Practice AE 2024-25"
   },
@@ -470,10 +470,10 @@
     "difficulty": "medium",
     "text": "Pendulum A is on Earth and pendulum B (of equal effective length) is at a place where g is one-fourth that on Earth. The ratio of their time periods, T(A) : T(B), is:",
     "options": [
-      "2 : 1",
-      "1 : 2",
       "1 : 4",
-      "4 : 1"
+      "1 : 2",
+      "4 : 1",
+      "2 : 1"
     ],
     "correct": 1,
     "explanation": "T ∝ 1/√g, so T(A)/T(B) = √(g(B)/g(A)) = √(1/4) = 1/2, giving the ratio 1:2.",
@@ -485,9 +485,9 @@
     "difficulty": "easy",
     "text": "The slope of a distance-time graph represents the:",
     "options": [
-      "Acceleration of the body",
-      "Speed of the body",
       "Displacement of the body",
+      "Speed of the body",
+      "Acceleration of the body",
       "Force on the body"
     ],
     "correct": 1,
@@ -500,10 +500,10 @@
     "difficulty": "medium",
     "text": "20 ms⁻¹ is equal to:",
     "options": [
-      "55 km/h",
+      "5.5 km/h",
       "72 km/h",
-      "7.2 km/h",
-      "5.5 km/h"
+      "55 km/h",
+      "7.2 km/h"
     ],
     "correct": 1,
     "explanation": "To convert m/s to km/h, multiply by 3.6: 20 × 3.6 = 72 km/h.",
@@ -530,12 +530,12 @@
     "difficulty": "medium",
     "text": "If a body returns to its starting point after travelling along a path, its displacement at that moment is:",
     "options": [
-      "Zero",
+      "Cannot be determined",
       "Negative of the distance travelled",
       "Equal to the total distance travelled",
-      "Cannot be determined"
+      "Zero"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Displacement is the straight-line distance from the starting point to the final position; if the body is back at its starting point, this is zero, even though the distance travelled is not zero.",
     "source": "School Practice AE 2020-21"
   },
@@ -546,11 +546,11 @@
     "text": "Velocity is defined as the:",
     "options": [
       "Rate of change of distance",
+      "Rate of change of displacement",
       "Product of mass and speed",
-      "Rate of change of acceleration",
-      "Rate of change of displacement"
+      "Rate of change of acceleration"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Velocity is the rate of change of displacement with time; it is a vector quantity.",
     "source": "School Practice T1 2021-22"
   },
@@ -560,12 +560,12 @@
     "difficulty": "medium",
     "text": "The magnitude of velocity equals the magnitude of speed of a body when:",
     "options": [
-      "They are never equal",
       "The body is accelerating",
+      "The body moves along a straight line without changing direction",
       "The body moves in a circle",
-      "The body moves along a straight line without changing direction"
+      "They are never equal"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "When a body moves in a fixed direction along a straight line, distance equals the magnitude of displacement, so speed equals the magnitude of velocity.",
     "source": "School Practice T1 2021-22"
   },
@@ -575,12 +575,12 @@
     "difficulty": "medium",
     "text": "A body initially moving with velocity u undergoes uniform acceleration a and reaches velocity v. The displacement S during this time is given by:",
     "options": [
-      "S = (v + u)a",
-      "S = (v² − u²)/2a",
+      "S = (v − u)/a",
       "S = v²/2a",
-      "S = (v − u)/a"
+      "S = (v + u)a",
+      "S = (v² − u²)/2a"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "From the third equation of motion v² = u² + 2aS, rearranging gives S = (v² − u²)/2a.",
     "source": "School Practice T1 2021-22"
   },
@@ -606,9 +606,9 @@
     "text": "A car moving with some initial velocity is retarded at a rate of 3 m/s². After 3 s of retardation, its velocity is 6 m/s. The initial velocity was:",
     "options": [
       "15 m/s",
-      "9 m/s",
       "12 m/s",
-      "18 m/s"
+      "18 m/s",
+      "9 m/s"
     ],
     "correct": 0,
     "explanation": "v = u − at ⟹ 6 = u − (3×3) = u − 9, so u = 15 m/s.",
@@ -620,12 +620,12 @@
     "difficulty": "medium",
     "text": "A body starts from rest and, with uniform acceleration, travels 32 m in 4 s. Its velocity 15 s after the start is:",
     "options": [
+      "30 m/s",
       "60 m/s",
       "45 m/s",
-      "75 m/s",
-      "30 m/s"
+      "75 m/s"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "From s = ½at²: 32 = ½ × a × 16, so a = 4 m/s². Then v = u + at = 0 + 4 × 15 = 60 m/s.",
     "source": "School Practice T1 2021-22"
   },
@@ -635,12 +635,12 @@
     "difficulty": "easy",
     "text": "A truck moves 4 km due east and then 3 km due west. The distance covered and the net displacement are respectively:",
     "options": [
-      "7 km and 1 km east",
       "7 km and 7 km east",
+      "7 km and 1 km east",
       "1 km and 1 km east",
       "1 km and 7 km east"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Total distance = 4 + 3 = 7 km. Net displacement = 4 km east − 3 km west = 1 km east.",
     "source": "School Practice UT1 2022-23"
   },
@@ -650,12 +650,12 @@
     "difficulty": "medium",
     "text": "A truck moving at 54 km/h stops in 5 s after brakes are applied (assume constant retardation). Its retardation is:",
     "options": [
-      "3 m/s²",
-      "2 m/s²",
       "5 m/s²",
+      "2 m/s²",
+      "3 m/s²",
       "4 m/s²"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "54 km/h = 15 m/s. Retardation = (15 − 0)/5 = 3 m/s².",
     "source": "School Practice UT1 2022-23"
   },
@@ -665,12 +665,12 @@
     "difficulty": "medium",
     "text": "A truck moving at 54 km/h (= 15 m/s) stops in 5 s under constant retardation. The distance covered while braking is:",
     "options": [
-      "15 m",
       "37.5 m",
+      "75 m",
       "7.5 m",
-      "75 m"
+      "15 m"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Distance = area under v-t graph = ½ × 15 m/s × 5 s = 37.5 m.",
     "source": "School Practice UT1 2022-23"
   },
@@ -680,12 +680,12 @@
     "difficulty": "medium",
     "text": "A jogger moves 500 m in 2 minutes, then 1000 m in the next 30 s along the same straight path, in the same direction. The jogger's average speed for the whole journey is:",
     "options": [
-      "10 m/s",
-      "15 m/s",
       "7.5 m/s",
-      "12.5 m/s"
+      "10 m/s",
+      "12.5 m/s",
+      "15 m/s"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Total distance = 500 + 1000 = 1500 m. Total time = 120 + 30 = 150 s. Average speed = 1500/150 = 10 m/s.",
     "source": "School Practice UT1 2022-23"
   },
@@ -695,12 +695,12 @@
     "difficulty": "easy",
     "text": "Distance is a scalar quantity, while displacement is a:",
     "options": [
-      "Vector quantity",
       "Dimensionless quantity",
       "Fundamental quantity",
+      "Vector quantity",
       "Scalar quantity"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Distance has magnitude only (scalar); displacement has both magnitude and direction, making it a vector quantity.",
     "source": "School Practice T1 2021-22"
   },
@@ -710,12 +710,12 @@
     "difficulty": "easy",
     "text": "Acceleration is a:",
     "options": [
-      "Dimensionless quantity",
       "Vector quantity",
-      "Scalar quantity",
-      "Fundamental quantity"
+      "Dimensionless quantity",
+      "Fundamental quantity",
+      "Scalar quantity"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Acceleration has both magnitude and direction, so it is a vector quantity.",
     "source": "School Practice T1 2021-22"
   },
@@ -725,12 +725,12 @@
     "difficulty": "easy",
     "text": "Acceleration due to gravity (g) at a place, for freely falling bodies:",
     "options": [
-      "Is directly proportional to the mass of the body",
-      "Increases with mass",
       "Is inversely proportional to the mass of the body",
-      "Is independent of the mass of the falling body"
+      "Is directly proportional to the mass of the body",
+      "Is independent of the mass of the falling body",
+      "Increases with mass"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "g = GM/R² depends on the mass and radius of the planet, not on the mass of the falling body, so all bodies fall with the same acceleration (ignoring air resistance).",
     "source": "School Practice T1 2021-22"
   },
@@ -740,12 +740,12 @@
     "difficulty": "easy",
     "text": "A car travels from town A to town B, 200 km apart, in 3 hours, and returns from B to A in 2 hours. Which statement is correct?",
     "options": [
-      "Average speed is 40 km/h and average velocity is 0",
-      "Average speed is 60 km/h and average velocity is 0",
       "Average speed is 50 km/h and average velocity is 0",
-      "Average speed is 80 km/h and average velocity is 0"
+      "Average speed is 80 km/h and average velocity is 0",
+      "Average speed is 60 km/h and average velocity is 0",
+      "Average speed is 40 km/h and average velocity is 0"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Average speed = total distance/total time = 400/5 = 80 km/h. Since the car returns to its starting point, net displacement = 0, so average velocity = 0.",
     "source": "School Practice T1 2023-24"
   },
@@ -755,12 +755,12 @@
     "difficulty": "medium",
     "text": "Anand leaves home at 8:30 a.m. for school, 2 km away, and classes start at 9:00 a.m. If he walks the first kilometre at 3 km/h, at what speed must he walk the second kilometre to reach exactly on time?",
     "options": [
-      "8 km/h",
-      "6 km/h",
+      "5 km/h",
       "4 km/h",
-      "5 km/h"
+      "8 km/h",
+      "6 km/h"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Total time available = 30 min = 0.5 h. First km at 3 km/h takes 1/3 h (20 min), leaving 10 min (1/6 h) for the second km, so required speed = 1 ÷ (1/6) = 6 km/h.",
     "source": "School Practice AE 2020-21"
   },
@@ -770,12 +770,12 @@
     "difficulty": "medium",
     "text": "An object dropped from a cliff falls with constant acceleration of 10 m/s². Its speed 5 s after being dropped is:",
     "options": [
-      "100 m/s",
-      "50 m/s",
       "40 m/s",
-      "25 m/s"
+      "25 m/s",
+      "50 m/s",
+      "100 m/s"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "v = u + at = 0 + 10 × 5 = 50 m/s.",
     "source": "School Practice AE 2020-21"
   },
@@ -785,12 +785,12 @@
     "difficulty": "medium",
     "text": "A body is dropped from a height and takes 7 s to reach the ground (g = 10 m/s²). The height from which it was dropped is:",
     "options": [
-      "70 m",
+      "245 m",
       "350 m",
-      "120 m",
-      "245 m"
+      "70 m",
+      "120 m"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "h = ½gt² = ½ × 10 × 7² = ½ × 10 × 49 = 245 m.",
     "source": "School Practice AE 2023-24"
   },
@@ -800,12 +800,12 @@
     "difficulty": "medium",
     "text": "A stone is dropped freely into a river from a bridge and takes 2 s to touch the water (g = 10 m/s²). The height of the bridge above the water is:",
     "options": [
+      "10 m",
       "20 m",
       "40 m",
-      "10 m",
       "100 m"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "h = ½gt² = ½ × 10 × 2² = 20 m.",
     "source": "School Practice AE 2024-25"
   },
@@ -816,11 +816,11 @@
     "text": "A stone is dropped from a bridge 80 m above a river (g = 10 m/s²). The velocity with which it strikes the water is:",
     "options": [
       "60 m/s",
+      "40 m/s",
       "80 m/s",
-      "20 m/s",
-      "40 m/s"
+      "20 m/s"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "v² = u² + 2gh = 0 + 2×10×80 = 1600, so v = 40 m/s.",
     "source": "School Practice UT2 2024-25"
   },
@@ -830,12 +830,12 @@
     "difficulty": "medium",
     "text": "A stone is dropped from a bridge 80 m above a river (g = 10 m/s²). The time it takes to reach the water is:",
     "options": [
-      "6 s",
+      "4 s",
       "8 s",
       "2 s",
-      "4 s"
+      "6 s"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "h = ½gt² ⟹ 80 = ½×10×t² ⟹ t² = 16, so t = 4 s.",
     "source": "School Practice UT2 2024-25"
   },
@@ -845,12 +845,12 @@
     "difficulty": "medium",
     "text": "A car starts from rest and reaches a speed of 50 m/s in 30 s. Its acceleration is:",
     "options": [
-      "2 m/s²",
       "1.67 m/s²",
-      "0.6 m/s²",
-      "1.2 m/s²"
+      "1.2 m/s²",
+      "2 m/s²",
+      "0.6 m/s²"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "a = (v − u)/t = (50 − 0)/30 ≈ 1.67 m/s².",
     "source": "School Practice AE 2024-25"
   },
@@ -860,12 +860,12 @@
     "difficulty": "hard",
     "text": "A car starts from rest, reaches 50 m/s in 30 s, then travels at that speed for a further 20 s. The total distance travelled in 50 s is:",
     "options": [
+      "1000 m",
       "1750 m",
-      "1500 m",
       "2000 m",
-      "1000 m"
+      "1500 m"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Distance in acceleration phase = average velocity × time = 25 × 30 = 750 m. Distance at constant speed = 50 × 20 = 1000 m. Total = 750 + 1000 = 1750 m.",
     "source": "School Practice AE 2024-25"
   },
@@ -876,11 +876,11 @@
     "text": "A bullet hits a sandbox with a velocity of 20 m/s and penetrates 10 cm (0.1 m) before stopping. Its deceleration inside the sandbox is:",
     "options": [
       "1000 m/s²",
-      "200 m/s²",
       "4000 m/s²",
-      "2000 m/s²"
+      "2000 m/s²",
+      "200 m/s²"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Using v² = u² − 2as with v = 0: 0 = 20² − 2×a×0.1 ⟹ a = 400/0.2 = 2000 m/s².",
     "source": "School Practice AE 2023-24"
   },
@@ -890,12 +890,12 @@
     "difficulty": "medium",
     "text": "A car in a straight line, starting from a certain displacement-time table, shows displacement 0, 6, 12, 12, 12, 12, 20, 24 m at t = 0 to 7 s. During which time interval is the car's velocity maximum?",
     "options": [
-      "3 s to 4 s",
-      "5 s to 6 s",
+      "0 s to 1 s",
       "2 s to 3 s",
-      "0 s to 1 s"
+      "5 s to 6 s",
+      "3 s to 4 s"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Velocity in each 1 s interval: 6, 6, 0, 0, 0, 8, 4 m/s. The maximum velocity (8 m/s) occurs between 5 s and 6 s.",
     "source": "School Practice T1 2024-25"
   },
@@ -920,12 +920,12 @@
     "difficulty": "easy",
     "text": "A sound of frequency 5 Hz is classified as:",
     "options": [
-      "Ultrasonic",
-      "Supersonic",
+      "Audible to normal human ears",
       "Infrasonic (below the audible range)",
-      "Audible to normal human ears"
+      "Supersonic",
+      "Ultrasonic"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The audible range for humans is roughly 20 Hz to 20,000 Hz; 5 Hz is below this, so it is infrasonic.",
     "source": "School Practice T1 2024-25"
   },
@@ -935,12 +935,12 @@
     "difficulty": "easy",
     "text": "A sound of frequency 500 Hz is classified as:",
     "options": [
-      "Cannot be heard by humans",
-      "Infrasonic",
       "Ultrasonic only",
-      "Audible to normal human ears"
+      "Audible to normal human ears",
+      "Infrasonic",
+      "Cannot be heard by humans"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "500 Hz lies within the audible range for humans (20 Hz to 20,000 Hz).",
     "source": "School Practice T1 2024-25"
   },
@@ -980,12 +980,12 @@
     "difficulty": "medium",
     "text": "Rimi and Geeta set two balls of masses 3m and m into motion with velocities 2v and v respectively. Compare their inertia and momentum.",
     "options": [
-      "Inertia ratio 3:1, momentum ratio 6:1",
-      "Inertia ratio 1:3, momentum ratio 1:6",
       "Inertia ratio 3:1, momentum ratio 3:1",
-      "Inertia and momentum are both equal"
+      "Inertia ratio 3:1, momentum ratio 6:1",
+      "Inertia and momentum are both equal",
+      "Inertia ratio 1:3, momentum ratio 1:6"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Inertia depends on mass: 3m:m = 3:1. Momentum = mass×velocity: (3m×2v):(m×v) = 6mv:mv = 6:1.",
     "source": "School Practice T1 2023-24"
   },
@@ -995,9 +995,9 @@
     "difficulty": "easy",
     "text": "When a shot is fired from a gun, the gun recoils backward. This is explained by:",
     "options": [
-      "Archimedes' principle",
-      "The law of conservation of energy only",
       "Newton's first law of motion",
+      "The law of conservation of energy only",
+      "Archimedes' principle",
       "Newton's third law of motion (equal and opposite reaction)"
     ],
     "correct": 3,
@@ -1010,12 +1010,12 @@
     "difficulty": "easy",
     "text": "The inertia of a body depends on its:",
     "options": [
-      "Shape",
       "Mass",
-      "Volume",
-      "Weight"
+      "Shape",
+      "Weight",
+      "Volume"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Inertia is the tendency of a body to resist a change in its state of motion, and it depends only on the mass of the body.",
     "source": "School Practice T1 2021-22"
   },
@@ -1025,12 +1025,12 @@
     "difficulty": "medium",
     "text": "A ball of mass 100 g rolling at 10 m/s is slowed by friction to 2 m/s in 2 s. The change in momentum of the ball is:",
     "options": [
-      "0.8 kg·m/s",
-      "0.4 kg·m/s",
       "0.2 kg·m/s",
-      "1.2 kg·m/s"
+      "1.2 kg·m/s",
+      "0.4 kg·m/s",
+      "0.8 kg·m/s"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Change in momentum = m × Δv = 0.1 kg × (10 − 2) m/s = 0.1 × 8 = 0.8 kg·m/s.",
     "source": "School Practice T1 2021-22"
   },
@@ -1040,12 +1040,12 @@
     "difficulty": "medium",
     "text": "A ball of mass 100 g rolling at 10 m/s is slowed by friction to 2 m/s in 2 s. The magnitude of the frictional force is:",
     "options": [
-      "0.2 N",
-      "1.6 N",
       "0.4 N",
-      "0.8 N"
+      "0.8 N",
+      "1.6 N",
+      "0.2 N"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Force = change in momentum / time = 0.8 kg·m/s ÷ 2 s = 0.4 N.",
     "source": "School Practice T1 2021-22"
   },
@@ -1056,11 +1056,11 @@
     "text": "The two main kinds of inertia are:",
     "options": [
       "Inertia of mass and inertia of weight",
+      "Inertia of force and inertia of energy",
       "Inertia of speed and inertia of time",
-      "Inertia of rest and inertia of motion",
-      "Inertia of force and inertia of energy"
+      "Inertia of rest and inertia of motion"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "A body at rest tends to stay at rest (inertia of rest) and a moving body tends to keep moving uniformly (inertia of motion); inertia of direction is sometimes listed as a third kind.",
     "source": "School Practice T1 2023-24"
   },
@@ -1085,12 +1085,12 @@
     "difficulty": "medium",
     "text": "When a person walks forward on a boat floating in still water, the boat tends to:",
     "options": [
-      "Move forward with the person",
       "Remain exactly still",
-      "Move backward (opposite to the direction the person walks)",
-      "Capsize immediately"
+      "Capsize immediately",
+      "Move forward with the person",
+      "Move backward (opposite to the direction the person walks)"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "By Newton's third law (and conservation of momentum), as the person pushes backward on the boat to move forward, the boat is pushed in the opposite direction.",
     "source": "School Practice AE 2024-25"
   },
@@ -1101,11 +1101,11 @@
     "text": "On striking the bottom coin of a pile of carrom coins sharply with a striker, only the bottom coin moves away while the rest of the pile stays almost in place. This is because:",
     "options": [
       "The striker only touches the bottom coin and nothing else happens physically",
-      "Of the inertia of rest of the upper coins — the short impact time is not enough to set them in motion",
+      "The upper coins are glued together",
       "Friction increases suddenly",
-      "The upper coins are glued together"
+      "Of the inertia of rest of the upper coins — the short impact time is not enough to set them in motion"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The force acts for a very short time only on the bottom coin; the inertia of rest of the coins above means they do not have time to move before the bottom coin is gone.",
     "source": "School Practice T1 2021-22"
   },
@@ -1115,12 +1115,12 @@
     "difficulty": "medium",
     "text": "Two equal and opposite forces act along the same line on a body moving at a certain velocity. The effect on the body's motion is:",
     "options": [
-      "No change — it continues moving with the same velocity, since the net force is zero",
-      "It reverses direction",
       "It stops immediately",
-      "It accelerates"
+      "It accelerates",
+      "No change — it continues moving with the same velocity, since the net force is zero",
+      "It reverses direction"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Since the two forces are equal and opposite, the net force is zero, so by Newton's first law the body continues with unchanged velocity.",
     "source": "School Practice T1 2021-22"
   },
@@ -1130,12 +1130,12 @@
     "difficulty": "medium",
     "text": "People often shake the branches of a tree to make its fruits fall down. This happens because of:",
     "options": [
-      "Air resistance on the fruits",
-      "The inertia of rest of the fruits, while the shaken branch moves suddenly",
+      "The fruits being too heavy",
       "Gravity suddenly increasing",
-      "The fruits being too heavy"
+      "The inertia of rest of the fruits, while the shaken branch moves suddenly",
+      "Air resistance on the fruits"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The branch is suddenly set in motion, but the fruits tend to remain at rest (inertia of rest) and so get separated and fall.",
     "source": "School Practice AE 2023-24"
   },
@@ -1145,12 +1145,12 @@
     "difficulty": "medium",
     "text": "A cricketer moves his hands backward while catching a fast-moving ball. This is done to:",
     "options": [
-      "Increase the ball's momentum",
+      "Increase the force on the ball",
       "Decrease the time of impact",
-      "Increase the time of impact, thereby reducing the force on the hands",
-      "Increase the force on the ball"
+      "Increase the ball's momentum",
+      "Increase the time of impact, thereby reducing the force on the hands"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Force = (change in momentum)/time. By increasing the time over which the ball's momentum changes to zero, the cricketer reduces the force experienced.",
     "source": "School Practice AE 2023-24"
   },
@@ -1175,12 +1175,12 @@
     "difficulty": "medium",
     "text": "A glass vessel breaks when it falls on a hard floor but does not break when it falls on a carpet from the same height. This is because:",
     "options": [
-      "The hard floor is heavier than the carpet",
-      "The carpet absorbs the vessel's weight",
+      "Gravity is less near a carpet",
       "The carpet increases the time of impact, reducing the force on the vessel",
-      "Gravity is less near a carpet"
+      "The carpet absorbs the vessel's weight",
+      "The hard floor is heavier than the carpet"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The carpet yields and increases the time taken for the vessel's momentum to become zero, reducing the force (force = change in momentum/time) compared to the sudden stop on a hard floor.",
     "source": "School Practice T1 2021-22"
   },
@@ -1190,12 +1190,12 @@
     "difficulty": "medium",
     "text": "When a running car stops suddenly, a passenger tends to be thrown forward. This is because of:",
     "options": [
-      "The passenger's inertia of motion, which tends to keep them moving forward",
       "The car's acceleration pushing them forward",
-      "Friction between the seat and passenger",
-      "The passenger's inertia of rest"
+      "The passenger's inertia of motion, which tends to keep them moving forward",
+      "The passenger's inertia of rest",
+      "Friction between the seat and passenger"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The passenger's body tends to continue moving forward (inertia of motion) even as the car stops, until an external force (seatbelt, etc.) acts on them.",
     "source": "School Practice AE 2024-25"
   },
@@ -1205,12 +1205,12 @@
     "difficulty": "easy",
     "text": "An athlete running a race continues to run for some distance even after crossing the finishing line. This is due to:",
     "options": [
-      "Inertia of rest",
-      "A force pushing the athlete forward",
       "Inertia of motion",
-      "Reduced gravity"
+      "Inertia of rest",
+      "Reduced gravity",
+      "A force pushing the athlete forward"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "The athlete's body tends to continue in its state of motion (inertia of motion) even after crossing the line, until they consciously slow down.",
     "source": "School Practice AE 2023-24"
   },
@@ -1220,12 +1220,12 @@
     "difficulty": "medium",
     "text": "A coin resting on a card placed over a tumbler falls into the tumbler when the card is flicked away quickly. This happens because of:",
     "options": [
-      "The card pushes the coin down",
       "Air pressure forces the coin down",
       "The coin's inertia of rest — it does not move with the card in the short time the card is flicked away",
-      "The coin is attracted by the tumbler"
+      "The coin is attracted by the tumbler",
+      "The card pushes the coin down"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The card is removed so quickly that the coin (due to inertia of rest) does not move with it, and then falls under gravity into the tumbler.",
     "source": "School Practice AE 2023-24"
   },
@@ -1250,12 +1250,12 @@
     "difficulty": "medium",
     "text": "A mass of 2 kg accelerating at 5 m/s² and a mass of 6 kg accelerating at 2 m/s² — which situation needs the greater force?",
     "options": [
-      "The 6 kg mass at 2 m/s² (12 N)",
+      "Cannot be compared without more data",
       "The 2 kg mass at 5 m/s² (10 N)",
-      "They need the same force",
-      "Cannot be compared without more data"
+      "The 6 kg mass at 2 m/s² (12 N)",
+      "They need the same force"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "F = ma. For the first: F = 2×5 = 10 N. For the second: F = 6×2 = 12 N. The 6 kg mass at 2 m/s² needs the greater force (12 N).",
     "source": "School Practice AE 2020-21"
   },
@@ -1265,12 +1265,12 @@
     "difficulty": "medium",
     "text": "An object of mass 100 kg is uniformly accelerated from 5 m/s to 8 m/s in 6 s. The force exerted on the object is:",
     "options": [
-      "50 N",
+      "80 N",
       "30 N",
-      "100 N",
-      "80 N"
+      "50 N",
+      "100 N"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "a = (8−5)/6 = 0.5 m/s². F = ma = 100 × 0.5 = 50 N.",
     "source": "School Practice AE 2020-21"
   },
@@ -1280,9 +1280,9 @@
     "difficulty": "medium",
     "text": "If the mass of a bus is 2000 kg, the force required to accelerate it at 6 m/s² is:",
     "options": [
-      "333 N",
-      "6000 N",
       "3000 N",
+      "6000 N",
+      "333 N",
       "12000 N"
     ],
     "correct": 3,
@@ -1296,11 +1296,11 @@
     "text": "According to Newton's law of gravitation, the force F between two masses m₁ and m₂ separated by distance r is given by:",
     "options": [
       "F = G(m₁+m₂)/r²",
+      "F = Gm₁m₂r²",
       "F = Gm₁m₂/r",
-      "F = Gm₁m₂/r²",
-      "F = Gm₁m₂r²"
+      "F = Gm₁m₂/r²"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Newton's universal law of gravitation states F = Gm₁m₂/r², where G is the universal gravitational constant.",
     "source": "School Practice AE 2020-21"
   },
@@ -1310,9 +1310,9 @@
     "difficulty": "medium",
     "text": "If the distance between two masses triples, the gravitational force between them becomes:",
     "options": [
-      "Nine times as much",
-      "One-third as much",
       "Three times as much",
+      "One-third as much",
+      "Nine times as much",
       "One-ninth as much"
     ],
     "correct": 3,
@@ -1325,10 +1325,10 @@
     "difficulty": "medium",
     "text": "The gravitational attraction between two bodies at a certain separation is 100 N. If the separation is doubled, the new force is:",
     "options": [
-      "200 N",
       "12.5 N",
+      "50 N",
       "25 N",
-      "50 N"
+      "200 N"
     ],
     "correct": 2,
     "explanation": "F ∝ 1/r². Doubling r reduces F by a factor of 1/2² = 1/4, so new force = 100/4 = 25 N.",
@@ -1355,12 +1355,12 @@
     "difficulty": "medium",
     "text": "Two masses are separated by distance r and attract each other with force F. For the force to become 4F, the new separation should be:",
     "options": [
-      "2r",
       "r/2",
       "r/4",
-      "4r"
+      "4r",
+      "2r"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "F ∝ 1/r². For F to become 4F, r² must become r²/4, i.e. r must become r/2.",
     "source": "School Practice UT2 2024-25"
   },
@@ -1370,12 +1370,12 @@
     "difficulty": "medium",
     "text": "The mass of a body on Earth is 10 kg. On a planet where g = 25 m/s², its mass and weight are respectively:",
     "options": [
-      "2.5 kg and 25 N",
       "10 kg and 250 N",
       "10 kg and 98 N",
-      "25 kg and 250 N"
+      "25 kg and 250 N",
+      "2.5 kg and 25 N"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Mass is unchanged by location: 10 kg. Weight = mg = 10 × 25 = 250 N.",
     "source": "School Practice AE 2022-23"
   },
@@ -1385,12 +1385,12 @@
     "difficulty": "medium",
     "text": "Two balls of masses 3m and 6m move with velocities 4v and 2v respectively. The ratio of their momenta is:",
     "options": [
-      "2:1",
-      "1:4",
       "1:1",
-      "1:2"
+      "1:2",
+      "1:4",
+      "2:1"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "p₁ = 3m×4v = 12mv; p₂ = 6m×2v = 12mv. The ratio is 1:1.",
     "source": "School Practice AE 2024-25"
   },
@@ -1400,12 +1400,12 @@
     "difficulty": "hard",
     "text": "It takes a greater braking force to stop a truck than a motorcycle travelling at the same speed, in the same time. This is because:",
     "options": [
+      "Motorcycles travel faster",
       "Trucks have weaker brakes",
       "The truck has a much greater mass, so a larger force is needed to produce the same deceleration (F = ma)",
-      "There is no real difference needed",
-      "Motorcycles travel faster"
+      "There is no real difference needed"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "For the same deceleration a and the same time, F = ma; since the truck's mass is far greater, a much larger force is required.",
     "source": "School Practice UT2 2024-25"
   },
@@ -1415,12 +1415,12 @@
     "difficulty": "medium",
     "text": "A hydraulic jack has a smaller piston of area 40 cm² carrying a 500 N load, balancing a load on a larger piston. If the larger load is 2500 N, the area of the larger piston is:",
     "options": [
-      "100 cm²",
-      "150 cm²",
+      "250 cm²",
       "200 cm²",
-      "250 cm²"
+      "100 cm²",
+      "150 cm²"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "By Pascal's law, F₁/A₁ = F₂/A₂, so A₂ = A₁ × F₂/F₁ = 40 × 2500/500 = 200 cm².",
     "source": "School Practice T1 2021-22"
   },
@@ -1430,12 +1430,12 @@
     "difficulty": "medium",
     "text": "The larger piston of a hydraulic machine has area 4 m² and carries a load of 400 kgf. If the smaller piston has area 0.01 m², the force required on the smaller piston is:",
     "options": [
+      "0.5 kgf",
       "1 kgf",
       "4 kgf",
-      "10 kgf",
-      "0.5 kgf"
+      "10 kgf"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "By Pascal's law, F_small/A_small = F_large/A_large, so F_small = 400 × 0.01/4 = 1 kgf.",
     "source": "School Practice AE 2022-23"
   },
@@ -1445,12 +1445,12 @@
     "difficulty": "medium",
     "text": "In a hydraulic jack, the ratio of the cross-sectional areas of the smaller to larger piston (A₁:A₂) is 3:200. To lift a car of weight 400 kgf using this jack, the mass that should be placed on the smaller piston is:",
     "options": [
-      "12 kgf",
       "60 kgf",
       "6 kgf",
-      "3 kgf"
+      "3 kgf",
+      "12 kgf"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "By Pascal's law, F₁/A₁ = F₂/A₂, so F₁ = F₂ × (A₁/A₂) = 400 × (3/200) = 6 kgf.",
     "source": "School Practice AE 2023-24"
   },
@@ -1475,9 +1475,9 @@
     "difficulty": "medium",
     "text": "In a hydraulic machine, the pressures P₁ and P₂ due to the forces F₁ and F₂ on the two pistons of different areas are related as:",
     "options": [
+      "P₁ > P₂",
       "F₁ = F₂",
       "F₁ > F₂",
-      "P₁ > P₂",
       "P₁ = P₂"
     ],
     "correct": 3,
@@ -1490,10 +1490,10 @@
     "difficulty": "easy",
     "text": "According to Archimedes' principle, the upthrust on a body immersed in a fluid is equal to:",
     "options": [
-      "The weight of the whole fluid in the container",
+      "The weight of the body",
       "The weight of fluid displaced by the submerged part of the body",
       "The volume of the submerged part",
-      "The weight of the body"
+      "The weight of the whole fluid in the container"
     ],
     "correct": 1,
     "explanation": "Archimedes' principle: the upthrust (buoyant force) on a body equals the weight of the fluid displaced by the submerged part of the body.",
@@ -1505,12 +1505,12 @@
     "difficulty": "hard",
     "text": "A body floats partly submerged in liquid A (density ρ₁) and fully submerged (in equilibrium, floating) in liquid B (density ρ₂). The densities ρ₁ and ρ₂ are related as:",
     "options": [
-      "ρ₁ = ρ₂",
       "ρ₁ < ρ₂",
+      "ρ₁ > ρ₂",
       "Nothing can be said",
-      "ρ₁ > ρ₂"
+      "ρ₁ = ρ₂"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Partly submerged in A means the body's density is less than ρ₁. Fully submerged yet floating in equilibrium in B means the body's density equals ρ₂. So ρ₂ < ρ₁, i.e. ρ₁ > ρ₂.",
     "source": "School Practice AE 2022-23"
   },
@@ -1520,10 +1520,10 @@
     "difficulty": "medium",
     "text": "An object is placed, one at a time, in three liquids P, Q and R. In P it is completely submerged and floats in equilibrium; in Q it floats with 1/4 of its volume submerged; in R it floats with 1/2 of its volume submerged. The correct ascending order of the densities of P, Q and R is:",
     "options": [
-      "P < Q < R",
+      "R < Q < P",
       "P < R < Q",
-      "Q < R < P",
-      "R < Q < P"
+      "P < Q < R",
+      "Q < R < P"
     ],
     "correct": 1,
     "explanation": "If the object's density is ρ, then density of P = ρ (fully submerged floating), density of Q = ρ/0.25 = 4ρ, density of R = ρ/0.5 = 2ρ. So ascending order: P (ρ) < R (2ρ) < Q (4ρ).",
@@ -1535,12 +1535,12 @@
     "difficulty": "hard",
     "text": "A body of volume V and density ρ is kept completely immersed in a liquid of density ρ_L. If g is the acceleration due to gravity, which expression correctly gives the apparent weight of the body in the liquid?",
     "options": [
+      "V(ρ − ρ_L)g",
       "mg",
-      "Vρ_Lg",
       "Vρg",
-      "V(ρ − ρ_L)g"
+      "Vρ_Lg"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Apparent weight = true weight − upthrust = Vρg − Vρ_Lg = V(ρ − ρ_L)g.",
     "source": "School Practice AE 2024-25"
   },
@@ -1551,9 +1551,9 @@
     "text": "Which of the following values of atmospheric pressure is INCORRECT?",
     "options": [
       "760 cm Hg",
+      "760 torr",
       "1 atm",
-      "760 mm Hg",
-      "760 torr"
+      "760 mm Hg"
     ],
     "correct": 0,
     "explanation": "Standard atmospheric pressure equals 76 cm Hg (= 760 mm Hg = 760 torr = 1 atm), not 760 cm Hg.",
@@ -1565,12 +1565,12 @@
     "difficulty": "medium",
     "text": "A decrease in the barometric (mercury) height in a simple barometer is an indication of:",
     "options": [
-      "Decrease in the humidity of air",
-      "Coming of dry weather",
       "Increase in atmospheric pressure",
-      "Possibility of rain"
+      "Decrease in the humidity of air",
+      "Possibility of rain",
+      "Coming of dry weather"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "A fall in atmospheric pressure (shown by falling mercury level) typically indicates the approach of stormy or rainy weather.",
     "source": "School Practice AE 2023-24"
   },
@@ -1580,12 +1580,12 @@
     "difficulty": "medium",
     "text": "A gradual increase in the height of mercury in a barometer indicates:",
     "options": [
-      "The approach of fine, dry weather",
+      "A storm is coming",
       "The approach of rain",
-      "No change in weather",
-      "A storm is coming"
+      "The approach of fine, dry weather",
+      "No change in weather"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "A gradual rise in barometric height indicates rising atmospheric pressure, associated with fine, settled (dry) weather.",
     "source": "School Practice T1 2021-22"
   },
@@ -1596,11 +1596,11 @@
     "text": "According to Pascal's law:",
     "options": [
       "Pressure at two points at the same depth in a liquid can be different",
+      "Increasing the pressure at any point in a confined liquid increases the pressure at all other points equally",
       "Pressure at two points at different depths in a liquid is always the same",
-      "Pressure cannot change in a confined liquid",
-      "Increasing the pressure at any point in a confined liquid increases the pressure at all other points equally"
+      "Pressure cannot change in a confined liquid"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Pascal's law states that a change in pressure applied at any point of a confined liquid is transmitted equally and undiminished to every other point in the liquid.",
     "source": "School Practice AE 2023-24"
   },
@@ -1625,9 +1625,9 @@
     "difficulty": "hard",
     "text": "Water shows anomalous expansion in the temperature range:",
     "options": [
+      "4°C to 10°C",
       "10°C to 25°C",
       "−5°C to 0°C",
-      "4°C to 10°C",
       "4°C to 0°C"
     ],
     "correct": 3,
@@ -1641,11 +1641,11 @@
     "text": "A block of wood of mass 200 kg floats on water. The density of the wood is 0.8 g/cm³ (800 kg/m³). The total volume of the wooden block is:",
     "options": [
       "0.16 m³",
+      "0.25 m³",
       "0.4 m³",
-      "0.2 m³",
-      "0.25 m³"
+      "0.2 m³"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Volume = mass/density = 200/800 = 0.25 m³.",
     "source": "School Practice AE 2022-23"
   },
@@ -1655,12 +1655,12 @@
     "difficulty": "medium",
     "text": "A block of wood of mass 200 kg (density 800 kg/m³) floats on water. The volume of the block below the water surface is:",
     "options": [
-      "0.15 m³",
-      "0.1 m³",
+      "0.2 m³",
       "0.25 m³",
-      "0.2 m³"
+      "0.15 m³",
+      "0.1 m³"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "For a floating body, weight = upthrust, so (mass of body)×g = density of water × V(submerged) × g, giving V(submerged) = mass/density of water = 200/1000 = 0.2 m³.",
     "source": "School Practice AE 2022-23"
   },
@@ -1670,12 +1670,12 @@
     "difficulty": "medium",
     "text": "A block of solid floats on water with 3/5 of its volume above the water surface. The density of the solid is:",
     "options": [
-      "800 kg/m³",
       "600 kg/m³",
-      "200 kg/m³",
-      "400 kg/m³"
+      "800 kg/m³",
+      "400 kg/m³",
+      "200 kg/m³"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Fraction submerged = 1 − 3/5 = 2/5. Density of solid = fraction submerged × density of water = (2/5) × 1000 = 400 kg/m³.",
     "source": "School Practice T1 2021-22"
   },
@@ -1685,10 +1685,10 @@
     "difficulty": "medium",
     "text": "A hydraulic press plunger has a cross-sectional area of 12 m² and overcomes a resistive load of 600 kgf. The pump plunger has an area of 2 m². The force needed on the pump plunger is:",
     "options": [
+      "300 kgf",
       "200 kgf",
-      "50 kgf",
       "100 kgf",
-      "300 kgf"
+      "50 kgf"
     ],
     "correct": 2,
     "explanation": "By Pascal's law, F_pump/A_pump = F_load/A_load, so F_pump = 600 × 2/12 = 100 kgf.",
@@ -1701,11 +1701,11 @@
     "text": "What should be the ratio of the areas of the smaller cylinder (A₁) to the larger cylinder (A₂) if a force of 50 N on the smaller piston is to overcome a force of 1250 N on the larger piston?",
     "options": [
       "1:50",
-      "1:25",
       "5:1",
-      "1:5"
+      "1:5",
+      "1:25"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "By Pascal's law, F₁/A₁ = F₂/A₂, so A₁/A₂ = F₁/F₂ = 50/1250 = 1/25.",
     "source": "School Practice UT2 2024-25"
   },
@@ -1715,12 +1715,12 @@
     "difficulty": "medium",
     "text": "A device that works on the principle of transmission of fluid pressure (Pascal's law) is the:",
     "options": [
-      "Hydraulic press/jack",
       "Manometer",
+      "Hydraulic press/jack",
       "Barometer",
       "Siphon"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "A hydraulic press or jack uses a confined liquid to transmit and multiply an applied force, based on Pascal's law.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1730,12 +1730,12 @@
     "difficulty": "medium",
     "text": "The white line painted on the hull of a ship, near the waterline, is known as the:",
     "options": [
-      "Plimsoll line",
       "Buoyancy line",
-      "Draft line",
-      "Load mark"
+      "Load mark",
+      "Plimsoll line",
+      "Draft line"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The Plimsoll line marks the maximum depth to which a ship may be safely loaded, ensuring it does not become overloaded and unsafe.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1760,12 +1760,12 @@
     "difficulty": "easy",
     "text": "The SI unit of upthrust is:",
     "options": [
-      "N/m²",
-      "dyne·cm",
+      "Newton (N)",
       "N·m",
-      "Newton (N)"
+      "N/m²",
+      "dyne·cm"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Upthrust is a force, so its SI unit is the newton (N), same as any other force.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1775,10 +1775,10 @@
     "difficulty": "medium",
     "text": "A body of weight W floats in equilibrium on a liquid. Its apparent weight (weight minus upthrust) is:",
     "options": [
-      "Greater than W",
+      "Less than W",
       "Zero",
-      "Equal to W",
-      "Less than W"
+      "Greater than W",
+      "Equal to W"
     ],
     "correct": 1,
     "explanation": "For a body floating freely in equilibrium, the upthrust exactly balances its true weight, so its apparent weight (weight − upthrust) is zero.",
@@ -1790,12 +1790,12 @@
     "difficulty": "hard",
     "text": "A solid of density d₁ is placed, in turn, in liquids of densities d₂, d₃ and d₄, where d₁ < d₂ < d₃ < d₄. In which liquid(s) will the apparent weight of the solid be zero?",
     "options": [
-      "d₂ only",
       "d₃ only",
       "d₄ only",
-      "All of them — the solid floats and is in equilibrium in each"
+      "All of them — the solid floats and is in equilibrium in each",
+      "d₂ only"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Since the solid is less dense than all three liquids, it floats freely (partly submerged) in equilibrium in each, so its apparent weight is zero in every case.",
     "source": "School Practice UT2 2024-25"
   },
@@ -1805,12 +1805,12 @@
     "difficulty": "medium",
     "text": "What length of water column exerts the same pressure as 76 cm of mercury? (R.D. of mercury = 13.6)",
     "options": [
-      "1 m",
       "25 m",
-      "10.34 m",
-      "76 m"
+      "76 m",
+      "1 m",
+      "10.34 m"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "h(water) = h(Hg) × R.D. of Hg = 0.76 × 13.6 = 10.336 m ≈ 10.34 m.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1821,9 +1821,9 @@
     "text": "If the density of ice is 0.9 g/cm³ and the density of sea water is 1.1 g/cm³, the fraction of an iceberg that remains below the surface of the sea water is approximately:",
     "options": [
       "81.8%",
-      "90%",
+      "50%",
       "18%",
-      "50%"
+      "90%"
     ],
     "correct": 0,
     "explanation": "For a floating body, fraction submerged = density of body/density of liquid = 0.9/1.1 ≈ 0.818, i.e. about 81.8%.",
@@ -1836,9 +1836,9 @@
     "text": "An iceberg floats on sea water with 90% of its volume submerged. Compared to the upthrust on it, the weight of the iceberg is:",
     "options": [
       "Equal to the upthrust",
-      "Less than the upthrust",
       "Cannot be determined",
-      "Greater than the upthrust"
+      "Greater than the upthrust",
+      "Less than the upthrust"
     ],
     "correct": 0,
     "explanation": "For any body floating in equilibrium, its weight exactly equals the upthrust acting on it, regardless of what fraction is submerged.",
@@ -1850,12 +1850,12 @@
     "difficulty": "medium",
     "text": "Density and relative density of a substance differ in that:",
     "options": [
-      "They are always numerically equal in SI units",
       "Density has units (e.g. kg/m³), while relative density is a dimensionless ratio (compared to water)",
-      "There is no real difference",
-      "Relative density has units, density does not"
+      "They are always numerically equal in SI units",
+      "Relative density has units, density does not",
+      "There is no real difference"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Density is mass per unit volume with units like kg/m³, while relative density is simply the ratio of a substance's density to that of water, and so has no units.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1865,12 +1865,12 @@
     "difficulty": "medium",
     "text": "Mercury is preferred over water as the barometric fluid mainly because:",
     "options": [
-      "Mercury's high density means a much shorter column balances atmospheric pressure (about 76 cm vs over 10 m of water)",
-      "Mercury does not evaporate at all",
+      "Mercury is a better conductor",
       "Mercury is cheaper than water",
-      "Mercury is a better conductor"
+      "Mercury's high density means a much shorter column balances atmospheric pressure (about 76 cm vs over 10 m of water)",
+      "Mercury does not evaporate at all"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Since mercury is about 13.6 times denser than water, a column of mercury only about 76 cm tall balances atmospheric pressure, compared to over 10 m of water, making the barometer practically sized.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1880,12 +1880,12 @@
     "difficulty": "medium",
     "text": "A balloon filled with hydrogen rises in air and then stops rising further at a certain height. This happens because:",
     "options": [
-      "At that height, the density of the surrounding air has decreased enough to equal the effective density of the balloon system, so there is no further net upward force",
+      "The balloon runs out of hydrogen",
       "Hydrogen stops being lighter than air at that height",
-      "Gravity becomes zero at that height",
-      "The balloon runs out of hydrogen"
+      "At that height, the density of the surrounding air has decreased enough to equal the effective density of the balloon system, so there is no further net upward force",
+      "Gravity becomes zero at that height"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Air density decreases with altitude; the balloon stops rising when the upthrust (depending on air density) just balances the total weight of the balloon system.",
     "source": "School Practice UT2 2023-24"
   },
@@ -1925,12 +1925,12 @@
     "difficulty": "medium",
     "text": "A hollow iron ball (average density 0.8 g/cm³) floats in water. The fraction of its total volume that remains submerged is:",
     "options": [
-      "20%",
-      "100%",
       "80%",
+      "100%",
+      "20%",
       "50%"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Fraction submerged = density of body/density of water = 0.8/1 = 0.8, i.e. 80%.",
     "source": "School Practice AE 2023-24"
   },
@@ -1955,12 +1955,12 @@
     "difficulty": "medium",
     "text": "A solid iron bar (density about 7.8 g/cm³) floats in mercury (density 13.6 g/cm³) even though it sinks in water. This is because:",
     "options": [
-      "The density of iron is less than that of mercury but greater than that of water",
-      "Iron becomes lighter in mercury",
       "Iron reacts with mercury",
+      "Iron becomes lighter in mercury",
+      "The density of iron is less than that of mercury but greater than that of water",
       "Mercury has no weight"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "A body floats in a liquid only if its density is less than that of the liquid; iron's density (~7.8) is less than mercury's (13.6) but greater than water's (1), so it floats in mercury but sinks in water.",
     "source": "School Practice AE 2023-24"
   },
@@ -1970,8 +1970,8 @@
     "difficulty": "hard",
     "text": "A bowl made from the same steel that sinks as a solid piece can float in water when shaped into a bowl. This is because:",
     "options": [
-      "The bowl has no weight",
       "Steel becomes magnetic and floats",
+      "The bowl has no weight",
       "The bowl absorbs air permanently",
       "The bowl shape increases the volume of water displaced for the same mass, reducing the effective density below that of water"
     ],
@@ -1985,9 +1985,9 @@
     "difficulty": "medium",
     "text": "The apparent weight (weight in a given fluid) of a body that sinks in both water and kerosene is less in water than in kerosene. This is because:",
     "options": [
+      "There is no real reason; it is random",
       "Kerosene is denser than water",
       "The body weighs less in air near water",
-      "There is no real reason; it is random",
       "Water is denser than kerosene, so it provides a greater upthrust, reducing the apparent weight more"
     ],
     "correct": 3,
@@ -2000,12 +2000,12 @@
     "difficulty": "easy",
     "text": "Upthrust on a body increases with an increase in the portion of the body submerged in the fluid because:",
     "options": [
+      "Upthrust depends only on the shape of the body",
       "Upthrust is independent of submerged volume",
-      "Upthrust equals the weight of fluid displaced, which increases as the submerged volume increases",
       "Upthrust decreases with submerged volume",
-      "Upthrust depends only on the shape of the body"
+      "Upthrust equals the weight of fluid displaced, which increases as the submerged volume increases"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Upthrust = density of fluid × submerged volume × g, so it increases directly with the volume of fluid displaced, i.e. the submerged volume.",
     "source": "School Practice AE 2023-24"
   },
@@ -2015,12 +2015,12 @@
     "difficulty": "medium",
     "text": "A man first swims in sea water, then in river water. Compared to river water, in sea water he would find it:",
     "options": [
-      "Impossible to swim at all",
       "Easier to swim, since denser sea water provides greater upthrust for the same submerged volume",
-      "Equally easy, as upthrust is unaffected by density",
-      "Harder to swim, since sea water is denser"
+      "Impossible to swim at all",
+      "Harder to swim, since sea water is denser",
+      "Equally easy, as upthrust is unaffected by density"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "For the same submerged volume, denser sea water displaces more weight of liquid, giving a greater upthrust and making it easier to stay afloat and swim.",
     "source": "School Practice AE 2024-25"
   },
@@ -2030,12 +2030,12 @@
     "difficulty": "medium",
     "text": "A man swims first in sea water, then in river water, each time floating with part of his body submerged. Comparing the weight of water he displaces in the two cases, in equilibrium:",
     "options": [
-      "The weight of water displaced is the same in both cases, equal to his own body weight",
-      "He displaces more weight of water in sea water",
       "He displaces more weight of water in river water",
-      "Weight of water displaced cannot be compared"
+      "The weight of water displaced is the same in both cases, equal to his own body weight",
+      "Weight of water displaced cannot be compared",
+      "He displaces more weight of water in sea water"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Whenever a body floats in equilibrium, the weight of liquid displaced (the upthrust) exactly equals its own weight, regardless of which liquid it floats in.",
     "source": "School Practice AE 2024-25"
   },
@@ -2046,11 +2046,11 @@
     "text": "The upthrust experienced by a body immersed in a liquid is directly proportional to:",
     "options": [
       "Only the total volume of the body, submerged or not",
+      "Only the shape of the body",
       "The volume of the body actually submerged and the density of the liquid",
-      "The weight of the body in air, regardless of the liquid",
-      "Only the shape of the body"
+      "The weight of the body in air, regardless of the liquid"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Upthrust = density of liquid × submerged volume × g, so it depends directly on the submerged volume and the liquid's density.",
     "source": "School Practice UT2 2024-25"
   },
@@ -2060,12 +2060,12 @@
     "difficulty": "medium",
     "text": "Is the value of 1 kgf the same on Earth and on the Moon?",
     "options": [
-      "No, because g on the Moon is different, so 1 kgf is smaller there",
-      "Yes, because mass does not change",
       "No, kgf has no meaning on the Moon",
-      "Yes, because 1 kgf is defined using a fixed standard value of g (9.8 m/s²), independent of location"
+      "No, because g on the Moon is different, so 1 kgf is smaller there",
+      "Yes, because 1 kgf is defined using a fixed standard value of g (9.8 m/s²), independent of location",
+      "Yes, because mass does not change"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "By convention, 1 kgf is defined as the force equal to mass (1 kg) times the standard value of g (9.8 m/s²), a fixed reference value, so it is the same everywhere, including on the Moon.",
     "source": "School Practice UT2 2024-25"
   },
@@ -2075,12 +2075,12 @@
     "difficulty": "medium",
     "text": "A metal piece weighs 200 gf in air and 150 gf when completely immersed in water. Its relative density is:",
     "options": [
-      "2",
       "3",
-      "5",
-      "4"
+      "2",
+      "4",
+      "5"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "R.D. = weight in air / loss of weight in water = 200/(200−150) = 200/50 = 4.",
     "source": "School Practice T1 2021-22"
   },
@@ -2090,12 +2090,12 @@
     "difficulty": "hard",
     "text": "A metal piece weighs 200 gf in air and 150 gf in water (R.D. = 4). Its weight when fully immersed in a liquid of density 0.8 g/cm³ would be:",
     "options": [
-      "160 gf",
       "180 gf",
+      "120 gf",
       "140 gf",
-      "120 gf"
+      "160 gf"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Volume = loss of weight in water/density of water = 50 cm³. Weight of this volume of the 0.8 g/cm³ liquid displaced = 50 × 0.8 = 40 gf. Apparent weight = 200 − 40 = 160 gf.",
     "source": "School Practice T1 2021-22"
   },
@@ -2105,12 +2105,12 @@
     "difficulty": "medium",
     "text": "A solid weighs 144 gf in air and 100 gf when completely immersed in water. The upthrust on it is:",
     "options": [
-      "100 gf",
-      "144 gf",
       "44 gf",
-      "244 gf"
+      "244 gf",
+      "100 gf",
+      "144 gf"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Upthrust = loss of weight in water = 144 − 100 = 44 gf.",
     "source": "School Practice UT2 2023-24"
   },
@@ -2120,9 +2120,9 @@
     "difficulty": "medium",
     "text": "A solid weighs 144 gf in air and 100 gf in water. Its volume is:",
     "options": [
-      "144 cm³",
-      "44 cm³",
       "244 cm³",
+      "44 cm³",
+      "144 cm³",
       "100 cm³"
     ],
     "correct": 1,
@@ -2135,12 +2135,12 @@
     "difficulty": "medium",
     "text": "A solid weighs 144 gf in air and 100 gf in water. Its relative density is approximately:",
     "options": [
-      "4.4",
-      "3.3",
+      "2.3",
       "1.4",
-      "2.3"
+      "3.3",
+      "4.4"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "R.D. = weight in air/loss of weight in water = 144/44 ≈ 3.27, approximately 3.3.",
     "source": "School Practice UT2 2023-24"
   },
@@ -2166,9 +2166,9 @@
     "text": "Block B (mass 20 g, density 5 g/cm³) is placed fully submerged in water. The upthrust on block B is:",
     "options": [
       "4 gf",
-      "2 gf",
       "5 gf",
-      "20 gf"
+      "20 gf",
+      "2 gf"
     ],
     "correct": 0,
     "explanation": "Volume of B = mass/density = 20/5 = 4 cm³. Upthrust = density of water × volume = 1 × 4 = 4 gf.",
@@ -2180,12 +2180,12 @@
     "difficulty": "medium",
     "text": "Block B (mass 20 g, upthrust 4 gf when fully submerged in water) has an apparent weight in water of:",
     "options": [
-      "20 gf",
-      "16 gf",
+      "4 gf",
       "24 gf",
-      "4 gf"
+      "20 gf",
+      "16 gf"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Apparent weight = true weight − upthrust = 20 − 4 = 16 gf.",
     "source": "School Practice UT2 2024-25"
   },
@@ -2195,12 +2195,12 @@
     "difficulty": "medium",
     "text": "A piece of iron of density 7.8 g/cm³ and volume 100 cm³ is weighed in air. Its weight is:",
     "options": [
-      "78 gf",
-      "7800 gf",
       "780 gf",
-      "100 gf"
+      "78 gf",
+      "100 gf",
+      "7800 gf"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Weight (in gf) numerically equals mass in g = density × volume = 7.8 × 100 = 780 g, i.e. 780 gf.",
     "source": "School Practice AE 2022-23"
   },
@@ -2210,9 +2210,9 @@
     "difficulty": "medium",
     "text": "A piece of iron of density 7.8 g/cm³ and volume 100 cm³ is completely immersed in water. The upthrust on it is:",
     "options": [
-      "780 gf",
       "680 gf",
       "78 gf",
+      "780 gf",
       "100 gf"
     ],
     "correct": 3,
@@ -2225,8 +2225,8 @@
     "difficulty": "medium",
     "text": "A piece of iron of density 7.8 g/cm³, volume 100 cm³, weighs 780 gf in air and experiences an upthrust of 100 gf in water. Its apparent weight in water is:",
     "options": [
-      "880 gf",
       "580 gf",
+      "880 gf",
       "680 gf",
       "780 gf"
     ],
@@ -2240,12 +2240,12 @@
     "difficulty": "medium",
     "text": "An aluminium can (density 2.7 g/cm³) floats in mercury (density 13.6 g/cm³). The fraction of its volume that remains immersed in mercury is approximately:",
     "options": [
-      "0.1",
       "0.5",
       "0.8",
-      "0.2"
+      "0.2",
+      "0.1"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Fraction immersed = density of aluminium/density of mercury = 2.7/13.6 ≈ 0.199, approximately 0.2 (1/5).",
     "source": "School Practice AE 2024-25"
   },
@@ -2255,12 +2255,12 @@
     "difficulty": "medium",
     "text": "Water pipes in colder countries often burst in winter. This is because:",
     "options": [
-      "Cold water flows faster, increasing pressure",
+      "Water expands on freezing into ice (anomalous expansion), and the increased volume cracks the pipe",
       "Pipes contract more than the water inside",
-      "Ice is heavier than water",
-      "Water expands on freezing into ice (anomalous expansion), and the increased volume cracks the pipe"
+      "Cold water flows faster, increasing pressure",
+      "Ice is heavier than water"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Unlike most substances, water expands when it freezes into ice; this increase in volume inside a closed pipe can crack it.",
     "source": "School Practice AE 2020-21"
   },
@@ -2270,12 +2270,12 @@
     "difficulty": "medium",
     "text": "An egg sinks in fresh water but floats in a strong salt solution. This is because:",
     "options": [
+      "There is no scientific reason",
       "Salt water is lighter than fresh water",
-      "The density of the egg lies between the density of fresh water and that of the strong salt solution",
       "The egg becomes lighter in salt water",
-      "There is no scientific reason"
+      "The density of the egg lies between the density of fresh water and that of the strong salt solution"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The egg's density is greater than fresh water's (so it sinks) but less than the denser salt solution's (so it floats there).",
     "source": "School Practice AE 2020-21"
   },
@@ -2285,12 +2285,12 @@
     "difficulty": "medium",
     "text": "The type of radiation mainly absorbed by greenhouse gases (contributing to the greenhouse effect) is:",
     "options": [
-      "Visible light",
-      "Radio waves",
       "Infrared radiation emitted by the Earth",
-      "Ultraviolet radiation from the Sun"
+      "Ultraviolet radiation from the Sun",
+      "Visible light",
+      "Radio waves"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Greenhouse gases are largely transparent to incoming sunlight but absorb the infrared radiation re-emitted by the Earth's surface, trapping heat.",
     "source": "School Practice AE 2020-21"
   },
@@ -2300,12 +2300,12 @@
     "difficulty": "easy",
     "text": "Which of the following is NOT a greenhouse gas?",
     "options": [
+      "Nitrogen",
       "Carbon dioxide",
       "Water vapour",
-      "Nitrogen",
       "Methane"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Nitrogen makes up most of the atmosphere but is not a greenhouse gas; CO₂, methane and water vapour all trap infrared radiation and contribute to the greenhouse effect.",
     "source": "School Practice AE 2020-21"
   },
@@ -2315,12 +2315,12 @@
     "difficulty": "medium",
     "text": "Deep pond water has its top layer frozen in winter. The temperature of the water layer just in contact with the ice, and at the bottom of the pond, are respectively:",
     "options": [
-      "0°C and 4°C",
       "0°C and 0°C",
-      "4°C and 4°C",
-      "4°C and 0°C"
+      "4°C and 0°C",
+      "0°C and 4°C",
+      "4°C and 4°C"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The layer touching the ice is at 0°C, while water at 4°C (its maximum density) sinks to the bottom, keeping the bottom at about 4°C — this is why aquatic life can survive under frozen ponds.",
     "source": "School Practice T1 2021-22"
   },
@@ -2330,12 +2330,12 @@
     "difficulty": "medium",
     "text": "First law of thermodynamics states that:",
     "options": [
-      "Entropy of an isolated system always increases",
-      "Heat supplied to a system equals the increase in its internal energy plus the work done by it (energy is conserved)",
       "Heat always flows from a cold to a hot body",
-      "Energy can be created but not destroyed"
+      "Energy can be created but not destroyed",
+      "Entropy of an isolated system always increases",
+      "Heat supplied to a system equals the increase in its internal energy plus the work done by it (energy is conserved)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The first law of thermodynamics is a statement of conservation of energy: ΔQ = ΔU + ΔW.",
     "source": "School Practice T1 2021-22"
   },
@@ -2346,8 +2346,8 @@
     "text": "The second law of thermodynamics implies that heat flows spontaneously, without external work, from a:",
     "options": [
       "Hotter body to a colder body",
-      "Hotter body to an even hotter body",
       "Body to itself only",
+      "Hotter body to an even hotter body",
       "Colder body to a hotter body"
     ],
     "correct": 0,
@@ -2361,9 +2361,9 @@
     "text": "The SI unit of heat is the joule (J). It is related to the older unit, the calorie, as:",
     "options": [
       "1 calorie ≈ 4.186 joules",
-      "1 calorie = 1 joule",
+      "1 calorie = 100 joules",
       "1 joule = 1000 calories",
-      "1 calorie = 100 joules"
+      "1 calorie = 1 joule"
     ],
     "correct": 0,
     "explanation": "1 calorie is defined as approximately 4.186 joules, the mechanical equivalent of heat.",
@@ -2375,12 +2375,12 @@
     "difficulty": "medium",
     "text": "The most non-polluting and energy-efficient lighting device among the following is:",
     "options": [
-      "LED",
-      "CFL",
       "Electric (incandescent) bulb",
-      "Fluorescent light"
+      "LED",
+      "Fluorescent light",
+      "CFL"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "LED lamps convert the largest fraction of electrical energy into light with the least waste heat and no toxic mercury content, making them the most efficient and least polluting choice.",
     "source": "School Practice AE 2023-24"
   },
@@ -2391,11 +2391,11 @@
     "text": "As a bulb's filament glows (heats up), its resistance:",
     "options": [
       "Remains unchanged",
-      "Increases",
       "Becomes zero",
+      "Increases",
       "Decreases"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The resistance of a metallic filament increases as its temperature rises, which is why a hot, glowing filament has higher resistance than when cold.",
     "source": "School Practice T1 2024-25"
   },
@@ -2405,12 +2405,12 @@
     "difficulty": "medium",
     "text": "Temperature of a body determines:",
     "options": [
-      "Only its thermal state",
       "Only the average kinetic energy of its particles",
       "Its thermal state, the average kinetic energy of its particles, and the direction of heat flow",
-      "Only the direction of heat flow"
+      "Only the direction of heat flow",
+      "Only its thermal state"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Temperature is a measure of the average kinetic energy of a body's particles, defines its thermal state, and determines the direction in which heat will flow when in contact with another body.",
     "source": "School Practice AE 2024-25"
   },
@@ -2421,11 +2421,11 @@
     "text": "Among 0°C, 4°C, 10°C and room temperature, water (of a fixed mass) has its maximum volume at:",
     "options": [
       "4°C",
-      "Room temperature",
       "10°C",
-      "0°C"
+      "0°C",
+      "Room temperature"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Water has minimum volume (maximum density) at 4°C. Below 4°C (down to 0°C) it expands anomalously, and above 4°C it expands normally with rising temperature, so among these options its volume is greatest at room temperature.",
     "source": "School Practice AE 2024-25"
   },
@@ -2435,12 +2435,12 @@
     "difficulty": "hard",
     "text": "A uniform cube of side 2 cm is immersed in water with its top surface at a depth of 5 cm. Taking density of water = 1000 kg/m³ and g = 10 m/s², the pressure at the top surface of the cube is:",
     "options": [
+      "200 Pa",
       "500 Pa",
-      "1000 Pa",
       "700 Pa",
-      "200 Pa"
+      "1000 Pa"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "P = ρgh = 1000 × 10 × 0.05 = 500 Pa.",
     "source": "School Practice AE 2024-25"
   },
@@ -2450,10 +2450,10 @@
     "difficulty": "hard",
     "text": "A cube of side 2 cm is immersed in water with its top face 5 cm below the surface (density of water 1000 kg/m³, g = 10 m/s²). The resultant thrust on the cube due to the pressure difference between its bottom and top faces is:",
     "options": [
-      "0.2 N",
+      "0.8 N",
       "0.08 N",
       "0.02 N",
-      "0.8 N"
+      "0.2 N"
     ],
     "correct": 1,
     "explanation": "Pressure at bottom (depth 7 cm) = 1000×10×0.07 = 700 Pa. Resultant pressure = 700 − 500 = 200 Pa. Resultant thrust = pressure × area of face = 200 × (0.02×0.02) = 200 × 0.0004 = 0.08 N.",
@@ -2465,12 +2465,12 @@
     "difficulty": "easy",
     "text": "The image formed by a plane mirror is:",
     "options": [
-      "Virtual, erect and laterally inverted",
-      "Virtual and inverted",
       "Real and inverted",
-      "Real and laterally inverted"
+      "Virtual and inverted",
+      "Real and laterally inverted",
+      "Virtual, erect and laterally inverted"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "A plane mirror always forms a virtual, erect image of the same size as the object, which is laterally inverted (left-right reversed).",
     "source": "School Practice AE 2022-23"
   },
@@ -2480,12 +2480,12 @@
     "difficulty": "medium",
     "text": "The pole of a spherical mirror is:",
     "options": [
+      "The midpoint on the principal axis where the mirror surface meets it",
       "The line joining focus and centre of curvature",
-      "The centre of the sphere from which the mirror is cut",
       "A point on the radius of curvature only",
-      "The midpoint on the principal axis where the mirror surface meets it"
+      "The centre of the sphere from which the mirror is cut"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The pole is the geometric centre point of the mirror's reflecting surface, lying on the principal axis.",
     "source": "School Practice AE 2024-25"
   },
@@ -2495,12 +2495,12 @@
     "difficulty": "medium",
     "text": "A man stands 3 m in front of a plane mirror. The distance between the man and his image is:",
     "options": [
-      "3 m",
+      "6 m",
       "9 m",
-      "0 m",
-      "6 m"
+      "3 m",
+      "0 m"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The image forms 3 m behind the mirror, as far behind as the object is in front, so the total separation between the man and his image is 3 + 3 = 6 m.",
     "source": "School Practice T1 2024-25"
   },
@@ -2510,9 +2510,9 @@
     "difficulty": "hard",
     "text": "An object is placed 80 cm in front of a plane mirror. The mirror is then moved 45 cm further away from the object. By how much does the image shift (in its position, not relative to the object)?",
     "options": [
-      "45 cm",
-      "80 cm",
       "125 cm",
+      "80 cm",
+      "45 cm",
       "90 cm"
     ],
     "correct": 3,
@@ -2526,11 +2526,11 @@
     "text": "In the dial of a clock, with lines marked instead of numbers, a plane mirror shows the reflected time as 4:25. The actual time is:",
     "options": [
       "5:35",
-      "7:35",
       "4:35",
-      "5:25"
+      "5:25",
+      "7:35"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "For a clock reflected in a mirror, actual time = 11:60 − reflected time = 11:60 − 4:25 = 7:35.",
     "source": "School Practice T1 2024-25"
   },
@@ -2540,12 +2540,12 @@
     "difficulty": "medium",
     "text": "Two plane mirrors are inclined at an angle of 30° to each other. The number of images formed of an object placed between them is:",
     "options": [
-      "11",
+      "12",
       "13",
-      "10",
-      "12"
+      "11",
+      "10"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Since 360°/30° = 12 (an even integer), the number of images = 12 − 1 = 11 (the same for symmetric or asymmetric placement).",
     "source": "School Practice T1 2021-22"
   },
@@ -2555,12 +2555,12 @@
     "difficulty": "hard",
     "text": "Two plane mirrors are inclined at 50° to each other, with an object placed between them. The number of images formed (same whether placed symmetrically or asymmetrically, since 360°/50° is not a whole number) is:",
     "options": [
-      "Cannot be determined",
-      "7",
+      "6",
       "8",
-      "6"
+      "7",
+      "Cannot be determined"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "360°/50° = 7.2, which is not an integer; in this case the number of images formed equals the integer (floor) part of this value, i.e. 7, the same for both symmetric and asymmetric placement.",
     "source": "School Practice AE 2020-21"
   },
@@ -2570,12 +2570,12 @@
     "difficulty": "medium",
     "text": "Two plane mirrors are inclined at 72° to each other, with an object placed asymmetrically between them. The number of images formed is:",
     "options": [
+      "6",
       "5",
       "4",
-      "6",
       "3"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "360°/72° = 5, an odd integer. For asymmetric placement with an odd integer ratio, the number of images = 5.",
     "source": "School Practice T1 2023-24"
   },
@@ -2585,12 +2585,12 @@
     "difficulty": "medium",
     "text": "Two plane mirrors are inclined at 45° to each other. The number of images formed, whether the object is placed symmetrically or asymmetrically, is:",
     "options": [
-      "9",
-      "6",
       "7",
-      "8"
+      "8",
+      "9",
+      "6"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "360°/45° = 8, an even integer, so the number of images = 8 − 1 = 7, the same for symmetric and asymmetric placement.",
     "source": "School Practice AE 2024-25"
   },
@@ -2600,12 +2600,12 @@
     "difficulty": "medium",
     "text": "Two plane mirrors are inclined at 60° to each other, with an object placed between them. The number of images formed, same for symmetric and asymmetric placement, is:",
     "options": [
-      "5",
-      "6",
       "4",
-      "7"
+      "5",
+      "7",
+      "6"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "360°/60° = 6, an even integer, so the number of images = 6 − 1 = 5, the same for symmetric and asymmetric placement.",
     "source": "School Practice T1 2024-25"
   },
@@ -2617,8 +2617,8 @@
     "options": [
       "Concave mirror",
       "Convex mirror",
-      "Either convex or plane mirror",
-      "Plane mirror"
+      "Plane mirror",
+      "Either convex or plane mirror"
     ],
     "correct": 0,
     "explanation": "A concave mirror forms a virtual, erect, magnified image when the object is placed between the pole and the focus.",
@@ -2630,12 +2630,12 @@
     "difficulty": "medium",
     "text": "When a concave mirror is used as a shaving mirror, the person's face (relative to the mirror's focus) should be located:",
     "options": [
-      "Between the pole and the focus",
-      "Beyond the centre of curvature",
       "At the centre of curvature",
+      "Beyond the centre of curvature",
+      "Between the pole and the focus",
       "Between the centre of curvature and focus"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Placing the face between the pole and focus of a concave mirror gives a virtual, erect and magnified image, ideal for shaving.",
     "source": "School Practice T1 2023-24"
   },
@@ -2645,12 +2645,12 @@
     "difficulty": "medium",
     "text": "When an object is placed between the pole and focus of a concave mirror, the image formed is:",
     "options": [
+      "Virtual, inverted and diminished",
       "Real, erect and the same size",
       "Virtual, erect and magnified",
-      "Real, inverted and diminished",
-      "Virtual, inverted and diminished"
+      "Real, inverted and diminished"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "For an object between the pole and focus of a concave mirror, the image is always virtual, erect and magnified, formed behind the mirror.",
     "source": "School Practice AE 2022-23"
   },
@@ -2690,12 +2690,12 @@
     "difficulty": "medium",
     "text": "The image formed by a convex mirror of an object placed at a finite distance in front of it is always:",
     "options": [
-      "Real and erect",
-      "Real, inverted and magnified",
+      "Virtual, inverted and magnified",
       "Virtual, erect and diminished",
-      "Virtual, inverted and magnified"
+      "Real and erect",
+      "Real, inverted and magnified"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A convex mirror always diverges reflected rays, so it forms a virtual, erect, diminished image regardless of the object's position.",
     "source": "School Practice T1 2021-22"
   },
@@ -2705,12 +2705,12 @@
     "difficulty": "medium",
     "text": "One common practical use of a convex mirror is as a:",
     "options": [
-      "Solar furnace reflector",
       "Telescope objective mirror",
-      "Shaving mirror",
-      "Vehicle rear-view/side mirror, for its wide field of view"
+      "Vehicle rear-view/side mirror, for its wide field of view",
+      "Solar furnace reflector",
+      "Shaving mirror"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Because a convex mirror always forms a diminished, erect image showing a wider field of view, it is commonly used as a rear-view or side mirror in vehicles.",
     "source": "School Practice T1 2021-22"
   },
@@ -2721,8 +2721,8 @@
     "text": "Which type of mirror does a dentist typically use to examine a patient's teeth?",
     "options": [
       "Convex mirror, for a wide field of view",
-      "Plane mirror, for a same-size image",
       "Any mirror works equally well",
+      "Plane mirror, for a same-size image",
       "Concave mirror, to get a magnified image of the teeth"
     ],
     "correct": 3,
@@ -2735,12 +2735,12 @@
     "difficulty": "medium",
     "text": "Which type of mirror is commonly used as a reflector for street lights, to spread light over a wide area of the street?",
     "options": [
+      "Concave mirror",
       "Convex mirror",
       "Plane mirror",
-      "Concave mirror",
       "No mirror is used"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "A convex reflector diverges light over a wide area, which is useful for spreading illumination across a street.",
     "source": "School Practice AE 2020-21"
   },
@@ -2750,12 +2750,12 @@
     "difficulty": "medium",
     "text": "A converging (concave) mirror forms a real image of height 4 cm of a 1 cm tall object placed 20 cm from the mirror. The image distance is:",
     "options": [
-      "100 cm",
       "40 cm",
       "80 cm",
+      "100 cm",
       "60 cm"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Magnification m = image height/object height = 4/1 = 4. Since m = v/u for a real image, v = 4 × 20 = 80 cm.",
     "source": "School Practice T1 2021-22"
   },
@@ -2766,11 +2766,11 @@
     "text": "A concave mirror forms a real image of height 4 cm (4 times a 1 cm object) placed 20 cm away, with the image at 80 cm. The focal length of the mirror is:",
     "options": [
       "24 cm",
-      "8 cm",
       "16 cm",
+      "8 cm",
       "32 cm"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Using 1/v + 1/u = 1/f: 1/80 + 1/20 = 5/80 = 1/16, so f = 16 cm.",
     "source": "School Practice T1 2021-22"
   },
@@ -2782,10 +2782,10 @@
     "options": [
       "40 cm",
       "80 cm",
-      "60 cm",
-      "48 cm"
+      "48 cm",
+      "60 cm"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Using 1/v + 1/u = 1/f: 1/v = 1/24 − 1/40 = (5−3)/120 = 1/60, so v = 60 cm.",
     "source": "School Practice AE 2022-23"
   },
@@ -2795,12 +2795,12 @@
     "difficulty": "hard",
     "text": "An object 4 cm tall is placed 40 cm in front of a concave mirror of focal length 24 cm, and the image forms at 60 cm. The size of the image is:",
     "options": [
-      "8 cm",
       "3 cm",
+      "6 cm",
       "10 cm",
-      "6 cm"
+      "8 cm"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Magnification m = v/u = 60/40 = 1.5. Image height = 1.5 × 4 cm = 6 cm.",
     "source": "School Practice AE 2022-23"
   },
@@ -2811,11 +2811,11 @@
     "text": "An object is placed 40 cm in front of a concave mirror of focal length 24 cm, and the image forms 60 cm from the mirror (beyond C at 48 cm). The nature of the image is:",
     "options": [
       "Virtual, erect and magnified",
-      "Virtual, inverted and diminished",
       "Real, inverted and magnified",
+      "Virtual, inverted and diminished",
       "Real, erect and diminished"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Since the image distance (60 cm) is real (positive, in front of the mirror) and larger than the object, the image is real, inverted and magnified.",
     "source": "School Practice AE 2022-23"
   },
@@ -2826,9 +2826,9 @@
     "text": "If the image is formed 6 cm from a concave mirror, with the object at 12 cm in front of it, the focal length of the mirror is:",
     "options": [
       "4 cm",
-      "6 cm",
+      "3 cm",
       "8 cm",
-      "3 cm"
+      "6 cm"
     ],
     "correct": 0,
     "explanation": "Using 1/v + 1/u = 1/f: 1/6 + 1/12 = (2+1)/12 = 3/12 = 1/4, so f = 4 cm.",
@@ -2840,12 +2840,12 @@
     "difficulty": "hard",
     "text": "An object is 12 cm in front of a concave mirror and its image forms 6 cm from the mirror (f = 4 cm). The magnification is:",
     "options": [
-      "1",
       "1.5",
-      "0.5",
-      "2"
+      "2",
+      "1",
+      "0.5"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Magnification m = v/u = 6/12 = 0.5.",
     "source": "School Practice AE 2023-24"
   },
@@ -2857,8 +2857,8 @@
     "options": [
       "Virtual, erect, magnified",
       "Real, inverted, diminished",
-      "Virtual, inverted, diminished",
-      "Real, erect, diminished"
+      "Real, erect, diminished",
+      "Virtual, inverted, diminished"
     ],
     "correct": 1,
     "explanation": "Since the image distance is real (positive) and the magnification is less than 1, the image is real, inverted and diminished (object was placed beyond the centre of curvature).",
@@ -2870,12 +2870,12 @@
     "difficulty": "hard",
     "text": "A concave mirror produces a 3-times magnified real image of an object placed 10 cm in front of it. The image is located at:",
     "options": [
+      "30 cm",
       "20 cm",
-      "10 cm",
       "40 cm",
-      "30 cm"
+      "10 cm"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "For a real image, magnification m = v/u, so v = 3 × 10 = 30 cm in front of the mirror.",
     "source": "School Practice AE 2024-25"
   },
@@ -2885,12 +2885,12 @@
     "difficulty": "medium",
     "text": "An object is placed 30 cm in front of a convex mirror of radius of curvature 12 cm. Using the New Cartesian sign convention (f = +6 cm), the image is formed at:",
     "options": [
-      "8 cm behind the mirror",
-      "6 cm behind the mirror",
       "5 cm behind the mirror",
-      "12 cm behind the mirror"
+      "12 cm behind the mirror",
+      "8 cm behind the mirror",
+      "6 cm behind the mirror"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "f = R/2 = 6 cm (positive, behind, convex). Using 1/v = 1/f − 1/u with u = −30: 1/v = 1/6 − 1/(−30) = 1/6 + 1/30 = 6/30 = 1/5, so v = 5 cm (behind the mirror).",
     "source": "School Practice T1 2023-24"
   },
@@ -2900,10 +2900,10 @@
     "difficulty": "hard",
     "text": "An object is 30 cm in front of a convex mirror of focal length 6 cm, and the virtual image forms 5 cm behind the mirror. The magnification is:",
     "options": [
+      "+6",
       "+1/5",
-      "−1/6",
       "+1/6",
-      "+6"
+      "−1/6"
     ],
     "correct": 2,
     "explanation": "m = −v/u = −(+5)/(−30) = +1/6. The positive sign shows the image is erect (virtual) and the value shows it is one-sixth the size of the object.",
@@ -2915,12 +2915,12 @@
     "difficulty": "medium",
     "text": "A convex mirror's side mirror on a car has radius of curvature 10 m. Another car, 15 m away and 2 m tall, is seen in it. The distance of the image from the mirror is:",
     "options": [
-      "2.5 m",
-      "7.5 m",
       "5 m",
-      "3.75 m"
+      "2.5 m",
+      "3.75 m",
+      "7.5 m"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "f = R/2 = 5 m (positive, convex). With u = −15: 1/v = 1/5 − 1/(−15) = 1/5 + 1/15 = 4/15, so v = 15/4 = 3.75 m.",
     "source": "School Practice T1 2024-25"
   },
@@ -2930,12 +2930,12 @@
     "difficulty": "hard",
     "text": "A car 2 m tall is 15 m from a convex side mirror of focal length 5 m, and its image forms 3.75 m behind the mirror. The height of the image is:",
     "options": [
-      "0.5 m",
-      "1 m",
+      "0.25 m",
       "0.75 m",
-      "0.25 m"
+      "0.5 m",
+      "1 m"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Magnification m = v/u (magnitude) = 3.75/15 = 0.25. Image height = 0.25 × 2 m = 0.5 m.",
     "source": "School Practice T1 2024-25"
   },
@@ -2945,12 +2945,12 @@
     "difficulty": "medium",
     "text": "The negative sign in the value of the magnification of a mirror indicates that the image is:",
     "options": [
+      "Diminished",
       "Real and inverted",
-      "Magnified",
       "Virtual and erect",
-      "Diminished"
+      "Magnified"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "By convention, a negative magnification indicates a real, inverted image, while a positive magnification indicates a virtual, erect image.",
     "source": "School Practice T1 2024-25"
   },
@@ -2975,12 +2975,12 @@
     "difficulty": "easy",
     "text": "A ray of light is incident at 35° to a plane reflecting surface (measured from the surface). The angle of incidence (measured from the normal) and angle of reflection are:",
     "options": [
-      "35° and 55°",
-      "35° and 35°",
       "55° and 55°",
-      "55° and 35°"
+      "55° and 35°",
+      "35° and 35°",
+      "35° and 55°"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "The angle from the normal = 90° − 35° = 55°. By the law of reflection, the angle of reflection equals the angle of incidence, so both are 55°.",
     "source": "School Practice T1 2024-25"
   },
@@ -2991,11 +2991,11 @@
     "text": "The focus of a concave mirror is defined as:",
     "options": [
       "The midpoint of the mirror's surface",
-      "The point on the principal axis where parallel rays (parallel to the principal axis) converge after reflection",
       "The centre of the sphere of which the mirror is a part",
-      "A point outside the principal axis"
+      "A point outside the principal axis",
+      "The point on the principal axis where parallel rays (parallel to the principal axis) converge after reflection"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The focus (principal focus) is the point on the principal axis where incident rays parallel to the axis converge (concave mirror) or appear to diverge from (convex mirror) after reflection.",
     "source": "School Practice T1 2021-22"
   },
@@ -3005,9 +3005,9 @@
     "difficulty": "medium",
     "text": "The centre of curvature of a spherical mirror is:",
     "options": [
-      "The same as the pole of the mirror",
       "Always at infinity",
       "The midpoint between the pole and the focus",
+      "The same as the pole of the mirror",
       "The centre of the sphere of which the mirror's reflecting surface is a part"
     ],
     "correct": 3,
@@ -3020,10 +3020,10 @@
     "difficulty": "medium",
     "text": "If u, v and R denote the object distance, image distance and radius of curvature of a spherical mirror, the correct mirror relation between them is:",
     "options": [
-      "(u−v)/(uv) = R",
+      "(u+v)/(uv) = R",
       "uv/(u−v) = R",
       "2uv/(u+v) = R",
-      "(u+v)/(uv) = R"
+      "(u−v)/(uv) = R"
     ],
     "correct": 2,
     "explanation": "From the mirror formula 1/u + 1/v = 2/R, rearranging gives (u+v)/(uv) = 2/R, i.e. R = 2uv/(u+v).",
@@ -3036,9 +3036,9 @@
     "text": "If the image of an object on the principal axis of a concave mirror is formed at the same point as the object, but inverted, the object must be located at:",
     "options": [
       "The focus (F)",
-      "Infinity",
+      "The pole (P)",
       "The centre of curvature (C)",
-      "The pole (P)"
+      "Infinity"
     ],
     "correct": 2,
     "explanation": "Only when an object is placed at the centre of curvature does a concave mirror form a real, inverted image of the same size at the same point.",
@@ -3050,12 +3050,12 @@
     "difficulty": "easy",
     "text": "When an object on the principal axis of a concave mirror forms an inverted image at the same point as itself, the distance between the object and the pole is called the:",
     "options": [
+      "Focal length",
       "Aperture",
       "Radius of curvature",
-      "Focal length",
       "Magnification"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The distance from the pole to the centre of curvature is, by definition, the radius of curvature of the mirror.",
     "source": "School Practice AE 2024-25"
   },
@@ -3080,12 +3080,12 @@
     "difficulty": "medium",
     "text": "As you move your face slowly away from the inner (concave) surface of a shiny spoon, the image of your face changes from:",
     "options": [
-      "Large, erect and virtual (close up) to small, inverted and real (farther away)",
       "Disappearing entirely",
-      "Always staying small and real",
-      "Always staying large and virtual"
+      "Always staying large and virtual",
+      "Large, erect and virtual (close up) to small, inverted and real (farther away)",
+      "Always staying small and real"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Close to the spoon's concave surface (within its focal length) the image is virtual, erect and magnified; moving beyond the focus produces a real, inverted, diminished image.",
     "source": "School Practice T1 2024-25"
   },
@@ -3095,12 +3095,12 @@
     "difficulty": "medium",
     "text": "Both a plane mirror and a convex mirror can form virtual images. The virtual image formed by a convex mirror differs from that of a plane mirror because it is:",
     "options": [
-      "Real",
       "Inverted",
       "Diminished (smaller than the object), unlike the plane mirror's same-size image",
-      "Magnified"
+      "Magnified",
+      "Real"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A plane mirror's virtual image is always the same size as the object, whereas a convex mirror's virtual image is always diminished.",
     "source": "School Practice AE 2023-24"
   },
@@ -3110,12 +3110,12 @@
     "difficulty": "medium",
     "text": "The speed of sound in a gas is independent of the:",
     "options": [
-      "Pressure of the gas",
-      "Density of the gas",
       "Humidity of the air",
-      "Temperature of the gas"
+      "Temperature of the gas",
+      "Density of the gas",
+      "Pressure of the gas"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "At constant temperature, a change in pressure changes the density in the same proportion, so the speed of sound (v = √(γP/ρ)) is unaffected by pressure.",
     "source": "School Practice AE 2022-23"
   },
@@ -3125,12 +3125,12 @@
     "difficulty": "easy",
     "text": "The speed of sound in steel is 5000 m/s. The distance it covers in steel in 9 s is:",
     "options": [
-      "4.5 × 10⁴ m",
       "4500 m",
       "450000 m",
-      "45 × 10⁹ m"
+      "45 × 10⁹ m",
+      "4.5 × 10⁴ m"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Distance = speed × time = 5000 × 9 = 45000 m = 4.5 × 10⁴ m.",
     "source": "School Practice AE 2022-23"
   },
@@ -3140,12 +3140,12 @@
     "difficulty": "medium",
     "text": "The speed of sound in a gas:",
     "options": [
-      "Increases with an increase in pressure",
+      "Increases with a decrease in humidity",
       "Decreases with an increase in temperature",
-      "Remains unchanged with a change in pressure",
-      "Increases with a decrease in humidity"
+      "Increases with an increase in pressure",
+      "Remains unchanged with a change in pressure"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Speed of sound in a gas does not depend on pressure (at constant temperature); it increases with temperature and with humidity.",
     "source": "School Practice AE 2023-24"
   },
@@ -3155,12 +3155,12 @@
     "difficulty": "medium",
     "text": "Choose the correct statement:",
     "options": [
-      "Sound and light both do not require a medium for propagation",
       "Speed of sound in air is greater than speed of light in air",
-      "Light waves are longitudinal mechanical waves whereas sound waves are transverse electromagnetic waves",
-      "Speed of light decreases in an optically denser medium, while speed of sound is greatest in solids, less in liquids and least in gases"
+      "Sound and light both do not require a medium for propagation",
+      "Speed of light decreases in an optically denser medium, while speed of sound is greatest in solids, less in liquids and least in gases",
+      "Light waves are longitudinal mechanical waves whereas sound waves are transverse electromagnetic waves"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Light slows down in optically denser media; sound, a mechanical wave, travels fastest in solids, slower in liquids and slowest in gases. The other statements are all false.",
     "source": "School Practice AE 2023-24"
   },
@@ -3185,12 +3185,12 @@
     "difficulty": "medium",
     "text": "Supersonic objects:",
     "options": [
-      "Produce sound of frequency less than 20 Hz",
       "Travel with speeds greater than the speed of sound in air (about 330 m/s)",
-      "Produce sound of frequency between 20 Hz and 20 kHz",
-      "Produce sound of frequency greater than 20 kHz"
+      "Produce sound of frequency greater than 20 kHz",
+      "Produce sound of frequency less than 20 Hz",
+      "Produce sound of frequency between 20 Hz and 20 kHz"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "'Supersonic' refers to speed — an object moving faster than sound in air. Frequencies above 20 kHz are 'ultrasonic', below 20 Hz 'infrasonic'.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3215,12 +3215,12 @@
     "difficulty": "medium",
     "text": "Humans cannot hear the sound produced by the vibrations of a seconds pendulum because:",
     "options": [
-      "Its frequency (0.5 Hz) is below the lower limit of human hearing (20 Hz)",
-      "Its frequency is above 20 kHz",
       "Its amplitude is too large",
-      "Sound cannot travel through air"
+      "Sound cannot travel through air",
+      "Its frequency (0.5 Hz) is below the lower limit of human hearing (20 Hz)",
+      "Its frequency is above 20 kHz"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "A seconds pendulum has T = 2 s, so f = 1/T = 0.5 Hz, which is far below the audible range of 20 Hz to 20 kHz.",
     "source": "School Practice AE 2020-21"
   },
@@ -3230,12 +3230,12 @@
     "difficulty": "medium",
     "text": "A wave pulse of frequency 200 Hz on a string moves a distance of 8 m in 0.05 s. The velocity of the pulse is:",
     "options": [
-      "40 m/s",
-      "400 m/s",
       "160 m/s",
-      "80 m/s"
+      "80 m/s",
+      "400 m/s",
+      "40 m/s"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Velocity = distance/time = 8/0.05 = 160 m/s.",
     "source": "School Practice AE 2020-21"
   },
@@ -3247,8 +3247,8 @@
     "options": [
       "1.25 m",
       "0.8 m",
-      "0.4 m",
-      "32 m"
+      "32 m",
+      "0.4 m"
     ],
     "correct": 1,
     "explanation": "λ = v/f = 160/200 = 0.8 m.",
@@ -3260,8 +3260,8 @@
     "difficulty": "medium",
     "text": "A wave pulse of frequency 100 Hz on a string moves 5 m in 0.05 s. The velocity of the pulse and the wavelength of the wave are respectively:",
     "options": [
-      "50 m/s and 0.5 m",
       "100 m/s and 0.1 m",
+      "50 m/s and 0.5 m",
       "250 m/s and 2.5 m",
       "100 m/s and 1 m"
     ],
@@ -3276,9 +3276,9 @@
     "text": "The time period of a wave is 0.002 s. Its frequency is:",
     "options": [
       "500 Hz",
-      "50 Hz",
       "200 Hz",
-      "2000 Hz"
+      "2000 Hz",
+      "50 Hz"
     ],
     "correct": 0,
     "explanation": "f = 1/T = 1/0.002 = 500 Hz.",
@@ -3290,12 +3290,12 @@
     "difficulty": "easy",
     "text": "The correct relationship between wave velocity (v), frequency (f) and wavelength (λ) is:",
     "options": [
+      "vf = λ",
       "v = fλ",
       "vλ = f",
-      "vf = λ",
       "v = f/λ"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "A wave travels one wavelength in one time period, so v = λ/T = fλ.",
     "source": "School Practice UT1 2024-25"
   },
@@ -3307,8 +3307,8 @@
     "options": [
       "5 mm",
       "2.5 mm",
-      "20 mm",
-      "10 mm"
+      "10 mm",
+      "20 mm"
     ],
     "correct": 0,
     "explanation": "Wavelength is the distance between two consecutive crests (or troughs), so λ = 5 mm.",
@@ -3320,12 +3320,12 @@
     "difficulty": "easy",
     "text": "Spectators at a cricket match hear the sound of the bat hitting the ball a little after they see the stroke. This is because:",
     "options": [
+      "The eyes react faster than the ears",
       "Light travels much faster than sound in air",
       "Sound is reflected by the ground first",
-      "The eyes react faster than the ears",
       "Sound travels faster than light"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Light (3 × 10⁸ m/s) reaches the spectators almost instantly, while sound (about 340 m/s) takes noticeably longer to cover the same distance.",
     "source": "School Practice AE 2022-23"
   },
@@ -3335,12 +3335,12 @@
     "difficulty": "easy",
     "text": "The SI unit of frequency is:",
     "options": [
-      "Decibel (dB)",
       "Hertz (Hz)",
-      "Second (s)",
-      "Metre per second (m/s)"
+      "Decibel (dB)",
+      "Metre per second (m/s)",
+      "Second (s)"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Frequency is measured in hertz; 1 Hz is one complete oscillation (vibration) per second.",
     "source": "School Practice AE 2022-23"
   },
@@ -3350,12 +3350,12 @@
     "difficulty": "easy",
     "text": "The amplitude of a wave is:",
     "options": [
-      "The maximum displacement of a particle of the medium from its mean position",
+      "The time taken for one vibration",
       "The distance between two consecutive crests",
-      "The number of vibrations per second",
-      "The time taken for one vibration"
+      "The maximum displacement of a particle of the medium from its mean position",
+      "The number of vibrations per second"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Amplitude is the maximum displacement of the vibrating particles on either side of their mean (rest) position.",
     "source": "School Practice AE 2022-23"
   },
@@ -3365,12 +3365,12 @@
     "difficulty": "easy",
     "text": "The audible range of frequency for normal human ears is:",
     "options": [
-      "2 Hz to 2000 Hz",
       "20 Hz to 20,000 Hz",
       "200 Hz to 200,000 Hz",
-      "Above 20,000 Hz"
+      "Above 20,000 Hz",
+      "2 Hz to 2000 Hz"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Normal human ears can hear sounds of frequency roughly between 20 Hz and 20 kHz.",
     "source": "School Practice AE 2023-24"
   },
@@ -3380,12 +3380,12 @@
     "difficulty": "easy",
     "text": "How long does sound take to travel along a 1 km iron rail if the speed of sound in iron is 5000 m/s?",
     "options": [
-      "5 s",
-      "0.2 s",
       "0.02 s",
-      "2 s"
+      "2 s",
+      "5 s",
+      "0.2 s"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "t = distance/speed = 1000/5000 = 0.2 s.",
     "source": "School Practice AE 2023-24"
   },
@@ -3395,12 +3395,12 @@
     "difficulty": "medium",
     "text": "A wave pulse has velocity 80 m/s and wavelength 0.2 m. Its frequency is:",
     "options": [
-      "400 Hz",
-      "16 Hz",
       "40 Hz",
-      "160 Hz"
+      "16 Hz",
+      "160 Hz",
+      "400 Hz"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "f = v/λ = 80/0.2 = 400 Hz.",
     "source": "School Practice AE 2023-24"
   },
@@ -3410,10 +3410,10 @@
     "difficulty": "easy",
     "text": "A wave pulse travelling at 80 m/s covers what distance in 5 s?",
     "options": [
-      "800 m",
       "80 m",
+      "16 m",
       "400 m",
-      "16 m"
+      "800 m"
     ],
     "correct": 2,
     "explanation": "Distance = speed × time = 80 × 5 = 400 m.",
@@ -3440,8 +3440,8 @@
     "difficulty": "medium",
     "text": "Speed of sound depends upon the:",
     "options": [
-      "Temperature of the source producing the sound",
       "Pressure of the medium",
+      "Temperature of the source producing the sound",
       "Temperature of the medium",
       "Temperature and pressure of the medium"
     ],
@@ -3455,12 +3455,12 @@
     "difficulty": "medium",
     "text": "A wave in a slinky of length 5 m travels to one end and back (to and fro) in 5 s. The speed of the wave is:",
     "options": [
-      "5 m/s",
-      "25 m/s",
+      "2 m/s",
       "10 m/s",
-      "2 m/s"
+      "5 m/s",
+      "25 m/s"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "To and fro covers 2 × 5 = 10 m in 5 s, so speed = 10/5 = 2 m/s.",
     "source": "School Practice T1 2024-25"
   },
@@ -3470,12 +3470,12 @@
     "difficulty": "easy",
     "text": "SONAR uses which type of sound waves?",
     "options": [
-      "Supersonic",
-      "Infrasonic",
       "Ultrasonic",
-      "Audible"
+      "Audible",
+      "Supersonic",
+      "Infrasonic"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "SONAR uses ultrasonic waves (above 20 kHz), which have short wavelengths, travel in narrow beams and reflect well from underwater objects.",
     "source": "School Practice T1 2024-25"
   },
@@ -3486,9 +3486,9 @@
     "text": "In a longitudinal wave, compressions are regions of:",
     "options": [
       "High density and high pressure",
-      "Low density but high pressure",
       "Low density and low pressure",
-      "High density but low pressure"
+      "High density but low pressure",
+      "Low density but high pressure"
     ],
     "correct": 0,
     "explanation": "In a compression the particles of the medium are crowded together, so both density and pressure are higher than normal.",
@@ -3500,12 +3500,12 @@
     "difficulty": "medium",
     "text": "Which of the following statements about the speed of sound is correct?",
     "options": [
-      "Speed of sound increases with an increase in the density of the gas",
       "Speed of sound increases with an increase in the amplitude of the wave",
       "Speed of sound in air decreases with increase in humidity",
-      "Speed of sound increases with an increase in the temperature of the gas"
+      "Speed of sound increases with an increase in the temperature of the gas",
+      "Speed of sound increases with an increase in the density of the gas"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Speed of sound in a gas increases with temperature. It increases (not decreases) with humidity, decreases with greater density, and is independent of amplitude.",
     "source": "School Practice UT1 2024-25"
   },
@@ -3515,12 +3515,12 @@
     "difficulty": "medium",
     "text": "An increase in the humidity of air causes the speed of sound in air to:",
     "options": [
-      "Remain unchanged",
-      "Decrease",
       "Increase",
+      "Decrease",
+      "Remain unchanged",
       "Become zero"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Moist air is less dense than dry air at the same temperature and pressure, so sound travels faster in humid air.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3530,12 +3530,12 @@
     "difficulty": "medium",
     "text": "A source produces 50 crests and 50 troughs in 0.5 s. The frequency of the wave is:",
     "options": [
-      "200 Hz",
       "100 Hz",
+      "200 Hz",
       "50 Hz",
       "25 Hz"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "One crest plus one trough make one complete wave, so 50 waves are produced in 0.5 s: f = 50/0.5 = 100 Hz.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3545,12 +3545,12 @@
     "difficulty": "medium",
     "text": "A wave of frequency 100 Hz travels at 150 m/s. Its wavelength is:",
     "options": [
-      "0.67 m",
-      "1.5 m",
+      "250 m",
       "15 m",
-      "250 m"
+      "0.67 m",
+      "1.5 m"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "λ = v/f = 150/100 = 1.5 m.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3560,12 +3560,12 @@
     "difficulty": "easy",
     "text": "One application of ultrasound is:",
     "options": [
-      "Detecting electric current",
       "SONAR and medical imaging (ultrasonography)",
       "Magnetising iron bars",
-      "Measuring atmospheric pressure"
+      "Measuring atmospheric pressure",
+      "Detecting electric current"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Ultrasound is used in SONAR to find sea depth/objects and in medical ultrasonography, among other uses such as cleaning delicate parts.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3576,9 +3576,9 @@
     "text": "Two requisites of a medium for the propagation of sound are that it must possess:",
     "options": [
       "Elasticity and inertia (density)",
-      "Transparency and colour",
       "High temperature and low pressure",
-      "Electrical conductivity and magnetism"
+      "Electrical conductivity and magnetism",
+      "Transparency and colour"
     ],
     "correct": 0,
     "explanation": "Sound is a mechanical wave; the medium must be elastic (to restore displaced particles) and have inertia/density (so particles overshoot and keep the vibration going).",
@@ -3590,12 +3590,12 @@
     "difficulty": "medium",
     "text": "A radar signal is received 2 × 10⁻⁵ s after it was sent and reflected by an aeroplane. If the waves travel at 3 × 10⁸ m/s, how far away is the aeroplane?",
     "options": [
-      "6000 m",
-      "600 m",
       "1500 m",
-      "3000 m"
+      "600 m",
+      "3000 m",
+      "6000 m"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "The signal goes to the plane and back, so distance = (v × t)/2 = (3 × 10⁸ × 2 × 10⁻⁵)/2 = 3000 m.",
     "source": "School Practice T1 2023-24"
   },
@@ -3605,10 +3605,10 @@
     "difficulty": "medium",
     "text": "A SONAR pulse is detected 2 s after emission, after reflection from the sea bed. If the speed of sound in water is 1530 m/s, the depth of the water is:",
     "options": [
-      "765 m",
+      "6120 m",
       "1530 m",
-      "3060 m",
-      "6120 m"
+      "765 m",
+      "3060 m"
     ],
     "correct": 1,
     "explanation": "Depth = (v × t)/2 = (1530 × 2)/2 = 1530 m, because the pulse travels down and back up.",
@@ -3620,12 +3620,12 @@
     "difficulty": "hard",
     "text": "A child strikes one end of an aluminium rod and another child at the other end hears two sounds. If sound travels at 346 m/s in air and 6420 m/s in aluminium, the ratio of the time taken through air to that through aluminium is about:",
     "options": [
-      "1 : 18.6",
-      "1 : 1",
+      "346 : 1",
       "18.6 : 1",
-      "346 : 1"
+      "1 : 1",
+      "1 : 18.6"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "For the same distance, time ∝ 1/speed, so t(air)/t(Al) = 6420/346 ≈ 18.6. Sound through air takes about 18.6 times as long.",
     "source": "School Practice T1 2024-25"
   },
@@ -3636,11 +3636,11 @@
     "text": "If the density of oxygen is 16 times that of hydrogen (same temperature and pressure), the speed of sound in hydrogen compared to that in oxygen is:",
     "options": [
       "1/4 times",
-      "4 times",
       "16 times",
+      "4 times",
       "1/16 times"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "v ∝ 1/√ρ, so v(H₂)/v(O₂) = √(ρ(O₂)/ρ(H₂)) = √16 = 4.",
     "source": "School Practice T1 2024-25"
   },
@@ -3665,12 +3665,12 @@
     "difficulty": "medium",
     "text": "Sound travels in air at 340 m/s. The wavelength in air of sound from a 20 kHz source is:",
     "options": [
-      "17 cm",
-      "7.5 cm",
       "0.17 cm",
-      "1.7 cm"
+      "1.7 cm",
+      "17 cm",
+      "7.5 cm"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "λ = v/f = 340/20000 = 0.017 m = 1.7 cm.",
     "source": "School Practice T1 2024-25"
   },
@@ -3680,12 +3680,12 @@
     "difficulty": "medium",
     "text": "A 20 kHz sound source is placed in a water tank, where sound travels at 1500 m/s. The wavelength of the sound in water is:",
     "options": [
-      "75 cm",
-      "7.5 cm",
       "1.7 cm",
-      "0.75 cm"
+      "0.75 cm",
+      "75 cm",
+      "7.5 cm"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Frequency is set by the source and does not change, so λ = 1500/20000 = 0.075 m = 7.5 cm.",
     "source": "School Practice T1 2024-25"
   },
@@ -3695,12 +3695,12 @@
     "difficulty": "medium",
     "text": "The speed of sound in water is 1360 m/s. The time taken by sound to travel 1700 m in water is:",
     "options": [
-      "2.5 s",
       "0.8 s",
       "5 s",
-      "1.25 s"
+      "1.25 s",
+      "2.5 s"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "t = distance/speed = 1700/1360 = 1.25 s.",
     "source": "School Practice UT1 2024-25"
   },
@@ -3710,12 +3710,12 @@
     "difficulty": "easy",
     "text": "If sound travels 1700 m in air in 5 s, the speed of sound in air is:",
     "options": [
-      "170 m/s",
-      "8500 m/s",
       "340 m/s",
+      "8500 m/s",
+      "170 m/s",
       "850 m/s"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Speed = distance/time = 1700/5 = 340 m/s.",
     "source": "School Practice UT1 2024-25"
   },
@@ -3725,12 +3725,12 @@
     "difficulty": "medium",
     "text": "A wave of time period 5 s travels with velocity 20 m/s. Its frequency is:",
     "options": [
-      "5 Hz",
-      "100 Hz",
+      "0.2 Hz",
       "4 Hz",
-      "0.2 Hz"
+      "5 Hz",
+      "100 Hz"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "f = 1/T = 1/5 = 0.2 Hz.",
     "source": "School Practice AE 2024-25"
   },
@@ -3740,10 +3740,10 @@
     "difficulty": "hard",
     "text": "For a wave of time period 5 s travelling at 20 m/s, the distance between a crest and the adjoining trough is:",
     "options": [
-      "100 m",
-      "50 m",
       "4 m",
-      "25 m"
+      "50 m",
+      "25 m",
+      "100 m"
     ],
     "correct": 1,
     "explanation": "λ = vT = 20 × 5 = 100 m. A crest and its adjoining trough are half a wavelength apart: 100/2 = 50 m.",
@@ -3755,12 +3755,12 @@
     "difficulty": "medium",
     "text": "In the same medium, how do ultrasonic and infrasonic waves compare in wavelength?",
     "options": [
-      "Ultrasonic waves have shorter wavelengths, infrasonic waves have longer wavelengths",
-      "Ultrasonic waves have longer wavelengths",
+      "Infrasonic waves have no wavelength",
       "Both have the same wavelength",
-      "Infrasonic waves have no wavelength"
+      "Ultrasonic waves have shorter wavelengths, infrasonic waves have longer wavelengths",
+      "Ultrasonic waves have longer wavelengths"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "In a given medium the speed is the same, so λ = v/f: higher-frequency ultrasonic waves have shorter wavelengths than low-frequency infrasonic waves.",
     "source": "School Practice AE 2024-25"
   },
@@ -3771,9 +3771,9 @@
     "text": "Sound travels faster on a:",
     "options": [
       "Hot day",
+      "It cannot be said",
       "Cold day",
-      "Both the same",
-      "It cannot be said"
+      "Both the same"
     ],
     "correct": 0,
     "explanation": "Speed of sound in air increases with temperature, so it is greater on a hot day.",
@@ -3785,10 +3785,10 @@
     "difficulty": "medium",
     "text": "Which of the following is NOT a characteristic of a primary cell?",
     "options": [
-      "Chemical energy is converted into electrical energy",
+      "It cannot be recharged",
       "Its chemical reaction is irreversible",
       "Its internal resistance is very low",
-      "It cannot be recharged"
+      "Chemical energy is converted into electrical energy"
     ],
     "correct": 2,
     "explanation": "Primary cells have a relatively high internal resistance; the other three statements are true of primary cells.",
@@ -3815,12 +3815,12 @@
     "difficulty": "easy",
     "text": "The magnetic field of an electromagnet can be increased by:",
     "options": [
+      "Decreasing the current in the coil",
       "Increasing the number of turns in the coil",
       "Reversing the direction of current in the coil",
-      "Decreasing the current in the coil",
       "Using alternating current of high frequency"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The strength of an electromagnet increases with the number of turns of the coil (and with the current); reversing the current only reverses its polarity.",
     "source": "School Practice AE 2022-23"
   },
@@ -3830,10 +3830,10 @@
     "difficulty": "easy",
     "text": "Which of the following statements is NOT true?",
     "options": [
+      "An electromagnet is made of soft iron",
       "At a neutral point, the resultant magnetic field is zero",
-      "Induced magnetism is temporary",
       "Like poles attract each other",
-      "An electromagnet is made of soft iron"
+      "Induced magnetism is temporary"
     ],
     "correct": 2,
     "explanation": "Like poles repel each other; only unlike poles attract. The other statements are true.",
@@ -3845,12 +3845,12 @@
     "difficulty": "easy",
     "text": "The device used to measure the potential difference between two points of a circuit is the:",
     "options": [
-      "Ammeter",
       "Voltmeter",
       "Battery",
+      "Ammeter",
       "Galvanometer"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A voltmeter, connected in parallel across two points, measures the potential difference between them.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3890,12 +3890,12 @@
     "difficulty": "easy",
     "text": "Electromagnets are:",
     "options": [
-      "Temporary magnets",
-      "Permanent magnets",
       "Made of steel",
+      "Permanent magnets",
+      "Temporary magnets",
       "Both permanent and made of steel"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "An electromagnet has a soft-iron core and is magnetised only while current flows, so it is a temporary magnet.",
     "source": "School Practice UT2 2022-23"
   },
@@ -3905,12 +3905,12 @@
     "difficulty": "easy",
     "text": "A current of 6.5 A flows through a conductor for 5 s. The charge passing through it is:",
     "options": [
-      "1.3 C",
       "32.5 C",
       "Cannot be determined",
+      "1.3 C",
       "3 C"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Q = I × t = 6.5 × 5 = 32.5 C.",
     "source": "School Practice AE 2023-24"
   },
@@ -3922,10 +3922,10 @@
     "options": [
       "Aluminium",
       "Copper",
-      "Steel",
-      "Soft iron"
+      "Soft iron",
+      "Steel"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Soft iron is magnetised and demagnetised easily, so the armature is attracted when current flows and released when it stops, letting the bell ring repeatedly.",
     "source": "School Practice AE 2023-24"
   },
@@ -3950,8 +3950,8 @@
     "difficulty": "easy",
     "text": "Which of the following is true for secondary cells?",
     "options": [
-      "Daniell cell and Leclanché cell are examples",
       "They give current as a result of an irreversible chemical reaction",
+      "Daniell cell and Leclanché cell are examples",
       "The only energy conversion is chemical to electrical",
       "They can be recharged"
     ],
@@ -3982,8 +3982,8 @@
     "options": [
       "It can be switched on and off",
       "It is a permanent magnet",
-      "Its polarity can be changed",
-      "Its strength can be altered"
+      "Its strength can be altered",
+      "Its polarity can be changed"
     ],
     "correct": 1,
     "explanation": "An electromagnet is a temporary magnet — it loses its magnetism when the current is switched off.",
@@ -4010,12 +4010,12 @@
     "difficulty": "easy",
     "text": "An ammeter is used to:",
     "options": [
-      "Limit current in a circuit",
       "Provide resistance in a circuit",
       "Measure current in a circuit",
-      "Provide current in a circuit"
+      "Provide current in a circuit",
+      "Limit current in a circuit"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "An ammeter is connected in series to measure the current flowing in the circuit.",
     "source": "School Practice AE 2024-25"
   },
@@ -4025,9 +4025,9 @@
     "difficulty": "easy",
     "text": "The resistance of a bulb filament with a potential difference of 12 V across it and a current of 2 A through it is:",
     "options": [
-      "24 Ω",
-      "6 Ω",
       "9 Ω",
+      "6 Ω",
+      "24 Ω",
       "8 Ω"
     ],
     "correct": 1,
@@ -4042,10 +4042,10 @@
     "options": [
       "Statement 1 only",
       "Statement 2 only",
-      "Both 1 and 2",
-      "Neither 1 nor 2"
+      "Neither 1 nor 2",
+      "Both 1 and 2"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Both are reversed: primary cells have high internal resistance and give only weak currents, while secondary cells have low internal resistance and can supply large currents.",
     "source": "School Practice T1 2024-25"
   },
@@ -4055,12 +4055,12 @@
     "difficulty": "hard",
     "text": "Among the following, the incorrect statement(s) is/are: Statement 1: Magnetic field lines are open and continuous curves. Statement 2: Outside the magnet, magnetic field lines are directed from the south pole to the north pole.",
     "options": [
-      "Statement 1 only",
       "Statement 2 only",
       "Both 1 and 2",
+      "Statement 1 only",
       "Neither 1 nor 2"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Field lines are closed (not open) continuous curves, and outside a magnet they run from the north pole to the south pole. Both statements are incorrect.",
     "source": "School Practice T1 2024-25"
   },
@@ -4070,12 +4070,12 @@
     "difficulty": "medium",
     "text": "If n electrons, each of charge e, pass through a cross-section of a conductor in time t, the current I is:",
     "options": [
-      "I = nt/e",
       "I = ne/t",
       "I = net",
+      "I = nt/e",
       "I = n/(et)"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Total charge Q = ne, and current I = Q/t = ne/t.",
     "source": "School Practice T1 2024-25"
   },
@@ -4085,12 +4085,12 @@
     "difficulty": "easy",
     "text": "The direction of the magnetic field at a point on a magnetic field line is given by the:",
     "options": [
+      "Tangent to the line at that point",
       "Line joining the point to the north pole",
-      "Normal to the line at that point",
       "Line joining the point to the south pole",
-      "Tangent to the line at that point"
+      "Normal to the line at that point"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The tangent drawn at any point on a field line gives the direction of the magnetic field at that point.",
     "source": "School Practice T1 2024-25"
   },
@@ -4100,12 +4100,12 @@
     "difficulty": "easy",
     "text": "Electromagnets are made of:",
     "options": [
-      "Soft iron",
       "Aluminium",
-      "Cobalt",
-      "Copper"
+      "Copper",
+      "Soft iron",
+      "Cobalt"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Soft iron is used as the core because it is strongly magnetised while current flows and loses its magnetism quickly when the current stops.",
     "source": "School Practice UT1 2024-25"
   },
@@ -4115,10 +4115,10 @@
     "difficulty": "medium",
     "text": "Can two magnetic field lines intersect each other?",
     "options": [
-      "Yes, but only outside the magnet",
+      "Yes, always near the poles",
       "Yes, at neutral points",
       "No — at the point of intersection the field would have two directions, which is impossible",
-      "Yes, always near the poles"
+      "Yes, but only outside the magnet"
     ],
     "correct": 2,
     "explanation": "The magnetic field at a point has a unique direction (a compass points only one way), so two field lines can never cross.",
@@ -4130,12 +4130,12 @@
     "difficulty": "medium",
     "text": "Several soft iron pins can cling one below the other from the pole of a magnet. This is because:",
     "options": [
-      "Gravity holds them together",
       "The pins are permanently magnetised",
-      "Each pin becomes an induced magnet and in turn attracts the pin below it",
-      "Friction holds them together"
+      "Friction holds them together",
+      "Gravity holds them together",
+      "Each pin becomes an induced magnet and in turn attracts the pin below it"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "By magnetic induction, the first pin becomes a magnet, which induces magnetism in the next pin, and so on, forming a chain.",
     "source": "School Practice AE 2020-21"
   },
@@ -4145,12 +4145,12 @@
     "difficulty": "easy",
     "text": "The function of an ammeter in an electric circuit is to:",
     "options": [
-      "Measure the current flowing in the circuit",
       "Vary the resistance",
-      "Measure the potential difference",
-      "Store electric charge"
+      "Store electric charge",
+      "Measure the current flowing in the circuit",
+      "Measure the potential difference"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "An ammeter, connected in series, measures the current through the circuit.",
     "source": "School Practice AE 2020-21"
   },
@@ -4160,12 +4160,12 @@
     "difficulty": "easy",
     "text": "If 0.6 A flows through a resistor and the voltage across it is 12 V, its resistance is:",
     "options": [
-      "20 Ω",
       "0.05 Ω",
       "12 Ω",
+      "20 Ω",
       "7.2 Ω"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "R = V/I = 12/0.6 = 20 Ω.",
     "source": "School Practice AE 2020-21"
   },
@@ -4176,11 +4176,11 @@
     "text": "The SI units of potential difference (voltage) and electric current are respectively:",
     "options": [
       "Ampere and volt",
-      "Ohm and ampere",
       "Volt and ampere",
+      "Ohm and ampere",
       "Volt and coulomb"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "1 volt = 1 joule per coulomb (potential difference); 1 ampere = 1 coulomb of charge flowing per second (current).",
     "source": "School Practice AE 2020-21"
   },
@@ -4192,10 +4192,10 @@
     "options": [
       "Iron objects rust",
       "Objects fall towards the Earth",
-      "Lightning occurs",
-      "A freely suspended magnet (compass needle) always comes to rest pointing in the north-south direction"
+      "A freely suspended magnet (compass needle) always comes to rest pointing in the north-south direction",
+      "Lightning occurs"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "A freely suspended magnet aligns itself north-south, which shows that the Earth behaves like a huge magnet with its own magnetic field.",
     "source": "School Practice AE 2020-21"
   },
@@ -4205,12 +4205,12 @@
     "difficulty": "medium",
     "text": "A compass needle placed at a neutral point:",
     "options": [
+      "Can rest in any direction",
       "Oscillates continuously",
       "Points towards geographic north",
-      "Can rest in any direction",
       "Points towards geographic south"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "At a neutral point the net magnetic field is zero, so there is no force aligning the needle and it can rest in any direction.",
     "source": "School Practice AE 2020-21"
   },
@@ -4220,8 +4220,8 @@
     "difficulty": "easy",
     "text": "If 5 A of current flows through a conductor for 4 s, the charge passing through it is:",
     "options": [
-      "9 C",
       "1.25 C",
+      "9 C",
       "0.8 C",
       "20 C"
     ],
@@ -4235,9 +4235,9 @@
     "difficulty": "medium",
     "text": "A charge of 20 C is transferred across a potential difference of 3 V. The work done is:",
     "options": [
-      "23 J",
-      "6.67 J",
       "17 J",
+      "6.67 J",
+      "23 J",
       "60 J"
     ],
     "correct": 3,
@@ -4250,12 +4250,12 @@
     "difficulty": "easy",
     "text": "According to Ohm's law, the resistance R of a conductor is given by:",
     "options": [
+      "R = I/V",
       "R = VI",
-      "R = V/I",
       "R = V + I",
-      "R = I/V"
+      "R = V/I"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Ohm's law states V ∝ I at constant temperature, i.e. V = IR, so R = V/I.",
     "source": "School Practice AE 2022-23"
   },
@@ -4265,12 +4265,12 @@
     "difficulty": "easy",
     "text": "The physical quantity expressed in volts is:",
     "options": [
-      "Potential difference",
-      "Charge",
       "Current",
-      "Resistance"
+      "Charge",
+      "Resistance",
+      "Potential difference"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The volt is the SI unit of potential difference (and of e.m.f.).",
     "source": "School Practice UT2 2022-23"
   },
@@ -4295,10 +4295,10 @@
     "difficulty": "easy",
     "text": "The SI unit of current and the direction of conventional current are:",
     "options": [
-      "Coulomb; the direction of electron flow",
-      "Ampere; the direction of flow of positive charge (opposite to electron flow)",
       "Volt; from negative to positive terminal",
-      "Ampere; the direction of electron flow"
+      "Ampere; the direction of flow of positive charge (opposite to electron flow)",
+      "Ampere; the direction of electron flow",
+      "Coulomb; the direction of electron flow"
     ],
     "correct": 1,
     "explanation": "Current is measured in amperes; conventional current flows from the positive to the negative terminal outside the cell, opposite to the flow of electrons.",
@@ -4310,12 +4310,12 @@
     "difficulty": "easy",
     "text": "A cell connected to a bulb has a potential difference of 24 V across it, and the ammeter reads 6 A. The resistance of the filament is:",
     "options": [
-      "4 Ω",
-      "18 Ω",
       "144 Ω",
-      "30 Ω"
+      "4 Ω",
+      "30 Ω",
+      "18 Ω"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "R = V/I = 24/6 = 4 Ω.",
     "source": "School Practice AE 2023-24"
   },
@@ -4326,9 +4326,9 @@
     "text": "The statement 'induced magnetism is temporary' means that:",
     "options": [
       "The magnetism induced in a magnetic material disappears once the inducing magnet is removed",
-      "The magnetism increases with time",
+      "The material becomes permanently magnetised",
       "Induced magnetism cannot be produced in iron",
-      "The material becomes permanently magnetised"
+      "The magnetism increases with time"
     ],
     "correct": 0,
     "explanation": "A soft iron piece magnetised by induction loses (almost all) its magnetism when the magnet is taken away.",
@@ -4340,12 +4340,12 @@
     "difficulty": "medium",
     "text": "A solenoid with an iron core is connected to a battery and the core is strongly attracted into it. If the battery terminals are reversed, the iron core will:",
     "options": [
-      "Become permanently demagnetised",
       "Be repelled out of the solenoid",
       "Still be attracted into the solenoid (only the polarity reverses)",
-      "Not be affected at all by the solenoid"
+      "Not be affected at all by the solenoid",
+      "Become permanently demagnetised"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Reversing the current reverses the solenoid's poles, but the soft iron core is induced with the matching opposite polarity, so it is still attracted.",
     "source": "School Practice AE 2023-24"
   },
@@ -4355,12 +4355,12 @@
     "difficulty": "easy",
     "text": "If the number of turns in a solenoid's coil is increased (same current), the strength of the magnetic field it produces:",
     "options": [
+      "Increases",
       "Decreases",
-      "Stays the same",
       "Becomes zero",
-      "Increases"
+      "Stays the same"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The magnetic field of a solenoid increases with the number of turns per unit length.",
     "source": "School Practice AE 2023-24"
   },
@@ -4370,12 +4370,12 @@
     "difficulty": "medium",
     "text": "One difference between an electromagnet and a bar magnet is that:",
     "options": [
-      "An electromagnet has no poles",
-      "A bar magnet is always stronger",
       "An electromagnet is temporary and its strength can be varied, while a bar magnet is permanent with fixed strength",
+      "A bar magnet is always stronger",
+      "An electromagnet has no poles",
       "A bar magnet can be switched on and off"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "An electromagnet works only while current flows and its strength/polarity can be changed; a bar magnet's magnetism is permanent and fixed.",
     "source": "School Practice AE 2023-24"
   },
@@ -4385,12 +4385,12 @@
     "difficulty": "easy",
     "text": "The function of a switch (key) in an electric circuit is to:",
     "options": [
-      "Measure current",
-      "Measure potential difference",
       "Increase resistance",
-      "Open or close (break or complete) the circuit"
+      "Open or close (break or complete) the circuit",
+      "Measure potential difference",
+      "Measure current"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "A switch makes or breaks the circuit, starting or stopping the flow of current.",
     "source": "School Practice T1 2023-24"
   },
@@ -4400,12 +4400,12 @@
     "difficulty": "medium",
     "text": "For a metallic conductor, an increase in (1) its length and (2) its temperature will:",
     "options": [
-      "Increase its resistance in both cases",
       "Decrease its resistance in both cases",
       "Increase it in case 1 and decrease it in case 2",
-      "Have no effect"
+      "Have no effect",
+      "Increase its resistance in both cases"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "R ∝ length, and for metals resistance increases with temperature, so both changes increase resistance.",
     "source": "School Practice T1 2023-24"
   },
@@ -4415,12 +4415,12 @@
     "difficulty": "easy",
     "text": "One advantage of an electromagnet over a permanent magnet is that:",
     "options": [
-      "It is always weaker",
+      "Its strength can be controlled and it can be switched on and off",
       "It cannot change polarity",
       "It never needs electricity",
-      "Its strength can be controlled and it can be switched on and off"
+      "It is always weaker"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Varying the current changes an electromagnet's strength, and switching off the current removes its magnetism.",
     "source": "School Practice T1 2023-24"
   },
@@ -4430,12 +4430,12 @@
     "difficulty": "easy",
     "text": "Which of the following is a use of an electromagnet in daily life?",
     "options": [
-      "In measuring temperature",
-      "In an electric bell and in cranes lifting scrap iron",
       "In storing charge",
-      "In producing light directly"
+      "In measuring temperature",
+      "In producing light directly",
+      "In an electric bell and in cranes lifting scrap iron"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Electromagnets are used in electric bells, cranes for scrap iron, electric motors, relays and loudspeakers.",
     "source": "School Practice T1 2023-24"
   },
@@ -4445,12 +4445,12 @@
     "difficulty": "easy",
     "text": "Parallel and equidistant magnetic field lines represent a:",
     "options": [
-      "Non-uniform magnetic field",
       "Field near a pole",
       "Uniform magnetic field",
-      "Zero magnetic field"
+      "Zero magnetic field",
+      "Non-uniform magnetic field"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Field lines that are parallel and equally spaced show a field of the same strength and direction everywhere — a uniform field (e.g. the Earth's local field).",
     "source": "School Practice T1 2024-25"
   },
@@ -4460,12 +4460,12 @@
     "difficulty": "easy",
     "text": "When the starter motor of a car is switched on for 0.8 s, a charge of 24 C passes through its coil. The current in the coil is:",
     "options": [
+      "3 A",
       "30 A",
       "0.03 A",
-      "19.2 A",
-      "3 A"
+      "19.2 A"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "I = Q/t = 24/0.8 = 30 A.",
     "source": "School Practice T1 2024-25"
   },
@@ -4475,12 +4475,12 @@
     "difficulty": "medium",
     "text": "Sam has a thick copper wire and Sonu a thin copper wire of the same length. Which wire has more resistance?",
     "options": [
+      "Cannot be compared",
       "The thin wire (Sonu's), since resistance is inversely proportional to cross-sectional area",
       "The thick wire (Sam's)",
-      "Both have the same resistance",
-      "Cannot be compared"
+      "Both have the same resistance"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "R ∝ 1/A for the same material and length, so the thinner wire (smaller area) has greater resistance.",
     "source": "School Practice T1 2024-25"
   },
@@ -4490,12 +4490,12 @@
     "difficulty": "easy",
     "text": "When current is drawn from a cell, the energy transformation taking place is:",
     "options": [
-      "Light energy to electrical energy",
       "Electrical energy to chemical energy",
       "Heat energy to electrical energy",
-      "Chemical energy to electrical energy"
+      "Chemical energy to electrical energy",
+      "Light energy to electrical energy"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Chemical reactions inside the cell release energy that drives charge round the circuit as electrical energy.",
     "source": "School Practice T1 2024-25"
   },
@@ -4505,12 +4505,12 @@
     "difficulty": "easy",
     "text": "The unit joule per coulomb represents:",
     "options": [
-      "Power (watt)",
+      "Current (ampere)",
       "Resistance (ohm)",
-      "Potential difference (volt)",
-      "Current (ampere)"
+      "Power (watt)",
+      "Potential difference (volt)"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Potential difference = work done/charge, so J/C = volt.",
     "source": "School Practice T1 2024-25"
   },
@@ -4520,12 +4520,12 @@
     "difficulty": "medium",
     "text": "If the resistance of a conductor is doubled while the potential difference across it is kept the same, the current:",
     "options": [
-      "Becomes four times",
       "Becomes half",
       "Stays the same",
-      "Doubles"
+      "Doubles",
+      "Becomes four times"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "I = V/R; with V fixed, doubling R halves I.",
     "source": "School Practice T1 2024-25"
   },
@@ -4535,12 +4535,12 @@
     "difficulty": "medium",
     "text": "'The potential difference between two conductors is 1 volt' means that:",
     "options": [
-      "The conductors have equal charge",
-      "1 ampere flows through 1 ohm for 1 second",
       "1 coulomb of charge flows per second",
-      "1 joule of work is done in moving 1 coulomb of charge from one conductor to the other"
+      "1 joule of work is done in moving 1 coulomb of charge from one conductor to the other",
+      "1 ampere flows through 1 ohm for 1 second",
+      "The conductors have equal charge"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "V = W/Q, so 1 V = 1 J/C: one joule of work is needed to move one coulomb of charge between the two points.",
     "source": "School Practice T1 2024-25"
   },
@@ -4551,9 +4551,9 @@
     "text": "Two copper wires of the same cross-sectional area have lengths 3 cm and 9 cm. The ratio of their resistances is:",
     "options": [
       "1 : 3",
+      "9 : 1",
       "1 : 9",
-      "3 : 1",
-      "9 : 1"
+      "3 : 1"
     ],
     "correct": 0,
     "explanation": "For the same material and area, R ∝ length, so R₁ : R₂ = 3 : 9 = 1 : 3.",
@@ -4565,12 +4565,12 @@
     "difficulty": "easy",
     "text": "A wire of resistance 12.5 Ω is connected to a battery of potential difference 2.5 V. The current in the circuit is:",
     "options": [
-      "31.25 A",
       "0.2 A",
+      "5 A",
       "2 A",
-      "5 A"
+      "31.25 A"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "I = V/R = 2.5/12.5 = 0.2 A.",
     "source": "School Practice AE 2024-25"
   },
@@ -4580,12 +4580,12 @@
     "difficulty": "easy",
     "text": "An example of a secondary cell is the:",
     "options": [
-      "Daniell cell",
+      "Lead-acid accumulator (car battery)",
       "Dry cell",
-      "Leclanché cell",
-      "Lead-acid accumulator (car battery)"
+      "Daniell cell",
+      "Leclanché cell"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The lead-acid accumulator can be recharged, so it is a secondary cell; Leclanché, Daniell and dry cells are primary cells.",
     "source": "School Practice AE 2024-25"
   },
@@ -4595,12 +4595,12 @@
     "difficulty": "medium",
     "text": "One difference between a concave mirror and a convex mirror is that:",
     "options": [
-      "A concave mirror converges light and can form real images, while a convex mirror diverges light and always forms virtual images",
-      "Both always form virtual images",
+      "A convex mirror converges light",
       "Both always form real images",
-      "A convex mirror converges light"
+      "A concave mirror converges light and can form real images, while a convex mirror diverges light and always forms virtual images",
+      "Both always form virtual images"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "A concave (converging) mirror forms real or virtual images depending on object position; a convex (diverging) mirror always forms virtual, erect, diminished images.",
     "source": "School Practice UT1 2024-25"
   },
@@ -4610,8 +4610,8 @@
     "difficulty": "medium",
     "text": "An object is placed 15 cm in front of a convex mirror of focal length 10 cm. The image distance is:",
     "options": [
-      "25 cm behind the mirror",
       "30 cm behind the mirror",
+      "25 cm behind the mirror",
       "6 cm in front of the mirror",
       "6 cm behind the mirror"
     ],
@@ -4641,11 +4641,11 @@
     "text": "What happens to the current in a circuit if the voltage is doubled while the resistance is kept constant?",
     "options": [
       "It is halved",
+      "It remains the same",
       "It is doubled",
-      "It is quadrupled",
-      "It remains the same"
+      "It is quadrupled"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "By Ohm's law I = V/R. With R constant, I is directly proportional to V, so doubling V doubles I.",
     "source": "School Practice UT1 2025-26"
   },
@@ -4655,12 +4655,12 @@
     "difficulty": "easy",
     "text": "The focal length of a convex mirror whose radius of curvature is 22.5 cm is:",
     "options": [
-      "45 cm",
-      "5.625 cm",
       "11.25 cm",
-      "22.5 cm"
+      "22.5 cm",
+      "5.625 cm",
+      "45 cm"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "For a spherical mirror f = R/2 = 22.5/2 = 11.25 cm.",
     "source": "School Practice UT1 2025-26"
   },
@@ -4670,12 +4670,12 @@
     "difficulty": "easy",
     "text": "Sound waves that have good directivity (can be sent as a narrow beam in a particular direction) are:",
     "options": [
-      "All sound waves equally",
+      "Ultrasonic waves",
       "Audible (sonic) waves",
       "Infrasonic waves",
-      "Ultrasonic waves"
+      "All sound waves equally"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Ultrasonic waves have very high frequency and hence very short wavelength, so they spread very little and can be sent in a narrow beam. This is why they are used in SONAR.",
     "source": "School Practice UT1 2025-26"
   },
@@ -4686,8 +4686,8 @@
     "text": "The nature of the gravitational force between two bodies is always:",
     "options": [
       "attractive",
-      "repulsive",
       "attractive or repulsive, depending on the bodies involved",
+      "repulsive",
       "neither attractive nor repulsive"
     ],
     "correct": 0,
@@ -4700,8 +4700,8 @@
     "difficulty": "easy",
     "text": "A footballer hits a football with a force of 25 N. What force does the footballer experience?",
     "options": [
-      "15 N",
       "10 N",
+      "15 N",
       "50 N",
       "25 N"
     ],
@@ -4715,12 +4715,12 @@
     "difficulty": "easy",
     "text": "The pressure P₁ at the top of a dam (at the water surface) and P₂ at a depth h below it inside water of density ρ are related as:",
     "options": [
-      "P₁ > P₂",
       "P₁ − P₂ = hρg",
-      "P₂ − P₁ = hρg",
-      "P₁ = P₂"
+      "P₁ > P₂",
+      "P₁ = P₂",
+      "P₂ − P₁ = hρg"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Pressure in a liquid increases with depth: P₂ = P₁ + hρg, so P₂ − P₁ = hρg.",
     "source": "School Practice UT2 2025-26"
   },
@@ -4730,12 +4730,12 @@
     "difficulty": "easy",
     "text": "A cork floating on the surface of water indicates that:",
     "options": [
-      "the density of water is less than the density of cork",
-      "the density of water is more than the density of cork",
+      "the density of water is equal to the density of cork",
       "the density of water plays no role in the floatation of cork",
-      "the density of water is equal to the density of cork"
+      "the density of water is more than the density of cork",
+      "the density of water is less than the density of cork"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A body floats partly submerged in a liquid when its density is less than that of the liquid. Cork floats, so water is denser than cork.",
     "source": "School Practice UT2 2025-26"
   },
@@ -4745,12 +4745,12 @@
     "difficulty": "medium",
     "text": "A body of volume 200 cm³ weighs 10 kgf in air. It is completely immersed in a liquid of density 1.8 × 10³ kg m⁻³. The upthrust due to the liquid and the weight of the body in the liquid are (g = 9.8 m s⁻²):",
     "options": [
-      "3.528 N and 94.472 N",
+      "3.528 N and 98 N",
       "35.28 N and 62.72 N",
-      "0.36 N and 9.64 N",
-      "3.528 N and 98 N"
+      "3.528 N and 94.472 N",
+      "0.36 N and 9.64 N"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Upthrust = Vρg = (200 × 10⁻⁶ m³)(1800 kg m⁻³)(9.8 m s⁻²) = 3.528 N. Weight in air = 10 kgf = 98 N. Weight in liquid = 98 − 3.528 = 94.472 N (≈ 9.64 kgf).",
     "source": "School Practice UT2 2025-26"
   },
@@ -4760,12 +4760,12 @@
     "difficulty": "medium",
     "text": "An object is thrown vertically upwards with a speed of 49 m/s. The maximum height reached and the time it takes to return to the point of projection are (g = 9.8 m/s²):",
     "options": [
-      "122.5 m and 5 s",
       "245 m and 10 s",
-      "61.25 m and 5 s",
-      "122.5 m and 10 s"
+      "122.5 m and 10 s",
+      "122.5 m and 5 s",
+      "61.25 m and 5 s"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "At the top v = 0: h = u²/2g = 49²/(2 × 9.8) = 2401/19.6 = 122.5 m. Time to rise t = u/g = 49/9.8 = 5 s; it takes the same time to come down, so total time = 10 s.",
     "source": "School Practice UT2 2025-26"
   },
@@ -4776,9 +4776,9 @@
     "text": "The derived unit of work (or energy) is the joule. Which is the correct relationship between joule and the fundamental units?",
     "options": [
       "kg m s⁻²",
-      "kg m² s⁻³",
+      "kg m⁻¹ s⁻²",
       "kg m² s⁻²",
-      "kg m⁻¹ s⁻²"
+      "kg m² s⁻³"
     ],
     "correct": 2,
     "explanation": "1 J = 1 N × 1 m and 1 N = 1 kg m s⁻². So 1 J = 1 kg m² s⁻². (kg m s⁻² is the newton, kg m⁻¹ s⁻² the pascal, kg m² s⁻³ the watt.)",
@@ -4790,12 +4790,12 @@
     "difficulty": "easy",
     "text": "Which option shows the units of distance in increasing order of their magnitude?",
     "options": [
-      "Å, nm, m, A.U.",
-      "A.U., Å, nm, m",
+      "nm, Å, A.U., m",
       "A.U., nm, Å, m",
-      "nm, Å, A.U., m"
+      "Å, nm, m, A.U.",
+      "A.U., Å, nm, m"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "1 Å = 10⁻¹⁰ m, 1 nm = 10⁻⁹ m, then the metre, and 1 A.U. ≈ 1.5 × 10¹¹ m. So the increasing order is Å < nm < m < A.U.",
     "source": "School Practice T1 2025-26"
   },
@@ -4820,12 +4820,12 @@
     "difficulty": "easy",
     "text": "Free fall of a body near the earth's surface (neglecting air resistance) is an example of:",
     "options": [
-      "variable acceleration",
       "uniform acceleration",
+      "variable acceleration",
       "uniform velocity",
       "uniform speed"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Near the earth's surface a freely falling body has a constant acceleration g ≈ 9.8 m s⁻², so its motion is uniformly accelerated.",
     "source": "School Practice T1 2025-26"
   },
@@ -4835,12 +4835,12 @@
     "difficulty": "medium",
     "text": "A ray of light strikes a concave mirror. In which case will the angle of incidence be zero?",
     "options": [
+      "When the incident ray strikes the pole",
       "When the incident ray is parallel to the principal axis",
-      "When the incident ray passes through the centre of curvature",
       "When the incident ray passes through the focus",
-      "When the incident ray strikes the pole"
+      "When the incident ray passes through the centre of curvature"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A ray through the centre of curvature travels along a radius, which is the normal to the mirror at that point. So it strikes the mirror normally (i = 0°) and retraces its path.",
     "source": "School Practice T1 2025-26"
   },
@@ -4850,12 +4850,12 @@
     "difficulty": "easy",
     "text": "The number of images of an object placed between two plane mirrors:",
     "options": [
-      "does not depend on the angle between the mirrors",
-      "decreases with a decrease in the angle between the mirrors",
       "increases with an increase in the angle between the mirrors",
-      "increases with a decrease in the angle between the mirrors"
+      "increases with a decrease in the angle between the mirrors",
+      "decreases with a decrease in the angle between the mirrors",
+      "does not depend on the angle between the mirrors"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Number of images n = (360°/θ) − 1 (for 360°/θ even). As θ decreases, 360°/θ increases, so more images are formed.",
     "source": "School Practice T1 2025-26"
   },
@@ -4865,12 +4865,12 @@
     "difficulty": "easy",
     "text": "For the magnification of the image formed by a concave mirror to be infinite, the object must be placed:",
     "options": [
-      "at the focus of the mirror",
-      "at an infinite distance from the mirror",
       "between the focus and the centre of curvature",
-      "at a distance shorter than the focal length"
+      "at a distance shorter than the focal length",
+      "at the focus of the mirror",
+      "at an infinite distance from the mirror"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "When the object is at the focus, the reflected rays are parallel and the image is formed at infinity, highly enlarged, so the magnification is infinite.",
     "source": "School Practice T1 2025-26"
   },
@@ -4880,8 +4880,8 @@
     "difficulty": "easy",
     "text": "For an infrasonic sound and an ultrasonic sound travelling in the same medium, which of the following is the same?",
     "options": [
-      "Wavelength",
       "Frequency",
+      "Wavelength",
       "Wave velocity",
       "Frequency, wavelength and wave velocity"
     ],
@@ -4895,12 +4895,12 @@
     "difficulty": "easy",
     "text": "Sound waves propagate in air in the form of:",
     "options": [
-      "longitudinal waves",
-      "transverse waves",
       "both longitudinal and transverse waves",
-      "sound cannot propagate in air because of its low density"
+      "longitudinal waves",
+      "sound cannot propagate in air because of its low density",
+      "transverse waves"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "In air the particles vibrate back and forth along the direction of propagation, forming compressions and rarefactions, so sound in air is a longitudinal wave.",
     "source": "School Practice T1 2025-26"
   },
@@ -4910,10 +4910,10 @@
     "difficulty": "easy",
     "text": "An ammeter is an electrical device of:",
     "options": [
-      "high resistance, always connected in parallel",
+      "high resistance, always connected in series",
       "low resistance, always connected in series",
-      "low resistance, always connected in parallel",
-      "high resistance, always connected in series"
+      "high resistance, always connected in parallel",
+      "low resistance, always connected in parallel"
     ],
     "correct": 1,
     "explanation": "An ammeter must carry the full circuit current without changing it noticeably, so it has very low resistance and is connected in series.",
@@ -4970,12 +4970,12 @@
     "difficulty": "easy",
     "text": "The earth's magnetic field resembles that of a:",
     "options": [
-      "circular current loop with no poles",
+      "bar magnet",
       "straight current-carrying wire",
-      "horse-shoe magnet",
-      "bar magnet"
+      "circular current loop with no poles",
+      "horse-shoe magnet"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The earth behaves as if a huge bar magnet were placed inside it, with its magnetic south pole near the geographic north pole.",
     "source": "School Practice T1 2025-26"
   },
@@ -5001,11 +5001,11 @@
     "text": "Why is a good conductor such as copper wire used for the coil of an electromagnet?",
     "options": [
       "It has high resistance, which strengthens the field",
-      "It is cheaper than any other wire",
+      "It has low resistance, so a large current can flow with little heating",
       "It is itself a strong magnetic material",
-      "It has low resistance, so a large current can flow with little heating"
+      "It is cheaper than any other wire"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Copper is non-magnetic but has very low resistance. A large current can pass through many turns without much heating, producing a strong magnetic field in the core.",
     "source": "School Practice T1 2025-26"
   },
@@ -5015,12 +5015,12 @@
     "difficulty": "medium",
     "text": "A TV tube shoots out a beam of electrons carrying a current of 100 mA. The charge striking the screen in one minute and the number of electrons striking it each second are (e = 1.6 × 10⁻¹⁹ C):",
     "options": [
-      "6 C and 6.25 × 10¹⁸",
-      "6000 C and 3.75 × 10¹⁹",
+      "0.1 C and 6.25 × 10¹⁷",
       "6 C and 6.25 × 10¹⁷",
-      "0.1 C and 6.25 × 10¹⁷"
+      "6000 C and 3.75 × 10¹⁹",
+      "6 C and 6.25 × 10¹⁸"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Q = It = 0.1 A × 60 s = 6 C. Charge per second = 0.1 C, so n = 0.1 / (1.6 × 10⁻¹⁹) = 6.25 × 10¹⁷ electrons per second.",
     "source": "School Practice T1 2025-26"
   },
@@ -5031,11 +5031,11 @@
     "text": "A circuit has a 12 V battery, a 4 Ω resistor and an ammeter in series. A voltmeter is used to measure the p.d. across the resistor. How is the voltmeter connected, and what is the ammeter reading?",
     "options": [
       "In series; 3 A",
-      "In parallel; 3 A",
       "In parallel; 48 A",
+      "In parallel; 3 A",
       "In series; 0.33 A"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A voltmeter is always connected in parallel across the component. I = V/R = 12/4 = 3 A (taking the ammeter and battery resistances as negligible).",
     "source": "School Practice T1 2025-26"
   },
@@ -5060,12 +5060,12 @@
     "difficulty": "easy",
     "text": "Which of the following units is equivalent to the joule?",
     "options": [
-      "volt × coulomb",
+      "volt / coulomb",
       "volt × ampere",
       "coulomb / volt",
-      "volt / coulomb"
+      "volt × coulomb"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Work W = QV, so 1 J = 1 C × 1 V. (Volt × ampere is the watt.)",
     "source": "School Practice AE 2025-26"
   },
@@ -5091,11 +5091,11 @@
     "text": "The magnitude of a non-contact force between two bodies ______ with a decrease in their separation and ______ with an increase in their separation.",
     "options": [
       "decreases, decreases",
-      "decreases, increases",
       "increases, decreases",
+      "decreases, increases",
       "increases, increases"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Non-contact forces such as gravitational, magnetic and electrostatic forces become stronger as the bodies come closer and weaker as they move apart.",
     "source": "School Practice AE 2025-26"
   },
@@ -5105,12 +5105,12 @@
     "difficulty": "easy",
     "text": "Which of the following statements about action and reaction is correct?",
     "options": [
+      "The sum of action and reaction on a body is zero.",
       "Action and reaction act on the same body in opposite directions.",
       "Action and reaction act on different bodies in opposite directions.",
-      "The sum of action and reaction on a body is zero.",
       "Action and reaction act on different bodies in the same direction."
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "By Newton's third law, action and reaction are equal, opposite and act on two different bodies, so they never cancel each other.",
     "source": "School Practice AE 2025-26"
   },
@@ -5120,12 +5120,12 @@
     "difficulty": "easy",
     "text": "The pressure P₁ at a certain depth in sea water and P₂ at the same depth in river water are related as:",
     "options": [
-      "P₁ = P₂",
+      "P₁ > P₂",
       "P₁ < P₂",
       "P₁ − P₂ = 0",
-      "P₁ > P₂"
+      "P₁ = P₂"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Liquid pressure = hρg. Sea water is denser than river water, so at the same depth P₁ > P₂.",
     "source": "School Practice AE 2025-26"
   },
@@ -5135,12 +5135,12 @@
     "difficulty": "easy",
     "text": "When a lake starts freezing, ice forms:",
     "options": [
-      "first in the middle",
-      "uniformly throughout",
+      "first at the top",
       "first at the bottom",
-      "first at the top"
+      "first in the middle",
+      "uniformly throughout"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "Water below 4°C is less dense and stays at the surface, so the top layer reaches 0°C first and freezes, while the denser 4°C water stays at the bottom.",
     "source": "School Practice AE 2025-26"
   },
@@ -5150,10 +5150,10 @@
     "difficulty": "easy",
     "text": "The magnification produced by the rear-view mirror fitted in vehicles:",
     "options": [
-      "is equal to one",
+      "can be more or less than one, depending on the position of the object",
       "is less than one",
-      "is more than one",
-      "can be more or less than one, depending on the position of the object"
+      "is equal to one",
+      "is more than one"
     ],
     "correct": 1,
     "explanation": "A rear-view mirror is a convex mirror, which always forms a virtual, erect and diminished image, so the magnification is always less than 1.",
@@ -5181,9 +5181,9 @@
     "text": "Which property of the ice layer formed on the surface of a lake prevents heat flowing from the water below to the cold atmosphere?",
     "options": [
       "Ice is a poor conductor of heat",
-      "Ice has maximum density at 4°C",
       "Ice is a good conductor of heat",
-      "Ice is denser than water"
+      "Ice is denser than water",
+      "Ice has maximum density at 4°C"
     ],
     "correct": 0,
     "explanation": "Ice is a bad conductor (insulator) of heat, so the ice layer prevents further loss of heat from the water below, and aquatic life survives in the water at 4°C.",
@@ -5195,10 +5195,10 @@
     "difficulty": "medium",
     "text": "A simple pendulum has a bob of mass 1 kg, length l and time period T. If the mass is doubled and the length is made 4 times, the new time period is:",
     "options": [
+      "T",
       "4T",
-      "2√2 T",
       "2T",
-      "T"
+      "2√2 T"
     ],
     "correct": 2,
     "explanation": "T = 2π√(l/g) is independent of the mass of the bob. With length 4l, T' = 2π√(4l/g) = 2T.",
@@ -5211,8 +5211,8 @@
     "text": "A particle is pushed along a horizontal surface with an initial velocity of 15 m s⁻¹. Its velocity decreases at a uniform rate of 0.5 m s⁻². The time it takes to come to rest is:",
     "options": [
       "30 s",
-      "15 s",
       "3 s",
+      "15 s",
       "7.5 s"
     ],
     "correct": 0,
@@ -5225,12 +5225,12 @@
     "difficulty": "easy",
     "text": "Why is a water supply tank always placed on top of a building?",
     "options": [
-      "Water at a height is cooler",
       "Liquid pressure decreases with depth",
       "It protects the water from atmospheric pressure",
-      "A greater height of water gives greater pressure at the taps"
+      "A greater height of water gives greater pressure at the taps",
+      "Water at a height is cooler"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Liquid pressure = hρg increases with the height of the water column. Placing the tank high gives sufficient pressure for water to reach all taps.",
     "source": "School Practice AE 2025-26"
   },
@@ -5240,12 +5240,12 @@
     "difficulty": "easy",
     "text": "A rubber suction pad sticks to a smooth wall because:",
     "options": [
-      "the rubber is attracted to the wall by gravity",
       "air is pushed out from under it, and the atmospheric pressure outside presses it against the wall",
       "friction alone holds it, even without pressure difference",
+      "the rubber is attracted to the wall by gravity",
       "the pad creates high pressure between itself and the wall"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Pressing the pad expels the air from under it, leaving very low pressure there. The greater atmospheric pressure on its outer surface then holds it firmly against the wall.",
     "source": "School Practice AE 2025-26"
   },
@@ -5255,12 +5255,12 @@
     "difficulty": "medium",
     "text": "A car of mass 2000 kg is moving at 18 km/h. The force needed to change its speed to 36 km/h in 2 s is:",
     "options": [
-      "10000 N",
-      "2500 N",
       "5000 N",
-      "18000 N"
+      "2500 N",
+      "18000 N",
+      "10000 N"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "18 km/h = 5 m/s and 36 km/h = 10 m/s. a = (10 − 5)/2 = 2.5 m/s². F = ma = 2000 × 2.5 = 5000 N.",
     "source": "School Practice AE 2025-26"
   },
@@ -5270,12 +5270,12 @@
     "difficulty": "medium",
     "text": "Two bodies have the same momentum. Their masses are in the ratio 1 : 2. The ratio of their kinetic energies is:",
     "options": [
-      "4 : 1",
       "1 : 4",
       "2 : 1",
-      "1 : 2"
+      "1 : 2",
+      "4 : 1"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "KE = p²/2m. With equal p, KE ∝ 1/m, so KE₁ : KE₂ = m₂ : m₁ = 2 : 1.",
     "source": "School Practice AE 2025-26"
   },
@@ -5285,9 +5285,9 @@
     "difficulty": "easy",
     "text": "According to the principle of floatation, a body floats in a liquid when:",
     "options": [
+      "its weight is greater than the upthrust on it",
       "its density is greater than that of the liquid",
       "its volume is equal to the volume of liquid displaced",
-      "its weight is greater than the upthrust on it",
       "its weight is equal to the weight of the liquid displaced by its immersed part"
     ],
     "correct": 3,
@@ -5300,12 +5300,12 @@
     "difficulty": "hard",
     "text": "A hollow rubber ball just floats fully submerged in water at 4°C. When the water is heated, the ball sinks. Why?",
     "options": [
-      "Above 4°C water expands and its density decreases, so the upthrust becomes less than the weight of the ball",
       "Upthrust does not depend on the density of water",
       "Above 4°C water contracts, so its density increases",
-      "Heating makes the ball heavier"
+      "Heating makes the ball heavier",
+      "Above 4°C water expands and its density decreases, so the upthrust becomes less than the weight of the ball"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Water has maximum density at 4°C. On heating above 4°C it expands and becomes less dense, so the same submerged volume displaces less weight of water. The upthrust becomes less than the ball's weight, and it sinks.",
     "source": "School Practice AE 2025-26"
   },
@@ -5315,12 +5315,12 @@
     "difficulty": "medium",
     "text": "A spherical mirror forms an image 10 cm behind it when the object is placed 20 cm in front of it. The type of mirror and its focal length are:",
     "options": [
-      "Concave mirror, 6.67 cm",
-      "Convex mirror, 20 cm",
       "Convex mirror, 6.67 cm",
-      "Concave mirror, 20 cm"
+      "Concave mirror, 6.67 cm",
+      "Concave mirror, 20 cm",
+      "Convex mirror, 20 cm"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "An image behind the mirror is virtual and is closer to the mirror than the object, i.e. diminished, so the mirror is convex. Using 1/f = 1/v + 1/u with u = −20 cm, v = +10 cm: 1/f = 1/10 − 1/20 = 1/20, so f = +20 cm.",
     "source": "School Practice AE 2025-26"
   },
@@ -5330,12 +5330,12 @@
     "difficulty": "medium",
     "text": "Infrasonic, sonic and ultrasonic waves travelling through air, arranged in decreasing order of their wavelength, are:",
     "options": [
-      "infrasonic > sonic > ultrasonic",
-      "sonic > infrasonic > ultrasonic",
       "ultrasonic > sonic > infrasonic",
-      "all have the same wavelength"
+      "all have the same wavelength",
+      "infrasonic > sonic > ultrasonic",
+      "sonic > infrasonic > ultrasonic"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "All travel at the same speed in air, and λ = v/f. Infrasonic has the lowest frequency, so the longest wavelength; ultrasonic the shortest.",
     "source": "School Practice AE 2025-26"
   },
@@ -5345,12 +5345,12 @@
     "difficulty": "easy",
     "text": "The resistance of an electric iron is 50 Ω. If a current of 4.2 A flows through it, the potential difference across it is:",
     "options": [
+      "54.2 V",
       "2100 V",
       "11.9 V",
-      "210 V",
-      "54.2 V"
+      "210 V"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "V = IR = 4.2 × 50 = 210 V.",
     "source": "School Practice AE 2025-26"
   },
@@ -5361,8 +5361,8 @@
     "text": "A body shows a weight W in air on a sensitive spring balance. When weighed in a vacuum, its weight reading will be:",
     "options": [
       "zero",
-      "exactly W",
       "slightly less than W, because there is no air pressure",
+      "exactly W",
       "slightly more than W, because there is no upthrust of air in vacuum"
     ],
     "correct": 3,
@@ -5375,12 +5375,12 @@
     "difficulty": "easy",
     "text": "A copper sphere and a brass sphere are completely dipped in water. The upthrust on them will be equal when:",
     "options": [
-      "they are dipped to the same depth",
       "their volumes are equal",
-      "their densities are equal",
-      "their masses are equal"
+      "their masses are equal",
+      "they are dipped to the same depth",
+      "their densities are equal"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Upthrust = Vρg, where V is the volume of water displaced. In the same liquid, two completely immersed bodies get equal upthrust if their volumes are equal.",
     "source": "School Practice AE 2025-26"
   },
@@ -5392,8 +5392,8 @@
     "options": [
       "0.5 A and 30 C",
       "0.5 A and 300 C",
-      "2 A and 1200 C",
-      "0.5 A and 5 C"
+      "0.5 A and 5 C",
+      "2 A and 1200 C"
     ],
     "correct": 1,
     "explanation": "I = V/R = 9/18 = 0.5 A. Q = It = 0.5 × (10 × 60) = 300 C.",
@@ -5405,12 +5405,12 @@
     "difficulty": "medium",
     "text": "Coil A has 200 turns and coil B has 100 turns, both wound on identical soft iron cores and carrying the same current. Which is the stronger electromagnet, and what happens if the current in both is doubled?",
     "options": [
-      "A is stronger; the strength of both increases",
-      "A is stronger; the strength of both decreases",
       "Both are equally strong; the strength does not change",
-      "B is stronger; the strength of both increases"
+      "B is stronger; the strength of both increases",
+      "A is stronger; the strength of both decreases",
+      "A is stronger; the strength of both increases"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The strength of an electromagnet increases with the number of turns and with the current. A (more turns) is stronger, and increasing the current makes both stronger.",
     "source": "School Practice AE 2025-26"
   },
@@ -5420,12 +5420,12 @@
     "difficulty": "medium",
     "text": "A spring balance records the weight of a body X of mass 2 kg on the moon as 3.4 N. The same balance records the weight of another body Y as 7.65 N. The mass of body Y is:",
     "options": [
-      "3.825 kg",
-      "13 kg",
       "0.78 kg",
-      "4.5 kg"
+      "4.5 kg",
+      "3.825 kg",
+      "13 kg"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "g on the moon = W/m = 3.4/2 = 1.7 N/kg. Mass of Y = 7.65/1.7 = 4.5 kg.",
     "source": "CISCE Specimen 2019"
   },
@@ -5435,12 +5435,12 @@
     "difficulty": "easy",
     "text": "Why do we need to run a certain distance alongside a moving bus before getting into it?",
     "options": [
-      "To overcome the gravitational pull of the bus",
-      "To reduce the momentum of the bus",
       "To acquire the speed of the bus, so that the inertia of motion does not make us fall",
-      "To increase friction between the feet and the road"
+      "To reduce the momentum of the bus",
+      "To increase friction between the feet and the road",
+      "To overcome the gravitational pull of the bus"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "If we step in while at rest, our feet are carried forward by the bus while the body tends to stay at rest (inertia), and we fall backwards. Running first gives our body the same velocity as the bus.",
     "source": "CISCE Specimen 2019"
   },
@@ -5450,12 +5450,12 @@
     "difficulty": "medium",
     "text": "I travel from Mumbai to Pune (150 km) in 2½ h via the Express Highway and return to Mumbai via the old highway (180 km) in 3½ h. The average velocity for the entire journey is:",
     "options": [
-      "55 km/h",
       "0 km/h",
-      "51.4 km/h",
-      "60 km/h"
+      "60 km/h",
+      "55 km/h",
+      "51.4 km/h"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The journey ends at the starting point, so the total displacement is zero, and average velocity = displacement/time = 0. (The average speed would be 330/6 = 55 km/h.)",
     "source": "CISCE Specimen 2019"
   },
@@ -5465,12 +5465,12 @@
     "difficulty": "medium",
     "text": "Sound wave A travels in water and B in CO₂ (case 1); then A travels in CO₂ and B in hydrogen (case 2). Which wave travels faster in each case?",
     "options": [
-      "Case 1: A; case 2: B",
       "Case 1: B; case 2: A",
+      "Case 1: A; case 2: B",
       "Case 1: A; case 2: A",
       "Case 1: B; case 2: B"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Sound travels faster in liquids than in gases, so A (water) is faster in case 1. Among gases, speed ∝ 1/√density; hydrogen is much less dense than CO₂, so B (hydrogen) is faster in case 2.",
     "source": "CISCE Specimen 2019"
   },
@@ -5480,9 +5480,9 @@
     "difficulty": "easy",
     "text": "Which two human activities are mainly responsible for the increase of carbon dioxide gas in the atmosphere?",
     "options": [
-      "Afforestation and use of solar energy",
       "Rainwater harvesting and organic farming",
       "Use of wind energy and hydroelectric power",
+      "Afforestation and use of solar energy",
       "Burning of fossil fuels and deforestation"
     ],
     "correct": 3,
@@ -5495,8 +5495,8 @@
     "difficulty": "medium",
     "text": "A train of mass 20000 kg moving at 25 m s⁻¹ is brought to rest by brakes that produce a uniform retardation of 0.5 m s⁻². The velocity of the train after 10 s and the braking force are:",
     "options": [
-      "5 m s⁻¹ and 10000 N",
       "20 m s⁻¹ and 40000 N",
+      "5 m s⁻¹ and 10000 N",
       "20 m s⁻¹ and 10000 N",
       "30 m s⁻¹ and 10000 N"
     ],
@@ -5510,12 +5510,12 @@
     "difficulty": "easy",
     "text": "The value of the universal gravitational constant G in SI units is:",
     "options": [
-      "6.67 × 10⁻¹¹ N m² kg⁻²",
-      "6.67 × 10¹¹ N m² kg⁻²",
       "9.8 N kg⁻¹",
-      "6.67 × 10⁻¹¹ N kg² m⁻²"
+      "6.67 × 10⁻¹¹ N kg² m⁻²",
+      "6.67 × 10¹¹ N m² kg⁻²",
+      "6.67 × 10⁻¹¹ N m² kg⁻²"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "From F = Gm₁m₂/r², G = Fr²/(m₁m₂), so its unit is N m² kg⁻², and G = 6.67 × 10⁻¹¹ N m² kg⁻².",
     "source": "CISCE Specimen 2019"
   },
@@ -5525,12 +5525,12 @@
     "difficulty": "medium",
     "text": "The speed of sound in air is 320 m s⁻¹ and in water 1600 m s⁻¹. Sound takes 2.5 s to reach a certain distance in air. The distance, and the time sound would take to cover it in water, are:",
     "options": [
-      "128 m and 0.5 s",
-      "800 m and 12.5 s",
       "4000 m and 2.5 s",
-      "800 m and 0.5 s"
+      "800 m and 0.5 s",
+      "128 m and 0.5 s",
+      "800 m and 12.5 s"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "Distance = 320 × 2.5 = 800 m. Time in water = 800/1600 = 0.5 s.",
     "source": "CISCE Specimen 2019"
   },
@@ -5540,10 +5540,10 @@
     "difficulty": "medium",
     "text": "An object 20 cm tall is placed 48 cm in front of a mirror of focal length 12 cm. The mirror forms a virtual, diminished image. The image distance and magnification are:",
     "options": [
-      "9.6 cm behind the mirror, +5",
+      "16 cm behind the mirror, +0.33",
       "9.6 cm behind the mirror, +0.2",
       "16 cm in front of the mirror, −0.33",
-      "16 cm behind the mirror, +0.33"
+      "9.6 cm behind the mirror, +5"
     ],
     "correct": 1,
     "explanation": "A virtual, diminished image is formed only by a convex mirror, so f = +12 cm and u = −48 cm. 1/v = 1/f − 1/u = 1/12 + 1/48 = 5/48 ⇒ v = +9.6 cm (behind the mirror). m = −v/u = −9.6/(−48) = +0.2 (image height 4 cm).",

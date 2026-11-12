@@ -5,12 +5,12 @@
     "difficulty": "easy",
     "text": "Which component of a computer is referred to as its 'brain'?",
     "options": [
-      "CPU",
-      "RAM",
       "ALU",
+      "RAM",
+      "CPU",
       "Motherboard"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The CPU carries out the actual processing and is usually referred to as the brain of the computer.",
     "source": "NCERT Textbook"
   },
@@ -20,12 +20,12 @@
     "difficulty": "medium",
     "text": "Which unit of the CPU performs all arithmetic and logical operations?",
     "options": [
-      "Control Unit (CU)",
-      "Arithmetic Logic Unit (ALU)",
+      "Cache Memory",
       "Registers",
-      "Cache Memory"
+      "Control Unit (CU)",
+      "Arithmetic Logic Unit (ALU)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "ALU performs all arithmetic and logic operations as per the instructions in a program.",
     "source": "NCERT Textbook"
   },
@@ -35,12 +35,12 @@
     "difficulty": "hard",
     "text": "Which unit of the CPU controls sequential instruction execution and guides data flow between memory, ALU and I/O devices?",
     "options": [
+      "ROM",
       "ALU",
       "Control Unit (CU)",
-      "Register",
-      "ROM"
+      "Register"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "CU controls sequential instruction execution, interprets instructions and guides data flow.",
     "source": "NCERT Textbook"
   },
@@ -50,10 +50,10 @@
     "difficulty": "easy",
     "text": "Which type of memory is volatile, i.e. its contents are lost when power is switched off?",
     "options": [
-      "ROM",
+      "Cache",
       "RAM",
       "Secondary memory",
-      "Cache"
+      "ROM"
     ],
     "correct": 1,
     "explanation": "RAM is volatile — as long as power is supplied it retains data, but loses it on power-off.",
@@ -65,12 +65,12 @@
     "difficulty": "medium",
     "text": "The startup program (boot loader) that loads the operating system into RAM is itself stored in:",
     "options": [
-      "RAM",
-      "ROM",
       "Cache",
-      "HDD"
+      "HDD",
+      "RAM",
+      "ROM"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "ROM is non-volatile and is used for small, fixed, rarely-changed content like the boot loader.",
     "source": "NCERT Textbook"
   },
@@ -81,9 +81,9 @@
     "text": "Which memory is placed between the CPU and primary memory to speed up operations by storing copies of frequently accessed data?",
     "options": [
       "Cache memory",
+      "Registers",
       "ROM",
-      "Secondary memory",
-      "Registers"
+      "Secondary memory"
     ],
     "correct": 0,
     "explanation": "Cache is a very high-speed memory placed between CPU and primary memory to reduce average access time.",
@@ -95,9 +95,9 @@
     "difficulty": "easy",
     "text": "A 4-bit word is called a:",
     "options": [
-      "Byte",
-      "Nibble",
       "Bit",
+      "Nibble",
+      "Byte",
       "Word"
     ],
     "correct": 1,
@@ -110,10 +110,10 @@
     "difficulty": "medium",
     "text": "How many bytes are there in 1 KB?",
     "options": [
-      "1000",
-      "1024",
       "100",
-      "1012"
+      "1024",
+      "1012",
+      "1000"
     ],
     "correct": 1,
     "explanation": "1 KB (Kilobyte) = 1024 Bytes, by the standard memory unit convention.",
@@ -125,12 +125,12 @@
     "difficulty": "hard",
     "text": "Which secondary storage device has no moving parts and offers faster data transfer than a traditional HDD?",
     "options": [
-      "CD",
-      "DVD",
       "SSD",
-      "Tape Drive"
+      "Tape Drive",
+      "CD",
+      "DVD"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Solid-State Drives (SSD) support very fast data transfer compared to earlier HDDs.",
     "source": "NCERT Textbook"
   },
@@ -140,12 +140,12 @@
     "difficulty": "easy",
     "text": "Which category of software provides the basic functionality to operate a computer by directly interacting with its hardware?",
     "options": [
-      "Application software",
       "System software",
-      "Programming tool",
-      "Utility only"
+      "Utility only",
+      "Application software",
+      "Programming tool"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "System software interacts directly with hardware to provide basic operating functionality (e.g. the OS).",
     "source": "NCERT Textbook"
   },
@@ -157,8 +157,8 @@
     "options": [
       "MS Word",
       "Disk defragmentation tool",
-      "VLC Player",
-      "GIMP"
+      "GIMP",
+      "VLC Player"
     ],
     "correct": 1,
     "explanation": "Disk defragmentation is a system utility used for maintenance/configuration; the others are application software.",
@@ -171,11 +171,11 @@
     "text": "Software whose source code is freely available for anyone to use, study, modify and improve is called:",
     "options": [
       "Freeware",
-      "Free and Open Source Software (FOSS)",
       "Proprietary software",
-      "Shareware"
+      "Shareware",
+      "Free and Open Source Software (FOSS)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "FOSS allows public access to both the software and its source code, e.g. Ubuntu, Python, LibreOffice.",
     "source": "NCERT Textbook"
   },
@@ -185,12 +185,12 @@
     "difficulty": "easy",
     "text": "Software that is free of cost to use but whose source code is NOT publicly available is called:",
     "options": [
+      "Shareware",
       "FOSS",
-      "Freeware",
       "Proprietary software",
-      "Shareware"
+      "Freeware"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Freeware (e.g. Skype, Adobe Reader) is free to use but its source code is not shared, unlike FOSS.",
     "source": "NCERT Textbook"
   },
@@ -200,12 +200,12 @@
     "difficulty": "medium",
     "text": "Convert 2 MB into bytes.",
     "options": [
+      "20,480 bytes",
       "2,097,152 bytes",
-      "2,000,000 bytes",
       "2,048 bytes",
-      "20,480 bytes"
+      "2,000,000 bytes"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "2 MB = 2 × 1024 KB × 1024 B = 2 × 1,048,576 = 2,097,152 bytes.",
     "source": "NCERT Textbook"
   },
@@ -215,12 +215,12 @@
     "difficulty": "hard",
     "text": "Which input device would best assist a visually impaired person in entering data?",
     "options": [
-      "Mouse",
       "Braille keyboard",
       "Scanner",
+      "Mouse",
       "Touch screen"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Specially designed Braille keyboards are available to help visually impaired users enter data.",
     "source": "NCERT Textbook"
   },
@@ -230,10 +230,10 @@
     "difficulty": "easy",
     "text": "Which of these is an example of proprietary software?",
     "options": [
-      "Ubuntu",
+      "Python",
       "Microsoft Windows",
       "Mozilla Firefox",
-      "Python"
+      "Ubuntu"
     ],
     "correct": 1,
     "explanation": "Microsoft Windows must be purchased from its copyright holder and its source code is not open — it is proprietary.",
@@ -245,12 +245,12 @@
     "difficulty": "easy",
     "text": "A subsystem of AI in which computers learn from data using statistical techniques, without being explicitly programmed, is called:",
     "options": [
+      "Blockchain",
       "Natural Language Processing",
-      "Machine Learning",
       "Robotics",
-      "Blockchain"
+      "Machine Learning"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Machine Learning comprises algorithms that use data to learn on their own and make predictions.",
     "source": "NCERT Textbook"
   },
@@ -260,12 +260,12 @@
     "difficulty": "medium",
     "text": "Which technology deals with interaction between humans and computers using spoken/written human language, enabling text-to-speech and speech-to-text conversion?",
     "options": [
-      "Natural Language Processing (NLP)",
+      "Augmented Reality",
       "Machine Learning",
-      "Internet of Things",
-      "Augmented Reality"
+      "Natural Language Processing (NLP)",
+      "Internet of Things"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "NLP facilitates communication between humans and computers using natural human language.",
     "source": "NCERT Textbook"
   },
@@ -275,12 +275,12 @@
     "difficulty": "hard",
     "text": "A three-dimensional, computer-generated environment that simulates the real world and immerses the user in it is called:",
     "options": [
-      "Augmented Reality",
-      "Virtual Reality",
+      "Cloud Computing",
       "Grid Computing",
-      "Cloud Computing"
+      "Augmented Reality",
+      "Virtual Reality"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Virtual Reality (VR) is a computer-generated situation simulating the real world, experienced via VR headsets.",
     "source": "NCERT Textbook"
   },
@@ -290,12 +290,12 @@
     "difficulty": "easy",
     "text": "Superimposing computer-generated information over the existing physical environment (rather than creating a wholly new one) is called:",
     "options": [
-      "Virtual Reality",
       "Augmented Reality",
-      "Immersive Reality",
-      "Robotics"
+      "Robotics",
+      "Virtual Reality",
+      "Immersive Reality"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Augmented Reality (AR) adds/alters perception of the existing physical world rather than replacing it.",
     "source": "NCERT Textbook"
   },
@@ -305,9 +305,9 @@
     "difficulty": "medium",
     "text": "Which of these is NOT one of the five characteristics ('5 Vs') of Big Data?",
     "options": [
+      "Variety",
       "Volume",
       "Velocity",
-      "Variety",
       "Vocabulary"
     ],
     "correct": 3,
@@ -320,12 +320,12 @@
     "difficulty": "hard",
     "text": "The network of physical devices embedded with hardware and software that communicate and exchange data with each other is called:",
     "options": [
-      "Cloud Computing",
-      "Internet of Things (IoT)",
       "Grid Computing",
-      "Blockchain"
+      "Blockchain",
+      "Cloud Computing",
+      "Internet of Things (IoT)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "IoT is a network of devices with embedded hardware/software to connect and exchange data with each other.",
     "source": "NCERT Textbook"
   },
@@ -350,12 +350,12 @@
     "difficulty": "medium",
     "text": "Using Google Docs or Microsoft Office 365 online, without installing or configuring any software yourself, is an example of:",
     "options": [
+      "Grid computing",
       "IaaS",
       "PaaS",
-      "SaaS",
-      "Grid computing"
+      "SaaS"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "SaaS provides on-demand access to ready-to-use application software, usually via subscription.",
     "source": "NCERT Textbook"
   },
@@ -380,12 +380,12 @@
     "difficulty": "easy",
     "text": "In grid computing, the individual constituent computing resources are called:",
     "options": [
+      "Servers only",
       "Nodes",
       "Blocks",
-      "Clusters",
-      "Servers only"
+      "Clusters"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "In grid computing, the constituent computational resources are called nodes.",
     "source": "NCERT Textbook"
   },
@@ -395,12 +395,12 @@
     "difficulty": "medium",
     "text": "Which best distinguishes grid computing from the IaaS cloud service model?",
     "options": [
-      "Grid computing has a service provider renting infrastructure, cloud does not",
-      "In grid computing, multiple independent nodes join together to solve a common computational problem, with no provider renting infrastructure",
       "Grid computing is only used for data storage",
-      "There is no real difference between the two"
+      "Grid computing has a service provider renting infrastructure, cloud does not",
+      "There is no real difference between the two",
+      "In grid computing, multiple independent nodes join together to solve a common computational problem, with no provider renting infrastructure"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "In IaaS, a provider rents infrastructure to users; in grid computing, multiple nodes join voluntarily to solve one shared problem.",
     "source": "NCERT Textbook"
   },
@@ -410,12 +410,12 @@
     "difficulty": "hard",
     "text": "In blockchain technology, each secured chunk of data or valid transaction is called a:",
     "options": [
+      "Ledger",
       "Node",
       "Block",
-      "Ledger",
       "Header"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A block is a secured chunk of data/valid transaction; linked blocks form a blockchain.",
     "source": "NCERT Textbook"
   },
@@ -425,12 +425,12 @@
     "difficulty": "easy",
     "text": "A key feature of blockchain technology is that it is:",
     "options": [
-      "Centralised, with a single copy of the database",
-      "Decentralised, with every participating node holding a full copy of the database",
       "Accessible only to one owner",
-      "Mutable by any single node at will"
+      "Centralised, with a single copy of the database",
+      "Mutable by any single node at will",
+      "Decentralised, with every participating node holding a full copy of the database"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Blockchain works on a decentralised, shared database — every node receives a full copy, making unilateral tampering impossible.",
     "source": "NCERT Textbook"
   },
@@ -441,11 +441,11 @@
     "text": "Which Big Data characteristic refers to the trustworthiness/accuracy of data, given that big data can be inconsistent or noisy?",
     "options": [
       "Volume",
-      "Velocity",
       "Veracity",
+      "Velocity",
       "Value"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Veracity refers to the trustworthiness of the data, since incorrect/inconsistent data can mislead interpretations.",
     "source": "NCERT Textbook"
   },
@@ -457,8 +457,8 @@
     "options": [
       "Accelerometer and gyroscope",
       "GPS and camera",
-      "Microphone and speaker",
-      "Bluetooth and WiFi"
+      "Bluetooth and WiFi",
+      "Microphone and speaker"
     ],
     "correct": 0,
     "explanation": "The accelerometer detects orientation while the gyroscope tracks rotation/twist, together adjusting the display orientation.",
@@ -470,12 +470,12 @@
     "difficulty": "easy",
     "text": "Which of the following is an invalid Python identifier?",
     "options": [
-      "_Percentage",
       "Total_Marks",
-      "1st_Room",
-      "serial_no"
+      "_Percentage",
+      "serial_no",
+      "1st_Room"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "An identifier cannot start with a digit; '1st_Room' starts with '1' and is therefore invalid.",
     "source": "NCERT Textbook"
   },
@@ -485,12 +485,12 @@
     "difficulty": "medium",
     "text": "Python keywords must be written:",
     "options": [
-      "In uppercase always",
       "Exactly as given, since Python is case-sensitive",
+      "In uppercase always",
       "In any case the programmer prefers",
       "In lowercase always"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Python is case sensitive, so keywords like True, False, None must be written exactly as defined.",
     "source": "NCERT Textbook"
   },
@@ -515,12 +515,12 @@
     "difficulty": "easy",
     "text": "What is the data type of the result of 10/2 in Python 3?",
     "options": [
-      "int",
       "float",
+      "int",
       "complex",
       "str"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The / (division) operator always returns a float result in Python, even for exact division.",
     "source": "NCERT Textbook"
   },
@@ -530,12 +530,12 @@
     "difficulty": "medium",
     "text": "What is the output of: print(13 % 5)",
     "options": [
-      "2",
-      "3",
+      "8",
       "2.6",
-      "8"
+      "3",
+      "2"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "% gives the remainder of division: 13 divided by 5 leaves a remainder of 3.",
     "source": "NCERT Textbook"
   },
@@ -560,12 +560,12 @@
     "difficulty": "easy",
     "text": "Which built-in function converts a string value (such as from input()) into an integer?",
     "options": [
+      "float()",
       "str()",
       "int()",
-      "float()",
       "input()"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "int() converts a numeric string into an integer value.",
     "source": "NCERT Textbook"
   },
@@ -576,9 +576,9 @@
     "text": "What is the output of: print('India' * 2)",
     "options": [
       "IndiaIndia",
-      "India India",
       "Error",
-      "IndiaX2"
+      "IndiaX2",
+      "India India"
     ],
     "correct": 0,
     "explanation": "The * operator repeats a string that many times, with no separator added, giving 'IndiaIndia'.",
@@ -590,12 +590,12 @@
     "difficulty": "hard",
     "text": "A program that runs without crashing but produces an incorrect result, due to a mistake in the logic, has a:",
     "options": [
-      "Syntax error",
       "Logical error",
+      "Compilation error",
       "Runtime error",
-      "Compilation error"
+      "Syntax error"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A logical error (semantic error) lets the program run but produces wrong/undesired output.",
     "source": "NCERT Textbook"
   },
@@ -605,12 +605,12 @@
     "difficulty": "easy",
     "text": "Which of these situations causes a runtime error?",
     "options": [
-      "A missing closing parenthesis",
       "Dividing a number by zero while the program is executing",
+      "A missing closing parenthesis",
       "Using elif instead of 'else if'",
       "Using single quotes for a string"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Division by zero is syntactically valid but cannot be carried out at execution time, causing a runtime error.",
     "source": "NCERT Textbook"
   },
@@ -620,12 +620,12 @@
     "difficulty": "medium",
     "text": "What does type(10) return in Python?",
     "options": [
-      "<class 'float'>",
       "<class 'int'>",
-      "<class 'str'>",
-      "<class 'bool'>"
+      "<class 'bool'>",
+      "<class 'float'>",
+      "<class 'str'>"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "10 is a whole number with no decimal point, so Python classifies it as int.",
     "source": "NCERT Textbook"
   },
@@ -636,9 +636,9 @@
     "text": "Which operator checks whether a value exists within a list (membership)?",
     "options": [
       "in",
-      "is",
       "==",
-      "exists"
+      "exists",
+      "is"
     ],
     "correct": 0,
     "explanation": "The 'in' operator returns True if the value is found in the given sequence, else False.",
@@ -665,9 +665,9 @@
     "difficulty": "medium",
     "text": "The process of identifying and removing logical and runtime errors from a program is called:",
     "options": [
-      "Compiling",
-      "Debugging",
       "Testing only",
+      "Debugging",
+      "Compiling",
       "Assembling"
     ],
     "correct": 1,
@@ -680,12 +680,12 @@
     "difficulty": "hard",
     "text": "What does the following code print?\nfor num in range(5):\n    if num > 0:\n        print(num * 10)",
     "options": [
-      "0 10 20 30 40 (all on one line)",
-      "10, 20, 30 and 40 printed on separate lines",
       "Only 0 is printed",
-      "Error: range() needs two arguments"
+      "0 10 20 30 40 (all on one line)",
+      "Error: range() needs two arguments",
+      "10, 20, 30 and 40 printed on separate lines"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "range(5) gives 0,1,2,3,4; the condition num>0 skips 0, and 1,2,3,4 each get multiplied by 10 and printed on their own line (10,20,30,40).",
     "source": "NCERT Textbook"
   },
@@ -696,11 +696,11 @@
     "text": "Which keyword lets you check an additional condition after an initial 'if', within the same chain?",
     "options": [
       "elseif",
+      "elseif:",
       "elif",
-      "else if",
-      "elseif:"
+      "else if"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Python uses 'elif' (short for else-if) to check further conditions in an if-elif-else chain.",
     "source": "NCERT Textbook"
   },
@@ -711,11 +711,11 @@
     "text": "Which of these does NOT create a Python list?",
     "options": [
       "[1,2,3]",
-      "list()",
       "list('abc')",
-      "{1,2,3}"
+      "{1,2,3}",
+      "list()"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "{1,2,3} with curly braces creates a set, not a list; lists use square brackets or the list() function.",
     "source": "NCERT Textbook"
   },
@@ -726,11 +726,11 @@
     "text": "What is printed by: list1 = [10,20,30,40,50]; print(list1[-1])",
     "options": [
       "10",
-      "50",
       "40",
+      "50",
       "Error"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Negative index -1 refers to the last element of the list, which is 50.",
     "source": "NCERT Textbook"
   },
@@ -741,11 +741,11 @@
     "text": "Lists in Python are:",
     "options": [
       "Immutable",
-      "Mutable",
+      "Neither",
       "Both immutable and mutable",
-      "Neither"
+      "Mutable"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Lists are mutable — their contents can be changed after creation (e.g. by assigning to an index).",
     "source": "NCERT Textbook"
   },
@@ -755,12 +755,12 @@
     "difficulty": "easy",
     "text": "What is the output of: list1=[1,2,3]; list2=[4,5]; print(list1 + list2)",
     "options": [
-      "[1, 2, 3, 4, 5]",
-      "[5, 7, 3]",
       "Error",
-      "[1, 2, 3, [4, 5]]"
+      "[1, 2, 3, [4, 5]]",
+      "[1, 2, 3, 4, 5]",
+      "[5, 7, 3]"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "+ concatenates two lists into one new list containing all elements of both, in order.",
     "source": "NCERT Textbook"
   },
@@ -770,10 +770,10 @@
     "difficulty": "medium",
     "text": "If list1 = ['Hi'], what does list1 * 3 do?",
     "options": [
-      "Raises an error",
+      "Creates a nested list",
       "Repeats the elements of list1 three times",
-      "Multiplies each character by 3",
-      "Creates a nested list"
+      "Raises an error",
+      "Multiplies each character by 3"
     ],
     "correct": 1,
     "explanation": "The * operator repeats the contents of a list that many times: ['Hi']*3 gives ['Hi','Hi','Hi'].",
@@ -785,12 +785,12 @@
     "difficulty": "hard",
     "text": "For a list with at least 6 elements, list1[2:6] returns:",
     "options": [
+      "An error",
       "Elements from index 2 up to but NOT including index 6",
       "Elements from index 2 to 6 inclusive",
-      "Only the single element at index 2",
-      "An error"
+      "Only the single element at index 2"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Slicing [start:end] includes the start index and excludes the end index.",
     "source": "NCERT Textbook"
   },
@@ -800,12 +800,12 @@
     "difficulty": "easy",
     "text": "Which list method removes and returns the LAST element if no index argument is given?",
     "options": [
+      "discard()",
       "remove()",
       "pop()",
-      "del()",
-      "discard()"
+      "del()"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "pop() with no argument removes and returns the last element of the list.",
     "source": "NCERT Textbook"
   },
@@ -816,11 +816,11 @@
     "text": "What is the output of: list1=[34,66,12,89]; list1.sort(reverse=True); print(list1)",
     "options": [
       "[12, 34, 66, 89]",
-      "[89, 66, 34, 12]",
+      "Error",
       "[34, 66, 12, 89]",
-      "Error"
+      "[89, 66, 34, 12]"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "sort(reverse=True) sorts the list in descending order, in place.",
     "source": "NCERT Textbook"
   },
@@ -830,12 +830,12 @@
     "difficulty": "hard",
     "text": "Which function creates a NEW sorted list WITHOUT modifying the original list?",
     "options": [
+      "list1.sort(reverse=True)",
       "list1.sort()",
-      "sorted(list1)",
       "list1.reverse()",
-      "list1.sort(reverse=True)"
+      "sorted(list1)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "sorted(list1) returns a new sorted list and leaves the original list unchanged, unlike the in-place sort() method.",
     "source": "NCERT Textbook"
   },
@@ -845,12 +845,12 @@
     "difficulty": "easy",
     "text": "Items in a Python dictionary are accessed using their:",
     "options": [
-      "Index position",
       "Keys",
+      "Index position",
       "Both index and keys equally",
       "Only a numeric index"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Dictionary items are accessed via their keys, not relative positions/indices (unlike lists).",
     "source": "NCERT Textbook"
   },
@@ -860,12 +860,12 @@
     "difficulty": "medium",
     "text": "What happens if you try to access a dictionary with a key that does not exist, using dict1[key]?",
     "options": [
+      "Creates the key automatically with value None",
       "Returns None",
       "Raises a KeyError",
-      "Returns 0",
-      "Creates the key automatically with value None"
+      "Returns 0"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Accessing a missing key directly with [] raises a KeyError.",
     "source": "NCERT Textbook"
   },
@@ -877,8 +877,8 @@
     "options": [
       "dict1[key]",
       "dict1.get(key)",
-      "dict1.keys()",
-      "dict1.items()"
+      "dict1.items()",
+      "dict1.keys()"
     ],
     "correct": 1,
     "explanation": "get(key) returns the value if present, or None (or a given default) if the key is missing, instead of raising an error.",
@@ -890,12 +890,12 @@
     "difficulty": "easy",
     "text": "Which data types can be used as keys in a Python dictionary?",
     "options": [
-      "Any mutable type, such as a list",
-      "Immutable types, such as string, number or tuple",
       "Only strings",
-      "Only integers"
+      "Only integers",
+      "Any mutable type, such as a list",
+      "Immutable types, such as string, number or tuple"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Dictionary keys must be of an immutable data type — numbers, strings or tuples; a list (mutable) cannot be a key.",
     "source": "NCERT Textbook"
   },
@@ -905,12 +905,12 @@
     "difficulty": "medium",
     "text": "What is the output of: dict1 = {'a':1,'b':2}; print(len(dict1))",
     "options": [
-      "1",
       "2",
       "3",
+      "1",
       "4"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "len() on a dictionary returns the number of key-value pairs it contains, which is 2.",
     "source": "NCERT Textbook"
   },
@@ -920,12 +920,12 @@
     "difficulty": "hard",
     "text": "The statement del dict1['x'] is used to:",
     "options": [
+      "Always raise a syntax error",
       "Delete the entire dictionary dict1",
-      "Delete the item with key 'x' from dict1",
       "Delete the value 'x' wherever it occurs",
-      "Always raise a syntax error"
+      "Delete the item with key 'x' from dict1"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "del dictname[key] removes just that one key-value pair; del dictname alone removes the whole dictionary.",
     "source": "NCERT Textbook"
   },
@@ -935,12 +935,12 @@
     "difficulty": "easy",
     "text": "In a Python dictionary, can two different keys be associated with the same value?",
     "options": [
-      "No, values must also be unique",
-      "Yes — values can repeat even though keys must be unique",
+      "Only if the keys are numeric",
       "No, Python disallows this entirely",
-      "Only if the keys are numeric"
+      "Yes — values can repeat even though keys must be unique",
+      "No, values must also be unique"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Dictionary keys must be unique, but there is no such restriction on values — different keys can map to the same value.",
     "source": "NCERT Textbook"
   },
@@ -950,12 +950,12 @@
     "difficulty": "easy",
     "text": "Data organised in a well-defined format of rows and columns is called:",
     "options": [
-      "Unstructured data",
-      "Structured data",
       "Metadata",
-      "Raw data only"
+      "Raw data only",
+      "Unstructured data",
+      "Structured data"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Structured data is organised and recorded in a well-defined, tabular (rows and columns) format.",
     "source": "NCERT Textbook"
   },
@@ -965,12 +965,12 @@
     "difficulty": "medium",
     "text": "Which of these is an example of unstructured data?",
     "options": [
-      "A spreadsheet of sales figures",
-      "A bank account details table",
       "The content of an email with no fixed line/paragraph structure",
+      "A bank account details table",
+      "A spreadsheet of sales figures",
       "A table of student marks"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "An email has no fixed structure for its content (lines, paragraphs, attachments), making it unstructured data.",
     "source": "NCERT Textbook"
   },
@@ -981,11 +981,11 @@
     "text": "Data about data — e.g. an image's size, type and resolution describing the image file itself — is called:",
     "options": [
       "Structured data",
-      "Metadata",
       "Raw data",
-      "Big data"
+      "Big data",
+      "Metadata"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Metadata is literally 'data about data', describing the properties of another piece of data.",
     "source": "NCERT Textbook"
   },
@@ -996,11 +996,11 @@
     "text": "Which measure of central tendency is the value that occurs most frequently in a data set?",
     "options": [
       "Mean",
-      "Median",
       "Mode",
-      "Range"
+      "Range",
+      "Median"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Mode is the value that appears with the highest frequency in the given data.",
     "source": "NCERT Textbook"
   },
@@ -1010,12 +1010,12 @@
     "difficulty": "medium",
     "text": "Which measure of central tendency is most affected by extreme values (outliers)?",
     "options": [
-      "Median",
       "Mode",
-      "Mean",
-      "None of them"
+      "None of them",
+      "Median",
+      "Mean"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Mean, being an average of all values, is pulled strongly by any extreme/outlier value in the data.",
     "source": "NCERT Textbook"
   },
@@ -1025,12 +1025,12 @@
     "difficulty": "hard",
     "text": "To find the Median of a sorted list of 10 (an even number of) values, you should:",
     "options": [
-      "Take the value at the 5th position only",
-      "Take the average of the two middle values",
       "Take the most frequent value",
-      "Subtract the minimum from the maximum"
+      "Subtract the minimum from the maximum",
+      "Take the value at the 5th position only",
+      "Take the average of the two middle values"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "With an even count of values, Median is the average of the two middle values after sorting.",
     "source": "NCERT Textbook"
   },
@@ -1040,12 +1040,12 @@
     "difficulty": "easy",
     "text": "For the data [85, 90, 90, 100, 102, 110, 110, 110, 115], what is the Mode?",
     "options": [
+      "115",
       "90",
       "100",
-      "110",
-      "115"
+      "110"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "110 occurs three times in the list, more often than any other value, so it is the Mode.",
     "source": "NCERT Textbook"
   },
@@ -1057,8 +1057,8 @@
     "options": [
       "Maximum + Minimum",
       "Maximum − Minimum",
-      "The sum of all values",
-      "The average of all values"
+      "The average of all values",
+      "The sum of all values"
     ],
     "correct": 1,
     "explanation": "Range is the difference between the largest and smallest values in the data.",
@@ -1071,11 +1071,11 @@
     "text": "Which measure of dispersion considers ALL data values, rather than just the two extremes?",
     "options": [
       "Range",
-      "Standard Deviation",
       "Mode",
+      "Standard Deviation",
       "Median"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Standard deviation is computed using every value's deviation from the mean, unlike Range which uses only the two extremes.",
     "source": "NCERT Textbook"
   },
@@ -1100,12 +1100,12 @@
     "difficulty": "medium",
     "text": "A smaller standard deviation indicates that the data values are:",
     "options": [
-      "More spread out from the mean",
       "Less spread out, i.e. closer to the mean",
       "Always exactly zero",
+      "More spread out from the mean",
       "Impossible to determine"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A small standard deviation means the values cluster closely around the mean; a large one means they are widely spread.",
     "source": "NCERT Textbook"
   },
@@ -1130,12 +1130,12 @@
     "difficulty": "easy",
     "text": "Which stage comes FIRST in the Data Processing cycle?",
     "options": [
-      "Output (reports/results)",
-      "Input (data collection, preparation, entry)",
       "Processing (store, retrieve, classify)",
-      "Analysis of conclusions"
+      "Output (reports/results)",
+      "Analysis of conclusions",
+      "Input (data collection, preparation, entry)"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The data processing cycle begins with Input (collection, preparation, entry), followed by Processing, then Output.",
     "source": "NCERT Textbook"
   },
@@ -1145,12 +1145,12 @@
     "difficulty": "medium",
     "text": "Data processing converts raw data into:",
     "options": [
-      "More raw data",
-      "Information, in the form of reports/results useful for decisions",
       "Only metadata",
-      "Nothing that can be used"
+      "More raw data",
+      "Nothing that can be used",
+      "Information, in the form of reports/results useful for decisions"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Processing raw data yields information — tables, charts or text that supports decision-making.",
     "source": "NCERT Textbook"
   },
@@ -1160,12 +1160,12 @@
     "difficulty": "hard",
     "text": "Which of these is a commonly used digital secondary storage device?",
     "options": [
-      "RAM",
       "Cache memory",
       "Hard Disk Drive (HDD)",
-      "A CPU register"
+      "A CPU register",
+      "RAM"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "HDD (along with SSD, CD/DVD, pen drives, etc.) is a secondary (non-volatile) storage device; RAM, cache and registers are all primary/fast internal memory.",
     "source": "NCERT Textbook"
   },
@@ -1177,8 +1177,8 @@
     "options": [
       "Numerical Python",
       "Number Python",
-      "Numeric Processing",
-      "Node Python"
+      "Node Python",
+      "Numeric Processing"
     ],
     "correct": 0,
     "explanation": "NumPy stands for 'Numerical Python', a package for data analysis and scientific computing.",
@@ -1190,12 +1190,12 @@
     "difficulty": "medium",
     "text": "Which attribute of a NumPy array gives the number of dimensions (its rank)?",
     "options": [
+      "dtype",
       "shape",
       "size",
-      "ndim",
-      "dtype"
+      "ndim"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "ndarray.ndim gives the number of dimensions (axes) of the array, as an integer.",
     "source": "NCERT Textbook"
   },
@@ -1205,12 +1205,12 @@
     "difficulty": "hard",
     "text": "Which attribute gives the total number of elements in a NumPy array?",
     "options": [
+      "ndim",
       "shape",
       "size",
-      "ndim",
       "itemsize"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "ndarray.size gives the total number of elements, equal to the product of the shape's dimensions.",
     "source": "NCERT Textbook"
   },
@@ -1220,12 +1220,12 @@
     "difficulty": "easy",
     "text": "For a 2-D array with shape (3, 2), this means the array has:",
     "options": [
-      "3 columns and 2 rows",
       "3 rows and 2 columns",
-      "A 1-D array of 6 elements",
-      "An invalid shape"
+      "An invalid shape",
+      "3 columns and 2 rows",
+      "A 1-D array of 6 elements"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A shape tuple (rows, columns) for a 2-D array means 3 rows and 2 columns here.",
     "source": "NCERT Textbook"
   },
@@ -1265,12 +1265,12 @@
     "difficulty": "easy",
     "text": "What does np.arange(-2, 24, 4) create?",
     "options": [
-      "A 2-D array",
       "A sequence starting at -2, up to but excluding 24, stepping by 4",
-      "An array filled with zeros",
-      "A single number"
+      "A 2-D array",
+      "A single number",
+      "An array filled with zeros"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "arange(start, stop, step) is analogous to range() — here it generates -2, 2, 6, 10, 14, 18, 22.",
     "source": "NCERT Textbook"
   },
@@ -1280,12 +1280,12 @@
     "difficulty": "medium",
     "text": "For a 2-D array arr, which indexing expression accesses the element in the 1st row, 3rd column (using 0-based indexing)?",
     "options": [
-      "arr[1,3]",
       "arr[0,2]",
-      "arr[3,1]",
-      "arr[2,0]"
+      "arr[2,0]",
+      "arr[1,3]",
+      "arr[3,1]"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Row and column indices both start at 0, so row 1/column 3 (as humans count) is arr[0,2] in 0-based indexing.",
     "source": "NCERT Textbook"
   },
@@ -1295,12 +1295,12 @@
     "difficulty": "hard",
     "text": "For arithmetic operations like array1 + array2 to work element-wise, the two arrays must:",
     "options": [
+      "Contain only integers",
       "Have the same shape",
       "Have different shapes",
-      "Be 1-D only",
-      "Contain only integers"
+      "Be 1-D only"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Element-wise operations require array1.shape to equal array2.shape.",
     "source": "NCERT Textbook"
   },
@@ -1310,12 +1310,12 @@
     "difficulty": "easy",
     "text": "Which NumPy function reverses an array's rows into columns and columns into rows, like a matrix transpose?",
     "options": [
-      "array.sort()",
-      "array.transpose()",
       "array.reshape()",
-      "array.split()"
+      "array.split()",
+      "array.sort()",
+      "array.transpose()"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "transpose() swaps the rows and columns of a 2-D array, just like a matrix transpose in mathematics.",
     "source": "NCERT Textbook"
   },
@@ -1325,10 +1325,10 @@
     "difficulty": "medium",
     "text": "The reshape() function can be used to:",
     "options": [
-      "Change the total number of elements in an array",
+      "Sort an array",
       "Change an array's shape/arrangement WITHOUT changing its total element count",
       "Delete elements from an array",
-      "Sort an array"
+      "Change the total number of elements in an array"
     ],
     "correct": 1,
     "explanation": "reshape() rearranges elements into a new shape, but the new shape must hold the same total number of elements.",
@@ -1340,12 +1340,12 @@
     "difficulty": "hard",
     "text": "Which NumPy function is used to join two or more arrays together?",
     "options": [
-      "np.split()",
       "np.concatenate()",
       "np.reshape()",
+      "np.split()",
       "np.sort()"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "np.concatenate() joins two or more arrays along a specified axis.",
     "source": "NCERT Textbook"
   },
@@ -1355,12 +1355,12 @@
     "difficulty": "easy",
     "text": "Which NumPy function loads data from a file AND can automatically handle missing values (converting them to nan)?",
     "options": [
+      "np.savetxt()",
       "np.loadtxt()",
       "np.genfromtxt()",
-      "np.array()",
-      "np.savetxt()"
+      "np.array()"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "genfromtxt() handles missing values (as nan, or a value given via filling_values), unlike loadtxt() which expects complete data.",
     "source": "NCERT Textbook"
   },
@@ -1371,11 +1371,11 @@
     "text": "Which function is used to save a NumPy array to a text file on disk?",
     "options": [
       "np.loadtxt()",
-      "np.array()",
       "np.savetxt()",
+      "np.array()",
       "np.genfromtxt()"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "np.savetxt() writes the contents of a NumPy array out to a text file.",
     "source": "NCERT Textbook"
   },
@@ -1385,12 +1385,12 @@
     "difficulty": "hard",
     "text": "For a 2-D array, arrayB.sum(axis=1) computes:",
     "options": [
-      "The sum of all elements in the whole array",
       "The sum of elements row-wise (one total per row)",
-      "The sum of elements column-wise (one total per column)",
-      "An error, since axis must be 0"
+      "The sum of all elements in the whole array",
+      "An error, since axis must be 0",
+      "The sum of elements column-wise (one total per column)"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "axis=1 sums each row's elements together, giving one result per row.",
     "source": "NCERT Textbook"
   },
@@ -1400,10 +1400,10 @@
     "difficulty": "easy",
     "text": "Which statement correctly imports NumPy using its standard conventional alias?",
     "options": [
-      "import numpy",
+      "include numpy",
       "import numpy as np",
-      "from numpy import *",
-      "include numpy"
+      "import numpy",
+      "from numpy import *"
     ],
     "correct": 1,
     "explanation": "The universal convention is `import numpy as np`, after which the library's functions are called as np.something().",
@@ -1430,12 +1430,12 @@
     "difficulty": "medium",
     "text": "The same piece of data being duplicated and stored in multiple places (files) is called:",
     "options": [
-      "Data Isolation",
       "Data Redundancy",
-      "Data Dependence",
-      "Meta-data"
+      "Data Isolation",
+      "Meta-data",
+      "Data Dependence"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Data Redundancy means the same data is unnecessarily duplicated across different files/locations.",
     "source": "NCERT Textbook"
   },
@@ -1445,12 +1445,12 @@
     "difficulty": "hard",
     "text": "When the same data, stored in different files, does not match after being updated in only one place, this is called:",
     "options": [
-      "Data Redundancy",
       "Data Inconsistency",
       "Data Isolation",
-      "Data Integrity"
+      "Data Integrity",
+      "Data Redundancy"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Data Inconsistency occurs when duplicated data in different places no longer matches, due to an update made in only one of them.",
     "source": "NCERT Textbook"
   },
@@ -1475,12 +1475,12 @@
     "difficulty": "medium",
     "text": "The design/skeleton of a database — its table names, columns, data types and relationships — is called the database's:",
     "options": [
-      "Instance",
-      "Schema",
       "Query",
-      "Engine"
+      "Engine",
+      "Schema",
+      "Instance"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Database Schema is the design of a database, representing its structure, constraints and relationships.",
     "source": "NCERT Textbook"
   },
@@ -1490,12 +1490,12 @@
     "difficulty": "hard",
     "text": "The actual snapshot of a database's data at a given point in time is called a database:",
     "options": [
-      "Schema",
       "Instance",
       "Meta-data",
+      "Schema",
       "Query"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A Database Instance is the state/snapshot of the data at a particular point in time, which changes as data is modified.",
     "source": "NCERT Textbook"
   },
@@ -1505,12 +1505,12 @@
     "difficulty": "easy",
     "text": "A request made to a database for information retrieval or data manipulation is called a:",
     "options": [
-      "Schema",
-      "Instance",
       "Query",
-      "Engine"
+      "Schema",
+      "Engine",
+      "Instance"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "A Query is a request to a database for obtaining or manipulating information, written in a query language such as SQL.",
     "source": "NCERT Textbook"
   },
@@ -1522,8 +1522,8 @@
     "options": [
       "Attribute",
       "Tuple",
-      "Degree",
-      "Domain"
+      "Domain",
+      "Degree"
     ],
     "correct": 1,
     "explanation": "Each row of a relation (table) is called a Tuple.",
@@ -1536,11 +1536,11 @@
     "text": "The number of attributes (columns) in a relation is called its:",
     "options": [
       "Cardinality",
-      "Degree",
+      "Instance",
       "Domain",
-      "Instance"
+      "Degree"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Degree is the number of attributes/columns in a relation.",
     "source": "NCERT Textbook"
   },
@@ -1550,12 +1550,12 @@
     "difficulty": "easy",
     "text": "The number of tuples (rows) in a relation is called its:",
     "options": [
-      "Degree",
-      "Cardinality",
+      "Schema size",
       "Attribute count",
-      "Schema size"
+      "Cardinality",
+      "Degree"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Cardinality is the number of tuples/rows present in a relation.",
     "source": "NCERT Textbook"
   },
@@ -1565,12 +1565,12 @@
     "difficulty": "medium",
     "text": "An attribute (or set of attributes) that COULD uniquely identify every tuple in a relation, making it a candidate for primary key, is called a:",
     "options": [
-      "Foreign key",
-      "Candidate key",
+      "Alternate key",
       "Composite key",
-      "Alternate key"
+      "Foreign key",
+      "Candidate key"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Any attribute capable of uniquely identifying tuples is a candidate key — one of these is then chosen as the primary key.",
     "source": "NCERT Textbook"
   },
@@ -1581,11 +1581,11 @@
     "text": "When no single attribute can uniquely identify a tuple, and two or more attributes together are used as the primary key, this is called a:",
     "options": [
       "Foreign key",
-      "Candidate key",
       "Composite primary key",
-      "Alternate key"
+      "Alternate key",
+      "Candidate key"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A Composite Primary Key combines two or more attributes together to achieve uniqueness, when no single attribute suffices.",
     "source": "NCERT Textbook"
   },
@@ -1596,11 +1596,11 @@
     "text": "An attribute in one relation that refers to the primary key of another relation, linking the two tables, is called a:",
     "options": [
       "Candidate key",
-      "Primary key",
       "Foreign key",
-      "Composite key"
+      "Composite key",
+      "Primary key"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A Foreign Key is an attribute whose value is derived from the primary key of another (referenced) relation.",
     "source": "NCERT Textbook"
   },
@@ -1610,12 +1610,12 @@
     "difficulty": "medium",
     "text": "Out of all the candidate keys of a relation, the ones NOT chosen as the primary key are called:",
     "options": [
-      "Foreign keys",
       "Alternate keys",
-      "Composite keys",
-      "Super keys"
+      "Foreign keys",
+      "Super keys",
+      "Composite keys"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The remaining candidate keys, once one is picked as primary key, are called alternate keys.",
     "source": "NCERT Textbook"
   },
@@ -1625,12 +1625,12 @@
     "difficulty": "hard",
     "text": "Can a foreign key's value be NULL?",
     "options": [
-      "Never, under any circumstance",
-      "Yes, if it is not part of its own table's primary key",
       "Only in the primary/referenced relation",
-      "Only for numeric foreign keys"
+      "Never, under any circumstance",
+      "Only for numeric foreign keys",
+      "Yes, if it is not part of its own table's primary key"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "A foreign key can take a NULL value if it is not itself part of the primary key of its own table, e.g. when the relationship is optional.",
     "source": "NCERT Textbook"
   },
@@ -1641,11 +1641,11 @@
     "text": "Which SQL statement is used to create a new, empty database?",
     "options": [
       "CREATE TABLE",
-      "CREATE DATABASE",
+      "ALTER DATABASE",
       "NEW DATABASE",
-      "ALTER DATABASE"
+      "CREATE DATABASE"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "CREATE DATABASE databasename; creates a new, empty database in the RDBMS.",
     "source": "NCERT Textbook"
   },
@@ -1655,9 +1655,9 @@
     "difficulty": "medium",
     "text": "Which statement selects a database to work with, after it has already been created?",
     "options": [
-      "SELECT databasename;",
-      "USE databasename;",
       "OPEN databasename;",
+      "USE databasename;",
+      "SELECT databasename;",
       "GO databasename;"
     ],
     "correct": 1,
@@ -1670,12 +1670,12 @@
     "difficulty": "hard",
     "text": "Which statement shows the column names and data types of an existing table's structure?",
     "options": [
-      "SHOW TABLES;",
-      "DESCRIBE tablename; (or DESC)",
+      "VIEW tablename;",
       "SELECT tablename;",
-      "VIEW tablename;"
+      "DESCRIBE tablename; (or DESC)",
+      "SHOW TABLES;"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "DESCRIBE (or its short form DESC) followed by the table name shows its structure — Field, Type, Null, Key, Default.",
     "source": "NCERT Textbook"
   },
@@ -1685,12 +1685,12 @@
     "difficulty": "easy",
     "text": "Which SQL statement is used to change the structure of an existing table, e.g. to add a new column?",
     "options": [
-      "UPDATE",
       "ALTER TABLE",
+      "CHANGE TABLE",
       "MODIFY TABLE",
-      "CHANGE TABLE"
+      "UPDATE"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "ALTER TABLE is used to add, modify or drop columns and constraints in an existing table's structure.",
     "source": "NCERT Textbook"
   },
@@ -1702,8 +1702,8 @@
     "options": [
       "REMOVE",
       "DROP",
-      "DELETE",
-      "ERASE"
+      "ERASE",
+      "DELETE"
     ],
     "correct": 1,
     "explanation": "ALTER TABLE tablename DROP columnname; removes that column from the table's structure.",
@@ -1716,11 +1716,11 @@
     "text": "Which SQL command permanently deletes an entire table or database, structure and all?",
     "options": [
       "DELETE",
-      "TRUNCATE",
       "DROP",
-      "REMOVE"
+      "REMOVE",
+      "TRUNCATE"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "DROP TABLE/DROP DATABASE deletes the entire table or database, including its structure — this action cannot be undone.",
     "source": "NCERT Textbook"
   },
@@ -1730,12 +1730,12 @@
     "difficulty": "easy",
     "text": "Which statement is used to add new rows/records into a table?",
     "options": [
-      "INSERT INTO",
       "ADD INTO",
       "CREATE RECORD",
+      "INSERT INTO",
       "APPEND"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "INSERT INTO tablename VALUES(...); is used to populate a table with new records.",
     "source": "NCERT Textbook"
   },
@@ -1760,12 +1760,12 @@
     "difficulty": "hard",
     "text": "Which clause is used to modify the values of existing records in a table?",
     "options": [
-      "UPDATE ... SET",
+      "CHANGE",
       "MODIFY",
       "ALTER ... SET",
-      "CHANGE"
+      "UPDATE ... SET"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "UPDATE tablename SET column=value WHERE condition; is used to change existing data.",
     "source": "NCERT Textbook"
   },
@@ -1775,12 +1775,12 @@
     "difficulty": "easy",
     "text": "What is the danger of running an UPDATE or DELETE statement WITHOUT a WHERE clause?",
     "options": [
-      "Nothing happens at all",
       "Only the first matching row is affected",
       "It updates/deletes EVERY row in the table",
-      "It raises a syntax error"
+      "It raises a syntax error",
+      "Nothing happens at all"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Without a WHERE clause, UPDATE/DELETE acts on every single row in the table — a serious and common mistake.",
     "source": "NCERT Textbook"
   },
@@ -1790,12 +1790,12 @@
     "difficulty": "medium",
     "text": "Which SQL clause retrieves only unique (non-repeating) values from a column?",
     "options": [
-      "UNIQUE",
-      "DISTINCT",
       "ONLY",
-      "SINGLE"
+      "UNIQUE",
+      "SINGLE",
+      "DISTINCT"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "SELECT DISTINCT removes duplicate values from the query's result.",
     "source": "NCERT Textbook"
   },
@@ -1805,12 +1805,12 @@
     "difficulty": "hard",
     "text": "Which clause filters rows of a SELECT query based on a condition?",
     "options": [
-      "FROM",
-      "WHERE",
       "ORDER BY",
-      "HAVING"
+      "HAVING",
+      "FROM",
+      "WHERE"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The WHERE clause specifies the condition(s) rows must satisfy to be included in the result.",
     "source": "NCERT Textbook"
   },
@@ -1820,12 +1820,12 @@
     "difficulty": "easy",
     "text": "Which clause arranges the rows of a query result in ascending or descending order?",
     "options": [
-      "GROUP BY",
-      "ORDER BY",
+      "ARRANGE BY",
       "SORT BY",
-      "ARRANGE BY"
+      "ORDER BY",
+      "GROUP BY"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "ORDER BY column [DESC] sorts the output by that column, ascending by default or descending with DESC.",
     "source": "NCERT Textbook"
   },
@@ -1835,10 +1835,10 @@
     "difficulty": "medium",
     "text": "In the LIKE operator, which wildcard character matches zero, one, or multiple characters?",
     "options": [
-      "_ (underscore)",
-      "% (percent)",
       "* (asterisk)",
-      "? (question mark)"
+      "% (percent)",
+      "? (question mark)",
+      "_ (underscore)"
     ],
     "correct": 1,
     "explanation": "% is the wildcard that matches any sequence of zero or more characters in pattern matching with LIKE.",
@@ -1852,8 +1852,8 @@
     "options": [
       "%",
       "_",
-      "*",
-      "#"
+      "#",
+      "*"
     ],
     "correct": 1,
     "explanation": "The underscore (_) wildcard matches exactly one character in a LIKE pattern.",
@@ -1880,12 +1880,12 @@
     "difficulty": "medium",
     "text": "To check whether a column's value is missing/unknown in SQL, you should use:",
     "options": [
-      "= NULL",
-      "IS NULL",
       "== NULL",
-      "= 'NULL'"
+      "= 'NULL'",
+      "IS NULL",
+      "= NULL"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "NULL is a special marker, not a comparable value, so it must be checked with IS NULL / IS NOT NULL, never with =.",
     "source": "NCERT Textbook"
   },
@@ -1895,12 +1895,12 @@
     "difficulty": "hard",
     "text": "Which MySQL data type is FIXED-length, padding shorter values with spaces to reach that length?",
     "options": [
-      "VARCHAR(n)",
       "CHAR(n)",
       "INT",
+      "VARCHAR(n)",
       "FLOAT"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "CHAR(n) always reserves exactly n characters, padding with spaces if the actual value is shorter.",
     "source": "NCERT Textbook"
   }

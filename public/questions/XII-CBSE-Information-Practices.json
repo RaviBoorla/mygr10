@@ -24,18 +24,18 @@
     "difficulty": "medium",
     "text": "Which of the following creates a Pandas Series from a list [10, 20, 30]? (2025 Board)",
     "options": [
-      "pd.Series([10, 20, 30])",
       "pd.DataFrame([10, 20, 30])",
-      "pd.Array([10, 20, 30])",
-      "pd.List([10, 20, 30])"
+      "pd.List([10, 20, 30])",
+      "pd.Series([10, 20, 30])",
+      "pd.Array([10, 20, 30])"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "pd.Series() is the constructor for a Pandas Series. Passing a list creates a Series with default integer index. pd.DataFrame() creates a 2D structure. pd.Array() and pd.List() are not valid Pandas constructors.",
     "whyWrong": [
-      "",
       "pd.DataFrame([10,20,30]) creates a DataFrame with a single column, not a Series.",
-      "pd.Array() is not a Pandas constructor.",
-      "pd.List() does not exist in Pandas."
+      "pd.List() does not exist in Pandas.",
+      "",
+      "pd.Array() is not a Pandas constructor."
     ],
     "priority": true
   },
@@ -46,17 +46,17 @@
     "difficulty": "easy",
     "text": "Which of the following is an example of e-waste? (2025 Board)",
     "options": [
-      "Used paper",
-      "Broken mobile phone",
       "Plastic bag",
+      "Broken mobile phone",
+      "Used paper",
       "Glass bottle"
     ],
     "correct": 1,
     "explanation": "E-waste (electronic waste) refers to discarded electrical or electronic equipment. A broken mobile phone contains electronic components and is e-waste. Paper, plastic bags, and glass bottles are not electronic.",
     "whyWrong": [
-      "Paper waste is not e-waste.",
-      "",
       "Plastic bags are general waste, not e-waste.",
+      "",
+      "Paper waste is not e-waste.",
       "Glass bottles are general waste, not e-waste."
     ],
     "priority": false
@@ -69,17 +69,17 @@
     "text": "Which type of chart is most suitable for showing the trend of a company's sales over 12 months? (2025 Board)",
     "options": [
       "Bar chart",
+      "Histogram",
       "Pie chart",
-      "Line chart",
-      "Histogram"
+      "Line chart"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "A line chart is ideal for showing trends over a continuous time period. It connects data points chronologically to reveal patterns such as rising or falling sales. Bar charts compare discrete categories; pie charts show proportions; histograms show frequency distributions.",
     "whyWrong": [
       "Bar charts compare discrete values — not ideal for continuous time trends.",
+      "Histograms show frequency distributions, not time-series trends.",
       "Pie charts show part-to-whole proportions, not trends.",
-      "",
-      "Histograms show frequency distributions, not time-series trends."
+      ""
     ],
     "priority": false
   },
@@ -91,16 +91,16 @@
     "text": "Which network topology connects each device to every other device directly? (2025 Board)",
     "options": [
       "Star",
-      "Bus",
       "Ring",
+      "Bus",
       "Mesh"
     ],
     "correct": 3,
     "explanation": "In a Mesh topology, every device has a dedicated point-to-point connection to every other device. This provides high redundancy and reliability but requires the most cabling.",
     "whyWrong": [
       "Star topology connects all devices to a central hub/switch.",
-      "Bus topology uses a single shared backbone cable.",
       "Ring topology connects devices in a closed circular loop.",
+      "Bus topology uses a single shared backbone cable.",
       ""
     ],
     "priority": false
@@ -112,14 +112,14 @@
     "difficulty": "medium",
     "text": "State True or False: In SQL, the GROUP BY clause is used to group rows that have the same value in specified columns. (2025 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "True — GROUP BY groups rows with identical values in specified columns into summary rows, often used with aggregate functions like COUNT(), SUM(), AVG().",
     "whyWrong": [
-      "",
-      "Incorrect — GROUP BY does exactly group rows with the same values, enabling aggregation per group."
+      "Incorrect — GROUP BY does exactly group rows with the same values, enabling aggregation per group.",
+      ""
     ],
     "priority": false
   },
@@ -130,18 +130,18 @@
     "difficulty": "easy",
     "text": "Riya has written a novel and wants to legally protect her creative work. Which type of Intellectual Property Right (IPR) should she apply for? (2025 Board)",
     "options": [
-      "Trademark",
-      "Patent",
       "Copyright",
-      "Trade Secret"
+      "Trade Secret",
+      "Patent",
+      "Trademark"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Copyright automatically protects original literary, artistic, and creative works such as novels, music, and films. It gives the creator exclusive rights to reproduce, distribute, and adapt the work. Patents protect inventions; Trademarks protect brand identifiers; Trade secrets protect confidential business information.",
     "whyWrong": [
-      "Trademark protects brand names, logos, and symbols.",
-      "Patents protect new inventions and technical processes.",
       "",
-      "Trade secrets are confidential business practices — not applicable to a published novel."
+      "Trade secrets are confidential business practices — not applicable to a published novel.",
+      "Patents protect new inventions and technical processes.",
+      "Trademark protects brand names, logos, and symbols."
     ],
     "priority": false
   },
@@ -152,18 +152,18 @@
     "difficulty": "medium",
     "text": "For a DataFrame df, which statement correctly accesses the value at row label 'R2' and column label 'Score'? (2025 Board)",
     "options": [
-      "df.loc['R2', 'Score']",
       "df.iloc['R2', 'Score']",
       "df['R2']['Score']",
-      "df.at[0, 'Score']"
+      "df.at[0, 'Score']",
+      "df.loc['R2', 'Score']"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "df.loc[row_label, col_label] accesses data by label. df.iloc[] uses integer positions (not labels). df['R2'] would try to access column 'R2', and df.at[0,'Score'] accesses by integer position.",
     "whyWrong": [
-      "",
       "iloc uses integer positions — 'R2' is a label, not a position.",
       "df['R2'] tries to access a column named 'R2', not a row.",
-      "df.at[0,'Score'] accesses row at integer position 0, not by label 'R2'."
+      "df.at[0,'Score'] accesses row at integer position 0, not by label 'R2'.",
+      ""
     ],
     "priority": true
   },
@@ -174,18 +174,18 @@
     "difficulty": "medium",
     "text": "What is the output of: SELECT UPPER(SUBSTRING('information', 2, 4)); (2025 Board)",
     "options": [
-      "NFOR",
-      "INFO",
+      "INFOR",
       "FORM",
-      "INFOR"
+      "NFOR",
+      "INFO"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "SUBSTRING('information', 2, 4): In SQL, string positions start at 1. Position 2 is 'n', taking 4 characters: n,f,o,r → 'nfor'. UPPER('nfor') = 'NFOR'.",
     "whyWrong": [
-      "",
-      "INFO would be positions 1-4: i,n,f,o.",
+      "INFOR would be 5 characters from position 1.",
       "FORM would start at position 4: r,m... not matching.",
-      "INFOR would be 5 characters from position 1."
+      "",
+      "INFO would be positions 1-4: i,n,f,o."
     ],
     "priority": true
   },
@@ -196,18 +196,18 @@
     "difficulty": "easy",
     "text": "Which of the following is NOT a web browser? (2025 Board)",
     "options": [
+      "Microsoft Edge",
       "Google Chrome",
-      "Mozilla Firefox",
       "Apache",
-      "Microsoft Edge"
+      "Mozilla Firefox"
     ],
     "correct": 2,
     "explanation": "Apache is a web server software, not a web browser. Google Chrome, Mozilla Firefox, and Microsoft Edge are all web browsers used to access websites.",
     "whyWrong": [
+      "Microsoft Edge is a web browser.",
       "Google Chrome is a web browser.",
-      "Mozilla Firefox is a web browser.",
       "",
-      "Microsoft Edge is a web browser."
+      "Mozilla Firefox is a web browser."
     ],
     "priority": false
   },
@@ -218,18 +218,18 @@
     "difficulty": "easy",
     "text": "Which SQL command is used to remove all rows from a table but keep the table structure intact? (2025 Board)",
     "options": [
-      "DROP TABLE",
       "DELETE FROM",
-      "TRUNCATE TABLE",
-      "REMOVE FROM"
+      "DROP TABLE",
+      "REMOVE FROM",
+      "TRUNCATE TABLE"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "TRUNCATE TABLE removes all rows quickly and resets auto-increment counters, but keeps the table structure. DROP TABLE removes the entire table including structure. DELETE FROM removes rows (with optional WHERE) but keeps structure and is slower. REMOVE FROM is not a SQL command.",
     "whyWrong": [
-      "DROP TABLE removes the entire table including its structure.",
       "DELETE FROM removes rows but is slower and logs each row deletion.",
-      "",
-      "REMOVE FROM is not a valid SQL command."
+      "DROP TABLE removes the entire table including its structure.",
+      "REMOVE FROM is not a valid SQL command.",
+      ""
     ],
     "priority": false
   },
@@ -240,17 +240,17 @@
     "difficulty": "easy",
     "text": "In Pandas, which function is used to read a CSV file into a DataFrame? (2025 Board)",
     "options": [
-      "pd.read_csv()",
       "pd.load_csv()",
       "pd.open_csv()",
+      "pd.read_csv()",
       "pd.import_csv()"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "pd.read_csv('filename.csv') reads a CSV file and returns it as a DataFrame. The other options (load_csv, open_csv, import_csv) do not exist in the Pandas library.",
     "whyWrong": [
-      "",
       "pd.load_csv() is not a valid Pandas function.",
       "pd.open_csv() is not a valid Pandas function.",
+      "",
       "pd.import_csv() is not a valid Pandas function."
     ],
     "priority": true
@@ -262,18 +262,18 @@
     "difficulty": "easy",
     "text": "Which of the following practices promotes good digital citizenship? (2025 Board)",
     "options": [
+      "Sending spam emails to large groups",
       "Sharing others' passwords online",
-      "Posting someone's personal information without consent",
       "Respecting others' privacy and intellectual property online",
-      "Sending spam emails to large groups"
+      "Posting someone's personal information without consent"
     ],
     "correct": 2,
     "explanation": "Good digital citizenship involves respecting privacy, intellectual property, and others online. Sharing passwords, posting personal info without consent, and spamming are all violations of digital etiquette and potentially illegal.",
     "whyWrong": [
+      "Sending spam is disrespectful and may be illegal.",
       "Sharing passwords violates privacy and security.",
-      "Posting personal info without consent violates privacy.",
       "",
-      "Sending spam is disrespectful and may be illegal."
+      "Posting personal info without consent violates privacy."
     ],
     "priority": false
   },
@@ -284,18 +284,18 @@
     "difficulty": "medium",
     "text": "What does df.shape return for a DataFrame with 5 rows and 3 columns? (2025 Board)",
     "options": [
-      "(3, 5)",
       "(5, 3)",
-      "[5, 3]",
-      "15"
+      "(3, 5)",
+      "15",
+      "[5, 3]"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "df.shape returns a tuple (rows, columns). For a DataFrame with 5 rows and 3 columns, it returns (5, 3). The first element is always the number of rows, the second is the number of columns.",
     "whyWrong": [
-      "(3,5) reverses rows and columns.",
       "",
-      "[5,3] — .shape returns a tuple, not a list.",
-      "15 would be the total number of cells, not shape."
+      "(3,5) reverses rows and columns.",
+      "15 would be the total number of cells, not shape.",
+      "[5,3] — .shape returns a tuple, not a list."
     ],
     "priority": true
   },
@@ -306,16 +306,16 @@
     "difficulty": "medium",
     "text": "For a Pandas Series s = pd.Series([10,20,30,40,50]), what does s[1:3] return? (2025 Board)",
     "options": [
-      "Series with values [20, 30, 40]",
       "Series with values [20, 30]",
+      "Series with values [20, 30, 40]",
       "Series with values [10, 20, 30]",
       "Series with values [30, 40]"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Slicing a Series with integer labels using s[1:3] uses positional slicing (start inclusive, stop exclusive). Positions 1 and 2 → values 20 and 30. The stop index 3 is excluded.",
     "whyWrong": [
-      "s[1:3] excludes index 3 — so value 40 is not included.",
       "",
+      "s[1:3] excludes index 3 — so value 40 is not included.",
       "s[1:3] starts from position 1 (value 20), not 0 (value 10).",
       "Positions 2 and 3 would be s[2:4]."
     ],
@@ -328,18 +328,18 @@
     "difficulty": "easy",
     "text": "Which of the following refers to the maximum rate at which data can be transmitted over a network connection? (2025 Board)",
     "options": [
-      "Latency",
+      "Jitter",
       "Bandwidth",
-      "Throughput",
-      "Jitter"
+      "Latency",
+      "Throughput"
     ],
     "correct": 1,
     "explanation": "Bandwidth is the maximum rate of data transmission over a network path, measured in bps/Kbps/Mbps/Gbps. Latency is the delay. Throughput is the actual data rate achieved. Jitter is variation in latency.",
     "whyWrong": [
-      "Latency is the time delay for data to travel from source to destination.",
+      "Jitter is variability in packet arrival time.",
       "",
-      "Throughput is the actual achieved data rate, which may be less than bandwidth.",
-      "Jitter is variability in packet arrival time."
+      "Latency is the time delay for data to travel from source to destination.",
+      "Throughput is the actual achieved data rate, which may be less than bandwidth."
     ],
     "priority": false
   },
@@ -368,16 +368,16 @@
     "difficulty": "medium",
     "text": "Which Pandas method is used to drop a column from a DataFrame? (2025 Board)",
     "options": [
-      "df.remove('col')",
       "df.delete('col')",
+      "df.remove('col')",
       "df.drop('col', axis=1)",
       "df.pop_col('col')"
     ],
     "correct": 2,
     "explanation": "df.drop('col', axis=1) drops a column (axis=1 means columns; axis=0 means rows). By default it returns a new DataFrame; use inplace=True to modify the original. df.remove(), df.delete(), and df.pop_col() are not valid Pandas methods.",
     "whyWrong": [
-      "df.remove() is not a valid Pandas DataFrame method.",
       "df.delete() is not a valid Pandas method.",
+      "df.remove() is not a valid Pandas DataFrame method.",
       "",
       "df.pop_col() is not a valid Pandas method."
     ],
@@ -391,16 +391,16 @@
     "text": "What is the output of: SELECT MOD(17, 5); (2025 Board)",
     "options": [
       "3",
-      "2",
       "3.4",
+      "2",
       "0"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "MOD(17, 5) returns the remainder of 17 divided by 5. 17 = 5×3 + 2, so the remainder is 2.",
     "whyWrong": [
       "MOD(17,5) = 2, not 3. (17 = 3×5 + 2, remainder is 2)",
-      "",
       "3.4 is the result of 17/5 (division), not MOD.",
+      "",
       "0 would mean 17 is divisible by 5, which it is not."
     ],
     "priority": false
@@ -476,18 +476,18 @@
     "difficulty": "medium",
     "text": "Which of the following statements correctly adds a new row to a DataFrame DF at label 'R4'? (2026 Board)",
     "options": [
-      "DF.add('R4', data)",
-      "DF.loc['R4'] = data",
       "DF.loc('R4') = data",
-      "DF.addloc['R4'] = data"
+      "DF.addloc['R4'] = data",
+      "DF.add('R4', data)",
+      "DF.loc['R4'] = data"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "DF.loc['R4'] = data adds or replaces a row at label 'R4'. DF.loc[] is a label-based indexer that supports assignment. The other options use invalid syntax or non-existent methods.",
     "whyWrong": [
-      "DF.add() is for element-wise addition, not adding rows.",
-      "",
       "DF.loc() with parentheses is invalid syntax — loc uses square brackets.",
-      "DF.addloc[] is not a valid Pandas method."
+      "DF.addloc[] is not a valid Pandas method.",
+      "DF.add() is for element-wise addition, not adding rows.",
+      ""
     ],
     "priority": true
   },
@@ -498,18 +498,18 @@
     "difficulty": "easy",
     "text": "Which of the following is an example of e-waste? (2026 Board)",
     "options": [
-      "Plastic Bottle",
-      "Broken Smartphone",
       "Aluminium Foil",
-      "Banana Peel"
+      "Banana Peel",
+      "Plastic Bottle",
+      "Broken Smartphone"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "E-waste refers to discarded electronic and electrical equipment. A broken smartphone contains electronic components and is classified as e-waste. Plastic bottles, aluminium foil, and banana peels are not electronic.",
     "whyWrong": [
-      "Plastic bottles are general waste, not e-waste.",
-      "",
       "Aluminium foil is a household material, not an electronic device.",
-      "Banana peel is organic waste."
+      "Banana peel is organic waste.",
+      "Plastic bottles are general waste, not e-waste.",
+      ""
     ],
     "priority": false
   },
@@ -520,18 +520,18 @@
     "difficulty": "medium",
     "text": "In which situation is a bar chart preferred over a line chart? (2026 Board)",
     "options": [
-      "Displaying monthly temperature trends",
+      "Tracking website traffic over a year",
       "Comparing the number of students enrolled in different classes",
       "Showing stock price changes over time",
-      "Tracking website traffic over a year"
+      "Displaying monthly temperature trends"
     ],
     "correct": 1,
     "explanation": "Bar charts are preferred for comparing discrete categories (like student counts across different classes). Line charts are better for continuous time-series data (trends over time like temperature, stock prices, or traffic).",
     "whyWrong": [
-      "Temperature trends over time → line chart preferred.",
+      "Website traffic over time is continuous → line chart.",
       "",
       "Stock price over time is continuous time-series → line chart.",
-      "Website traffic over time is continuous → line chart."
+      "Temperature trends over time → line chart preferred."
     ],
     "priority": true
   },
@@ -542,18 +542,18 @@
     "difficulty": "easy",
     "text": "Which network topology uses a central backbone cable to which all devices are connected? (2026 Board)",
     "options": [
-      "Mesh",
       "Star",
       "Tree",
-      "Bus"
+      "Bus",
+      "Mesh"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Bus topology uses a single central backbone cable (the bus). All devices connect to this cable and share it for communication. Star topology uses a central hub/switch. Tree is a hierarchical combination. Mesh connects all devices to each other.",
     "whyWrong": [
-      "Mesh connects every device directly to every other device.",
       "Star topology uses a central hub or switch, not a backbone cable.",
       "Tree is a hierarchical topology branching from a root.",
-      ""
+      "",
+      "Mesh connects every device directly to every other device."
     ],
     "priority": false
   },
@@ -564,14 +564,14 @@
     "difficulty": "medium",
     "text": "State True or False: A SQL aggregate function always returns multiple values, one for each column in the table. (2026 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "False — SQL aggregate functions (SUM, COUNT, AVG, MAX, MIN) return a single value per group (or one value for the whole table if no GROUP BY). They summarize multiple rows into a single result, not one value per column.",
     "whyWrong": [
-      "Incorrect — aggregate functions return a single summary value per group, not multiple values.",
-      ""
+      "",
+      "Incorrect — aggregate functions return a single summary value per group, not multiple values."
     ],
     "priority": false
   },
@@ -582,18 +582,18 @@
     "difficulty": "medium",
     "text": "Rohini has invented a new type of water purifier. Which form of Intellectual Property Right (IPR) should she apply for? (2026 Board)",
     "options": [
-      "Trademark",
+      "Both Trademark and Copyright",
       "Copyright",
       "Patent",
-      "Both Trademark and Copyright"
+      "Trademark"
     ],
     "correct": 2,
     "explanation": "A Patent protects new inventions and technical innovations. Since Rohini has invented a new water purifier (a technical device), she should apply for a Patent. Trademarks protect brand identifiers; Copyright protects creative/artistic works.",
     "whyWrong": [
-      "Trademark protects brand names and logos, not inventions.",
+      "'Both Trademark and Copyright' does not cover inventions — the correct protection is a Patent.",
       "Copyright protects creative and literary works, not inventions.",
       "",
-      "'Both Trademark and Copyright' does not cover inventions — the correct protection is a Patent."
+      "Trademark protects brand names and logos, not inventions."
     ],
     "priority": false
   },
@@ -626,18 +626,18 @@
     "difficulty": "medium",
     "text": "What is the output of: SELECT LENGTH('Data Base'); (note the space between the two words) (2026 Board)",
     "options": [
-      "7",
-      "8",
       "9",
-      "Error"
+      "Error",
+      "7",
+      "8"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "LENGTH() counts all characters including spaces. 'Data Base' = D,a,t,a,' ',B,a,s,e = 9 characters. The space counts as one character.",
     "whyWrong": [
-      "7 would be 'DataBas' — wrong.",
-      "8 would exclude the space — but LENGTH includes spaces.",
       "",
-      "LENGTH is a valid SQL function; no error occurs."
+      "LENGTH is a valid SQL function; no error occurs.",
+      "7 would be 'DataBas' — wrong.",
+      "8 would exclude the space — but LENGTH includes spaces."
     ],
     "priority": true
   },
@@ -648,18 +648,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a key feature of a static web page? (2026 Board)",
     "options": [
-      "Its content updates automatically and frequently",
       "Different users see different content based on their input",
-      "It loads slower than dynamic pages",
-      "It displays the same content to all users unless manually updated"
+      "It displays the same content to all users unless manually updated",
+      "Its content updates automatically and frequently",
+      "It loads slower than dynamic pages"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "A static web page has fixed content — all users see identical content. The content only changes if a developer manually edits the HTML file. Dynamic pages generate content per user/request using server-side processing.",
     "whyWrong": [
-      "Static pages do NOT auto-update; that is a feature of dynamic pages.",
       "Showing different content per user is a dynamic page feature.",
-      "Static pages actually load faster (no server processing required).",
-      ""
+      "",
+      "Static pages do NOT auto-update; that is a feature of dynamic pages.",
+      "Static pages actually load faster (no server processing required)."
     ],
     "priority": false
   },
@@ -670,17 +670,17 @@
     "difficulty": "easy",
     "text": "What does DML stand for in the context of databases? (2026 Board)",
     "options": [
+      "Data Management Language",
       "Device Management Language",
       "Device Manipulation Language",
-      "Data Management Language",
       "Data Manipulation Language"
     ],
     "correct": 3,
     "explanation": "DML stands for Data Manipulation Language. It includes commands like SELECT, INSERT, UPDATE, and DELETE used to manipulate data stored within existing tables.",
     "whyWrong": [
-      "Incorrect — DML is not about devices.",
-      "Incorrect — DML is not about devices.",
       "Incorrect — 'Management' is wrong; it is 'Manipulation'.",
+      "Incorrect — DML is not about devices.",
+      "Incorrect — DML is not about devices.",
       ""
     ],
     "priority": false
@@ -694,16 +694,16 @@
     "options": [
       "Colon",
       "CTRL",
-      "Comma",
-      "Caret"
+      "Caret",
+      "Comma"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "CSV stands for Comma-Separated Values. It is a plain-text format where each record occupies a line and fields are separated by commas.",
     "whyWrong": [
       "Colon-separated files exist but are not called CSV.",
       "CTRL is a keyboard modifier key, not a CSV separator.",
-      "",
-      "Caret (^) separated files are not standard CSV."
+      "Caret (^) separated files are not standard CSV.",
+      ""
     ],
     "priority": false
   },
@@ -715,16 +715,16 @@
     "text": "Which of the following is an example of good net etiquette (netiquette)? (2026 Board)",
     "options": [
       "Sending spam messages to a large group",
-      "Ignoring others' opinions in online discussions",
       "Not using copyrighted material without permission",
+      "Ignoring others' opinions in online discussions",
       "Sharing others' private information on social media"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Good netiquette includes respecting intellectual property rights by not using copyrighted material without permission. Spamming, ignoring others, and sharing private information without consent are all netiquette violations.",
     "whyWrong": [
       "Spamming is a major netiquette violation.",
-      "Ignoring others is disrespectful online behaviour.",
       "",
+      "Ignoring others is disrespectful online behaviour.",
       "Sharing private info without consent violates privacy and netiquette."
     ],
     "priority": false
@@ -737,17 +737,17 @@
     "text": "When creating a Pandas Series from a dictionary, which of the following is correct? (2026 Board)",
     "options": [
       "Dictionary values become the index labels",
+      "The Series uses default integer index regardless of the dictionary",
       "Dictionary keys become the values",
-      "Dictionary keys become the index labels",
-      "The Series uses default integer index regardless of the dictionary"
+      "Dictionary keys become the index labels"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "When pd.Series(dict) is called, dictionary keys become the index labels and dictionary values become the Series values. For example, pd.Series({'a':1,'b':2}) creates a Series with index ['a','b'] and values [1,2].",
     "whyWrong": [
       "Dictionary values become the Series data values, not index.",
+      "The Series uses dictionary keys as index — not default integers.",
       "Dictionary keys become the index labels, not values.",
-      "",
-      "The Series uses dictionary keys as index — not default integers."
+      ""
     ],
     "priority": true
   },
@@ -758,18 +758,18 @@
     "difficulty": "medium",
     "text": "For a Series s with integer index [0,1,2,3,4], what does s[start:end] return regarding the end index? (2026 Board)",
     "options": [
-      "The end index position is included",
+      "The start index position is excluded",
       "The end index position is excluded",
       "Both start and end positions are excluded",
-      "The start index position is excluded"
+      "The end index position is included"
     ],
     "correct": 1,
     "explanation": "Python slicing (used by Pandas Series with positional integer index) is always stop-exclusive: s[1:3] returns elements at positions 1 and 2, not 3. This is consistent with Python list slicing.",
     "whyWrong": [
-      "The end position is excluded (stop-exclusive slicing).",
+      "The start position is included, not excluded.",
       "",
       "The start position IS included; only the end is excluded.",
-      "The start position is included, not excluded."
+      "The end position is excluded (stop-exclusive slicing)."
     ],
     "priority": true
   },
@@ -780,18 +780,18 @@
     "difficulty": "easy",
     "text": "Which technology allows you to make voice calls over the Internet? (2026 Board)",
     "options": [
+      "Internet TV",
       "Chat",
-      "VoIP",
       "Email",
-      "Internet TV"
+      "VoIP"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "VoIP (Voice over Internet Protocol) enables voice communication over IP networks/internet. Chat is text-based; Email is message-based; Internet TV delivers video content.",
     "whyWrong": [
+      "Internet TV streams video content, not voice calls.",
       "Chat is text-based communication, not voice.",
-      "",
       "Email transmits text and file messages, not real-time voice.",
-      "Internet TV streams video content, not voice calls."
+      ""
     ],
     "priority": false
   },
@@ -802,14 +802,14 @@
     "difficulty": "medium",
     "text": "State True or False: The INSTR(string1, string2) function returns 0 if string2 is not found in string1. (2026 Board)",
     "options": [
-      "True",
-      "False"
+      "False",
+      "True"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "True — In MySQL, INSTR(str, substr) returns the position of the first occurrence of substr in str. If substr is not found, it returns 0 (unlike Python's str.find() which also returns -1... wait, INSTR returns 0 for not found in SQL).",
     "whyWrong": [
-      "",
-      "Incorrect — INSTR returns 0 when the substring is not found in the main string."
+      "Incorrect — INSTR returns 0 when the substring is not found in the main string.",
+      ""
     ],
     "priority": true
   },
@@ -821,17 +821,17 @@
     "text": "What value of the 'axis' parameter is used in df.drop() to drop a column? (2026 Board)",
     "options": [
       "axis=-1",
+      "axis=2",
       "axis=0",
-      "axis=1",
-      "axis=2"
+      "axis=1"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "In df.drop(), axis=1 specifies columns (axis=0 specifies rows, which is the default). So df.drop('ColName', axis=1) removes the column. axis=2 does not exist for 2D DataFrames.",
     "whyWrong": [
       "axis=-1 is not standard for DataFrame.drop().",
+      "axis=2 would be for 3D arrays — DataFrames only have 0 and 1.",
       "axis=0 drops rows (the default), not columns.",
-      "",
-      "axis=2 would be for 3D arrays — DataFrames only have 0 and 1."
+      ""
     ],
     "priority": true
   },
@@ -842,18 +842,18 @@
     "difficulty": "easy",
     "text": "What is the output of: SELECT ROUND(15.678, 2); (2026 Board)",
     "options": [
-      "15.00",
-      "15.67",
+      "16.00",
       "15.68",
-      "16.00"
+      "15.00",
+      "15.67"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "ROUND(15.678, 2) rounds 15.678 to 2 decimal places. The third decimal is 8 (≥5), so the second decimal rounds up: 15.67 → 15.68.",
     "whyWrong": [
-      "15.00 would be ROUND(15.678, 0) — rounds to integer.",
-      "15.67 — the digit after is 8 (≥5) so it rounds up to 15.68.",
+      "16.00 would require rounding to 0 decimal places and a value ≥ 15.5, but here we round to 2 places.",
       "",
-      "16.00 would require rounding to 0 decimal places and a value ≥ 15.5, but here we round to 2 places."
+      "15.00 would be ROUND(15.678, 0) — rounds to integer.",
+      "15.67 — the digit after is 8 (≥5) so it rounds up to 15.68."
     ],
     "priority": true
   },
@@ -910,16 +910,17 @@
     "difficulty": "easy",
     "text": "In __________ topology, the devices are arranged in the form of multiple branches in hierarchical manner. (2024 Board)",
     "options": [
-      "Star",
       "Tree",
-      "Mesh",
-      "Bus"
+      "Star",
+      "Bus",
+      "Mesh"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Tree topology arranges devices in a hierarchical structure with multiple branches emanating from a root/central node, resembling a tree.",
     "whyWrong": [
-      "Star connects all devices to a single central hub without branches.",
       "Mesh interconnects every device to every other device.",
+      "Star connects all devices to a single central hub without branches.",
+      "",
       "Bus connects all devices to a single shared backbone cable."
     ],
     "priority": 2
@@ -931,17 +932,18 @@
     "difficulty": "easy",
     "text": "Ridhima purchased a license for a copy of a software and made additional copies without the permission of the copyright owner. This act of hers is known as __________. (2024 Board)",
     "options": [
-      "Trademark Infringement",
       "Identity Theft",
+      "Trademark Infringement",
       "Copyright Infringement",
       "Patent"
     ],
     "correct": 2,
     "explanation": "Copyright Infringement is the unauthorized reproduction, distribution, or use of copyrighted work without the owner's permission.",
     "whyWrong": [
-      "Trademark Infringement involves unauthorized use of a brand name or logo.",
       "Identity Theft is stealing someone's personal information.",
-      "Patent protects inventions, not software copies."
+      "Trademark Infringement involves unauthorized use of a brand name or logo.",
+      "Patent protects inventions, not software copies.",
+      ""
     ],
     "priority": 2
   },
@@ -952,17 +954,18 @@
     "difficulty": "easy",
     "text": "What can an individual do to enhance the privacy of data stored digitally? (2024 Board)",
     "options": [
-      "Share sensitive information on social media platforms",
-      "Use your date of birth as your password",
+      "Download and install software from unknown sources",
       "Regularly update software installed on your device",
-      "Download and install software from unknown sources"
+      "Share sensitive information on social media platforms",
+      "Use your date of birth as your password"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Regularly updating software patches security vulnerabilities, protecting digital data privacy. Using strong, unique passwords and keeping software up to date are key privacy practices.",
     "whyWrong": [
+      "",
+      "Downloading from unknown sources risks malware infection.",
       "Sharing sensitive info on social media compromises privacy.",
-      "Using date of birth as password is weak and easily guessable.",
-      "Downloading from unknown sources risks malware infection."
+      "Using date of birth as password is weak and easily guessable."
     ],
     "priority": 2
   },
@@ -973,16 +976,17 @@
     "difficulty": "medium",
     "text": "What will be the output of the following query?\nSELECT POWER(2, MOD(17,3)); (2024 Board)",
     "options": [
-      "8",
+      "4",
       "1",
-      "0",
-      "4"
+      "8",
+      "0"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "MOD(17,3) = 2 (17 divided by 3 gives remainder 2). POWER(2,2) = 4.",
     "whyWrong": [
-      "8 would be POWER(2,3).",
+      "",
       "1 would be POWER(2,0).",
+      "8 would be POWER(2,3).",
       "0 is not a power of 2."
     ],
     "priority": 2
@@ -1004,7 +1008,8 @@
     "whyWrong": [
       "AVG() calculates the average of a column — it is an aggregate function.",
       "MAX() returns the maximum value — it is an aggregate function.",
-      "MIN() returns the minimum value — it is an aggregate function."
+      "MIN() returns the minimum value — it is an aggregate function.",
+      ""
     ],
     "priority": 2
   },
@@ -1015,17 +1020,18 @@
     "difficulty": "easy",
     "text": "__________ is the gaining of unauthorized access to data in a computer system. (2024 Board)",
     "options": [
-      "Phishing",
-      "Plagiarism",
       "Hacking",
-      "Copyright violation"
+      "Phishing",
+      "Copyright violation",
+      "Plagiarism"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Hacking is the unauthorized access to or control over a computer system, network, or data without the owner's permission.",
     "whyWrong": [
+      "Copyright violation is unauthorized use of copyrighted content.",
       "Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity.",
-      "Plagiarism is presenting someone else's work as one's own.",
-      "Copyright violation is unauthorized use of copyrighted content."
+      "",
+      "Plagiarism is presenting someone else's work as one's own."
     ],
     "priority": 2
   },
@@ -1036,17 +1042,18 @@
     "difficulty": "easy",
     "text": "Which of the following is NOT true with respect to CSV files? (2024 Board)",
     "options": [
-      "Values are separated by commas",
       "to_csv() can be used to save a dataframe to a CSV file",
+      "Values are separated by commas",
       "CSV file is created using a word processor",
       "CSV file is a type of text file"
     ],
     "correct": 2,
     "explanation": "CSV files are plain text files and can be created/edited with text editors or spreadsheet software, not word processors. Word processors add formatting that is incompatible with the plain CSV structure.",
     "whyWrong": [
-      "(i) is TRUE — CSV stands for Comma-Separated Values.",
       "(ii) is TRUE — pandas to_csv() saves a DataFrame as a CSV file.",
-      "(iv) is TRUE — CSV files are plain text files."
+      "(i) is TRUE — CSV stands for Comma-Separated Values.",
+      "(iv) is TRUE — CSV files are plain text files.",
+      ""
     ],
     "priority": 2
   },
@@ -1057,16 +1064,17 @@
     "difficulty": "easy",
     "text": "Which MySQL command helps to add a primary key constraint to any table that has already been created? (2024 Board)",
     "options": [
-      "UPDATE",
       "INSERT INTO",
-      "ALTER TABLE",
-      "ORDER BY"
+      "UPDATE",
+      "ORDER BY",
+      "ALTER TABLE"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "ALTER TABLE is a DDL command used to modify the structure of an existing table, including adding or dropping constraints like PRIMARY KEY.",
     "whyWrong": [
-      "UPDATE is a DML command that modifies existing row data, not structure.",
       "INSERT INTO adds new rows; it cannot modify table structure.",
+      "UPDATE is a DML command that modifies existing row data, not structure.",
+      "",
       "ORDER BY is a SELECT clause for sorting results."
     ],
     "priority": 2
@@ -1078,16 +1086,17 @@
     "difficulty": "medium",
     "text": "What will be the output of the following query?\nSELECT SUBSTR(\"G20 2023 INDIA\", 5, 4); (2024 Board)",
     "options": [
-      "G20 2",
+      "023",
       "2023",
-      "INDI",
-      "023"
+      "G20 2",
+      "INDI"
     ],
     "correct": 1,
     "explanation": "SUBSTR(str, pos, len) extracts a substring starting at position 5 (1-indexed) with length 4. 'G20 2023 INDIA': G(1)2(2)0(3) (4)2(5)0(6)2(7)3(8) → starting at 5 for 4 chars = '2023'.",
     "whyWrong": [
-      "'G20 2' starts at position 1.",
+      "",
       "'INDI' starts at position 9.",
+      "'G20 2' starts at position 1.",
       "'023' starts at position 6, length 3."
     ],
     "priority": 2
@@ -1099,17 +1108,18 @@
     "difficulty": "medium",
     "text": "What will be the output of the following Python code?\nimport pandas as pd\ndd={'One':1,'Two':2,'Three':3,'Seven':7}\nrr=pd.Series(dd)\nrr['Four']=4\nprint(rr) (2024 Board)",
     "options": [
-      "One 1\nTwo 2\nThree 3\nSeven 7\ndtype: int64",
-      "One 1\nTwo 2\nThree 3\nFour 4\nSeven 7\ndtype: int64",
       "Four 4\nOne 1\nTwo 2\nThree 3\nSeven 7\ndtype: int64",
+      "One 1\nTwo 2\nThree 3\nFour 4\nSeven 7\ndtype: int64",
+      "One 1\nTwo 2\nThree 3\nSeven 7\ndtype: int64",
       "One 1\nTwo 2\nThree 3\nSeven 7\nFour 4\ndtype: int64"
     ],
     "correct": 3,
     "explanation": "When a new key-value pair is assigned to an existing Series (rr['Four']=4), it is appended at the end. The existing order (One, Two, Three, Seven) is preserved and Four is added last.",
     "whyWrong": [
-      "Option (i) is wrong because it omits Four, which was added.",
+      "Option (iii) shows Four first, which is incorrect.",
       "Option (ii) shows Four between Three and Seven (sorted), which pandas doesn't do on assignment.",
-      "Option (iii) shows Four first, which is incorrect."
+      "Option (i) is wrong because it omits Four, which was added.",
+      ""
     ],
     "priority": 2
   },
@@ -1122,14 +1132,15 @@
     "options": [
       "FROM",
       "INSERT INTO",
-      "WHERE",
-      "GROUP BY"
+      "GROUP BY",
+      "WHERE"
     ],
     "correct": 1,
     "explanation": "INSERT INTO is a DML command used to add records to a table; it cannot be used as a clause within a SELECT statement.",
     "whyWrong": [
       "FROM is required with SELECT to specify the table.",
       "WHERE filters rows in a SELECT query.",
+      "",
       "GROUP BY groups rows for aggregate functions in SELECT."
     ],
     "priority": 2
@@ -1141,16 +1152,17 @@
     "difficulty": "easy",
     "text": "Which of the following command will not show first five rows from the Pandas series named S1? (2024 Board)",
     "options": [
-      "S1[0:5]",
       "S1.head()",
-      "S1.head(5)",
-      "S1.head[0:5]"
+      "S1[0:5]",
+      "S1.head[0:5]",
+      "S1.head(5)"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "S1.head[0:5] is invalid syntax — head is a method and must be called with parentheses, not subscripted with []. This will raise a TypeError.",
     "whyWrong": [
-      "S1[0:5] is valid slicing that returns first 5 elements.",
       "S1.head() returns first 5 rows by default.",
+      "S1[0:5] is valid slicing that returns first 5 elements.",
+      "",
       "S1.head(5) explicitly returns first 5 rows."
     ],
     "priority": 2
@@ -1162,14 +1174,15 @@
     "difficulty": "easy",
     "text": "Rama was unable to understand how the recruiters were able to know about her digital activity when she has not shared anything with them. The recruiters might have checked __________ of Rama. (2024 Board)",
     "options": [
+      "Digital Footprint",
       "Carbon Footprint",
       "Water Footprint",
-      "Online print",
-      "Digital Footprint"
+      "Online print"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "A Digital Footprint is the trail of data left behind by a person's online activities — websites visited, posts, searches — which can be tracked by others without the person explicitly sharing.",
     "whyWrong": [
+      "",
       "Carbon Footprint measures greenhouse gas emissions.",
       "Water Footprint measures water usage.",
       "'Online print' is not a standard term."
@@ -1183,17 +1196,18 @@
     "difficulty": "easy",
     "text": "Which MySQL string function is used to extract a substring from a given string based on a specified starting position and length? (2024 Board)",
     "options": [
-      "SUBSTRING_INDEX()",
       "LENGTH()",
+      "SUBSTRING_INDEX()",
       "MID()",
       "TRIM()"
     ],
     "correct": 2,
     "explanation": "MID(str, pos, len) — or equivalently SUBSTR()/SUBSTRING() — extracts a substring starting at a specified position for a given length.",
     "whyWrong": [
-      "SUBSTRING_INDEX() splits a string by a delimiter.",
       "LENGTH() returns the number of characters in a string.",
-      "TRIM() removes leading/trailing spaces."
+      "SUBSTRING_INDEX() splits a string by a delimiter.",
+      "TRIM() removes leading/trailing spaces.",
+      ""
     ],
     "priority": 2
   },
@@ -1204,17 +1218,18 @@
     "difficulty": "easy",
     "text": "The software that is free for anyone, and its source code is available for access, modification, correction, and improvement is called __________. (2024 Board)",
     "options": [
-      "Proprietary software",
-      "Commercial software",
       "Free and Open source software",
-      "Copyrighted software"
+      "Copyrighted software",
+      "Proprietary software",
+      "Commercial software"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Free and Open Source Software (FOSS) is software whose source code is publicly available for anyone to view, modify, and distribute freely.",
     "whyWrong": [
+      "Copyrighted software grants rights to the copyright holder, not the public.",
+      "",
       "Proprietary software has restricted source code that cannot be accessed or modified.",
-      "Commercial software is sold for profit; source code is typically closed.",
-      "Copyrighted software grants rights to the copyright holder, not the public."
+      "Commercial software is sold for profit; source code is typically closed."
     ],
     "priority": 2
   },
@@ -1225,17 +1240,18 @@
     "difficulty": "easy",
     "text": "__________ help in data protection through copyrights, patents and trademarks. (2024 Board)",
     "options": [
-      "Data Privacy Right",
-      "Right to Innovation",
       "Intellectual Property Rights (IPR)",
-      "Right to Data Protection"
+      "Data Privacy Right",
+      "Right to Data Protection",
+      "Right to Innovation"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Intellectual Property Rights (IPR) is the legal framework that protects creations of the mind through mechanisms like copyrights, patents, and trademarks.",
     "whyWrong": [
+      "Right to Data Protection relates to personal data, not intellectual creations.",
       "Data Privacy Right pertains to personal data protection, not creative works.",
-      "Right to Innovation is not a defined legal category.",
-      "Right to Data Protection relates to personal data, not intellectual creations."
+      "",
+      "Right to Innovation is not a defined legal category."
     ],
     "priority": 2
   },
@@ -1286,17 +1302,18 @@
     "difficulty": "easy",
     "text": "Which of the following topologies is very efficient and all nodes are connected to a central hub? (2023 Board)",
     "options": [
-      "Star",
+      "Ring",
       "Tree",
       "Bus",
-      "Ring"
+      "Star"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "In Star topology all nodes connect to a central hub/switch, making it efficient and easy to manage.",
     "whyWrong": [
-      "Tree has a hierarchical branching structure.",
+      "",
       "Bus uses a single backbone cable.",
-      "Ring connects nodes in a closed loop."
+      "Ring connects nodes in a closed loop.",
+      "Tree has a hierarchical branching structure."
     ],
     "priority": 2
   },
@@ -1307,17 +1324,18 @@
     "difficulty": "easy",
     "text": "Ramandeep started a company and designed a logo for it. What type of intellectual property does this logo represent? (2023 Board)",
     "options": [
-      "Patents",
-      "Copyright",
       "Design",
-      "Trademark"
+      "Copyright",
+      "Trademark",
+      "Patents"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "A Trademark protects brand identifiers such as logos, names, and slogans used in commerce.",
     "whyWrong": [
-      "Patents protect inventions.",
+      "Design right protects the aesthetic appearance of a product shape.",
       "Copyright protects original creative works like books.",
-      "Design right protects the aesthetic appearance of a product shape."
+      "",
+      "Patents protect inventions."
     ],
     "priority": 2
   },
@@ -1328,17 +1346,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a type of cybercrime where objectionable and demeaning comments are posted on social media about a person, such that he/she is mentally harassed? (2023 Board)",
     "options": [
-      "Phishing",
-      "Hacking",
       "Cyber bullying",
-      "Identity Theft"
+      "Identity Theft",
+      "Hacking",
+      "Phishing"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Cyber bullying involves using digital platforms to harass, threaten, or demean someone.",
     "whyWrong": [
-      "Phishing steals credentials via fake websites/emails.",
+      "Identity Theft is stealing someone's personal information.",
+      "",
       "Hacking is unauthorized access to systems.",
-      "Identity Theft is stealing someone's personal information."
+      "Phishing steals credentials via fake websites/emails."
     ],
     "priority": 2
   },
@@ -1350,16 +1369,17 @@
     "text": "Which of the following is the correct output of the SQL command: SELECT ROUND(7876.4568, 2)? (2023 Board)",
     "options": [
       "7876.46",
-      "7876.45",
+      "7900.4568",
       "7900",
-      "7900.4568"
+      "7876.45"
     ],
     "correct": 0,
     "explanation": "ROUND(7876.4568, 2) rounds to 2 decimal places: the third decimal is 6 ≥ 5, so 7876.46.",
     "whyWrong": [
       "7876.45 would result from truncation not rounding.",
-      "7900 would be ROUND(7876.4568, -2).",
-      "7900.4568 is not a valid rounding output."
+      "",
+      "7900.4568 is not a valid rounding output.",
+      "7900 would be ROUND(7876.4568, -2)."
     ],
     "priority": 2
   },
@@ -1370,15 +1390,17 @@
     "difficulty": "easy",
     "text": "Aggregate functions are also known as: (2023 Board)",
     "options": [
-      "Scalar Functions",
-      "Single Row Functions",
       "Multiple Row Functions",
-      "Hybrid Functions"
+      "Scalar Functions",
+      "Hybrid Functions",
+      "Single Row Functions"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Aggregate (group) functions operate on multiple rows to return a single result, hence they are called Multiple Row Functions.",
     "whyWrong": [
+      "",
       "Scalar/Single Row Functions operate on each row individually.",
+      "",
       "Hybrid Functions is not a standard MySQL term."
     ],
     "priority": 2
@@ -1390,15 +1412,18 @@
     "difficulty": "easy",
     "text": "The primary law in India for matters related to e-commerce and cyber crime is: (2023 Board)",
     "options": [
+      "IT Act 2010",
       "IT Act 1995",
       "IT Act 2000",
-      "IT Act 1998",
-      "IT Act 2010"
+      "IT Act 1998"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The Information Technology Act 2000 is India's primary legislation governing e-commerce and cyber crime.",
     "whyWrong": [
-      "IT Act 1995, 1998, and 2010 do not exist as official legislation."
+      "",
+      "IT Act 1995, 1998, and 2010 do not exist as official legislation.",
+      "",
+      ""
     ],
     "priority": 2
   },
@@ -1409,17 +1434,18 @@
     "difficulty": "easy",
     "text": "Ravisha stored records of all students in a MySQL table and wants to display names in alphabetical order. Which SQL clause should she use? (2023 Board)",
     "options": [
-      "SORT BY",
-      "ALIGN BY",
       "GROUP BY",
-      "ORDER BY"
+      "ORDER BY",
+      "ALIGN BY",
+      "SORT BY"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "ORDER BY is the SQL clause used to sort query results in ascending or descending order.",
     "whyWrong": [
-      "SORT BY is not a valid MySQL clause.",
+      "GROUP BY groups rows for aggregate functions, not sorting.",
+      "",
       "ALIGN BY does not exist in SQL.",
-      "GROUP BY groups rows for aggregate functions, not sorting."
+      "SORT BY is not a valid MySQL clause."
     ],
     "priority": 2
   },
@@ -1430,17 +1456,18 @@
     "difficulty": "easy",
     "text": "To remove the leading and trailing spaces from data values in a column of a MySQL table, we use: (2023 Board)",
     "options": [
-      "Left()",
       "Right()",
       "Trim()",
-      "Ltrim()"
+      "Ltrim()",
+      "Left()"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "TRIM() removes both leading and trailing spaces from a string in MySQL.",
     "whyWrong": [
-      "LEFT() extracts characters from the left.",
       "RIGHT() extracts characters from the right.",
-      "LTRIM() removes only leading spaces."
+      "LTRIM() removes only leading spaces.",
+      "",
+      "LEFT() extracts characters from the left."
     ],
     "priority": 2
   },
@@ -1453,14 +1480,15 @@
     "options": [
       "-1",
       "1",
-      "NULL",
-      "0"
+      "0",
+      "NULL"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "INSTR() returns 0 when the substring is not found in the string (unlike Python's find() which returns -1).",
     "whyWrong": [
       "-1 is what Python's find() returns, not MySQL's INSTR().",
       "1 would mean found at position 1.",
+      "",
       "NULL is not returned for a missing substring."
     ],
     "priority": 2
@@ -1472,17 +1500,18 @@
     "difficulty": "easy",
     "text": "What will be the output of the following code?\nimport pandas as pd\nmyser = pd.Series([0, 0, 0])\nprint(myser)\n(2023 Board)",
     "options": [
+      "0  0\n1  0\n2  0",
       "0  0\n0  0\n0  0",
       "0  1\n0  1\n0  2",
-      "0  0\n1  0\n2  0",
       "0  0\n1  1\n2  2"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "pd.Series([0,0,0]) creates a Series with default integer index 0,1,2 and all values 0, printed as index-value pairs.",
     "whyWrong": [
+      "Option D shows index values as data values.",
       "Option A shows all rows as '0  0' confusing index with value.",
       "Option B shows wrong values.",
-      "Option D shows index values as data values."
+      ""
     ],
     "priority": 2
   },
@@ -1493,17 +1522,18 @@
     "difficulty": "easy",
     "text": "Which of the following is a two-dimensional labelled data structure of Python? (2023 Board)",
     "options": [
-      "Relation",
+      "Square",
       "Dataframe",
       "Series",
-      "Square"
+      "Relation"
     ],
     "correct": 1,
     "explanation": "DataFrame is pandas' two-dimensional labelled data structure with rows and columns.",
     "whyWrong": [
-      "Relation is a database term.",
+      "",
       "Series is one-dimensional.",
-      "Square is not a pandas data structure."
+      "Square is not a pandas data structure.",
+      "Relation is a database term."
     ],
     "priority": 2
   },
@@ -1514,16 +1544,17 @@
     "difficulty": "easy",
     "text": "To compare data values of commission earned by salesmen over a year, which type of graph should preferably be used? (2023 Board)",
     "options": [
-      "line",
       "area",
-      "bar",
-      "scatter"
+      "scatter",
+      "line",
+      "bar"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "A bar chart is best for comparing discrete categories (different salesmen) side by side.",
     "whyWrong": [
-      "Line charts show trends over continuous time.",
       "Area charts show cumulative values.",
+      "",
+      "Line charts show trends over continuous time.",
       "Scatter plots show correlation between two variables."
     ],
     "priority": 2
@@ -1537,13 +1568,16 @@
     "options": [
       "Opera",
       "Google Chrome",
-      "Linux",
-      "Mozilla Firefox"
+      "Mozilla Firefox",
+      "Linux"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "Linux is an operating system, not a web browser.",
     "whyWrong": [
-      "Opera, Google Chrome, and Mozilla Firefox are all web browsers."
+      "Opera, Google Chrome, and Mozilla Firefox are all web browsers.",
+      "",
+      "",
+      ""
     ],
     "priority": 2
   },
@@ -1554,15 +1588,18 @@
     "difficulty": "easy",
     "text": "Which of the following is NOT a valid aggregate function in MySQL? (2023 Board)",
     "options": [
+      "LEN()",
       "COUNT()",
       "SUM()",
-      "MAX()",
-      "LEN()"
+      "MAX()"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "LEN() is not a MySQL function. MySQL uses LENGTH() to find string length, not LEN().",
     "whyWrong": [
-      "COUNT(), SUM(), and MAX() are all valid MySQL aggregate functions."
+      "",
+      "COUNT(), SUM(), and MAX() are all valid MySQL aggregate functions.",
+      "",
+      ""
     ],
     "priority": 2
   },
@@ -1582,7 +1619,9 @@
     "explanation": "Passive digital footprint is the data trail left unintentionally (e.g., cookies, IP addresses).",
     "whyWrong": [
       "Active digital footprint is deliberately created (e.g., posts, sign-ups).",
-      "True/False digital footprint are not standard terms."
+      "True/False digital footprint are not standard terms.",
+      "",
+      ""
     ],
     "priority": 2
   },
@@ -1593,15 +1632,18 @@
     "difficulty": "easy",
     "text": "E-waste is responsible for environmental degradation if not properly disposed of. Some feasible methods of e-waste management are reduce, _____ and recycle. (2023 Board)",
     "options": [
-      "reuse",
-      "recheck",
       "resubmit",
-      "regular"
+      "regular",
+      "reuse",
+      "recheck"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The 3Rs of e-waste management are Reduce, Reuse, and Recycle.",
     "whyWrong": [
-      "Recheck, resubmit, and regular are not part of the standard e-waste 3R framework."
+      "",
+      "",
+      "Recheck, resubmit, and regular are not part of the standard e-waste 3R framework.",
+      ""
     ],
     "priority": 2
   },

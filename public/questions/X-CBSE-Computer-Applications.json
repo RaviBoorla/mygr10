@@ -5,12 +5,12 @@
     "difficulty": "easy",
     "text": "Which of these best defines the World Wide Web?",
     "options": [
-      "A physical network of cables connecting computers",
       "A system of interlinked hypertext documents accessed via the Internet",
-      "A single website containing all information",
-      "An email delivery system"
+      "An email delivery system",
+      "A physical network of cables connecting computers",
+      "A single website containing all information"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The World Wide Web (WWW) is a system of interlinked hypertext documents (web pages) that are accessed over the Internet using a web browser."
   },
   {
@@ -19,12 +19,12 @@
     "difficulty": "medium",
     "text": "A computer that stores web pages and delivers them to browsers on request is called a",
     "options": [
-      "web client",
-      "web server",
       "search engine",
-      "web browser"
+      "web browser",
+      "web server",
+      "web client"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A web server is a computer that stores website files and responds to requests from web clients (browsers) by sending the requested pages."
   },
   {
@@ -33,10 +33,10 @@
     "difficulty": "medium",
     "text": "Which software is used by a user to view and interact with web pages?",
     "options": [
-      "Web server",
+      "Domain host",
       "Web browser",
-      "FTP server",
-      "Domain host"
+      "Web server",
+      "FTP server"
     ],
     "correct": 1,
     "explanation": "A web browser (e.g., Chrome, Firefox) is client-side software used to request pages from a web server and display them to the user."
@@ -47,12 +47,12 @@
     "difficulty": "medium",
     "text": "A regularly updated personal website featuring commentary or journal-style entries is called a",
     "options": [
-      "blog",
-      "forum",
       "newsgroup",
-      "portal"
+      "forum",
+      "portal",
+      "blog"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "A blog (short for weblog) is a personal or informational website displaying entries in reverse chronological order, usually maintained by an individual or small group."
   },
   {
@@ -61,12 +61,12 @@
     "difficulty": "medium",
     "text": "An online discussion group where people post messages on a shared topic is known as a",
     "options": [
-      "blog",
-      "newsgroup",
       "web browser",
-      "protocol"
+      "protocol",
+      "newsgroup",
+      "blog"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "A newsgroup is an online discussion forum where users post and read messages on a specific topic of common interest."
   },
   {
@@ -75,12 +75,12 @@
     "difficulty": "easy",
     "text": "The language most commonly used to create web pages is",
     "options": [
-      "HTML",
-      "SQL",
       "Python",
-      "COBOL"
+      "COBOL",
+      "SQL",
+      "HTML"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "HTML (HyperText Markup Language) is the standard markup language used to create the structure and content of web pages."
   },
   {
@@ -89,12 +89,12 @@
     "difficulty": "easy",
     "text": "In the web address https://www.cbse.gov.in, which part identifies the top-level domain?",
     "options": [
+      "https",
       ".gov",
-      ".in",
       "www",
-      "https"
+      ".in"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The top-level domain (TLD) is the last segment of the domain name; here '.in' indicates the country-code TLD for India (with .gov being a second-level domain indicating a government site)."
   },
   {
@@ -103,12 +103,12 @@
     "difficulty": "easy",
     "text": "An e-mail address such as student@school.edu.in is divided into a username and a",
     "options": [
-      "password",
-      "domain name",
       "protocol name",
-      "file name"
+      "file name",
+      "password",
+      "domain name"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "An e-mail address has the format username@domainname, where the part after '@' is the domain name of the mail server handling that account."
   },
   {
@@ -117,12 +117,12 @@
     "difficulty": "easy",
     "text": "Transferring a file from a remote server to your own computer is called",
     "options": [
-      "uploading",
-      "downloading",
       "browsing",
-      "hosting"
+      "hosting",
+      "uploading",
+      "downloading"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Downloading refers to copying a file from a remote server to the local computer; the reverse process is called uploading."
   },
   {
@@ -131,12 +131,12 @@
     "difficulty": "easy",
     "text": "Sending a file from your local computer to a remote server is called",
     "options": [
-      "downloading",
       "uploading",
-      "streaming",
-      "mirroring"
+      "mirroring",
+      "downloading",
+      "streaming"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Uploading is the process of transferring a file from a local computer to a remote server over a network."
   },
   {
@@ -145,12 +145,12 @@
     "difficulty": "medium",
     "text": "Which protocol suite forms the basic communication language of the Internet?",
     "options": [
-      "TCP/IP",
-      "HTTP",
       "SMTP",
+      "HTTP",
+      "TCP/IP",
       "FTP"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental set of protocols that governs how data is broken into packets, addressed, transmitted and reassembled across the Internet."
   },
   {
@@ -159,12 +159,12 @@
     "difficulty": "medium",
     "text": "Which protocol is used to send outgoing e-mail from a client to a mail server?",
     "options": [
+      "TELNET",
       "POP3",
       "SMTP",
-      "HTTP",
-      "TELNET"
+      "HTTP"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending and relaying outgoing e-mail messages between mail servers and from a client to its outgoing server."
   },
   {
@@ -173,12 +173,12 @@
     "difficulty": "medium",
     "text": "Which protocol is used by an e-mail client to retrieve and download messages from a mail server?",
     "options": [
-      "SMTP",
+      "SSH",
       "HTTP",
-      "POP3",
-      "SSH"
+      "SMTP",
+      "POP3"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "POP3 (Post Office Protocol version 3) is used by e-mail clients to retrieve messages stored on a mail server, typically downloading them to the local device."
   },
   {
@@ -189,8 +189,8 @@
     "options": [
       "HTTP",
       "HTTPS",
-      "FTP",
-      "SCP"
+      "SCP",
+      "FTP"
     ],
     "correct": 0,
     "explanation": "HTTP (HyperText Transfer Protocol) defines how requests and responses for web pages are exchanged between a browser and a web server, without encryption."
@@ -202,11 +202,11 @@
     "text": "HTTPS differs from HTTP mainly because HTTPS",
     "options": [
       "works only on local networks",
-      "encrypts data using SSL/TLS for secure transmission",
       "is used only for sending e-mail",
+      "encrypts data using SSL/TLS for secure transmission",
       "does not require a web server"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "HTTPS (HTTP Secure) is HTTP layered with SSL/TLS encryption, so data exchanged between browser and server is encrypted and protected from eavesdropping."
   },
   {
@@ -215,12 +215,12 @@
     "difficulty": "hard",
     "text": "Which protocol allows a user to securely log in to and execute commands on a remote computer over an encrypted connection?",
     "options": [
+      "HTTP",
       "TELNET",
       "SSH",
-      "SMTP",
-      "HTTP"
+      "SMTP"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "SSH (Secure Shell) provides an encrypted channel for remote login and command execution, unlike TELNET which sends data, including passwords, in plain text."
   },
   {
@@ -230,11 +230,11 @@
     "text": "Which protocol is used to transfer files securely over an SSH connection?",
     "options": [
       "FTP",
-      "SFTP",
+      "SMTP",
       "HTTP",
-      "SMTP"
+      "SFTP"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "SFTP (SSH File Transfer Protocol) runs over SSH and encrypts both commands and data, providing a secure alternative to plain FTP."
   },
   {
@@ -243,12 +243,12 @@
     "difficulty": "easy",
     "text": "Which of the following protocols transfers files between computers WITHOUT encrypting the data?",
     "options": [
+      "FTP",
       "SFTP",
       "SCP",
-      "FTP",
       "SSH"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "FTP (File Transfer Protocol) transmits files and login credentials in plain text, making it insecure compared to SFTP or SCP, which use SSH-based encryption."
   },
   {
@@ -258,11 +258,11 @@
     "text": "SCP (Secure Copy Protocol) is primarily used to",
     "options": [
       "browse websites",
+      "translate domain names to IP addresses",
       "securely copy files between hosts over SSH",
-      "send bulk e-mail",
-      "translate domain names to IP addresses"
+      "send bulk e-mail"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "SCP allows secure copying of files between a local and a remote host, or between two remote hosts, using the SSH protocol for authentication and encryption."
   },
   {
@@ -271,12 +271,12 @@
     "difficulty": "easy",
     "text": "TELNET is a protocol used for",
     "options": [
-      "encrypting e-mail attachments",
-      "remote login to another computer over a network",
       "compressing large files",
-      "resolving domain names"
+      "resolving domain names",
+      "encrypting e-mail attachments",
+      "remote login to another computer over a network"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "TELNET allows a user to log in to and operate a remote computer over a network, though it is considered insecure since data is sent unencrypted."
   },
   {
@@ -285,12 +285,12 @@
     "difficulty": "easy",
     "text": "Which of the following is a program that helps users locate information on the Internet by keyword?",
     "options": [
-      "Web browser",
       "Search engine",
+      "FTP client",
       "E-mail client",
-      "FTP client"
+      "Web browser"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A search engine (e.g., Google, Bing) indexes web content and allows users to locate relevant sites and pages by entering keywords."
   },
   {
@@ -299,12 +299,12 @@
     "difficulty": "easy",
     "text": "Real-time text communication between two or more users over the Internet is called",
     "options": [
-      "chat",
       "e-mail",
+      "e-governance",
       "blogging",
-      "e-governance"
+      "chat"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Chat is a web service that allows users to exchange text messages in real time over the Internet."
   },
   {
@@ -314,11 +314,11 @@
     "text": "Conducting meetings between people at different locations using audio and video over the Internet is called",
     "options": [
       "e-Learning",
+      "social networking",
       "video conferencing",
-      "e-Reservation",
-      "social networking"
+      "e-Reservation"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Video conferencing is an Internet-based service that allows participants at different locations to see and hear each other in real time for a meeting or discussion."
   },
   {
@@ -327,12 +327,12 @@
     "difficulty": "medium",
     "text": "Delivering educational content and conducting classes over the Internet is known as",
     "options": [
-      "e-Banking",
-      "e-Governance",
+      "e-Groups",
       "e-Learning",
-      "e-Groups"
+      "e-Banking",
+      "e-Governance"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "e-Learning refers to using the Internet and digital technology to deliver educational content, courses, and training to learners remotely."
   },
   {
@@ -341,12 +341,12 @@
     "difficulty": "medium",
     "text": "Carrying out banking transactions such as fund transfer and bill payment over the Internet is called",
     "options": [
-      "e-Banking",
-      "e-Shopping",
       "e-Reservation",
-      "e-Governance"
+      "e-Governance",
+      "e-Shopping",
+      "e-Banking"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "e-Banking allows customers to perform banking transactions like balance enquiry, fund transfer, and bill payments through the Internet instead of visiting a branch."
   },
   {
@@ -369,12 +369,12 @@
     "difficulty": "hard",
     "text": "Government services delivered to citizens electronically over the Internet, such as filing returns or applying for certificates online, are examples of",
     "options": [
-      "e-Governance",
       "e-Banking",
+      "e-Governance",
       "e-Groups",
       "e-Learning"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "e-Governance refers to the use of the Internet and IT to deliver government information and services to citizens electronically."
   },
   {
@@ -397,12 +397,12 @@
     "difficulty": "medium",
     "text": "Booking tickets for trains, flights or movies online is an example of which web service?",
     "options": [
-      "e-Reservation",
-      "e-Governance",
+      "chat",
       "e-Groups",
-      "chat"
+      "e-Governance",
+      "e-Reservation"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "e-Reservation refers to booking services such as train, flight, or event tickets online through the Internet."
   },
   {
@@ -412,11 +412,11 @@
     "text": "Which mobile technology is designed only for sending short text messages of limited length between mobile phones?",
     "options": [
       "MMS",
-      "SMS",
       "3G",
-      "5G"
+      "5G",
+      "SMS"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "SMS (Short Message Service) allows the exchange of short text-only messages (traditionally up to 160 characters) between mobile phones."
   },
   {
@@ -426,11 +426,11 @@
     "text": "Which tag is used to define the root element of an HTML document?",
     "options": [
       "<body>",
-      "<html>",
+      "<title>",
       "<head>",
-      "<title>"
+      "<html>"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The <html> tag is the root element that encloses the entire HTML document, including the <head> and <body> sections."
   },
   {
@@ -440,11 +440,11 @@
     "text": "Which HTML tag contains meta-information about the document such as its title, not displayed in the browser window?",
     "options": [
       "<body>",
+      "<meta>",
       "<head>",
-      "<title>",
-      "<meta>"
+      "<title>"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The <head> tag holds information about the document (like <title>, <meta>, and links to style sheets) that is not directly displayed in the visible page content."
   },
   {
@@ -453,10 +453,10 @@
     "difficulty": "easy",
     "text": "Which tag defines the text that appears on the browser's title bar or tab?",
     "options": [
-      "<head>",
+      "<caption>",
       "<header>",
       "<title>",
-      "<caption>"
+      "<head>"
     ],
     "correct": 2,
     "explanation": "The <title> tag, placed inside <head>, specifies the text shown on the browser's title bar or tab for that page."
@@ -468,11 +468,11 @@
     "text": "Which tag contains all the visible content of a web page, such as text and images?",
     "options": [
       "<html>",
+      "<title>",
       "<head>",
-      "<body>",
-      "<title>"
+      "<body>"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "The <body> tag contains all the content that is displayed to the user in the browser window, such as text, images, links and tables."
   },
   {
@@ -481,12 +481,12 @@
     "difficulty": "medium",
     "text": "Which attribute of the <body> tag is used to set the background colour of a web page?",
     "options": [
+      "bgstyle",
       "bgcolor",
-      "background",
       "color",
-      "bgstyle"
+      "background"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The bgcolor attribute of the <body> tag sets the background colour of the entire web page, e.g. <body bgcolor=\"yellow\">."
   },
   {
@@ -495,12 +495,12 @@
     "difficulty": "easy",
     "text": "Which attribute of the <body> tag is used to specify an image as the page background?",
     "options": [
-      "bgcolor",
       "background",
+      "src",
       "bgimage",
-      "src"
+      "bgcolor"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The background attribute of the <body> tag is used to set an image file as the background of the web page."
   },
   {
@@ -509,12 +509,12 @@
     "difficulty": "easy",
     "text": "Which <body> attribute sets the default colour of hyperlinks that have not yet been visited?",
     "options": [
+      "text",
       "link",
-      "vlink",
       "alink",
-      "text"
+      "vlink"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The link attribute of <body> specifies the colour of unvisited hyperlinks on the page."
   },
   {
@@ -524,11 +524,11 @@
     "text": "Which <body> attribute sets the colour of a link at the moment it is being clicked (activated)?",
     "options": [
       "link",
-      "vlink",
       "alink",
+      "vlink",
       "text"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The alink attribute of <body> defines the colour a hyperlink takes on while it is actively being clicked."
   },
   {
@@ -537,12 +537,12 @@
     "difficulty": "easy",
     "text": "Which <body> attribute sets the colour of hyperlinks that have already been visited?",
     "options": [
-      "link",
-      "vlink",
       "alink",
-      "text"
+      "text",
+      "link",
+      "vlink"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The vlink attribute of <body> specifies the colour applied to hyperlinks that the user has previously visited."
   },
   {
@@ -551,10 +551,10 @@
     "difficulty": "medium",
     "text": "Which tag is used to insert a single line break within text, without starting a new paragraph?",
     "options": [
-      "<hr>",
-      "<br>",
       "<p>",
-      "<lb>"
+      "<br>",
+      "<lb>",
+      "<hr>"
     ],
     "correct": 1,
     "explanation": "The <br> tag inserts a line break, moving following content to a new line, and is an empty (self-closing) tag."
@@ -565,12 +565,12 @@
     "difficulty": "medium",
     "text": "Which tag draws a horizontal line across the page, often used to separate sections?",
     "options": [
-      "<br>",
-      "<hr>",
+      "<div>",
       "<line>",
-      "<div>"
+      "<hr>",
+      "<br>"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The <hr> tag inserts a horizontal rule (a horizontal line) across the page, commonly used to visually separate content sections."
   },
   {
@@ -579,12 +579,12 @@
     "difficulty": "medium",
     "text": "How are comments written in HTML source code so that they are ignored by the browser?",
     "options": [
-      "// comment",
-      "/* comment */",
       "<!-- comment -->",
-      "# comment"
+      "/* comment */",
+      "# comment",
+      "// comment"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "HTML comments are written between <!-- and -->; the browser ignores this text when rendering the page, but it remains visible in the source code."
   },
   {
@@ -594,11 +594,11 @@
     "text": "Which tag pair represents the largest (most prominent) heading level in HTML?",
     "options": [
       "<h6>...</h6>",
-      "<h1>...</h1>",
+      "<header>...</header>",
       "<head>...</head>",
-      "<header>...</header>"
+      "<h1>...</h1>"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "HTML provides six heading levels, <h1> to <h6>; <h1> represents the largest and most important heading, while <h6> is the smallest."
   },
   {
@@ -607,8 +607,8 @@
     "difficulty": "easy",
     "text": "Which tag is used to define a paragraph of text?",
     "options": [
-      "<pa>",
       "<para>",
+      "<pa>",
       "<p>",
       "<txt>"
     ],
@@ -621,12 +621,12 @@
     "difficulty": "easy",
     "text": "Which tag makes enclosed text appear in bold?",
     "options": [
-      "<i>",
-      "<u>",
+      "<bold>",
       "<b>",
-      "<bold>"
+      "<i>",
+      "<u>"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The <b> tag renders the enclosed text in bold typeface."
   },
   {
@@ -635,12 +635,12 @@
     "difficulty": "easy",
     "text": "Which tag makes enclosed text appear italicised?",
     "options": [
-      "<i>",
       "<b>",
       "<u>",
-      "<em>"
+      "<em>",
+      "<i>"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The <i> tag displays the enclosed text in italics."
   },
   {
@@ -649,12 +649,12 @@
     "difficulty": "easy",
     "text": "Which tag underlines the enclosed text?",
     "options": [
-      "<b>",
       "<i>",
       "<u>",
+      "<b>",
       "<sub>"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The <u> tag renders the enclosed text with an underline."
   },
   {
@@ -663,12 +663,12 @@
     "difficulty": "easy",
     "text": "Which tag is used to create a bulleted (unordered) list?",
     "options": [
-      "<ol>",
       "<ul>",
+      "<dl>",
       "<li>",
-      "<dl>"
+      "<ol>"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The <ul> tag defines an unordered list, whose items are marked with bullets by default, with each item wrapped in an <li> tag."
   },
   {
@@ -678,11 +678,11 @@
     "text": "Which tag is used to create a numbered (ordered) list?",
     "options": [
       "<ul>",
-      "<ol>",
+      "<dt>",
       "<li>",
-      "<dt>"
+      "<ol>"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The <ol> tag defines an ordered list whose items are automatically numbered, with each item wrapped in an <li> tag."
   },
   {
@@ -691,12 +691,12 @@
     "difficulty": "easy",
     "text": "Which tag is used to define an individual item within an ordered or unordered list?",
     "options": [
-      "<item>",
       "<li>",
-      "<dd>",
-      "<dt>"
+      "<item>",
+      "<dt>",
+      "<dd>"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The <li> (list item) tag defines each entry within an <ol> or <ul> list."
   },
   {
@@ -705,12 +705,12 @@
     "difficulty": "easy",
     "text": "In a description list, which tag encloses the entire list?",
     "options": [
-      "<dl>",
       "<dt>",
+      "<ul>",
       "<dd>",
-      "<ul>"
+      "<dl>"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The <dl> tag defines a description list, which contains term-definition pairs marked using <dt> (term) and <dd> (description)."
   },
   {
@@ -719,12 +719,12 @@
     "difficulty": "medium",
     "text": "In a description list, which tag is used to specify the description/definition of a term?",
     "options": [
-      "<dt>",
       "<dl>",
       "<dd>",
-      "<li>"
+      "<li>",
+      "<dt>"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The <dd> tag is used inside a <dl> to provide the description or definition corresponding to the preceding <dt> term."
   },
   {
@@ -733,12 +733,12 @@
     "difficulty": "medium",
     "text": "Which attribute of the <ol> tag is used to change the starting number of the list?",
     "options": [
-      "type",
-      "start",
       "value",
-      "begin"
+      "begin",
+      "start",
+      "type"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The start attribute of <ol> specifies the number (or letter/roman numeral position) at which the ordered list should begin counting, e.g. <ol start=\"5\">."
   },
   {
@@ -747,12 +747,12 @@
     "difficulty": "hard",
     "text": "Which attribute of <ol> or <ul> is used to change the numbering style (e.g., to Roman numerals or letters) or bullet style of a list?",
     "options": [
-      "type",
-      "style",
       "start",
-      "format"
+      "style",
+      "format",
+      "type"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "The type attribute of <ol> sets the numbering style (1, A, a, I, i) and the type attribute of <ul> sets the bullet style (disc, circle, square)."
   },
   {
@@ -761,12 +761,12 @@
     "difficulty": "medium",
     "text": "Which attribute of the <font> tag is used to change the typeface of text, such as Arial or Times New Roman?",
     "options": [
-      "style",
       "face",
       "type",
+      "style",
       "family"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The face attribute of the <font> tag specifies the typeface/font family to be used for the enclosed text, e.g. <font face=\"Arial\">."
   },
   {
@@ -775,12 +775,12 @@
     "difficulty": "easy",
     "text": "Which attribute of the <font> tag controls the size of the displayed text?",
     "options": [
-      "size",
       "scale",
+      "size",
       "width",
       "font-size"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The size attribute of the <font> tag sets the size of the text, typically using values from 1 (smallest) to 7 (largest)."
   },
   {
@@ -789,10 +789,10 @@
     "difficulty": "medium",
     "text": "Which attribute of the <img> tag specifies the path or URL of the image file to be displayed?",
     "options": [
-      "alt",
-      "src",
       "href",
-      "link"
+      "src",
+      "link",
+      "alt"
     ],
     "correct": 1,
     "explanation": "The src attribute of the <img> tag specifies the source location (path or URL) of the image file to be embedded in the page."
@@ -803,12 +803,12 @@
     "difficulty": "medium",
     "text": "Which attribute of the <img> tag provides alternative text shown if the image cannot be displayed?",
     "options": [
-      "src",
-      "alt",
+      "width",
       "title",
-      "width"
+      "src",
+      "alt"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The alt attribute provides alternate descriptive text for an image, which is displayed if the image fails to load and is also used by screen readers."
   },
   {
@@ -817,12 +817,12 @@
     "difficulty": "medium",
     "text": "Which tag displays text raised slightly above the normal line, such as in x2 written as a power?",
     "options": [
-      "<sub>",
       "<sup>",
-      "<small>",
-      "<top>"
+      "<sub>",
+      "<top>",
+      "<small>"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The <sup> tag renders enclosed text as superscript, raised above the baseline, commonly used for exponents like x<sup>2</sup>."
   },
   {
@@ -831,12 +831,12 @@
     "difficulty": "medium",
     "text": "Which tag displays text lowered slightly below the normal line, such as the '2' in H2O?",
     "options": [
-      "<sup>",
       "<sub>",
       "<small>",
-      "<low>"
+      "<low>",
+      "<sup>"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The <sub> tag renders enclosed text as subscript, positioned below the baseline, commonly used for chemical formulas like H<sub>2</sub>O."
   },
   {
@@ -846,11 +846,11 @@
     "text": "Which HTML form input type is used to accept a single line of visible text from the user, such as a name?",
     "options": [
       "<textarea>",
+      "<select>",
       "<input type=\"text\">",
-      "<input type=\"password\">",
-      "<select>"
+      "<input type=\"password\">"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "<input type=\"text\"> creates a single-line text box in which the user can type and see visible characters, such as a name field."
   },
   {
@@ -859,10 +859,10 @@
     "difficulty": "medium",
     "text": "Which HTML form input type masks the characters typed by the user, showing dots or asterisks instead?",
     "options": [
-      "<input type=\"text\">",
+      "<textarea>",
       "<input type=\"password\">",
-      "<input type=\"hidden\">",
-      "<textarea>"
+      "<input type=\"text\">",
+      "<input type=\"hidden\">"
     ],
     "correct": 1,
     "explanation": "<input type=\"password\"> creates a text field where typed characters are masked (shown as dots/asterisks) for confidentiality, such as for login passwords."
@@ -873,12 +873,12 @@
     "difficulty": "easy",
     "text": "Which HTML form element allows a user to select only ONE option from a set of mutually exclusive choices?",
     "options": [
+      "textbox",
       "checkbox",
-      "radio button",
       "list box",
-      "textbox"
+      "radio button"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Radio buttons (<input type=\"radio\">) are grouped using the same name attribute and allow the user to select only one option from the group at a time."
   },
   {
@@ -887,12 +887,12 @@
     "difficulty": "hard",
     "text": "Which HTML form element allows a user to select MULTIPLE independent options, each of which can be ticked on or off?",
     "options": [
-      "radio button",
-      "checkbox",
+      "textbox",
       "password",
-      "textbox"
+      "radio button",
+      "checkbox"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Checkboxes (<input type=\"checkbox\">) allow the user to select zero, one, or more options independently, unlike radio buttons which allow only one from a group."
   },
   {
@@ -901,12 +901,12 @@
     "difficulty": "easy",
     "text": "Which tag creates a drop-down list (combo box) in an HTML form, from which a user picks one option?",
     "options": [
-      "<list>",
-      "<select>",
       "<option>",
-      "<dropdown>"
+      "<dropdown>",
+      "<list>",
+      "<select>"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The <select> tag creates a drop-down list/combo box in a form, with each choice defined using an <option> tag nested inside it."
   },
   {
@@ -915,12 +915,12 @@
     "difficulty": "medium",
     "text": "The set of accepted rules of polite and responsible behaviour while communicating on the Internet is called",
     "options": [
-      "Netiquette",
       "Copyright",
       "Plagiarism",
-      "Cyber law"
+      "Cyber law",
+      "Netiquette"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Netiquette (network + etiquette) refers to the accepted rules of polite, respectful and responsible online behaviour, such as not spamming or using offensive language."
   },
   {
@@ -929,12 +929,12 @@
     "difficulty": "hard",
     "text": "A type of software license that allows users to freely use, study, modify and distribute the source code is called",
     "options": [
-      "proprietary software license",
-      "open source license",
+      "shareware trial license",
       "freeware only",
-      "shareware trial license"
+      "open source license",
+      "proprietary software license"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "An open source software license grants users the right to freely access, use, study, modify and redistribute the program's source code, subject to certain conditions."
   },
   {
@@ -943,12 +943,12 @@
     "difficulty": "medium",
     "text": "Software that is fully copyrighted and whose source code is kept private by the owning company is called",
     "options": [
-      "open source software",
-      "proprietary software",
+      "public domain software",
       "freeware",
-      "public domain software"
+      "proprietary software",
+      "open source software"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Proprietary software is owned and controlled by a company or individual; its source code is not made public, and usage is restricted by licensing terms."
   },
   {
@@ -957,12 +957,12 @@
     "difficulty": "medium",
     "text": "Software that can be used free of cost but whose source code is not necessarily made available is called",
     "options": [
+      "proprietary software",
       "freeware",
-      "open source software",
       "shareware",
-      "proprietary software"
+      "open source software"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Freeware is software that is distributed and can be used at no cost, but unlike open source software, its source code may not be publicly available for modification."
   },
   {
@@ -971,12 +971,12 @@
     "difficulty": "hard",
     "text": "Software distributed on a trial basis, often with limited features or a time limit, after which the user must pay to continue using it, is called",
     "options": [
-      "freeware",
-      "shareware",
+      "malware",
       "open source software",
-      "malware"
+      "shareware",
+      "freeware"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Shareware is software provided free for a trial period or with restricted features, requiring payment to unlock full functionality or continue use afterward."
   },
   {
@@ -985,10 +985,10 @@
     "difficulty": "hard",
     "text": "The legal rights given to creators over their original creations of the mind, such as inventions, literary works and designs, are collectively known as",
     "options": [
-      "Netiquette",
-      "Intellectual Property Rights (IPR)",
       "Freedom of information",
-      "Digital divide"
+      "Intellectual Property Rights (IPR)",
+      "Digital divide",
+      "Netiquette"
     ],
     "correct": 1,
     "explanation": "Intellectual Property Rights (IPR) are legal rights that protect creations of the mind, such as inventions, literary and artistic works, symbols and designs, giving creators control over their use."
@@ -999,12 +999,12 @@
     "difficulty": "hard",
     "text": "Presenting someone else's work, words or ideas as one's own without giving proper credit is called",
     "options": [
-      "copyright",
       "plagiarism",
-      "netiquette",
-      "hacking"
+      "hacking",
+      "copyright",
+      "netiquette"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Plagiarism is the act of using another person's work, ideas or words without proper acknowledgment and presenting them as one's own, which is considered an ethical and academic offence."
   },
   {
@@ -1013,12 +1013,12 @@
     "difficulty": "hard",
     "text": "The exclusive legal right granted to the creator of an original work (like a book, song or software) to control its use and distribution is called",
     "options": [
-      "patent",
-      "copyright",
       "trademark",
-      "license key"
+      "license key",
+      "patent",
+      "copyright"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "Copyright is a legal right that grants the creator of an original literary, artistic or software work exclusive control over its reproduction, distribution and use."
   },
   {
@@ -1027,12 +1027,12 @@
     "difficulty": "easy",
     "text": "A distinctive sign, symbol or logo used to identify a company's products and distinguish them from others is protected under a",
     "options": [
-      "patent",
       "trademark",
       "copyright",
+      "patent",
       "open license"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A trademark is a recognizable sign, symbol, logo or name legally registered to identify and distinguish a company's goods or services from those of others."
   },
   {
@@ -1043,10 +1043,10 @@
     "options": [
       "copyright",
       "trademark",
-      "patent",
-      "netiquette rule"
+      "netiquette rule",
+      "patent"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "A patent grants an inventor exclusive rights to their invention for a limited period, preventing others from manufacturing, using or selling it without authorisation."
   },
   {
@@ -1055,12 +1055,12 @@
     "difficulty": "hard",
     "text": "The unequal access that different groups of people have to digital technology and the Internet, often due to economic or geographic reasons, is called the",
     "options": [
-      "digital divide",
-      "digital property right",
       "freedom of information",
-      "open license"
+      "open license",
+      "digital divide",
+      "digital property right"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The digital divide refers to the gap between individuals or communities who have adequate access to computers and the Internet and those who do not, often due to economic, social or geographic factors."
   },
   {
@@ -1069,12 +1069,12 @@
     "difficulty": "hard",
     "text": "The principle that citizens have the right to access information held by public authorities and government bodies is known as",
     "options": [
-      "freedom of information",
-      "digital divide",
+      "netiquette",
       "plagiarism",
-      "netiquette"
+      "digital divide",
+      "freedom of information"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "Freedom of information refers to the right of citizens to access information held by government and public authorities, promoting transparency and accountability."
   },
   {
@@ -1083,12 +1083,12 @@
     "difficulty": "hard",
     "text": "In e-commerce, the protection of a customer's personal and financial data from being seen or misused by unauthorised parties is referred to as",
     "options": [
-      "privacy",
       "plagiarism",
-      "piracy",
-      "freeware"
+      "privacy",
+      "freeware",
+      "piracy"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Privacy in e-commerce refers to protecting a customer's personal and financial information from unauthorised access, disclosure or misuse during online transactions."
   },
   {
@@ -1097,12 +1097,12 @@
     "difficulty": "hard",
     "text": "Deceptive activities intended to illegally obtain money or sensitive information from victims during online transactions are collectively called",
     "options": [
-      "netiquette violations",
       "e-commerce fraud",
-      "open source practices",
-      "digital divide issues"
+      "digital divide issues",
+      "netiquette violations",
+      "open source practices"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "E-commerce fraud refers to deceptive or dishonest practices, such as fake websites or phishing, aimed at illegally obtaining money, goods or sensitive information from online shoppers."
   },
   {
@@ -1111,10 +1111,10 @@
     "difficulty": "easy",
     "text": "Encrypting data before sending it over the Internet, such as using HTTPS during an online purchase, ensures which of the following in e-commerce?",
     "options": [
-      "Faster download speed",
+      "Unlimited bandwidth",
       "Secure data transmission",
       "Free access to paid content",
-      "Unlimited bandwidth"
+      "Faster download speed"
     ],
     "correct": 1,
     "explanation": "Secure data transmission uses encryption protocols (like SSL/TLS in HTTPS) to protect data, such as payment details, as it travels between the customer's browser and the e-commerce server, preventing interception."
@@ -1125,9 +1125,9 @@
     "difficulty": "easy",
     "text": "In Scratch, the visual objects that can be programmed to move and interact are called:",
     "options": [
-      "Backdrops",
-      "Sprites",
       "Blocks",
+      "Sprites",
+      "Backdrops",
       "Stages"
     ],
     "correct": 1,
@@ -1140,11 +1140,11 @@
     "text": "Which category of Scratch blocks would you use to make a sprite say something in a speech bubble?",
     "options": [
       "Motion",
-      "Looks",
       "Sound",
+      "Looks",
       "Sensing"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The 'Looks' block category contains blocks like 'say' and 'think' that display speech/thought bubbles above a sprite."
   },
   {
@@ -1153,12 +1153,12 @@
     "difficulty": "easy",
     "text": "Which Scratch block category contains 'move 10 steps' and 'turn 15 degrees'?",
     "options": [
-      "Motion",
-      "Events",
       "Control",
-      "Operators"
+      "Motion",
+      "Operators",
+      "Events"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "The Motion category controls a sprite's position and direction, including 'move' and 'turn' blocks."
   },
   {
@@ -1168,11 +1168,11 @@
     "text": "In Scratch, which block is used to start a script when the green flag is clicked?",
     "options": [
       "when this sprite clicked",
-      "when green flag clicked",
       "when key pressed",
-      "forever"
+      "forever",
+      "when green flag clicked"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "'when green flag clicked' is an Events block that triggers a script as soon as the user clicks the green flag to start the project."
   },
   {
@@ -1181,12 +1181,12 @@
     "difficulty": "medium",
     "text": "Which Scratch block category is used to send a message that other sprites can react to?",
     "options": [
+      "Variables",
       "Broadcast (Events)",
-      "Looks",
       "Sound",
-      "Variables"
+      "Looks"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "'Broadcast' and 'when I receive' blocks (found in Events) allow one sprite to send a message that triggers scripts in other sprites."
   },
   {
@@ -1195,12 +1195,12 @@
     "difficulty": "medium",
     "text": "Which Scratch construct repeats a set of blocks continuously for as long as the program runs?",
     "options": [
-      "repeat 10",
-      "forever",
       "if...then",
-      "wait"
+      "wait",
+      "repeat 10",
+      "forever"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The 'forever' loop (Control category) repeats the enclosed blocks endlessly until the program is stopped."
   },
   {
@@ -1210,8 +1210,8 @@
     "text": "In Scratch, which block category would you use to check 'is the sprite touching the edge?'",
     "options": [
       "Sensing",
-      "Operators",
       "Control",
+      "Operators",
       "Variables"
     ],
     "correct": 0,
@@ -1237,12 +1237,12 @@
     "difficulty": "hard",
     "text": "In Scratch, what is the key difference between 'repeat 10' and 'repeat until <condition>'?",
     "options": [
-      "They are identical",
-      "'repeat 10' runs a fixed number of times; 'repeat until' runs until a condition becomes true",
       "'repeat until' always runs exactly 10 times",
-      "'repeat 10' checks a condition each time"
+      "'repeat 10' checks a condition each time",
+      "'repeat 10' runs a fixed number of times; 'repeat until' runs until a condition becomes true",
+      "They are identical"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "'repeat 10' is a counted loop that always executes 10 times, while 'repeat until <condition>' keeps looping until the given condition evaluates to true — the number of iterations is not fixed in advance."
   },
   {
@@ -1251,12 +1251,12 @@
     "difficulty": "hard",
     "text": "A different appearance/image a sprite can switch between (e.g. to animate walking) is called a:",
     "options": [
-      "Backdrop",
       "Costume",
-      "Variable",
-      "Broadcast"
+      "Backdrop",
+      "Broadcast",
+      "Variable"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A costume is one of the visual appearances a sprite can take; switching costumes rapidly creates the illusion of animation (e.g. walking)."
   },
   {
@@ -1265,12 +1265,12 @@
     "difficulty": "easy",
     "text": "Which Python function is used to display output on the screen?",
     "options": [
-      "input()",
       "print()",
       "display()",
+      "input()",
       "output()"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "print() outputs text or values to the console/screen. input() is used to read user input, not display output."
   },
   {
@@ -1280,11 +1280,11 @@
     "text": "Which of the following is a valid Python variable name?",
     "options": [
       "2ndValue",
-      "student-name",
       "student_name",
+      "student-name",
       "class"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Python variable names can contain letters, digits, and underscores but cannot start with a digit or contain hyphens; 'class' is a reserved keyword so it cannot be used as a variable name."
   },
   {
@@ -1293,12 +1293,12 @@
     "difficulty": "easy",
     "text": "Which Python data type would you use to store the value True or False?",
     "options": [
-      "int",
-      "str",
+      "float",
       "bool",
-      "float"
+      "int",
+      "str"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "The bool (Boolean) data type stores one of two values: True or False, commonly used in conditional logic."
   },
   {
@@ -1307,12 +1307,12 @@
     "difficulty": "medium",
     "text": "What will the following Python code print?\nx = 5\ny = 2\nprint(x // y)",
     "options": [
-      "2.5",
       "2",
+      "2.0",
       "3",
-      "2.0"
+      "2.5"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "The // operator performs integer (floor) division in Python, discarding the remainder: 5 // 2 = 2."
   },
   {
@@ -1321,12 +1321,12 @@
     "difficulty": "medium",
     "text": "Which Python statement is used to take input from the user and store it as a string?",
     "options": [
-      "name = input(\"Enter your name: \")",
       "name = print(\"Enter your name: \")",
-      "input(name)",
-      "get(name)"
+      "get(name)",
+      "name = input(\"Enter your name: \")",
+      "input(name)"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "input() displays the prompt, waits for the user to type, and returns the entered text as a string, which is then assigned to the variable."
   },
   {
@@ -1335,12 +1335,12 @@
     "difficulty": "medium",
     "text": "Which loop in Python is best suited to iterate a fixed number of times using range()?",
     "options": [
+      "repeat loop",
       "while loop",
       "for loop",
-      "do-while loop",
-      "repeat loop"
+      "do-while loop"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "Python's for loop combined with range() is the standard way to iterate a known, fixed number of times, e.g. for i in range(5):."
   },
   {
@@ -1349,12 +1349,12 @@
     "difficulty": "medium",
     "text": "What is the correct Python syntax to check if a number stored in 'n' is even?",
     "options": [
-      "if n % 2 == 0:",
+      "if n == 2:",
       "if n / 2 == 0:",
-      "if n * 2 == 0:",
-      "if n == 2:"
+      "if n % 2 == 0:",
+      "if n * 2 == 0:"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "The modulus operator % gives the remainder of division; if n % 2 equals 0, the number n has no remainder when divided by 2, meaning it is even."
   },
   {
@@ -1363,10 +1363,10 @@
     "difficulty": "hard",
     "text": "What does the following Python code print?\ntotal = 0\nfor i in range(1, 4):\n    total = total + i\nprint(total)",
     "options": [
-      "3",
+      "4",
       "6",
       "10",
-      "4"
+      "3"
     ],
     "correct": 1,
     "explanation": "range(1,4) generates 1, 2, 3. The loop adds each to total: 0+1=1, 1+2=3, 3+3=6. Final printed value is 6."
@@ -1377,12 +1377,12 @@
     "difficulty": "hard",
     "text": "In Python, which keyword is used to define a reusable block of code (a function)?",
     "options": [
-      "func",
-      "define",
       "def",
-      "function"
+      "func",
+      "function",
+      "define"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "Python uses the 'def' keyword to define a function, e.g. def greet(): followed by an indented code block."
   },
   {
@@ -1391,12 +1391,12 @@
     "difficulty": "hard",
     "text": "Both Scratch and Python support which fundamental programming concept, used to make decisions based on a condition?",
     "options": [
-      "Broadcasting",
       "Selection (if-else)",
-      "Costumes",
-      "Backdrops"
+      "Backdrops",
+      "Broadcasting",
+      "Costumes"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "Selection (conditional branching using if-else) is a fundamental programming concept present in both Scratch (via 'if...then...else' blocks) and Python (via if-elif-else statements)."
   },
   {
@@ -1406,9 +1406,9 @@
     "year": "2023-Board",
     "text": "Suhani asks her colleague for her project work and then copies the entire work and submits it to her team leader claiming it to be her own work. The act performed by Suhani is known as ___.",
     "options": [
-      "Phishing",
-      "Plagiarism",
       "Spamming",
+      "Plagiarism",
+      "Phishing",
       "Virus"
     ],
     "correct": 1,
@@ -1426,9 +1426,9 @@
     "year": "2023-Board",
     "text": "Which of the following is the correct expansion of SMS?",
     "options": [
-      "Small Message Service",
-      "Small Multimedia Service",
       "Short Multimedia Service",
+      "Small Multimedia Service",
+      "Small Message Service",
       "Short Message Service"
     ],
     "correct": 3,
@@ -1447,11 +1447,11 @@
     "text": "Which of the following is an e-Shopping portal?",
     "options": [
       "Diksha",
-      "Swayam",
       "Flipkart",
-      "NPTEL"
+      "NPTEL",
+      "Swayam"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "Flipkart is an Indian e-commerce platform where users can browse and purchase products online — it is an e-Shopping portal.",
     "whyOthersWrong": {
       "a": "Diksha (DIKSHA) is a national digital platform for school education launched by NCERT. It is an e-Learning portal, not e-Shopping.",
@@ -1466,12 +1466,12 @@
     "year": "2023-Board",
     "text": "Which of the following is NOT an e-Governance portal?",
     "options": [
-      "e-Aadhaar",
       "DigiLocker",
       "Sarathi",
-      "Zomato"
+      "Zomato",
+      "e-Aadhaar"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "Zomato is a food delivery and restaurant discovery application — it is a commercial service, not an e-Governance portal. All the others are government digital service portals.",
     "whyOthersWrong": {
       "a": "e-Aadhaar is the official online portal to download the digital copy of the Aadhaar card — it is an e-Governance service.",
@@ -1487,11 +1487,11 @@
     "text": "The protocol that is used to send e-mails is ___.",
     "options": [
       "HTTP",
+      "FTP",
       "POP",
-      "SMTP",
-      "FTP"
+      "SMTP"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "SMTP (Simple Mail Transfer Protocol) is the standard protocol used for sending e-mails from a client to a mail server and between mail servers.",
     "whyOthersWrong": {
       "a": "HTTP (HyperText Transfer Protocol) is used for transferring web pages on the World Wide Web, not for sending e-mails.",
@@ -1506,12 +1506,12 @@
     "year": "2023-Board",
     "text": "SFTP is used for:",
     "options": [
-      "Sending Files over the Internet in a secure manner",
       "Sending Mail over the Internet in a secure manner",
       "Video Conferencing",
+      "Sending Files over the Internet in a secure manner",
       "Secure Chat Services"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "SFTP (Secure File Transfer Protocol) is a secure version of FTP that uses SSH encryption to transfer files over the Internet safely, protecting data from interception.",
     "whyOthersWrong": {
       "b": "Sending e-mail securely uses SMTPS or STARTTLS extensions. SFTP stands for Secure File Transfer Protocol and deals with files, not mail.",
@@ -1527,11 +1527,11 @@
     "text": "Which of the following is NOT an attribute of <img> tag in HTML?",
     "options": [
       "source",
-      "width",
+      "color",
       "alt",
-      "color"
+      "width"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "The <img> tag does not have a 'color' attribute. Color styling is applied via CSS (color property applies to text, not images). Valid <img> attributes include src, width, height, alt, align, border, etc.",
     "whyOthersWrong": {
       "a": "'source' is a valid attribute of <img> (though the standard spelling is 'src', 'source' refers to the same concept and is listed as an option here — the question asks specifically about 'color' being invalid).",
@@ -1546,12 +1546,12 @@
     "year": "2023-Board",
     "text": "HTML provides us with ___ levels of headings that can be inserted in a web page.",
     "options": [
-      "5",
-      "6",
+      "8",
       "7",
-      "8"
+      "6",
+      "5"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "HTML provides 6 levels of headings: <h1> (largest/most important) through <h6> (smallest/least important). There is no <h7> or beyond in standard HTML.",
     "whyOthersWrong": {
       "a": "HTML has 6 heading levels (<h1> to <h6>), not 5. Choosing 5 would exclude <h6>.",
@@ -1567,11 +1567,11 @@
     "text": "Which of the following options is an INVALID attribute of <font> tag in HTML?",
     "options": [
       "face",
-      "width",
       "size",
+      "width",
       "color"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The <font> tag in HTML has three valid attributes: face (font family/typeface), size (font size 1–7), and color (text color). 'width' is not an attribute of the <font> tag; it is used for elements like tables, images, etc.",
     "whyOthersWrong": {
       "a": "'face' is a valid attribute of the <font> tag that specifies the font family/typeface (e.g., <font face=\"Arial\">).",
@@ -1587,11 +1587,11 @@
     "text": "The default starting value for an ordered list in HTML is ___.",
     "options": [
       "i",
-      "1",
       "a",
+      "1",
       "."
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "By default, an HTML ordered list (<ol>) starts numbering from 1 (Arabic numerals). You can change the starting value using the 'start' attribute (e.g., <ol start=\"5\">).",
     "whyOthersWrong": {
       "a": "'i' is used for lowercase Roman numerals in ordered lists (type=\"i\"), but it is not the default. The default type is Arabic numerals starting at 1.",
@@ -1666,12 +1666,12 @@
     "year": "2024-Board",
     "text": "Which of the following is NOT a Web Service?",
     "options": [
-      "Using Diksha learning portal",
-      "Sending and receiving email",
+      "Using a banking portal for online transaction",
       "File transfer over Bluetooth",
-      "Using a banking portal for online transaction"
+      "Sending and receiving email",
+      "Using Diksha learning portal"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "File transfer over Bluetooth is a local wireless technology (short-range, ~10m) that does not require the Internet. Web services are services accessed over the Internet/World Wide Web. Bluetooth transfers are not web-based.",
     "whyOthersWrong": {
       "a": "Diksha is a government e-learning portal accessed over the Internet — it is a web service (e-Learning).",
@@ -1686,12 +1686,12 @@
     "year": "2024-Board",
     "text": "In 3G and 4G mobile technologies, the character 'G' stands for:",
     "options": [
+      "Google",
       "Generation",
-      "GPRS",
       "Grid",
-      "Google"
+      "GPRS"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "In mobile technology, 'G' stands for Generation. 3G = Third Generation, 4G = Fourth Generation, 5G = Fifth Generation. Each generation represents a new standard of wireless mobile communication with improved speed and capacity.",
     "whyOthersWrong": {
       "b": "GPRS (General Packet Radio Service) is a technology associated with 2.5G networks — it is not what 'G' stands for in 3G/4G.",
@@ -1706,12 +1706,12 @@
     "year": "2024-Board",
     "text": "A website or online platform where individuals or groups regularly publish written content, typically in a reverse chronological order is known as:",
     "options": [
-      "News Group",
       "Blog",
       "Chat Group",
-      "Social Networking"
+      "Social Networking",
+      "News Group"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A Blog (short for Web Log) is an online platform where individuals or groups regularly publish written entries (posts) displayed in reverse chronological order (newest first). Examples: Blogger, WordPress.",
     "whyOthersWrong": {
       "a": "A News Group (Usenet newsgroup) is a discussion forum organised around a topic where users post and reply to messages — it is not primarily about individuals publishing content in reverse chronological order.",
@@ -1726,12 +1726,12 @@
     "year": "2024-Board",
     "text": "Which of the following is NOT an attribute of the <font> tag?",
     "options": [
+      "size",
       "face",
       "height",
-      "size",
       "color"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The <font> tag has three valid attributes: face (font typeface), size (1–7), and color (text color). 'height' is not an attribute of the <font> tag; height is used for elements like images, tables, and table rows.",
     "whyOthersWrong": {
       "a": "'face' is a valid <font> attribute specifying the font family/typeface (e.g., <font face=\"Arial\">).",
@@ -1746,12 +1746,12 @@
     "year": "2024-Board",
     "text": "In HTML, we start a comment using:",
     "options": [
-      "<!--",
-      "!-->",
       "--!>",
-      "<--!"
+      "!-->",
+      "<--!",
+      "<!--"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "HTML comments begin with <!-- and end with -->. Everything between these markers is ignored by the browser. Example: <!-- This is a comment -->",
     "whyOthersWrong": {
       "b": "'!-->' is the closing pattern of an HTML comment (-->), preceded by !, which is not correct for opening a comment.",
@@ -1766,10 +1766,10 @@
     "year": "2024-Board",
     "text": "Which of the following elements have both the opening and the closing tags in HTML?",
     "options": [
-      "<br>",
-      "<h1>",
       "<hr>",
-      "<img>"
+      "<h1>",
+      "<img>",
+      "<br>"
     ],
     "correct": 1,
     "explanation": "<h1> is a container tag — it requires both an opening tag <h1> and a closing tag </h1> to define heading text. <br>, <hr>, and <img> are empty/void tags with no closing tags.",
@@ -1786,12 +1786,12 @@
     "year": "2024-Board",
     "text": "The default color of vlink is ________.",
     "options": [
-      "Green",
       "Purple",
       "Blue",
-      "Yellow"
+      "Yellow",
+      "Green"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "In HTML, 'vlink' (visited link) is an attribute of the <body> tag that sets the color of links that have already been visited. The default color of visited links (vlink) is Purple. Unvisited links (link) default to Blue, and active links (alink) default to Red.",
     "whyOthersWrong": {
       "a": "Green is not the default color for any of the standard link states (link, vlink, alink).",
@@ -1827,9 +1827,9 @@
     "text": "Which of the following is NOT an example of an Open Source Software?",
     "options": [
       "Linux",
-      "Android",
+      "OpenOffice",
       "Photoshop",
-      "OpenOffice"
+      "Android"
     ],
     "correct": 2,
     "explanation": "Adobe Photoshop is proprietary (closed source) software — its source code is not publicly available and requires a paid licence. Linux, Android (AOSP), and OpenOffice are open source software with publicly available source code.",
@@ -1886,12 +1886,12 @@
     "year": "2025-Board",
     "text": "Arun is sending an e-mail to his office. Which protocol out of the following options will be used for the purpose?",
     "options": [
-      "FTP",
-      "HTTP",
       "SMTP",
-      "SCP"
+      "SCP",
+      "HTTP",
+      "FTP"
     ],
-    "correct": 2,
+    "correct": 0,
     "explanation": "SMTP (Simple Mail Transfer Protocol) is the protocol used for sending e-mails. It transfers emails from the sender's mail client to the mail server and between mail servers.",
     "whyOthersWrong": {
       "a": "FTP (File Transfer Protocol) is used to transfer files between computers over a network, not for sending emails.",
@@ -1926,12 +1926,12 @@
     "year": "2025-Board",
     "text": "Which of the following attributes is NOT a valid attribute of the <font> tag in HTML?",
     "options": [
+      "color",
       "face",
-      "type",
       "size",
-      "color"
+      "type"
     ],
-    "correct": 1,
+    "correct": 3,
     "explanation": "The <font> tag has three valid attributes: face (font family), size (1–7), and color (text color). 'type' is not an attribute of <font>; 'type' is used with input, button, ol, and script elements.",
     "whyOthersWrong": {
       "a": "'face' is a valid attribute of <font> specifying the font typeface/family (e.g., <font face=\"Arial\">).",
@@ -1946,12 +1946,12 @@
     "year": "2025-Board",
     "text": "What is the full form of FTP?",
     "options": [
-      "File Transfer Protocol",
-      "File Transmission Protocol",
+      "Fast Transmission Protocol",
       "Fast Transfer Protocol",
-      "Fast Transmission Protocol"
+      "File Transmission Protocol",
+      "File Transfer Protocol"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "FTP stands for File Transfer Protocol — it is a standard network protocol used to transfer files between a client and a server over the Internet or a TCP/IP network.",
     "whyOthersWrong": {
       "b": "'File Transmission Protocol' is incorrect. The T in FTP stands for 'Transfer', not 'Transmission'.",
@@ -1966,9 +1966,9 @@
     "year": "2025-Board",
     "text": "Which of the following attributes is NOT a valid attribute of the <body> tag in HTML?",
     "options": [
+      "bgcolor",
       "text",
       "background",
-      "bgcolor",
       "width"
     ],
     "correct": 3,
@@ -1986,12 +1986,12 @@
     "year": "2025-Board",
     "text": "Select the correct option to fill in the blank:\nA __________ is an online platform or website where individuals or businesses regularly publish articles/journals, known as posts, on various topics.",
     "options": [
-      "Browser",
       "Blog",
+      "Browser",
       "News Group",
       "Web Server"
     ],
-    "correct": 1,
+    "correct": 0,
     "explanation": "A Blog (Web Log) is an online platform where individuals or organizations regularly publish written content (posts/articles) on various topics, typically in reverse chronological order. Examples: Blogger, WordPress.",
     "whyOthersWrong": {
       "a": "A Browser (web browser) is software used to access and display web pages (e.g., Chrome, Firefox). It is not a platform for publishing content.",
@@ -2007,11 +2007,11 @@
     "text": "The default value for the type attribute of an Unordered List in HTML is:",
     "options": [
       "circle",
+      "triangle",
       "disc",
-      "square",
-      "triangle"
+      "square"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The default value of the type attribute of the <ul> (Unordered List) tag in HTML is 'disc' — a filled circle bullet point. Other valid values are 'circle' (hollow circle) and 'square'.",
     "whyOthersWrong": {
       "a": "'circle' is a valid type value for <ul> (produces hollow circle bullets), but it is not the default. 'disc' is the default.",
@@ -2026,8 +2026,8 @@
     "year": "2025-Board",
     "text": "Which of the following is NOT a Search Engine available over the Internet?",
     "options": [
-      "Google",
       "Bing",
+      "Google",
       "Diksha",
       "Yahoo"
     ],
@@ -2046,12 +2046,12 @@
     "year": "2025-Board",
     "text": "Which of the following options is a network protocol that enables secure and encrypted file transfers between a client and a server?",
     "options": [
-      "SFTP",
       "Telnet",
+      "HTTP",
       "SCP",
-      "HTTP"
+      "SFTP"
     ],
-    "correct": 0,
+    "correct": 3,
     "explanation": "SFTP (Secure File Transfer Protocol) is a network protocol that provides file transfer capability over a secure (SSH-encrypted) connection. It protects data from interception during transfer.",
     "whyOthersWrong": {
       "b": "Telnet is a protocol for remote login to another computer, but it does not encrypt data — it transmits data in plain text, making it insecure.",
@@ -2067,9 +2067,9 @@
     "text": "Which of the following options will set the font family of all paragraphs to 'Arial'?",
     "options": [
       "<style> p { font-family: Arial; } </style>",
-      "<style> p { fontfamily: Arial; } </style>",
+      "<style> p { font-type: Arial; } </style>",
       "<style> p { font: Arial; } </style>",
-      "<style> p { font-type: Arial; } </style>"
+      "<style> p { fontfamily: Arial; } </style>"
     ],
     "correct": 0,
     "explanation": "The correct CSS property to set the font family is 'font-family'. The correct syntax is: p { font-family: Arial; } which applies the Arial font to all paragraph elements.",
@@ -2127,11 +2127,11 @@
     "text": "What is Internet?",
     "options": [
       "A type of computer software",
-      "A global network of interconnected computer networks",
       "A local area network in a school",
+      "A global network of interconnected computer networks",
       "A type of computer hardware"
     ],
-    "correct": 1,
+    "correct": 2,
     "explanation": "The Internet is a global network of interconnected computer networks that uses the TCP/IP protocol suite to communicate. It connects millions of private, public, academic, business, and government networks worldwide.",
     "whyOthersWrong": {
       "a": "The Internet is not a type of software. Software like browsers and email clients use the Internet, but the Internet itself is a network infrastructure.",
@@ -2147,11 +2147,11 @@
     "text": "What is the primary purpose of the TCP/IP?",
     "options": [
       "To manage web pages",
-      "To store emails on the server",
       "To define how data is transmitted over the Internet",
-      "To secure websites using encryption"
+      "To secure websites using encryption",
+      "To store emails on the server"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "TCP/IP (Transmission Control Protocol/Internet Protocol) is the fundamental communication protocol suite of the Internet. Its primary purpose is to define how data is transmitted, packaged, addressed, routed, and received over the Internet.",
     "whyOthersWrong": {
       "a": "Managing web pages is the role of HTTP/web servers, not TCP/IP. TCP/IP is a lower-level protocol for data transmission.",
@@ -2168,10 +2168,10 @@
     "options": [
       "<h1>",
       "<h3>",
-      "<h5>",
-      "<h6>"
+      "<h6>",
+      "<h5>"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "<h6> represents the smallest heading in HTML. HTML provides 6 heading levels: <h1> (largest/most important) down to <h6> (smallest/least important).",
     "whyOthersWrong": {
       "a": "<h1> is the LARGEST heading in HTML, used for the most important heading on a page.",
@@ -2186,10 +2186,10 @@
     "year": "2026-Board",
     "text": "In any email address, the username and the domain name are separated by _________ symbol.",
     "options": [
-      "$",
+      "%",
       "@",
       "#",
-      "%"
+      "$"
     ],
     "correct": 1,
     "explanation": "The '@' (at) symbol separates the username from the domain name in an email address. For example, in 'student@school.edu', 'student' is the username and 'school.edu' is the domain name.",
@@ -2207,11 +2207,11 @@
     "text": "Which of the following refers to the rules that enable computers to communicate over a network?",
     "options": [
       "Browser",
-      "e-Banking",
       "Protocol",
-      "Text Editor"
+      "Text Editor",
+      "e-Banking"
     ],
-    "correct": 2,
+    "correct": 1,
     "explanation": "A Protocol is a set of rules and standards that govern how data is transmitted and received over a network, enabling computers to communicate with each other. Examples: TCP/IP, HTTP, SMTP, FTP.",
     "whyOthersWrong": {
       "a": "A Browser (web browser) is software for accessing and displaying websites. It uses protocols to communicate, but it is not itself the set of rules.",
@@ -2226,12 +2226,12 @@
     "year": "2026-Board",
     "text": "In the POP3 protocol, what does the number '3' signify?",
     "options": [
-      "It represents three computers involved",
       "It stands for the year 2003",
+      "It indicates the third version of the Post Office Protocol",
       "It refers to three main servers used in email delivery",
-      "It indicates the third version of the Post Office Protocol"
+      "It represents three computers involved"
     ],
-    "correct": 3,
+    "correct": 1,
     "explanation": "POP3 stands for Post Office Protocol version 3. The '3' indicates that it is the third and current version of the POP email retrieval protocol. It is used to download emails from a mail server to a local client.",
     "whyOthersWrong": {
       "a": "The '3' does not refer to three computers. POP3 is a version number, not a count of computers.",
@@ -2248,10 +2248,10 @@
     "options": [
       "Description list",
       "Ordered list",
-      "Detail list",
-      "Unordered list"
+      "Unordered list",
+      "Detail list"
     ],
-    "correct": 2,
+    "correct": 3,
     "explanation": "HTML has three standard list types: Ordered List (<ol>), Unordered List (<ul>), and Description List (<dl>). 'Detail list' does not exist as a standard HTML list type.",
     "whyOthersWrong": {
       "a": "Description list (<dl>) is a valid HTML list type that pairs terms (<dt>) with their descriptions (<dd>).",
@@ -2266,12 +2266,12 @@
     "year": "2026-Board",
     "text": "Ajay, a computer engineer, generally uses his laptop to remotely access customers' computers in order to diagnose problems in their computer. Which protocol is being used for this purpose?",
     "options": [
-      "FTP",
-      "SMS",
       "SMTP",
-      "TELNET"
+      "FTP",
+      "TELNET",
+      "SMS"
     ],
-    "correct": 3,
+    "correct": 2,
     "explanation": "TELNET (Telecommunication Network) is a protocol that allows a user to remotely log in to and control another computer over a network. Ajay is using TELNET to remotely access customers' computers for diagnosis.",
     "whyOthersWrong": {
       "a": "FTP (File Transfer Protocol) is used to transfer files between computers, not for remote login/access and diagnostics.",
@@ -2286,10 +2286,10 @@
     "year": "2026-Board",
     "text": "What is World Wide Web?",
     "options": [
-      "A network hardware",
       "Software to manage data",
+      "Web server",
       "System of interlinked webpages",
-      "Web server"
+      "A network hardware"
     ],
     "correct": 2,
     "explanation": "The World Wide Web (WWW) is a system of interlinked hypertext documents and multimedia content accessed via the Internet using a web browser. It was invented by Tim Berners-Lee in 1989.",
@@ -2306,12 +2306,12 @@
     "year": "2026-Board",
     "text": "What is the purpose of the start attribute in the <ol> tag?",
     "options": [
-      "To change the type of bullets",
-      "To specify the total number of items in the list",
+      "To set the starting number of the list",
       "To create a list within another list",
-      "To set the starting number of the list"
+      "To specify the total number of items in the list",
+      "To change the type of bullets"
     ],
-    "correct": 3,
+    "correct": 0,
     "explanation": "The 'start' attribute in the <ol> tag sets the starting number for the ordered list. For example, <ol start=\"5\"> will begin numbering from 5 instead of the default 1.",
     "whyOthersWrong": {
       "a": "Changing the type of bullets/numbering style is done using the 'type' attribute of <ol>, not 'start'. For example, type=\"a\" for alphabetical.",
