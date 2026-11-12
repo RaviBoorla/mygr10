@@ -18,7 +18,7 @@ const SUBJECTS = {
   },
   XI: {
     CBSE: ['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Computer Science', 'Mathematics', 'Political Science', 'Informatics Practices', 'Biology'],
-    ICSE: ['Mathematics', 'Physics', 'Chemistry']
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology']
   },
   XII: {
     CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
@@ -87,7 +87,8 @@ const BANKS = {
 
   'XI ICSE Mathematics':     'XI-ICSE-Mathematics',
   'XI ICSE Physics':         'XI-ICSE-Physics',
-  'XI ICSE Chemistry':       'XI-ICSE-Chemistry'
+  'XI ICSE Chemistry':       'XI-ICSE-Chemistry',
+  'XI ICSE Biology':         'XI-ICSE-Biology'
 };
 
 const SA_BANKS = {
@@ -145,7 +146,8 @@ const SA_BANKS = {
 
   'XI ICSE Mathematics':     'XI-ICSE-Mathematics-ShortAnswers',
   'XI ICSE Physics':         'XI-ICSE-Physics-ShortAnswers',
-  'XI ICSE Chemistry':       'XI-ICSE-Chemistry-ShortAnswers'
+  'XI ICSE Chemistry':       'XI-ICSE-Chemistry-ShortAnswers',
+  'XI ICSE Biology':         'XI-ICSE-Biology-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;

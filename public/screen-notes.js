@@ -53,7 +53,7 @@ const NOTES_SOURCES = {
     Mathematics:            { CBSE: [['XI Mathematics']], ICSE: [['XI ICSE Mathematics']] },
     'Political Science':    { CBSE: [['XI Political Science']] },
     'Informatics Practices': { CBSE: [['XI Informatics Practices']] },
-    Biology:                { CBSE: [['XI Biology']] }
+    Biology:                { CBSE: [['XI Biology']], ICSE: [['XI ICSE Biology']] }
   },
   XII: {
     Mathematics:        { CBSE: [['XII Mathematics']] },
@@ -91,7 +91,8 @@ const REVISION_EXTRA_FILES = {
     { file: 'revision-data-xi-biology.js?v=dd26303f',         probeKey: 'XI Biology' },
     { file: 'revision-data-xi-icse-physics.js?v=d19467ba',           probeKey: 'XI ICSE Physics' },
     { file: 'revision-data-xi-icse-chemistry.js?v=36d62ddc',         probeKey: 'XI ICSE Chemistry' },
-    { file: 'revision-data-xi-icse-maths.js?v=eae071b2',             probeKey: 'XI ICSE Mathematics' }
+    { file: 'revision-data-xi-icse-maths.js?v=eae071b2',             probeKey: 'XI ICSE Mathematics' },
+    { file: 'revision-data-xi-icse-biology.js?v=715e88e9',           probeKey: 'XI ICSE Biology' }
   ],
   XII: [
     { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
