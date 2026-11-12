@@ -15,12 +15,17 @@ Object.assign(app, {
         <span class="soon-tag">Practice Questions</span>
         <p>Class IX has no CISCE board exam, so these questions are not official ICSE board papers —
            unlike the Class X and XII banks.</p>
-      </section>`) : state.grade === 'XI' ? `
+      </section>`) : state.grade === 'XI' ? (state.board === 'ICSE' ? `
+      <section class="card ix-source-banner">
+        <span class="soon-tag">Practice Questions</span>
+        <p>Class XI has no CISCE board exam, so these questions are authored to the ISC syllabus
+           rather than taken from official board papers — unlike the Class X and XII banks.</p>
+      </section>` : `
       <section class="card ix-source-banner">
         <span class="soon-tag">Practice Questions</span>
         <p>Class XI has no CBSE board exam, so these questions are authored from the NCERT
            textbook rather than official board papers — unlike the Class X and XII banks.</p>
-      </section>` : '';
+      </section>`) : '';
 
     const resume = draft ? `
       <section class="resume-banner card">
@@ -52,7 +57,7 @@ Object.assign(app, {
 
       const saSlug = saBankSlug(subject);
       const saLink = saSlug
-        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">${state.grade === 'IX' ? 'Practice' : 'Board'} Short Answers</button>`
+        ? `<button class="btn act-btn ghost half" onclick="app.go(['shortanswers','${esc(subject)}'])">${['IX', 'XI'].includes(state.grade) ? 'Practice' : 'Board'} Short Answers</button>`
         : '';
 
       const solvedSlug = solvedBankSlug(subject);
