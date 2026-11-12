@@ -1,0 +1,5342 @@
+[
+  {
+    "id": "xiicsemath001",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "How many subsets does a set with 4 elements have?",
+    "options": [
+      "8",
+      "16",
+      "15",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "A set with n elements has 2ⁿ subsets, so 2⁴ = 16 (this count includes φ and the set itself).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath002",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "The number of proper subsets of a set containing 5 elements is:",
+    "options": [
+      "25",
+      "31",
+      "32",
+      "30"
+    ],
+    "correct": 1,
+    "explanation": "Total subsets = 2⁵ = 32; excluding the set itself leaves 31 proper subsets.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath003",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "Which of the following is the empty set?",
+    "options": [
+      "{0}",
+      "{x ∈ ℝ : x² = 1}",
+      "{x ∈ ℕ : x < 2}",
+      "{x ∈ ℝ : x² + 1 = 0}"
+    ],
+    "correct": 3,
+    "explanation": "x² + 1 = 0 has no real solution, so the set has no elements. {0} is not empty — it contains the element 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath004",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "If A = {1, 2, 3, 4} and B = {3, 4, 5}, then A − B is:",
+    "options": [
+      "{1, 2}",
+      "{3, 4}",
+      "{1, 2, 5}",
+      "{5}"
+    ],
+    "correct": 0,
+    "explanation": "A − B keeps the elements of A that are not in B: {1, 2}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath005",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "If n(A) = 25, n(B) = 18 and n(A ∪ B) = 35, then n(A ∩ B) is:",
+    "options": [
+      "8",
+      "43",
+      "10",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "n(A ∩ B) = n(A) + n(B) − n(A ∪ B) = 25 + 18 − 35 = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath006",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "By De Morgan's law, (A ∪ B)′ is equal to:",
+    "options": [
+      "A′ ∪ B",
+      "A′ ∪ B′",
+      "A ∩ B′",
+      "A′ ∩ B′"
+    ],
+    "correct": 3,
+    "explanation": "The complement of a union is the intersection of the complements: (A ∪ B)′ = A′ ∩ B′.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath007",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "In a class of 60 students, 35 like tea and 30 like coffee. Every student likes at least one of the two. How many like both?",
+    "options": [
+      "5",
+      "65",
+      "25",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "n(T ∩ C) = n(T) + n(C) − n(T ∪ C) = 35 + 30 − 60 = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath008",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "For any two sets A and B, A ∩ (A ∪ B) equals:",
+    "options": [
+      "A",
+      "A ∩ B",
+      "A ∪ B",
+      "B"
+    ],
+    "correct": 0,
+    "explanation": "Every element of A is in A ∪ B, so intersecting A with A ∪ B gives back A (absorption law).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath009",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "If A = {1, {2, 3}}, which statement is correct?",
+    "options": [
+      "{2, 3} ∈ A",
+      "{2, 3} ⊂ A",
+      "{1, 2} ⊂ A",
+      "2 ∈ A"
+    ],
+    "correct": 0,
+    "explanation": "The elements of A are 1 and the set {2, 3}. So {2, 3} is an element of A, not a subset; 2 itself is not an element.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath010",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "If A ⊂ B, then A ∪ B is:",
+    "options": [
+      "A",
+      "φ",
+      "A ∩ B",
+      "B"
+    ],
+    "correct": 3,
+    "explanation": "When A is contained in B, adding A's elements to B adds nothing new, so A ∪ B = B.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath011",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "The set {3, 6, 9, 12} in set-builder form is:",
+    "options": [
+      "{x : x = 3n, n ∈ ℕ, n < 4}",
+      "{x : x = 3n, n ∈ ℕ, n ≤ 4}",
+      "{x : x is a multiple of 3, x ∈ ℕ}",
+      "{x : x = n + 3, n ∈ ℕ, n ≤ 4}"
+    ],
+    "correct": 1,
+    "explanation": "n = 1, 2, 3, 4 gives 3, 6, 9, 12. With n < 4 the 12 is lost; 'all multiples of 3' is an infinite set.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath012",
+    "chapter": "Sets",
+    "difficulty": "hard",
+    "text": "In a universal set U, n(U) = 50, n(A) = 28, n(B) = 23 and n(A′ ∩ B′) = 7. Then n(A ∩ B) is:",
+    "options": [
+      "15",
+      "8",
+      "1",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "A′ ∩ B′ = (A ∪ B)′, so n(A ∪ B) = 50 − 7 = 43. Then n(A ∩ B) = 28 + 23 − 43 = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath013",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "The interval [−2, 3) in set-builder form is:",
+    "options": [
+      "{x ∈ ℝ : −2 ≤ x < 3}",
+      "{x ∈ ℝ : −2 < x ≤ 3}",
+      "{x ∈ ℝ : −2 < x < 3}",
+      "{x ∈ ℝ : −2 ≤ x ≤ 3}"
+    ],
+    "correct": 0,
+    "explanation": "A square bracket includes the end-point and a round bracket excludes it: −2 is included, 3 is not.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath014",
+    "chapter": "Sets",
+    "difficulty": "hard",
+    "text": "Of 100 students, 50 study Mathematics, 45 Physics and 40 Chemistry; 20 study M and P, 15 study P and C, 18 study M and C, and 8 study all three. How many study none of the three?",
+    "options": [
+      "2",
+      "10",
+      "18",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "n(M ∪ P ∪ C) = 50 + 45 + 40 − 20 − 15 − 18 + 8 = 90, so 100 − 90 = 10 study none.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath015",
+    "chapter": "Sets",
+    "difficulty": "easy",
+    "text": "Which pair of sets are equal?",
+    "options": [
+      "{0} and φ",
+      "{1, 2, 3} and {1, 2, 3, 4}",
+      "Letters of the word FOLLOW and letters of the word WOLF",
+      "{x : x² = 4} and {2}"
+    ],
+    "correct": 2,
+    "explanation": "Both sets are {F, O, L, W} — order and repetition do not matter. {x : x² = 4} = {−2, 2}, not {2}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath016",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "If A = {1, 2, 3, 4} and B = {2, 4, 6}, the symmetric difference (A − B) ∪ (B − A) is:",
+    "options": [
+      "{2, 4}",
+      "{1, 3, 6}",
+      "{1, 3}",
+      "{1, 2, 3, 4, 6}"
+    ],
+    "correct": 1,
+    "explanation": "A − B = {1, 3} and B − A = {6}; their union is {1, 3, 6}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath017",
+    "chapter": "Sets",
+    "difficulty": "hard",
+    "text": "Which of the following is NOT true for all sets A, B, C (U is the universal set)?",
+    "options": [
+      "A ∪ A′ = U",
+      "(A′)′ = A",
+      "A − (B ∪ C) = (A − B) ∪ (A − C)",
+      "A − B = A ∩ B′"
+    ],
+    "correct": 2,
+    "explanation": "The correct law is A − (B ∪ C) = (A − B) ∩ (A − C); a union on the right is wrong in general.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath018",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "If n(A) = 3 and n(B) = 5, the least possible value of n(A ∪ B) is:",
+    "options": [
+      "8",
+      "5",
+      "3",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "n(A ∪ B) is least when A ⊂ B, giving n(A ∪ B) = n(B) = 5. (The greatest value, 8, occurs when they are disjoint.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath019",
+    "chapter": "Sets",
+    "difficulty": "hard",
+    "text": "In a universal set with 60 elements, n(A) = 40 and n(B) = 26. The least possible value of n(A ∩ B) is:",
+    "options": [
+      "14",
+      "0",
+      "6",
+      "26"
+    ],
+    "correct": 2,
+    "explanation": "n(A ∩ B) = 40 + 26 − n(A ∪ B) and n(A ∪ B) ≤ 60, so n(A ∩ B) ≥ 66 − 60 = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath020",
+    "chapter": "Sets",
+    "difficulty": "medium",
+    "text": "A set A has 3 elements. The number of elements in the power set of the power set of A is:",
+    "options": [
+      "512",
+      "8",
+      "256",
+      "64"
+    ],
+    "correct": 2,
+    "explanation": "P(A) has 2³ = 8 elements, so P(P(A)) has 2⁸ = 256 elements.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath021",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If A = {1, 2} and B = {a, b, c}, then n(A × B) is:",
+    "options": [
+      "5",
+      "9",
+      "8",
+      "6"
+    ],
+    "correct": 3,
+    "explanation": "n(A × B) = n(A) × n(B) = 2 × 3 = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath022",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If n(A) = 2 and n(B) = 3, the number of relations from A to B is:",
+    "options": [
+      "6",
+      "8",
+      "64",
+      "32"
+    ],
+    "correct": 2,
+    "explanation": "A relation is any subset of A × B. Since n(A × B) = 6, there are 2⁶ = 64 relations.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath023",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If (x + 1, y − 2) = (3, 1), then (x, y) is:",
+    "options": [
+      "(2, −1)",
+      "(2, 3)",
+      "(3, 1)",
+      "(4, −1)"
+    ],
+    "correct": 1,
+    "explanation": "Ordered pairs are equal when corresponding entries are equal: x + 1 = 3 and y − 2 = 1 give x = 2, y = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath024",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "The domain of f(x) = √(x − 2) is:",
+    "options": [
+      "[2, ∞)",
+      "ℝ",
+      "(−∞, 2]",
+      "(2, ∞)"
+    ],
+    "correct": 0,
+    "explanation": "We need x − 2 ≥ 0, i.e. x ≥ 2. The end-point 2 is allowed since √0 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath025",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "The range of f(x) = |x| + 3, x ∈ ℝ, is:",
+    "options": [
+      "[3, ∞)",
+      "[0, ∞)",
+      "ℝ",
+      "(3, ∞)"
+    ],
+    "correct": 0,
+    "explanation": "|x| ≥ 0, so |x| + 3 ≥ 3, with the value 3 attained at x = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath026",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If sgn denotes the signum function, then sgn(−7) + sgn(0) + sgn(4) equals:",
+    "options": [
+      "1",
+      "0",
+      "−1",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "sgn(−7) = −1, sgn(0) = 0 and sgn(4) = 1; the sum is 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath027",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If [x] denotes the greatest integer function, then [−2.3] equals:",
+    "options": [
+      "−2",
+      "−2.3",
+      "2",
+      "−3"
+    ],
+    "correct": 3,
+    "explanation": "[x] is the greatest integer ≤ x. The greatest integer not exceeding −2.3 is −3 (not −2, which is larger than −2.3).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath028",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "The domain of f(x) = 1/(x² − 5x + 6) is:",
+    "options": [
+      "(2, 3)",
+      "ℝ − {−2, −3}",
+      "ℝ − {2, 3}",
+      "ℝ"
+    ],
+    "correct": 2,
+    "explanation": "The denominator x² − 5x + 6 = (x − 2)(x − 3) vanishes at x = 2 and 3, which must be excluded.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath029",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If f(x) = x² and g(x) = 2x + 1, then (f − g)(3) is:",
+    "options": [
+      "−2",
+      "16",
+      "2",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "(f − g)(3) = f(3) − g(3) = 9 − 7 = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath030",
+    "chapter": "Relations and Functions",
+    "difficulty": "hard",
+    "text": "The range of f(x) = x²/(1 + x²), x ∈ ℝ, is:",
+    "options": [
+      "[0, 1]",
+      "[0, ∞)",
+      "[0, 1)",
+      "(0, 1)"
+    ],
+    "correct": 2,
+    "explanation": "f(x) = 1 − 1/(1 + x²). It equals 0 at x = 0 and approaches 1 as |x| grows, but never reaches 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath031",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "Which of the following relations from A = {1, 2, 3} to B = {4, 5} is a function?",
+    "options": [
+      "{(4, 1), (5, 2), (4, 3)}",
+      "{(1, 4), (2, 5)}",
+      "{(1, 4), (1, 5), (2, 4), (3, 5)}",
+      "{(1, 4), (2, 4), (3, 5)}"
+    ],
+    "correct": 3,
+    "explanation": "A function must give each element of A exactly one image. Option 2 gives 1 two images, option 3 leaves 3 without an image, and option 4 is not even from A to B.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath032",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "The range of the relation R = {(x, y) : y = x + 2, x ∈ {1, 2, 3, 4}} is:",
+    "options": [
+      "{2, 3, 4, 5}",
+      "{1, 2, 3, 4}",
+      "{3, 4, 5, 6}",
+      "{3, 5, 7, 9}"
+    ],
+    "correct": 2,
+    "explanation": "Substituting x = 1, 2, 3, 4 gives y = 3, 4, 5, 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath033",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "The range of f(x) = √(4 − x²) is:",
+    "options": [
+      "[0, 4]",
+      "(0, 2)",
+      "[−2, 2]",
+      "[0, 2]"
+    ],
+    "correct": 3,
+    "explanation": "Domain is [−2, 2]. 4 − x² runs from 0 to 4 on it, so the square root runs from 0 to 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath034",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If f(x) = x² − 3x + 1, then f(−2) is:",
+    "options": [
+      "−1",
+      "3",
+      "11",
+      "−9"
+    ],
+    "correct": 2,
+    "explanation": "f(−2) = 4 + 6 + 1 = 11.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath035",
+    "chapter": "Relations and Functions",
+    "difficulty": "hard",
+    "text": "A × A has 9 elements, two of which are (−1, 0) and (0, 1). Then A is:",
+    "options": [
+      "{−1, 1}",
+      "{−1, 0, 1}",
+      "{−1, 0}",
+      "{0, 1}"
+    ],
+    "correct": 1,
+    "explanation": "n(A)² = 9 gives n(A) = 3. The pairs show −1, 0 and 1 are all in A, so A = {−1, 0, 1}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath036",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "The graph of the modulus function f(x) = |x| is:",
+    "options": [
+      "V-shaped with vertex at the origin, symmetric about the y-axis",
+      "a parabola opening upward",
+      "a set of horizontal steps",
+      "a straight line through the origin with slope 1"
+    ],
+    "correct": 0,
+    "explanation": "|x| = x for x ≥ 0 and −x for x < 0: two half-lines meeting at the origin, mirror images in the y-axis.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath037",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If [x] is the greatest integer function, the solution set of [x] = 3 is:",
+    "options": [
+      "(3, 4]",
+      "[3, 4]",
+      "(2, 3]",
+      "[3, 4)"
+    ],
+    "correct": 3,
+    "explanation": "[x] = 3 exactly when 3 ≤ x < 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath038",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "If f(x) = √x and g(x) = x − 1, the domain of f/g is:",
+    "options": [
+      "(1, ∞)",
+      "[0, ∞)",
+      "ℝ − {1}",
+      "[0, ∞) − {1}"
+    ],
+    "correct": 3,
+    "explanation": "f needs x ≥ 0 and g(x) ≠ 0 needs x ≠ 1; the domain is [0, ∞) − {1}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath039",
+    "chapter": "Relations and Functions",
+    "difficulty": "easy",
+    "text": "If A × B = {(a, 1), (a, 2), (b, 1), (b, 2)}, then B is:",
+    "options": [
+      "{a, b}",
+      "{a, 1}",
+      "{(1, 2)}",
+      "{1, 2}"
+    ],
+    "correct": 3,
+    "explanation": "B is the set of second entries: {1, 2}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath040",
+    "chapter": "Relations and Functions",
+    "difficulty": "hard",
+    "text": "If [x] denotes the greatest integer function, the range of f(x) = [x] − x, x ∈ ℝ, is:",
+    "options": [
+      "(−1, 0)",
+      "[−1, 0)",
+      "(−1, 0]",
+      "[0, 1)"
+    ],
+    "correct": 2,
+    "explanation": "x − [x] is the fractional part, which lies in [0, 1). So [x] − x lies in (−1, 0], equalling 0 when x is an integer.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath041",
+    "chapter": "Relations and Functions",
+    "difficulty": "medium",
+    "text": "A function f: ℝ → ℝ given by f(x) = c (a fixed real number) for all x is called a:",
+    "options": [
+      "constant function, with range {c}",
+      "identity function, with range ℝ",
+      "polynomial function of degree 1",
+      "constant function, with range ℝ"
+    ],
+    "correct": 0,
+    "explanation": "Every input gives the same output c, so the range is the single-element set {c}; a non-zero constant is a polynomial of degree 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath042",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "135° expressed in radians is:",
+    "options": [
+      "2π/3",
+      "5π/6",
+      "3π/4",
+      "3π/8"
+    ],
+    "correct": 2,
+    "explanation": "Multiply by π/180: 135 × π/180 = 3π/4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath043",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "5π/6 radians expressed in degrees is:",
+    "options": [
+      "135°",
+      "150°",
+      "120°",
+      "300°"
+    ],
+    "correct": 1,
+    "explanation": "Multiply by 180/π: (5π/6) × (180/π) = 150°.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath044",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "If sin θ < 0 and tan θ > 0, then θ lies in the:",
+    "options": [
+      "fourth quadrant",
+      "first quadrant",
+      "third quadrant",
+      "second quadrant"
+    ],
+    "correct": 2,
+    "explanation": "sin is negative in Q3 and Q4; tan is positive in Q1 and Q3. Both hold only in Q3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath045",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The value of sin(−330°) is:",
+    "options": [
+      "1/2",
+      "−√3/2",
+      "√3/2",
+      "−1/2"
+    ],
+    "correct": 0,
+    "explanation": "sin(−330°) = −sin 330° = −(−1/2) = 1/2. Equivalently −330° is coterminal with 30°.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath046",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The value of cos 210° is:",
+    "options": [
+      "−√3/2",
+      "−1/2",
+      "1/2",
+      "√3/2"
+    ],
+    "correct": 0,
+    "explanation": "cos 210° = cos(180° + 30°) = −cos 30° = −√3/2 (cosine is negative in Q3).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath047",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The value of sin 75° is:",
+    "options": [
+      "(√6 − √2)/4",
+      "(√2 + 1)/2",
+      "(√6 + √2)/4",
+      "(√3 + 1)/2"
+    ],
+    "correct": 2,
+    "explanation": "sin(45° + 30°) = sin45 cos30 + cos45 sin30 = (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath048",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The value of tan 15° is:",
+    "options": [
+      "√3 − 1",
+      "1/√3",
+      "2 − √3",
+      "2 + √3"
+    ],
+    "correct": 2,
+    "explanation": "tan(45° − 30°) = (1 − 1/√3)/(1 + 1/√3) = (√3 − 1)/(√3 + 1) = 2 − √3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath049",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "If tan θ = 3/4 and θ is acute, then sin 2θ is:",
+    "options": [
+      "7/25",
+      "3/5",
+      "12/25",
+      "24/25"
+    ],
+    "correct": 3,
+    "explanation": "sin θ = 3/5, cos θ = 4/5, so sin 2θ = 2 · (3/5)(4/5) = 24/25. (7/25 is cos 2θ.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath050",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "cos 3θ is equal to:",
+    "options": [
+      "3sin θ − 4sin³θ",
+      "4cos³θ + 3cos θ",
+      "4cos³θ − 3cos θ",
+      "3cos θ − 4cos³θ"
+    ],
+    "correct": 2,
+    "explanation": "cos 3θ = 4cos³θ − 3cos θ. The form 3sin θ − 4sin³θ is sin 3θ.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath051",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The value of sin 75° cos 15° is:",
+    "options": [
+      "(2 − √3)/4",
+      "(2 + √3)/4",
+      "√3/4",
+      "1/2"
+    ],
+    "correct": 1,
+    "explanation": "2 sin A cos B = sin(A + B) + sin(A − B), so sin75 cos15 = ½(sin 90° + sin 60°) = ½(1 + √3/2) = (2 + √3)/4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath052",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The general solution of sin x = 0 is:",
+    "options": [
+      "x = (2n + 1)π/2, n ∈ ℤ",
+      "x = nπ/2, n ∈ ℤ",
+      "x = nπ, n ∈ ℤ",
+      "x = 2nπ, n ∈ ℤ"
+    ],
+    "correct": 2,
+    "explanation": "sin x vanishes at every integer multiple of π. (2n + 1)π/2 are the zeros of cos x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath053",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The general solution of cos x = 1/2 is:",
+    "options": [
+      "x = 2nπ ± π/3, n ∈ ℤ",
+      "x = nπ + (−1)ⁿ π/3, n ∈ ℤ",
+      "x = 2nπ ± π/6, n ∈ ℤ",
+      "x = nπ ± π/3, n ∈ ℤ"
+    ],
+    "correct": 0,
+    "explanation": "cos x = cos α gives x = 2nπ ± α; here α = π/3. The (−1)ⁿ form belongs to sine equations.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath054",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The general solution of tan x = √3 is:",
+    "options": [
+      "x = nπ + π/6, n ∈ ℤ",
+      "x = nπ + π/3, n ∈ ℤ",
+      "x = 2nπ + π/3, n ∈ ℤ",
+      "x = nπ ± π/3, n ∈ ℤ"
+    ],
+    "correct": 1,
+    "explanation": "tan has period π, so tan x = tan(π/3) gives x = nπ + π/3. The ± form would include −π/3, where tan = −√3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath055",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "hard",
+    "text": "The general solution of 2cos²x + 3 sin x = 0 is:",
+    "options": [
+      "x = 2nπ ± 2π/3, n ∈ ℤ",
+      "x = nπ + (−1)ⁿ(7π/6), n ∈ ℤ",
+      "x = nπ ± π/6, n ∈ ℤ",
+      "x = nπ + (−1)ⁿ(π/6), n ∈ ℤ"
+    ],
+    "correct": 1,
+    "explanation": "Write cos²x = 1 − sin²x: 2sin²x − 3 sin x − 2 = 0 ⇒ (2 sin x + 1)(sin x − 2) = 0. sin x = 2 is impossible, so sin x = −1/2 = sin(7π/6).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath056",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The period of sin 3x is:",
+    "options": [
+      "2π/3",
+      "π/3",
+      "2π",
+      "3π"
+    ],
+    "correct": 0,
+    "explanation": "sin(kx) has period 2π/k; with k = 3 the period is 2π/3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath057",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "The maximum value of 3 sin x + 4 cos x is:",
+    "options": [
+      "5",
+      "1",
+      "4",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "a sin x + b cos x ranges over [−√(a² + b²), √(a² + b²)]; √(9 + 16) = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath058",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "In △ABC, a = 6, A = 30° and B = 45°. Then b equals:",
+    "options": [
+      "6√3",
+      "3√2",
+      "6√2",
+      "12"
+    ],
+    "correct": 2,
+    "explanation": "Sine rule: b = a sin B / sin A = 6 · (√2/2)/(1/2) = 6√2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath059",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "In △ABC, a = 3, b = 5 and c = 7. The angle C is:",
+    "options": [
+      "60°",
+      "90°",
+      "150°",
+      "120°"
+    ],
+    "correct": 3,
+    "explanation": "cos C = (a² + b² − c²)/(2ab) = (9 + 25 − 49)/30 = −1/2, so C = 120°.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath060",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "In any △ABC, b cos C + c cos B equals:",
+    "options": [
+      "b",
+      "c",
+      "a + b + c",
+      "a"
+    ],
+    "correct": 3,
+    "explanation": "This is the projection formula: side a is the sum of the projections of b and c on it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath061",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "hard",
+    "text": "The value of sin²(π/8) + sin²(3π/8) + sin²(5π/8) + sin²(7π/8) is:",
+    "options": [
+      "1/2",
+      "1",
+      "4",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "sin(7π/8) = sin(π/8) and sin(5π/8) = sin(3π/8) = cos(π/8). So the sum is 2[sin²(π/8) + cos²(π/8)] = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath062",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "Which of the following is impossible?",
+    "options": [
+      "cos θ = −1",
+      "sin θ = 5/4",
+      "sec θ = −3",
+      "tan θ = 100"
+    ],
+    "correct": 1,
+    "explanation": "−1 ≤ sin θ ≤ 1, so sin θ = 5/4 is impossible. tan takes every real value and |sec θ| ≥ 1 allows −3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath063",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "hard",
+    "text": "The value of cos 20° cos 40° cos 80° is:",
+    "options": [
+      "1/8",
+      "√3/8",
+      "1/4",
+      "1/16"
+    ],
+    "correct": 0,
+    "explanation": "Multiply and divide by 2 sin 20° and use 2 sin A cos A = sin 2A three times: the product = sin 160°/(8 sin 20°) = 1/8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath064",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "(sin 5x − sin 3x)/(cos 5x + cos 3x) simplifies to:",
+    "options": [
+      "tan x",
+      "tan 2x",
+      "tan 4x",
+      "cot x"
+    ],
+    "correct": 0,
+    "explanation": "Numerator = 2 cos 4x sin x, denominator = 2 cos 4x cos x; the ratio is tan x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath065",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "medium",
+    "text": "sin(A + B) · sin(A − B) is equal to:",
+    "options": [
+      "sin²A − sin²B",
+      "cos²A − sin²B",
+      "sin²A + sin²B",
+      "sin²A − cos²B"
+    ],
+    "correct": 0,
+    "explanation": "Expanding gives sin²A cos²B − cos²A sin²B = sin²A − sin²B. (It also equals cos²B − cos²A.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath066",
+    "chapter": "Trigonometric Functions",
+    "difficulty": "easy",
+    "text": "The area of △ABC with a = 4, b = 6 and C = 30° is:",
+    "options": [
+      "6",
+      "6√3",
+      "24",
+      "12"
+    ],
+    "correct": 0,
+    "explanation": "Area = ½ab sin C = ½ · 4 · 6 · ½ = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath067",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "The value of i³⁵ is:",
+    "options": [
+      "i",
+      "1",
+      "−i",
+      "−1"
+    ],
+    "correct": 2,
+    "explanation": "35 = 4 × 8 + 3, so i³⁵ = i³ = −i.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath068",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "(3 + 2i)(1 − i) expressed in the form a + ib is:",
+    "options": [
+      "1 − i",
+      "5 + i",
+      "3 − 2i",
+      "5 − i"
+    ],
+    "correct": 3,
+    "explanation": "3 − 3i + 2i − 2i² = 3 − i + 2 = 5 − i (using i² = −1).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath069",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The conjugate of 1/(2 − i) is:",
+    "options": [
+      "2 + i",
+      "(2 + i)/5",
+      "(−2 + i)/5",
+      "(2 − i)/5"
+    ],
+    "correct": 3,
+    "explanation": "1/(2 − i) = (2 + i)/((2 − i)(2 + i)) = (2 + i)/5; its conjugate is (2 − i)/5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath070",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "The modulus of 3 − 4i is:",
+    "options": [
+      "5",
+      "25",
+      "7",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "|a + ib| = √(a² + b²) = √(9 + 16) = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath071",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The principal argument of −1 + i√3 is:",
+    "options": [
+      "5π/6",
+      "2π/3",
+      "−π/3",
+      "π/3"
+    ],
+    "correct": 1,
+    "explanation": "The point (−1, √3) is in Q2 with reference angle tan⁻¹(√3) = π/3, so arg = π − π/3 = 2π/3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath072",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "The polar form of 1 + i is:",
+    "options": [
+      "√2(cos 3π/4 + i sin 3π/4)",
+      "√2(cos π/2 + i sin π/2)",
+      "2(cos π/4 + i sin π/4)",
+      "√2(cos π/4 + i sin π/4)"
+    ],
+    "correct": 3,
+    "explanation": "r = √(1 + 1) = √2 and θ = tan⁻¹(1) = π/4 since the point is in Q1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath073",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The value of ((1 + i)/(1 − i))³ is:",
+    "options": [
+      "1",
+      "−i",
+      "−1",
+      "i"
+    ],
+    "correct": 1,
+    "explanation": "(1 + i)/(1 − i) = (1 + i)²/2 = 2i/2 = i, and i³ = −i.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath074",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The multiplicative inverse of 3 + 4i is:",
+    "options": [
+      "3 − 4i",
+      "(3 − 4i)/5",
+      "(−3 + 4i)/25",
+      "(3 − 4i)/25"
+    ],
+    "correct": 3,
+    "explanation": "z⁻¹ = z̄/|z|² = (3 − 4i)/25.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath075",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The square roots of 5 + 12i are:",
+    "options": [
+      "±(2 + 3i)",
+      "±(3 + 2i)",
+      "±(2 − 3i)",
+      "±(3 − 2i)"
+    ],
+    "correct": 1,
+    "explanation": "(3 + 2i)² = 9 + 12i + 4i² = 5 + 12i. (2 + 3i)² = −5 + 12i, which is different.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath076",
+    "chapter": "Complex Numbers",
+    "difficulty": "hard",
+    "text": "If ω is a non-real cube root of unity, then (1 + ω − ω²)(1 − ω + ω²) equals:",
+    "options": [
+      "0",
+      "4",
+      "1",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "Using 1 + ω + ω² = 0: 1 + ω − ω² = −2ω² and 1 − ω + ω² = −2ω. The product is 4ω³ = 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath077",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "If ω is a non-real cube root of unity, ω¹⁰⁰ equals:",
+    "options": [
+      "−ω",
+      "ω²",
+      "1",
+      "ω"
+    ],
+    "correct": 3,
+    "explanation": "ω³ = 1 and 100 = 3 × 33 + 1, so ω¹⁰⁰ = ω.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath078",
+    "chapter": "Complex Numbers",
+    "difficulty": "hard",
+    "text": "If z = x + iy satisfies |z − 1| = |z + 1|, then z lies on:",
+    "options": [
+      "the real axis (y = 0)",
+      "the line y = x",
+      "the circle |z| = 1",
+      "the imaginary axis (x = 0)"
+    ],
+    "correct": 3,
+    "explanation": "z is equidistant from 1 and −1, so it lies on the perpendicular bisector of the segment joining them, which is x = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath079",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "In the Argand plane, the point representing −2 − 3i lies in the:",
+    "options": [
+      "first quadrant",
+      "fourth quadrant",
+      "third quadrant",
+      "second quadrant"
+    ],
+    "correct": 2,
+    "explanation": "Real part −2 < 0 and imaginary part −3 < 0 place the point in Q3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath080",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The principal argument (in (−π, π]) of 1 − i is:",
+    "options": [
+      "3π/4",
+      "7π/4",
+      "π/4",
+      "−π/4"
+    ],
+    "correct": 3,
+    "explanation": "The point (1, −1) is in Q4 with reference angle π/4, so the principal value is −π/4. 7π/4 is an argument but not the principal one.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath081",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "If z₁ = 1 + i and z₂ = 3 − 4i, then |z₁z₂| is:",
+    "options": [
+      "10",
+      "5√2",
+      "7",
+      "√26"
+    ],
+    "correct": 1,
+    "explanation": "|z₁z₂| = |z₁||z₂| = √2 × 5 = 5√2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath082",
+    "chapter": "Complex Numbers",
+    "difficulty": "hard",
+    "text": "If (x + iy)(2 − 3i) = 4 + i where x, y are real, then (x, y) is:",
+    "options": [
+      "(11/13, 10/13)",
+      "(14/13, 5/13)",
+      "(5/13, 14/13)",
+      "(5/13, −14/13)"
+    ],
+    "correct": 2,
+    "explanation": "x + iy = (4 + i)/(2 − 3i) = (4 + i)(2 + 3i)/13 = (5 + 14i)/13.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath083",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "The value of i + i² + i³ + i⁴ is:",
+    "options": [
+      "i",
+      "0",
+      "1",
+      "−1"
+    ],
+    "correct": 1,
+    "explanation": "i − 1 − i + 1 = 0; any four consecutive powers of i add up to 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath084",
+    "chapter": "Complex Numbers",
+    "difficulty": "easy",
+    "text": "If z = 2 − 5i, then z · z̄ equals:",
+    "options": [
+      "4 + 25i",
+      "−21",
+      "29",
+      "√29"
+    ],
+    "correct": 2,
+    "explanation": "z z̄ = |z|² = 2² + 5² = 29, always a non-negative real number.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath085",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "The least positive integer n for which ((1 + i)/(1 − i))ⁿ = 1 is:",
+    "options": [
+      "1",
+      "2",
+      "8",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "(1 + i)/(1 − i) = i, and iⁿ = 1 first happens at n = 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath086",
+    "chapter": "Complex Numbers",
+    "difficulty": "medium",
+    "text": "Which of the following is NOT true for every non-zero complex number z?",
+    "options": [
+      "z + z̄ = 2 Re(z)",
+      "|z̄| = |z|",
+      "z − z̄ = 2i Im(z)",
+      "arg(z̄) = arg(z)"
+    ],
+    "correct": 3,
+    "explanation": "Conjugation reflects z in the real axis, so arg(z̄) = −arg(z) (for non-real z), not arg(z).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath087",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The roots of x² − 5x + 6 = 0 are:",
+    "options": [
+      "2 and 3",
+      "−1 and 6",
+      "1 and 6",
+      "−2 and −3"
+    ],
+    "correct": 0,
+    "explanation": "x² − 5x + 6 = (x − 2)(x − 3).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath088",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The sum of the roots of 2x² − 7x + 3 = 0 is:",
+    "options": [
+      "7/2",
+      "−7/2",
+      "3/2",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "Sum of roots = −b/a = 7/2. (3/2 is the product.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath089",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The roots of x² + x + 1 = 0 are:",
+    "options": [
+      "rational",
+      "real and distinct",
+      "real and equal",
+      "non-real complex conjugates"
+    ],
+    "correct": 3,
+    "explanation": "D = 1 − 4 = −3 < 0, and the coefficients are real, so the roots are a conjugate pair of non-real numbers.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath090",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The values of k for which x² − kx + 9 = 0 has equal roots are:",
+    "options": [
+      "k = 6 only",
+      "k = ±9",
+      "k = ±3",
+      "k = ±6"
+    ],
+    "correct": 3,
+    "explanation": "D = k² − 36 = 0 ⇒ k = ±6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath091",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The roots of x² + 2x + 5 = 0 are:",
+    "options": [
+      "−1 ± 4i",
+      "−2 ± i",
+      "−1 ± 2i",
+      "1 ± 2i"
+    ],
+    "correct": 2,
+    "explanation": "x = (−2 ± √(4 − 20))/2 = (−2 ± 4i)/2 = −1 ± 2i.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath092",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The quadratic equation with roots 2 + √3 and 2 − √3 is:",
+    "options": [
+      "x² − 4x − 1 = 0",
+      "x² − 4x + 7 = 0",
+      "x² + 4x + 1 = 0",
+      "x² − 4x + 1 = 0"
+    ],
+    "correct": 3,
+    "explanation": "Sum = 4 and product = 4 − 3 = 1, so x² − 4x + 1 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath093",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "If α and β are the roots of x² − 3x + 2 = 0, then α² + β² is:",
+    "options": [
+      "13",
+      "9",
+      "1",
+      "5"
+    ],
+    "correct": 3,
+    "explanation": "α² + β² = (α + β)² − 2αβ = 9 − 4 = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath094",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If α and β are the roots of x² − 5x + 3 = 0, then 1/α + 1/β is:",
+    "options": [
+      "15",
+      "−5/3",
+      "5/3",
+      "3/5"
+    ],
+    "correct": 2,
+    "explanation": "1/α + 1/β = (α + β)/(αβ) = 5/3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath095",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The equation whose roots are the squares of the roots of x² − 3x + 1 = 0 is:",
+    "options": [
+      "x² − 9x + 1 = 0",
+      "x² − 7x − 1 = 0",
+      "x² − 7x + 1 = 0",
+      "x² + 7x + 1 = 0"
+    ],
+    "correct": 2,
+    "explanation": "α² + β² = 9 − 2 = 7 and α²β² = 1, giving x² − 7x + 1 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath096",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The real solutions of x⁴ − 5x² + 4 = 0 are:",
+    "options": [
+      "±1, ±4",
+      "±2 only",
+      "±1, ±2",
+      "1, 4"
+    ],
+    "correct": 2,
+    "explanation": "Put y = x²: y² − 5y + 4 = 0 ⇒ y = 1 or 4 ⇒ x = ±1 or ±2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath097",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The solution of √(x + 5) = x − 1 is:",
+    "options": [
+      "no real solution",
+      "x = 4 or x = −1",
+      "x = 4 only",
+      "x = −1 only"
+    ],
+    "correct": 2,
+    "explanation": "Squaring gives x² − 3x − 4 = 0 ⇒ x = 4 or −1. At x = −1 the right side is −2 < 0, so −1 is extraneous.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath098",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If 4 is a root of x² + px + 12 = 0, the other root is:",
+    "options": [
+      "−7",
+      "3",
+      "−3",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "16 + 4p + 12 = 0 ⇒ p = −7; product of roots = 12, so the other root is 12/4 = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath099",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The roots of x² − (3 + i)x + (2 + 2i) = 0 are:",
+    "options": [
+      "2 and 1 − i",
+      "2 and 1 + i",
+      "1 and 2 + i",
+      "−2 and −1 − i"
+    ],
+    "correct": 1,
+    "explanation": "Check: sum 2 + (1 + i) = 3 + i and product 2(1 + i) = 2 + 2i match the coefficients.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath100",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "The roots of x² + 3ix − 2 = 0 are:",
+    "options": [
+      "−i and −2i",
+      "−1 and −2",
+      "i and 2i",
+      "1 and 2"
+    ],
+    "correct": 0,
+    "explanation": "D = (3i)² + 8 = −9 + 8 = −1, √D = i, so x = (−3i ± i)/2 = −i or −2i.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath101",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If a, b, c are rational and b² − 4ac is a positive perfect square, the roots of ax² + bx + c = 0 are:",
+    "options": [
+      "rational and equal",
+      "irrational and unequal",
+      "non-real",
+      "rational and unequal"
+    ],
+    "correct": 3,
+    "explanation": "√D is rational and non-zero, so (−b ± √D)/(2a) are two different rational numbers.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath102",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "If one root of x² − 6x + k = 0 is twice the other, then k is:",
+    "options": [
+      "6",
+      "12",
+      "8",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "Roots α and 2α: 3α = 6 ⇒ α = 2, and k = α · 2α = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath103",
+    "chapter": "Quadratic Equations",
+    "difficulty": "easy",
+    "text": "The discriminant of 3x² − 2x + 5 = 0 is:",
+    "options": [
+      "−56",
+      "64",
+      "56",
+      "−64"
+    ],
+    "correct": 0,
+    "explanation": "D = b² − 4ac = 4 − 60 = −56.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath104",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "The roots of (x² + x)² − 8(x² + x) + 12 = 0 are:",
+    "options": [
+      "1, −2, 2, −3",
+      "2, 6",
+      "1, 2 only",
+      "−1, 2, −2, 3"
+    ],
+    "correct": 0,
+    "explanation": "With y = x² + x: y² − 8y + 12 = 0 ⇒ y = 2 or 6. x² + x = 2 gives 1, −2; x² + x = 6 gives 2, −3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath105",
+    "chapter": "Quadratic Equations",
+    "difficulty": "hard",
+    "text": "x² + kx + 4 = 0 has no real roots exactly when:",
+    "options": [
+      "k > 4",
+      "−2 < k < 2",
+      "−4 < k < 4",
+      "k < −4 or k > 4"
+    ],
+    "correct": 2,
+    "explanation": "Need D = k² − 16 < 0, i.e. −4 < k < 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath106",
+    "chapter": "Quadratic Equations",
+    "difficulty": "medium",
+    "text": "If α and β are the roots of x² + x + 1 = 0, then α³ + β³ is:",
+    "options": [
+      "0",
+      "2",
+      "1",
+      "−2"
+    ],
+    "correct": 1,
+    "explanation": "α³ + β³ = (α + β)³ − 3αβ(α + β) = (−1)³ − 3(1)(−1) = −1 + 3 = 2. (The roots are ω, ω², each with cube 1.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath107",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The solution of 3x − 5 < 7, x ∈ ℝ, is:",
+    "options": [
+      "x < 4",
+      "x ≤ 4",
+      "x < 2/3",
+      "x > 4"
+    ],
+    "correct": 0,
+    "explanation": "3x < 12 ⇒ x < 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath108",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The solution of −2x > 6 is:",
+    "options": [
+      "x > 3",
+      "x > −3",
+      "x < −3",
+      "x < 3"
+    ],
+    "correct": 2,
+    "explanation": "Dividing by −2 reverses the inequality: x < −3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath109",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The solution set of 2x + 3 ≥ 7 for x ∈ ℕ is:",
+    "options": [
+      "{1, 2, 3, …}",
+      "{1, 2}",
+      "{3, 4, 5, …}",
+      "{2, 3, 4, …}"
+    ],
+    "correct": 3,
+    "explanation": "2x ≥ 4 ⇒ x ≥ 2; in ℕ this is {2, 3, 4, …}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath110",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of −3 ≤ (4 − 7x)/2 ≤ 18 is:",
+    "options": [
+      "(−32/7, 10/7)",
+      "[−32/7, 10/7]",
+      "[−10/7, 32/7]",
+      "[10/7, ∞)"
+    ],
+    "correct": 1,
+    "explanation": "Multiply by 2: −6 ≤ 4 − 7x ≤ 36 ⇒ −10 ≤ −7x ≤ 32 ⇒ −32/7 ≤ x ≤ 10/7 (dividing by −7 reverses both signs).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath111",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of |x − 2| < 3 is:",
+    "options": [
+      "x < 5",
+      "−5 < x < 1",
+      "−1 < x < 5",
+      "x < −1 or x > 5"
+    ],
+    "correct": 2,
+    "explanation": "|x − 2| < 3 ⇔ −3 < x − 2 < 3 ⇔ −1 < x < 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath112",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of |2x + 1| ≥ 5 is:",
+    "options": [
+      "−3 ≤ x ≤ 2",
+      "x ≤ −2 or x ≥ 3",
+      "x ≤ −3 or x ≥ 2",
+      "x ≥ 2"
+    ],
+    "correct": 2,
+    "explanation": "2x + 1 ≥ 5 gives x ≥ 2; 2x + 1 ≤ −5 gives x ≤ −3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath113",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of (x − 1)/(x + 2) > 0 is:",
+    "options": [
+      "−2 < x < 1",
+      "x > −2",
+      "x > 1",
+      "x < −2 or x > 1"
+    ],
+    "correct": 3,
+    "explanation": "Critical points −2 and 1; the quotient is positive outside them.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath114",
+    "chapter": "Linear Inequalities",
+    "difficulty": "hard",
+    "text": "The solution of (x − 3)/(x + 1) ≤ 0 is:",
+    "options": [
+      "−1 ≤ x ≤ 3",
+      "−1 ≤ x < 3",
+      "x < −1 or x ≥ 3",
+      "−1 < x ≤ 3"
+    ],
+    "correct": 3,
+    "explanation": "The quotient is ≤ 0 between the critical points. x = 3 is allowed (value 0) but x = −1 is not (denominator 0).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath115",
+    "chapter": "Linear Inequalities",
+    "difficulty": "hard",
+    "text": "Using the wavy-curve (sign) method, the solution of (x − 1)(x − 2)(x − 3) < 0 is:",
+    "options": [
+      "1 < x < 2 or x > 3",
+      "1 < x < 3",
+      "x < 1 or x > 3",
+      "x < 1 or 2 < x < 3"
+    ],
+    "correct": 3,
+    "explanation": "For x > 3 all factors are positive; signs alternate across 3, 2, 1: (+) beyond 3, (−) on (2, 3), (+) on (1, 2), (−) below 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath116",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "Which point lies in the region 2x + 3y > 6?",
+    "options": [
+      "(0, 0)",
+      "(3, 1)",
+      "(0, 2)",
+      "(1, 1)"
+    ],
+    "correct": 1,
+    "explanation": "2(3) + 3(1) = 9 > 6. (0, 2) gives exactly 6, which is on the boundary, not in the strict region.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath117",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The system x ≥ 0, y ≥ 0 represents:",
+    "options": [
+      "the first quadrant excluding the axes",
+      "the whole plane",
+      "the third quadrant",
+      "the first quadrant including the positive axes"
+    ],
+    "correct": 3,
+    "explanation": "x ≥ 0 is the right half-plane with the y-axis; y ≥ 0 is the upper half-plane with the x-axis. Their intersection is Q1 with its boundary.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath118",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "To show the solution of 3x + 2y > 6 graphically, we draw:",
+    "options": [
+      "a dashed line 3x + 2y = 6 and shade the side not containing the origin",
+      "a dashed line and shade the side containing the origin",
+      "a solid line 3x + 2y = 6 and shade the side containing the origin",
+      "a solid line and shade the side not containing the origin"
+    ],
+    "correct": 0,
+    "explanation": "Strict inequality ⇒ boundary excluded (dashed). Testing (0, 0): 0 > 6 is false, so the origin's side is not the solution.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath119",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The system x + y ≥ 2 and x + y ≤ 1 has:",
+    "options": [
+      "no solution",
+      "infinitely many solutions",
+      "exactly one solution",
+      "only the solution (0, 0)"
+    ],
+    "correct": 0,
+    "explanation": "x + y cannot be both at least 2 and at most 1; the half-planes do not overlap.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath120",
+    "chapter": "Linear Inequalities",
+    "difficulty": "hard",
+    "text": "The solution of (2x − 1)/(x − 3) ≥ 1 is:",
+    "options": [
+      "x ≤ −2 or x ≥ 3",
+      "−2 ≤ x < 3",
+      "x ≤ −2 or x > 3",
+      "x ≥ 3"
+    ],
+    "correct": 2,
+    "explanation": "Bring to one side: (2x − 1)/(x − 3) − 1 = (x + 2)/(x − 3) ≥ 0, so x ≤ −2 or x > 3 (3 excluded). Cross-multiplying would be wrong since x − 3 may be negative.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath121",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "If x < y and z < 0, then:",
+    "options": [
+      "xz > yz",
+      "xz = yz",
+      "x/z < y/z",
+      "xz < yz"
+    ],
+    "correct": 0,
+    "explanation": "Multiplying both sides by a negative number reverses the inequality. Likewise x/z > y/z.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath122",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The solution of the system 5x − 3 < 3x + 1 and 2x + 5 ≥ 1 is:",
+    "options": [
+      "[−2, 2)",
+      "(−2, 2]",
+      "[−2, ∞)",
+      "(−∞, 2)"
+    ],
+    "correct": 0,
+    "explanation": "First gives x < 2, second gives x ≥ −2; the common part is −2 ≤ x < 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath123",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "The number of integers x satisfying −3 < 2x + 1 ≤ 7 is:",
+    "options": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "−4 < 2x ≤ 6 ⇒ −2 < x ≤ 3, so x ∈ {−1, 0, 1, 2, 3}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath124",
+    "chapter": "Linear Inequalities",
+    "difficulty": "medium",
+    "text": "A student scored 62 and 48 in two tests (out of 100). The least score in the third test that gives an average of at least 60 is:",
+    "options": [
+      "60",
+      "70",
+      "65",
+      "75"
+    ],
+    "correct": 1,
+    "explanation": "(62 + 48 + x)/3 ≥ 60 ⇒ 110 + x ≥ 180 ⇒ x ≥ 70.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath125",
+    "chapter": "Linear Inequalities",
+    "difficulty": "easy",
+    "text": "The region strictly below the line y = 2x is described by:",
+    "options": [
+      "y ≤ 2x",
+      "y < 2x",
+      "y > 2x",
+      "x < 2y"
+    ],
+    "correct": 1,
+    "explanation": "Points below the line have y-coordinate smaller than 2x; 'strictly' excludes the line itself.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath126",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "The value of 5! is:",
+    "options": [
+      "720",
+      "24",
+      "120",
+      "60"
+    ],
+    "correct": 2,
+    "explanation": "5! = 5 × 4 × 3 × 2 × 1 = 120.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath127",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "The value of ⁵P₂ is:",
+    "options": [
+      "25",
+      "10",
+      "20",
+      "60"
+    ],
+    "correct": 2,
+    "explanation": "ⁿPᵣ = n!/(n − r)! so ⁵P₂ = 5 × 4 = 20. (⁵C₂ = 10.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath128",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "The value of ⁸C₃ is:",
+    "options": [
+      "56",
+      "336",
+      "28",
+      "70"
+    ],
+    "correct": 0,
+    "explanation": "⁸C₃ = (8 × 7 × 6)/(3 × 2 × 1) = 56. (336 is ⁸P₃.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath129",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of distinct arrangements of the letters of BANANA is:",
+    "options": [
+      "60",
+      "720",
+      "36",
+      "120"
+    ],
+    "correct": 0,
+    "explanation": "6 letters with A repeated 3 times and N twice: 6!/(3! 2!) = 60.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath130",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "How many 3-digit numbers with distinct digits can be formed using the digits 1, 2, 3, 4, 5?",
+    "options": [
+      "60",
+      "10",
+      "120",
+      "125"
+    ],
+    "correct": 0,
+    "explanation": "5 choices for the first digit, 4 for the second, 3 for the third: 5 × 4 × 3 = 60.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath131",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "In how many ways can 6 people be seated around a round table?",
+    "options": [
+      "120",
+      "720",
+      "60",
+      "360"
+    ],
+    "correct": 0,
+    "explanation": "Circular arrangements of n distinct objects: (n − 1)! = 5! = 120.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath132",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of different necklaces that can be made from 7 distinct beads is:",
+    "options": [
+      "120",
+      "5040",
+      "360",
+      "720"
+    ],
+    "correct": 2,
+    "explanation": "A necklace can be flipped, so clockwise and anticlockwise orders coincide: (7 − 1)!/2 = 360.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath133",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "If ⁿC₂ = 45, then n is:",
+    "options": [
+      "10",
+      "45",
+      "15",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "n(n − 1)/2 = 45 ⇒ n² − n − 90 = 0 ⇒ n = 10 (rejecting −9).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath134",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "A committee of 3 men and 2 women is to be chosen from 6 men and 5 women. The number of ways is:",
+    "options": [
+      "30",
+      "120",
+      "200",
+      "462"
+    ],
+    "correct": 2,
+    "explanation": "⁶C₃ × ⁵C₂ = 20 × 10 = 200.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath135",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "The number of diagonals of a decagon (10-sided polygon) is:",
+    "options": [
+      "70",
+      "45",
+      "90",
+      "35"
+    ],
+    "correct": 3,
+    "explanation": "Lines joining 10 vertices = ¹⁰C₂ = 45; subtract the 10 sides: 35.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath136",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "hard",
+    "text": "The number of distinct arrangements of the letters of MISSISSIPPI is:",
+    "options": [
+      "11550",
+      "39916800",
+      "34650",
+      "69300"
+    ],
+    "correct": 2,
+    "explanation": "11 letters: I × 4, S × 4, P × 2, M × 1, so 11!/(4! 4! 2!) = 34650.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath137",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "If ⁿC₈ = ⁿC₆, then ⁿC₂ equals:",
+    "options": [
+      "14",
+      "28",
+      "182",
+      "91"
+    ],
+    "correct": 3,
+    "explanation": "ⁿCᵣ = ⁿCₛ with r ≠ s ⇒ r + s = n, so n = 14 and ¹⁴C₂ = 91.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath138",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "The value of 0! is:",
+    "options": [
+      "1",
+      "0",
+      "−1",
+      "undefined"
+    ],
+    "correct": 0,
+    "explanation": "0! is defined to be 1, which keeps formulas like ⁿC₀ = n!/(0! n!) = 1 consistent.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath139",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "In how many ways can 4 letters be posted in 3 letter boxes (any box may hold any number of letters)?",
+    "options": [
+      "24",
+      "64",
+      "12",
+      "81"
+    ],
+    "correct": 3,
+    "explanation": "Each of the 4 letters has 3 choices: 3⁴ = 81. (4³ would wrongly let boxes choose letters.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath140",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "hard",
+    "text": "The number of arrangements of the letters of LEADING in which the vowels always come together is:",
+    "options": [
+      "5040",
+      "1440",
+      "720",
+      "144"
+    ],
+    "correct": 2,
+    "explanation": "Vowels E, A, I form one block: 5 units (block + L, D, N, G) give 5! arrangements, and the block itself 3!: 120 × 6 = 720.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath141",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "If each of 12 people shakes hands once with every other person, the number of handshakes is:",
+    "options": [
+      "24",
+      "66",
+      "132",
+      "144"
+    ],
+    "correct": 1,
+    "explanation": "Each handshake is a selection of 2 people: ¹²C₂ = 66.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath142",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "hard",
+    "text": "There are 12 points in a plane, of which exactly 5 are collinear (no other three are collinear). The number of triangles with vertices at these points is:",
+    "options": [
+      "215",
+      "210",
+      "220",
+      "200"
+    ],
+    "correct": 1,
+    "explanation": "¹²C₃ = 220, minus the ⁵C₃ = 10 degenerate 'triangles' from the collinear points: 210.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath143",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "ⁿCᵣ + ⁿCᵣ₋₁ is equal to:",
+    "options": [
+      "ⁿ⁺¹Cᵣ",
+      "²ⁿCᵣ",
+      "ⁿCᵣ₊₁",
+      "ⁿ⁺¹Cᵣ₋₁"
+    ],
+    "correct": 0,
+    "explanation": "This is Pascal's rule, the basis of Pascal's triangle.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath144",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "medium",
+    "text": "How many 4-digit even numbers can be formed from the digits 1, 2, 3, 4, 5, 6 without repetition?",
+    "options": [
+      "60",
+      "360",
+      "120",
+      "180"
+    ],
+    "correct": 3,
+    "explanation": "Units digit: 3 choices (2, 4, 6). Remaining three places from 5 digits: 5 × 4 × 3 = 60. Total 180.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath145",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "hard",
+    "text": "In how many ways can 5 boys and 3 girls stand in a row so that no two girls are together?",
+    "options": [
+      "14400",
+      "2880",
+      "40320",
+      "4320"
+    ],
+    "correct": 0,
+    "explanation": "Arrange boys: 5! = 120. They create 6 gaps; place girls in 3 of them in order: ⁶P₃ = 120. Total 14400.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath146",
+    "chapter": "Permutations and Combinations",
+    "difficulty": "easy",
+    "text": "In how many ways can a president and a vice-president be chosen from 10 members?",
+    "options": [
+      "20",
+      "90",
+      "45",
+      "100"
+    ],
+    "correct": 1,
+    "explanation": "Order matters (different posts): ¹⁰P₂ = 10 × 9 = 90.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath147",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "In the principle of mathematical induction, the first step (base case) is to:",
+    "options": [
+      "verify that P(1) is true",
+      "prove P(k + 1) is true",
+      "assume P(k) is true",
+      "verify P(n) for all n"
+    ],
+    "correct": 0,
+    "explanation": "Induction starts by checking the statement for the first natural number, usually n = 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath148",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "In the inductive step of a proof by induction we:",
+    "options": [
+      "verify P(1) and P(2) only",
+      "assume P(k + 1) and prove P(k)",
+      "prove P(k) for one particular k",
+      "assume P(k) is true and prove that P(k + 1) is true"
+    ],
+    "correct": 3,
+    "explanation": "The inductive step shows P(k) ⇒ P(k + 1) for every natural k; with the base case, this chains to all n.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath149",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "By induction one proves that 1 + 3 + 5 + … + (2n − 1) equals:",
+    "options": [
+      "n(n + 1)/2",
+      "n²",
+      "n(n + 1)",
+      "2n − 1"
+    ],
+    "correct": 1,
+    "explanation": "The sum of the first n odd numbers is n²; e.g. 1 + 3 + 5 = 9.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath150",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "The largest natural number that divides n(n + 1)(n + 2) for every n ∈ ℕ is:",
+    "options": [
+      "24",
+      "6",
+      "12",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Among three consecutive integers one is a multiple of 3 and at least one is even, so 6 always divides; at n = 1 the product is 6, so nothing larger works.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath151",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "For every n ∈ ℕ, 10ⁿ + 3 · 4ⁿ⁺² + 5 is divisible by:",
+    "options": [
+      "11",
+      "5",
+      "9",
+      "7"
+    ],
+    "correct": 2,
+    "explanation": "At n = 1 the value is 10 + 192 + 5 = 207 = 9 × 23, and induction shows 9 divides it for all n. 207 is not divisible by 7, 5 or 11.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath152",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "For every n ∈ ℕ, 2³ⁿ − 1 is divisible by:",
+    "options": [
+      "3",
+      "9",
+      "5",
+      "7"
+    ],
+    "correct": 3,
+    "explanation": "2³ⁿ − 1 = 8ⁿ − 1, and 8 ≡ 1 (mod 7), so 7 divides it. For n = 1 the value is 7 itself.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath153",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "Induction is used to prove that 1² + 2² + … + n² equals:",
+    "options": [
+      "n²(n + 1)/2",
+      "n(n + 1)/2",
+      "[n(n + 1)/2]²",
+      "n(n + 1)(2n + 1)/6"
+    ],
+    "correct": 3,
+    "explanation": "This is the sum-of-squares formula; [n(n + 1)/2]² is the sum of cubes.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath154",
+    "chapter": "Mathematical Induction",
+    "difficulty": "hard",
+    "text": "The value of n² − n + 41 is prime for n = 1, 2, …, 40. A student concludes that it is prime for every natural number n. The correct comment is:",
+    "options": [
+      "Checking finitely many cases is not a proof; at n = 41 the value is 41², which is not prime",
+      "The claim is proved by induction, as P(1) is true",
+      "The claim first fails at n = 2",
+      "The claim is proved, since 40 cases were checked"
+    ],
+    "correct": 0,
+    "explanation": "Without a valid inductive step, any number of checked cases proves nothing — and here the statement is false at n = 41.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath155",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "For all n ∈ ℕ, xⁿ − yⁿ is divisible by:",
+    "options": [
+      "x − y",
+      "xy",
+      "x² − y²",
+      "x + y"
+    ],
+    "correct": 0,
+    "explanation": "xᵏ⁺¹ − yᵏ⁺¹ = x(xᵏ − yᵏ) + yᵏ(x − y), so the factor x − y carries from k to k + 1. (x + y divides only for even n.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath156",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "For every n ∈ ℕ, 3²ⁿ − 1 is divisible by:",
+    "options": [
+      "6",
+      "8",
+      "5",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "3²ⁿ − 1 = 9ⁿ − 1 and 9 − 1 = 8 divides 9ⁿ − 1. For n = 1 it equals 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath157",
+    "chapter": "Mathematical Induction",
+    "difficulty": "hard",
+    "text": "In proving 2ⁿ > n by induction, from 2ᵏ > k we get 2ᵏ⁺¹ > 2k. The step is completed using:",
+    "options": [
+      "2k ≤ k + 1 for k ≥ 1",
+      "2k ≥ k + 1 for k ≥ 1",
+      "2ᵏ ≥ k² for all k",
+      "k + 1 > 2k"
+    ],
+    "correct": 1,
+    "explanation": "2ᵏ⁺¹ > 2k = k + k ≥ k + 1 since k ≥ 1, giving 2ᵏ⁺¹ > k + 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath158",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "By induction, 1/(1·2) + 1/(2·3) + … + 1/(n(n + 1)) equals:",
+    "options": [
+      "n/(n + 2)",
+      "n/(n + 1)",
+      "1/(n + 1)",
+      "(n + 1)/n"
+    ],
+    "correct": 1,
+    "explanation": "Each term 1/(k(k + 1)) = 1/k − 1/(k + 1), and the sum telescopes to 1 − 1/(n + 1).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath159",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "By induction, 1·2 + 2·3 + … + n(n + 1) equals:",
+    "options": [
+      "n(n + 1)(n + 2)/6",
+      "n(n + 1)(n + 2)/3",
+      "n²(n + 1)/2",
+      "n(n + 1)(2n + 1)/6"
+    ],
+    "correct": 1,
+    "explanation": "Check n = 2: 2 + 6 = 8 and 2·3·4/3 = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath160",
+    "chapter": "Mathematical Induction",
+    "difficulty": "hard",
+    "text": "The statement P(n): 2n + 1 < 2ⁿ is true for all n ≥ m. The least such m is:",
+    "options": [
+      "4",
+      "2",
+      "3",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "n = 1: 3 < 2 false; n = 2: 5 < 4 false; n = 3: 7 < 8 true, and the inductive step works from there.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath161",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "For every n ∈ ℕ, 7ⁿ − 3ⁿ is divisible by:",
+    "options": [
+      "3",
+      "4",
+      "10",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "aⁿ − bⁿ is divisible by a − b = 4. For n = 1 the value is 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath162",
+    "chapter": "Mathematical Induction",
+    "difficulty": "easy",
+    "text": "The principle of mathematical induction is used to prove statements that depend on:",
+    "options": [
+      "a real number x",
+      "a complex number z",
+      "an angle θ",
+      "a natural number n"
+    ],
+    "correct": 3,
+    "explanation": "Induction works on ℕ because every natural number is reached from 1 by repeatedly adding 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath163",
+    "chapter": "Mathematical Induction",
+    "difficulty": "hard",
+    "text": "For P(n): 'n² + n is odd', one can show P(k) ⇒ P(k + 1), since (k + 1)² + (k + 1) = (k² + k) + 2(k + 1). What follows?",
+    "options": [
+      "P(n) is true for odd n only",
+      "Nothing is proved because P(1) is false; in fact n² + n is always even",
+      "P(n) is true for all n ≥ 2",
+      "P(n) is true for all n"
+    ],
+    "correct": 1,
+    "explanation": "The base case 1² + 1 = 2 is even, so P(1) fails. Both steps are needed; here the statement is false for every n.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath164",
+    "chapter": "Mathematical Induction",
+    "difficulty": "medium",
+    "text": "For every n ∈ ℕ, n³ + 2n is divisible by:",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "(k + 1)³ + 2(k + 1) = (k³ + 2k) + 3(k² + k + 1), so divisibility by 3 carries over. At n = 1 the value is 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath165",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The number of terms in the expansion of (x + y)¹⁰ is:",
+    "options": [
+      "11",
+      "10",
+      "20",
+      "12"
+    ],
+    "correct": 0,
+    "explanation": "(a + b)ⁿ has n + 1 terms.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath166",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The coefficient of x³ in (1 + x)⁷ is:",
+    "options": [
+      "35",
+      "42",
+      "21",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "Coefficient = ⁷C₃ = 35.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath167",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The middle term of (x + 1/x)¹⁰ is:",
+    "options": [
+      "126",
+      "252",
+      "252x",
+      "210"
+    ],
+    "correct": 1,
+    "explanation": "With n = 10 the middle term is T₆ = ¹⁰C₅ x⁵ (1/x)⁵ = 252.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath168",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The term independent of x in (x² + 1/x)⁹ is:",
+    "options": [
+      "84",
+      "9",
+      "36",
+      "126"
+    ],
+    "correct": 0,
+    "explanation": "Tᵣ₊₁ = ⁹Cᵣ x¹⁸⁻²ʳ x⁻ʳ = ⁹Cᵣ x¹⁸⁻³ʳ; 18 − 3r = 0 ⇒ r = 6; ⁹C₆ = 84.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath169",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The sum of all binomial coefficients in the expansion of (1 + x)⁸ is:",
+    "options": [
+      "256",
+      "128",
+      "512",
+      "64"
+    ],
+    "correct": 0,
+    "explanation": "Put x = 1: ⁸C₀ + ⁸C₁ + … + ⁸C₈ = 2⁸ = 256.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath170",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The 4th term in the expansion of (2x − 3)⁵ is:",
+    "options": [
+      "−720x³",
+      "−1080x²",
+      "1080x²",
+      "−1080x³"
+    ],
+    "correct": 1,
+    "explanation": "T₄ = ⁵C₃ (2x)² (−3)³ = 10 × 4x² × (−27) = −1080x².",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath171",
+    "chapter": "Binomial Theorem",
+    "difficulty": "hard",
+    "text": "The coefficient of x⁵ in (x + 3)⁸ is:",
+    "options": [
+      "4536",
+      "504",
+      "1512",
+      "168"
+    ],
+    "correct": 2,
+    "explanation": "Term with x⁵: ⁸C₃ x⁵ 3³ = 56 × 27 = 1512.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath172",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "Using the binomial theorem, (101)⁴ equals:",
+    "options": [
+      "104060401",
+      "104040401",
+      "104060101",
+      "106040401"
+    ],
+    "correct": 0,
+    "explanation": "(100 + 1)⁴ = 10⁸ + 4·10⁶ + 6·10⁴ + 4·10² + 1 = 104060401.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath173",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "In the expansion of (1 + x)¹⁰, the value of C₀ + C₂ + C₄ + … + C₁₀ is:",
+    "options": [
+      "1024",
+      "256",
+      "512",
+      "511"
+    ],
+    "correct": 2,
+    "explanation": "The even-indexed and odd-indexed coefficient sums are equal, each 2¹⁰/2 = 2⁹ = 512.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath174",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The row of Pascal's triangle giving the coefficients of (a + b)⁵ is:",
+    "options": [
+      "1 5 10 10 5 1",
+      "1 5 10 5 1",
+      "1 6 15 20 15 6 1",
+      "1 4 6 4 1"
+    ],
+    "correct": 0,
+    "explanation": "The entries are ⁵C₀, …, ⁵C₅ = 1, 5, 10, 10, 5, 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath175",
+    "chapter": "Binomial Theorem",
+    "difficulty": "hard",
+    "text": "The middle terms in the expansion of (2x − y/2)⁷ are:",
+    "options": [
+      "−70x⁴y³ and (35/2)x³y⁴",
+      "−35x⁴y³ and 35x³y⁴",
+      "70x⁴y³ and −(35/2)x³y⁴",
+      "−70x³y⁴ and (35/2)x⁴y³"
+    ],
+    "correct": 0,
+    "explanation": "n = 7 is odd, so T₄ and T₅ are middle. T₄ = ⁷C₃(2x)⁴(−y/2)³ = −70x⁴y³; T₅ = ⁷C₄(2x)³(−y/2)⁴ = (35/2)x³y⁴.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath176",
+    "chapter": "Binomial Theorem",
+    "difficulty": "hard",
+    "text": "If the coefficients of x² and x³ in (3 + ax)⁹ are equal, then a is (a ≠ 0):",
+    "options": [
+      "7/9",
+      "1/3",
+      "9/7",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "⁹C₂ 3⁷ a² = ⁹C₃ 3⁶ a³ ⇒ 36 × 3 = 84a ⇒ a = 108/84 = 9/7.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath177",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The general term of (a + b)ⁿ is:",
+    "options": [
+      "Tᵣ = ⁿCᵣ aⁿ⁻ʳ bʳ",
+      "Tᵣ₊₁ = ⁿPᵣ aⁿ⁻ʳ bʳ",
+      "Tᵣ₊₁ = ⁿCᵣ aⁿ⁻ʳ bʳ",
+      "Tᵣ₊₁ = ⁿCᵣ aʳ bʳ"
+    ],
+    "correct": 2,
+    "explanation": "The (r + 1)th term carries ⁿCᵣ with b raised to r.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath178",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "After simplification, the number of terms in (x + a)⁶ + (x − a)⁶ is:",
+    "options": [
+      "7",
+      "4",
+      "14",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "Terms with odd powers of a cancel; those with a⁰, a², a⁴, a⁶ remain (doubled): 4 terms.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath179",
+    "chapter": "Binomial Theorem",
+    "difficulty": "hard",
+    "text": "The remainder when 9¹⁰⁰ is divided by 8 is:",
+    "options": [
+      "1",
+      "0",
+      "9",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "9¹⁰⁰ = (8 + 1)¹⁰⁰ = 8(…) + 1, so the remainder is 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath180",
+    "chapter": "Binomial Theorem",
+    "difficulty": "easy",
+    "text": "The sum of the coefficients in the expansion of (1 − x)⁴ is:",
+    "options": [
+      "0",
+      "16",
+      "1",
+      "−1"
+    ],
+    "correct": 0,
+    "explanation": "Put x = 1: (1 − 1)⁴ = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath181",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The term independent of x in (x − 2/x)⁶ is:",
+    "options": [
+      "240",
+      "−20",
+      "−160",
+      "160"
+    ],
+    "correct": 2,
+    "explanation": "Tᵣ₊₁ = ⁶Cᵣ x⁶⁻ʳ (−2)ʳ x⁻ʳ; 6 − 2r = 0 ⇒ r = 3; ⁶C₃(−2)³ = 20 × (−8) = −160.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath182",
+    "chapter": "Binomial Theorem",
+    "difficulty": "medium",
+    "text": "The value of ⁿC₀ − ⁿC₁ + ⁿC₂ − … + (−1)ⁿ ⁿCₙ (n ≥ 1) is:",
+    "options": [
+      "2ⁿ",
+      "2ⁿ⁻¹",
+      "1",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "Put x = −1 in (1 + x)ⁿ: the alternating sum is 0ⁿ = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath183",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The 10th term of the AP 3, 7, 11, … is:",
+    "options": [
+      "40",
+      "43",
+      "35",
+      "39"
+    ],
+    "correct": 3,
+    "explanation": "aₙ = a + (n − 1)d = 3 + 9 × 4 = 39.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath184",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The sum of the first 10 terms of the AP 2, 5, 8, … is:",
+    "options": [
+      "145",
+      "155",
+      "160",
+      "29"
+    ],
+    "correct": 1,
+    "explanation": "Sₙ = n/2[2a + (n − 1)d] = 5(4 + 27) = 155.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath185",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The 6th term of the GP 2, 6, 18, … is:",
+    "options": [
+      "486",
+      "243",
+      "1458",
+      "162"
+    ],
+    "correct": 0,
+    "explanation": "aₙ = arⁿ⁻¹ = 2 × 3⁵ = 486.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath186",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The sum to infinity of 1 + 1/3 + 1/9 + … is:",
+    "options": [
+      "2",
+      "3",
+      "4/3",
+      "3/2"
+    ],
+    "correct": 3,
+    "explanation": "S∞ = a/(1 − r) = 1/(1 − 1/3) = 3/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath187",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The geometric mean of 4 and 16 is:",
+    "options": [
+      "12",
+      "6.4",
+      "10",
+      "8"
+    ],
+    "correct": 3,
+    "explanation": "GM = √(ab) = √64 = 8. (10 is the AM and 6.4 the HM.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath188",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The harmonic mean of 4 and 16 is:",
+    "options": [
+      "32/5",
+      "8",
+      "5",
+      "10"
+    ],
+    "correct": 0,
+    "explanation": "HM = 2ab/(a + b) = 128/20 = 32/5 = 6.4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath189",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "For two distinct positive numbers, the arithmetic mean A, geometric mean G and harmonic mean H satisfy:",
+    "options": [
+      "A > G > H",
+      "A < G < H",
+      "H > A > G",
+      "G > A > H"
+    ],
+    "correct": 0,
+    "explanation": "A ≥ G ≥ H with equality only when the numbers are equal; also G² = AH.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath190",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The AM and GM of two positive numbers are 10 and 8. The numbers are:",
+    "options": [
+      "18 and 2",
+      "12 and 8",
+      "16 and 4",
+      "14 and 6"
+    ],
+    "correct": 2,
+    "explanation": "a + b = 20 and ab = 64, so they are the roots of t² − 20t + 64 = 0: 16 and 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath191",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The value of 1² + 2² + 3² + … + 10² is:",
+    "options": [
+      "385",
+      "55",
+      "505",
+      "3025"
+    ],
+    "correct": 0,
+    "explanation": "n(n + 1)(2n + 1)/6 = 10 × 11 × 21/6 = 385.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath192",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The value of 1³ + 2³ + … + 10³ is:",
+    "options": [
+      "3025",
+      "1000",
+      "385",
+      "5050"
+    ],
+    "correct": 0,
+    "explanation": "[n(n + 1)/2]² = 55² = 3025.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath193",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "Which term of the AP 5, 9, 13, … is 81?",
+    "options": [
+      "21st",
+      "18th",
+      "19th",
+      "20th"
+    ],
+    "correct": 3,
+    "explanation": "5 + (n − 1)4 = 81 ⇒ n − 1 = 19 ⇒ n = 20.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath194",
+    "chapter": "Sequences and Series",
+    "difficulty": "hard",
+    "text": "The sum to n terms of 0.7 + 0.77 + 0.777 + … is:",
+    "options": [
+      "(7/9)[n − (1 − 10⁻ⁿ)/9]",
+      "(7/81)(10ⁿ − 1)",
+      "(7/9)[n + (1 − 10⁻ⁿ)/9]",
+      "7n/9"
+    ],
+    "correct": 0,
+    "explanation": "kth term = (7/9)(1 − 10⁻ᵏ). Summing: (7/9)[n − (0.1 + 0.01 + …)] = (7/9)[n − (1/9)(1 − 10⁻ⁿ)].",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath195",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "Three numbers in AP have sum 15 and product 80. The numbers are:",
+    "options": [
+      "3, 5, 7",
+      "4, 5, 6",
+      "1, 5, 9",
+      "2, 5, 8"
+    ],
+    "correct": 3,
+    "explanation": "Take a − d, a, a + d: 3a = 15 ⇒ a = 5; 5(25 − d²) = 80 ⇒ d² = 9 ⇒ d = ±3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath196",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The 8th term of the HP 1/2, 1/5, 1/8, … is:",
+    "options": [
+      "1/26",
+      "1/23",
+      "1/20",
+      "23"
+    ],
+    "correct": 1,
+    "explanation": "Reciprocals 2, 5, 8, … form an AP with 8th term 2 + 7 × 3 = 23; so the HP term is 1/23.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath197",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The three arithmetic means inserted between 3 and 19 are:",
+    "options": [
+      "7, 11, 15",
+      "6, 11, 16",
+      "7, 12, 17",
+      "5, 9, 13"
+    ],
+    "correct": 0,
+    "explanation": "With 5 terms, 19 = 3 + 4d ⇒ d = 4: 3, 7, 11, 15, 19.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath198",
+    "chapter": "Sequences and Series",
+    "difficulty": "hard",
+    "text": "For |x| < 1, the sum to infinity of 1 + 2x + 3x² + 4x³ + … is:",
+    "options": [
+      "1/(1 + x)²",
+      "x/(1 − x)²",
+      "1/(1 − x)²",
+      "1/(1 − x)"
+    ],
+    "correct": 2,
+    "explanation": "This arithmetico-geometric series S satisfies S − xS = 1 + x + x² + … = 1/(1 − x), so S = 1/(1 − x)².",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath199",
+    "chapter": "Sequences and Series",
+    "difficulty": "easy",
+    "text": "The sum of the first 10 terms of 1 + 2 + 4 + 8 + … is:",
+    "options": [
+      "1023",
+      "1024",
+      "2047",
+      "511"
+    ],
+    "correct": 0,
+    "explanation": "Sₙ = a(rⁿ − 1)/(r − 1) = 2¹⁰ − 1 = 1023.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath200",
+    "chapter": "Sequences and Series",
+    "difficulty": "hard",
+    "text": "The value of 1·2 + 2·3 + 3·4 + … + 10·11 is:",
+    "options": [
+      "440",
+      "385",
+      "495",
+      "330"
+    ],
+    "correct": 0,
+    "explanation": "Σ k(k + 1) = Σk² + Σk = 385 + 55 = 440, matching n(n + 1)(n + 2)/3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath201",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "The recurring decimal 0.121212… expressed as a fraction is:",
+    "options": [
+      "3/25",
+      "12/100",
+      "4/33",
+      "6/55"
+    ],
+    "correct": 2,
+    "explanation": "0.1212… = 12/100 + 12/100² + … = (12/100)/(1 − 1/100) = 12/99 = 4/33.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath202",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "If a, b, c are in HP, then b equals:",
+    "options": [
+      "(a + c)/2",
+      "√(ac)",
+      "2ac/(a + c)",
+      "ac/(a + c)"
+    ],
+    "correct": 2,
+    "explanation": "1/a, 1/b, 1/c are in AP ⇒ 2/b = 1/a + 1/c ⇒ b = 2ac/(a + c).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath203",
+    "chapter": "Sequences and Series",
+    "difficulty": "medium",
+    "text": "If the sum of the first n terms of an AP is 3n² + 5n, its common difference is:",
+    "options": [
+      "5",
+      "8",
+      "6",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "aₙ = Sₙ − Sₙ₋₁ = 6n + 2; consecutive terms differ by 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath204",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The slope of the line joining (2, 3) and (4, 7) is:",
+    "options": [
+      "1/2",
+      "2",
+      "−2",
+      "5/3"
+    ],
+    "correct": 1,
+    "explanation": "m = (7 − 3)/(4 − 2) = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath205",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The slope of a line inclined at 135° to the positive x-axis is:",
+    "options": [
+      "−1",
+      "−√3",
+      "1/√3",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "m = tan 135° = −1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath206",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The line with slope 3 and y-intercept −2 is:",
+    "options": [
+      "y = 3x + 2",
+      "3y = x − 2",
+      "y = −2x + 3",
+      "y = 3x − 2"
+    ],
+    "correct": 3,
+    "explanation": "Slope-intercept form y = mx + c with m = 3, c = −2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath207",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The equation of the line through (1, 2) and (3, 6) is:",
+    "options": [
+      "y = x + 1",
+      "y = 2x + 1",
+      "y = 2x",
+      "2y = x + 3"
+    ],
+    "correct": 2,
+    "explanation": "Slope = 4/2 = 2; y − 2 = 2(x − 1) ⇒ y = 2x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath208",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The acute angle between the lines y = x and y = √3x is:",
+    "options": [
+      "45°",
+      "60°",
+      "30°",
+      "15°"
+    ],
+    "correct": 3,
+    "explanation": "Inclinations are 45° and 60°, so the angle between them is 15°. (tan θ = |(√3 − 1)/(1 + √3)| = 2 − √3.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath209",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The line through the origin perpendicular to 2x + 3y = 5 is:",
+    "options": [
+      "3x + 2y = 0",
+      "2x − 3y = 0",
+      "3x − 2y = 0",
+      "2x + 3y = 0"
+    ],
+    "correct": 2,
+    "explanation": "Given slope −2/3; perpendicular slope 3/2 ⇒ y = (3/2)x ⇒ 3x − 2y = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath210",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The distance of the point (3, 4) from the line 3x + 4y − 5 = 0 is:",
+    "options": [
+      "5",
+      "4/5",
+      "20",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "d = |3·3 + 4·4 − 5|/√(9 + 16) = 20/5 = 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath211",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The distance between the parallel lines 3x + 4y − 7 = 0 and 3x + 4y − 17 = 0 is:",
+    "options": [
+      "10",
+      "2",
+      "5",
+      "24/5"
+    ],
+    "correct": 1,
+    "explanation": "d = |c₁ − c₂|/√(a² + b²) = |−7 + 17|/5 = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath212",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The x- and y-intercepts of the line 2x + 3y = 6 are:",
+    "options": [
+      "1/3 and 1/2",
+      "2 and 3",
+      "3 and 2",
+      "6 and 6"
+    ],
+    "correct": 2,
+    "explanation": "Dividing by 6: x/3 + y/2 = 1, so the intercepts are 3 (on x-axis) and 2 (on y-axis).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath213",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "In normal form x cos α + y sin α = p, the line x + √3y = 4 has:",
+    "options": [
+      "p = 4, α = 60°",
+      "p = 2, α = 30°",
+      "p = 2, α = 60°",
+      "p = 4, α = 30°"
+    ],
+    "correct": 2,
+    "explanation": "Divide by √(1 + 3) = 2: (1/2)x + (√3/2)y = 2, so cos α = 1/2, sin α = √3/2 ⇒ α = 60°, p = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath214",
+    "chapter": "Straight Lines",
+    "difficulty": "hard",
+    "text": "The lines 3x + y − 2 = 0, kx + 2y − 3 = 0 and 2x − y − 3 = 0 are concurrent when k equals:",
+    "options": [
+      "−5",
+      "3",
+      "5",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "The first and third meet at (1, −1). Substituting: k − 2 − 3 = 0 ⇒ k = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath215",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The lines 2x + 3y + 4 = 0 and 4x + 6y − 1 = 0 are:",
+    "options": [
+      "coincident",
+      "intersecting at one point, not perpendicular",
+      "parallel and distinct",
+      "perpendicular"
+    ],
+    "correct": 2,
+    "explanation": "Both have slope −2/3, but 4x + 6y − 1 = 0 is 2x + 3y − 1/2 = 0, a different constant, so they are distinct parallel lines.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath216",
+    "chapter": "Straight Lines",
+    "difficulty": "hard",
+    "text": "The line through the point of intersection of x + y = 3 and 2x − y = 0, parallel to the x-axis, is:",
+    "options": [
+      "x = 1",
+      "x + y = 2",
+      "y = 2",
+      "y = 3"
+    ],
+    "correct": 2,
+    "explanation": "The lines meet at (1, 2); a line parallel to the x-axis through it is y = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath217",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The slope of a line perpendicular to the line joining (1, 2) and (4, 8) is:",
+    "options": [
+      "−1/2",
+      "−2",
+      "1/2",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "The joining line has slope 6/3 = 2; a perpendicular slope is −1/2 (product −1).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath218",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The points (1, 2), (3, k) and (5, 10) are collinear when k is:",
+    "options": [
+      "5",
+      "8",
+      "4",
+      "6"
+    ],
+    "correct": 3,
+    "explanation": "Slope from (1, 2) to (5, 10) is 2, so (k − 2)/2 = 2 ⇒ k = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath219",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The area of the triangle formed by the line 3x + 4y = 12 and the coordinate axes is:",
+    "options": [
+      "24 sq. units",
+      "6 sq. units",
+      "12 sq. units",
+      "7 sq. units"
+    ],
+    "correct": 1,
+    "explanation": "Intercepts are 4 and 3, so area = ½ × 4 × 3 = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath220",
+    "chapter": "Straight Lines",
+    "difficulty": "easy",
+    "text": "The line with slope −2 passing through (1, −1) is:",
+    "options": [
+      "2x + y + 1 = 0",
+      "2x − y − 3 = 0",
+      "x + 2y + 1 = 0",
+      "2x + y − 1 = 0"
+    ],
+    "correct": 3,
+    "explanation": "y + 1 = −2(x − 1) ⇒ 2x + y − 1 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath221",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The inclination of the line x − √3y + 1 = 0 is:",
+    "options": [
+      "30°",
+      "60°",
+      "120°",
+      "150°"
+    ],
+    "correct": 0,
+    "explanation": "y = x/√3 + 1/√3, so tan θ = 1/√3 ⇒ θ = 30°.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath222",
+    "chapter": "Straight Lines",
+    "difficulty": "hard",
+    "text": "The perpendicular distance from the origin to the line x/a + y/b = 1 is:",
+    "options": [
+      "√(a² + b²)",
+      "ab/√(a² + b²)",
+      "(a + b)/2",
+      "ab/(a + b)"
+    ],
+    "correct": 1,
+    "explanation": "Write it as bx + ay − ab = 0; distance from (0, 0) = |−ab|/√(b² + a²).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath223",
+    "chapter": "Straight Lines",
+    "difficulty": "medium",
+    "text": "The lines 3x − 4y + 7 = 0 and 4x + 3y − 1 = 0 are:",
+    "options": [
+      "perpendicular",
+      "parallel",
+      "coincident",
+      "inclined at 45°"
+    ],
+    "correct": 0,
+    "explanation": "Slopes 3/4 and −4/3 multiply to −1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath224",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The centre and radius of (x − 2)² + (y + 3)² = 16 are:",
+    "options": [
+      "(−2, 3) and 16",
+      "(−2, 3) and 4",
+      "(2, −3) and 16",
+      "(2, −3) and 4"
+    ],
+    "correct": 3,
+    "explanation": "Compare with (x − h)² + (y − k)² = r²: h = 2, k = −3, r = 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath225",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The equation of the circle with centre (1, 2) and radius 3 is:",
+    "options": [
+      "x² + y² + 2x + 4y − 4 = 0",
+      "x² + y² − 2x − 4y + 4 = 0",
+      "x² + y² − 2x − 4y − 4 = 0",
+      "x² + y² − 2x − 4y − 9 = 0"
+    ],
+    "correct": 2,
+    "explanation": "(x − 1)² + (y − 2)² = 9 ⇒ x² + y² − 2x − 4y + 5 − 9 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath226",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The centre and radius of x² + y² − 6x + 8y − 11 = 0 are:",
+    "options": [
+      "(3, −4) and √14",
+      "(3, −4) and 36",
+      "(−3, 4) and 6",
+      "(3, −4) and 6"
+    ],
+    "correct": 3,
+    "explanation": "g = −3, f = 4, c = −11: centre (−g, −f) = (3, −4), r = √(9 + 16 + 11) = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath227",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "x² + y² + 2gx + 2fy + c = 0 represents a real circle (of positive radius) if and only if:",
+    "options": [
+      "c > 0",
+      "g² + f² − c < 0",
+      "g² + f² + c > 0",
+      "g² + f² − c > 0"
+    ],
+    "correct": 3,
+    "explanation": "Radius = √(g² + f² − c), which must be a positive real number.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath228",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The circle on the segment joining (1, 2) and (3, 4) as diameter is:",
+    "options": [
+      "x² + y² − 2x − 4y + 11 = 0",
+      "x² + y² + 4x + 6y + 11 = 0",
+      "x² + y² − 4x − 6y + 11 = 0",
+      "x² + y² − 4x − 6y − 11 = 0"
+    ],
+    "correct": 2,
+    "explanation": "Diameter form: (x − 1)(x − 3) + (y − 2)(y − 4) = 0 ⇒ x² + y² − 4x − 6y + 3 + 8 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath229",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The tangent to x² + y² = 25 at the point (3, 4) is:",
+    "options": [
+      "3x − 4y = 25",
+      "3x + 4y = 25",
+      "4x + 3y = 25",
+      "3x + 4y = 5"
+    ],
+    "correct": 1,
+    "explanation": "Tangent to x² + y² = a² at (x₁, y₁) is xx₁ + yy₁ = a².",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath230",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The line y = mx + c is a tangent to x² + y² = a² if:",
+    "options": [
+      "c = a(1 + m)",
+      "c² = a²(1 + m²)",
+      "c² = a²(1 − m²)",
+      "c² = a² + m²"
+    ],
+    "correct": 1,
+    "explanation": "The distance from the centre, |c|/√(1 + m²), must equal the radius a.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath231",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "The values of c for which the line y = x + c touches the circle x² + y² = 8 are:",
+    "options": [
+      "±2",
+      "±8",
+      "±4",
+      "±2√2"
+    ],
+    "correct": 2,
+    "explanation": "c² = a²(1 + m²) = 8 × 2 = 16 ⇒ c = ±4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath232",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The circle through (0, 0), (4, 0) and (0, 6) is:",
+    "options": [
+      "x² + y² + 4x + 6y = 0",
+      "x² + y² − 4x − 6y + 13 = 0",
+      "x² + y² − 2x − 3y = 0",
+      "x² + y² − 4x − 6y = 0"
+    ],
+    "correct": 3,
+    "explanation": "Through the origin ⇒ c = 0. (4, 0): 16 + 8g = 0 ⇒ g = −2; (0, 6): 36 + 12f = 0 ⇒ f = −3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath233",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The radius of the circle 2x² + 2y² − 4x + 8y − 8 = 0 is:",
+    "options": [
+      "√14",
+      "9",
+      "3",
+      "√6"
+    ],
+    "correct": 2,
+    "explanation": "Divide by 2: x² + y² − 2x + 4y − 4 = 0, so r = √(1 + 4 + 4) = 3. Forgetting to divide first is the trap.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath234",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The point (2, 3) lies ______ the circle x² + y² = 9.",
+    "options": [
+      "at the centre of",
+      "inside",
+      "on",
+      "outside"
+    ],
+    "correct": 3,
+    "explanation": "Substitute: 4 + 9 − 9 = 4 > 0, so the point is outside.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath235",
+    "chapter": "Circles",
+    "difficulty": "easy",
+    "text": "The circle with centre (2, 3) that touches the x-axis is:",
+    "options": [
+      "(x − 2)² + (y − 3)² = 9",
+      "(x + 2)² + (y + 3)² = 9",
+      "(x − 2)² + (y − 3)² = 13",
+      "(x − 2)² + (y − 3)² = 4"
+    ],
+    "correct": 0,
+    "explanation": "Touching the x-axis means radius = |y-coordinate of centre| = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath236",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "A circle has its centre on the x-axis and passes through (2, 3) and (−1, 2). Its centre is:",
+    "options": [
+      "(3/4, 0)",
+      "(1/2, 0)",
+      "(−4/3, 0)",
+      "(4/3, 0)"
+    ],
+    "correct": 3,
+    "explanation": "With centre (h, 0): (h − 2)² + 9 = (h + 1)² + 4 ⇒ −6h + 8 = 0 ⇒ h = 4/3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath237",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The circle concentric with x² + y² − 4x − 6y − 3 = 0 and of radius 2 is:",
+    "options": [
+      "x² + y² + 4x + 6y + 9 = 0",
+      "x² + y² − 4x − 6y + 9 = 0",
+      "x² + y² − 4x − 6y + 1 = 0",
+      "x² + y² − 4x − 6y − 7 = 0"
+    ],
+    "correct": 1,
+    "explanation": "Common centre (2, 3): (x − 2)² + (y − 3)² = 4 ⇒ x² + y² − 4x − 6y + 9 = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath238",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "Which equation represents a real circle?",
+    "options": [
+      "x² − y² = 4",
+      "x² + 2y² − 4 = 0",
+      "x² + y² + 2x + 5 = 0",
+      "x² + y² − 2x + 4y + 1 = 0"
+    ],
+    "correct": 3,
+    "explanation": "Option 1: g² + f² − c = 1 + 4 − 1 = 4 > 0 (radius 2). Option 2 is an ellipse, option 3 a hyperbola, and option 4 has 1 − 5 < 0, no real points.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath239",
+    "chapter": "Circles",
+    "difficulty": "hard",
+    "text": "The tangent to x² + y² − 2x − 4y − 4 = 0 at the point (4, 2) is:",
+    "options": [
+      "3x + 2y = 16",
+      "y = 2",
+      "x + y = 6",
+      "x = 4"
+    ],
+    "correct": 3,
+    "explanation": "T = 0: 4x + 2y − (x + 4) − 2(y + 2) − 4 = 0 ⇒ 3x − 12 = 0 ⇒ x = 4. Indeed the radius from (1, 2) to (4, 2) is horizontal, so the tangent is vertical.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath240",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The line 3x + 4y = k touches the circle x² + y² = 4 when k is:",
+    "options": [
+      "±5",
+      "±2",
+      "±10",
+      "±20"
+    ],
+    "correct": 2,
+    "explanation": "Distance of the centre from the line = |k|/5 must equal 2 ⇒ |k| = 10.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath241",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The point on the circle x² + y² = 25 at which the tangent is parallel to the y-axis and lies to the right of the centre is:",
+    "options": [
+      "(0, 5)",
+      "(5, 0)",
+      "(3, 4)",
+      "(−5, 0)"
+    ],
+    "correct": 1,
+    "explanation": "A tangent parallel to the y-axis is a vertical line x = ±5; it touches where the radius is horizontal. On the right that is (5, 0).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath242",
+    "chapter": "Circles",
+    "difficulty": "medium",
+    "text": "The length of the tangent from the point (5, 1) to the circle x² + y² = 9 is:",
+    "options": [
+      "√26",
+      "17",
+      "4",
+      "√17"
+    ],
+    "correct": 3,
+    "explanation": "Length = √S₁ = √(25 + 1 − 9) = √17.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath243",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "lim (x → 2) (x² − 4)/(x − 2) equals:",
+    "options": [
+      "does not exist",
+      "0",
+      "2",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Factorise: (x − 2)(x + 2)/(x − 2) = x + 2 → 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath244",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "lim (x → 0) (sin 3x)/x equals:",
+    "options": [
+      "1/3",
+      "1",
+      "3",
+      "0"
+    ],
+    "correct": 2,
+    "explanation": "(sin 3x)/x = 3 · (sin 3x)/(3x) → 3 × 1 = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath245",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim (x → 0) (2ˣ − 1)/x equals:",
+    "options": [
+      "2",
+      "1",
+      "0",
+      "ln 2"
+    ],
+    "correct": 3,
+    "explanation": "Standard limit: (aˣ − 1)/x → ln a (= logₑ a).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath246",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim (x → 0) (1 − cos x)/x² equals:",
+    "options": [
+      "0",
+      "1",
+      "1/2",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "1 − cos x = 2 sin²(x/2), so the expression = (1/2)[sin(x/2)/(x/2)]² → 1/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath247",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim (x → ∞) (3x² + 2x)/(5x² − 1) equals:",
+    "options": [
+      "−2",
+      "∞",
+      "0",
+      "3/5"
+    ],
+    "correct": 3,
+    "explanation": "Divide numerator and denominator by x²: (3 + 2/x)/(5 − 1/x²) → 3/5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath248",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim (x → 1) (x¹⁰ − 1)/(x − 1) equals:",
+    "options": [
+      "9",
+      "0",
+      "1",
+      "10"
+    ],
+    "correct": 3,
+    "explanation": "Using lim (xⁿ − aⁿ)/(x − a) = naⁿ⁻¹ with a = 1, n = 10: the limit is 10.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath249",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "The derivative of x⁵ with respect to x is:",
+    "options": [
+      "x⁶/6",
+      "x⁴",
+      "5x⁵",
+      "5x⁴"
+    ],
+    "correct": 3,
+    "explanation": "Power rule: d/dx (xⁿ) = nxⁿ⁻¹.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath250",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "d/dx (cos x) equals:",
+    "options": [
+      "sin x",
+      "sec²x",
+      "−cos x",
+      "−sin x"
+    ],
+    "correct": 3,
+    "explanation": "The derivative of cos x is −sin x; that of sin x is cos x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath251",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "d/dx (x² sin x) equals:",
+    "options": [
+      "2x sin x + x² cos x",
+      "x² cos x",
+      "2x cos x",
+      "2x sin x − x² cos x"
+    ],
+    "correct": 0,
+    "explanation": "Product rule: (uv)′ = u′v + uv′ with u = x², v = sin x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath252",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "d/dx [x/(1 + x)] equals:",
+    "options": [
+      "1/(1 + x)²",
+      "1/(1 + x)",
+      "−1/(1 + x)²",
+      "x/(1 + x)²"
+    ],
+    "correct": 0,
+    "explanation": "Quotient rule: [(1 + x)(1) − x(1)]/(1 + x)² = 1/(1 + x)².",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath253",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "d/dx (tan x) equals:",
+    "options": [
+      "−cosec²x",
+      "sec x tan x",
+      "cot x",
+      "sec²x"
+    ],
+    "correct": 3,
+    "explanation": "tan x = sin x/cos x; by the quotient rule its derivative is 1/cos²x = sec²x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath254",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "d/dx [sin(3x + 2)] equals:",
+    "options": [
+      "3 sin(3x + 2)",
+      "3 cos(3x + 2)",
+      "−3 cos(3x + 2)",
+      "cos(3x + 2)"
+    ],
+    "correct": 1,
+    "explanation": "Chain rule: cos(3x + 2) × d/dx(3x + 2) = 3 cos(3x + 2).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath255",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "hard",
+    "text": "d/dx (sin²x) equals:",
+    "options": [
+      "2 cos x",
+      "2 sin x",
+      "sin 2x",
+      "cos²x"
+    ],
+    "correct": 2,
+    "explanation": "Chain rule: 2 sin x · cos x = sin 2x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath256",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "hard",
+    "text": "From first principles, lim (h → 0) [1/(x + h) − 1/x]/h equals:",
+    "options": [
+      "1/x²",
+      "−1/x²",
+      "ln x",
+      "−1/x"
+    ],
+    "correct": 1,
+    "explanation": "[x − (x + h)]/[hx(x + h)] = −1/[x(x + h)] → −1/x².",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath257",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "At x = 0, the function f(x) = |x| is:",
+    "options": [
+      "neither continuous nor differentiable",
+      "both continuous and differentiable",
+      "differentiable but not continuous",
+      "continuous but not differentiable"
+    ],
+    "correct": 3,
+    "explanation": "The limit and value are both 0, so f is continuous; but the left derivative is −1 and the right derivative is +1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath258",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "hard",
+    "text": "f(x) = (sin 2x)/x for x ≠ 0 and f(0) = k. f is continuous at x = 0 if k equals:",
+    "options": [
+      "0",
+      "1/2",
+      "1",
+      "2"
+    ],
+    "correct": 3,
+    "explanation": "Continuity needs k = lim (x → 0) (sin 2x)/x = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath259",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "lim (x → 0) (tan 2x)/(sin 5x) equals:",
+    "options": [
+      "2/5",
+      "1",
+      "5/2",
+      "0"
+    ],
+    "correct": 0,
+    "explanation": "tan 2x ≈ 2x and sin 5x ≈ 5x near 0, i.e. the ratio → (2 · 1)/(5 · 1) = 2/5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath260",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "hard",
+    "text": "lim (x → 2) (x³ − 8)/(x² − 4) equals:",
+    "options": [
+      "3",
+      "4",
+      "12",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "(x³ − 8)/(x² − 4) = (x² + 2x + 4)/(x + 2) → 12/4 = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath261",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "medium",
+    "text": "d/dx (x² + 1)³ equals:",
+    "options": [
+      "2x(x² + 1)²",
+      "3(x² + 1)²",
+      "6x(x² + 1)³",
+      "6x(x² + 1)²"
+    ],
+    "correct": 3,
+    "explanation": "Chain rule: 3(x² + 1)² × 2x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath262",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "easy",
+    "text": "If f(x) = x³ − 2x, then f′(2) is:",
+    "options": [
+      "4",
+      "10",
+      "12",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "f′(x) = 3x² − 2, so f′(2) = 12 − 2 = 10.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath263",
+    "chapter": "Limits and Derivatives",
+    "difficulty": "hard",
+    "text": "lim (x → 0) [√(1 + x) − 1]/x equals:",
+    "options": [
+      "0",
+      "2",
+      "1/2",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "Rationalise: x/[x(√(1 + x) + 1)] = 1/(√(1 + x) + 1) → 1/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath264",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The range of the data 3, 8, 2, 10, 6 is:",
+    "options": [
+      "5.8",
+      "8",
+      "7",
+      "10"
+    ],
+    "correct": 1,
+    "explanation": "Range = largest − smallest = 10 − 2 = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath265",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The mean deviation about the mean of 2, 4, 6, 8, 10 is:",
+    "options": [
+      "2.8",
+      "6",
+      "8",
+      "2.4"
+    ],
+    "correct": 3,
+    "explanation": "Mean = 6; |deviations| = 4, 2, 0, 2, 4, sum 12; MD = 12/5 = 2.4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath266",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The variance of 2, 4, 6, 8, 10 is:",
+    "options": [
+      "8",
+      "40",
+      "√8",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "Mean 6; squared deviations 16, 4, 0, 4, 16 sum to 40; variance = 40/5 = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath267",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "The standard deviation of 1, 2, 3, 4, 5 is:",
+    "options": [
+      "2",
+      "√2.5",
+      "√2",
+      "3"
+    ],
+    "correct": 2,
+    "explanation": "Mean 3; squared deviations sum to 10; variance = 10/5 = 2; SD = √2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath268",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "Standard deviation is:",
+    "options": [
+      "the square of the variance",
+      "the difference between the largest and smallest values",
+      "the mean of absolute deviations",
+      "the positive square root of the variance"
+    ],
+    "correct": 3,
+    "explanation": "σ = √(variance). The mean of absolute deviations is the mean deviation; largest − smallest is the range.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath269",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "If 5 is added to every observation of a data set, the standard deviation:",
+    "options": [
+      "remains unchanged",
+      "increases by 25",
+      "becomes 5 times",
+      "increases by 5"
+    ],
+    "correct": 0,
+    "explanation": "Shifting all values moves the mean by the same amount, so every deviation — and hence σ — is unchanged.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath270",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "If every observation is multiplied by 3, the variance is:",
+    "options": [
+      "multiplied by 9",
+      "increased by 3",
+      "multiplied by 3",
+      "unchanged"
+    ],
+    "correct": 0,
+    "explanation": "Deviations are tripled, so squared deviations (and the variance) are multiplied by 9; σ is multiplied by 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath271",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "A distribution has mean 40 and standard deviation 10. Its coefficient of variation is:",
+    "options": [
+      "4%",
+      "10%",
+      "400%",
+      "25%"
+    ],
+    "correct": 3,
+    "explanation": "CV = (σ/x̄) × 100 = (10/40) × 100 = 25%.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath272",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "Team A: mean score 50, SD 5. Team B: mean score 60, SD 9. Which is more consistent?",
+    "options": [
+      "Team A, since its CV is 10% against 15%",
+      "Team B, since its mean is higher",
+      "Team B, since its CV is lower",
+      "Both are equally consistent"
+    ],
+    "correct": 0,
+    "explanation": "CV(A) = 5/50 × 100 = 10% and CV(B) = 9/60 × 100 = 15%. Lower CV means more consistency.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath273",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "The variance of the first 10 natural numbers is:",
+    "options": [
+      "8.25",
+      "5.5",
+      "9.17",
+      "38.5"
+    ],
+    "correct": 0,
+    "explanation": "Variance of 1, 2, …, n is (n² − 1)/12 = 99/12 = 8.25.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath274",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "The mean deviation about the median of 3, 9, 5, 3, 12, 10, 18, 4, 7, 19, 21 is:",
+    "options": [
+      "58/11",
+      "9",
+      "5",
+      "60/11"
+    ],
+    "correct": 0,
+    "explanation": "Arranged: 3, 3, 4, 5, 7, 9, 10, 12, 18, 19, 21; median = 9. Sum of |x − 9| = 6 + 6 + 5 + 4 + 2 + 0 + 1 + 3 + 9 + 10 + 12 = 58, so MD = 58/11.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath275",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "For 10 observations, Σx = 60 and Σx² = 1000. The standard deviation is:",
+    "options": [
+      "√94",
+      "10",
+      "64",
+      "8"
+    ],
+    "correct": 3,
+    "explanation": "σ² = Σx²/n − (Σx/n)² = 100 − 36 = 64, so σ = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath276",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "Which measure of dispersion depends only on the two extreme observations?",
+    "options": [
+      "Range",
+      "Mean deviation",
+      "Standard deviation",
+      "Variance"
+    ],
+    "correct": 0,
+    "explanation": "Range = maximum − minimum; the others use every observation.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath277",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "For the distribution x: 2, 4, 6 with frequencies f: 1, 2, 1, the variance is:",
+    "options": [
+      "4",
+      "2",
+      "√2",
+      "8"
+    ],
+    "correct": 1,
+    "explanation": "N = 4, mean = (2 + 8 + 6)/4 = 4. Σf(x − 4)² = 4 + 0 + 4 = 8; variance = 8/4 = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath278",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "The mean of 20 observations was found to be 10. Later it was found that 12 was misread for 8. The correct mean is:",
+    "options": [
+      "9.6",
+      "9.8",
+      "10",
+      "10.2"
+    ],
+    "correct": 1,
+    "explanation": "Correct sum = 200 − 12 + 8 = 196, so the correct mean = 196/20 = 9.8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath279",
+    "chapter": "Statistics",
+    "difficulty": "easy",
+    "text": "The standard deviation of 7, 7, 7, 7 is:",
+    "options": [
+      "7",
+      "0",
+      "1",
+      "49"
+    ],
+    "correct": 1,
+    "explanation": "All values equal the mean, so every deviation is 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath280",
+    "chapter": "Statistics",
+    "difficulty": "hard",
+    "text": "The standard deviation of two observations a and b is:",
+    "options": [
+      "|a − b|/√2",
+      "|a − b|",
+      "(a + b)/2",
+      "|a − b|/2"
+    ],
+    "correct": 3,
+    "explanation": "Mean = (a + b)/2; each deviation is ±(a − b)/2, so σ = |a − b|/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath281",
+    "chapter": "Statistics",
+    "difficulty": "medium",
+    "text": "For ungrouped data x₁, …, xₙ with mean x̄, the variance can be computed as:",
+    "options": [
+      "Σx²/n − x̄²",
+      "Σ(x − x̄)/n",
+      "Σx²/n − x̄",
+      "(Σx)²/n − x̄²"
+    ],
+    "correct": 0,
+    "explanation": "σ² = (1/n)Σ(x − x̄)² simplifies to Σx²/n − x̄². Σ(x − x̄) is always 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath282",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The number of outcomes in the sample space when two coins are tossed is:",
+    "options": [
+      "8",
+      "3",
+      "4",
+      "2"
+    ],
+    "correct": 2,
+    "explanation": "S = {HH, HT, TH, TT}.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath283",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "When two dice are thrown, the probability that the sum is 7 is:",
+    "options": [
+      "1/12",
+      "1/6",
+      "5/36",
+      "7/36"
+    ],
+    "correct": 1,
+    "explanation": "Favourable: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) — 6 of 36.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath284",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A card is drawn from a well-shuffled pack of 52. The probability that it is a king is:",
+    "options": [
+      "1/4",
+      "4/13",
+      "1/52",
+      "1/13"
+    ],
+    "correct": 3,
+    "explanation": "There are 4 kings: 4/52 = 1/13.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath285",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "If P(A) = 0.5, P(B) = 0.3 and P(A ∩ B) = 0.1, then P(A ∪ B) is:",
+    "options": [
+      "0.7",
+      "0.9",
+      "0.8",
+      "0.15"
+    ],
+    "correct": 0,
+    "explanation": "Addition theorem: P(A ∪ B) = 0.5 + 0.3 − 0.1 = 0.7.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath286",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A and B are mutually exclusive with P(A) = 0.3 and P(B) = 0.4. The probability that neither occurs is:",
+    "options": [
+      "0.12",
+      "0.42",
+      "0.7",
+      "0.3"
+    ],
+    "correct": 3,
+    "explanation": "P(A ∪ B) = 0.3 + 0.4 = 0.7 (no overlap), so P(neither) = 1 − 0.7 = 0.3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath287",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "If P(A) = 2/7, then P(A′) is:",
+    "options": [
+      "2/7",
+      "5/7",
+      "7/2",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "P(A′) = 1 − P(A) = 5/7.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath288",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Three coins are tossed. The probability of getting at least one head is:",
+    "options": [
+      "1/2",
+      "1/8",
+      "7/8",
+      "3/8"
+    ],
+    "correct": 2,
+    "explanation": "P(no head) = P(TTT) = 1/8, so P(at least one head) = 7/8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath289",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "Two dice are thrown. The probability that the sum is at least 10 is:",
+    "options": [
+      "1/9",
+      "5/36",
+      "1/12",
+      "1/6"
+    ],
+    "correct": 3,
+    "explanation": "Sums 10, 11, 12 come from (4,6), (5,5), (6,4), (5,6), (6,5), (6,6): 6/36 = 1/6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath290",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "When a die is thrown, the events 'an even number' and 'an odd number' are:",
+    "options": [
+      "neither",
+      "mutually exclusive but not exhaustive",
+      "mutually exclusive and exhaustive",
+      "exhaustive but not mutually exclusive"
+    ],
+    "correct": 2,
+    "explanation": "They cannot happen together and together they cover {1, …, 6}; they are complementary events.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath291",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "A bag has 5 red and 3 blue balls. Two balls are drawn at random together. The probability that both are red is:",
+    "options": [
+      "5/8",
+      "25/64",
+      "5/14",
+      "10/56"
+    ],
+    "correct": 2,
+    "explanation": "⁵C₂/⁸C₂ = 10/28 = 5/14. (25/64 would be with replacement.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath292",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "A committee of 4 is chosen at random from 6 men and 4 women. The probability that it has exactly 2 women is:",
+    "options": [
+      "9/35",
+      "3/7",
+      "2/5",
+      "1/2"
+    ],
+    "correct": 1,
+    "explanation": "⁴C₂ × ⁶C₂ / ¹⁰C₄ = 6 × 15/210 = 90/210 = 3/7.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath293",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "For a sample space {ω₁, ω₂, ω₃}, which assignment is a valid probability assignment?",
+    "options": [
+      "P(ω₁) = 0.2, P(ω₂) = 0.5, P(ω₃) = 0.3",
+      "P(ω₁) = 0.4, P(ω₂) = 0.4, P(ω₃) = 0.4",
+      "P(ω₁) = 0.5, P(ω₂) = 0.6, P(ω₃) = −0.1",
+      "P(ω₁) = 0.1, P(ω₂) = 0.2, P(ω₃) = 0.3"
+    ],
+    "correct": 0,
+    "explanation": "Axioms: each probability lies in [0, 1] and they add to 1. Only the first satisfies both (the second has a negative value; the others add to 1.2 and 0.6).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath294",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "The probability that a leap year selected at random has 53 Sundays is:",
+    "options": [
+      "3/7",
+      "1/7",
+      "53/366",
+      "2/7"
+    ],
+    "correct": 3,
+    "explanation": "366 days = 52 weeks + 2 days. The 2 extra days are one of 7 equally likely pairs (Sun–Mon, …, Sat–Sun); 2 contain a Sunday.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath295",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "If P(A) = 0.42, P(B) = 0.48 and P(A ∩ B) = 0.16, then P(neither A nor B) is:",
+    "options": [
+      "0.74",
+      "0.26",
+      "0.10",
+      "0.58"
+    ],
+    "correct": 1,
+    "explanation": "P(A ∪ B) = 0.42 + 0.48 − 0.16 = 0.74, so P(A′ ∩ B′) = 1 − 0.74 = 0.26.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath296",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "The probability of an impossible event is:",
+    "options": [
+      "1/2",
+      "−1",
+      "1",
+      "0"
+    ],
+    "correct": 3,
+    "explanation": "An impossible event is φ, and P(φ) = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath297",
+    "chapter": "Probability",
+    "difficulty": "medium",
+    "text": "A letter is chosen at random from the word ASSASSINATION. The probability that it is a vowel is:",
+    "options": [
+      "4/13",
+      "6/13",
+      "3/13",
+      "7/13"
+    ],
+    "correct": 1,
+    "explanation": "13 letters; vowels are A (3), I (2), O (1) — 6 in all.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath298",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "If P(A) = 0.5, P(B) = 0.6 and P(A ∪ B) = 0.8, the probability that exactly one of A, B occurs is:",
+    "options": [
+      "0.5",
+      "0.3",
+      "0.2",
+      "0.8"
+    ],
+    "correct": 0,
+    "explanation": "P(A ∩ B) = 0.5 + 0.6 − 0.8 = 0.3; P(exactly one) = P(A ∪ B) − P(A ∩ B) = 0.5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath299",
+    "chapter": "Probability",
+    "difficulty": "easy",
+    "text": "A die is thrown and a coin is tossed. The number of outcomes in the sample space is:",
+    "options": [
+      "36",
+      "12",
+      "8",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "6 outcomes of the die × 2 of the coin = 12.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath300",
+    "chapter": "Probability",
+    "difficulty": "hard",
+    "text": "A 4-digit number is formed using the digits 1, 2, 3, 4 without repetition. The probability that it is divisible by 4 is:",
+    "options": [
+      "1/3",
+      "1/2",
+      "1/6",
+      "1/4"
+    ],
+    "correct": 3,
+    "explanation": "A number is divisible by 4 if its last two digits are: 12, 24, 32 qualify, each with 2 arrangements of the rest: 6 of 4! = 24.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath301",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The focus of the parabola y² = 12x is:",
+    "options": [
+      "(12, 0)",
+      "(−3, 0)",
+      "(0, 3)",
+      "(3, 0)"
+    ],
+    "correct": 3,
+    "explanation": "y² = 4ax with 4a = 12 ⇒ a = 3; focus (a, 0) = (3, 0).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath302",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The directrix of the parabola y² = 8x is:",
+    "options": [
+      "x = −8",
+      "x = 2",
+      "y = −2",
+      "x = −2"
+    ],
+    "correct": 3,
+    "explanation": "4a = 8 ⇒ a = 2; the directrix of y² = 4ax is x = −a.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath303",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The length of the latus rectum of y² = −16x is:",
+    "options": [
+      "4",
+      "−16",
+      "16",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "For y² = −4ax the latus rectum is 4a; here 4a = 16. A length is never negative.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath304",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The focus of the parabola x² = −8y is:",
+    "options": [
+      "(0, −8)",
+      "(0, 2)",
+      "(−2, 0)",
+      "(0, −2)"
+    ],
+    "correct": 3,
+    "explanation": "x² = −4ay with 4a = 8 ⇒ a = 2; it opens downward with focus (0, −a).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath305",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The eccentricity of the ellipse x²/25 + y²/9 = 1 is:",
+    "options": [
+      "5/4",
+      "3/5",
+      "3/4",
+      "4/5"
+    ],
+    "correct": 3,
+    "explanation": "a = 5, b = 3, c = √(25 − 9) = 4, so e = c/a = 4/5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath306",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The foci of the ellipse x²/25 + y²/9 = 1 are:",
+    "options": [
+      "(±3, 0)",
+      "(±5, 0)",
+      "(0, ±4)",
+      "(±4, 0)"
+    ],
+    "correct": 3,
+    "explanation": "c² = a² − b² = 16, and the major axis is along the x-axis.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath307",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The length of the latus rectum of the ellipse x²/25 + y²/9 = 1 is:",
+    "options": [
+      "18/5",
+      "9/5",
+      "50/3",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "2b²/a = 2 × 9/5 = 18/5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath308",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The eccentricity of the hyperbola x²/16 − y²/9 = 1 is:",
+    "options": [
+      "√7/4",
+      "5/4",
+      "4/5",
+      "5/3"
+    ],
+    "correct": 1,
+    "explanation": "c² = a² + b² = 25 ⇒ c = 5; e = 5/4. (√7/4 wrongly uses a² − b².)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath309",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The foci of the hyperbola x²/9 − y²/16 = 1 are:",
+    "options": [
+      "(±5, 0)",
+      "(±√7, 0)",
+      "(0, ±5)",
+      "(±3, 0)"
+    ],
+    "correct": 0,
+    "explanation": "c² = 9 + 16 = 25 ⇒ c = 5, on the transverse (x-) axis.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath310",
+    "chapter": "Conic Sections",
+    "difficulty": "hard",
+    "text": "The foci of the ellipse x²/16 + y²/25 = 1 are:",
+    "options": [
+      "(0, ±3)",
+      "(±3, 0)",
+      "(0, ±√41)",
+      "(±√41, 0)"
+    ],
+    "correct": 0,
+    "explanation": "Here 25 > 16, so the major axis is the y-axis: a² = 25, b² = 16, c = 3; foci (0, ±3).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath311",
+    "chapter": "Conic Sections",
+    "difficulty": "easy",
+    "text": "The eccentricity of every parabola is:",
+    "options": [
+      "greater than 1",
+      "1",
+      "0",
+      "less than 1"
+    ],
+    "correct": 1,
+    "explanation": "A parabola is the locus of points whose distance from the focus equals the distance from the directrix: e = 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath312",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "Which statement about eccentricity is correct?",
+    "options": [
+      "Ellipse: e > 1; hyperbola: 0 < e < 1",
+      "Both have e < 1",
+      "Ellipse: 0 < e < 1; hyperbola: e > 1",
+      "Both have e = 1"
+    ],
+    "correct": 2,
+    "explanation": "For an ellipse c < a, so e = c/a < 1; for a hyperbola c > a, so e > 1. (A circle is the limiting case e = 0.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath313",
+    "chapter": "Conic Sections",
+    "difficulty": "hard",
+    "text": "The ellipse with vertices (±5, 0) and foci (±4, 0) is:",
+    "options": [
+      "x²/25 − y²/9 = 1",
+      "x²/9 + y²/25 = 1",
+      "x²/25 + y²/16 = 1",
+      "x²/25 + y²/9 = 1"
+    ],
+    "correct": 3,
+    "explanation": "a = 5, c = 4 ⇒ b² = a² − c² = 9.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath314",
+    "chapter": "Conic Sections",
+    "difficulty": "hard",
+    "text": "The hyperbola with foci (0, ±13) and conjugate axis of length 24 is:",
+    "options": [
+      "y²/169 − x²/144 = 1",
+      "x²/25 − y²/144 = 1",
+      "y²/144 − x²/25 = 1",
+      "y²/25 − x²/144 = 1"
+    ],
+    "correct": 3,
+    "explanation": "Foci on the y-axis ⇒ y²/a² − x²/b² = 1. 2b = 24 ⇒ b = 12; a² = c² − b² = 169 − 144 = 25.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath315",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The parabola with vertex at the origin and focus (0, 3) is:",
+    "options": [
+      "x² = −12y",
+      "y² = 12x",
+      "x² = 3y",
+      "x² = 12y"
+    ],
+    "correct": 3,
+    "explanation": "Focus on the positive y-axis with a = 3 ⇒ x² = 4ay = 12y.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath316",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The length of the latus rectum of the hyperbola x²/16 − y²/9 = 1 is:",
+    "options": [
+      "8",
+      "32/3",
+      "9/4",
+      "9/2"
+    ],
+    "correct": 3,
+    "explanation": "2b²/a = 2 × 9/4 = 9/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath317",
+    "chapter": "Conic Sections",
+    "difficulty": "hard",
+    "text": "For the ellipse 9x² + 4y² = 36, the length of the major axis is:",
+    "options": [
+      "4",
+      "6",
+      "3",
+      "9"
+    ],
+    "correct": 1,
+    "explanation": "Divide by 36: x²/4 + y²/9 = 1. The larger denominator 9 is under y², so a = 3 and the major axis (along y) has length 2a = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath318",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The length of the transverse axis of the hyperbola 9x² − 16y² = 144 is:",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "Divide by 144: x²/16 − y²/9 = 1, so a = 4 and the transverse axis is 2a = 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath319",
+    "chapter": "Conic Sections",
+    "difficulty": "hard",
+    "text": "The parabola y² = 4ax passes through (2, 3). Its equation is:",
+    "options": [
+      "2y² = 3x",
+      "y² = 9x",
+      "y² = 6x",
+      "2y² = 9x"
+    ],
+    "correct": 3,
+    "explanation": "9 = 8a ⇒ a = 9/8, so y² = (9/2)x, i.e. 2y² = 9x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath320",
+    "chapter": "Conic Sections",
+    "difficulty": "medium",
+    "text": "The vertices of the hyperbola y²/9 − x²/16 = 1 are:",
+    "options": [
+      "(0, ±3)",
+      "(±4, 0)",
+      "(0, ±4)",
+      "(±3, 0)"
+    ],
+    "correct": 0,
+    "explanation": "The positive term is y², so the transverse axis is the y-axis with a = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath321",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The distance between (1, 2, 3) and (4, 6, 3) is:",
+    "options": [
+      "25",
+      "5",
+      "7",
+      "√7"
+    ],
+    "correct": 1,
+    "explanation": "√(3² + 4² + 0²) = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath322",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The point (0, 3, −4) lies in the:",
+    "options": [
+      "xy-plane",
+      "x-axis",
+      "xz-plane",
+      "yz-plane"
+    ],
+    "correct": 3,
+    "explanation": "Its x-coordinate is 0, and every point of the yz-plane has x = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath323",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The distance of the point (3, 4, 12) from the origin is:",
+    "options": [
+      "√19",
+      "19",
+      "13",
+      "12"
+    ],
+    "correct": 2,
+    "explanation": "√(9 + 16 + 144) = √169 = 13.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath324",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The distance of the point (2, −3, 6) from the x-axis is:",
+    "options": [
+      "√13",
+      "3√5",
+      "2",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "The foot on the x-axis is (2, 0, 0); distance = √(y² + z²) = √(9 + 36) = √45 = 3√5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath325",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The mid-point of the segment joining (1, −2, 3) and (3, 4, −5) is:",
+    "options": [
+      "(2, 1, −1)",
+      "(1, 3, −4)",
+      "(2, 3, −1)",
+      "(4, 2, −2)"
+    ],
+    "correct": 0,
+    "explanation": "Average each coordinate: ((1 + 3)/2, (−2 + 4)/2, (3 − 5)/2).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath326",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The point dividing the join of (2, −3, 4) and (8, 0, 10) internally in the ratio 1 : 2 is:",
+    "options": [
+      "(4, −2, 6)",
+      "(6, −1, 8)",
+      "(4, −1, 6)",
+      "(5, −3/2, 7)"
+    ],
+    "correct": 0,
+    "explanation": "((1·8 + 2·2)/3, (1·0 + 2·(−3))/3, (1·10 + 2·4)/3) = (4, −2, 6).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath327",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "hard",
+    "text": "The point dividing the join of A(1, 2, 3) and B(4, 5, 6) externally in the ratio 2 : 1 is:",
+    "options": [
+      "(9, 12, 15)",
+      "(7, 8, 9)",
+      "(−2, −1, 0)",
+      "(3, 4, 5)"
+    ],
+    "correct": 1,
+    "explanation": "((2·4 − 1·1)/(2 − 1), (2·5 − 1·2)/1, (2·6 − 1·3)/1) = (7, 8, 9).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath328",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The centroid of the triangle with vertices (1, 2, 3), (2, 3, 1) and (3, 1, 2) is:",
+    "options": [
+      "(1, 1, 1)",
+      "(2, 2, 2)",
+      "(3, 3, 3)",
+      "(6, 6, 6)"
+    ],
+    "correct": 1,
+    "explanation": "Centroid = (Σx/3, Σy/3, Σz/3) = (6/3, 6/3, 6/3).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath329",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The foot of the perpendicular from (3, 4, 5) to the xy-plane is:",
+    "options": [
+      "(0, 4, 5)",
+      "(3, 0, 5)",
+      "(3, 4, 0)",
+      "(0, 0, 5)"
+    ],
+    "correct": 2,
+    "explanation": "Dropping to the xy-plane sets z = 0 and keeps x, y.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath330",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "hard",
+    "text": "The yz-plane divides the segment joining (−2, 4, 7) and (3, −5, 8) in the ratio:",
+    "options": [
+      "1 : 1",
+      "2 : 3 internally",
+      "3 : 2 internally",
+      "2 : 3 externally"
+    ],
+    "correct": 1,
+    "explanation": "On the yz-plane x = 0: (3k − 2)/(k + 1) = 0 ⇒ k = 2/3, positive, so 2 : 3 internally.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath331",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The points A(1, 2, 3), B(2, 3, 4) and C(3, 4, 5) are:",
+    "options": [
+      "vertices of an isosceles, non-collinear triangle",
+      "vertices of a right-angled triangle",
+      "vertices of an equilateral triangle",
+      "collinear"
+    ],
+    "correct": 3,
+    "explanation": "AB = √3, BC = √3 and AC = 2√3 = AB + BC, so B lies on AC.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath332",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "A general point on the z-axis has coordinates:",
+    "options": [
+      "(0, 0, z)",
+      "(x, y, 0)",
+      "(0, y, 0)",
+      "(x, 0, 0)"
+    ],
+    "correct": 0,
+    "explanation": "On the z-axis both x and y are zero.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath333",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "hard",
+    "text": "The point on the x-axis equidistant from (1, 2, 3) and (3, 5, −2) is:",
+    "options": [
+      "(6, 0, 0)",
+      "(2, 0, 0)",
+      "(−6, 0, 0)",
+      "(4, 0, 0)"
+    ],
+    "correct": 0,
+    "explanation": "(x − 1)² + 4 + 9 = (x − 3)² + 25 + 4 ⇒ 4x = 24 ⇒ x = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath334",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The triangle with vertices (0, 7, −10), (1, 6, −6) and (4, 9, −6) is:",
+    "options": [
+      "degenerate (collinear)",
+      "equilateral",
+      "scalene and obtuse-angled",
+      "right-angled and isosceles"
+    ],
+    "correct": 3,
+    "explanation": "AB = BC = √18 and AC = 6; AB² + BC² = 36 = AC², so it is right-angled at B and isosceles.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath335",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "easy",
+    "text": "The three coordinate planes divide space into how many octants?",
+    "options": [
+      "4",
+      "3",
+      "6",
+      "8"
+    ],
+    "correct": 3,
+    "explanation": "Each of x, y, z can be positive or negative: 2³ = 8 octants.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath336",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "The distance of the point (4, −3, 5) from the xy-plane is:",
+    "options": [
+      "5",
+      "5√2",
+      "4",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "Distance from the xy-plane is |z| = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath337",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "medium",
+    "text": "If the origin is the centroid of the triangle with vertices (2a, 2, 6), (−4, 3b, −10) and (8, 14, 2c), then (a, b, c) is:",
+    "options": [
+      "(−2, −16/3, 2)",
+      "(−2, 16/3, 2)",
+      "(−1, −16/3, 4)",
+      "(2, 16/3, −2)"
+    ],
+    "correct": 0,
+    "explanation": "Each coordinate sum must be 0: 2a − 4 + 8 = 0 ⇒ a = −2; 2 + 3b + 14 = 0 ⇒ b = −16/3; 6 − 10 + 2c = 0 ⇒ c = 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath338",
+    "chapter": "Introduction to Three-Dimensional Geometry",
+    "difficulty": "hard",
+    "text": "The set of points P(x, y, z) equidistant from A(1, 2, 3) and B(3, 2, −1) satisfies:",
+    "options": [
+      "x − 2z = 4",
+      "2x − z = 0",
+      "x − 2z = 0",
+      "x + 2z = 0"
+    ],
+    "correct": 2,
+    "explanation": "PA² = PB² ⇒ (x − 1)² + (z − 3)² = (x − 3)² + (z + 1)² (the y-terms cancel) ⇒ 4x − 8z = 0 ⇒ x − 2z = 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath339",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "Which of the following is a statement (in the logical sense)?",
+    "options": [
+      "x + 2 = 5",
+      "The sum of 2 and 3 is 6.",
+      "How beautiful the sky is!",
+      "Close the door."
+    ],
+    "correct": 1,
+    "explanation": "A statement is a sentence that is either true or false, not both. '2 + 3 = 6' is a false statement; commands, exclamations and open sentences are not statements.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath340",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "The negation of '√2 is irrational' is:",
+    "options": [
+      "√2 is not irrational",
+      "√3 is irrational",
+      "√2 is a real number",
+      "√2 is irrational and rational"
+    ],
+    "correct": 0,
+    "explanation": "Negation simply reverses the truth: 'It is not the case that √2 is irrational', i.e. √2 is rational.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath341",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The negation of 'All birds can fly' is:",
+    "options": [
+      "All birds cannot fly",
+      "Some birds can fly",
+      "No bird can fly",
+      "There exists a bird that cannot fly"
+    ],
+    "correct": 3,
+    "explanation": "The negation of 'for all' is 'there exists … not'. 'No bird can fly' is far stronger than what is needed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath342",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The negation of p ∧ q is:",
+    "options": [
+      "p ∨ q",
+      "∼p ∧ ∼q",
+      "∼p ∨ ∼q",
+      "∼p ∧ q"
+    ],
+    "correct": 2,
+    "explanation": "De Morgan's law for statements: ∼(p ∧ q) ≡ ∼p ∨ ∼q.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath343",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The contrapositive of 'If a number is divisible by 9, then it is divisible by 3' is:",
+    "options": [
+      "If a number is not divisible by 3, then it is not divisible by 9",
+      "A number is divisible by 9 and not by 3",
+      "If a number is divisible by 3, then it is divisible by 9",
+      "If a number is not divisible by 9, then it is not divisible by 3"
+    ],
+    "correct": 0,
+    "explanation": "The contrapositive of p ⇒ q is ∼q ⇒ ∼p. Option 2 is the converse and option 3 the inverse.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath344",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The converse of 'If a number is divisible by 9, then it is divisible by 3' is:",
+    "options": [
+      "If a number is not divisible by 9, then it is not divisible by 3",
+      "If a number is not divisible by 3, then it is not divisible by 9",
+      "If a number is divisible by 3, then it is divisible by 9",
+      "A number is divisible by 9 if and only if it is divisible by 3"
+    ],
+    "correct": 2,
+    "explanation": "The converse of p ⇒ q is q ⇒ p. (Here the converse is false: 6 is divisible by 3 but not by 9.)",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath345",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "The compound statement p ∨ q is false only when:",
+    "options": [
+      "both p and q are false",
+      "p is false and q is true",
+      "both p and q are true",
+      "p is true and q is false"
+    ],
+    "correct": 0,
+    "explanation": "An inclusive 'or' is true if at least one component is true.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath346",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "The compound statement p ∧ q is true only when:",
+    "options": [
+      "exactly one of p, q is true",
+      "at least one of p, q is true",
+      "both p and q are false",
+      "both p and q are true"
+    ],
+    "correct": 3,
+    "explanation": "'And' requires every component to be true.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath347",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The implication p ⇒ q is false only when:",
+    "options": [
+      "p is true and q is false",
+      "p is false and q is true",
+      "both are false",
+      "both are true"
+    ],
+    "correct": 0,
+    "explanation": "A promise 'if p then q' is broken only when p happens and q does not.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath348",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The statement p ⇒ q is logically equivalent to:",
+    "options": [
+      "∼p ⇒ ∼q",
+      "∼q ⇒ ∼p",
+      "p ∧ ∼q",
+      "q ⇒ p"
+    ],
+    "correct": 1,
+    "explanation": "A statement and its contrapositive always have the same truth value; the converse and inverse need not.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath349",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The truth value of 'There exists a real number x such that x² < 0' is:",
+    "options": [
+      "false",
+      "true",
+      "true only for negative x",
+      "neither true nor false"
+    ],
+    "correct": 0,
+    "explanation": "For every real x, x² ≥ 0, so no such x exists.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath350",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "hard",
+    "text": "The negation of 'For every real number x, x² ≥ 0' is:",
+    "options": [
+      "There exists a real number x such that x² ≥ 0",
+      "For every real number x, x² < 0",
+      "There exists a real number x such that x² < 0",
+      "For every real number x, x² ≤ 0"
+    ],
+    "correct": 2,
+    "explanation": "∼(∀x, P(x)) ≡ ∃x, ∼P(x), and the negation of x² ≥ 0 is x² < 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath351",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The biconditional p ⇔ q is true exactly when:",
+    "options": [
+      "p and q have different truth values",
+      "q is true",
+      "p and q have the same truth value",
+      "p is true"
+    ],
+    "correct": 2,
+    "explanation": "p ⇔ q means (p ⇒ q) ∧ (q ⇒ p); it holds when both are true or both are false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath352",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "hard",
+    "text": "To prove 'If n² is even, then n is even' (n an integer), the most convenient method is to prove:",
+    "options": [
+      "If n is even, then n² is even",
+      "If n² is odd, then n is odd",
+      "n² is even for every n",
+      "If n is odd, then n² is odd"
+    ],
+    "correct": 3,
+    "explanation": "That is the contrapositive (∼q ⇒ ∼p): n = 2m + 1 gives n² = 2(2m² + 2m) + 1, odd. Option 2 is the converse, which does not prove the claim.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath353",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "The compound statement '7 is a prime number or 7 is even' is:",
+    "options": [
+      "true, since the first component is true",
+      "not a statement",
+      "false, since 7 is not even",
+      "true, since both components are true"
+    ],
+    "correct": 0,
+    "explanation": "For 'or', one true component is enough.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath354",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "hard",
+    "text": "A counter-example to the statement 'If n is a prime number, then n is odd' is:",
+    "options": [
+      "n = 3",
+      "n = 1",
+      "n = 9",
+      "n = 2"
+    ],
+    "correct": 3,
+    "explanation": "2 is prime but even, so the hypothesis holds while the conclusion fails. 9 is odd but not prime — not a counter-example to this statement.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath355",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "medium",
+    "text": "The negation of 'x > 3 or x < 1' is:",
+    "options": [
+      "x > 3 and x < 1",
+      "x < 3 and x > 1",
+      "x ≤ 3 and x ≥ 1",
+      "x ≤ 3 or x ≥ 1"
+    ],
+    "correct": 2,
+    "explanation": "∼(p ∨ q) ≡ ∼p ∧ ∼q; the negation of x > 3 is x ≤ 3 and of x < 1 is x ≥ 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsemath356",
+    "chapter": "Mathematical Reasoning",
+    "difficulty": "easy",
+    "text": "The number of rows in the truth table of a compound statement built from 3 simple statements is:",
+    "options": [
+      "8",
+      "9",
+      "6",
+      "3"
+    ],
+    "correct": 0,
+    "explanation": "Each statement is T or F: 2³ = 8 combinations.",
+    "source": "Rise Practice"
+  }
+]
