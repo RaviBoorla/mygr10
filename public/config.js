@@ -18,7 +18,7 @@ const SUBJECTS = {
   },
   XI: {
     CBSE: ['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Computer Science', 'Mathematics', 'Political Science', 'Informatics Practices', 'Biology'],
-    ICSE: ['Physics']
+    ICSE: ['Physics', 'Chemistry']
   },
   XII: {
     CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
@@ -85,7 +85,8 @@ const BANKS = {
   'XI CBSE Informatics Practices': 'XI-CBSE-Information-Practices',
   'XI CBSE Biology':         'XI-CBSE-Biology',
 
-  'XI ICSE Physics':         'XI-ICSE-Physics'
+  'XI ICSE Physics':         'XI-ICSE-Physics',
+  'XI ICSE Chemistry':       'XI-ICSE-Chemistry'
 };
 
 const SA_BANKS = {
@@ -141,7 +142,8 @@ const SA_BANKS = {
   'XI CBSE Informatics Practices': 'XI-CBSE-Information-Practices-ShortAnswers',
   // XI CBSE Accountancy/Economics/Psychology/Biology: no Short Answers banks — only MCQ + Solved Exercises
 
-  'XI ICSE Physics':         'XI-ICSE-Physics-ShortAnswers'
+  'XI ICSE Physics':         'XI-ICSE-Physics-ShortAnswers',
+  'XI ICSE Chemistry':       'XI-ICSE-Chemistry-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;
