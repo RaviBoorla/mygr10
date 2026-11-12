@@ -49,7 +49,7 @@ const NOTES_SOURCES = {
     Psychology:         { CBSE: [['XI Psychology']] },
     Physics:            { CBSE: [['XI Physics']], ICSE: [['XI ICSE Physics']] },
     Chemistry:          { CBSE: [['XI Chemistry']], ICSE: [['XI ICSE Chemistry']] },
-    'Comp App & IT':    { CBSE: [['XI Computer Science']] },
+    'Comp App & IT':    { CBSE: [['XI Computer Science']], ICSE: [['XI ICSE Computer Science']] },
     Mathematics:            { CBSE: [['XI Mathematics']], ICSE: [['XI ICSE Mathematics']] },
     'Political Science':    { CBSE: [['XI Political Science']] },
     'Informatics Practices': { CBSE: [['XI Informatics Practices']] },
@@ -92,7 +92,8 @@ const REVISION_EXTRA_FILES = {
     { file: 'revision-data-xi-icse-physics.js?v=d19467ba',           probeKey: 'XI ICSE Physics' },
     { file: 'revision-data-xi-icse-chemistry.js?v=36d62ddc',         probeKey: 'XI ICSE Chemistry' },
     { file: 'revision-data-xi-icse-maths.js?v=eae071b2',             probeKey: 'XI ICSE Mathematics' },
-    { file: 'revision-data-xi-icse-biology.js?v=715e88e9',           probeKey: 'XI ICSE Biology' }
+    { file: 'revision-data-xi-icse-biology.js?v=715e88e9',           probeKey: 'XI ICSE Biology' },
+    { file: 'revision-data-xi-icse-compsci.js?v=bcb7ac7b',           probeKey: 'XI ICSE Computer Science' }
   ],
   XII: [
     { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }

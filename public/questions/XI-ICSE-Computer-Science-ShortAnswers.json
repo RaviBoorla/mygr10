@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "sa-xiicse-cs-001",
+    "chapter": "Number Systems",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Convert (237)₁₀ into binary and hexadecimal.",
+    "modelAnswer": "Repeated division by 2 gives remainders (read bottom-up) 11101101, so (237)₁₀ = (11101101)₂. Grouping into fours: 1110 1101 → E D, so (237)₁₀ = (ED)₁₆.",
+    "keyPoints": [
+      "Binary 11101101",
+      "Grouping of 4 bits from the right",
+      "Hexadecimal ED"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-002",
+    "chapter": "Number Systems",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Convert (43.375)₁₀ to binary, showing the working for both the integer and the fractional parts.",
+    "modelAnswer": "Integer part by repeated division by 2: 43→21 r1, 21→10 r1, 10→5 r0, 5→2 r1, 2→1 r0, 1→0 r1; reading upward 101011.\nFraction by repeated multiplication by 2: 0.375×2 = 0.75 → 0; 0.75×2 = 1.5 → 1; 0.5×2 = 1.0 → 1; reading downward .011.\nAnswer: (43.375)₁₀ = (101011.011)₂.",
+    "keyPoints": [
+      "Integer: repeated ÷2, remainders read upward",
+      "Fraction: repeated ×2, integer parts read downward",
+      "Result 101011.011"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-003",
+    "chapter": "Number Systems",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Subtract 0110101 from 1010010 using the 2's complement method (7-bit words).",
+    "modelAnswer": "Minuend 1010010 (82), subtrahend 0110101 (53).\n1's complement of subtrahend: 1001010; add 1 → 2's complement 1001011.\nAdd: 1010010 + 1001011 = 1 0011101. The 8th-bit carry is discarded, leaving 0011101.\nCheck: 0011101 = 29 = 82 − 53.",
+    "keyPoints": [
+      "2's complement of subtrahend = 1001011",
+      "Add to minuend",
+      "Discard end carry",
+      "Result 0011101 (29)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-004",
+    "chapter": "Number Systems",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Why are octal and hexadecimal convenient shorthand for binary?",
+    "modelAnswer": "Since 8 = 2³ and 16 = 2⁴, each octal digit maps to exactly 3 bits and each hexadecimal digit to exactly 4 bits. Long bit strings can therefore be written compactly and converted back by simple grouping, without arithmetic.",
+    "keyPoints": [
+      "8 = 2³, 16 = 2⁴",
+      "Direct grouping of 3 or 4 bits",
+      "Shorter, less error-prone to read"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-005",
+    "chapter": "Number Systems",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "(a) Convert (5B.4)₁₆ to octal via binary. (b) Find the 8-bit 2's complement representation of −76 and verify it by adding it to +76.",
+    "modelAnswer": "(a) 5 → 0101, B → 1011, 4 → 0100, so (5B.4)₁₆ = 01011011.0100₂. Regroup in threes from the point: 001 011 011 . 010 → 1 3 3 . 2, so (5B.4)₁₆ = (133.2)₈ (= 91.25₁₀).\n(b) +76 = 01001100. Invert → 10110011; add 1 → 10110100. So −76 = 10110100.\nCheck: 01001100 + 10110100 = 1 00000000; dropping the carry leaves 00000000, confirming the pair sums to zero.",
+    "keyPoints": [
+      "Hex → 4-bit groups",
+      "Regroup into 3-bit groups around the point",
+      "(133.2)₈",
+      "−76 = 10110100",
+      "Sum with +76 gives 0 after discarding carry"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-006",
+    "chapter": "Number Systems",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Add the binary numbers 1101.101 and 111.011.",
+    "modelAnswer": "Align the points: 1101.101 + 0111.011. Fraction: .101 + .011 = 1.000 (carry 1). Integer: 1101 + 0111 + 1 = 10101. Sum = 10101.000₂ = 10101₂ (13.625 + 7.375 = 21).",
+    "keyPoints": [
+      "Align binary points",
+      "Carry from fraction to integer",
+      "Sum 10101 (21)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-007",
+    "chapter": "Encodings",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State the range of integers representable in n-bit 2's complement and evaluate it for n = 12.",
+    "modelAnswer": "Range = −2ⁿ⁻¹ to 2ⁿ⁻¹ − 1. For n = 12: −2¹¹ to 2¹¹ − 1, i.e. −2048 to +2047.",
+    "keyPoints": [
+      "General formula −2ⁿ⁻¹ … 2ⁿ⁻¹ − 1",
+      "n = 12 → −2048 to 2047"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-008",
+    "chapter": "Encodings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Represent −52 in 8-bit (i) sign-magnitude, (ii) 1's complement and (iii) 2's complement form.",
+    "modelAnswer": "+52 = 00110100.\n(i) Sign-magnitude: set the sign bit → 10110100.\n(ii) 1's complement: invert all bits of +52 → 11001011.\n(iii) 2's complement: 1's complement + 1 → 11001100.",
+    "keyPoints": [
+      "+52 = 00110100",
+      "SM 10110100",
+      "1's complement 11001011",
+      "2's complement 11001100"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-009",
+    "chapter": "Encodings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Distinguish between ASCII, ISCII and Unicode.",
+    "modelAnswer": "ASCII: 7-bit code (128 characters) for English letters, digits, punctuation and control codes.\nISCII: 8-bit code that keeps ASCII in its lower half and uses the upper half for Indian scripts (Devanagari, Bengali, Tamil, etc.).\nUnicode: a universal character set assigning a unique code point (U+0000 … U+10FFFF) to characters of all scripts; stored using encodings such as UTF-8 (1–4 bytes, ASCII-compatible), UTF-16 or UTF-32.",
+    "keyPoints": [
+      "ASCII 7-bit, 128 characters",
+      "ISCII 8-bit for Indian scripts",
+      "Unicode universal code points",
+      "UTF-8 is a variable-length Unicode encoding"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-010",
+    "chapter": "Encodings",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is overflow in 2's complement addition? How can it be detected?",
+    "modelAnswer": "Overflow occurs when the true result of an operation lies outside the representable range, so the stored bits show a wrong value. It is detected when two numbers of the same sign are added and the result has the opposite sign (equivalently, the carry into the sign bit differs from the carry out of it). Adding numbers of opposite sign can never overflow.",
+    "keyPoints": [
+      "Result outside range",
+      "Same-sign operands give opposite-sign result",
+      "Carry into MSB ≠ carry out of MSB"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-011",
+    "chapter": "Encodings",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain the idea of floating-point representation of real numbers. Express 13.25 in normalised binary form m × 2ᵉ (1 ≤ m < 2), and state why some decimal values cannot be stored exactly.",
+    "modelAnswer": "A floating-point number is stored as a sign, a mantissa (significand) and an exponent, like scientific notation in base 2. The exponent lets the point 'float', giving a very wide range, while the mantissa width fixes the precision.\n13.25₁₀ = 1101.01₂. Moving the point 3 places left: 1.10101 × 2³ (mantissa 1.10101, exponent 3).\nOnly fractions whose denominators are powers of 2 terminate in binary. A value like 0.1 becomes the repeating 0.000110011…₂, which must be cut off at the mantissa width, so it is stored as a close approximation; this is why 0.1 + 0.2 is not exactly 0.3 in floating point.",
+    "keyPoints": [
+      "Sign, mantissa, exponent",
+      "Range vs precision trade-off",
+      "13.25 = 1101.01₂ = 1.10101 × 2³",
+      "Non-terminating binary fractions are rounded"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-012",
+    "chapter": "Encodings",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Why does a 7-bit code limit the number of characters to 128? How many characters can an 8-bit code hold?",
+    "modelAnswer": "Each extra bit doubles the number of patterns; 7 bits give 2⁷ = 128 distinct codes. An 8-bit code gives 2⁸ = 256 codes.",
+    "keyPoints": [
+      "2⁷ = 128",
+      "2⁸ = 256"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-013",
+    "chapter": "Propositional Logic",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Define tautology, contradiction and contingency with one example each.",
+    "modelAnswer": "Tautology: always true, e.g. p ∨ ¬p.\nContradiction: always false, e.g. p ∧ ¬p.\nContingency: true for some assignments and false for others, e.g. p → q.",
+    "keyPoints": [
+      "Tautology always true + example",
+      "Contradiction always false + example",
+      "Contingency mixed + example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-014",
+    "chapter": "Propositional Logic",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "For the statement 'If it rains, then the match is cancelled', write the converse, inverse and contrapositive. Which of these is equivalent to the original?",
+    "modelAnswer": "Let p: it rains, q: the match is cancelled. Original p → q.\nConverse (q → p): If the match is cancelled, then it rains.\nInverse (¬p → ¬q): If it does not rain, then the match is not cancelled.\nContrapositive (¬q → ¬p): If the match is not cancelled, then it does not rain.\nOnly the contrapositive is logically equivalent to the original.",
+    "keyPoints": [
+      "Correct converse",
+      "Correct inverse",
+      "Correct contrapositive",
+      "Contrapositive ≡ original"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-015",
+    "chapter": "Propositional Logic",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Using a truth table, show that ¬(p ∨ q) ≡ ¬p ∧ ¬q.",
+    "modelAnswer": "p q | p∨q | ¬(p∨q) | ¬p | ¬q | ¬p∧¬q\nT T |  T  |   F    | F  | F  |  F\nT F |  T  |   F    | F  | T  |  F\nF T |  T  |   F    | T  | F  |  F\nF F |  F  |   T    | T  | T  |  T\nThe columns ¬(p ∨ q) and ¬p ∧ ¬q are identical in every row, so the two are logically equivalent (De Morgan's law).",
+    "keyPoints": [
+      "All 4 rows listed",
+      "Correct intermediate columns",
+      "Final columns identical ⇒ equivalent"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-016",
+    "chapter": "Propositional Logic",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Using laws of logic (not a truth table), prove that (p ∧ q) → (p ∨ q) is a tautology. Name each law used.",
+    "modelAnswer": "(p ∧ q) → (p ∨ q)\n≡ ¬(p ∧ q) ∨ (p ∨ q)        [conditional law: a → b ≡ ¬a ∨ b]\n≡ (¬p ∨ ¬q) ∨ (p ∨ q)        [De Morgan's law]\n≡ (¬p ∨ p) ∨ (¬q ∨ q)        [commutative and associative laws]\n≡ T ∨ T                       [complement law: ¬x ∨ x ≡ T]\n≡ T                           [idempotent / domination law]\nHence the proposition is a tautology.",
+    "keyPoints": [
+      "Replace → by ¬a ∨ b",
+      "Apply De Morgan",
+      "Regroup with commutative/associative laws",
+      "Complement law gives T",
+      "Conclusion stated"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-017",
+    "chapter": "Propositional Logic",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write the truth table of p ⊕ q (exclusive OR) and express it using ∧, ∨ and ¬.",
+    "modelAnswer": "p q | p⊕q\nT T | F\nT F | T\nF T | T\nF F | F\np ⊕ q ≡ (p ∧ ¬q) ∨ (¬p ∧ q) — true exactly when p and q differ.",
+    "keyPoints": [
+      "Truth table correct",
+      "(p ∧ ¬q) ∨ (¬p ∧ q)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-018",
+    "chapter": "Propositional Logic",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Why is 'x > 5' not a proposition, while 'For x = 7, x > 5' is?",
+    "modelAnswer": "'x > 5' contains a free variable, so its truth cannot be decided until x is known; it is an open sentence (predicate). Fixing x = 7 gives a definite statement that is true, so it is a proposition.",
+    "keyPoints": [
+      "Proposition must be definitely true or false",
+      "Free variable makes it undecidable"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-019",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State both forms of De Morgan's theorem and verify one using a truth table.",
+    "modelAnswer": "(A + B)′ = A′·B′ and (A·B)′ = A′ + B′.\nVerification of (A·B)′ = A′ + B′:\nA B | AB | (AB)′ | A′ + B′\n0 0 | 0  |  1    |  1\n0 1 | 0  |  1    |  1\n1 0 | 0  |  1    |  1\n1 1 | 1  |  0    |  0\nThe last two columns match.",
+    "keyPoints": [
+      "Both forms stated",
+      "Truth table with matching columns"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-020",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Simplify using Boolean laws: F = A·B + A·B′·C + A′·C, naming each law.",
+    "modelAnswer": "F = AB + AB′C + A′C\n= A(B + B′C) + A′C          [distributive]\n= A(B + C) + A′C            [B + B′C = B + C]\n= AB + AC + A′C             [distributive]\n= AB + C(A + A′)            [distributive]\n= AB + C                    [complement law, A + A′ = 1; identity C·1 = C]\nSo F = A·B + C.",
+    "keyPoints": [
+      "Factor A",
+      "Use X + X′Y = X + Y",
+      "Combine AC + A′C = C",
+      "Final F = AB + C"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-021",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show how NAND gates alone can implement NOT, AND and OR.",
+    "modelAnswer": "NOT: join both inputs of one NAND: (A·A)′ = A′.\nAND: NAND followed by a NAND-inverter: ((AB)′)′ = AB (2 gates).\nOR: invert A and B with two NAND-inverters, then NAND them: (A′·B′)′ = A + B (3 gates, by De Morgan).\nSince NOT, AND and OR can be built, NAND is a universal gate.",
+    "keyPoints": [
+      "NOT with tied inputs",
+      "AND = NAND + inverter",
+      "OR = inverted inputs into NAND",
+      "Concludes universality"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-022",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Design a full adder: give its truth table, derive Sum and Carry expressions, and show how it can be built from two half adders and an OR gate.",
+    "modelAnswer": "Inputs A, B, Cin; outputs S, Cout.\nA B Cin | S Cout\n0 0 0 | 0 0\n0 0 1 | 1 0\n0 1 0 | 1 0\n0 1 1 | 0 1\n1 0 0 | 1 0\n1 0 1 | 0 1\n1 1 0 | 0 1\n1 1 1 | 1 1\nS = A ⊕ B ⊕ Cin (1 when an odd number of inputs are 1).\nCout = AB + Cin(A ⊕ B) (equivalently AB + BCin + ACin).\nConstruction: half adder 1 adds A and B, giving S₁ = A ⊕ B and C₁ = AB. Half adder 2 adds S₁ and Cin, giving S = S₁ ⊕ Cin and C₂ = S₁·Cin. An OR gate combines the carries: Cout = C₁ + C₂.",
+    "keyPoints": [
+      "Complete 8-row truth table",
+      "S = A ⊕ B ⊕ Cin",
+      "Cout = AB + Cin(A ⊕ B)",
+      "Two half adders + OR gate connection"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-023",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State the principle of duality and write the dual of A·(B + C) = A·B + A·C.",
+    "modelAnswer": "Principle of duality: every valid Boolean identity remains valid if + and · are interchanged and 0 and 1 are interchanged (variables and complements are unchanged).\nDual: A + B·C = (A + B)·(A + C).",
+    "keyPoints": [
+      "Swap + and ·, 0 and 1",
+      "Dual A + BC = (A + B)(A + C)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-024",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Draw/describe the truth table of a 2-input XNOR gate and state its expression.",
+    "modelAnswer": "A B | Y\n0 0 | 1\n0 1 | 0\n1 0 | 0\n1 1 | 1\nY = (A ⊕ B)′ = A·B + A′·B′ — output 1 when inputs are equal.",
+    "keyPoints": [
+      "Correct table",
+      "Y = AB + A′B′"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-025",
+    "chapter": "Computer Hardware",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between primary and secondary memory (any two points).",
+    "modelAnswer": "Primary memory (RAM, ROM, cache) is directly accessed by the CPU, is faster and costlier per byte, and RAM is volatile. Secondary memory (HDD, SSD, optical, pen drive) is not directly accessed by the CPU, is slower, cheaper, larger and non-volatile.",
+    "keyPoints": [
+      "Direct CPU access vs not",
+      "Speed/cost/capacity",
+      "Volatile vs non-volatile"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-026",
+    "chapter": "Computer Hardware",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain the function of the ALU, Control Unit and registers in a CPU.",
+    "modelAnswer": "ALU: performs arithmetic (add, subtract) and logical operations (AND, OR, comparisons) on data.\nControl Unit: fetches and decodes instructions, then generates timing and control signals that direct the ALU, memory and I/O.\nRegisters: very small, very fast storage locations inside the CPU holding operands, results, addresses and the current instruction (e.g. PC, IR, MAR, MDR, accumulator).",
+    "keyPoints": [
+      "ALU role",
+      "Control unit role",
+      "Registers: fast internal storage + examples"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-027",
+    "chapter": "Computer Hardware",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Describe the three types of system bus and state the direction of each.",
+    "modelAnswer": "Address bus: carries memory/I/O addresses; unidirectional (CPU → memory/devices).\nData bus: carries the actual data and instructions; bidirectional.\nControl bus: carries control and status signals such as read, write, clock and interrupt; signals travel in both directions overall.",
+    "keyPoints": [
+      "Address bus unidirectional",
+      "Data bus bidirectional",
+      "Control bus signals examples"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-028",
+    "chapter": "Computer Hardware",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Describe the fetch–decode–execute cycle, mentioning the role of PC, MAR, MDR and IR at each step.",
+    "modelAnswer": "Fetch: the address in the PC is copied to the MAR; the control unit signals a memory read; the instruction at that address is placed in the MDR and copied to the IR; the PC is incremented to point to the next instruction.\nDecode: the control unit interprets the opcode in the IR and identifies any operands or addresses needed (which may be loaded via MAR/MDR).\nExecute: the control unit activates the ALU or other units to perform the operation; results are stored in a register or written to memory through the MAR/MDR. For a jump, the PC is loaded with a new address.\nThe cycle repeats until the program halts; interrupts are checked between cycles.",
+    "keyPoints": [
+      "PC → MAR, memory → MDR → IR",
+      "PC incremented",
+      "Decode by control unit",
+      "Execute via ALU, results stored",
+      "Cycle repeats / jumps change PC"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-029",
+    "chapter": "Computer Hardware",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is meant by the memory hierarchy? Why is it used?",
+    "modelAnswer": "The memory hierarchy arranges storage in levels — registers, cache, main memory, secondary storage — from fastest/smallest/costliest to slowest/largest/cheapest. It gives the CPU access speeds close to the fastest level for most requests, at a cost close to the cheapest level, by keeping frequently used data in the faster levels.",
+    "keyPoints": [
+      "Levels in order",
+      "Speed vs cost vs capacity trade-off",
+      "Locality keeps hot data in fast levels"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-030",
+    "chapter": "Algorithms and Problem Solving",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State any four characteristics of a good algorithm.",
+    "modelAnswer": "Finiteness — it terminates after a finite number of steps.\nDefiniteness — each step is precise and unambiguous.\nInput — zero or more well-defined inputs.\nOutput — at least one output.\nEffectiveness — each step is basic enough to be carried out exactly.",
+    "keyPoints": [
+      "Finiteness",
+      "Definiteness",
+      "Input/Output",
+      "Effectiveness"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-031",
+    "chapter": "Algorithms and Problem Solving",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write an algorithm (in pseudocode) to find the largest of N numbers entered by the user.",
+    "modelAnswer": "1. START\n2. READ N\n3. READ x; SET max ← x\n4. SET i ← 2\n5. WHILE i ≤ N DO\n     READ x\n     IF x > max THEN max ← x\n     i ← i + 1\n   END WHILE\n6. PRINT max\n7. STOP",
+    "keyPoints": [
+      "Initialise max with first value",
+      "Loop over remaining values",
+      "Compare and update",
+      "Print result"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-032",
+    "chapter": "Algorithms and Problem Solving",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Trace the code below with a trace table and give the output.\n\nint n = 153, s = 0, t = n;\nwhile (t > 0) {\n    int d = t % 10;\n    s += d * d * d;\n    t /= 10;\n}\nSystem.out.println(s == n);",
+    "modelAnswer": "t | d | s\n153 | 3 | 27\n15 | 5 | 152\n1 | 1 | 153\n0 | — | loop ends\ns = 153 = n, so the output is: true (153 is an Armstrong number).",
+    "keyPoints": [
+      "Correct digit extraction",
+      "Running sum 27 → 152 → 153",
+      "Output true"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-033",
+    "chapter": "Algorithms and Problem Solving",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Compare the number of steps taken by a single loop of n iterations and two nested loops of n iterations each. For n = 1000, estimate both, and explain why the growth rate matters more than the exact constant.",
+    "modelAnswer": "Single loop: the body runs n times, so time grows linearly (≈ c·n). For n = 1000: about 1000 executions.\nNested loops: the inner body runs n × n times, so time grows quadratically (≈ c·n²). For n = 1000: about 1,000,000 executions.\nIf n doubles, the linear algorithm takes twice as long but the quadratic one takes four times as long. Constants (e.g. 5n vs n²) only matter for small n; beyond n = 5 the quadratic version is always slower and the gap keeps widening, so the dominant term (growth rate) decides efficiency for large inputs.",
+    "keyPoints": [
+      "Linear: n steps",
+      "Nested: n² steps",
+      "1000 vs 1,000,000",
+      "Doubling effect",
+      "Dominant term outweighs constant"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-034",
+    "chapter": "Algorithms and Problem Solving",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Name the flowchart symbols for terminal, process, decision and input/output.",
+    "modelAnswer": "Terminal (start/stop): oval / rounded rectangle.\nProcess: rectangle.\nDecision: diamond.\nInput/output: parallelogram.",
+    "keyPoints": [
+      "Oval",
+      "Rectangle",
+      "Diamond",
+      "Parallelogram"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-035",
+    "chapter": "Objects and Classes",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between a class and an object.",
+    "modelAnswer": "A class is a user-defined blueprint describing the fields (state) and methods (behaviour) common to a set of objects; it occupies no memory for data by itself. An object is a specific instance of a class created with new, occupying memory and having its own values for the fields. E.g. class Student; objects s1, s2.",
+    "keyPoints": [
+      "Class = blueprint/template",
+      "Object = instance with its own state",
+      "Example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-036",
+    "chapter": "Objects and Classes",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain the steps from writing a Java program to running it.",
+    "modelAnswer": "1. Write source code in a .java file (e.g. Main.java).\n2. Compile with javac Main.java — the compiler checks syntax and types and produces Main.class containing bytecode.\n3. Run with java Main — the JVM's class loader loads the bytecode, the verifier checks it, and the interpreter/JIT compiler executes it as native instructions on that machine.\nBecause bytecode is the same everywhere, the same .class file runs on any platform with a JVM.",
+    "keyPoints": [
+      "Source .java",
+      "javac → bytecode .class",
+      "JVM loads, verifies, interprets/JIT",
+      "Platform independence"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-037",
+    "chapter": "Objects and Classes",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Distinguish between compile-time, run-time and logical errors with an example of each.",
+    "modelAnswer": "Compile-time (syntax) error: violates Java's rules and is reported by javac, e.g. a missing semicolon or undeclared variable.\nRun-time error: program compiles but fails during execution, e.g. int r = 7 / 0; throws ArithmeticException.\nLogical error: program compiles and runs but gives the wrong answer, e.g. average = a + b / 2 instead of (a + b) / 2.",
+    "keyPoints": [
+      "Compile-time + example",
+      "Run-time + example",
+      "Logical + example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-038",
+    "chapter": "Objects and Classes",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Write a class Rectangle with private fields length and breadth, a method to set them, and methods area() and perimeter(). Explain how this design shows encapsulation and abstraction. Show the output for a rectangle of length 4 and breadth 3.",
+    "modelAnswer": "class Rectangle {\n    private double length, breadth;\n    void set(double l, double b) { length = l; breadth = b; }\n    double area() { return length * breadth; }\n    double perimeter() { return 2 * (length + breadth); }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Rectangle r = new Rectangle();\n        r.set(4, 3);\n        System.out.println(r.area() + \" \" + r.perimeter());\n    }\n}\nOutput: 12.0 14.0\nEncapsulation: the fields are private and can be changed only through set(), so data and the methods that use it are bundled and protected.\nAbstraction: a user simply calls area() or perimeter() without knowing the formulas inside.",
+    "keyPoints": [
+      "Private fields",
+      "Setter and computing methods",
+      "Output 12.0 14.0",
+      "Encapsulation explained",
+      "Abstraction explained"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-039",
+    "chapter": "Objects and Classes",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "What is bytecode? Why is it important?",
+    "modelAnswer": "Bytecode is the intermediate, platform-neutral instruction set that javac produces (stored in .class files). It is important because any JVM can execute it, making Java programs portable across operating systems and CPUs.",
+    "keyPoints": [
+      "Intermediate code from javac",
+      "Executed by JVM",
+      "Gives portability"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-040",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "List the eight primitive data types of Java with their sizes.",
+    "modelAnswer": "byte – 1 byte; short – 2 bytes; int – 4 bytes; long – 8 bytes; float – 4 bytes; double – 8 bytes; char – 2 bytes; boolean – logically 1 bit (true/false; size is JVM dependent).",
+    "keyPoints": [
+      "All eight types",
+      "Correct sizes"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-041",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Differentiate between implicit (widening) and explicit (narrowing) type conversion with examples. Give the output of: int a = 7; double b = a / 2; System.out.println(b);",
+    "modelAnswer": "Implicit conversion is done automatically by the compiler when a smaller type is assigned to a larger compatible type and no information is lost, e.g. int → long → float → double: double d = 5; (d = 5.0).\nExplicit conversion (casting) is written by the programmer to convert a larger type to a smaller one and may lose data, e.g. int n = (int) 9.8; (n = 9).\nFor the code: a / 2 is integer division = 3, which is then widened to 3.0, so the output is 3.0.",
+    "keyPoints": [
+      "Widening automatic, safe",
+      "Narrowing needs cast, may lose data",
+      "Examples",
+      "Output 3.0 with reason"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-042",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What are wrapper classes? Explain autoboxing and unboxing with an example.",
+    "modelAnswer": "Wrapper classes (Integer, Double, Character, Boolean, etc.) are classes in java.lang that wrap a primitive value in an object, so primitives can be used where objects are required (e.g. collections) and so that utility methods such as Integer.parseInt() are available.\nAutoboxing: automatic conversion of a primitive to its wrapper — Integer obj = 25;\nUnboxing: automatic conversion of a wrapper back to the primitive — int n = obj + 5; // n = 30",
+    "keyPoints": [
+      "Definition and examples of wrapper classes",
+      "Uses: objects needed, utility methods",
+      "Autoboxing example",
+      "Unboxing example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-043",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain type promotion in expressions. Give the output of the following and justify each line:\n\nbyte b = 10; char c = 'B'; short s = 3;\nSystem.out.println(b + c);\nSystem.out.println(s * 2.5f);\nSystem.out.println(c + 1 + \"X\");\nSystem.out.println(\"X\" + c + 1);",
+    "modelAnswer": "In an arithmetic expression, byte, short and char are first promoted to int; then the whole expression is promoted to the widest type present (long, float or double).\nLine 1: b + c → 10 + 66 = 76 (int).\nLine 2: s is promoted to float: 3 × 2.5f = 7.5 (float).\nLine 3: evaluated left to right: c + 1 = 67 (int), then 67 + \"X\" → \"67X\".\nLine 4: \"X\" + c → \"XB\", then \"XB\" + 1 → \"XB1\".\nOutput:\n76\n7.5\n67X\nXB1",
+    "keyPoints": [
+      "Rule: byte/short/char → int first",
+      "Widest operand type wins",
+      "76 and 7.5",
+      "String concatenation left to right: 67X, XB1"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-044",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Give the output: System.out.println((int) 'z' - (int) 'a'); and System.out.println((char) 70);",
+    "modelAnswer": "(int) 'z' = 122, (int) 'a' = 97, difference = 25. (char) 70 = 'F'.\nOutput:\n25\nF",
+    "keyPoints": [
+      "25",
+      "F"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-045",
+    "chapter": "Variables, Expressions and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between = and == with examples.",
+    "modelAnswer": "= is the assignment operator; it stores the right-hand value in the variable on the left (x = 5;).\n== is a relational operator that compares two values and gives a boolean (x == 5 is true if x holds 5).",
+    "keyPoints": [
+      "= assigns",
+      "== compares, returns boolean",
+      "Examples"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-046",
+    "chapter": "Variables, Expressions and Operators",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Evaluate, showing steps, if a = 6, b = 4 (int):\n(i) a++ * 2 + --b\n(ii) a % b + a / b * b\n(Treat each part independently, starting from a = 6, b = 4.)",
+    "modelAnswer": "(i) a++ gives 6 (a becomes 7); 6 × 2 = 12; --b makes b = 3; 12 + 3 = 15.\n(ii) a % b = 6 % 4 = 2; a / b = 1 (integer division); 1 × 4 = 4; 2 + 4 = 6.",
+    "keyPoints": [
+      "Post-increment uses old value",
+      "Pre-decrement uses new value",
+      "(i) = 15",
+      "(ii) = 6 with integer division"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-047",
+    "chapter": "Variables, Expressions and Operators",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write Java expressions for: (i) √(a² + b²)  (ii) (x³ + y³)/(x − y)  (iii) |p − q| rounded to the nearest whole number.",
+    "modelAnswer": "(i) Math.sqrt(a * a + b * b)  (or Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2)))\n(ii) (Math.pow(x, 3) + Math.pow(y, 3)) / (x - y)\n(iii) Math.round(Math.abs(p - q))",
+    "keyPoints": [
+      "Math.sqrt with squared terms",
+      "Brackets around numerator and denominator",
+      "Math.round(Math.abs(...))"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-048",
+    "chapter": "Variables, Expressions and Operators",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain operator precedence and associativity. Evaluate the following, giving the final values of x and y:\nint x = 4, y = 5;\ny = x++ * 2 + y-- - --x / 2;",
+    "modelAnswer": "Precedence decides which operator is applied first (unary ++/-- > * / % > + − > relational > == > && > || > ?: > assignment). Associativity decides the order among operators of equal precedence: most binary operators are left-to-right; assignment and the ternary operator are right-to-left.\nEvaluation (operands are taken left to right):\nx++ → 4 (x becomes 5)\n4 * 2 = 8\ny-- → 5 (y becomes 4)\n--x → x becomes 4, value 4; 4 / 2 = 2\ny = 8 + 5 − 2 = 11\nFinal: x = 4, y = 11.",
+    "keyPoints": [
+      "Definition of precedence",
+      "Definition of associativity with examples",
+      "Correct operand-by-operand evaluation",
+      "x = 4",
+      "y = 11"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-049",
+    "chapter": "Variables, Expressions and Operators",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "What is short-circuit evaluation? Give an example.",
+    "modelAnswer": "With && and ||, Java stops evaluating as soon as the result is known: for A && B, B is skipped if A is false; for A || B, B is skipped if A is true. Example: if (n != 0 && 10 / n > 2) — when n is 0 the division is never performed, avoiding an exception.",
+    "keyPoints": [
+      "&& skips when left is false",
+      "|| skips when left is true",
+      "Example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-050",
+    "chapter": "Statements and Scope",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between while and do-while loops.",
+    "modelAnswer": "while is an entry-controlled loop: the condition is tested before each iteration, so the body may execute zero times. do-while is exit-controlled: the body runs first and the condition is tested afterwards, so the body executes at least once. do-while ends with a semicolon after while(condition).",
+    "keyPoints": [
+      "Entry vs exit controlled",
+      "Zero vs at least one execution",
+      "Syntax difference"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-051",
+    "chapter": "Statements and Scope",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is fall-through in a switch statement? Give the output of:\n\nint m = 1;\nswitch (m) {\n    case 1: System.out.print(\"one \");\n    case 2: System.out.print(\"two \"); break;\n    case 3: System.out.print(\"three \");\n}",
+    "modelAnswer": "Fall-through occurs when a case has no break: after its statements run, execution continues into the next case's statements regardless of its label, until a break or the end of switch.\nHere m = 1 matches case 1, prints \"one \", falls into case 2, prints \"two \", then break exits.\nOutput: one two",
+    "keyPoints": [
+      "Definition of fall-through",
+      "Role of break",
+      "Output: one two"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-052",
+    "chapter": "Statements and Scope",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write a program segment using nested loops to print:\n1\n2 3\n4 5 6\n7 8 9 10",
+    "modelAnswer": "int k = 1;\nfor (int i = 1; i <= 4; i++) {\n    for (int j = 1; j <= i; j++) {\n        System.out.print(k + \" \");\n        k++;\n    }\n    System.out.println();\n}\nThe outer loop controls rows; the inner loop prints i numbers in row i; k keeps counting across rows (Floyd's triangle).",
+    "keyPoints": [
+      "Outer loop for rows",
+      "Inner loop j ≤ i",
+      "Counter continues across rows",
+      "println after each row"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-053",
+    "chapter": "Statements and Scope",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain the scope and lifetime of local variables declared (a) in a method, (b) in a loop header and (c) in a block inside a loop. Then write a program segment that prints all prime numbers between 10 and 30, using a flag variable whose scope is limited to the outer loop.",
+    "modelAnswer": "(a) A local variable in a method is visible from its declaration to the end of the method; it is created when the method is called and destroyed when it returns.\n(b) A variable declared in a for header (for (int i …)) exists only within that loop — it cannot be used after the loop.\n(c) A variable declared inside the loop body's braces is created afresh on each iteration and is visible only up to the closing brace.\nProgram:\nfor (int n = 10; n <= 30; n++) {\n    boolean prime = true;\n    for (int d = 2; d * d <= n; d++)\n        if (n % d == 0) { prime = false; break; }\n    if (prime) System.out.print(n + \" \");\n}\nOutput: 11 13 17 19 23 29",
+    "keyPoints": [
+      "Method scope and lifetime",
+      "Loop-header variable scope",
+      "Block variable recreated each iteration",
+      "Correct prime logic with break",
+      "Output 11 13 17 19 23 29"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-054",
+    "chapter": "Statements and Scope",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Convert this for loop to an equivalent while loop:\nfor (int i = 10; i > 0; i -= 2) System.out.print(i + \" \");",
+    "modelAnswer": "int i = 10;\nwhile (i > 0) {\n    System.out.print(i + \" \");\n    i -= 2;\n}\nBoth print: 10 8 6 4 2",
+    "keyPoints": [
+      "Initialisation before loop",
+      "Update at end of body",
+      "Same output 10 8 6 4 2"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-055",
+    "chapter": "Methods and Constructors",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between formal and actual parameters.",
+    "modelAnswer": "Formal parameters are the variables declared in the method header that receive values (e.g. int a, int b in int add(int a, int b)). Actual parameters are the values or expressions supplied in the method call (e.g. 4 and x in add(4, x)). Values of actual parameters are copied into the formal parameters.",
+    "keyPoints": [
+      "Formal = in definition",
+      "Actual = in call",
+      "Values copied (pass by value)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-056",
+    "chapter": "Methods and Constructors",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain pass-by-value in Java for primitives and for object references, with a short example of each.",
+    "modelAnswer": "Java always passes a copy of the argument.\nPrimitive: the method gets a copy of the value; changing it does not affect the caller. void inc(int x) { x++; } — after int a = 5; inc(a); a is still 5.\nReference: the method gets a copy of the reference, so both refer to the same object. Changes to the object's contents are visible to the caller (void set(int[] t) { t[0] = 9; } changes the caller's array). But reassigning the parameter to a new object (t = new int[3];) does not affect the caller's variable.",
+    "keyPoints": [
+      "Always pass by value",
+      "Primitive copy unaffected",
+      "Reference copy — object changes visible",
+      "Reassigning the parameter has no effect on caller"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-057",
+    "chapter": "Methods and Constructors",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is a constructor? State three ways in which it differs from an ordinary method.",
+    "modelAnswer": "A constructor is a special member with the same name as the class, invoked automatically by new to initialise the new object.\nDifferences: (1) it has the class's name; (2) it has no return type, not even void; (3) it is called automatically when an object is created, not explicitly by name; (4) if none is written, the compiler supplies a default no-argument constructor.",
+    "keyPoints": [
+      "Definition",
+      "Same name as class",
+      "No return type",
+      "Invoked automatically by new"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-058",
+    "chapter": "Methods and Constructors",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Design a class Student with private fields name and marks, a parameterised constructor using this, an overloaded constructor that sets only the name (marks = 0), a method grade() returning 'A' if marks ≥ 80, 'B' if ≥ 60 and 'C' otherwise, and a static counter of objects created. Show the output for new Student(\"Asha\", 85) and new Student(\"Ravi\").",
+    "modelAnswer": "class Student {\n    private String name;\n    private int marks;\n    static int count = 0;\n    Student(String name, int marks) {\n        this.name = name;\n        this.marks = marks;\n        count++;\n    }\n    Student(String name) { this(name, 0); }\n    char grade() {\n        if (marks >= 80) return 'A';\n        if (marks >= 60) return 'B';\n        return 'C';\n    }\n    String getName() { return name; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Student s1 = new Student(\"Asha\", 85);\n        Student s2 = new Student(\"Ravi\");\n        System.out.println(s1.getName() + \" \" + s1.grade());\n        System.out.println(s2.getName() + \" \" + s2.grade());\n        System.out.println(Student.count);\n    }\n}\nOutput:\nAsha A\nRavi C\n2",
+    "keyPoints": [
+      "this.field = parameter",
+      "Constructor chaining with this(...)",
+      "grade() logic",
+      "static counter shared",
+      "Correct output"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-059",
+    "chapter": "Methods and Constructors",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Differentiate between static and instance members.",
+    "modelAnswer": "A static member belongs to the class: one copy is shared by all objects and it can be accessed with the class name (Math.PI, C.count). An instance member belongs to each object: every object has its own copy and it is accessed through an object reference. Static methods cannot directly use instance variables or this.",
+    "keyPoints": [
+      "Static: one shared copy, class name access",
+      "Instance: per-object copy",
+      "Static methods cannot use this/instance fields"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-060",
+    "chapter": "Arrays",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Differentiate between linear search and binary search.",
+    "modelAnswer": "Linear search checks elements one by one from the start; it works on unsorted data but needs up to n comparisons. Binary search repeatedly compares with the middle element of a sorted array and discards half the range each time, needing only about log₂n comparisons.",
+    "keyPoints": [
+      "Linear: sequential, any order, up to n",
+      "Binary: sorted only, halving, ~log₂n"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-061",
+    "chapter": "Arrays",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show the array after each pass of bubble sort (ascending) on {7, 3, 9, 2}.",
+    "modelAnswer": "Pass 1: compare/swap adjacent pairs → {3, 7, 2, 9} (9 reaches the end).\nPass 2: → {3, 2, 7, 9}.\nPass 3: → {2, 3, 7, 9}.\nThe array is sorted after n − 1 = 3 passes.",
+    "keyPoints": [
+      "Pass 1 {3, 7, 2, 9}",
+      "Pass 2 {3, 2, 7, 9}",
+      "Pass 3 {2, 3, 7, 9}"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-062",
+    "chapter": "Arrays",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write a program segment to find the sum of each row of a 3 × 4 integer matrix m and print it.",
+    "modelAnswer": "for (int i = 0; i < m.length; i++) {\n    int sum = 0;\n    for (int j = 0; j < m[i].length; j++)\n        sum += m[i][j];\n    System.out.println(\"Row \" + i + \": \" + sum);\n}\nThe outer loop selects the row; sum is reset for each row; the inner loop runs across the columns.",
+    "keyPoints": [
+      "Outer loop over rows",
+      "Reset sum per row",
+      "Inner loop over columns using m[i].length",
+      "Print inside outer loop"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-063",
+    "chapter": "Arrays",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Write a method int binarySearch(int[] a, int key) that returns the index of key in a sorted array or −1 if absent. Trace it for a = {3, 9, 14, 21, 30, 42, 57} and key = 42, showing lo, hi and mid at each step.",
+    "modelAnswer": "static int binarySearch(int[] a, int key) {\n    int lo = 0, hi = a.length - 1;\n    while (lo <= hi) {\n        int mid = (lo + hi) / 2;\n        if (a[mid] == key) return mid;\n        else if (a[mid] < key) lo = mid + 1;\n        else hi = mid - 1;\n    }\n    return -1;\n}\nTrace (key = 42):\nlo = 0, hi = 6, mid = 3 → a[3] = 21 < 42 → lo = 4\nlo = 4, hi = 6, mid = 5 → a[5] = 42 → found, return 5.\nOutput: 5",
+    "keyPoints": [
+      "Correct loop condition lo ≤ hi",
+      "Mid computation and three-way comparison",
+      "Returns −1 when absent",
+      "Trace rows correct",
+      "Returns index 5"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-064",
+    "chapter": "Arrays",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is ArrayIndexOutOfBoundsException? Give an example statement that causes it.",
+    "modelAnswer": "It is an unchecked run-time exception thrown when a program accesses an array with an index less than 0 or greater than or equal to its length. Example: int[] a = new int[3]; a[3] = 5; — valid indices are only 0, 1, 2.",
+    "keyPoints": [
+      "Run-time exception",
+      "Index < 0 or ≥ length",
+      "Example"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-065",
+    "chapter": "Strings",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State the purpose of: (i) indexOf()  (ii) substring()  (iii) trim()  (iv) equalsIgnoreCase().",
+    "modelAnswer": "(i) indexOf(ch/str) returns the index of the first occurrence, or −1 if absent.\n(ii) substring(b, e) returns the characters from index b up to e − 1 (or to the end with one argument).\n(iii) trim() returns a copy without leading and trailing spaces.\n(iv) equalsIgnoreCase(s) compares two strings for equality ignoring case.",
+    "keyPoints": [
+      "indexOf −1 when absent",
+      "substring end exclusive",
+      "trim leading/trailing",
+      "equalsIgnoreCase"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-066",
+    "chapter": "Strings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write a program segment to count the words in a sentence s (words separated by single spaces) and print the longest word.",
+    "modelAnswer": "String[] words = s.trim().split(\" \");\nString longest = \"\";\nfor (String w : words)\n    if (w.length() > longest.length()) longest = w;\nSystem.out.println(\"Words: \" + words.length);\nSystem.out.println(\"Longest: \" + longest);\nFor s = \"ISC computer science practice\" the output is Words: 4 and Longest: computer.",
+    "keyPoints": [
+      "split on space",
+      "Word count = array length",
+      "Track longest by length()",
+      "Correct sample output"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-067",
+    "chapter": "Strings",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain String immutability, and give the output of:\nString s = \"abc\";\ns.toUpperCase();\nString t = s.toUpperCase();\nSystem.out.println(s + \" \" + t);",
+    "modelAnswer": "A String object cannot be changed once created; every 'modifying' method returns a new String. s.toUpperCase() on line 2 creates \"ABC\" but the result is not stored, so s still refers to \"abc\". t receives the new object \"ABC\".\nOutput: abc ABC",
+    "keyPoints": [
+      "Immutability defined",
+      "Methods return new strings",
+      "Output abc ABC"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-068",
+    "chapter": "Strings",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Write a method that accepts a sentence and returns it with the first letter of each word capitalised and the rest in lower case (e.g. \"tHE ISC exam\" → \"The Isc Exam\"). Also write a method that checks whether a word is a palindrome ignoring case.",
+    "modelAnswer": "static String titleCase(String s) {\n    String[] w = s.trim().split(\" \");\n    StringBuilder sb = new StringBuilder();\n    for (int i = 0; i < w.length; i++) {\n        if (w[i].length() == 0) continue;\n        sb.append(Character.toUpperCase(w[i].charAt(0)));\n        sb.append(w[i].substring(1).toLowerCase());\n        if (i < w.length - 1) sb.append(' ');\n    }\n    return sb.toString();\n}\nstatic boolean isPalindrome(String w) {\n    w = w.toLowerCase();\n    int i = 0, j = w.length() - 1;\n    while (i < j) {\n        if (w.charAt(i) != w.charAt(j)) return false;\n        i++; j--;\n    }\n    return true;\n}\ntitleCase(\"tHE ISC exam\") returns \"The Isc Exam\"; isPalindrome(\"Madam\") returns true.",
+    "keyPoints": [
+      "Split into words",
+      "Capitalise first char, lower-case rest",
+      "StringBuilder to build result",
+      "Two-pointer palindrome check",
+      "Case ignored"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-069",
+    "chapter": "Strings",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Differentiate between String and StringBuilder.",
+    "modelAnswer": "String is immutable — any change produces a new object, which is costly in loops. StringBuilder is mutable — methods such as append(), insert(), reverse() and deleteCharAt() modify the same object, making repeated changes efficient. (StringBuffer is similar but synchronised/thread-safe.)",
+    "keyPoints": [
+      "String immutable",
+      "StringBuilder mutable + methods",
+      "Efficiency in loops"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-070",
+    "chapter": "Recursion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "What are the base case and the recursive case? Identify them in a recursive factorial method.",
+    "modelAnswer": "The base case is the simplest input whose answer is returned directly without further recursion; it stops the recursion. The recursive case expresses the problem in terms of a smaller instance and calls the method again.\nIn int fact(int n) { if (n <= 1) return 1; return n * fact(n - 1); } the base case is n ≤ 1 → 1 and the recursive case is n * fact(n − 1).",
+    "keyPoints": [
+      "Base case definition",
+      "Recursive case definition",
+      "Identification in factorial"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-071",
+    "chapter": "Recursion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Trace the call fact(4) for the recursive factorial method, showing how the call stack grows and unwinds.",
+    "modelAnswer": "Calls (stack grows):\nfact(4) → 4 * fact(3)\nfact(3) → 3 * fact(2)\nfact(2) → 2 * fact(1)\nfact(1) → returns 1 (base case)\nUnwinding: fact(2) = 2 × 1 = 2; fact(3) = 3 × 2 = 6; fact(4) = 4 × 6 = 24.\nResult: 24.",
+    "keyPoints": [
+      "Calls pushed down to base case",
+      "Base case returns 1",
+      "Values multiplied while unwinding",
+      "Result 24"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-072",
+    "chapter": "Recursion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Write a recursive method int countDigit(int n, int d) that returns how many times digit d occurs in n. Give the result of countDigit(737173, 7).",
+    "modelAnswer": "static int countDigit(int n, int d) {\n    if (n == 0) return 0;\n    int add = (n % 10 == d) ? 1 : 0;\n    return add + countDigit(n / 10, d);\n}\nDigits of 737173 are 7, 3, 7, 1, 7, 3, so countDigit(737173, 7) = 3.",
+    "keyPoints": [
+      "Base case n == 0",
+      "Check last digit",
+      "Recurse on n / 10",
+      "Result 3"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-073",
+    "chapter": "Recursion",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Compare recursion and iteration (any four points). Write both a recursive and an iterative method for the nth Fibonacci term (fib(0) = 0, fib(1) = 1) and explain why the simple recursive version is slow for large n. Give fib(10).",
+    "modelAnswer": "Comparison: (1) Recursion uses method calls; iteration uses loops. (2) Recursion needs a base case; iteration needs a loop condition. (3) Recursion uses stack memory for every pending call and can overflow; iteration uses constant extra memory. (4) Recursion is often shorter and closer to the mathematical definition; iteration is usually faster.\nstatic int fibR(int n) {\n    if (n <= 1) return n;\n    return fibR(n - 1) + fibR(n - 2);\n}\nstatic int fibI(int n) {\n    int a = 0, b = 1;\n    for (int i = 0; i < n; i++) { int c = a + b; a = b; b = c; }\n    return a;\n}\nThe recursive version recomputes the same subproblems repeatedly (fibR(n − 2) is computed by both branches), so the number of calls grows exponentially (fibR(30) makes over 2.6 million calls), whereas the loop needs only n iterations.\nfib(10) = 55.",
+    "keyPoints": [
+      "Four valid comparison points",
+      "Correct recursive method",
+      "Correct iterative method",
+      "Exponential repeated calls explained",
+      "fib(10) = 55"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-074",
+    "chapter": "Recursion",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Give the output and explain:\nstatic void f(int n) { if (n > 0) { f(n / 2); System.out.print(n % 2); } }\ncalled as f(10).",
+    "modelAnswer": "f(10) → f(5) → f(2) → f(1) → f(0) stops. Printing happens while unwinding: f(1) prints 1, f(2) prints 0, f(5) prints 1, f(10) prints 0.\nOutput: 1010 — the binary form of 10.",
+    "keyPoints": [
+      "Calls halve n until 0",
+      "Printing on unwinding",
+      "Output 1010"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-075",
+    "chapter": "Input/Output and Exceptions",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Write statements to read a student's name (full line) and marks (double) using Scanner.",
+    "modelAnswer": "import java.util.Scanner;\nScanner sc = new Scanner(System.in);\nSystem.out.print(\"Enter name: \");\nString name = sc.nextLine();\nSystem.out.print(\"Enter marks: \");\ndouble marks = sc.nextDouble();",
+    "keyPoints": [
+      "Import java.util.Scanner",
+      "new Scanner(System.in)",
+      "nextLine() for name, nextDouble() for marks"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-076",
+    "chapter": "Input/Output and Exceptions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Differentiate between checked and unchecked exceptions with two examples each.",
+    "modelAnswer": "Checked exceptions are checked by the compiler: a method that may throw one must handle it with try–catch or declare it with throws. Examples: IOException, FileNotFoundException.\nUnchecked exceptions are subclasses of RuntimeException (or Error); the compiler does not force handling. They usually indicate programming errors. Examples: ArithmeticException, NullPointerException, ArrayIndexOutOfBoundsException, NumberFormatException.",
+    "keyPoints": [
+      "Compiler enforcement for checked",
+      "RuntimeException subclasses unchecked",
+      "Two examples each"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-077",
+    "chapter": "Input/Output and Exceptions",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain the roles of try, catch and finally with a suitable code example.",
+    "modelAnswer": "try encloses code that may throw an exception. catch(Type e) handles a matching exception; several catch blocks can follow, from specific to general. finally contains clean-up code that runs whether or not an exception occurred.\nExample:\ntry {\n    int r = 10 / 0;\n    System.out.println(r);\n} catch (ArithmeticException e) {\n    System.out.println(\"Cannot divide by zero\");\n} finally {\n    System.out.println(\"Done\");\n}\nOutput:\nCannot divide by zero\nDone",
+    "keyPoints": [
+      "try = risky code",
+      "catch = handler, specific before general",
+      "finally always runs",
+      "Correct example output"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-078",
+    "chapter": "Input/Output and Exceptions",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Write a program that reads integers using Scanner until the user enters 0, ignoring any non-integer token with a message, and finally prints the count and the average formatted to 2 decimal places with printf. Show the output for the input: 4 7 x 10 0",
+    "modelAnswer": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int count = 0, sum = 0;\n        while (true) {\n            String tok = sc.next();\n            int n;\n            try {\n                n = Integer.parseInt(tok);\n            } catch (NumberFormatException e) {\n                System.out.println(\"Skipping \" + tok);\n                continue;\n            }\n            if (n == 0) break;\n            sum += n;\n            count++;\n        }\n        System.out.printf(\"Count=%d Average=%.2f%n\", count, (double) sum / count);\n    }\n}\nOutput for 4 7 x 10 0:\nSkipping x\nCount=3 Average=7.00",
+    "keyPoints": [
+      "Scanner reading tokens in a loop",
+      "try–catch NumberFormatException",
+      "Sentinel 0 ends loop",
+      "Cast to double for average",
+      "printf with %.2f; correct output"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-079",
+    "chapter": "Input/Output and Exceptions",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Why does nextLine() sometimes return an empty string after nextInt()? How is it fixed?",
+    "modelAnswer": "nextInt() reads only the number and leaves the newline character in the input buffer. The following nextLine() reads up to that newline and returns an empty string. Fix: call an extra sc.nextLine() after nextInt() to consume the leftover newline (or read every line with nextLine() and parse it).",
+    "keyPoints": [
+      "nextInt leaves newline",
+      "nextLine consumes it, returns \"\"",
+      "Extra nextLine() fix"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-080",
+    "chapter": "Trends in Computing and Ethics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "What is a digital footprint? Give two ways to manage it.",
+    "modelAnswer": "A digital footprint is the record of a person's online activity — posts, comments, searches, purchases, location check-ins — that can persist and be traced back. Managing it: think before posting; adjust privacy settings on social media; delete unused accounts; avoid sharing personal details publicly.",
+    "keyPoints": [
+      "Definition",
+      "Persistent/traceable",
+      "Two management tips"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-081",
+    "chapter": "Trends in Computing and Ethics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Differentiate between copyright, patent and trademark.",
+    "modelAnswer": "Copyright protects original creative works (software code, books, music, films) from being copied without permission; it arises automatically on creation.\nPatent protects a new, useful and non-obvious invention for a limited period, giving the holder exclusive rights to make and sell it; it must be applied for and granted.\nTrademark protects a word, symbol or logo that identifies the source of goods or services.",
+    "keyPoints": [
+      "Copyright — creative works",
+      "Patent — inventions, granted",
+      "Trademark — brand identity"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-082",
+    "chapter": "Trends in Computing and Ethics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain cloud computing and state two advantages and one risk.",
+    "modelAnswer": "Cloud computing is the delivery of computing services — storage, servers, databases, software — over the Internet on demand, usually paid per use (models: IaaS, PaaS, SaaS).\nAdvantages: access from anywhere; scalable resources; lower up-front hardware cost; automatic backups and updates.\nRisk: dependence on Internet connectivity; data privacy/security concerns; vendor lock-in.",
+    "keyPoints": [
+      "Definition with service models",
+      "Two advantages",
+      "One risk"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-083",
+    "chapter": "Trends in Computing and Ethics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Discuss five cybersecurity threats a student may face online and a protective measure for each.",
+    "modelAnswer": "1. Phishing — fake emails/links stealing credentials. Measure: verify sender and URL; never share OTPs or passwords.\n2. Malware/viruses — harmful software from untrusted downloads. Measure: install apps only from trusted sources; keep antivirus updated.\n3. Ransomware — encrypts files for ransom. Measure: keep regular offline backups; update the OS.\n4. Weak/reused passwords — easy account takeover. Measure: strong unique passwords with a password manager and two-factor authentication.\n5. Cyberbullying/identity theft — misuse of personal information. Measure: limit what is shared publicly, use privacy settings, report and block abusers.",
+    "keyPoints": [
+      "Five distinct threats",
+      "Each threat explained",
+      "Matching protective measure",
+      "Practical, specific measures"
+    ]
+  },
+  {
+    "id": "sa-xiicse-cs-084",
+    "chapter": "Trends in Computing and Ethics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is e-waste? Why is its improper disposal harmful?",
+    "modelAnswer": "E-waste is discarded electrical and electronic equipment such as phones, computers, batteries and chargers. Improper disposal (dumping or burning) releases toxic substances like lead, mercury and cadmium into soil, water and air, harming health, and wastes recoverable materials. It should go to authorised recyclers.",
+    "keyPoints": [
+      "Definition with examples",
+      "Toxic substances",
+      "Recycling as solution"
+    ]
+  }
+]

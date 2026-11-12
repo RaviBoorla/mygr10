@@ -18,7 +18,7 @@ const SUBJECTS = {
   },
   XI: {
     CBSE: ['Accountancy', 'Economics', 'Psychology', 'Physics', 'Chemistry', 'Computer Science', 'Mathematics', 'Political Science', 'Informatics Practices', 'Biology'],
-    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology']
+    ICSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science']
   },
   XII: {
     CBSE: ['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Computer Science', 'Informatics Practices', 'Economics', 'Political Science', 'Psychology', 'Information Technology'],
@@ -88,7 +88,8 @@ const BANKS = {
   'XI ICSE Mathematics':     'XI-ICSE-Mathematics',
   'XI ICSE Physics':         'XI-ICSE-Physics',
   'XI ICSE Chemistry':       'XI-ICSE-Chemistry',
-  'XI ICSE Biology':         'XI-ICSE-Biology'
+  'XI ICSE Biology':         'XI-ICSE-Biology',
+  'XI ICSE Computer Science': 'XI-ICSE-Computer-Science'
 };
 
 const SA_BANKS = {
@@ -147,7 +148,8 @@ const SA_BANKS = {
   'XI ICSE Mathematics':     'XI-ICSE-Mathematics-ShortAnswers',
   'XI ICSE Physics':         'XI-ICSE-Physics-ShortAnswers',
   'XI ICSE Chemistry':       'XI-ICSE-Chemistry-ShortAnswers',
-  'XI ICSE Biology':         'XI-ICSE-Biology-ShortAnswers'
+  'XI ICSE Biology':         'XI-ICSE-Biology-ShortAnswers',
+  'XI ICSE Computer Science': 'XI-ICSE-Computer-Science-ShortAnswers'
 };
 function saBankSlug(subject, board, grade) {
   board = board || state.board;

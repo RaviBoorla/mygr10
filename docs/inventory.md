@@ -175,7 +175,9 @@ Commercial Applications, Physical Education, Mass Media, Robotics & AI.
 
 History & Civics questions carry a `subject` field (`History`/`Civics`).
 
-## Grade XI (CBSE only)
+## Grade XI
+
+### CBSE
 
 Class XI has no CBSE board exam, so — same reasoning as Grade IX above — there is no
 official past-paper corpus to source from. These banks are authored directly from the
@@ -247,6 +249,34 @@ Solved item was independently traced/run to confirm its stated output is correct
 
 Left out throughout: questions depending on a printed table/figure/diagram not
 reproducible in plain text, and anything with garbled PDF extraction.
+
+### ICSE (ISC)
+
+Class XI has no CISCE board exam and there are no past papers or source PDFs for this
+set. The questions, model answers and notes are original practice material authored
+against the ISC Class XI syllabus (2026-27, "ISC 2028" framework); the chapter lists
+were confirmed from published syllabus summaries (guidance sites themselves are not
+reachable from the build environment, and their text is not reproduced). Every MCQ and
+SA carries `"source": "Rise Practice"` and never the word "Board", so none gets a 🔥
+badge; the home screen shows an ISC variant of the "Practice Questions" banner.
+
+Verification: every numerical answer was computed (python3/sympy) and every Computer
+Science code-output, compile-error and exception question was compiled and run on
+Java 21. Options were shuffled so answers spread across A–D, and distractor lengths
+were balanced so the correct option is not usually the longest.
+
+| Subject | MCQ file | MCQs | Short Answers file | SAs | Chapters |
+|---|---|---|---|---|---|
+| Mathematics | `XI-ICSE-Mathematics.json` | 356 | `XI-ICSE-Mathematics-ShortAnswers.json` | 97 | 18 (Section A + Section B) |
+| Physics | `XI-ICSE-Physics.json` | 286 | `XI-ICSE-Physics-ShortAnswers.json` | 84 | 14 (all 10 units) |
+| Chemistry | `XI-ICSE-Chemistry.json` | 291 | `XI-ICSE-Chemistry-ShortAnswers.json` | 79 | 14 |
+| Biology | `XI-ICSE-Biology.json` | 447 | `XI-ICSE-Biology-ShortAnswers.json` | 132 | 22 (5 units) |
+| Computer Science | `XI-ICSE-Computer-Science.json` | 325 | `XI-ICSE-Computer-Science-ShortAnswers.json` | 84 | 16 (Java) |
+
+Revision notes: `public/revision-data-xi-icse-{maths,physics,chemistry,biology,compsci}.js`
+(`REVISION['XI ICSE <Subject>']`), one entry per chapter. No Textbook Solved sets.
+Not covered: Mathematics Section C (commerce applications), English, commerce and
+humanities subjects.
 
 ## Grade XII
 

@@ -1,0 +1,4877 @@
+[
+  {
+    "id": "xiicsecs001",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "In a positional number system, the value of a digit depends on:",
+    "options": [
+      "Only the number of digits in the numeral",
+      "The digit itself and its position (place value)",
+      "Only the digit itself",
+      "The colour or font used to write it"
+    ],
+    "correct": 1,
+    "explanation": "Positional systems weight each digit by baseᵖᵒˢⁱᵗⁱᵒⁿ, so both the digit and where it sits matter.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs002",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "What is the base (radix) of the hexadecimal number system?",
+    "options": [
+      "16",
+      "8",
+      "10",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "Hexadecimal uses 16 symbols: 0–9 and A–F.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs003",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "Which of the following is NOT a valid octal numeral?",
+    "options": [
+      "(0)₈",
+      "(1727)₈",
+      "(7070)₈",
+      "(1729)₈"
+    ],
+    "correct": 3,
+    "explanation": "Octal digits run only from 0 to 7, so the digit 9 makes (1729)₈ invalid.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs004",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "Convert (45)₁₀ to binary.",
+    "options": [
+      "110101",
+      "101011",
+      "101101",
+      "100101"
+    ],
+    "correct": 2,
+    "explanation": "45 = 32 + 8 + 4 + 1, giving 101101.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs005",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "Convert (11010)₂ to decimal.",
+    "options": [
+      "26",
+      "24",
+      "52",
+      "22"
+    ],
+    "correct": 0,
+    "explanation": "16 + 8 + 2 = 26.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs006",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "What is the decimal value of the hexadecimal digit E?",
+    "options": [
+      "12",
+      "15",
+      "14",
+      "13"
+    ],
+    "correct": 2,
+    "explanation": "A=10, B=11, C=12, D=13, E=14, F=15.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs007",
+    "chapter": "Number Systems",
+    "difficulty": "easy",
+    "text": "How many distinct values can be represented with 6 bits?",
+    "options": [
+      "128",
+      "64",
+      "63",
+      "32"
+    ],
+    "correct": 1,
+    "explanation": "n bits give 2ⁿ patterns; 2⁶ = 64 (0 to 63).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs008",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Convert (3AF)₁₆ to decimal.",
+    "options": [
+      "933",
+      "815",
+      "1007",
+      "943"
+    ],
+    "correct": 3,
+    "explanation": "3×256 + 10×16 + 15 = 768 + 160 + 15 = 943.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs009",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Convert (725)₈ to binary.",
+    "options": [
+      "111010101",
+      "111010110",
+      "110010101",
+      "111100101"
+    ],
+    "correct": 0,
+    "explanation": "Replace each octal digit with 3 bits: 7→111, 2→010, 5→101.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs010",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Convert (1011110110)₂ to hexadecimal.",
+    "options": [
+      "BF6",
+      "2E6",
+      "2F6",
+      "BD8"
+    ],
+    "correct": 2,
+    "explanation": "Group in fours from the right: 10 1111 0110 → 2 F 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs011",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Convert (0.625)₁₀ to binary.",
+    "options": [
+      "0.011",
+      "0.1001",
+      "0.110",
+      "0.101"
+    ],
+    "correct": 3,
+    "explanation": "Repeated ×2: 1.25→1, 0.5→0, 1.0→1, so 0.101.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs012",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Convert (101.11)₂ to decimal.",
+    "options": [
+      "5.3",
+      "5.75",
+      "5.5",
+      "6.75"
+    ],
+    "correct": 1,
+    "explanation": "101 = 5 and .11 = 1/2 + 1/4 = 0.75.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs013",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Find the binary sum 10111 + 1101.",
+    "options": [
+      "101100",
+      "100010",
+      "11100",
+      "100100"
+    ],
+    "correct": 3,
+    "explanation": "23 + 13 = 36 = 100100₂.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs014",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "Find the binary difference 11001 − 1011.",
+    "options": [
+      "1110",
+      "1010",
+      "1100",
+      "10110"
+    ],
+    "correct": 0,
+    "explanation": "25 − 11 = 14 = 1110₂.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs015",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "What is the 1's complement of 01011010?",
+    "options": [
+      "10101010",
+      "10100101",
+      "10100110",
+      "01011011"
+    ],
+    "correct": 1,
+    "explanation": "1's complement inverts every bit.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs016",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "What is the 2's complement of the 8-bit number 00110100?",
+    "options": [
+      "11001101",
+      "10110100",
+      "11001100",
+      "11001011"
+    ],
+    "correct": 2,
+    "explanation": "Invert to 11001011 and add 1 to get 11001100.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs017",
+    "chapter": "Number Systems",
+    "difficulty": "medium",
+    "text": "(156)₁₀ in octal is:",
+    "options": [
+      "234",
+      "324",
+      "236",
+      "214"
+    ],
+    "correct": 0,
+    "explanation": "156 ÷ 8 = 19 r 4, 19 ÷ 8 = 2 r 3, 2 → read upward: 234.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs018",
+    "chapter": "Number Systems",
+    "difficulty": "hard",
+    "text": "Convert (A7.C)₁₆ to decimal.",
+    "options": [
+      "167.5",
+      "170.75",
+      "167.12",
+      "167.75"
+    ],
+    "correct": 3,
+    "explanation": "A7 = 10×16 + 7 = 167; .C = 12/16 = 0.75.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs019",
+    "chapter": "Number Systems",
+    "difficulty": "hard",
+    "text": "Using 8-bit 2's complement, 00101101 − 00111010 is computed as 00101101 + 11000110. The result is:",
+    "options": [
+      "00010011, i.e. +19",
+      "11110011, i.e. −13",
+      "11110011, i.e. −12",
+      "11101101, i.e. −19"
+    ],
+    "correct": 1,
+    "explanation": "45 − 58 = −13; 0x2D + 0xC6 = 0xF3 = 11110011, which is the 2's complement form of −13.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs020",
+    "chapter": "Number Systems",
+    "difficulty": "hard",
+    "text": "If (121)ₓ = (49)₁₀, the base x is:",
+    "options": [
+      "8",
+      "7",
+      "6",
+      "5"
+    ],
+    "correct": 2,
+    "explanation": "x² + 2x + 1 = 49 ⇒ (x + 1)² = 49 ⇒ x = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs021",
+    "chapter": "Number Systems",
+    "difficulty": "hard",
+    "text": "The decimal fraction 0.1 written in binary is:",
+    "options": [
+      "A non-terminating repeating fraction 0.0001100110011…",
+      "Exactly 0.1",
+      "Exactly 0.00011",
+      "Exactly 0.0001"
+    ],
+    "correct": 0,
+    "explanation": "0.1 × 2 never reaches exactly 1.0, so the pattern 0011 repeats forever — one reason floating-point values are approximate.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs022",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "In sign-magnitude representation, the leftmost bit indicates:",
+    "options": [
+      "Whether the number is a fraction",
+      "The sign (0 = positive, 1 = negative)",
+      "The parity of the number",
+      "The carry from the previous addition"
+    ],
+    "correct": 1,
+    "explanation": "Sign-magnitude reserves the MSB for the sign and the remaining bits for the magnitude.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs023",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "The range of integers that can be stored in 8-bit 2's complement is:",
+    "options": [
+      "−128 to +127",
+      "−127 to +127",
+      "0 to 255",
+      "−128 to +128"
+    ],
+    "correct": 0,
+    "explanation": "n-bit 2's complement covers −2ⁿ⁻¹ to 2ⁿ⁻¹ − 1; for n = 8 that is −128 to 127.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs024",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "ASCII originally uses how many bits per character?",
+    "options": [
+      "16",
+      "32",
+      "7",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "Standard ASCII is a 7-bit code with 128 characters; 8-bit 'extended ASCII' variants came later.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs025",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "What is the ASCII code of the character 'A'?",
+    "options": [
+      "64",
+      "97",
+      "48",
+      "65"
+    ],
+    "correct": 3,
+    "explanation": "'A' = 65, 'a' = 97 and '0' = 48.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs026",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "Which encoding was developed specifically to represent Indian scripts such as Devanagari and Tamil?",
+    "options": [
+      "EBCDIC",
+      "ASCII",
+      "BCD",
+      "ISCII"
+    ],
+    "correct": 3,
+    "explanation": "ISCII (Indian Script Code for Information Interchange) is an 8-bit code for Indian scripts.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs027",
+    "chapter": "Encodings",
+    "difficulty": "easy",
+    "text": "Unicode was designed mainly to:",
+    "options": [
+      "Compress text files",
+      "Encrypt text for secure transmission",
+      "Give every character of every writing system a unique code point",
+      "Represent only English letters more efficiently"
+    ],
+    "correct": 2,
+    "explanation": "Unicode is a universal character set covering scripts worldwide, plus symbols and emoji.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs028",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "How many representations of zero exist in sign-magnitude form?",
+    "options": [
+      "Two (+0 and −0)",
+      "One",
+      "None",
+      "Three"
+    ],
+    "correct": 0,
+    "explanation": "00000000 is +0 and 10000000 is −0 in 8-bit sign-magnitude; 2's complement has only one zero.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs029",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "The 8-bit sign-magnitude representation of −37 is:",
+    "options": [
+      "00100101",
+      "10100101",
+      "11011011",
+      "11011010"
+    ],
+    "correct": 1,
+    "explanation": "37 = 0100101; setting the sign bit gives 1 0100101.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs030",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "The 8-bit 2's complement representation of −37 is:",
+    "options": [
+      "10100101",
+      "10100100",
+      "11011010",
+      "11011011"
+    ],
+    "correct": 3,
+    "explanation": "37 = 00100101 → invert 11011010 → add 1 → 11011011.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs031",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "The 8-bit 2's complement value 11101100 represents the decimal number:",
+    "options": [
+      "236",
+      "−20",
+      "−19",
+      "−108"
+    ],
+    "correct": 1,
+    "explanation": "MSB is 1, so negative: invert 00010011, add 1 → 00010100 = 20, hence −20.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs032",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "What is the largest positive integer storable in 16-bit 2's complement?",
+    "options": [
+      "65535",
+      "32768",
+      "32767",
+      "65536"
+    ],
+    "correct": 2,
+    "explanation": "2¹⁵ − 1 = 32767.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs033",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "Which statement about fixed-point and floating-point representation is correct?",
+    "options": [
+      "Floating point stores a mantissa and an exponent, giving a much wider range than fixed point",
+      "Floating point stores numbers exactly with no rounding",
+      "Fixed point needs an exponent field",
+      "Fixed point can represent a wider range of values with the same bits"
+    ],
+    "correct": 0,
+    "explanation": "Floating point (like scientific notation) trades some precision for a huge range by keeping a separate exponent.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs034",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "In UTF-8 encoding, a character in the basic ASCII range (code points 0–127) occupies:",
+    "options": [
+      "1 byte",
+      "2 bytes",
+      "3 bytes",
+      "4 bytes"
+    ],
+    "correct": 0,
+    "explanation": "UTF-8 is backward compatible with ASCII: code points below 128 use a single byte.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs035",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "The ASCII code of 'd' is 100. What is the ASCII code of 'D'?",
+    "options": [
+      "36",
+      "132",
+      "68",
+      "67"
+    ],
+    "correct": 2,
+    "explanation": "Upper- and lower-case letters differ by 32: 100 − 32 = 68.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs036",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "Why is 2's complement preferred over sign-magnitude in computers?",
+    "options": [
+      "It represents fractions exactly",
+      "It needs fewer bits for positive numbers",
+      "It makes the sign bit unnecessary",
+      "Addition and subtraction use the same circuit, and there is a single zero"
+    ],
+    "correct": 3,
+    "explanation": "With 2's complement, A − B is just A + (−B) using an ordinary adder, and −0 does not exist.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs037",
+    "chapter": "Encodings",
+    "difficulty": "medium",
+    "text": "How many bytes does UTF-8 use to encode the Devanagari letter 'क' (U+0915)?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "Code points U+0800 to U+FFFF take 3 bytes in UTF-8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs038",
+    "chapter": "Encodings",
+    "difficulty": "hard",
+    "text": "Adding 01100100 (+100) and 00110010 (+50) in 8-bit 2's complement gives 10010110. This indicates:",
+    "options": [
+      "A correct answer of 150",
+      "An underflow of the fractional part",
+      "A correct answer of −106",
+      "Overflow — the true result 150 exceeds +127"
+    ],
+    "correct": 3,
+    "explanation": "Two positives produced a negative-looking result; 150 is outside −128…127, so overflow occurred.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs039",
+    "chapter": "Encodings",
+    "difficulty": "hard",
+    "text": "The 8-bit pattern 10000001 is interpreted in sign-magnitude, 1's complement and 2's complement respectively as:",
+    "options": [
+      "−1, −126, −127",
+      "−1, −127, −126",
+      "−127, −126, −1",
+      "+129, −1, −127"
+    ],
+    "correct": 0,
+    "explanation": "SM: sign 1, magnitude 1 → −1. 1's comp: invert → 01111110 = 126 → −126. 2's comp: 129 − 256 = −127.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs040",
+    "chapter": "Encodings",
+    "difficulty": "hard",
+    "text": "A fixed-point format stores numbers as 8 bits with 4 bits after the binary point (unsigned). What value does 0110.1010 represent?",
+    "options": [
+      "6.10",
+      "6.625",
+      "10.6",
+      "6.5"
+    ],
+    "correct": 1,
+    "explanation": "0110 = 6 and .1010 = 1/2 + 1/8 = 0.625.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs041",
+    "chapter": "Encodings",
+    "difficulty": "hard",
+    "text": "Which of the following statements is INCORRECT?",
+    "options": [
+      "ISCII is an 8-bit code",
+      "ASCII codes for digits '0'–'9' are 48–57",
+      "UTF-8 always uses exactly 2 bytes for every character",
+      "Unicode code points are written like U+0041"
+    ],
+    "correct": 2,
+    "explanation": "UTF-8 is variable-length (1 to 4 bytes), so the 'always 2 bytes' claim is false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs042",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "Which of the following is a proposition?",
+    "options": [
+      "Please close the door.",
+      "7 is a prime number.",
+      "Is it raining?",
+      "x + 2 = 5"
+    ],
+    "correct": 1,
+    "explanation": "A proposition is a declarative sentence that is either true or false; commands, questions and open sentences with unknowns are not.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs043",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "The conjunction p ∧ q is true when:",
+    "options": [
+      "Both p and q are true",
+      "At least one of p, q is true",
+      "p is true and q is false",
+      "Both p and q are false"
+    ],
+    "correct": 0,
+    "explanation": "∧ (AND) is true only in the single case where both operands are true.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs044",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "The implication p → q is FALSE only when:",
+    "options": [
+      "p is true and q is false",
+      "p is false and q is true",
+      "Both are false",
+      "Both are true"
+    ],
+    "correct": 0,
+    "explanation": "A conditional fails only when a true premise leads to a false conclusion.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs045",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "A compound proposition that is true for every combination of truth values of its variables is called a:",
+    "options": [
+      "Contingency",
+      "Contradiction",
+      "Tautology",
+      "Fallacy"
+    ],
+    "correct": 2,
+    "explanation": "Tautology = always true; contradiction = always false; contingency = sometimes true, sometimes false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs046",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "If p is 'It is sunny' and q is 'We play cricket', which is the symbolic form of 'If it is sunny then we play cricket'?",
+    "options": [
+      "p ↔ q",
+      "p ∧ q",
+      "q → p",
+      "p → q"
+    ],
+    "correct": 3,
+    "explanation": "'If p then q' is the conditional p → q.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs047",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "How many rows does a truth table for a proposition with 4 variables have?",
+    "options": [
+      "8",
+      "32",
+      "4",
+      "16"
+    ],
+    "correct": 3,
+    "explanation": "Each variable doubles the rows: 2⁴ = 16.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs048",
+    "chapter": "Propositional Logic",
+    "difficulty": "easy",
+    "text": "The biconditional p ↔ q is true when:",
+    "options": [
+      "p is true",
+      "p and q have different truth values",
+      "p and q have the same truth value",
+      "q is false"
+    ],
+    "correct": 2,
+    "explanation": "↔ means 'if and only if' and is true exactly when both sides agree.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs049",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "Which of the following is a tautology?",
+    "options": [
+      "p ∧ ¬p",
+      "p ∨ ¬p",
+      "p ↔ ¬p",
+      "p → ¬p"
+    ],
+    "correct": 1,
+    "explanation": "p ∨ ¬p (law of excluded middle) is true whether p is true or false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs050",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "The contrapositive of p → q is:",
+    "options": [
+      "¬p → ¬q",
+      "¬p → q",
+      "¬q → ¬p",
+      "q → p"
+    ],
+    "correct": 2,
+    "explanation": "Contrapositive negates and swaps both parts; it is logically equivalent to the original.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs051",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "The converse of 'If a number is divisible by 4, then it is even' is:",
+    "options": [
+      "If a number is not even, then it is not divisible by 4",
+      "If a number is not divisible by 4, then it is not even",
+      "A number is divisible by 4 and it is even",
+      "If a number is even, then it is divisible by 4"
+    ],
+    "correct": 3,
+    "explanation": "The converse swaps hypothesis and conclusion (q → p). Note it is false here, e.g. 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs052",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "p → q is logically equivalent to:",
+    "options": [
+      "¬p ∧ q",
+      "¬p ∨ q",
+      "p ∧ ¬q",
+      "p ∨ ¬q"
+    ],
+    "correct": 1,
+    "explanation": "The conditional is false only when p is true and q false, exactly like ¬p ∨ q.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs053",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "By De Morgan's law, ¬(p ∧ q) ≡",
+    "options": [
+      "¬p ∧ ¬q",
+      "¬p ∧ q",
+      "p ∨ q",
+      "¬p ∨ ¬q"
+    ],
+    "correct": 3,
+    "explanation": "Negating an AND gives an OR of the negations.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs054",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "If p is true and q is false, which of the following is TRUE?",
+    "options": [
+      "p ↔ q",
+      "p → q",
+      "p ∨ q",
+      "p ∧ q"
+    ],
+    "correct": 2,
+    "explanation": "p ∨ q needs only one true operand; the other three are false for p = T, q = F.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs055",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "The proposition (p ∧ q) → p is a:",
+    "options": [
+      "Tautology",
+      "Not a well-formed proposition",
+      "Contradiction",
+      "Contingency"
+    ],
+    "correct": 0,
+    "explanation": "If p ∧ q is true then p is true, so the conditional can never fail.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs056",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "The proposition p → (p ∧ q) is a:",
+    "options": [
+      "Equivalent to p",
+      "Contingency",
+      "Contradiction",
+      "Tautology"
+    ],
+    "correct": 1,
+    "explanation": "It is false when p = T, q = F and true otherwise, so it is sometimes true and sometimes false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs057",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "Which pair consists of logically equivalent statements?",
+    "options": [
+      "The converse and the conditional's negation",
+      "A conditional and its contrapositive",
+      "A conditional and its inverse",
+      "A conditional and its converse"
+    ],
+    "correct": 1,
+    "explanation": "p → q ≡ ¬q → ¬p; separately, the converse and the inverse are equivalent to each other but not to the original.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs058",
+    "chapter": "Propositional Logic",
+    "difficulty": "medium",
+    "text": "The negation of 'All students passed' is:",
+    "options": [
+      "Some student did not pass",
+      "No student passed",
+      "All students failed",
+      "Some students passed"
+    ],
+    "correct": 0,
+    "explanation": "To negate 'all X are P', it is enough that at least one X is not P.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs059",
+    "chapter": "Propositional Logic",
+    "difficulty": "hard",
+    "text": "Which of the following is equivalent to p ↔ q?",
+    "options": [
+      "(p → q) ∨ (q → p)",
+      "(p ∧ q) ∨ ¬p",
+      "(p → q) ∧ (q → p)",
+      "¬p ↔ ¬¬q"
+    ],
+    "correct": 2,
+    "explanation": "A biconditional is a two-way conditional. Option (p → q) ∨ (q → p) is a tautology, not ↔.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs060",
+    "chapter": "Propositional Logic",
+    "difficulty": "hard",
+    "text": "Simplify ¬(p → q) ∨ (p ∧ q).",
+    "options": [
+      "p ∧ ¬q",
+      "True (tautology)",
+      "q",
+      "p"
+    ],
+    "correct": 3,
+    "explanation": "¬(p → q) = p ∧ ¬q; (p ∧ ¬q) ∨ (p ∧ q) = p ∧ (¬q ∨ q) = p.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs061",
+    "chapter": "Propositional Logic",
+    "difficulty": "hard",
+    "text": "Assertion (A): (p → q) ∧ (q → r) → (p → r) is a tautology.\nReason (R): Implication is transitive (hypothetical syllogism).",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 0,
+    "explanation": "Checking all 8 rows shows the statement is always true, and that is precisely the transitivity of →.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs062",
+    "chapter": "Propositional Logic",
+    "difficulty": "hard",
+    "text": "How many rows of the truth table of (p ∨ q) → r are false?",
+    "options": [
+      "1",
+      "3",
+      "5",
+      "2"
+    ],
+    "correct": 1,
+    "explanation": "It is false when p ∨ q is true and r is false: (T,T,F), (T,F,F), (F,T,F) — 3 rows.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs063",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "In Boolean algebra, A + 1 =",
+    "options": [
+      "A′",
+      "0",
+      "A",
+      "1"
+    ],
+    "correct": 3,
+    "explanation": "Null (domination) law: OR with 1 is always 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs064",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "In Boolean algebra, A · A′ =",
+    "options": [
+      "A",
+      "A′",
+      "0",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "Complement law: a variable ANDed with its complement is 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs065",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "Which gates are called universal gates?",
+    "options": [
+      "NOT and AND",
+      "NAND and NOR",
+      "XOR and XNOR",
+      "AND and OR"
+    ],
+    "correct": 1,
+    "explanation": "Any Boolean function can be built using only NAND gates, or only NOR gates.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs066",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "The output of a 2-input NOR gate is 1 only when:",
+    "options": [
+      "Both inputs are 0",
+      "Both inputs are 1",
+      "Exactly one input is 1",
+      "At least one input is 1"
+    ],
+    "correct": 0,
+    "explanation": "NOR = NOT(OR); OR is 0 only when both inputs are 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs067",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "The dual of A + 0 = A is:",
+    "options": [
+      "A + 1 = 1",
+      "A′ + 0 = A′",
+      "A · 1 = A",
+      "A · 0 = 0"
+    ],
+    "correct": 2,
+    "explanation": "Duality swaps + ↔ · and 0 ↔ 1, leaving variables unchanged.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs068",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "The idempotent law states that:",
+    "options": [
+      "A · 1 = A",
+      "A + A′ = 1",
+      "A + A = 2A",
+      "A + A = A"
+    ],
+    "correct": 3,
+    "explanation": "Idempotence: repeating a variable with + or · leaves it unchanged (A + A = A, A·A = A).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs069",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "easy",
+    "text": "Which gate gives output 1 when its two inputs are different?",
+    "options": [
+      "XNOR",
+      "XOR",
+      "NAND",
+      "AND"
+    ],
+    "correct": 1,
+    "explanation": "XOR (exclusive OR) is 1 exactly when the inputs differ.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs070",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "By De Morgan's theorem, (A + B)′ =",
+    "options": [
+      "A · B",
+      "A′ · B",
+      "A′ · B′",
+      "A′ + B′"
+    ],
+    "correct": 2,
+    "explanation": "The complement of a sum is the product of complements.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs071",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "Simplify A + A·B.",
+    "options": [
+      "A",
+      "A + B",
+      "A·B",
+      "B"
+    ],
+    "correct": 0,
+    "explanation": "Absorption law: A + AB = A(1 + B) = A.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs072",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "Simplify A + A′·B.",
+    "options": [
+      "B",
+      "A′ + B",
+      "A·B",
+      "A + B"
+    ],
+    "correct": 3,
+    "explanation": "A + A′B = (A + A′)(A + B) = A + B.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs073",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "Simplify (A + B)(A + C).",
+    "options": [
+      "A + B + C",
+      "A + B·C",
+      "A·B + C",
+      "A·B·C"
+    ],
+    "correct": 1,
+    "explanation": "Distributive law in its 'OR over AND' form: (A + B)(A + C) = A + BC.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs074",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "A NAND gate with both inputs tied together behaves as a:",
+    "options": [
+      "NOT gate",
+      "AND gate",
+      "OR gate",
+      "Buffer"
+    ],
+    "correct": 0,
+    "explanation": "(A·A)′ = A′, so a NAND with joined inputs is an inverter.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs075",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "How many 2-input NAND gates are needed to build a 2-input OR gate?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ],
+    "correct": 0,
+    "explanation": "Invert each input with a NAND (2 gates), then NAND the results: (A′·B′)′ = A + B (3 gates).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs076",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "In a half adder with inputs A and B, the Sum and Carry outputs are:",
+    "options": [
+      "Sum = A ⊕ B, Carry = A + B",
+      "Sum = A + B, Carry = A·B",
+      "Sum = A·B, Carry = A ⊕ B",
+      "Sum = A ⊕ B, Carry = A·B"
+    ],
+    "correct": 3,
+    "explanation": "Sum is 1 when exactly one input is 1 (XOR); carry is 1 only when both are 1 (AND).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs077",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "Simplify A·B + A·B′.",
+    "options": [
+      "1",
+      "A·B",
+      "A",
+      "B"
+    ],
+    "correct": 2,
+    "explanation": "AB + AB′ = A(B + B′) = A·1 = A.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs078",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "The Boolean expression realised by an AND gate fed by A and B, whose output goes into an OR gate along with C′, is:",
+    "options": [
+      "(A + B)·C′",
+      "A·(B + C′)",
+      "A·B + C′",
+      "(A·B·C)′"
+    ],
+    "correct": 2,
+    "explanation": "AND gives AB; ORing that with C′ gives AB + C′.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs079",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "medium",
+    "text": "The complement of A·B′ + C is:",
+    "options": [
+      "(A′ + B′)·C′",
+      "(A′ + B)·C′",
+      "A′ + B + C′",
+      "A′·B + C′"
+    ],
+    "correct": 1,
+    "explanation": "Apply De Morgan twice: (AB′ + C)′ = (AB′)′·C′ = (A′ + B)·C′.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs080",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "hard",
+    "text": "Simplify A′B′C + A′BC + AB′C + ABC.",
+    "options": [
+      "A′ + C",
+      "A + C",
+      "B·C",
+      "C"
+    ],
+    "correct": 3,
+    "explanation": "All four minterms contain C and cover every combination of A, B, so the expression reduces to C.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs081",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "hard",
+    "text": "In a full adder, the carry-out can be written as:",
+    "options": [
+      "A + B + C",
+      "A·B + C(A ⊕ B)",
+      "A ⊕ B ⊕ C",
+      "(A·B·C)′"
+    ],
+    "correct": 1,
+    "explanation": "A carry is produced if both A and B are 1, or if exactly one of them is 1 and the incoming carry is 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs082",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "hard",
+    "text": "Simplify (A + B)(A′ + C)(B + C).",
+    "options": [
+      "(A + B)(A′ + C)",
+      "A + B + C",
+      "(A + C)(B + C)",
+      "A·C + B"
+    ],
+    "correct": 0,
+    "explanation": "By the consensus theorem the term (B + C) is redundant, leaving (A + B)(A′ + C).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs083",
+    "chapter": "Boolean Algebra and Logic Gates",
+    "difficulty": "hard",
+    "text": "Which expression is NOT equivalent to A ⊕ B?",
+    "options": [
+      "(A + B)(A′ + B′)",
+      "(A + B)·(A·B)′",
+      "A·B′ + A′·B",
+      "A·B + A′·B′"
+    ],
+    "correct": 3,
+    "explanation": "A·B + A′·B′ is XNOR, the complement of XOR; the other three all equal A ⊕ B.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs084",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "The key idea of the Von Neumann architecture is that:",
+    "options": [
+      "Only one input device can be attached to the system at a time",
+      "The computer works without a CPU, using memory to compute",
+      "Program instructions and data are stored in the same memory",
+      "Instructions and data are kept in separate memories with separate buses"
+    ],
+    "correct": 2,
+    "explanation": "The stored-program concept keeps both instructions and data in a single read–write memory.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs085",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "Which unit of the CPU performs arithmetic and logical operations?",
+    "options": [
+      "Control Unit",
+      "ALU",
+      "Memory Address Register",
+      "Cache"
+    ],
+    "correct": 1,
+    "explanation": "The Arithmetic Logic Unit carries out calculations and comparisons.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs086",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "Which unit of the CPU directs and coordinates the operations of other units?",
+    "options": [
+      "Accumulator",
+      "ALU",
+      "Hard disk",
+      "Control Unit"
+    ],
+    "correct": 3,
+    "explanation": "The control unit decodes instructions and issues control signals.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs087",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "Which memory is volatile?",
+    "options": [
+      "RAM",
+      "Flash pen drive",
+      "ROM",
+      "Hard disk"
+    ],
+    "correct": 0,
+    "explanation": "RAM loses its contents when power is removed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs088",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "Which of the following is an output device?",
+    "options": [
+      "Microphone",
+      "Scanner",
+      "Printer",
+      "Mouse"
+    ],
+    "correct": 2,
+    "explanation": "A printer produces output from the computer; the others send data into it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs089",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "Cache memory is placed between:",
+    "options": [
+      "Main memory and the hard disk",
+      "The CPU and main memory",
+      "Two input devices",
+      "The monitor and the CPU"
+    ],
+    "correct": 1,
+    "explanation": "Cache is a small, fast memory that holds recently/frequently used data close to the CPU.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs090",
+    "chapter": "Computer Hardware",
+    "difficulty": "easy",
+    "text": "The correct order of the basic instruction cycle is:",
+    "options": [
+      "Fetch → Decode → Execute",
+      "Decode → Fetch → Execute",
+      "Execute → Fetch → Decode",
+      "Fetch → Execute → Decode"
+    ],
+    "correct": 0,
+    "explanation": "The CPU fetches an instruction, decodes it, then executes it, repeating continuously.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs091",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Which register holds the address of the next instruction to be fetched?",
+    "options": [
+      "Accumulator",
+      "Instruction Register (IR)",
+      "Memory Data Register (MDR)",
+      "Program Counter (PC)"
+    ],
+    "correct": 3,
+    "explanation": "The PC points to the next instruction and is normally incremented after each fetch.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs092",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Which register holds the instruction currently being decoded and executed?",
+    "options": [
+      "Memory Address Register (MAR)",
+      "Program Counter (PC)",
+      "Instruction Register (IR)",
+      "Stack Pointer"
+    ],
+    "correct": 2,
+    "explanation": "Once fetched, the instruction is copied into the IR for decoding.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs093",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Arrange in order of increasing access speed: hard disk, registers, RAM, cache.",
+    "options": [
+      "Hard disk, RAM, cache, registers",
+      "Registers, cache, RAM, hard disk",
+      "RAM, hard disk, cache, registers",
+      "Cache, registers, RAM, hard disk"
+    ],
+    "correct": 0,
+    "explanation": "Registers are fastest and the hard disk slowest; the memory hierarchy trades speed for capacity and cost.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs094",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Which bus carries the location in memory that the CPU wants to read or write?",
+    "options": [
+      "USB",
+      "Data bus",
+      "Address bus",
+      "Control bus"
+    ],
+    "correct": 2,
+    "explanation": "The address bus is one-directional from CPU to memory and carries addresses.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs095",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "If a CPU has a 16-bit address bus, how many memory locations can it address directly?",
+    "options": [
+      "256",
+      "65536",
+      "16",
+      "32768"
+    ],
+    "correct": 1,
+    "explanation": "2¹⁶ = 65536 distinct addresses.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs096",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Which statement about ROM is correct?",
+    "options": [
+      "It loses data when power is switched off",
+      "It is slower than a magnetic tape",
+      "It is the main working memory for running programs",
+      "It is non-volatile and typically stores firmware such as the boot program"
+    ],
+    "correct": 3,
+    "explanation": "ROM keeps its contents without power and holds startup code (firmware).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs097",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Why is cache memory effective even though it is small?",
+    "options": [
+      "Programs tend to reuse recently accessed data and nearby addresses (locality of reference)",
+      "Cache is non-volatile, so its contents survive a restart",
+      "Cache adds its own capacity to RAM, enlarging main memory",
+      "Cache holds a full copy of the entire hard disk for quick access"
+    ],
+    "correct": 0,
+    "explanation": "Because of temporal and spatial locality, a small cache serves most memory requests.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs098",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "Which of the following is secondary storage?",
+    "options": [
+      "RAM",
+      "Solid-state drive (SSD)",
+      "Cache",
+      "Registers"
+    ],
+    "correct": 1,
+    "explanation": "Secondary storage is non-volatile, larger and slower; SSDs, hard disks and pen drives are examples.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs099",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "The Memory Address Register (MAR) and Memory Data Register (MDR) are used to:",
+    "options": [
+      "Store the operating system permanently",
+      "Store the program counter and the accumulator",
+      "Hold the address being accessed and the data being transferred to/from memory",
+      "Connect input devices to the monitor"
+    ],
+    "correct": 2,
+    "explanation": "MAR holds the target address; MDR (MBR) buffers the word read from or written to memory.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs100",
+    "chapter": "Computer Hardware",
+    "difficulty": "medium",
+    "text": "The data bus is described as bidirectional because:",
+    "options": [
+      "It has exactly two wires, one for sending and one for receiving",
+      "It carries both memory addresses and data on the same lines",
+      "It links two computers so they can exchange files directly",
+      "Data can travel both from CPU to memory and from memory to CPU"
+    ],
+    "correct": 3,
+    "explanation": "Reads move data into the CPU and writes move it out, along the same data bus.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs101",
+    "chapter": "Computer Hardware",
+    "difficulty": "hard",
+    "text": "Assertion (A): The Von Neumann bottleneck limits processing speed.\nReason (R): Instructions and data share a single path between the CPU and memory, so they cannot be fetched simultaneously.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 0,
+    "explanation": "The shared bus forces instruction fetches and data transfers to take turns, which is exactly the bottleneck.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs102",
+    "chapter": "Computer Hardware",
+    "difficulty": "hard",
+    "text": "A memory has 4096 locations, each storing 1 byte. What are the minimum widths of the address bus and data bus?",
+    "options": [
+      "4096 bits and 8 bits",
+      "12 bits and 8 bits",
+      "8 bits and 12 bits",
+      "12 bits and 1 bit"
+    ],
+    "correct": 1,
+    "explanation": "2¹² = 4096 locations need 12 address lines; a 1-byte word needs 8 data lines.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs103",
+    "chapter": "Computer Hardware",
+    "difficulty": "hard",
+    "text": "During the fetch step, which sequence is correct?",
+    "options": [
+      "ALU → PC; MDR → MAR; IR cleared",
+      "IR → PC; MDR → MAR; ALU executes",
+      "PC → MAR; memory → MDR; MDR → IR; PC incremented",
+      "MAR → PC; IR → MDR; PC decremented"
+    ],
+    "correct": 2,
+    "explanation": "The PC's address goes to the MAR, the word is read into the MDR, copied to the IR, and the PC advances.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs104",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "Which is NOT a necessary property of an algorithm?",
+    "options": [
+      "Effectiveness",
+      "Definiteness",
+      "Finiteness",
+      "It must be written in Java"
+    ],
+    "correct": 3,
+    "explanation": "An algorithm is language-independent; it must be finite, definite (unambiguous), effective, with defined input and output.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs105",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "In a flowchart, a diamond-shaped box represents:",
+    "options": [
+      "A decision",
+      "Start/Stop",
+      "Input/Output",
+      "A process"
+    ],
+    "correct": 0,
+    "explanation": "Diamonds hold conditions with two exits (yes/no); rectangles are processes; parallelograms are I/O; ovals are terminals.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs106",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "In a flowchart, the parallelogram symbol is used for:",
+    "options": [
+      "A decision",
+      "Input or output",
+      "Start or end",
+      "A connector"
+    ],
+    "correct": 1,
+    "explanation": "Parallelograms denote reading input or displaying output.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs107",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "Pseudocode is:",
+    "options": [
+      "Machine code",
+      "A compiled Java program",
+      "An informal, language-independent description of an algorithm's steps",
+      "A type of flowchart symbol"
+    ],
+    "correct": 2,
+    "explanation": "Pseudocode uses structured English-like statements to describe logic without strict syntax.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs108",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "'Finiteness' of an algorithm means it must:",
+    "options": [
+      "Have exactly one input",
+      "Produce infinitely many outputs",
+      "Use a finite amount of paper",
+      "Terminate after a finite number of steps"
+    ],
+    "correct": 3,
+    "explanation": "An algorithm must stop eventually; an endless procedure is not an algorithm.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs109",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "Breaking a large problem into smaller sub-problems and refining each step further is called:",
+    "options": [
+      "Compilation",
+      "Encoding",
+      "Stepwise (top-down) refinement",
+      "Debugging"
+    ],
+    "correct": 2,
+    "explanation": "Top-down design repeatedly decomposes a task until each step is simple to implement.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs110",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "easy",
+    "text": "Dry-running an algorithm with sample values, recording variables at each step, is called:",
+    "options": [
+      "Tracing",
+      "Encrypting",
+      "Linking",
+      "Compiling"
+    ],
+    "correct": 0,
+    "explanation": "A trace table records each variable's value after every step.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs111",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Trace the following and choose the output.\n\nint s = 0;\nfor (int i = 1; i <= 5; i++)\n    s = s + i * i;\nSystem.out.println(s);",
+    "options": [
+      "25",
+      "55",
+      "15",
+      "30"
+    ],
+    "correct": 1,
+    "explanation": "s = 1 + 4 + 9 + 16 + 25 = 55.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs112",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Trace the following and choose the output.\n\nint n = 1234, r = 0;\nwhile (n > 0) {\n    r = r * 10 + n % 10;\n    n = n / 10;\n}\nSystem.out.println(r);",
+    "options": [
+      "1234",
+      "4",
+      "10",
+      "4321"
+    ],
+    "correct": 3,
+    "explanation": "Each pass moves the last digit of n to the end of r, reversing the number.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs113",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Trace the following and choose the output.\n\nint a = 48, b = 18;\nwhile (b != 0) {\n    int t = b;\n    b = a % b;\n    a = t;\n}\nSystem.out.println(a);",
+    "options": [
+      "18",
+      "6",
+      "2",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "This is Euclid's algorithm: (48,18) → (18,12) → (12,6) → (6,0), so GCD = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs114",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "How many times is the statement inside the inner loop executed?\n\nfor (i = 1; i <= n; i++)\n    for (j = 1; j <= n; j++)\n        count++;",
+    "options": [
+      "n + 1",
+      "2n",
+      "n²",
+      "n"
+    ],
+    "correct": 2,
+    "explanation": "For each of the n outer iterations the inner loop runs n times: n × n.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs115",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "How many times does count++ execute? (The program prints count.)\n\nint n = 10, count = 0;\nfor (int i = 1; i <= n; i++)\n    for (int j = 1; j <= i; j++)\n        count++;\nSystem.out.println(count);",
+    "options": [
+      "55",
+      "100",
+      "10",
+      "45"
+    ],
+    "correct": 0,
+    "explanation": "Inner loop runs i times: 1 + 2 + … + 10 = 55 = n(n + 1)/2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs116",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "An algorithm takes about 3n + 5 steps for input size n. As n grows large, its running time grows:",
+    "options": [
+      "Quadratically with n",
+      "It stays constant",
+      "Exponentially",
+      "Linearly with n"
+    ],
+    "correct": 3,
+    "explanation": "The dominant term is 3n, so time is proportional to n (linear).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs117",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Which algorithm is generally faster for large n?",
+    "options": [
+      "One taking about 100n steps",
+      "One taking about n² steps",
+      "Both are always equal",
+      "Neither ever finishes"
+    ],
+    "correct": 0,
+    "explanation": "For n > 100, n² exceeds 100n, and the gap widens rapidly; growth rate matters more than the constant.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs118",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Trace the following and choose the output.\n\nint x = 1, k = 0;\nwhile (x < 100) {\n    x = x * 3;\n    k++;\n}\nSystem.out.println(k + \" \" + x);",
+    "options": [
+      "4 243",
+      "5 81",
+      "4 81",
+      "5 243"
+    ],
+    "correct": 3,
+    "explanation": "x: 3, 9, 27, 81, 243 — five multiplications before x ≥ 100.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs119",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "medium",
+    "text": "Which pair of flowchart symbols is correctly matched?",
+    "options": [
+      "Arrow — Process",
+      "Rectangle — Decision",
+      "Oval — Start/Stop",
+      "Diamond — Input/Output"
+    ],
+    "correct": 2,
+    "explanation": "Ovals (terminals) mark start and end; rectangles are processes, diamonds decisions, arrows flow lines.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs120",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "hard",
+    "text": "Trace the following and choose the output.\n\nint n = 6, a = 0, b = 1;\nfor (int i = 1; i <= n; i++) {\n    int c = a + b;\n    a = b;\n    b = c;\n}\nSystem.out.println(a);",
+    "options": [
+      "5",
+      "8",
+      "13",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "After 6 iterations a holds the 6th Fibonacci number: 1, 1, 2, 3, 5, 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs121",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "hard",
+    "text": "How many times is the body (count++) executed? The program prints count.\n\nint count = 0;\nfor (int i = 1; i <= 64; i = i * 2)\n    count++;\nSystem.out.println(count);",
+    "options": [
+      "7",
+      "32",
+      "6",
+      "64"
+    ],
+    "correct": 0,
+    "explanation": "i takes 1, 2, 4, 8, 16, 32, 64 — seven values; doubling loops run about log₂n + 1 times.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs122",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "hard",
+    "text": "Trace the following and choose the output.\n\nint n = 28, s = 0;\nfor (int d = 1; d < n; d++)\n    if (n % d == 0) s += d;\nSystem.out.println(s == n ? \"Perfect\" : \"Not perfect\");",
+    "options": [
+      "0",
+      "Not perfect",
+      "Perfect",
+      "28"
+    ],
+    "correct": 2,
+    "explanation": "Proper divisors of 28: 1 + 2 + 4 + 7 + 14 = 28, so it is a perfect number.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs123",
+    "chapter": "Algorithms and Problem Solving",
+    "difficulty": "hard",
+    "text": "Linear search on an unsorted list of n items, in the worst case, needs about how many comparisons?",
+    "options": [
+      "log₂n",
+      "n",
+      "1",
+      "n²"
+    ],
+    "correct": 1,
+    "explanation": "The item may be last or absent, so every element is examined.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs124",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "An object in Java combines:",
+    "options": [
+      "Only data fields, with all methods stored separately in the JVM",
+      "Only methods, since data is kept in local variables",
+      "Only a main method and the constructors of its class",
+      "State (data/fields) and behaviour (methods)"
+    ],
+    "correct": 3,
+    "explanation": "Objects bundle attributes (fields) with the operations (methods) that act on them.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs125",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "A class is best described as:",
+    "options": [
+      "A built-in list of reserved Java keywords and operators",
+      "A blueprint or template from which objects are created",
+      "A single object that has already been stored on disk",
+      "A variable that holds the memory address of a method"
+    ],
+    "correct": 1,
+    "explanation": "A class defines the fields and methods; objects are instances of it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs126",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which keyword creates a new object in Java?",
+    "options": [
+      "new",
+      "static",
+      "class",
+      "this"
+    ],
+    "correct": 0,
+    "explanation": "new allocates memory for an object and calls its constructor.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs127",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "The Java compiler (javac) converts source code into:",
+    "options": [
+      "HTML",
+      "Machine code for one specific CPU",
+      "Bytecode (.class files)",
+      "Pseudocode"
+    ],
+    "correct": 2,
+    "explanation": "javac produces platform-independent bytecode, which the JVM then runs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs128",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "Which component executes Java bytecode?",
+    "options": [
+      "The text editor",
+      "The operating system's file manager",
+      "javac",
+      "Java Virtual Machine (JVM)"
+    ],
+    "correct": 3,
+    "explanation": "The JVM interprets or JIT-compiles bytecode on the host machine.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs129",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "Java is called platform independent because:",
+    "options": [
+      "It runs directly on hardware without needing any software",
+      "The same bytecode can run on any machine that has a JVM",
+      "It is compiled directly to every CPU's native machine code",
+      "Its programs never call the operating system for any service"
+    ],
+    "correct": 1,
+    "explanation": "'Write once, run anywhere' — bytecode is portable; only the JVM is platform specific.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs130",
+    "chapter": "Objects and Classes",
+    "difficulty": "easy",
+    "text": "Hiding the internal data of an object and allowing access only through methods is called:",
+    "options": [
+      "Compilation",
+      "Inheritance",
+      "Encapsulation",
+      "Iteration"
+    ],
+    "correct": 2,
+    "explanation": "Encapsulation wraps data and methods together and restricts direct access, typically with private fields.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs131",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "Abstraction means:",
+    "options": [
+      "Converting source code to bytecode before the JVM runs it",
+      "Writing all code inside main so the logic is in one place",
+      "Making every field public so other classes can change it freely",
+      "Showing only essential features and hiding unnecessary implementation details"
+    ],
+    "correct": 3,
+    "explanation": "Users of a class need to know what it does, not how it does it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs132",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "A missing semicolon in a Java program is detected:",
+    "options": [
+      "At compile time",
+      "Never",
+      "At run time",
+      "Only when the program is printed"
+    ],
+    "correct": 0,
+    "explanation": "Syntax errors are reported by javac and stop bytecode from being generated.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs133",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "Dividing an integer by zero (e.g. 5 / 0) in Java causes:",
+    "options": [
+      "The output Infinity",
+      "A compile-time error",
+      "The output 0",
+      "A run-time error (ArithmeticException)"
+    ],
+    "correct": 3,
+    "explanation": "Integer division by zero compiles but throws ArithmeticException when executed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs134",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "What is the result of compiling and running this code?\n\nint a = 10, b = 0;\nSystem.out.println(a / b);",
+    "options": [
+      "Compiles, but throws ArithmeticException at run time",
+      "Compiles and prints 0 since the quotient is undefined",
+      "Compile-time error: division by a zero variable",
+      "Compiles and prints Infinity because b is zero"
+    ],
+    "correct": 0,
+    "explanation": "The compiler cannot know b is zero; the JVM throws java.lang.ArithmeticException: / by zero.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs135",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "What happens when this code is compiled?\n\nint x = 5\nSystem.out.println(x);",
+    "options": [
+      "Prints x",
+      "Compile-time error: ';' expected",
+      "Run-time error",
+      "Prints 5"
+    ],
+    "correct": 1,
+    "explanation": "The declaration lacks a terminating semicolon, a syntax error caught by javac.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs136",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass Box {\n    int w = 2, h = 3;\n    int area() { return w * h; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Box b = new Box();\n        b.w = 5;\n        System.out.println(b.area());\n    }\n}",
+    "options": [
+      "Compile-time error",
+      "10",
+      "15",
+      "6"
+    ],
+    "correct": 2,
+    "explanation": "b.w is changed to 5 while h stays 3, so area() returns 15.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs137",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass Counter {\n    int c;\n    void inc() { c++; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Counter p = new Counter();\n        Counter q = new Counter();\n        p.inc(); p.inc(); q.inc();\n        System.out.println(p.c + \" \" + q.c);\n    }\n}",
+    "options": [
+      "1 2",
+      "2 1",
+      "3 3",
+      "0 0"
+    ],
+    "correct": 1,
+    "explanation": "Each object has its own copy of the instance variable c; fields default to 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs138",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass Pt { int x; }\npublic class Main {\n    public static void main(String[] args) {\n        Pt a = new Pt();\n        Pt b = a;\n        b.x = 7;\n        System.out.println(a.x);\n    }\n}",
+    "options": [
+      "Compile-time error",
+      "null",
+      "0",
+      "7"
+    ],
+    "correct": 3,
+    "explanation": "b = a copies the reference, not the object; both names refer to the same Pt.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs139",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "Which of the following is a logical error?",
+    "options": [
+      "Misspelling the keyword 'public' as 'pubic' in a class header",
+      "Leaving out the closing brace at the end of a method",
+      "Using < instead of <= in a loop, so the last value is skipped",
+      "Calling a method name that is not defined in any class"
+    ],
+    "correct": 2,
+    "explanation": "Logical errors compile and run but give wrong results; the others are compile-time errors.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs140",
+    "chapter": "Objects and Classes",
+    "difficulty": "medium",
+    "text": "The extension of a compiled Java file is:",
+    "options": [
+      ".class",
+      ".jvm",
+      ".java",
+      ".exe"
+    ],
+    "correct": 0,
+    "explanation": "Source files end in .java; javac writes bytecode to .class files.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs141",
+    "chapter": "Objects and Classes",
+    "difficulty": "hard",
+    "text": "What is the result of compiling this code?\n\nclass Acct {\n    private int bal = 100;\n}\npublic class Main {\n    public static void main(String[] args) {\n        Acct a = new Acct();\n        System.out.println(a.bal);\n    }\n}",
+    "options": [
+      "Prints 100",
+      "Prints 0",
+      "Compile-time error: bal has private access in Acct",
+      "Run-time error"
+    ],
+    "correct": 2,
+    "explanation": "private members are visible only inside their own class — this is encapsulation enforced by the compiler.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs142",
+    "chapter": "Objects and Classes",
+    "difficulty": "hard",
+    "text": "What is the result of running this code?\n\nclass Node { int v; }\npublic class Main {\n    public static void main(String[] args) {\n        Node n = null;\n        System.out.println(n.v);\n    }\n}",
+    "options": [
+      "NullPointerException at run time",
+      "Prints 0",
+      "Prints null",
+      "Compile-time error"
+    ],
+    "correct": 0,
+    "explanation": "The variable is declared and compiles, but dereferencing a null reference fails when executed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs143",
+    "chapter": "Objects and Classes",
+    "difficulty": "hard",
+    "text": "Which statement about the JIT (Just-In-Time) compiler is correct?",
+    "options": [
+      "It replaces the JVM entirely, so bytecode is no longer needed at all",
+      "It converts frequently executed bytecode into native machine code at run time to speed up execution",
+      "It converts .java source files into .class files before the program runs",
+      "It checks the source code for syntax errors before javac compiles it"
+    ],
+    "correct": 1,
+    "explanation": "The JIT is part of the JVM; it compiles hot bytecode paths to native code while the program runs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs144",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "How many bytes does a Java int occupy?",
+    "options": [
+      "2",
+      "8",
+      "1",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "int is a 32-bit (4-byte) signed integer on every platform.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs145",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "Which is NOT a primitive data type in Java?",
+    "options": [
+      "double",
+      "String",
+      "boolean",
+      "char"
+    ],
+    "correct": 1,
+    "explanation": "String is a class (reference type); Java has 8 primitives: byte, short, int, long, float, double, char, boolean.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs146",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "The size of a char in Java is:",
+    "options": [
+      "4 bytes",
+      "1 byte",
+      "2 bytes",
+      "8 bytes"
+    ],
+    "correct": 2,
+    "explanation": "Java chars are 16-bit UTF-16 code units.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs147",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "The range of the byte data type is:",
+    "options": [
+      "−128 to 127",
+      "0 to 255",
+      "−256 to 255",
+      "−32768 to 32767"
+    ],
+    "correct": 0,
+    "explanation": "byte is an 8-bit signed integer.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs148",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "Which literal is of type long?",
+    "options": [
+      "25.0f",
+      "'2'",
+      "25",
+      "25L"
+    ],
+    "correct": 3,
+    "explanation": "An integer literal with suffix L (or l) is a long.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs149",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "The wrapper class for the primitive type char is:",
+    "options": [
+      "Character",
+      "Charecter",
+      "Char",
+      "String"
+    ],
+    "correct": 0,
+    "explanation": "Wrapper classes: Integer, Character, Boolean, Double, Float, Long, Short, Byte.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs150",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "easy",
+    "text": "Automatic conversion of an int to an Integer object is called:",
+    "options": [
+      "Narrowing",
+      "Parsing",
+      "Unboxing",
+      "Autoboxing"
+    ],
+    "correct": 3,
+    "explanation": "Autoboxing wraps a primitive in its wrapper; unboxing extracts it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs151",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint x = 7;\ndouble d = x;\nSystem.out.println(d);",
+    "options": [
+      "Compile-time error",
+      "7.0",
+      "7.00",
+      "7"
+    ],
+    "correct": 1,
+    "explanation": "int widens implicitly to double, and println shows a double with a decimal point.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs152",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\ndouble d = 9.99;\nint i = (int) d;\nSystem.out.println(i);",
+    "options": [
+      "Compile-time error",
+      "9.99",
+      "9",
+      "10"
+    ],
+    "correct": 2,
+    "explanation": "An explicit cast to int truncates towards zero; it does not round.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs153",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the result of compiling this code?\n\ndouble d = 3.5;\nint n = d;\nSystem.out.println(n);",
+    "options": [
+      "Prints 3",
+      "Prints 4",
+      "Prints 3.5",
+      "Compile-time error: possible lossy conversion from double to int"
+    ],
+    "correct": 3,
+    "explanation": "Narrowing double → int needs an explicit cast.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs154",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nchar c = 'A';\nint n = c + 2;\nSystem.out.println(n);",
+    "options": [
+      "C",
+      "67",
+      "65",
+      "A2"
+    ],
+    "correct": 1,
+    "explanation": "In c + 2, the char is promoted to int (65), giving 67.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs155",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nchar c = 'a';\nc += 2;\nSystem.out.println(c);",
+    "options": [
+      "a2",
+      "99",
+      "c",
+      "Compile-time error"
+    ],
+    "correct": 2,
+    "explanation": "Compound assignment includes an implicit cast back to char, so 'a' + 2 → 'c'.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs156",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint a = Integer.parseInt(\"45\");\nint b = Integer.valueOf(\"5\");\nSystem.out.println(a + b);",
+    "options": [
+      "50",
+      "455",
+      "Compile-time error",
+      "4555"
+    ],
+    "correct": 0,
+    "explanation": "parseInt returns an int and valueOf returns an Integer that is unboxed for addition: 45 + 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs157",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString s = \"12\" + 3;\nint t = Integer.parseInt(s) + 3;\nSystem.out.println(t);",
+    "options": [
+      "18",
+      "15",
+      "1233",
+      "126"
+    ],
+    "correct": 3,
+    "explanation": "\"12\" + 3 is the string \"123\"; parsing gives 123, plus 3 = 126.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs158",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nbyte b = (byte) 130;\nSystem.out.println(b);",
+    "options": [
+      "-126",
+      "-130",
+      "130",
+      "126"
+    ],
+    "correct": 0,
+    "explanation": "130 does not fit in a byte; the low 8 bits 10000010 are read as 2's complement −126.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs159",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(Character.isLetter('5') + \" \" + Character.isDigit('5'));",
+    "options": [
+      "false false",
+      "true false",
+      "false true",
+      "true true"
+    ],
+    "correct": 2,
+    "explanation": "'5' is a digit, not a letter.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs160",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "medium",
+    "text": "What is the output?\n\ndouble r = Double.parseDouble(\"2.5\") * 2;\nSystem.out.println(r);",
+    "options": [
+      "Compile-time error",
+      "5.0",
+      "5",
+      "2.52.5"
+    ],
+    "correct": 1,
+    "explanation": "parseDouble converts the text to the double 2.5; doubling gives 5.0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs161",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint i = Integer.MAX_VALUE;\ni = i + 1;\nSystem.out.println(i);",
+    "options": [
+      "2147483647",
+      "-2147483648",
+      "Run-time error: overflow",
+      "2147483648"
+    ],
+    "correct": 1,
+    "explanation": "int arithmetic silently wraps around in 2's complement; no exception is thrown.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs162",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nlong big = 1000000 * 1000000;\nSystem.out.println(big);",
+    "options": [
+      "Compile-time error",
+      "1000000000000",
+      "-727379968",
+      "1000000000000L"
+    ],
+    "correct": 2,
+    "explanation": "Both literals are int, so the multiplication overflows as int before widening to long. Use 1000000L to avoid it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs163",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nfloat f = 1.1f;\ndouble d = 1.1;\nSystem.out.println(f == d);",
+    "options": [
+      "false",
+      "Compile-time error",
+      "1.1",
+      "true"
+    ],
+    "correct": 0,
+    "explanation": "1.1 is not exact in binary; the float approximation widened to double differs from the double approximation.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs164",
+    "chapter": "Primitive Values, Wrapper Classes, Types and Casting",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nInteger p = 127, q = 127;\nInteger r = 128, s = 128;\nSystem.out.println((p == q) + \" \" + r.equals(s));",
+    "options": [
+      "false true",
+      "false false",
+      "true false",
+      "true true"
+    ],
+    "correct": 3,
+    "explanation": "Autoboxed Integers from −128 to 127 are cached, so p == q is true; equals() compares values, so r.equals(s) is true.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs165",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "Which is a valid Java identifier?",
+    "options": [
+      "total-2",
+      "2total",
+      "class",
+      "_total2"
+    ],
+    "correct": 3,
+    "explanation": "Identifiers may contain letters, digits, _ and $, cannot start with a digit, and cannot be keywords.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs166",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "Which operator gives the remainder of an integer division?",
+    "options": [
+      "mod",
+      "%",
+      "#",
+      "/"
+    ],
+    "correct": 1,
+    "explanation": "% is the modulus (remainder) operator.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs167",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(17 / 5 + \" \" + 17 % 5);",
+    "options": [
+      "3 2",
+      "3 3",
+      "2 3",
+      "3.4 2"
+    ],
+    "correct": 0,
+    "explanation": "Integer division discards the fraction: 17 / 5 = 3, remainder 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs168",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nint a = 5;\na += 3;\na *= 2;\nSystem.out.println(a);",
+    "options": [
+      "13",
+      "11",
+      "16",
+      "10"
+    ],
+    "correct": 2,
+    "explanation": "a becomes 8, then 16.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs169",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(10 > 5 && 3 > 7);",
+    "options": [
+      "false",
+      "0",
+      "1",
+      "true"
+    ],
+    "correct": 0,
+    "explanation": "&& is true only if both operands are true; 3 > 7 is false.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs170",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(Math.sqrt(49) + Math.pow(2, 3));",
+    "options": [
+      "56.0",
+      "11.0",
+      "15.0",
+      "15"
+    ],
+    "correct": 2,
+    "explanation": "sqrt(49) = 7.0 and pow(2, 3) = 8.0; both return double.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs171",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nint x = 8;\nString r = (x % 2 == 0) ? \"Even\" : \"Odd\";\nSystem.out.println(r);",
+    "options": [
+      "Odd",
+      "8",
+      "true",
+      "Even"
+    ],
+    "correct": 3,
+    "explanation": "The ternary operator picks the first value when the condition is true.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs172",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint a = 5;\nint b = a++ + ++a;\nSystem.out.println(a + \" \" + b);",
+    "options": [
+      "7 13",
+      "7 12",
+      "7 11",
+      "6 11"
+    ],
+    "correct": 1,
+    "explanation": "a++ gives 5 (a → 6); ++a makes a 7 and gives 7; b = 5 + 7 = 12.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs173",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint x = 10;\nx = x++ + x--;\nSystem.out.println(x);",
+    "options": [
+      "22",
+      "20",
+      "21",
+      "19"
+    ],
+    "correct": 2,
+    "explanation": "x++ yields 10 (x → 11); x-- yields 11 (x → 10); the sum 21 is then assigned to x.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs174",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(2 + 3 * 4 - 6 / 2);",
+    "options": [
+      "11",
+      "10",
+      "17",
+      "7"
+    ],
+    "correct": 0,
+    "explanation": "* and / bind tighter: 2 + 12 − 3 = 11.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs175",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(-17 % 5 + \" \" + 17 % -5);",
+    "options": [
+      "3 -3",
+      "-2 2",
+      "-2 -2",
+      "2 -2"
+    ],
+    "correct": 1,
+    "explanation": "In Java the remainder takes the sign of the dividend.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs176",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(Math.round(2.5) + \" \" + Math.round(-2.5));",
+    "options": [
+      "2 -2",
+      "2 -3",
+      "3 -3",
+      "3 -2"
+    ],
+    "correct": 3,
+    "explanation": "Math.round adds 0.5 and takes the floor: floor(3.0) = 3, floor(−2.0) = −2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs177",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(Math.ceil(-4.3) + \" \" + Math.floor(-4.3));",
+    "options": [
+      "-5.0 -4.0",
+      "4.0 5.0",
+      "-4.0 -5.0",
+      "-4 -5"
+    ],
+    "correct": 2,
+    "explanation": "ceil goes up (towards +∞) and floor goes down (towards −∞); both return double.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs178",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(6 & 3);\nSystem.out.println(6 | 3);\nSystem.out.println(6 ^ 3);",
+    "options": [
+      "3 6 5",
+      "2 7 5",
+      "7 2 5",
+      "2 7 1"
+    ],
+    "correct": 1,
+    "explanation": "110 & 011 = 010 (2); 110 | 011 = 111 (7); 110 ^ 011 = 101 (5).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs179",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint k = 5;\nboolean f = (k > 10) && (++k > 5);\nSystem.out.println(f + \" \" + k);",
+    "options": [
+      "false 5",
+      "true 5",
+      "false 6",
+      "true 6"
+    ],
+    "correct": 0,
+    "explanation": "&& short-circuits: the left side is false, so ++k is never evaluated.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs180",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(Math.abs(-7) + Math.max(3, 9) - Math.min(-2, 4));",
+    "options": [
+      "20",
+      "14",
+      "10",
+      "18"
+    ],
+    "correct": 3,
+    "explanation": "7 + 9 − (−2) = 18.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs181",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint a = 20, b = 6;\nSystem.out.println((double) a / b > 3 ? \"big\" : \"small\");",
+    "options": [
+      "big",
+      "small",
+      "3.33",
+      "Compile-time error"
+    ],
+    "correct": 0,
+    "explanation": "(double) 20 / 6 = 3.33…, which is greater than 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs182",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nSystem.out.println(1 + 2 + \"3\" + 4 + 5);",
+    "options": [
+      "339",
+      "12345",
+      "3345",
+      "15"
+    ],
+    "correct": 2,
+    "explanation": "Left to right: 1 + 2 = 3, then string concatenation \"33\", \"334\", \"3345\".",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs183",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nSystem.out.println(-16 >> 2);\nSystem.out.println(-16 >>> 28);\nSystem.out.println(3 << 4);",
+    "options": [
+      "4 15 12",
+      "-4 -1 48",
+      "-4 15 12",
+      "-4 15 48"
+    ],
+    "correct": 3,
+    "explanation": "Signed >> keeps the sign: −16 >> 2 = −4; >>> fills with zeros: top 4 bits of −16 are 1111 = 15; 3 << 4 = 48.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs184",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint i = 3;\ni += i++ * --i;\nSystem.out.println(i);",
+    "options": [
+      "15",
+      "12",
+      "18",
+      "9"
+    ],
+    "correct": 1,
+    "explanation": "i += … is i = 3 + (3 × 3): i++ yields 3 (i → 4), --i yields 3, so 3 + 9 = 12.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs185",
+    "chapter": "Variables, Expressions and Operators",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint a = 2, b = 3, c = 4;\nboolean r = a < b || b > c && c++ > 0;\nSystem.out.println(r + \" \" + c);",
+    "options": [
+      "true 4",
+      "false 4",
+      "false 5",
+      "true 5"
+    ],
+    "correct": 0,
+    "explanation": "&& binds tighter than ||, so this is a < b || (…); a < b is true and || short-circuits, leaving c = 4.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs186",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "Which loop always executes its body at least once?",
+    "options": [
+      "do-while",
+      "for",
+      "while",
+      "None of these"
+    ],
+    "correct": 0,
+    "explanation": "do-while checks its condition after the body.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs187",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "The break statement inside a loop:",
+    "options": [
+      "Skips to the next iteration",
+      "Ends the program",
+      "Restarts the loop",
+      "Terminates the loop immediately"
+    ],
+    "correct": 3,
+    "explanation": "break exits the innermost enclosing loop or switch.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs188",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "The continue statement:",
+    "options": [
+      "Pauses the program",
+      "Exits the loop",
+      "Skips the rest of the current iteration and moves to the next one",
+      "Exits the method"
+    ],
+    "correct": 2,
+    "explanation": "continue jumps to the update/condition of the loop.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs189",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nint n = 7;\nif (n % 2 == 0)\n    System.out.println(\"Even\");\nelse\n    System.out.println(\"Odd\");",
+    "options": [
+      "7",
+      "Odd",
+      "Even",
+      "No output"
+    ],
+    "correct": 1,
+    "explanation": "7 % 2 is 1, so the else branch runs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs190",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nfor (int i = 1; i <= 10; i += 3)\n    System.out.print(i + \" \");",
+    "options": [
+      "1 3 6 9",
+      "1 4 7",
+      "3 6 9",
+      "1 4 7 10"
+    ],
+    "correct": 3,
+    "explanation": "i takes 1, 4, 7, 10 and then 13 fails the test.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs191",
+    "chapter": "Statements and Scope",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nint i = 10;\nwhile (i > 0) i -= 4;\nSystem.out.println(i);",
+    "options": [
+      "2",
+      "0",
+      "-2",
+      "-4"
+    ],
+    "correct": 2,
+    "explanation": "10 → 6 → 2 → −2; the loop stops once i ≤ 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs192",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint k = 2;\nswitch (k) {\n    case 1: System.out.print(\"A\");\n    case 2: System.out.print(\"B\");\n    case 3: System.out.print(\"C\");\n    default: System.out.print(\"D\");\n}",
+    "options": [
+      "B",
+      "BCD",
+      "BC",
+      "ABCD"
+    ],
+    "correct": 1,
+    "explanation": "Without break, execution falls through from case 2 into all later cases.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs193",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint x = 5;\ndo {\n    System.out.print(x);\n    x++;\n} while (x < 5);",
+    "options": [
+      "Infinite loop",
+      "No output",
+      "5",
+      "56"
+    ],
+    "correct": 2,
+    "explanation": "The body runs once before the condition 6 < 5 is checked.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs194",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nfor (int i = 1; i <= 10; i++) {\n    if (i % 3 == 0) continue;\n    if (i == 8) break;\n    System.out.print(i);\n}",
+    "options": [
+      "1245781",
+      "12457",
+      "1245",
+      "124578"
+    ],
+    "correct": 1,
+    "explanation": "Multiples of 3 are skipped; the loop breaks when i reaches 8.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs195",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint a = 15;\nif (a > 10)\n    if (a > 20) System.out.println(\"X\");\n    else System.out.println(\"Y\");",
+    "options": [
+      "Y",
+      "XY",
+      "No output",
+      "X"
+    ],
+    "correct": 0,
+    "explanation": "The else attaches to the nearest unmatched if (a > 20), so Y is printed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs196",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint a = 5;\nif (a > 10)\n    if (a > 20) System.out.println(\"X\");\n    else System.out.println(\"Y\");\nSystem.out.println(\"Z\");",
+    "options": [
+      "Y",
+      "XZ",
+      "YZ",
+      "Z"
+    ],
+    "correct": 3,
+    "explanation": "The outer if is false, and the else belongs to the inner if, so only Z prints (the dangling-else trap).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs197",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "How many stars are printed?\n\nint c = 0;\nfor (int i = 1; i <= 4; i++)\n    for (int j = i; j <= 4; j++) {\n        System.out.print(\"*\");\n        c++;\n    }\nSystem.out.println();\nSystem.out.println(c);",
+    "options": [
+      "10",
+      "16",
+      "4",
+      "6"
+    ],
+    "correct": 0,
+    "explanation": "The inner loop runs 4, 3, 2, 1 times — 10 stars in all.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs198",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nfor (int i = 1; i <= 3; i++) {\n    for (int j = 1; j <= i; j++)\n        System.out.print(j);\n    System.out.print(\" \");\n}",
+    "options": [
+      "1 22 333",
+      "123 12 1",
+      "111 22 3",
+      "1 12 123"
+    ],
+    "correct": 3,
+    "explanation": "Row i prints 1 to i.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs199",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint s = 0;\nfor (int i = 1; i <= 5; i++);\n    s++;\nSystem.out.println(s);",
+    "options": [
+      "6",
+      "1",
+      "0",
+      "5"
+    ],
+    "correct": 1,
+    "explanation": "The semicolon after for(...) makes an empty loop body; s++ runs once afterwards.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs200",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString day = \"Sat\";\nswitch (day) {\n    case \"Sat\":\n    case \"Sun\": System.out.println(\"Weekend\"); break;\n    default: System.out.println(\"Weekday\");\n}",
+    "options": [
+      "Compile-time error",
+      "WeekendWeekday",
+      "Weekend",
+      "Weekday"
+    ],
+    "correct": 2,
+    "explanation": "switch works on Strings; case \"Sat\" falls through to the shared \"Sun\" branch and then breaks.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs201",
+    "chapter": "Statements and Scope",
+    "difficulty": "medium",
+    "text": "What is the result of compiling this code?\n\nfor (int i = 0; i < 3; i++) {\n    int sq = i * i;\n}\nSystem.out.println(sq);",
+    "options": [
+      "Compile-time error: sq cannot be found outside the loop block",
+      "Prints 0",
+      "Prints 9",
+      "Prints 4"
+    ],
+    "correct": 0,
+    "explanation": "sq is declared inside the loop's block, so its scope ends at the closing brace.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs202",
+    "chapter": "Statements and Scope",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint n = 0;\nouter:\nfor (int i = 1; i <= 3; i++)\n    for (int j = 1; j <= 3; j++) {\n        if (j == 2) continue outer;\n        if (i == 3) break outer;\n        n += i * j;\n    }\nSystem.out.println(n);",
+    "options": [
+      "9",
+      "3",
+      "6",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "For i = 1 and i = 2 only j = 1 runs (adding 1 and 2) before continue outer; at i = 3, j = 1 hits break outer. n = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs203",
+    "chapter": "Statements and Scope",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint i = 0, s = 0;\nwhile (i++ < 5)\n    s += i;\nSystem.out.println(s + \" \" + i);",
+    "options": [
+      "15 5",
+      "10 5",
+      "15 6",
+      "10 6"
+    ],
+    "correct": 2,
+    "explanation": "The test uses the old i (0…4) but the body sees the incremented value (1…5), summing to 15; the final failed test leaves i = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs204",
+    "chapter": "Statements and Scope",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint x = 3;\nswitch (x * 2) {\n    case 6: x += 1;\n    case 7: x *= 2; break;\n    case 8: x = 0;\n}\nSystem.out.println(x);",
+    "options": [
+      "0",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 3,
+    "explanation": "Case 6 runs x = 4, falls through to case 7: x = 8, then break.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs205",
+    "chapter": "Statements and Scope",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint count = 0;\nfor (int i = 1; i <= 100; i++)\n    if (i % 4 == 0 && i % 6 != 0) count++;\nSystem.out.println(count);",
+    "options": [
+      "8",
+      "25",
+      "17",
+      "16"
+    ],
+    "correct": 2,
+    "explanation": "25 multiples of 4 up to 100, minus the 8 that are also multiples of 6 (multiples of 12) = 17.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs206",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "A method that does not return any value has the return type:",
+    "options": [
+      "int",
+      "empty",
+      "null",
+      "void"
+    ],
+    "correct": 3,
+    "explanation": "void indicates that a method returns nothing.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs207",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "The values passed to a method when it is called are called:",
+    "options": [
+      "Actual parameters (arguments)",
+      "Local constants",
+      "Formal parameters",
+      "Return values"
+    ],
+    "correct": 0,
+    "explanation": "Arguments in the call are actual parameters; the variables in the method header are formal parameters.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs208",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "A constructor in Java:",
+    "options": [
+      "Must be static",
+      "Has the same name as the class and no return type",
+      "Must return void",
+      "Can have any name"
+    ],
+    "correct": 1,
+    "explanation": "Constructors initialise new objects; they share the class name and declare no return type, not even void.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs209",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "Defining several methods with the same name but different parameter lists is called:",
+    "options": [
+      "Recursion",
+      "Method overriding",
+      "Encapsulation",
+      "Method overloading"
+    ],
+    "correct": 3,
+    "explanation": "Overloading is resolved at compile time by the number/types/order of parameters.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs210",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "The keyword this refers to:",
+    "options": [
+      "A static variable",
+      "The current object",
+      "The parent class",
+      "The main method"
+    ],
+    "correct": 1,
+    "explanation": "this is a reference to the object on which the method or constructor was invoked.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs211",
+    "chapter": "Methods and Constructors",
+    "difficulty": "easy",
+    "text": "A static method can be called:",
+    "options": [
+      "Using the class name, without creating an object",
+      "Only from another class",
+      "Only through an object",
+      "Only from a constructor"
+    ],
+    "correct": 0,
+    "explanation": "static members belong to the class itself, e.g. Math.sqrt().",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs212",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic void change(int x) { x = x * 10; }\npublic static void main(String[] args) {\n    int a = 5;\n    change(a);\n    System.out.println(a);\n}",
+    "options": [
+      "0",
+      "Compile-time error",
+      "5",
+      "50"
+    ],
+    "correct": 2,
+    "explanation": "Primitives are passed by value: change() modifies only its own copy.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs213",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic void change(int[] arr) { arr[0] = 99; }\npublic static void main(String[] args) {\n    int[] a = {1, 2, 3};\n    change(a);\n    System.out.println(a[0]);\n}",
+    "options": [
+      "Compile-time error",
+      "0",
+      "1",
+      "99"
+    ],
+    "correct": 3,
+    "explanation": "The reference is copied, but both copies point to the same array, so the change is visible.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs214",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int sq(int n) { return n * n; }\nstatic double sq(double n) { return n * n; }\npublic static void main(String[] args) {\n    System.out.println(sq(3) + \" \" + sq(1.5));\n}",
+    "options": [
+      "9.0 2.25",
+      "Compile-time error: duplicate method",
+      "9 2.25",
+      "9 2"
+    ],
+    "correct": 2,
+    "explanation": "Overloading picks sq(int) for 3 and sq(double) for 1.5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs215",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass Item {\n    int qty;\n    Item() { qty = 1; }\n    Item(int q) { qty = q; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Item a = new Item();\n        Item b = new Item(4);\n        System.out.println(a.qty + b.qty);\n    }\n}",
+    "options": [
+      "0",
+      "5",
+      "1",
+      "4"
+    ],
+    "correct": 1,
+    "explanation": "Constructor overloading: a uses the default constructor (1), b the parameterised one (4).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs216",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass P {\n    int x;\n    P(int x) { x = x; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(new P(8).x);\n    }\n}",
+    "options": [
+      "0",
+      "8",
+      "Compile-time error",
+      "null"
+    ],
+    "correct": 0,
+    "explanation": "Inside the constructor, x refers to the parameter both times, so the field stays 0. this.x = x is required.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs217",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass C {\n    static int count = 0;\n    C() { count++; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        new C(); new C(); new C();\n        System.out.println(C.count);\n    }\n}",
+    "options": [
+      "0",
+      "Compile-time error",
+      "3",
+      "1"
+    ],
+    "correct": 2,
+    "explanation": "A static variable is shared by all objects; each constructor call increments the same copy.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs218",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the result of compiling this code?\n\nclass T {\n    int v = 5;\n    static void show() { System.out.println(v); }\n}\npublic class Main {\n    public static void main(String[] args) { T.show(); }\n}",
+    "options": [
+      "Prints 5",
+      "Compile-time error: non-static variable v cannot be referenced from a static context",
+      "Run-time error",
+      "Prints 0"
+    ],
+    "correct": 1,
+    "explanation": "A static method has no 'this' object, so it cannot directly use instance fields.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs219",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int f(int a, int b) {\n    if (a > b) return a - b;\n    return b - a;\n}\npublic static void main(String[] args) {\n    System.out.println(f(3, 8) + f(9, 2));\n}",
+    "options": [
+      "12",
+      "-12",
+      "5",
+      "2"
+    ],
+    "correct": 0,
+    "explanation": "f(3, 8) = 5 and f(9, 2) = 7; total 12. A return ends the method immediately.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs220",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "Which pair of method headers is NOT a valid overload?",
+    "options": [
+      "void show(int a, char c) and void show(char c, int a)",
+      "double area(double r) and int area(int s)",
+      "int area(int s) and int area(int l, int b)",
+      "int area(int s) and double area(int s)"
+    ],
+    "correct": 3,
+    "explanation": "Methods that differ only in return type cannot be overloaded — the parameter lists must differ.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs221",
+    "chapter": "Methods and Constructors",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nclass Box {\n    int v;\n    Box(int v) { this.v = v; }\n}\npublic class Main {\n    static void reset(Box b) { b = new Box(0); }\n    public static void main(String[] args) {\n        Box x = new Box(7);\n        reset(x);\n        System.out.println(x.v);\n    }\n}",
+    "options": [
+      "0",
+      "null",
+      "7",
+      "Compile-time error"
+    ],
+    "correct": 2,
+    "explanation": "reset() rebinds its own copy of the reference to a new Box; the caller's x still points to the original.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs222",
+    "chapter": "Methods and Constructors",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nclass A {\n    int n;\n    A() { this(10); n++; }\n    A(int n) { this.n = n * 2; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        System.out.println(new A().n);\n    }\n}",
+    "options": [
+      "11",
+      "21",
+      "10",
+      "20"
+    ],
+    "correct": 1,
+    "explanation": "this(10) chains to A(int), setting n = 20; then n++ gives 21.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs223",
+    "chapter": "Methods and Constructors",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic void m(long x) { System.out.print(\"long \"); }\nstatic void m(double x) { System.out.print(\"double \"); }\npublic static void main(String[] args) {\n    m(5);\n    m(5.0f);\n}",
+    "options": [
+      "double double",
+      "long long",
+      "Compile-time error: ambiguous call",
+      "long double"
+    ],
+    "correct": 3,
+    "explanation": "For an int argument, the closest widening is to long; a float widens only to double.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs224",
+    "chapter": "Methods and Constructors",
+    "difficulty": "hard",
+    "text": "What is the result of compiling this code?\n\nclass Q {\n    int a;\n    Q(int a) { this.a = a; }\n}\npublic class Main {\n    public static void main(String[] args) {\n        Q q = new Q();\n        System.out.println(q.a);\n    }\n}",
+    "options": [
+      "Compile-time error: no constructor Q() exists",
+      "Run-time error",
+      "Prints 0",
+      "Prints null"
+    ],
+    "correct": 0,
+    "explanation": "Java supplies a default constructor only if the class defines none; once Q(int) exists, Q() is unavailable.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs225",
+    "chapter": "Methods and Constructors",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic int calls = 0;\nstatic int g(int n) {\n    calls++;\n    return n % 2 == 0 ? n / 2 : 3 * n + 1;\n}\npublic static void main(String[] args) {\n    int n = 6;\n    while (n != 1) n = g(n);\n    System.out.println(calls);\n}",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "9"
+    ],
+    "correct": 0,
+    "explanation": "6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1 takes 8 calls to g().",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs226",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "The index of the first element of a Java array is:",
+    "options": [
+      "1",
+      "-1",
+      "0",
+      "Depends on the array size"
+    ],
+    "correct": 2,
+    "explanation": "Java arrays are zero-indexed.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs227",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "For int[] a = new int[8];, the index of the last element is:",
+    "options": [
+      "9",
+      "7",
+      "8",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "Valid indices run from 0 to length − 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs228",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "Which correctly declares and creates an integer array of 5 elements?",
+    "options": [
+      "int[] a = int[5];",
+      "array int a = 5;",
+      "int a[5];",
+      "int[] a = new int[5];"
+    ],
+    "correct": 3,
+    "explanation": "Java uses new with the size in brackets; C-style int a[5] is not valid Java.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs229",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nint[] a = {4, 8, 15, 16, 23, 42};\nSystem.out.println(a.length + \" \" + a[2]);",
+    "options": [
+      "42 15",
+      "6 8",
+      "5 15",
+      "6 15"
+    ],
+    "correct": 3,
+    "explanation": "length is 6 (a field, not a method) and a[2] is the third element.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs230",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "What is the output?\n\ndouble[] d = new double[3];\nboolean[] f = new boolean[2];\nSystem.out.println(d[1] + \" \" + f[0]);",
+    "options": [
+      "null null",
+      "0.0 false",
+      "0 false",
+      "Compile-time error"
+    ],
+    "correct": 1,
+    "explanation": "Array elements get default values: 0.0 for double, false for boolean.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs231",
+    "chapter": "Arrays",
+    "difficulty": "easy",
+    "text": "Binary search can be applied only when the array is:",
+    "options": [
+      "Unsorted",
+      "Of even length",
+      "Sorted",
+      "Of type String"
+    ],
+    "correct": 2,
+    "explanation": "Binary search halves the search range by comparing with the middle element, which requires sorted order.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs232",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the result of running this code?\n\nint[] a = new int[4];\na[4] = 10;\nSystem.out.println(a[4]);",
+    "options": [
+      "ArrayIndexOutOfBoundsException at run time",
+      "Prints 10",
+      "Compile-time error",
+      "Prints 0"
+    ],
+    "correct": 0,
+    "explanation": "Index 4 is beyond 0–3; Java checks bounds while running.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs233",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[] a = {3, 7, 1, 9, 4};\nint m = a[0];\nfor (int i = 1; i < a.length; i++)\n    if (a[i] < m) m = a[i];\nSystem.out.println(m);",
+    "options": [
+      "4",
+      "1",
+      "3",
+      "9"
+    ],
+    "correct": 1,
+    "explanation": "The loop keeps the smallest value seen so far.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs234",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[] a = {1, 2, 3, 4, 5};\nfor (int i = 0; i < a.length / 2; i++) {\n    int t = a[i];\n    a[i] = a[a.length - 1 - i];\n    a[a.length - 1 - i] = t;\n}\nfor (int x : a) System.out.print(x);",
+    "options": [
+      "12345",
+      "52341",
+      "54321",
+      "54123"
+    ],
+    "correct": 2,
+    "explanation": "Swapping symmetric pairs up to the middle reverses the array.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs235",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[] a = {5, 1, 4, 2};\nfor (int j = 0; j < a.length - 1; j++)\n    if (a[j] > a[j + 1]) {\n        int t = a[j]; a[j] = a[j + 1]; a[j + 1] = t;\n    }\nSystem.out.println(Arrays.toString(a));",
+    "options": [
+      "[1, 2, 4, 5]",
+      "[5, 4, 2, 1]",
+      "[1, 5, 2, 4]",
+      "[1, 4, 2, 5]"
+    ],
+    "correct": 3,
+    "explanation": "One bubble-sort pass carries the largest value (5) to the end.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs236",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output after the FIRST pass of selection sort (ascending) on {29, 10, 14, 37, 13}?\n\nint[] a = {29, 10, 14, 37, 13};\nint min = 0;\nfor (int j = 1; j < a.length; j++)\n    if (a[j] < a[min]) min = j;\nint t = a[0]; a[0] = a[min]; a[min] = t;\nSystem.out.println(Arrays.toString(a));",
+    "options": [
+      "[10, 29, 14, 37, 13]",
+      "[13, 10, 14, 37, 29]",
+      "[10, 13, 14, 29, 37]",
+      "[10, 14, 29, 37, 13]"
+    ],
+    "correct": 0,
+    "explanation": "Selection sort swaps the smallest element (10) into position 0.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs237",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "How many comparisons does binary search make to find 23? (The program prints the count.)\n\nint[] a = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91};\nint lo = 0, hi = a.length - 1, c = 0;\nwhile (lo <= hi) {\n    int mid = (lo + hi) / 2;\n    c++;\n    if (a[mid] == 23) break;\n    else if (a[mid] < 23) lo = mid + 1;\n    else hi = mid - 1;\n}\nSystem.out.println(c);",
+    "options": [
+      "4",
+      "2",
+      "6",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "mid = 4 (16) → go right; mid = 7 (56) → go left; mid = 5 (23) → found on the 3rd comparison.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs238",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[][] m = {{1, 2, 3}, {4, 5, 6}};\nSystem.out.println(m.length + \" \" + m[0].length + \" \" + m[1][2]);",
+    "options": [
+      "2 3 6",
+      "3 2 5",
+      "3 2 6",
+      "2 3 5"
+    ],
+    "correct": 0,
+    "explanation": "m has 2 rows of 3 columns; m[1][2] is row 1, column 2.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs239",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[][] m = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};\nint s = 0;\nfor (int i = 0; i < 3; i++) s += m[i][i];\nSystem.out.println(s);",
+    "options": [
+      "12",
+      "24",
+      "15",
+      "45"
+    ],
+    "correct": 2,
+    "explanation": "Main diagonal: 1 + 5 + 9 = 15.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs240",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nint[] a = {1, 2, 3};\nint[] b = a;\nb[1] = 20;\nSystem.out.println(a[1]);",
+    "options": [
+      "Compile-time error",
+      "20",
+      "2",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "b = a copies the reference; both names share one array.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs241",
+    "chapter": "Arrays",
+    "difficulty": "medium",
+    "text": "What is the output after one insertion-sort step that inserts a[3] into the sorted part {3, 8, 12}?\n\nint[] a = {3, 8, 12, 5, 1};\nint key = a[3], j = 2;\nwhile (j >= 0 && a[j] > key) {\n    a[j + 1] = a[j];\n    j--;\n}\na[j + 1] = key;\nSystem.out.println(Arrays.toString(a));",
+    "options": [
+      "[3, 5, 8, 12, 1]",
+      "[5, 3, 8, 12, 1]",
+      "[1, 3, 5, 8, 12]",
+      "[3, 8, 5, 12, 1]"
+    ],
+    "correct": 0,
+    "explanation": "Elements larger than 5 shift right, and 5 is placed after 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs242",
+    "chapter": "Arrays",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint[][] m = {{1, 2}, {3, 4}, {5, 6}};\nint[][] t = new int[2][3];\nfor (int i = 0; i < 3; i++)\n    for (int j = 0; j < 2; j++)\n        t[j][i] = m[i][j];\nSystem.out.println(Arrays.toString(t[1]));",
+    "options": [
+      "[1, 3, 5]",
+      "[2, 4, 6]",
+      "[3, 4]",
+      "[4, 5, 6]"
+    ],
+    "correct": 1,
+    "explanation": "t is the transpose; row 1 of t is column 1 of m.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs243",
+    "chapter": "Arrays",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint[] a = {2, 4, 6, 8};\nint[] b = {2, 4, 6, 8};\nSystem.out.println((a == b) + \" \" + Arrays.equals(a, b));",
+    "options": [
+      "true false",
+      "false false",
+      "true true",
+      "false true"
+    ],
+    "correct": 3,
+    "explanation": "== compares references (two different arrays); Arrays.equals compares contents.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs244",
+    "chapter": "Arrays",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint[] a = new int[5];\nfor (int i = 0; i < a.length; i++)\n    a[i] = i * i;\nint s = 0;\nfor (int i = a.length - 1; i >= 0; i -= 2)\n    s += a[i];\nSystem.out.println(s);",
+    "options": [
+      "30",
+      "10",
+      "20",
+      "16"
+    ],
+    "correct": 2,
+    "explanation": "a = {0, 1, 4, 9, 16}; indices 4, 2, 0 give 16 + 4 + 0 = 20.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs245",
+    "chapter": "Arrays",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint[][] j = new int[3][];\nj[0] = new int[1];\nj[1] = new int[2];\nj[2] = new int[3];\nint total = 0;\nfor (int[] row : j) total += row.length;\nSystem.out.println(total);",
+    "options": [
+      "9",
+      "3",
+      "6",
+      "Compile-time error"
+    ],
+    "correct": 2,
+    "explanation": "A 2D array can be jagged: rows of length 1, 2 and 3 total 6 elements.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs246",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "Strings in Java are immutable. This means:",
+    "options": [
+      "Strings cannot be printed",
+      "A String variable can never be reassigned",
+      "Strings cannot be compared",
+      "A String object's contents cannot be changed after it is created"
+    ],
+    "correct": 3,
+    "explanation": "Methods like toUpperCase() return a new String; the original object is unchanged (the variable may still be reassigned).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs247",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nString s = \"COMPUTER\";\nSystem.out.println(s.length() + \" \" + s.charAt(3));",
+    "options": [
+      "8 P",
+      "9 P",
+      "7 P",
+      "8 M"
+    ],
+    "correct": 0,
+    "explanation": "length() is 8 and index 3 is the fourth character, P.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs248",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nString s = \"Programming\";\nSystem.out.println(s.substring(3, 7));",
+    "options": [
+      "ogra",
+      "gram",
+      "gramm",
+      "ram"
+    ],
+    "correct": 1,
+    "explanation": "substring(begin, end) includes begin but excludes end: indices 3–6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs249",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(\"banana\".indexOf('n') + \" \" + \"banana\".lastIndexOf('a'));",
+    "options": [
+      "2 5",
+      "1 5",
+      "3 5",
+      "2 3"
+    ],
+    "correct": 0,
+    "explanation": "First 'n' is at index 2; the last 'a' is at index 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs250",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(\"Java\".equals(\"java\") + \" \" + \"Java\".equalsIgnoreCase(\"java\"));",
+    "options": [
+      "true false",
+      "true true",
+      "false false",
+      "false true"
+    ],
+    "correct": 3,
+    "explanation": "equals is case-sensitive; equalsIgnoreCase is not.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs251",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "Which class should be used when a string will be modified many times in a loop?",
+    "options": [
+      "String",
+      "Scanner",
+      "StringBuilder (or StringBuffer)",
+      "Character"
+    ],
+    "correct": 2,
+    "explanation": "StringBuilder is mutable, so append/insert do not create new objects each time.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs252",
+    "chapter": "Strings",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nSystem.out.println(\"  hello world  \".trim().toUpperCase());",
+    "options": [
+      "HELLOWORLD",
+      "HELLO WORLD",
+      "hello world",
+      "  HELLO WORLD  "
+    ],
+    "correct": 1,
+    "explanation": "trim() removes leading/trailing spaces only; toUpperCase() then capitalises.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs253",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(\"apple\".compareTo(\"banana\"));",
+    "options": [
+      "0",
+      "-1",
+      "-2",
+      "1"
+    ],
+    "correct": 1,
+    "explanation": "compareTo returns the difference of the first mismatching characters: 'a' − 'b' = −1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs254",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(\"cat\".compareTo(\"category\"));",
+    "options": [
+      "-1",
+      "0",
+      "-5",
+      "5"
+    ],
+    "correct": 2,
+    "explanation": "One string is a prefix of the other, so the result is the difference in lengths: 3 − 8 = −5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs255",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString s = \"Hello\";\ns.concat(\" World\");\nSystem.out.println(s);",
+    "options": [
+      "Hello",
+      "Compile-time error",
+      "Hello World",
+      " World"
+    ],
+    "correct": 0,
+    "explanation": "concat returns a new String, which is discarded; s still refers to \"Hello\".",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs256",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(\"Mississippi\".replace(\"ss\", \"S\"));",
+    "options": [
+      "MiSSiSSippi",
+      "MiSissippi",
+      "Mississippi",
+      "MiSiSippi"
+    ],
+    "correct": 3,
+    "explanation": "replace changes every occurrence of \"ss\".",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs257",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString[] w = \"the quick  brown fox\".split(\" \");\nSystem.out.println(w.length);",
+    "options": [
+      "3",
+      "6",
+      "4",
+      "5"
+    ],
+    "correct": 3,
+    "explanation": "Splitting on a single space produces an empty string between the two consecutive spaces, giving 5 parts.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs258",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString s = \"level\", r = \"\";\nfor (int i = s.length() - 1; i >= 0; i--)\n    r += s.charAt(i);\nSystem.out.println(r.equals(s) ? \"Palindrome\" : \"Not palindrome\");",
+    "options": [
+      "level",
+      "Not palindrome",
+      "Palindrome",
+      "Compile-time error"
+    ],
+    "correct": 2,
+    "explanation": "Reversing \"level\" gives the same word.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs259",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString s = \"Tree House\";\nint v = 0;\nfor (int i = 0; i < s.length(); i++)\n    if (\"AEIOUaeiou\".indexOf(s.charAt(i)) >= 0) v++;\nSystem.out.println(v);",
+    "options": [
+      "3",
+      "5",
+      "4",
+      "6"
+    ],
+    "correct": 1,
+    "explanation": "Vowels: e, e, o, u, e — 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs260",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nStringBuilder sb = new StringBuilder(\"abc\");\nsb.append(\"de\").reverse();\nSystem.out.println(sb);",
+    "options": [
+      "edcba",
+      "abcde",
+      "edabc",
+      "cbade"
+    ],
+    "correct": 0,
+    "explanation": "StringBuilder is mutable: append makes \"abcde\", reverse turns it into \"edcba\".",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs261",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.println(Character.toUpperCase('g') + \"\" + Character.isWhitespace(' ') + Character.isLetterOrDigit('#'));",
+    "options": [
+      "gtruefalse",
+      "71truefalse",
+      "Gtruefalse",
+      "Gfalsefalse"
+    ],
+    "correct": 2,
+    "explanation": "Character methods: 'G', true for a space, false for '#'; the \"\" forces string concatenation.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs262",
+    "chapter": "Strings",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nString a = \"hi\";\nString b = new String(\"hi\");\nSystem.out.println((a == b) + \" \" + a.equals(b));",
+    "options": [
+      "true true",
+      "false true",
+      "false false",
+      "true false"
+    ],
+    "correct": 1,
+    "explanation": "new String creates a separate object, so == (reference comparison) is false; equals compares contents.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs263",
+    "chapter": "Strings",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nString s = \"programming\";\nint[] f = new int[26];\nfor (char c : s.toCharArray()) f[c - 'a']++;\nint best = 0;\nfor (int i = 1; i < 26; i++) if (f[i] > f[best]) best = i;\nSystem.out.println((char) ('a' + best) + \" \" + f[best]);",
+    "options": [
+      "m 2",
+      "r 2",
+      "p 1",
+      "g 2"
+    ],
+    "correct": 3,
+    "explanation": "g, r and m each occur twice; the loop keeps the first maximum in alphabetical order (strict >), so 'g' wins.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs264",
+    "chapter": "Strings",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nString s = \"Java Is Fun\";\nString r = \"\";\nfor (String w : s.split(\" \"))\n    r += w.charAt(0);\nSystem.out.println(r.toLowerCase() + r.length());",
+    "options": [
+      "jif3",
+      "JIF3",
+      "jif11",
+      "j i f3"
+    ],
+    "correct": 0,
+    "explanation": "Initials J, I, F are joined, lower-cased, and the length 3 appended.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs265",
+    "chapter": "Strings",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nString s = \"abcabc\";\nSystem.out.println(s.indexOf(\"bc\", 2) + s.substring(4).length());",
+    "options": [
+      "42",
+      "5",
+      "4",
+      "6"
+    ],
+    "correct": 3,
+    "explanation": "indexOf(\"bc\", 2) searches from index 2 and finds 4; substring(4) is \"bc\", length 2; the + adds the ints: 4 + 2 = 6.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs266",
+    "chapter": "Strings",
+    "difficulty": "hard",
+    "text": "What is the result of running this code?\n\nString s = \"code\";\nSystem.out.println(s.charAt(4));",
+    "options": [
+      "StringIndexOutOfBoundsException at run time",
+      "Prints e",
+      "Prints a blank",
+      "Compile-time error"
+    ],
+    "correct": 0,
+    "explanation": "Valid indices are 0–3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs267",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "A recursive method is one that:",
+    "options": [
+      "Has no parameters",
+      "Is called only once",
+      "Calls itself, directly or indirectly",
+      "Uses a loop"
+    ],
+    "correct": 2,
+    "explanation": "Recursion solves a problem in terms of a smaller instance of itself.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs268",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "The condition that stops further recursive calls is called the:",
+    "options": [
+      "Recursive case",
+      "Base case",
+      "Return type",
+      "Loop condition"
+    ],
+    "correct": 1,
+    "explanation": "Without a base case, recursion never terminates.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs269",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "If a recursive method has no reachable base case, Java eventually throws:",
+    "options": [
+      "StackOverflowError",
+      "NullPointerException",
+      "ArithmeticException",
+      "ArrayIndexOutOfBoundsException"
+    ],
+    "correct": 0,
+    "explanation": "Each call adds a stack frame; unbounded calls exhaust the call stack.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs270",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "Each pending recursive call is stored on the:",
+    "options": [
+      "Call stack",
+      "Heap only",
+      "Hard disk",
+      "Program counter"
+    ],
+    "correct": 0,
+    "explanation": "Frames holding parameters and local variables are pushed on the call stack and popped on return.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs271",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nstatic int fact(int n) {\n    if (n <= 1) return 1;\n    return n * fact(n - 1);\n}\npublic static void main(String[] args) {\n    System.out.println(fact(5));\n}",
+    "options": [
+      "5",
+      "120",
+      "24",
+      "720"
+    ],
+    "correct": 1,
+    "explanation": "5 × 4 × 3 × 2 × 1 = 120.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs272",
+    "chapter": "Recursion",
+    "difficulty": "easy",
+    "text": "What is the output?\n\nstatic int sum(int n) {\n    if (n == 0) return 0;\n    return n + sum(n - 1);\n}\npublic static void main(String[] args) {\n    System.out.println(sum(6));\n}",
+    "options": [
+      "15",
+      "6",
+      "720",
+      "21"
+    ],
+    "correct": 3,
+    "explanation": "6 + 5 + 4 + 3 + 2 + 1 + 0 = 21.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs273",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int fib(int n) {\n    if (n <= 1) return n;\n    return fib(n - 1) + fib(n - 2);\n}\npublic static void main(String[] args) {\n    System.out.println(fib(7));\n}",
+    "options": [
+      "21",
+      "7",
+      "13",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "fib: 0, 1, 1, 2, 3, 5, 8, 13 — fib(7) = 13.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs274",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int gcd(int a, int b) {\n    if (b == 0) return a;\n    return gcd(b, a % b);\n}\npublic static void main(String[] args) {\n    System.out.println(gcd(84, 36));\n}",
+    "options": [
+      "4",
+      "36",
+      "6",
+      "12"
+    ],
+    "correct": 3,
+    "explanation": "gcd(84, 36) → gcd(36, 12) → gcd(12, 0) = 12.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs275",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int power(int b, int e) {\n    if (e == 0) return 1;\n    return b * power(b, e - 1);\n}\npublic static void main(String[] args) {\n    System.out.println(power(3, 4));\n}",
+    "options": [
+      "12",
+      "81",
+      "64",
+      "27"
+    ],
+    "correct": 1,
+    "explanation": "3⁴ = 81.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs276",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int digitSum(int n) {\n    if (n == 0) return 0;\n    return n % 10 + digitSum(n / 10);\n}\npublic static void main(String[] args) {\n    System.out.println(digitSum(4096));\n}",
+    "options": [
+      "21",
+      "9",
+      "19",
+      "4096"
+    ],
+    "correct": 2,
+    "explanation": "4 + 0 + 9 + 6 = 19.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs277",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic void show(int n) {\n    if (n == 0) return;\n    System.out.print(n + \" \");\n    show(n - 1);\n}\npublic static void main(String[] args) {\n    show(4);\n}",
+    "options": [
+      "4 3 2 1",
+      "0 1 2 3 4",
+      "1 2 3 4",
+      "4 3 2 1 0"
+    ],
+    "correct": 0,
+    "explanation": "The print happens before the recursive call, so values appear on the way down.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs278",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic void show(int n) {\n    if (n == 0) return;\n    show(n - 1);\n    System.out.print(n + \" \");\n}\npublic static void main(String[] args) {\n    show(4);\n}",
+    "options": [
+      "4 3 2 1 0",
+      "1 2 3 4",
+      "0 1 2 3 4",
+      "4 3 2 1"
+    ],
+    "correct": 1,
+    "explanation": "The print comes after the call, so values are printed as the stack unwinds.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs279",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic String rev(String s) {\n    if (s.length() <= 1) return s;\n    return rev(s.substring(1)) + s.charAt(0);\n}\npublic static void main(String[] args) {\n    System.out.println(rev(\"java\"));\n}",
+    "options": [
+      "vaja",
+      "ajav",
+      "avaj",
+      "java"
+    ],
+    "correct": 2,
+    "explanation": "Each call moves the first character to the end of the reversed remainder.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs280",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic int count(int n) {\n    if (n < 10) return 1;\n    return 1 + count(n / 10);\n}\npublic static void main(String[] args) {\n    System.out.println(count(305021));\n}",
+    "options": [
+      "3",
+      "11",
+      "5",
+      "6"
+    ],
+    "correct": 3,
+    "explanation": "Each call strips one digit; 305021 has 6 digits.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs281",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nstatic String bin(int n) {\n    if (n == 0) return \"\";\n    return bin(n / 2) + n % 2;\n}\npublic static void main(String[] args) {\n    System.out.println(bin(13));\n}",
+    "options": [
+      "1101",
+      "1011",
+      "13",
+      "0110"
+    ],
+    "correct": 0,
+    "explanation": "Remainders are appended after the recursive call, so they appear in reverse order of computation: 1101.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs282",
+    "chapter": "Recursion",
+    "difficulty": "medium",
+    "text": "How many times is f called in total for f(4)? (The program prints the count.)\n\nstatic int calls = 0;\nstatic int f(int n) {\n    calls++;\n    if (n <= 1) return 1;\n    return f(n - 1) + f(n - 2);\n}\npublic static void main(String[] args) {\n    f(4);\n    System.out.println(calls);\n}",
+    "options": [
+      "8",
+      "5",
+      "9",
+      "4"
+    ],
+    "correct": 2,
+    "explanation": "Tree recursion: calls(n) = 1 + calls(n − 1) + calls(n − 2) with calls(0) = calls(1) = 1, giving 3, 5, 9.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs283",
+    "chapter": "Recursion",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic int m(int a, int b) {\n    if (a < b) return a;\n    return m(a - b, b);\n}\npublic static void main(String[] args) {\n    System.out.println(m(47, 6) + \" \" + m(5, 9));\n}",
+    "options": [
+      "41 5",
+      "5 5",
+      "7 5",
+      "5 9"
+    ],
+    "correct": 1,
+    "explanation": "m repeatedly subtracts b — it computes a % b: 47 % 6 = 5 and 5 % 9 = 5.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs284",
+    "chapter": "Recursion",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic int g(int n) {\n    if (n <= 0) return 0;\n    if (n % 2 == 0) return g(n - 1) + n;\n    return g(n - 1) - n;\n}\npublic static void main(String[] args) {\n    System.out.println(g(6));\n}",
+    "options": [
+      "0",
+      "-3",
+      "21",
+      "3"
+    ],
+    "correct": 3,
+    "explanation": "g(6) = −1 + 2 − 3 + 4 − 5 + 6 = 3.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs285",
+    "chapter": "Recursion",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic void p(int n) {\n    if (n > 0) {\n        p(n - 1);\n        System.out.print(n);\n        p(n - 1);\n    }\n}\npublic static void main(String[] args) {\n    p(3);\n}",
+    "options": [
+      "3213123",
+      "1213121",
+      "121312",
+      "1231231"
+    ],
+    "correct": 1,
+    "explanation": "p(3) = p(2) 3 p(2), and p(2) = 1 2 1, giving 121 3 121.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs286",
+    "chapter": "Recursion",
+    "difficulty": "hard",
+    "text": "Which statement about recursion vs iteration is correct?",
+    "options": [
+      "Recursion uses extra memory for stack frames, while an equivalent loop usually uses constant extra memory",
+      "Recursion is always faster than iteration",
+      "Every loop runs out of stack memory for large n",
+      "Iteration cannot solve problems that recursion can"
+    ],
+    "correct": 0,
+    "explanation": "Each recursive call adds a frame; loops reuse the same variables. Any recursion can be rewritten iteratively (possibly with an explicit stack).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs287",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "Which package contains the Scanner class?",
+    "options": [
+      "java.lang",
+      "java.io",
+      "java.text",
+      "java.util"
+    ],
+    "correct": 3,
+    "explanation": "import java.util.Scanner; is required to use Scanner.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs288",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "Which statement creates a Scanner to read user input from the console?",
+    "options": [
+      "Scanner sc = new Scanner();",
+      "Scanner sc = new Scanner(System.out);",
+      "Scanner sc = new Scanner(System.in);",
+      "Scanner sc = Scanner.read();"
+    ],
+    "correct": 2,
+    "explanation": "System.in is the standard input stream.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs289",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "Which Scanner method reads an int?",
+    "options": [
+      "next()",
+      "nextInt()",
+      "getInt()",
+      "readInt()"
+    ],
+    "correct": 1,
+    "explanation": "nextInt(), nextDouble(), nextLine(), next() etc. read the corresponding types.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs290",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "The difference between print() and println() is that println():",
+    "options": [
+      "Prints in bold",
+      "Clears the screen first",
+      "Moves the cursor to a new line after printing",
+      "Prints only numbers"
+    ],
+    "correct": 2,
+    "explanation": "println adds a line terminator; print leaves the cursor on the same line.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs291",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "Which block always executes, whether or not an exception occurs?",
+    "options": [
+      "catch",
+      "try",
+      "throw",
+      "finally"
+    ],
+    "correct": 3,
+    "explanation": "finally runs after try/catch in all normal and exceptional cases (barring System.exit).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs292",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "easy",
+    "text": "An exception in Java is:",
+    "options": [
+      "An event during execution that disrupts the normal flow of the program",
+      "A type of loop",
+      "A syntax error found by javac",
+      "A comment in code"
+    ],
+    "correct": 0,
+    "explanation": "Exceptions are run-time events represented by objects of Throwable subclasses.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs293",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.printf(\"%.2f|%5d|%s%n\", 3.14159, 42, \"ok\");",
+    "options": [
+      "3.14|   42|ok",
+      "3.14159|42|ok",
+      "3.14|42   |ok",
+      "3.1|   42|ok"
+    ],
+    "correct": 0,
+    "explanation": "%.2f gives two decimal places; %5d right-justifies in width 5; %s prints the string.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs294",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "What is the output?\n\ntry {\n    int[] a = new int[2];\n    a[5] = 1;\n    System.out.print(\"A\");\n} catch (ArrayIndexOutOfBoundsException e) {\n    System.out.print(\"B\");\n} finally {\n    System.out.print(\"C\");\n}",
+    "options": [
+      "B",
+      "ABC",
+      "AC",
+      "BC"
+    ],
+    "correct": 3,
+    "explanation": "The exception skips the rest of try; catch prints B; finally prints C.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs295",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "What is the output?\n\ntry {\n    System.out.print(\"X\");\n} catch (Exception e) {\n    System.out.print(\"Y\");\n} finally {\n    System.out.print(\"Z\");\n}",
+    "options": [
+      "XYZ",
+      "Z",
+      "XZ",
+      "X"
+    ],
+    "correct": 2,
+    "explanation": "No exception occurs, so catch is skipped but finally still runs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs296",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "What is the output?\n\ntry {\n    int n = Integer.parseInt(\"12a\");\n    System.out.print(n);\n} catch (NumberFormatException e) {\n    System.out.print(\"Invalid\");\n}",
+    "options": [
+      "12a",
+      "Invalid",
+      "12",
+      "0"
+    ],
+    "correct": 1,
+    "explanation": "\"12a\" is not a valid integer, so parseInt throws NumberFormatException.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs297",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "Which of the following is a checked exception?",
+    "options": [
+      "IOException",
+      "NullPointerException",
+      "ArithmeticException",
+      "ArrayIndexOutOfBoundsException"
+    ],
+    "correct": 0,
+    "explanation": "Checked exceptions (like IOException) must be caught or declared with throws; RuntimeException subclasses are unchecked.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs298",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "Which statement about unchecked exceptions is correct?",
+    "options": [
+      "They must always be declared using throws",
+      "They can never be caught",
+      "They are detected at compile time",
+      "They are subclasses of RuntimeException and the compiler does not force you to handle them"
+    ],
+    "correct": 3,
+    "explanation": "The compiler enforces handling only for checked exceptions.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs299",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "Given the input below, what is printed? (Input: 25 Rahul Kumar)\n\nScanner sc = new Scanner(\"25 Rahul Kumar\");\nint age = sc.nextInt();\nString name = sc.next();\nSystem.out.println(name + \":\" + age);",
+    "options": [
+      "Kumar:25",
+      "Rahul Kumar:25",
+      "Rahul:25",
+      "25:Rahul"
+    ],
+    "correct": 2,
+    "explanation": "next() reads one token up to whitespace, so only \"Rahul\" is read.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs300",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "With input lines \"7\" and \"Delhi\", what is printed?\n\nScanner sc = new Scanner(\"7\\nDelhi\\n\");\nint n = sc.nextInt();\nString city = sc.nextLine();\nSystem.out.println(\"[\" + city + \"]\");",
+    "options": [
+      "[7]",
+      "[]",
+      "[Delhi]",
+      "[ Delhi]"
+    ],
+    "correct": 1,
+    "explanation": "nextInt() leaves the newline in the buffer; nextLine() then reads the empty remainder of that line — a classic trap.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs301",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "medium",
+    "text": "What is the output?\n\nSystem.out.print(\"A\");\nSystem.out.println(\"B\");\nSystem.out.print(\"C\");",
+    "options": [
+      "AB\nC",
+      "A B C",
+      "ABC",
+      "A\nB\nC"
+    ],
+    "correct": 0,
+    "explanation": "Only println adds a line break (after B).",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs302",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nstatic int f() {\n    try {\n        return 1;\n    } finally {\n        System.out.print(\"F\");\n    }\n}\npublic static void main(String[] args) {\n    System.out.print(f());\n}",
+    "options": [
+      "F",
+      "F1",
+      "1",
+      "1F"
+    ],
+    "correct": 1,
+    "explanation": "finally runs before the method actually returns, so F is printed before the caller prints 1.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs303",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "hard",
+    "text": "What is the output?\n\nint[] a = {10, 0, 5};\nint s = 0;\nfor (int x : a) {\n    try {\n        s += 100 / x;\n    } catch (ArithmeticException e) {\n        s -= 1;\n    }\n}\nSystem.out.println(s);",
+    "options": [
+      "10",
+      "30",
+      "-1",
+      "29"
+    ],
+    "correct": 3,
+    "explanation": "100/10 = 10, then −1 for division by zero, then 100/5 = 20: 10 − 1 + 20 = 29.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs304",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "hard",
+    "text": "What is the result of compiling this code?\n\nstatic void read() {\n    throw new java.io.IOException(\"disk\");\n}\npublic static void main(String[] args) {\n    read();\n}",
+    "options": [
+      "Compiles and prints disk",
+      "Compiles; prints nothing",
+      "Compile-time error: unreported exception IOException must be caught or declared",
+      "Compiles; throws at run time"
+    ],
+    "correct": 2,
+    "explanation": "IOException is checked, so the method must catch it or declare throws IOException.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs305",
+    "chapter": "Input/Output and Exceptions",
+    "difficulty": "hard",
+    "text": "What is the output?\n\ntry {\n    String s = null;\n    System.out.print(s.length());\n} catch (ArithmeticException e) {\n    System.out.print(\"A\");\n} catch (Exception e) {\n    System.out.print(\"E\");\n} finally {\n    System.out.print(\"F\");\n}",
+    "options": [
+      "F",
+      "AEF",
+      "EF",
+      "AF"
+    ],
+    "correct": 2,
+    "explanation": "A NullPointerException is not an ArithmeticException, so the general Exception handler catches it, then finally runs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs306",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "Artificial Intelligence (AI) refers to:",
+    "options": [
+      "Computer systems performing tasks that normally require human intelligence, such as learning and reasoning",
+      "Any computer that has a very large hard disk and fast processor",
+      "A type of computer virus that copies itself across networks",
+      "A programming language used only for writing robot programs"
+    ],
+    "correct": 0,
+    "explanation": "AI covers learning, reasoning, perception and language tasks done by machines.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs307",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "Storing and processing data on remote servers accessed over the Internet is called:",
+    "options": [
+      "Offline computing",
+      "Assembly programming",
+      "Batch processing",
+      "Cloud computing"
+    ],
+    "correct": 3,
+    "explanation": "Cloud services provide on-demand computing resources over the network.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs308",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "The Internet of Things (IoT) refers to:",
+    "options": [
+      "A list of rules that govern how the Internet must be used",
+      "Everyday physical devices with sensors connected to the Internet to exchange data",
+      "A social media website where people share photos of objects",
+      "Only desktop computers connected together on a school LAN"
+    ],
+    "correct": 1,
+    "explanation": "Smart meters, wearables and connected appliances are IoT devices.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs309",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "Presenting someone else's work or ideas as your own without credit is:",
+    "options": [
+      "Plagiarism",
+      "Encryption",
+      "Phishing",
+      "Licensing"
+    ],
+    "correct": 0,
+    "explanation": "Plagiarism is an ethical (and often academic/legal) violation; cite sources to avoid it.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs310",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "A digital footprint is:",
+    "options": [
+      "The physical space a computer occupies on a desk or table",
+      "The trail of data a person leaves through online activities",
+      "A fingerprint scanner used to unlock phones and laptops",
+      "A type of malware that records every website you visit"
+    ],
+    "correct": 1,
+    "explanation": "Posts, searches, likes and location data all form a lasting digital footprint.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs311",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "Discarded electronic devices such as old phones and computers are called:",
+    "options": [
+      "Spam",
+      "Firmware",
+      "Freeware",
+      "E-waste"
+    ],
+    "correct": 3,
+    "explanation": "E-waste contains hazardous materials and should be recycled responsibly.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs312",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "easy",
+    "text": "Which of the following protects an original invention?",
+    "options": [
+      "Copyright",
+      "Privacy policy",
+      "Patent",
+      "Trademark"
+    ],
+    "correct": 2,
+    "explanation": "Patents protect inventions; copyright protects creative works; trademarks protect brand names and logos.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs313",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "A fraudulent email that imitates a bank to trick users into revealing passwords is an example of:",
+    "options": [
+      "Phishing",
+      "Cloud backup",
+      "Open-source licensing",
+      "Firewall"
+    ],
+    "correct": 0,
+    "explanation": "Phishing uses deceptive messages to steal credentials.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs314",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Software whose source code is freely available to view, modify and redistribute is called:",
+    "options": [
+      "Proprietary software",
+      "Open-source software",
+      "Shareware",
+      "Malware"
+    ],
+    "correct": 1,
+    "explanation": "Open-source licences (e.g. GPL, MIT) grant rights to study, change and share the code.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs315",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Which cloud service model provides ready-to-use applications over the Internet, such as web-based email?",
+    "options": [
+      "IaaS (Infrastructure as a Service)",
+      "PaaS (Platform as a Service)",
+      "SaaS (Software as a Service)",
+      "LAN"
+    ],
+    "correct": 2,
+    "explanation": "SaaS delivers complete applications; IaaS gives virtual machines/storage; PaaS gives a development platform.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs316",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Which practice best strengthens account security?",
+    "options": [
+      "Writing the password on a note stuck to the monitor for quick access",
+      "Using one memorable password on every site so it is never forgotten",
+      "Sharing passwords with close friends so they can help recover accounts",
+      "Using a long unique password together with two-factor authentication"
+    ],
+    "correct": 3,
+    "explanation": "Unique passwords limit damage from breaches, and 2FA adds a second verification step.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs317",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "A firewall is used to:",
+    "options": [
+      "Speed up the Internet connection by compressing all traffic",
+      "Recover deleted files from the recycle bin and backup drives",
+      "Monitor and filter network traffic according to security rules",
+      "Cool the processor by controlling the speed of the system fan"
+    ],
+    "correct": 2,
+    "explanation": "Firewalls block unauthorised connections while permitting legitimate traffic.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs318",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Machine learning differs from traditional programming because:",
+    "options": [
+      "It runs only on supercomputers and never on phones or laptops",
+      "It cannot make predictions and only stores past records",
+      "It never needs any data because all rules are typed in by hand",
+      "The system learns patterns from data instead of following only explicitly coded rules"
+    ],
+    "correct": 3,
+    "explanation": "ML models are trained on examples and generalise to new inputs.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs319",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Which of the following is an ethical concern specific to AI systems?",
+    "options": [
+      "Bias in training data leading to unfair decisions",
+      "The colour and design of the computer case it runs on",
+      "The screen resolution of the monitor showing results",
+      "The number of USB ports available on the server"
+    ],
+    "correct": 0,
+    "explanation": "Models can inherit and amplify biases present in the data they learn from.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs320",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Copyright protects:",
+    "options": [
+      "Physical inventions only, such as new machines and devices",
+      "Original creative expression such as software code, books and music",
+      "Company names and logos only, as used in advertising",
+      "Ideas and methods themselves, even if never written down"
+    ],
+    "correct": 1,
+    "explanation": "Copyright covers the expression of a work, not the underlying idea.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs321",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "medium",
+    "text": "Ransomware is malware that:",
+    "options": [
+      "Encrypts a victim's files and demands payment for the key",
+      "Backs up a victim's files to the cloud without their consent",
+      "Speeds up a computer by deleting temporary and unused files",
+      "Shows harmless pop-up advertisements without touching files"
+    ],
+    "correct": 0,
+    "explanation": "Regular offline backups are a key defence against ransomware.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs322",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "hard",
+    "text": "Assertion (A): Data collected by IoT devices raises privacy concerns.\nReason (R): IoT devices can continuously collect personal data such as location and habits, which may be shared or misused.",
+    "options": [
+      "Both A and R are true, and R is the correct explanation of A",
+      "Both A and R are true, but R is not the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true"
+    ],
+    "correct": 0,
+    "explanation": "Continuous, often unnoticed data collection is exactly why IoT raises privacy issues.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs323",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "hard",
+    "text": "Under a 'copyleft' licence such as the GNU GPL:",
+    "options": [
+      "The source code must be kept secret from everyone except the author",
+      "Modified versions that are distributed must be released under the same licence",
+      "The software can never be modified, even by its own users",
+      "The software may be used freely only for one year after download"
+    ],
+    "correct": 1,
+    "explanation": "Copyleft keeps derivative works open by requiring the same licence terms.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs324",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "hard",
+    "text": "Which is the most responsible way to dispose of an old smartphone?",
+    "options": [
+      "Throw it in household garbage after removing the SIM card",
+      "Bury it in the ground so the battery slowly breaks down",
+      "Burn it in the open to destroy the stored personal data",
+      "Wipe personal data and hand it to an authorised e-waste recycler"
+    ],
+    "correct": 3,
+    "explanation": "Data wiping protects privacy; authorised recyclers recover materials safely and prevent toxic leakage.",
+    "source": "Rise Practice"
+  },
+  {
+    "id": "xiicsecs325",
+    "chapter": "Trends in Computing and Ethics",
+    "difficulty": "hard",
+    "text": "Which statement about cloud computing is INCORRECT?",
+    "options": [
+      "It can reduce the need for local hardware",
+      "It allows scaling resources up or down on demand",
+      "Data stored in the cloud can never be lost or leaked",
+      "It requires network connectivity to access services"
+    ],
+    "correct": 2,
+    "explanation": "Cloud data still faces risks such as breaches, misconfiguration and outages; no system is risk-free.",
+    "source": "Rise Practice"
+  }
+]
