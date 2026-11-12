@@ -47,7 +47,7 @@ const NOTES_SOURCES = {
     Accountancy:        { CBSE: [['XI Accountancy']] },
     Economics:          { CBSE: [['XI Economics']] },
     Psychology:         { CBSE: [['XI Psychology']] },
-    Physics:            { CBSE: [['XI Physics']] },
+    Physics:            { CBSE: [['XI Physics']], ICSE: [['XI ICSE Physics']] },
     Chemistry:          { CBSE: [['XI Chemistry']] },
     'Comp App & IT':    { CBSE: [['XI Computer Science']] },
     Mathematics:            { CBSE: [['XI Mathematics']] },
@@ -88,7 +88,8 @@ const REVISION_EXTRA_FILES = {
     { file: 'revision-data-xi-maths.js?v=0884abfb',              probeKey: 'XI Mathematics' },
     { file: 'revision-data-xi-polsci.js?v=9893dce3',             probeKey: 'XI Political Science' },
     { file: 'revision-data-xi-infopractices.js?v=3727bfec',   probeKey: 'XI Informatics Practices' },
-    { file: 'revision-data-xi-biology.js?v=dd26303f',         probeKey: 'XI Biology' }
+    { file: 'revision-data-xi-biology.js?v=dd26303f',         probeKey: 'XI Biology' },
+    { file: 'revision-data-xi-icse-physics.js?v=d19467ba',           probeKey: 'XI ICSE Physics' }
   ],
   XII: [
     { file: 'revision-data-xii.js?v=2d919395', probeKey: 'XII Mathematics' }
@@ -266,7 +267,9 @@ Object.assign(app, {
       XII: new Set(['Mathematics', 'Physics', 'Chemistry', 'Biology', 'Comp App & IT', 'Economics', 'Political Science', 'Psychology', 'Informatics Practices'])
     };
     const allowed = BY_GRADE[state.grade] || BY_GRADE.X;
-    return NOTES_CATALOG.filter(s => allowed.has(s.id));
+    const sources = NOTES_SOURCES[state.grade] || {};
+    const forBoard = state.grade === 'XI' ? NOTES_CATALOG.filter(s => allowed.has(s.id) && sources[s.id]?.[state.board]) : [];
+    return forBoard.length ? forBoard : NOTES_CATALOG.filter(s => allowed.has(s.id));
   },
 
   _subjectSelect(activeId) {

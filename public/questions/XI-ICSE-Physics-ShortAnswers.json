@@ -1,0 +1,1224 @@
+[
+  {
+    "id": "sa-xiicse-phy-001",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Distinguish between accuracy and precision of a measurement.",
+    "modelAnswer": "Accuracy is how close a measured value is to the true value of the quantity. Precision is the resolution of the instrument, i.e. how closely repeated readings agree with one another (how finely the value is resolved). A set of readings can be precise (close together) yet inaccurate if there is a systematic error such as an uncorrected zero error.",
+    "keyPoints": [
+      "Accuracy: closeness to true value",
+      "Precision: closeness of repeated readings / resolution",
+      "Precise but inaccurate possible with systematic error"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-002",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Using dimensional analysis, check whether the relation v = √(P/ρ) is dimensionally correct, where v is speed of sound, P is pressure and ρ is density.",
+    "modelAnswer": "Dimensions of P = [M L⁻¹ T⁻²]; dimensions of ρ = [M L⁻³].\nP/ρ = [M L⁻¹ T⁻²]/[M L⁻³] = [L² T⁻²].\n√(P/ρ) = [L T⁻¹], which is the dimension of speed.\nLHS v = [L T⁻¹]. Both sides match, so the relation is dimensionally correct (although dimensional analysis cannot confirm any numerical factor such as √γ).",
+    "keyPoints": [
+      "[P] = M L⁻¹ T⁻²",
+      "[ρ] = M L⁻³",
+      "√(P/ρ) = L T⁻¹ = [v]",
+      "Dimensionally correct; constants not checked"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-003",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State three limitations of dimensional analysis.",
+    "modelAnswer": "(1) It cannot determine the values of dimensionless constants (e.g. the 2π in T = 2π√(l/g)).\n(2) It cannot be used to derive relations containing trigonometric, exponential or logarithmic functions, or relations that are sums/differences of terms with a constant added.\n(3) It cannot distinguish between quantities having the same dimensions (e.g. work and torque), and it fails if a quantity depends on more than three quantities when M, L, T are used as the base.",
+    "keyPoints": [
+      "No numerical constants",
+      "Fails for trig/exp/log or sums of terms",
+      "Cannot distinguish same-dimension quantities",
+      "Limited to three variables with M, L, T"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-004",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "The radius of a sphere is measured as (2.1 ± 0.05) cm. Calculate the percentage error in its volume.",
+    "modelAnswer": "V = (4/3)πr³, so ΔV/V = 3(Δr/r).\nΔr/r = 0.05/2.1 = 0.0238.\nΔV/V = 3 × 0.0238 = 0.0714.\nPercentage error in volume = 0.0714 × 100 ≈ 7.1%.",
+    "keyPoints": [
+      "ΔV/V = 3Δr/r",
+      "Δr/r = 0.0238",
+      "≈ 7.1%"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-005",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Using the method of dimensions, derive an expression for the time period T of a simple pendulum, assuming it depends on the mass m of the bob, the length l and the acceleration due to gravity g. Also state why the experimental constant cannot be found by this method.",
+    "modelAnswer": "Let T = k mᵃ lᵇ gᶜ, where k is dimensionless.\n[M⁰ L⁰ T¹] = [M]ᵃ [L]ᵇ [L T⁻²]ᶜ = [Mᵃ Lᵇ⁺ᶜ T⁻²ᶜ].\nComparing powers: M: a = 0; T: −2c = 1 ⇒ c = −½; L: b + c = 0 ⇒ b = ½.\nSo T = k √(l/g). Experiment shows k = 2π, giving T = 2π√(l/g).\nThe result shows T does not depend on the mass of the bob. The constant k is a pure number with no dimensions, so the method of dimensions cannot determine it — it must be found by experiment or full theory.",
+    "keyPoints": [
+      "Assume T = k mᵃ lᵇ gᶜ",
+      "Equate powers of M, L, T",
+      "a = 0, b = ½, c = −½",
+      "T = k√(l/g), k = 2π from experiment",
+      "Dimensionless k not obtainable"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-006",
+    "chapter": "Units, Dimensions and Measurement",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Define least count of a screw gauge. A screw gauge has pitch 1 mm and 100 circular divisions; find its least count.",
+    "modelAnswer": "Least count is the smallest length that can be measured accurately with the instrument; for a screw gauge, LC = pitch ÷ number of divisions on the circular scale.\nLC = 1 mm ÷ 100 = 0.01 mm.",
+    "keyPoints": [
+      "LC = pitch / no. of circular divisions",
+      "LC = 0.01 mm"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-007",
+    "chapter": "Motion in a Straight Line",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive the equation v² = u² + 2as for uniformly accelerated motion using a velocity–time graph.",
+    "modelAnswer": "Draw a v–t graph: velocity rises in a straight line from u at t = 0 to v at time t. The slope is a = (v − u)/t, so t = (v − u)/a.\nThe displacement s is the area of the trapezium under the line: s = ½(u + v)t.\nSubstituting t: s = ½(u + v)(v − u)/a = (v² − u²)/(2a).\nHence v² = u² + 2as.",
+    "keyPoints": [
+      "a = slope = (v − u)/t",
+      "s = area of trapezium = ½(u + v)t",
+      "Eliminate t",
+      "v² = u² + 2as"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-008",
+    "chapter": "Motion in a Straight Line",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A car accelerates from rest at 2 m s⁻² for 10 s, then moves at constant velocity for 20 s and finally decelerates uniformly to rest in 5 s. Find the total distance covered.",
+    "modelAnswer": "Phase 1: v = at = 2 × 10 = 20 m s⁻¹; s₁ = ½at² = ½ × 2 × 100 = 100 m.\nPhase 2: s₂ = 20 × 20 = 400 m.\nPhase 3: s₃ = (u + v)t/2 = (20 + 0) × 5/2 = 50 m.\nTotal distance = 100 + 400 + 50 = 550 m.",
+    "keyPoints": [
+      "Max speed 20 m s⁻¹",
+      "s₁ = 100 m",
+      "s₂ = 400 m",
+      "s₃ = 50 m; total 550 m"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-009",
+    "chapter": "Motion in a Straight Line",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Distinguish between distance and displacement.",
+    "modelAnswer": "Distance is the total length of the path travelled; it is a scalar and is never negative. Displacement is the shortest straight-line change in position from the initial to the final point, in a specified direction; it is a vector and can be zero or negative. Magnitude of displacement ≤ distance.",
+    "keyPoints": [
+      "Distance: path length, scalar",
+      "Displacement: change in position, vector",
+      "|displacement| ≤ distance"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-010",
+    "chapter": "Motion in a Straight Line",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A ball is thrown vertically upward from the top of a 25 m high building with a speed of 20 m s⁻¹. Taking g = 10 m s⁻², find the time it takes to reach the ground.",
+    "modelAnswer": "Take upward as positive and the launch point as origin. Ground is at y = −25 m.\ny = ut − ½gt² ⇒ −25 = 20t − 5t² ⇒ 5t² − 20t − 25 = 0 ⇒ t² − 4t − 5 = 0.\n(t − 5)(t + 1) = 0 ⇒ t = 5 s (reject the negative root).\nThe ball reaches the ground after 5 s.",
+    "keyPoints": [
+      "Sign convention stated",
+      "−25 = 20t − 5t²",
+      "t² − 4t − 5 = 0",
+      "t = 5 s"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-011",
+    "chapter": "Motion in a Straight Line",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Derive the three equations of uniformly accelerated motion by calculus, starting from a = dv/dt. State the assumption involved.",
+    "modelAnswer": "Assumption: acceleration a is constant; at t = 0, velocity = u and position x = 0.\n(i) a = dv/dt ⇒ dv = a dt. Integrating from u to v and 0 to t: v − u = at ⇒ v = u + at.\n(ii) v = dx/dt ⇒ dx = (u + at) dt. Integrating from 0 to s and 0 to t: s = ut + ½at².\n(iii) a = dv/dt = (dv/dx)(dx/dt) = v dv/dx ⇒ v dv = a dx. Integrating from u to v and 0 to s: (v² − u²)/2 = as ⇒ v² = u² + 2as.",
+    "keyPoints": [
+      "Constant acceleration assumed",
+      "v = u + at by integrating a dt",
+      "s = ut + ½at² by integrating v dt",
+      "v dv = a dx ⇒ v² = u² + 2as"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-012",
+    "chapter": "Motion in a Straight Line",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show that the distance covered by a uniformly accelerated body in the nth second is sₙ = u + (a/2)(2n − 1).",
+    "modelAnswer": "Distance in n seconds: Sₙ = un + ½an². Distance in (n − 1) seconds: Sₙ₋₁ = u(n − 1) + ½a(n − 1)².\nsₙ = Sₙ − Sₙ₋₁ = u + ½a[n² − (n − 1)²] = u + ½a(2n − 1).",
+    "keyPoints": [
+      "Sₙ − Sₙ₋₁",
+      "n² − (n − 1)² = 2n − 1",
+      "sₙ = u + (a/2)(2n − 1)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-013",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State the triangle law of vector addition.",
+    "modelAnswer": "If two vectors are represented in magnitude and direction by two sides of a triangle taken in the same order, their resultant is represented in magnitude and direction by the third side of the triangle taken in the opposite order.",
+    "keyPoints": [
+      "Two sides taken in order",
+      "Third side in opposite order = resultant"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-014",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Two forces of 5 N and 3 N act on a body with an angle of 60° between them. Find the magnitude of the resultant.",
+    "modelAnswer": "R = √(P² + Q² + 2PQ cos θ)\n= √(25 + 9 + 2 × 5 × 3 × 0.5)\n= √(25 + 9 + 15) = √49 = 7 N.",
+    "keyPoints": [
+      "Parallelogram formula",
+      "cos 60° = 0.5",
+      "R = 7 N"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-015",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A projectile is launched with speed u at angle θ above the horizontal on level ground. Derive expressions for (i) time of flight, (ii) maximum height and (iii) horizontal range. Hence show that the range is maximum at θ = 45°.",
+    "modelAnswer": "Components: uₓ = u cos θ (constant), u_y = u sin θ, a_y = −g.\n(i) Time of flight: y = (u sin θ)t − ½gt² = 0 ⇒ T = 2u sin θ/g.\n(ii) Maximum height: at the top v_y = 0 ⇒ 0 = u² sin²θ − 2gH ⇒ H = u² sin²θ/(2g).\n(iii) Range: R = uₓ T = u cos θ × 2u sin θ/g = u² sin 2θ/g.\nR is maximum when sin 2θ = 1 ⇒ 2θ = 90° ⇒ θ = 45°, giving R_max = u²/g.",
+    "keyPoints": [
+      "Resolve u into components",
+      "T = 2u sin θ/g",
+      "H = u² sin²θ/2g",
+      "R = u² sin 2θ/g",
+      "Max at 45°, R_max = u²/g"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-016",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive the expression for centripetal acceleration of a body moving uniformly in a circle of radius r with speed v.",
+    "modelAnswer": "Let the body move from P to Q in time Δt, turning through angle Δθ. The velocity vectors v₁ and v₂ have equal magnitude v and differ in direction by Δθ.\nThe change |Δv| = v Δθ (for small Δθ, from the isosceles velocity triangle), and Δv points towards the centre.\nAcceleration a = |Δv|/Δt = v (Δθ/Δt) = vω. Since v = ωr, a = v²/r = ω²r, directed towards the centre.",
+    "keyPoints": [
+      "Velocity changes direction only",
+      "|Δv| = v Δθ",
+      "a = vω = v²/r = ω²r",
+      "Directed towards centre"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-017",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A swimmer can swim at 5 km h⁻¹ in still water. A river 1 km wide flows at 3 km h⁻¹. In which direction should he swim to cross straight across, and how long will it take?",
+    "modelAnswer": "To reach the point directly opposite, the swimmer's velocity component upstream must cancel the river flow: 5 sin θ = 3 ⇒ sin θ = 0.6 ⇒ θ ≈ 36.9° upstream from the perpendicular to the bank.\nResultant speed across = 5 cos θ = 5 × 0.8 = 4 km h⁻¹.\nTime = 1 km ÷ 4 km h⁻¹ = 0.25 h = 15 min.",
+    "keyPoints": [
+      "sin θ = v_river/v_swimmer = 0.6",
+      "θ ≈ 37° upstream of the normal",
+      "Speed across 4 km h⁻¹",
+      "t = 15 min"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-018",
+    "chapter": "Vectors and Motion in a Plane",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Distinguish between scalar (dot) product and vector (cross) product of two vectors.",
+    "modelAnswer": "Dot product A·B = AB cos θ is a scalar; it is commutative (A·B = B·A) and is maximum when vectors are parallel. Example: work W = F·s.\nCross product A × B = AB sin θ n̂ is a vector perpendicular to the plane of A and B (right-hand rule); it is anti-commutative (A × B = −B × A) and is zero for parallel vectors. Example: torque τ = r × F.",
+    "keyPoints": [
+      "Dot: scalar, AB cos θ, commutative",
+      "Cross: vector, AB sin θ n̂, anti-commutative",
+      "Examples: work / torque"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-019",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State Newton's second law of motion and show that it gives F = ma for constant mass.",
+    "modelAnswer": "The rate of change of linear momentum of a body is directly proportional to the applied external force and takes place in the direction of the force: F ∝ dp/dt; in SI units F = dp/dt.\nWith p = mv and m constant, F = m dv/dt = ma.",
+    "keyPoints": [
+      "F = dp/dt",
+      "Direction of force",
+      "Constant m ⇒ F = ma"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-020",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State the law of conservation of linear momentum and derive it from Newton's laws for two colliding bodies.",
+    "modelAnswer": "Law: if no net external force acts on a system, its total linear momentum remains constant.\nDerivation: during a collision A exerts F_BA on B and B exerts F_AB on A for time Δt. By the second law, F_AB Δt = Δp_A and F_BA Δt = Δp_B. By the third law F_AB = −F_BA, so Δp_A = −Δp_B ⇒ Δp_A + Δp_B = 0.\nHence p_A + p_B before = p_A + p_B after.",
+    "keyPoints": [
+      "Statement: no external force ⇒ total p constant",
+      "Impulse = Δp for each body",
+      "Third law: forces equal and opposite",
+      "Δp_A + Δp_B = 0"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-021",
+    "chapter": "Laws of Motion",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Derive an expression for the maximum safe speed of a vehicle on a banked circular road with friction. Hence obtain the optimum speed when friction is absent.",
+    "modelAnswer": "Let the road be banked at θ, radius r, coefficient of friction μ. At maximum speed, friction f = μN acts down the slope.\nVertical: N cos θ = mg + f sin θ = mg + μN sin θ ⇒ N(cos θ − μ sin θ) = mg.\nHorizontal (centripetal): N sin θ + μN cos θ = mv²/r ⇒ N(sin θ + μ cos θ) = mv²/r.\nDividing: v²/(rg) = (sin θ + μ cos θ)/(cos θ − μ sin θ) = (tan θ + μ)/(1 − μ tan θ).\nv_max = √[rg (μ + tan θ)/(1 − μ tan θ)].\nWithout friction (μ = 0): v₀ = √(rg tan θ), the optimum speed at which no friction is needed.",
+    "keyPoints": [
+      "Free-body diagram with N, mg, friction down slope",
+      "Vertical balance equation",
+      "Horizontal centripetal equation",
+      "v_max = √[rg(μ + tan θ)/(1 − μ tan θ)]",
+      "μ = 0 ⇒ v₀ = √(rg tan θ)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-022",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A 0.15 kg ball moving at 20 m s⁻¹ is hit back by a bat and leaves at 30 m s⁻¹ in the opposite direction. If contact lasts 0.01 s, find the average force exerted by the bat.",
+    "modelAnswer": "Take the final direction as positive: u = −20 m s⁻¹, v = +30 m s⁻¹.\nΔp = m(v − u) = 0.15 × (30 − (−20)) = 0.15 × 50 = 7.5 N s.\nF = Δp/Δt = 7.5/0.01 = 750 N, in the direction of the ball's final motion.",
+    "keyPoints": [
+      "Sign convention",
+      "Δp = 7.5 N s",
+      "F = 750 N"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-023",
+    "chapter": "Laws of Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Why is it easier to pull a lawn roller than to push it? (Assume the handle makes an angle θ with the horizontal.)",
+    "modelAnswer": "When pulling, the force F along the handle has an upward vertical component F sin θ, which reduces the normal reaction to mg − F sin θ and hence reduces friction. When pushing, the vertical component acts downward, increasing the normal reaction to mg + F sin θ and increasing friction. So pulling needs less effort.",
+    "keyPoints": [
+      "Resolve F into components",
+      "Pull: N = mg − F sin θ",
+      "Push: N = mg + F sin θ; friction ∝ N"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-024",
+    "chapter": "Laws of Motion",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "State Lami's theorem. A 10 kg mass hangs from two strings making 30° and 60° with the horizontal ceiling. Find the tensions (g = 10 m s⁻²).",
+    "modelAnswer": "Lami's theorem: if three concurrent forces keep a body in equilibrium, each force is proportional to the sine of the angle between the other two.\nLet T₁ be the string at 30° to the horizontal, T₂ at 60°. Horizontal: T₁ cos 30° = T₂ cos 60°. Vertical: T₁ sin 30° + T₂ sin 60° = 100 N.\nFrom the first, T₂ = √3 T₁. Then 0.5T₁ + (√3)(√3/2)T₁ = 100 ⇒ 2T₁ = 100 ⇒ T₁ = 50 N, T₂ = 50√3 ≈ 86.6 N.",
+    "keyPoints": [
+      "Statement of Lami's theorem",
+      "Resolve horizontally and vertically",
+      "T₁ = 50 N",
+      "T₂ ≈ 86.6 N"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-025",
+    "chapter": "Work, Energy and Power",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State and prove the work–energy theorem for a constant force.",
+    "modelAnswer": "Statement: the work done by the net force on a body equals the change in its kinetic energy, W = K_f − K_i.\nProof: for a constant net force F producing acceleration a over displacement s, v² = u² + 2as ⇒ as = (v² − u²)/2.\nW = Fs = mas = m(v² − u²)/2 = ½mv² − ½mu² = ΔK.",
+    "keyPoints": [
+      "Statement W_net = ΔK",
+      "v² − u² = 2as",
+      "W = mas = ½mv² − ½mu²"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-026",
+    "chapter": "Work, Energy and Power",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Distinguish between conservative and non-conservative forces with one example each.",
+    "modelAnswer": "Conservative force: work done is independent of path and is zero round any closed path; a potential energy can be defined. Example: gravity, spring force.\nNon-conservative force: work done depends on the path and is not recoverable (not zero round a closed path). Example: friction, air drag.",
+    "keyPoints": [
+      "Path independent / zero over closed loop",
+      "Example: gravity or spring",
+      "Non-conservative path dependent, e.g. friction"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-027",
+    "chapter": "Work, Energy and Power",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Two bodies of masses m₁ and m₂ moving with velocities u₁ and u₂ (u₁ > u₂) along the same line collide elastically. Derive expressions for their velocities after the collision.",
+    "modelAnswer": "Momentum: m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂ ⇒ m₁(u₁ − v₁) = m₂(v₂ − u₂) … (1)\nKinetic energy: ½m₁u₁² + ½m₂u₂² = ½m₁v₁² + ½m₂v₂² ⇒ m₁(u₁² − v₁²) = m₂(v₂² − u₂²) … (2)\nDividing (2) by (1): u₁ + v₁ = u₂ + v₂ ⇒ u₁ − u₂ = v₂ − v₁ (relative speed of separation = relative speed of approach).\nSo v₂ = u₁ − u₂ + v₁. Substituting in (1):\nv₁ = [(m₁ − m₂)u₁ + 2m₂u₂]/(m₁ + m₂)\nv₂ = [(m₂ − m₁)u₂ + 2m₁u₁]/(m₁ + m₂).\nSpecial case m₁ = m₂: v₁ = u₂, v₂ = u₁ (velocities exchange).",
+    "keyPoints": [
+      "Momentum conservation equation",
+      "KE conservation equation",
+      "Relative velocity relation u₁ − u₂ = v₂ − v₁",
+      "v₁ and v₂ expressions",
+      "Equal-mass special case"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-028",
+    "chapter": "Work, Energy and Power",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A 1500 kg car accelerates from 10 m s⁻¹ to 20 m s⁻¹ in 5 s on a level road. Neglecting friction, find (i) the work done by the engine and (ii) the average power.",
+    "modelAnswer": "(i) W = ΔK = ½ × 1500 × (20² − 10²) = 750 × 300 = 2.25 × 10⁵ J.\n(ii) P = W/t = 2.25 × 10⁵/5 = 4.5 × 10⁴ W = 45 kW.",
+    "keyPoints": [
+      "Work–energy theorem",
+      "W = 2.25 × 10⁵ J",
+      "P = 45 kW"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-029",
+    "chapter": "Work, Energy and Power",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show that power P = F·v.",
+    "modelAnswer": "Power is the rate of doing work: P = dW/dt. For a small displacement ds, dW = F·ds, so P = F·(ds/dt) = F·v.",
+    "keyPoints": [
+      "P = dW/dt",
+      "dW = F·ds",
+      "P = F·v"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-030",
+    "chapter": "Work, Energy and Power",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A bullet of mass 10 g moving at 400 m s⁻¹ embeds itself in a 2 kg wooden block suspended as a pendulum. Find the height to which the block rises (g = 10 m s⁻²).",
+    "modelAnswer": "Collision (momentum conserved): 0.01 × 400 = 2.01 V ⇒ V = 4/2.01 ≈ 1.99 m s⁻¹.\nAfter collision (mechanical energy conserved): ½(2.01)V² = (2.01)gh ⇒ h = V²/(2g) = (1.99)²/20 ≈ 0.198 m ≈ 19.8 cm.",
+    "keyPoints": [
+      "Momentum conservation for impact",
+      "V ≈ 1.99 m s⁻¹",
+      "Energy conservation for rise",
+      "h ≈ 0.198 m"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-031",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State the theorem of parallel axes and the theorem of perpendicular axes.",
+    "modelAnswer": "Parallel axes: the moment of inertia of a body about any axis equals its MI about a parallel axis through the centre of mass plus Md², where d is the distance between the axes: I = I_cm + Md².\nPerpendicular axes (for a plane lamina): the MI about an axis perpendicular to the plane equals the sum of the MIs about two mutually perpendicular axes in the plane intersecting at that point: I_z = Iₓ + I_y.",
+    "keyPoints": [
+      "I = I_cm + Md²",
+      "I_z = Iₓ + I_y for planar lamina",
+      "Axes intersect at the same point"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-032",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show that the angular momentum of a particle is related to torque by τ = dL/dt, and hence state the law of conservation of angular momentum.",
+    "modelAnswer": "L = r × p. Differentiating: dL/dt = (dr/dt × p) + (r × dp/dt) = (v × mv) + (r × F).\nv × mv = 0 (parallel vectors), so dL/dt = r × F = τ.\nIf the net external torque τ = 0, then dL/dt = 0, i.e. L = constant — the law of conservation of angular momentum.",
+    "keyPoints": [
+      "L = r × p",
+      "Product rule; v × mv = 0",
+      "τ = dL/dt",
+      "τ = 0 ⇒ L constant"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-033",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Derive the expression for the acceleration of a body of mass M, radius R and moment of inertia I = Mk² rolling without slipping down an inclined plane of angle θ. Compare the accelerations of a ring, a disc and a solid sphere.",
+    "modelAnswer": "Forces along the incline: Mg sin θ − f = Ma … (1), where f is static friction at the contact point.\nTorque about the centre: fR = Iα = Mk² (a/R) (rolling: a = αR) ⇒ f = Mk²a/R² … (2).\nSubstituting (2) in (1): Mg sin θ = Ma(1 + k²/R²) ⇒ a = g sin θ/(1 + k²/R²).\nRing: k²/R² = 1 ⇒ a = ½g sin θ.\nDisc: k²/R² = ½ ⇒ a = (2/3)g sin θ.\nSolid sphere: k²/R² = 2/5 ⇒ a = (5/7)g sin θ.\nSo the sphere reaches the bottom first, then the disc, then the ring — independent of mass and radius.",
+    "keyPoints": [
+      "Translational equation with friction",
+      "Rotational equation fR = Iα, a = αR",
+      "a = g sin θ/(1 + k²/R²)",
+      "Ring ½, disc 2/3, sphere 5/7 of g sin θ",
+      "Order: sphere, disc, ring"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-034",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A thin uniform rod of mass 0.6 kg and length 1 m rotates about a perpendicular axis through its centre at 5 rad s⁻¹. Find its moment of inertia, angular momentum and rotational KE.",
+    "modelAnswer": "I = ML²/12 = 0.6 × 1/12 = 0.05 kg m².\nL = Iω = 0.05 × 5 = 0.25 kg m² s⁻¹.\nK = ½Iω² = ½ × 0.05 × 25 = 0.625 J.",
+    "keyPoints": [
+      "I = ML²/12 = 0.05 kg m²",
+      "L = 0.25 kg m² s⁻¹",
+      "K = 0.625 J"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-035",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Define centre of mass. Does the centre of mass of a body necessarily lie inside it? Give an example.",
+    "modelAnswer": "The centre of mass is the point where the entire mass of a system may be considered concentrated for describing its translational motion; r_cm = Σmᵢrᵢ/Σmᵢ.\nIt need not lie inside the material of the body — e.g. the centre of mass of a ring (or a hollow sphere, or a boomerang) lies at its centre, where there is no mass.",
+    "keyPoints": [
+      "Definition / r_cm = Σmr/Σm",
+      "Need not lie within material",
+      "Example: ring's centre"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-036",
+    "chapter": "System of Particles and Rotational Motion",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Using the perpendicular and parallel axis theorems, find the moment of inertia of a uniform disc of mass M and radius R about a tangent in its plane.",
+    "modelAnswer": "MI about the symmetry axis (perpendicular to the plane through the centre) = MR²/2.\nBy the perpendicular axis theorem, I_diameter + I_diameter = MR²/2 ⇒ I_diameter = MR²/4.\nThe tangent in the plane is parallel to a diameter at distance R. By the parallel axis theorem: I_tangent = MR²/4 + MR² = 5MR²/4.",
+    "keyPoints": [
+      "I_axis = MR²/2",
+      "I_diameter = MR²/4 (perpendicular axes)",
+      "I_tangent = MR²/4 + MR² = 5MR²/4"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-037",
+    "chapter": "Gravitation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive an expression for the variation of g with height h above the Earth's surface. Show that for h ≪ R, g_h ≈ g(1 − 2h/R).",
+    "modelAnswer": "At the surface g = GM/R². At height h, g_h = GM/(R + h)².\nRatio: g_h/g = R²/(R + h)² ⇒ g_h = g(1 + h/R)⁻².\nFor h ≪ R, using the binomial approximation (1 + x)⁻² ≈ 1 − 2x: g_h ≈ g(1 − 2h/R).",
+    "keyPoints": [
+      "g = GM/R²",
+      "g_h = GM/(R + h)²",
+      "Binomial expansion",
+      "g_h ≈ g(1 − 2h/R)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-038",
+    "chapter": "Gravitation",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive an expression for the escape speed from the surface of a planet of mass M and radius R.",
+    "modelAnswer": "To escape, the body's kinetic energy at the surface must at least equal the work needed to take it to infinity (where U = 0 and K ≥ 0).\n½mvₑ² + (−GMm/R) = 0 ⇒ vₑ = √(2GM/R).\nSince GM = gR², vₑ = √(2gR). For Earth, vₑ = √(2 × 9.8 × 6.4 × 10⁶) ≈ 11.2 km s⁻¹. It is independent of the mass of the body.",
+    "keyPoints": [
+      "Energy condition: total energy = 0",
+      "½mvₑ² = GMm/R",
+      "vₑ = √(2GM/R) = √(2gR)",
+      "≈ 11.2 km s⁻¹, independent of m"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-039",
+    "chapter": "Gravitation",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "For a satellite of mass m in a circular orbit of radius r about the Earth (mass M), derive expressions for (i) orbital speed, (ii) time period, (iii) kinetic, potential and total energy. Show that the period satisfies Kepler's third law.",
+    "modelAnswer": "(i) Gravity provides centripetal force: GMm/r² = mv₀²/r ⇒ v₀ = √(GM/r).\n(ii) T = 2πr/v₀ = 2π√(r³/GM) ⇒ T² = (4π²/GM) r³, i.e. T² ∝ r³ — Kepler's third law.\n(iii) K = ½mv₀² = GMm/2r; U = −GMm/r; E = K + U = −GMm/2r.\nThus K = −E and U = 2E. The negative total energy shows the satellite is bound to the Earth; the binding energy is GMm/2r.",
+    "keyPoints": [
+      "GMm/r² = mv²/r",
+      "v₀ = √(GM/r)",
+      "T = 2π√(r³/GM) ⇒ T² ∝ r³",
+      "K = GMm/2r, U = −GMm/r",
+      "E = −GMm/2r"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-040",
+    "chapter": "Gravitation",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State Kepler's three laws of planetary motion.",
+    "modelAnswer": "(1) Law of orbits: every planet moves in an elliptical orbit with the Sun at one focus.\n(2) Law of areas: the line joining the Sun and a planet sweeps out equal areas in equal intervals of time.\n(3) Law of periods: the square of the period of a planet is proportional to the cube of the semi-major axis of its orbit (T² ∝ a³).",
+    "keyPoints": [
+      "Elliptical orbits, Sun at a focus",
+      "Equal areas in equal times",
+      "T² ∝ a³"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-041",
+    "chapter": "Gravitation",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Find the value of g at a height of 3200 km above the Earth's surface and at a depth of 3200 km below it (R = 6400 km, g = 9.8 m s⁻²).",
+    "modelAnswer": "Height: g_h = g R²/(R + h)² = 9.8 × (6400/9600)² = 9.8 × 4/9 ≈ 4.36 m s⁻².\nDepth: g_d = g(1 − d/R) = 9.8 × (1 − 3200/6400) = 9.8 × 0.5 = 4.9 m s⁻².\nNote that g decreases faster with height than with depth for the same distance.",
+    "keyPoints": [
+      "Use exact formula for height (h not ≪ R)",
+      "g_h ≈ 4.36 m s⁻²",
+      "g_d = 4.9 m s⁻²"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-042",
+    "chapter": "Gravitation",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What is a geostationary satellite? State two conditions it must satisfy.",
+    "modelAnswer": "A geostationary satellite appears stationary relative to a point on the Earth's surface. Conditions: (1) its period must be 24 h (one rotation of the Earth), and it must revolve in the same direction as the Earth's rotation (west to east); (2) its orbit must be circular and in the equatorial plane, at a height of about 36 000 km. Used for communication and weather monitoring.",
+    "keyPoints": [
+      "Period 24 h, west-to-east",
+      "Equatorial circular orbit",
+      "Height ≈ 36 000 km"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-043",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Define stress and strain. Write their SI units.",
+    "modelAnswer": "Stress is the internal restoring force per unit area set up in a deformed body: σ = F/A, unit N m⁻² (pascal).\nStrain is the fractional change in a dimension (length, volume or shape) produced: e.g. ΔL/L; it has no unit.",
+    "keyPoints": [
+      "Stress = restoring force / area",
+      "Unit N m⁻² (Pa)",
+      "Strain = change/original, dimensionless"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-044",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A load of 4 kg is suspended from a 2 m long steel wire of radius 1 mm. Find the extension (Y = 2 × 10¹¹ N m⁻², g = 9.8 m s⁻²).",
+    "modelAnswer": "F = mg = 4 × 9.8 = 39.2 N.\nA = πr² = π × (10⁻³)² = 3.14 × 10⁻⁶ m².\nΔL = FL/(AY) = 39.2 × 2/(3.14 × 10⁻⁶ × 2 × 10¹¹) ≈ 1.25 × 10⁻⁴ m = 0.125 mm.",
+    "keyPoints": [
+      "F = 39.2 N",
+      "A = 3.14 × 10⁻⁶ m²",
+      "ΔL = FL/AY ≈ 1.25 × 10⁻⁴ m"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-045",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 5,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Draw and explain a typical stress–strain curve for a ductile metal wire, marking the proportional limit, elastic limit/yield point, ultimate tensile strength and fracture point.",
+    "modelAnswer": "Stress is plotted on the y-axis and strain on the x-axis.\n(1) O to A — straight line: stress ∝ strain (Hooke's law holds); A is the proportional limit. Slope = Young's modulus.\n(2) A to B — slightly curved but still elastic; B is the elastic limit or yield point. Unloading anywhere up to B returns the wire to its original length.\n(3) B to D — beyond the yield point, strain increases rapidly even for small extra stress; the deformation is plastic and permanent (permanent set when unloaded).\n(4) D — ultimate tensile strength, the maximum stress the wire can bear.\n(5) D to E — the wire thins (necking) and breaks at E, the fracture point.\nIf D and E are far apart the material is ductile; if close, it is brittle.",
+    "keyPoints": [
+      "Linear region and proportional limit",
+      "Elastic limit / yield point",
+      "Plastic region and permanent set",
+      "Ultimate tensile strength",
+      "Fracture point; ductile vs brittle"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-046",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show that the elastic potential energy stored per unit volume in a stretched wire is ½ × stress × strain.",
+    "modelAnswer": "For extension x, restoring force F = YAx/L. Work done for an extra dx: dW = F dx = (YA/L)x dx.\nTotal work for extension l: W = ∫₀ˡ (YA/L) x dx = ½ YA l²/L = ½ (YAl/L) l = ½ F l.\nEnergy per unit volume u = W/(AL) = ½ (F/A)(l/L) = ½ × stress × strain.",
+    "keyPoints": [
+      "F = YAx/L",
+      "W = ∫F dx = ½Fl",
+      "Divide by volume AL",
+      "u = ½ stress × strain"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-047",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Define Poisson's ratio. Why does it have no unit?",
+    "modelAnswer": "Poisson's ratio σ is the ratio of lateral strain to longitudinal strain within the elastic limit: σ = −(Δd/d)/(ΔL/L). Both strains are ratios of lengths and dimensionless, so their ratio is also a pure number with no unit.",
+    "keyPoints": [
+      "σ = lateral strain / longitudinal strain",
+      "Within elastic limit",
+      "Ratio of two dimensionless strains"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-048",
+    "chapter": "Mechanical Properties of Solids",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A steel rod (Y = 2 × 10¹¹ Pa, α = 1.2 × 10⁻⁵ K⁻¹) of cross-section 5 cm² is clamped rigidly at both ends and its temperature is raised by 50 K. Find the force exerted by the rod on the clamps.",
+    "modelAnswer": "Prevented thermal strain = αΔT = 1.2 × 10⁻⁵ × 50 = 6 × 10⁻⁴.\nThermal stress = Y α ΔT = 2 × 10¹¹ × 6 × 10⁻⁴ = 1.2 × 10⁸ Pa.\nForce = stress × area = 1.2 × 10⁸ × 5 × 10⁻⁴ = 6 × 10⁴ N.",
+    "keyPoints": [
+      "Strain = αΔT",
+      "Stress = YαΔT = 1.2 × 10⁸ Pa",
+      "F = 6 × 10⁴ N"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-049",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State Bernoulli's theorem and write its equation. Name two applications.",
+    "modelAnswer": "Statement: for the streamline flow of an ideal (non-viscous, incompressible) fluid, the sum of pressure energy, kinetic energy and potential energy per unit volume is constant along a streamline:\nP + ½ρv² + ρgh = constant.\nApplications: lift on an aircraft wing, working of an atomiser/sprayer, Venturi meter, blowing off of roofs in storms, Magnus effect (swing of a spinning ball).",
+    "keyPoints": [
+      "Ideal fluid, streamline flow",
+      "P + ½ρv² + ρgh = constant",
+      "Two applications"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-050",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive the expression for the excess pressure inside a liquid drop of radius r.",
+    "modelAnswer": "Let the excess pressure inside be p. If the radius increases from r to r + dr, the extra surface area is dA = 8πr dr (one surface), so the work against surface tension = T × 8πr dr.\nThis work is done by the excess pressure: p × 4πr² dr.\nEquating: p × 4πr² dr = T × 8πr dr ⇒ p = 2T/r.\n(For a soap bubble with two surfaces, p = 4T/r.)",
+    "keyPoints": [
+      "Virtual increase dr",
+      "Work by pressure = p 4πr² dr",
+      "Work against T = T 8πr dr",
+      "p = 2T/r; bubble 4T/r"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-051",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Using Stokes' law, derive an expression for the terminal velocity of a small sphere falling through a viscous fluid. Explain why a parachutist falls at roughly constant speed.",
+    "modelAnswer": "Forces on a sphere of radius r, density ρ, falling in a fluid of density σ and viscosity η:\nWeight W = (4/3)πr³ρg (down); buoyant force U = (4/3)πr³σg (up); viscous drag F = 6πηrv (up, Stokes' law).\nAs v increases, F increases until the net force is zero; then v = v_t (terminal velocity):\n6πηr v_t = (4/3)πr³(ρ − σ)g ⇒ v_t = 2r²(ρ − σ)g/(9η).\nA parachute has a very large area, so drag grows rapidly with speed and balances the weight at a low speed; thereafter the net force is zero and the parachutist descends at a nearly constant (terminal) speed.",
+    "keyPoints": [
+      "Three forces: weight, upthrust, viscous drag 6πηrv",
+      "Net force zero at terminal velocity",
+      "v_t = 2r²(ρ − σ)g/9η",
+      "Parachute: large drag ⇒ low constant speed"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-052",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Water rises to 4 cm in a capillary tube of radius 0.35 mm. Find the surface tension of water (angle of contact 0°, ρ = 1000 kg m⁻³, g = 9.8 m s⁻²).",
+    "modelAnswer": "h = 2T cos θ/(rρg) ⇒ T = hrρg/(2 cos θ).\nT = 0.04 × 0.35 × 10⁻³ × 1000 × 9.8/(2 × 1) = 0.0686 N m⁻¹ ≈ 6.9 × 10⁻² N m⁻¹.",
+    "keyPoints": [
+      "Capillary rise formula",
+      "Rearrange for T",
+      "T ≈ 0.069 N m⁻¹"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-053",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Distinguish between streamline flow and turbulent flow.",
+    "modelAnswer": "Streamline (laminar) flow: the velocity of the fluid at any given point stays constant in time; fluid particles move in smooth, non-crossing layers. It occurs at low speeds (low Reynolds number).\nTurbulent flow: velocity at a point changes erratically with time; eddies and whirls form and layers mix. It occurs above a critical speed (high Reynolds number).",
+    "keyPoints": [
+      "Streamline: steady velocity at each point, layers don't cross",
+      "Turbulent: irregular, eddies",
+      "Critical velocity / Reynolds number"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-054",
+    "chapter": "Mechanical Properties of Fluids",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State Archimedes' principle. A block of wood of density 600 kg m⁻³ floats in water. What fraction of its volume is submerged?",
+    "modelAnswer": "Archimedes' principle: a body wholly or partly immersed in a fluid experiences an upthrust equal to the weight of the fluid it displaces.\nFor floating: weight = upthrust ⇒ Vρ_w g × (fraction) = Vρ g ⇒ fraction submerged = ρ/ρ_w = 600/1000 = 0.6 (60%).",
+    "keyPoints": [
+      "Upthrust = weight of fluid displaced",
+      "Floating: weight = upthrust",
+      "Fraction = 0.6"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-055",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Define coefficient of linear expansion and state its unit.",
+    "modelAnswer": "The coefficient of linear expansion α is the fractional increase in length per unit rise in temperature: α = ΔL/(L ΔT). Its unit is K⁻¹ (or °C⁻¹).",
+    "keyPoints": [
+      "α = ΔL/(LΔT)",
+      "Unit K⁻¹"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-056",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State Stefan–Boltzmann law. A black body at 727 °C radiates energy. Find the power emitted per unit area (σ = 5.67 × 10⁻⁸ W m⁻² K⁻⁴).",
+    "modelAnswer": "Stefan–Boltzmann law: the total energy radiated per unit area per second by a perfect black body is proportional to the fourth power of its absolute temperature, E = σT⁴.\nT = 727 + 273 = 1000 K.\nE = 5.67 × 10⁻⁸ × (10³)⁴ = 5.67 × 10⁴ W m⁻².",
+    "keyPoints": [
+      "E = σT⁴ (absolute temperature)",
+      "T = 1000 K",
+      "E = 5.67 × 10⁴ W m⁻²"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-057",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "How much heat is needed to convert 50 g of ice at −10 °C into steam at 100 °C? (c_ice = 2.1 J g⁻¹ K⁻¹, c_water = 4.2 J g⁻¹ K⁻¹, L_f = 336 J g⁻¹, L_v = 2260 J g⁻¹)",
+    "modelAnswer": "Ice −10 °C → 0 °C: 50 × 2.1 × 10 = 1050 J.\nMelting: 50 × 336 = 16 800 J.\nWater 0 °C → 100 °C: 50 × 4.2 × 100 = 21 000 J.\nVaporisation: 50 × 2260 = 113 000 J.\nTotal = 1050 + 16 800 + 21 000 + 113 000 = 151 850 J ≈ 1.52 × 10⁵ J.",
+    "keyPoints": [
+      "Four stages identified",
+      "Correct heat for each stage",
+      "Total ≈ 1.52 × 10⁵ J"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-058",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain the three modes of heat transfer with one example each. Explain why a vacuum flask keeps liquids hot.",
+    "modelAnswer": "Conduction: heat flows through a material from hotter to colder parts by molecular collisions and free electrons, without bulk movement of matter; e.g. a metal spoon in hot tea gets hot. Rate H = KAΔT/L.\nConvection: heat is carried by the actual movement of the heated fluid (density differences cause currents); e.g. sea and land breezes, heating water in a pan.\nRadiation: heat travels as electromagnetic waves and needs no medium; e.g. heat from the Sun, warmth near a fire.\nVacuum flask: the vacuum between the double walls prevents conduction and convection; the silvered walls reflect radiation back (and are poor emitters); the stopper of insulating material reduces conduction and convection through the mouth. Hence heat loss is minimised by all three modes.",
+    "keyPoints": [
+      "Conduction — mechanism + example",
+      "Convection — fluid movement + example",
+      "Radiation — EM waves, no medium + example",
+      "Vacuum blocks conduction/convection",
+      "Silvering reduces radiation"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-059",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Explain the anomalous expansion of water and its importance for aquatic life.",
+    "modelAnswer": "When water is heated from 0 °C to 4 °C it contracts instead of expanding, so its density is maximum at 4 °C; above 4 °C it expands normally.\nIn cold climates, as the surface water cools to 4 °C it becomes densest and sinks; water below 4 °C stays at the top and finally freezes. Ice is a poor conductor and floats, insulating the water below, which remains at about 4 °C. Thus fish and other aquatic life survive even when the surface is frozen.",
+    "keyPoints": [
+      "Contracts between 0 °C and 4 °C",
+      "Maximum density at 4 °C",
+      "Top layer freezes, ice insulates",
+      "Water below stays ≈ 4 °C"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-060",
+    "chapter": "Thermal Properties of Matter",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State Newton's law of cooling and the conditions for its validity.",
+    "modelAnswer": "The rate of loss of heat from a body is directly proportional to the difference in temperature between the body and its surroundings: −dQ/dt = k(T − T₀).\nIt holds when the temperature difference is small (a few tens of kelvin) and heat loss is mainly by convection in a steady environment.",
+    "keyPoints": [
+      "Rate ∝ (T − T₀)",
+      "Small temperature difference",
+      "Mainly convective, steady surroundings"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-061",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State the first law of thermodynamics and write its mathematical form, explaining the sign convention.",
+    "modelAnswer": "The heat ΔQ supplied to a system equals the increase in its internal energy ΔU plus the work ΔW done by the system: ΔQ = ΔU + ΔW.\nSign convention: ΔQ is positive when heat is absorbed by the system; ΔW is positive when work is done by the system (expansion); ΔU is positive when internal energy increases.",
+    "keyPoints": [
+      "Statement",
+      "ΔQ = ΔU + ΔW",
+      "Sign convention"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-062",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive an expression for the work done by an ideal gas during isothermal expansion from volume V₁ to V₂.",
+    "modelAnswer": "Work for a small expansion dV: dW = P dV. For an isothermal process of n moles, P = nRT/V.\nW = ∫ P dV from V₁ to V₂ = nRT ∫ dV/V = nRT ln(V₂/V₁).\nSince P₁V₁ = P₂V₂, also W = nRT ln(P₁/P₂). W is positive for expansion (V₂ > V₁).",
+    "keyPoints": [
+      "dW = P dV",
+      "P = nRT/V",
+      "W = nRT ln(V₂/V₁)",
+      "= nRT ln(P₁/P₂)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-063",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Derive Mayer's relation Cₚ − C_v = R for one mole of an ideal gas.",
+    "modelAnswer": "Heat one mole through ΔT at constant volume: ΔQ_v = C_vΔT = ΔU (no work).\nHeat one mole through the same ΔT at constant pressure: ΔQ_p = CₚΔT = ΔU + PΔV.\nFor an ideal gas U depends only on T, so ΔU is the same in both cases. From PV = RT at constant P, PΔV = RΔT.\nCₚΔT = C_vΔT + RΔT ⇒ Cₚ − C_v = R.",
+    "keyPoints": [
+      "Constant V: Q = C_vΔT = ΔU",
+      "Constant P: Q = ΔU + PΔV",
+      "ΔU same (depends only on T)",
+      "PΔV = RΔT ⇒ Cₚ − C_v = R"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-064",
+    "chapter": "Thermodynamics",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Describe the four steps of a Carnot cycle on a P–V diagram and derive (state) its efficiency. Why can no real engine reach 100% efficiency?",
+    "modelAnswer": "Working substance: ideal gas; source at T₁, sink at T₂.\n(1) Isothermal expansion at T₁: gas absorbs Q₁ from the source and does work W₁ = nRT₁ ln(V₂/V₁).\n(2) Adiabatic expansion: gas does work and cools from T₁ to T₂ (no heat exchange).\n(3) Isothermal compression at T₂: work is done on the gas and it rejects Q₂ = nRT₂ ln(V₃/V₄) to the sink.\n(4) Adiabatic compression: gas is warmed from T₂ back to T₁.\nUsing the adiabatic relations, V₂/V₁ = V₃/V₄, so Q₂/Q₁ = T₂/T₁.\nEfficiency η = W/Q₁ = 1 − Q₂/Q₁ = 1 − T₂/T₁.\nη = 1 only if T₂ = 0 K or T₁ = ∞, both unattainable; also the second law (Kelvin–Planck) forbids converting all heat to work, and real engines have friction and irreversibility, so η < 1.",
+    "keyPoints": [
+      "Isothermal expansion at T₁ (absorbs Q₁)",
+      "Adiabatic expansion (cools to T₂)",
+      "Isothermal compression at T₂ (rejects Q₂)",
+      "Adiabatic compression back to T₁",
+      "η = 1 − T₂/T₁; cannot reach 1"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-065",
+    "chapter": "Thermodynamics",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A Carnot engine absorbs 1000 J from a source at 500 K and rejects heat to a sink at 300 K. Find the work done per cycle and the heat rejected.",
+    "modelAnswer": "η = 1 − T₂/T₁ = 1 − 300/500 = 0.4.\nWork W = ηQ₁ = 0.4 × 1000 = 400 J.\nHeat rejected Q₂ = Q₁ − W = 1000 − 400 = 600 J (check: Q₂/Q₁ = T₂/T₁ = 0.6).",
+    "keyPoints": [
+      "η = 0.4",
+      "W = 400 J",
+      "Q₂ = 600 J"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-066",
+    "chapter": "Thermodynamics",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Distinguish between isothermal and adiabatic processes.",
+    "modelAnswer": "Isothermal: temperature stays constant; heat is exchanged with the surroundings; occurs slowly in a conducting vessel; for an ideal gas PV = constant and ΔU = 0.\nAdiabatic: no heat is exchanged (ΔQ = 0); temperature changes; occurs rapidly or in an insulated vessel; PV^γ = constant and ΔW = −ΔU.",
+    "keyPoints": [
+      "Isothermal: T constant, heat exchanged, PV = const",
+      "Adiabatic: Q = 0, T changes, PV^γ = const",
+      "Slow/conducting vs fast/insulated"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-067",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "State any four assumptions of the kinetic theory of gases.",
+    "modelAnswer": "(1) A gas consists of a very large number of identical, tiny molecules whose size is negligible compared with the distances between them.\n(2) Molecules move randomly in all directions with all possible speeds.\n(3) Collisions between molecules and with the walls are perfectly elastic and of negligible duration.\n(4) There are no intermolecular forces except during collisions; between collisions molecules move in straight lines with constant speed. (Gravity on molecules is neglected.)",
+    "keyPoints": [
+      "Negligible molecular size",
+      "Random motion",
+      "Elastic collisions, negligible duration",
+      "No intermolecular forces"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-068",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Derive the expression P = (1/3)ρ v̄² for the pressure exerted by an ideal gas. Hence show that the average kinetic energy of a molecule is (3/2)k_BT.",
+    "modelAnswer": "Consider N molecules, each of mass m, in a cube of side L. A molecule with velocity component vₓ hits the face perpendicular to x and rebounds elastically: momentum change = 2mvₓ.\nTime between successive hits on the same face = 2L/vₓ, so force from this molecule = 2mvₓ ÷ (2L/vₓ) = mvₓ²/L.\nTotal force on the face = (m/L) Σvₓ². Pressure P = F/L² = (m/L³) Σvₓ² = (mN/V) v̄ₓ².\nBy isotropy v̄ₓ² = v̄²/3, so P = (1/3)(mN/V) v̄² = (1/3)ρ v̄².\nKinetic interpretation: PV = (1/3)Nm v̄² = (2/3)N(½m v̄²). Comparing with PV = Nk_BT gives ½m v̄² = (3/2)k_BT — average KE is proportional to absolute temperature.",
+    "keyPoints": [
+      "Momentum change 2mvₓ per hit",
+      "Collision interval 2L/vₓ",
+      "P = (mN/V) v̄ₓ²",
+      "Isotropy: v̄ₓ² = v̄²/3 ⇒ P = ⅓ρv̄²",
+      "Compare with PV = Nk_BT ⇒ KE = (3/2)k_BT"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-069",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "State the law of equipartition of energy. Use it to find Cₚ, C_v and γ for a diatomic gas (rigid molecules).",
+    "modelAnswer": "Law: in thermal equilibrium at temperature T, the total energy of a molecule is equally distributed among all its degrees of freedom, each contributing ½k_BT on average.\nA rigid diatomic molecule has 3 translational + 2 rotational = 5 degrees of freedom.\nU per mole = 5 × ½RT = (5/2)RT ⇒ C_v = (5/2)R.\nCₚ = C_v + R = (7/2)R.\nγ = Cₚ/C_v = 7/5 = 1.4.",
+    "keyPoints": [
+      "Statement: ½k_BT per degree of freedom",
+      "f = 5 for rigid diatomic",
+      "C_v = 5R/2, Cₚ = 7R/2",
+      "γ = 1.4"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-070",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Calculate the rms speed of nitrogen molecules at 27 °C (M = 28 g mol⁻¹, R = 8.314 J mol⁻¹ K⁻¹).",
+    "modelAnswer": "T = 27 + 273 = 300 K; M = 0.028 kg mol⁻¹.\nv_rms = √(3RT/M) = √(3 × 8.314 × 300/0.028) = √(2.672 × 10⁵) ≈ 517 m s⁻¹.",
+    "keyPoints": [
+      "Convert T to K and M to kg mol⁻¹",
+      "v_rms = √(3RT/M)",
+      "≈ 517 m s⁻¹"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-071",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Define mean free path. Write its expression and state two factors on which it depends.",
+    "modelAnswer": "Mean free path λ is the average distance travelled by a gas molecule between two successive collisions.\nλ = 1/(√2 π d² n), where d is the molecular diameter and n is the number of molecules per unit volume.\nIt decreases with increase in molecular size (d) and in number density n (i.e. with pressure at constant T); at constant pressure it increases with temperature (λ = k_BT/(√2 π d² P)).",
+    "keyPoints": [
+      "Average distance between collisions",
+      "λ = 1/(√2 π d² n)",
+      "Depends on d and n (pressure/temperature)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-072",
+    "chapter": "Kinetic Theory of Gases",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "An oxygen cylinder of volume 30 L has gauge pressure 15 atm at 27 °C. After some oxygen is used, the gauge pressure drops to 11 atm at 17 °C. Find the mass of oxygen used (atmospheric pressure 1 atm = 1.013 × 10⁵ Pa, R = 8.31 J mol⁻¹ K⁻¹, M = 32 g mol⁻¹).",
+    "modelAnswer": "Absolute pressures: P₁ = 16 atm = 1.621 × 10⁶ Pa, P₂ = 12 atm = 1.216 × 10⁶ Pa; V = 0.030 m³.\nn₁ = P₁V/(RT₁) = 1.621 × 10⁶ × 0.03/(8.31 × 300) ≈ 19.5 mol.\nn₂ = P₂V/(RT₂) = 1.216 × 10⁶ × 0.03/(8.31 × 290) ≈ 15.1 mol.\nMass used = (19.5 − 15.1) × 32 g ≈ 4.4 × 32 ≈ 0.14 kg.",
+    "keyPoints": [
+      "Use absolute pressure = gauge + 1 atm",
+      "n₁ ≈ 19.5 mol",
+      "n₂ ≈ 15.1 mol",
+      "Mass used ≈ 0.14 kg"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-073",
+    "chapter": "Oscillations",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Define simple harmonic motion. Write the differential equation of SHM.",
+    "modelAnswer": "SHM is periodic motion in which the restoring force (and hence acceleration) is directly proportional to the displacement from the mean position and is always directed towards it: F = −kx.\nDifferential equation: d²x/dt² + ω²x = 0, where ω² = k/m.",
+    "keyPoints": [
+      "F = −kx, towards mean position",
+      "d²x/dt² + ω²x = 0",
+      "ω² = k/m"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-074",
+    "chapter": "Oscillations",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Show that the motion of a simple pendulum for small amplitude is simple harmonic and derive its time period.",
+    "modelAnswer": "For a bob of mass m on a string of length l displaced by angle θ, the restoring force along the arc is F = −mg sin θ.\nFor small θ, sin θ ≈ θ = x/l (x = arc displacement), so F = −(mg/l)x.\nSince F ∝ −x, the motion is SHM with k = mg/l.\nω = √(k/m) = √(g/l) and T = 2π/ω = 2π√(l/g).",
+    "keyPoints": [
+      "Restoring force −mg sin θ",
+      "Small angle: sin θ ≈ x/l",
+      "F = −(mg/l)x ⇒ SHM",
+      "T = 2π√(l/g)"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-075",
+    "chapter": "Oscillations",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "For a particle in SHM x = A sin ωt, derive expressions for its kinetic, potential and total energy at displacement x. Show the variation with displacement graphically (describe).",
+    "modelAnswer": "Velocity v = dx/dt = Aω cos ωt = ω√(A² − x²).\nKE: K = ½mv² = ½mω²(A² − x²).\nPE: work done against the restoring force F = −mω²x from 0 to x: U = ∫₀ˣ mω²x dx = ½mω²x².\nTotal: E = K + U = ½mω²A², independent of x — mechanical energy is conserved.\nGraph against x: U is a parabola opening upward with minimum zero at x = 0; K is an inverted parabola, maximum ½mω²A² at x = 0 and zero at x = ±A; E is a horizontal line. K = U at x = ±A/√2.",
+    "keyPoints": [
+      "v = ω√(A² − x²)",
+      "K = ½mω²(A² − x²)",
+      "U = ½mω²x²",
+      "E = ½mω²A² constant",
+      "Graph: parabolas and horizontal line; K = U at A/√2"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-076",
+    "chapter": "Oscillations",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A body of mass 0.2 kg executes SHM with amplitude 0.1 m and period 0.5 s. Find (i) maximum speed, (ii) maximum acceleration, (iii) total energy.",
+    "modelAnswer": "ω = 2π/T = 2π/0.5 = 4π ≈ 12.57 rad s⁻¹.\n(i) v_max = ωA = 12.57 × 0.1 ≈ 1.26 m s⁻¹.\n(ii) a_max = ω²A = 158 × 0.1 ≈ 15.8 m s⁻².\n(iii) E = ½mω²A² = ½ × 0.2 × 158 × 0.01 ≈ 0.158 J.",
+    "keyPoints": [
+      "ω = 4π rad s⁻¹",
+      "v_max ≈ 1.26 m s⁻¹",
+      "a_max ≈ 15.8 m s⁻²",
+      "E ≈ 0.16 J"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-077",
+    "chapter": "Oscillations",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Distinguish between free, damped and forced oscillations.",
+    "modelAnswer": "Free oscillations: a system oscillates at its natural frequency with constant amplitude, with no resistive forces or external driving force.\nDamped oscillations: the amplitude decreases with time because energy is lost to resistive forces (friction, air drag); frequency is slightly less than natural.\nForced oscillations: the system oscillates under an external periodic force, finally at the frequency of the driving force; at resonance the amplitude is maximum.",
+    "keyPoints": [
+      "Free: natural frequency, constant amplitude",
+      "Damped: amplitude decays",
+      "Forced: driver's frequency; resonance"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-078",
+    "chapter": "Oscillations",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A mass m attached to a spring oscillates with period 2 s. If the mass is increased by 2 kg, the period becomes 3 s. Find m.",
+    "modelAnswer": "T = 2π√(m/k) ⇒ T² ∝ m.\n(3/2)² = (m + 2)/m ⇒ 9m = 4m + 8 ⇒ 5m = 8 ⇒ m = 1.6 kg.",
+    "keyPoints": [
+      "T² ∝ m",
+      "(m + 2)/m = 9/4",
+      "m = 1.6 kg"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-079",
+    "chapter": "Waves",
+    "marks": 2,
+    "difficulty": "easy",
+    "source": "Rise Practice",
+    "text": "Distinguish between transverse and longitudinal waves with one example each.",
+    "modelAnswer": "Transverse wave: particles of the medium vibrate perpendicular to the direction of propagation, forming crests and troughs; e.g. waves on a stretched string, ripples on water.\nLongitudinal wave: particles vibrate along the direction of propagation, forming compressions and rarefactions; e.g. sound in air.",
+    "keyPoints": [
+      "Transverse: vibration ⊥ propagation, crests/troughs",
+      "Longitudinal: vibration ∥ propagation, compressions/rarefactions",
+      "Examples"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-080",
+    "chapter": "Waves",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "Explain Laplace's correction to Newton's formula for the speed of sound in air. Calculate the corrected speed at STP (P = 1.013 × 10⁵ Pa, ρ = 1.293 kg m⁻³, γ = 1.41).",
+    "modelAnswer": "Newton assumed the compressions and rarefactions were isothermal, so the relevant modulus was the isothermal bulk modulus P, giving v = √(P/ρ) ≈ 280 m s⁻¹ — about 16% too low.\nLaplace argued the changes are so rapid that no heat exchange occurs (and air is a poor conductor), so they are adiabatic; the adiabatic bulk modulus is γP.\nv = √(γP/ρ) = √(1.41 × 1.013 × 10⁵/1.293) ≈ √(1.105 × 10⁵) ≈ 332 m s⁻¹, in good agreement with experiment.",
+    "keyPoints": [
+      "Newton: isothermal, v = √(P/ρ) ≈ 280 m s⁻¹",
+      "Laplace: adiabatic, modulus γP",
+      "v = √(γP/ρ) ≈ 332 m s⁻¹"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-081",
+    "chapter": "Waves",
+    "marks": 5,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "Discuss the modes of vibration of air columns in (i) a pipe closed at one end and (ii) a pipe open at both ends. Show which harmonics are present in each (neglect end correction).",
+    "modelAnswer": "(i) Closed pipe of length L: a node forms at the closed end and an antinode at the open end. The allowed modes satisfy L = (2n − 1)λ/4, n = 1, 2, 3 …\nFrequencies f = (2n − 1)v/4L: f₁ = v/4L, f₂ = 3v/4L, f₃ = 5v/4L … ratio 1 : 3 : 5 … — only odd harmonics are present.\n(ii) Open pipe of length L: antinodes form at both ends. Allowed modes satisfy L = nλ/2.\nFrequencies f = nv/2L: f₁ = v/2L, 2v/2L, 3v/2L … ratio 1 : 2 : 3 … — all harmonics are present.\nFor the same length, the fundamental of an open pipe is twice that of a closed pipe, and an open pipe gives a richer (more pleasing) note because it has all the harmonics.",
+    "keyPoints": [
+      "Closed pipe: node at closed end, antinode at open end",
+      "L = (2n − 1)λ/4, odd harmonics only",
+      "Open pipe: antinodes at both ends",
+      "L = nλ/2, all harmonics",
+      "Open-pipe fundamental is double"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-082",
+    "chapter": "Waves",
+    "marks": 3,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "A string 0.5 m long fixed at both ends has mass 2 g and is under a tension of 40 N. Find the speed of transverse waves and the fundamental frequency.",
+    "modelAnswer": "μ = m/L = 0.002/0.5 = 4 × 10⁻³ kg m⁻¹.\nv = √(T/μ) = √(40/0.004) = √10⁴ = 100 m s⁻¹.\nFundamental: λ = 2L = 1 m ⇒ f₁ = v/2L = 100/1 = 100 Hz.",
+    "keyPoints": [
+      "μ = 4 × 10⁻³ kg m⁻¹",
+      "v = 100 m s⁻¹",
+      "f₁ = v/2L = 100 Hz"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-083",
+    "chapter": "Waves",
+    "marks": 3,
+    "difficulty": "hard",
+    "source": "Rise Practice",
+    "text": "A train approaches a stationary observer at 20 m s⁻¹ while sounding a whistle of 600 Hz, then passes and moves away at the same speed. Find the frequencies heard (v_sound = 340 m s⁻¹).",
+    "modelAnswer": "Approaching (source moving towards observer): f₁ = f v/(v − vₛ) = 600 × 340/320 = 637.5 Hz.\nReceding: f₂ = f v/(v + vₛ) = 600 × 340/360 ≈ 566.7 Hz.\nThe pitch drops by about 71 Hz as the train passes.",
+    "keyPoints": [
+      "Source-moving Doppler formula",
+      "Approaching: 637.5 Hz",
+      "Receding: ≈ 566.7 Hz"
+    ]
+  },
+  {
+    "id": "sa-xiicse-phy-084",
+    "chapter": "Waves",
+    "marks": 2,
+    "difficulty": "medium",
+    "source": "Rise Practice",
+    "text": "What are beats? Write the expression for beat frequency and give one use of beats.",
+    "modelAnswer": "Beats are the periodic rise and fall in the intensity (loudness) of sound heard when two sound waves of slightly different frequencies travel in the same direction and superpose.\nBeat frequency = |f₁ − f₂|.\nUse: tuning musical instruments (beats disappear when frequencies match) or finding the unknown frequency of a tuning fork.",
+    "keyPoints": [
+      "Periodic variation of loudness from nearly equal frequencies",
+      "f_beat = |f₁ − f₂|",
+      "Use: tuning instruments / unknown frequency"
+    ]
+  }
+]
