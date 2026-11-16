@@ -25,11 +25,16 @@ const IX_SCIENCE_SPLIT = {
 // notes tab fed by two separate test subjects); different boards never merge.
 const NOTES_SOURCES = {
   IX: {
-    Physics:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]] },
-    Chemistry:        { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]] },
-    Biology:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]] },
-    Mathematics:      { CBSE: [['IX Mathematics']] },
-    'Social Science': { CBSE: [['IX Social Science']] }
+    Physics:            { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Physics]], ICSE: [['IX ICSE Physics']] },
+    Chemistry:          { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Chemistry]], ICSE: [['IX ICSE Chemistry']] },
+    Biology:            { CBSE: [['IX Science', null, IX_SCIENCE_SPLIT.Biology]], ICSE: [['IX ICSE Biology']] },
+    Mathematics:        { CBSE: [['IX Mathematics']], ICSE: [['IX ICSE Mathematics']] },
+    'Social Science':   { CBSE: [['IX Social Science']] },
+    'History & Civics': { ICSE: [['IX ICSE History & Civics']] },
+    Geography:          { ICSE: [['IX ICSE Geography']] },
+    English:            { ICSE: [['IX ICSE English']] },
+    Economics:          { ICSE: [['IX ICSE Economics']] },
+    'Comp App & IT':    { ICSE: [['IX ICSE Computer Science']] }
   },
   X: {
     Mathematics: { CBSE: [['CBSE Mathematics', 'Mathematics']], ICSE: [['ICSE Mathematics', 'Mathematics']], IB: [['IB Mathematics', 'Mathematics']] },
@@ -76,9 +81,18 @@ const NOTES_SOURCES = {
 // the grade is "ready" once every one of them has landed.
 const REVISION_EXTRA_FILES = {
   IX: [
-    { file: 'revision-data-ix.js?v=0fd12941',       probeKey: 'IX Science' },
-    { file: 'revision-data-ix-maths.js?v=c70af358', probeKey: 'IX Mathematics' },
-    { file: 'revision-data-ix-sst.js?v=2c38d9ce', probeKey: 'IX Social Science' }
+    { file: 'revision-data-ix.js?v=0fd12941',                probeKey: 'IX Science' },
+    { file: 'revision-data-ix-maths.js?v=c70af358',          probeKey: 'IX Mathematics' },
+    { file: 'revision-data-ix-sst.js?v=2c38d9ce',            probeKey: 'IX Social Science' },
+    { file: 'revision-data-ix-icse-maths.js?v=abf6b3df',     probeKey: 'IX ICSE Mathematics' },
+    { file: 'revision-data-ix-icse-physics.js?v=075dd594',   probeKey: 'IX ICSE Physics' },
+    { file: 'revision-data-ix-icse-chemistry.js?v=b7c4a13f', probeKey: 'IX ICSE Chemistry' },
+    { file: 'revision-data-ix-icse-biology.js?v=8218f6b9',   probeKey: 'IX ICSE Biology' },
+    { file: 'revision-data-ix-icse-history.js?v=d0e0bb31',   probeKey: 'IX ICSE History & Civics' },
+    { file: 'revision-data-ix-icse-geography.js?v=b07a5ff0', probeKey: 'IX ICSE Geography' },
+    { file: 'revision-data-ix-icse-english.js?v=1b3e4785',   probeKey: 'IX ICSE English' },
+    { file: 'revision-data-ix-icse-economics.js?v=4a7c21be', probeKey: 'IX ICSE Economics' },
+    { file: 'revision-data-ix-icse-compsci.js?v=641e0d33',   probeKey: 'IX ICSE Computer Science' }
   ],
   XI: [
     { file: 'revision-data-xi.js?v=d8f28c28',           probeKey: 'XI Accountancy' },
