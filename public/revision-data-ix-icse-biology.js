@@ -1,5 +1,5 @@
 // ─── Grade IX ICSE Biology revision notes ────────────────────────────────────
-// screen-notes.js reads REVISION['IX ICSE Biology'] when grade==='IX' && board==='ICSE'
+// screen-notes.js reads REVISION['IX ICSE Biology'] when grade==='IX' && syllabus==='ICSE'
 
 REVISION['IX ICSE Biology'] = [
   {

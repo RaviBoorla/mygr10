@@ -1,5 +1,5 @@
 // ─── Grade IX ICSE History & Civics revision notes ───────────────────────────
-// screen-notes.js reads REVISION['IX ICSE History & Civics'] when grade==='IX' && board==='ICSE'
+// screen-notes.js reads REVISION['IX ICSE History & Civics'] when grade==='IX' && syllabus==='ICSE'
 
 REVISION['IX ICSE History & Civics'] = [
   {
@@ -105,7 +105,7 @@ REVISION['IX ICSE History & Civics'] = [
     "tips": [
       "Mayor is the political head; Commissioner is the administrative head — distinguish clearly",
       "74th Amendment established State Election Commissions to conduct local body elections uniformly",
-      "Cantonment Boards (under Ministry of Defence) are a separate category of urban local bodies",
+      "Cantonment Areas (under Ministry of Defence) are a separate category of urban local bodies",
       "AMRUT (Atal Mission for Rejuvenation and Urban Transformation) funds urban infrastructure through ULBs"
     ],
     "bestPractices": [
