@@ -337,7 +337,7 @@ const app = {
       <div class="screen legal-screen">
         <div class="legal-top-bar"><button class="btn ghost home-btn" onclick="app.go(['home'])">&#8962; Home</button></div>
         <h1 class="legal-title">Terms &amp; Conditions</h1>
-        <p class="legal-updated">Last updated: September 2026</p>
+        <p class="legal-updated">Last updated: November 2026</p>
         <p>These terms ("Terms") govern your use of Rise, a free self-study practice tool for Grade 10 board-exam students, operated by Strat101 ("we", "us"). By using the app you agree to these Terms. If you do not agree, do not use the app.</p>
 
         <h2>1. Eligibility</h2>
@@ -370,7 +370,7 @@ const app = {
         <p>Display names and any other content you submit in Arena features must not be defamatory, offensive, or infringe third-party rights. We reserve the right to remove content or suspend users who violate this requirement.</p>
 
         <h2>8. Third-party services</h2>
-        <p>Rise uses Google OAuth for optional sign-in and Cloudflare for hosting. Your use of those services is also governed by their respective terms. We are not responsible for third-party services.</p>
+        <p>Rise uses Google OAuth for optional sign-in, Cloudflare for hosting, and Cloudflare Web Analytics to measure aggregate page traffic and performance. Cloudflare Web Analytics collects no cookies and does not track you across sites. Your use of those services is also governed by their respective terms. We are not responsible for third-party services.</p>
 
         <h2>9. Disclaimers and no warranty</h2>
         <p>Rise is provided "as is" and "as available" without warranty of any kind, express or implied, including warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant uninterrupted or error-free access.</p>
