@@ -432,7 +432,7 @@ function aiRenderPanel() {
       <div class="ai-resize-handle" onmousedown="aiPanel._startResize(event)" ontouchstart="aiPanel._startResize(event)"></div>
       <div class="ai-header">
         <div class="ai-header-left">
-          <span class="ai-star">✦</span>
+          <img src="cloe-avatar.svg" class="ai-avatar" alt="Cloé" width="36" height="36">
           <span class="ai-title">Cloé</span>
           <span class="ai-badge">${escHtml(prov.label.split(/ — | \(/)[0])} · ${escHtml(cfg.model || '—')}</span>
         </div>

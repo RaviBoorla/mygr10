@@ -1016,7 +1016,7 @@ kbd {
 }
 .ai-header-left  { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .ai-header-right { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
-.ai-star   { font-size: 15px; color: var(--primary); }
+.ai-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .ai-title  { font-weight: 700; font-size: var(--fs-body); }
 .ai-badge  { font-size: var(--fs-sm); color: var(--text-light); background: var(--bg); padding: 2px 8px; border-radius: 20px; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ai-icon-btn {
