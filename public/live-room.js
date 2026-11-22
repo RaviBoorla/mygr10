@@ -545,6 +545,7 @@
         if (!state.board) { app.go(['board'], true); return; }
         state.screen = r.name;
         state.params = r.parts || [];
+        app._lastHtml = null;
         document.getElementById('app').innerHTML = app._header() + `<main>${app._screen(r.name, r.parts || [])}</main>`;
         window.scrollTo(0, 0);
         app._afterRender(r.name, r.parts || []);

@@ -134,10 +134,11 @@ const app = {
       this.render();
     });
     if (!location.hash && state.board) this.go(['home'], true);
-    // auth.js (loaded last, deferred) calls app.render() in onAuthStateChanged.
-    // Skip the synchronous render here to avoid a flash of unauthenticated state.
-    // Window load provides a fallback if Firebase fails to initialise.
-    window.addEventListener('load', () => { if (!this._rendered) this.render(); }, { once: true });
+    // First paint waits for Firebase's first auth answer (read from IndexedDB, fast)
+    // so a signed-in user never sees the guest UI first. 1.5s cap if Firebase is slow/absent.
+    const authKnown = () => { if (this._authKnown) return; this._authKnown = true; this.render(); };
+    try { firebase.auth().onAuthStateChanged(authKnown); } catch (_) { authKnown(); }
+    setTimeout(authKnown, 1500);
   },
 
   _isStandalone() {
@@ -182,12 +183,8 @@ const app = {
   },
 
   render() {
-    // Hold off until auth.js has run and set window.riseAuth (it's loaded last,
-    // deferred). Once auth resolves, onAuthStateChanged calls render() with riseAuth
-    // defined, triggering the first real paint.
-    if (typeof window.riseAuth === 'undefined') return;
-    // Debounce via setTimeout(0) so back-to-back calls within the same event loop
-    // tick (e.g. onAuthStateChanged + streak onSnapshot) coalesce into one paint.
+    if (!this._authKnown) return;
+    // Coalesce back-to-back calls (auth, streak snapshot, family/class polls) into one paint.
     clearTimeout(this._renderTimer);
     this._renderTimer = setTimeout(() => this._execRender(), 0);
   },
@@ -203,6 +200,7 @@ const app = {
       sc.src = 'careers.js?v=93d722b3';
       sc.onload = () => this.render();
       document.head.appendChild(sc);
+      this._lastHtml = null;
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading…</div></main>';
       return;
     }
@@ -219,9 +217,10 @@ const app = {
       css.rel = 'stylesheet'; css.href = 'arena.css?v=a62d56e7';
       css.onload = css.onerror = done;
       const s = document.createElement('script');
-      s.src = 'arena.js?v=a5428783';
+      s.src = 'arena.js?v=6d244f76';
       s.onload = done;
       document.head.append(css, s);
+      this._lastHtml = null;
       document.getElementById('app').innerHTML = this._header() + '<main><div style="padding:2rem;text-align:center;opacity:.5">Loading Arena…</div></main>';
       return;
     }
@@ -240,12 +239,16 @@ const app = {
     state.screen = name;
     state.params = r.parts;
 
-    document.getElementById('app').innerHTML = this._header() + `<main>${this._screen(name, r.parts)}</main>`;
-    window.scrollTo(0, 0);
-    if (!this._rendered) {
-      this._rendered = true;
-      document.getElementById('app').classList.add('app-ready');
-    }
+    // Background re-renders (sync, polls) usually produce identical markup — skip the
+    // DOM swap then, so nothing repaints. Scroll to top only on actual navigation.
+    const html = this._header() + `<main>${this._screen(name, r.parts)}</main>`;
+    if (html === this._lastHtml) return;
+    this._lastHtml = html;
+    const el = document.getElementById('app');
+    el.innerHTML = html;
+    const routeKey = location.hash;
+    if (routeKey !== this._lastRoute) { this._lastRoute = routeKey; window.scrollTo(0, 0); }
+    el.classList.add('app-ready');
     this._afterRender(name, r.parts);
   },
 
