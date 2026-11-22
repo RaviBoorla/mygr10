@@ -390,7 +390,8 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
       `${(r.q.keyPoints || []).length ? 'Key points: ' + r.q.keyPoints.join(' | ') + '\n' : ''}Student answer: ${r.text || '(blank)'}`).join('\n\n');
     const systemPrompt = `You are a fair Class ${grade} ${board} board examiner. Mark each student answer against its model answer and key points, ` +
       'giving credit for correct ideas in the student\'s own words. Use whole or half marks from 0 to the maximum; a blank answer gets 0. ' +
-      'Reply with ONLY a JSON array, one object per question, like [{"q":1,"marks":2,"feedback":"one short sentence for the parent"}]. No other text.';
+      'Reply with ONLY one line per question, in order, exactly in this form:\nQ1 | 2 | one short sentence for the parent\n' +
+      'The middle value is the marks awarded. Do not use the | character inside the sentence. No other text, no code fences.';
     say('Cloé is marking…');
     document.querySelectorAll('.ak-actions .btn').forEach(b => { b.disabled = true; });
     let text = '';
@@ -411,7 +412,12 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
         lines.forEach(l => { try { const j = JSON.parse(l); if (j.delta) text += j.delta; if (j.error) err = j.error; } catch (_) {} });
       }
       if (err) throw new Error(err);
-      const marks = JSON.parse((text.match(/\[[\s\S]*\]/) || [''])[0]);
+      // Line format "Q1 | 2 | feedback"; each line stands alone, so one bad line can't sink the rest.
+      let marks = text.split('\n').map(l => l.replace(/[*`]/g, '').trim()
+        .match(/^Q?\s*(\d+)\s*[|:.)\-]\s*(\d+(?:\.\d+)?)\s*(?:\/\s*\d+(?:\.\d+)?)?\s*(?:\|\s*(.*))?$/i))
+        .filter(Boolean).map(m => ({ q: m[1], marks: m[2], feedback: (m[3] || '').trim() }));
+      if (!marks.length) { try { marks = JSON.parse((text.match(/\[[\s\S]*\]/) || [''])[0]); } catch (_) {} }
+      if (!marks.length) { console.warn('[Cloé marking] unparsed reply:', text); throw new Error('unparsed'); }
       marks.forEach(m => {
         const i = Number(m.q) - 1, row = rows[i];
         if (!row) return;
@@ -422,7 +428,10 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
       });
       this._akEval.by = 'cloe';
       this._akShowTotal();
-      say('Cloé suggested marks and comments below — check them, change anything you disagree with, then Submit marks.');
+      const got = new Set(marks.map(m => Number(m.q))).size;
+      say(got < rows.length
+        ? `Cloé marked ${got} of ${rows.length} answers — mark the rest by hand, check everything, then Submit marks.`
+        : 'Cloé suggested marks and comments below — check them, change anything you disagree with, then Submit marks.', got < rows.length);
     } catch (e) {
       say(text ? 'Cloé\'s reply could not be read — try again, or mark by hand.' : `Cloé could not mark these: ${e.message}`, true);
     }
