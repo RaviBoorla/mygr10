@@ -385,25 +385,22 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     if (aiPanel._needsSetup()) { say('Set up Cloé first (it opens on the right), then try again.', true); aiPanel.open(); aiPanel.openConfig(); return; }
     const { a, rows } = this._akEval;
     const [grade, board] = (a.gradeBoard || '').split('::');
-    const items = rows.map((r, i) =>
-      `Q${i + 1} (max ${r.q.marks} marks): ${r.q.text}\nModel answer: ${r.q.modelAnswer}\n` +
-      `${(r.q.keyPoints || []).length ? 'Key points: ' + r.q.keyPoints.join(' | ') + '\n' : ''}Student answer: ${r.text || '(blank)'}`).join('\n\n');
     const systemPrompt = `You are a fair Class ${grade} ${board} board examiner. Mark each student answer against its model answer and key points, ` +
       'giving credit for correct ideas in the student\'s own words. Use whole or half marks from 0 to the maximum; a blank answer gets 0. ' +
       'Reply with ONLY one line per question, in order, exactly in this form:\nQ1 | 2 | one short sentence for the parent\n' +
       'The middle value is the marks awarded. Do not use the | character inside the sentence. No other text, no code fences.';
-    say('Cloé is marking…');
-    document.querySelectorAll('.ak-actions .btn').forEach(b => { b.disabled = true; });
-    let text = '';
-    try {
-      const cfg = aiState.config;
-      const r = await fetch(AI_ENDPOINT, {
+    const cfg = aiState.config;
+    const ask = async idxs => {
+      const items = idxs.map(i => { const r = rows[i];
+        return `Q${i + 1} (max ${r.q.marks} marks): ${r.q.text}\nModel answer: ${r.q.modelAnswer}\n` +
+          `${(r.q.keyPoints || []).length ? 'Key points: ' + r.q.keyPoints.join(' / ') + '\n' : ''}Student answer: ${r.text || '(blank)'}`; }).join('\n\n');
+      const res = await fetch(AI_ENDPOINT, {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ provider: cfg.provider, endpoint: cfg.endpoint, model: cfg.model, apiKey: cfg.apiKey, accountId: cfg.accountId,
-          history: [{ role: 'user', content: `${a.subject} — mark these ${rows.length} answers.\n\n${items}` }], systemPrompt })
+          history: [{ role: 'user', content: `${a.subject} — mark these ${idxs.length} answers (${idxs.map(i => 'Q' + (i + 1)).join(', ')}).\n\n${items}` }], systemPrompt })
       });
-      const reader = r.body.getReader(), dec = new TextDecoder();
-      let buf = '', err = '';
+      const reader = res.body.getReader(), dec = new TextDecoder();
+      let buf = '', err = '', text = '';
       for (;;) {
         const { done, value } = await reader.read();
         if (done) break;
@@ -412,28 +409,39 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
         lines.forEach(l => { try { const j = JSON.parse(l); if (j.delta) text += j.delta; if (j.error) err = j.error; } catch (_) {} });
       }
       if (err) throw new Error(err);
-      // Line format "Q1 | 2 | feedback"; each line stands alone, so one bad line can't sink the rest.
-      let marks = text.split('\n').map(l => l.replace(/[*`]/g, '').trim()
-        .match(/^Q?\s*(\d+)\s*[|:.)\-]\s*(\d+(?:\.\d+)?)\s*(?:\/\s*\d+(?:\.\d+)?)?\s*(?:\|\s*(.*))?$/i))
+      // "Q1 | 2 | feedback" per line, so one bad line can't sink the rest.
+      let marks = text.split('\n').map(l => l.replace(/[*`#]/g, '').trim()
+        .match(/^(?:Q(?:uestion)?\s*)?(\d+)\s*[|:.)\-–—]\s*(\d+(?:\.\d+)?)\s*(?:\/\s*\d+(?:\.\d+)?)?\s*(?:marks?)?\s*(?:[|:\-–—]\s*(.*))?$/i))
         .filter(Boolean).map(m => ({ q: m[1], marks: m[2], feedback: (m[3] || '').trim() }));
       if (!marks.length) { try { marks = JSON.parse((text.match(/\[[\s\S]*\]/) || [''])[0]); } catch (_) {} }
-      if (!marks.length) { console.warn('[Cloé marking] unparsed reply:', text); throw new Error('unparsed'); }
-      marks.forEach(m => {
-        const i = Number(m.q) - 1, row = rows[i];
-        if (!row) return;
-        const v = row.text ? Math.max(0, Math.min(row.q.marks, Math.round(Number(m.marks) * 2) / 2)) : 0;
-        const mEl = document.querySelector(`.ak-mark[data-i="${i}"]`), fEl = document.querySelector(`.ak-feedback[data-i="${i}"]`);
-        if (mEl && !isNaN(v)) mEl.value = v;
-        if (fEl && m.feedback) fEl.value = String(m.feedback);
-      });
-      this._akEval.by = 'cloe';
-      this._akShowTotal();
-      const got = new Set(marks.map(m => Number(m.q))).size;
-      say(got < rows.length
-        ? `Cloé marked ${got} of ${rows.length} answers — mark the rest by hand, check everything, then Submit marks.`
-        : 'Cloé suggested marks and comments below — check them, change anything you disagree with, then Submit marks.', got < rows.length);
+      if (!marks.length) console.warn('[Cloé marking] unparsed reply:', text);
+      return marks;
+    };
+    document.querySelectorAll('.ak-actions .btn').forEach(b => { b.disabled = true; });
+    const got = new Set();
+    try {
+      // Long assignments sometimes come back cut short; ask again for just the missing ones.
+      for (let pass = 0; pass < 3 && got.size < rows.length; pass++) {
+        const missing = rows.map((_, i) => i).filter(i => !got.has(i));
+        say(pass ? `Cloé is marking the remaining ${missing.length}…` : 'Cloé is marking…');
+        (await ask(missing)).forEach(m => {
+          const i = Number(m.q) - 1, row = rows[i];
+          if (!row || got.has(i)) return;
+          const v = row.text ? Math.max(0, Math.min(row.q.marks, Math.round(Number(m.marks) * 2) / 2)) : 0;
+          if (isNaN(v)) return;
+          const mEl = document.querySelector(`.ak-mark[data-i="${i}"]`), fEl = document.querySelector(`.ak-feedback[data-i="${i}"]`);
+          if (mEl) mEl.value = v;
+          if (fEl && m.feedback) fEl.value = String(m.feedback);
+          got.add(i);
+        });
+      }
+      if (got.size) { this._akEval.by = 'cloe'; this._akShowTotal(); }
+      say(!got.size ? 'Cloé\'s reply could not be read — try again, or mark by hand.'
+        : got.size < rows.length ? `Cloé marked ${got.size} of ${rows.length} answers — mark the rest by hand, check everything, then Submit marks.`
+        : 'Cloé suggested marks and comments below — check them, change anything you disagree with, then Submit marks.', got.size < rows.length);
     } catch (e) {
-      say(text ? 'Cloé\'s reply could not be read — try again, or mark by hand.' : `Cloé could not mark these: ${e.message}`, true);
+      if (got.size) this._akShowTotal();
+      say(`Cloé could not mark ${got.size ? 'all of ' : ''}these: ${e.message}`, true);
     }
     document.querySelectorAll('.ak-actions .btn').forEach(b => { b.disabled = false; });
   },
@@ -449,7 +457,12 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     const evaluation = { items, score: items.reduce((s, x) => s + x.marks, 0), max: items.reduce((s, x) => s + x.max, 0), by: by || 'parent', at: Date.now() };
     evaluation.pct = _akPct(evaluation);
     const res = await window.riseFamily.saveEvaluation(childUid, a.id, evaluation);
-    if (!res.ok) { alert(res.msg || 'Could not save the marks.'); return; }
+    if (!res.ok) {
+      alert(/permission/i.test(res.msg || '')
+        ? 'The server refused to save these marks (security rules). The app owner needs to deploy the latest Firestore rules — your marks are still on screen, so keep this open and try again later.'
+        : res.msg || 'Could not save the marks.');
+      return;
+    }
     this._akOverlay(`<h2 class="ak-title">Marks sent ✓</h2>
       <div class="ak-score"><span class="ak-score-big">${evaluation.score} / ${evaluation.max}</span><span class="ak-score-pct">${evaluation.pct}%</span></div>
       <p class="subtitle">Your child can now see the marks for each question and the total.</p>
