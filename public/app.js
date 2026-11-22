@@ -136,7 +136,7 @@ const app = {
     if (!location.hash && state.board) this.go(['home'], true);
     // First paint waits for Firebase's first auth answer (read from IndexedDB, fast)
     // so a signed-in user never sees the guest UI first. 1.5s cap if Firebase is slow/absent.
-    const authKnown = () => { if (this._authKnown) return; this._authKnown = true; this.render(); };
+    const authKnown = () => { if (this._authKnown) return; this._authKnown = true; this._settleUntil = performance.now() + 3000; this.render(); };
     try { firebase.auth().onAuthStateChanged(authKnown); } catch (_) { authKnown(); }
     setTimeout(authKnown, 1500);
   },
@@ -186,7 +186,11 @@ const app = {
     if (!this._authKnown) return;
     // Coalesce back-to-back calls (auth, streak snapshot, family/class polls) into one paint.
     clearTimeout(this._renderTimer);
-    this._renderTimer = setTimeout(() => this._execRender(), 0);
+    // Signed-in startup: cloud pull, profile, family and class listeners each call render().
+    // Hold the first paint until they go quiet (400ms) so the user sees one settled page.
+    const settling = window.riseAuth?.user && performance.now() < this._settleUntil
+      && !document.getElementById('app').classList.contains('app-ready');
+    this._renderTimer = setTimeout(() => this._execRender(), settling ? 400 : 0);
   },
 
   _execRender() {
