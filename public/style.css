@@ -12,7 +12,8 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-#app { width: 100%; flex: 1; min-width: 0; }
+#app { width: 100%; flex: 1; min-width: 0; opacity: 0; }
+#app.app-ready { opacity: 1; transition: opacity 0.12s ease; }
 
 :focus-visible {
   outline: 3px solid var(--primary);

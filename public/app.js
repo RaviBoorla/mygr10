@@ -134,7 +134,10 @@ const app = {
       this.render();
     });
     if (!location.hash && state.board) this.go(['home'], true);
-    this.render();
+    // auth.js (loaded last, deferred) calls app.render() in onAuthStateChanged.
+    // Skip the synchronous render here to avoid a flash of unauthenticated state.
+    // Window load provides a fallback if Firebase fails to initialise.
+    window.addEventListener('load', () => { if (!this._rendered) this.render(); }, { once: true });
   },
 
   _isStandalone() {
@@ -179,6 +182,17 @@ const app = {
   },
 
   render() {
+    // Hold off until auth.js has run and set window.riseAuth (it's loaded last,
+    // deferred). Once auth resolves, onAuthStateChanged calls render() with riseAuth
+    // defined, triggering the first real paint.
+    if (typeof window.riseAuth === 'undefined') return;
+    // Debounce via setTimeout(0) so back-to-back calls within the same event loop
+    // tick (e.g. onAuthStateChanged + streak onSnapshot) coalesce into one paint.
+    clearTimeout(this._renderTimer);
+    this._renderTimer = setTimeout(() => this._execRender(), 0);
+  },
+
+  _execRender() {
     const r = parseHash();
     let name = r.name || 'home';
 
@@ -228,6 +242,10 @@ const app = {
 
     document.getElementById('app').innerHTML = this._header() + `<main>${this._screen(name, r.parts)}</main>`;
     window.scrollTo(0, 0);
+    if (!this._rendered) {
+      this._rendered = true;
+      document.getElementById('app').classList.add('app-ready');
+    }
     this._afterRender(name, r.parts);
   },
 
