@@ -115,10 +115,11 @@
     _unsubMyAssignments = db.collection('users').doc(uid()).collection('assignments')
       .onSnapshot(snap => {
         const all = snap.docs.map(d => ({ id: d.id, ...d.data() }));
-        _myAssignments = all.filter(a => a.status === 'pending')
-          .sort((a, b) => (a.dueAt?.toMillis?.() || 0) - (b.dueAt?.toMillis?.() || 0));
-        _myAssignmentHistory = all.filter(a => a.status !== 'pending')
-          .sort((a, b) => (b.dueAt?.toMillis?.() || 0) - (a.dueAt?.toMillis?.() || 0));
+        // Latest assigned first; createdAt is null until the server stamps a brand-new doc.
+        const made = a => a.createdAt?.toMillis?.() ?? Infinity;
+        const newest = (a, b) => made(b) - made(a) || (b.dueAt?.toMillis?.() || 0) - (a.dueAt?.toMillis?.() || 0);
+        _myAssignments = all.filter(a => a.status === 'pending').sort(newest);
+        _myAssignmentHistory = all.filter(a => a.status !== 'pending').sort(newest);
         refresh();
       }, (err) => { console.error('[family] my assignments listener error:', err); });
   }
@@ -467,7 +468,8 @@
         status: 'cancelled',
         cancelledAt: firebase.firestore.FieldValue.serverTimestamp()
       });
-    } catch (e) { console.error('[family] cancelAssignment failed:', e); }
+      return { ok: true };
+    } catch (e) { console.error('[family] cancelAssignment failed:', e); return { ok: false, msg: e.message }; }
   }
 
   async function completeAssignment(childUid, assignmentId, result) {
@@ -515,7 +517,8 @@
           ).catch(() => {});
         }
       }
-    } catch (e) { console.error('[family] completeAssignment failed:', e); }
+      return { ok: true };
+    } catch (e) { console.error('[family] completeAssignment failed:', e); return { ok: false, msg: e.message }; }
   }
 
   // Guardian's marks for a submitted short-answer assignment.
@@ -588,7 +591,8 @@
 
     async _cancelAssignment(childUid, assignmentId) {
       if (!confirm('Cancel this assignment?')) return;
-      await cancelAssignment(childUid, assignmentId);
+      const res = await cancelAssignment(childUid, assignmentId);
+      if (!res.ok) alert(`Could not cancel the assignment — check your connection and try again.\n(${res.msg || 'unknown error'})`);
     },
 
     async _invite(role) {

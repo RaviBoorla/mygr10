@@ -426,6 +426,8 @@ Object.assign(app, {
           score: correct, total: this.reviewData.length,
           accuracy: this.reviewData.length ? Math.round(correct / this.reviewData.length * 100) : 0,
           reviewData: this.reviewData
+        })?.then(res => {
+          if (res && !res.ok) alert(`Your score was saved on this device, but could not be sent to your parent. Check your connection, then open it again from Assignments and resubmit.\n(${res.msg || 'unknown error'})`);
         });
       }
 

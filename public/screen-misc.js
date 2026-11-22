@@ -371,7 +371,8 @@ Object.assign(app, {
         <li class="assign-row card ${a.status}">
           <div class="assign-row-main">
             <strong class="assign-row-title">${esc(a.subject)}${a.chapter ? ' · ' + esc(a.chapter) : ''}${a.questionIds && assignKind(a) === 'mcq' ? ' · missed questions' : ''}
-              ${a.status === 'expired' ? '<span class="assign-status-pill expired">Missed</span>' : ''}</strong>
+              ${a.status === 'expired' ? '<span class="assign-status-pill expired">Missed</span>'
+                : a.status === 'pending' && a.dueAt?.toMillis?.() < Date.now() ? '<span class="assign-status-pill expired">Overdue</span>' : ''}</strong>
             <small class="assign-row-meta">${meta}</small>
             ${note || ''}
           </div>

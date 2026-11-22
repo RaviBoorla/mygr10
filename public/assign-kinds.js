@@ -228,7 +228,8 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
   // Child marks a printed paper as done (no answers are collected online).
   async markPaperDone(assignmentId) {
     if (!confirm('Mark this paper as done?')) return;
-    await window.riseFamily?.completeAssignment(window.riseAuth?.user?.uid, assignmentId, { kind: 'paper', done: true });
+    const res = await window.riseFamily?.completeAssignment(window.riseAuth?.user?.uid, assignmentId, { kind: 'paper', done: true });
+    if (!res?.ok) alert(`Could not mark the paper as done — check your connection and try again.\n(${res?.msg || 'unknown error'})`);
   },
 
   // ── Short answers: child answers and submits ────────────────────────────────
@@ -278,7 +279,13 @@ ${withKey ? `<section class="key"><h1>Answer key</h1><p class="sub">For the pare
     if (!confirm(blank ? `${blank} answer${blank === 1 ? ' is' : 's are'} blank. Submit anyway?` : 'Submit your answers to your parent?')) return;
     const btn = document.querySelector('.ak-actions .btn');
     if (btn) { btn.disabled = true; btn.textContent = 'Submitting…'; }
-    await window.riseFamily?.completeAssignment(window.riseAuth?.user?.uid, assignmentId, { kind: 'sa', answers });
+    const res = await window.riseFamily?.completeAssignment(window.riseAuth?.user?.uid, assignmentId, { kind: 'sa', answers });
+    if (!res?.ok) {
+      // Keep the sheet and the saved draft so nothing typed is lost.
+      if (btn) { btn.disabled = false; btn.textContent = 'Submit answers'; }
+      alert(`Your answers could not be sent — they are still saved here. Check your connection and tap Submit again.\n(${res?.msg || 'unknown error'})`);
+      return;
+    }
     try { localStorage.removeItem(`rise.saAssign.${assignmentId}`); } catch (_) {}
     this._akOverlay(`<h2 class="ak-title">Answers sent ✓</h2><p class="subtitle">Your parent will mark them — you'll see the marks under History.</p>
       <div class="ak-actions"><button class="btn primary" onclick="app.closeAssignSheet()">OK</button></div>`);
